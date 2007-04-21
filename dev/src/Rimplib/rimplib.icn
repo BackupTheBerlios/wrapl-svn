@@ -1,0 +1,89 @@
+procedure usage()
+	write("usage: rimplib [options] <library> <output>")
+	write("where options can be any of")
+	write("  -n <path>")
+	write("  -p <prefix>")
+	write("  -t dll | so")
+end
+
+invocable "process_so"
+procedure process_so(Input, Output, Path, Prefix)
+	Digits := 'abcdefABCDEF0123456789'
+	Exports := set()
+	system("objdump -T " || Input || " > rimplib.tmp")
+	InFile := open("rimplib.tmp")
+	OutFile := open(Output, "w")
+	write(OutFile, "module(", image(Path), ")")
+	write(OutFile, "prefix(", image(\Prefix), ")")
+	while Line := read(InFile) do Line ? {
+		if tab(upto('D')) then {
+			tab(upto(' \t'))
+			tab(many(' \t'))
+			Section := tab(upto(' \t'))
+			if \Section ~== "*UND*" then {
+				tab(many(' \t'))
+				tab(many(Digits)) | next
+				tab(upto(' \t'))
+				tab(many(' \t'))
+				tab(upto(' \t'))
+				tab(many(' \t'))
+				insert(Exports, tab(0))
+			}
+		}
+	}
+	every write(OutFile, "export(", image(!Exports), ")")
+	close(InFile)
+	close(OutFile)
+	remove("rimplib.tmp")
+end
+
+invocable "process_dll"
+procedure process_dll(Input, Output, Path, Prefix)
+	system("objdump -x " || Input || " > rimplib.tmp")
+	InFile := open("rimplib.tmp")
+	OutFile := open(Output, "w")
+	write(OutFile, "module(", image(Path), ")")
+	write("prefix(", image(\Prefix), ")")
+	while read(InFile) ~== "[Ordinal/Name Pointer] Table"
+	while ("" ~== (Line := read(InFile))) ? {
+		tab(many(' \t'))
+		tab(match("["))
+		tab(many(' \t'))
+		tab(many(&digits))
+		tab(match("]"))
+		tab(match(" "))
+		write(OutFile, "export(", image(tab(0)), ")")
+	}
+	close(InFile)
+	close(OutFile)
+	remove("rimplib.tmp")
+end
+
+procedure main(Args)
+	if *Args = 0 then {
+		usage()
+	} else {
+		I := 1
+		while I < *Args do {
+			case Args[I] of {
+			"-p": Prefix := Args[I +:= 1]
+			"-n": Path := Args[I +:= 1]
+			"-t": Type := Args[I +:= 1]
+			"-v": Verbose := 1
+			default: break
+			}
+			I +:= 1
+		};
+		Input := Args[I]
+		Output := Args[I + 1]
+		if \Verbose then write("Input = ", Input)
+		if \Verbose then write("Output = ", Output)
+		every Base := find("\\" | "/", Input)
+		every Ext := find(".", Input)
+		/Type := Input[Ext + 1:0]
+		/Path := Input[Base + 1:Ext]
+		if \Verbose then write("Type = ", Type)
+		if \Verbose then write("Path = ", Path)
+		("process_" || Type)(Input, Output, Path, Prefix)
+	}
+end

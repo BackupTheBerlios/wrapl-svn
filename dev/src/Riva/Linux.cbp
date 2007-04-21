@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Riva" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="../../../bin/riva" prefix_auto="1" extension_auto="1" />
+				<Option object_output=".objs/debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="../../../bin/riva" prefix_auto="1" extension_auto="1" />
+				<Option object_output=".objs/release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-march=pentium-m" />
+					<Add option="-fexpensive-optimizations" />
+					<Add option="-O3" />
+					<Add option="-fomit-frame-pointer" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-std=gnu99" />
+			<Add option="-DLINUX" />
+			<Add option="-D_GNU_SOURCE" />
+		</Compiler>
+		<Linker>
+			<Add library="z" />
+			<Add library="gc" />
+			<Add library="confuse" />
+		</Linker>
+		<Unit filename="log.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="log.h" />
+		<Unit filename="log2.asm">
+			<Option compile="1" />
+			<Option link="1" />
+			<Option compiler="gcc" use="1" buildCommand="nasm -DLINUX -felf -o$object $file" />
+		</Unit>
+		<Unit filename="main.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="memory.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="memory.h" />
+		<Unit filename="module.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="module.h" />
+		<Unit filename="native.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="native.h" />
+		<Unit filename="riva.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="riva.h" />
+		<Unit filename="stringtable.asm">
+			<Option compile="1" />
+			<Option link="1" />
+			<Option compiler="gcc" use="1" buildCommand="nasm -DLINUX -felf -o$object $file" />
+		</Unit>
+		<Unit filename="stringtable.h" />
+		<Unit filename="symbol.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="symbol.h" />
+		<Unit filename="thread.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="thread.h" />
+		<Extensions>
+			<code_completion />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

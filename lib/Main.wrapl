@@ -1,0 +1,36 @@
+MOD Main;
+
+IMP Lang.String;
+IMP Lang.Symbol;
+IMP IO.Terminal USE In, Out;
+IMP Wrapl;
+
+Out:write("Interactive Wrapl Version: " + Wrapl.Version + "\n");
+--wrapl.interact(terminal.In, terminal.Out);
+
+VAR Session <- Wrapl.SessionNew(In, Out);
+VAR Result;
+
+REP (
+	Out:write("--> ");
+	(Result <- Session:eval) => (
+		Out:write(Result @ String.T);
+		RECV Msg DO Msg IN Symbol.NoMethodMessageT => (
+			Out:write("<value>");
+		) // (
+			SEND Msg;
+		);
+	) // (
+		Out:write("failure");
+	);
+	RECV Msg DO Msg IN Wrapl.ErrorMessageT => (
+		Out:write("console");
+		Out:write(Msg @ String.T);
+	) // (
+		Out:write("Unhandled message: ");
+		Out:write(Msg @ String.T);
+		RECV Msg2 DO Out:write("<value>");
+	);
+);
+
+END Main.

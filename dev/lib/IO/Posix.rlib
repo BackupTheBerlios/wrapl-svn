@@ -1,0 +1,8 @@
+module("IO", "Posix")
+prefix("IO$Posix$")
+export("T")
+export("ReaderT")
+export("WriterT")
+export("SeekerT")
+export("TextReaderT")
+export("TextWriterT")

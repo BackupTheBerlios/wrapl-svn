@@ -1,0 +1,16 @@
+export("T")
+export("_new")
+export("_new_length")
+export("_new_char")
+if WINDOWS then
+	export("__flatten", "_flatten")
+	export("__flatten_to", "_flatten_to")
+else
+	export("_flatten")
+	export("_flatten_to")
+end
+export("GetBlockAddress")
+export("GetBlockLength")
+export("GetBlocks")
+export("Ord")
+export("Chr")

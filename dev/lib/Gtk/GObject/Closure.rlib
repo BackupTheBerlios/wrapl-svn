@@ -1,0 +1,4 @@
+module("Gtk", "GObject", "Closure")
+prefix("Gtk$GObject$Closure$")
+export("T")
+export("_new")

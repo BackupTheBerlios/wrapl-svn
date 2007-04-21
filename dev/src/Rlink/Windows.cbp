@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="rlink" />
+		<Option platforms="Windows;" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="..\..\bin\rlink.exe" prefix_auto="1" extension_auto="1" />
+				<Option object_output=".objs\debug\" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="..\..\bin\rlink.exe" prefix_auto="1" extension_auto="1" />
+				<Option object_output=".objs\release\" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-std=gnu99" />
+			<Add option="-DWINDOWS" />
+		</Compiler>
+		<Linker>
+			<Add library="z" />
+			<Add library="bfd" />
+			<Add library="iberty" />
+			<Add library="intl" />
+			<Add library="lua" />
+			<Add library="imagehlp" />
+		</Linker>
+		<Unit filename="rlink.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="stringtable.asm">
+			<Option compile="1" />
+			<Option link="1" />
+			<Option compiler="gcc" use="1" buildCommand="nasm -DWINDOWS -fwin32 -o$object $file" />
+		</Unit>
+		<Unit filename="stringtable.h" />
+		<Extensions>
+			<code_completion />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

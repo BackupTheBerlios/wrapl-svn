@@ -1,0 +1,6 @@
+module("Riva")
+include("Riva/Log.rlib")
+include("Riva/Memory.rlib")
+include("Riva/Module.rlib")
+include("Riva/Symbol.rlib")
+include("Riva/Thread.rlib")

@@ -1,0 +1,814 @@
+#include "system.h"
+
+|.arch x86
+|.section code, data
+|.type TRAP, trap_t
+|.type STATE, state_t
+|.type BSTATE, bstate_t
+|.type CLOSURE, closure_t
+|.type VALUE, Lang$Object_t
+|.type TYPE, Lang$Type_t
+
+|.actionlist ActionList
+|.globals Globals_
+
+struct state_t {
+	void *Run;
+	void *Resume;
+	state_t *Chain;
+};
+
+struct trap_t {
+	void *Run;
+	state_t *State;
+	state_t *Chain;
+};
+
+struct bstate_t {
+	void *Run;
+	void *Resume;
+	state_t *Chain;
+	Lang$Object_t *Val;
+	Lang$Object_t **Ref;
+	void *Code;
+	void *Handler;
+};
+
+void encode_entry(assembler_t *Assembler) {
+	|.code
+	//| int3
+	if (Assembler->NoOfUpScopes) {
+		| lea esi, CLOSURE:ecx->Scopes
+	};
+	| push dword Assembler->Size
+	| call &Riva$Memory$alloc
+	| mov [esp], eax
+	if (Assembler->NoOfParams) {
+		| push edi
+		| push esi
+	};
+	if (Assembler->NoOfUpScopes) {
+		| lea edi, [eax + Assembler->UpScopes]
+		| mov ecx, Assembler->NoOfUpScopes
+		| rep; movsd
+	};
+	| lea edi, [eax + Assembler->Locals]
+	| mov [eax + Assembler->Scopes], edi
+	if (Assembler->NoOfParams) {
+		| pop ebx
+		| sub ebx, Assembler->NoOfParams
+		| sbb edx, edx
+		| and edx, ebx
+		| add edx, Assembler->NoOfParams
+		| lea ecx, [edx * 2]
+		| pop esi
+		| rep; movsd
+		| neg edx
+		| lea ecx, [edx * 2 + 2 * Assembler->NoOfLocals]
+		| mov eax, Lang$Object$Nil
+		| rep; stosd
+	} else if (Assembler->NoOfLocals) {
+		| mov ecx, 2 * Assembler->NoOfLocals
+		| mov eax, Lang$Object$Nil
+		| rep; stosd
+	};
+	| pop eax
+	| mov STATE:eax->Run, dword &run_state
+	| mov BSTATE:eax->Handler, dword &resend_message
+	| push ebp
+	| mov ebp, eax
+	| xor edx, edx
+};
+
+void label_t::encode(assembler_t *Assembler) {
+	| =>this:
+};
+
+void link_inst_t::encode(assembler_t *Assembler) {
+	| jmp =>Link->final()
+};
+
+void zero_inst_t::encode(assembler_t *Assembler) {
+	| lea ebx, [ebp + Assembler->Traps + 12 * Trap]
+	| mov TRAP:ebx->Chain, ebx
+	| mov TRAP:ebx->State, ebx
+	| mov TRAP:ebx->Run, =>Failure->final()
+};
+
+void trap_inst_t::encode(assembler_t *Assembler) {
+	| lea ebx, [ebp + Assembler->Traps + 12 * Trap]
+	| mov eax, TRAP:ebx->State
+	| mov TRAP:ebx->Chain, eax
+	| mov TRAP:ebx->State, ebx
+	| mov TRAP:ebx->Run, =>Failure->final()
+};
+
+void resume_inst_t::encode(assembler_t *Assembler) {
+	| add esp, 12
+};
+
+void scope_inst_t::encode(assembler_t *Assembler) {
+	| push dword Size * 8
+	| call &Riva$Memory$alloc
+	| pop ecx
+	| mov [ebp + Assembler->Scopes + 4 * Index], eax
+	| mov edi, eax
+	| mov eax, Lang$Object$Nil
+	| mov ecx, Size * 2
+	| rep; stosd
+};
+
+static inline void load_closure(assembler_t *Assembler, operand_t *Operand) {
+	int NoOfUpScopes = 0;
+	for (upscope_t *UpScope = Operand->UpScopes; UpScope; UpScope = UpScope->Next) ++NoOfUpScopes;
+	| push sizeof(closure_t) + 4 * NoOfUpScopes
+	| call &Riva$Memory$alloc
+	| pop ecx
+	| mov dword VALUE:eax->Type, WraplT
+	| mov dword CLOSURE:eax->Entry, Operand->Entry
+	for (upscope_t *UpScope = Operand->UpScopes; UpScope; UpScope = UpScope->Next) {
+		if (UpScope->Index < 0) {
+			| mov ecx, [ebp + Assembler->UpScopes - 4 * UpScope->Index + 8]
+		} else {
+			| mov ecx, [ebp + Assembler->Scopes + 4 * UpScope->Index]
+		};
+		| mov [eax + 8 + 4 * --NoOfUpScopes], ecx
+	};
+	| mov ecx, eax
+};
+
+void load_inst_t::encode(assembler_t *Assembler) {
+	switch (Operand->Type) {
+	case operand_t::CNST: {
+		switch (Type) {
+		case LOAD_VAL: {
+			| mov ecx, Operand->Value
+			break;
+		};
+		case LOAD_REF: {
+			| xor edx, edx
+			break;
+		};
+		case LOAD_ARG:
+		case LOAD_BOTH: {
+			| mov ecx, Operand->Value
+			| xor edx, edx
+			break;
+		};
+		};
+		break;
+	};
+	case operand_t::GVAR: {
+		switch (Type) {
+		case LOAD_VAL: {
+			| mov ecx, [Operand->Address]
+			break;
+		};
+		case LOAD_REF:
+		case LOAD_ARG: {
+			| mov edx, Operand->Address
+			break;
+		};
+		case LOAD_BOTH: {
+			| mov edx, Operand->Address
+			| mov ecx, [edx]
+			break;
+		};
+		};
+		break;
+	};
+	case operand_t::LVAR: {
+		switch (Type) {
+		case LOAD_VAL: {
+			switch (Operand->Loop) {
+			case -1: {
+				| mov ecx, [ebp + Assembler->Temps + 8 * Operand->Index]
+				break;
+			};
+			case 0: {
+				| mov ecx, [ebp + Assembler->Locals + 8 * Operand->Index]
+				break;
+			};
+			default: {
+				if (Operand->Loop < 0) {
+					| mov ecx, [ebp + Assembler->UpScopes - 4 * Operand->Loop - 8]
+				} else {
+					| mov ecx, [ebp + Assembler->Scopes + 4 * Operand->Loop]
+				};
+				| mov ecx, [ecx + 8 * Operand->Index]
+				break;
+			};
+			};
+			break;
+		};
+		case LOAD_REF:
+		case LOAD_ARG: {
+			switch (Operand->Loop) {
+			case -1: {
+				| lea edx, [ebp + Assembler->Temps + 8 * Operand->Index]
+				break;
+			};
+			case 0: {
+				| lea edx, [ebp + Assembler->Locals + 8 * Operand->Index]
+				break;
+			};
+			default: {
+				if (Operand->Loop < 0) {
+					| mov edx, [ebp + Assembler->UpScopes - 4 * Operand->Loop - 8]
+				} else {
+					| mov edx, [ebp + Assembler->Scopes + 4 * Operand->Loop]
+				};
+				if (Operand->Index) {
+					| add edx, 8 * Operand->Index
+				};
+				break;
+			};
+			};
+			break;
+		};
+		case LOAD_BOTH: {
+			switch (Operand->Loop) {
+			case -1: {
+				| lea edx, [ebp + Assembler->Temps + 8 * Operand->Index]
+				| mov ecx, [edx]
+				break;
+			};
+			case 0: {
+				| lea edx, [ebp + Assembler->Locals + 8 * Operand->Index]
+				| mov ecx, [edx]
+				break;
+			};
+			default: {
+				if (Operand->Loop < 0) {
+					| mov edx, [ebp + Assembler->UpScopes - 4 * Operand->Loop - 8]
+				} else {
+					| mov edx, [ebp + Assembler->Scopes + 4 * Operand->Loop]
+				};
+				if (Operand->Index) {
+					| add edx, 8 * Operand->Index
+				};
+				| mov ecx, [edx]
+				break;
+			};
+			};
+			break;
+		};
+		};
+		break;
+	};
+	case operand_t::LREF: {
+		switch (Type) {
+		case LOAD_VAL: {
+			switch (Operand->Loop) {
+			case -1: {
+				| mov ecx, [ebp + Assembler->Temps + 8 * Operand->Index + 4]
+				| mov ecx, [ecx]
+				break;
+			};
+			case 0: {
+				| mov ecx, [ebp + Assembler->Locals + 8 * Operand->Index + 4]
+				| mov ecx, [ecx]
+				break;
+			};
+			default: {
+				if (Operand->Loop < 0) {
+					| mov ecx, [ebp + Assembler->UpScopes - 4 * Operand->Loop - 8]
+				} else {
+					| mov ecx, [ebp + Assembler->Scopes + 4 * Operand->Loop]
+				};
+				| mov ecx, [ecx + 8 * Operand->Index + 4]
+				| mov ecx, [ecx]
+				break;
+			};
+			};
+			break;
+		};
+		case LOAD_REF:
+		case LOAD_ARG: {
+			switch (Operand->Loop) {
+			case -1: {
+				| mov edx, [ebp + Assembler->Temps + 8 * Operand->Index + 4]
+				break;
+			};
+			case 0: {
+				| mov edx, [ebp + Assembler->Locals + 8 * Operand->Index + 4]
+				break;
+			};
+			default: {
+				if (Operand->Loop < 0) {
+					| mov edx, [ebp + Assembler->UpScopes - 4 * Operand->Loop - 8]
+				} else {
+					| mov edx, [ebp + Assembler->Scopes + 4 * Operand->Loop]
+				};
+				| mov edx, [edx + 8 * Operand->Index + 4]
+				break;
+			};
+			};
+			break;
+		};
+		case LOAD_BOTH: {
+			switch (Operand->Loop) {
+			case -1: {
+				| mov edx, [ebp + Assembler->Temps + 8 * Operand->Index + 4]
+				| mov ecx, [edx]
+				break;
+			};
+			case 0: {
+				| mov edx, [ebp + Assembler->Locals + 8 * Operand->Index + 4]
+				| mov ecx, [edx]
+				break;
+			};
+			default: {
+				if (Operand->Loop < 0) {
+					| mov edx, [ebp + Assembler->UpScopes - 4 * Operand->Loop - 8]
+				} else {
+					| mov edx, [ebp + Assembler->Scopes + 4 * Operand->Loop]
+				};
+				| mov edx, [edx + 8 * Operand->Index + 4]
+				| mov ecx, [edx]
+				break;
+			};
+			};
+			break;
+		};
+		};
+		break;
+	};
+	case operand_t::TEMP: {
+		switch (Type) {
+		case LOAD_VAL: {
+			| mov ecx, [ebp + Assembler->Temps + 8 * Operand->Index]
+			break;
+		};
+		case LOAD_REF: {
+			| mov edx, [ebp + Assembler->Temps + 8 * Operand->Index + 4]
+			break;
+		};
+		case LOAD_ARG:
+		case LOAD_BOTH: {
+			| mov ecx, [ebp + Assembler->Temps + 8 * Operand->Index]
+			| mov edx, [ebp + Assembler->Temps + 8 * Operand->Index + 4]
+			break;
+		};
+		};
+		break;
+	};
+	case operand_t::CLSR: {
+		switch (Type) {
+		case LOAD_VAL: {
+			load_closure(Assembler, Operand);
+			break;
+		};
+		case LOAD_REF: {
+			| xor edx, edx
+			break;
+		};
+		case LOAD_ARG:
+		case LOAD_BOTH: {
+			load_closure(Assembler, Operand);
+			| xor edx, edx
+			break;
+		};
+		};
+		break;
+	};
+	};
+};
+
+static inline void store_reg(assembler_t *Assembler, operand_t *Operand) {
+	switch (Operand->Type) {
+	case operand_t::GVAR: {
+		| mov [Operand->Address], ecx
+		break;
+	};
+	case operand_t::LVAR: {
+		switch (Operand->Loop) {
+		case -1: {
+			| mov [ebp + Assembler->Temps + 8 * Operand->Index], ecx
+			break;
+		};
+		case 0: {
+			| mov [ebp + Assembler->Locals + 8 * Operand->Index], ecx
+			break;
+		};
+		default: {
+			if (Operand->Loop < 0) {
+				| mov eax, [ebp + Assembler->UpScopes - 4 * Operand->Loop - 8]
+			} else {
+				| mov eax, [ebp + Assembler->Scopes + 4 * Operand->Loop]
+			};
+			| mov [eax + 8 * Operand->Index], ecx
+			break;
+		};
+		};
+		break;
+	};
+	case operand_t::LREF: {
+		switch (Operand->Loop) {
+		case -1: {
+			| mov eax, [ebp + Assembler->Temps + 8 * Operand->Index + 4]
+			| mov [eax], ecx
+			break;
+		};
+		case 0: {
+			| mov eax, [ebp + Assembler->Locals + 8 * Operand->Index + 4]
+			| mov [eax], ecx
+			break;
+		};
+		default: {
+			if (Operand->Loop < 0) {
+				| mov eax, [ebp + Assembler->UpScopes - 4 * Operand->Loop - 8]
+			} else {
+				| mov eax, [ebp + Assembler->Scopes + 4 * Operand->Loop]
+			};
+			| mov eax, [eax + 8 * Operand->Index + 4]
+			| mov [eax], ecx
+			break;
+		};
+		};
+		break;
+	};
+	case operand_t::TEMP: {
+		| mov eax, [ebp + Assembler->Temps + 8 * Operand->Index + 4]
+		| mov [eax], ecx
+		break;
+	};
+	};
+};
+
+void store_con_inst_t::encode(assembler_t *Assembler) {
+	switch (Type) {
+	case LOAD_REF:
+		| xor edx, edx;
+	case LOAD_NONE:
+		switch (Operand->Type) {
+		case operand_t::GVAR: {
+			| mov dword [Operand->Address], Value
+			break;
+		};
+		case operand_t::LVAR: {
+			switch (Operand->Loop) {
+			case -1: {
+				| mov dword [ebp + Assembler->Temps + 8 * Operand->Index], Value
+				break;
+			};
+			case 0: {
+				| mov dword [ebp + Assembler->Locals + 8 * Operand->Index], Value
+				break;
+			};
+			default: {
+				if (Operand->Loop < 0) {
+					| mov eax, [ebp + Assembler->UpScopes - 4 * Operand->Loop - 8]
+				} else {
+					| mov eax, [ebp + Assembler->Scopes + 4 * Operand->Loop]
+				};
+				| mov dword [eax + 8 * Operand->Index], Value
+				break;
+			};
+			};
+			break;
+		};
+		case operand_t::LREF: {
+			switch (Operand->Loop) {
+			case -1: {
+				| mov eax, [ebp + Assembler->Temps + 8 * Operand->Index + 4]
+				| mov dword [eax], Value
+				break;
+			};
+			case 0: {
+				| mov eax, [ebp + Assembler->Locals + 8 * Operand->Index + 4]
+				| mov dword [eax], Value
+				break;
+			};
+			default: {
+				if (Operand->Loop < 0) {
+					| mov eax, [ebp + Assembler->UpScopes - 4 * Operand->Loop - 8]
+				} else {
+					| mov eax, [ebp + Assembler->Scopes + 4 * Operand->Loop]
+				};
+				| mov eax, [eax + 8 * Operand->Index + 4]
+				| mov dword [eax], Value
+				break;
+			};
+			};
+			break;
+		};
+		case operand_t::TEMP: {
+			| mov eax, [ebp + Assembler->Temps + 8 * Operand->Index + 4]
+			| mov dword [eax], Value
+			break;
+		};
+		};
+		break;
+	case LOAD_ARG: case LOAD_BOTH:
+		| xor edx, edx
+	case LOAD_VAL:
+		| mov ecx, Value
+		store_reg(Assembler, Operand);
+		break;
+	};
+};
+
+void store_val_inst_t::encode(assembler_t *Assembler) {
+	store_reg(Assembler, Operand);
+};
+
+void store_ref_inst_t::encode(assembler_t *Assembler) {
+	switch (Operand->Loop) {
+	case -1: {
+		| mov [ebp + Assembler->Temps + 8 * Operand->Index + 4], edx
+		break;
+	};
+	case 0: {
+		| mov [ebp + Assembler->Locals + 8 * Operand->Index + 4], edx
+		break;
+	};
+	default: {
+		if (Operand->Loop < 0) {
+			| mov eax, [ebp + Assembler->UpScopes - 4 * Operand->Loop - 8]
+		} else {
+			| mov eax, [ebp + Assembler->Scopes + 4 * Operand->Loop]
+		};
+		| mov [eax + 8 * Operand->Index + 4], edx
+		break;
+	};
+	};
+};
+
+void store_arg_inst_t::encode(assembler_t *Assembler) {
+	switch (Operand->Type) {
+	case operand_t::CNST: {
+		| mov dword [ebp + Assembler->Temps + 8 * Index], Operand->Value
+		| mov dword [ebp + Assembler->Temps + 8 * Index + 4], 0
+		break;
+	};
+	case operand_t::GVAR: {
+		| mov dword [ebp + Assembler->Temps + 8 * Index + 4], Operand->Value
+		break;
+	};
+	case operand_t::LVAR: {
+		switch (Operand->Loop) {
+		case -1: {
+			| lea edx, [ebp + Assembler->Temps + 8 * Operand->Index]
+			| mov [ebp + Assembler->Temps + 8 * Index + 4], edx
+			break;
+		};
+		case 0: {
+			| lea edx, [ebp + Assembler->Locals + 8 * Operand->Index]
+			| mov [ebp + Assembler->Temps + 8 * Index + 4], edx
+			break;
+		};
+		default: {
+			if (Operand->Loop < 0) {
+				| mov edx, [ebp + Assembler->UpScopes - 4 * Operand->Loop - 8]
+			} else {
+				| mov edx, [ebp + Assembler->Scopes + 4 * Operand->Loop]
+			};
+			if (Operand->Index) {
+				| add edx, 8 * Operand->Index
+			};
+			| mov [ebp + Assembler->Temps + 8 * Index + 4], edx
+			break;
+		};
+		};
+		break;
+	};
+	case operand_t::LREF: {
+		switch (Operand->Loop) {
+		case -1: {
+			| mov edx, [ebp + Assembler->Temps + 8 * Operand->Index + 4]
+			| mov [ebp + Assembler->Temps + 8 * Index + 4], edx
+			break;
+		};
+		case 0: {
+			| mov edx, [ebp + Assembler->Locals + 8 * Operand->Index + 4]
+			| mov [ebp + Assembler->Temps + 8 * Index + 4], edx
+			break;
+		};
+		default: {
+			if (Operand->Loop < 0) {
+				| mov edx, [ebp + Assembler->UpScopes - 4 * Operand->Loop - 8]
+			} else {
+				| mov edx, [ebp + Assembler->Scopes + 4 * Operand->Loop]
+			};
+			| mov edx, [edx + 8 * Operand->Index + 4]
+			| mov [ebp + Assembler->Temps + 8 * Index + 4], edx
+			break;
+		};
+		};
+		break;
+	};
+	case operand_t::TEMP: {
+		| mov ecx, [ebp + Assembler->Temps + 8 * Operand->Index]
+		| mov edx, [ebp + Assembler->Temps + 8 * Operand->Index + 4]
+		| mov [ebp + Assembler->Temps + 8 * Index], ecx
+		| mov [ebp + Assembler->Temps + 8 * Index + 4], edx
+		break;
+	};
+	case operand_t::CLSR: {
+		load_closure(Assembler, Operand);
+		| mov [ebp + Assembler->Temps + 8 * Index], ecx
+		| mov dword [ebp + Assembler->Temps + 8 * Index + 4], 0
+		break;
+	};
+	case operand_t::REGR: {
+		| mov [ebp + Assembler->Temps + 8 * Index], ecx
+		| mov [ebp + Assembler->Temps + 8 * Index + 4], edx
+		break;
+	};
+	};
+};
+
+void fixup_arg_inst_t::encode(assembler_t *Assembler) {
+	switch (Operand->Type) {
+	case operand_t::CNST: {
+		break;
+	};
+	case operand_t::GVAR: {
+		| mov eax, [Operand->Address]
+		| mov [ebp + Assembler->Temps + 8 * Index], eax
+		break;
+	};
+	case operand_t::LVAR: {
+		switch (Operand->Loop) {
+		case -1: {
+			| mov eax, [ebp + Assembler->Temps + 8 * Operand->Index]
+			| mov [ebp + Assembler->Temps + 8 * Index], eax
+			break;
+		};
+		case 0: {
+			| mov eax, [ebp + Assembler->Locals + 8 * Operand->Index]
+			| mov [ebp + Assembler->Temps + 8 * Index], eax
+			break;
+		};
+		default: {
+			| mov eax, [ebp + Assembler->Temps + 8 * Index + 4]
+			| mov eax, [eax]
+			| mov [ebp + Assembler->Temps + 8 * Index], eax
+			break;
+		};
+		};
+		break;
+	};
+	case operand_t::LREF: {
+		| mov eax, [ebp + Assembler->Temps + 8 * Index + 4]
+		| mov eax, [eax]
+		| mov [ebp + Assembler->Temps + 8 * Index], eax
+		break;
+	};
+	case operand_t::TEMP: {
+		| mov eax, [ebp + Assembler->Temps + 8 * Index + 4]
+		| test eax, eax
+		| jz >1
+		| mov eax, [eax]
+		| mov [ebp + Assembler->Temps + 8 * Index], eax
+		| 1:
+		break;
+	};
+	case operand_t::CLSR: {
+		break;
+	};
+	case operand_t::REGR: {
+		| mov eax, [ebp + Assembler->Temps + 8 * Index + 4]
+		| test eax, eax
+		| jz >1
+		| mov eax, [eax]
+		| mov [ebp + Assembler->Temps + 8 * Index], eax
+		| 1:
+		break;
+	};
+	};
+};
+
+void store_tmp_inst_t::encode(assembler_t *Assembler) {
+	| mov [ebp + Assembler->Temps + 8 * Index], ecx
+	| mov [ebp + Assembler->Temps + 8 * Index + 4], edx
+};
+
+void flush_inst_t::encode(assembler_t *Assembler) {
+};
+
+void invoke_inst_t::encode(assembler_t *Assembler) {
+	if (Count) {
+		| mov esi, Count
+		| lea edi, [ebp + Assembler->Temps + 8 * Args]
+	} else {
+		| xor esi, esi
+	};
+	| push Assembler->Traps + 12 * Trap
+	| call &invoke_function
+};
+
+void back_inst_t::encode(assembler_t *Assembler) {
+	| mov edi, Assembler->Traps + 12 * Trap
+	| jmp &backtrack
+};
+
+void ret_inst_t::encode(assembler_t *Assembler) {
+	| xor eax, eax
+	| pop ebp
+	| ret
+};
+
+void susp_inst_t::encode(assembler_t *Assembler) {
+	| mov BSTATE:ebx, ebp
+	| mov BSTATE:ebx->Val, ecx
+	| mov BSTATE:ebx->Ref, edx
+	| mov BSTATE:ebx->Code, dword >1
+	| or eax, -1
+	| pop ebp
+	| ret
+	| 1:
+};
+
+void fail_inst_t::encode(assembler_t *Assembler) {
+	| xor eax, eax
+	| pop ebp
+	| inc eax
+	| ret
+};
+
+void recv_inst_t::encode(assembler_t *Assembler) {
+	if (Handler) {
+		| mov BSTATE:ebp->Handler, =>Handler->final()
+	} else {
+		| mov BSTATE:ebp->Handler, &resend_message
+	};
+};
+
+void send_inst_t::encode(assembler_t *Assembler) {
+	| jmp dword BSTATE:ebp->Handler
+};
+
+void comp_inst_t::encode(assembler_t *Assembler) {
+	switch (Operand->Type) {
+	case operand_t::CNST: {
+		| cmp ecx, Operand->Value
+		break;
+	};
+	case operand_t::GVAR: {
+		| cmp ecx, [Operand->Address]
+		break;
+	};
+	case operand_t::LVAR: {
+		switch (Operand->Loop) {
+		case -1: {
+			| cmp ecx, [ebp + Assembler->Temps + 8 * Operand->Index]
+			break;
+		};
+		case 0: {
+			| cmp ecx, [ebp + Assembler->Locals + 8 * Operand->Index]
+			break;
+		};
+		default: {
+			if (Operand->Loop < 0) {
+				| mov eax, [ebp + Assembler->UpScopes - 4 * Operand->Loop - 8]
+			} else {
+				| mov eax, [ebp + Assembler->Scopes + 4 * Operand->Loop]
+			};
+			| cmp ecx, [eax + 8 * Operand->Index]
+			break;
+		};
+		};
+		break;
+	};
+	case operand_t::LREF: {
+		switch (Operand->Loop) {
+		case -1: {
+			| mov eax, [ebp + Assembler->Temps + 8 * Operand->Index + 4]
+			| cmp ecx, [eax]
+			break;
+		};
+		case 0: {
+			| mov eax, [ebp + Assembler->Locals + 8 * Operand->Index + 4]
+			| cmp ecx, [eax]
+			break;
+		};
+		default: {
+			if (Operand->Loop < 0) {
+				| mov eax, [ebp + Assembler->UpScopes - 4 * Operand->Loop - 8]
+			} else {
+				| mov eax, [ebp + Assembler->Scopes + 4 * Operand->Loop]
+			};
+			| mov eax, [eax + 8 * Operand->Index + 4]
+			| cmp ecx, [eax]
+			break;
+		};
+		};
+		break;
+	};
+	case operand_t::TEMP: {
+		| cmp ecx, [ebp + Assembler->Temps + 8 * Operand->Index]
+		break;
+	};
+	case operand_t::CLSR: {
+		| cmp ecx, 0
+		break;
+	};
+	};
+	if (Equal) {
+		| jne =>Failure->final()
+	} else {
+		| je =>Failure->final()
+	};
+};

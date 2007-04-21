@@ -1,0 +1,6 @@
+module("Lang", "Type")
+prefix("Lang$Type$")
+export("T")
+export("T.invoke")
+export("Of")
+export("New")

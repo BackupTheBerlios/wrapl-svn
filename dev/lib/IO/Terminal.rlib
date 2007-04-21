@@ -1,0 +1,4 @@
+module("IO", "Terminal")
+prefix("IO$Terminal$")
+export("In")
+export("Out")

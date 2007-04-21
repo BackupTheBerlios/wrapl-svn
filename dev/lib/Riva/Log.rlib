@@ -1,0 +1,8 @@
+module("Riva", "Log")
+prefix("Riva$Log$")
+export("_writes")
+export("_writef")
+export("_writen")
+export("_errors")
+export("_errorf")
+export("_errorn")

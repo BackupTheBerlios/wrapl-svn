@@ -1,0 +1,5 @@
+module("Lang", "Array")
+prefix("Lang$Array$")
+export("T")
+export("New")
+export("_new")

@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Lang" />
+		<Option pch_mode="2" />
+		<Option compiler="gnu_gcc_compiler_riva" />
+		<Build>
+			<Target title="Type">
+				<Option output="../../../lib/Lang/Type.riva" prefix_auto="0" extension_auto="0" />
+				<Option external_deps="Type.rdef;" />
+				<Option type="0" />
+				<Option compiler="gnu_gcc_compiler_riva" />
+				<Linker>
+					<Add library="Type.rdef" />
+				</Linker>
+			</Target>
+			<Target title="Object">
+				<Option output="../../../lib/Lang/Object.riva" prefix_auto="0" extension_auto="0" />
+				<Option external_deps="Object.rdef;" />
+				<Option type="0" />
+				<Option compiler="gnu_gcc_compiler_riva" />
+				<Linker>
+					<Add library="Object.rdef" />
+				</Linker>
+			</Target>
+			<Target title="Symbol">
+				<Option output="../../../lib/Lang/Symbol.riva" prefix_auto="0" extension_auto="0" />
+				<Option external_deps="Symbol.rdef;" />
+				<Option type="0" />
+				<Option compiler="gnu_gcc_compiler_riva" />
+				<Linker>
+					<Add library="Symbol.rdef" />
+				</Linker>
+			</Target>
+			<Target title="Function">
+				<Option output="../../../lib/Lang/Function.riva" prefix_auto="0" extension_auto="0" />
+				<Option external_deps="Function.rdef;" />
+				<Option type="0" />
+				<Option compiler="gnu_gcc_compiler_riva" />
+				<Linker>
+					<Add library="Function.rdef" />
+				</Linker>
+			</Target>
+			<Target title="Address">
+				<Option output="../../../lib/Lang/Address.riva" prefix_auto="0" extension_auto="0" />
+				<Option external_deps="Address.rdef;" />
+				<Option type="0" />
+				<Option compiler="gnu_gcc_compiler_riva" />
+				<Linker>
+					<Add library="Address.rdef" />
+				</Linker>
+			</Target>
+			<Target title="Integer">
+				<Option output="../../../lib/Lang/Integer.riva" prefix_auto="0" extension_auto="0" />
+				<Option external_deps="Integer.rdef;" />
+				<Option type="0" />
+				<Option compiler="gnu_gcc_compiler_riva" />
+				<Linker>
+					<Add option="-?Integer.lst" />
+					<Add library="Integer.rdef" />
+				</Linker>
+			</Target>
+			<Target title="Real">
+				<Option output="../../../lib/Lang/Real.riva" prefix_auto="0" extension_auto="0" />
+				<Option external_deps="Real.rdef;" />
+				<Option type="0" />
+				<Option compiler="gnu_gcc_compiler_riva" />
+				<Linker>
+					<Add library="Real.rdef" />
+				</Linker>
+			</Target>
+			<Target title="String">
+				<Option output="../../../lib/Lang/String.riva" prefix_auto="0" extension_auto="0" />
+				<Option external_deps="String.rdef;" />
+				<Option type="0" />
+				<Option compiler="gnu_gcc_compiler_riva" />
+				<Linker>
+					<Add library="String.rdef" />
+				</Linker>
+			</Target>
+			<Target title="Array">
+				<Option output="../../../lib/Lang/Array.riva" prefix_auto="0" extension_auto="0" />
+				<Option external_deps="Array.rdef;" />
+				<Option type="0" />
+				<Option compiler="gnu_gcc_compiler_riva" />
+				<Linker>
+					<Add library="Array.rdef" />
+				</Linker>
+			</Target>
+			<Target title="List">
+				<Option output="../../../lib/Lang/List.riva" prefix_auto="0" extension_auto="0" />
+				<Option external_deps="List.rdef;" />
+				<Option type="0" />
+				<Option compiler="gnu_gcc_compiler_riva" />
+				<Linker>
+					<Add library="List.rdef" />
+				</Linker>
+			</Target>
+			<Target title="Table">
+				<Option output="../../../lib/Lang/Table.riva" prefix_auto="0" extension_auto="0" />
+				<Option external_deps="Table.rdef;" />
+				<Option type="0" />
+				<Option compiler="gnu_gcc_compiler_riva" />
+				<Linker>
+					<Add library="Table.rdef" />
+				</Linker>
+			</Target>
+			<Target title="Methods">
+				<Option output="../../../lib/Lang/Methods.riva" prefix_auto="0" extension_auto="0" />
+				<Option external_deps="Methods.rdef;" />
+				<Option type="0" />
+				<Option compiler="gnu_gcc_compiler_riva" />
+				<Linker>
+					<Add library="Methods.rdef" />
+				</Linker>
+			</Target>
+			<Target title="Coexpr">
+				<Option output="../../../lib/Lang/Coexpr.riva" prefix_auto="0" extension_auto="0" />
+				<Option external_deps="Coexpr.rdef;" />
+				<Option type="0" />
+				<Option compiler="gnu_gcc_compiler_riva" />
+				<Linker>
+					<Add library="Coexpr.rdef" />
+				</Linker>
+			</Target>
+		</Build>
+		<VirtualTargets>
+			<Add alias="All" targets="Type;Object;Symbol;Function;Address;Integer;Real;String;Array;List;Table;Methods;Coexpr;" />
+		</VirtualTargets>
+		<Compiler>
+			<Add option="-march=pentium-m" />
+			<Add option="-fexpensive-optimizations" />
+			<Add option="-O3" />
+			<Add option="-std=gnu99" />
+			<Add option="-fomit-frame-pointer" />
+		</Compiler>
+		<Linker>
+			<Add library="libc.rlib" />
+			<Add library="libgmp.rlib" />
+			<Add library="libm.rlib" />
+			<Add library="Riva.rlib" />
+			<Add library="Lang.rlib" />
+		</Linker>
+		<Unit filename="Address.asm">
+			<Option compile="1" />
+			<Option link="1" />
+			<Option compiler="gnu_gcc_compiler_riva" use="1" buildCommand="nasm -I$ASMINC -felf -DLINUX -o $object $file" />
+			<Option target="Address" />
+		</Unit>
+		<Unit filename="Address.rdef">
+			<Option target="Address" />
+		</Unit>
+		<Unit filename="Array.asm">
+			<Option compile="1" />
+			<Option link="1" />
+			<Option compiler="gnu_gcc_compiler_riva" use="1" buildCommand="nasm -I$ASMINC -felf -DLINUX -o $object $file" />
+			<Option target="Array" />
+		</Unit>
+		<Unit filename="Array.rdef">
+			<Option target="Array" />
+		</Unit>
+		<Unit filename="Coexpr.c">
+			<Option compilerVar="CC" />
+			<Option target="Coexpr" />
+		</Unit>
+		<Unit filename="Coexpr.rdef">
+			<Option target="Coexpr" />
+		</Unit>
+		<Unit filename="Function.asm">
+			<Option compile="1" />
+			<Option link="1" />
+			<Option compiler="gnu_gcc_compiler_riva" use="1" buildCommand="nasm -I$ASMINC -felf -DLINUX -o $object $file" />
+			<Option target="Function" />
+		</Unit>
+		<Unit filename="Function.rdef">
+			<Option target="Function" />
+		</Unit>
+		<Unit filename="Integer.asm">
+			<Option compile="1" />
+			<Option link="1" />
+			<Option compiler="gnu_gcc_compiler_riva" use="1" buildCommand="nasm -I$ASMINC -felf -DLINUX -o $object $file" />
+			<Option target="Integer" />
+		</Unit>
+		<Unit filename="Integer.rdef">
+			<Option target="Integer" />
+		</Unit>
+		<Unit filename="List.c">
+			<Option compilerVar="CC" />
+			<Option target="List" />
+		</Unit>
+		<Unit filename="List.rdef">
+			<Option target="List" />
+		</Unit>
+		<Unit filename="Methods.asm">
+			<Option compile="1" />
+			<Option link="1" />
+			<Option compiler="gnu_gcc_compiler_riva" use="1" buildCommand="nasm -I$ASMINC -felf -DLINUX -o $object $file" />
+			<Option target="Methods" />
+		</Unit>
+		<Unit filename="Methods.rdef">
+			<Option target="Methods" />
+		</Unit>
+		<Unit filename="Methods2.c">
+			<Option compilerVar="CC" />
+			<Option target="Methods" />
+		</Unit>
+		<Unit filename="Object.asm">
+			<Option compile="1" />
+			<Option link="1" />
+			<Option compiler="gnu_gcc_compiler_riva" use="1" buildCommand="nasm -I$ASMINC -felf -DLINUX -o $object $file" />
+			<Option target="Object" />
+		</Unit>
+		<Unit filename="Object.rdef">
+			<Option target="Object" />
+		</Unit>
+		<Unit filename="Real.asm">
+			<Option compile="1" />
+			<Option link="1" />
+			<Option compiler="gnu_gcc_compiler_riva" use="1" buildCommand="nasm -I$ASMINC -felf -DLINUX -o $object $file" />
+			<Option target="Real" />
+		</Unit>
+		<Unit filename="Real.rdef">
+			<Option target="Real" />
+		</Unit>
+		<Unit filename="String.asm">
+			<Option compile="1" />
+			<Option link="1" />
+			<Option compiler="gnu_gcc_compiler_riva" use="1" buildCommand="nasm -I$ASMINC -felf -DLINUX -o $object $file" />
+			<Option target="String" />
+		</Unit>
+		<Unit filename="String.rdef">
+			<Option target="String" />
+		</Unit>
+		<Unit filename="String2.c">
+			<Option compilerVar="CC" />
+			<Option target="String" />
+		</Unit>
+		<Unit filename="Symbol.asm">
+			<Option compile="1" />
+			<Option link="1" />
+			<Option compiler="gnu_gcc_compiler_riva" use="1" buildCommand="nasm -I$ASMINC -felf -DLINUX -o $object $file" />
+			<Option target="Symbol" />
+		</Unit>
+		<Unit filename="Symbol.rdef">
+			<Option target="Symbol" />
+		</Unit>
+		<Unit filename="Table.c">
+			<Option compilerVar="CC" />
+			<Option target="Table" />
+		</Unit>
+		<Unit filename="Table.rdef">
+			<Option target="Table" />
+		</Unit>
+		<Unit filename="Type.asm">
+			<Option compile="1" />
+			<Option link="1" />
+			<Option compiler="gnu_gcc_compiler_riva" use="1" buildCommand="nasm -I$ASMINC -felf -DLINUX -o $object $file" />
+			<Option target="Type" />
+		</Unit>
+		<Unit filename="Type.rdef">
+			<Option target="Type" />
+		</Unit>
+		<Extensions>
+			<code_completion />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

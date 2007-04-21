@@ -1,0 +1,5 @@
+module("Lang", "Object")
+prefix("Lang$Object$")
+export("T")
+export("Nil")
+export("New")

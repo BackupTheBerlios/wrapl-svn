@@ -1,0 +1,6 @@
+module("Lang", "Real")
+prefix("Lang$Real$")
+export("T")
+export("_new_string")
+export("_new")
+export("_alloc")
