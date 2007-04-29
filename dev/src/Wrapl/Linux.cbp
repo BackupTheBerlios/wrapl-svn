@@ -39,6 +39,7 @@
 			<Add option="-fno-rtti" />
 			<Add option="-Wno-non-virtual-dtor" />
 			<Add option="-fpermissive" />
+			<Add option="-DLINUX" />
 		</Compiler>
 		<Linker>
 			<Add library="exports.rdef" />
