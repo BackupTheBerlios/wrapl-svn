@@ -1,5 +1,9 @@
 module("Util", "ObjectTable")
-prefix("Util$ObjectTable$")
+if WINDOWS then
+	prefix("_Util$ObjectTable$")
+else
+	prefix("Util$ObjectTable$")
+end
 export("T")
 export("_init")
 export("_get")

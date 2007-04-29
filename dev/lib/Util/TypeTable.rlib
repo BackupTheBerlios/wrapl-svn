@@ -1,5 +1,9 @@
 module("Util", "TypeTable")
-prefix("Util$TypeTable$")
+if WINDOWS then
+	prefix("_Util$TypeTable$")
+else
+	prefix("Util$TypeTable$")
+end
 export("T")
 export("_init")
 export("_get")

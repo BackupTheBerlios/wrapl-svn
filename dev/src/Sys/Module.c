@@ -1,7 +1,7 @@
 #include <Sys/Module.h>
 #include <Lang.h>
 #include <Riva/Memory.h>
-#include <sys/stat.h>
+#include <string.h>
 
 TYPE(T);
 
@@ -135,6 +135,28 @@ static int directory_import(const char *Path, const char *Name, int *IsRef, void
 	};
 };
 
+#ifdef WINDOWS
+
+#include <windows.h>
+
+static int directory_load(Riva$Module_t *Module, const char *FileName) {
+    DWORD FileAttributes = GetFileAttributes(FileName);
+    if (FileAttributes & FILE_ATTRIBUTE_DIRECTORY) {
+        int Length = strlen(FileName);
+		char *Path = Riva$Memory$alloc_atomic(Length + 2);
+		strcpy(Path, FileName);
+		Path[Length] = '\\';
+		Path[Length + 1] = 0;
+		Riva$Module$setup(Module, Path, (Riva$Module_importer)directory_import);
+	} else {
+		return 0;
+    };
+};
+
+#else
+
+#include <sys/stat.h>
+
 static int directory_load(Riva$Module_t *Module, const char *FileName) {
 	struct stat Stat;
 	stat(FileName, &Stat);
@@ -149,6 +171,8 @@ static int directory_load(Riva$Module_t *Module, const char *FileName) {
 		return 0;
 	};
 };
+
+#endif
 
 void __init(void) {
 	Riva$Module$add_loader("", directory_load);

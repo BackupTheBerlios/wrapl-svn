@@ -2,6 +2,8 @@
 #define IO_POSIX_H
 
 #include <IO/Stream.h>
+#include <unistd.h>
+#include <fcntl.h>
 
 #define RIVA_MODULE IO$Posix
 #include <Riva-Header.h>

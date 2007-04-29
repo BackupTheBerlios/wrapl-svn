@@ -1,5 +1,9 @@
 module("Lang", "Integer")
-prefix("Lang$Integer$")
+if WINDOWS then
+	prefix("_Lang$Integer$")
+else
+	prefix("Lang$Integer$")
+end
 export("T")
 export("SmallT")
 export("BigT")

@@ -4,15 +4,9 @@
 #ifdef WINDOWS
 	#define PATHSTR "\\"
 	#define PATHCHR '\\'
-	#define STDLANG "std\\lang\\"
-	#define STD "std\\"
-	#define SYSEXT ".dll"
 #else
 	#define PATHSTR "/"
 	#define PATHCHR '/'
-	#define STDLANG "std/lang/"
-	#define STD "std/"
-	#define SYSEXT ".so"
 #endif
 
 typedef struct module_t module_t;

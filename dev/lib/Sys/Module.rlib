@@ -1,5 +1,9 @@
 module("Sys", "Module")
-prefix("Sys$Module$")
+if WINDOWS then
+	prefix("_Sys$Module$")
+else
+	prefix("Sys$Module$")
+end
 export("T")
 export("_import")
 export("_export")

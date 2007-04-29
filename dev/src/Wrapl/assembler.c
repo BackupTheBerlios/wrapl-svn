@@ -1,7 +1,8 @@
 #include "assembler.h"
+#include "missing.h"
 #include <Lang/Function.h>
 #include <string.h>
-#include <udis86.h>
+//#include <udis86.h>
 
 operand_t Register[] = {{
 	0, operand_t::REGR

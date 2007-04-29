@@ -1,3 +1,7 @@
 module("Lang", "Methods")
-prefix("Lang$Methods$")
+if WINDOWS then
+	prefix("_Lang$Methods$")
+else
+	prefix("Lang$Methods$")
+end
 export("add_string_string")

@@ -1,5 +1,9 @@
 module("Util", "StringTable")
-prefix("Util$StringTable$")
+if WINDOWS then
+	prefix("_Util$StringTable$")
+else
+	prefix("Util$StringTable$")
+end
 export("T")
 export("_init")
 export("_get")

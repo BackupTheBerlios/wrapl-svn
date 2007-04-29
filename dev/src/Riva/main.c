@@ -4,10 +4,11 @@
 #include <confuse.h>
 
 #include <unistd.h>
-#include <pthread.h>
 
 #ifdef WINDOWS
 #include <windows.h>
+#else
+#include <pthread.h>
 #endif
 
 #include <gc/gc.h>
@@ -56,6 +57,8 @@ static void read_config(void) {
 	};
 #endif
 
+    log_writef("Loading config file: %s\n", Conf);
+
 	static cfg_opt_t OptsMain[] = {
 		CFG_STR_LIST("library", 0, CFGF_NONE),
 		CFG_STR_LIST("modules", 0, CFGF_NONE),
@@ -64,7 +67,7 @@ static void read_config(void) {
 	};
 	cfg_t *Cfg = cfg_init(OptsMain, CFGF_NONE);
 	if (cfg_parse(Cfg, Conf) == CFG_PARSE_ERROR) {
-		printf("Error: configuration file not present or corrupt\n");
+		log_errorf("Error: configuration file not present or corrupt\n");
 		exit(1);
 	};
 	for (int I = 0; I < cfg_size(Cfg, "library"); ++I) {
@@ -73,7 +76,10 @@ static void read_config(void) {
 	};
 	for (int I = 0; I < cfg_size(Cfg, "modules"); ++I) {
 		const char *Path = cfg_getnstr(Cfg, "modules", I);
-		module_load(0, Path);
+		log_writef("Preloading module: %s\n", Path);
+		if (module_load(0, Path) == 0) {
+		    log_errorf("Error: module %s not found\n", Path);
+        };
 	};
 	BatchMode = cfg_getbool(Cfg, "batch");
 };
@@ -124,5 +130,9 @@ int main(int Argc, char **Argv) {
 	if (!BatchMode) {
 		if (module_load(0, Module) == 0) printf("Error: module %s not found\n", Module);
 	};
+#ifdef WINDOWS
+    ExitThread(0);
+#else
 	pthread_exit(0);
+#endif
 };

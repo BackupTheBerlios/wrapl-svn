@@ -1,4 +1,5 @@
 #include "scanner.h"
+#include "missing.h"
 #include <Riva.h>
 #include <Lang.h>
 

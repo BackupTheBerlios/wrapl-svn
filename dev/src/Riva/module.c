@@ -17,6 +17,23 @@
 #include <windows.h>
 #endif
 
+#ifdef WINDOWS
+static inline const char *module_fixup_path(const char *Path) {
+    if (Path == 0) return 0;
+    if (strchr(Path, '/')) {
+        char *NewPath = strdup(Path);
+        for (char *P = NewPath; *P; ++P) if (*P == '/') *P = PATHCHR;
+        return NewPath;
+    } else {
+        return Path;
+    };
+};
+    #define FIXUP_PATH(x) x = module_fixup_path(x)
+
+#else
+    #define FIXUP_PATH(x) 0
+#endif
+
 typedef struct export_t {
 	int IsRef;
 	void *Data;
@@ -43,15 +60,17 @@ typedef struct path_node {
 static path_node *Library = 0;
 
 void module_add_directory(const char *Dir) {
+    FIXUP_PATH(Dir);
+    log_writef("Adding %s to library search path.\n", Dir);
     long Length = strlen(Dir);
     path_node *Node;
-    if (Dir[Length - 1] == '/') {
+    if (Dir[Length - 1] == PATHCHR) {
     	Node = (path_node *)GC_malloc_stubborn(sizeof(path_node) + Length + 1);
 		strcpy(Node->Dir, Dir);
     } else {
     	Node = (path_node *)GC_malloc_stubborn(sizeof(path_node) + Length + 2);
 		char *End = stpcpy(Node->Dir, Dir);
-		End[0] = '/';
+		End[0] = PATHCHR;
 		End[1] = 0;
     };
     Node->Next = Library;
@@ -161,6 +180,8 @@ static module_t *do_load(const char *Path, const char *Name) {
 };
 
 module_t *module_run(const char *Name, const char *Path) {
+    FIXUP_PATH(Name);
+    FIXUP_PATH(Path);
     if (Path) {
 		module_t *Module = do_run(Path, Name);
 		if (Module == MODULE_NOT_FOUND) {
@@ -180,6 +201,8 @@ module_t *module_run(const char *Name, const char *Path) {
 };
 
 module_t *module_load(const char *Path, const char *Name) {
+    FIXUP_PATH(Name);
+    FIXUP_PATH(Path);
     if (Path) {
 		module_t *Module = do_load(Path, Name);
 		if (Module == MODULE_NOT_FOUND) {
@@ -233,6 +256,7 @@ module_t *module_setup(module_t *Module, void *Data, module_importer Import) {
 };
 
 module_t *module_alias(const char *Name) {
+    FIXUP_PATH(Name);
 	module_t *Module = new(module_t);
 	Module->Name = Name;
 	Module->Import = default_import;
@@ -241,6 +265,7 @@ module_t *module_alias(const char *Name) {
 };
 
 void module_set_path(module_t *Module, const char *Path) {
+    FIXUP_PATH(Path);
 	Module->Path = Path;
 };
 

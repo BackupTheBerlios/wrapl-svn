@@ -39,7 +39,8 @@ static int native_load(module_t *Module, const char *FileName) {
 };
 
 void native_init(void) {
-	module_add_loader(SYSEXT, native_load);
+	module_add_loader(".dll", native_load);
+	native_load(module_alias("libc"), "msvcrt.dll");
 };
 
 #else
@@ -73,7 +74,7 @@ static int native_load(module_t *Module, const char *FileName) {
 };
 
 void native_init(void) {
-	module_add_loader(SYSEXT, native_load);
+	module_add_loader(".so", native_load);
 	void *Handle = GC_dlopen(0, RTLD_LOCAL | RTLD_LAZY);
 	module_setup(module_alias("libc"), Handle, native_import);
 	module_setup(module_alias("libgcc"), Handle, native_import);

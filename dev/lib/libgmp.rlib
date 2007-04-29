@@ -1,4 +1,7 @@
 module("libgmp")
+if WINDOWS then
+	prefix("_")
+end
 export("__gmpn_copyd_p6")
 export("__gmpn_rootrem")
 export("__gmpn_mul_basecase_k7")

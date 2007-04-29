@@ -57,7 +57,6 @@
 				<Option type="0" />
 				<Option compiler="gnu_gcc_compiler_riva" />
 				<Linker>
-					<Add option="-?Integer.lst" />
 					<Add library="Integer.rdef" />
 				</Linker>
 			</Target>
@@ -122,6 +121,7 @@
 				<Option compiler="gnu_gcc_compiler_riva" />
 				<Linker>
 					<Add library="Coexpr.rdef" />
+					<Add library="kernel32.rlib" />
 				</Linker>
 			</Target>
 		</Build>
@@ -129,37 +129,22 @@
 			<Add alias="All" targets="Type;Object;Symbol;Function;Address;Integer;Real;String;Array;List;Table;Methods;Coexpr;" />
 		</VirtualTargets>
 		<Compiler>
-			<Add option="-march=pentium-m" />
+			<Add option="-march=athlon-xp" />
 			<Add option="-fexpensive-optimizations" />
 			<Add option="-O3" />
 			<Add option="-std=gnu99" />
 			<Add option="-fomit-frame-pointer" />
+			<Add option="-DWINDOWS" />
 		</Compiler>
 		<Linker>
-			<Add library="..\..\..\dev\lib\c.rlib" />
-			<Add library="..\..\..\dev\lib\gmp.rlib" />
-			<Add library="..\..\..\dev\lib\m.rlib" />
-			<Add library="..\..\..\dev\lib\Riva\Log.rlib" />
-			<Add library="..\..\..\dev\lib\Riva\Memory.rlib" />
-			<Add library="..\..\..\dev\lib\Lang\Address.rlib" />
-			<Add library="..\..\..\dev\lib\Lang\Array.rlib" />
-			<Add library="..\..\..\dev\lib\Lang\Coexpr.rlib" />
-			<Add library="..\..\..\dev\lib\Lang\Function.rlib" />
-			<Add library="..\..\..\dev\lib\Lang\Integer.rlib" />
-			<Add library="..\..\..\dev\lib\Lang\List.rlib" />
-			<Add library="..\..\..\dev\lib\Lang\Methods.rlib" />
-			<Add library="..\..\..\dev\lib\Lang\Object.rlib" />
-			<Add library="..\..\..\dev\lib\Lang\Real.rlib" />
-			<Add library="..\..\..\dev\lib\Lang\String.rlib" />
-			<Add library="..\..\..\dev\lib\Lang\Symbol.rlib" />
-			<Add library="..\..\..\dev\lib\Lang\Table.rlib" />
-			<Add library="..\..\..\dev\lib\Lang\Type.rlib" />
-			<Add library="..\..\..\dev\lib\Riva\Thread.rlib" />
+			<Add library="libgmp.rlib" />
+			<Add library="Riva.rlib" />
+			<Add library="Lang.rlib" />
 		</Linker>
 		<Unit filename="Address.asm">
 			<Option compile="1" />
 			<Option link="1" />
-			<Option compiler="gnu_gcc_compiler_riva" use="1" buildCommand="nasm -I$ASMINC -felf -DLINUX -o $object $file" />
+			<Option compiler="gnu_gcc_compiler_riva" use="1" buildCommand="nasm -Ov --prefix _ -I$ASMINC -fwin32 -DWINDOWS -o $object $file" />
 			<Option target="Address" />
 		</Unit>
 		<Unit filename="Address.rdef">
@@ -168,7 +153,7 @@
 		<Unit filename="Array.asm">
 			<Option compile="1" />
 			<Option link="1" />
-			<Option compiler="gnu_gcc_compiler_riva" use="1" buildCommand="nasm -I$ASMINC -felf -DLINUX -o $object $file" />
+			<Option compiler="gnu_gcc_compiler_riva" use="1" buildCommand="nasm -Ov --prefix _ -I$ASMINC -fwin32 -DWINDOWS -o $object $file" />
 			<Option target="Array" />
 		</Unit>
 		<Unit filename="Array.rdef">
@@ -184,7 +169,7 @@
 		<Unit filename="Function.asm">
 			<Option compile="1" />
 			<Option link="1" />
-			<Option compiler="gnu_gcc_compiler_riva" use="1" buildCommand="nasm -I$ASMINC -felf -DLINUX -o $object $file" />
+			<Option compiler="gnu_gcc_compiler_riva" use="1" buildCommand="nasm -Ov --prefix _ -I$ASMINC -fwin32 -DWINDOWS -o $object $file" />
 			<Option target="Function" />
 		</Unit>
 		<Unit filename="Function.rdef">
@@ -193,7 +178,7 @@
 		<Unit filename="Integer.asm">
 			<Option compile="1" />
 			<Option link="1" />
-			<Option compiler="gnu_gcc_compiler_riva" use="1" buildCommand="nasm -I$ASMINC -felf -DLINUX -o $object $file" />
+			<Option compiler="gnu_gcc_compiler_riva" use="1" buildCommand="nasm -Ov --prefix _ -I$ASMINC -fwin32 -DWINDOWS -o $object $file" />
 			<Option target="Integer" />
 		</Unit>
 		<Unit filename="Integer.rdef">
@@ -209,7 +194,7 @@
 		<Unit filename="Methods.asm">
 			<Option compile="1" />
 			<Option link="1" />
-			<Option compiler="gnu_gcc_compiler_riva" use="1" buildCommand="nasm -I$ASMINC -felf -DLINUX -o $object $file" />
+			<Option compiler="gnu_gcc_compiler_riva" use="1" buildCommand="nasm -Ov --prefix _ -I$ASMINC -fwin32 -DWINDOWS -o $object $file" />
 			<Option target="Methods" />
 		</Unit>
 		<Unit filename="Methods.rdef">
@@ -222,7 +207,7 @@
 		<Unit filename="Object.asm">
 			<Option compile="1" />
 			<Option link="1" />
-			<Option compiler="gnu_gcc_compiler_riva" use="1" buildCommand="nasm -I$ASMINC -felf -DLINUX -o $object $file" />
+			<Option compiler="gnu_gcc_compiler_riva" use="1" buildCommand="nasm -Ov --prefix _ -I$ASMINC -fwin32 -DWINDOWS -o $object $file" />
 			<Option target="Object" />
 		</Unit>
 		<Unit filename="Object.rdef">
@@ -231,7 +216,7 @@
 		<Unit filename="Real.asm">
 			<Option compile="1" />
 			<Option link="1" />
-			<Option compiler="gnu_gcc_compiler_riva" use="1" buildCommand="nasm -I$ASMINC -felf -DLINUX -o $object $file" />
+			<Option compiler="gnu_gcc_compiler_riva" use="1" buildCommand="nasm -Ov --prefix _ -I$ASMINC -fwin32 -DWINDOWS -o $object $file" />
 			<Option target="Real" />
 		</Unit>
 		<Unit filename="Real.rdef">
@@ -240,7 +225,7 @@
 		<Unit filename="String.asm">
 			<Option compile="1" />
 			<Option link="1" />
-			<Option compiler="gnu_gcc_compiler_riva" use="1" buildCommand="nasm -I$ASMINC -felf -DLINUX -o $object $file" />
+			<Option compiler="gnu_gcc_compiler_riva" use="1" buildCommand="nasm -Ov --prefix _ -I$ASMINC -fwin32 -DWINDOWS -o $object $file" />
 			<Option target="String" />
 		</Unit>
 		<Unit filename="String.rdef">
@@ -253,7 +238,7 @@
 		<Unit filename="Symbol.asm">
 			<Option compile="1" />
 			<Option link="1" />
-			<Option compiler="gnu_gcc_compiler_riva" use="1" buildCommand="nasm -I$ASMINC -felf -DLINUX -o $object $file" />
+			<Option compiler="gnu_gcc_compiler_riva" use="1" buildCommand="nasm -Ov --prefix _ -I$ASMINC -fwin32 -DWINDOWS -o $object $file" />
 			<Option target="Symbol" />
 		</Unit>
 		<Unit filename="Symbol.rdef">
@@ -269,7 +254,7 @@
 		<Unit filename="Type.asm">
 			<Option compile="1" />
 			<Option link="1" />
-			<Option compiler="gnu_gcc_compiler_riva" use="1" buildCommand="nasm -I$ASMINC -felf -DLINUX -o $object $file" />
+			<Option compiler="gnu_gcc_compiler_riva" use="1" buildCommand="nasm -Ov --prefix _ -I$ASMINC -fwin32 -DWINDOWS -o $object $file" />
 			<Option target="Type" />
 		</Unit>
 		<Unit filename="Type.rdef">

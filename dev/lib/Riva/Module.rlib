@@ -1,5 +1,9 @@
 module("Riva", "Module")
-prefix("Riva$Module$")
+if WINDOWS then
+	prefix("_Riva$Module$")
+else
+	prefix("Riva$Module$")
+end
 export("_add_loader")
 export("_add_directory")
 export("_setup")

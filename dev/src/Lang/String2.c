@@ -25,7 +25,7 @@ char *_flatten(Lang$String_t *String) {
 		char *Flat = Riva$Memory$alloc_atomic(String->Length.Value + 1);
 		char *P = Flat;
 		for (int I = 0; I < String->Count; ++I) {
-			__builtin_memcpy(P, String->Blocks[I].Chars.Value, String->Blocks[I].Length.Value);
+			memcpy(P, String->Blocks[I].Chars.Value, String->Blocks[I].Length.Value);
 			P += String->Blocks[I].Length.Value;
 		};
 		*P = 0;
@@ -37,7 +37,7 @@ char *_flatten(Lang$String_t *String) {
 			return Chars;
 		} else {
 			char *Flat = Riva$Memory$alloc_atomic(Length + 1);
-			__builtin_memcpy(Flat, Chars, Length);
+			memcpy(Flat, Chars, Length);
 			Flat[Length] = 0;
 			return Flat;
 		};

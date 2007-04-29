@@ -14,6 +14,9 @@
 				<Compiler>
 					<Add option="-g" />
 				</Compiler>
+				<Environment>
+					<Variable name="ASMOPTS" value="-g" />
+				</Environment>
 			</Target>
 			<Target title="Release">
 				<Option output="..\..\..\bin\riva.exe" prefix_auto="1" extension_auto="1" />
@@ -21,7 +24,7 @@
 				<Option type="1" />
 				<Option compiler="gcc" />
 				<Compiler>
-					<Add option="-march=pentium-m" />
+					<Add option="-march=athlon-xp" />
 					<Add option="-fexpensive-optimizations" />
 					<Add option="-O3" />
 					<Add option="-fomit-frame-pointer" />
@@ -29,14 +32,17 @@
 				<Linker>
 					<Add option="-s" />
 				</Linker>
+				<Environment>
+					<Variable name="ASMOPTS" value="-Ov" />
+				</Environment>
 			</Target>
 		</Build>
 		<Compiler>
 			<Add option="-Wall" />
 			<Add option="-std=gnu99" />
-			<Add option="-fno-leading-underscores" />
 			<Add option="-DWINDOWS" />
 			<Add option="-D_GNU_SOURCE" />
+			<Add option="-DWIN32_THREADS" />
 		</Compiler>
 		<Linker>
 			<Add library="z" />
@@ -50,7 +56,7 @@
 		<Unit filename="log2.asm">
 			<Option compile="1" />
 			<Option link="1" />
-			<Option compiler="gcc" use="1" buildCommand="nasm --prefix _ -DWINDOWS -fwin32 -o$object $file" />
+			<Option compiler="gcc" use="1" buildCommand="nasm $ASMOPTS --prefix _ -DWINDOWS -fwin32 -o$object $file" />
 		</Unit>
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
@@ -74,12 +80,12 @@
 		<Unit filename="stpcpy.asm">
 			<Option compile="1" />
 			<Option link="1" />
-			<Option compiler="gcc" use="1" buildCommand="nasm --prefix _ -DWINDOWS -fwin32 -o$object $file" />
+			<Option compiler="gcc" use="1" buildCommand="nasm $ASMOPTS --prefix _ -DWINDOWS -fwin32 -o$object $file" />
 		</Unit>
 		<Unit filename="stringtable.asm">
 			<Option compile="1" />
 			<Option link="1" />
-			<Option compiler="gcc" use="1" buildCommand="nasm --prefix _ -DWINDOWS -fwin32 -o$object $file" />
+			<Option compiler="gcc" use="1" buildCommand="nasm $ASMOPTS --prefix _ -DWINDOWS -fwin32 -o$object $file" />
 		</Unit>
 		<Unit filename="stringtable.h" />
 		<Unit filename="symbol.c">

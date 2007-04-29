@@ -1,5 +1,9 @@
 module("Lang", "List")
-prefix("Lang$List$")
+if WINDOWS then
+	prefix("_Lang$List$")
+else
+	prefix("Lang$List$")
+end
 export("T")
 export("New")
 export("_new")

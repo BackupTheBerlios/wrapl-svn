@@ -1,5 +1,9 @@
 module("Lang", "Real")
-prefix("Lang$Real$")
+if WINDOWS then
+	prefix("_Lang$Real$")
+else
+	prefix("Lang$Real$")
+end
 export("T")
 export("_new_string")
 export("_new")

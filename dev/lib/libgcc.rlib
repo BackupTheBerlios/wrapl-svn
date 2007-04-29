@@ -1,4 +1,7 @@
 module("libgcc")
+if WINDOWS then
+	prefix("_")
+end
 export("_Unwind_GetIPInfo")
 export("GCC_3.0")
 export("__ffsdi2")

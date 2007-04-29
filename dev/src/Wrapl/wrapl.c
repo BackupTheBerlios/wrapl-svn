@@ -6,11 +6,12 @@
 
 #include "parser.h"
 #include "compiler.h"
+#include "missing.h"
 
 static int wrapl_load(Riva$Module_t *Module, const char *Path) {
 	char *LoadPath;
 	for (int I = strlen(Path) - 1; I >= 0; --I) {
-		if (Path[I] == '/') {
+		if (Path[I] == PATHCHR) {
 			memcpy(LoadPath = (char *)Riva$Memory$alloc_atomic(I + 2), Path, I + 1);
 			break;
 		};
@@ -19,7 +20,6 @@ static int wrapl_load(Riva$Module_t *Module, const char *Path) {
 	Sys$Module_t *Module0 = new Sys$Module_t;
 	Module0->Type = Sys$Module$T;
 	Module0->Handle = Module;
-
 	IO$Stream_t *Source = (IO$Stream_t *)IO$File$open(Path, IO$File$OPENREAD | IO$File$OPENTEXT);
 	scanner_t *Scanner = new scanner_t(Source);
 	if (setjmp(Scanner->Error.Handler)) {
@@ -93,6 +93,6 @@ METHOD("eval", TYP, SessionT) {
 
 extern "C" void __init(Riva$Module_t *Module);
 void __init(Riva$Module_t *Module) {
-	Riva$Module$export(Module, "Version", 0, Lang$String$new("0.2.1"));
+	Riva$Module$export(Module, "Version", 0, Lang$String$new("0.4.1"));
 	Riva$Module$add_loader(".wrapl", wrapl_load);
 };

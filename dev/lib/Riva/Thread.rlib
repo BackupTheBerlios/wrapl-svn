@@ -1,5 +1,9 @@
 module("Riva", "Thread")
-prefix("Riva$Thread$")
+if WINDOWS then
+	prefix("_Riva$Thread$")
+else
+	prefix("Riva$Thread$")
+end
 export("_new")
 export("_self")
 export("_key_new")

@@ -1,5 +1,9 @@
 module("IO", "Posix")
-prefix("IO$Posix$")
+if WINDOWS then
+	prefix("_IO$Posix$")
+else
+	prefix("IO$Posix$")
+end
 export("T")
 export("ReaderT")
 export("WriterT")

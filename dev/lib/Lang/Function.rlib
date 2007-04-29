@@ -1,5 +1,9 @@
 module("Lang", "Function")
-prefix("Lang$Function$")
+if WINDOWS then
+	prefix("_Lang$Function$")
+else
+	prefix("Lang$Function$")
+end
 export("T")
 export("AsmT")
 export("CheckedAsmT")

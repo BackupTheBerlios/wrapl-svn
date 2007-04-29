@@ -1,4 +1,5 @@
 #include "compiler.h"
+#include "missing.h"
 
 #include <Lang.h>
 
@@ -1067,7 +1068,7 @@ operand_t *module_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t 
 		char *Temp = Imp->Relative ? stpcpy(ImportPath, ModulePath) : ImportPath;
 		for (module_expr_t::globalimp_t::path_t *Path = Imp->Path; Path; Path = Path->Next) {
 			Temp = stpcpy(Temp, Path->Part);
-			Temp++[0] = '/';
+			Temp++[0] = PATHCHR;
 		};
 		(--Temp)[0] = 0;
 		operand_t *Operand = new operand_t;
@@ -1162,7 +1163,7 @@ int command_expr_t::compile(compiler_t *Compiler, Lang$Function_result *Result) 
 	for (command_expr_t::globalimp_t *Imp = Imps; Imp; Imp = Imp->Next) {
 		if (Imp->Relative && !InitPath) {
 			getcwd(ModulePath, 256);
-			strcat(ModulePath, "/");
+			strcat(ModulePath, PATHSTR);
 			PathLength = strlen(ModulePath);
 		};
 		operand_t *Operand = new operand_t;
@@ -1173,7 +1174,7 @@ int command_expr_t::compile(compiler_t *Compiler, Lang$Function_result *Result) 
 		char *Temp = Imp->Relative ? stpcpy(ImportPath, ModulePath) : ImportPath;
 		for (command_expr_t::globalimp_t::path_t *Path = Imp->Path; Path; Path = Path->Next) {
 			Temp = stpcpy(Temp, Path->Part);
-			Temp++[0] = '/';
+			Temp++[0] = PATHCHR;
 		};
 		(--Temp)[0] = 0;
 		Operand->Module = ImportPath;

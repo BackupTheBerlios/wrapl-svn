@@ -381,7 +381,11 @@ static void bfd_section_setup(bfd_section_t *Section) {
 		Relocation->Flags = Type->pc_relative ? RELOC_REL : RELOC_ABS;
 		uint32_t *Target = (uint32_t *)(Section->Code + Relocs[I]->address);
 		if (Type->pc_relative) {
-			*(long *)(Section->Code + Relocs[I]->address) -= Relocs[I]->address;// + 4 on windows platforms ???;
+#ifdef WINDOWS
+			*(long *)(Section->Code + Relocs[I]->address) -= Relocs[I]->address + 4;// why oh why is this here???
+#else
+            *(long *)(Section->Code + Relocs[I]->address) -= Relocs[I]->address;// + 4 on windows platforms ???;
+#endif
 		};
 		if (Sym->section == bfd_und_section_ptr) {
 			symbol_t *Symbol;
@@ -392,6 +396,18 @@ static void bfd_section_setup(bfd_section_t *Section) {
 				if (Symbol) break;
 				Symbol = (symbol_t *)stringtable_get(WeakTable, Sym->name);
 				if (Symbol) break;
+#ifdef WINDOWS
+                char *WindowsSizeHint = strrchr(Sym->name, '@');
+                if (WindowsSizeHint) {
+                    *WindowsSizeHint = 0;
+                    Symbol = (symbol_t *)stringtable_get(BfdInfo->LocalTable, Sym->name);
+                    if (Symbol) break;
+                    Symbol = (symbol_t *)stringtable_get(GlobalTable, Sym->name);
+                    if (Symbol) break;
+                    Symbol = (symbol_t *)stringtable_get(WeakTable, Sym->name);
+                    if (Symbol) break;
+                }
+#endif
 				printf("%s: unresolved symbol %s.\n", Bfd->filename, Sym->name);
 				exit(1);
 			} while (0);
@@ -620,7 +636,12 @@ static int library_file_module(lua_State *State) {
     int PathSize = 0;
     for (int I = 1; I <= NoOfArgs; ++I) PathSize += strlen(lua_tostring(State, I)) + 1;
     char *Path = (char *)malloc(PathSize), *PathPtr = Path;
+#ifdef WINDOWS
+    char *Name = (char *)malloc(PathSize + 1), *NamePtr = Name + 1;
+    Name[0] = '_';
+#else
 	char *Name = (char *)malloc(PathSize), *NamePtr = Name;
+#endif
     for (int I = 1; I <= NoOfArgs; ++I) {
         char *Temp = lua_tostring(State, I);
 		PathPtr = stpcpy(PathPtr, Temp);
@@ -632,14 +653,14 @@ static int library_file_module(lua_State *State) {
 	NamePtr[-1] = 0;
 
 	library_section_t *LibrarySection = (library_section_t *)stringtable_get(LibraryTable, Path);
-	if (LibrarySection) return luaL_error("%s: duplicate module.\n", Library->FileName);
-	LibrarySection = new_library_section(Path);
-
-	symbol_t *Symbol = new(symbol_t);
-	Symbol->Name = Name;
-	Symbol->Section = (section_t *)LibrarySection;
-	Symbol->Offset = 0;
-	stringtable_put(GlobalTable, Name, Symbol);
+	if (LibrarySection == 0) {
+        LibrarySection = new_library_section(Path);
+        symbol_t *Symbol = new(symbol_t);
+        Symbol->Name = Name;
+        Symbol->Section = (section_t *)LibrarySection;
+        Symbol->Offset = 0;
+        stringtable_put(GlobalTable, Name, Symbol);
+	};
 
     Library->Section = LibrarySection;
     return 0;
@@ -683,8 +704,9 @@ static int library_file_export(lua_State *State) {
     //printf("Adding export: %s -> %s\n", Internal, External);
 
     import_section_t *ImportSection = (import_section_t *)stringtable_get(Library->Section->Imports, Internal);
-    if (ImportSection) return luaL_error("%s: duplicate export %s.\n", Library->FileName, Internal);
-    ImportSection = new_import_section(Library->Section, Internal, Flags);
+    if (ImportSection == 0) {
+        ImportSection = new_import_section(Library->Section, Internal, Flags);
+    };
     symbol_t *Symbol = new_symbol(External, (section_t *)ImportSection, 0);
     stringtable_put(GlobalTable, External, Symbol);
     return 0;

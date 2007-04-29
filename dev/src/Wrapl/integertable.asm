@@ -31,27 +31,21 @@ struct node
 	.Value : resd 1
 endstruct
 
-%ifdef LINUX
-	%define _integertable_init integertable_init
-	%define _integertable_put integertable_put
-	%define _integertable_get integertable_get
-	%define _system_alloc Riva$Memory$_alloc
-%endif
-
+%define _system_alloc Riva$Memory$_alloc
 extern _system_alloc
 
-global _integertable_init
-global _integertable_put
-global _integertable_get
+global integertable_init
+global integertable_put
+global integertable_get
 
 section .text
-_integertable_init:;(integertable Table) -> ()
+integertable_init:;(integertable Table) -> ()
 	mov eax, [esp + 4]
 	mov [table(eax).Size], dword 0
 	mov [table(eax).Space], dword 0
 	ret
 
-_integertable_put:;(integertable Table, const char *Key, void *Value) -> ()
+integertable_put:;(integertable Table, const char *Key, void *Value) -> ()
 	push ebx
 	push edi
 	push esi
@@ -264,7 +258,7 @@ _integertable_put:;(integertable Table, const char *Key, void *Value) -> ()
 .no_recurse_2:
 	ret 8
 
-_integertable_get:;(integertable Table, const char *Key) -> (void *)
+integertable_get:;(integertable Table, const char *Key) -> (void *)
 	push ebx
 	push edi
 	push esi

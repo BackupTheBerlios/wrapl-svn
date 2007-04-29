@@ -1,15 +1,5 @@
 %include "Lang.inc"
 
-%ifdef LINUX
-	%define _to_real_real to_real_real
-	%define _to_real_real_real to_real_real_real
-	%define _in_string_string in_string_string
-	%define _in_string_string_small in_string_string_small
-	%define _in_string_string_small_small in_string_string_small_small
-	%define _chars_string chars_string
-	%define _resume_repeat_value resume_repeat_value
-%endif
-
 extern Riva$Memory$_alloc
 extern Riva$Memory$_alloc_atomic
 
@@ -2071,7 +2061,7 @@ struct repeat_value_state, state
 	.Value:	resd 1
 endstruct
 
-c_func _resume_repeat_value
+c_func resume_repeat_value
 	mov ecx, [repeat_value_state(eax).Value]
 	mov ebx, eax
 	or eax, byte -1
@@ -2267,7 +2257,7 @@ repeat_small:
 	add esp, byte 4
 	mov ecx, [argument(edi).Val]
 	mov [repeat_value_state(eax).Value], ecx
-	mov dword [state(eax).Run], _resume_repeat_value
+	mov dword [state(eax).Run], resume_repeat_value
 	mov ebx, eax
 	or eax, byte -1
 	xor edx, edx
@@ -2437,10 +2427,6 @@ extern round
 method "round", REAL
 	mov eax, [argument(edi).Val]
 	fld qword [real(eax).Value]
-	sub esp, byte 8
-	fstp qword [esp]
-	call round
-	add esp, byte 8
 	call Lang$Integer$_alloc_small
 	fistp dword [small_int(eax).Value]
 	mov ecx, eax

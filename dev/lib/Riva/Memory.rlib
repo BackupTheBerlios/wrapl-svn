@@ -1,5 +1,9 @@
 module("Riva", "Memory")
-prefix("Riva$Memory$")
+if WINDOWS then
+	prefix("_Riva$Memory$")
+else
+	prefix("Riva$Memory$")
+end
 export("_alloc")
 export("_alloc_atomic")
 export("_alloc_small")

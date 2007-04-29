@@ -1,6 +1,7 @@
 #include "parser.h"
 #include "scanner.h"
 #include "compiler.h"
+#include "missing.h"
 
 #include <Riva.h>
 #include <string.h>

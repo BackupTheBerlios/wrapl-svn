@@ -1,5 +1,9 @@
 module("Lang", "Address")
-prefix("Lang$Address$")
+if WINDOWS then
+	prefix("_Lang$Address$")
+else
+	prefix("Lang$Address$")
+end
 export("T")
 export("New")
 export("_alloc")

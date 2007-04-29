@@ -38,9 +38,7 @@
 			<Add library="z" />
 			<Add library="bfd" />
 			<Add library="iberty" />
-			<Add library="intl" />
 			<Add library="lua" />
-			<Add library="imagehlp" />
 		</Linker>
 		<Unit filename="rlink.c">
 			<Option compilerVar="CC" />

@@ -1,5 +1,15 @@
+if WINDOWS then
+	_export = export
+	export = function(Internal, External)
+		if External == nil then
+			External = Internal
+		end
+		_export("_" .. Internal, External)
+	end
+end
+
 export("T")
-export("_open")
+export("__file_open", "_open")
 export("Open")
 export("READ")
 export("WRITE")

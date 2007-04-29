@@ -1,5 +1,9 @@
 module("IO", "Stream")
-prefix("IO$Stream$")
+if WINDOWS then
+	prefix("_IO$Stream$")
+else
+	prefix("IO$Stream$")
+end
 export("T")
 export("ReaderT")
 export("WriterT")
