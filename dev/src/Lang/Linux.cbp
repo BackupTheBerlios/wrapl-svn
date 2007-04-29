@@ -136,9 +136,7 @@
 			<Add option="-fomit-frame-pointer" />
 		</Compiler>
 		<Linker>
-			<Add library="libc.rlib" />
 			<Add library="libgmp.rlib" />
-			<Add library="libm.rlib" />
 			<Add library="Riva.rlib" />
 			<Add library="Lang.rlib" />
 		</Linker>

@@ -95,7 +95,7 @@ static void coexpr_func(coexpr_t *Callee, Lang$Object_t *Fun, long Count, Lang$F
 	case SUCCESS:
 		switch_coexpr(Callee, Caller, SUCCESS, Result.Arg);
 	case FAILURE: for (;;) {
-		switch_coexpr(Callee, Caller, FAILURE, {0, 0});
+		switch_coexpr(Callee, Caller, FAILURE, (Lang$Function_argument){0, 0});
 	};
 	case MESSAGE: for (;;) {
 		switch_coexpr(Callee, Caller, MESSAGE, Result.Arg);

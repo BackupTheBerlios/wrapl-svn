@@ -15,9 +15,7 @@ extern "C" char * stpcpy (char *restrict, const char *restrict);
 
 #define getcwd _getcwd
 
-#endif
-
-#ifdef LINUX
+#else
 
 #define PATHSTR "/"
 #define PATHCHR '/'

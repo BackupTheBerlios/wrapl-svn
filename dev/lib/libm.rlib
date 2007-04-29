@@ -1,5 +1,5 @@
 module("libm")
-if WINDOWS then
+if LINUX then
 	export("cbrtl")
 	export("rintf")
 	export("clog10")

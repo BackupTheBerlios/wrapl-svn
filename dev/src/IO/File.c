@@ -68,7 +68,7 @@ GLOBAL_FUNCTION(Open, 2) {
 		Result->Val = OpenMessage;
 		return MESSAGE;
 	};
-	if (Flags & IO$File$OPENAPPEND) seek(Handle, 0, SEEK_END);
+	if (Flags & IO$File$OPENAPPEND) lseek(Handle, 0, SEEK_END);
 	NATIVE(_t) *Stream = new(NATIVE(_t));
 	Stream->Type = OpenMode.Type;
 	Stream->Handle = Handle;
@@ -96,7 +96,7 @@ NATIVE(_t) *__file_open(const char *FileName, int Flags) {
 	openmode_t OpenMode = OpenModes[Flags % 8];
 	int Handle = open(FileName, OpenMode.Mode, 0644);
 	if (Handle < 0) return 0;
-	if (Flags & IO$File$OPENAPPEND) seek(Handle, 0, SEEK_END);
+	if (Flags & IO$File$OPENAPPEND) lseek(Handle, 0, SEEK_END);
 	NATIVE(_t) *Stream = new(NATIVE(_t));
 	Stream->Type = OpenMode.Type;
 	Stream->Handle = Handle;
