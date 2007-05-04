@@ -47,7 +47,7 @@ static int directory_load(module_t *Module, const char *FileName) {
 	stat(FileName, &Stat);
 	if (S_ISDIR(Stat.st_mode)) {
 		int Length = strlen(FileName);
-		char *Path = RGC_malloc_atomic(Length + 2);
+		char *Path = GC_malloc_atomic(Length + 2);
 		strcpy(Path, FileName);
 		Path[Length] = '/';
 		Path[Length + 1] = 0;
