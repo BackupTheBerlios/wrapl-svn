@@ -1,6 +1,3 @@
-.PHONY: Riva Rlink Lang Util Sys IO Wrapl
-.DEFAULT: Riva Rlink Lang Util Sys IO Wrapl
-
 CFLAGS += -O3 -fexpensive-optimizations -fomit-frame-pointer -w -D_GNU_SOURCE
 ASFLAGS += -Ov
 

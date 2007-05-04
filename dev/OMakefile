@@ -1,5 +1,5 @@
 .PHONY: Riva Rlink Lang Util Sys IO Wrapl clean
-.DEFAULT: Riva Rlink Lang Util Sys IO Wrapl clean
+.DEFAULT: Riva Rlink Lang Util Sys IO Wrapl
 
 vmount($(SRC_DIR), $(OBJ_DIR))
 .SUBDIRS: $(OBJ_DIR)

@@ -480,6 +480,7 @@ public.RivaProgram(name, files) =
    clean:
        $(rm -f $(OFILES))
        $(rm -f $(NAME))
+       $(rm -f $(LIST))
 
    return $(NAME)
 #

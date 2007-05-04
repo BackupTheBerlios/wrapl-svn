@@ -12,10 +12,10 @@ static int symbol_import(void *Ignore, const char *Name, int *IsRef, void **Data
 };
 
 static int symbol_import0(void *Ignore, const char *Name, int *IsRef, void **Data) {
-	module_t *StdLangSymbol = module_load(0, "Lang/Symbol");
+	module_t *LangSymbol = module_load(0, "Lang/Symbol");
 	int IsRef0;
-	module_import(StdLangSymbol, "_new_string", &IsRef0, (void **)&make_symbol);
-	module_import(StdLangSymbol, "_add_methods", &IsRef0, (void **)&add_methods);
+	module_import(LangSymbol, "_new_string", &IsRef0, (void **)&make_symbol);
+	module_import(LangSymbol, "_add_methods", &IsRef0, (void **)&add_methods);
 	module_setup(Symbol, 0, symbol_import);
 	return symbol_import(0, Name, IsRef, Data);
 };

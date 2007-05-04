@@ -20,6 +20,7 @@
 #include "thread.h"
 #include "riva.h"
 #include "native.h"
+#include "directory.h"
 
 static void path_init(void) {
 	char Cwd[256];
@@ -92,6 +93,7 @@ int main(int Argc, char **Argv) {
 	memory_init();
 	log_init();
 	thread_init();
+	directory_init();
 	native_init();
 	riva_init();
 	symbol_init();
