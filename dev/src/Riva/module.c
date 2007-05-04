@@ -250,16 +250,14 @@ module_t *module_load(const char *Path, const char *Name) {
 	};
 	Module = stringtable_get(Modules, Name);
 	if (Module) return Module;
-	for (loader_node *Loader = Loaders; Loader; Loader = Loader->Next) {
-		Module = module_try_load("", Name, Loader);
-		if (Module) return Module;
-	};
 	for (path_node *Node = Library; Node; Node = Node->Next) {
 		stpcpy(stpcpy(FullPath, Node->Dir), Name);
 		Module = stringtable_get(Modules, FullPath);
 		if (Module) return Module;
 	};
 	for (loader_node *Loader = Loaders; Loader; Loader = Loader->Next) {
+		Module = module_try_load("", Name, Loader);
+		if (Module) return Module;
 		for (path_node *Node = Library; Node; Node = Node->Next) {
 			Module = module_try_load(Node->Dir, Name, Loader);
 			if (Module) return Module;
