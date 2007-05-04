@@ -147,7 +147,7 @@ foreach(CXX_EXT, $(CXX_EXTS))
 
     export
 
-%$(EXT_OBJ): %$(EXT_ASM)
+%$(EXT_OBJ): %.asm
     $(AS) $(ASFLAGS) $(PREFIXED_INCLUDES) $(ASOUT)$@ $<
 
 %.c: %.y

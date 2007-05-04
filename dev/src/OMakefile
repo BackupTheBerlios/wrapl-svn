@@ -11,7 +11,7 @@ if $(equal $(OSTYPE), Win32)
 	LDFLAGS += -LC:\Apps\Mingw\lib -LC:\Apps\Mingw\local\lib
 	export
 
-if $(equal $(OSTYPE), Linux)
+if $(equal $(OSTYPE), Unix)
 	CFLAGS += -DLINUX
 	ASFLAGS += -DLINUX -felf
 	export

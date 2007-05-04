@@ -7,7 +7,14 @@ FILES[] =
 	rlink
 	stringtable
 
-LDFLAGS += -lz -llua -lbfd -liberty -s
+if $(equal $(OSTYPE), Windows)
+	LDFLAGS += -lz -llua -lbfd -liberty -s
+	export
+
+if $(equal $(OSTYPE), Unix)
+	LDFLAGS += -lz -llua5.1 -lbfd -s
+	export
+
 CProgram($(BASENAME), $(FILES))
 
 Rlink: $(PROGRAM)

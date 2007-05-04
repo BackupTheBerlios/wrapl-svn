@@ -23,7 +23,7 @@ if $(equal $(OSTYPE), Win32)
 LocalCGeneratedFiles(assembler-internal.c keywords.c)
 	
 assembler-internal.c: $(file assembler-internal.dasc)
-	$(DEV_BIN)lua $(DEV_BIN)dynasm.lua $(file assembler-internal.dasc) > assembler-internal.c
+	lua $(DEV_BIN)dynasm.lua $(file assembler-internal.dasc) > assembler-internal.c
 
 keywords.c: $(file keywords.lst)
 	gperf -S 3 -L C++ -C -t -K Name -Z keyword -H hash -N lookup $(file keywords.lst) > keywords.c
