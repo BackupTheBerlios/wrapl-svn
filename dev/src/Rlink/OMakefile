@@ -7,7 +7,7 @@ FILES[] =
 	rlink
 	stringtable
 
-if $(equal $(OSTYPE), Windows)
+if $(equal $(OSTYPE), Win32)
 	LDFLAGS += -lz -llua -lbfd -liberty -s
 	export
 
