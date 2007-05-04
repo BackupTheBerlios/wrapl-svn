@@ -6,7 +6,7 @@
 #include <zlib.h>
 #include <sys/stat.h>
 
-#ifdef __linux__
+#ifdef LINUX
 #include <lua5.1/lua.h>
 #include <lua5.1/lauxlib.h>
 #else
@@ -834,6 +834,7 @@ static void add_file(const char *FileName) {
 		};
 	};
 	printf("%s: file not found.\n", FileName);
+	exit(1);
 };
 
 
