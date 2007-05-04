@@ -203,6 +203,72 @@ module_t *module_run(const char *Name, const char *Path) {
 	};
 };
 
+static module_t *module_try_load(const char *Path, const char *Name, loader_node *Loader) {
+	char FullPath[256];
+	char *ExtPtr = stpcpy(stpcpy(FullPath, Path), Name);
+	stpcpy(ExtPtr, Loader->Extension);
+	struct stat Stat;
+	if (stat(FullPath, &Stat) == 0) {
+		int Length = ExtPtr - FullPath;
+		char *Key = GC_malloc_atomic(Length + 1);
+		memcpy(Key, FullPath, Length);
+		Key[Length] = 0;
+		int Level = ModuleLevel++;
+		for (int I = 0; I < Level; ++I) log_writef("|   ");
+		log_writef("Loading: %s\n", FullPath);
+		module_t *Module = new(module_t);
+		Module->Name = Name;
+		Module->Import = default_import;
+		stringtable_put(Modules, Key, Module);
+		if (Loader->_load(Module, FullPath) == 0) {
+			log_errorf("Error: error loading %s\n", FullPath);
+			return 0;
+		};
+		for (int I = 0; I < Level; ++I) log_writef("|   ");
+		log_writef("Loaded: %s\n", FullPath);
+		ModuleLevel--;
+		return Module;
+	} else {
+		return 0;
+	};
+};
+
+module_t *module_load(const char *Path, const char *Name) {
+	FIXUP_PATH(Name);
+	FIXUP_PATH(Path);
+	module_t *Module;
+	char FullPath[256];
+	if (Path) {
+		stpcpy(stpcpy(FullPath, Path), Name);
+		Module = stringtable_get(Modules, FullPath);
+		if (Module) return Module;
+		for (loader_node *Loader = Loaders; Loader; Loader = Loader->Next) {
+			Module = module_try_load(Path, Name, Loader);
+			if (Module) return Module;
+		};
+		return 0;
+	};
+	Module = stringtable_get(Modules, Name);
+	if (Module) return Module;
+	for (loader_node *Loader = Loaders; Loader; Loader = Loader->Next) {
+		Module = module_try_load("", Name, Loader);
+		if (Module) return Module;
+	};
+	for (path_node *Node = Library; Node; Node = Node->Next) {
+		stpcpy(stpcpy(FullPath, Node->Dir), Name);
+		Module = stringtable_get(Modules, FullPath);
+		if (Module) return Module;
+	};
+	for (loader_node *Loader = Loaders; Loader; Loader = Loader->Next) {
+		for (path_node *Node = Library; Node; Node = Node->Next) {
+			Module = module_try_load(Node->Dir, Name, Loader);
+			if (Module) return Module;
+		};
+	};
+	return 0;
+};
+
+/*
 module_t *module_load(const char *Path, const char *Name) {
     FIXUP_PATH(Name);
     FIXUP_PATH(Path);
@@ -224,6 +290,7 @@ module_t *module_load(const char *Path, const char *Name) {
         return 0;
 	};
 };
+*/
 
 int module_import(module_t *Module, const char *Symbol, int *IsRef, void **Data) {
 	export_t *Export = stringtable_get(Module->Symbols, Symbol);
