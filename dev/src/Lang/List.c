@@ -67,6 +67,34 @@ Lang$Object_t *_new(long Count, ...) {
 	return List;
 };
 
+Lang$Object_t *_newv(long Count, Lang$Object_t **Values) {
+	_list *List = new(_list);
+	List->Type = T;
+	if (Count > 0) {
+		_node *Node = new(_node);
+		Node->Value = Values[0];
+		Node->Prev = 0;
+		List->Head = Node;
+		List->Cache = Node;
+		List->Index = 1;
+		for (int I = 1; I < Count; ++I) {
+			_node *Prev = Node;
+			Node = new(_node);
+			(Node->Prev = Prev)->Next = Node;
+			Node->Value = Values[I];
+		};
+		List->Tail = Node;
+		Node->Next = 0;
+		List->Length = Count;
+	} else {
+		List->Head = List->Tail = 0;
+		List->Length = 0;
+	};
+	List->Lower = List->Upper = 0;
+	List->Access = 4;
+	return List;
+};
+
 GLOBAL_FUNCTION(Make, 0) {
 	_list *List = new(_list);
 	List->Type = T;

@@ -1,0 +1,37 @@
+BASENAME = $(LIB_DIR)Lang$(DIRSEP)
+
+CFLAGS += -std=gnu99
+LDFLAGS += Lang.rlib Riva.rlib libgmp.rlib
+if $(equal $(OSTYPE), Win32)
+	LDFLAGS += kernel32.rlib
+	export
+
+RivaProgram($(BASENAME)Address, Address)
+RivaProgram($(BASENAME)Array, Array)
+RivaProgram($(BASENAME)Coexpr, Coexpr)
+RivaProgram($(BASENAME)Function, Function)
+RivaProgram($(BASENAME)Integer, Integer)
+RivaProgram($(BASENAME)Methods, Methods Methods2)
+RivaProgram($(BASENAME)List, List)
+RivaProgram($(BASENAME)Object, Object)
+RivaProgram($(BASENAME)Real, Real)
+RivaProgram($(BASENAME)String, String String2)
+RivaProgram($(BASENAME)Symbol, Symbol)
+RivaProgram($(BASENAME)Table, Table)
+RivaProgram($(BASENAME)Type, Type)
+
+
+Lang:\
+	$(BASENAME)Address.riva\
+	$(BASENAME)Array.riva\
+	$(BASENAME)Coexpr.riva\
+	$(BASENAME)Function.riva\
+	$(BASENAME)Integer.riva\
+	$(BASENAME)List.riva\
+	$(BASENAME)Methods.riva\
+	$(BASENAME)Object.riva\
+	$(BASENAME)Real.riva\
+	$(BASENAME)String.riva\
+	$(BASENAME)Symbol.riva\
+	$(BASENAME)Table.riva\
+	$(BASENAME)Type.riva

@@ -1,0 +1,13 @@
+BASENAME = $(DEV_BIN)rlink
+PROGRAM = $(BASENAME)$(EXE)
+
+CFLAGS += -std=gnu99
+
+FILES[] =
+	rlink
+	stringtable
+
+LDFLAGS += -lz -llua -lbfd -liberty -s
+CProgram($(BASENAME), $(FILES))
+
+Rlink: $(PROGRAM)

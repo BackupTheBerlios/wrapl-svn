@@ -105,6 +105,7 @@ struct frame_t {
 	uint32_t NoOfUpScopes;
 	uint32_t NoOfTraps;
 	uint32_t NoOfParams;
+	bool Variadic;
 	upscope_t *UpScopes;
 };
 

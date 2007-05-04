@@ -33,26 +33,19 @@ struct node
 	.Value : resd 1
 endstruct
 
-%ifdef LINUX
-	%define _stringtable_init stringtable_init
-	%define _stringtable_put stringtable_put
-	%define _stringtable_get stringtable_get
-	%define _calloc calloc
-%endif
-
-global _stringtable_init
-global _stringtable_put
-global _stringtable_get
-extern _calloc
+global stringtable_init
+global stringtable_put
+global stringtable_get
+extern calloc
 
 section .text
-_stringtable_init:;(stringtable Table) -> ()
+stringtable_init:;(stringtable Table) -> ()
 	mov eax, [esp + 4]
 	mov [table(eax).Size], dword 0
 	mov [table(eax).Space], dword 0
 	ret
 
-_stringtable_put:;(stringtable Table, const char *Key, void *Value) -> ()
+stringtable_put:;(stringtable Table, const char *Key, void *Value) -> ()
 	push ebx
 	push edi
 	push esi
@@ -118,7 +111,7 @@ _stringtable_put:;(stringtable Table, const char *Key, void *Value) -> ()
 	push ecx
 	push byte 1
 	push byte 64
-	call _calloc
+	call calloc
 	add esp, byte 8
 	pop ecx
 	pop ebx
@@ -217,7 +210,7 @@ _stringtable_put:;(stringtable Table, const char *Key, void *Value) -> ()
 	shl edx, 4
 	push byte 1
 	push edx
-	call _calloc
+	call calloc
 	add esp, byte 8
 	pop edx
 	mov [table(esi).Size], edx
@@ -341,7 +334,7 @@ _stringtable_put:;(stringtable Table, const char *Key, void *Value) -> ()
 .no_recurse_2:
 	ret 16
 
-_stringtable_get:;(stringtable Table, const char *Key) -> (void *)
+stringtable_get:;(stringtable Table, const char *Key) -> (void *)
 	push ebx
 	push edi
 	push esi

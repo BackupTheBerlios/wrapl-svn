@@ -1,0 +1,17 @@
+BASENAME = $(LIB_DIR)Sys$(DIRSEP)
+
+CFLAGS += -std=gnu99
+LDFLAGS += Lang.rlib Riva.rlib
+if $(equal $(OSTYPE), Win32)
+	LDFLAGS += kernel32.rlib
+	export
+
+RivaProgram($(BASENAME)Thread, Thread)
+RivaProgram($(BASENAME)Module, Module)
+RivaProgram($(BASENAME)Environ, Environ)
+
+
+Sys:\
+	$(BASENAME)Thread.riva\
+	$(BASENAME)Module.riva\
+	$(BASENAME)Environ.riva

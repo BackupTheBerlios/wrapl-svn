@@ -846,6 +846,7 @@ int main(int Argc, char **Argv) {
 		stringtable_put(SupportedFiles, ".rdef", (void *)add_definition_file);
 		stringtable_put(SupportedFiles, ".a", (void *)add_object_file);
 		stringtable_put(SupportedFiles, ".o", (void *)add_object_file);
+		stringtable_put(SupportedFiles, ".obj", (void *)add_object_file);
 		stringtable_put(SupportedFiles, ".mo", (void *)add_object_file);
 		stringtable_put(SupportedFiles, ".io", (void *)add_object_file);
 		char *OutFile = 0;

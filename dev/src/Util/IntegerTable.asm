@@ -1,10 +1,10 @@
-%include "wrapl.inc"
+%include "Lang.inc"
 
 extern system$_alloc
-extern std.lang.type$t
+extern Lang.Type$t
 extern std.lang.integer$small_t
 
-c_data t
+c_data T
 	dd std.lang.type$t
 	dd .types
 	dd 0
@@ -30,7 +30,7 @@ c_func _init
 	mov [value(eax).Type], dword t
 	ret
 
-func new
+unchecked_func new
 	push byte sizeof(table)
 	call system$_alloc
 	add esp, byte 4
@@ -40,7 +40,7 @@ func new
 	xor eax, eax
 	ret
 
-func _insert_table_value_value
+method "insert", TYP, T, TYP, Lang$Integer$SmallT, ANY
 	push dword [argument(edi + 16).Val]
 	mov eax, [argument(edi + 8).Val]
 	push dword [small_int(eax).Value]
@@ -52,7 +52,7 @@ func _insert_table_value_value
 	xor eax, eax
 	ret
 
-func _index_table_value
+method "[]", TYP, T, TYP, Lang$Integer$SmallT
 	mov ebx, [argument(edi + 8).Val]
 	mov ebx, [small_int(ebx).Value]
 	mov ecx, ebx
@@ -83,19 +83,6 @@ func _index_table_value
 	xor eax, eax
 	inc eax
 	ret
-
-symbol ?insert, "insert"
-symbol ?INDEX, "[]"
-
-c_data __methods
-	dd 3, _insert_table_value_value, ?insert
-	dd TYP, t
-	dd TYP, std.lang.integer$small_t
-	dd SKP, 0
-	dd 2, _index_table_value, ?INDEX
-	dd TYP, t
-	dd TYP, std.lang.integer$small_t
-	dd END
 
 c_func _put
 	push ebx

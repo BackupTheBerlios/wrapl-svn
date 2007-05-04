@@ -1,0 +1,28 @@
+BASENAME = $(LIB_DIR)IO$(DIRSEP)
+
+CFLAGS += -std=gnu99
+LDFLAGS += Lang.rlib Riva.rlib Util.rlib
+
+RivaProgram($(BASENAME)Stream, Stream)
+LDFLAGS += IO$(DIRSEP)Stream.rlib
+if $(equal $(OSTYPE), Win32)
+	LDFLAGS += kernel32.rlib IO$(DIRSEP)Windows.rlib
+	PLATFORM_STREAM = $(BASENAME)Windows.riva
+	RivaProgram($(BASENAME)Windows, Windows)
+	export
+else
+	LDFLAGS += IO$(DIRSEP)Posix.rlib
+	PLATFORM_STREAM = $(BASENAME)Posix.riva
+	RivaProgram($(BASENAME)Posix, Posix)
+	export
+
+RivaProgram($(BASENAME)File, File)
+RivaProgram($(BASENAME)Terminal, Terminal)
+
+IO:\
+	$(BASENAME)File.riva\
+	$(BASENAME)Stream.riva\
+	$(BASENAME)Terminal.riva\
+	$(PLATFORM_STREAM)
+
+.DEFAULT: IO

@@ -23,6 +23,7 @@ extern Lang$Object_t Lang$List$New[];
 extern Lang$Object_t Lang$List$Make[];
 
 RIVA_CFUN(Lang$Object_t *, new, long, ...);
+RIVA_CFUN(Lang$Object_t *, newv, long, Lang$Object_t **);
 
 #undef RIVA_MODULE
 

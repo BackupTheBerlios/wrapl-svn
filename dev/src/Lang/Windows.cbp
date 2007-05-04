@@ -92,6 +92,9 @@
 				<Option external_deps="List.rdef;" />
 				<Option type="0" />
 				<Option compiler="gnu_gcc_compiler_riva" />
+				<Compiler>
+					<Add option="--save-temps" />
+				</Compiler>
 				<Linker>
 					<Add library="List.rdef" />
 				</Linker>
@@ -189,6 +192,12 @@
 			<Option target="List" />
 		</Unit>
 		<Unit filename="List.rdef">
+			<Option target="List" />
+		</Unit>
+		<Unit filename="List2.asm">
+			<Option compile="1" />
+			<Option link="1" />
+			<Option compiler="gnu_gcc_compiler_riva" use="1" buildCommand="nasm -Ov --prefix _ -I$ASMINC -fwin32 -DWINDOWS -o $object $file" />
 			<Option target="List" />
 		</Unit>
 		<Unit filename="Methods.asm">
