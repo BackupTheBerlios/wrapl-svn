@@ -18,3 +18,5 @@ if $(equal $(OSTYPE), Unix)
 CProgram($(BASENAME), $(FILES))
 
 Rlink: $(PROGRAM)
+
+.DEFAULT: Rlink

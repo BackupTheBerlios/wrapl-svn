@@ -21,7 +21,8 @@ if $(equal $(OSTYPE), Win32)
 	export
 
 LocalCGeneratedFiles(assembler-internal.c keywords.c)
-	
+
+setenv(LUA_PATH, $(DEV_BIN)?.lua)
 assembler-internal.c: $(file assembler-internal.dasc)
 	lua $(DEV_BIN)dynasm.lua $(file assembler-internal.dasc) > assembler-internal.c
 
@@ -34,3 +35,5 @@ Wrapl: $(LIB_DIR)Wrapl.riva
 
 clean:
 	$(rm -f assembler-internal.c keywords.c)
+
+.DEFAULT: Wrapl

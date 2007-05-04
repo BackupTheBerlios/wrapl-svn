@@ -23,3 +23,5 @@ LDFLAGS += -lz -lgc -lconfuse -s
 CProgram($(BASENAME), $(FILES))
 
 Riva: $(PROGRAM)
+
+.DEFAULT: Riva
