@@ -113,14 +113,20 @@ static expr_t *accept_table_list(scanner_t *Scanner) {
 	expr_t *List = parse_expr(Scanner);
 	if (List == 0) return 0;
 	expr_t *Tail = List;
-	Scanner->accept(tkIS);
-	Tail->Next = accept_expr(Scanner);
+	if (Scanner->parse(tkIS)) {
+		Tail->Next = accept_expr(Scanner);
+	} else {
+		Tail->Next = new const_expr_t(Scanner->Token.LineNo, Lang$Object$Nil);
+	};
 	Tail = Tail->Next;
 	while (Scanner->parse(tkCOMMA)) {
 		Tail->Next = accept_expr(Scanner);
 		Tail = Tail->Next;
-		Scanner->accept(tkIS);
-		Tail->Next = accept_expr(Scanner);
+		if (Scanner->parse(tkIS)) {
+			Tail->Next = accept_expr(Scanner);
+		} else {
+			Tail->Next = new const_expr_t(Scanner->Token.LineNo, Lang$Object$Nil);
+		};
 		Tail = Tail->Next;
 	};
 	return List;

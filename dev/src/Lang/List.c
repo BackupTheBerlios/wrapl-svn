@@ -15,7 +15,6 @@ GLOBAL_FUNCTION(New, 0) {
 		_node *Node = new(_node);
 		if (Count > 1) Value = Args[1].Val;
 		Node->Value = Value;
-		Node->Prev = 0;
 		List->Head = Node;
 		List->Cache = Node;
 		List->Index = 1;
@@ -26,10 +25,8 @@ GLOBAL_FUNCTION(New, 0) {
 			Node->Value = Value;
 		};
 		List->Tail = Node;
-		Node->Next = 0;
 		List->Length = Size;
 	} else {
-		List->Head = List->Tail = 0;
 		List->Length = 0;
 	};
 	List->Lower = List->Upper = 0;
@@ -45,7 +42,6 @@ Lang$Object_t *_new(long Count, ...) {
 	if (Count > 0) {
 		_node *Node = new(_node);
 		Node->Value = Values[0];
-		Node->Prev = 0;
 		List->Head = Node;
 		List->Cache = Node;
 		List->Index = 1;
@@ -56,10 +52,8 @@ Lang$Object_t *_new(long Count, ...) {
 			Node->Value = Values[I];
 		};
 		List->Tail = Node;
-		Node->Next = 0;
 		List->Length = Count;
 	} else {
-		List->Head = List->Tail = 0;
 		List->Length = 0;
 	};
 	List->Lower = List->Upper = 0;
@@ -73,7 +67,6 @@ Lang$Object_t *_newv(long Count, Lang$Object_t **Values) {
 	if (Count > 0) {
 		_node *Node = new(_node);
 		Node->Value = Values[0];
-		Node->Prev = 0;
 		List->Head = Node;
 		List->Cache = Node;
 		List->Index = 1;
@@ -84,10 +77,8 @@ Lang$Object_t *_newv(long Count, Lang$Object_t **Values) {
 			Node->Value = Values[I];
 		};
 		List->Tail = Node;
-		Node->Next = 0;
 		List->Length = Count;
 	} else {
-		List->Head = List->Tail = 0;
 		List->Length = 0;
 	};
 	List->Lower = List->Upper = 0;
@@ -101,7 +92,6 @@ GLOBAL_FUNCTION(Make, 0) {
 	if (Count > 0) {
 		_node *Node = new(_node);
 		Node->Value = Args[0].Val;
-		Node->Prev = 0;
 		List->Head = Node;
 		List->Cache = Node;
 		List->Index = 1;
@@ -112,12 +102,36 @@ GLOBAL_FUNCTION(Make, 0) {
 			Node->Value = Args[I].Val;
 		};
 		List->Tail = Node;
-		Node->Next = 0;
 		List->Length = Count;
 	} else {
-		List->Head = List->Tail = 0;
 		List->Length = 0;
 	};
+	List->Lower = List->Upper = 0;
+	List->Access = 4;
+	Result->Val = List;
+	return SUCCESS;
+};
+
+METHOD("copy", TYP, T) {
+	const _list *List0 = (_list *)Args[0].Val;
+	_list *List = new(_list);
+	List->Type = T;
+	if (List0->Head) {
+		_node *Temp = List0->Head;
+		_node *Node = new(_node);
+		List->Head = Node;
+		Node->Value = Temp->Value;
+		while (Temp = Temp->Next) {
+			_node *Prev = Node;
+			Node = new(_node);
+			(Node->Prev = Prev)->Next = Node;
+			Node->Value = Temp->Value;
+		};
+		List->Cache = Node;
+		List->Index = List0->Length;
+		List->Tail = Node;
+	};
+	List->Length = List0->Length;
 	List->Lower = List->Upper = 0;
 	List->Access = 4;
 	Result->Val = List;
@@ -176,7 +190,6 @@ METHOD("push", TYP, T, SKP) {
 	_node *Node = new(_node);
 	Node->Value = Count < 2 ? Lang$Object$Nil : Args[1].Val;
 	Node->Next = List->Head;
-	Node->Prev = 0;
 	if (List->Head) List->Head->Prev = Node; else List->Tail = Node;
 	List->Head = Node;
 	++List->Length;
@@ -192,7 +205,6 @@ METHOD("put", TYP, T, SKP) {
 	_node *Node = new(_node);
 	Node->Value = Count < 2 ? Lang$Object$Nil : Args[1].Val;
 	Node->Prev = List->Tail;
-	Node->Next = 0;
 	if (List->Tail) List->Tail->Next = Node; else List->Head = Node;
 	List->Tail = Node;
 	++List->Length;
@@ -356,7 +368,6 @@ METHOD("[]", TYP, T, TYP, Lang$Integer$SmallT, TYP, Lang$Integer$SmallT) {
 	if (Index0 > Index1) {
 		_list *List2 = new(_list);
 		List2->Type = T;
-		List2->Head = List2->Tail = 0;
 		List2->Length = 0;
 		List2->Lower = List2->Upper = 0;
 		List2->Access = 4;
@@ -504,10 +515,9 @@ METHOD("insert", TYP, T, TYP, Lang$Integer$SmallT, SKP) {
 	if (Index < 0) Index += Length + 1;
 	if ((Index < 1) || (Length + 1 < Index)) return FAILURE;
 	if (Index == 1) {
-		_node *Node = new(_list);
+		_node *Node = new(_node);
 		Node->Value = Value;
 		Node->Next = List->Head;
-		Node->Prev = 0;
 		if (List->Head) List->Head->Prev = Node; else List->Tail = Node;
 		List->Head = Node;
 		++List->Length;
@@ -518,10 +528,9 @@ METHOD("insert", TYP, T, TYP, Lang$Integer$SmallT, SKP) {
 		return SUCCESS;
 	};
 	if (Index == Length + 1) {
-		_node *Node = new(_list);
+		_node *Node = new(_node);
 		Node->Value = Value;
 		Node->Prev = List->Tail;
-		Node->Next = 0;
 		if (List->Tail) List->Tail->Next = Node; else List->Head = Node;
 		List->Tail = Node;
 		++List->Length;
@@ -903,7 +912,7 @@ finished:
 	return SUCCESS;
 };
 
-GLOBAL_FUNCTION(collect, 1) {
+GLOBAL_FUNCTION(Collect, 1) {
 	Lang$Function_result Result0;
 	Lang$Object_t *Function = Args[0].Val;
 	_list *List = new(_list);
@@ -912,18 +921,15 @@ GLOBAL_FUNCTION(collect, 1) {
 	if (Return == SUCCESS) {
 		_node *Node = new(_node);
 		Node->Value = Result0.Val;
-		Node->Prev = 0;
 		List->Head = Node;
 		List->Cache = Node;
 		List->Index = 1;
 		List->Tail = Node;
-		Node->Next = 0;
 		List->Length = 1;
 	} else if (Return == SUSPEND) {
 		_node *Node = new(_node);
 		long NoOfElements = 1;
 		Node->Value = Result0.Val;
-		Node->Prev = 0;
 		List->Head = Node;
 		List->Cache = Node;
 		List->Index = 1;
@@ -946,13 +952,11 @@ GLOBAL_FUNCTION(collect, 1) {
 			return MESSAGE;
 		};
 		List->Tail = Node;
-		Node->Next = 0;
 		List->Length = NoOfElements;
 	} else if (Return == MESSAGE) {
 		*Result = Result0;
 		return MESSAGE;
 	} else {
-		List->Head = List->Tail = 0;
 		List->Length = 0;
 	};
 	List->Lower = List->Upper = 0;

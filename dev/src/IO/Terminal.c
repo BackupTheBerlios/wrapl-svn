@@ -5,7 +5,7 @@
 TYPE(T, NATIVE($T), IO$Stream$T);
 
 TYPE(ReaderT, T, NATIVE($TextReaderT), NATIVE($ReaderT), NATIVE($T), IO$Stream$TextReaderT, IO$Stream$ReaderT, IO$Stream$T);
-TYPE(WriterT, T, NATIVE($TextWriterT), NATIVE($WriterT), NATIVE($T), IO$Stream$TextReaderT, IO$Stream$WriterT,
+TYPE(WriterT, T, NATIVE($TextWriterT), NATIVE($WriterT), NATIVE($T), IO$Stream$TextWriterT, IO$Stream$WriterT,
 IO$Stream$T);
 
 #ifdef WINDOWS

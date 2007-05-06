@@ -136,6 +136,31 @@ void label_t::resume() {
 	append(Inst);
 };
 
+int load_inst_t::noof_consts() {
+	switch (Operand->Type) {
+	case operand_t::CNST: return 1;
+	case operand_t::GVAR: return 1;
+	case operand_t::CLSR: return 1;
+	default: return 0;
+	};
+};
+
+
+void **load_inst_t::get_consts(void **Ptr) {
+	switch (Operand->Type) {
+	case operand_t::CNST:
+		Ptr[0] = Operand->Value;
+		return Ptr + 1;
+	case operand_t::GVAR:
+		Ptr[0] = Operand->Address;
+		return Ptr + 1;
+	case operand_t::CLSR:
+		Ptr[0] = Operand->Entry;
+		return Ptr + 1;
+	default: return Ptr;
+	};
+};
+
 void load_inst_t::list() {
 	static const char *Types[] = {
 		"_none", "_val", "_ref", "_both", "_arg"
@@ -155,6 +180,8 @@ struct store_con_inst_t : load_inst_t {
 	void list() {
 		printf("\tstore_con %s <- %x\n", listop(Operand), Value);
 	};
+	int noof_consts() {return 1;};
+	void **get_consts(void **Ptr) {Ptr[0] = Value; return Ptr + 1;};
 	void encode(assembler_t *Assembler);
 };
 
@@ -239,7 +266,34 @@ struct store_arg_inst_t : inst_t {
 	void list() {
 		printf("\tstore_arg %d <- %s\n", Index, listop(Operand));
 	};
+	int noof_consts();
+	void **get_consts(void **);
 	void encode(assembler_t *Assembler);
+};
+
+int store_arg_inst_t::noof_consts() {
+	switch (Operand->Type) {
+	case operand_t::CNST: return 1;
+	case operand_t::GVAR: return 1;
+	case operand_t::CLSR: return 1;
+	default: return 0;
+	};
+};
+
+
+void **store_arg_inst_t::get_consts(void **Ptr) {
+	switch (Operand->Type) {
+	case operand_t::CNST:
+		Ptr[0] = Operand->Value;
+		return Ptr + 1;
+	case operand_t::GVAR:
+		Ptr[0] = Operand->Address;
+		return Ptr + 1;
+	case operand_t::CLSR:
+		Ptr[0] = Operand->Entry;
+		return Ptr + 1;
+	default: return Ptr;
+	};
 };
 
 void label_t::store_arg(uint32_t Index, operand_t *Operand) {
@@ -444,6 +498,11 @@ static void dasm_m_free(Dst_DECL, void *p, size_t sz) {
 
 extern Lang$Type_t WraplT[];
 
+typedef struct code_header_t {
+	void **Consts;
+	unsigned long Size;
+} code_header_t;
+
 #include "dasm_proto.h"
 #include "dasm_x86.h"
 #include "assembler-internal.c"
@@ -453,6 +512,12 @@ operand_t *label_t::assemble(const frame_t *Frame, operand_t *Operand) {
 	memset(&Assembly, 0, sizeof(Assembly));
 	use_label(&Assembly, this, true);
 	for (inst_t *Inst = Assembly.Next; Inst; Inst = Inst->Next) Inst->add_sources();
+	
+	int NoOfConsts = 0;
+	for (inst_t *Inst = Assembly.Next; Inst; Inst = Inst->Next) NoOfConsts += Inst->noof_consts();
+	void **Consts = new void *[NoOfConsts];
+	void **ConstPtr = Consts;
+	for (inst_t *Inst = Assembly.Next; Inst; Inst = Inst->Next) ConstPtr = Inst->get_consts(ConstPtr);
 
 	assembler_t *Assembler = new assembler_t;
 	Assembler->UpScopes = sizeof(bstate_t);
@@ -489,7 +554,10 @@ operand_t *label_t::assemble(const frame_t *Frame, operand_t *Operand) {
 	for (inst_t *Inst = Assembly.Next; Inst; Inst = Inst->Next) Inst->encode(Assembler);
 	uint32_t Size;
 	dasm_link(Dst, &Size);
-	uint8_t *Code = new uint8_t[Size];
+	code_header_t *Header = (code_header_t *)Riva$Memory$alloc(Size + sizeof(code_header_t));
+	uint8_t *Code = (uint8_t *)(Header + 1);
+	Header->Consts = Consts;
+	Header->Size = Size;
 	dasm_encode(Assembler, Code);
 
 /*

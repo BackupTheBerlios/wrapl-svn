@@ -9,11 +9,13 @@ if $(equal $(OSTYPE), Win32)
 RivaProgram($(BASENAME)Thread, Thread)
 RivaProgram($(BASENAME)Module, Module)
 RivaProgram($(BASENAME)Environ, Environ)
+RivaProgram($(BASENAME)Program, Program)
 
 
 Sys:\
 	$(BASENAME)Thread.riva\
 	$(BASENAME)Module.riva\
-	$(BASENAME)Environ.riva
+	$(BASENAME)Environ.riva\
+	$(BASENAME)Program.riva
 
 .DEFAULT: Sys

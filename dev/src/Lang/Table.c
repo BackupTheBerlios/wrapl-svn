@@ -382,6 +382,56 @@ GLOBAL_FUNCTION(Make, 0) {
 	return SUCCESS;
 };
 
+GLOBAL_FUNCTION(Collect, 1) {
+	Lang$Function_result Result0;
+	Lang$Object_t *Function = Args[0].Val;
+	struct avl_table *Table = avl_create($COMP, $HASH);
+	long Return = Lang$Function$invoke(Function, Count - 1, &Result0, Args + 1);
+	if (Return == SUCCESS) {
+		Lang$Function_result Result1;
+		Lang$Object_t **Slot;
+		Lang$Function$call($HASH, 1, &Result1, Result0.Val, 0);
+		Slot = avl_probe(Table, Result0.Val, ((Lang$Integer_smallt *)Result1.Val)->Value);
+		*Slot = Lang$Object$Nil;
+	} else if (Return == SUSPEND) {
+		Lang$Function_result Result1;
+		Lang$Object_t **Slot;
+		Lang$Function$call($HASH, 1, &Result1, Result0.Val, 0);
+		Slot = avl_probe(Table, Result0.Val, ((Lang$Integer_smallt *)Result1.Val)->Value);
+		*Slot = Lang$Object$Nil;
+		Return = Lang$Function$resume(&Result0);
+		while (Return == SUSPEND) {
+			Lang$Function$call($HASH, 1, &Result1, Result0.Val, 0);
+			Slot = avl_probe(Table, Result0.Val, ((Lang$Integer_smallt *)Result1.Val)->Value);
+			*Slot = Lang$Object$Nil;
+			Return = Lang$Function$resume(&Result0);
+		};
+		if (Return == SUCCESS) {
+			Lang$Function$call($HASH, 1, &Result1, Result0.Val, 0);
+			Slot = avl_probe(Table, Result0.Val, ((Lang$Integer_smallt *)Result1.Val)->Value);
+			*Slot = Lang$Object$Nil;
+		} else if (Return == MESSAGE) {
+			*Result = Result0;
+			return MESSAGE;
+		};
+	} else if (Return == MESSAGE) {
+		*Result = Result0;
+		return MESSAGE;
+	};
+	Result->Val = Table;
+	return SUCCESS;
+};
+
+METHOD("copy", TYP, T) {
+	struct avl_table *Table = avl_create($COMP, $HASH);
+	struct avl_traverser Traverser;
+	for (struct avl_node *Node = avl_t_first(&Traverser, Args[0].Val); Node; Node = avl_t_next(&Traverser)) {
+		avl_probe(Table, Node->avl_key, Node->avl_hash)[0] = Node->avl_value;
+	};
+	Result->Val = Table;
+	return SUCCESS;
+};
+
 METHOD("+", TYP, T, TYP, T) {
 	struct avl_table *Table = avl_create($COMP, $HASH);
 	struct avl_traverser Traverser;

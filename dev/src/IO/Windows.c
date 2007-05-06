@@ -14,7 +14,7 @@ TYPE(WriterT, T, IO$Stream$WriterT, IO$Stream$T);
 TYPE(SeekerT, T, IO$Stream$SeekerT, IO$Stream$T);
 
 TYPE(TextReaderT, T, ReaderT, IO$Stream$TextReaderT, IO$Stream$ReaderT, IO$Stream$T);
-TYPE(TextWriterT, T, WriterT, IO$Stream$TextReaderT, IO$Stream$WriterT, IO$Stream$T);
+TYPE(TextWriterT, T, WriterT, IO$Stream$TextWriterT, IO$Stream$WriterT, IO$Stream$T);
 
 static IO$Stream_messaget ConvertMessage[] = {{IO$Stream$MessageT, "Conversion Error"}};
 static IO$Stream_messaget ReadMessage[] = {{IO$Stream$MessageT, "Read Error"}};

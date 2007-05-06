@@ -23,11 +23,11 @@ if $(equal $(OSTYPE), Win32)
 LocalCGeneratedFiles(assembler-internal.c keywords.c)
 
 setenv(LUA_PATH, $(DEV_BIN)?.lua)
-assembler-internal.c: $(file assembler-internal.dasc)
-	lua $(DEV_BIN)dynasm.lua $(file assembler-internal.dasc) > assembler-internal.c
+$(file assembler-internal.c): $(file assembler-internal.dasc)
+	lua $(DEV_BIN)dynasm.lua $(file assembler-internal.dasc) > $(file assembler-internal.c)
 
-keywords.c: $(file keywords.lst)
-	gperf -S 3 -L C++ -C -t -K Name -Z keyword -H hash -N lookup $(file keywords.lst) > keywords.c
+$(file keywords.c): $(file keywords.lst)
+	gperf -S 3 -L C++ -C -t -K Name -Z keyword -H hash -N lookup $(file keywords.lst) > $(file keywords.c)
 
 RivaProgram($(LIB_DIR)Wrapl, $(FILES))
 

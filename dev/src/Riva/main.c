@@ -85,6 +85,9 @@ static void read_config(void) {
 	BatchMode = cfg_getbool(Cfg, "batch");
 };
 
+static const char **Args;
+static unsigned int NoOfArgs = 0;
+
 int main(int Argc, char **Argv) {
 	GC_init();
 	//GC_disable();
@@ -119,20 +122,34 @@ int main(int Argc, char **Argv) {
 			log_enable();
 			break;
 		};
+		case '-': {
+			++I;
+			Args = Argv + I;
+			NoOfArgs = Argc - I;
+			goto finished;
+		};
 		default: {
 			printf("Error: unknown option %s\n", Argv[I]);
 			break;
 		};
 		} else {
 			Module = Argv[I];
-			break;
+			++I;
+			Args = Argv + I;
+			NoOfArgs = Argc - I;
+			goto finished;
 		};
 	};
+finished: 0;
+	module_t *System = module_alias("Riva/System");
+	module_export(System, "_Args", 0, &Args);
+	module_export(System, "_NoOfArgs", 0, &NoOfArgs);
 	read_config();
 	if (!BatchMode) {
 		if (module_load(0, Module) == 0) printf("Error: module %s not found\n", Module);
 	};
 #ifdef WINDOWS
+#undef ExitThread
     ExitThread(0);
 #else
 	pthread_exit(0);

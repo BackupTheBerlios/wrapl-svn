@@ -952,19 +952,20 @@ method "ror", SMALLINT, SMALLINT
 	xor eax, eax
 	ret
 
-extern __gmpz_ui_pow_ui
+extern __gmpz_pow_ui
 method "^", SMALLINT, SMALLINT
 	sub esp, byte 12
-	push esp
-	call __gmpz_init
-	add esp, byte 4
 	mov ebx, esp
-	mov eax, [argument(edi + 8).Val]
-	push dword [small_int(eax).Value]
 	mov eax, [argument(edi).Val]
 	push dword [small_int(eax).Value]
 	push ebx
-	call __gmpz_ui_pow_ui
+	call __gmpz_init_set_si
+	add esp, byte 8
+	mov eax, [argument(edi + 8).Val]
+	push dword [small_int(eax).Value]	
+	push ebx
+	push ebx
+	call __gmpz_pow_ui
 	add esp, byte 12
 	jmp finish_integer
 

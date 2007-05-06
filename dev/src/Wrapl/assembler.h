@@ -49,6 +49,8 @@ struct inst_t {
 	virtual void add_sources() {};
 	virtual void add_source(load_inst_t *Load) {};
 	virtual void append_links(label_t *Start) {};
+	virtual int noof_consts() {return 0;};
+	virtual void **get_consts(void **Ptr) {return Ptr;};
 	virtual void encode(assembler_t *Assembler) {};
 };
 
@@ -58,6 +60,8 @@ struct load_inst_t : inst_t {
 
 	void list();
 	void add_sources() {Next->add_source(this);};
+	int noof_consts();
+	void **get_consts(void **);
 	void encode(assembler_t *Assembler);
 
 	void load_val() {

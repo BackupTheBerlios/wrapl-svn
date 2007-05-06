@@ -474,7 +474,7 @@ public.RivaProgram(name, files) =
    private.RDEF = $(file $(basename $(name)).rdef)
    private.LIST = $(file $(basename $(name)).lst)
 
-   $(NAME): $(OFILES) $(RLINK)
+   $(NAME): $(OFILES) $(RLINK) $(RDEF)
        $(RLINK) -o$@ $(OFILES) $(LDFLAGS) $(RDEF) -?$(LIST)
    
    clean:

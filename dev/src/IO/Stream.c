@@ -32,26 +32,26 @@ METHOD("@", TYP, MessageT, VAL, Lang$String$T) {
 static IO$Stream_messaget ConvertMessage[] = {{MessageT, "Conversion Error"}};
 
 METHOD("write", TYP, TextWriterT, ANY) {
-	if (Count == 2) {
-		Lang$Function_result Result0;
-		switch (Lang$Function$call($AS, 2, &Result0, Args[1].Val, Args[1].Ref, Lang$String$T, 0)) {
-		case SUSPEND:
-		case SUCCESS:
-			return Lang$Function$call($write, 2, Result, Args[0].Val, Args[0].Ref, Result0.Val, Result0.Ref);
-		case FAILURE:
-			Result->Val = ConvertMessage;
-			return MESSAGE;
-		case MESSAGE:
-			Result->Arg = Result0.Arg;
-			return MESSAGE;
-		};
-	} else {
-		for (int I = 1; I < Count; ++I) {
-			long Status = Lang$Function$call($write, 2, Result, Args[0].Val, Args[0].Ref, Args[I].Val, Args[I].Ref);
-			if (Status >= FAILURE) return Status;
-		};
-		return SUCCESS;
+	Lang$Function_result Result0;
+	switch (Lang$Function$call($AS, 2, &Result0, Args[1].Val, Args[1].Ref, Lang$String$T, 0)) {
+	case SUSPEND:
+	case SUCCESS:
+		return Lang$Function$call($write, 2, Result, Args[0].Val, Args[0].Ref, Result0.Val, Result0.Ref);
+	case FAILURE:
+		Result->Val = ConvertMessage;
+		return MESSAGE;
+	case MESSAGE:
+		Result->Arg = Result0.Arg;
+		return MESSAGE;
 	};
+};
+
+METHOD("writes", TYP, TextWriterT) {
+	for (int I = 1; I < Count; ++I) {
+		long Status = Lang$Function$call($write, 2, Result, Args[0].Val, Args[0].Ref, Args[I].Val, Args[I].Ref);
+		if (Status >= FAILURE) return Status;
+	};
+	return SUCCESS;
 };
 
 static void stream_flush(IO$Stream_t *Stream) {

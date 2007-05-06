@@ -32,6 +32,7 @@ struct bstate_t {
 	Lang$Object_t **Ref;
 	void *Code;
 	void *Handler;
+	void *Data;
 };
 
 void encode_entry(assembler_t *Assembler) {

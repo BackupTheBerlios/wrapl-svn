@@ -9,7 +9,7 @@
 #include "missing.h"
 
 static int wrapl_load(Riva$Module_t *Module, const char *Path) {
-	char *LoadPath;
+	char *LoadPath = 0;
 	for (int I = strlen(Path) - 1; I >= 0; --I) {
 		if (Path[I] == PATHCHR) {
 			memcpy(LoadPath = (char *)Riva$Memory$alloc_atomic(I + 2), Path, I + 1);
@@ -27,6 +27,8 @@ static int wrapl_load(Riva$Module_t *Module, const char *Path) {
 		return 0;
 	};
 	module_expr_t *Expr = accept_module(Scanner, Module0);
+	IO$Stream_t_methods *Methods = (IO$Stream_t_methods *)Util$TypeTable$get(IO$Stream$T_Methods, Source->Type);
+	Methods->close(Source);
 	//Expr->print(0);
 	compiler_t *Compiler = new compiler_t();
 	if (setjmp(Compiler->Error.Handler)) {
