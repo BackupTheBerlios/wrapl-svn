@@ -603,6 +603,12 @@ METHOD("length", TYP, T) {
 	return SUCCESS;
 };
 
+METHOD("size", TYP, T) {
+	_list *List = (_list *)Args[0].Val;
+	Result->Val = Lang$Integer$new_small(List->Length);
+	return SUCCESS;
+};
+
 static Lang$Object_t *LeftBracket, *RightBracket, *CommaSpace, *LeftRightBracket, *ValueString;
 
 SYMBOL($AT, "@");
