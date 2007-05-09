@@ -1,0 +1,18 @@
+module("Lang", "Symbol")
+if WINDOWS then
+	prefix("_Lang$Symbol$")
+else
+	prefix("Lang$Symbol$")
+end
+export("T")
+export("T.invoke")
+export("NoMethodMessageT")
+export("_new")
+export("_new_string")
+export("_add_methods")
+export("_typetable_put")
+export("_valuetable_put")
+export("Is")
+export("In")
+export("New")
+export("Set")

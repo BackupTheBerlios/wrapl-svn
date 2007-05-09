@@ -1,0 +1,21 @@
+open build/Common
+ASM_EXT = .asm
+open Gcc
+
+.SCANNER: scan-c-%.asm: %.asm /.PHONY/CGeneratedFilesTarget :value: $(digest-in-path-optional $(INCLUDES), $&)
+	$(AS) $(ASFLAGS) $(PREFIXED_INCLUDES) -M $<
+
+
+DefineCommandVars()
+
+BIN_DIR = $(dir ../bin)$(DIRSEP)
+LIB_DIR = $(dir ../lib)$(DIRSEP)
+
+SRC_DIR = $(dir src)$(DIRSEP)
+OBJ_DIR = $(dir obj)$(DIRSEP)
+
+DEV_BIN = $(dir bin)$(DIRSEP)
+DEV_LIB = $(dir lib)$(DIRSEP)
+DEV_INC = $(dir inc)
+
+.SUBDIRS: .

@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="IO" />
+		<Option pch_mode="2" />
+		<Option compiler="gnu_gcc_compiler_riva" />
+		<Build>
+			<Target title="Stream">
+				<Option output="..\..\..\lib\IO\Stream.riva" prefix_auto="0" extension_auto="0" />
+				<Option external_deps="Stream.rdef;" />
+				<Option type="0" />
+				<Option compiler="gnu_gcc_compiler_riva" />
+				<Linker>
+					<Add library="Stream.rdef" />
+				</Linker>
+			</Target>
+			<Target title="Posix">
+				<Option output="..\..\..\lib\IO\Posix.riva" prefix_auto="0" extension_auto="0" />
+				<Option external_deps="Posix.rdef;" />
+				<Option type="0" />
+				<Option compiler="gnu_gcc_compiler_riva" />
+				<Linker>
+					<Add library="Posix.rdef" />
+					<Add library="..\..\lib\IO\Stream.rlib" />
+				</Linker>
+			</Target>
+			<Target title="Windows">
+				<Option output="..\..\..\lib\IO\Windows.riva" prefix_auto="0" extension_auto="0" />
+				<Option external_deps="Windows.rdef;" />
+				<Option type="0" />
+				<Option compiler="gnu_gcc_compiler_riva" />
+				<Linker>
+					<Add library="Windows.rdef" />
+					<Add library="kernel32.rlib" />
+					<Add library="..\..\lib\IO\Stream.rlib" />
+				</Linker>
+			</Target>
+			<Target title="File">
+				<Option output="..\..\..\lib\IO\File.riva" prefix_auto="0" extension_auto="0" />
+				<Option external_deps="File.rdef;" />
+				<Option type="0" />
+				<Option compiler="gnu_gcc_compiler_riva" />
+				<Linker>
+					<Add library="File.rdef" />
+					<Add library="..\..\lib\IO\Stream.rlib" />
+					<Add library="..\..\lib\IO\Windows.rlib" />
+					<Add library="kernel32.rlib" />
+				</Linker>
+			</Target>
+			<Target title="Terminal">
+				<Option output="..\..\..\lib\IO\Terminal.riva" prefix_auto="0" extension_auto="0" />
+				<Option external_deps="Terminal.rdef;" />
+				<Option type="0" />
+				<Option compiler="gnu_gcc_compiler_riva" />
+				<Linker>
+					<Add library="Terminal.rdef" />
+					<Add library="..\..\lib\IO\Stream.rlib" />
+					<Add library="..\..\lib\IO\Windows.rlib" />
+					<Add library="kernel32.rlib" />
+				</Linker>
+			</Target>
+			<Target title="Socket">
+				<Option output="..\..\..\lib\IO\Socket.riva" prefix_auto="0" extension_auto="0" />
+				<Option external_deps="Socket.rdef;" />
+				<Option type="0" />
+				<Option compiler="gnu_gcc_compiler_riva" />
+				<Linker>
+					<Add library="Socket.rdef" />
+					<Add library="..\..\lib\IO\Stream.rlib" />
+					<Add library="..\..\lib\IO\Posix.rlib" />
+				</Linker>
+			</Target>
+			<Target title="Line">
+				<Option output="IO.exe" prefix_auto="1" extension_auto="1" />
+				<Option external_deps="Line.rdef;" />
+				<Option type="0" />
+				<Option compiler="gnu_gcc_compiler_riva" />
+				<Linker>
+					<Add library="Line.rdef" />
+				</Linker>
+			</Target>
+			<Target title="CGI">
+				<Option output="..\..\..\lib\IO\CGI.riva" prefix_auto="0" extension_auto="0" />
+				<Option external_deps="CGI.rdef;" />
+				<Option type="0" />
+				<Option compiler="gnu_gcc_compiler_riva" />
+				<Linker>
+					<Add library="CGI.rdef" />
+					<Add library="..\..\..\dev\lib\IO\Stream.rlib" />
+				</Linker>
+			</Target>
+			<Target title="String">
+				<Option output="..\..\..\lib\IO\String.riva" prefix_auto="0" extension_auto="0" />
+				<Option external_deps="String.rdef;" />
+				<Option type="0" />
+				<Option compiler="gnu_gcc_compiler_riva" />
+				<Linker>
+					<Add library="String.rdef" />
+					<Add library="..\..\lib\IO\Stream.rlib" />
+				</Linker>
+			</Target>
+		</Build>
+		<VirtualTargets>
+			<Add alias="All" targets="Stream;Windows;File;Terminal;" />
+		</VirtualTargets>
+		<Compiler>
+			<Add option="-march=athlon-xp" />
+			<Add option="-fexpensive-optimizations" />
+			<Add option="-O3" />
+			<Add option="-std=gnu99" />
+			<Add option="-fomit-frame-pointer" />
+			<Add option="-DWINDOWS" />
+		</Compiler>
+		<Linker>
+			<Add library="Riva.rlib" />
+			<Add library="Lang.rlib" />
+			<Add library="Util\TypeTable.rlib" />
+		</Linker>
+		<Unit filename="CGI.c">
+			<Option compilerVar="CC" />
+			<Option target="CGI" />
+		</Unit>
+		<Unit filename="CGI.rdef">
+			<Option target="CGI" />
+		</Unit>
+		<Unit filename="File.c">
+			<Option compilerVar="CC" />
+			<Option target="File" />
+		</Unit>
+		<Unit filename="File.rdef">
+			<Option target="File" />
+		</Unit>
+		<Unit filename="Line.c">
+			<Option compilerVar="CC" />
+			<Option target="Line" />
+		</Unit>
+		<Unit filename="Line.rdef">
+			<Option target="Line" />
+		</Unit>
+		<Unit filename="Posix.c">
+			<Option compilerVar="CC" />
+			<Option target="Posix" />
+		</Unit>
+		<Unit filename="Posix.rdef">
+			<Option target="Posix" />
+		</Unit>
+		<Unit filename="Socket.c">
+			<Option compilerVar="CC" />
+			<Option target="Socket" />
+		</Unit>
+		<Unit filename="Socket.rdef">
+			<Option target="Socket" />
+		</Unit>
+		<Unit filename="Stream.c">
+			<Option compilerVar="CC" />
+			<Option target="Stream" />
+		</Unit>
+		<Unit filename="Stream.rdef">
+			<Option target="Stream" />
+		</Unit>
+		<Unit filename="String.c">
+			<Option compilerVar="CC" />
+			<Option target="String" />
+		</Unit>
+		<Unit filename="String.rdef">
+			<Option target="String" />
+		</Unit>
+		<Unit filename="Terminal.c">
+			<Option compilerVar="CC" />
+			<Option target="Terminal" />
+		</Unit>
+		<Unit filename="Terminal.rdef">
+			<Option target="Terminal" />
+		</Unit>
+		<Unit filename="Windows.c">
+			<Option compilerVar="CC" />
+			<Option target="Windows" />
+		</Unit>
+		<Unit filename="Windows.rdef">
+			<Option target="Windows" />
+		</Unit>
+		<Extensions>
+			<code_completion />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

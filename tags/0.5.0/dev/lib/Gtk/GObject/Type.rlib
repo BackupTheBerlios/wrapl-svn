@@ -1,0 +1,4 @@
+module("Gtk", "GObject", "Type")
+prefix("Gtk$GObject$Type$")
+export("T")
+export("_gtk_to_riva")

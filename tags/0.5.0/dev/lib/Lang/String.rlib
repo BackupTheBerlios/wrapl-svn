@@ -1,0 +1,17 @@
+module("Lang", "String")
+if WINDOWS then
+	prefix("_Lang$String$")
+else
+	prefix("Lang$String$")
+end
+export("T")
+export("_new")
+export("_new_length")
+export("_new_char")
+export("_flatten")
+export("_flatten_to")
+export("GetBlockAddress")
+export("GetBlockLength")
+export("GetBlocks")
+export("Ord")
+export("Chr")

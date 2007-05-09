@@ -1,0 +1,5 @@
+module("Gtk", "GObject", "Object")
+prefix("Gtk$GObject$Object$")
+export("T")
+export("_gtk_to_riva")
+export("_new")

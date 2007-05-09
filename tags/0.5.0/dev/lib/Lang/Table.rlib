@@ -1,0 +1,9 @@
+module("Lang", "Table")
+if WINDOWS then
+	prefix("_Lang$Table$")
+else
+	prefix("Lang$Table$")
+end
+export("T")
+export("New")
+export("Make")

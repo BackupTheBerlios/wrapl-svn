@@ -1,0 +1,9 @@
+module("Lang", "Object")
+if WINDOWS then
+	prefix("_Lang$Object$")
+else
+	prefix("Lang$Object$")
+end
+export("T")
+export("Nil")
+export("New")

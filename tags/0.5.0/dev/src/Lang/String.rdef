@@ -1,0 +1,18 @@
+if WINDOWS then
+	_export = export
+	export = function(Name)
+		_export("_" .. Name, Name)
+	end
+end
+
+export("T")
+export("_new")
+export("_new_length")
+export("_new_char")
+export("_flatten")
+export("_flatten_to")
+export("GetBlockAddress")
+export("GetBlockLength")
+export("GetBlocks")
+export("Ord")
+export("Chr")

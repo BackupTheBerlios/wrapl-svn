@@ -1,0 +1,13 @@
+module("Lang", "Integer")
+if WINDOWS then
+	prefix("_Lang$Integer$")
+else
+	prefix("Lang$Integer$")
+end
+export("T")
+export("SmallT")
+export("BigT")
+export("_new_small")
+export("_new_string")
+export("_alloc_small")
+export("_alloc_big")

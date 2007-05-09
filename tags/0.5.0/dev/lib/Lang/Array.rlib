@@ -1,0 +1,9 @@
+module("Lang", "Array")
+if WINDOWS then
+	prefix("_Lang$Array$")
+else
+	prefix("Lang$Array$")
+end
+export("T")
+export("New")
+export("_new")

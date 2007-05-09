@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Sys" />
+		<Option pch_mode="2" />
+		<Option compiler="gnu_gcc_compiler_riva" />
+		<Build>
+			<Target title="Module">
+				<Option output="..\..\..\lib\Sys\Module.riva" prefix_auto="0" extension_auto="0" />
+				<Option external_deps="Module.rdef;" />
+				<Option type="0" />
+				<Option compiler="gnu_gcc_compiler_riva" />
+				<Linker>
+					<Add library="Module.rdef" />
+					<Add library="kernel32.rlib" />
+				</Linker>
+			</Target>
+			<Target title="Thread">
+				<Option output="..\..\..\lib\Sys\Thread.riva" prefix_auto="0" extension_auto="0" />
+				<Option external_deps="Thread.rdef;" />
+				<Option type="0" />
+				<Option compiler="gnu_gcc_compiler_riva" />
+				<Linker>
+					<Add library="Thread.rdef" />
+				</Linker>
+			</Target>
+			<Target title="Memory">
+				<Option output="..\..\..\lib\Sys\Memory.riva" prefix_auto="0" extension_auto="0" />
+				<Option external_deps="Memory.rdef;" />
+				<Option type="0" />
+				<Option compiler="gnu_gcc_compiler_riva" />
+			</Target>
+			<Target title="Environ">
+				<Option output="..\..\..\lib\Sys\Environ.riva" prefix_auto="0" extension_auto="0" />
+				<Option external_deps="Environ.rdef;" />
+				<Option type="0" />
+				<Option compiler="gnu_gcc_compiler_riva" />
+				<Linker>
+					<Add library="Environ.rdef" />
+				</Linker>
+			</Target>
+		</Build>
+		<VirtualTargets>
+			<Add alias="All" targets="Module;Thread;Memory;Environ;" />
+		</VirtualTargets>
+		<Compiler>
+			<Add option="-march=athlon-xp" />
+			<Add option="-fexpensive-optimizations" />
+			<Add option="-O3" />
+			<Add option="-std=gnu99" />
+			<Add option="-fomit-frame-pointer" />
+			<Add option="-DWINDOWS" />
+			<Add directory="..\..\..\dev\inc" />
+		</Compiler>
+		<Linker>
+			<Add library="Riva.rlib" />
+			<Add library="Lang.rlib" />
+		</Linker>
+		<Unit filename="Environ.c">
+			<Option compilerVar="CC" />
+			<Option target="Environ" />
+		</Unit>
+		<Unit filename="Environ.rdef">
+			<Option target="Environ" />
+		</Unit>
+		<Unit filename="Module.c">
+			<Option compilerVar="CC" />
+			<Option target="Module" />
+		</Unit>
+		<Unit filename="Module.rdef">
+			<Option target="Module" />
+		</Unit>
+		<Unit filename="Thread.c">
+			<Option compilerVar="CC" />
+			<Option target="Thread" />
+		</Unit>
+		<Unit filename="Thread.rdef">
+			<Option target="Thread" />
+		</Unit>
+		<Extensions>
+			<code_completion />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

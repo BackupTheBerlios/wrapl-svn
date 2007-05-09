@@ -1,0 +1,16 @@
+module("Lang", "Function")
+if WINDOWS then
+	prefix("_Lang$Function$")
+else
+	prefix("Lang$Function$")
+end
+export("T")
+export("AsmT")
+export("CheckedAsmT")
+export("CT")
+export("CheckedCT")
+export("FewArgsMessageT")
+export("_resume_c")
+export("_invoke")
+export("_call")
+export("_resume")

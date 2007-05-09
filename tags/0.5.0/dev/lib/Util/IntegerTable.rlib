@@ -1,0 +1,10 @@
+module("Util", "IntegerTable")
+if WINDOWS then
+	prefix("_Util$IntegerTable$")
+else
+	prefix("Util$IntegerTable$")
+end
+export("T")
+export("_init")
+export("_get")
+export("_put")
