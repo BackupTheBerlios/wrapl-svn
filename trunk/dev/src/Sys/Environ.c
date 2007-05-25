@@ -1,6 +1,5 @@
 #include <Lang.h>
 #include <Riva/Memory.h>
-#include <Riva/Thread.h>
 
 #include <stdlib.h>
 #include <string.h>

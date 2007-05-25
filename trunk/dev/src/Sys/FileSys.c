@@ -123,3 +123,15 @@ GLOBAL_FUNCTION(Exists, 1) {
 		return FAILURE;
 	};
 };
+
+GLOBAL_FUNCTION(FileSize, 1) {
+	char FileName[((Lang$String_t *)Args[0].Val)->Length.Value + 1];
+	Lang$String$flatten_to(Args[0].Val, FileName);
+	struct stat Stat;
+	if (stat(FileName, &Stat) == 0) {
+		Result->Val = Lang$Integer$new_small(Stat.st_size);
+		return SUCCESS;
+	} else {
+		return FAILURE;
+	};
+};

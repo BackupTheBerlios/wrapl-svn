@@ -1,0 +1,7 @@
+module("Sys", "Time")
+if WINDOWS then
+	prefix("_Sys$Time$")
+else
+	prefix("Sys$Time$")
+end
+export("T")
