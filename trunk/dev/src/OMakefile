@@ -45,3 +45,14 @@ section
 section
 	vmount($(SRC_DIR)Wrapl, $(OBJ_DIR)Wrapl)
 	.SUBDIRS: $(OBJ_DIR)Wrapl
+
+#section
+#	vmount($(SRC_DIR)FS, $(OBJ_DIR)FS)
+#	.SUBDIRS: $(OBJ_DIR)FS
+
+Gtk:
+	vmount($(SRC_DIR)Gtk, $(OBJ_DIR)Gtk)
+	.SUBDIRS: $(OBJ_DIR)Gtk
+if $(equal $(TARGETS), Allegro)
+	vmount($(SRC_DIR)Allegro, $(OBJ_DIR)Allegro)
+	.SUBDIRS: $(OBJ_DIR)Allegro

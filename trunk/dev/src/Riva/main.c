@@ -22,18 +22,6 @@
 #include "native.h"
 #include "directory.h"
 
-static void path_init(void) {
-	char Cwd[256];
-    getcwd(Cwd, 255);
-    strcat(Cwd, PATHSTR);
-	{char *Temp = getenv("RIVA"); if (Temp) module_add_directory(Temp);};
-	module_add_directory("/usr/lib/");
-	module_add_directory("/usr/local/lib/");
-	module_add_directory("/usr/lib/riva/");
-	module_add_directory("/usr/local/lib/riva/");
-	module_add_directory(Cwd);
-};
-
 static int BatchMode = 0;
 static int ParseArgs = 0;
 static char *MainModule;

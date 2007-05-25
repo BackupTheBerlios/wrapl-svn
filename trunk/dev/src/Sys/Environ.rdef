@@ -6,3 +6,5 @@ if WINDOWS then
 end
 
 export("Get")
+export("GetCwd")
+export("SetCwd")
