@@ -40,6 +40,7 @@ section .d %+ %s, class=data,use32
 align 8
 %1:
 	dd Std$Function$CheckedAsmT
+	dd Std$Function$AsmT
 	dd %%here
 	dd %2
 	dd %%file
@@ -110,7 +111,7 @@ struct asm_fun, value
 endstruct
 
 struct checkedasm_fun, value
-	.Invoke:	resd 1
+	.Target:	resb sizeof(asm_fun)
 	.Count:		resd 1
 	.File:		resd 1
 	.Line:		resd 1
@@ -211,6 +212,16 @@ unchecked_func %+ __LINE__: dd Std$Function$AsmT, %%entry
 section .text
 align 8
 %%entry:
+%endmacro
+
+%macro _method 3+
+section .symbols
+%%SYMBOL:
+	db %1, 0
+section .methods
+	dd %%SYMBOL
+	dd %3, 0
+	dd %2
 %endmacro
 
 %endif

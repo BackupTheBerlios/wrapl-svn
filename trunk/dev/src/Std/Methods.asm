@@ -2933,9 +2933,9 @@ method "new", TYP, Std$Type$T
 	ret
 
 
-symbol PLUS, "+"
-section .methods
-	dd PLUS, STRING, STRING, 0, add_string_string
+;symbol PLUS, "+"
+;section .methods
+;	dd PLUS, STRING, STRING, 0, add_string_string
 unchecked_func add_string_string
 .invoke:
 	mov ebx, [argument(edi + 8).Val]
