@@ -1,4 +1,4 @@
-#include <Lang.h>
+#include <Std.h>
 #include <dirent.h>
 #include <sys/stat.h>
 #include <unistd.h>
@@ -17,9 +17,9 @@ GLOBAL_FUNCTION(Path, 0) {
 };
 
 GLOBAL_FUNCTION(MakeDir, 2) {
-	char DirName[((Lang$String_t *)Args[0].Val)->Length.Value + 1];
-	Lang$String$flatten_to(Args[0].Val, DirName);
-	if (mkdir(DirName, ((Lang$Integer_smallt *)Args[0].Val)->Value)) {
+	char DirName[((Std$String_t *)Args[0].Val)->Length.Value + 1];
+	Std$String$flatten_to(Args[0].Val, DirName);
+	if (mkdir(DirName, ((Std$Integer_smallt *)Args[0].Val)->Value)) {
 		Result->Val = "Error creating directory";
 		return MESSAGE;
 	};
@@ -27,8 +27,8 @@ GLOBAL_FUNCTION(MakeDir, 2) {
 };
 
 GLOBAL_FUNCTION(RemoveDir, 1) {
-	char DirName[((Lang$String_t *)Args[0].Val)->Length.Value + 1];
-	Lang$String$flatten_to(Args[0].Val, DirName);
+	char DirName[((Std$String_t *)Args[0].Val)->Length.Value + 1];
+	Std$String$flatten_to(Args[0].Val, DirName);
 	if (rmdir(DirName)) {
 		Result->Val = "Error removing directory";
 		return MESSAGE;
@@ -40,8 +40,8 @@ GLOBAL_FUNCTION(Copy, 2) {
 };
 
 GLOBAL_FUNCTION(Remove, 1) {
-	char FileName[((Lang$String_t *)Args[0].Val)->Length.Value + 1];
-	Lang$String$flatten_to(Args[0].Val, FileName);
+	char FileName[((Std$String_t *)Args[0].Val)->Length.Value + 1];
+	Std$String$flatten_to(Args[0].Val, FileName);
 	if (unlink(FileName)) {
 		Result->Val = "Error unlinking file";
 		return MESSAGE;
@@ -50,10 +50,10 @@ GLOBAL_FUNCTION(Remove, 1) {
 };
 
 GLOBAL_FUNCTION(Rename, 2) {
-	char OldName[((Lang$String_t *)Args[0].Val)->Length.Value + 1];
-	Lang$String$flatten_to(Args[0].Val, OldName);
-	char NewName[((Lang$String_t *)Args[1].Val)->Length.Value + 1];
-	Lang$String$flatten_to(Args[1].Val, NewName);
+	char OldName[((Std$String_t *)Args[0].Val)->Length.Value + 1];
+	Std$String$flatten_to(Args[0].Val, OldName);
+	char NewName[((Std$String_t *)Args[1].Val)->Length.Value + 1];
+	Std$String$flatten_to(Args[1].Val, NewName);
 	if (rename(OldName, NewName) == -1) {
 		Result->Val = "Error renaming file";
 		return MESSAGE;
@@ -62,13 +62,13 @@ GLOBAL_FUNCTION(Rename, 2) {
 };
 
 typedef struct listdir_generator {
-	Lang$Function_cstate State;
+	Std$Function_cstate State;
 	DIR *Dir;
 } listdir_generator;
 
 typedef struct listdir_resume_data {
 	listdir_generator *Generator;
-	Lang$Function_argument Result;
+	Std$Function_argument Result;
 } listdir_resume_data;
 
 static long listdir_resume(listdir_resume_data *Data) {
@@ -82,13 +82,13 @@ static long listdir_resume(listdir_resume_data *Data) {
 	char *FileName = Riva$Memory$alloc_atomic(Length + 1);
 	strcpy(FileName, Entry->d_name);
 	FileName[Length] = 0;
-	Data->Result.Val = Lang$String$new_length(FileName, Length);
+	Data->Result.Val = Std$String$new_length(FileName, Length);
 	return SUSPEND;
 };
 
 GLOBAL_FUNCTION(ListDir, 1) {
-	char DirName[((Lang$String_t *)Args[0].Val)->Length.Value + 1];
-	Lang$String$flatten_to(Args[0].Val, DirName);
+	char DirName[((Std$String_t *)Args[0].Val)->Length.Value + 1];
+	Std$String$flatten_to(Args[0].Val, DirName);
 	DIR *Dir = opendir(DirName);
 	if (Dir == 0) {
 		Result->Val = "Error opening directory";
@@ -103,9 +103,9 @@ GLOBAL_FUNCTION(ListDir, 1) {
 	char *FileName = Riva$Memory$alloc_atomic(Length + 1);
 	strcpy(FileName, Entry->d_name);
 	FileName[Length] = 0;
-	Result->Val = Lang$String$new_length(FileName, Length);
+	Result->Val = Std$String$new_length(FileName, Length);
 	listdir_generator *Generator = new(listdir_generator);
-	Generator->State.Run = Lang$Function$resume_c;
+	Generator->State.Run = Std$Function$resume_c;
 	Generator->State.Invoke = listdir_resume;
 	Generator->Dir = Dir;
 	Result->State = Generator;
@@ -113,8 +113,8 @@ GLOBAL_FUNCTION(ListDir, 1) {
 };
 
 GLOBAL_FUNCTION(Exists, 1) {
-	char FileName[((Lang$String_t *)Args[0].Val)->Length.Value + 1];
-	Lang$String$flatten_to(Args[0].Val, FileName);
+	char FileName[((Std$String_t *)Args[0].Val)->Length.Value + 1];
+	Std$String$flatten_to(Args[0].Val, FileName);
 	struct stat Stat;
 	if (stat(FileName, &Stat) == 0) {
 		Result->Val = Args[0].Val;
@@ -125,11 +125,11 @@ GLOBAL_FUNCTION(Exists, 1) {
 };
 
 GLOBAL_FUNCTION(FileSize, 1) {
-	char FileName[((Lang$String_t *)Args[0].Val)->Length.Value + 1];
-	Lang$String$flatten_to(Args[0].Val, FileName);
+	char FileName[((Std$String_t *)Args[0].Val)->Length.Value + 1];
+	Std$String$flatten_to(Args[0].Val, FileName);
 	struct stat Stat;
 	if (stat(FileName, &Stat) == 0) {
-		Result->Val = Lang$Integer$new_small(Stat.st_size);
+		Result->Val = Std$Integer$new_small(Stat.st_size);
 		return SUCCESS;
 	} else {
 		return FAILURE;

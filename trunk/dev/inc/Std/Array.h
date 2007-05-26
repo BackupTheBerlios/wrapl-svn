@@ -1,22 +1,22 @@
 #ifndef LANG_ARRAY_H
 #define LANG_ARRAY_H
 
-#include <Lang/Object.h>
+#include <Std/Object.h>
 
-#define RIVA_MODULE Lang$Array
+#define RIVA_MODULE Std$Array
 #include <Riva-Header.h>
 
-typedef struct Lang$Array_t Lang$Array_t;
+typedef struct Std$Array_t Std$Array_t;
 
-struct Lang$Array_t {
-	Lang$Type_t *Type;
-	Lang$Integer_smallt Length;
-	Lang$Object_t **Values;
+struct Std$Array_t {
+	Std$Type_t *Type;
+	Std$Integer_smallt Length;
+	Std$Object_t **Values;
 };
 
-extern Lang$Type_t Lang$Array$T[];
+extern Std$Type_t Std$Array$T[];
 
-RIVA_CFUN(Lang$Array_t *, new, int);
+RIVA_CFUN(Std$Array_t *, new, int);
 
 #undef RIVA_MODULE
 

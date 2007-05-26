@@ -1,84 +1,84 @@
 #ifndef LANG_FUNCTION_H
 #define LANG_FUNCTION_H
 
-#include <Lang/Object.h>
+#include <Std/Object.h>
 
-#define RIVA_MODULE Lang$Function
+#define RIVA_MODULE Std$Function
 #include <Riva-Header.h>
 
-typedef struct Lang$Function_argument {
-	Lang$Object_t *Val;
-	Lang$Object_t **Ref;
-} Lang$Function_argument;
+typedef struct Std$Function_argument {
+	Std$Object_t *Val;
+	Std$Object_t **Ref;
+} Std$Function_argument;
 
-typedef struct Lang$Function_result {
+typedef struct Std$Function_result {
 	union {
 		struct {
-			Lang$Object_t *Val;
-			Lang$Object_t **Ref;
+			Std$Object_t *Val;
+			Std$Object_t **Ref;
 		};
-		Lang$Function_argument Arg;
+		Std$Function_argument Arg;
 	};
 	void *State;
-} Lang$Function_result;
+} Std$Function_result;
 
 #define SUSPEND -1
 #define SUCCESS 0
 #define FAILURE 1
 #define MESSAGE 2
 
-typedef struct Lang$Function_asmt Lang$Function_asmt;
-typedef struct Lang$Function_ct Lang$Function_ct;
-typedef struct Lang$Function_checkedct Lang$Function_checkedct;
-typedef struct Lang$Function_cstate Lang$Function_cstate;
-typedef struct Lang$Function_cresumedata Lang$Function_cresumedata;
+typedef struct Std$Function_asmt Std$Function_asmt;
+typedef struct Std$Function_ct Std$Function_ct;
+typedef struct Std$Function_checkedct Std$Function_checkedct;
+typedef struct Std$Function_cstate Std$Function_cstate;
+typedef struct Std$Function_cresumedata Std$Function_cresumedata;
 
-struct Lang$Function_asmt {
-	Lang$Type_t *Type;
+struct Std$Function_asmt {
+	Std$Type_t *Type;
 	void *Invoke;
 };
 
-struct Lang$Function_ct {
-	Lang$Type_t *Type;
-	long (*Invoke)(Lang$Function_ct *, unsigned long, Lang$Function_argument *, Lang$Function_result *);
+struct Std$Function_ct {
+	Std$Type_t *Type;
+	long (*Invoke)(Std$Function_ct *, unsigned long, Std$Function_argument *, Std$Function_result *);
 };
 
-struct Lang$Function_checkedct {
-	Lang$Type_t *Type;
-	long (*Invoke)(Lang$Function_checkedct *, unsigned long, Lang$Function_argument *, Lang$Function_result *);
+struct Std$Function_checkedct {
+	Std$Type_t *Type;
+	long (*Invoke)(Std$Function_checkedct *, unsigned long, Std$Function_argument *, Std$Function_result *);
 	int Count;
 	const char *File;
 	int Line;
 };
 
-struct Lang$Function_cresumedata {
-	Lang$Function_cstate *State;
-	Lang$Function_argument Result;
+struct Std$Function_cresumedata {
+	Std$Function_cstate *State;
+	Std$Function_argument Result;
 };
 
-struct Lang$Function_cstate {
+struct Std$Function_cstate {
 	void *Run, *Resume, *Chain[2];
-	long (* Invoke)(Lang$Function_cresumedata *Data);
+	long (* Invoke)(Std$Function_cresumedata *Data);
 };
 
-extern Lang$Type_t Lang$Function$T[];
-extern Lang$Type_t Lang$Function$CT[];
-extern Lang$Type_t Lang$Function$CheckedCT[];
+extern Std$Type_t Std$Function$T[];
+extern Std$Type_t Std$Function$CT[];
+extern Std$Type_t Std$Function$CheckedCT[];
 
-RIVA_CFUN(long, resume_c, Lang$Function_cresumedata *);
-RIVA_CFUN(long, invoke, Lang$Object_t *, long, Lang$Function_result *, Lang$Function_argument *);
-RIVA_CFUN(long, call, Lang$Object_t *, long, Lang$Function_result *, ...);
-RIVA_CFUN(long, resume, Lang$Function_result *);
+RIVA_CFUN(long, resume_c, Std$Function_cresumedata *);
+RIVA_CFUN(long, invoke, Std$Object_t *, long, Std$Function_result *, Std$Function_argument *);
+RIVA_CFUN(long, call, Std$Object_t *, long, Std$Function_result *, ...);
+RIVA_CFUN(long, resume, Std$Function_result *);
 
 #define LOCAL_FUNCTION(NAME)\
-	static long invoke_ ## NAME(Lang$Function_ct *Fun, unsigned long Count, Lang$Function_argument *Args, Lang$Function_result *Result);\
-	static Lang$Function_ct NAME = {Lang$Function$CT, invoke_ ## NAME};\
-	static long invoke_ ## NAME(Lang$Function_ct *Fun, unsigned long Count, Lang$Function_argument *Args, Lang$Function_result *Result)
+	static long invoke_ ## NAME(Std$Function_ct *Fun, unsigned long Count, Std$Function_argument *Args, Std$Function_result *Result);\
+	static Std$Function_ct NAME = {Std$Function$CT, invoke_ ## NAME};\
+	static long invoke_ ## NAME(Std$Function_ct *Fun, unsigned long Count, Std$Function_argument *Args, Std$Function_result *Result)
 
 #define GLOBAL_FUNCTION(NAME, COUNT)\
-	static long invoke_ ## NAME(Lang$Function_checkedct *Fun, unsigned long Count, Lang$Function_argument *Args, Lang$Function_result *Result);\
-	Lang$Function_checkedct NAME = {Lang$Function$CheckedCT, invoke_ ## NAME, COUNT, __FILE__, __LINE__};\
-	static long invoke_ ## NAME(Lang$Function_checkedct *Fun, unsigned long Count, Lang$Function_argument *Args, Lang$Function_result *Result)
+	static long invoke_ ## NAME(Std$Function_checkedct *Fun, unsigned long Count, Std$Function_argument *Args, Std$Function_result *Result);\
+	Std$Function_checkedct NAME = {Std$Function$CheckedCT, invoke_ ## NAME, COUNT, __FILE__, __LINE__};\
+	static long invoke_ ## NAME(Std$Function_checkedct *Fun, unsigned long Count, Std$Function_argument *Args, Std$Function_result *Result)
 
 #undef RIVA_MODULE
 

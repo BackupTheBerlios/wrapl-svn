@@ -1,15 +1,15 @@
 #ifndef LANG_TABLE_H
 #define LANG_TABLE_H
 
-#include <Lang/Object.h>
+#include <Std/Object.h>
 
-#define RIVA_MODULE Lang$Table
+#define RIVA_MODULE Std$Table
 #include <Riva-Header.h>
 
-extern Lang$Type_t Lang$Table$T[];
-RIVA_CFUN(Lang$Object_t *, new, long, ...);
-extern Lang$Object_t Lang$Table$New[];
-extern Lang$Object_t Lang$Table$Make[];
+extern Std$Type_t Std$Table$T[];
+RIVA_CFUN(Std$Object_t *, new, long, ...);
+extern Std$Object_t Std$Table$New[];
+extern Std$Object_t Std$Table$Make[];
 
 #undef RIVA_MODULE
 

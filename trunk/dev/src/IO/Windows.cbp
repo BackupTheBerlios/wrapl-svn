@@ -114,7 +114,7 @@
 		</Compiler>
 		<Linker>
 			<Add library="Riva.rlib" />
-			<Add library="Lang.rlib" />
+			<Add library="Std.rlib" />
 			<Add library="Util\TypeTable.rlib" />
 		</Linker>
 		<Unit filename="CGI.c">

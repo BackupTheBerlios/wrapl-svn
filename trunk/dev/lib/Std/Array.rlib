@@ -1,8 +1,8 @@
-module("Lang", "Array")
+module("Std", "Array")
 if WINDOWS then
-	prefix("_Lang$Array$")
+	prefix("_Std$Array$")
 else
-	prefix("Lang$Array$")
+	prefix("Std$Array$")
 end
 export("T")
 export("New")

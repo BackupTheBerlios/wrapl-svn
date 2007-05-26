@@ -1,7 +1,7 @@
 #include "compiler.h"
 #include "missing.h"
 
-#include <Lang.h>
+#include <Std.h>
 
 #include <stdlib.h>
 #include <string.h>
@@ -247,7 +247,7 @@ operand_t *compiler_t::lookup(int LineNo, const char *Name) {
 						};
 					} else {
 						Operand->Type = operand_t::CNST;
-						Operand->Value = (Lang$Object_t *)Module;
+						Operand->Value = (Std$Object_t *)Module;
 					};
 				};
 				return Operand;
@@ -270,8 +270,8 @@ operand_t *compiler_t::lookup(int LineNo, const char *Name) {
 	case scope_t::SC_GLOBAL: {
 		operand_t *Operand = new operand_t;
 		Operand->Type = operand_t::GVAR;
-		Lang$Object_t **Address = new Lang$Object_t *;
-		Address[0] = Lang$Object$Nil;
+		Std$Object_t **Address = new Std$Object_t *;
+		Address[0] = Std$Object$Nil;
 		Operand->Address = Address;
 		declare(Name, Operand);
 		return Operand;
@@ -334,9 +334,9 @@ void qualident_expr_t::print(int Indent) {
 SYMBOL($AT, "@");
 
 void const_expr_t::print(int Indent) {
-	Lang$Function_result Result;
-	if (Lang$Function$call((Lang$Object_t *)$AT, 2, &Result, Operand->Value, 0, Lang$String$T, 0) < FAILURE) {
-		printf("%s", Lang$String$flatten((Lang$String_t *)Result.Val));
+	Std$Function_result Result;
+	if (Std$Function$call((Std$Object_t *)$AT, 2, &Result, Operand->Value, 0, Std$String$T, 0) < FAILURE) {
+		printf("%s", Std$String$flatten((Std$String_t *)Result.Val));
 	} else {
 		printf("#%x", Operand->Value);
 	};
@@ -597,7 +597,7 @@ operand_t *ref_assign_expr_t::compile(compiler_t *Compiler, label_t *Start, labe
 operand_t *invoke_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t *Success) {
 	label_t *Label0 = new label_t;
 	operand_t *FunctionOperand = Function->compile(Compiler, Start, Label0);
-	//if ((FunctionOperand->Type == operand_t::CNST) && (FunctionOperand->Value->Type == Lang$Integer$SmallT)) {
+	//if ((FunctionOperand->Type == operand_t::CNST) && (FunctionOperand->Value->Type == Std$Integer$SmallT)) {
 	//	printf("%s:%d: I'm not done yet!\n", __FILE__, __LINE__);
 	//} else {
 		label_t *Label2 = new label_t;
@@ -1042,7 +1042,7 @@ operand_t *block_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t *
 		} else if (Result == 0) {
 			Result = new operand_t;
 			Result->Type = operand_t::CNST;
-			Result->Value = Lang$Object$Nil;
+			Result->Value = Std$Object$Nil;
 		};
 		Label0->link(Success);
 	};
@@ -1055,8 +1055,8 @@ operand_t *module_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t 
 	for (module_expr_t::globalvar_t *Var = Vars; Var; Var = Var->Next) {
 		operand_t *Operand = new operand_t;
 		Operand->Type = operand_t::GVAR;
-		Lang$Object_t **Address = new Lang$Object_t *;
-		Address[0] = Lang$Object$Nil;
+		Std$Object_t **Address = new Std$Object_t *;
+		Address[0] = Std$Object$Nil;
 		Operand->Address = Address;
 		Compiler->declare(Var->Name, Operand);
 		if (Var->Exported) Sys$Module$export(Module, Var->Name, 1, Address);
@@ -1074,7 +1074,7 @@ operand_t *module_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t 
 		operand_t *Operand = new operand_t;
 		if (Imp->Exported) {
 			Operand->Type = operand_t::CNST;
-			Operand->Value = (Lang$Object_t *)Sys$Module$load(0, ImportPath);
+			Operand->Value = (Std$Object_t *)Sys$Module$load(0, ImportPath);
 			Sys$Module$export(Module, Imp->Alias, 0, Operand->Value);
 		} else {
 			Operand->Type = operand_t::FUTR;
@@ -1106,8 +1106,8 @@ operand_t *module_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t 
 			Compiler->pop_expression();
 		frame_t *Frame = Compiler->pop_function();
 		operand_t *Closure = Start->assemble(Frame);
-		Lang$Function_result Result;
-		if (Lang$Function$call(Closure->Value, 0, &Result) < FAILURE) {
+		Std$Function_result Result;
+		if (Std$Function$call(Closure->Value, 0, &Result) < FAILURE) {
 			operand_t *Operand = new operand_t;
 			Operand->Type = operand_t::CNST;
 			Operand->Value = Result.Val;
@@ -1134,12 +1134,12 @@ operand_t *module_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t 
 			Label0->ret();
 		frame_t *Frame = Compiler->pop_function();
 		operand_t *Closure = Start->assemble(Frame);
-		Lang$Function_result Result;
-		Lang$Function$call(Closure->Value, 0, &Result);
+		Std$Function_result Result;
+		Std$Function$call(Closure->Value, 0, &Result);
 	};
 	operand_t *Operand = new operand_t;
 	Operand->Type = operand_t::CNST;
-	Operand->Value = (Lang$Object_t *)Module;
+	Operand->Value = (Std$Object_t *)Module;
 	Start->link(Success);
 	return Operand;
 };
@@ -1148,15 +1148,15 @@ void module_expr_t::compile(compiler_t *Compiler) {
 	compile(Compiler, new label_t, new label_t);
 };
 
-int command_expr_t::compile(compiler_t *Compiler, Lang$Function_result *Result) {
+int command_expr_t::compile(compiler_t *Compiler, Std$Function_result *Result) {
 	char ModulePath[256];
 	int PathLength;
 	bool InitPath = false;
 	for (command_expr_t::globalvar_t *Var = Vars; Var; Var = Var->Next) {
 		operand_t *Operand = new operand_t;
 		Operand->Type = operand_t::GVAR;
-		Lang$Object_t **Address = new Lang$Object_t *;
-		Address[0] = Lang$Object$Nil;
+		Std$Object_t **Address = new Std$Object_t *;
+		Address[0] = Std$Object$Nil;
 		Operand->Address = Address;
 		Compiler->declare(Var->Name, Operand);
 	};
@@ -1205,7 +1205,7 @@ int command_expr_t::compile(compiler_t *Compiler, Lang$Function_result *Result) 
 			Compiler->pop_expression();
 		frame_t *Frame = Compiler->pop_function();
 		operand_t *Closure = Start->assemble(Frame);
-		Status = Lang$Function$call(Closure->Value, 0, Result);
+		Status = Std$Function$call(Closure->Value, 0, Result);
 		if (Status < FAILURE) {
 			operand_t *Operand = new operand_t;
 			Operand->Type = operand_t::CNST;
@@ -1241,7 +1241,7 @@ int command_expr_t::compile(compiler_t *Compiler, Lang$Function_result *Result) 
 			Failure->fail();
 		frame_t *Frame = Compiler->pop_function();
 		operand_t *Closure = Start->assemble(Frame);
-		Status = Lang$Function$call(Closure->Value, 0, Result);
+		Status = Std$Function$call(Closure->Value, 0, Result);
 	};
 	return Status;
 };

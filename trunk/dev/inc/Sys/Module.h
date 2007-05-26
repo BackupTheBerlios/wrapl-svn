@@ -1,7 +1,7 @@
 #ifndef SYS_MODULE_H
 #define SYS_MODULE_H
 
-#include <Lang/Object.h>
+#include <Std/Object.h>
 #include <Riva/Module.h>
 
 #define RIVA_MODULE Sys$Module
@@ -10,11 +10,11 @@
 typedef struct Sys$Module_t Sys$Module_t;
 
 struct Sys$Module_t {
-	Lang$Type_t *Type;
+	Std$Type_t *Type;
 	Riva$Module_t *Handle;
 };
 
-extern Lang$Type_t Sys$Module$T[];
+extern Std$Type_t Sys$Module$T[];
 
 RIVA_CFUN(Sys$Module_t *, new);
 RIVA_CFUN(Sys$Module_t *, load, const char *, const char *);

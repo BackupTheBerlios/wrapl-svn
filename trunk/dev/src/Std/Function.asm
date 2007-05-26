@@ -1,11 +1,11 @@
-%include "Lang.inc"
+%include "Std.inc"
 
-extern Lang$Type$T
+extern Std$Type$T
 extern Riva$Memory$_alloc
-extern Lang$Object$Nil
+extern Std$Object$Nil
 
 c_data FewArgsMessageT
-	dd Lang$Type$T
+	dd Std$Type$T
 	dd .types
 	dd 0
 	dd 0
@@ -15,7 +15,7 @@ c_data FewArgsMessageT
 	dd 0
 
 c_data T
-	dd Lang$Type$T
+	dd Std$Type$T
 	dd .types
 	dd 0
 	dd 0
@@ -25,7 +25,7 @@ c_data T
 	dd 0
 
 c_data AsmT
-	dd Lang$Type$T
+	dd Std$Type$T
 	dd .types
 	dd .invoke
 	dd 0
@@ -40,7 +40,7 @@ align 8
 	jmp [asm_fun(ecx).Invoke]
 
 c_data CheckedAsmT
-	dd Lang$Type$T
+	dd Std$Type$T
 	dd .types
 	dd .invoke
 	dd 0
@@ -70,7 +70,7 @@ align 8
 	ret
 
 c_data CT
-	dd Lang$Type$T
+	dd Std$Type$T
 	dd .types
 	dd .invoke
 	dd 0
@@ -83,7 +83,7 @@ section .text
 .invoke:
 	push byte 0
 	push byte 0
-	push dword Lang$Object$Nil
+	push dword Std$Object$Nil
 	push esp
 	push edi
 	push esi
@@ -96,7 +96,7 @@ section .text
 	ret
 
 c_data CheckedCT
-	dd Lang$Type$T
+	dd Std$Type$T
 	dd .types
 	dd .invoke
 	dd 0
@@ -112,7 +112,7 @@ section .text
 	jb .toofewargs
 	push byte 0
 	push byte 0
-	push dword Lang$Object$Nil
+	push dword Std$Object$Nil
 	push esp
 	push edi
 	push esi
@@ -151,7 +151,7 @@ endstruct
 
 c_func _resume_c
 	push byte 0
-	push dword Lang$Object$Nil
+	push dword Std$Object$Nil
 	push eax
 	push esp
 	call [c_state(eax).Invoke]

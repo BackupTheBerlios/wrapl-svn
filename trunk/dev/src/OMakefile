@@ -27,8 +27,8 @@ ASFLAGS += -I$(DEV_INC)$(DIRSEP)
 INCLUDES += $(DEV_INC)
 
 section
-	vmount($(SRC_DIR)Lang, $(OBJ_DIR)Lang)
-	.SUBDIRS: $(OBJ_DIR)Lang
+	vmount($(SRC_DIR)Std, $(OBJ_DIR)Std)
+	.SUBDIRS: $(OBJ_DIR)Std
 
 section
 	vmount($(SRC_DIR)Sys, $(OBJ_DIR)Sys)

@@ -1,22 +1,22 @@
 #ifndef LANG_REAL_H
 #define LANG_REAL_H
 
-#include <Lang/Object.h>
+#include <Std/Object.h>
 
-#define RIVA_MODULE Lang$Real
+#define RIVA_MODULE Std$Real
 #include <Riva-Header.h>
 
-typedef struct Lang$Real_t Lang$Real_t;
+typedef struct Std$Real_t Std$Real_t;
 
-struct Lang$Real_t {
-	Lang$Type_t *Type;
+struct Std$Real_t {
+	Std$Type_t *Type;
 	double Value;
 };
 
-extern Lang$Type_t Lang$Real$T[];
+extern Std$Type_t Std$Real$T[];
 
-RIVA_CFUN(Lang$Real_t *, new, double);
-RIVA_CFUN(Lang$Real_t *, new_string, const char *);
+RIVA_CFUN(Std$Real_t *, new, double);
+RIVA_CFUN(Std$Real_t *, new_string, const char *);
 
 #undef RIVA_MODULE
 

@@ -2,7 +2,7 @@
 #define COMPILER_H
 
 #include <Riva/Memory.h>
-#include <Lang/Function.h>
+#include <Std/Function.h>
 
 #include "assembler.h"
 #include "bitset.h"
@@ -180,7 +180,7 @@ struct const_expr_t : expr_t {
 		this->LineNo = LineNo;
 		Operand = new operand_t;
 		Operand->Type = operand_t::CNST;
-		Operand->Value = (Lang$Object_t *)Value;
+		Operand->Value = (Std$Object_t *)Value;
 	};
 	void print(int Indent);
 	operand_t *compile(compiler_t *Compiler, label_t *Start, label_t *Success);
@@ -208,7 +208,7 @@ struct func_expr_t : expr_t {
 		Constant = new operand_t;
 		Constant->Type = operand_t::CNST;
 		closure_t *Closure = new closure_t;
-		Constant->Value = (Lang$Object_t *)Closure;
+		Constant->Value = (Std$Object_t *)Closure;
 		return Constant;
 	};
 };
@@ -525,7 +525,7 @@ struct command_expr_t : expr_t {
 	expr_t *Body;
 
 	void print(int Indent);
-	int compile(compiler_t *Compiler, Lang$Function_result *Result);
+	int compile(compiler_t *Compiler, Std$Function_result *Result);
 };
 
 #endif

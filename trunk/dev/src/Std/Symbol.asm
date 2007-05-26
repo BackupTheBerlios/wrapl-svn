@@ -1,10 +1,10 @@
-%include "Lang.inc"
+%include "Std.inc"
 
 %define KEY_ROTATION 5
 %define INCR_ROTATION 2
 
-extern Lang$Type$T
-extern Lang$Function$T
+extern Std$Type$T
+extern Std$Function$T
 extern Riva$Memory$_alloc
 extern Riva$Memory$_alloc_uncollectable
 
@@ -208,14 +208,14 @@ Proceed:
 %endrep
 
 c_data T
-	dd Lang$Type$T
+	dd Std$Type$T
 	dd .types
 	dd .invoke
 	dd 0
 	dd 0
 .types:
 	dd T
-	dd Lang$Function$T
+	dd Std$Function$T
 	dd 0
 section .text
 align 8
@@ -258,7 +258,7 @@ c_data T.invoke
 	jmp [type(eax).Invoke]
 
 c_data NoMethodMessageT
-	dd Lang$Type$T
+	dd Std$Type$T
 	dd .types
 	dd 0
 	dd 0
@@ -267,9 +267,9 @@ c_data NoMethodMessageT
 	dd NoMethodMessageT
 	dd 0
 
-extern Lang$String$T
-extern Lang$Integer$SmallT
-extern Lang$Address$T
+extern Std$String$T
+extern Std$Integer$SmallT
+extern Std$Address$T
 unchecked_func nomethod
 	push byte sizeof(nomethod_message)
 	call Riva$Memory$_alloc
@@ -281,7 +281,7 @@ unchecked_func nomethod
 	mov eax, 2
 	ret
 
-extern Lang$String$_new
+extern Std$String$_new
 
 unchecked_func New
 	push byte sizeof(symbol)
@@ -302,11 +302,11 @@ unchecked_func New
 	ret
 section .data
 .anonymous_str:
-	dd Lang$String$T
-	dd Lang$Integer$SmallT
+	dd Std$String$T
+	dd Std$Integer$SmallT
 	dd 6, 1
-	dd Lang$Integer$SmallT, 6
-	dd Lang$Address$T, .anonymous
+	dd Std$Integer$SmallT, 6
+	dd Std$Address$T, .anonymous
 	dd 0, 0, 0, 0
 .anonymous:
 	db "<anon>", 0, 0
@@ -317,7 +317,7 @@ c_func _new_string
 	mov [esp], eax
 	mov [value(eax).Type], dword T
 	push dword [esp + 8]
-	call Lang$String$_new
+	call Std$String$_new
 	mov ecx, eax
 	pop eax
 	pop eax
@@ -345,13 +345,13 @@ c_func _new
 	mov dword [symbol(eax).Function], 0
 	ret
 
-extern Lang$Object$T
+extern Std$Object$T
 
 global __In
 global __Is
 section .data
-__In: dd Lang$Object$T
-__Is: dd Lang$Object$T
+__In: dd Std$Object$T
+__Is: dd Std$Object$T
 
 unchecked_func Set
 	push ebp

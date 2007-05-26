@@ -1,10 +1,10 @@
-%include "Lang.inc"
+%include "Std.inc"
 
 extern Riva$Memory$_alloc
-extern Lang$Type$T
+extern Std$Type$T
 
 c_data T
-	dd Lang$Type$T
+	dd Std$Type$T
 	dd .types
 	dd 0
 	dd 0

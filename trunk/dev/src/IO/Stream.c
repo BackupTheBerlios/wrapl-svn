@@ -1,5 +1,5 @@
 #include <IO/Stream.h>
-#include <Lang.h>
+#include <Std.h>
 #include <Riva/Memory.h>
 #include <stdio.h>
 
@@ -23,20 +23,20 @@ ITYPE(TextWriterT, 3, WriterT, T);
 
 TYPE(MessageT);
 
-METHOD("@", TYP, MessageT, VAL, Lang$String$T) {
+METHOD("@", TYP, MessageT, VAL, Std$String$T) {
 	IO$Stream_messaget *Msg = Args[0].Val;
-	Result->Val = Lang$String$new(Msg->Message);
+	Result->Val = Std$String$new(Msg->Message);
 	return SUCCESS;
 };
 
 static IO$Stream_messaget ConvertMessage[] = {{MessageT, "Conversion Error"}};
 
 METHOD("write", TYP, TextWriterT, ANY) {
-	Lang$Function_result Result0;
-	switch (Lang$Function$call($AS, 2, &Result0, Args[1].Val, Args[1].Ref, Lang$String$T, 0)) {
+	Std$Function_result Result0;
+	switch (Std$Function$call($AS, 2, &Result0, Args[1].Val, Args[1].Ref, Std$String$T, 0)) {
 	case SUSPEND:
 	case SUCCESS:
-		return Lang$Function$call($write, 2, Result, Args[0].Val, Args[0].Ref, Result0.Val, Result0.Ref);
+		return Std$Function$call($write, 2, Result, Args[0].Val, Args[0].Ref, Result0.Val, Result0.Ref);
 	case FAILURE:
 		Result->Val = ConvertMessage;
 		return MESSAGE;
@@ -48,25 +48,25 @@ METHOD("write", TYP, TextWriterT, ANY) {
 
 METHOD("writes", TYP, TextWriterT) {
 	for (int I = 1; I < Count; ++I) {
-		long Status = Lang$Function$call($write, 2, Result, Args[0].Val, Args[0].Ref, Args[I].Val, Args[I].Ref);
+		long Status = Std$Function$call($write, 2, Result, Args[0].Val, Args[0].Ref, Args[I].Val, Args[I].Ref);
 		if (Status >= FAILURE) return Status;
 	};
 	return SUCCESS;
 };
 
 static void stream_flush(IO$Stream_t *Stream) {
-	Lang$Function_result Result;
-	Lang$Function$call($flush, 1, &Result, Stream, 0);
+	Std$Function_result Result;
+	Std$Function$call($flush, 1, &Result, Stream, 0);
 };
 
 static void stream_close(IO$Stream_t *Stream) {
-	Lang$Function_result Result;
-	Lang$Function$call($close, 1, &Result, Stream, 0);
+	Std$Function_result Result;
+	Std$Function$call($close, 1, &Result, Stream, 0);
 };
 
 static int stream_eoi(IO$Stream_t *Stream) {
-	Lang$Function_result Result;
-	if (Lang$Function$call($EOI, 1, &Result, Stream, 0) < FAILURE) {
+	Std$Function_result Result;
+	if (Std$Function$call($EOI, 1, &Result, Stream, 0) < FAILURE) {
 		return 1;
 	} else {
 		return 0;
@@ -74,18 +74,18 @@ static int stream_eoi(IO$Stream_t *Stream) {
 };
 
 static int stream_read(IO$Stream_t *Stream, char *Buffer, int Count) {
-	Lang$Function_result Result;
-	if (Lang$Function$call($read, 2, &Result, Stream, 0, Lang$Address$new(Buffer), 0, Lang$Integer$new_small(Count), 0) < FAILURE) {
-		return ((Lang$Integer_smallt *)Result.Val)->Value;
+	Std$Function_result Result;
+	if (Std$Function$call($read, 2, &Result, Stream, 0, Std$Address$new(Buffer), 0, Std$Integer$new_small(Count), 0) < FAILURE) {
+		return ((Std$Integer_smallt *)Result.Val)->Value;
 	} else {
 		return 0;
 	};
 };
 
 static char stream_readc(IO$Stream_t *Stream) {
-	Lang$Function_result Result;
-	if (Lang$Function$call($read, 2, &Result, Stream, 0, Lang$Integer$new_small(1), 0) < FAILURE) {
-		Lang$String_t *String = Result.Val;
+	Std$Function_result Result;
+	if (Std$Function$call($read, 2, &Result, Stream, 0, Std$Integer$new_small(1), 0) < FAILURE) {
+		Std$String_t *String = Result.Val;
 		return *(char *)(String->Blocks[0].Chars.Value);
 	} else {
 		return EOF;
@@ -93,9 +93,9 @@ static char stream_readc(IO$Stream_t *Stream) {
 };
 
 static char *stream_readn(IO$Stream_t *Stream, int Count) {
-	Lang$Function_result Result;
-	if (Lang$Function$call($read, 2, &Result, Stream, 0, Lang$Integer$new_small(Count), 0) < FAILURE) {
-		return Lang$String$flatten(Result.Val);
+	Std$Function_result Result;
+	if (Std$Function$call($read, 2, &Result, Stream, 0, Std$Integer$new_small(Count), 0) < FAILURE) {
+		return Std$String$flatten(Result.Val);
 	} else {
 		return 0;
 	};
@@ -103,29 +103,29 @@ static char *stream_readn(IO$Stream_t *Stream, int Count) {
 
 
 static char *stream_readl(IO$Stream_t *Stream) {
-	Lang$Function_result Result;
-	if (Lang$Function$call($read, 2, &Result, Stream, 0) < FAILURE) {
-		return Lang$String$flatten(Result.Val);
+	Std$Function_result Result;
+	if (Std$Function$call($read, 2, &Result, Stream, 0) < FAILURE) {
+		return Std$String$flatten(Result.Val);
 	} else {
 		return 0;
 	};
 };
 
 static int stream_write(IO$Stream_t *Stream, const char *Buffer, int Count) {
-	Lang$Function_result Result;
-	Lang$Function$call($write, 2, &Result, Stream, 0, Lang$Address$new(Buffer), 0, Lang$Integer$new_small(Count), 0);
+	Std$Function_result Result;
+	Std$Function$call($write, 2, &Result, Stream, 0, Std$Address$new(Buffer), 0, Std$Integer$new_small(Count), 0);
 };
 
 static void stream_writec(IO$Stream_t *Stream, char Char) {
-	Lang$String_t *String = Lang$String$new_char(Char);
-	Lang$Function_result Result;
-	Lang$Function$call($write, 2, &Result, Stream, 0, String, 0);
+	Std$String_t *String = Std$String$new_char(Char);
+	Std$Function_result Result;
+	Std$Function$call($write, 2, &Result, Stream, 0, String, 0);
 };
 
 static void stream_writes(IO$Stream_t *Stream, const char *Text) {
-	Lang$String_t *String = Lang$String$new(Text);
-	Lang$Function_result Result;
-	Lang$Function$call($write, 2, &Result, Stream, 0, String, 0);
+	Std$String_t *String = Std$String$new(Text);
+	Std$Function_result Result;
+	Std$Function$call($write, 2, &Result, Stream, 0, String, 0);
 };
 
 static void stream_writef(IO$Stream_t *Stream, const char *Format, ...) {
@@ -133,31 +133,31 @@ static void stream_writef(IO$Stream_t *Stream, const char *Format, ...) {
 	va_start(Args, Format);
 	char *Buffer;
 	int Length = vasprintf(&Buffer, Format, Args);
-	Lang$String_t *String = Lang$String$new_length(Buffer, Length);
-	Lang$Function_result Result;
-	Lang$Function$call($write, 2, &Result, Stream, 0, String, 0);
+	Std$String_t *String = Std$String$new_length(Buffer, Length);
+	Std$Function_result Result;
+	Std$Function$call($write, 2, &Result, Stream, 0, String, 0);
 };
 
-Lang$Integer_smallt _SEEK_SET[] = {{Lang$Integer$SmallT, IO$Stream_SEEK_SET}};
-Lang$Integer_smallt _SEEK_CUR[] = {{Lang$Integer$SmallT, IO$Stream_SEEK_CUR}};
-Lang$Integer_smallt _SEEK_END[] = {{Lang$Integer$SmallT, IO$Stream_SEEK_END}};
+Std$Integer_smallt _SEEK_SET[] = {{Std$Integer$SmallT, IO$Stream_SEEK_SET}};
+Std$Integer_smallt _SEEK_CUR[] = {{Std$Integer$SmallT, IO$Stream_SEEK_CUR}};
+Std$Integer_smallt _SEEK_END[] = {{Std$Integer$SmallT, IO$Stream_SEEK_END}};
 
-static Lang$Integer_smallt *_SEEK[] = {_SEEK_SET, _SEEK_CUR, _SEEK_END};
+static Std$Integer_smallt *_SEEK[] = {_SEEK_SET, _SEEK_CUR, _SEEK_END};
 
 static int stream_seek(IO$Stream_t *Stream, int Position, int Mode) {
 	if ((Mode < IO$Stream_SEEK_SET) || (Mode > IO$Stream_SEEK_END)) return -1;
-	Lang$Function_result Result;
-	if (Lang$Function$call($seek, 3, &Result, Stream, 0, Lang$Integer$new_small(Position), 0, _SEEK[Mode], 0) < FAILURE) {
-		return ((Lang$Integer_smallt *)Result.Val)->Value;
+	Std$Function_result Result;
+	if (Std$Function$call($seek, 3, &Result, Stream, 0, Std$Integer$new_small(Position), 0, _SEEK[Mode], 0) < FAILURE) {
+		return ((Std$Integer_smallt *)Result.Val)->Value;
 	} else {
 		return -1;
 	};
 };
 
 static int stream_tell(IO$Stream_t *Stream) {
-	Lang$Function_result Result;
-	if (Lang$Function$call($tell, 1, &Result, Stream, 0) < FAILURE) {
-		return ((Lang$Integer_smallt *)Result.Val)->Value;
+	Std$Function_result Result;
+	if (Std$Function$call($tell, 1, &Result, Stream, 0) < FAILURE) {
+		return ((Std$Integer_smallt *)Result.Val)->Value;
 	} else {
 		return -1;
 	};

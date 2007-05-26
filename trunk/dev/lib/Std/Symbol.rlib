@@ -1,8 +1,8 @@
-module("Lang", "Symbol")
+module("Std", "Symbol")
 if WINDOWS then
-	prefix("_Lang$Symbol$")
+	prefix("_Std$Symbol$")
 else
-	prefix("Lang$Symbol$")
+	prefix("Std$Symbol$")
 end
 export("T")
 export("T.invoke")

@@ -1,5 +1,5 @@
 #include <IO/Stream.h>
-#include <Lang.h>
+#include <Std.h>
 #include <Riva.h>
 #include <string.h>
 #include <stdio.h>
@@ -7,7 +7,7 @@
 #include <unistd.h>
 
 typedef struct cgi_reader_t {
-	Lang$Type_t *Type;
+	Std$Type_t *Type;
 	int Length, Remaining;
 } cgi_reader_t;
 
@@ -33,10 +33,10 @@ static int cgi_reader_eoi(cgi_reader_t *Stream) {
 	return Stream->Remaining == 0;
 };
 
-METHOD("read", TYP, ReaderT, TYP, Lang$Address$T, TYP, Lang$Integer$SmallT) {
+METHOD("read", TYP, ReaderT, TYP, Std$Address$T, TYP, Std$Integer$SmallT) {
 	cgi_reader_t *Stream = Args[0].Val;
-	char *Buffer = ((Lang$Address_t *)Args[1].Val)->Value;
-	long Size = ((Lang$Integer_smallt *)Args[2].Val)->Value;
+	char *Buffer = ((Std$Address_t *)Args[1].Val)->Value;
+	long Size = ((Std$Integer_smallt *)Args[2].Val)->Value;
 	if (Size > Stream->Remaining) Size = Stream->Remaining;
 	size_t BytesRead = read(STDIN_FILENO, Buffer, Size);
 	if (BytesRead < 0) {
@@ -44,7 +44,7 @@ METHOD("read", TYP, ReaderT, TYP, Lang$Address$T, TYP, Lang$Integer$SmallT) {
 		return MESSAGE;
 	};
 	Stream->Remaining -= BytesRead;
-	Result->Val = Lang$Integer$new_small(BytesRead);
+	Result->Val = Std$Integer$new_small(BytesRead);
 	return SUCCESS;
 };
 
@@ -65,9 +65,9 @@ static char cgi_reader_readc(cgi_reader_t *Stream) {
 	return Char;
 };
 
-METHOD("read", TYP, ReaderT, TYP, Lang$Integer$SmallT) {
+METHOD("read", TYP, ReaderT, TYP, Std$Integer$SmallT) {
 	cgi_reader_t *Stream = Args[0].Val;
-	unsigned long Length = ((Lang$Integer_smallt *)Args[1].Val)->Value;
+	unsigned long Length = ((Std$Integer_smallt *)Args[1].Val)->Value;
 	if (Length > Stream->Remaining) Length = Stream->Remaining;
 	char *Buffer = Riva$Memory$alloc_atomic(Length);
 	size_t BytesRead = read(STDIN_FILENO, Buffer, Length);
@@ -77,7 +77,7 @@ METHOD("read", TYP, ReaderT, TYP, Lang$Integer$SmallT) {
 		return MESSAGE;
 	};
 	Stream->Remaining -= BytesRead;
-	Result->Val = Lang$String$new_length(Buffer, BytesRead);
+	Result->Val = Std$String$new_length(Buffer, BytesRead);
 	return SUCCESS;
 };
 
@@ -158,7 +158,7 @@ METHOD("read", TYP, ReaderT) {
 	if (Line == 0) {
 		return FAILURE;
 	} else {
-		Result->Val = Lang$String$new(Line);
+		Result->Val = Std$String$new(Line);
 		return SUCCESS;
 	};
 };

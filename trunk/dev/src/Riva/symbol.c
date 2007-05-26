@@ -12,7 +12,7 @@ static int symbol_import(void *Ignore, const char *Name, int *IsRef, void **Data
 };
 
 static int symbol_import0(void *Ignore, const char *Name, int *IsRef, void **Data) {
-	module_t *LangSymbol = module_load(0, "Lang/Symbol");
+	module_t *LangSymbol = module_load(0, "Std/Symbol");
 	int IsRef0;
 	module_import(LangSymbol, "_new_string", &IsRef0, (void **)&make_symbol);
 	module_import(LangSymbol, "_add_methods", &IsRef0, (void **)&add_methods);

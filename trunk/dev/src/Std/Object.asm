@@ -1,8 +1,8 @@
-%include "Lang.inc"
-extern Lang$Type$T
+%include "Std.inc"
+extern Std$Type$T
 
 c_data T
-	dd Lang$Type$T
+	dd Std$Type$T
 	dd .types
 	dd 0
 	dd 0

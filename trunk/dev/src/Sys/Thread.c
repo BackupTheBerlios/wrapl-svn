@@ -1,4 +1,4 @@
-#include <Lang.h>
+#include <Std.h>
 #include <Riva/Memory.h>
 #include <Riva/Thread.h>
 
@@ -9,22 +9,22 @@ TYPE(MutexT);
 static Riva$Thread_key *ThreadKey;
 
 typedef struct thread {
-	Lang$Type_t *Type;
+	Std$Type_t *Type;
 	Riva$Thread_t *Handle;
-	Lang$Function_result Result;
+	Std$Function_result Result;
 	long Return;
-	Lang$Object_t *Function;
-	Lang$Function_argument *Args;
+	Std$Object_t *Function;
+	Std$Function_argument *Args;
 	unsigned long Count;
 } thread;
 
 typedef struct mutex {
-	Lang$Type_t *Type;
+	Std$Type_t *Type;
 	Riva$Thread_mutex *Handle;
 } mutex;
 
 typedef struct key {
-	Lang$Type_t *Type;
+	Std$Type_t *Type;
 	Riva$Thread_key *Handle;
 } key;
 
@@ -49,7 +49,7 @@ static long invoke_resume(c_fun *Fun, unsigned long Count, argument *Args, resul
 
 static void *thread_func(thread *Thread) {
 	Riva$Thread$key_set(ThreadKey, Thread);
-	Lang$Function$invoke(Thread->Function, Thread->Count, &Thread->Result, Thread->Args);
+	Std$Function$invoke(Thread->Function, Thread->Count, &Thread->Result, Thread->Args);
 };
 
 GLOBAL_FUNCTION(New, 1) {
@@ -57,8 +57,8 @@ GLOBAL_FUNCTION(New, 1) {
 	Thread->Type = T;
 	Thread->Function = Args[0].Val;
 	Thread->Count = Count - 1;
-	Thread->Args = Riva$Memory$alloc(Thread->Count * sizeof(Lang$Function_argument));
-	__builtin_memcpy(Thread->Args, &Args[1], Thread->Count * sizeof(Lang$Function_argument));
+	Thread->Args = Riva$Memory$alloc(Thread->Count * sizeof(Std$Function_argument));
+	__builtin_memcpy(Thread->Args, &Args[1], Thread->Count * sizeof(Std$Function_argument));
 	Thread->Handle = Riva$Thread$new(thread_func, Thread);
 	Result->Val = Thread;
 	return SUCCESS;
@@ -80,7 +80,7 @@ GLOBAL_FUNCTION(MutexNew, 0) {
 METHOD("lock", TYP, MutexT) {
 	Riva$Thread_mutex *Mutex = ((mutex *)Args[0].Val)->Handle;
 	if (Riva$Thread$mutex_lock(Mutex)) {
-		Result->Val = Lang$String$new("Error locking mutex");
+		Result->Val = Std$String$new("Error locking mutex");
 		return MESSAGE;
 	};
 	return SUCCESS;
@@ -94,7 +94,7 @@ METHOD("trylock", TYP, MutexT) {
 METHOD("lock", TYP, MutexT) {
 	Riva$Thread_mutex *Mutex = ((mutex *)Args[0].Val)->Handle;
 	if (Riva$Thread$mutex_unlock(Mutex)) {
-		Result->Val = Lang$String$new("Error unlocking mutex");
+		Result->Val = Std$String$new("Error unlocking mutex");
 		return MESSAGE;
 	};
 	return SUCCESS;

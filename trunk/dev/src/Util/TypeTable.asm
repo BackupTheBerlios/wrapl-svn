@@ -1,10 +1,10 @@
-%include "Lang.inc"
+%include "Std.inc"
 
 extern Riva$Memory$_alloc
-extern Lang$Type$T
+extern Std$Type$T
 
 c_data T
-	dd Lang$Type$T
+	dd Std$Type$T
 	dd .types
 	dd 0
 	dd 0
@@ -51,7 +51,7 @@ method "insert", TYP, T, ANY, ANY
 	xor eax, eax
 	ret
 
-method "[]", TYP, T, TYP, Lang$Type$T
+method "[]", TYP, T, TYP, Std$Type$T
 	mov esi, [argument(edi + 8).Val]
 	mov esi, [type(esi).Types]
 	mov ebx, [esi]

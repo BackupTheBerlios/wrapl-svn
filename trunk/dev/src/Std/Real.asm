@@ -1,14 +1,14 @@
-%include "Lang.inc"
+%include "Std.inc"
 
 extern Riva$Memory$_alloc
 extern Riva$Memory$_alloc_atomic
 extern Riva$Memory$_alloc_small
-extern Lang$Type$T
+extern Std$Type$T
 
 section .data
 
 c_data T
-	dd Lang$Type$T
+	dd Std$Type$T
 	dd .types
 	dd 0
 	dd 0

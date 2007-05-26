@@ -1,5 +1,5 @@
 #include <IO/Posix.h>
-#include <Lang.h>
+#include <Std.h>
 #include <Riva.h>
 #include <string.h>
 #include <stdio.h>
@@ -45,7 +45,7 @@ METHOD("close", TYP, T) {
 		Result->Val = CloseMessage;
 		return MESSAGE;
 	};
-	Result->Val = Lang$Object$Nil;
+	Result->Val = Std$Object$Nil;
 	return SUCCESS;
 };
 
@@ -66,16 +66,16 @@ static int posix_eoi(IO$Posix_t *Stream) {
 	return 0;
 };
 
-METHOD("read", TYP, ReaderT, TYP, Lang$Address$T, TYP, Lang$Integer$SmallT) {
+METHOD("read", TYP, ReaderT, TYP, Std$Address$T, TYP, Std$Integer$SmallT) {
 	IO$Posix_t *Stream = Args[0].Val;
-	char *Buffer = ((Lang$Address_t *)Args[1].Val)->Value;
-	long Size = ((Lang$Integer_smallt *)Args[2].Val)->Value;
+	char *Buffer = ((Std$Address_t *)Args[1].Val)->Value;
+	long Size = ((Std$Integer_smallt *)Args[2].Val)->Value;
 	size_t BytesRead = read(Stream->Handle, Buffer, Size);
 	if (BytesRead < 0) {
 		Result->Val = ReadMessage;
 		return MESSAGE;
 	};
-	Result->Val = Lang$Integer$new_small(BytesRead);
+	Result->Val = Std$Integer$new_small(BytesRead);
 	return SUCCESS;
 };
 
@@ -91,9 +91,9 @@ static char posix_readc(IO$Posix_t *Stream) {
 	return Char;
 };
 
-METHOD("read", TYP, ReaderT, TYP, Lang$Integer$SmallT) {
+METHOD("read", TYP, ReaderT, TYP, Std$Integer$SmallT) {
 	IO$Posix_t *Stream = Args[0].Val;
-	unsigned long Length = ((Lang$Integer_smallt *)Args[1].Val)->Value;
+	unsigned long Length = ((Std$Integer_smallt *)Args[1].Val)->Value;
 	char *Buffer = Riva$Memory$alloc_atomic(Length);
 	size_t BytesRead = read(Stream->Handle, Buffer, Length);
 	if (BytesRead == 0) return FAILURE;
@@ -101,7 +101,7 @@ METHOD("read", TYP, ReaderT, TYP, Lang$Integer$SmallT) {
 		Result->Val = ReadMessage;
 		return MESSAGE;
 	};
-	Result->Val = Lang$String$new_length(Buffer, BytesRead);
+	Result->Val = Std$String$new_length(Buffer, BytesRead);
 	return SUCCESS;
 };
 
@@ -141,7 +141,7 @@ METHOD("read", TYP, TextReaderT) {
 	if (Line == 0) {
 		return FAILURE;
 	} else {
-		Result->Val = Lang$String$new(Line);
+		Result->Val = Std$String$new(Line);
 		return SUCCESS;
 	};
 };
@@ -150,16 +150,16 @@ static char *posix_readl(IO$Posix_t *Stream) {
 	return _read_line_next(Stream->Handle, 0);
 };
 
-METHOD("write", TYP, WriterT, TYP, Lang$Address$T, TYP, Lang$Integer$SmallT) {
+METHOD("write", TYP, WriterT, TYP, Std$Address$T, TYP, Std$Integer$SmallT) {
 	IO$Posix_t *Stream = Args[0].Val;
-	char *Buffer = ((Lang$Address_t *)Args[1].Val)->Value;
-	long Size = ((Lang$Integer_smallt *)Args[2].Val)->Value;
+	char *Buffer = ((Std$Address_t *)Args[1].Val)->Value;
+	long Size = ((Std$Integer_smallt *)Args[2].Val)->Value;
 	size_t BytesWritten = write(Stream->Handle, Buffer, Size);
 	if (BytesWritten < 0) {
 		Result->Val = WriteMessage;
 		return MESSAGE;
 	};
-	Result->Val = Lang$Integer$new_small(BytesWritten);
+	Result->Val = Std$Integer$new_small(BytesWritten);
 	return SUCCESS;
 };
 
@@ -171,9 +171,9 @@ static void posix_writec(IO$Posix_t *Stream, char Char) {
 	write(Stream->Handle, &Char, 1);
 };
 
-METHOD("write", TYP, WriterT, TYP, Lang$String$T) {
+METHOD("write", TYP, WriterT, TYP, Std$String$T) {
 	IO$Posix_t *Stream = Args[0].Val;
-	Lang$String_t *String = Args[1].Val;
+	Std$String_t *String = Args[1].Val;
 	for (long I = 0; I < String->Count; ++I) {
 		if (write(Stream->Handle, String->Blocks[I].Chars.Value, String->Blocks[I].Length.Value) < 0) {
 			Result->Val = WriteMessage;
@@ -190,11 +190,11 @@ static void posix_writes(IO$Posix_t *Stream, const char *Text) {
 
 METHOD("write", TYP, TextWriterT, ANY) {
 	IO$Posix_t *Stream = Args[0].Val;
-	Lang$Function_result Result0;
-	switch (Lang$Function$call($AS, 2, &Result0, Args[1].Val, Args[1].Ref, Lang$String$T, 0)) {
+	Std$Function_result Result0;
+	switch (Std$Function$call($AS, 2, &Result0, Args[1].Val, Args[1].Ref, Std$String$T, 0)) {
 	case SUSPEND:
 	case SUCCESS: {
-		Lang$String_t *String = Result0.Val;
+		Std$String_t *String = Result0.Val;
 		for (long I = 0; I < String->Count; ++I) {
 			if (write(Stream->Handle, String->Blocks[I].Chars.Value, String->Blocks[I].Length.Value) < 0) {
 				Result->Val = WriteMessage;
@@ -221,15 +221,15 @@ static void posix_writef(IO$Posix_t *Stream, const char *Format, ...) {
 	write(Stream->Handle, Buffer, Length);
 };
 
-METHOD("seek", TYP, SeekerT, TYP, Lang$Integer$SmallT) {
+METHOD("seek", TYP, SeekerT, TYP, Std$Integer$SmallT) {
 	IO$Posix_t *Stream = Args[0].Val;
-	long Position = ((Lang$Integer_smallt *)Args[1].Val)->Value;
+	long Position = ((Std$Integer_smallt *)Args[1].Val)->Value;
 	Position = lseek(Stream->Handle, Position, SEEK_SET);
 	if (Position < 0) {
 		Result->Val = SeekMessage;
 		return MESSAGE;
 	};
-	Result->Val = Lang$Integer$new_small(Position);
+	Result->Val = Std$Integer$new_small(Position);
 	return SUCCESS;
 };
 
@@ -239,7 +239,7 @@ static int posix_seek(IO$Posix_t *Stream, int Position) {
 
 METHOD("tell", TYP, T) {
 	IO$Posix_t *Stream = Args[0].Val;
-	Result->Val = Lang$Integer$new_small(lseek(Stream->Handle, 0, SEEK_CUR));
+	Result->Val = Std$Integer$new_small(lseek(Stream->Handle, 0, SEEK_CUR));
 	return SUCCESS;
 };
 

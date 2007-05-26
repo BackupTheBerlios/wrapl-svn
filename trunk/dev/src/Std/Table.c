@@ -1,4 +1,4 @@
-#include <Lang.h>
+#include <Std.h>
 #include <Riva/Memory.h>
 //#include <stdlib.h>
 
@@ -17,26 +17,26 @@ TYPE(NodeType);
 
 /* Tree data structure. */
 struct avl_table {
-	Lang$Type_t *avl_type;
+	Std$Type_t *avl_type;
 	struct avl_node *avl_root;          /* Tree's root. */
 	unsigned long avl_count;                   /* Number of items in tree. */
 	unsigned long avl_generation;       /* Generation number. */
-	Lang$Object_t *avl_compare;
-	Lang$Object_t *avl_hash;
+	Std$Object_t *avl_compare;
+	Std$Object_t *avl_hash;
 };
 
 /* An AVL tree node. */
 struct avl_node {
-	Lang$Type_t *avl_node_type;
+	Std$Type_t *avl_node_type;
 	struct avl_node *avl_link[2];  /* Subtrees. */
-	Lang$Object_t *avl_key, *avl_value;      /* Key/Value of node. */
+	Std$Object_t *avl_key, *avl_value;      /* Key/Value of node. */
 	unsigned long avl_hash;            /* Hash value for value. */
 	signed char avl_balance;       /* Balance factor. */
 };
 
 /* AVL traverser structure. */
 struct avl_traverser {
-	Lang$Function_cstate avl_state;
+	Std$Function_cstate avl_state;
 	struct avl_table *avl_table;        /* Tree being traversed. */
 	struct avl_node *avl_node;          /* Current node in tree. */
 	struct avl_node *avl_stack[AVL_MAX_HEIGHT];
@@ -49,7 +49,7 @@ struct avl_traverser {
    with comparison function |compare| using parameter |param|
    and memory allocator |allocator|.
    Returns |0| if memory allocation failed. */
-struct avl_table *avl_create (Lang$Object_t *avl_compare, Lang$Object_t *avl_hash) {
+struct avl_table *avl_create (Std$Object_t *avl_compare, Std$Object_t *avl_hash) {
 	struct avl_table *tree = (struct avl_table *)Riva$Memory$alloc(sizeof *tree);
 	tree->avl_type = T;
 	tree->avl_root = 0;
@@ -60,15 +60,15 @@ struct avl_table *avl_create (Lang$Object_t *avl_compare, Lang$Object_t *avl_has
 	return tree;
 }
 
-static int avl_compare(const struct avl_table *t, Lang$Object_t *a, Lang$Object_t *b) {
-	Lang$Function_result Result;
-	Lang$Function$call(t->avl_compare, 2, &Result, a, 0, b, 0);
-	return ((Lang$Integer_smallt *)Result.Val)->Value;
+static int avl_compare(const struct avl_table *t, Std$Object_t *a, Std$Object_t *b) {
+	Std$Function_result Result;
+	Std$Function$call(t->avl_compare, 2, &Result, a, 0, b, 0);
+	return ((Std$Integer_smallt *)Result.Val)->Value;
 };
 
 /* Search |tree| for an item matching |item|, and return it if found.
    Otherwise return |0|. */
-static Lang$Object_t *avl_find (const struct avl_table *tree, Lang$Object_t *key, unsigned long hash) {
+static Std$Object_t *avl_find (const struct avl_table *tree, Std$Object_t *key, unsigned long hash) {
 	struct avl_node *p;
 	for (p = tree->avl_root; p != 0;) {
 		int cmp = hash - p->avl_hash;
@@ -84,7 +84,7 @@ static Lang$Object_t *avl_find (const struct avl_table *tree, Lang$Object_t *key
    If a duplicate item is found in the tree,
    returns a pointer to the duplicate without inserting |item|.
    Returns |0| in case of memory allocation failure. */
-static Lang$Object_t **avl_probe (struct avl_table *tree, Lang$Object_t *key, unsigned long hash) {
+static Std$Object_t **avl_probe (struct avl_table *tree, Std$Object_t *key, unsigned long hash) {
 	struct avl_node *y, *z; /* Top node to update balance factor, and parent. */
 	struct avl_node *p, *q; /* Iterator, and parent. */
 	struct avl_node *n;     /* Newly inserted node. */
@@ -165,7 +165,7 @@ static Lang$Object_t **avl_probe (struct avl_table *tree, Lang$Object_t *key, un
 
 /* Deletes from |tree| and returns an item matching |item|.
    Returns a null pointer if no matching item found. */
-static Lang$Object_t *avl_delete (struct avl_table *tree, Lang$Object_t *key, long hash) {
+static Std$Object_t *avl_delete (struct avl_table *tree, Std$Object_t *key, long hash) {
 	/* Stack of nodes. */
 	struct avl_node *pa[AVL_MAX_HEIGHT]; /* Nodes. */
 	unsigned char da[AVL_MAX_HEIGHT];    /* |avl_link[]| indexes. */
@@ -173,7 +173,7 @@ static Lang$Object_t *avl_delete (struct avl_table *tree, Lang$Object_t *key, lo
 
 	struct avl_node *p;   /* Traverses tree to find node to delete. */
 	int cmp;              /* Result of comparison between |item| and |p|. */
-	Lang$Object_t *data;
+	Std$Object_t *data;
 
 	k = 0;
 	p = (struct avl_node *) tree;
@@ -312,7 +312,7 @@ static void trav_refresh (struct avl_traverser *trav) {
 /* Initializes |trav| for |tree|
    and selects and returns a pointer to its least-valued item.
    Returns |0| if |tree| contains no nodes. */
-static Lang$Object_t *avl_t_first (struct avl_traverser *trav, struct avl_table *tree) {
+static Std$Object_t *avl_t_first (struct avl_traverser *trav, struct avl_table *tree) {
 	struct avl_node *x;
 	trav->avl_table = tree;
 	trav->avl_height = 0;
@@ -329,7 +329,7 @@ static Lang$Object_t *avl_t_first (struct avl_traverser *trav, struct avl_table 
 /* Returns the next data item in inorder
    within the tree being traversed with |trav|,
    or if there are no more data items returns |0|. */
-static Lang$Object_t *avl_t_next (struct avl_traverser *trav) {
+static Std$Object_t *avl_t_next (struct avl_traverser *trav) {
 	struct avl_node *x;
 	if (trav->avl_generation != trav->avl_table->avl_generation) trav_refresh (trav);
 	x = trav->avl_node;
@@ -372,10 +372,10 @@ GLOBAL_FUNCTION(Make, 0) {
 	struct avl_table *Table = avl_create($COMP, $HASH);
 	int I;
 	for (I = 0; I < Count; I+=2) {
-		Lang$Function_result Result1;
-		Lang$Object_t **Slot;
-		Lang$Function$call($HASH, 1, &Result1, Args[I].Val, 0);
-		Slot = avl_probe(Table, Args[I].Val, ((Lang$Integer_smallt *)Result1.Val)->Value);
+		Std$Function_result Result1;
+		Std$Object_t **Slot;
+		Std$Function$call($HASH, 1, &Result1, Args[I].Val, 0);
+		Slot = avl_probe(Table, Args[I].Val, ((Std$Integer_smallt *)Result1.Val)->Value);
 		*Slot = Args[I + 1].Val;
 	};
 	Result->Val = Table;
@@ -383,33 +383,33 @@ GLOBAL_FUNCTION(Make, 0) {
 };
 
 GLOBAL_FUNCTION(Collect, 1) {
-	Lang$Function_result Result0;
-	Lang$Object_t *Function = Args[0].Val;
+	Std$Function_result Result0;
+	Std$Object_t *Function = Args[0].Val;
 	struct avl_table *Table = avl_create($COMP, $HASH);
-	long Return = Lang$Function$invoke(Function, Count - 1, &Result0, Args + 1);
+	long Return = Std$Function$invoke(Function, Count - 1, &Result0, Args + 1);
 	if (Return == SUCCESS) {
-		Lang$Function_result Result1;
-		Lang$Object_t **Slot;
-		Lang$Function$call($HASH, 1, &Result1, Result0.Val, 0);
-		Slot = avl_probe(Table, Result0.Val, ((Lang$Integer_smallt *)Result1.Val)->Value);
-		*Slot = Lang$Object$Nil;
+		Std$Function_result Result1;
+		Std$Object_t **Slot;
+		Std$Function$call($HASH, 1, &Result1, Result0.Val, 0);
+		Slot = avl_probe(Table, Result0.Val, ((Std$Integer_smallt *)Result1.Val)->Value);
+		*Slot = Std$Object$Nil;
 	} else if (Return == SUSPEND) {
-		Lang$Function_result Result1;
-		Lang$Object_t **Slot;
-		Lang$Function$call($HASH, 1, &Result1, Result0.Val, 0);
-		Slot = avl_probe(Table, Result0.Val, ((Lang$Integer_smallt *)Result1.Val)->Value);
-		*Slot = Lang$Object$Nil;
-		Return = Lang$Function$resume(&Result0);
+		Std$Function_result Result1;
+		Std$Object_t **Slot;
+		Std$Function$call($HASH, 1, &Result1, Result0.Val, 0);
+		Slot = avl_probe(Table, Result0.Val, ((Std$Integer_smallt *)Result1.Val)->Value);
+		*Slot = Std$Object$Nil;
+		Return = Std$Function$resume(&Result0);
 		while (Return == SUSPEND) {
-			Lang$Function$call($HASH, 1, &Result1, Result0.Val, 0);
-			Slot = avl_probe(Table, Result0.Val, ((Lang$Integer_smallt *)Result1.Val)->Value);
-			*Slot = Lang$Object$Nil;
-			Return = Lang$Function$resume(&Result0);
+			Std$Function$call($HASH, 1, &Result1, Result0.Val, 0);
+			Slot = avl_probe(Table, Result0.Val, ((Std$Integer_smallt *)Result1.Val)->Value);
+			*Slot = Std$Object$Nil;
+			Return = Std$Function$resume(&Result0);
 		};
 		if (Return == SUCCESS) {
-			Lang$Function$call($HASH, 1, &Result1, Result0.Val, 0);
-			Slot = avl_probe(Table, Result0.Val, ((Lang$Integer_smallt *)Result1.Val)->Value);
-			*Slot = Lang$Object$Nil;
+			Std$Function$call($HASH, 1, &Result1, Result0.Val, 0);
+			Slot = avl_probe(Table, Result0.Val, ((Std$Integer_smallt *)Result1.Val)->Value);
+			*Slot = Std$Object$Nil;
 		} else if (Return == MESSAGE) {
 			*Result = Result0;
 			return MESSAGE;
@@ -471,20 +471,20 @@ METHOD("*", TYP, T, TYP, T) {
 
 METHOD("insert", TYP, T, SKP) {
 	struct avl_table *Table = (struct avl_table *)Args[0].Val;
-	Lang$Function_result Result1;
-	Lang$Object_t **Slot;
-	Lang$Function$call(Table->avl_hash, 1, &Result1, Args[1].Val, 0);
-	Slot = avl_probe(Table, Args[1].Val, ((Lang$Integer_smallt *)Result1.Val)->Value);
-	*Slot = Count > 2 ? Args[2].Val : Lang$Object$Nil;
+	Std$Function_result Result1;
+	Std$Object_t **Slot;
+	Std$Function$call(Table->avl_hash, 1, &Result1, Args[1].Val, 0);
+	Slot = avl_probe(Table, Args[1].Val, ((Std$Integer_smallt *)Result1.Val)->Value);
+	*Slot = Count > 2 ? Args[2].Val : Std$Object$Nil;
 	Result->Arg = Args[0];
 	return SUCCESS;
 };
 
 METHOD("delete", TYP, T, SKP) {
 	struct avl_table *Table = (struct avl_table *)Args[0].Val;
-	Lang$Function_result Result1;
-	Lang$Function$call(Table->avl_hash, 1, &Result1, Args[1].Val, 0);
-	if (avl_delete(Table, Args[1].Val, ((Lang$Integer_smallt *)Result1.Val)->Value)) {
+	Std$Function_result Result1;
+	Std$Function$call(Table->avl_hash, 1, &Result1, Args[1].Val, 0);
+	if (avl_delete(Table, Args[1].Val, ((Std$Integer_smallt *)Result1.Val)->Value)) {
 		Result->Arg = Args[0];
 		return SUCCESS;
 	} else {
@@ -494,10 +494,10 @@ METHOD("delete", TYP, T, SKP) {
 
 METHOD("[]",TYP, T, SKP ) {
 	struct avl_table *Table = (struct avl_table *)Args[0].Val;
-	Lang$Function_result Result1;
-	Lang$Object_t **Slot;
-	Lang$Function$call(Table->avl_hash, 1, &Result1, Args[1].Val, 0);
-	Slot = avl_find(Table, Args[1].Val, ((Lang$Integer_smallt *)Result1.Val)->Value);
+	Std$Function_result Result1;
+	Std$Object_t **Slot;
+	Std$Function$call(Table->avl_hash, 1, &Result1, Args[1].Val, 0);
+	Slot = avl_find(Table, Args[1].Val, ((Std$Integer_smallt *)Result1.Val)->Value);
 	if (Slot != 0) {
 		Result->Val = *(Result->Ref = Slot);
 		return SUCCESS;
@@ -506,40 +506,40 @@ METHOD("[]",TYP, T, SKP ) {
 	};
 };
 
-static Lang$Object_t *LeftBrace, *RightBrace, *SpaceIsSpace, *CommaSpace;
+static Std$Object_t *LeftBrace, *RightBrace, *SpaceIsSpace, *CommaSpace;
 
-METHOD("@", TYP, T, VAL, Lang$String$T) {
-	Lang$Function_result Buffer;
-	Lang$Object_t *Final = LeftBrace;
+METHOD("@", TYP, T, VAL, Std$String$T) {
+	Std$Function_result Buffer;
+	Std$Object_t *Final = LeftBrace;
 	struct avl_traverser Traverser;
 	struct avl_node *Node = avl_t_first(&Traverser, Args[0].Val);
 	if (Node != 0) {
-		Lang$Function$call($AT, 2, &Buffer, Node->avl_key, 0, Lang$String$T, 0);
-		Lang$Function$call(Lang$Methods$add_string_string, 2, &Buffer, Final, 0, Buffer.Val, 0);
+		Std$Function$call($AT, 2, &Buffer, Node->avl_key, 0, Std$String$T, 0);
+		Std$Function$call(Std$Methods$add_string_string, 2, &Buffer, Final, 0, Buffer.Val, 0);
 		Final = Buffer.Val;
-		if (Node->avl_value != Lang$Object$Nil) {
-			Lang$Function$call(Lang$Methods$add_string_string, 2, &Buffer, Final, 0, SpaceIsSpace, 0);
+		if (Node->avl_value != Std$Object$Nil) {
+			Std$Function$call(Std$Methods$add_string_string, 2, &Buffer, Final, 0, SpaceIsSpace, 0);
 			Final = Buffer.Val;
-			Lang$Function$call($AT, 2, &Buffer, Node->avl_value, 0, Lang$String$T, 0);
-			Lang$Function$call(Lang$Methods$add_string_string, 2, &Buffer, Final, 0, Buffer.Val, 0);
+			Std$Function$call($AT, 2, &Buffer, Node->avl_value, 0, Std$String$T, 0);
+			Std$Function$call(Std$Methods$add_string_string, 2, &Buffer, Final, 0, Buffer.Val, 0);
 			Final = Buffer.Val;
 		};
 	};
 	for (Node = avl_t_next(&Traverser); Node; Node = avl_t_next(&Traverser)) {
-		Lang$Function$call(Lang$Methods$add_string_string, 2, &Buffer, Final, 0, CommaSpace, 0);
+		Std$Function$call(Std$Methods$add_string_string, 2, &Buffer, Final, 0, CommaSpace, 0);
 		Final = Buffer.Val;
-		Lang$Function$call($AT, 2, &Buffer, Node->avl_key, 0, Lang$String$T, 0);
-		Lang$Function$call(Lang$Methods$add_string_string, 2, &Buffer, Final, 0, Buffer.Val, 0);
+		Std$Function$call($AT, 2, &Buffer, Node->avl_key, 0, Std$String$T, 0);
+		Std$Function$call(Std$Methods$add_string_string, 2, &Buffer, Final, 0, Buffer.Val, 0);
 		Final = Buffer.Val;
-		if (Node->avl_value != Lang$Object$Nil) {
-			Lang$Function$call(Lang$Methods$add_string_string, 2, &Buffer, Final, 0, SpaceIsSpace, 0);
+		if (Node->avl_value != Std$Object$Nil) {
+			Std$Function$call(Std$Methods$add_string_string, 2, &Buffer, Final, 0, SpaceIsSpace, 0);
 			Final = Buffer.Val;
-			Lang$Function$call($AT, 2, &Buffer, Node->avl_value, 0, Lang$String$T, 0);
-			Lang$Function$call(Lang$Methods$add_string_string, 2, &Buffer, Final, 0, Buffer.Val, 0);
+			Std$Function$call($AT, 2, &Buffer, Node->avl_value, 0, Std$String$T, 0);
+			Std$Function$call(Std$Methods$add_string_string, 2, &Buffer, Final, 0, Buffer.Val, 0);
 			Final = Buffer.Val;
 		};
 	};
-	Lang$Function$call(Lang$Methods$add_string_string, 2, &Buffer, Final, 0, RightBrace, 0);
+	Std$Function$call(Std$Methods$add_string_string, 2, &Buffer, Final, 0, RightBrace, 0);
 	Final = Buffer.Val;
 	Result->Val = Final;
 	return SUCCESS;
@@ -557,11 +557,11 @@ METHOD("value", TYP, NodeType) {
 
 typedef struct avl_resume_data {
 	struct avl_traverser *Traverser;
-	Lang$Function_argument Result;
+	Std$Function_argument Result;
 } avl_resume_data;
 
 static long resume_items_table(avl_resume_data *Data) {
-	Lang$Object_t *Node = avl_t_next(Data->Traverser);
+	Std$Object_t *Node = avl_t_next(Data->Traverser);
 	if (Node != 0) {
 		Data->Result.Val = Node;
 		Data->Result.Ref = 0;
@@ -573,8 +573,8 @@ static long resume_items_table(avl_resume_data *Data) {
 
 METHOD("items", TYP, T) {
 	struct avl_traverser *Traverser = (struct avl_traverser *)Riva$Memory$alloc(sizeof(*Traverser));
-	Lang$Object_t *Node = avl_t_first(Traverser, Args[0].Val);
-	Traverser->avl_state.Run = Lang$Function$resume_c;
+	Std$Object_t *Node = avl_t_first(Traverser, Args[0].Val);
+	Traverser->avl_state.Run = Std$Function$resume_c;
 	Traverser->avl_state.Invoke = resume_items_table;
 	if (Node != 0) {
 		Result->Val = Node;
@@ -586,19 +586,19 @@ METHOD("items", TYP, T) {
 };
 
 struct avl_traverser2 {
-	Lang$Function_cstate avl_state;
+	Std$Function_cstate avl_state;
 	struct avl_table *avl_table;        /* Tree being traversed. */
 	struct avl_node *avl_node;          /* Current node in tree. */
 	struct avl_node *avl_stack[AVL_MAX_HEIGHT];
 	                                    /* All the nodes above |avl_node|. */
 	unsigned long avl_height;                  /* Number of nodes in |avl_parent|. */
 	unsigned long avl_generation;       /* Generation number. */
-	Lang$Object_t **Key, **Value;
+	Std$Object_t **Key, **Value;
 };
 
 typedef struct avl_resume_data2 {
 	struct avl_traverser2 *Traverser;
-	Lang$Function_argument Result;
+	Std$Function_argument Result;
 } avl_resume_data2;
 
 static long resume_loop_table(avl_resume_data2 *Data) {
@@ -615,7 +615,7 @@ static long resume_loop_table(avl_resume_data2 *Data) {
 METHOD("loop", TYP, T) {
 	struct avl_traverser2 *Traverser = (struct avl_traverser2 *)Riva$Memory$alloc(sizeof(*Traverser));
 	struct avl_node *Node = avl_t_first(Traverser, Args[0].Val);
-	Traverser->avl_state.Run = Lang$Function$resume_c;
+	Traverser->avl_state.Run = Std$Function$resume_c;
 	Traverser->avl_state.Invoke = resume_loop_table;
 	Traverser->Key = Args[1].Ref;
 	Traverser->Value = Args[2].Ref;
@@ -643,7 +643,7 @@ static long resume_keys_table(avl_resume_data *Data) {
 METHOD("keys", TYP, T) {
 	struct avl_traverser *Traverser = (struct avl_traverser *)Riva$Memory$alloc(sizeof(*Traverser));
 	struct avl_node *Node = avl_t_first(Traverser, Args[0].Val);
-	Traverser->avl_state.Run = Lang$Function$resume_c;
+	Traverser->avl_state.Run = Std$Function$resume_c;
 	Traverser->avl_state.Invoke = resume_keys_table;
 	if (Node != 0) {
 		Result->Val = Node->avl_key;
@@ -667,7 +667,7 @@ static long resume_values_table(avl_resume_data *Data) {
 METHOD("values", TYP, T) {
 	struct avl_traverser *Traverser = (struct avl_traverser *)Riva$Memory$alloc(sizeof(*Traverser));
 	struct avl_node *Node = avl_t_first(Traverser, Args[0].Val);
-	Traverser->avl_state.Run = Lang$Function$resume_c;
+	Traverser->avl_state.Run = Std$Function$resume_c;
 	Traverser->avl_state.Invoke = resume_values_table;
 	if (Node != 0) {
 		Result->Val = *(Result->Ref = &Node->avl_value);
@@ -679,7 +679,7 @@ METHOD("values", TYP, T) {
 };
 
 METHOD("size", TYP, T) {
-	Result->Val = Lang$Integer$new_small(((struct avl_table *)Args[0].Val)->avl_count);
+	Result->Val = Std$Integer$new_small(((struct avl_table *)Args[0].Val)->avl_count);
 	return SUCCESS;
 };
 
@@ -694,8 +694,8 @@ METHOD("compare", TYP, T) {
 };
 
 void __init(void *Module) {
-	LeftBrace = Lang$String$new("{");
-	RightBrace = Lang$String$new("}");
-	CommaSpace = Lang$String$new(", ");
-	SpaceIsSpace = Lang$String$new(" is ");
+	LeftBrace = Std$String$new("{");
+	RightBrace = Std$String$new("}");
+	CommaSpace = Std$String$new(", ");
+	SpaceIsSpace = Std$String$new(" is ");
 };

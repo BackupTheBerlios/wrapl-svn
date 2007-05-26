@@ -1,7 +1,7 @@
 MOD Main;
 
-IMP Lang.String;
-IMP Lang.Symbol;
+IMP Std.String;
+IMP Std.Symbol;
 IMP IO.Terminal USE In, Out;
 IMP Wrapl;
 

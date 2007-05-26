@@ -1,7 +1,7 @@
 BASENAME = $(LIB_DIR)Util$(DIRSEP)
 
 CFLAGS += -std=gnu99
-LDFLAGS += Lang.rlib Riva.rlib
+LDFLAGS += Std.rlib Riva.rlib
 
 RivaProgram($(BASENAME)StringTable, StringTable)
 RivaProgram($(BASENAME)TypeTable, TypeTable)

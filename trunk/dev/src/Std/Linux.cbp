@@ -138,7 +138,7 @@
 		<Linker>
 			<Add library="libgmp.rlib" />
 			<Add library="Riva.rlib" />
-			<Add library="Lang.rlib" />
+			<Add library="Std.rlib" />
 		</Linker>
 		<Unit filename="Address.asm">
 			<Option compile="1" />

@@ -1,28 +1,28 @@
 #ifndef IO_STREAM_H
 #define IO_STREAM_H
 
-#include <Lang/Object.h>
-#include <Lang/Integer.h>
+#include <Std/Object.h>
+#include <Std/Integer.h>
 #include <Util/TypeTable.h>
 
 #define RIVA_MODULE IO$Stream
 #include <Riva-Header.h>
 
-typedef Lang$Object_t IO$Stream_t;
+typedef Std$Object_t IO$Stream_t;
 
 typedef struct IO$Stream_messaget {
-	Lang$Type_t *Type;
+	Std$Type_t *Type;
 	const char *Message;
 } IO$Stream_messaget;
 
-extern Lang$Type_t IO$Stream$T[];
-extern Lang$Type_t IO$Stream$ReaderT[];
-extern Lang$Type_t IO$Stream$WriterT[];
-extern Lang$Type_t IO$Stream$TextReaderT[];
-extern Lang$Type_t IO$Stream$TextWriterT[];
-extern Lang$Type_t IO$Stream$SeekerT[];
+extern Std$Type_t IO$Stream$T[];
+extern Std$Type_t IO$Stream$ReaderT[];
+extern Std$Type_t IO$Stream$WriterT[];
+extern Std$Type_t IO$Stream$TextReaderT[];
+extern Std$Type_t IO$Stream$TextWriterT[];
+extern Std$Type_t IO$Stream$SeekerT[];
 
-extern Lang$Type_t IO$Stream$MessageT[];
+extern Std$Type_t IO$Stream$MessageT[];
 
 typedef struct IO$Stream_t_methods {
 	void (*flush)(IO$Stream_t *);
@@ -53,9 +53,9 @@ typedef struct IO$Stream_seeker_methods {
 	int (*tell)(IO$Stream_t *);
 } IO$Stream_seeker_methods;
 
-extern Lang$Integer_smallt IO$Stream$SEEK_SET[];
-extern Lang$Integer_smallt IO$Stream$SEEK_CUR[];
-extern Lang$Integer_smallt IO$Stream$SEEK_END[];
+extern Std$Integer_smallt IO$Stream$SEEK_SET[];
+extern Std$Integer_smallt IO$Stream$SEEK_CUR[];
+extern Std$Integer_smallt IO$Stream$SEEK_END[];
 
 extern Util$TypeTable_t IO$Stream$T_Methods[];
 extern Util$TypeTable_t IO$Stream$ReaderT_Methods[];

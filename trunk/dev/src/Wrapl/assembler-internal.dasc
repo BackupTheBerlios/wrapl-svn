@@ -6,8 +6,8 @@
 |.type STATE, state_t
 |.type BSTATE, bstate_t
 |.type CLOSURE, closure_t
-|.type VALUE, Lang$Object_t
-|.type TYPE, Lang$Type_t
+|.type VALUE, Std$Object_t
+|.type TYPE, Std$Type_t
 
 |.actionlist ActionList
 |.globals Globals_
@@ -28,8 +28,8 @@ struct bstate_t {
 	void *Run;
 	void *Resume;
 	state_t *Chain;
-	Lang$Object_t *Val;
-	Lang$Object_t **Ref;
+	Std$Object_t *Val;
+	Std$Object_t **Ref;
 	void *Code;
 	void *Handler;
 	void *Data;
@@ -66,11 +66,11 @@ void encode_entry(assembler_t *Assembler) {
 		| rep; movsd
 		| neg edx
 		| lea ecx, [edx * 2 + 2 * Assembler->NoOfLocals]
-		| mov eax, Lang$Object$Nil
+		| mov eax, Std$Object$Nil
 		| rep; stosd
 	} else if (Assembler->NoOfLocals) {
 		| mov ecx, 2 * Assembler->NoOfLocals
-		| mov eax, Lang$Object$Nil
+		| mov eax, Std$Object$Nil
 		| rep; stosd
 	};
 	| pop eax
@@ -114,7 +114,7 @@ void scope_inst_t::encode(assembler_t *Assembler) {
 	| pop ecx
 	| mov [ebp + Assembler->Scopes + 4 * Index], eax
 	| mov edi, eax
-	| mov eax, Lang$Object$Nil
+	| mov eax, Std$Object$Nil
 	| mov ecx, Size * 2
 	| rep; stosd
 };

@@ -1,19 +1,19 @@
 #ifndef LANG_OBJECT_H
 #define LANG_OBJECT_H
 
-#include <Lang/Type.h>
+#include <Std/Type.h>
 
-#define RIVA_MODULE Lang$Object
+#define RIVA_MODULE Std$Object
 #include <Riva-Header.h>
 
-typedef struct Lang$Object_t Lang$Object_t;
+typedef struct Std$Object_t Std$Object_t;
 
-struct Lang$Object_t {
-	Lang$Type_t *Type;
+struct Std$Object_t {
+	Std$Type_t *Type;
 };
 
-extern Lang$Type_t Lang$Object$T[];
-extern Lang$Object_t Lang$Object$Nil[];
+extern Std$Type_t Std$Object$T[];
+extern Std$Object_t Std$Object$Nil[];
 
 #undef RIVA_MODULE
 

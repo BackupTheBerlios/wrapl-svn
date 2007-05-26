@@ -1,4 +1,4 @@
-#include <Lang.h>
+#include <Std.h>
 #include <Riva/Memory.h>
 #include <Riva/Thread.h>
 #include <string.h>
@@ -18,21 +18,21 @@ static Riva$Thread_key *CoexprKey;
 #endif
 
 typedef struct coexpr_t {
-	Lang$Type_t *Type;
+	Std$Type_t *Type;
 	struct coexpr_t *Caller;
-	Lang$Function_argument Transfer;
+	Std$Function_argument Transfer;
 	int Status;
 #ifdef WINDOWS
     void *Fiber;
-    Lang$Function_argument *Args;
+    Std$Function_argument *Args;
     int Count;
-    Lang$Object_t *Func;
+    Std$Object_t *Func;
 #else
 	ucontext_t Context;
 #endif
 } coexpr_t;
 
-static void switch_coexpr(coexpr_t *Old, coexpr_t *New, int Status, Lang$Function_argument Transfer) {
+static void switch_coexpr(coexpr_t *Old, coexpr_t *New, int Status, Std$Function_argument Transfer) {
     New->Transfer = Transfer;
 	New->Status = Status;
 	New->Caller = Old;
@@ -48,18 +48,18 @@ static void switch_coexpr(coexpr_t *Old, coexpr_t *New, int Status, Lang$Functio
 
 static void __stdcall coexpr_func(coexpr_t *Callee) {
     coexpr_t *Caller = Callee->Caller;
-	Lang$Function_result Result;
-	int Status = Lang$Function$invoke(Callee->Func, Callee->Count, &Result, Callee->Args);
+	Std$Function_result Result;
+	int Status = Std$Function$invoke(Callee->Func, Callee->Count, &Result, Callee->Args);
 	loop: switch (Status) {
 	case SUSPEND:
         switch_coexpr(Callee, Caller, SUCCESS, Result.Arg);
 		Result.Arg = Caller->Transfer;
-		Status = Lang$Function$resume(&Result);
+		Status = Std$Function$resume(&Result);
 		goto loop;
 	case SUCCESS:
 		switch_coexpr(Callee, Caller, SUCCESS, Result.Arg);
 	case FAILURE: for (;;) {
-		switch_coexpr(Callee, Caller, FAILURE, (Lang$Function_argument){0, 0});
+		switch_coexpr(Callee, Caller, FAILURE, (Std$Function_argument){0, 0});
 	};
 	case MESSAGE: for (;;) {
 		switch_coexpr(Callee, Caller, MESSAGE, Result.Arg);
@@ -71,8 +71,8 @@ GLOBAL_FUNCTION(New, 1) {
 	coexpr_t *Coexpr = new(coexpr_t);
 	Coexpr->Type = T;
 	Coexpr->Fiber = CreateFiber(0, coexpr_func, Coexpr);
-	Lang$Function_argument *Arguments = Riva$Memory$alloc(sizeof(Lang$Function_argument *) * (Count - 1));
-	memcpy(Arguments, Args + 1, sizeof(Lang$Function_argument *) * (Count - 1));
+	Std$Function_argument *Arguments = Riva$Memory$alloc(sizeof(Std$Function_argument *) * (Count - 1));
+	memcpy(Arguments, Args + 1, sizeof(Std$Function_argument *) * (Count - 1));
 	Coexpr->Count = Count - 1;
 	Coexpr->Args = Arguments;
 	Coexpr->Func = Args[0].Val;
@@ -82,20 +82,20 @@ GLOBAL_FUNCTION(New, 1) {
 
 #else
 
-static void coexpr_func(coexpr_t *Callee, Lang$Object_t *Fun, long Count, Lang$Function_argument *Args) {
+static void coexpr_func(coexpr_t *Callee, Std$Object_t *Fun, long Count, Std$Function_argument *Args) {
 	coexpr_t *Caller = Callee->Caller;
-	Lang$Function_result Result;
-	int Status = Lang$Function$invoke(Fun, Count, &Result, Args);
+	Std$Function_result Result;
+	int Status = Std$Function$invoke(Fun, Count, &Result, Args);
 	loop: switch (Status) {
 	case SUSPEND:
         switch_coexpr(Callee, Caller, SUCCESS, Result.Arg);
 		Result.Arg = Caller->Transfer;
-		Status = Lang$Function$resume(&Result);
+		Status = Std$Function$resume(&Result);
 		goto loop;
 	case SUCCESS:
 		switch_coexpr(Callee, Caller, SUCCESS, Result.Arg);
 	case FAILURE: for (;;) {
-		switch_coexpr(Callee, Caller, FAILURE, (Lang$Function_argument){0, 0});
+		switch_coexpr(Callee, Caller, FAILURE, (Std$Function_argument){0, 0});
 	};
 	case MESSAGE: for (;;) {
 		switch_coexpr(Callee, Caller, MESSAGE, Result.Arg);
@@ -109,8 +109,8 @@ GLOBAL_FUNCTION(New, 1) {
 	getcontext(&Coexpr->Context);
 	Coexpr->Context.uc_stack.ss_sp = Coexpr;
 	Coexpr->Context.uc_stack.ss_size = Riva$Memory$size(Coexpr);
-	Lang$Function_argument *Arguments = Riva$Memory$alloc(sizeof(Lang$Function_argument *) * (Count - 1));
-	memcpy(Arguments, Args + 1, sizeof(Lang$Function_argument *) * (Count - 1));
+	Std$Function_argument *Arguments = Riva$Memory$alloc(sizeof(Std$Function_argument *) * (Count - 1));
+	memcpy(Arguments, Args + 1, sizeof(Std$Function_argument *) * (Count - 1));
 	makecontext(&Coexpr->Context, coexpr_func, 4, Coexpr, Args[0].Val, Count - 1, Arguments);
 	Result->Val = Coexpr;
 	return SUCCESS;
@@ -158,7 +158,7 @@ METHOD("^", TYP, T) {
 	coexpr_t *Caller = Riva$Thread$key_get(CoexprKey);
 #endif
 	coexpr_t *Callee = Args[0].Val;
-	switch_coexpr(Caller, Callee, SUCCESS, (Lang$Function_argument){Lang$Object$Nil, 0});
+	switch_coexpr(Caller, Callee, SUCCESS, (Std$Function_argument){Std$Object$Nil, 0});
 	Result->Arg = Caller->Transfer;
 	return Caller->Status;
 };

@@ -1,12 +1,12 @@
-%include "Lang.inc"
+%include "Std.inc"
 
-extern Lang$Type$T
+extern Std$Type$T
 extern Riva$Memory$_alloc
 extern Riva$Memory$_alloc_atomic
-extern Lang$Object$Nil
+extern Std$Object$Nil
 
 c_data T
-	dd Lang$Type$T
+	dd Std$Type$T
 	dd .types
 	dd 0
 	dd 0
@@ -16,8 +16,8 @@ c_data T
 	dd 0
 
 extern strlen
-extern Lang$Integer$SmallT
-extern Lang$Address$T
+extern Std$Integer$SmallT
+extern Std$Address$T
 c_func _new
 	push dword [esp + 4]
 	call strlen
@@ -28,12 +28,12 @@ c_func _new
 	pop edx
 	mov ecx, [esp + 4]
 	mov [value(eax).Type], dword T
-	mov [value(string(eax).Length).Type], dword Lang$Integer$SmallT
+	mov [value(string(eax).Length).Type], dword Std$Integer$SmallT
 	mov [small_int(string(eax).Length).Value], edx
 	mov [string(eax).Count], dword 1
-	mov [value(string_block(string(eax).Blocks).Length).Type], dword Lang$Integer$SmallT
+	mov [value(string_block(string(eax).Blocks).Length).Type], dword Std$Integer$SmallT
 	mov [small_int(string_block(string(eax).Blocks).Length).Value], edx
-	mov [value(string_block(string(eax).Blocks).Chars).Type], dword Lang$Address$T
+	mov [value(string_block(string(eax).Blocks).Chars).Type], dword Std$Address$T
 	mov [address(string_block(string(eax).Blocks).Chars).Value], ecx
 	ret
 
@@ -44,12 +44,12 @@ c_func _new_length
 	mov edx, [esp + 8]
 	mov ecx, [esp + 4]
 	mov [value(eax).Type], dword T
-	mov [value(string(eax).Length).Type], dword Lang$Integer$SmallT
+	mov [value(string(eax).Length).Type], dword Std$Integer$SmallT
 	mov [small_int(string(eax).Length).Value], edx
 	mov [string(eax).Count], dword 1
-	mov [value(string_block(string(eax).Blocks).Length).Type], dword Lang$Integer$SmallT
+	mov [value(string_block(string(eax).Blocks).Length).Type], dword Std$Integer$SmallT
 	mov [small_int(string_block(string(eax).Blocks).Length).Value], edx
-	mov [value(string_block(string(eax).Blocks).Chars).Type], dword Lang$Address$T
+	mov [value(string_block(string(eax).Blocks).Chars).Type], dword Std$Address$T
 	mov [address(string_block(string(eax).Blocks).Chars).Value], ecx
 	ret
 
@@ -67,12 +67,12 @@ c_func _new_char
 	mov ecx, [esp + 4]
 	mov edx, 1
 	mov [value(eax).Type], dword T
-	mov [value(string(eax).Length).Type], dword Lang$Integer$SmallT
+	mov [value(string(eax).Length).Type], dword Std$Integer$SmallT
 	mov [small_int(string(eax).Length).Value], edx
 	mov [string(eax).Count], edx
-	mov [value(string_block(string(eax).Blocks).Length).Type], dword Lang$Integer$SmallT
+	mov [value(string_block(string(eax).Blocks).Length).Type], dword Std$Integer$SmallT
 	mov [small_int(string_block(string(eax).Blocks).Length).Value], edx
-	mov [value(string_block(string(eax).Blocks).Chars).Type], dword Lang$Address$T
+	mov [value(string_block(string(eax).Blocks).Chars).Type], dword Std$Address$T
 	mov [address(string_block(string(eax).Blocks).Chars).Value], ecx
 	ret
 
@@ -85,12 +85,12 @@ func FromAddress, 2
 	mov [value(eax).Type], dword T
 	mov ecx, [address(ecx).Value]
 	mov edx, [small_int(edx).Value]
-	mov [value(string(eax).Length).Type], dword Lang$Integer$SmallT
+	mov [value(string(eax).Length).Type], dword Std$Integer$SmallT
 	mov [small_int(string(eax).Length).Value], edx
 	mov [string(eax).Count], dword 1
-	mov [value(string_block(string(eax).Blocks).Chars).Type], dword Lang$Address$T
+	mov [value(string_block(string(eax).Blocks).Chars).Type], dword Std$Address$T
 	mov [address(string_block(string(eax).Blocks).Chars).Value], ecx
-	mov [value(string_block(string(eax).Blocks).Length).Type], dword Lang$Integer$SmallT
+	mov [value(string_block(string(eax).Blocks).Length).Type], dword Std$Integer$SmallT
 	mov [small_int(string_block(string(eax).Blocks).Length).Value], edx
 	mov ecx, eax
 	xor edx, edx
@@ -148,7 +148,7 @@ func GetBlocks, 3
 	add eax, byte 8
 	cmp [eax], dword 0
 	jne .suspend
-	mov ecx, Lang$Object$Nil
+	mov ecx, Std$Object$Nil
 	xor edx, edx
 	xor eax, eax
 	ret
@@ -163,7 +163,7 @@ func GetBlocks, 3
 	pop dword [get_blocks_state(eax).Block]
 	pop dword [get_blocks_state(eax).Address]
 	pop dword [get_blocks_state(eax).Length]
-	mov ecx, Lang$Object$Nil
+	mov ecx, Std$Object$Nil
 	xor edx, edx
 	mov ebx, eax
 	or eax, byte -1
@@ -180,7 +180,7 @@ func GetBlocks, 3
 	add ebx, byte 8
 	mov [edx], ebx
 	add ebx, byte 8
-	mov ecx, Lang$Object$Nil
+	mov ecx, Std$Object$Nil
 	xor edx, edx
 	cmp [ebx], dword 0
 	jne .resuspend

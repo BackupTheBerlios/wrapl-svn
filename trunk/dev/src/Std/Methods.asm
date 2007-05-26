@@ -1,32 +1,32 @@
-%include "Lang.inc"
+%include "Std.inc"
 
 extern Riva$Memory$_alloc
 extern Riva$Memory$_alloc_atomic
 
-extern Lang$Type$T
-extern Lang$Function$T
-extern Lang$Function$FewArgsMessageT
-extern Lang$Address$T
-extern Lang$Symbol$T
-extern Lang$Symbol$NoMethodMessageT
-extern Lang$Integer$T
-extern Lang$Integer$BigT
-extern Lang$Integer$SmallT
-extern Lang$String$T
-extern Lang$Real$T
-extern Lang$Array$T
-extern Lang$Object$Nil
-extern Lang$Object$T
+extern Std$Type$T
+extern Std$Function$T
+extern Std$Function$FewArgsMessageT
+extern Std$Address$T
+extern Std$Symbol$T
+extern Std$Symbol$NoMethodMessageT
+extern Std$Integer$T
+extern Std$Integer$BigT
+extern Std$Integer$SmallT
+extern Std$String$T
+extern Std$Real$T
+extern Std$Array$T
+extern Std$Object$Nil
+extern Std$Object$T
 
-extern Lang$Address$_alloc
+extern Std$Address$_alloc
 
-%define ADDRESS TYP, Lang$Address$T
-%define SMALLINT TYP, Lang$Integer$SmallT
-%define BIGINT TYP, Lang$Integer$BigT
-%define REAL TYP, Lang$Real$T
-%define STRING TYP, Lang$String$T
-%define OBJECT TYP, Lang$Object$T
-%define SYMBOL TYP, Lang$Symbol$T
+%define ADDRESS TYP, Std$Address$T
+%define SMALLINT TYP, Std$Integer$SmallT
+%define BIGINT TYP, Std$Integer$BigT
+%define REAL TYP, Std$Real$T
+%define STRING TYP, Std$String$T
+%define OBJECT TYP, Std$Object$T
+%define SYMBOL TYP, Std$Symbol$T
 %define ANY SKP
 
 method "put", ADDRESS, ADDRESS, SMALLINT
@@ -37,7 +37,7 @@ method "put", ADDRESS, ADDRESS, SMALLINT
 	mov esi, [address(ebx).Value]
 	mov ecx, [small_int(ecx).Value]
 	rep movsb
-	mov ecx, Lang$Object$Nil
+	mov ecx, Std$Object$Nil
 	xor edx, edx
 	xor eax, eax
 	ret
@@ -52,7 +52,7 @@ method "put", ADDRESS, ADDRESS, SMALLINT, SMALLINT
 	mov esi, [address(ebx).Value]
 	mov ecx, [small_int(ecx).Value]
 	rep movsb
-	mov ecx, Lang$Object$Nil
+	mov ecx, Std$Object$Nil
 	xor edx, edx
 	xor eax, eax
 	ret
@@ -63,7 +63,7 @@ method "put8", ADDRESS, SMALLINT
 	mov esi, [address(esi).Value]
 	mov al, [small_int(eax).Value]
 	mov [esi], al
-	mov ecx, Lang$Object$Nil
+	mov ecx, Std$Object$Nil
 	xor edx, edx
 	xor eax, eax
 	ret
@@ -73,7 +73,7 @@ method "put", ADDRESS, OBJECT
 	mov eax, [argument(edi + 8).Val]
 	mov esi, [address(esi).Value]
 	mov [esi], eax
-	mov ecx, Lang$Object$Nil
+	mov ecx, Std$Object$Nil
 	xor edx, edx
 	xor eax, eax
 	ret
@@ -85,7 +85,7 @@ method "put", ADDRESS, OBJECT, SMALLINT
 	mov esi, [address(esi).Value]
 	add esi, [small_int(ebx).Value]
 	mov [esi], eax
-	mov ecx, Lang$Object$Nil
+	mov ecx, Std$Object$Nil
 	xor edx, edx
 	xor eax, eax
 	ret
@@ -96,7 +96,7 @@ method "put32", ADDRESS, SMALLINT
 	mov esi, [address(esi).Value]
 	mov eax, [small_int(eax).Value]
 	mov [esi], eax
-	mov ecx, Lang$Object$Nil
+	mov ecx, Std$Object$Nil
 	xor edx, edx
 	xor eax, eax
 	ret
@@ -109,7 +109,7 @@ method "put8", ADDRESS, SMALLINT, SMALLINT
 	add esi, [small_int(ebx).Value]
 	mov al, [small_int(eax).Value]
 	mov [esi], al
-	mov ecx, Lang$Object$Nil
+	mov ecx, Std$Object$Nil
 	xor edx, edx
 	xor eax, eax
 	ret
@@ -122,7 +122,7 @@ method "put32", ADDRESS, SMALLINT, SMALLINT
 	add esi, [small_int(ebx).Value]
 	mov eax, [small_int(eax).Value]
 	mov [esi], eax
-	mov ecx, Lang$Object$Nil
+	mov ecx, Std$Object$Nil
 	xor edx, edx
 	xor eax, eax
 	ret
@@ -140,7 +140,7 @@ method "put", ADDRESS, STRING
 	add eax, byte sizeof(string_block)
 	jmp .loop
 .finished:
-	mov ecx, Lang$Object$Nil
+	mov ecx, Std$Object$Nil
 	xor edx, edx
 	xor eax, eax
 	ret
@@ -160,7 +160,7 @@ method "puts", ADDRESS, STRING, SMALLINT
 	add eax, byte sizeof(string_block)
 	jmp .loop
 .finished:
-	mov ecx, Lang$Object$Nil
+	mov ecx, Std$Object$Nil
 	xor edx, edx
 	xor eax, eax
 	ret
@@ -186,7 +186,7 @@ method "get8", ADDRESS
 	mov eax, [address(eax).Value]
 	movzx eax, byte [eax]
 	push eax
-	call Lang$Integer$_alloc_small
+	call Std$Integer$_alloc_small
 	pop dword [small_int(eax).Value]
 	mov ecx, eax
 	xor eax, eax
@@ -197,7 +197,7 @@ method "get32", ADDRESS
 	mov eax, [argument(edi).Val]
 	mov eax, [address(eax).Value]
 	push dword [eax]
-	call Lang$Integer$_alloc_small
+	call Std$Integer$_alloc_small
 	pop dword [small_int(eax).Value]
 	mov ecx, eax
 	xor eax, eax
@@ -211,7 +211,7 @@ method "get8", ADDRESS, SMALLINT
 	add eax, [small_int(ebx).Value]
 	movzx eax, byte [eax]
 	push eax
-	call Lang$Integer$_alloc_small
+	call Std$Integer$_alloc_small
 	pop dword [small_int(eax).Value]
 	mov ecx, eax
 	xor eax, eax
@@ -224,7 +224,7 @@ method "get32", ADDRESS, SMALLINT
 	mov eax, [address(eax).Value]
 	add eax, [small_int(ebx).Value]
 	push dword [eax]
-	call Lang$Integer$_alloc_small
+	call Std$Integer$_alloc_small
 	pop dword [small_int(eax).Value]
 	mov ecx, eax
 	xor eax, eax
@@ -247,15 +247,15 @@ method "gets", ADDRESS, SMALLINT
 	call Riva$Memory$_alloc
 	add esp, byte 4
 	mov ecx, eax
-	mov [value(ecx).Type], dword Lang$String$T
-	mov [value(string(ecx).Length).Type], dword Lang$Integer$SmallT
+	mov [value(ecx).Type], dword Std$String$T
+	mov [value(string(ecx).Length).Type], dword Std$Integer$SmallT
 	pop dword [address(string_block(string(ecx).Blocks).Chars).Value]
 	pop eax
 	mov [small_int(string(ecx).Length).Value], eax
 	mov [small_int(string_block(string(ecx).Blocks).Length).Value], eax
 	mov [string(ecx).Count], dword 1
-	mov [value(string_block(string(ecx).Blocks).Length).Type], dword Lang$Integer$SmallT
-	mov [value(string_block(string(ecx).Blocks).Chars).Type], dword Lang$Address$T
+	mov [value(string_block(string(ecx).Blocks).Length).Type], dword Std$Integer$SmallT
+	mov [value(string_block(string(ecx).Blocks).Chars).Type], dword Std$Address$T
 	xor edx, edx
 	xor eax, eax
 	ret
@@ -278,15 +278,15 @@ method "gets", ADDRESS, SMALLINT, SMALLINT
 	call Riva$Memory$_alloc
 	add esp, byte 4
 	mov ecx, eax
-	mov [value(ecx).Type], dword Lang$String$T
-	mov [value(string(ecx).Length).Type], dword Lang$Integer$SmallT
+	mov [value(ecx).Type], dword Std$String$T
+	mov [value(string(ecx).Length).Type], dword Std$Integer$SmallT
 	pop dword [address(string_block(string(ecx).Blocks).Chars).Value]
 	pop eax
 	mov [small_int(string(ecx).Length).Value], eax
 	mov [small_int(string_block(string(ecx).Blocks).Length).Value], eax
 	mov [string(ecx).Count], dword 1
-	mov [value(string_block(string(ecx).Blocks).Length).Type], dword Lang$Integer$SmallT
-	mov [value(string_block(string(ecx).Blocks).Chars).Type], dword Lang$Address$T
+	mov [value(string_block(string(ecx).Blocks).Length).Type], dword Std$Integer$SmallT
+	mov [value(string_block(string(ecx).Blocks).Chars).Type], dword Std$Address$T
 	xor edx, edx
 	xor eax, eax
 	ret
@@ -298,7 +298,7 @@ method "add", ADDRESS, SMALLINT
 	mov eax, [eax + 4]
 	add eax, [ebx + 4]
 	push eax
-	call Lang$Address$_alloc
+	call Std$Address$_alloc
 	mov ecx, eax
 	pop dword [eax + 4]
 	xor edx, edx
@@ -311,7 +311,7 @@ method "sub", ADDRESS, SMALLINT
 	mov eax, [eax + 4]
 	sub eax, [ebx + 4]
 	push eax
-	call Lang$Address$_alloc
+	call Std$Address$_alloc
 	mov ecx, eax
 	pop dword [eax + 4]
 	xor edx, edx
@@ -324,17 +324,17 @@ method "sub", ADDRESS, ADDRESS
 	mov eax, [eax + 4]
 	sub eax, [ebx + 4]
 	push eax
-	call Lang$Integer$_alloc_small
+	call Std$Integer$_alloc_small
 	mov ecx, eax
 	pop dword [eax + 4]
 	xor edx, edx
 	xor eax, eax
 	ret
 
-extern Lang$String$_new
+extern Std$String$_new
 extern sprintf
 
-method "@", ADDRESS, VAL, Lang$String$T
+method "@", ADDRESS, VAL, Std$String$T
 	push byte 12
 	call Riva$Memory$_alloc_atomic
 	mov [esp], eax
@@ -346,7 +346,7 @@ method "@", ADDRESS, VAL, Lang$String$T
 	push eax
 	call sprintf
 	add esp, byte 12
-	call Lang$String$_new
+	call Std$String$_new
 	add esp, byte 4
 	mov ecx, eax
 	xor edx, edx
@@ -356,7 +356,7 @@ section .data
 .format:
 	db "%x", 0, 0
 
-method "@", ANY, TYP, Lang$Type$T
+method "@", ANY, TYP, Std$Type$T
 	mov ecx, [argument(edi).Val]
 	mov edx, [argument(edi + 8).Val]
 	mov eax, [value(ecx).Type]
@@ -370,7 +370,7 @@ method "@", ANY, TYP, Lang$Type$T
 	push byte sizeof(nomethod_message)
 	call Riva$Memory$_alloc
 	add esp, byte 4
-	mov [value(eax).Type], dword Lang$Symbol$NoMethodMessageT
+	mov [value(eax).Type], dword Std$Symbol$NoMethodMessageT
 	mov [nomethod_message(eax).Symbol], ebx
 	mov ecx, eax
 	xor edx, edx
@@ -382,11 +382,11 @@ method "@", ANY, TYP, Lang$Type$T
 	ret
 
 section .data
-LESS: dd Lang$Integer$SmallT, -1
+LESS: dd Std$Integer$SmallT, -1
 ZERO:
-EQUAL: dd Lang$Integer$SmallT, 0
+EQUAL: dd Std$Integer$SmallT, 0
 ONE:
-GREATER: dd Lang$Integer$SmallT, 1
+GREATER: dd Std$Integer$SmallT, 1
 
 method "?", ANY, ANY
 	mov eax, [argument(edi).Val]
@@ -413,23 +413,23 @@ method "?", ANY, ANY
 	xor eax, eax
 	ret
 
-method "@", VAL, Lang$Object$Nil, VAL, Lang$String$T
+method "@", VAL, Std$Object$Nil, VAL, Std$String$T
 	mov ecx, .nilstr
 	xor edx, edx
 	xor eax, eax
 	ret
 section .data
 .nilstr:
-	dd Lang$String$T
-	dd Lang$Integer$SmallT
+	dd Std$String$T
+	dd Std$Integer$SmallT
 	dd 3, 1
-	dd Lang$Integer$SmallT, 3
-	dd Lang$Address$T, .nil
+	dd Std$Integer$SmallT, 3
+	dd Std$Address$T, .nil
 	dd 0, 0, 0, 0
 .nil:
 	db "NIL", 0
 
-method "@", SYMBOL, VAL, Lang$String$T
+method "@", SYMBOL, VAL, Std$String$T
 	mov edx, [argument(edi).Val]
 	lea edx, [symbol(edx).Name]
 	mov ecx, [edx]
@@ -437,7 +437,7 @@ method "@", SYMBOL, VAL, Lang$String$T
 	ret
 
 extern asprintf
-method "@", TYP, Lang$Symbol$NoMethodMessageT, VAL, Lang$String$T
+method "@", TYP, Std$Symbol$NoMethodMessageT, VAL, Std$String$T
 	mov edx, [argument(edi).Val]
 	mov edx, [nomethod_message(edx).Symbol]
 	push byte 0
@@ -452,16 +452,16 @@ method "@", TYP, Lang$Symbol$NoMethodMessageT, VAL, Lang$String$T
 	ret
 section .data
 .messagestr:
-	dd Lang$String$T
-	dd Lang$Integer$SmallT
+	dd Std$String$T
+	dd Std$Integer$SmallT
 	dd 3, 1
-	dd Lang$Integer$SmallT, 11
-	dd Lang$Address$T, .str
+	dd Std$Integer$SmallT, 11
+	dd Std$Address$T, .str
 	dd 0, 0, 0, 0
 .str:
 	db "no method: ", 0
 
-method "@", TYP, Lang$Function$FewArgsMessageT, VAL, Lang$String$T
+method "@", TYP, Std$Function$FewArgsMessageT, VAL, Std$String$T
 	sub esp, byte 4
 	mov edx, [argument(edi).Val]
 	mov eax, esp
@@ -474,7 +474,7 @@ method "@", TYP, Lang$Function$FewArgsMessageT, VAL, Lang$String$T
 	push eax
 	call asprintf
 	add esp, byte 24
-	call Lang$String$_new
+	call Std$String$_new
 	add esp, byte 4
 	mov ecx, eax
 	xor edx, edx
@@ -483,7 +483,7 @@ method "@", TYP, Lang$Function$FewArgsMessageT, VAL, Lang$String$T
 section .data
 .format: db "%s:%d: expected %d args, received %d", 0
 
-method "@", SMALLINT, VAL, Lang$String$T
+method "@", SMALLINT, VAL, Std$String$T
 	push byte 10
 	call Riva$Memory$_alloc_atomic
 	mov [esp], eax
@@ -493,7 +493,7 @@ method "@", SMALLINT, VAL, Lang$String$T
 	push eax
 	call sprintf
 	add esp, byte 12
-	call Lang$String$_new
+	call Std$String$_new
 	add esp, byte 4
 	mov ecx, eax
 	xor edx, edx
@@ -505,7 +505,7 @@ section .data
 
 extern __gmpz_get_str
 
-method "@", BIGINT, VAL, Lang$String$T
+method "@", BIGINT, VAL, Std$String$T
 	mov ebx, [argument(edi).Val]
 	lea ebx, [big_int(ebx).Value]
 	push ebx
@@ -514,7 +514,7 @@ method "@", BIGINT, VAL, Lang$String$T
 	call __gmpz_get_str
 	add esp, byte 12
 	push eax
-	call Lang$String$_new
+	call Std$String$_new
 	add esp, byte 4
 	mov ecx, eax
 	xor edx, edx
@@ -522,7 +522,7 @@ method "@", BIGINT, VAL, Lang$String$T
 	ret
 
 extern __gmpz_init_set_str
-method "@", STRING, VAL, Lang$Integer$T
+method "@", STRING, VAL, Std$Integer$T
 	sub esp, byte 12
 	mov ebx, esp
 	mov eax, [argument(edi).Val]
@@ -554,7 +554,7 @@ method "@", STRING, VAL, Lang$Integer$T
 	ret
 
 extern atof
-method "@", STRING, VAL, Lang$Real$T
+method "@", STRING, VAL, Std$Real$T
 	mov ebx, esp
 	mov eax, [argument(edi).Val]
 	push byte 0
@@ -572,14 +572,14 @@ method "@", STRING, VAL, Lang$Real$T
 	push esp
 	call atof
 	mov esp, ebx
-	call Lang$Real$_alloc
+	call Std$Real$_alloc
 	fstp qword [real(eax).Value]
 	mov ecx, eax
 	xor eax, eax
 	xor edx, edx
 	ret
 
-method "[]", TYP, Lang$Array$T, SMALLINT
+method "[]", TYP, Std$Array$T, SMALLINT
 	mov eax, [argument(edi + 8).Val]
 	mov eax, [small_int(eax).Value]
 	mov ecx, [argument(edi).Val]
@@ -589,7 +589,7 @@ method "[]", TYP, Lang$Array$T, SMALLINT
 	xor eax, eax
 	ret
 
-method "apply", TYP, Lang$Array$T, TYP, Lang$Function$T
+method "apply", TYP, Std$Array$T, TYP, Std$Function$T
 	mov eax, [argument(edi).Val]
 	mov ecx, [argument(edi + 8).Val]
 	mov esi, [small_int(array(eax).Length).Value]
@@ -602,11 +602,11 @@ extern __gmpz_add_ui
 extern __gmpz_sub_ui
 extern __gmpz_mul_si
 
-extern Lang$Integer$_alloc_small
-extern Lang$Integer$_alloc_big
+extern Std$Integer$_alloc_small
+extern Std$Integer$_alloc_big
 
 method "-", SMALLINT
-	call Lang$Integer$_alloc_small
+	call Std$Integer$_alloc_small
 	mov ecx, eax
 	mov eax, [argument(edi).Val]
 	mov eax, [small_int(eax).Value]
@@ -617,7 +617,7 @@ method "-", SMALLINT
 	ret
 
 method "abs", SMALLINT
-	call Lang$Integer$_alloc_small
+	call Std$Integer$_alloc_small
 	mov ecx, eax
 	mov eax, [argument(edi).Val]
 	mov eax, [small_int(eax).Value]
@@ -638,14 +638,14 @@ add_small_small:
 	add eax, [small_int(ebx).Value]
 	jo .overflow
 	push eax
-	call Lang$Integer$_alloc_small
+	call Std$Integer$_alloc_small
 	mov ecx, eax
 	pop dword [small_int(ecx).Value]
 	xor edx, edx
 	xor eax, eax
 	ret
 .overflow:
-	call Lang$Integer$_alloc_big
+	call Std$Integer$_alloc_big
 	push eax
 	lea esi, [big_int(eax).Value]
 	mov eax, [argument(edi).Val]
@@ -676,14 +676,14 @@ sub_small_small:
 	sub eax, [small_int(ebx).Value]
 	jo .overflow
 	push eax
-	call Lang$Integer$_alloc_small
+	call Std$Integer$_alloc_small
 	mov ecx, eax
 	pop dword [small_int(ecx).Value]
 	xor edx, edx
 	xor eax, eax
 	ret
 .overflow:
-	call Lang$Integer$_alloc_big
+	call Std$Integer$_alloc_big
 	push eax
 	lea esi, [big_int(eax).Value]
 	mov eax, [argument(edi).Val]
@@ -713,14 +713,14 @@ method "*", SMALLINT, SMALLINT
 	imul eax, [small_int(ebx).Value]
 	jo .overflow
 	push eax
-	call Lang$Integer$_alloc_small
+	call Std$Integer$_alloc_small
 	mov ecx, eax
 	pop dword [small_int(ecx).Value]
 	xor edx, edx
 	xor eax, eax
 	ret
 .overflow:
-	call Lang$Integer$_alloc_big
+	call Std$Integer$_alloc_big
 	push eax
 	lea esi, [big_int(eax).Value]
 	mov eax, [argument(edi).Val]
@@ -740,7 +740,7 @@ method "*", SMALLINT, SMALLINT
 	ret
 
 method "/", SMALLINT, SMALLINT
-	call Lang$Integer$_alloc_small
+	call Std$Integer$_alloc_small
 	mov ecx, eax
 	mov eax, [argument(edi).Val]
 	mov ebx, [argument(edi + 8).Val]
@@ -753,7 +753,7 @@ method "/", SMALLINT, SMALLINT
 	ret
 
 method "%", SMALLINT, SMALLINT
-	call Lang$Integer$_alloc_small
+	call Std$Integer$_alloc_small
 	mov ecx, eax
 	mov eax, [argument(edi).Val]
 	mov ebx, [argument(edi + 8).Val]
@@ -766,7 +766,7 @@ method "%", SMALLINT, SMALLINT
 	ret
 
 method "~", SMALLINT
-	call Lang$Integer$_alloc_small
+	call Std$Integer$_alloc_small
 	mov ecx, eax
 	mov eax, [argument(edi).Val]
 	mov eax, [small_int(eax).Value]
@@ -777,7 +777,7 @@ method "~", SMALLINT
 	ret
 
 method "and", SMALLINT, SMALLINT
-	call Lang$Integer$_alloc_small
+	call Std$Integer$_alloc_small
 	mov ecx, eax
 	mov eax, [argument(edi).Val]
 	mov ebx, [argument(edi + 8).Val]
@@ -789,7 +789,7 @@ method "and", SMALLINT, SMALLINT
 	ret
 
 method "or", SMALLINT, SMALLINT
-	call Lang$Integer$_alloc_small
+	call Std$Integer$_alloc_small
 	mov ecx, eax
 	mov eax, [argument(edi).Val]
 	mov ebx, [argument(edi + 8).Val]
@@ -801,7 +801,7 @@ method "or", SMALLINT, SMALLINT
 	ret
 
 method "xor", SMALLINT, SMALLINT
-	call Lang$Integer$_alloc_small
+	call Std$Integer$_alloc_small
 	mov ecx, eax
 	mov eax, [argument(edi).Val]
 	mov ebx, [argument(edi + 8).Val]
@@ -826,7 +826,7 @@ sar_small_small:
 	sar eax, cl
 	jz .zero
 	push eax
-	call Lang$Integer$_alloc_small
+	call Std$Integer$_alloc_small
 	mov ecx, eax
 	pop dword [small_int(eax).Value]
 	xor edx, edx
@@ -865,7 +865,7 @@ sal_small_small:
 	dec ecx
 	jnz .loop
 	push eax
-	call Lang$Integer$_alloc_small
+	call Std$Integer$_alloc_small
 	mov ecx, eax
 	pop dword [small_int(ecx).Value]
 	xor edx, edx
@@ -877,7 +877,7 @@ sal_small_small:
 	xor eax, eax
 	ret
 .overflow:
-	call Lang$Integer$_alloc_big
+	call Std$Integer$_alloc_big
 	push eax
 	lea esi, [big_int(eax).Value]
 	mov eax, [argument(edi).Val]
@@ -897,7 +897,7 @@ sal_small_small:
 	ret
 
 method "shl", SMALLINT, SMALLINT
-	call Lang$Integer$_alloc_small
+	call Std$Integer$_alloc_small
 	push eax
 	mov eax, [argument(edi).Val]
 	mov ebx, [argument(edi + 8).Val]
@@ -911,7 +911,7 @@ method "shl", SMALLINT, SMALLINT
 	ret
 
 method "shr", SMALLINT, SMALLINT
-	call Lang$Integer$_alloc_small
+	call Std$Integer$_alloc_small
 	push eax
 	mov eax, [argument(edi).Val]
 	mov ebx, [argument(edi + 8).Val]
@@ -925,7 +925,7 @@ method "shr", SMALLINT, SMALLINT
 	ret
 
 method "rol", SMALLINT, SMALLINT
-	call Lang$Integer$_alloc_small
+	call Std$Integer$_alloc_small
 	push eax
 	mov eax, [argument(edi).Val]
 	mov ebx, [argument(edi + 8).Val]
@@ -939,7 +939,7 @@ method "rol", SMALLINT, SMALLINT
 	ret
 
 method "ror", SMALLINT, SMALLINT
-	call Lang$Integer$_alloc_small
+	call Std$Integer$_alloc_small
 	push eax
 	mov eax, [argument(edi).Val]
 	mov ebx, [argument(edi + 8).Val]
@@ -1238,7 +1238,7 @@ method "%", BIGINT, BIGINT
 	push ebx
 	call __gmpz_mod
 	add esp, byte 12
-	call Lang$Integer$_alloc_big
+	call Std$Integer$_alloc_big
 	pop dword [eax + 4]
 	pop dword [eax + 8]
 	pop dword [eax + 12]
@@ -1506,7 +1506,7 @@ method "%", BIGINT, SMALLINT
 	call __gmpz_fdiv_ui
 	add esp, byte 8
 	push eax
-	call Lang$Integer$_alloc_small
+	call Std$Integer$_alloc_small
 	pop dword [small_int(eax).Value]
 	mov ecx, eax
 	xor edx, edx
@@ -1857,7 +1857,7 @@ section .data
 	xor eax, eax
 	ret
 .zero:
-	dd Lang$Integer$SmallT
+	dd Std$Integer$SmallT
 	dd 0
 
 method "%", SMALLINT, BIGINT
@@ -2038,7 +2038,7 @@ finish_integer:
 	add esp, byte 4
 	test eax, eax
 	jnz .convert_to_small
-	call Lang$Integer$_alloc_big
+	call Std$Integer$_alloc_big
 	pop dword [eax + 4]
 	pop dword [eax + 8]
 	pop dword [eax + 12]
@@ -2051,7 +2051,7 @@ finish_integer:
 	call __gmpz_get_si
 	add esp, byte 16
 	push eax
-	call Lang$Integer$_alloc_small
+	call Std$Integer$_alloc_small
 	pop dword [small_int(eax).Value]
 	mov ecx, eax
 	xor edx, edx
@@ -2113,7 +2113,7 @@ method "to", SMALLINT, SMALLINT
 	mov [to_small_small_state(eax).Current], ecx
 	push eax
 	push ecx
-	call Lang$Integer$_alloc_small
+	call Std$Integer$_alloc_small
 	mov ecx, eax
 	pop dword [small_int(ecx).Value]
 	xor edx, edx
@@ -2122,7 +2122,7 @@ method "to", SMALLINT, SMALLINT
 	ret
 .return2:
 	push ecx
-	call Lang$Integer$_alloc_small
+	call Std$Integer$_alloc_small
 	pop dword [small_int(eax).Value]
 	mov ecx, eax
 	xor edx, edx
@@ -2181,7 +2181,7 @@ method "to", SMALLINT, SMALLINT, SMALLINT
 	mov [to_small_small_small_state(eax).Current], ecx
 	push eax
 	push ecx
-	call Lang$Integer$_alloc_small
+	call Std$Integer$_alloc_small
 	mov ecx, eax
 	pop dword [small_int(ecx).Value]
 	xor edx, edx
@@ -2190,7 +2190,7 @@ method "to", SMALLINT, SMALLINT, SMALLINT
 	ret
 .return2:
 	push ecx
-	call Lang$Integer$_alloc_small
+	call Std$Integer$_alloc_small
 	pop dword [small_int(eax).Value]
 	mov ecx, eax
 	xor edx, edx
@@ -2237,7 +2237,7 @@ downto_small_small_small:
 	mov [to_small_small_small_state(eax).Current], ecx
 	push eax
 	push ecx
-	call Lang$Integer$_alloc_small
+	call Std$Integer$_alloc_small
 	mov ecx, eax
 	pop dword [small_int(ecx).Value]
 	xor edx, edx
@@ -2246,7 +2246,7 @@ downto_small_small_small:
 	ret
 .return2:
 	push ecx
-	call Lang$Integer$_alloc_small
+	call Std$Integer$_alloc_small
 	pop dword [small_int(eax).Value]
 	mov ecx, eax
 	xor edx, edx
@@ -2265,7 +2265,7 @@ repeat_small:
 	ret
 
 extern sprintf
-method "@", REAL, VAL, Lang$String$T
+method "@", REAL, VAL, Std$String$T
 	push byte 12
 	call Riva$Memory$_alloc_atomic
 	mov [esp], eax
@@ -2277,7 +2277,7 @@ method "@", REAL, VAL, Lang$String$T
 	push eax
 	call sprintf
 	add esp, byte 16
-	call Lang$String$_new
+	call Std$String$_new
 	add esp, byte 4
 	mov ecx, eax
 	xor edx, edx
@@ -2287,7 +2287,7 @@ method "@", REAL, VAL, Lang$String$T
 	db "%f", 0
 
 extern __gmpz_init_set_d
-method "@", REAL, VAL, Lang$Integer$SmallT
+method "@", REAL, VAL, Std$Integer$SmallT
 	sub esp, byte 12
 	mov ebx, esp
 	mov eax, [argument(edi).Val]
@@ -2299,9 +2299,9 @@ method "@", REAL, VAL, Lang$Integer$SmallT
 	add esp, byte 12
 	jmp finish_integer
 
-extern Lang$Real$_alloc
-method "@", SMALLINT, VAL, Lang$Real$T
-	call Lang$Real$_alloc
+extern Std$Real$_alloc
+method "@", SMALLINT, VAL, Std$Real$T
+	call Std$Real$_alloc
 	mov ecx, eax
 	mov eax, [argument(edi).Val]
 	fild dword [small_int(eax).Value]
@@ -2311,13 +2311,13 @@ method "@", SMALLINT, VAL, Lang$Real$T
 	ret
 
 extern __gmpz_get_d
-method "@", BIGINT, VAL, Lang$Real$T
+method "@", BIGINT, VAL, Std$Real$T
 	mov eax, [argument(edi).Val]
 	lea eax, [big_int(eax).Value]
 	push eax
 	call __gmpz_get_d
 	add esp, byte 4
-	call Lang$Real$_alloc
+	call Std$Real$_alloc
 	fstp qword [real(eax).Value]
 	mov ecx, eax
 	xor eax, eax
@@ -2329,7 +2329,7 @@ method "+", REAL, REAL
 	fld qword [real(eax).Value]
 	mov eax, [argument(edi + 8).Val]
 	fadd qword [real(eax).Value]
-	call Lang$Real$_alloc
+	call Std$Real$_alloc
 	fstp qword [real(eax).Value]
 	mov ecx, eax
 	xor edx, edx
@@ -2341,7 +2341,7 @@ method "-", REAL, REAL
 	fld qword [real(eax).Value]
 	mov eax, [argument(edi + 8).Val]
 	fsub qword [real(eax).Value]
-	call Lang$Real$_alloc
+	call Std$Real$_alloc
 	fstp qword [real(eax).Value]
 	mov ecx, eax
 	xor edx, edx
@@ -2353,7 +2353,7 @@ method "*", REAL, REAL
 	fld qword [real(eax).Value]
 	mov eax, [argument(edi + 8).Val]
 	fmul qword [real(eax).Value]
-	call Lang$Real$_alloc
+	call Std$Real$_alloc
 	fstp qword [real(eax).Value]
 	mov ecx, eax
 	xor edx, edx
@@ -2365,7 +2365,7 @@ method "/", REAL, REAL
 	fld qword [real(eax).Value]
 	mov eax, [argument(edi + 8).Val]
 	fdiv qword [real(eax).Value]
-	call Lang$Real$_alloc
+	call Std$Real$_alloc
 	fstp qword [real(eax).Value]
 	mov ecx, eax
 	xor edx, edx
@@ -2376,7 +2376,7 @@ method "abs", REAL
 	mov eax, [argument(edi).Val]
 	fld qword [real(eax).Value]
 	fabs
-	call Lang$Real$_alloc
+	call Std$Real$_alloc
 	fstp qword [real(eax).Value]
 	mov ecx, eax
 	xor edx, edx
@@ -2387,7 +2387,7 @@ method "-", REAL
 	mov eax, [argument(edi).Val]
 	fld qword [real(eax).Value]
 	fchs
-	call Lang$Real$_alloc
+	call Std$Real$_alloc
 	fstp qword [real(eax).Value]
 	mov ecx, eax
 	xor edx, edx
@@ -2402,7 +2402,7 @@ method "floor", REAL
 	fstp qword [esp]
 	call floor
 	add esp, byte 8
-	call Lang$Integer$_alloc_small
+	call Std$Integer$_alloc_small
 	fistp dword [small_int(eax).Value]
 	mov ecx, eax
 	xor edx, edx
@@ -2417,7 +2417,7 @@ method "ceil", REAL
 	fstp qword [esp]
 	call ceil
 	add esp, byte 8
-	call Lang$Integer$_alloc_small
+	call Std$Integer$_alloc_small
 	fistp dword [small_int(eax).Value]
 	mov ecx, eax
 	xor edx, edx
@@ -2428,7 +2428,7 @@ extern round
 method "round", REAL
 	mov eax, [argument(edi).Val]
 	fld qword [real(eax).Value]
-	call Lang$Integer$_alloc_small
+	call Std$Integer$_alloc_small
 	fistp dword [small_int(eax).Value]
 	mov ecx, eax
 	xor edx, edx
@@ -2439,7 +2439,7 @@ method "sin", REAL
 	mov eax, [argument(edi).Val]
 	fld qword [real(eax).Value]
 	fsin
-	call Lang$Real$_alloc
+	call Std$Real$_alloc
 	fstp qword [real(eax).Value]
 	mov ecx, eax
 	xor edx, edx
@@ -2450,7 +2450,7 @@ method "cos", REAL
 	mov eax, [argument(edi).Val]
 	fld qword [real(eax).Value]
 	fcos
-	call Lang$Real$_alloc
+	call Std$Real$_alloc
 	fstp qword [real(eax).Value]
 	mov ecx, eax
 	xor edx, edx
@@ -2462,7 +2462,7 @@ method "tan", REAL
 	fld qword [real(eax).Value]
 	fsincos
 	fdivp st1, st0
-	call Lang$Real$_alloc
+	call Std$Real$_alloc
 	fstp qword [real(eax).Value]
 	mov ecx, eax
 	xor edx, edx
@@ -2477,7 +2477,7 @@ method "asin", REAL
 	fstp qword [esp]
 	call asin
 	add esp, byte 8
-	call Lang$Real$_alloc
+	call Std$Real$_alloc
 	fstp qword [real(eax).Value]
 	mov ecx, eax
 	xor edx, edx
@@ -2492,7 +2492,7 @@ method "acos", REAL
 	fstp qword [esp]
 	call acos
 	add esp, byte 8
-	call Lang$Real$_alloc
+	call Std$Real$_alloc
 	fstp qword [real(eax).Value]
 	mov ecx, eax
 	xor edx, edx
@@ -2504,7 +2504,7 @@ method "atan", REAL
 	fld1
 	fld qword [real(eax).Value]
 	fatan
-	call Lang$Real$_alloc
+	call Std$Real$_alloc
 	fstp qword [real(eax).Value]
 	mov ecx, eax
 	xor edx, edx
@@ -2517,7 +2517,7 @@ method "atan", REAL, REAL
 	fld qword [real(eax).Value]
 	fld qword [real(ebx).Value]
 	fpatan
-	call Lang$Real$_alloc
+	call Std$Real$_alloc
 	fstp qword [real(eax).Value]
 	mov ecx, eax
 	xor edx, edx
@@ -2528,7 +2528,7 @@ method "sqrt", REAL
 	mov eax, [argument(edi).Val]
 	fld qword [real(eax).Value]
 	fsqrt
-	call Lang$Real$_alloc
+	call Std$Real$_alloc
 	fstp qword [real(eax).Value]
 	mov ecx, eax
 	xor edx, edx
@@ -2543,7 +2543,7 @@ method "exp", REAL
 	fstp qword [esp]
 	call exp
 	add esp, byte 8
-	call Lang$Real$_alloc
+	call Std$Real$_alloc
 	fstp qword [real(eax).Value]
 	mov ecx, eax
 	xor edx, edx
@@ -2558,7 +2558,7 @@ method "ln", REAL
 	fstp qword [esp]
 	call log
 	add esp, byte 8
-	call Lang$Real$_alloc
+	call Std$Real$_alloc
 	fstp qword [real(eax).Value]
 	mov ecx, eax
 	xor edx, edx
@@ -2576,7 +2576,7 @@ method "^", REAL, REAL
 	fstp qword [esp]
 	call pow
 	add esp, byte 16
-	call Lang$Real$_alloc
+	call Std$Real$_alloc
 	fstp qword [real(eax).Value]
 	mov ecx, eax
 	xor edx, edx
@@ -2666,7 +2666,7 @@ method "?", REAL, REAL
 	ret
 
 method "#", REAL
-	call Lang$Integer$_alloc_small
+	call Std$Integer$_alloc_small
 	mov ecx, [argument(edi).Val]
 	fld qword [real(ecx).Value]
 	fstp dword [small_int(eax).Value]
@@ -2680,7 +2680,7 @@ method "+", REAL, SMALLINT
 	fld qword [real(eax).Value]
 	mov eax, [argument(edi + 8).Val]
 	fiadd dword [small_int(eax).Value]
-	call Lang$Real$_alloc
+	call Std$Real$_alloc
 	fstp qword [real(eax).Value]
 	mov ecx, eax
 	xor edx, edx
@@ -2692,7 +2692,7 @@ method "-", REAL, SMALLINT
 	fld qword [real(eax).Value]
 	mov eax, [argument(edi + 8).Val]
 	fisub dword [small_int(eax).Value]
-	call Lang$Real$_alloc
+	call Std$Real$_alloc
 	fstp qword [real(eax).Value]
 	mov ecx, eax
 	xor edx, edx
@@ -2704,7 +2704,7 @@ method "*", REAL, SMALLINT
 	fld qword [real(eax).Value]
 	mov eax, [argument(edi + 8).Val]
 	fimul dword [small_int(eax).Value]
-	call Lang$Real$_alloc
+	call Std$Real$_alloc
 	fstp qword [real(eax).Value]
 	mov ecx, eax
 	xor edx, edx
@@ -2716,7 +2716,7 @@ method "/", REAL, SMALLINT
 	fld qword [real(eax).Value]
 	mov eax, [argument(edi + 8).Val]
 	fidiv dword [small_int(eax).Value]
-	call Lang$Real$_alloc
+	call Std$Real$_alloc
 	fstp qword [real(eax).Value]
 	mov ecx, eax
 	xor edx, edx
@@ -2728,7 +2728,7 @@ method "+", SMALLINT, REAL
 	fld qword [real(eax).Value]
 	mov eax, [argument(edi).Val]
 	fiadd dword [small_int(eax).Value]
-	call Lang$Real$_alloc
+	call Std$Real$_alloc
 	fstp qword [real(eax).Value]
 	mov ecx, eax
 	xor edx, edx
@@ -2740,7 +2740,7 @@ method "-", SMALLINT, REAL
 	fld qword [real(eax).Value]
 	mov eax, [argument(edi).Val]
 	fisubr dword [small_int(eax).Value]
-	call Lang$Real$_alloc
+	call Std$Real$_alloc
 	fstp qword [real(eax).Value]
 	mov ecx, eax
 	xor edx, edx
@@ -2752,7 +2752,7 @@ method "*", SMALLINT, REAL
 	fld qword [real(eax).Value]
 	mov eax, [argument(edi).Val]
 	fimul dword [small_int(eax).Value]
-	call Lang$Real$_alloc
+	call Std$Real$_alloc
 	fstp qword [real(eax).Value]
 	mov ecx, eax
 	xor edx, edx
@@ -2764,7 +2764,7 @@ method "/", SMALLINT, REAL
 	fld qword [real(eax).Value]
 	mov eax, [argument(edi).Val]
 	fidivr dword [small_int(eax).Value]
-	call Lang$Real$_alloc
+	call Std$Real$_alloc
 	fstp qword [real(eax).Value]
 	mov ecx, eax
 	xor edx, edx
@@ -2799,8 +2799,8 @@ method "[]", STRING, SMALLINT
 	push byte sizeof(string) + 2 * sizeof(string_block)
 	call Riva$Memory$_alloc
 	add esp, byte 4
-	mov [value(eax).Type], dword Lang$String$T
-	mov [value(string(eax).Length).Type], dword Lang$Integer$SmallT
+	mov [value(eax).Type], dword Std$String$T
+	mov [value(string(eax).Length).Type], dword Std$Integer$SmallT
 	mov [small_int(string(eax).Length).Value], byte 1
 	mov [string(eax).Count], byte 1
 	mov esi, [esp + 4]
@@ -2879,9 +2879,9 @@ method "[]", STRING, SMALLINT, SMALLINT
 	push eax
 	call Riva$Memory$_alloc
 	add esp, byte 4
-	mov [value(eax).Type], dword Lang$String$T
+	mov [value(eax).Type], dword Std$String$T
 	pop ecx
-	mov [value(string(eax).Length).Type], dword Lang$Integer$SmallT
+	mov [value(string(eax).Length).Type], dword Std$Integer$SmallT
 	pop dword [small_int(string(eax).Length).Value]
 	mov [string(eax).Count], ecx
 	mov esi, [esp + 8]
@@ -2903,30 +2903,30 @@ method "[]", STRING, SMALLINT, SMALLINT
 	ret
 section .data
 .empty_string:
-	dd Lang$String$T
-	dd Lang$Integer$SmallT
+	dd Std$String$T
+	dd Std$Integer$SmallT
 	dd 0
 	dd 0
 	dd 0, 0, 0, 0
 
 symbol ?init, "init"
 
-extern Lang$Type$T.invoke
-extern Lang$Symbol$T.invoke
+extern Std$Type$T.invoke
+extern Std$Symbol$T.invoke
 
-method "new", TYP, Lang$Type$T
+method "new", TYP, Std$Type$T
 	push esi
 	push edi
 	xor esi, esi
 	mov ecx, [argument(edi).Val]
-	call Lang$Type$T.invoke
+	call Std$Type$T.invoke
 	pop edi
 	pop esi
 	push ecx
 	mov [argument(edi).Val], ecx
 	mov [argument(edi).Ref], dword 0
 	mov ecx, ?init
-	call Lang$Symbol$T.invoke
+	call Std$Symbol$T.invoke
 	pop ecx
 	xor edx, edx
 	xor eax, eax
@@ -2971,9 +2971,9 @@ unchecked_func add_string_string
 	push eax
 	call Riva$Memory$_alloc
 	add esp, byte 4
-	mov [value(eax).Type], dword Lang$String$T
+	mov [value(eax).Type], dword Std$String$T
 	pop dword [string(eax).Count]
-	mov [value(string(eax).Length).Type], dword Lang$Integer$SmallT
+	mov [value(string(eax).Length).Type], dword Std$Integer$SmallT
 	pop dword [small_int(string(eax).Length).Value]
 	mov edx, edi
 	lea edi, [string(eax).Blocks]
@@ -2999,9 +2999,9 @@ unchecked_func add_string_string
 	push eax
 	call Riva$Memory$_alloc
 	add esp, byte 4
-	mov [value(eax).Type], dword Lang$String$T
+	mov [value(eax).Type], dword Std$String$T
 	pop dword [string(eax).Count]
-	mov [value(string(eax).Length).Type], dword Lang$Integer$SmallT
+	mov [value(string(eax).Length).Type], dword Std$Integer$SmallT
 	pop dword [small_int(string(eax).Length).Value]
 	mov edx, edi
 	lea edi, [string(eax).Blocks]
@@ -3017,9 +3017,9 @@ unchecked_func add_string_string
 	push ebx
 	mov eax, [small_int(string_block(esi).Length).Value]
 	add eax, [small_int(string_block(string(ebx).Blocks).Length).Value]
-	mov [value(string_block(edi).Length).Type], dword Lang$Integer$SmallT
+	mov [value(string_block(edi).Length).Type], dword Std$Integer$SmallT
 	mov [small_int(string_block(edi).Length).Value], eax
-	mov [value(string_block(edi).Chars).Type], dword Lang$Address$T
+	mov [value(string_block(edi).Chars).Type], dword Std$Address$T
 	inc eax
 	push eax
 	call Riva$Memory$_alloc_atomic
@@ -3190,7 +3190,7 @@ method "?", STRING, STRING
 	ret
 
 method "#", ANY
-	call Lang$Integer$_alloc_small
+	call Std$Integer$_alloc_small
 	mov ecx, [argument(edi).Val]
 	mov [small_int(eax).Value], ecx
 	mov ecx, eax
@@ -3199,7 +3199,7 @@ method "#", ANY
 	ret
 
 method "#", ADDRESS
-	call Lang$Integer$_alloc_small
+	call Std$Integer$_alloc_small
 	mov ecx, [argument(edi).Val]
 	mov ecx, [address(ecx).Value]
 	mov [small_int(eax).Value], ecx
@@ -3220,7 +3220,7 @@ method "#", BIGINT
 	push ecx
 	call __gmpz_get_si
 	mov [esp], eax
-	call Lang$Integer$_alloc_small
+	call Std$Integer$_alloc_small
 	pop dword [small_int(eax).Value]
 	mov ecx, eax
 	xor edx, edx
@@ -3258,7 +3258,7 @@ bits_small:
 	shr eax, 16
 	add eax, edx
 	push eax
-	call Lang$Integer$_alloc_small
+	call Std$Integer$_alloc_small
 	pop dword [small_int(eax).Value]
 	mov ecx, eax
 	xor edx, edx
@@ -3304,7 +3304,7 @@ resume_ones_small:
 	mov [bits_small_state(ebx).Source], eax
 	mov [bits_small_state(ebx).Last], ecx
 	push ecx
-	call Lang$Integer$_alloc_small
+	call Std$Integer$_alloc_small
 	pop dword [small_int(eax).Value]
 	mov ecx, eax
 	or eax, byte -1
@@ -3340,7 +3340,7 @@ ones_small:
 	mov [bits_small_state(eax).Last], ecx
 	mov ebx, eax
 	mov dword [state(ebx).Run], resume_ones_small
-	call Lang$Integer$_alloc_small
+	call Std$Integer$_alloc_small
 	pop dword [small_int(eax).Value]
 	mov ecx, eax
 	or eax, byte -1
@@ -3376,7 +3376,7 @@ ones_small_small:
 	mov [bits_small_state(eax).Last], ecx
 	mov ebx, eax
 	mov dword [state(ebx).Run], resume_ones_small
-	call Lang$Integer$_alloc_small
+	call Std$Integer$_alloc_small
 	pop dword [small_int(eax).Value]
 	mov ecx, eax
 	or eax, byte -1
@@ -3420,7 +3420,7 @@ ones_small_small_small:
 	mov [bits_small_state(eax).Last], ecx
 	mov ebx, eax
 	mov dword [state(ebx).Run], resume_ones_small
-	call Lang$Integer$_alloc_small
+	call Std$Integer$_alloc_small
 	pop dword [small_int(eax).Value]
 	mov ecx, eax
 	or eax, byte -1
@@ -3478,7 +3478,7 @@ method "bits", BIGINT
 	push ecx
 	call __gmpz_popcount
 	mov [esp], eax
-	call Lang$Integer$_alloc_small
+	call Std$Integer$_alloc_small
 	pop dword [small_int(eax).Value]
 	mov ecx, eax
 	xor edx, edx
@@ -3493,7 +3493,7 @@ method "scan0", BIGINT
 	push ecx
 	call __gmpz_scan0
 	mov [esp], eax
-	call Lang$Integer$_alloc_small
+	call Std$Integer$_alloc_small
 	pop dword [small_int(eax).Value]
 	pop ecx
 	mov ecx, eax
@@ -3509,7 +3509,7 @@ method "scan1", BIGINT
 	push ecx
 	call __gmpz_scan1
 	mov [esp], eax
-	call Lang$Integer$_alloc_small
+	call Std$Integer$_alloc_small
 	pop dword [small_int(eax).Value]
 	pop ecx
 	mov ecx, eax
@@ -3536,7 +3536,7 @@ resume_ones_big:
 	push eax
 	inc eax
 	mov [bits_big_state(ebx).Last], eax
-	call Lang$Integer$_alloc_small
+	call Std$Integer$_alloc_small
 	pop dword [small_int(eax).Value]
 	mov ecx, eax
 	or eax, byte -1
@@ -3562,7 +3562,7 @@ method "ones", BIGINT
 	call Riva$Memory$_alloc
 	add esp, byte 4
 	mov ebx, eax
-	call Lang$Integer$_alloc_small
+	call Std$Integer$_alloc_small
 	pop edx
 	mov [small_int(eax).Value], edx
 	inc edx
@@ -3596,7 +3596,7 @@ method "ones", BIGINT, SMALLINT
 	call Riva$Memory$_alloc
 	add esp, byte 4
 	mov ebx, eax
-	call Lang$Integer$_alloc_small
+	call Std$Integer$_alloc_small
 	pop edx
 	mov [small_int(eax).Value], edx
 	inc edx
@@ -3632,7 +3632,7 @@ method "ones", BIGINT, SMALLINT, SMALLINT
 	call Riva$Memory$_alloc
 	add esp, byte 4
 	mov ebx, eax
-	call Lang$Integer$_alloc_small
+	call Std$Integer$_alloc_small
 	pop edx
 	mov [small_int(eax).Value], edx
 	inc edx
@@ -3663,7 +3663,7 @@ resume_zeros_big:
 	push eax
 	inc eax
 	mov [bits_big_state(ebx).Last], eax
-	call Lang$Integer$_alloc_small
+	call Std$Integer$_alloc_small
 	pop dword [small_int(eax).Value]
 	mov ecx, eax
 	or eax, byte -1
@@ -3689,7 +3689,7 @@ method "zeros", BIGINT
 	call Riva$Memory$_alloc
 	add esp, byte 4
 	mov ebx, eax
-	call Lang$Integer$_alloc_small
+	call Std$Integer$_alloc_small
 	pop edx
 	mov [small_int(eax).Value], edx
 	inc edx
@@ -3723,7 +3723,7 @@ method "zeros", BIGINT, SMALLINT
 	call Riva$Memory$_alloc
 	add esp, byte 4
 	mov ebx, eax
-	call Lang$Integer$_alloc_small
+	call Std$Integer$_alloc_small
 	pop edx
 	mov [small_int(eax).Value], edx
 	inc edx
@@ -3759,7 +3759,7 @@ method "zeros", BIGINT, SMALLINT, SMALLINT
 	call Riva$Memory$_alloc
 	add esp, byte 4
 	mov ebx, eax
-	call Lang$Integer$_alloc_small
+	call Std$Integer$_alloc_small
 	pop edx
 	mov [small_int(eax).Value], edx
 	inc edx
@@ -3786,7 +3786,7 @@ method "bit", BIGINT, SMALLINT
 	push ecx
 	call __gmpz_tstbit
 	mov [esp], eax
-	call Lang$Integer$_alloc_small
+	call Std$Integer$_alloc_small
 	pop dword [small_int(eax).Value]
 	pop edx
 	mov ecx, eax
@@ -3814,14 +3814,14 @@ method "#", STRING
 	test ecx, ecx
 	jnz .outer_loop
 .done:
-	call Lang$Integer$_alloc_small
+	call Std$Integer$_alloc_small
 	mov [small_int(eax).Value], ebx
 	mov ecx, eax
 	xor edx, edx
 	xor eax, eax
 	ret
 
-method "in", ANY, TYP, Lang$Type$T
+method "in", ANY, TYP, Std$Type$T
 	mov ecx, [argument(edi).Val]
 	mov eax, [argument(edi + 8).Val]
 	mov edx, [value(ecx).Type]
@@ -3842,7 +3842,7 @@ method "in", ANY, TYP, Lang$Type$T
 	inc eax
 	ret
 
-method "<", TYP, Lang$Type$T, TYP, Lang$Type$T
+method "<", TYP, Std$Type$T, TYP, Std$Type$T
 	mov eax, [argument(edi).Val]
 	mov ecx, [argument(edi + 8).Val]
 	mov eax, [type(eax).Types]
@@ -3861,7 +3861,7 @@ method "<", TYP, Lang$Type$T, TYP, Lang$Type$T
 	inc eax
 	ret
 
-method ">", TYP, Lang$Type$T, TYP, Lang$Type$T
+method ">", TYP, Std$Type$T, TYP, Std$Type$T
 	mov ecx, [argument(edi + 8).Val]
 	mov edx, [argument(edi).Val]
 	mov eax, [type(ecx).Types]
@@ -3880,7 +3880,7 @@ method ">", TYP, Lang$Type$T, TYP, Lang$Type$T
 	inc eax
 	ret
 
-method "<=", TYP, Lang$Type$T, TYP, Lang$Type$T
+method "<=", TYP, Std$Type$T, TYP, Std$Type$T
 	mov eax, [argument(edi).Val]
 	mov ecx, [argument(edi + 8).Val]
 	mov eax, [type(eax).Types]
@@ -3900,7 +3900,7 @@ method "<=", TYP, Lang$Type$T, TYP, Lang$Type$T
 	inc eax
 	ret
 
-method ">=", TYP, Lang$Type$T, TYP, Lang$Type$T
+method ">=", TYP, Std$Type$T, TYP, Std$Type$T
 	mov ecx, [argument(edi + 8).Val]
 	mov edx, [argument(edi).Val]
 	mov eax, [type(ecx).Types]

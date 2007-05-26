@@ -1,4 +1,4 @@
-%include "Lang.inc"
+%include "Std.inc"
 
 extern system$_alloc
 extern Lang.Type$t
@@ -40,7 +40,7 @@ unchecked_func new
 	xor eax, eax
 	ret
 
-method "insert", TYP, T, TYP, Lang$Integer$SmallT, ANY
+method "insert", TYP, T, TYP, Std$Integer$SmallT, ANY
 	push dword [argument(edi + 16).Val]
 	mov eax, [argument(edi + 8).Val]
 	push dword [small_int(eax).Value]
@@ -52,7 +52,7 @@ method "insert", TYP, T, TYP, Lang$Integer$SmallT, ANY
 	xor eax, eax
 	ret
 
-method "[]", TYP, T, TYP, Lang$Integer$SmallT
+method "[]", TYP, T, TYP, Std$Integer$SmallT
 	mov ebx, [argument(edi + 8).Val]
 	mov ebx, [small_int(ebx).Value]
 	mov ecx, ebx

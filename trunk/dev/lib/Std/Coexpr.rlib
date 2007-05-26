@@ -1,8 +1,8 @@
-module("Lang", "Coexpr")
+module("Std", "Coexpr")
 if WINDOWS then
-	prefix("_Lang$Coexpr$")
+	prefix("_Std$Coexpr$")
 else
-	prefix("Lang$Coexpr$")
+	prefix("Std$Coexpr$")
 end
 export("T")
 export("New")

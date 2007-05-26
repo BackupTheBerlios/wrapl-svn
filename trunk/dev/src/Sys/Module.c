@@ -1,5 +1,5 @@
 #include <Sys/Module.h>
-#include <Lang.h>
+#include <Std.h>
 #include <Riva/Memory.h>
 #include <string.h>
 
@@ -8,7 +8,7 @@ TYPE(T);
 GLOBAL_FUNCTION(FromVal, 1) {
 	char *ModuleName, *SymbolName;
 	if (Riva$Module$lookup(Args[0].Val, &ModuleName, &SymbolName)) {
-		Result->Val = Lang$List$new(2, Lang$String$new(ModuleName), Lang$String$new(SymbolName));
+		Result->Val = Std$List$new(2, Std$String$new(ModuleName), Std$String$new(SymbolName));
 		return SUCCESS;
 	} else {
 		return FAILURE;
@@ -18,7 +18,7 @@ GLOBAL_FUNCTION(FromVal, 1) {
 GLOBAL_FUNCTION(FromRef, 1) {
 	char *ModuleName, *SymbolName;
 	if (Riva$Module$lookup(Args[0].Ref, &ModuleName, &SymbolName)) {
-		Result->Val = Lang$List$new(2, Lang$String$new(ModuleName), Lang$String$new(SymbolName));
+		Result->Val = Std$List$new(2, Std$String$new(ModuleName), Std$String$new(SymbolName));
 		return SUCCESS;
 	} else {
 		return FAILURE;
@@ -63,8 +63,8 @@ const char *_get_path(Sys$Module_t *Module) {
 };
 
 GLOBAL_FUNCTION(Load, 2) {
-	char *Path = (Args[0].Val == Lang$Object$Nil) ? 0 :Lang$String$flatten(Args[0].Val);
-	char *Name = Lang$String$flatten(Args[1].Val);
+	char *Path = (Args[0].Val == Std$Object$Nil) ? 0 :Std$String$flatten(Args[0].Val);
+	char *Name = Std$String$flatten(Args[1].Val);
 	Sys$Module_t *Handle = Riva$Module$load(Path, Name);
 	if (Handle) {
 		Sys$Module_t *Module = new(Sys$Module_t);
@@ -73,14 +73,14 @@ GLOBAL_FUNCTION(Load, 2) {
 		Result->Val = Module;
 		return SUCCESS;
 	} else {
-		Result->Val = Lang$String$new("Module not found");
+		Result->Val = Std$String$new("Module not found");
 		return MESSAGE;
 	};
 };
 
 GLOBAL_FUNCTION(Run, 2) {
-	char *Path = (Args[0].Val == Lang$Object$Nil) ? 0 : Lang$String$flatten(Args[0].Val);
-	char *Name = Lang$String$flatten(Args[1].Val);
+	char *Path = (Args[0].Val == Std$Object$Nil) ? 0 : Std$String$flatten(Args[0].Val);
+	char *Name = Std$String$flatten(Args[1].Val);
 	Sys$Module_t *Handle = Riva$Module$run(Path, Name);
 	if (Handle) {
 		Sys$Module_t *Module = new(Sys$Module_t);
@@ -89,13 +89,13 @@ GLOBAL_FUNCTION(Run, 2) {
 		Result->Val = Module;
 		return SUCCESS;
 	} else {
-		Result->Val = Lang$String$new("Module not found");
+		Result->Val = Std$String$new("Module not found");
 		return MESSAGE;
 	};
 };
 
 METHOD("import", TYP, T, ANY) {
-	char *Symbol = Lang$String$flatten(Args[1].Val);
+	char *Symbol = Std$String$flatten(Args[1].Val);
 	Riva$Module_t *Module = ((Sys$Module_t *)Args[0].Val)->Handle;
 	int IsRef; void *Data;
 	if (Riva$Module$import(Module, Symbol, &IsRef, &Data)) {
@@ -107,7 +107,7 @@ METHOD("import", TYP, T, ANY) {
 		};
 		return SUCCESS;
 	} else {
-		Result->Val = Lang$String$new("Import not found");
+		Result->Val = Std$String$new("Import not found");
 		return MESSAGE;
 	};
 };

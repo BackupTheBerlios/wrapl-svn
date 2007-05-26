@@ -1,8 +1,8 @@
-module("Lang", "Real")
+module("Std", "Real")
 if WINDOWS then
-	prefix("_Lang$Real$")
+	prefix("_Std$Real$")
 else
-	prefix("Lang$Real$")
+	prefix("Std$Real$")
 end
 export("T")
 export("_new_string")

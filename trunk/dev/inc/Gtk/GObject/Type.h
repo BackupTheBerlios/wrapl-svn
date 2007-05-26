@@ -2,7 +2,7 @@
 #define GTK_GOBJECT_TYPE_H
 
 #include <glib-object.h>
-#include <Lang.h>
+#include <Std.h>
 
 #define RIVA_MODULE Gtk$GObject$Type
 #include <Riva-Header.h>

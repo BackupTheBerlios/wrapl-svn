@@ -1,29 +1,29 @@
 #ifndef LANG_LIST_H
 #define LANG_LIST_H
 
-#include <Lang/Object.h>
+#include <Std/Object.h>
 
-#define RIVA_MODULE Lang$List
+#define RIVA_MODULE Std$List
 #include <Riva-Header.h>
 
-typedef struct Lang$List_node {
-	struct Lang$List_node *Next, *Prev;
-	Lang$Object_t *Value;
-} Lang$List_node;
+typedef struct Std$List_node {
+	struct Std$List_node *Next, *Prev;
+	Std$Object_t *Value;
+} Std$List_node;
 
-typedef struct Lang$List_t {
-	Lang$Type_t *Type;
-	Lang$List_node *Head, *Tail, *Cache, **Array;
+typedef struct Std$List_t {
+	Std$Type_t *Type;
+	Std$List_node *Head, *Tail, *Cache, **Array;
 	unsigned long Length;
 	unsigned long Index, Lower, Upper, Access;
-} Lang$List_t;
+} Std$List_t;
 
-extern Lang$Type_t Lang$List$T[];
-extern Lang$Object_t Lang$List$New[];
-extern Lang$Object_t Lang$List$Make[];
+extern Std$Type_t Std$List$T[];
+extern Std$Object_t Std$List$New[];
+extern Std$Object_t Std$List$Make[];
 
-RIVA_CFUN(Lang$Object_t *, new, long, ...);
-RIVA_CFUN(Lang$Object_t *, newv, long, Lang$Object_t **);
+RIVA_CFUN(Std$Object_t *, new, long, ...);
+RIVA_CFUN(Std$Object_t *, newv, long, Std$Object_t **);
 
 #undef RIVA_MODULE
 

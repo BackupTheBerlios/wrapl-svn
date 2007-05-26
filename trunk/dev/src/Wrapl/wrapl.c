@@ -1,5 +1,5 @@
 #include <Riva.h>
-#include <Lang.h>
+#include <Std.h>
 #include <IO/File.h>
 #include <string.h>
 #include <Sys/Module.h>
@@ -40,7 +40,7 @@ static int wrapl_load(Riva$Module_t *Module, const char *Path) {
 };
 
 struct session_t {
-	Lang$Type_t *Type;
+	Std$Type_t *Type;
 	scanner_t *Scanner;
 	compiler_t *Compiler;
 };
@@ -49,15 +49,15 @@ TYPE(SessionT);
 TYPE(ErrorMessageT);
 
 struct errormessage_t {
-	Lang$Type_t *Type;
+	Std$Type_t *Type;
 	int LineNo;
 	const char *Message;
 };
 
-METHOD("@", TYP, ErrorMessageT, VAL, Lang$String$T) {
+METHOD("@", TYP, ErrorMessageT, VAL, Std$String$T) {
 	errormessage_t *Error = (errormessage_t *)Args[0].Val;
 	char *Buffer;
-	Result->Val = (Lang$Object_t *)Lang$String$new_length(Buffer, asprintf(&Buffer, "(%d): %s", Error->LineNo, Error->Message));
+	Result->Val = (Std$Object_t *)Std$String$new_length(Buffer, asprintf(&Buffer, "(%d): %s", Error->LineNo, Error->Message));
 	return SUCCESS;
 };
 
@@ -66,7 +66,7 @@ GLOBAL_FUNCTION(SessionNew, 1) {
 	Session->Type = SessionT;
 	Session->Scanner = new scanner_t(Args[0].Val);
 	Session->Compiler = new compiler_t();
-	Result->Val = (Lang$Object_t *)Session;
+	Result->Val = (Std$Object_t *)Session;
 	return SUCCESS;
 };
 
@@ -77,7 +77,7 @@ METHOD("eval", TYP, SessionT) {
 		Error->Type = ErrorMessageT;
 		Error->LineNo = Session->Scanner->Error.LineNo;
 		Error->Message = Session->Scanner->Error.Message;
-		Result->Val = (Lang$Object_t *)Error;
+		Result->Val = (Std$Object_t *)Error;
 		return MESSAGE;
 	};
 	command_expr_t *Command = accept_command(Session->Scanner);
@@ -87,7 +87,7 @@ METHOD("eval", TYP, SessionT) {
 		Error->Type = ErrorMessageT;
 		Error->LineNo = Session->Compiler->Error.LineNo;
 		Error->Message = Session->Compiler->Error.Message;
-		Result->Val = (Lang$Object_t *)Error;
+		Result->Val = (Std$Object_t *)Error;
 		return MESSAGE;
 	};
 	return Command->compile(Session->Compiler, Result);
@@ -95,6 +95,6 @@ METHOD("eval", TYP, SessionT) {
 
 extern "C" void __init(Riva$Module_t *Module);
 void __init(Riva$Module_t *Module) {
-	Riva$Module$export(Module, "Version", 0, Lang$String$new("0.4.1"));
+	Riva$Module$export(Module, "Version", 0, Std$String$new("0.4.1"));
 	Riva$Module$add_loader(".wrapl", wrapl_load);
 };

@@ -1,8 +1,8 @@
-module("Lang", "Integer")
+module("Std", "Integer")
 if WINDOWS then
-	prefix("_Lang$Integer$")
+	prefix("_Std$Integer$")
 else
-	prefix("Lang$Integer$")
+	prefix("Std$Integer$")
 end
 export("T")
 export("SmallT")

@@ -1,14 +1,14 @@
 #ifndef LANG_COEXPR_H
 #define LANG_COEXPR_H
 
-#include <Lang/Object.h>
+#include <Std/Object.h>
 
-#define RIVA_MODULE Lang$Coexpr
+#define RIVA_MODULE Std$Coexpr
 #include <Riva-Header.h>
 
-extern Lang$Object_t Lang$Coexpr$New[];
-extern Lang$Object_t Lang$Coexpr$Yield[];
-extern Lang$Object_t Lang$Coexpr$Self[];
+extern Std$Object_t Std$Coexpr$New[];
+extern Std$Object_t Std$Coexpr$Yield[];
+extern Std$Object_t Std$Coexpr$Self[];
 
 #undef RIVA_MODULE
 

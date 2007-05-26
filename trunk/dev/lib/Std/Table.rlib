@@ -1,8 +1,8 @@
-module("Lang", "Table")
+module("Std", "Table")
 if WINDOWS then
-	prefix("_Lang$Table$")
+	prefix("_Std$Table$")
 else
-	prefix("Lang$Table$")
+	prefix("Std$Table$")
 end
 export("T")
 export("New")

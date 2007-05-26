@@ -1,8 +1,8 @@
-module("Lang", "String")
+module("Std", "String")
 if WINDOWS then
-	prefix("_Lang$String$")
+	prefix("_Std$String$")
 else
-	prefix("Lang$String$")
+	prefix("Std$String$")
 end
 export("T")
 export("_new")

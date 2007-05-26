@@ -1,43 +1,43 @@
 #ifndef LANG_TYPE_H
 #define LANG_TYPE_H
 
-#define RIVA_MODULE Lang$Type
+#define RIVA_MODULE Std$Type
 #include <Riva-Header.h>
 
-typedef struct Lang$Array_t Lang$Type_fields;
+typedef struct Std$Array_t Std$Type_fields;
 
-typedef struct Lang$Type_t Lang$Type_t;
+typedef struct Std$Type_t Std$Type_t;
 
-struct Lang$Type_t {
-	Lang$Type_t *Type;
-	Lang$Type_t **Types;
+struct Std$Type_t {
+	Std$Type_t *Type;
+	Std$Type_t **Types;
 	void *Invoke;
-	Lang$Type_fields *Fields;
+	Std$Type_fields *Fields;
 	unsigned long *Levels;
 };
 
-extern Lang$Type_t Lang$Type$T[];
+extern Std$Type_t Std$Type$T[];
 
 #define TYPE(NAME, PARENTS...)\
-	extern Lang$Type_t *NAME ## _parents[];\
-	Lang$Type_t NAME[] = {{Lang$Type$T, NAME ## _parents}};\
-	Lang$Type_t *NAME ## _parents[] = {NAME, ## PARENTS, 0}
+	extern Std$Type_t *NAME ## _parents[];\
+	Std$Type_t NAME[] = {{Std$Type$T, NAME ## _parents}};\
+	Std$Type_t *NAME ## _parents[] = {NAME, ## PARENTS, 0}
 
 #define ITYPE(NAME, LEVELS, PARENTS...)\
-	extern Lang$Type_t *NAME ## _parents[];\
-	Lang$Type_fields NAME ## _fields[] = {{\
-		Lang$Array$T, \
-		{Lang$Integer$SmallT, 0}\
+	extern Std$Type_t *NAME ## _parents[];\
+	Std$Type_fields NAME ## _fields[] = {{\
+		Std$Array$T, \
+		{Std$Integer$SmallT, 0}\
 	}};\
 	unsigned long NAME ## _levels[] = LEVELS_ ## LEVELS;\
-	Lang$Type_t NAME[] = {{\
-		Lang$Type$T, \
+	Std$Type_t NAME[] = {{\
+		Std$Type$T, \
 		NAME ## _parents, \
 		0, \
 		NAME ## _fields, \
 		NAME ## _levels\
 	}};\
-	Lang$Type_t *NAME ## _parents[] = {NAME, ## PARENTS, 0}
+	Std$Type_t *NAME ## _parents[] = {NAME, ## PARENTS, 0}
 
 #define LEVELS_1 {1, 0}
 #define LEVELS_2 {2, 0, 1}

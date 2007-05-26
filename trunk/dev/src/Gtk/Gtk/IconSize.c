@@ -1,5 +1,5 @@
 #include <Gtk/Gtk/IconSize.h>
-#include <Lang.h>
+#include <Std.h>
 #include <gtk/gtk.h>
 
 Lang$Integer_smallt MENU[] = {{Lang$Integer$SmallT, GTK_ICON_SIZE_MENU}};

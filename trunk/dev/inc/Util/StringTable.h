@@ -1,18 +1,18 @@
 #ifndef UTIL_STRINGTABLE_H
 #define UTIL_STRINGTABLE_H
 
-#include <Lang/Type.h>
+#include <Std/Type.h>
 
 #define RIVA_MODULE Util$StringTable
 #include <Riva-Header.h>
 
 typedef struct Util$StringTable_t {
-	Lang$Type_t *Type;
+	Std$Type_t *Type;
 	unsigned long Size, Space;
 	void *Entries;
 } Util$StringTable_t;
 
-extern Lang$Type_t Util$StringTable$T[];
+extern Std$Type_t Util$StringTable$T[];
 
 #define Util$StringTable$INIT {Util$StringTable$T, 0, 0, 0}
 

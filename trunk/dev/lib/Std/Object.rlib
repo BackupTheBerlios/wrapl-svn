@@ -1,8 +1,8 @@
-module("Lang", "Object")
+module("Std", "Object")
 if WINDOWS then
-	prefix("_Lang$Object$")
+	prefix("_Std$Object$")
 else
-	prefix("Lang$Object$")
+	prefix("Std$Object$")
 end
 export("T")
 export("Nil")

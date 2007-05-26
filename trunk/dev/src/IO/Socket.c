@@ -1,4 +1,4 @@
-#include <Lang.h>
+#include <Std.h>
 #include <IO/Socket.h>
 #include <Riva/Memory.h>
 
@@ -20,16 +20,16 @@ static IO$Stream_messaget AcceptMessage[] = {{IO$Stream$MessageT, "Accept Error"
 static IO$Stream_messaget ConnectMessage[] = {{IO$Stream$MessageT, "Connect Error"}};
 static IO$Stream_messaget HostNotFoundMessage[] = {{IO$Stream$MessageT, "Host Not Found"}};
 
-Lang$Integer_smallt STREAM[] = {{Lang$Integer$SmallT, IO$Socket$SOCKSTREAM}};
-Lang$Integer_smallt DGRAM[] = {{Lang$Integer$SmallT, IO$Socket$SOCKDGRAM}};
-Lang$Integer_smallt RAW[] = {{Lang$Integer$SmallT, IO$Socket$SOCKRAW}};
+Std$Integer_smallt STREAM[] = {{Std$Integer$SmallT, IO$Socket$SOCKSTREAM}};
+Std$Integer_smallt DGRAM[] = {{Std$Integer$SmallT, IO$Socket$SOCKDGRAM}};
+Std$Integer_smallt RAW[] = {{Std$Integer$SmallT, IO$Socket$SOCKRAW}};
 
-Lang$Integer_smallt INET[] = {{Lang$Integer$SmallT, IO$Socket$PFINET}};
-Lang$Integer_smallt LOCAL[] = {{Lang$Integer$SmallT, IO$Socket$PFLOCAL}};
+Std$Integer_smallt INET[] = {{Std$Integer$SmallT, IO$Socket$PFINET}};
+Std$Integer_smallt LOCAL[] = {{Std$Integer$SmallT, IO$Socket$PFLOCAL}};
 
 GLOBAL_FUNCTION(New, 2) {
 	int Handle, Style;
-	Lang$Type_t *Type;
+	Std$Type_t *Type;
 	if (Args[1].Val == STREAM) {
 		Style = SOCK_STREAM;
 	} else if (Args[1].Val == DGRAM) {
@@ -61,10 +61,10 @@ GLOBAL_FUNCTION(New, 2) {
 	return SUCCESS;
 };
 
-METHOD("bind", TYP, LocalT, TYP, Lang$String$T) {
+METHOD("bind", TYP, LocalT, TYP, Std$String$T) {
 	struct sockaddr_un Name;
 	Name.sun_family = AF_LOCAL;
-	Lang$String$flatten_to(Args[1].Val, Name.sun_path);
+	Std$String$flatten_to(Args[1].Val, Name.sun_path);
 	if (bind(((IO$Posix_t *)Args[0].Val)->Handle, &Name, SUN_LEN(&Name)) < 0) {
 		Result->Val = BindMessage;
 		return MESSAGE;
@@ -72,10 +72,10 @@ METHOD("bind", TYP, LocalT, TYP, Lang$String$T) {
 	return SUCCESS;
 };
 
-METHOD("bind", TYP, InetT, TYP, Lang$Integer$SmallT) {
+METHOD("bind", TYP, InetT, TYP, Std$Integer$SmallT) {
 	struct sockaddr_in Name;
 	Name.sin_family = AF_INET;
-	Name.sin_port = htons(((Lang$Integer_smallt *)Args[1].Val)->Value);
+	Name.sin_port = htons(((Std$Integer_smallt *)Args[1].Val)->Value);
 	Name.sin_addr.s_addr = htonl(INADDR_ANY);
 	if (bind(((IO$Posix_t *)Args[0].Val)->Handle, &Name, sizeof(Name)) < 0) {
 		Result->Val = BindMessage;
@@ -84,9 +84,9 @@ METHOD("bind", TYP, InetT, TYP, Lang$Integer$SmallT) {
 	return SUCCESS;
 };
 
-METHOD("listen", TYP, T, TYP, Lang$Integer$SmallT) {
+METHOD("listen", TYP, T, TYP, Std$Integer$SmallT) {
 	int Socket = ((IO$Posix_t *)Args[0].Val)->Handle;
-	if (listen(Socket, ((Lang$Integer_smallt *)Args[1].Val)->Value) < 0) {
+	if (listen(Socket, ((Std$Integer_smallt *)Args[1].Val)->Value) < 0) {
 		Result->Val = ListenMessage;
 		return MESSAGE;
 	};
@@ -109,11 +109,11 @@ METHOD("accept", TYP, T) {
 	return SUCCESS;
 };
 
-METHOD("connect", TYP, LocalT, TYP, Lang$String$T) {
+METHOD("connect", TYP, LocalT, TYP, Std$String$T) {
 	int Socket = ((IO$Posix_t *)Args[0].Val)->Handle;
 	struct sockaddr_un Name;
 	Name.sun_family = AF_LOCAL;
-	Lang$String$flatten_to(Args[1].Val, Name.sun_path);
+	Std$String$flatten_to(Args[1].Val, Name.sun_path);
 	if (connect(((IO$Posix_t *)Args[0].Val)->Handle, &Name, SUN_LEN(&Name)) < 0) {
 		Result->Val = ConnectMessage;
 		return MESSAGE;
@@ -121,9 +121,9 @@ METHOD("connect", TYP, LocalT, TYP, Lang$String$T) {
 	return SUCCESS;
 };
 
-METHOD("connect", TYP, InetT, TYP, Lang$String$T, TYP, Lang$Integer$SmallT) {
+METHOD("connect", TYP, InetT, TYP, Std$String$T, TYP, Std$Integer$SmallT) {
 	char HostName[256];
-	Lang$String$flatten_to(Args[1].Val, HostName);
+	Std$String$flatten_to(Args[1].Val, HostName);
 	struct hostent *HostInfo = gethostbyname(HostName);
 	if (HostInfo == 0) {
 		Result->Val = HostNotFoundMessage;
@@ -132,7 +132,7 @@ METHOD("connect", TYP, InetT, TYP, Lang$String$T, TYP, Lang$Integer$SmallT) {
 	int Socket = ((IO$Posix_t *)Args[0].Val)->Handle;
 	struct sockaddr_in Name;
 	Name.sin_family = AF_INET;
-	Name.sin_port = htons(((Lang$Integer_smallt *)Args[2].Val)->Value);
+	Name.sin_port = htons(((Std$Integer_smallt *)Args[2].Val)->Value);
 	Name.sin_addr = *(struct in_addr *)HostInfo->h_addr;
 	if (connect(((IO$Posix_t *)Args[0].Val)->Handle, &Name, sizeof(Name)) < 0) {
 		Result->Val = ConnectMessage;

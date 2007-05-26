@@ -1,21 +1,21 @@
 #ifndef LANG_ADDRESS_H
 #define LANG_ADDRESS_H
 
-#include <Lang/Object.h>
+#include <Std/Object.h>
 
-#define RIVA_MODULE Lang$Address
+#define RIVA_MODULE Std$Address
 #include <Riva-Header.h>
 
-typedef struct Lang$Address_t Lang$Address_t;
+typedef struct Std$Address_t Std$Address_t;
 
-struct Lang$Address_t {
-	Lang$Type_t *Type;
+struct Std$Address_t {
+	Std$Type_t *Type;
 	void *Value;
 };
 
-extern Lang$Type_t Lang$Address$T[];
+extern Std$Type_t Std$Address$T[];
 
-RIVA_CFUN(Lang$Address_t *, new, void *);
+RIVA_CFUN(Std$Address_t *, new, void *);
 
 #undef RIVA_MODULE
 

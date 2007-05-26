@@ -89,7 +89,7 @@ struct scanner_t {
 		int Type;
 		int LineNo;
 		union {
-			Lang$Object_t *Const;
+			Std$Object_t *Const;
 			const char *Ident;
 		};
 	} Token, NextToken;

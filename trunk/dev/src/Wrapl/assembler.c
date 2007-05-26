@@ -1,6 +1,6 @@
 #include "assembler.h"
 #include "missing.h"
-#include <Lang/Function.h>
+#include <Std/Function.h>
 #include <string.h>
 //#include <udis86.h>
 
@@ -176,7 +176,7 @@ void label_t::load(operand_t *Operand) {
 };
 
 struct store_con_inst_t : load_inst_t {
-	Lang$Object_t *Value;
+	Std$Object_t *Value;
 	void list() {
 		printf("\tstore_con %s <- %x\n", listop(Operand), Value);
 	};
@@ -185,7 +185,7 @@ struct store_con_inst_t : load_inst_t {
 	void encode(assembler_t *Assembler);
 };
 
-void label_t::store_con(operand_t *Operand, Lang$Object_t *Value) {
+void label_t::store_con(operand_t *Operand, Std$Object_t *Value) {
 	store_con_inst_t *Inst = new store_con_inst_t;
 	Inst->Operand = Operand;
 	Inst->Value = Value;
@@ -496,7 +496,7 @@ static void dasm_m_grow(Dst_DECL, void **pp, size_t *szp, int need) {
 static void dasm_m_free(Dst_DECL, void *p, size_t sz) {
 }
 
-extern Lang$Type_t WraplT[];
+extern Std$Type_t WraplT[];
 
 typedef struct code_header_t {
 	void **Consts;
@@ -582,7 +582,7 @@ operand_t *label_t::assemble(const frame_t *Frame, operand_t *Operand) {
 		Closure->Entry = Code;
 		Operand = new operand_t;
 		Operand->Type = operand_t::CNST;
-		Operand->Value = (Lang$Object_t *)Closure;
+		Operand->Value = (Std$Object_t *)Closure;
 	} else {
 		Operand = new operand_t;
 		Operand->Type = operand_t::CLSR;

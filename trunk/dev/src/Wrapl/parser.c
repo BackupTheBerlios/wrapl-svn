@@ -5,7 +5,7 @@
 
 #include <Riva.h>
 #include <string.h>
-#include <Lang.h>
+#include <Std.h>
 
 #include <stdio.h>
 
@@ -70,14 +70,14 @@ static typed_parameters accept_typed_parameters(scanner_t *Scanner) {
 	};
 	expr_t *Type;
 	if (Scanner->parse(tkAT)) {
-		Type = new const_expr_t(Scanner->Token.LineNo, Lang$Symbol$In);
+		Type = new const_expr_t(Scanner->Token.LineNo, Std$Symbol$In);
 		Type->Next = accept_expr(Scanner);
 	} else if (Scanner->parse(tkEQUAL)) {
-		Type = new const_expr_t(Scanner->Token.LineNo, Lang$Symbol$Is);
+		Type = new const_expr_t(Scanner->Token.LineNo, Std$Symbol$Is);
 		Type->Next = accept_expr(Scanner);
 	} else {
-		Type = new const_expr_t(Scanner->Token.LineNo, Lang$Object$Nil);
-		Type->Next = new const_expr_t(Scanner->Token.LineNo, Lang$Object$Nil);
+		Type = new const_expr_t(Scanner->Token.LineNo, Std$Object$Nil);
+		Type->Next = new const_expr_t(Scanner->Token.LineNo, Std$Object$Nil);
 	};
 	if (Scanner->parse(tkCOMMA)) {
 		typed_parameters TP = accept_typed_parameters(Scanner);
@@ -116,7 +116,7 @@ static expr_t *accept_table_list(scanner_t *Scanner) {
 	if (Scanner->parse(tkIS)) {
 		Tail->Next = accept_expr(Scanner);
 	} else {
-		Tail->Next = new const_expr_t(Scanner->Token.LineNo, Lang$Object$Nil);
+		Tail->Next = new const_expr_t(Scanner->Token.LineNo, Std$Object$Nil);
 	};
 	Tail = Tail->Next;
 	while (Scanner->parse(tkCOMMA)) {
@@ -125,7 +125,7 @@ static expr_t *accept_table_list(scanner_t *Scanner) {
 		if (Scanner->parse(tkIS)) {
 			Tail->Next = accept_expr(Scanner);
 		} else {
-			Tail->Next = new const_expr_t(Scanner->Token.LineNo, Lang$Object$Nil);
+			Tail->Next = new const_expr_t(Scanner->Token.LineNo, Std$Object$Nil);
 		};
 		Tail = Tail->Next;
 	};
@@ -134,25 +134,25 @@ static expr_t *accept_table_list(scanner_t *Scanner) {
 
 extern Riva$Module_t Riva$Symbol[];
 
-static Lang$Array_t *accept_fields(scanner_t *Scanner, int Index = 0) {
-	Lang$Object_t *Field;
+static Std$Array_t *accept_fields(scanner_t *Scanner, int Index = 0) {
+	Std$Object_t *Field;
 	if (Scanner->parse(tkIDENT)) {
 		int Type;
 		Riva$Module$import(Riva$Symbol, Scanner->Token.Ident, &Type, (void **)&Field);
 	} else if (Scanner->parse(tkSYMBOL)) {
 		Field = Scanner->Token.Const;
 	} else {
-		return Lang$Array$new(Index);
+		return Std$Array$new(Index);
 	};
 	Scanner->parse(tkCOMMA);
-	Lang$Array_t *Fields = accept_fields(Scanner, Index + 1);
+	Std$Array_t *Fields = accept_fields(Scanner, Index + 1);
 	Fields->Values[Index] = Field;
 	return Fields;
 };
 
 static expr_t *accept_factor(scanner_t *Scanner);
 
-extern Lang$Object_t Lang$Type$New[];
+extern Std$Object_t Std$Type$New[];
 
 static block_expr_t *accept_localstatement(scanner_t *Scanner);
 
@@ -330,10 +330,10 @@ static expr_t *parse_factor(scanner_t *Scanner) {
 		};
 	};
 	if (Scanner->parse(tkSELF)) return new self_expr_t(Scanner->Token.LineNo);
-	if (Scanner->parse(tkNIL)) return new const_expr_t(Scanner->Token.LineNo, Lang$Object$Nil);
+	if (Scanner->parse(tkNIL)) return new const_expr_t(Scanner->Token.LineNo, Std$Object$Nil);
 	if (Scanner->parse(tkLBRACKET)) {
 		expr_t *Expr = new invoke_expr_t(Scanner->Token.LineNo,
-			new const_expr_t(Scanner->Token.LineNo, Lang$List$Make),
+			new const_expr_t(Scanner->Token.LineNo, Std$List$Make),
 			accept_expr_list(Scanner)
 		);
 		Scanner->accept(tkRBRACKET);
@@ -341,7 +341,7 @@ static expr_t *parse_factor(scanner_t *Scanner) {
 	};
 	if (Scanner->parse(tkLBRACE)) {
 		expr_t *Expr = new invoke_expr_t(Scanner->Token.LineNo,
-			new const_expr_t(Scanner->Token.LineNo, Lang$Table$Make),
+			new const_expr_t(Scanner->Token.LineNo, Std$Table$Make),
 			accept_table_list(Scanner)
 		);
 		Scanner->accept(tkRBRACE);
@@ -353,13 +353,13 @@ static expr_t *parse_factor(scanner_t *Scanner) {
 			Scanner->accept(tkRBRACKET);
 			expr_t *Fields;
 			//if (Scanner->parse(tkGREATER)) {
-			//	Fields = new const_expr_t(Scanner->Token.LineNo, Lang$Array$new(0));
+			//	Fields = new const_expr_t(Scanner->Token.LineNo, Std$Array$new(0));
 			//} else {
 				Fields = new const_expr_t(Scanner->Token.LineNo, accept_fields(Scanner));
 				Scanner->accept(tkGREATER);
 			//};
 			Fields->Next = Parents;
-			return new invoke_expr_t(Scanner->Token.LineNo, new const_expr_t(Scanner->Token.LineNo, Lang$Type$New), Fields);
+			return new invoke_expr_t(Scanner->Token.LineNo, new const_expr_t(Scanner->Token.LineNo, Std$Type$New), Fields);
 		} else {
 			func_expr_t::parameter_t *Parameters = accept_parameters(Scanner);
 			Scanner->accept(tkGREATER);
@@ -375,35 +375,35 @@ static expr_t *parse_factor(scanner_t *Scanner) {
 	if (Scanner->parse(tkFAIL)) return new fail_expr_t(Scanner->Token.LineNo);
 	if (Scanner->parse(tkRET)) {
 		expr_t *Value = parse_expr(Scanner);
-		if (Value == 0) Value = new const_expr_t(Scanner->Token.LineNo, Lang$Object$Nil);
+		if (Value == 0) Value = new const_expr_t(Scanner->Token.LineNo, Std$Object$Nil);
 		return new ret_expr_t(Scanner->Token.LineNo, Value);
 	};
 	if (Scanner->parse(tkSUSP)) return new susp_expr_t(Scanner->Token.LineNo, accept_expr(Scanner));
 	if (Scanner->parse(tkREP)) return new rep_expr_t(Scanner->Token.LineNo, accept_expr(Scanner));
 	if (Scanner->parse(tkEXIT)) {
 		expr_t *Value = parse_expr(Scanner);
-		if (Value == 0) Value = new const_expr_t(Scanner->Token.LineNo, Lang$Object$Nil);
+		if (Value == 0) Value = new const_expr_t(Scanner->Token.LineNo, Std$Object$Nil);
 		return new exit_expr_t(Scanner->Token.LineNo, Value);
 	};
 	if (Scanner->parse(tkSTEP)) return new step_expr_t(Scanner->Token.LineNo);
 	if (Scanner->parse(tkEVERY)) {
 		expr_t *Condition = accept_expr(Scanner);
 		if (Scanner->parse(tkDO)) return new every_expr_t(Scanner->Token.LineNo, Condition, accept_expr(Scanner));
-		return new every_expr_t(Scanner->Token.LineNo, Condition, new const_expr_t(Scanner->Token.LineNo, Lang$Object$Nil));
+		return new every_expr_t(Scanner->Token.LineNo, Condition, new const_expr_t(Scanner->Token.LineNo, Std$Object$Nil));
 	};
 	/*if (Scanner->parse(tkNOT)) return new cond_expr_t(Scanner->Token.LineNo,
 		accept_expr(Scanner),
 		new back_expr_t(Scanner->Token.LineNo),
-		new const_expr_t(Scanner->Token.LineNo, Lang$Object$Nil)
+		new const_expr_t(Scanner->Token.LineNo, Std$Object$Nil)
 	);*/
 	if (Scanner->parse(tkWHILE)) return new cond_expr_t(Scanner->Token.LineNo,
 		accept_expr(Scanner),
 		new back_expr_t(Scanner->Token.LineNo),
-		new exit_expr_t(Scanner->Token.LineNo, new const_expr_t(Scanner->Token.LineNo, Lang$Object$Nil))
+		new exit_expr_t(Scanner->Token.LineNo, new const_expr_t(Scanner->Token.LineNo, Std$Object$Nil))
 	);
 	if (Scanner->parse(tkUNTIL)) return new cond_expr_t(Scanner->Token.LineNo,
 		accept_expr(Scanner),
-		new exit_expr_t(Scanner->Token.LineNo, new const_expr_t(Scanner->Token.LineNo, Lang$Object$Nil)),
+		new exit_expr_t(Scanner->Token.LineNo, new const_expr_t(Scanner->Token.LineNo, Std$Object$Nil)),
 		new back_expr_t(Scanner->Token.LineNo)
 	);
 	if (Scanner->parse(tkSEND)) return new send_expr_t(Scanner->Token.LineNo, accept_expr(Scanner));
@@ -423,14 +423,14 @@ static expr_t *parse_factor(scanner_t *Scanner) {
 		};
 		Symbol->Next = Body;
 		Body->Next = TP.Types;
-		return new invoke_expr_t(Scanner->Token.LineNo, new const_expr_t(Scanner->Token.LineNo, Lang$Symbol$Set), Symbol);
+		return new invoke_expr_t(Scanner->Token.LineNo, new const_expr_t(Scanner->Token.LineNo, Std$Symbol$Set), Symbol);
 	};
 	if (Scanner->parse(tkDO)) {
 		expr_t *Function = new func_expr_t(Scanner->Token.LineNo, 0, accept_expr(Scanner));
-		return new invoke_expr_t(Scanner->Token.LineNo, new const_expr_t(Scanner->Token.LineNo, Lang$Coexpr$New), Function);
+		return new invoke_expr_t(Scanner->Token.LineNo, new const_expr_t(Scanner->Token.LineNo, Std$Coexpr$New), Function);
 	};
 	if (Scanner->parse(tkYIELD)) {
-		return new invoke_expr_t(Scanner->Token.LineNo, new const_expr_t(Scanner->Token.LineNo, Lang$Coexpr$Yield), accept_expr(Scanner));
+		return new invoke_expr_t(Scanner->Token.LineNo, new const_expr_t(Scanner->Token.LineNo, Std$Coexpr$Yield), accept_expr(Scanner));
 	};
 	if (Scanner->parse(tkMOD)) return accept_module(Scanner, 0);
 	return 0;
@@ -507,7 +507,7 @@ static expr_t *parse_expr2(scanner_t *Scanner, int Precedence = 0) {
 	if (Scanner->parse(tkNOT)) return new cond_expr_t(Scanner->Token.LineNo,
 		accept_expr2(Scanner),
 		new back_expr_t(Scanner->Token.LineNo),
-		new const_expr_t(Scanner->Token.LineNo, Lang$Object$Nil)
+		new const_expr_t(Scanner->Token.LineNo, Std$Object$Nil)
 	);
 	expr_t *Term = parse_term(Scanner);
 	if (Term == 0) return 0;

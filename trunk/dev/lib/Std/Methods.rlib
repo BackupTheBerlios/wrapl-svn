@@ -1,7 +1,7 @@
-module("Lang", "Methods")
+module("Std", "Methods")
 if WINDOWS then
-	prefix("_Lang$Methods$")
+	prefix("_Std$Methods$")
 else
-	prefix("Lang$Methods$")
+	prefix("Std$Methods$")
 end
 export("add_string_string")

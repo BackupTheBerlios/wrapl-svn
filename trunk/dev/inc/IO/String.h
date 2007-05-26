@@ -2,7 +2,7 @@
 #define IO_STRING_H
 
 #include <IO/Stream.h>
-#include <Lang/String.h>
+#include <Std/String.h>
 
 #define RIVA_MODULE IO$String
 #include <Riva-Header.h>

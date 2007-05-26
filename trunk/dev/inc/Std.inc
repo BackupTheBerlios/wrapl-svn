@@ -19,15 +19,15 @@
 
 %define sizeof(T) T %+ .__size__
 
-extern Lang$Function$AsmT
-extern Lang$Function$CheckedAsmT
+extern Std$Function$AsmT
+extern Std$Function$CheckedAsmT
 
 %macro unchecked_func 1
 	global %1
 section .d %+ %s, class=data,use32
 align 8
 %1:
-	dd Lang$Function$AsmT
+	dd Std$Function$AsmT
 	dd %%here
 section .t %+ %s, class=text,use32
 align 8
@@ -39,7 +39,7 @@ align 8
 section .d %+ %s, class=data,use32
 align 8
 %1:
-	dd Lang$Function$CheckedAsmT
+	dd Std$Function$CheckedAsmT
 	dd %%here
 	dd %2
 	dd %%file
@@ -207,7 +207,7 @@ section .methods
 	dd unchecked_func %+ __LINE__
 section .data
 align 8
-unchecked_func %+ __LINE__: dd Lang$Function$AsmT, %%entry
+unchecked_func %+ __LINE__: dd Std$Function$AsmT, %%entry
 section .text
 align 8
 %%entry:

@@ -1,5 +1,5 @@
 #include <gtk/gtk.h>
-#include <Lang.h>
+#include <Std.h>
 
 GLOBAL_FUNCTION(Run, 0) {
 	gtk_main();

@@ -55,7 +55,7 @@
 		</Compiler>
 		<Linker>
 			<Add library="Riva.rlib" />
-			<Add library="Lang.rlib" />
+			<Add library="Std.rlib" />
 		</Linker>
 		<Unit filename="Environ.c">
 			<Option compilerVar="CC" />

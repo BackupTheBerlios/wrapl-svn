@@ -1,4 +1,4 @@
-%include "Lang.inc"
+%include "Std.inc"
 
 struct _node
 	.Next:	resd 1
@@ -22,15 +22,15 @@ s
 extern Riva$Memory$_alloc
 extern Riva$Memory$_alloc_atomic
 extern Riva$Memory$_alloc_small
-extern Lang$Type$T
-extern Lang$Object$Nil
+extern Std$Type$T
+extern Std$Object$Nil
 
 extern T
 
 section .data
 
 ;c_data T
-;	dd Lang$Type$T
+;	dd Std$Type$T
 ;	dd .types
 ;	dd 0
 ;	dd 0
@@ -49,7 +49,7 @@ unchecked_func New2
 	mov ecx, [argument(edi).Val]
 	mov ecx, [small_int(ecx).Value]
 	mov [_list(eax).Length], ecx
-	mov edx, Lang$Object$Nil
+	mov edx, Std$Object$Nil
 	dec esi
 	jz .no_default_value
 	mov edx, [argument(edi + 8).Val]

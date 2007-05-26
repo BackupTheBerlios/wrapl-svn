@@ -1,7 +1,7 @@
 BASENAME = $(LIB_DIR)IO$(DIRSEP)
 
 CFLAGS += -std=gnu99
-LDFLAGS += Lang.rlib Riva.rlib Util.rlib
+LDFLAGS += Std.rlib Riva.rlib Util.rlib
 
 RivaProgram($(BASENAME)Stream, Stream)
 LDFLAGS += IO$(DIRSEP)Stream.rlib

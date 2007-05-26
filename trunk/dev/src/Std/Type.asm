@@ -1,8 +1,8 @@
-%include "Lang.inc"
+%include "Std.inc"
 
 extern Riva$Memory$_alloc
 extern Riva$Memory$_alloc_atomic
-extern Lang$Object$Nil
+extern Std$Object$Nil
 
 struct fields
 	.Length:	resd 1
@@ -38,7 +38,7 @@ c_func T.invoke
 	lea edi, [eax + 4 + 4 * esi]
 	mov ecx, [esp + 8]
 	sub ecx, esi
-	mov eax, Lang$Object$Nil
+	mov eax, Std$Object$Nil
 	rep stosd
 	pop edi
 
@@ -89,8 +89,8 @@ c_func _new
 	mov [type(eax).Types], ecx
 	ret
 
-extern Lang$Symbol$_typetable_put
-extern Lang$Array$_new
+extern Std$Symbol$_typetable_put
+extern Std$Array$_new
 
 unchecked_func New
 	push edi
@@ -116,7 +116,7 @@ unchecked_func New
 	jnz .sizeloop
 	mov eax, [esp]
 	push eax
-	call Lang$Array$_new
+	call Std$Array$_new
 	mov [esp], eax
 	mov eax, [esp + 8]
 	lea eax, [4 * eax + 4]
@@ -217,7 +217,7 @@ unchecked_func New
 	push edi
 	push dword [esp + 32]
 	push esi
-	call Lang$Symbol$_typetable_put
+	call Std$Symbol$_typetable_put
 	pop dword [symbol(eax).Function]
 	add [esp + 4], dword 4
 	add [esp], dword 8
@@ -298,7 +298,7 @@ unchecked_func New
 %macro field_getter 1
 section .dfields class=data, use32
 get_field_%1:
-	dd Lang$Function$AsmT
+	dd Std$Function$AsmT
 	dd %%here
 section .cfields class=text, use32
 %%here:

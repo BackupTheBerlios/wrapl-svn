@@ -1,8 +1,8 @@
-module("Lang", "Address")
+module("Std", "Address")
 if WINDOWS then
-	prefix("_Lang$Address$")
+	prefix("_Std$Address$")
 else
-	prefix("Lang$Address$")
+	prefix("Std$Address$")
 end
 export("T")
 export("New")

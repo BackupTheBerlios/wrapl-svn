@@ -1,11 +1,11 @@
-#include <Lang.h>
+#include <Std.h>
 #include <Riva/Memory.h>
 #include <string.h>
 
 GLOBAL_FUNCTION(Ord, 1) {
-	Lang$String_t *String = Args[0].Val;
+	Std$String_t *String = Args[0].Val;
 	if (String->Length.Value) {
-		Result->Val = Lang$Integer$new_small(*(char *)String->Blocks[0].Chars.Value);
+		Result->Val = Std$Integer$new_small(*(char *)String->Blocks[0].Chars.Value);
 		Result->Ref = 0;
 		return SUCCESS;
 	} else {
@@ -14,13 +14,13 @@ GLOBAL_FUNCTION(Ord, 1) {
 };
 
 GLOBAL_FUNCTION(Chr, 1) {
-	Lang$Integer_smallt *Int = Args[0].Val;
+	Std$Integer_smallt *Int = Args[0].Val;
 	Result->Val = _new_char(Int->Value);
 	Result->Ref = 0;
 	return SUCCESS;
 };
 
-char *_flatten(Lang$String_t *String) {
+char *_flatten(Std$String_t *String) {
 	if (String->Count > 1) {
 		char *Flat = Riva$Memory$alloc_atomic(String->Length.Value + 1);
 		char *P = Flat;
@@ -44,7 +44,7 @@ char *_flatten(Lang$String_t *String) {
 	};
 };
 
-void _flatten_to(Lang$String_t *String, char *Result) {
+void _flatten_to(Std$String_t *String, char *Result) {
 	char *P = Result;
 	for (int I = 0; I < String->Count; ++I) {
 		__builtin_memcpy(P, String->Blocks[I].Chars.Value, String->Blocks[I].Length.Value);

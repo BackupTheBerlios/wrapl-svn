@@ -1,6 +1,6 @@
 #include <IO/File.h>
 #include <Riva/Memory.h>
-#include <Lang.h>
+#include <Std.h>
 
 #include <stdarg.h>
 #include <stdio.h>
@@ -17,14 +17,14 @@ TYPE(TextReaderWriterT, ReaderT, WriterT, T, NATIVE($TextReaderT), NATIVE($TextW
 
 static IO$Stream_messaget OpenMessage[] = {{IO$Stream$MessageT, "Open Error"}};
 
-Lang$Integer_smallt READ[] = {{Lang$Integer$SmallT, IO$File$OPENREAD}};
-Lang$Integer_smallt WRITE[] = {{Lang$Integer$SmallT, IO$File$OPENWRITE}};
-Lang$Integer_smallt APPEND[] = {{Lang$Integer$SmallT, IO$File$OPENAPPEND}};
-Lang$Integer_smallt TEXT[] = {{Lang$Integer$SmallT, IO$File$OPENTEXT}};
+Std$Integer_smallt READ[] = {{Std$Integer$SmallT, IO$File$OPENREAD}};
+Std$Integer_smallt WRITE[] = {{Std$Integer$SmallT, IO$File$OPENWRITE}};
+Std$Integer_smallt APPEND[] = {{Std$Integer$SmallT, IO$File$OPENAPPEND}};
+Std$Integer_smallt TEXT[] = {{Std$Integer$SmallT, IO$File$OPENTEXT}};
 
 #ifdef WINDOWS
 
-typedef struct {Lang$Type_t *Type; int Access, Create;} openmode_t;
+typedef struct {Std$Type_t *Type; int Access, Create;} openmode_t;
 
 static openmode_t OpenModes[] = {
 	{T, 0}, {ReaderT, GENERIC_READ, OPEN_EXISTING},
@@ -35,7 +35,7 @@ static openmode_t OpenModes[] = {
 
 #else
 
-typedef struct {Lang$Type_t *Type; int Mode;} openmode_t;
+typedef struct {Std$Type_t *Type; int Mode;} openmode_t;
 
 static openmode_t OpenModes[] = {
 	{T, 0}, {ReaderT, O_RDONLY}, {WriterT, O_WRONLY | O_CREAT}, {ReaderWriterT, O_RDWR | O_CREAT},
@@ -45,10 +45,10 @@ static openmode_t OpenModes[] = {
 #endif
 
 GLOBAL_FUNCTION(Open, 2) {
-	Lang$String_t *Arg0 = Args[0].Val;
-	int Flags = ((Lang$Integer_smallt *)Args[1].Val)->Value;
+	Std$String_t *Arg0 = Args[0].Val;
+	int Flags = ((Std$Integer_smallt *)Args[1].Val)->Value;
 #ifdef WINDOWS
-    char *FileName = Lang$String$flatten(Args[0].Val);
+    char *FileName = Std$String$flatten(Args[0].Val);
     openmode_t OpenMode = OpenModes[Flags % 8];
     HANDLE Handle = CreateFile(FileName, OpenMode.Access, FILE_SHARE_READ | FILE_SHARE_WRITE, 0, OpenMode.Create, 0, 0);
     if (Handle == INVALID_HANDLE_VALUE) {
@@ -61,7 +61,7 @@ GLOBAL_FUNCTION(Open, 2) {
 	Stream->Handle = Handle;
 #else
 	char FileName[Arg0->Length.Value + 1];
-	Lang$String$flatten_to(Args[0].Val, FileName);
+	Std$String$flatten_to(Args[0].Val, FileName);
 	openmode_t OpenMode = OpenModes[Flags % 8];
 	int Handle = open(FileName, OpenMode.Mode, 0644);
 	if (Handle < 0) {

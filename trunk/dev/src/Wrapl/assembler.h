@@ -12,7 +12,7 @@
 struct assembler_t;
 
 struct closure_t {
-	Lang$Type_t *Type;
+	Std$Type_t *Type;
 	void *Entry;
 	void *Scopes[];
 };
@@ -27,9 +27,9 @@ struct operand_t {
 	enum {CNST = 0, GVAR = 1, LVAR, LREF, TEMP, CLSR, FUTR, REGR} Type;
 	union {
 		struct {uint32_t Index; int32_t Loop;};
-		Lang$Object_t *Value;
+		Std$Object_t *Value;
 		struct {void *Entry; upscope_t *UpScopes;};
-		Lang$Object_t **Address;
+		Std$Object_t **Address;
 		struct {const char *Module, *Import;};
 	};
 };
@@ -149,7 +149,7 @@ struct label_t : inst_t {
 	void store_val(operand_t *Operand);
 	void store_ref(operand_t *Operand);
 	void store_tmp(uint32_t Index);
-	void store_con(operand_t *Operand, Lang$Object_t *Value);
+	void store_con(operand_t *Operand, Std$Object_t *Value);
 	void flush();
 	void store_arg(uint32_t Index, operand_t *Operand);
 	void fixup_arg(uint32_t Index, operand_t *Operand);

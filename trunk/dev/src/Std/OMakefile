@@ -1,7 +1,7 @@
-BASENAME = $(LIB_DIR)Lang$(DIRSEP)
+BASENAME = $(LIB_DIR)Std$(DIRSEP)
 
 CFLAGS += -std=gnu99
-LDFLAGS += Lang.rlib Riva.rlib libgmp.rlib
+LDFLAGS += Std.rlib Riva.rlib libgmp.rlib
 if $(equal $(OSTYPE), Win32)
 	LDFLAGS += kernel32.rlib
 	export
@@ -21,7 +21,7 @@ RivaProgram($(BASENAME)Table, Table)
 RivaProgram($(BASENAME)Type, Type)
 
 
-Lang:\
+Std:\
 	$(BASENAME)Address.riva\
 	$(BASENAME)Array.riva\
 	$(BASENAME)Coexpr.riva\
@@ -36,4 +36,4 @@ Lang:\
 	$(BASENAME)Table.riva\
 	$(BASENAME)Type.riva
 
-.DEFAULT: Lang
+.DEFAULT: Std

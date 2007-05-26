@@ -1,5 +1,5 @@
 %define WRAPL2
-%include "Lang.inc"
+%include "Std.inc"
 
 struct bstate, state
 	.Val:		resd 1
@@ -13,20 +13,20 @@ struct closure, value
 	.Scopes:
 endstruct
 
-extern Lang$Type$T
-extern Lang$Function$T
+extern Std$Type$T
+extern Std$Function$T
 
 global WraplT
 section .data
 WraplT:
-	dd Lang$Type$T
+	dd Std$Type$T
 	dd .types
 	dd .invoke
 	dd 0
 	dd 0
 .types:
 	dd WraplT
-	dd Lang$Function$T
+	dd Std$Function$T
 	dd 0
 section .text
 .invoke:

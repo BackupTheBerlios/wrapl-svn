@@ -10,16 +10,16 @@
 typedef struct IO$Windows_t IO$Windows_t;
 
 struct IO$Windows_t {
-	Lang$Type_t *Type;
+	Std$Type_t *Type;
 	HANDLE Handle;
 };
 
-extern Lang$Type_t IO$Windows$T[];
-extern Lang$Type_t IO$Windows$ReaderT[];
-extern Lang$Type_t IO$Windows$WriterT[];
-extern Lang$Type_t IO$Windows$SeekerT[];
-extern Lang$Type_t IO$Windows$TextReaderT[];
-extern Lang$Type_t IO$Windows$TextWriterT[];
+extern Std$Type_t IO$Windows$T[];
+extern Std$Type_t IO$Windows$ReaderT[];
+extern Std$Type_t IO$Windows$WriterT[];
+extern Std$Type_t IO$Windows$SeekerT[];
+extern Std$Type_t IO$Windows$TextReaderT[];
+extern Std$Type_t IO$Windows$TextWriterT[];
 
 #undef RIVA_MODULE
 

@@ -1,12 +1,12 @@
-%include "Lang.inc"
+%include "Std.inc"
 
-extern Lang$Type$T
-extern Lang$Integer$SmallT
-extern Lang$Object$Nil
+extern Std$Type$T
+extern Std$Integer$SmallT
+extern Std$Object$Nil
 extern Riva$Memory$_alloc
 
 c_data T
-	dd Lang$Type$T
+	dd Std$Type$T
 	dd .types
 	dd 0
 	dd 0
@@ -29,11 +29,11 @@ func New, 1
 	pop dword [array(eax).Values]
 	pop ecx
 	mov [value(eax).Type], dword T
-	mov [value(array(eax).Length).Type], dword Lang$Integer$SmallT
+	mov [value(array(eax).Length).Type], dword Std$Integer$SmallT
 	mov [small_int(array(eax).Length).Value], ecx
 	push eax
 	mov edi, [array(eax).Values]
-	mov eax, Lang$Object$Nil
+	mov eax, Std$Object$Nil
 	rep stosd
 .empty:
 	pop ecx
@@ -52,7 +52,7 @@ c_func _new
 	call Riva$Memory$_alloc
 	add esp, byte 4
 	mov [value(eax).Type], dword T
-	mov [value(array(eax).Length).Type], dword Lang$Integer$SmallT
+	mov [value(array(eax).Length).Type], dword Std$Integer$SmallT
 	pop dword [array(eax).Values]
 	pop dword [small_int(array(eax).Length).Value]
 	ret

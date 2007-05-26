@@ -1,8 +1,8 @@
-module("Lang", "List")
+module("Std", "List")
 if WINDOWS then
-	prefix("_Lang$List$")
+	prefix("_Std$List$")
 else
-	prefix("Lang$List$")
+	prefix("Std$List$")
 end
 export("T")
 export("New")

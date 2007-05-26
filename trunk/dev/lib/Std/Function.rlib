@@ -1,8 +1,8 @@
-module("Lang", "Function")
+module("Std", "Function")
 if WINDOWS then
-	prefix("_Lang$Function$")
+	prefix("_Std$Function$")
 else
-	prefix("Lang$Function$")
+	prefix("Std$Function$")
 end
 export("T")
 export("AsmT")

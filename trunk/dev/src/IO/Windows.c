@@ -1,5 +1,5 @@
 #include <IO/Windows.h>
-#include <Lang.h>
+#include <Std.h>
 #include <Riva.h>
 #include <string.h>
 #include <stdio.h>
@@ -43,7 +43,7 @@ METHOD("close", TYP, T) {
 		Result->Val = CloseMessage;
 		return MESSAGE;
 	};
-	Result->Val = Lang$Object$Nil;
+	Result->Val = Std$Object$Nil;
 	return SUCCESS;
 };
 
@@ -63,16 +63,16 @@ static int windows_eoi(IO$Windows_t *Stream) {
 	return (ReadFile(Stream->Handle, &Buffer, 0, &BytesRead, 0) == 0);
 };
 
-METHOD("read", TYP, ReaderT, TYP, Lang$Address$T, TYP, Lang$Integer$SmallT) {
+METHOD("read", TYP, ReaderT, TYP, Std$Address$T, TYP, Std$Integer$SmallT) {
 	IO$Windows_t *Stream = Args[0].Val;
-	char *Buffer = ((Lang$Address_t *)Args[1].Val)->Value;
-	long Size = ((Lang$Integer_smallt *)Args[2].Val)->Value;
+	char *Buffer = ((Std$Address_t *)Args[1].Val)->Value;
+	long Size = ((Std$Integer_smallt *)Args[2].Val)->Value;
 	size_t BytesRead;
 	if (ReadFile(Stream->Handle, Buffer, Size, &BytesRead, 0) == 0) {
 		Result->Val = ReadMessage;
 		return MESSAGE;
 	};
-	Result->Val = Lang$Integer$new_small(BytesRead);
+	Result->Val = Std$Integer$new_small(BytesRead);
 	return SUCCESS;
 };
 
@@ -90,9 +90,9 @@ static char windows_readc(IO$Windows_t *Stream) {
 	return Char;
 };
 
-METHOD("read", TYP, ReaderT, TYP, Lang$Integer$SmallT) {
+METHOD("read", TYP, ReaderT, TYP, Std$Integer$SmallT) {
 	IO$Windows_t *Stream = Args[0].Val;
-	unsigned long Length = ((Lang$Integer_smallt *)Args[1].Val)->Value;
+	unsigned long Length = ((Std$Integer_smallt *)Args[1].Val)->Value;
 	char *Buffer = Riva$Memory$alloc_atomic(Length);
 	size_t BytesRead;
 	if (ReadFile(Stream->Handle, Buffer, Length, &BytesRead, 0) == 0) {
@@ -100,7 +100,7 @@ METHOD("read", TYP, ReaderT, TYP, Lang$Integer$SmallT) {
 		return MESSAGE;
 	};
 	if (BytesRead == 0) return FAILURE;
-	Result->Val = Lang$String$new_length(Buffer, BytesRead);
+	Result->Val = Std$String$new_length(Buffer, BytesRead);
 	return SUCCESS;
 };
 
@@ -141,7 +141,7 @@ METHOD("read", TYP, TextReaderT) {
 	if (Line == 0) {
 		return FAILURE;
 	} else {
-		Result->Val = Lang$String$new(Line);
+		Result->Val = Std$String$new(Line);
 		return SUCCESS;
 	};
 };
@@ -150,16 +150,16 @@ static char *windows_readl(IO$Windows_t *Stream) {
 	return _read_line_next(Stream->Handle, 0);
 };
 
-METHOD("write", TYP, WriterT, TYP, Lang$Address$T, TYP, Lang$Integer$SmallT) {
+METHOD("write", TYP, WriterT, TYP, Std$Address$T, TYP, Std$Integer$SmallT) {
 	IO$Windows_t *Stream = Args[0].Val;
-	char *Buffer = ((Lang$Address_t *)Args[1].Val)->Value;
-	long Size = ((Lang$Integer_smallt *)Args[2].Val)->Value;
+	char *Buffer = ((Std$Address_t *)Args[1].Val)->Value;
+	long Size = ((Std$Integer_smallt *)Args[2].Val)->Value;
 	size_t BytesWritten;
 	if (WriteFile(Stream->Handle, Buffer, Size, &BytesWritten, 0) == 0) {
 		Result->Val = WriteMessage;
 		return MESSAGE;
 	};
-	Result->Val = Lang$Integer$new_small(BytesWritten);
+	Result->Val = Std$Integer$new_small(BytesWritten);
 	return SUCCESS;
 };
 
@@ -174,9 +174,9 @@ static void windows_writec(IO$Windows_t *Stream, char Char) {
 	WriteFile(Stream->Handle, &Char, 1, &BytesWritten, 0);
 };
 
-METHOD("write", TYP, WriterT, TYP, Lang$String$T) {
+METHOD("write", TYP, WriterT, TYP, Std$String$T) {
 	IO$Windows_t *Stream = Args[0].Val;
-	Lang$String_t *String = Args[1].Val;
+	Std$String_t *String = Args[1].Val;
 	for (long I = 0; I < String->Count; ++I) {
 	    size_t BytesWritten;
 		if (WriteFile(Stream->Handle, String->Blocks[I].Chars.Value, String->Blocks[I].Length.Value, &BytesWritten, 0) == 0) {
@@ -195,11 +195,11 @@ static void windows_writes(IO$Windows_t *Stream, const char *Text) {
 
 METHOD("write", TYP, TextWriterT, ANY) {
 	IO$Windows_t *Stream = Args[0].Val;
-	Lang$Function_result Result0;
-	switch (Lang$Function$call($AS, 2, &Result0, Args[1].Val, Args[1].Ref, Lang$String$T, 0)) {
+	Std$Function_result Result0;
+	switch (Std$Function$call($AS, 2, &Result0, Args[1].Val, Args[1].Ref, Std$String$T, 0)) {
 	case SUSPEND:
 	case SUCCESS: {
-		Lang$String_t *String = Result0.Val;
+		Std$String_t *String = Result0.Val;
 		for (long I = 0; I < String->Count; ++I) {
 		    size_t BytesWritten;
 			if (WriteFile(Stream->Handle, String->Blocks[I].Chars.Value, String->Blocks[I].Length.Value, &BytesWritten, 0) == 0) {
@@ -228,15 +228,15 @@ static void windows_writef(IO$Windows_t *Stream, const char *Format, ...) {
 	WriteFile(Stream->Handle, Buffer, Length, &BytesWritten, 0);
 };
 
-METHOD("seek", TYP, SeekerT, TYP, Lang$Integer$SmallT) {
+METHOD("seek", TYP, SeekerT, TYP, Std$Integer$SmallT) {
 	IO$Windows_t *Stream = Args[0].Val;
-	long Position = ((Lang$Integer_smallt *)Args[1].Val)->Value;
+	long Position = ((Std$Integer_smallt *)Args[1].Val)->Value;
 	Position = SetFilePointer(Stream->Handle, Position, 0, FILE_BEGIN);
 	if (Position < 0) {
 		Result->Val = SeekMessage;
 		return MESSAGE;
 	};
-	Result->Val = Lang$Integer$new_small(Position);
+	Result->Val = Std$Integer$new_small(Position);
 	return SUCCESS;
 };
 
@@ -246,7 +246,7 @@ static int windows_seek(IO$Windows_t *Stream, int Position) {
 
 METHOD("tell", TYP, T) {
 	IO$Windows_t *Stream = Args[0].Val;
-	Result->Val = Lang$Integer$new_small(SetFilePointer(Stream->Handle, 0, 0, FILE_CURRENT));
+	Result->Val = Std$Integer$new_small(SetFilePointer(Stream->Handle, 0, 0, FILE_CURRENT));
 	return SUCCESS;
 };
 

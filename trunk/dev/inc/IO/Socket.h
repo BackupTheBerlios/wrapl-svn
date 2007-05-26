@@ -6,7 +6,7 @@
 #define RIVA_MODULE IO$Socket
 #include <Riva-Header.h>
 
-extern Lang$Type_t IO$Socket$T[];
+extern Std$Type_t IO$Socket$T[];
 
 //RIVA_CFUN(IO$Posix_t *, new, const char *, int);
 

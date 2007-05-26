@@ -1,8 +1,8 @@
-module("Lang", "Type")
+module("Std", "Type")
 if WINDOWS then
-	prefix("_Lang$Type$")
+	prefix("_Std$Type$")
 else
-	prefix("Lang$Type$")
+	prefix("Std$Type$")
 end
 export("T")
 export("T.invoke")

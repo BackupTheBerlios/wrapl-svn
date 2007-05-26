@@ -1,8 +1,8 @@
-#include <Lang.h>
+#include <Std.h>
 #include <Riva/Memory.h>
 
-typedef struct Lang$List_t _list;
-typedef struct Lang$List_node _node;
+typedef struct Std$List_t _list;
+typedef struct Std$List_node _node;
 
 TYPE(T);
 
@@ -10,8 +10,8 @@ GLOBAL_FUNCTION(New, 0) {
 	_list *List = new(_list);
 	List->Type = T;
 	if (Count > 0) {
-		long I, Size = ((Lang$Integer_smallt *)Args[0].Val)->Value;
-		Lang$Object_t *Value = Lang$Object$Nil;
+		long I, Size = ((Std$Integer_smallt *)Args[0].Val)->Value;
+		Std$Object_t *Value = Std$Object$Nil;
 		_node *Node = new(_node);
 		if (Count > 1) Value = Args[1].Val;
 		Node->Value = Value;
@@ -35,8 +35,8 @@ GLOBAL_FUNCTION(New, 0) {
 	return SUCCESS;
 };
 
-Lang$Object_t *_new(long Count, ...) {
-	Lang$Object_t **Values = (&Count + 1);
+Std$Object_t *_new(long Count, ...) {
+	Std$Object_t **Values = (&Count + 1);
 	_list *List = new(_list);
 	List->Type = T;
 	if (Count > 0) {
@@ -61,7 +61,7 @@ Lang$Object_t *_new(long Count, ...) {
 	return List;
 };
 
-Lang$Object_t *_newv(long Count, Lang$Object_t **Values) {
+Std$Object_t *_newv(long Count, Std$Object_t **Values) {
 	_list *List = new(_list);
 	List->Type = T;
 	if (Count > 0) {
@@ -188,7 +188,7 @@ METHOD("+", TYP, T, TYP, T) {
 METHOD("push", TYP, T, SKP) {
 	_list *List = (_list *)Args[0].Val;
 	_node *Node = new(_node);
-	Node->Value = Count < 2 ? Lang$Object$Nil : Args[1].Val;
+	Node->Value = Count < 2 ? Std$Object$Nil : Args[1].Val;
 	Node->Next = List->Head;
 	if (List->Head) List->Head->Prev = Node; else List->Tail = Node;
 	List->Head = Node;
@@ -203,7 +203,7 @@ METHOD("push", TYP, T, SKP) {
 METHOD("put", TYP, T, SKP) {
 	_list *List = (_list *)Args[0].Val;
 	_node *Node = new(_node);
-	Node->Value = Count < 2 ? Lang$Object$Nil : Args[1].Val;
+	Node->Value = Count < 2 ? Std$Object$Nil : Args[1].Val;
 	Node->Prev = List->Tail;
 	if (List->Tail) List->Tail->Next = Node; else List->Head = Node;
 	List->Tail = Node;
@@ -255,9 +255,9 @@ static void build_index_array(_list *List) {
 	List->Upper = List->Length;
 };
 
-METHOD("[]", TYP, T, TYP, Lang$Integer$SmallT) {
+METHOD("[]", TYP, T, TYP, Std$Integer$SmallT) {
 	_list *List = (_list *)Args[0].Val;
-	long Index = ((Lang$Integer_smallt *)Args[1].Val)->Value;
+	long Index = ((Std$Integer_smallt *)Args[1].Val)->Value;
 	long Cache = List->Index;
 	long Length = List->Length;
 	if (Index < 0) Index += Length + 1;
@@ -355,13 +355,13 @@ static _node *find_node(_list *List, long Index) {
 	};
 };
 
-METHOD("[]", TYP, T, TYP, Lang$Integer$SmallT, TYP, Lang$Integer$SmallT) {
+METHOD("[]", TYP, T, TYP, Std$Integer$SmallT, TYP, Std$Integer$SmallT) {
 	_list *List = (_list *)Args[0].Val;
 	long Length = List->Length;
-	long Index0 = ((Lang$Integer_smallt *)Args[1].Val)->Value;
+	long Index0 = ((Std$Integer_smallt *)Args[1].Val)->Value;
 	if (Index0 <= 0) Index0 += Length + 1;
 	if ((Index0 < 1) || (Length < Index0)) return FAILURE;
-	long Index1 = ((Lang$Integer_smallt *)Args[2].Val)->Value;
+	long Index1 = ((Std$Integer_smallt *)Args[2].Val)->Value;
 	if (Index1 <= 0) Index1 += Length + 1;
 	--Index1;
 	if ((Index1 < 0) || (Length < Index1)) return FAILURE;
@@ -403,7 +403,7 @@ METHOD("[]", TYP, T, TYP, Lang$Integer$SmallT, TYP, Lang$Integer$SmallT) {
 	return SUCCESS;
 };
 
-static Lang$Object_t *delete_node(_list *List, _node *Node) {
+static Std$Object_t *delete_node(_list *List, _node *Node) {
 	(Node->Prev->Next = Node->Next)->Prev = Node->Prev;
 	--List->Length;
 	List->Array = 0;
@@ -413,7 +413,7 @@ static Lang$Object_t *delete_node(_list *List, _node *Node) {
 
 METHOD("delete", TYP, T) {
 	_list *List = (_list *)Args[0].Val;
-	long Index = ((Lang$Integer_smallt *)Args[1].Val)->Value;
+	long Index = ((Std$Integer_smallt *)Args[1].Val)->Value;
 	long Cache = List->Index;
 	long Length = List->Length;
 	if (Index < 0) Index += Length + 1;
@@ -495,7 +495,7 @@ METHOD("delete", TYP, T) {
 	};
 };
 
-static void insert_node(_list *List, _node *Node, Lang$Object_t *Value) {
+static void insert_node(_list *List, _node *Node, Std$Object_t *Value) {
 	_node *New = new(_node);
 	(New->Prev = Node->Prev)->Next = New;
 	(New->Next = Node)->Prev = New;
@@ -506,10 +506,10 @@ static void insert_node(_list *List, _node *Node, Lang$Object_t *Value) {
 	List->Index = 1; List->Cache = List->Head;
 };
 
-METHOD("insert", TYP, T, TYP, Lang$Integer$SmallT, SKP) {
+METHOD("insert", TYP, T, TYP, Std$Integer$SmallT, SKP) {
 	_list *List = (_list *)Args[0].Val;
-	long Index = ((Lang$Integer_smallt *)Args[1].Val)->Value;
-	Lang$Object_t *Value = Args[2].Val;
+	long Index = ((Std$Integer_smallt *)Args[1].Val)->Value;
+	Std$Object_t *Value = Args[2].Val;
 	long Cache = List->Index;
 	long Length = List->Length;
 	if (Index < 0) Index += Length + 1;
@@ -599,42 +599,42 @@ METHOD("insert", TYP, T, TYP, Lang$Integer$SmallT, SKP) {
 
 METHOD("length", TYP, T) {
 	_list *List = (_list *)Args[0].Val;
-	Result->Val = Lang$Integer$new_small(List->Length);
+	Result->Val = Std$Integer$new_small(List->Length);
 	return SUCCESS;
 };
 
 METHOD("size", TYP, T) {
 	_list *List = (_list *)Args[0].Val;
-	Result->Val = Lang$Integer$new_small(List->Length);
+	Result->Val = Std$Integer$new_small(List->Length);
 	return SUCCESS;
 };
 
-static Lang$Object_t *LeftBracket, *RightBracket, *CommaSpace, *LeftRightBracket, *ValueString;
+static Std$Object_t *LeftBracket, *RightBracket, *CommaSpace, *LeftRightBracket, *ValueString;
 
 SYMBOL($AT, "@");
 
-METHOD("@", TYP, T, VAL, Lang$String$T) {
+METHOD("@", TYP, T, VAL, Std$String$T) {
 	_node *Node = ((_list *)Args[0].Val)->Head;
 	if (Node) {
-		Lang$Object_t *Final;
-		Lang$Function_result Buffer;
-		if (Lang$Function$call($AT, 2, &Buffer, Node->Value, 0, Lang$String$T, 0) < FAILURE) {
-			Lang$Function$call(Lang$Methods$add_string_string, 2, &Buffer, LeftBracket, 0, Buffer.Val, 0);
+		Std$Object_t *Final;
+		Std$Function_result Buffer;
+		if (Std$Function$call($AT, 2, &Buffer, Node->Value, 0, Std$String$T, 0) < FAILURE) {
+			Std$Function$call(Std$Methods$add_string_string, 2, &Buffer, LeftBracket, 0, Buffer.Val, 0);
 		} else {
-			Lang$Function$call(Lang$Methods$add_string_string, 2, &Buffer, LeftBracket, 0, ValueString, 0);
+			Std$Function$call(Std$Methods$add_string_string, 2, &Buffer, LeftBracket, 0, ValueString, 0);
 		};
 		Final = Buffer.Val;
 		while (Node = Node->Next) {
-			Lang$Function$call(Lang$Methods$add_string_string, 2, &Buffer, Final, 0, CommaSpace, 0);
+			Std$Function$call(Std$Methods$add_string_string, 2, &Buffer, Final, 0, CommaSpace, 0);
 			Final = Buffer.Val;
-			if (Lang$Function$call($AT, 2, &Buffer, Node->Value, 0, Lang$String$T, 0) < FAILURE) {
-				Lang$Function$call(Lang$Methods$add_string_string, 2, &Buffer, Final, 0, Buffer.Val, 0);
+			if (Std$Function$call($AT, 2, &Buffer, Node->Value, 0, Std$String$T, 0) < FAILURE) {
+				Std$Function$call(Std$Methods$add_string_string, 2, &Buffer, Final, 0, Buffer.Val, 0);
 			} else {
-				Lang$Function$call(Lang$Methods$add_string_string, 2, &Buffer, Final, 0, ValueString, 0);
+				Std$Function$call(Std$Methods$add_string_string, 2, &Buffer, Final, 0, ValueString, 0);
 			};
 			Final = Buffer.Val;
 		};
-		Lang$Function$call(Lang$Methods$add_string_string, 2, &Buffer, Final, 0, RightBracket, 0);
+		Std$Function$call(Std$Methods$add_string_string, 2, &Buffer, Final, 0, RightBracket, 0);
 		Final = Buffer.Val;
 		Result->Val = Final;
 		return SUCCESS;
@@ -648,22 +648,22 @@ SYMBOL($EQUAL, "=");
 
 METHOD("in", ANY, TYP, T) {
 	for (_node *Node = ((_list *)Args[1].Val)->Head; Node; Node = Node->Next) {
-		long Status = Lang$Function$call($EQUAL, 2, Result, Args[0].Val, 0, Node->Value, 0);
+		long Status = Std$Function$call($EQUAL, 2, Result, Args[0].Val, 0, Node->Value, 0);
 		if (Status != FAILURE) return Status;
 	};
 	return FAILURE;
 };
 
 typedef struct find_generator {
-	Lang$Function_cstate State;
+	Std$Function_cstate State;
 	_node *Current;
 	long Index;
-	Lang$Object_t *Value;
+	Std$Object_t *Value;
 } find_generator;
 
 typedef struct find_resume_data {
 	find_generator *Generator;
-	Lang$Function_argument Result;
+	Std$Function_argument Result;
 } find_resume_data;
 
 static long resume_find_list(find_resume_data *Data) {
@@ -672,10 +672,10 @@ static long resume_find_list(find_resume_data *Data) {
 	int Index = Generator->Index;
 	for (_node *Node = Generator->Current; Node; Node = Node->Next) {
 		++Index;
-		Lang$Function_result Result0;
-		switch (Lang$Function$call($EQUAL, 2, &Result0, Generator->Value, 0, Node->Value, 0)) {
+		Std$Function_result Result0;
+		switch (Std$Function$call($EQUAL, 2, &Result0, Generator->Value, 0, Node->Value, 0)) {
 		case SUSPEND: case SUCCESS: {
-			Data->Result.Val = Lang$Integer$new_small(Index);
+			Data->Result.Val = Std$Integer$new_small(Index);
 			if (Node->Next) {
 				Generator->Current = Node->Next;
 				Generator->Index = Index;
@@ -698,13 +698,13 @@ METHOD("find", TYP, T, ANY) {
 	int Index = 0;
 	for (_node *Node = ((_list *)Args[0].Val)->Head; Node; Node = Node->Next) {
 		++Index;
-		Lang$Function_result Result0;
-		switch (Lang$Function$call($EQUAL, 2, &Result0, Args[1].Val, 0, Node->Value, 0)) {
+		Std$Function_result Result0;
+		switch (Std$Function$call($EQUAL, 2, &Result0, Args[1].Val, 0, Node->Value, 0)) {
 		case SUSPEND: case SUCCESS: {
-			Result->Val = Lang$Integer$new_small(Index);
+			Result->Val = Std$Integer$new_small(Index);
 			if (Node->Next) {
 				find_generator *Generator = new(find_generator);
-				Generator->State.Run = Lang$Function$resume_c;
+				Generator->State.Run = Std$Function$resume_c;
 				Generator->State.Invoke = resume_find_list;
 				Generator->Current = Node->Next;
 				Generator->Index = Index;
@@ -727,8 +727,8 @@ METHOD("find", TYP, T, ANY) {
 
 METHOD("remove", TYP, T, ANY) {
 	for (_node *Node = ((_list *)Args[0].Val)->Head; Node; Node = Node->Next) {
-		Lang$Function_result Result0;
-		switch (Lang$Function$call($EQUAL, 2, &Result0, Args[1].Val, 0, Node->Value, 0)) {
+		Std$Function_result Result0;
+		switch (Std$Function$call($EQUAL, 2, &Result0, Args[1].Val, 0, Node->Value, 0)) {
 		case SUSPEND: case SUCCESS: {
 			Result->Val = delete_node(Args[0].Val, Node);
 			return SUCCESS;
@@ -744,13 +744,13 @@ METHOD("remove", TYP, T, ANY) {
 };
 
 typedef struct list_generator {
-	Lang$Function_cstate State;
+	Std$Function_cstate State;
 	_node *Current;
 } list_generator;
 
 typedef struct list_resume_data {
 	list_generator *Generator;
-	Lang$Function_argument Result;
+	Std$Function_argument Result;
 } list_resume_data;
 
 static long resume_values_list(list_resume_data *Data) {
@@ -768,7 +768,7 @@ METHOD("values", TYP, T) {
 	_node *Node = ((_list *)Args[0].Val)->Head;
 	if (Node != 0) {
 		list_generator *Generator = new(list_generator);
-		Generator->State.Run = Lang$Function$resume_c;
+		Generator->State.Run = Std$Function$resume_c;
 		Generator->State.Invoke = resume_values_list;
 		Generator->Current = Node;
 		Result->Val = *(Result->Ref = &Node->Value);
@@ -780,15 +780,15 @@ METHOD("values", TYP, T) {
 };
 
 typedef struct list_loop_generator {
-	Lang$Function_cstate State;
+	Std$Function_cstate State;
 	unsigned long NoOfRefs;
 	_node *Current;
-	Lang$Object_t **Refs[];
+	Std$Object_t **Refs[];
 } list_loop_generator;
 
 typedef struct list_loop_resume_data {
 	list_loop_generator *Generator;
-	Lang$Function_argument Result;
+	Std$Function_argument Result;
 } list_loop_resume_data;
 
 static long resume_loop_list(list_loop_resume_data *Data) {
@@ -812,8 +812,8 @@ METHOD("loop", TYP, T) {
 		Current = Current->Next;
 	};
 	if (Current == 0) return SUCCESS;
-	list_loop_generator *Generator = (list_loop_generator *)Riva$Memory$alloc(sizeof(list_loop_generator) + (Count - 1) * sizeof(Lang$Object_t **));
-	Generator->State.Run = Lang$Function$resume_c;
+	list_loop_generator *Generator = (list_loop_generator *)Riva$Memory$alloc(sizeof(list_loop_generator) + (Count - 1) * sizeof(Std$Object_t **));
+	Generator->State.Run = Std$Function$resume_c;
 	Generator->State.Invoke = resume_loop_list;
 	Generator->Current = Current;
 	Generator->NoOfRefs = Count - 1;
@@ -825,36 +825,36 @@ METHOD("loop", TYP, T) {
 	return SUSPEND;
 };
 
-METHOD("apply", TYP, T, TYP, Lang$Function$T) {
+METHOD("apply", TYP, T, TYP, Std$Function$T) {
 	_list *List = Args[0].Val;
 	int Count0 = List->Length;
-	Lang$Function_argument *Args0 = Riva$Memory$alloc(Count0 * sizeof(Lang$Function_argument));
+	Std$Function_argument *Args0 = Riva$Memory$alloc(Count0 * sizeof(Std$Function_argument));
 	_node *Node = List->Head;
-	Lang$Function_argument *Cur = Args0;
+	Std$Function_argument *Cur = Args0;
 	for (;Node; Node = Node->Next, ++Cur) Cur->Val = *(Cur->Ref = &Node->Value);
-	return Lang$Function$invoke(Args[1].Val, Count0, Result, Args0);
+	return Std$Function$invoke(Args[1].Val, Count0, Result, Args0);
 };
 
-METHOD("apply", TYP, Lang$Function$T, TYP, T) {
+METHOD("apply", TYP, Std$Function$T, TYP, T) {
 	_list *List = Args[1].Val;
 	int Count0 = List->Length;
-	Lang$Function_argument *Args0 = Riva$Memory$alloc(Count0 * sizeof(Lang$Function_argument));
+	Std$Function_argument *Args0 = Riva$Memory$alloc(Count0 * sizeof(Std$Function_argument));
 	_node *Node = List->Head;
-	Lang$Function_argument* Cur = Args0;
+	Std$Function_argument* Cur = Args0;
 	for (;Node; Node = Node->Next, ++Cur) Cur->Val = *(Cur->Ref = &Node->Value);
-	return Lang$Function$invoke(Args[0].Val, Count0, Result, Args0);
+	return Std$Function$invoke(Args[0].Val, Count0, Result, Args0);
 };
 
-METHOD("map", TYP, T, TYP, Lang$Function$T) {
-	Lang$Object_t *Function = Args[1].Val;
+METHOD("map", TYP, T, TYP, Std$Function$T) {
+	Std$Object_t *Function = Args[1].Val;
 	_list *In = Args[0].Val;
 	_list *Out = new(_list);
 	Out->Type = T;
 	_node *Node = 0;
 	long Length = 0;
 	for (_node *Arg = In->Head; Arg; Arg = Arg->Next) {
-		Lang$Function_result Result;
-		if (Lang$Function$invoke(Function, 1, &Result, &Arg->Value) <= SUCCESS) {
+		Std$Function_result Result;
+		if (Std$Function$invoke(Function, 1, &Result, &Arg->Value) <= SUCCESS) {
 			if (Node) {
 				_node *Prev = Node;
 				Node = new(_node);
@@ -876,22 +876,22 @@ METHOD("map", TYP, T, TYP, Lang$Function$T) {
 	return SUCCESS;
 };
 
-METHOD("map", TYP, Lang$Function$T, TYP, T) {
-	Lang$Object_t *Function = Args[0].Val;
+METHOD("map", TYP, Std$Function$T, TYP, T) {
+	Std$Object_t *Function = Args[0].Val;
 	_list *Out = new(_list);
 	Out->Type = T;
 	_node *Node = 0;
 	long Length = 0;
 	long Count0 = Count - 1;
-	Lang$Function_argument *Args0 = Riva$Memory$alloc(Count0 * sizeof(Lang$Function_argument));
+	Std$Function_argument *Args0 = Riva$Memory$alloc(Count0 * sizeof(Std$Function_argument));
 	_node **Nodes = Riva$Memory$alloc(Count0 * sizeof(_node *));
 	for (int I = 0; I < Count0; ++I) {
 		if ((Nodes[I] = ((_list *)Args[I + 1].Val)->Head) == 0) goto finished;
 		Args0[I].Val = *(Args0[I].Ref = &Nodes[I]->Value);
 	};
 	for (;;) {
-		Lang$Function_result Result;
-		if (Lang$Function$invoke(Function, Count0, &Result, Args0) <= SUCCESS) {
+		Std$Function_result Result;
+		if (Std$Function$invoke(Function, Count0, &Result, Args0) <= SUCCESS) {
 			if (Node) {
 				_node *Prev = Node;
 				Node = new(_node);
@@ -919,10 +919,10 @@ finished:
 };
 
 GLOBAL_FUNCTION(Collect, 1) {
-	Lang$Function_result Result0;
-	Lang$Object_t *Function = Args[0].Val;
+	Std$Function_result Result0;
+	Std$Object_t *Function = Args[0].Val;
 	_list *List = new(_list);
-	long Return = Lang$Function$invoke(Function, Count - 1, &Result0, Args + 1);
+	long Return = Std$Function$invoke(Function, Count - 1, &Result0, Args + 1);
 	List->Type = T;
 	if (Return == SUCCESS) {
 		_node *Node = new(_node);
@@ -939,13 +939,13 @@ GLOBAL_FUNCTION(Collect, 1) {
 		List->Head = Node;
 		List->Cache = Node;
 		List->Index = 1;
-		Return = Lang$Function$resume(&Result0);
+		Return = Std$Function$resume(&Result0);
 		while (Return == SUSPEND) {
 			_node *Prev = Node;
 			Node = new(_node);
 			(Node->Prev = Prev)->Next = Node;
 			Node->Value = Result0.Val;
-			Return = Lang$Function$resume(&Result0);
+			Return = Std$Function$resume(&Result0);
 			++NoOfElements;
 		};
 		if (Return == SUCCESS) {
@@ -972,9 +972,9 @@ GLOBAL_FUNCTION(Collect, 1) {
 };
 
 void __init (void *Module) {
-	LeftBracket = Lang$String$new("[");
-	RightBracket = Lang$String$new("]");
-	CommaSpace = Lang$String$new(", ");
-	LeftRightBracket = Lang$String$new("[]");
-	ValueString = Lang$String$new("<value>");
+	LeftBracket = Std$String$new("[");
+	RightBracket = Std$String$new("]");
+	CommaSpace = Std$String$new(", ");
+	LeftRightBracket = Std$String$new("[]");
+	ValueString = Std$String$new("<value>");
 };
