@@ -36,12 +36,14 @@ align 8
 
 %macro func 2
 	global %1
+	global %1.invoke
 section .d %+ %s, class=data,use32
 align 8
 %1:
 	dd Std$Function$CheckedAsmT
+.unchecked:
 	dd Std$Function$AsmT
-	dd %%here
+	dd .invoke
 	dd %2
 	dd %%file
 	dd __LINE__
@@ -49,7 +51,7 @@ align 8
 	db __FILE__, 0
 section .t %+ %s, class=text,use32
 align 8
-%%here:
+.invoke:
 %endmacro
 
 %macro c_func 1
@@ -111,10 +113,10 @@ struct asm_fun, value
 endstruct
 
 struct checkedasm_fun, value
-	.Target:	resb sizeof(asm_fun)
-	.Count:		resd 1
-	.File:		resd 1
-	.Line:		resd 1
+	.Unchecked:		resb sizeof(asm_fun)
+	.Count:			resd 1
+	.File:			resd 1
+	.Line:			resd 1
 endstruct
 
 struct c_fun, value
@@ -209,7 +211,7 @@ section .methods
 section .data
 align 8
 unchecked_func %+ __LINE__: dd Std$Function$AsmT, %%entry
-section .text
+section .methodtext
 align 8
 %%entry:
 %endmacro

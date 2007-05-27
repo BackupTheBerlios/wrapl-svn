@@ -436,6 +436,8 @@ method "@", SYMBOL, VAL, Std$String$T
 	xor eax, eax
 	ret
 
+extern Std$String$Add
+extern Std$String$Add.invoke
 extern asprintf
 method "@", TYP, Std$Symbol$NoMethodMessageT, VAL, Std$String$T
 	mov edx, [argument(edi).Val]
@@ -446,8 +448,8 @@ method "@", TYP, Std$Symbol$NoMethodMessageT, VAL, Std$String$T
 	push dword .messagestr
 	mov edi, esp
 	mov esi, 2
-	mov ecx, add_string_string
-	call add_string_string.invoke
+	mov ecx, Std$String$Add
+	call Std$String$Add.invoke
 	add esp, byte 16
 	ret
 section .data
@@ -2927,121 +2929,6 @@ method "new", TYP, Std$Type$T
 	mov [argument(edi).Ref], dword 0
 	mov ecx, ?init
 	call Std$Symbol$T.invoke
-	pop ecx
-	xor edx, edx
-	xor eax, eax
-	ret
-
-
-;symbol PLUS, "+"
-;section .methods
-;	dd PLUS, STRING, STRING, 0, add_string_string
-unchecked_func add_string_string
-.invoke:
-	mov ebx, [argument(edi + 8).Val]
-	mov esi, [small_int(string(ebx).Length).Value]
-	test esi, esi
-	jnz .first_not_empty
-	mov ecx, [argument(edi).Val]
-	xor edx, edx
-	xor eax, eax
-	ret
-.first_not_empty:
-	mov eax, [argument(edi).Val]
-	mov ecx, [small_int(string(eax).Length).Value]
-	test ecx, ecx
-	jnz .second_not_empty
-	mov ecx, [argument(edi + 8).Val]
-	xor edx, edx
-	xor eax, eax
-	ret
-.second_not_empty
-	mov edx, [string(eax).Count]
-	add esi, ecx
-	mov ecx, [string(ebx).Count]
-	add ecx, edx
-	mov edx, [small_int(string_block(string(eax).Blocks + (edx - 2) * (sizeof(string_block) / 2)).Length).Value]
-	add edx, [small_int(string_block(string(ebx).Blocks).Length).Value]
-	push esi
-	cmp edx, byte 32
-	jb .compress
-	push ecx
-	lea ecx, [2 * ecx + 2]
-	lea eax, [sizeof(string) + ecx * (sizeof(string_block) / 2)]
-	push eax
-	call Riva$Memory$_alloc
-	add esp, byte 4
-	mov [value(eax).Type], dword Std$String$T
-	pop dword [string(eax).Count]
-	mov [value(string(eax).Length).Type], dword Std$Integer$SmallT
-	pop dword [small_int(string(eax).Length).Value]
-	mov edx, edi
-	lea edi, [string(eax).Blocks]
-	mov ebx, [argument(edx).Val]
-	lea esi, [string(ebx).Blocks]
-	mov ecx, [string(ebx).Count]
-	shl ecx, 2
-	rep movsd
-	mov ebx, [argument(edx + 8).Val]
-	lea esi, [string(ebx).Blocks]
-	mov ecx, [string(ebx).Count]
-	shl ecx, 2
-	rep movsd
-	mov ecx, eax
-	xor edx, edx
-	xor eax, eax
-	ret
-.compress:
-	dec ecx
-	push ecx
-	lea ecx, [2 * ecx + 2]
-	lea eax, [sizeof(string) + ecx * (sizeof(string_block) / 2)]
-	push eax
-	call Riva$Memory$_alloc
-	add esp, byte 4
-	mov [value(eax).Type], dword Std$String$T
-	pop dword [string(eax).Count]
-	mov [value(string(eax).Length).Type], dword Std$Integer$SmallT
-	pop dword [small_int(string(eax).Length).Value]
-	mov edx, edi
-	lea edi, [string(eax).Blocks]
-	mov ebx, [argument(edx).Val]
-	lea esi, [string(ebx).Blocks]
-	mov ecx, [string(ebx).Count]
-	lea ecx, [4 * ecx - 4]
-	rep movsd
-	mov ebx, [argument(edx + 8).Val]
-	push eax
-	push esi
-	push edi
-	push ebx
-	mov eax, [small_int(string_block(esi).Length).Value]
-	add eax, [small_int(string_block(string(ebx).Blocks).Length).Value]
-	mov [value(string_block(edi).Length).Type], dword Std$Integer$SmallT
-	mov [small_int(string_block(edi).Length).Value], eax
-	mov [value(string_block(edi).Chars).Type], dword Std$Address$T
-	inc eax
-	push eax
-	call Riva$Memory$_alloc_atomic
-	add esp, byte 4
-	mov edi, [esp + 4]
-	mov [address(string_block(edi).Chars).Value], eax
-	mov edi, eax
-	mov esi, [esp + 8]
-	mov ecx, [small_int(string_block(esi).Length).Value]
-	mov esi, [address(string_block(esi).Chars).Value]
-	rep movsb
-	pop ebx
-	mov esi, [address(string_block(string(ebx).Blocks).Chars).Value]
-	mov ecx, [small_int(string_block(string(ebx).Blocks).Length).Value]
-	rep movsb
-	pop edi
-	pop esi
-	add edi, byte sizeof(string_block)
-	lea esi, [string(ebx).Blocks + sizeof(string_block)]
-	mov ecx, [string(ebx).Count]
-	lea ecx, [4 * ecx - 4]
-	rep movsd
 	pop ecx
 	xor edx, edx
 	xor eax, eax

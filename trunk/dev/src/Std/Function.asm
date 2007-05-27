@@ -55,7 +55,7 @@ align 8
 .invoke:
 	cmp esi, [checkedasm_fun(ecx).Count]
 	jb .toofewargs
-	jmp [asm_fun(checkedasm_fun(ecx).Target).Invoke]
+	jmp [asm_fun(checkedasm_fun(ecx).Unchecked).Invoke]
 .toofewargs:
 	push ecx
 	push byte sizeof(fewargs_message)

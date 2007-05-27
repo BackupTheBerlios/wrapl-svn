@@ -619,22 +619,22 @@ METHOD("@", TYP, T, VAL, Std$String$T) {
 		Std$Object_t *Final;
 		Std$Function_result Buffer;
 		if (Std$Function$call($AT, 2, &Buffer, Node->Value, 0, Std$String$T, 0) < FAILURE) {
-			Std$Function$call(Std$Methods$add_string_string, 2, &Buffer, LeftBracket, 0, Buffer.Val, 0);
+			Std$Function$call(Std$String$Add, 2, &Buffer, LeftBracket, 0, Buffer.Val, 0);
 		} else {
-			Std$Function$call(Std$Methods$add_string_string, 2, &Buffer, LeftBracket, 0, ValueString, 0);
+			Std$Function$call(Std$String$Add, 2, &Buffer, LeftBracket, 0, ValueString, 0);
 		};
 		Final = Buffer.Val;
 		while (Node = Node->Next) {
-			Std$Function$call(Std$Methods$add_string_string, 2, &Buffer, Final, 0, CommaSpace, 0);
+			Std$Function$call(Std$String$Add, 2, &Buffer, Final, 0, CommaSpace, 0);
 			Final = Buffer.Val;
 			if (Std$Function$call($AT, 2, &Buffer, Node->Value, 0, Std$String$T, 0) < FAILURE) {
-				Std$Function$call(Std$Methods$add_string_string, 2, &Buffer, Final, 0, Buffer.Val, 0);
+				Std$Function$call(Std$String$Add, 2, &Buffer, Final, 0, Buffer.Val, 0);
 			} else {
-				Std$Function$call(Std$Methods$add_string_string, 2, &Buffer, Final, 0, ValueString, 0);
+				Std$Function$call(Std$String$Add, 2, &Buffer, Final, 0, ValueString, 0);
 			};
 			Final = Buffer.Val;
 		};
-		Std$Function$call(Std$Methods$add_string_string, 2, &Buffer, Final, 0, RightBracket, 0);
+		Std$Function$call(Std$String$Add, 2, &Buffer, Final, 0, RightBracket, 0);
 		Final = Buffer.Val;
 		Result->Val = Final;
 		return SUCCESS;

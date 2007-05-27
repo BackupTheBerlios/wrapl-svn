@@ -1135,7 +1135,13 @@ operand_t *module_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t 
 		frame_t *Frame = Compiler->pop_function();
 		operand_t *Closure = Start->assemble(Frame);
 		Std$Function_result Result;
-		Std$Function$call(Closure->Value, 0, &Result);
+		if (Std$Function$call(Closure->Value, 0, &Result) == MESSAGE) {
+			if (Std$Function$call((Std$Object_t *)$AT, 2, &Result, Result.Val, 0, Std$String$T, 0) < FAILURE) {
+				Compiler->raise_error(LineNo, Std$String$flatten((Std$String_t *)Result.Val));
+			} else {
+				Compiler->raise_error(0, "Error: unhandled message");
+			};
+		};
 	};
 	operand_t *Operand = new operand_t;
 	Operand->Type = operand_t::CNST;

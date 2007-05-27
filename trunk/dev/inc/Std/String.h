@@ -20,6 +20,7 @@ typedef struct Std$String_t {
 } Std$String_t;
 
 extern Std$Type_t Std$String$T[];
+extern Std$Function_t Std$String$Add[];
 
 RIVA_CFUN(char *, flatten, Std$String_t *);
 RIVA_CFUN(void, flatten_to, Std$String_t *, char *);

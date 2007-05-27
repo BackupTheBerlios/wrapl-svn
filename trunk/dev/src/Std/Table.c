@@ -515,31 +515,31 @@ METHOD("@", TYP, T, VAL, Std$String$T) {
 	struct avl_node *Node = avl_t_first(&Traverser, Args[0].Val);
 	if (Node != 0) {
 		Std$Function$call($AT, 2, &Buffer, Node->avl_key, 0, Std$String$T, 0);
-		Std$Function$call(Std$Methods$add_string_string, 2, &Buffer, Final, 0, Buffer.Val, 0);
+		Std$Function$call(Std$String$Add, 2, &Buffer, Final, 0, Buffer.Val, 0);
 		Final = Buffer.Val;
 		if (Node->avl_value != Std$Object$Nil) {
-			Std$Function$call(Std$Methods$add_string_string, 2, &Buffer, Final, 0, SpaceIsSpace, 0);
+			Std$Function$call(Std$String$Add, 2, &Buffer, Final, 0, SpaceIsSpace, 0);
 			Final = Buffer.Val;
 			Std$Function$call($AT, 2, &Buffer, Node->avl_value, 0, Std$String$T, 0);
-			Std$Function$call(Std$Methods$add_string_string, 2, &Buffer, Final, 0, Buffer.Val, 0);
+			Std$Function$call(Std$String$Add, 2, &Buffer, Final, 0, Buffer.Val, 0);
 			Final = Buffer.Val;
 		};
 	};
 	for (Node = avl_t_next(&Traverser); Node; Node = avl_t_next(&Traverser)) {
-		Std$Function$call(Std$Methods$add_string_string, 2, &Buffer, Final, 0, CommaSpace, 0);
+		Std$Function$call(Std$String$Add, 2, &Buffer, Final, 0, CommaSpace, 0);
 		Final = Buffer.Val;
 		Std$Function$call($AT, 2, &Buffer, Node->avl_key, 0, Std$String$T, 0);
-		Std$Function$call(Std$Methods$add_string_string, 2, &Buffer, Final, 0, Buffer.Val, 0);
+		Std$Function$call(Std$String$Add, 2, &Buffer, Final, 0, Buffer.Val, 0);
 		Final = Buffer.Val;
 		if (Node->avl_value != Std$Object$Nil) {
-			Std$Function$call(Std$Methods$add_string_string, 2, &Buffer, Final, 0, SpaceIsSpace, 0);
+			Std$Function$call(Std$String$Add, 2, &Buffer, Final, 0, SpaceIsSpace, 0);
 			Final = Buffer.Val;
 			Std$Function$call($AT, 2, &Buffer, Node->avl_value, 0, Std$String$T, 0);
-			Std$Function$call(Std$Methods$add_string_string, 2, &Buffer, Final, 0, Buffer.Val, 0);
+			Std$Function$call(Std$String$Add, 2, &Buffer, Final, 0, Buffer.Val, 0);
 			Final = Buffer.Val;
 		};
 	};
-	Std$Function$call(Std$Methods$add_string_string, 2, &Buffer, Final, 0, RightBrace, 0);
+	Std$Function$call(Std$String$Add, 2, &Buffer, Final, 0, RightBrace, 0);
 	Final = Buffer.Val;
 	Result->Val = Final;
 	return SUCCESS;

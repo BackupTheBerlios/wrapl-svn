@@ -238,7 +238,7 @@ func GetBlocks, 3
 	or eax, byte -1
 	ret
 
-_method "+", checkedasm_fun($Add).Target, TYP, T, TYP, T
+_method "+", $Add, TYP, T, TYP, T
 func $Add, 2
 	mov ebx, [argument(edi + 8).Val]
 	mov esi, [small_int(string(ebx).Length).Value]

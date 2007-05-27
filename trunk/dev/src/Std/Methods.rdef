@@ -4,5 +4,3 @@ if WINDOWS then
 		_export("_" .. Name, Name)
 	end
 end
-
-export("add_string_string")

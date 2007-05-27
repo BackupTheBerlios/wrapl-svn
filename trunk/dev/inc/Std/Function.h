@@ -27,7 +27,10 @@ typedef struct Std$Function_result {
 #define FAILURE 1
 #define MESSAGE 2
 
+typedef struct Std$Object_t Std$Function_t;
+
 typedef struct Std$Function_asmt Std$Function_asmt;
+typedef struct Std$Function_checkedasmt Std$Function_checkedasmt;
 typedef struct Std$Function_ct Std$Function_ct;
 typedef struct Std$Function_checkedct Std$Function_checkedct;
 typedef struct Std$Function_cstate Std$Function_cstate;
@@ -36,6 +39,11 @@ typedef struct Std$Function_cresumedata Std$Function_cresumedata;
 struct Std$Function_asmt {
 	Std$Type_t *Type;
 	void *Invoke;
+};
+
+struct Std$Function_checkedasmt {
+	Std$Type_t *Type;
+	Std$Function_t Target;
 };
 
 struct Std$Function_ct {

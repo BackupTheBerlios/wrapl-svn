@@ -95,6 +95,7 @@ METHOD("eval", TYP, SessionT) {
 
 extern "C" void __init(Riva$Module_t *Module);
 void __init(Riva$Module_t *Module) {
+	Riva$Module$load(0, "Std/Methods");
 	Riva$Module$export(Module, "Version", 0, Std$String$new("0.4.1"));
 	Riva$Module$add_loader(".wrapl", wrapl_load);
 };

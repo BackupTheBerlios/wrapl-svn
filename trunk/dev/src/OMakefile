@@ -1,4 +1,4 @@
-CFLAGS += -O3 -fexpensive-optimizations -fomit-frame-pointer -w -D_GNU_SOURCE
+CFLAGS += -O3 -fexpensive-optimizations -fomit-frame-pointer -w -D_GNU_SOURCE -fdata-sections -ffunction-sections
 ASFLAGS += -Ov
 
 if $(equal $(OSTYPE), Win32)
