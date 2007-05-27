@@ -54,6 +54,15 @@ METHOD("writes", TYP, TextWriterT) {
 	return SUCCESS;
 };
 
+METHOD("write", TYP, T, TYP, Std$String$T) {
+	Std$String_t *String;
+	for (int I = 0; I < String->Count; ++I) {
+		long Status = Std$Function$call($write, 2, Result, &String->Blocks[I].Chars, 0, &String->Blocks[I].Length, 0);
+		if (Status >= FAILURE) return Status;
+	};
+	return SUCCESS;
+};
+
 static void stream_flush(IO$Stream_t *Stream) {
 	Std$Function_result Result;
 	Std$Function$call($flush, 1, &Result, Stream, 0);
