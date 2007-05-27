@@ -8,8 +8,9 @@
 
 typedef struct Sys$Time_t Sys$Time_t;
 
-struct Sys$Module_t {
+struct Sys$Time_t {
 	Std$Type_t *Type;
+	
 };
 
 extern Std$Type_t Sys$Time$T[];
