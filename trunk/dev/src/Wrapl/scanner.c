@@ -337,6 +337,12 @@ bool scanner_t::parse(int Type) {
 			};
 			scan_symbol: {
 				switch (*Current) {
+				case '?': {
+					++Current;
+					NextToken.Type = tkSYMBOL;
+					NextToken.Const = (Std$Object_t *)Std$Symbol$new_string("<anon>");
+					goto scan_done;
+				};
 				case 'A' ... 'Z': case 'a' ... 'z': case '_': Start = Current++; goto scan_symbol_identifier;
 				case '\"': {
 					++Current;

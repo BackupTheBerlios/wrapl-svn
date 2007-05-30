@@ -38,7 +38,65 @@ c_func _new
 	mov [address(string_block(string(eax).Blocks).Chars).Value], ecx
 	ret
 
+c_func _copy
+	push dword [esp + 4]
+	call strlen
+	mov [esp], eax
+	push eax
+	call Riva$Memory$_alloc_atomic
+	pop ecx
+	push edi
+	push esi
+	mov esi, [esp + 16]
+	mov edi, eax
+	mov [esp + 16], eax
+	rep movsb
+	pop esi
+	pop edi
+	push byte sizeof(string) + 2 * sizeof(string_block)
+	call Riva$Memory$_alloc
+	add esp, byte 4
+	pop edx
+	mov ecx, [esp + 4]
+	mov [value(eax).Type], dword T
+	mov [value(string(eax).Length).Type], dword Std$Integer$SmallT
+	mov [small_int(string(eax).Length).Value], edx
+	mov [string(eax).Count], dword 1
+	mov [value(string_block(string(eax).Blocks).Length).Type], dword Std$Integer$SmallT
+	mov [small_int(string_block(string(eax).Blocks).Length).Value], edx
+	mov [value(string_block(string(eax).Blocks).Chars).Type], dword Std$Address$T
+	mov [address(string_block(string(eax).Blocks).Chars).Value], ecx
+	ret
+
 c_func _new_length
+	push byte sizeof(string) + 2 * sizeof(string_block)
+	call Riva$Memory$_alloc
+	add esp, byte 4
+	mov edx, [esp + 8]
+	mov ecx, [esp + 4]
+	mov [value(eax).Type], dword T
+	mov [value(string(eax).Length).Type], dword Std$Integer$SmallT
+	mov [small_int(string(eax).Length).Value], edx
+	mov [string(eax).Count], dword 1
+	mov [value(string_block(string(eax).Blocks).Length).Type], dword Std$Integer$SmallT
+	mov [small_int(string_block(string(eax).Blocks).Length).Value], edx
+	mov [value(string_block(string(eax).Blocks).Chars).Type], dword Std$Address$T
+	mov [address(string_block(string(eax).Blocks).Chars).Value], ecx
+	ret
+
+c_func _copy_length
+	mov eax, [esp + 8]
+	push eax
+	call Riva$Memory$_alloc_atomic
+	pop ecx
+	push edi
+	push esi
+	mov esi, [esp + 12]
+	mov edi, eax
+	mov [esp + 12], eax
+	rep movsb
+	pop esi
+	pop edi
 	push byte sizeof(string) + 2 * sizeof(string_block)
 	call Riva$Memory$_alloc
 	add esp, byte 4

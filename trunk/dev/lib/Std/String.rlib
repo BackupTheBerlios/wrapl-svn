@@ -6,7 +6,9 @@ else
 end
 export("T")
 export("_new")
+export("_copy")
 export("_new_length")
+export("_copy_length")
 export("_new_char")
 export("_flatten")
 export("_flatten_to")

@@ -24,8 +24,10 @@ extern Std$Function_t Std$String$Add[];
 
 RIVA_CFUN(char *, flatten, Std$String_t *);
 RIVA_CFUN(void, flatten_to, Std$String_t *, char *);
-RIVA_CFUN(Std$String_t *, new, const char *);
-RIVA_CFUN(Std$String_t *, new_length, const char *, long);
+RIVA_CFUN(Std$String_t *, new, char *);
+RIVA_CFUN(Std$String_t *, copy, const char *);
+RIVA_CFUN(Std$String_t *, new_length, char *, long);
+RIVA_CFUN(Std$String_t *, copy_length, const char *, long);
 RIVA_CFUN(Std$String_t *, new_char, char);
 
 #undef RIVA_MODULE
