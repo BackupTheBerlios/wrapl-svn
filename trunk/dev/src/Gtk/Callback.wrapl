@@ -1,0 +1,28 @@
+MOD Callback;
+
+IMP Type, Target;
+
+DEF T <- <[Type.T, Target.T]
+	ns, name, cname,
+	params,
+	ctype
+>;
+
+DEF New!(ns, name, cname) (
+	VAR t <- T();
+	t:ns <- ns;
+	t:name <- name;
+	t:cname <- cname;
+	t:ctype <- cname;
+	Type.Define(cname, t);
+	t:queue;
+	RET t;
+);
+
+TO :rtype(t@T) "Std$Function$T";
+
+TO :precall(t@T, name, arg) [
+	t:ctype + " " + name + " = " + t:ns + "$" + t:name + "$new(" + arg + ".Val);"
+];
+
+END Callback.

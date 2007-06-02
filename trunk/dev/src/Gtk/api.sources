@@ -1,0 +1,22 @@
+﻿<gapi-parser-input>
+	<api filename="api.raw">
+		<library name="libgtk">
+			<namespace name="Gtk">
+				<dir>/usr/include/gtk-2.0/gtk/</dir>
+			</namespace>
+			<namespace name="Gdk">
+				<dir>/usr/include/gtk-2.0/gdk/</dir>
+				<dir>/usr/include/gtk-2.0/gdk-pixbuf</dir>
+			</namespace>
+			<namespace name="Glib">
+				<dir>/usr/include/glib-2.0/glib/</dir>
+			</namespace>
+			<namespace name="Pango">
+				<dir>/usr/include/pango-1.0/pango/</dir>
+			</namespace>
+			<namespace name="Atk">
+				<dir>/usr/include/atk-1.0/atk/</dir>
+			</namespace>
+		</library>
+	</api>
+ </gapi-parser-input>

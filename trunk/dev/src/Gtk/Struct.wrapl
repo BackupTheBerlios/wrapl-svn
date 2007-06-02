@@ -1,0 +1,27 @@
+MOD Struct;
+
+IMP Type, Target;
+
+DEF T <- <[Type.T, Target.T]
+	ns, name, cname,
+	methods,
+	ctype, rtype
+>;
+
+DEF New!(ns, name, cname) (
+	VAR t <- T();
+	t:ns <- ns;
+	t:name <- name;
+	t:cname <- cname;
+	t:rtype <- ns + "$" + name + "$T";
+	t:ctype <- cname + " *";
+	Type.Define(cname + "*", t);
+	t:queue;
+	RET t;
+);
+
+TO :precall(t@T, name, arg) [
+	t:ctype + " " + name + "= (" + t:ctype + ")(((Std$Type_t *)" + arg + ".Val) + 1);"
+];
+
+END Struct.

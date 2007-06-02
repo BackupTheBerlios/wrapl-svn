@@ -1,0 +1,23 @@
+MOD Class;
+
+IMP Type, Target;
+
+DEF T <- <[Type.T, Target.T]
+	ns, name, cname, parent,
+	ctype, rtype
+>;
+
+DEF New!(ns, name, cname) (
+	VAR t <- T();
+	t:ns <- ns;
+	t:name <- name;
+	t:cname <- cname;
+	t:rtype <- ns + "$" + name + "$T";
+	t:ctype <- cname + " *";
+	Type.Define(cname + "*", t);
+	t:queue;
+	RET t;
+);
+
+
+END Class.

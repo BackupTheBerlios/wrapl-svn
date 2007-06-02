@@ -1,0 +1,84 @@
+MOD Interface;
+
+IMP Type, Target;
+IMP IO.File;
+IMP Std.String;
+
+DEF T <- <[Type.T, Target.T]
+	ns, name, cname,
+	methods,
+	ctype, rtype
+>;
+
+DEF New!(ns, name, cname) (
+	VAR t <- T();
+	t:ns <- ns;
+	t:name <- name;
+	t:cname <- cname;
+	t:methods <- [];
+	t:rtype <- "Gtk$" + ns + "$" + name + "$T";
+	t:ctype <- cname + " *";
+	Type.Define(cname + "*", t);
+	t:queue;
+	RET t;
+);
+
+TO :addmethod(t@T, name, cname) (
+	VAR method <- Type.Method(name, cname, []);
+	method:addparam("self", t:cname + "*");
+	t:methods:put(method);
+	RET method;
+);
+
+TO :precall(t@T, name, arg) [
+	t:ctype + " " + name + " = ((Gtk$GObject$Object_t *)" + arg + ".Val)->Handle;"
+];
+
+TO :return(t@T, result) [
+	"if (" + result + " == 0) return FAILURE;",
+	"Result->Val = Gtk$GObject$gtk_to_riva(" + result + ");",
+	"return SUCCESS;"
+];
+
+TO :process(t@T) (
+	VAR base <- t:ns + "/" + t:name;
+	VAR cfile <- File.Open("src/" + base + ".c", File.WRITE + File.TEXT);
+	cfile:writes("#include <Gtk/", base, ".h>\n\n");
+	cfile:writes("TYPE(T);\n\n");
+	VAR method, param, i, returntype, types, names, n, params;
+	EVERY method <- t:methods:values DO (
+		params <- method:params;
+		n <- params:size;
+		types <- params:map(<p> Type.Lookup(p:type));
+		names <- params:map(:name);
+		cfile:writes("METHOD(\"", method:name, "\", TYP, T");
+		EVERY cfile:writes(", TYP, ", types[2:to(n)]:rtype);
+		cfile:write(") {\n");
+		EVERY i <- 1:to(n) DO (
+			EVERY cfile:writes("\t", types[i]:precall(names[i], "Args[" + i@String.T + "]"):values, "\n");
+		);
+		cfile:write("\t");
+		returntype <- Type.Lookup(method:type);
+		returntype:ctype ~= "void" => cfile:writes(returntype:ctype, " result = ");
+		cfile:writes(method:cname, "(self");
+		EVERY i <- 2:to(n) DO cfile:writes(", ", names[i]);
+		cfile:writes(");\n");
+		EVERY i <- 1:to(n) DO (
+			EVERY cfile:writes("\t", types[i]:postcall(names[i], "Args[" + i@String.T + "]"):values, "\n");
+		);
+		returntype:ctype ~= "void" => (
+			EVERY cfile:writes("\t", returntype:return("result"):values, "\n");
+		);
+		cfile:write("\treturn SUCCESS;\n");
+		cfile:write("};\n\n");
+	);
+	cfile:close;
+	VAR hfile <- File.Open("inc/" + base + ".h", File.WRITE + File.TEXT);
+	hfile:writes("#ifndef ", t:ns, "_", t:name, "_H\n");
+	hfile:writes("#define ", t:ns, "_", t:name, "_H\n\n");
+	hfile:writes("extern Std$Type_t ", t:rtype, "[];\n\n");
+	hfile:write("#endif\n");
+	hfile:close;
+);
+
+END Interface.

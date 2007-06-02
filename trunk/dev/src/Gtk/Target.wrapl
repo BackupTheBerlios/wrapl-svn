@@ -1,0 +1,18 @@
+MOD Target;
+
+IMP IO.Terminal USE Out;
+
+DEF T! <- <[]
+>;
+
+VAR queue <- [];
+
+TO :queue(t@T) queue:put(t);
+
+TO :process(t@T) (
+	--Out:writes("Unhandled target: ", t:name, ".\n");
+);
+
+DEF Process!() EVERY queue:values:process;
+
+END Target.

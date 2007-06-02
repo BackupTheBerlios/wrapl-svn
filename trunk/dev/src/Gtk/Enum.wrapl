@@ -1,0 +1,61 @@
+MOD Enum;
+
+IMP Type, Target;
+IMP IO.File;
+
+DEF T <- <[Type.T, Target.T]
+	ns, name, cname, members,
+	ctype, rtype
+>;
+
+DEF Member <- <[] name, cname>;
+
+DEF New!(ns, name, cname) (
+	VAR t <- T();
+	t:ns <- ns;
+	t:name <- name;
+	t:cname <- cname;
+	t:rtype <- ns + "$" + name + "$T";
+	t:ctype <- cname;
+	t:members <- [];
+	Type.Define(cname, t);
+	t:queue;
+	RET t;
+);
+
+TO :member(t@T, name, cname) (
+	t:members:put(Member(name, cname));
+);
+
+TO :precall(t@T, name, arg) [
+	t:cname + " " + name + " = ((Std$Integer_smallt *)" + arg + ".Val)->Value;"
+];
+
+TO :return(t@T, result) [
+	"Result->Val = " + t:ns + "$" + t:name + "$new(" + result + ");"
+];
+
+TO :process(t@T) (
+	VAR base <- t:ns + "/" + t:name;
+	VAR cfile <- File.Open("src/" + base + ".c", File.WRITE + File.TEXT);
+	cfile:writes("#include <Gtk/", base, ".h>\n\n");
+	cfile:writes("TYPE(T);\n\n");
+	VAR member;
+	EVERY member <- t:members:values DO (
+		cfile:writes("Gtk$", t:ns, "$", t:name, "_t ", member:name, "[] = {{T, ", member:cname, "}};\n");
+	);
+	cfile:close;
+	VAR hfile <- File.Open("inc/" + base + ".h", File.WRITE + File.TEXT);
+	hfile:writes("#ifndef ", t:ns, "_", t:name, "_H\n");
+	hfile:writes("#define ", t:ns, "_", t:name, "_H\n\n");
+	hfile:writes("#include <gtk/gtk.h>\n\n");
+	hfile:writes("typedef struct Gtk$", t:ns, "$", t:name, "_t {\n");
+	hfile:writes("\tStd$Type_t *Type;\n");
+	hfile:writes("\t", t:ctype, " Value;\n");
+	hfile:writes("} Gtk$", t:ns, "$", t:name, "_t;\n\n");
+	hfile:writes("extern Std$Type_t ", t:rtype, "[];\n\n");
+	hfile:write("#endif\n");
+	hfile:close;
+);
+
+END Enum.
