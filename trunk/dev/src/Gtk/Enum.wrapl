@@ -45,6 +45,9 @@ TO :process(t@T, srcdir, incdir, libdir) (
 	VAR base <- t:ns + "/" + t:name;
 	VAR cfile <- File.Open(srcdir + base + ".c", File.WRITE + File.TEXT);
 	cfile:writes("#include <Gtk/", base, ".h>\n\n");
+	-- BEGIN HACK
+	t:name = "FileSystemError" => cfile:write("#include <gtk/gtkfilesystem.h>\n");
+	-- END HACK
 	cfile:writes("TYPE(T);\n\n");
 	VAR member;
 	EVERY member <- t:members:values DO (

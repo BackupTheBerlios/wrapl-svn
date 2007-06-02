@@ -24,7 +24,7 @@ DEF Environment <- <[]
 DEF StartHandlers <- {
 
 "virtual_method" IS <env, attrs> (
-	env:method <- env:object:addmethod(attrs["name"], attrs["cname"]);
+	env:method <- env:object:addvirtual(attrs["name"], attrs["cname"]);
 ),
 
 "field" IS <env, attrs> (
@@ -98,6 +98,8 @@ DEF StartHandlers <- {
 "parameter" IS <env, attrs> (
 	attrs["ellipsis"] => (
 		env:method:addparam("___", "ellipsis");
+	) // attrs["array"] => (
+		env:method:addparam(attrs["name"], attrs["type"] + "*");
 	) // (
 		env:method:addparam(attrs["name"], attrs["type"]);
 	);
@@ -108,28 +110,14 @@ DEF StartHandlers <- {
 
 };
 
-VAR logfile <- File.Open("log.xml", File.WRITE + File.TEXT);
-VAR indent <- "";
-
 VAR source <- File.Open("api.xml", File.READ + File.TEXT);
 VAR parser <- Parser.New();
 parser:userdata <- Environment();
-parser:onstartelement <- <env, name, attrs> (
-	Out:writes(indent, "<", name, " ", attrs, ">\n");
-	indent <- indent + "  ";
-	StartHandlers[name](env, attrs);
-);
-
-parser:onendelement <- <env, name> (
-	indent <- indent[2, 0];
-	Out:writes(indent, "</", name, ">\n");
-);
+parser:onstartelement <- <env, name, attrs> StartHandlers[name](env, attrs);
 
 Out:write("Reading api file...");
 REP WHILE parser:parse(source:read(1024));
 Out:write("done.\n");
-
-logfile:close;
 
 Out:write("Generating files...");
 Target.Process("./", "../../inc/Gtk/", "../../lib/Gtk/");

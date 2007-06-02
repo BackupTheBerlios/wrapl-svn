@@ -2,10 +2,11 @@ MOD Struct;
 
 IMP Type, Target;
 IMP IO.File;
+IMP Std.String;
 
 DEF T <- <[Type.T, Target.T]
 	ns, name, cname,
-	methods,
+	methods, shared, ctors,
 	ctype, rtype,
 	headers, libraries
 >;
@@ -15,6 +16,9 @@ DEF New!(ns, name, cname) (
 	t:ns <- ns;
 	t:name <- name;
 	t:cname <- cname;
+	t:methods <- [];
+	t:shared <- [];
+	t:ctors <- [];
 	t:rtype <- "Gtk$" + ns + "$" + name + "$T";
 	t:ctype <- cname + " *";
 	Type.Define(cname + "*", t);
@@ -23,6 +27,40 @@ DEF New!(ns, name, cname) (
 	t:libraries <- ["Gtk/" + ns + "/" + name + ".rlib"];
 	t:queue;
 	RET t;
+);
+
+TO :addmethod(t@T, name, cname) (
+	VAR method <- Type.Method(name, cname, []);
+	method:addparam("self", t:cname + "*");
+	t:methods:put(method);
+	RET method;
+);
+
+TO :addshared(t@T, name, cname) (
+	VAR method <- Type.Method(name, cname, []);
+	t:shared:put(method);
+	RET method;
+);
+
+TO :addctor(t@T, cname) (
+	VAR name <- "";
+	VAR i <- t:ctor_prefix, n <- cname:length;
+	cname[i] = "_" => (i <- i + 1);
+	name <- name + String.Chr(String.Ord(cname[i]) - 32);
+	REP (
+		i <- i + 1;
+		UNTIL i > n;
+		cname[i] = "_" => (
+			i <- i + 1;
+			name <- name + String.Chr(String.Ord(cname[i]) - 32);
+		) // (
+			name <- name + cname[i];
+		);
+	);
+	--Out:writes("Adding constructor ", cname, " -> ", name, "\n");
+	VAR method <- Type.Method(name, cname, []);
+	t:ctors:put(method);
+	RET method;
 );
 
 TO :precall(t@T, name, arg) [
