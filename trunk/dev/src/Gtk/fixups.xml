@@ -1,4 +1,4 @@
 <?xml version="1.0"?>
 <metadata>
-	<attr path="/api/namespace/object[@cname='GtkWindow']/signal[@name='ActivateDefault']" name="name">DefaultActivated</attr>
-  </metadata>
+	<remove-node path="/api/namespace/enum[@cname='FileSystemError']" />
+</metadata>
