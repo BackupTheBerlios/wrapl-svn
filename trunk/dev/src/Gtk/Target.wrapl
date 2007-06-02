@@ -9,10 +9,10 @@ VAR queue <- [];
 
 TO :queue(t@T) queue:put(t);
 
-TO :process(t@T) (
+TO :process(t@T, srcdir, incdir, libdir) (
 	--Out:writes("Unhandled target: ", t:name, ".\n");
 );
 
-DEF Process!() EVERY queue:values:process;
+DEF Process!(srcdir, incdir, libdir) EVERY queue:values:process(srcdir, incdir, libdir);
 
 END Target.

@@ -8,7 +8,7 @@ TYPE(T, Gtk$GObject$Object$T);
 
 static Util$StringTable_t TypeTable[] = {Util$StringTable$INIT};
 
-Lang$Type_t *_gtk_to_riva(GType GtkType) {
+Lang$Type_t *_to_riva(GType GtkType) {
 	const char *GtkName = g_type_name(GtkType);
 	const char *RivaName = Util$StringTable$get(TypeTable, GtkName);
 	if (RivaName == 0) {

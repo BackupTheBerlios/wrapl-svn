@@ -8,9 +8,11 @@ IMP Target;
 IMP Callback;
 IMP Class;
 IMP Enum;
+IMP Flags;
 IMP Interface;
 IMP Native;
 IMP Object;
+IMP Opaque;
 IMP Struct;
 
 DEF Environment <- <[]
@@ -33,7 +35,11 @@ DEF StartHandlers <- {
 ),
 
 "method" IS <env, attrs> (
-	env:method <- env:object:addmethod(attrs["name"], attrs["cname"]);
+	attrs["shared"] => (
+		env:method <- env:object:addshared(attrs["name"], attrs["cname"]);
+	) // (
+		env:method <- env:object:addmethod(attrs["name"], attrs["cname"]);
+	);
 ),
 
 "api" IS <env, attrs> (
@@ -62,15 +68,19 @@ DEF StartHandlers <- {
 ),
 
 "object" IS <env, attrs> (
-	env:object <- Object.New(env:namespace, attrs["name"], attrs["cname"], attrs["parent"]);
+	env:object <- Object.New(env:namespace, attrs["name"], attrs["cname"], attrs["parent"] | "GObject");
 ),
 
 "struct" IS <env, attrs> (
-	env:object <- Struct.New(env:namespace, attrs["name"], attrs["cname"]);
+	attrs["opaque"] => (
+		env:object <- Opaque.New(env:namespace, attrs["name"], attrs["cname"]);
+	) // (
+		env:object <- Struct.New(env:namespace, attrs["name"], attrs["cname"]);
+	);
 ),
 
 "member" IS <env, attrs> (
-	env:object:member(attrs["name"], attrs["cname"]);
+	env:object:member(attrs["name"], attrs["cname"], attrs["value"] | "");
 ),
 
 "constructor" IS <env, attrs> (
@@ -78,12 +88,16 @@ DEF StartHandlers <- {
 ),
 
 "enum" IS <env, attrs> (
-	env:object <- Enum.New(env:namespace, attrs["name"], attrs["cname"]);
+	attrs["type"] = "enum" => (
+		env:object <- Enum.New(env:namespace, attrs["name"], attrs["cname"]);
+	) // attrs["type"] = "flags" => (
+		env:object <- Flags.New(env:namespace, attrs["name"], attrs["cname"]);
+	);
 ),
 
 "parameter" IS <env, attrs> (
 	attrs["ellipsis"] => (
-		env:method:addparam("...", "ellipsis");
+		env:method:addparam("___", "ellipsis");
 	) // (
 		env:method:addparam(attrs["name"], attrs["type"]);
 	);
@@ -94,17 +108,31 @@ DEF StartHandlers <- {
 
 };
 
+VAR logfile <- File.Open("log.xml", File.WRITE + File.TEXT);
+VAR indent <- "";
+
 VAR source <- File.Open("api.xml", File.READ + File.TEXT);
 VAR parser <- Parser.New();
 parser:userdata <- Environment();
-parser:onstartelement <- <env, name, attrs> StartHandlers[name](env, attrs);
+parser:onstartelement <- <env, name, attrs> (
+	Out:writes(indent, "<", name, " ", attrs, ">\n");
+	indent <- indent + "  ";
+	StartHandlers[name](env, attrs);
+);
+
+parser:onendelement <- <env, name> (
+	indent <- indent[2, 0];
+	Out:writes(indent, "</", name, ">\n");
+);
 
 Out:write("Reading api file...");
 REP WHILE parser:parse(source:read(1024));
 Out:write("done.\n");
 
+logfile:close;
+
 Out:write("Generating files...");
-Target.Process();
+Target.Process("./", "../../inc/Gtk/", "../../lib/Gtk/");
 Out:write("done.\n");
 
 END Main.

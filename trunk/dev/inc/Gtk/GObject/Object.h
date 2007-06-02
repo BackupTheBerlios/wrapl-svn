@@ -8,14 +8,14 @@
 #include <Riva-Header.h>
 
 typedef struct GtkGOobject$Object_t {
-	Lang$Type_t *Type;
+	Std$Type_t *Type;
 	GObject *Handle;
 } Gtk$GObject$Object_t;
 
-extern Lang$Type_t Gtk$GObject$Object$T[];
+extern Std$Type_t Gtk$GObject$Object$T[];
 
-RIVA_CFUN(Gtk$GObject$Object_t *, new, GObject *, Lang$Type_t *);
-RIVA_CFUN(Gtk$GObject$Object_t *, gtk_to_riva, GObject *);
+RIVA_CFUN(Gtk$GObject$Object_t *, new, GObject *, Std$Type_t *);
+RIVA_CFUN(Gtk$GObject$Object_t *, to_riva, GObject *);
 
 #undef RIVA_MODULE
 

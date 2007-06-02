@@ -18,7 +18,7 @@ inline Gtk$GObject$Object_t *_new(GObject *Handle, Lang$Type_t *Type) {
 	return Object;
 };
 
-Gtk$GObject$Object_t *_gtk_to_riva(GObject *Handle) {
+Gtk$GObject$Object_t *_to_riva(GObject *Handle) {
 	Gtk$GObject$Object_t *Object = g_object_get_qdata(Handle, RivaQuark);
 	if (Object) return Object;
 	Lang$Type_t *Type = Gtk$GObject$Type$gtk_to_riva(G_OBJECT_TYPE(Handle));

@@ -1,11 +1,13 @@
 MOD Struct;
 
 IMP Type, Target;
+IMP IO.File;
 
 DEF T <- <[Type.T, Target.T]
 	ns, name, cname,
 	methods,
-	ctype, rtype
+	ctype, rtype,
+	headers, libraries
 >;
 
 DEF New!(ns, name, cname) (
@@ -13,15 +15,41 @@ DEF New!(ns, name, cname) (
 	t:ns <- ns;
 	t:name <- name;
 	t:cname <- cname;
-	t:rtype <- ns + "$" + name + "$T";
+	t:rtype <- "Gtk$" + ns + "$" + name + "$T";
 	t:ctype <- cname + " *";
 	Type.Define(cname + "*", t);
+	Type.Define("const-" + cname + "*", t);
+	t:headers <- ["#include <Gtk/" + ns + "/" + name + ".h>"];
+	t:libraries <- ["Gtk/" + ns + "/" + name + ".rlib"];
 	t:queue;
 	RET t;
 );
 
 TO :precall(t@T, name, arg) [
-	t:ctype + " " + name + "= (" + t:ctype + ")(((Std$Type_t *)" + arg + ".Val) + 1);"
+	t:ctype + " " + name + "= &((Gtk$" + t:ns + "$" + t:name + "_t *)" + arg + ".Val)->Value;"
 ];
+
+TO :process(t@T, srcdir, incdir, libdir) (
+	VAR base <- t:ns + "/" + t:name;
+	VAR libfile <- File.Open(libdir + base + ".rlib", File.WRITE + File.TEXT);
+	libfile:writes("module(\"Gtk\", \"", t:ns, "\", \"", t:name, "\")\n");
+	libfile:writes("prefix(\"Gtk$", t:ns, "$", t:name, "$\")\n");
+	libfile:write("export(\"T\")\n");
+	libfile:close;
+	VAR hfile <- File.Open(incdir + base + ".h", File.WRITE + File.TEXT);
+	hfile:writes("#ifndef ", t:ns, "_", t:name, "_H\n");
+	hfile:writes("#define ", t:ns, "_", t:name, "_H\n\n");
+	hfile:writes("#define RIVA_MODULE Gtk$", t:ns, "$", t:name, "\n");
+	hfile:writes("#include <gtk/gtk.h>\n\n");
+	hfile:writes("#include <Riva-Header.h>\n\n");
+	hfile:writes("typedef struct Gtk$", t:ns, "$", t:name, "_t {\n");
+	hfile:writes("\tStd$Type_t *Type;\n");
+	hfile:writes("\t", t:cname, " Value;\n");
+	hfile:writes("} Gtk$", t:ns, "$", t:name, "_t;\n\n");
+	hfile:writes("extern Std$Type_t ", t:rtype, "[];\n\n");
+	hfile:write("#undef RIVA_MODULE\n\n");
+	hfile:write("#endif\n");
+	hfile:close;
+);
 
 END Struct.

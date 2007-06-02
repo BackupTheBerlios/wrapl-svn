@@ -8,13 +8,13 @@
 #include <Riva-Header.h>
 
 typedef struct Gtk$GObject$Closure_t {
-	Lang$Type_t *Type;
+	Std$Type_t *Type;
 	GClosure *Handle;
 } Gtk$GObject$Closure_t;
 
-extern Lang$Type_t Gtk$GObject$Closure$T[];
+extern Std$Type_t Gtk$GObject$Closure$T[];
 
-RIVA_CFUN(Gtk$GObject$Closure_t *, new, Lang$Object_t *);
+RIVA_CFUN(Gtk$GObject$Closure_t *, new, Std$Object_t *);
 
 #undef RIVA_MODULE
 

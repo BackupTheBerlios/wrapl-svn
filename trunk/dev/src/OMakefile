@@ -46,13 +46,11 @@ section
 	vmount($(SRC_DIR)Wrapl, $(OBJ_DIR)Wrapl)
 	.SUBDIRS: $(OBJ_DIR)Wrapl
 
-if $(equal $(TARGETS), Xml)
+section
 	vmount($(SRC_DIR)Xml, $(OBJ_DIR)Xml)
 	.SUBDIRS: $(OBJ_DIR)Xml
 
-Gtk:
+section
 	vmount($(SRC_DIR)Gtk, $(OBJ_DIR)Gtk)
 	.SUBDIRS: $(OBJ_DIR)Gtk
-if $(equal $(TARGETS), Allegro)
-	vmount($(SRC_DIR)Allegro, $(OBJ_DIR)Allegro)
-	.SUBDIRS: $(OBJ_DIR)Allegro
+

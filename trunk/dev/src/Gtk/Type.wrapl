@@ -13,13 +13,16 @@ DEF Method! <- <[] name, cname, params, type>;
 
 TO :addparam(method@Method, name, type) method:params:put(Param(name, type));
 
+TO :headers(t@T) [];
+TO :libraries(t@T) [];
+
 TO :precall(t@T, name, arg) (
 	unknownprecalls[t] // (
 		unknownprecalls:insert(t);
 		Out:writes("Cannot unbox values of type ", t:cname, "\n");
 		RECV msg DO Out:writes("Cannot unbox values of unknown type\n");
 	);
-	["//Unknown parameter type"];
+	[t:ctype + " " + name + ";"];
 );
 
 TO :postcall(t@T, name, arg) [
@@ -36,14 +39,28 @@ TO :return(t@T, result) (
 
 VAR typetable <- {};
 
+DEF FixupName(name) (
+	VAR res <- "", char;
+	EVERY char <- name:chars DO (
+		res <- res + (char = "-" => " " // char);
+	);
+	RET res;
+);
+
 DEF Lookup!(name) (
 	VAR type <- typetable[name];
 	type == NIL => (
-		unknowntypes[name] // (
+		--unknowntypes[name] // (
+			type <- T();
+			TO :ctype(=type) name;
+			TO :rtype(=type) "Std$Object$T";
+			TO :precall(=type, param, arg) [FixupName(name) + " " + param + ";"];
+			Define(name, type);
 			unknowntypes:insert(name);
 			Out:writes(name, " not found\n");
-		);
-		RET voidtype;
+			RET type;
+		--);
+		--RET voidtype;
 	);
 	RET type;
 );
@@ -53,6 +70,14 @@ DEF Define!(name, type) (
 	typetable:insert(name, type);
 );
 
+VAR ellipsis <- T();
+TO :rtype(=ellipsis) "Std$Object$T";
+TO :ctype(=ellipsis) "char *";
+TO :precall(=ellipsis, name, arg) [
+	"char *" + name + " = 0;"
+];
+Define("ellipsis", ellipsis);
+
 VAR gtype <- T();
 TO :rtype(=gtype) "Gtk$GObject$Type$T";
 TO :ctype(=gtype) "GType";
@@ -60,20 +85,25 @@ TO :precall(=gtype, name, arg) [
 	"GType " + name + " = ((Gtk$GObject$Type_t *)" + arg + ".Val)->Handle;"
 ];
 TO :return(=gtype, result) [
-	"Result->Val = Gtk$GObject$Type$new(" + result + ");"
+	"Result->Val = Gtk$GObject$Type$to_riva(" + result + ");"
 ];
+TO :headers(=gtype) ["#include <Gtk/GObject/Type.h>"];
+TO :libraries(=gtype) ["Gtk/GObject/Type.rlib"];
 Define("GType", gtype);
 Define("GtkType", gtype);
 
 VAR gvaluetype <- T();
-TO :rtype(=gvaluetype) "Gtk$GObject$Value$T";
+TO :rtype(=gvaluetype) "Std$Object$T";
 TO :ctype(=gvaluetype) "GValue *";
 TO :precall(=gvaluetype, name, arg) [
-	"GValue *" + name + " = Gtk$GObject$Value$riva_to_gtk(" + arg + ".Val);"
+	"GValue " + name + "[1];",
+	"Gtk$GObject$Value$to_gtk(" + arg + ".Val, " + name + ");"
 ];
 TO :return(=gvaluetype, result) [
-	"Result->Val = Gtk$GObject$Value$gtk_to_riva(" + result + ");"
+	"Result->Val = Gtk$GObject$Value$to_riva(" + result + ");"
 ];
+TO :headers(=gvaluetype) ["#include <Gtk/GObject/Value.h>"];
+TO :libraries(=gvaluetype) ["Gtk/GObject/Value.rlib"];
 Define("GValue*", gvaluetype);
 Define("const-GValue*", gvaluetype);
 
@@ -102,10 +132,10 @@ VAR stringtype <- T();
 TO :rtype(=stringtype) "Std$String$T";
 TO :ctype(=stringtype) "char *";
 TO :precall(=stringtype, name, arg) [
-	"char *" + name + " = Std$String$flatten(" + arg + ");"
+	"char *" + name + " = Std$String$flatten(" + arg + ".Val);"
 ];
 TO :return(=stringtype, result) [
-	"if (RESULT == 0) return FAILURE;",
+	"if (" + result + " == 0) return FAILURE;",
 	"Result->Val = Std$String$new(" + result + ");"
 ];
 Define("char*", stringtype);
@@ -116,11 +146,11 @@ VAR conststringtype <- T();
 TO :rtype(=conststringtype) "Std$String$T";
 TO :ctype(=conststringtype) "const char *";
 TO :precall(=conststringtype, name, arg) [
-	"char " + name + "[((Std$String_t *)" + arg + ")->Length.Value + 1];",
+	"char " + name + "[((Std$String_t *)" + arg + ".Val)->Length.Value + 1];",
 	"Std$String$flatten_to(" + arg + ".Val, " + name + ");"
 ];
 TO :return(=conststringtype, result) [
-	"if (RESULT == 0) return FAILURE;",
+	"if (" + result + " == 0) return FAILURE;",
 	"Result->Val = Std$String$copy(" + result + ");"
 ];
 Define("const-char*", conststringtype);
@@ -191,6 +221,21 @@ TO :precall(=booleantype, name, arg) [
 TO :return(=booleantype, result) [
 	"Result->Val = " + result + " ? $true : $false;"
 ];
+TO :headers(=booleantype) [
+	"SYMBOL($true, \"true\");",
+	"SYMBOL($false, \"false\");"
+];
 Define("gboolean", booleantype);
+
+VAR pointertype <- T();
+TO :rtype(=pointertype) "Std$Object$T";
+TO :ctype(=pointertype) "void *";
+TO :precall(=pointertype, name, arg) [
+	"void *" + name + " = " + arg + ".Val;"
+];
+TO :return(=pointertype, result) [
+	"Result->Val = " + result + ";"
+];
+Define("gpointer", pointertype);
 
 END Type.

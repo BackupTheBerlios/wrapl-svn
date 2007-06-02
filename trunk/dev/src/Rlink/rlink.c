@@ -748,6 +748,11 @@ static void add_library_file(const char *FileName) {
     };
 };
 
+static int definition_file_library(lua_State *State) {
+	add_file(lua_tostring(State, 1));
+	return 0;
+};
+
 static int definition_file_export(lua_State *State) {
     const char *Internal = 0;
     const char *External = 0;
@@ -778,6 +783,7 @@ static int definition_file_export(lua_State *State) {
 static void add_definition_file(const char *FileName) {
     lua_State *State = luaL_newstate();
     lua_register(State, "export", definition_file_export);
+    lua_register(State, "library", definition_file_library);
     lua_pushstring(State, Platform);
     lua_setglobal(State, "Platform");
     for (const char **P = Platforms; *P; ++P) {

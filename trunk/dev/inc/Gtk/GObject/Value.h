@@ -7,8 +7,8 @@
 #define RIVA_MODULE Gtk$GObject$Value
 #include <Riva-Header.h>
 
-RIVA_CFUN(Lang$Object_t *, to_riva, const GValue *);
-RIVA_CFUN(void, to_gtk, Lang$Object_t *, GValue *);
+RIVA_CFUN(Std$Object_t *, to_riva, const GValue *);
+RIVA_CFUN(void, to_gtk, Std$Object_t *, GValue *);
 
 #undef RIVA_MODULE
 

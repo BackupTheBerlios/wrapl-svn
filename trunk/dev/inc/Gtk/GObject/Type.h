@@ -7,9 +7,9 @@
 #define RIVA_MODULE Gtk$GObject$Type
 #include <Riva-Header.h>
 
-extern Lang$Type_t Gtk$GObject$Type$T[];
+extern Std$Type_t Gtk$GObject$Type$T[];
 
-RIVA_CFUN(Lang$Type_t *, gtk_to_riva, GType);
+RIVA_CFUN(Std$Type_t *, to_riva, GType);
 
 #undef RIVA_MODULE
 
