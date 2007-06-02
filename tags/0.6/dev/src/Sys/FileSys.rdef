@@ -1,0 +1,14 @@
+if WINDOWS then
+	_export = export
+	export = function(Name)
+		_export("_" .. Name, Name)
+	end
+end
+
+export("MakeDir")
+export("RemoveDir")
+export("ListDir")
+export("Exists")
+export("FileSize")
+export("Remove")
+export("Rename")

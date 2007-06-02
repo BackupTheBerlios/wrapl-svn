@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Util" />
+		<Option pch_mode="2" />
+		<Option compiler="gnu_gcc_compiler_riva" />
+		<Build>
+			<Target title="ObjectTable">
+				<Option output="..\..\..\lib\Util\ObjectTable.riva" prefix_auto="0" extension_auto="0" />
+				<Option external_deps="ObjectTable.rdef;" />
+				<Option type="0" />
+				<Option compiler="gnu_gcc_compiler_riva" />
+				<Linker>
+					<Add library="ObjectTable.rdef" />
+				</Linker>
+			</Target>
+			<Target title="IntegerTable">
+				<Option output="..\..\..\lib\Util\IntegerTable.riva" prefix_auto="0" extension_auto="0" />
+				<Option external_deps="IntegerTable.rdef;" />
+				<Option type="0" />
+				<Option compiler="gnu_gcc_compiler_riva" />
+			</Target>
+			<Target title="StringTable">
+				<Option output="..\..\..\lib\Util\StringTable.riva" prefix_auto="0" extension_auto="0" />
+				<Option external_deps="StringTable.rdef;" />
+				<Option type="0" />
+				<Option compiler="gnu_gcc_compiler_riva" />
+				<Linker>
+					<Add library="StringTable.rdef" />
+				</Linker>
+			</Target>
+			<Target title="TypeTable">
+				<Option output="..\..\..\lib\Util\TypeTable.riva" prefix_auto="0" extension_auto="0" />
+				<Option external_deps="TypeTable.rdef;" />
+				<Option type="0" />
+				<Option compiler="gnu_gcc_compiler_riva" />
+				<Linker>
+					<Add library="TypeTable.rdef" />
+				</Linker>
+			</Target>
+		</Build>
+		<VirtualTargets>
+			<Add alias="All" targets="ObjectTable;StringTable;TypeTable;" />
+		</VirtualTargets>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Linker>
+			<Add library="Riva.rlib" />
+			<Add library="Std.rlib" />
+		</Linker>
+		<Unit filename="ObjectTable.asm">
+			<Option compile="1" />
+			<Option link="1" />
+			<Option compiler="gnu_gcc_compiler_riva" use="1" buildCommand="nasm -Ov --prefix _ -I$ASMINC -fwin32 -DWINDOWS -o $object $file" />
+			<Option target="ObjectTable" />
+		</Unit>
+		<Unit filename="ObjectTable.rdef">
+			<Option target="ObjectTable" />
+		</Unit>
+		<Unit filename="StringTable.asm">
+			<Option compile="1" />
+			<Option link="1" />
+			<Option compiler="gnu_gcc_compiler_riva" use="1" buildCommand="nasm -Ov --prefix _ -I$ASMINC -fwin32 -DWINDOWS -o $object $file" />
+			<Option target="StringTable" />
+		</Unit>
+		<Unit filename="StringTable.rdef">
+			<Option target="StringTable" />
+		</Unit>
+		<Unit filename="TypeTable.asm">
+			<Option compile="1" />
+			<Option link="1" />
+			<Option compiler="gnu_gcc_compiler_riva" use="1" buildCommand="nasm -Ov --prefix _ -I$ASMINC -fwin32 -DWINDOWS -o $object $file" />
+			<Option target="TypeTable" />
+		</Unit>
+		<Unit filename="TypeTable.rdef">
+			<Option target="TypeTable" />
+		</Unit>
+		<Extensions>
+			<code_completion />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

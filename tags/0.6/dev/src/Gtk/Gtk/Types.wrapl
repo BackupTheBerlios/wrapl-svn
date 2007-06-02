@@ -1,0 +1,143 @@
+MOD Types;
+
+IMP IO.File;
+IMP IO.Terminal USE Out;
+IMP Lang.String;
+
+VAR Input <- File.Open("Types.txt", File.READ + File.TEXT);
+
+VAR Line;
+VAR Indent <- 9;
+
+VAR Parents <- [];
+VAR Indents <- [9];
+VAR I;
+VAR Type <- "object";
+
+DEF lowercase(Type) (
+	VAR Type2 <- "";
+	EVERY Type2 <- Type2 + String.Chr(String.Ord(Type[4, 0]:chars):or(32));
+	RET Type2;
+);
+
+DEF uppercase(Type) (
+	VAR Type2 <- "";
+	EVERY Type2 <- Type2 + String.Chr(String.Ord(Type[4, 0]:chars):and(223));
+	RET Type2;
+);
+
+DEF mixedcase(Type) (
+	VAR Type2 <- Type[4];
+	EVERY Type2 <- Type2 + String.Chr(String.Ord(Type[5, 0]:chars):or(32));
+	RET Type2;
+);
+
+DEF typeline(Type, Parents) (
+	VAR Line <- "TYPE(T";
+	VAR Parent;
+	EVERY Parent <- Parents:Values DO (
+		(Parent ~= "GInitiallyUnowned") => (
+			Line <- Line + ", Gtk$Gtk$" + Parent[4, 0] + "$T";
+		);
+	);
+	Line <- Line + ", Gtk$GObject$Object$T);\n";
+);
+
+VAR Output;
+VAR LName, UName, MName, Name;
+
+--Output <- File.open("Targets.txt", File.WRITE + File.TEXT);
+
+REP (WHILE Line <- Input:read;
+	I <- 1;
+	REP (WHILE Line[I] = " "; I <- I + 1);
+	I > Indent => (
+		Parents:push(Type);
+		Indents:push(I);
+	) // (I < Indent) => (
+		REP (UNTIL Indents[1] = I; Indents:pop; Parents:pop);
+	);
+	Indent <- I;
+	Type <- Line[I, 0];
+	("GInitiallyUnowned" = Type) => STEP;
+	("GtkObject" = Type) => STEP;
+	Out:write("Creating files for " + Type + "\n");
+	UName <- uppercase(Type);
+	LName <- lowercase(Type);
+	MName <- mixedcase(Type);
+	Name <- Type[4, 0];
+
+-=
+	Output <- File.Open(Name + ".h", File.WRITE + File.TEXT);
+	Output:write("#ifndef GTK_GTK_" + UName + "\n");
+	Output:write("#define GTK_GTK_" + UName + "\n");
+	Output:write("\n");
+	Output:write("#include <Gtk/Gtk/" + Parents[1][4, 0] + ".h>\n");
+	Output:write("\n");
+	Output:write("#define RIVA_MODULE Gtk$Gtk$" + Name + "\n");
+	Output:write("#include <Riva-Header.h>\n");
+	Output:write("\n");
+	Output:write("extern Lang$Type_t Gtk$Gtk$" + Name + "$T[];\n");
+	Output:write("\n");
+	Output:write("#undef RIVA_MODULE\n");
+	Output:write("\n");
+	Output:write("#endif\n");
+	Output:close;
+=-
+
+-=
+	Output <- File.Open(Name + ".c", File.WRITE + File.TEXT);
+	Output:write("#include <Gtk/Gtk/" + Name + ".h>\n");
+	Output:write("\n");
+	Output:write(typeline(Type, Parents));
+	Output:write("\n");
+	Output:write("GLOBAL_FUNCTION(new, 0) {\n");
+	Output:write("\tGtkWidget *Handle = gtk_" + LName + "_new();\n");
+	Output:write("\tResult->Val = Gtk$GObject$Object$new(Handle, T);\n");
+	Output:write("\treturn SUCCESS;\n");
+	Output:write("};\n");
+	Output:close;
+=-
+
+
+	Output <- File.Open(Name + ".rdef", File.WRITE + File.TEXT);
+	Output:write("export(\"T\")\n");
+	Output:write("export(\"New\")\n");
+	Output:close;
+
+
+-=
+	Output <- File.Open(Name + ".rlib", File.WRITE + File.TEXT);
+	Output:write("module(\"Gtk\", \"Gtk\", \"" + Name + "\")\n");
+	Output:write("prefix(\"Gtk$Gtk$" + Name + "$\")\n");
+	Output:write("export(\"T\")\n");
+	Output:close;
+=-
+
+
+-=
+	Output:write("\t\t\t<Target title=\"" + Name + "\">\n");
+	Output:write("\t\t\t\t<Option output=\"../../../../lib/Gtk/Gtk/" + Name + ".riva\" prefix_auto=\"0\" extension_auto=\"0\" />\n");
+	Output:write("\t\t\t\t<Option external_deps=\"" + Name + ".rdef;\" />\n");
+	Output:write("\t\t\t\t<Option type=\"0\" />\n");
+	Output:write("\t\t\t\t<Option compiler=\"gnu_gcc_compiler_riva\" />\n");
+	Output:write("\t\t\t\t<Linker>\n");
+	Output:write("\t\t\t\t\t<Add library=\"" + Name + ".rdef\" />\n");
+	Output:write("\t\t\t\t</Linker>\n");
+	Output:write("\t\t\t</Target>\n");
+=-
+
+-=
+	Output:write("\t\t<Unit filename=\"" + Name + ".c\">\n");
+	Output:write("\t\t\t<Option compilerVar=\"CC\" />\n");
+	Output:write("\t\t\t<Option target=\"" + Name + "\" />\n");
+	Output:write("\t\t</Unit>\n");
+	Output:write("\t\t<Unit filename=\"" + Name + ".rdef\">\n");
+	Output:write("\t\t\t<Option target=\"" + Name + "\" />\n");
+	Output:write("\t\t</Unit>\n");
+=-
+);
+
+--Output:close;
+
+END Types.

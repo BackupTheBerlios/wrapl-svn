@@ -1,0 +1,17 @@
+module("IO", "Stream")
+if WINDOWS then
+	prefix("_IO$Stream$")
+else
+	prefix("IO$Stream$")
+end
+export("T")
+export("ReaderT")
+export("WriterT")
+export("SeekerT")
+export("TextReaderT")
+export("TextWriterT")
+export("MessageT")
+export("T_Methods")
+export("ReaderT_Methods")
+export("WriterT_Methods")
+export("SeekerT_Methods")

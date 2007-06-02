@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="GObject" />
+		<Option pch_mode="2" />
+		<Option compiler="gnu_gcc_compiler_riva" />
+		<Build>
+			<Target title="Object">
+				<Option output="../../../../lib/Gtk/GObject/Object.riva" prefix_auto="0" extension_auto="0" />
+				<Option external_deps="Object.rdef;" />
+				<Option type="0" />
+				<Option compiler="gnu_gcc_compiler_riva" />
+				<Linker>
+					<Add library="Object.rdef" />
+					<Add library="../../../../dev/lib/Gtk/GObject/Type.rlib" />
+					<Add library="../../../../dev/lib/Gtk/GObject/Closure.rlib" />
+					<Add library="../../../../dev/lib/Gtk/GObject/Value.rlib" />
+				</Linker>
+			</Target>
+			<Target title="Type">
+				<Option output="../../../../lib/Gtk/GObject/Type.riva" prefix_auto="0" extension_auto="0" />
+				<Option external_deps="Type.rdef;" />
+				<Option type="0" />
+				<Option compiler="gnu_gcc_compiler_riva" />
+				<Linker>
+					<Add library="Type.rdef" />
+					<Add library="../../../../dev/lib/Util/StringTable.rlib" />
+					<Add library="../../../../dev/lib/Gtk/GObject/Object.rlib" />
+				</Linker>
+			</Target>
+			<Target title="Closure">
+				<Option output="../../../../lib/Gtk/GObject/Closure.riva" prefix_auto="0" extension_auto="0" />
+				<Option external_deps="Closure.rdef;" />
+				<Option type="0" />
+				<Option compiler="gnu_gcc_compiler_riva" />
+				<Linker>
+					<Add library="Closure.rdef" />
+					<Add library="../../../../dev/lib/Gtk/GObject/Object.rlib" />
+					<Add library="../../../../dev/lib/Gtk/GObject/Type.rlib" />
+					<Add library="../../../../dev/lib/Gtk/GObject/Value.rlib" />
+				</Linker>
+			</Target>
+			<Target title="Value">
+				<Option output="../../../../lib/Gtk/GObject/Value.riva" prefix_auto="0" extension_auto="0" />
+				<Option external_deps="Value.rdef;" />
+				<Option type="0" />
+				<Option compiler="gnu_gcc_compiler_riva" />
+				<Linker>
+					<Add library="Value.rdef" />
+					<Add library="../../../../dev/lib/Gtk/GObject/Object.rlib" />
+				</Linker>
+			</Target>
+		</Build>
+		<VirtualTargets>
+			<Add alias="All" targets="Object;Type;Closure;Value;" />
+		</VirtualTargets>
+		<Compiler>
+			<Add option="-march=pentium-m" />
+			<Add option="-fexpensive-optimizations" />
+			<Add option="-O3" />
+			<Add option="-std=gnu99" />
+			<Add directory="/usr/include/glib-2.0" />
+			<Add directory="/usr/lib/glib-2.0/include" />
+		</Compiler>
+		<Linker>
+			<Add library="../../../../dev/lib/Riva/Log.rlib" />
+			<Add library="../../../../dev/lib/Riva/Memory.rlib" />
+			<Add library="../../../../dev/lib/Riva/Module.rlib" />
+			<Add library="../../../../dev/lib/Riva/Symbol.rlib" />
+			<Add library="../../../../dev/lib/Riva/Thread.rlib" />
+			<Add library="../../../../dev/lib/Lang/Address.rlib" />
+			<Add library="../../../../dev/lib/Lang/Array.rlib" />
+			<Add library="../../../../dev/lib/Lang/Coexpr.rlib" />
+			<Add library="../../../../dev/lib/Lang/Function.rlib" />
+			<Add library="../../../../dev/lib/Lang/Integer.rlib" />
+			<Add library="../../../../dev/lib/Lang/List.rlib" />
+			<Add library="../../../../dev/lib/Lang/Methods.rlib" />
+			<Add library="../../../../dev/lib/Lang/Object.rlib" />
+			<Add library="../../../../dev/lib/Lang/Real.rlib" />
+			<Add library="../../../../dev/lib/Lang/String.rlib" />
+			<Add library="../../../../dev/lib/Lang/Symbol.rlib" />
+			<Add library="../../../../dev/lib/Lang/Table.rlib" />
+			<Add library="../../../../dev/lib/Lang/Type.rlib" />
+			<Add library="../../../../dev/lib/libc.rlib" />
+			<Add library="../../../lib/Gtk/libgobject-2.0.rlib" />
+			<Add library="../../../lib/Gtk/libglib-2.0.rlib" />
+		</Linker>
+		<Unit filename="Closure.c">
+			<Option compilerVar="CC" />
+			<Option target="Closure" />
+		</Unit>
+		<Unit filename="Closure.rdef">
+			<Option target="Closure" />
+		</Unit>
+		<Unit filename="Object.c">
+			<Option compilerVar="CC" />
+			<Option target="Object" />
+		</Unit>
+		<Unit filename="Object.rdef">
+			<Option target="Object" />
+		</Unit>
+		<Unit filename="Type.c">
+			<Option compilerVar="CC" />
+			<Option target="Type" />
+		</Unit>
+		<Unit filename="Type.rdef">
+			<Option target="Type" />
+		</Unit>
+		<Unit filename="Value.c">
+			<Option compilerVar="CC" />
+			<Option target="Value" />
+		</Unit>
+		<Unit filename="Value.rdef">
+			<Option target="Value" />
+		</Unit>
+		<Extensions>
+			<code_completion />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
