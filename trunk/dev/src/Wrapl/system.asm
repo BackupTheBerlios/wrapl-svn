@@ -65,7 +65,7 @@ send_message:
 global resend_message
 align 8
 resend_message:
-	mov eax, 2
+	;mov eax, 2
 	pop ebp
 	ret
 

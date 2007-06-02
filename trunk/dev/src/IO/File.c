@@ -55,7 +55,11 @@ GLOBAL_FUNCTION(Open, 2) {
         Result->Val = OpenMessage;
 		return MESSAGE;
 	};
-	if (Flags & IO$File$OPENAPPEND) SetFilePointer(Handle, 0, 0, FILE_END);
+	if (Flags & IO$File$OPENAPPEND) {
+		SetFilePointer(Handle, 0, 0, FILE_END);
+	} else if (Flags & IO$File$OPENWRITE) {
+		// truncate
+	};
 	NATIVE(_t) *Stream = new(NATIVE(_t));
 	Stream->Type = OpenMode.Type;
 	Stream->Handle = Handle;
@@ -68,7 +72,11 @@ GLOBAL_FUNCTION(Open, 2) {
 		Result->Val = OpenMessage;
 		return MESSAGE;
 	};
-	if (Flags & IO$File$OPENAPPEND) lseek(Handle, 0, SEEK_END);
+	if (Flags & IO$File$OPENAPPEND) {
+		lseek(Handle, 0, SEEK_END);
+	} else if (Flags & IO$File$OPENWRITE) {
+		ftruncate(Handle, 0);
+	};
 	NATIVE(_t) *Stream = new(NATIVE(_t));
 	Stream->Type = OpenMode.Type;
 	Stream->Handle = Handle;

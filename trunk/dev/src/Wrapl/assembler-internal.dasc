@@ -738,6 +738,7 @@ void recv_inst_t::encode(assembler_t *Assembler) {
 };
 
 void send_inst_t::encode(assembler_t *Assembler) {
+	| mov eax, 2
 	| jmp dword BSTATE:ebp->Handler
 };
 
