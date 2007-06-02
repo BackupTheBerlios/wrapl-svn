@@ -224,8 +224,7 @@ TO :return(=booleantype, result) [
 	"Result->Val = " + result + " ? $true : $false;"
 ];
 TO :headers(=booleantype) [
-	"SYMBOL($true, \"true\");",
-	"SYMBOL($false, \"false\");"
+	"#include <Std/Boolean.h>"
 ];
 Define("gboolean", booleantype);
 

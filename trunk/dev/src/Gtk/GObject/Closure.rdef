@@ -1,3 +1,8 @@
+library("Gtk/libgobject-2.0.rlib")
+library("Gtk/libgtk-x11-2.0.rlib")
+library("Gtk/libglib-2.0.rlib")
+library("Gtk/GObject/Value.rlib")
+
 export("T")
 export("_new")
 export("New")

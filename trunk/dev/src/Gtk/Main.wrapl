@@ -14,6 +14,7 @@ IMP Native;
 IMP Object;
 IMP Opaque;
 IMP Struct;
+IMP Type;
 
 DEF Environment <- <[]
 	namespace,
@@ -52,7 +53,11 @@ DEF StartHandlers <- {
 ),
 
 "callback" IS <env, attrs> (
-	env:method <- Callback.New(env:namespace, attrs["name"], attrs["cname"]);
+	attrs["name"] => (
+		env:method <- Callback.New(env:namespace, attrs["name"], attrs["cname"]);
+	) // (
+		env:method <- Type.Method("", "", [], "");
+	);
 ),
 
 "interface" IS <env, attrs> (

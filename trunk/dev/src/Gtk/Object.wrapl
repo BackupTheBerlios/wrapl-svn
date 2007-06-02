@@ -127,7 +127,10 @@ TO :process(t@T, srcdir, incdir, libdir) (
 		EVERY libraries:insert(Type.Lookup(method:type):libraries:values);
 	);
 	EVERY libraries:insert(t:parents:libraries:values);
+	cfile:writes("/***********************************/\n");
+	cfile:writes("// Number of included files = ", headers:size, "\n");
 	EVERY cfile:writes(headers:keys, "\n");
+	cfile:writes("/***********************************/\n");
 	cfile:writes("#include <gtk/gtk.h>\n\n");
 	cfile:writes("TYPE(T");
 	EVERY cfile:writes(", ", t:parents:rtype);

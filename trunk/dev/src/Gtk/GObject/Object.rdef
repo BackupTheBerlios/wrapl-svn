@@ -1,4 +1,11 @@
+library("Gtk/libgobject-2.0.rlib")
+library("Gtk/libgtk-x11-2.0.rlib")
+library("Gtk/libglib-2.0.rlib")
+library("Gtk/GObject/Value.rlib")
+library("Gtk/GObject/Closure.rlib")
+library("Gtk/GObject/Type.rlib")
+
 export("__init")
 export("T")
-export("_gtk_to_riva")
+export("_to_riva")
 export("_new")

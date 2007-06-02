@@ -1,4 +1,7 @@
 <?xml version="1.0"?>
 <metadata>
 	<remove-node path="/api/namespace/enum[@name='FileSystemError']" />
+	<remove-node path="/api/namespace/interface[@name='FileSystem']" />
+	<remove-node path="/api/namespace/interface[@name='FileFolder']" />
+	<remove-node path="/api/namespace/enum[@name='ArgFlags']" />
 </metadata>
