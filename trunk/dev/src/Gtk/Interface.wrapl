@@ -78,7 +78,6 @@ TO :process(t@T, srcdir, incdir, libdir) (
 		EVERY libraries:insert(Type.Lookup(method:type):libraries:values);
 	);
 	EVERY cfile:writes(headers:keys, "\n");
-	cfile:writes("#include <gtk/gtk.h>\n\n");
 	cfile:writes("TYPE(T);\n\n");
 	EVERY method <- t:shared:values DO (
 		params <- method:params;

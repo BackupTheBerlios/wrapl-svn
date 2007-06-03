@@ -26,7 +26,7 @@ Gtk$GObject$Object_t *_to_riva(GObject *Handle) {
 	return _new(Handle, Type);
 };
 
-METHOD("connect", TYP, T, TYP, Std$String$T, TYP, Gtk$GObject$Closure$T) {
+METHOD("Connect", TYP, T, TYP, Std$String$T, TYP, Gtk$GObject$Closure$T) {
 	Gtk$GObject$Object_t *Object = Args[0].Val;
 	const char *Signal = Std$String$flatten(Args[1].Val);
 	Gtk$GObject$Closure_t *Closure = Args[2].Val;
@@ -36,7 +36,7 @@ METHOD("connect", TYP, T, TYP, Std$String$T, TYP, Gtk$GObject$Closure$T) {
 	return SUCCESS;
 };
 
-METHOD("connect", TYP, T, TYP, Std$String$T, TYP, Std$Function$T) {
+METHOD("Connect", TYP, T, TYP, Std$String$T, TYP, Std$Function$T) {
 	Gtk$GObject$Object_t *Object = Args[0].Val;
 	const char *Signal = Std$String$flatten(Args[1].Val);
 	Gtk$GObject$Closure_t *Closure = Gtk$GObject$Closure$new(Args[2].Val);
@@ -46,7 +46,7 @@ METHOD("connect", TYP, T, TYP, Std$String$T, TYP, Std$Function$T) {
 	return SUCCESS;
 };
 
-METHOD("get", TYP, T, TYP, Std$String$T) {
+METHOD("Get", TYP, T, TYP, Std$String$T) {
 	Gtk$GObject$Object_t *Object = Args[0].Val;
 	const char *Prop = Std$String$flatten(Args[1].Val);
 	GValue Value[1] = {{0,}};
@@ -55,7 +55,7 @@ METHOD("get", TYP, T, TYP, Std$String$T) {
 	return SUCCESS;
 };
 
-METHOD("set", TYP, T, TYP, Std$String$T, ANY) {
+METHOD("Set", TYP, T, TYP, Std$String$T, ANY) {
 	Gtk$GObject$Object_t *Object = Args[0].Val;
 	const char *Prop = Std$String$flatten(Args[1].Val);
 	GValue Value[1] = {{0,}};

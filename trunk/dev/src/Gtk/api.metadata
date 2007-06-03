@@ -1,13 +1,36 @@
 <?xml version="1.0"?>
 <metadata>
+	<remove-node path="/api/namespace/enum[@name='FileInfoType']" />
 	<remove-node path="/api/namespace/enum[@name='FileSystemError']" />
 	<remove-node path="/api/namespace/interface[@name='FileSystem']" />
 	<remove-node path="/api/namespace/interface[@name='FileFolder']" />
+	<remove-node path="/api/namespace/struct[@name='FileSystemHandleClass']" />
+	<remove-node path="/api/namespace/struct[@name='FileInfo']" />
 	<remove-node path="/api/namespace/enum[@name='ArgFlags']" />
 	<remove-node path="/api/namespace/callback[@name='FileSystemGetInfoCallback']" />
 	<remove-node path="/api/namespace/callback[@name='FileSystemCreateFolderCallback']" />
 	<remove-node path="/api/namespace/callback[@name='FileSystemGetFolderCallback']" />
 	<remove-node path="/api/namespace/callback[@name='FileSystemVolumeMountCallback']" />
+	<remove-node path="/api/namespace/struct[@name='FileSystemVolume']" />
+	<remove-node path="/api/namespace/struct[@name='FilePath']" />
 	<remove-node path="/api/namespace/object[@cname='GdkWindow']/method[@name='InvalidateMaybeRecurse']" />
 	<remove-node path="/api/namespace/callback[@name='InvalidateMaybeRecurseChildFunc']" />
+	<remove-node path="/api/namespace/callback[@name='XftSubstituteFunc']" />
+	<remove-node path="/api/namespace/object[@name='XftFont']" />
+	<remove-node path="/api/namespace/object[@name='XftFontMap']" />
+	<remove-node path="/api/namespace/object[@name='XftRenderer']" />
+	<remove-node path="/api/namespace/class[@name='Xft']" />
+	<remove-node path="/api/namespace/class[@cname='GdkXid_']" />
+	<remove-node path="/api/namespace/class[@cname='PangoX_']" />
+	<remove-node path="/api/namespace/struct[@name='XFontCache']" />
+	<remove-node path="/api/namespace/callback[@cname='PangoFreeGCFunc']" />
+	<remove-node path="/api/namespace/callback[@cname='PangoGetGCFunc']" />
+	<remove-node path="/api/namespace/class/method[@cname='gtk_text_layout_draw']" />
+	<remove-node path="/api/namespace/class/method[@cname='gtk_init_abi_check']" />
+	<remove-node path="/api/namespace/class/method[@cname='gtk_init_check_abi_check']" />
+	<add-node path="/api/namespace/class[@cname='GtkMain_']">
+		<method name="Run" cname="gtk_main" shared="true">
+			<return-type type="void" />
+		</method>
+	</add-node>
 </metadata>

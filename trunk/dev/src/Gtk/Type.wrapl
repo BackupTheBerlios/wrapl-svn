@@ -54,7 +54,7 @@ DEF Lookup!(name) (
 			type <- T();
 			TO :ctype(=type) FixupName(name);
 			TO :rtype(=type) "Std$Object$T";
-			TO :precall(=type, param, arg) [FixupName(name) + " " + param + ";"];
+			TO :precall(=type, param, arg) [FixupName(name) + " " + param + " = 0;"];
 			Define(name, type);
 			unknowntypes:insert(name);
 			log:writes(name, " not found\n");

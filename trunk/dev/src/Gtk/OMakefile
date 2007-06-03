@@ -21,8 +21,8 @@ clean:
 	$(rm api.xml)
 	$(rm $(GTK_AUTOGEN))
 
-.SUBDIRS: GObject Gtk Gdk
+.SUBDIRS: GObject Gtk Gdk Pango
 
-Gtk: GtkGObject $(GTK_AUTOGEN) GtkGtk GtkGdk
+Gtk: GtkGObject $(GTK_AUTOGEN) GtkGtk GtkGdk GtkPango
 
 .DEFAULT: Gtk

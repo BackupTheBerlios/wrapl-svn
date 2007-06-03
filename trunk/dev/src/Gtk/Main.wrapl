@@ -122,7 +122,12 @@ log <- File.Open("Autogen.log", File.WRITE + File.TEXT);
 VAR source <- File.Open(Args[1], File.READ + File.TEXT);
 VAR parser <- Parser.New();
 parser:userdata <- Environment();
-parser:onstartelement <- <env, name, attrs> StartHandlers[name](env, attrs);
+parser:onstartelement <- <env, name, attrs> (
+	StartHandlers[name](env, attrs);
+	RECV msg DO (
+		log:writes("Error: ", name, " -> ", attrs, "\n\t", msg, "\n");
+	)
+);
 
 Out:write("Reading api file...");
 REP WHILE parser:parse(source:read(1024));

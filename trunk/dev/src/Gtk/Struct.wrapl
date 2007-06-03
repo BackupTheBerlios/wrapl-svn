@@ -8,8 +8,16 @@ DEF T <- <[Type.T, Target.T]
 	ns, name, cname,
 	methods, shared, ctors,
 	ctype, rtype,
-	headers, libraries
+	headers, libraries,
+	ctor_prefix
 >;
+
+DEF PrefixLength(cname) (
+	VAR n <- cname:length;
+	EVERY "A" <= cname:chars <= "Z" DO n <- n + 1;
+	--Out:writes("PrefixLength(", cname, ") = ", n, "\n");
+	RET n;
+);
 
 DEF New!(ns, name, cname) (
 	VAR t <- T();
@@ -21,6 +29,7 @@ DEF New!(ns, name, cname) (
 	t:ctors <- [];
 	t:rtype <- "Gtk$" + ns + "$" + name + "$T";
 	t:ctype <- cname + " *";
+	t:ctor_prefix <- PrefixLength(cname);
 	Type.Define(cname + "*", t);
 	Type.Define("const-" + cname + "*", t);
 	t:headers <- ["#include <Gtk/" + ns + "/" + name + ".h>"];
@@ -68,7 +77,116 @@ TO :precall(t@T, name, arg) [
 ];
 
 TO :process(t@T, srcdir, incdir, libdir) (
+	VAR headers <- {"#include <Gtk/GObject/Object.h>"};
+	VAR libraries <- {};
 	VAR base <- t:ns + "/" + t:name;
+	VAR cfile <- File.Open(srcdir + base + ".c", File.WRITE + File.TEXT);
+	cfile:writes("#include <Gtk/", base, ".h>\n");
+	cfile:writes("#include <Riva/Memory.h>\n");
+	VAR method, param, i, returntype, types, names, n, params, ctor, type;
+	EVERY ctor <- t:ctors:values DO (
+		EVERY headers:insert(Type.Lookup(ctor:params:values:type):headers:values);
+		EVERY libraries:insert(Type.Lookup(ctor:params:values:type):libraries:values);
+	);
+	EVERY method <- t:shared:values DO (
+		EVERY headers:insert(Type.Lookup(method:params:values:type):headers:values);
+		EVERY headers:insert(Type.Lookup(method:type):headers:values);
+		EVERY libraries:insert(Type.Lookup(method:params:values:type):libraries:values);
+		EVERY libraries:insert(Type.Lookup(method:type):libraries:values);
+	);
+	EVERY method <- t:methods:values DO (
+		EVERY headers:insert(Type.Lookup(method:params:values:type):headers:values);
+		EVERY headers:insert(Type.Lookup(method:type):headers:values);
+		EVERY libraries:insert(Type.Lookup(method:params:values:type):libraries:values);
+		EVERY libraries:insert(Type.Lookup(method:type):libraries:values);
+	);
+	cfile:writes("/***********************************/\n");
+	cfile:writes("// Number of included files = ", headers:size, "\n");
+	EVERY cfile:writes(headers:keys, "\n");
+	cfile:writes("/***********************************/\n");
+	cfile:writes("TYPE(T);\n\n");
+	EVERY ctor <- t:ctors:values DO (
+		params <- ctor:params;
+		n <- params:size;
+		types <- params:map(<p> Type.Lookup(p:type));
+		names <- params:map(:name);
+		cfile:writes("GLOBAL_FUNCTION(", ctor:name, ", ", n, ") {\n");
+		EVERY i <- 1:to(n) DO (
+			EVERY cfile:writes("\t", types[i]:precall(names[i], "Args[" + (i - 1)@String.T + "]"):values, "\n");
+		);
+		cfile:writes("\tGtk$GObject$Object_t *result = new(Gtk$GObject$Object_t);\n");
+		cfile:writes("\tresult->Type = T;\n");
+		cfile:writes("\tresult->Handle = ", ctor:cname, "(");
+		cfile:write(names[1]) => EVERY i <- 2:to(n) DO cfile:writes(", ", names[i]);
+		cfile:write(");\n");
+		cfile:write("\tResult->Val= result;\n");
+		cfile:write("\treturn SUCCESS;\n");
+		cfile:write("};\n\n");
+	);
+	EVERY method <- t:shared:values DO (
+		params <- method:params;
+		n <- params:size;
+		types <- params:map(<p> Type.Lookup(p:type));
+		names <- params:map(:name);
+		cfile:writes("GLOBAL_FUNCTION(", method:name, ", ", n, ") {\n");
+		EVERY i <- 1:to(n) DO (
+			EVERY cfile:writes("\t", types[i]:precall(names[i], "Args[" + (i - 1)@String.T + "]"):values, "\n");
+		);
+		returntype <- Type.Lookup(method:type);
+		cfile:write("\t");
+		returntype:ctype ~= "void" => cfile:writes(returntype:ctype, " result = ");
+		cfile:writes(method:cname, "(");
+		cfile:write(names[1]) => EVERY i <- 2:to(n) DO cfile:writes(", ", names[i]);
+		cfile:write(");\n");
+		returntype:ctype ~= "void" => (
+			EVERY cfile:writes("\t", returntype:return("result"):values, "\n");
+		);
+		cfile:write("\treturn SUCCESS;\n");
+		cfile:write("};\n\n");
+	);
+	EVERY method <- t:methods:values DO (
+		params <- method:params;
+		n <- params:size;
+		types <- params:map(<p> Type.Lookup(p:type));
+		names <- params:map(:name);
+		cfile:writes("METHOD(\"", method:name, "\", TYP, T");
+		EVERY cfile:writes(", TYP, ", types[2:to(n)]:rtype);
+		cfile:write(") {\n");
+		EVERY i <- 1:to(n) DO (
+			EVERY cfile:writes("\t", types[i]:precall(names[i], "Args[" + (i - 1)@String.T + "]"):values, "\n");
+		);
+		cfile:write("\t");
+		returntype <- Type.Lookup(method:type);
+		returntype:ctype ~= "void" => cfile:writes(returntype:ctype, " result = ");
+		cfile:writes(method:cname, "(self");
+		EVERY i <- 2:to(n) DO cfile:writes(", ", names[i]);
+		cfile:writes(");\n");
+		EVERY i <- 1:to(n) DO (
+			EVERY cfile:writes("\t", types[i]:postcall(names[i], "Args[" + (i - 1)@String.T + "]"):values, "\n");
+		);
+		returntype:ctype ~= "void" => (
+			EVERY cfile:writes("\t", returntype:return("result"):values, "\n");
+		);
+		cfile:write("\treturn SUCCESS;\n");
+		cfile:write("};\n\n");
+	);
+	cfile:close;
+	VAR deffile <- File.Open(srcdir + base + ".rdef", File.WRITE + File.TEXT);
+	EVERY deffile:writes("library(\"", libraries:keys, "\")\n");
+	deffile:write(>>EOF
+library("Gtk/GObject/Object.rlib")
+
+EOF);
+	deffile:write(>>EOF
+if WINDOWS then
+	_export = export
+	export = function(Name)
+		_export("_" .. Name, Name)
+	end
+end
+
+export("T")
+EOF);
 	VAR libfile <- File.Open(libdir + base + ".rlib", File.WRITE + File.TEXT);
 	libfile:writes("module(\"Gtk\", \"", t:ns, "\", \"", t:name, "\")\n");
 	libfile:writes("prefix(\"Gtk$", t:ns, "$", t:name, "$\")\n");
@@ -78,7 +196,7 @@ TO :process(t@T, srcdir, incdir, libdir) (
 	hfile:writes("#ifndef ", t:ns, "_", t:name, "_H\n");
 	hfile:writes("#define ", t:ns, "_", t:name, "_H\n\n");
 	hfile:writes("#define RIVA_MODULE Gtk$", t:ns, "$", t:name, "\n");
-	hfile:writes("#include <gtk/gtk.h>\n\n");
+	hfile:writes("#include <Std.h>\n\n");
 	hfile:writes("#include <Riva-Header.h>\n\n");
 	hfile:writes("typedef struct Gtk$", t:ns, "$", t:name, "_t {\n");
 	hfile:writes("\tStd$Type_t *Type;\n");

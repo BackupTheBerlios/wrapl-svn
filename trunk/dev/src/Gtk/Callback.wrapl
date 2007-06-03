@@ -3,9 +3,8 @@ MOD Callback;
 IMP Type, Target;
 IMP IO.File;
 
-DEF T <- <[Type.T, Target.T]
-	ns, name, cname,
-	params,
+DEF T <- <[Type.T, Target.T, Type.Method]
+	ns,
 	ctype,
 	headers, libraries
 >;
@@ -16,6 +15,7 @@ DEF New!(ns, name, cname) (
 	t:name <- name;
 	t:cname <- cname;
 	t:ctype <- cname;
+	t:params <- [];
 	Type.Define(cname, t);
 	t:queue;
 	t:headers <- ["#include <Gtk/" + ns + "/" + name + ".h>"];
@@ -65,8 +65,6 @@ EOF);
 	hfile:writes("#ifndef ", t:ns, "_", t:name, "_H\n");
 	hfile:writes("#define ", t:ns, "_", t:name, "_H\n\n");
 	hfile:write("#include <Std.h>\n");
-	hfile:write("#include <gdk/gdk.h>\n");
-	hfile:writes("#include <gtk/gtk.h>\n\n");
 	hfile:writes("#define RIVA_MODULE Gtk$", t:ns, "$", t:name, "\n");
 	hfile:writes("#include <Riva-Header.h>\n\n");
 	hfile:writes("extern Std$Type_t ", t:rtype, "[];\n\n");

@@ -1,0 +1,16 @@
+BASENAME = $(GTK_LIB_DIR)Pango$(DIRSEP)
+
+CFLAGS += $(shell pkg-config --cflags gtk+-2.0) -include pango/pango.h -include pango/pangofc-fontmap.h -include pango/pangoft2.h -include pango/pangocairo.h
+LDFLAGS += Gtk/libgobject-2.0.rlib Gtk/libpango-1.0.rlib Gtk/libpangoft2-1.0.rlib Gtk/libpangocairo-1.0.rlib
+
+if $(file-exists $(GTK_AUTOGEN))
+	foreach(FILE, $(rootname $(basename $(glob *.c))))
+		#println($(FILE))
+		clean:
+			$(rm $(FILE).c)
+			$(rm $(FILE).rdef)
+		RivaProgram($(BASENAME)$(FILE), $(FILE))
+		GtkPango: $(BASENAME)$(FILE).riva
+		export
+
+.DEFAULT: GtkPango
