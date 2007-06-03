@@ -87,9 +87,9 @@ typedef struct loader_node {
 static loader_node *Loaders = 0;
 
 void module_add_loader(const char *Extension, module_loader _load) {
-	if (Extension[0] == 0) {
+	//if (Extension[0] == 0) {
 		// Work around to force the directory loader to be tried last
-	};
+	//};
 	long Length = strlen(Extension) + 1;
 	loader_node *Node = GC_malloc_stubborn(sizeof(loader_node) + Length);
 	memcpy(Node->Extension, Extension, Length);

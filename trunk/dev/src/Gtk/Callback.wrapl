@@ -31,6 +31,30 @@ TO :precall(t@T, name, arg) [
 
 TO :process(t@T, srcdir, incdir, libdir) (
 	VAR base <- t:ns + "/" + t:name;
+	VAR cfile <- File.Open(srcdir + base + ".c", File.WRITE + File.TEXT);
+	cfile:writes("#include <Gtk/", base, ".h>\n");
+	cfile:write("#include <Riva/Memory.h>\n\n");
+	cfile:write("TYPE(T);\n\n");
+	cfile:write(t:ctype + " _new(Std$Object_t *Function) {\n");
+	cfile:write("\treturn 0;\n");
+	cfile:write("};\n");
+	cfile:close;
+	VAR deffile <- File.Open(srcdir + base + ".rdef", File.WRITE + File.TEXT);
+	deffile:write(>>EOF
+library("Gtk/GObject/Object.rlib")
+
+EOF);
+	deffile:write(>>EOF
+if WINDOWS then
+	_export = export
+	export = function(Name)
+		_export("_" .. Name, Name)
+	end
+end
+
+export("T")
+export("_new")
+EOF);
 	VAR libfile <- File.Open(libdir + base + ".rlib", File.WRITE + File.TEXT);
 	libfile:writes("module(\"Gtk\", \"", t:ns, "\", \"", t:name, "\")\n");
 	libfile:writes("prefix(\"Gtk$", t:ns, "$", t:name, "$\")\n");
@@ -40,6 +64,8 @@ TO :process(t@T, srcdir, incdir, libdir) (
 	VAR hfile <- File.Open(incdir + base + ".h", File.WRITE + File.TEXT);
 	hfile:writes("#ifndef ", t:ns, "_", t:name, "_H\n");
 	hfile:writes("#define ", t:ns, "_", t:name, "_H\n\n");
+	hfile:write("#include <Std.h>\n");
+	hfile:write("#include <gdk/gdk.h>\n");
 	hfile:writes("#include <gtk/gtk.h>\n\n");
 	hfile:writes("#define RIVA_MODULE Gtk$", t:ns, "$", t:name, "\n");
 	hfile:writes("#include <Riva-Header.h>\n\n");

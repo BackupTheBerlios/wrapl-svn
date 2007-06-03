@@ -1,6 +1,6 @@
 MOD Type;
 
-IMP IO.Terminal USE Out;
+IMP Log USE log;
 
 DEF unknownprecalls <- {};
 DEF unknownreturns <- {};
@@ -19,8 +19,8 @@ TO :libraries(t@T) [];
 TO :precall(t@T, name, arg) (
 	unknownprecalls[t] // (
 		unknownprecalls:insert(t);
-		Out:writes("Cannot unbox values of type ", t:cname, "\n");
-		RECV msg DO Out:writes("Cannot unbox values of unknown type\n");
+		log:writes("Cannot unbox values of type ", t:cname, "\n");
+		RECV msg DO log:writes("Cannot unbox values of unknown type\n");
 	);
 	[t:ctype + " " + name + ";"];
 );
@@ -31,8 +31,8 @@ TO :postcall(t@T, name, arg) [
 TO :return(t@T, result) (
 	unknownreturns[t] // (
 		unknownreturns:insert(t);
-		Out:writes("Cannot return values of type ", t:cname, "\n");
-		RECV msg DO Out:writes("Cannot return values of unknown type\n");
+		log:writes("Cannot return values of type ", t:cname, "\n");
+		RECV msg DO log:writes("Cannot return values of unknown type\n");
 	);
 	["//Unknown return type"];
 );
@@ -52,12 +52,12 @@ DEF Lookup!(name) (
 	type == NIL => (
 		--unknowntypes[name] // (
 			type <- T();
-			TO :ctype(=type) name;
+			TO :ctype(=type) FixupName(name);
 			TO :rtype(=type) "Std$Object$T";
 			TO :precall(=type, param, arg) [FixupName(name) + " " + param + ";"];
 			Define(name, type);
 			unknowntypes:insert(name);
-			Out:writes(name, " not found\n");
+			log:writes(name, " not found\n");
 			RET type;
 		--);
 		--RET voidtype;
@@ -66,7 +66,7 @@ DEF Lookup!(name) (
 );
 
 DEF Define!(name, type) (
---	Out:writes("Adding type ", name, "\n");
+--	log:writes("Adding type ", name, "\n");
 	typetable:insert(name, type);
 );
 
@@ -121,7 +121,7 @@ VAR chartype <- T();
 TO :rtype(=chartype) "Std$String$T";
 TO :ctype(=chartype) "char";
 TO :precall(=chartype, name, arg) [
-	"char " + name + " = ((Std$String_t *)" + arg + ".Val)->Blocks[0].Chars.Value[0];"
+	"char " + name + " = ((char *)((Std$String_t *)" + arg + ".Val)->Blocks[0].Chars.Value)[0];"
 ];
 TO :return(=chartype, result) [
 	"Result->Val = Std$String$new_char(" + result + ");"

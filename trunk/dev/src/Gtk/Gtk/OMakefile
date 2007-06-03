@@ -1,10 +1,16 @@
 BASENAME = $(GTK_LIB_DIR)Gtk$(DIRSEP)
 
-CFLAGS += $(shell pkg-config --cflags gtk+-2.0)
+CFLAGS += $(shell pkg-config --cflags gtk+-2.0) -include gtk/gtk.h
+LDFLAGS += Gtk/libgobject-2.0.rlib Gtk/libgtk-x11-2.0.rlib Gtk/libglib-2.0.rlib
 
-foreach(FILE, $(rootname $(basename $(glob $(SRC_DIR)Gtk/Gtk/*.c))))
-	RivaProgram($(BASENAME)$(FILE), $(FILE))
-	GtkGtk: $(BASENAME)$(FILE).riva
-	export
+if $(file-exists $(GTK_AUTOGEN))
+	foreach(FILE, $(rootname $(basename $(glob *.c))))
+		#println($(FILE))
+		clean:
+			$(rm $(FILE).c)
+			$(rm $(FILE).rdef)
+		RivaProgram($(BASENAME)$(FILE), $(FILE))
+		GtkGtk: $(BASENAME)$(FILE).riva
+		export
 
 .DEFAULT: GtkGtk

@@ -204,9 +204,6 @@ TO :process(t@T, srcdir, incdir, libdir) (
 	VAR deffile <- File.Open(srcdir + base + ".rdef", File.WRITE + File.TEXT);
 	EVERY deffile:writes("library(\"", libraries:keys, "\")\n");
 	deffile:write(>>EOF
-library("Gtk/libgobject-2.0.rlib")
-library("Gtk/libgtk-x11-2.0.rlib")
-library("Gtk/libglib-2.0.rlib")
 library("Gtk/GObject/Object.rlib")
 
 EOF);

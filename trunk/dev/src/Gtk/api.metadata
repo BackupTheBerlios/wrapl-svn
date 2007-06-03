@@ -4,4 +4,10 @@
 	<remove-node path="/api/namespace/interface[@name='FileSystem']" />
 	<remove-node path="/api/namespace/interface[@name='FileFolder']" />
 	<remove-node path="/api/namespace/enum[@name='ArgFlags']" />
+	<remove-node path="/api/namespace/callback[@name='FileSystemGetInfoCallback']" />
+	<remove-node path="/api/namespace/callback[@name='FileSystemCreateFolderCallback']" />
+	<remove-node path="/api/namespace/callback[@name='FileSystemGetFolderCallback']" />
+	<remove-node path="/api/namespace/callback[@name='FileSystemVolumeMountCallback']" />
+	<remove-node path="/api/namespace/object[@cname='GdkWindow']/method[@name='InvalidateMaybeRecurse']" />
+	<remove-node path="/api/namespace/callback[@name='InvalidateMaybeRecurseChildFunc']" />
 </metadata>

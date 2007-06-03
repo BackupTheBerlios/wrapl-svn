@@ -2,7 +2,9 @@ MOD Main;
 
 IMP Xml.Parser;
 IMP IO.Terminal USE Out;
+IMP Log USE log;
 IMP IO.File;
+IMP Sys.Program USE Args;
 
 IMP Target;
 IMP Callback;
@@ -115,7 +117,9 @@ DEF StartHandlers <- {
 
 };
 
-VAR source <- File.Open("api.xml", File.READ + File.TEXT);
+log <- File.Open("Autogen.log", File.WRITE + File.TEXT);
+
+VAR source <- File.Open(Args[1], File.READ + File.TEXT);
 VAR parser <- Parser.New();
 parser:userdata <- Environment();
 parser:onstartelement <- <env, name, attrs> StartHandlers[name](env, attrs);
@@ -127,5 +131,7 @@ Out:write("done.\n");
 Out:write("Generating files...");
 Target.Process("./", "../../inc/Gtk/", "../../lib/Gtk/");
 Out:write("done.\n");
+
+log:close;
 
 END Main.
