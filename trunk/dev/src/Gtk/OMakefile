@@ -7,8 +7,8 @@ GTK_SRC_DIR = $(SRC_DIR)Gtk$(DIRSEP)
 GTK_OBJ_DIR = $(OBJ_DIR)Gtk$(DIRSEP)
 GTK_AUTOGEN = $(file Autogen.log)
 
-api.raw: $(file api.sources)
-	gapi2-parser $(file api.sources)
+#api.raw: $(file api.sources)
+#	gapi2-parser $(file api.sources)
 
 api.xml: $(file api.raw) $(file api.metadata)
 	cp $(file api.raw) api.xml
