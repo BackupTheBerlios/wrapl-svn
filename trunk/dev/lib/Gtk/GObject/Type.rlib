@@ -1,4 +1,8 @@
 module("Gtk", "GObject", "Type")
-prefix("Gtk$GObject$Type$")
+if WINDOWS then
+	prefix("_Gtk$GObject$Type$")
+else
+	prefix("Gtk$GObject$Type$")
+end
 export("T")
 export("_to_riva")

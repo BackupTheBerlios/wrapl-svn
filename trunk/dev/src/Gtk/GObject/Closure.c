@@ -12,7 +12,11 @@ typedef struct closure_t {
 } closure_t;
 
 static void __marshal(closure_t *Closure, GValue *Result, guint NoOfArgs, const GValue *Args, gpointer Hint, gpointer Data) {
+#ifdef WINDOWS
+	Std$Function_argument *Args0 = Riva$Memory$alloc(sizeof(Std$Function_argument) * NoOfArgs);
+#else
 	Std$Function_argument Args0[NoOfArgs];
+#endif
 	for (guint I = 0; I < NoOfArgs; ++I) Args0[I].Val = Gtk$GObject$Value$to_riva(Args + I);
 	Std$Function_result Result0;
 	if (Std$Function$invoke(Closure->Function, NoOfArgs, &Result0, Args0) >= FAILURE) return;

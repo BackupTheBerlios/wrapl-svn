@@ -1,4 +1,8 @@
 module("Gtk", "GObject", "Closure")
-prefix("Gtk$GObject$Closure$")
+if WINDOWS then
+	prefix("_Gtk$GObject$Closure$")
+else
+	prefix("Gtk$GObject$Closure$")
+end
 export("T")
 export("_new")

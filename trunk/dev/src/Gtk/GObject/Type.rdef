@@ -3,6 +3,13 @@ library("Gtk/libgtk-x11-2.0.rlib")
 library("Gtk/libglib-2.0.rlib")
 library("Gtk/GObject/Object.rlib")
 
+if WINDOWS then
+	_export = export
+	export = function(Name)
+		_export("_" .. Name, Name)
+	end
+end
+
 export("__init")
 export("T")
 export("_to_riva")

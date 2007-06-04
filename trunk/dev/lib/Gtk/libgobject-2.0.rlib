@@ -1,4 +1,7 @@
 module("libgobject-2.0")
+if WINDOWS then
+	prefix("_")
+end
 export("g_type_module_use")
 export("g_type_plugin_use")
 export("g_gstring_get_type")

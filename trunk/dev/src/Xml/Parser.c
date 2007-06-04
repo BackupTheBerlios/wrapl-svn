@@ -23,7 +23,11 @@ static void startelementhandler(parser_t *Parser, const XML_Char *Name, const XM
 		Std$Function_result Result0;
 		int NoOfAttrs = 0;
 		for (const XML_Char **Attr = Attrs; Attr[0]; ++Attr) ++NoOfAttrs;
+#ifdef WINDOWS
+		Std$Function_argument *Args0 = Riva$Memory$alloc(sizeof(Std$Function_argument) * NoOfAttrs);
+#else
 		Std$Function_argument Args0[NoOfAttrs];
+#endif
 		for (int I = 0; I < NoOfAttrs; ++I) {
 			Args0[I].Val = Std$String$copy(Attrs[I]);
 			Args0[I].Ref = 0;

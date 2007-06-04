@@ -1,4 +1,7 @@
 module("libglib-2.0")
+if WINDOWS then
+	prefix("_")
+end
 export("g_queue_find_custom")
 export("g_string_chunk_new")
 export("g_cache_destroy")

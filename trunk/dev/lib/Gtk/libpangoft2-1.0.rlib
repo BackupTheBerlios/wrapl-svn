@@ -1,4 +1,7 @@
 module("libpangoft2-1.0")
+if WINDOWS then
+	prefix("_")
+end
 export("pango_ft2_font_map_set_default_substitute")
 export("pango_ot_info_find_script")
 export("pango_ot_ruleset_add_feature")

@@ -1,4 +1,7 @@
 module("libpangocairo-1.0")
+if WINDOWS then
+	prefix("_")
+end
 export("pango_cairo_layout_path")
 export("pango_cairo_show_layout")
 export("pango_cairo_font_map_new")

@@ -1,4 +1,7 @@
 module("libpango-1.0")
+if WINDOWS then
+	prefix("_")
+end
 export("pango_glyph_string_get_width")
 export("pango_glyph_item_apply_attrs")
 export("pango_underline_get_type")

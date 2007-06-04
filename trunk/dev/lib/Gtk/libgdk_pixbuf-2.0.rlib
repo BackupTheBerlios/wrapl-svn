@@ -1,4 +1,7 @@
 module("libgdk_pixbuf-2.0")
+if WINDOWS then
+	prefix("_")
+end
 export("_gdk_pixbuf_lock")
 export("_edata")
 export("gdk_pixbuf_get_pixels")

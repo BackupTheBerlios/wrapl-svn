@@ -10,9 +10,9 @@ GTK_AUTOGEN = $(file Autogen.log)
 #api.raw: $(file api.sources)
 #	gapi2-parser $(file api.sources)
 
-api.xml: $(file api.raw) $(file api.metadata)
-	cp $(file api.raw) api.xml
-	gapi2-fixup --api=api.xml --metadata=$(file api.metadata)
+#api.xml: $(file api.raw) $(file api.metadata)
+#	cp $(file api.raw) api.xml
+#	gapi2-fixup --api=api.xml --metadata=$(file api.metadata)
 
 $(GTK_AUTOGEN): api.xml
 	riva -L $(GTK_SRC_DIR) Main $(file api.xml)

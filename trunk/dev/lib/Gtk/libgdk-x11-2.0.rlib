@@ -1,4 +1,7 @@
 module("libgdk-x11-2.0")
+if WINDOWS then
+	prefix("_")
+end
 export("_gdk_event_button_generate")
 export("gdk_atom_name")
 export("gdk_keyval_convert_case")
