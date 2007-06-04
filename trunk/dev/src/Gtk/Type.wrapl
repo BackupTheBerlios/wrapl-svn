@@ -148,8 +148,9 @@ VAR conststringtype <- T();
 TO :rtype(=conststringtype) "Std$String$T";
 TO :ctype(=conststringtype) "const char *";
 TO :precall(=conststringtype, name, arg) [
-	"char " + name + "[((Std$String_t *)" + arg + ".Val)->Length.Value + 1];",
-	"Std$String$flatten_to(" + arg + ".Val, " + name + ");"
+	"char *" + name + " = Std$String$flatten(" + arg + ".Val);"
+	--"char " + name + "[((Std$String_t *)" + arg + ".Val)->Length.Value + 1];",
+	--"Std$String$flatten_to(" + arg + ".Val, " + name + ");"
 ];
 TO :return(=conststringtype, result) [
 	"if (" + result + " == 0) return FAILURE;",

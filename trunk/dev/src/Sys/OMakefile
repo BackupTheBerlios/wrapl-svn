@@ -12,6 +12,7 @@ RivaProgram($(BASENAME)Environ, Environ)
 RivaProgram($(BASENAME)Program, Program)
 RivaProgram($(BASENAME)FileSys, FileSys)
 RivaProgram($(BASENAME)Time, Time)
+RivaProgram($(BASENAME)Memory, Memory)
 
 
 Sys:\
@@ -20,6 +21,7 @@ Sys:\
 	$(BASENAME)Environ.riva\
 	$(BASENAME)Program.riva\
 	$(BASENAME)FileSys.riva\
-	$(BASENAME)Time.riva
+	$(BASENAME)Time.riva\
+	$(BASENAME)Memory.riva
 
 .DEFAULT: Sys
