@@ -1,0 +1,8 @@
+module("Gtk", "Gtk", "UIManagerItemType")
+if WINDOWS then
+	prefix("_Gtk$Gtk$UIManagerItemType$")
+else
+	prefix("Gtk$Gtk$UIManagerItemType$")
+end
+export("T")
+export("_new")

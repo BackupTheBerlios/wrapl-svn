@@ -1,0 +1,8 @@
+module("Gtk", "Gdk", "WMDecoration")
+if WINDOWS then
+	prefix("_Gtk$Gdk$WMDecoration$")
+else
+	prefix("Gtk$Gdk$WMDecoration$")
+end
+export("T")
+export("_new")

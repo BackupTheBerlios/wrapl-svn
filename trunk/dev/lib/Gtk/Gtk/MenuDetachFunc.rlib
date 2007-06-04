@@ -1,0 +1,8 @@
+module("Gtk", "Gtk", "MenuDetachFunc")
+if WINDOWS then
+	prefix("_Gtk$Gtk$MenuDetachFunc$")
+else
+	prefix("Gtk$Gtk$MenuDetachFunc$")
+end
+export("T")
+export("_new")

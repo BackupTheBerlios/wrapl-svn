@@ -1,0 +1,8 @@
+module("Gtk", "Gdk", "ModifierType")
+if WINDOWS then
+	prefix("_Gtk$Gdk$ModifierType$")
+else
+	prefix("Gtk$Gdk$ModifierType$")
+end
+export("T")
+export("_new")

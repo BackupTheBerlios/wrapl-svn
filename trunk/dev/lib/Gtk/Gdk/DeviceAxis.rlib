@@ -1,0 +1,7 @@
+module("Gtk", "Gdk", "DeviceAxis")
+if WINDOWS then
+	prefix("_Gtk$Gdk$DeviceAxis$")
+else
+	prefix("Gtk$Gdk$DeviceAxis$")
+end
+export("T")

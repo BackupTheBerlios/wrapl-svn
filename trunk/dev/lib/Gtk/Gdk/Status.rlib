@@ -1,0 +1,8 @@
+module("Gtk", "Gdk", "Status")
+if WINDOWS then
+	prefix("_Gtk$Gdk$Status$")
+else
+	prefix("Gtk$Gdk$Status$")
+end
+export("T")
+export("_new")

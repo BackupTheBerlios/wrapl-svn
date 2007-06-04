@@ -1,0 +1,7 @@
+module("Gtk", "Gtk", "CellRendererToggle")
+if WINDOWS then
+	prefix("_Gtk$Gtk$CellRendererToggle$")
+else
+	prefix("Gtk$Gtk$CellRendererToggle$")
+end
+export("T")

@@ -1,0 +1,7 @@
+module("Gtk", "Gtk", "IconSet")
+if WINDOWS then
+	prefix("_Gtk$Gtk$IconSet$")
+else
+	prefix("Gtk$Gtk$IconSet$")
+end
+export("T")

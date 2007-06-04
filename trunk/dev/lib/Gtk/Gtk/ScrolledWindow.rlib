@@ -1,0 +1,7 @@
+module("Gtk", "Gtk", "ScrolledWindow")
+if WINDOWS then
+	prefix("_Gtk$Gtk$ScrolledWindow$")
+else
+	prefix("Gtk$Gtk$ScrolledWindow$")
+end
+export("T")

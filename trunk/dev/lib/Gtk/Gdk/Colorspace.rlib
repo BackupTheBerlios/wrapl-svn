@@ -1,0 +1,8 @@
+module("Gtk", "Gdk", "Colorspace")
+if WINDOWS then
+	prefix("_Gtk$Gdk$Colorspace$")
+else
+	prefix("Gtk$Gdk$Colorspace$")
+end
+export("T")
+export("_new")

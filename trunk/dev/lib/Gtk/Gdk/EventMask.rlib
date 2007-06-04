@@ -1,0 +1,8 @@
+module("Gtk", "Gdk", "EventMask")
+if WINDOWS then
+	prefix("_Gtk$Gdk$EventMask$")
+else
+	prefix("Gtk$Gdk$EventMask$")
+end
+export("T")
+export("_new")

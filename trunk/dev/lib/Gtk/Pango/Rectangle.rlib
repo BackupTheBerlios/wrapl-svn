@@ -1,0 +1,7 @@
+module("Gtk", "Pango", "Rectangle")
+if WINDOWS then
+	prefix("_Gtk$Pango$Rectangle$")
+else
+	prefix("Gtk$Pango$Rectangle$")
+end
+export("T")

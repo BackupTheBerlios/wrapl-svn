@@ -1,0 +1,7 @@
+module("Gtk", "Gtk", "VPaned")
+if WINDOWS then
+	prefix("_Gtk$Gtk$VPaned$")
+else
+	prefix("Gtk$Gtk$VPaned$")
+end
+export("T")

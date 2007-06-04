@@ -1,0 +1,7 @@
+module("Gtk", "Gtk", "TextAttributes")
+if WINDOWS then
+	prefix("_Gtk$Gtk$TextAttributes$")
+else
+	prefix("Gtk$Gtk$TextAttributes$")
+end
+export("T")

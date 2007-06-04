@@ -1,0 +1,13 @@
+if WINDOWS then
+	_export = export
+	export = function(Name)
+		_export("_" .. Name, Name)
+	end
+end
+
+export("Uri")
+export("DisplayName")
+export("MimeType")
+export("Application")
+export("Group")
+export("Age")

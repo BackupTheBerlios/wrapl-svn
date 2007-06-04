@@ -1,0 +1,7 @@
+module("Gtk", "Gdk", "Drag")
+if WINDOWS then
+	prefix("_Gtk$Gdk$Drag$")
+else
+	prefix("Gtk$Gdk$Drag$")
+end
+export("T")

@@ -1,0 +1,7 @@
+module("Gtk", "Gtk", "Bin")
+if WINDOWS then
+	prefix("_Gtk$Gtk$Bin$")
+else
+	prefix("Gtk$Gtk$Bin$")
+end
+export("T")

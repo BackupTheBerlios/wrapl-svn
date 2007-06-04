@@ -1,0 +1,7 @@
+module("Gtk", "Gdk", "Pointer")
+if WINDOWS then
+	prefix("_Gtk$Gdk$Pointer$")
+else
+	prefix("Gtk$Gdk$Pointer$")
+end
+export("T")

@@ -1,0 +1,7 @@
+module("Gtk", "Gtk", "ToolbarChild")
+if WINDOWS then
+	prefix("_Gtk$Gtk$ToolbarChild$")
+else
+	prefix("Gtk$Gtk$ToolbarChild$")
+end
+export("T")

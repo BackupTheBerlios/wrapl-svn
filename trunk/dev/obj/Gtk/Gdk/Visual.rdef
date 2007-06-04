@@ -1,0 +1,23 @@
+library("Gtk/Gdk/Visual.rlib")
+library("Gtk/Gdk/VisualType.rlib")
+library("Gtk/GObject/Type.rlib")
+library("Gtk/Gtk/Object.rlib")
+library("Gtk/Gdk/Screen.rlib")
+library("Gtk/GObject/Object.rlib")
+
+if WINDOWS then
+	_export = export
+	export = function(Name)
+		_export("_" .. Name, Name)
+	end
+end
+
+export("T")
+export("GetBest")
+export("GetBestDepth")
+export("GetBestType")
+export("GetBestWithBoth")
+export("GetBestWithDepth")
+export("GetBestWithType")
+export("GetSystem")
+export("GetType")

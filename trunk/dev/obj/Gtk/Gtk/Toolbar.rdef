@@ -1,0 +1,25 @@
+library("Gtk/Gtk/ToolbarChildType.rlib")
+library("Gtk/Gtk/Widget.rlib")
+library("Gtk/Gtk/Toolbar.rlib")
+library("Gtk/Gtk/ToolItem.rlib")
+library("Gtk/Gtk/SignalFunc.rlib")
+library("Gtk/Gtk/Orientation.rlib")
+library("Gtk/Gtk/IconSize.rlib")
+library("Gtk/Gtk/ReliefStyle.rlib")
+library("Gtk/GObject/Type.rlib")
+library("Gtk/Gtk/Object.rlib")
+library("Gtk/Gtk/ToolbarStyle.rlib")
+library("Gtk/Gtk/Container.rlib")
+library("Gtk/Gtk/ToolbarChildType.rlib")
+library("Gtk/GObject/Object.rlib")
+
+if WINDOWS then
+	_export = export
+	export = function(Name)
+		_export("_" .. Name, Name)
+	end
+end
+
+export("T")
+export("New")
+export("GetType")

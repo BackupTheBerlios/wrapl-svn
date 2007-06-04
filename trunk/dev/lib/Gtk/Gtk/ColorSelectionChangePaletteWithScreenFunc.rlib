@@ -1,0 +1,8 @@
+module("Gtk", "Gtk", "ColorSelectionChangePaletteWithScreenFunc")
+if WINDOWS then
+	prefix("_Gtk$Gtk$ColorSelectionChangePaletteWithScreenFunc$")
+else
+	prefix("Gtk$Gtk$ColorSelectionChangePaletteWithScreenFunc$")
+end
+export("T")
+export("_new")

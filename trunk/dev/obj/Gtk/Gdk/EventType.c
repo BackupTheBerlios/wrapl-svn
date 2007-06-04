@@ -1,0 +1,41 @@
+#include <Gtk/Gdk/EventType.h>
+
+TYPE(T);
+
+Gtk$Gdk$EventType_t Nothing[] = {{T, GDK_NOTHING}};
+Gtk$Gdk$EventType_t Delete[] = {{T, GDK_DELETE}};
+Gtk$Gdk$EventType_t Destroy[] = {{T, GDK_DESTROY}};
+Gtk$Gdk$EventType_t Expose[] = {{T, GDK_EXPOSE}};
+Gtk$Gdk$EventType_t MotionNotify[] = {{T, GDK_MOTION_NOTIFY}};
+Gtk$Gdk$EventType_t ButtonPress[] = {{T, GDK_BUTTON_PRESS}};
+Gtk$Gdk$EventType_t TwoButtonPress[] = {{T, GDK_2BUTTON_PRESS}};
+Gtk$Gdk$EventType_t ThreeButtonPress[] = {{T, GDK_3BUTTON_PRESS}};
+Gtk$Gdk$EventType_t ButtonRelease[] = {{T, GDK_BUTTON_RELEASE}};
+Gtk$Gdk$EventType_t KeyPress[] = {{T, GDK_KEY_PRESS}};
+Gtk$Gdk$EventType_t KeyRelease[] = {{T, GDK_KEY_RELEASE}};
+Gtk$Gdk$EventType_t EnterNotify[] = {{T, GDK_ENTER_NOTIFY}};
+Gtk$Gdk$EventType_t LeaveNotify[] = {{T, GDK_LEAVE_NOTIFY}};
+Gtk$Gdk$EventType_t FocusChange[] = {{T, GDK_FOCUS_CHANGE}};
+Gtk$Gdk$EventType_t Configure[] = {{T, GDK_CONFIGURE}};
+Gtk$Gdk$EventType_t Map[] = {{T, GDK_MAP}};
+Gtk$Gdk$EventType_t Unmap[] = {{T, GDK_UNMAP}};
+Gtk$Gdk$EventType_t PropertyNotify[] = {{T, GDK_PROPERTY_NOTIFY}};
+Gtk$Gdk$EventType_t SelectionClear[] = {{T, GDK_SELECTION_CLEAR}};
+Gtk$Gdk$EventType_t SelectionRequest[] = {{T, GDK_SELECTION_REQUEST}};
+Gtk$Gdk$EventType_t SelectionNotify[] = {{T, GDK_SELECTION_NOTIFY}};
+Gtk$Gdk$EventType_t ProximityIn[] = {{T, GDK_PROXIMITY_IN}};
+Gtk$Gdk$EventType_t ProximityOut[] = {{T, GDK_PROXIMITY_OUT}};
+Gtk$Gdk$EventType_t DragEnter[] = {{T, GDK_DRAG_ENTER}};
+Gtk$Gdk$EventType_t DragLeave[] = {{T, GDK_DRAG_LEAVE}};
+Gtk$Gdk$EventType_t DragMotion[] = {{T, GDK_DRAG_MOTION}};
+Gtk$Gdk$EventType_t DragStatus[] = {{T, GDK_DRAG_STATUS}};
+Gtk$Gdk$EventType_t DropStart[] = {{T, GDK_DROP_START}};
+Gtk$Gdk$EventType_t DropFinished[] = {{T, GDK_DROP_FINISHED}};
+Gtk$Gdk$EventType_t ClientEvent[] = {{T, GDK_CLIENT_EVENT}};
+Gtk$Gdk$EventType_t VisibilityNotify[] = {{T, GDK_VISIBILITY_NOTIFY}};
+Gtk$Gdk$EventType_t NoExpose[] = {{T, GDK_NO_EXPOSE}};
+Gtk$Gdk$EventType_t Scroll[] = {{T, GDK_SCROLL}};
+Gtk$Gdk$EventType_t WindowState[] = {{T, GDK_WINDOW_STATE}};
+Gtk$Gdk$EventType_t Setting[] = {{T, GDK_SETTING}};
+Gtk$Gdk$EventType_t OwnerChange[] = {{T, GDK_OWNER_CHANGE}};
+Gtk$Gdk$EventType_t GrabBroken[] = {{T, GDK_GRAB_BROKEN}};

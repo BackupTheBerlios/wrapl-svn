@@ -1,0 +1,8 @@
+module("Gtk", "Pango", "Gravity")
+if WINDOWS then
+	prefix("_Gtk$Pango$Gravity$")
+else
+	prefix("Gtk$Pango$Gravity$")
+end
+export("T")
+export("_new")

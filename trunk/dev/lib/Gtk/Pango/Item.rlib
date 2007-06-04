@@ -1,0 +1,7 @@
+module("Gtk", "Pango", "Item")
+if WINDOWS then
+	prefix("_Gtk$Pango$Item$")
+else
+	prefix("Gtk$Pango$Item$")
+end
+export("T")

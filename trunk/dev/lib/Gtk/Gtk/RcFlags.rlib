@@ -1,0 +1,8 @@
+module("Gtk", "Gtk", "RcFlags")
+if WINDOWS then
+	prefix("_Gtk$Gtk$RcFlags$")
+else
+	prefix("Gtk$Gtk$RcFlags$")
+end
+export("T")
+export("_new")

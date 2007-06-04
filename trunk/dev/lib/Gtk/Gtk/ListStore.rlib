@@ -1,0 +1,7 @@
+module("Gtk", "Gtk", "ListStore")
+if WINDOWS then
+	prefix("_Gtk$Gtk$ListStore$")
+else
+	prefix("Gtk$Gtk$ListStore$")
+end
+export("T")

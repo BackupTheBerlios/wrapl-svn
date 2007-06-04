@@ -1,0 +1,7 @@
+module("Gtk", "Gtk", "Expander")
+if WINDOWS then
+	prefix("_Gtk$Gtk$Expander$")
+else
+	prefix("Gtk$Gtk$Expander$")
+end
+export("T")

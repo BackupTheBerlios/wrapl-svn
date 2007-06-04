@@ -1,0 +1,7 @@
+module("Gtk", "Gtk", "CellLayout")
+if WINDOWS then
+	prefix("_Gtk$Gtk$CellLayout$")
+else
+	prefix("Gtk$Gtk$CellLayout$")
+end
+export("T")

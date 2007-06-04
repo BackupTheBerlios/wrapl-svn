@@ -1,0 +1,7 @@
+module("Gtk", "Gtk", "VScrollbar")
+if WINDOWS then
+	prefix("_Gtk$Gtk$VScrollbar$")
+else
+	prefix("Gtk$Gtk$VScrollbar$")
+end
+export("T")

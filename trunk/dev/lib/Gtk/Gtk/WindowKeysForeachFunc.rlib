@@ -1,0 +1,8 @@
+module("Gtk", "Gtk", "WindowKeysForeachFunc")
+if WINDOWS then
+	prefix("_Gtk$Gtk$WindowKeysForeachFunc$")
+else
+	prefix("Gtk$Gtk$WindowKeysForeachFunc$")
+end
+export("T")
+export("_new")

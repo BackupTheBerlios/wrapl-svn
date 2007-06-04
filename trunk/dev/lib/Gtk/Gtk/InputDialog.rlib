@@ -1,0 +1,7 @@
+module("Gtk", "Gtk", "InputDialog")
+if WINDOWS then
+	prefix("_Gtk$Gtk$InputDialog$")
+else
+	prefix("Gtk$Gtk$InputDialog$")
+end
+export("T")

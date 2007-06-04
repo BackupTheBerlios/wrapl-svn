@@ -1,0 +1,7 @@
+module("Gtk", "Gtk", "RecentChooserDialog")
+if WINDOWS then
+	prefix("_Gtk$Gtk$RecentChooserDialog$")
+else
+	prefix("Gtk$Gtk$RecentChooserDialog$")
+end
+export("T")

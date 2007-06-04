@@ -1,0 +1,7 @@
+module("Gtk", "Gtk", "TreeIter")
+if WINDOWS then
+	prefix("_Gtk$Gtk$TreeIter$")
+else
+	prefix("Gtk$Gtk$TreeIter$")
+end
+export("T")

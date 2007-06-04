@@ -1,0 +1,8 @@
+module("Gtk", "Gdk", "PixbufSaveFunc")
+if WINDOWS then
+	prefix("_Gtk$Gdk$PixbufSaveFunc$")
+else
+	prefix("Gtk$Gdk$PixbufSaveFunc$")
+end
+export("T")
+export("_new")

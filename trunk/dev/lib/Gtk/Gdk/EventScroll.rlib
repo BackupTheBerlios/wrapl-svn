@@ -1,0 +1,7 @@
+module("Gtk", "Gdk", "EventScroll")
+if WINDOWS then
+	prefix("_Gtk$Gdk$EventScroll$")
+else
+	prefix("Gtk$Gdk$EventScroll$")
+end
+export("T")

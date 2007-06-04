@@ -1,0 +1,7 @@
+module("Gtk", "Gtk", "TreeDragDest")
+if WINDOWS then
+	prefix("_Gtk$Gtk$TreeDragDest$")
+else
+	prefix("Gtk$Gtk$TreeDragDest$")
+end
+export("T")

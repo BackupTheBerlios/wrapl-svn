@@ -1,0 +1,4 @@
+module("Gtk", "Pango", "XftSubstituteFunc")
+prefix("Gtk$Pango$XftSubstituteFunc$")
+export("T")
+export("_new")

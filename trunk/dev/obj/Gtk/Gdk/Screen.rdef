@@ -1,0 +1,25 @@
+library("Gtk/Gdk/Colormap.rlib")
+library("Gtk/Gdk/Display.rlib")
+library("Gtk/GObject/Type.rlib")
+library("Gtk/Gtk/Object.rlib")
+library("Gtk/Gdk/Screen.rlib")
+library("Gtk/Gdk/Rectangle.rlib")
+library("Gtk/GObject/Value.rlib")
+library("Gtk/Gdk/Visual.rlib")
+library("Gtk/Gdk/Window.rlib")
+library("Gtk/GObject/Object.rlib")
+
+if WINDOWS then
+	_export = export
+	export = function(Name)
+		_export("_" .. Name, Name)
+	end
+end
+
+export("T")
+export("GetDefault")
+export("GetType")
+export("Height")
+export("HeightMm")
+export("Width")
+export("WidthMm")

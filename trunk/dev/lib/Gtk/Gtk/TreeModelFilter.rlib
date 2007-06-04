@@ -1,0 +1,7 @@
+module("Gtk", "Gtk", "TreeModelFilter")
+if WINDOWS then
+	prefix("_Gtk$Gtk$TreeModelFilter$")
+else
+	prefix("Gtk$Gtk$TreeModelFilter$")
+end
+export("T")

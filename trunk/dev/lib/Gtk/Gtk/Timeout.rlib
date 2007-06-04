@@ -1,0 +1,7 @@
+module("Gtk", "Gtk", "Timeout")
+if WINDOWS then
+	prefix("_Gtk$Gtk$Timeout$")
+else
+	prefix("Gtk$Gtk$Timeout$")
+end
+export("T")

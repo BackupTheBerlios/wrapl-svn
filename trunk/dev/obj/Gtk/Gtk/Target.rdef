@@ -1,0 +1,13 @@
+library("Gtk/Gtk/TargetEntry.rlib")
+library("Gtk/Gtk/TargetList.rlib")
+library("Gtk/GObject/Object.rlib")
+
+if WINDOWS then
+	_export = export
+	export = function(Name)
+		_export("_" .. Name, Name)
+	end
+end
+
+export("TableFree")
+export("TableNewFromList")

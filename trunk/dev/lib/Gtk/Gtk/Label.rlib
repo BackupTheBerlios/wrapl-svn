@@ -1,0 +1,7 @@
+module("Gtk", "Gtk", "Label")
+if WINDOWS then
+	prefix("_Gtk$Gtk$Label$")
+else
+	prefix("Gtk$Gtk$Label$")
+end
+export("T")

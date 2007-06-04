@@ -1,0 +1,7 @@
+module("Gtk", "Gtk", "Statusbar")
+if WINDOWS then
+	prefix("_Gtk$Gtk$Statusbar$")
+else
+	prefix("Gtk$Gtk$Statusbar$")
+end
+export("T")

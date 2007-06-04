@@ -1,0 +1,3 @@
+module("Gtk", "Pango", "XftRenderer")
+prefix("Gtk$Pango$XftRenderer$")
+export("T")

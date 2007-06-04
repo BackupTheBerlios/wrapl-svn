@@ -1,0 +1,7 @@
+module("Gtk", "Pango", "GlyphGeometry")
+if WINDOWS then
+	prefix("_Gtk$Pango$GlyphGeometry$")
+else
+	prefix("Gtk$Pango$GlyphGeometry$")
+end
+export("T")

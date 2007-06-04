@@ -1,0 +1,8 @@
+module("Gtk", "Gdk", "WindowHints")
+if WINDOWS then
+	prefix("_Gtk$Gdk$WindowHints$")
+else
+	prefix("Gtk$Gdk$WindowHints$")
+end
+export("T")
+export("_new")

@@ -1,0 +1,23 @@
+library("Gtk/Gdk/Atom.rlib")
+library("Gtk/Gdk/Window.rlib")
+library("Gtk/Gdk/Display.rlib")
+library("Gtk/GObject/Type.rlib")
+library("Gtk/Gtk/Object.rlib")
+library("Gtk/Gdk/DisplayPointerHooks.rlib")
+library("Gtk/Gdk/Screen.rlib")
+library("Gtk/Gdk/FilterFunc.rlib")
+library("Gtk/Gdk/Device.rlib")
+library("Gtk/GObject/Object.rlib")
+
+if WINDOWS then
+	_export = export
+	export = function(Name)
+		_export("_" .. Name, Name)
+	end
+end
+
+export("T")
+export("GetDefault")
+export("GetType")
+export("Open")
+export("OpenDefaultLibgtkOnly")

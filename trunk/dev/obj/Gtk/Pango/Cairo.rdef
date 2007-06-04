@@ -1,0 +1,29 @@
+library("Gtk/Pango/GlyphString.rlib")
+library("Gtk/Pango/Context.rlib")
+library("Gtk/Pango/LayoutLine.rlib")
+library("Gtk/Pango/Layout.rlib")
+library("Gtk/Pango/Font.rlib")
+library("Gtk/GObject/Object.rlib")
+
+if WINDOWS then
+	_export = export
+	export = function(Name)
+		_export("_" .. Name, Name)
+	end
+end
+
+export("ContextGetFontOptions")
+export("ContextGetResolution")
+export("ContextSetFontOptions")
+export("ContextSetResolution")
+export("CreateLayout")
+export("ErrorUnderlinePath")
+export("GlyphStringPath")
+export("LayoutLinePath")
+export("LayoutPath")
+export("ShowErrorUnderline")
+export("ShowGlyphString")
+export("ShowLayout")
+export("ShowLayoutLine")
+export("UpdateContext")
+export("UpdateLayout")

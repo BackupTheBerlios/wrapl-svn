@@ -1,0 +1,8 @@
+module("Gtk", "Pango", "Weight")
+if WINDOWS then
+	prefix("_Gtk$Pango$Weight$")
+else
+	prefix("Gtk$Pango$Weight$")
+end
+export("T")
+export("_new")

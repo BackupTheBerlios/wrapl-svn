@@ -1,0 +1,7 @@
+module("Gtk", "Pango", "LayoutLine")
+if WINDOWS then
+	prefix("_Gtk$Pango$LayoutLine$")
+else
+	prefix("Gtk$Pango$LayoutLine$")
+end
+export("T")

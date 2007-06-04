@@ -1,0 +1,8 @@
+module("Gtk", "Gdk", "InterpType")
+if WINDOWS then
+	prefix("_Gtk$Gdk$InterpType$")
+else
+	prefix("Gtk$Gdk$InterpType$")
+end
+export("T")
+export("_new")

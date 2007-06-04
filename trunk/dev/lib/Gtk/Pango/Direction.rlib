@@ -1,0 +1,8 @@
+module("Gtk", "Pango", "Direction")
+if WINDOWS then
+	prefix("_Gtk$Pango$Direction$")
+else
+	prefix("Gtk$Pango$Direction$")
+end
+export("T")
+export("_new")

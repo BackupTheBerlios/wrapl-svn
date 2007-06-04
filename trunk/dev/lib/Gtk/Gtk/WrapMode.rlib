@@ -1,0 +1,8 @@
+module("Gtk", "Gtk", "WrapMode")
+if WINDOWS then
+	prefix("_Gtk$Gtk$WrapMode$")
+else
+	prefix("Gtk$Gtk$WrapMode$")
+end
+export("T")
+export("_new")

@@ -1,0 +1,7 @@
+module("Gtk", "Gtk", "IMContextInfo")
+if WINDOWS then
+	prefix("_Gtk$Gtk$IMContextInfo$")
+else
+	prefix("Gtk$Gtk$IMContextInfo$")
+end
+export("T")

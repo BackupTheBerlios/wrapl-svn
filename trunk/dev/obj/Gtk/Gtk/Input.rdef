@@ -1,0 +1,14 @@
+library("Gtk/Gtk/CallbackMarshal.rlib")
+library("Gtk/Gdk/InputFunction.rlib")
+library("Gtk/Gtk/DestroyNotify.rlib")
+library("Gtk/GObject/Object.rlib")
+
+if WINDOWS then
+	_export = export
+	export = function(Name)
+		_export("_" .. Name, Name)
+	end
+end
+
+export("AddFull")
+export("Remove")

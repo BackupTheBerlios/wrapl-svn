@@ -1,0 +1,8 @@
+module("Gtk", "Gtk", "StateType")
+if WINDOWS then
+	prefix("_Gtk$Gtk$StateType$")
+else
+	prefix("Gtk$Gtk$StateType$")
+end
+export("T")
+export("_new")

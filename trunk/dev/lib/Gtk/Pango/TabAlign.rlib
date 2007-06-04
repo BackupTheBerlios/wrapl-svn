@@ -1,0 +1,8 @@
+module("Gtk", "Pango", "TabAlign")
+if WINDOWS then
+	prefix("_Gtk$Pango$TabAlign$")
+else
+	prefix("Gtk$Pango$TabAlign$")
+end
+export("T")
+export("_new")

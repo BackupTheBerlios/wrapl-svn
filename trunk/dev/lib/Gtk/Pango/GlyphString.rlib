@@ -1,0 +1,7 @@
+module("Gtk", "Pango", "GlyphString")
+if WINDOWS then
+	prefix("_Gtk$Pango$GlyphString$")
+else
+	prefix("Gtk$Pango$GlyphString$")
+end
+export("T")

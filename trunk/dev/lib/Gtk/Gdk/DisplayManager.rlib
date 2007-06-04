@@ -1,0 +1,7 @@
+module("Gtk", "Gdk", "DisplayManager")
+if WINDOWS then
+	prefix("_Gtk$Gdk$DisplayManager$")
+else
+	prefix("Gtk$Gdk$DisplayManager$")
+end
+export("T")

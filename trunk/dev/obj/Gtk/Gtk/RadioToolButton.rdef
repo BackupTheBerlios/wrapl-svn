@@ -1,0 +1,24 @@
+library("Gtk/Gtk/RadioToolButton.rlib")
+library("Gtk/Gtk/Widget.rlib")
+library("Gtk/Gtk/ToolItem.rlib")
+library("Gtk/GObject/Type.rlib")
+library("Gtk/Gtk/ToggleToolButton.rlib")
+library("Gtk/Gtk/Object.rlib")
+library("Gtk/Gtk/ToolButton.rlib")
+library("Gtk/Gtk/Bin.rlib")
+library("Gtk/Gtk/Container.rlib")
+library("Gtk/GObject/Object.rlib")
+
+if WINDOWS then
+	_export = export
+	export = function(Name)
+		_export("_" .. Name, Name)
+	end
+end
+
+export("T")
+export("New")
+export("NewFromStock")
+export("NewFromWidget")
+export("NewWithStockFromWidget")
+export("GetType")

@@ -1,0 +1,8 @@
+module("Gtk", "Gdk", "Gravity")
+if WINDOWS then
+	prefix("_Gtk$Gdk$Gravity$")
+else
+	prefix("Gtk$Gdk$Gravity$")
+end
+export("T")
+export("_new")

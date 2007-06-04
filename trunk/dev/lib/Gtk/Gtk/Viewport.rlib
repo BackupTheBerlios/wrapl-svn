@@ -1,0 +1,7 @@
+module("Gtk", "Gtk", "Viewport")
+if WINDOWS then
+	prefix("_Gtk$Gtk$Viewport$")
+else
+	prefix("Gtk$Gtk$Viewport$")
+end
+export("T")

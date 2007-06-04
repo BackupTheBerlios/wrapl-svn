@@ -1,0 +1,8 @@
+module("Gtk", "Gdk", "VisibilityState")
+if WINDOWS then
+	prefix("_Gtk$Gdk$VisibilityState$")
+else
+	prefix("Gtk$Gdk$VisibilityState$")
+end
+export("T")
+export("_new")

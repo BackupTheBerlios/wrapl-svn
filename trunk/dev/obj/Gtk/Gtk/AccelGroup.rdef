@@ -1,0 +1,21 @@
+library("Gtk/Gtk/AccelGroup.rlib")
+library("Gtk/Gtk/AccelGroupEntry.rlib")
+library("Gtk/GObject/Type.rlib")
+library("Gtk/GObject/Closure.rlib")
+library("Gtk/Gtk/Object.rlib")
+library("Gtk/Gtk/AccelKey.rlib")
+library("Gtk/Gtk/AccelGroupFindFunc.rlib")
+library("Gtk/Gtk/AccelGroup.rlib")
+library("Gtk/GObject/Object.rlib")
+
+if WINDOWS then
+	_export = export
+	export = function(Name)
+		_export("_" .. Name, Name)
+	end
+end
+
+export("T")
+export("New")
+export("FromAccelClosure")
+export("GetType")

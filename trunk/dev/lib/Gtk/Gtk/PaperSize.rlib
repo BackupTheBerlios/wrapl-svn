@@ -1,0 +1,7 @@
+module("Gtk", "Gtk", "PaperSize")
+if WINDOWS then
+	prefix("_Gtk$Gtk$PaperSize$")
+else
+	prefix("Gtk$Gtk$PaperSize$")
+end
+export("T")

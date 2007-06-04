@@ -1,0 +1,8 @@
+module("Gtk", "Gtk", "MatchType")
+if WINDOWS then
+	prefix("_Gtk$Gtk$MatchType$")
+else
+	prefix("Gtk$Gtk$MatchType$")
+end
+export("T")
+export("_new")

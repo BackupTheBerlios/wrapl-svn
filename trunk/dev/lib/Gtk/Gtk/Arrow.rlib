@@ -1,0 +1,7 @@
+module("Gtk", "Gtk", "Arrow")
+if WINDOWS then
+	prefix("_Gtk$Gtk$Arrow$")
+else
+	prefix("Gtk$Gtk$Arrow$")
+end
+export("T")

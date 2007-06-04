@@ -1,0 +1,7 @@
+module("Gtk", "Gtk", "AccelMap")
+if WINDOWS then
+	prefix("_Gtk$Gtk$AccelMap$")
+else
+	prefix("Gtk$Gtk$AccelMap$")
+end
+export("T")

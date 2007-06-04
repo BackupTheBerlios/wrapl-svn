@@ -1,0 +1,7 @@
+module("Gtk", "Gtk", "HRuler")
+if WINDOWS then
+	prefix("_Gtk$Gtk$HRuler$")
+else
+	prefix("Gtk$Gtk$HRuler$")
+end
+export("T")

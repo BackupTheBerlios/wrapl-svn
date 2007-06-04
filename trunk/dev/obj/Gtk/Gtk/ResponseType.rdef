@@ -1,0 +1,19 @@
+if WINDOWS then
+	_export = export
+	export = function(Name)
+		_export("_" .. Name, Name)
+	end
+end
+
+export("T")
+export("None")
+export("Reject")
+export("Accept")
+export("DeleteEvent")
+export("Ok")
+export("Cancel")
+export("Close")
+export("Yes")
+export("No")
+export("Apply")
+export("Help")

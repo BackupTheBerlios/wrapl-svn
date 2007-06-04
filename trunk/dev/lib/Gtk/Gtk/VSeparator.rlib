@@ -1,0 +1,7 @@
+module("Gtk", "Gtk", "VSeparator")
+if WINDOWS then
+	prefix("_Gtk$Gtk$VSeparator$")
+else
+	prefix("Gtk$Gtk$VSeparator$")
+end
+export("T")

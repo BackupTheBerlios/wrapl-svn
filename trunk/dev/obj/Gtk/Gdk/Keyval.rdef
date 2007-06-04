@@ -1,0 +1,17 @@
+library("Gtk/GObject/Object.rlib")
+
+if WINDOWS then
+	_export = export
+	export = function(Name)
+		_export("_" .. Name, Name)
+	end
+end
+
+export("ConvertCase")
+export("FromName")
+export("IsLower")
+export("IsUpper")
+export("Name")
+export("ToLower")
+export("ToUnicode")
+export("ToUpper")

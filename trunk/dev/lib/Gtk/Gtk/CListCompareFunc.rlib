@@ -1,0 +1,8 @@
+module("Gtk", "Gtk", "CListCompareFunc")
+if WINDOWS then
+	prefix("_Gtk$Gtk$CListCompareFunc$")
+else
+	prefix("Gtk$Gtk$CListCompareFunc$")
+end
+export("T")
+export("_new")

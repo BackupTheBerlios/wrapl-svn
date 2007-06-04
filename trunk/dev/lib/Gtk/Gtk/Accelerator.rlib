@@ -1,0 +1,7 @@
+module("Gtk", "Gtk", "Accelerator")
+if WINDOWS then
+	prefix("_Gtk$Gtk$Accelerator$")
+else
+	prefix("Gtk$Gtk$Accelerator$")
+end
+export("T")

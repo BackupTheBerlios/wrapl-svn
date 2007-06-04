@@ -1,0 +1,21 @@
+library("Gtk/Pango/RenderPart.rlib")
+library("Gtk/Pango/Color.rlib")
+library("Gtk/Pango/LayoutLine.rlib")
+library("Gtk/Pango/Layout.rlib")
+library("Gtk/Pango/Matrix.rlib")
+library("Gtk/GObject/Type.rlib")
+library("Gtk/Pango/Font.rlib")
+library("Gtk/Gtk/Object.rlib")
+library("Gtk/Pango/Renderer.rlib")
+library("Gtk/Pango/GlyphString.rlib")
+library("Gtk/GObject/Object.rlib")
+
+if WINDOWS then
+	_export = export
+	export = function(Name)
+		_export("_" .. Name, Name)
+	end
+end
+
+export("T")
+export("GetType")

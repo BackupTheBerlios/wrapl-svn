@@ -1,0 +1,7 @@
+module("Gtk", "Gtk", "GammaCurve")
+if WINDOWS then
+	prefix("_Gtk$Gtk$GammaCurve$")
+else
+	prefix("Gtk$Gtk$GammaCurve$")
+end
+export("T")

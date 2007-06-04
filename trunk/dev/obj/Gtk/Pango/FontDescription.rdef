@@ -1,0 +1,17 @@
+library("Gtk/Pango/Style.rlib")
+library("Gtk/Pango/Variant.rlib")
+library("Gtk/Pango/Gravity.rlib")
+library("Gtk/GObject/Type.rlib")
+library("Gtk/Pango/Stretch.rlib")
+library("Gtk/Pango/FontDescription.rlib")
+library("Gtk/Pango/Weight.rlib")
+library("Gtk/GObject/Object.rlib")
+
+if WINDOWS then
+	_export = export
+	export = function(Name)
+		_export("_" .. Name, Name)
+	end
+end
+
+export("T")

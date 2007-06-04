@@ -1,0 +1,7 @@
+module("Gtk", "Gdk", "Span")
+if WINDOWS then
+	prefix("_Gtk$Gdk$Span$")
+else
+	prefix("Gtk$Gdk$Span$")
+end
+export("T")

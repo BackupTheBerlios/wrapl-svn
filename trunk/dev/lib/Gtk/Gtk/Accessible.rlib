@@ -1,0 +1,7 @@
+module("Gtk", "Gtk", "Accessible")
+if WINDOWS then
+	prefix("_Gtk$Gtk$Accessible$")
+else
+	prefix("Gtk$Gtk$Accessible$")
+end
+export("T")

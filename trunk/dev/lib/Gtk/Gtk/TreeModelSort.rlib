@@ -1,0 +1,7 @@
+module("Gtk", "Gtk", "TreeModelSort")
+if WINDOWS then
+	prefix("_Gtk$Gtk$TreeModelSort$")
+else
+	prefix("Gtk$Gtk$TreeModelSort$")
+end
+export("T")

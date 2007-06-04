@@ -1,0 +1,7 @@
+module("Gtk", "Gtk", "RadioActionEntry")
+if WINDOWS then
+	prefix("_Gtk$Gtk$RadioActionEntry$")
+else
+	prefix("Gtk$Gtk$RadioActionEntry$")
+end
+export("T")

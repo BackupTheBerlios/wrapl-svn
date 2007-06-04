@@ -1,0 +1,8 @@
+module("Gtk", "Gtk", "SensitivityType")
+if WINDOWS then
+	prefix("_Gtk$Gtk$SensitivityType$")
+else
+	prefix("Gtk$Gtk$SensitivityType$")
+end
+export("T")
+export("_new")

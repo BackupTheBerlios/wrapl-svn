@@ -1,0 +1,7 @@
+module("Gtk", "Gtk", "BindingSignal")
+if WINDOWS then
+	prefix("_Gtk$Gtk$BindingSignal$")
+else
+	prefix("Gtk$Gtk$BindingSignal$")
+end
+export("T")

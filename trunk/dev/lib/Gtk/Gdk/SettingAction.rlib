@@ -1,0 +1,8 @@
+module("Gtk", "Gdk", "SettingAction")
+if WINDOWS then
+	prefix("_Gtk$Gdk$SettingAction$")
+else
+	prefix("Gtk$Gdk$SettingAction$")
+end
+export("T")
+export("_new")

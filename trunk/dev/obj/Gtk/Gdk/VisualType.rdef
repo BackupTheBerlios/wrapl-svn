@@ -1,0 +1,14 @@
+if WINDOWS then
+	_export = export
+	export = function(Name)
+		_export("_" .. Name, Name)
+	end
+end
+
+export("T")
+export("StaticGray")
+export("Grayscale")
+export("StaticColor")
+export("PseudoColor")
+export("TrueColor")
+export("DirectColor")

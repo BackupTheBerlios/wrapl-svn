@@ -1,0 +1,7 @@
+module("Gtk", "Pango", "AttrString")
+if WINDOWS then
+	prefix("_Gtk$Pango$AttrString$")
+else
+	prefix("Gtk$Pango$AttrString$")
+end
+export("T")

@@ -1,0 +1,21 @@
+library("Gtk/Gtk/TreeModelFilterModifyFunc.rlib")
+library("Gtk/Gtk/TreeModelFilter.rlib")
+library("Gtk/GObject/Type.rlib")
+library("Gtk/Gtk/TreeModel.rlib")
+library("Gtk/Gtk/Object.rlib")
+library("Gtk/Gtk/TreePath.rlib")
+library("Gtk/Gtk/TreeIter.rlib")
+library("Gtk/Gtk/DestroyNotify.rlib")
+library("Gtk/Gtk/TreeModelFilterVisibleFunc.rlib")
+library("Gtk/GObject/Object.rlib")
+
+if WINDOWS then
+	_export = export
+	export = function(Name)
+		_export("_" .. Name, Name)
+	end
+end
+
+export("T")
+export("New")
+export("GetType")

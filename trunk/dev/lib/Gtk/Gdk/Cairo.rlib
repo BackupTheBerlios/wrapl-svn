@@ -1,0 +1,7 @@
+module("Gtk", "Gdk", "Cairo")
+if WINDOWS then
+	prefix("_Gtk$Gdk$Cairo$")
+else
+	prefix("Gtk$Gdk$Cairo$")
+end
+export("T")

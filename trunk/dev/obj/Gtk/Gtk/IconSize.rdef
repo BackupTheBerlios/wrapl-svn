@@ -1,0 +1,15 @@
+if WINDOWS then
+	_export = export
+	export = function(Name)
+		_export("_" .. Name, Name)
+	end
+end
+
+export("T")
+export("Invalid")
+export("Menu")
+export("SmallToolbar")
+export("LargeToolbar")
+export("Button")
+export("Dnd")
+export("Dialog")

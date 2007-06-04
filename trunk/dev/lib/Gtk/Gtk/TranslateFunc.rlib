@@ -1,0 +1,8 @@
+module("Gtk", "Gtk", "TranslateFunc")
+if WINDOWS then
+	prefix("_Gtk$Gtk$TranslateFunc$")
+else
+	prefix("Gtk$Gtk$TranslateFunc$")
+end
+export("T")
+export("_new")

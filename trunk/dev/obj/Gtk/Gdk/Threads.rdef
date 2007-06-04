@@ -1,0 +1,13 @@
+library("Gtk/GObject/Object.rlib")
+
+if WINDOWS then
+	_export = export
+	export = function(Name)
+		_export("_" .. Name, Name)
+	end
+end
+
+export("Enter")
+export("Init")
+export("Leave")
+export("SetLockFunctions")

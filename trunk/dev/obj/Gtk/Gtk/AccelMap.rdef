@@ -1,0 +1,30 @@
+library("Gtk/Gtk/Object.rlib")
+library("Gtk/Gtk/AccelMap.rlib")
+library("Gtk/Gtk/AccelKey.rlib")
+library("Gtk/Gtk/AccelMapForeach.rlib")
+library("Gtk/GObject/Type.rlib")
+library("Gtk/GObject/Object.rlib")
+
+if WINDOWS then
+	_export = export
+	export = function(Name)
+		_export("_" .. Name, Name)
+	end
+end
+
+export("T")
+export("AddEntry")
+export("AddFilter")
+export("ChangeEntry")
+export("Foreach")
+export("ForeachUnfiltered")
+export("Get")
+export("GetType")
+export("Load")
+export("LoadFd")
+export("LoadScanner")
+export("LockPath")
+export("LookupEntry")
+export("Save")
+export("SaveFd")
+export("UnlockPath")

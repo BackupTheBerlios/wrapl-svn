@@ -1,0 +1,8 @@
+module("Gtk", "Gtk", "MenuPositionFunc")
+if WINDOWS then
+	prefix("_Gtk$Gtk$MenuPositionFunc$")
+else
+	prefix("Gtk$Gtk$MenuPositionFunc$")
+end
+export("T")
+export("_new")

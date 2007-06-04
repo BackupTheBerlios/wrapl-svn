@@ -1,0 +1,7 @@
+module("Gtk", "Gdk", "RgbCmap")
+if WINDOWS then
+	prefix("_Gtk$Gdk$RgbCmap$")
+else
+	prefix("Gtk$Gdk$RgbCmap$")
+end
+export("T")

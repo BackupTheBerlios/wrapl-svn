@@ -1,0 +1,7 @@
+module("Gtk", "Gdk", "Drawable")
+if WINDOWS then
+	prefix("_Gtk$Gdk$Drawable$")
+else
+	prefix("Gtk$Gdk$Drawable$")
+end
+export("T")

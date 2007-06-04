@@ -1,0 +1,8 @@
+module("Gtk", "Gdk", "ScrollDirection")
+if WINDOWS then
+	prefix("_Gtk$Gdk$ScrollDirection$")
+else
+	prefix("Gtk$Gdk$ScrollDirection$")
+end
+export("T")
+export("_new")

@@ -1,0 +1,7 @@
+module("Gtk", "Gdk", "PixbufAnimation")
+if WINDOWS then
+	prefix("_Gtk$Gdk$PixbufAnimation$")
+else
+	prefix("Gtk$Gdk$PixbufAnimation$")
+end
+export("T")

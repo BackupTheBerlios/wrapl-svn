@@ -1,0 +1,8 @@
+module("Gtk", "Pango", "EllipsizeMode")
+if WINDOWS then
+	prefix("_Gtk$Pango$EllipsizeMode$")
+else
+	prefix("Gtk$Pango$EllipsizeMode$")
+end
+export("T")
+export("_new")

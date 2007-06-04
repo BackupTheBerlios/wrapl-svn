@@ -1,0 +1,3 @@
+module("Gtk", "Pango", "XftFontMap")
+prefix("Gtk$Pango$XftFontMap$")
+export("T")

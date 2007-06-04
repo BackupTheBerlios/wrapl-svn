@@ -1,0 +1,8 @@
+module("Gtk", "Pango", "Style")
+if WINDOWS then
+	prefix("_Gtk$Pango$Style$")
+else
+	prefix("Gtk$Pango$Style$")
+end
+export("T")
+export("_new")

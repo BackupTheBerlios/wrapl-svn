@@ -1,0 +1,17 @@
+library("Gtk/Gtk/TextTagTableForeach.rlib")
+library("Gtk/GObject/Type.rlib")
+library("Gtk/Gtk/Object.rlib")
+library("Gtk/Gtk/TextTagTable.rlib")
+library("Gtk/Gtk/TextTag.rlib")
+library("Gtk/GObject/Object.rlib")
+
+if WINDOWS then
+	_export = export
+	export = function(Name)
+		_export("_" .. Name, Name)
+	end
+end
+
+export("T")
+export("New")
+export("GetType")

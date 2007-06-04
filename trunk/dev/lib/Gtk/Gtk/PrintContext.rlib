@@ -1,0 +1,7 @@
+module("Gtk", "Gtk", "PrintContext")
+if WINDOWS then
+	prefix("_Gtk$Gtk$PrintContext$")
+else
+	prefix("Gtk$Gtk$PrintContext$")
+end
+export("T")

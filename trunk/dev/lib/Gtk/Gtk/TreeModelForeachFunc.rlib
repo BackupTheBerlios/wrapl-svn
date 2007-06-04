@@ -1,0 +1,8 @@
+module("Gtk", "Gtk", "TreeModelForeachFunc")
+if WINDOWS then
+	prefix("_Gtk$Gtk$TreeModelForeachFunc$")
+else
+	prefix("Gtk$Gtk$TreeModelForeachFunc$")
+end
+export("T")
+export("_new")

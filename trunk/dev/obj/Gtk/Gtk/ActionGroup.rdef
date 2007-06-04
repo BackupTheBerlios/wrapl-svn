@@ -1,0 +1,21 @@
+library("Gtk/Gtk/ToggleActionEntry.rlib")
+library("Gtk/Gtk/TranslateFunc.rlib")
+library("Gtk/GObject/Type.rlib")
+library("Gtk/Gtk/ActionEntry.rlib")
+library("Gtk/Gtk/Object.rlib")
+library("Gtk/Gtk/Action.rlib")
+library("Gtk/Gtk/ActionGroup.rlib")
+library("Gtk/Gtk/RadioActionEntry.rlib")
+library("Gtk/Gtk/DestroyNotify.rlib")
+library("Gtk/GObject/Object.rlib")
+
+if WINDOWS then
+	_export = export
+	export = function(Name)
+		_export("_" .. Name, Name)
+	end
+end
+
+export("T")
+export("New")
+export("GetType")

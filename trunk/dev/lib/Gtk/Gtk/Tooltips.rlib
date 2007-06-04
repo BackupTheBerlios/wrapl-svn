@@ -1,0 +1,7 @@
+module("Gtk", "Gtk", "Tooltips")
+if WINDOWS then
+	prefix("_Gtk$Gtk$Tooltips$")
+else
+	prefix("Gtk$Gtk$Tooltips$")
+end
+export("T")

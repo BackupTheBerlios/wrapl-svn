@@ -1,0 +1,8 @@
+module("Gtk", "Gtk", "WidgetHelpType")
+if WINDOWS then
+	prefix("_Gtk$Gtk$WidgetHelpType$")
+else
+	prefix("Gtk$Gtk$WidgetHelpType$")
+end
+export("T")
+export("_new")

@@ -1,0 +1,8 @@
+module("Gtk", "Gtk", "TreeDestroyCountFunc")
+if WINDOWS then
+	prefix("_Gtk$Gtk$TreeDestroyCountFunc$")
+else
+	prefix("Gtk$Gtk$TreeDestroyCountFunc$")
+end
+export("T")
+export("_new")

@@ -1,0 +1,8 @@
+module("Gtk", "Gdk", "PropertyState")
+if WINDOWS then
+	prefix("_Gtk$Gdk$PropertyState$")
+else
+	prefix("Gtk$Gdk$PropertyState$")
+end
+export("T")
+export("_new")

@@ -1,0 +1,7 @@
+module("Gtk", "Gdk", "DragContext")
+if WINDOWS then
+	prefix("_Gtk$Gdk$DragContext$")
+else
+	prefix("Gtk$Gdk$DragContext$")
+end
+export("T")

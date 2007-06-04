@@ -1,0 +1,8 @@
+module("Gtk", "Gtk", "PackDirection")
+if WINDOWS then
+	prefix("_Gtk$Gtk$PackDirection$")
+else
+	prefix("Gtk$Gtk$PackDirection$")
+end
+export("T")
+export("_new")

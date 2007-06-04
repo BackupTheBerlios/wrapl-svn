@@ -1,0 +1,7 @@
+module("Gtk", "Gtk", "Progress")
+if WINDOWS then
+	prefix("_Gtk$Gtk$Progress$")
+else
+	prefix("Gtk$Gtk$Progress$")
+end
+export("T")

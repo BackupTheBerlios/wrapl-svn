@@ -1,0 +1,8 @@
+module("Gtk", "Gtk", "ClipboardRichTextReceivedFunc")
+if WINDOWS then
+	prefix("_Gtk$Gtk$ClipboardRichTextReceivedFunc$")
+else
+	prefix("Gtk$Gtk$ClipboardRichTextReceivedFunc$")
+end
+export("T")
+export("_new")

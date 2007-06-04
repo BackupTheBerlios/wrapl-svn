@@ -1,0 +1,7 @@
+module("Gtk", "Gtk", "MenuEntry")
+if WINDOWS then
+	prefix("_Gtk$Gtk$MenuEntry$")
+else
+	prefix("Gtk$Gtk$MenuEntry$")
+end
+export("T")

@@ -1,0 +1,7 @@
+module("Gtk", "Gtk", "RcContext")
+if WINDOWS then
+	prefix("_Gtk$Gtk$RcContext$")
+else
+	prefix("Gtk$Gtk$RcContext$")
+end
+export("T")

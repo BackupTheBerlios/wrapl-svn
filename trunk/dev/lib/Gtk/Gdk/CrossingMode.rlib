@@ -1,0 +1,8 @@
+module("Gtk", "Gdk", "CrossingMode")
+if WINDOWS then
+	prefix("_Gtk$Gdk$CrossingMode$")
+else
+	prefix("Gtk$Gdk$CrossingMode$")
+end
+export("T")
+export("_new")

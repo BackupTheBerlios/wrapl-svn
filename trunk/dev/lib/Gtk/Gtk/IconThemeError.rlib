@@ -1,0 +1,8 @@
+module("Gtk", "Gtk", "IconThemeError")
+if WINDOWS then
+	prefix("_Gtk$Gtk$IconThemeError$")
+else
+	prefix("Gtk$Gtk$IconThemeError$")
+end
+export("T")
+export("_new")

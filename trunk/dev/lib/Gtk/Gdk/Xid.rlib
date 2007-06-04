@@ -1,0 +1,3 @@
+module("Gtk", "Gdk", "Xid")
+prefix("Gtk$Gdk$Xid$")
+export("T")

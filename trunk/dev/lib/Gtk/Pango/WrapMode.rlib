@@ -1,0 +1,8 @@
+module("Gtk", "Pango", "WrapMode")
+if WINDOWS then
+	prefix("_Gtk$Pango$WrapMode$")
+else
+	prefix("Gtk$Pango$WrapMode$")
+end
+export("T")
+export("_new")

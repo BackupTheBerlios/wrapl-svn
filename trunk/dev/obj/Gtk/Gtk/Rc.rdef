@@ -1,0 +1,38 @@
+library("Gtk/Gtk/Widget.rlib")
+library("Gtk/Gtk/RcStyle.rlib")
+library("Gtk/GObject/Type.rlib")
+library("Gtk/Gdk/Color.rlib")
+library("Gtk/Gtk/Style.rlib")
+library("Gtk/Gtk/Settings.rlib")
+library("Gtk/GObject/Object.rlib")
+
+if WINDOWS then
+	_export = export
+	export = function(Name)
+		_export("_" .. Name, Name)
+	end
+end
+
+export("AddClassStyle")
+export("AddDefaultFile")
+export("AddWidgetClassStyle")
+export("AddWidgetNameStyle")
+export("FindModuleInPath")
+export("FindPixmapInPath")
+export("GetDefaultFiles")
+export("GetImModuleFile")
+export("GetImModulePath")
+export("GetModuleDir")
+export("GetStyle")
+export("GetStyleByPaths")
+export("GetThemeDir")
+export("Parse")
+export("ParseColor")
+export("ParsePriority")
+export("ParseState")
+export("ParseString")
+export("ReparseAll")
+export("ReparseAllForSettings")
+export("ResetStyles")
+export("ScannerNew")
+export("SetDefaultFiles")

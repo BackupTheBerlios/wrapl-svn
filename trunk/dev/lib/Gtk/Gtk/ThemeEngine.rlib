@@ -1,0 +1,7 @@
+module("Gtk", "Gtk", "ThemeEngine")
+if WINDOWS then
+	prefix("_Gtk$Gtk$ThemeEngine$")
+else
+	prefix("Gtk$Gtk$ThemeEngine$")
+end
+export("T")

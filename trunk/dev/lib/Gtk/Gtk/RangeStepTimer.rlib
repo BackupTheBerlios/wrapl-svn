@@ -1,0 +1,7 @@
+module("Gtk", "Gtk", "RangeStepTimer")
+if WINDOWS then
+	prefix("_Gtk$Gtk$RangeStepTimer$")
+else
+	prefix("Gtk$Gtk$RangeStepTimer$")
+end
+export("T")

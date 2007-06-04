@@ -1,0 +1,8 @@
+module("Gtk", "Gdk", "ImageType")
+if WINDOWS then
+	prefix("_Gtk$Gdk$ImageType$")
+else
+	prefix("Gtk$Gdk$ImageType$")
+end
+export("T")
+export("_new")

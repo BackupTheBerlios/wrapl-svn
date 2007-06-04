@@ -1,0 +1,8 @@
+module("Gtk", "Gdk", "DragProtocol")
+if WINDOWS then
+	prefix("_Gtk$Gdk$DragProtocol$")
+else
+	prefix("Gtk$Gdk$DragProtocol$")
+end
+export("T")
+export("_new")

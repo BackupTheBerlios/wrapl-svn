@@ -1,0 +1,19 @@
+library("Gtk/Pango/Language.rlib")
+library("Gtk/Pango/Context.rlib")
+library("Gtk/Pango/FontMap.rlib")
+library("Gtk/Pango/Fontset.rlib")
+library("Gtk/GObject/Type.rlib")
+library("Gtk/Pango/Font.rlib")
+library("Gtk/Gtk/Object.rlib")
+library("Gtk/Pango/FontDescription.rlib")
+library("Gtk/GObject/Object.rlib")
+
+if WINDOWS then
+	_export = export
+	export = function(Name)
+		_export("_" .. Name, Name)
+	end
+end
+
+export("T")
+export("GetType")

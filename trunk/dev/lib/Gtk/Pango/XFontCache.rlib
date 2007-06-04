@@ -1,0 +1,3 @@
+module("Gtk", "Pango", "XFontCache")
+prefix("Gtk$Pango$XFontCache$")
+export("T")

@@ -1,0 +1,8 @@
+module("Gtk", "Gdk", "WindowType")
+if WINDOWS then
+	prefix("_Gtk$Gdk$WindowType$")
+else
+	prefix("Gtk$Gdk$WindowType$")
+end
+export("T")
+export("_new")

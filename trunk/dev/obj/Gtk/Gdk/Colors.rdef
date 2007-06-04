@@ -1,0 +1,14 @@
+library("Gtk/Gdk/Colormap.rlib")
+library("Gtk/Gdk/Color.rlib")
+library("Gtk/GObject/Object.rlib")
+
+if WINDOWS then
+	_export = export
+	export = function(Name)
+		_export("_" .. Name, Name)
+	end
+end
+
+export("Alloc")
+export("Free")
+export("Store")

@@ -1,0 +1,7 @@
+module("Gtk", "Pango", "EngineShape")
+if WINDOWS then
+	prefix("_Gtk$Pango$EngineShape$")
+else
+	prefix("Gtk$Pango$EngineShape$")
+end
+export("T")

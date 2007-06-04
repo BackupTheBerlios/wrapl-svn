@@ -1,0 +1,7 @@
+module("Gtk", "Gdk", "Rectangle")
+if WINDOWS then
+	prefix("_Gtk$Gdk$Rectangle$")
+else
+	prefix("Gtk$Gdk$Rectangle$")
+end
+export("T")

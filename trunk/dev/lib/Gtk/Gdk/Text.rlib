@@ -1,0 +1,7 @@
+module("Gtk", "Gdk", "Text")
+if WINDOWS then
+	prefix("_Gtk$Gdk$Text$")
+else
+	prefix("Gtk$Gdk$Text$")
+end
+export("T")

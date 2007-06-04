@@ -1,0 +1,8 @@
+module("Gtk", "Gtk", "CTreeFunc")
+if WINDOWS then
+	prefix("_Gtk$Gtk$CTreeFunc$")
+else
+	prefix("Gtk$Gtk$CTreeFunc$")
+end
+export("T")
+export("_new")

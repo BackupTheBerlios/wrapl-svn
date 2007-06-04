@@ -1,0 +1,7 @@
+module("Gtk", "Gtk", "SettingsPropertyValue")
+if WINDOWS then
+	prefix("_Gtk$Gtk$SettingsPropertyValue$")
+else
+	prefix("Gtk$Gtk$SettingsPropertyValue$")
+end
+export("T")

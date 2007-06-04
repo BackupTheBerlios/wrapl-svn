@@ -1,0 +1,35 @@
+library("Gtk/Gdk/Display.rlib")
+library("Gtk/GObject/Type.rlib")
+library("Gtk/Gdk/Screen.rlib")
+library("Gtk/Gdk/AxisUse.rlib")
+library("Gtk/Gdk/EventFunc.rlib")
+library("Gtk/Gdk/EventType.rlib")
+library("Gtk/Gdk/Window.rlib")
+library("Gtk/GObject/Object.rlib")
+
+if WINDOWS then
+	_export = export
+	export = function(Name)
+		_export("_" .. Name, Name)
+	end
+end
+
+export("Copy")
+export("Free")
+export("Get")
+export("GetAxis")
+export("GetCoords")
+export("GetGraphicsExpose")
+export("GetRootCoords")
+export("GetScreen")
+export("GetState")
+export("GetTime")
+export("GetType")
+export("HandlerSet")
+export("New")
+export("Peek")
+export("Put")
+export("SendClientMessage")
+export("SendClientMessageForDisplay")
+export("SendClientmessageToall")
+export("SetScreen")

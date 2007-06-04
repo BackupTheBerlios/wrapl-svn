@@ -1,0 +1,7 @@
+module("Gtk", "Gtk", "MessageDialog")
+if WINDOWS then
+	prefix("_Gtk$Gtk$MessageDialog$")
+else
+	prefix("Gtk$Gtk$MessageDialog$")
+end
+export("T")

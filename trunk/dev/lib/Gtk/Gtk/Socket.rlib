@@ -1,0 +1,7 @@
+module("Gtk", "Gtk", "Socket")
+if WINDOWS then
+	prefix("_Gtk$Gtk$Socket$")
+else
+	prefix("Gtk$Gtk$Socket$")
+end
+export("T")

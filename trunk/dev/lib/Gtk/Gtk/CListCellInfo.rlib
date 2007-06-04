@@ -1,0 +1,7 @@
+module("Gtk", "Gtk", "CListCellInfo")
+if WINDOWS then
+	prefix("_Gtk$Gtk$CListCellInfo$")
+else
+	prefix("Gtk$Gtk$CListCellInfo$")
+end
+export("T")

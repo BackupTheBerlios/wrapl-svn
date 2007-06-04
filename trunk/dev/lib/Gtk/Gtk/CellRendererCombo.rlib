@@ -1,0 +1,7 @@
+module("Gtk", "Gtk", "CellRendererCombo")
+if WINDOWS then
+	prefix("_Gtk$Gtk$CellRendererCombo$")
+else
+	prefix("Gtk$Gtk$CellRendererCombo$")
+end
+export("T")

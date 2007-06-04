@@ -1,0 +1,8 @@
+module("Gtk", "Gdk", "InputMode")
+if WINDOWS then
+	prefix("_Gtk$Gdk$InputMode$")
+else
+	prefix("Gtk$Gdk$InputMode$")
+end
+export("T")
+export("_new")

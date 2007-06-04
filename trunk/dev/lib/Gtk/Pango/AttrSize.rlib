@@ -1,0 +1,7 @@
+module("Gtk", "Pango", "AttrSize")
+if WINDOWS then
+	prefix("_Gtk$Pango$AttrSize$")
+else
+	prefix("Gtk$Pango$AttrSize$")
+end
+export("T")

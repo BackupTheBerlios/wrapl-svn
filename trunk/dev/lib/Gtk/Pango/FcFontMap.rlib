@@ -1,0 +1,7 @@
+module("Gtk", "Pango", "FcFontMap")
+if WINDOWS then
+	prefix("_Gtk$Pango$FcFontMap$")
+else
+	prefix("Gtk$Pango$FcFontMap$")
+end
+export("T")

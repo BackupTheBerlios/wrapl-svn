@@ -1,0 +1,7 @@
+module("Gtk", "Gdk", "EventWindowState")
+if WINDOWS then
+	prefix("_Gtk$Gdk$EventWindowState$")
+else
+	prefix("Gtk$Gdk$EventWindowState$")
+end
+export("T")

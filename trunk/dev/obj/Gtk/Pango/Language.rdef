@@ -1,0 +1,13 @@
+library("Gtk/GObject/Type.rlib")
+library("Gtk/Pango/Script.rlib")
+library("Gtk/Pango/Language.rlib")
+library("Gtk/GObject/Object.rlib")
+
+if WINDOWS then
+	_export = export
+	export = function(Name)
+		_export("_" .. Name, Name)
+	end
+end
+
+export("T")

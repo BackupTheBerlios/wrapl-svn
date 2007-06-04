@@ -1,0 +1,7 @@
+module("Gtk", "Gtk", "AccelGroup")
+if WINDOWS then
+	prefix("_Gtk$Gtk$AccelGroup$")
+else
+	prefix("Gtk$Gtk$AccelGroup$")
+end
+export("T")

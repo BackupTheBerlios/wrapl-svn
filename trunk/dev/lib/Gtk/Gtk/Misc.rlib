@@ -1,0 +1,7 @@
+module("Gtk", "Gtk", "Misc")
+if WINDOWS then
+	prefix("_Gtk$Gtk$Misc$")
+else
+	prefix("Gtk$Gtk$Misc$")
+end
+export("T")

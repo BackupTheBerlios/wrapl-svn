@@ -1,0 +1,8 @@
+module("Gtk", "Gtk", "CallbackMarshal")
+if WINDOWS then
+	prefix("_Gtk$Gtk$CallbackMarshal$")
+else
+	prefix("Gtk$Gtk$CallbackMarshal$")
+end
+export("T")
+export("_new")

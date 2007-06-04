@@ -1,0 +1,7 @@
+module("Gtk", "Pango", "Language")
+if WINDOWS then
+	prefix("_Gtk$Pango$Language$")
+else
+	prefix("Gtk$Pango$Language$")
+end
+export("T")

@@ -1,0 +1,8 @@
+module("Gtk", "Gtk", "DeleteType")
+if WINDOWS then
+	prefix("_Gtk$Gtk$DeleteType$")
+else
+	prefix("Gtk$Gtk$DeleteType$")
+end
+export("T")
+export("_new")

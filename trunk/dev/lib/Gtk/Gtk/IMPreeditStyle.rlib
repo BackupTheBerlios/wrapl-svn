@@ -1,0 +1,8 @@
+module("Gtk", "Gtk", "IMPreeditStyle")
+if WINDOWS then
+	prefix("_Gtk$Gtk$IMPreeditStyle$")
+else
+	prefix("Gtk$Gtk$IMPreeditStyle$")
+end
+export("T")
+export("_new")

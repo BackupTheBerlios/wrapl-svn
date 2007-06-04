@@ -1,0 +1,8 @@
+module("Gtk", "Pango", "RenderPart")
+if WINDOWS then
+	prefix("_Gtk$Pango$RenderPart$")
+else
+	prefix("Gtk$Pango$RenderPart$")
+end
+export("T")
+export("_new")

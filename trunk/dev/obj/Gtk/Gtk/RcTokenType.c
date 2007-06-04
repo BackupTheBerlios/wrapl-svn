@@ -1,0 +1,43 @@
+#include <Gtk/Gtk/RcTokenType.h>
+
+TYPE(T);
+
+Gtk$Gtk$RcTokenType_t Invalid[] = {{T, GTK_RC_TOKEN_INVALID}};
+Gtk$Gtk$RcTokenType_t Include[] = {{T, GTK_RC_TOKEN_INCLUDE}};
+Gtk$Gtk$RcTokenType_t Normal[] = {{T, GTK_RC_TOKEN_NORMAL}};
+Gtk$Gtk$RcTokenType_t Active[] = {{T, GTK_RC_TOKEN_ACTIVE}};
+Gtk$Gtk$RcTokenType_t Prelight[] = {{T, GTK_RC_TOKEN_PRELIGHT}};
+Gtk$Gtk$RcTokenType_t Selected[] = {{T, GTK_RC_TOKEN_SELECTED}};
+Gtk$Gtk$RcTokenType_t Insensitive[] = {{T, GTK_RC_TOKEN_INSENSITIVE}};
+Gtk$Gtk$RcTokenType_t Fg[] = {{T, GTK_RC_TOKEN_FG}};
+Gtk$Gtk$RcTokenType_t Bg[] = {{T, GTK_RC_TOKEN_BG}};
+Gtk$Gtk$RcTokenType_t Text[] = {{T, GTK_RC_TOKEN_TEXT}};
+Gtk$Gtk$RcTokenType_t Base[] = {{T, GTK_RC_TOKEN_BASE}};
+Gtk$Gtk$RcTokenType_t Xthickness[] = {{T, GTK_RC_TOKEN_XTHICKNESS}};
+Gtk$Gtk$RcTokenType_t Ythickness[] = {{T, GTK_RC_TOKEN_YTHICKNESS}};
+Gtk$Gtk$RcTokenType_t Font[] = {{T, GTK_RC_TOKEN_FONT}};
+Gtk$Gtk$RcTokenType_t Fontset[] = {{T, GTK_RC_TOKEN_FONTSET}};
+Gtk$Gtk$RcTokenType_t FontName[] = {{T, GTK_RC_TOKEN_FONT_NAME}};
+Gtk$Gtk$RcTokenType_t BgPixmap[] = {{T, GTK_RC_TOKEN_BG_PIXMAP}};
+Gtk$Gtk$RcTokenType_t PixmapPath[] = {{T, GTK_RC_TOKEN_PIXMAP_PATH}};
+Gtk$Gtk$RcTokenType_t Style[] = {{T, GTK_RC_TOKEN_STYLE}};
+Gtk$Gtk$RcTokenType_t Binding[] = {{T, GTK_RC_TOKEN_BINDING}};
+Gtk$Gtk$RcTokenType_t Bind[] = {{T, GTK_RC_TOKEN_BIND}};
+Gtk$Gtk$RcTokenType_t Widget[] = {{T, GTK_RC_TOKEN_WIDGET}};
+Gtk$Gtk$RcTokenType_t WidgetClass[] = {{T, GTK_RC_TOKEN_WIDGET_CLASS}};
+Gtk$Gtk$RcTokenType_t Class[] = {{T, GTK_RC_TOKEN_CLASS}};
+Gtk$Gtk$RcTokenType_t Lowest[] = {{T, GTK_RC_TOKEN_LOWEST}};
+Gtk$Gtk$RcTokenType_t Gtk[] = {{T, GTK_RC_TOKEN_GTK}};
+Gtk$Gtk$RcTokenType_t Application[] = {{T, GTK_RC_TOKEN_APPLICATION}};
+Gtk$Gtk$RcTokenType_t Theme[] = {{T, GTK_RC_TOKEN_THEME}};
+Gtk$Gtk$RcTokenType_t Rc[] = {{T, GTK_RC_TOKEN_RC}};
+Gtk$Gtk$RcTokenType_t Highest[] = {{T, GTK_RC_TOKEN_HIGHEST}};
+Gtk$Gtk$RcTokenType_t Engine[] = {{T, GTK_RC_TOKEN_ENGINE}};
+Gtk$Gtk$RcTokenType_t ModulePath[] = {{T, GTK_RC_TOKEN_MODULE_PATH}};
+Gtk$Gtk$RcTokenType_t ImModulePath[] = {{T, GTK_RC_TOKEN_IM_MODULE_PATH}};
+Gtk$Gtk$RcTokenType_t ImModuleFile[] = {{T, GTK_RC_TOKEN_IM_MODULE_FILE}};
+Gtk$Gtk$RcTokenType_t Stock[] = {{T, GTK_RC_TOKEN_STOCK}};
+Gtk$Gtk$RcTokenType_t Ltr[] = {{T, GTK_RC_TOKEN_LTR}};
+Gtk$Gtk$RcTokenType_t Rtl[] = {{T, GTK_RC_TOKEN_RTL}};
+Gtk$Gtk$RcTokenType_t Color[] = {{T, GTK_RC_TOKEN_COLOR}};
+Gtk$Gtk$RcTokenType_t Last[] = {{T, GTK_RC_TOKEN_LAST}};

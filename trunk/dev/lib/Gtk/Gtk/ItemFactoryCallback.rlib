@@ -1,0 +1,8 @@
+module("Gtk", "Gtk", "ItemFactoryCallback")
+if WINDOWS then
+	prefix("_Gtk$Gtk$ItemFactoryCallback$")
+else
+	prefix("Gtk$Gtk$ItemFactoryCallback$")
+end
+export("T")
+export("_new")

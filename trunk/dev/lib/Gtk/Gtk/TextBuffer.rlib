@@ -1,0 +1,7 @@
+module("Gtk", "Gtk", "TextBuffer")
+if WINDOWS then
+	prefix("_Gtk$Gtk$TextBuffer$")
+else
+	prefix("Gtk$Gtk$TextBuffer$")
+end
+export("T")

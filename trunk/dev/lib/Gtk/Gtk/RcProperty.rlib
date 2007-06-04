@@ -1,0 +1,7 @@
+module("Gtk", "Gtk", "RcProperty")
+if WINDOWS then
+	prefix("_Gtk$Gtk$RcProperty$")
+else
+	prefix("Gtk$Gtk$RcProperty$")
+end
+export("T")

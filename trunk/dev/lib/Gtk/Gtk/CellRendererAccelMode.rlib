@@ -1,0 +1,8 @@
+module("Gtk", "Gtk", "CellRendererAccelMode")
+if WINDOWS then
+	prefix("_Gtk$Gtk$CellRendererAccelMode$")
+else
+	prefix("Gtk$Gtk$CellRendererAccelMode$")
+end
+export("T")
+export("_new")

@@ -1,0 +1,7 @@
+module("Gtk", "Gtk", "TableChild")
+if WINDOWS then
+	prefix("_Gtk$Gtk$TableChild$")
+else
+	prefix("Gtk$Gtk$TableChild$")
+end
+export("T")

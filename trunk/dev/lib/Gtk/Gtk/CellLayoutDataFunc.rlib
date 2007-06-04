@@ -1,0 +1,8 @@
+module("Gtk", "Gtk", "CellLayoutDataFunc")
+if WINDOWS then
+	prefix("_Gtk$Gtk$CellLayoutDataFunc$")
+else
+	prefix("Gtk$Gtk$CellLayoutDataFunc$")
+end
+export("T")
+export("_new")

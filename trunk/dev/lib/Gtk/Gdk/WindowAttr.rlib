@@ -1,0 +1,7 @@
+module("Gtk", "Gdk", "WindowAttr")
+if WINDOWS then
+	prefix("_Gtk$Gdk$WindowAttr$")
+else
+	prefix("Gtk$Gdk$WindowAttr$")
+end
+export("T")

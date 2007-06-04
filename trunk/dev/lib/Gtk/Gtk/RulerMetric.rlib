@@ -1,0 +1,7 @@
+module("Gtk", "Gtk", "RulerMetric")
+if WINDOWS then
+	prefix("_Gtk$Gtk$RulerMetric$")
+else
+	prefix("Gtk$Gtk$RulerMetric$")
+end
+export("T")

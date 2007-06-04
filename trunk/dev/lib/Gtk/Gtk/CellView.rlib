@@ -1,0 +1,7 @@
+module("Gtk", "Gtk", "CellView")
+if WINDOWS then
+	prefix("_Gtk$Gtk$CellView$")
+else
+	prefix("Gtk$Gtk$CellView$")
+end
+export("T")

@@ -1,0 +1,7 @@
+module("Gtk", "Gtk", "TextPendingScroll")
+if WINDOWS then
+	prefix("_Gtk$Gtk$TextPendingScroll$")
+else
+	prefix("Gtk$Gtk$TextPendingScroll$")
+end
+export("T")

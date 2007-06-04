@@ -1,0 +1,17 @@
+library("Gtk/Gdk/Window.rlib")
+library("Gtk/Gdk/EventKey.rlib")
+library("Gtk/GObject/Type.rlib")
+library("Gtk/Gtk/Object.rlib")
+library("Gtk/Gtk/IMContext.rlib")
+library("Gtk/Gdk/Rectangle.rlib")
+library("Gtk/GObject/Object.rlib")
+
+if WINDOWS then
+	_export = export
+	export = function(Name)
+		_export("_" .. Name, Name)
+	end
+end
+
+export("T")
+export("GetType")

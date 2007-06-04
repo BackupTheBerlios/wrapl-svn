@@ -1,0 +1,7 @@
+module("Gtk", "Gtk", "WindowGeometryInfo")
+if WINDOWS then
+	prefix("_Gtk$Gtk$WindowGeometryInfo$")
+else
+	prefix("Gtk$Gtk$WindowGeometryInfo$")
+end
+export("T")

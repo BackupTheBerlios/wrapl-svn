@@ -1,0 +1,36 @@
+library("Gtk/Pango/Underline.rlib")
+library("Gtk/Pango/GravityHint.rlib")
+library("Gtk/Pango/AttrType.rlib")
+library("Gtk/Pango/Weight.rlib")
+library("Gtk/Pango/Attribute.rlib")
+library("Gtk/Pango/Style.rlib")
+library("Gtk/Pango/Variant.rlib")
+library("Gtk/Pango/Gravity.rlib")
+library("Gtk/Pango/Stretch.rlib")
+library("Gtk/GObject/Object.rlib")
+
+if WINDOWS then
+	_export = export
+	export = function(Name)
+		_export("_" .. Name, Name)
+	end
+end
+
+export("BackgroundNew")
+export("FallbackNew")
+export("FamilyNew")
+export("ForegroundNew")
+export("GravityHintNew")
+export("GravityNew")
+export("LetterSpacingNew")
+export("RiseNew")
+export("ScaleNew")
+export("StretchNew")
+export("StrikethroughColorNew")
+export("StrikethroughNew")
+export("StyleNew")
+export("TypeRegister")
+export("UnderlineColorNew")
+export("UnderlineNew")
+export("VariantNew")
+export("WeightNew")

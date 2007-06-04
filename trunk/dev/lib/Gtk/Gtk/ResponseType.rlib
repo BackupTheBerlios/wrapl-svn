@@ -1,0 +1,8 @@
+module("Gtk", "Gtk", "ResponseType")
+if WINDOWS then
+	prefix("_Gtk$Gtk$ResponseType$")
+else
+	prefix("Gtk$Gtk$ResponseType$")
+end
+export("T")
+export("_new")

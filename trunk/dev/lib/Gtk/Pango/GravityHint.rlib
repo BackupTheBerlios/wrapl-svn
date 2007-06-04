@@ -1,0 +1,8 @@
+module("Gtk", "Pango", "GravityHint")
+if WINDOWS then
+	prefix("_Gtk$Pango$GravityHint$")
+else
+	prefix("Gtk$Pango$GravityHint$")
+end
+export("T")
+export("_new")

@@ -1,0 +1,7 @@
+module("Gtk", "Gtk", "HButtonBox")
+if WINDOWS then
+	prefix("_Gtk$Gtk$HButtonBox$")
+else
+	prefix("Gtk$Gtk$HButtonBox$")
+end
+export("T")

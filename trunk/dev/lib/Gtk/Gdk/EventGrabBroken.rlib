@@ -1,0 +1,7 @@
+module("Gtk", "Gdk", "EventGrabBroken")
+if WINDOWS then
+	prefix("_Gtk$Gdk$EventGrabBroken$")
+else
+	prefix("Gtk$Gdk$EventGrabBroken$")
+end
+export("T")

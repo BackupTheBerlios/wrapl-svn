@@ -1,0 +1,7 @@
+module("Gtk", "Gtk", "ItemFactoryItem")
+if WINDOWS then
+	prefix("_Gtk$Gtk$ItemFactoryItem$")
+else
+	prefix("Gtk$Gtk$ItemFactoryItem$")
+end
+export("T")

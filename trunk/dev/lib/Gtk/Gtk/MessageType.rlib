@@ -1,0 +1,8 @@
+module("Gtk", "Gtk", "MessageType")
+if WINDOWS then
+	prefix("_Gtk$Gtk$MessageType$")
+else
+	prefix("Gtk$Gtk$MessageType$")
+end
+export("T")
+export("_new")

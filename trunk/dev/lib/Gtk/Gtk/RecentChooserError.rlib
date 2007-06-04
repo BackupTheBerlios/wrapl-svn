@@ -1,0 +1,8 @@
+module("Gtk", "Gtk", "RecentChooserError")
+if WINDOWS then
+	prefix("_Gtk$Gtk$RecentChooserError$")
+else
+	prefix("Gtk$Gtk$RecentChooserError$")
+end
+export("T")
+export("_new")

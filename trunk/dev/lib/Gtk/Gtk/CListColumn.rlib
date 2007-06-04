@@ -1,0 +1,7 @@
+module("Gtk", "Gtk", "CListColumn")
+if WINDOWS then
+	prefix("_Gtk$Gtk$CListColumn$")
+else
+	prefix("Gtk$Gtk$CListColumn$")
+end
+export("T")

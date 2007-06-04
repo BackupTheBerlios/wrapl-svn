@@ -1,0 +1,7 @@
+module("Gtk", "Gtk", "Paned")
+if WINDOWS then
+	prefix("_Gtk$Gtk$Paned$")
+else
+	prefix("Gtk$Gtk$Paned$")
+end
+export("T")

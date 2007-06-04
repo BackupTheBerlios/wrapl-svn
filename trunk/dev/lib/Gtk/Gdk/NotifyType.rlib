@@ -1,0 +1,8 @@
+module("Gtk", "Gdk", "NotifyType")
+if WINDOWS then
+	prefix("_Gtk$Gdk$NotifyType$")
+else
+	prefix("Gtk$Gdk$NotifyType$")
+end
+export("T")
+export("_new")

@@ -1,0 +1,7 @@
+module("Gtk", "Gtk", "Global")
+if WINDOWS then
+	prefix("_Gtk$Gtk$Global$")
+else
+	prefix("Gtk$Gtk$Global$")
+end
+export("T")

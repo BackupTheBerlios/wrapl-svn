@@ -1,0 +1,8 @@
+module("Gtk", "Gtk", "TextSearchFlags")
+if WINDOWS then
+	prefix("_Gtk$Gtk$TextSearchFlags$")
+else
+	prefix("Gtk$Gtk$TextSearchFlags$")
+end
+export("T")
+export("_new")

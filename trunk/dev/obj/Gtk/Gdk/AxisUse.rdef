@@ -1,0 +1,16 @@
+if WINDOWS then
+	_export = export
+	export = function(Name)
+		_export("_" .. Name, Name)
+	end
+end
+
+export("T")
+export("Ignore")
+export("X")
+export("Y")
+export("Pressure")
+export("Xtilt")
+export("Ytilt")
+export("Wheel")
+export("Last")

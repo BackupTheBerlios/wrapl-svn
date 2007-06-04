@@ -1,0 +1,19 @@
+library("Gtk/Gtk/MenuShell.rlib")
+library("Gtk/Gtk/Widget.rlib")
+library("Gtk/Gtk/MenuBar.rlib")
+library("Gtk/GObject/Type.rlib")
+library("Gtk/Gtk/Object.rlib")
+library("Gtk/Gtk/Container.rlib")
+library("Gtk/Gtk/PackDirection.rlib")
+library("Gtk/GObject/Object.rlib")
+
+if WINDOWS then
+	_export = export
+	export = function(Name)
+		_export("_" .. Name, Name)
+	end
+end
+
+export("T")
+export("New")
+export("GetType")

@@ -1,0 +1,8 @@
+module("Gtk", "Gtk", "PrintPages")
+if WINDOWS then
+	prefix("_Gtk$Gtk$PrintPages$")
+else
+	prefix("Gtk$Gtk$PrintPages$")
+end
+export("T")
+export("_new")

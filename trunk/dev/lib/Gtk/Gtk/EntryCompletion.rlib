@@ -1,0 +1,7 @@
+module("Gtk", "Gtk", "EntryCompletion")
+if WINDOWS then
+	prefix("_Gtk$Gtk$EntryCompletion$")
+else
+	prefix("Gtk$Gtk$EntryCompletion$")
+end
+export("T")

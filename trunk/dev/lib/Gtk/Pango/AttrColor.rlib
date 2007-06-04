@@ -1,0 +1,7 @@
+module("Gtk", "Pango", "AttrColor")
+if WINDOWS then
+	prefix("_Gtk$Pango$AttrColor$")
+else
+	prefix("Gtk$Pango$AttrColor$")
+end
+export("T")

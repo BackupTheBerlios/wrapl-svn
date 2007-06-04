@@ -1,0 +1,7 @@
+module("Gtk", "Gtk", "TipsQuery")
+if WINDOWS then
+	prefix("_Gtk$Gtk$TipsQuery$")
+else
+	prefix("Gtk$Gtk$TipsQuery$")
+end
+export("T")

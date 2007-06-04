@@ -1,0 +1,13 @@
+library("Gtk/Gtk/Widget.rlib")
+library("Gtk/GObject/Object.rlib")
+
+if WINDOWS then
+	_export = export
+	export = function(Name)
+		_export("_" .. Name, Name)
+	end
+end
+
+export("Add")
+export("GetCurrent")
+export("Remove")

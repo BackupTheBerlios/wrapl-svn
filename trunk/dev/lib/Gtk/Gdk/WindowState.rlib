@@ -1,0 +1,8 @@
+module("Gtk", "Gdk", "WindowState")
+if WINDOWS then
+	prefix("_Gtk$Gdk$WindowState$")
+else
+	prefix("Gtk$Gdk$WindowState$")
+end
+export("T")
+export("_new")

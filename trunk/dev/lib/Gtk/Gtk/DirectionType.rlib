@@ -1,0 +1,8 @@
+module("Gtk", "Gtk", "DirectionType")
+if WINDOWS then
+	prefix("_Gtk$Gtk$DirectionType$")
+else
+	prefix("Gtk$Gtk$DirectionType$")
+end
+export("T")
+export("_new")

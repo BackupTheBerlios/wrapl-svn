@@ -1,0 +1,8 @@
+module("Gtk", "Gtk", "SubmenuPlacement")
+if WINDOWS then
+	prefix("_Gtk$Gtk$SubmenuPlacement$")
+else
+	prefix("Gtk$Gtk$SubmenuPlacement$")
+end
+export("T")
+export("_new")

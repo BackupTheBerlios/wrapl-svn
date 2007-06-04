@@ -1,0 +1,14 @@
+library("Gtk/Gdk/Font.rlib")
+library("Gtk/GObject/Object.rlib")
+
+if WINDOWS then
+	_export = export
+	export = function(Name)
+		_export("_" .. Name, Name)
+	end
+end
+
+export("Height")
+export("Measure")
+export("Width")
+export("WidthWc")

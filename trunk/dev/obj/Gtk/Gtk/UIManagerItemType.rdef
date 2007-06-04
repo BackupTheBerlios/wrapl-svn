@@ -1,0 +1,17 @@
+if WINDOWS then
+	_export = export
+	export = function(Name)
+		_export("_" .. Name, Name)
+	end
+end
+
+export("Auto")
+export("Menubar")
+export("Menu")
+export("Toolbar")
+export("Placeholder")
+export("Popup")
+export("Menuitem")
+export("Toolitem")
+export("Separator")
+export("Accelerator")

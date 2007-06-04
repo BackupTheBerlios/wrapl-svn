@@ -1,0 +1,8 @@
+module("Gtk", "Gtk", "PageSetupDoneFunc")
+if WINDOWS then
+	prefix("_Gtk$Gtk$PageSetupDoneFunc$")
+else
+	prefix("Gtk$Gtk$PageSetupDoneFunc$")
+end
+export("T")
+export("_new")

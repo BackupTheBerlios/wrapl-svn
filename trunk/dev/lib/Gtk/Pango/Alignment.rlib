@@ -1,0 +1,8 @@
+module("Gtk", "Pango", "Alignment")
+if WINDOWS then
+	prefix("_Gtk$Pango$Alignment$")
+else
+	prefix("Gtk$Pango$Alignment$")
+end
+export("T")
+export("_new")

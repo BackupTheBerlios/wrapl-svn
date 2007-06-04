@@ -1,0 +1,7 @@
+module("Gtk", "Gtk", "Scrollbar")
+if WINDOWS then
+	prefix("_Gtk$Gtk$Scrollbar$")
+else
+	prefix("Gtk$Gtk$Scrollbar$")
+end
+export("T")

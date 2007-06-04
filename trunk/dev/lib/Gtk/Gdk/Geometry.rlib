@@ -1,0 +1,7 @@
+module("Gtk", "Gdk", "Geometry")
+if WINDOWS then
+	prefix("_Gtk$Gdk$Geometry$")
+else
+	prefix("Gtk$Gdk$Geometry$")
+end
+export("T")

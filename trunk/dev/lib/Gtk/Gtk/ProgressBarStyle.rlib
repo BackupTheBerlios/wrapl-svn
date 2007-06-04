@@ -1,0 +1,8 @@
+module("Gtk", "Gtk", "ProgressBarStyle")
+if WINDOWS then
+	prefix("_Gtk$Gtk$ProgressBarStyle$")
+else
+	prefix("Gtk$Gtk$ProgressBarStyle$")
+end
+export("T")
+export("_new")

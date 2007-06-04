@@ -1,0 +1,13 @@
+library("Gtk/Pango/AttrList.rlib")
+library("Gtk/Pango/LogAttr.rlib")
+library("Gtk/Pango/GlyphItem.rlib")
+library("Gtk/GObject/Object.rlib")
+
+if WINDOWS then
+	_export = export
+	export = function(Name)
+		_export("_" .. Name, Name)
+	end
+end
+
+export("T")

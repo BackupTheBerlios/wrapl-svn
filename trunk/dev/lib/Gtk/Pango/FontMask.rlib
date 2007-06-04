@@ -1,0 +1,8 @@
+module("Gtk", "Pango", "FontMask")
+if WINDOWS then
+	prefix("_Gtk$Pango$FontMask$")
+else
+	prefix("Gtk$Pango$FontMask$")
+end
+export("T")
+export("_new")

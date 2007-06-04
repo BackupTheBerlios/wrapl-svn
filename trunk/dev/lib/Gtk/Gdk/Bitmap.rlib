@@ -1,0 +1,7 @@
+module("Gtk", "Gdk", "Bitmap")
+if WINDOWS then
+	prefix("_Gtk$Gdk$Bitmap$")
+else
+	prefix("Gtk$Gdk$Bitmap$")
+end
+export("T")

@@ -1,0 +1,7 @@
+module("Gtk", "Gdk", "Query")
+if WINDOWS then
+	prefix("_Gtk$Gdk$Query$")
+else
+	prefix("Gtk$Gdk$Query$")
+end
+export("T")

@@ -1,0 +1,8 @@
+module("Gtk", "Pango", "AttrFilterFunc")
+if WINDOWS then
+	prefix("_Gtk$Pango$AttrFilterFunc$")
+else
+	prefix("Gtk$Pango$AttrFilterFunc$")
+end
+export("T")
+export("_new")

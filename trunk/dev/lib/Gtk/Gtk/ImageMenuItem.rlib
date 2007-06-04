@@ -1,0 +1,7 @@
+module("Gtk", "Gtk", "ImageMenuItem")
+if WINDOWS then
+	prefix("_Gtk$Gtk$ImageMenuItem$")
+else
+	prefix("Gtk$Gtk$ImageMenuItem$")
+end
+export("T")

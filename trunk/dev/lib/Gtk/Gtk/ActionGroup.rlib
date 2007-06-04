@@ -1,0 +1,7 @@
+module("Gtk", "Gtk", "ActionGroup")
+if WINDOWS then
+	prefix("_Gtk$Gtk$ActionGroup$")
+else
+	prefix("Gtk$Gtk$ActionGroup$")
+end
+export("T")

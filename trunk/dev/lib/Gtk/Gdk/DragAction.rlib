@@ -1,0 +1,8 @@
+module("Gtk", "Gdk", "DragAction")
+if WINDOWS then
+	prefix("_Gtk$Gdk$DragAction$")
+else
+	prefix("Gtk$Gdk$DragAction$")
+end
+export("T")
+export("_new")

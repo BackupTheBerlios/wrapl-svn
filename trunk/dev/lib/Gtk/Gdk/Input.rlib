@@ -1,0 +1,7 @@
+module("Gtk", "Gdk", "Input")
+if WINDOWS then
+	prefix("_Gtk$Gdk$Input$")
+else
+	prefix("Gtk$Gdk$Input$")
+end
+export("T")

@@ -1,0 +1,31 @@
+library("Gtk/Gtk/Adjustment.rlib")
+library("Gtk/Gdk/Bitmap.rlib")
+library("Gtk/Gdk/Pixmap.rlib")
+library("Gtk/Gtk/ShadowType.rlib")
+library("Gtk/Gtk/Widget.rlib")
+library("Gtk/Gtk/CellType.rlib")
+library("Gtk/Gtk/Justification.rlib")
+library("Gtk/Gtk/CListCompareFunc.rlib")
+library("Gtk/GObject/Type.rlib")
+library("Gtk/Gdk/Color.rlib")
+library("Gtk/Gtk/Style.rlib")
+library("Gtk/Gtk/CList.rlib")
+library("Gtk/Gtk/Object.rlib")
+library("Gtk/Gtk/SortType.rlib")
+library("Gtk/Gtk/DestroyNotify.rlib")
+library("Gtk/Gtk/SelectionMode.rlib")
+library("Gtk/Gtk/Container.rlib")
+library("Gtk/Gtk/Adjustment.rlib")
+library("Gtk/GObject/Object.rlib")
+
+if WINDOWS then
+	_export = export
+	export = function(Name)
+		_export("_" .. Name, Name)
+	end
+end
+
+export("T")
+export("New")
+export("NewWithTitles")
+export("GetType")

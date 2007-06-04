@@ -1,0 +1,7 @@
+module("Gtk", "Gtk", "CellRendererProgress")
+if WINDOWS then
+	prefix("_Gtk$Gtk$CellRendererProgress$")
+else
+	prefix("Gtk$Gtk$CellRendererProgress$")
+end
+export("T")

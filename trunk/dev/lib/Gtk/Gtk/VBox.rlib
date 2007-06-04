@@ -1,0 +1,7 @@
+module("Gtk", "Gtk", "VBox")
+if WINDOWS then
+	prefix("_Gtk$Gtk$VBox$")
+else
+	prefix("Gtk$Gtk$VBox$")
+end
+export("T")

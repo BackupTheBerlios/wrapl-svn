@@ -1,0 +1,7 @@
+module("Gtk", "Gtk", "TreePath")
+if WINDOWS then
+	prefix("_Gtk$Gtk$TreePath$")
+else
+	prefix("Gtk$Gtk$TreePath$")
+end
+export("T")

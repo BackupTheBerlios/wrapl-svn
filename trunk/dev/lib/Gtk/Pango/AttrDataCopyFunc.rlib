@@ -1,0 +1,8 @@
+module("Gtk", "Pango", "AttrDataCopyFunc")
+if WINDOWS then
+	prefix("_Gtk$Pango$AttrDataCopyFunc$")
+else
+	prefix("Gtk$Pango$AttrDataCopyFunc$")
+end
+export("T")
+export("_new")

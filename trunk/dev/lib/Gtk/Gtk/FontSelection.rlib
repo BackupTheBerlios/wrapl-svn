@@ -1,0 +1,7 @@
+module("Gtk", "Gtk", "FontSelection")
+if WINDOWS then
+	prefix("_Gtk$Gtk$FontSelection$")
+else
+	prefix("Gtk$Gtk$FontSelection$")
+end
+export("T")

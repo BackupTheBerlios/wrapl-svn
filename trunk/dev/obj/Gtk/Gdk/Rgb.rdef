@@ -1,0 +1,25 @@
+library("Gtk/Gdk/Visual.rlib")
+library("Gtk/Gdk/GC.rlib")
+library("Gtk/Gdk/Colormap.rlib")
+library("Gtk/Gdk/Color.rlib")
+library("Gtk/GObject/Object.rlib")
+
+if WINDOWS then
+	_export = export
+	export = function(Name)
+		_export("_" .. Name, Name)
+	end
+end
+
+export("ColormapDitherable")
+export("Ditherable")
+export("FindColor")
+export("GcSetBackground")
+export("GcSetForeground")
+export("GetColormap")
+export("GetVisual")
+export("Init")
+export("SetInstall")
+export("SetMinColors")
+export("SetVerbose")
+export("XpixelFromRgb")

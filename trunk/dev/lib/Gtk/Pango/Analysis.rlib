@@ -1,0 +1,7 @@
+module("Gtk", "Pango", "Analysis")
+if WINDOWS then
+	prefix("_Gtk$Pango$Analysis$")
+else
+	prefix("Gtk$Pango$Analysis$")
+end
+export("T")

@@ -1,0 +1,8 @@
+module("Gtk", "Gtk", "Function")
+if WINDOWS then
+	prefix("_Gtk$Gtk$Function$")
+else
+	prefix("Gtk$Gtk$Function$")
+end
+export("T")
+export("_new")

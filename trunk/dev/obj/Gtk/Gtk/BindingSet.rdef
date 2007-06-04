@@ -1,0 +1,14 @@
+library("Gtk/Gtk/PathType.rlib")
+library("Gtk/Gtk/PathPriorityType.rlib")
+library("Gtk/Gtk/BindingSet.rlib")
+library("Gtk/Gtk/Object.rlib")
+library("Gtk/GObject/Object.rlib")
+
+if WINDOWS then
+	_export = export
+	export = function(Name)
+		_export("_" .. Name, Name)
+	end
+end
+
+export("T")

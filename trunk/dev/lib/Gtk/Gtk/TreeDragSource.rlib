@@ -1,0 +1,7 @@
+module("Gtk", "Gtk", "TreeDragSource")
+if WINDOWS then
+	prefix("_Gtk$Gtk$TreeDragSource$")
+else
+	prefix("Gtk$Gtk$TreeDragSource$")
+end
+export("T")

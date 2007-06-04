@@ -1,0 +1,8 @@
+module("Gtk", "Gtk", "WidgetFlags")
+if WINDOWS then
+	prefix("_Gtk$Gtk$WidgetFlags$")
+else
+	prefix("Gtk$Gtk$WidgetFlags$")
+end
+export("T")
+export("_new")

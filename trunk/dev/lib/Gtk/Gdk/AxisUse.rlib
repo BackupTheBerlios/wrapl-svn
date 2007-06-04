@@ -1,0 +1,8 @@
+module("Gtk", "Gdk", "AxisUse")
+if WINDOWS then
+	prefix("_Gtk$Gdk$AxisUse$")
+else
+	prefix("Gtk$Gdk$AxisUse$")
+end
+export("T")
+export("_new")

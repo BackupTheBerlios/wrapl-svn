@@ -1,0 +1,8 @@
+module("Gtk", "Gdk", "DestroyNotify")
+if WINDOWS then
+	prefix("_Gtk$Gdk$DestroyNotify$")
+else
+	prefix("Gtk$Gdk$DestroyNotify$")
+end
+export("T")
+export("_new")

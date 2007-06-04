@@ -1,0 +1,7 @@
+module("Gtk", "Pango", "Font")
+if WINDOWS then
+	prefix("_Gtk$Pango$Font$")
+else
+	prefix("Gtk$Pango$Font$")
+end
+export("T")

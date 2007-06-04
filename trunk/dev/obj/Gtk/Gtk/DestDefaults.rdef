@@ -1,0 +1,11 @@
+if WINDOWS then
+	_export = export
+	export = function(Name)
+		_export("_" .. Name, Name)
+	end
+end
+
+export("Motion")
+export("Highlight")
+export("Drop")
+export("All")

@@ -1,0 +1,7 @@
+module("Gtk", "Gdk", "Segment")
+if WINDOWS then
+	prefix("_Gtk$Gdk$Segment$")
+else
+	prefix("Gtk$Gdk$Segment$")
+end
+export("T")

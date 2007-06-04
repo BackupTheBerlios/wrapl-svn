@@ -1,0 +1,8 @@
+module("Gtk", "Gtk", "PageSet")
+if WINDOWS then
+	prefix("_Gtk$Gtk$PageSet$")
+else
+	prefix("Gtk$Gtk$PageSet$")
+end
+export("T")
+export("_new")

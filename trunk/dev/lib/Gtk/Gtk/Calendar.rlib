@@ -1,0 +1,7 @@
+module("Gtk", "Gtk", "Calendar")
+if WINDOWS then
+	prefix("_Gtk$Gtk$Calendar$")
+else
+	prefix("Gtk$Gtk$Calendar$")
+end
+export("T")

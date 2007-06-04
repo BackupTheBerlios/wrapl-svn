@@ -1,0 +1,7 @@
+module("Gtk", "Gdk", "Atom")
+if WINDOWS then
+	prefix("_Gtk$Gdk$Atom$")
+else
+	prefix("Gtk$Gdk$Atom$")
+end
+export("T")

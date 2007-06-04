@@ -1,0 +1,20 @@
+library("Gtk/Gdk/Screen.rlib")
+library("Gtk/Gdk/Region.rlib")
+library("Gtk/Pango/Context.rlib")
+library("Gtk/Pango/LayoutLine.rlib")
+library("Gtk/Pango/Layout.rlib")
+library("Gtk/Gdk/Colormap.rlib")
+library("Gtk/GObject/Object.rlib")
+
+if WINDOWS then
+	_export = export
+	export = function(Name)
+		_export("_" .. Name, Name)
+	end
+end
+
+export("ContextGet")
+export("ContextGetForScreen")
+export("ContextSetColormap")
+export("LayoutGetClipRegion")
+export("LayoutLineGetClipRegion")

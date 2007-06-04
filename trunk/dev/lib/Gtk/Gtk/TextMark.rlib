@@ -1,0 +1,7 @@
+module("Gtk", "Gtk", "TextMark")
+if WINDOWS then
+	prefix("_Gtk$Gtk$TextMark$")
+else
+	prefix("Gtk$Gtk$TextMark$")
+end
+export("T")

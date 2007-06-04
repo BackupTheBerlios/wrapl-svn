@@ -1,0 +1,20 @@
+library("Gtk/GObject/Type.rlib")
+library("Gtk/Gtk/Object.rlib")
+library("Gtk/Gtk/Bin.rlib")
+library("Gtk/Gtk/Container.rlib")
+library("Gtk/Gtk/Viewport.rlib")
+library("Gtk/Gtk/Adjustment.rlib")
+library("Gtk/Gtk/ShadowType.rlib")
+library("Gtk/Gtk/Widget.rlib")
+library("Gtk/GObject/Object.rlib")
+
+if WINDOWS then
+	_export = export
+	export = function(Name)
+		_export("_" .. Name, Name)
+	end
+end
+
+export("T")
+export("New")
+export("GetType")

@@ -1,0 +1,7 @@
+module("Gtk", "Pango", "AttrIterator")
+if WINDOWS then
+	prefix("_Gtk$Pango$AttrIterator$")
+else
+	prefix("Gtk$Pango$AttrIterator$")
+end
+export("T")

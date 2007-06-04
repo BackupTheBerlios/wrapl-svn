@@ -1,0 +1,7 @@
+module("Gtk", "Pango", "Units")
+if WINDOWS then
+	prefix("_Gtk$Pango$Units$")
+else
+	prefix("Gtk$Pango$Units$")
+end
+export("T")

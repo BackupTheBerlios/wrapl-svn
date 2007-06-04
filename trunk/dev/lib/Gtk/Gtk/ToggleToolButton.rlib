@@ -1,0 +1,7 @@
+module("Gtk", "Gtk", "ToggleToolButton")
+if WINDOWS then
+	prefix("_Gtk$Gtk$ToggleToolButton$")
+else
+	prefix("Gtk$Gtk$ToggleToolButton$")
+end
+export("T")

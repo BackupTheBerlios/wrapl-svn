@@ -1,0 +1,7 @@
+module("Gtk", "Gtk", "FileChooser")
+if WINDOWS then
+	prefix("_Gtk$Gtk$FileChooser$")
+else
+	prefix("Gtk$Gtk$FileChooser$")
+end
+export("T")

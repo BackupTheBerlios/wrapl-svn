@@ -1,0 +1,19 @@
+library("Gtk/Gdk/Pixbuf.rlib")
+library("Gtk/Gtk/StateType.rlib")
+library("Gtk/Gtk/Widget.rlib")
+library("Gtk/Gtk/IconSet.rlib")
+library("Gtk/Gtk/TextDirection.rlib")
+library("Gtk/Gtk/IconSize.rlib")
+library("Gtk/GObject/Type.rlib")
+library("Gtk/Gtk/IconSource.rlib")
+library("Gtk/Gtk/Style.rlib")
+library("Gtk/GObject/Object.rlib")
+
+if WINDOWS then
+	_export = export
+	export = function(Name)
+		_export("_" .. Name, Name)
+	end
+end
+
+export("T")

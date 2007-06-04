@@ -1,0 +1,7 @@
+module("Gtk", "Gdk", "Error")
+if WINDOWS then
+	prefix("_Gtk$Gdk$Error$")
+else
+	prefix("Gtk$Gdk$Error$")
+end
+export("T")

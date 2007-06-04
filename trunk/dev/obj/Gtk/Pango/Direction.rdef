@@ -1,0 +1,15 @@
+if WINDOWS then
+	_export = export
+	export = function(Name)
+		_export("_" .. Name, Name)
+	end
+end
+
+export("T")
+export("Ltr")
+export("Rtl")
+export("TtbLtr")
+export("TtbRtl")
+export("WeakLtr")
+export("WeakRtl")
+export("Neutral")

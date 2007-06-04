@@ -1,0 +1,8 @@
+module("Gtk", "Gtk", "CListDragPos")
+if WINDOWS then
+	prefix("_Gtk$Gtk$CListDragPos$")
+else
+	prefix("Gtk$Gtk$CListDragPos$")
+end
+export("T")
+export("_new")

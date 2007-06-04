@@ -1,0 +1,18 @@
+if WINDOWS then
+	_export = export
+	export = function(Name)
+		_export("_" .. Name, Name)
+	end
+end
+
+export("Misc")
+export("Plugsocket")
+export("Text")
+export("Tree")
+export("Updates")
+export("Keybindings")
+export("Multihead")
+export("Modules")
+export("Geometry")
+export("Icontheme")
+export("Printing")

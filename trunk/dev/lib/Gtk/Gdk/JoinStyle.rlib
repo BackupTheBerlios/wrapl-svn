@@ -1,0 +1,8 @@
+module("Gtk", "Gdk", "JoinStyle")
+if WINDOWS then
+	prefix("_Gtk$Gdk$JoinStyle$")
+else
+	prefix("Gtk$Gdk$JoinStyle$")
+end
+export("T")
+export("_new")

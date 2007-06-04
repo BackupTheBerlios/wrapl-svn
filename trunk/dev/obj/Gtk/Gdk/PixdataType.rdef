@@ -1,0 +1,15 @@
+if WINDOWS then
+	_export = export
+	export = function(Name)
+		_export("_" .. Name, Name)
+	end
+end
+
+export("ColorTypeRgb")
+export("ColorTypeRgba")
+export("ColorTypeMask")
+export("SampleWidth8")
+export("SampleWidthMask")
+export("EncodingRaw")
+export("EncodingRle")
+export("EncodingMask")

@@ -1,0 +1,7 @@
+module("Gtk", "Gtk", "Quit")
+if WINDOWS then
+	prefix("_Gtk$Gtk$Quit$")
+else
+	prefix("Gtk$Gtk$Quit$")
+end
+export("T")

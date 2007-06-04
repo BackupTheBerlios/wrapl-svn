@@ -1,0 +1,7 @@
+module("Gtk", "Gdk", "EventAny")
+if WINDOWS then
+	prefix("_Gtk$Gdk$EventAny$")
+else
+	prefix("Gtk$Gdk$EventAny$")
+end
+export("T")

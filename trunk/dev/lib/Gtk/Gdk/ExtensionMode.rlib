@@ -1,0 +1,8 @@
+module("Gtk", "Gdk", "ExtensionMode")
+if WINDOWS then
+	prefix("_Gtk$Gdk$ExtensionMode$")
+else
+	prefix("Gtk$Gdk$ExtensionMode$")
+end
+export("T")
+export("_new")

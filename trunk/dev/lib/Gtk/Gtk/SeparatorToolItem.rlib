@@ -1,0 +1,7 @@
+module("Gtk", "Gtk", "SeparatorToolItem")
+if WINDOWS then
+	prefix("_Gtk$Gtk$SeparatorToolItem$")
+else
+	prefix("Gtk$Gtk$SeparatorToolItem$")
+end
+export("T")

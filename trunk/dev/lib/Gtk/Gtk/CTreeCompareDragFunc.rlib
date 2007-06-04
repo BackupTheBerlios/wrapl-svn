@@ -1,0 +1,8 @@
+module("Gtk", "Gtk", "CTreeCompareDragFunc")
+if WINDOWS then
+	prefix("_Gtk$Gtk$CTreeCompareDragFunc$")
+else
+	prefix("Gtk$Gtk$CTreeCompareDragFunc$")
+end
+export("T")
+export("_new")

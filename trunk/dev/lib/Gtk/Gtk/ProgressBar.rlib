@@ -1,0 +1,7 @@
+module("Gtk", "Gtk", "ProgressBar")
+if WINDOWS then
+	prefix("_Gtk$Gtk$ProgressBar$")
+else
+	prefix("Gtk$Gtk$ProgressBar$")
+end
+export("T")

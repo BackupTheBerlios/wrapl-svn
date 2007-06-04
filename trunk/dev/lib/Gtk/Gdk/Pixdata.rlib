@@ -1,0 +1,7 @@
+module("Gtk", "Gdk", "Pixdata")
+if WINDOWS then
+	prefix("_Gtk$Gdk$Pixdata$")
+else
+	prefix("Gtk$Gdk$Pixdata$")
+end
+export("T")

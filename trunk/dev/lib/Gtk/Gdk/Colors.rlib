@@ -1,0 +1,7 @@
+module("Gtk", "Gdk", "Colors")
+if WINDOWS then
+	prefix("_Gtk$Gdk$Colors$")
+else
+	prefix("Gtk$Gdk$Colors$")
+end
+export("T")

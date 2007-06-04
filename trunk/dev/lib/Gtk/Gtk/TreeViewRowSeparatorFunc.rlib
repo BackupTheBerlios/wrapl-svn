@@ -1,0 +1,8 @@
+module("Gtk", "Gtk", "TreeViewRowSeparatorFunc")
+if WINDOWS then
+	prefix("_Gtk$Gtk$TreeViewRowSeparatorFunc$")
+else
+	prefix("Gtk$Gtk$TreeViewRowSeparatorFunc$")
+end
+export("T")
+export("_new")

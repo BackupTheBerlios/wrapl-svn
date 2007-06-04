@@ -1,0 +1,8 @@
+module("Gtk", "Gtk", "ResizeMode")
+if WINDOWS then
+	prefix("_Gtk$Gtk$ResizeMode$")
+else
+	prefix("Gtk$Gtk$ResizeMode$")
+end
+export("T")
+export("_new")

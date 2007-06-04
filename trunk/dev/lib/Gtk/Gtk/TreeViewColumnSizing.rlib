@@ -1,0 +1,8 @@
+module("Gtk", "Gtk", "TreeViewColumnSizing")
+if WINDOWS then
+	prefix("_Gtk$Gtk$TreeViewColumnSizing$")
+else
+	prefix("Gtk$Gtk$TreeViewColumnSizing$")
+end
+export("T")
+export("_new")

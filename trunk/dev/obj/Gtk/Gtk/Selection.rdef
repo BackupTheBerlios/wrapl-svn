@@ -1,0 +1,21 @@
+library("Gtk/Gtk/TargetEntry.rlib")
+library("Gtk/Gtk/Widget.rlib")
+library("Gtk/Gdk/Display.rlib")
+library("Gtk/Gdk/EventSelection.rlib")
+library("Gtk/GObject/Object.rlib")
+
+if WINDOWS then
+	_export = export
+	export = function(Name)
+		_export("_" .. Name, Name)
+	end
+end
+
+export("AddTarget")
+export("AddTargets")
+export("Clear")
+export("ClearTargets")
+export("Convert")
+export("OwnerSet")
+export("OwnerSetForDisplay")
+export("RemoveAll")

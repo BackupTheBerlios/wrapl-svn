@@ -1,0 +1,7 @@
+module("Gtk", "Gtk", "ColorSelectionDialog")
+if WINDOWS then
+	prefix("_Gtk$Gtk$ColorSelectionDialog$")
+else
+	prefix("Gtk$Gtk$ColorSelectionDialog$")
+end
+export("T")

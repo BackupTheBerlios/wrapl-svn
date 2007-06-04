@@ -1,0 +1,8 @@
+module("Gtk", "Gtk", "FileFilterFunc")
+if WINDOWS then
+	prefix("_Gtk$Gtk$FileFilterFunc$")
+else
+	prefix("Gtk$Gtk$FileFilterFunc$")
+end
+export("T")
+export("_new")

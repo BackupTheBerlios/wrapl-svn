@@ -1,0 +1,7 @@
+module("Gtk", "Gtk", "ToggleActionEntry")
+if WINDOWS then
+	prefix("_Gtk$Gtk$ToggleActionEntry$")
+else
+	prefix("Gtk$Gtk$ToggleActionEntry$")
+end
+export("T")

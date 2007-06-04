@@ -1,0 +1,7 @@
+module("Gtk", "Gtk", "CellRendererAccel")
+if WINDOWS then
+	prefix("_Gtk$Gtk$CellRendererAccel$")
+else
+	prefix("Gtk$Gtk$CellRendererAccel$")
+end
+export("T")

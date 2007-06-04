@@ -1,0 +1,8 @@
+module("Gtk", "Gtk", "CTreePos")
+if WINDOWS then
+	prefix("_Gtk$Gtk$CTreePos$")
+else
+	prefix("Gtk$Gtk$CTreePos$")
+end
+export("T")
+export("_new")

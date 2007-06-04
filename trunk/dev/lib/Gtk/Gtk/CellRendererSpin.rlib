@@ -1,0 +1,7 @@
+module("Gtk", "Gtk", "CellRendererSpin")
+if WINDOWS then
+	prefix("_Gtk$Gtk$CellRendererSpin$")
+else
+	prefix("Gtk$Gtk$CellRendererSpin$")
+end
+export("T")

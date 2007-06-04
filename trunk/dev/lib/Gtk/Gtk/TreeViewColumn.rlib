@@ -1,0 +1,7 @@
+module("Gtk", "Gtk", "TreeViewColumn")
+if WINDOWS then
+	prefix("_Gtk$Gtk$TreeViewColumn$")
+else
+	prefix("Gtk$Gtk$TreeViewColumn$")
+end
+export("T")

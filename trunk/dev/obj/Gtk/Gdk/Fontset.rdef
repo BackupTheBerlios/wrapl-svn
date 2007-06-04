@@ -1,0 +1,13 @@
+library("Gtk/Gdk/Font.rlib")
+library("Gtk/Gdk/Display.rlib")
+library("Gtk/GObject/Object.rlib")
+
+if WINDOWS then
+	_export = export
+	export = function(Name)
+		_export("_" .. Name, Name)
+	end
+end
+
+export("Load")
+export("LoadForDisplay")

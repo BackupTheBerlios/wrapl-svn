@@ -1,0 +1,8 @@
+module("Gtk", "Gtk", "AccelFlags")
+if WINDOWS then
+	prefix("_Gtk$Gtk$AccelFlags$")
+else
+	prefix("Gtk$Gtk$AccelFlags$")
+end
+export("T")
+export("_new")

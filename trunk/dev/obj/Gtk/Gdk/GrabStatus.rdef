@@ -1,0 +1,13 @@
+if WINDOWS then
+	_export = export
+	export = function(Name)
+		_export("_" .. Name, Name)
+	end
+end
+
+export("T")
+export("Success")
+export("AlreadyGrabbed")
+export("InvalidTime")
+export("NotViewable")
+export("Frozen")

@@ -1,0 +1,16 @@
+if WINDOWS then
+	_export = export
+	export = function(Name)
+		_export("_" .. Name, Name)
+	end
+end
+
+export("T")
+export("NorthWest")
+export("North")
+export("NorthEast")
+export("West")
+export("East")
+export("SouthWest")
+export("South")
+export("SouthEast")

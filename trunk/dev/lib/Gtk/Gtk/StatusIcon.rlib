@@ -1,0 +1,7 @@
+module("Gtk", "Gtk", "StatusIcon")
+if WINDOWS then
+	prefix("_Gtk$Gtk$StatusIcon$")
+else
+	prefix("Gtk$Gtk$StatusIcon$")
+end
+export("T")

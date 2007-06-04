@@ -1,0 +1,14 @@
+if WINDOWS then
+	_export = export
+	export = function(Name)
+		_export("_" .. Name, Name)
+	end
+end
+
+export("T")
+export("CorruptImage")
+export("InsufficientMemory")
+export("BadOption")
+export("UnknownType")
+export("UnsupportedOperation")
+export("Failed")

@@ -1,0 +1,7 @@
+module("Gtk", "Gtk", "Scale")
+if WINDOWS then
+	prefix("_Gtk$Gtk$Scale$")
+else
+	prefix("Gtk$Gtk$Scale$")
+end
+export("T")

@@ -1,0 +1,8 @@
+module("Gtk", "Gtk", "RecentFilterFunc")
+if WINDOWS then
+	prefix("_Gtk$Gtk$RecentFilterFunc$")
+else
+	prefix("Gtk$Gtk$RecentFilterFunc$")
+end
+export("T")
+export("_new")

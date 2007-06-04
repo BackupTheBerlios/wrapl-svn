@@ -1,0 +1,7 @@
+module("Gtk", "Gtk", "IMMulticontext")
+if WINDOWS then
+	prefix("_Gtk$Gtk$IMMulticontext$")
+else
+	prefix("Gtk$Gtk$IMMulticontext$")
+end
+export("T")

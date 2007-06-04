@@ -1,0 +1,14 @@
+if WINDOWS then
+	_export = export
+	export = function(Name)
+		_export("_" .. Name, Name)
+	end
+end
+
+export("Withdrawn")
+export("Iconified")
+export("Maximized")
+export("Sticky")
+export("Fullscreen")
+export("Above")
+export("Below")

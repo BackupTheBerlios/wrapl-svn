@@ -1,0 +1,7 @@
+module("Gtk", "Gtk", "TextView")
+if WINDOWS then
+	prefix("_Gtk$Gtk$TextView$")
+else
+	prefix("Gtk$Gtk$TextView$")
+end
+export("T")

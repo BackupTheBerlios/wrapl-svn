@@ -1,0 +1,7 @@
+module("Gtk", "Gtk", "ColorButton")
+if WINDOWS then
+	prefix("_Gtk$Gtk$ColorButton$")
+else
+	prefix("Gtk$Gtk$ColorButton$")
+end
+export("T")

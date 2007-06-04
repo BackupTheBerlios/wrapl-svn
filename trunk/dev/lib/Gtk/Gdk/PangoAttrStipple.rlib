@@ -1,0 +1,7 @@
+module("Gtk", "Gdk", "PangoAttrStipple")
+if WINDOWS then
+	prefix("_Gtk$Gdk$PangoAttrStipple$")
+else
+	prefix("Gtk$Gdk$PangoAttrStipple$")
+end
+export("T")

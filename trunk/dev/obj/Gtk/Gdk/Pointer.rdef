@@ -1,0 +1,17 @@
+library("Gtk/Gdk/Display.rlib")
+library("Gtk/Gdk/Cursor.rlib")
+library("Gtk/Gdk/GrabStatus.rlib")
+library("Gtk/Gdk/Window.rlib")
+library("Gtk/GObject/Object.rlib")
+
+if WINDOWS then
+	_export = export
+	export = function(Name)
+		_export("_" .. Name, Name)
+	end
+end
+
+export("Grab")
+export("GrabInfoLibgtkOnly")
+export("IsGrabbed")
+export("Ungrab")

@@ -1,0 +1,20 @@
+library("Gtk/Gdk/Atom.rlib")
+library("Gtk/Gdk/Window.rlib")
+library("Gtk/Gdk/Display.rlib")
+library("Gtk/GObject/Object.rlib")
+
+if WINDOWS then
+	_export = export
+	export = function(Name)
+		_export("_" .. Name, Name)
+	end
+end
+
+export("Convert")
+export("OwnerGet")
+export("OwnerGetForDisplay")
+export("OwnerSet")
+export("OwnerSetForDisplay")
+export("PropertyGet")
+export("SendNotify")
+export("SendNotifyForDisplay")

@@ -1,0 +1,7 @@
+module("Gtk", "Gtk", "OldEditable")
+if WINDOWS then
+	prefix("_Gtk$Gtk$OldEditable$")
+else
+	prefix("Gtk$Gtk$OldEditable$")
+end
+export("T")

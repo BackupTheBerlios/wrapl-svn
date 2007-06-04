@@ -1,0 +1,7 @@
+module("Gtk", "Gtk", "TextAppearance")
+if WINDOWS then
+	prefix("_Gtk$Gtk$TextAppearance$")
+else
+	prefix("Gtk$Gtk$TextAppearance$")
+end
+export("T")

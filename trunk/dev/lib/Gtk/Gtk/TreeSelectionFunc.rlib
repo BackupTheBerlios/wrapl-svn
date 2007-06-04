@@ -1,0 +1,8 @@
+module("Gtk", "Gtk", "TreeSelectionFunc")
+if WINDOWS then
+	prefix("_Gtk$Gtk$TreeSelectionFunc$")
+else
+	prefix("Gtk$Gtk$TreeSelectionFunc$")
+end
+export("T")
+export("_new")

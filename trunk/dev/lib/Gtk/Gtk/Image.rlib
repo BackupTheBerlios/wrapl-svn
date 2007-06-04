@@ -1,0 +1,7 @@
+module("Gtk", "Gtk", "Image")
+if WINDOWS then
+	prefix("_Gtk$Gtk$Image$")
+else
+	prefix("Gtk$Gtk$Image$")
+end
+export("T")

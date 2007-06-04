@@ -1,0 +1,8 @@
+module("Gtk", "Gtk", "PrintStatus")
+if WINDOWS then
+	prefix("_Gtk$Gtk$PrintStatus$")
+else
+	prefix("Gtk$Gtk$PrintStatus$")
+end
+export("T")
+export("_new")

@@ -1,0 +1,8 @@
+module("Gtk", "Gtk", "TextBufferDeserializeFunc")
+if WINDOWS then
+	prefix("_Gtk$Gtk$TextBufferDeserializeFunc$")
+else
+	prefix("Gtk$Gtk$TextBufferDeserializeFunc$")
+end
+export("T")
+export("_new")
