@@ -1,0 +1,13 @@
+.PHONY: Xml
+
+BASENAME = $(LIB_DIR)Xml$(DIRSEP)
+
+CFLAGS += -std=gnu99
+LDFLAGS += Std.rlib Riva.rlib libexpat.rlib
+
+RivaProgram($(BASENAME)Parser, Parser)
+
+Xml:\
+	$(BASENAME)Parser.riva
+
+.DEFAULT: Xml
