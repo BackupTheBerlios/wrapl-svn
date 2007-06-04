@@ -24,5 +24,3 @@ clean:
 .SUBDIRS: GObject Gtk Gdk Pango
 
 Gtk: GtkGObject $(GTK_AUTOGEN) GtkGtk GtkGdk GtkPango
-
-.DEFAULT: Gtk

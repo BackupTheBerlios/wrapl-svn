@@ -34,7 +34,10 @@ TO :return(t@T, result) (
 		log:writes("Cannot return values of type ", t:cname, "\n");
 		RECV msg DO log:writes("Cannot return values of unknown type\n");
 	);
-	["//Unknown return type"];
+	[
+		"Result->Val = Std$String$new_format(\"Incomplete GTK function: %s:%d\", __FILE__, __LINE__);",
+		"return MESSAGE;"
+	];
 );
 
 VAR typetable <- {};
@@ -239,5 +242,32 @@ TO :return(=pointertype, result) [
 	"Result->Val = " + result + ";"
 ];
 Define("gpointer", pointertype);
+
+VAR glistobjecttype <- T();
+TO :rtype(=glistobjecttype) "Std$List$T";
+TO :ctype(=glistobjecttype) "GList *";
+TO :return(=glistobjecttype, result) [
+	"if (" + result + ") {",
+	"\tint _length = 1;",
+	"\tGList *node = " + result + ";",
+	"\tnode->data = Gtk$GObject$Object$to_riva(node->data);",
+	"\twhile (node->next) {",
+	"\t\tnode = node->next;",
+	"\t\tnode->data = Gtk$GObject$Object$to_riva(node->data);",
+	"\t\t_length++;",
+	"\t};",
+	"\tStd$List_t *list = new(Std$List_t);",
+	"\tlist->Type = Std$List$T;",
+	"\tlist->Cache = list->Head = " + result + ";",
+	"\tlist->Tail = node;",
+	"\tlist->Length = _length;",
+	"\tlist->Index = 1;",
+	"\tlist->Access = 4;",
+	"\tResult->Val = list;",
+	"} else {",
+	"\tResult->Val = Std$List$new(0);",
+	"};"
+];
+Define("reusable-GList[GObject]*", glistobjecttype);
 
 END Type.

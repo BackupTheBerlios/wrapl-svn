@@ -7,8 +7,8 @@
 #include <Riva-Header.h>
 
 typedef struct Std$List_node {
-	struct Std$List_node *Next, *Prev;
 	Std$Object_t *Value;
+	struct Std$List_node *Next, *Prev;
 } Std$List_node;
 
 typedef struct Std$List_t {

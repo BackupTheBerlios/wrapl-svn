@@ -78,6 +78,6 @@ static GMemVTable MemVTable = {
 };
 
 void __init(Riva$Module_t *Module) {
-	if (g_mem_is_system_malloc() == 0) g_mem_set_vtable(&MemVTable);
+	g_mem_set_vtable(&MemVTable);
 	RivaQuark = g_quark_from_static_string("<<riva>>");
 };

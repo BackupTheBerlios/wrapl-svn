@@ -1,6 +1,7 @@
 #include <Std.h>
 #include <Riva/Memory.h>
 #include <string.h>
+#include <stdarg.h>
 
 char *_flatten(Std$String_t *String) {
 	if (String->Count > 1) {
@@ -33,4 +34,18 @@ void _flatten_to(Std$String_t *String, char *Result) {
 		P += String->Blocks[I].Length.Value;
 	};
 	*P = 0;
+};
+extern Std$Type_t T[];
+
+Std$String_t *_new_format(const char *Format, ...) {
+	Std$String_t *String = Riva$Memory$alloc(sizeof(Std$String_t) + sizeof(Std$String_block));
+	String->Type = T;
+	String->Count = 1;
+	String->Blocks[0].Length.Type = String->Length.Type = Std$Integer$SmallT;
+	String->Blocks[0].Chars.Type = Std$Address$T;
+	va_list Args;
+	va_start(Args, Format);
+	String->Length.Value = String->Blocks[0].Length.Value = vasprintf(&String->Blocks[0].Chars.Value, Format, Args);
+	va_end(Args);
+	return String;
 };

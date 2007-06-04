@@ -32,6 +32,7 @@ DEF New!(ns, name, cname, parent) (
 	t:rtype <- "Gtk$" + ns + "$" + name + "$T";
 	t:ctype <- cname + " *";
 	Type.Define(cname + "*", t);
+	Type.Define("const-" + cname + "*", t);
 	t:queue;
 	t:ctor_prefix <- PrefixLength(cname);
 	t:headers <- ["#include <Gtk/" + ns + "/" + name + ".h>"];

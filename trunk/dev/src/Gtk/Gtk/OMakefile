@@ -13,4 +13,3 @@ if $(file-exists $(GTK_AUTOGEN))
 		GtkGtk: $(BASENAME)$(FILE).riva
 		export
 
-.DEFAULT: GtkGtk

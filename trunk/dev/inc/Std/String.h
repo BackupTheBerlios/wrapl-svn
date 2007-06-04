@@ -28,6 +28,7 @@ RIVA_CFUN(Std$String_t *, new, char *);
 RIVA_CFUN(Std$String_t *, copy, const char *);
 RIVA_CFUN(Std$String_t *, new_length, char *, long);
 RIVA_CFUN(Std$String_t *, copy_length, const char *, long);
+RIVA_CFUN(Std$String_t *, new_format, const char *, ...);
 RIVA_CFUN(Std$String_t *, new_char, char);
 
 #undef RIVA_MODULE

@@ -12,7 +12,4 @@ export("_new_small")
 export("_new_string")
 export("_alloc_small")
 export("_alloc_big")
-
-if WINDOWS then
-	export("__init")
-end
+export("__init")

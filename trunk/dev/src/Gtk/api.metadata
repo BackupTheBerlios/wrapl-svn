@@ -33,4 +33,19 @@
 			<return-type type="void" />
 		</method>
 	</add-node>
+	<attr path="/api/namespace/object/method[@cname='gtk_container_get_children']/return-type" name="type">reusable-GList[GObject]*</attr>
+	<attr path="/api/namespace/object/method[@cname='gtk_action_group_list_actions']/return-type" name="type">reusable-GList[GObject]*</attr>
+	<attr path="/api/namespace/object/method[@cname='gtk_cell_view_get_cell_renderers']/return-type" name="type">reusable-GList[GObject]*</attr>
+	<attr path="/api/namespace/object/method[@cname='gtk_text_child_anchor_get_widgets']/return-type" name="type">reusable-GList[GObject]*</attr>
+	<attr path="/api/namespace/object/method[@cname='gtk_tree_view_get_columns']/return-type" name="type">reusable-GList[GObject]*</attr>
+	<attr path="/api/namespace/object/method[@cname='gtk_tree_view_column_get_cell_renderers']/return-type" name="type">reusable-GList[GObject]*</attr>
+	<attr path="/api/namespace/object/method[@cname='gtk_window_get_default_icon_list']/return-type" name="type">reusable-GList[GObject]*</attr>
+	<attr path="/api/namespace/object/method[@cname='gtk_window_get_icon_list']/return-type" name="type">reusable-GList[GObject]*</attr>
+	<attr path="/api/namespace/object/method[@cname='gtk_window_list_toplevels']/return-type" name="type">reusable-GList[GObject]*</attr>
+	<attr path="/api/namespace/object/method[@cname='gdk_screen_get_toplevel_windows']/return-type" name="type">reusable-GList[GObject]*</attr>
+	<attr path="/api/namespace/object/method[@cname='gdk_screen_get_window_stack']/return-type" name="type">reusable-GList[GObject]*</attr>
+	<attr path="/api/namespace/object/method[@cname='gdk_screen_list_visuals']/return-type" name="type">reusable-GList[GObject]*</attr>
+	<attr path="/api/namespace/object/method[@cname='gdk_window_get_children']/return-type" name="type">reusable-GList[GObject]*</attr>
+	<attr path="/api/namespace/object/method[@cname='gdk_window_get_toplevels']/return-type" name="type">reusable-GList[GObject]*</attr>
+	<attr path="/api/namespace/class/method[@cname='gdk_list_visuals']/return-type" name="type">reusable-GList[GObject]*</attr>
 </metadata>

@@ -9,40 +9,18 @@
 
 #ifdef LINUX
 
-static memory_alloc_debug(size_t Size) {
-	return GC_debug_malloc(Size, GC_EXTRAS);
-};
-
-static memory_realloc_debug(void *Ptr, size_t Size) {
-	if (Ptr == 0x83ab0f0) asm("int3");
-	return GC_debug_realloc(Ptr, Size, GC_EXTRAS);
-};
-
-static memory_memalign_debug(size_t Alignment, size_t Size, const void *Caller) {
-	uint8_t *Result = GC_debug_malloc(Size + Alignment, GC_EXTRAS);
-	uint32_t Offset = (uint32_t)Result % Alignment;
-	if (Offset) Result += (Alignment - Offset);
-	return Result;
-};
-
-static memory_free() {
-};
-
 static memory_memalign(size_t Alignment, size_t Size, const void *Caller) {
-	uint8_t *Result = GC_malloc(Size + Alignment);
+	uint8_t *Result = GC_malloc_uncollectable(Size + Alignment);
 	uint32_t Offset = (uint32_t)Result % Alignment;
 	if (Offset) Result += (Alignment - Offset);
 	return Result;
 };
 
 static void memory_init_hook (void) {
-	//__malloc_hook = GC_malloc;
-	//__realloc_hook = GC_realloc;
-	__malloc_hook = memory_alloc_debug;
-	__realloc_hook = memory_realloc_debug;
-	__free_hook = memory_free;
-	//__memalign_hook = memory_memalign;
-	__memalign_hook = memory_memalign_debug;
+	__malloc_hook = GC_malloc_uncollectable;
+	__realloc_hook = GC_realloc;
+	__free_hook = GC_free;
+	__memalign_hook = memory_memalign;
 }
 
 void (*__malloc_initialize_hook)(void) = memory_init_hook;

@@ -125,8 +125,6 @@ c_func _new_small ;(long  Value)
 
 c_func _new_big ;(mpz_t Value)
 
-%ifdef WINDOWS
-
 extern Riva$Memory$_realloc
 extern __gmp_set_memory_functions
 
@@ -136,9 +134,8 @@ _realloc:
 	push dword [esp + 8]
 	call Riva$Memory$_realloc
 	add esp, byte 8
-	ret
 _free:
-	ret
+	ret	
 
 c_func __init
 	push dword _free
@@ -147,5 +144,3 @@ c_func __init
 	call __gmp_set_memory_functions
 	add esp, byte 12
 	ret
-
-%endif

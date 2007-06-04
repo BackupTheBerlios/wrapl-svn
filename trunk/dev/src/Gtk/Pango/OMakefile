@@ -12,5 +12,3 @@ if $(file-exists $(GTK_AUTOGEN))
 		RivaProgram($(BASENAME)$(FILE), $(FILE))
 		GtkPango: $(BASENAME)$(FILE).riva
 		export
-
-.DEFAULT: GtkPango
