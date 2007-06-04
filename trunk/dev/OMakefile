@@ -1,4 +1,4 @@
-.PHONY: Riva Rlink Std Util Sys IO Wrapl Xml Gtk Allegro clean
+.PHONY: Riva Rlink Std Util Sys IO Wrapl Xml Gtk clean
 .DEFAULT: Riva Rlink Std Util Sys IO Wrapl Xml
 
 vmount($(SRC_DIR), $(OBJ_DIR))
