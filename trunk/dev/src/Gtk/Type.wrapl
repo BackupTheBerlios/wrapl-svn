@@ -233,13 +233,13 @@ TO :headers(=booleantype) [
 Define("gboolean", booleantype);
 
 VAR pointertype <- T();
-TO :rtype(=pointertype) "Std$Object$T";
+TO :rtype(=pointertype) "Std$Address$T";
 TO :ctype(=pointertype) "void *";
 TO :precall(=pointertype, name, arg) [
-	"void *" + name + " = " + arg + ".Val;"
+	"void *" + name + " = ((Std$Address_t *)" + arg + ".Val)->Value;"
 ];
 TO :return(=pointertype, result) [
-	"Result->Val = " + result + ";"
+	"Result->Val = Std$Address$new(" + result + ");"
 ];
 Define("gpointer", pointertype);
 
