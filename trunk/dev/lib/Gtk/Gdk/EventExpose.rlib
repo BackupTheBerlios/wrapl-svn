@@ -1,7 +1,0 @@
-module("Gtk", "Gdk", "EventExpose")
-if WINDOWS then
-	prefix("_Gtk$Gdk$EventExpose$")
-else
-	prefix("Gtk$Gdk$EventExpose$")
-end
-export("T")
