@@ -1,8 +1,0 @@
-module("Gtk", "Gdk", "ByteOrder")
-if WINDOWS then
-	prefix("_Gtk$Gdk$ByteOrder$")
-else
-	prefix("Gtk$Gdk$ByteOrder$")
-end
-export("T")
-export("_new")
