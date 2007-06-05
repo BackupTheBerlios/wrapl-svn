@@ -1,8 +1,0 @@
-module("Gtk", "Gtk", "TextFunction")
-if WINDOWS then
-	prefix("_Gtk$Gtk$TextFunction$")
-else
-	prefix("Gtk$Gtk$TextFunction$")
-end
-export("T")
-export("_new")

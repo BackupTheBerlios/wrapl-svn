@@ -1,8 +1,0 @@
-module("Gtk", "Gtk", "NotebookTab")
-if WINDOWS then
-	prefix("_Gtk$Gtk$NotebookTab$")
-else
-	prefix("Gtk$Gtk$NotebookTab$")
-end
-export("T")
-export("_new")

@@ -1,8 +1,0 @@
-module("Gtk", "Gtk", "ClipboardTextReceivedFunc")
-if WINDOWS then
-	prefix("_Gtk$Gtk$ClipboardTextReceivedFunc$")
-else
-	prefix("Gtk$Gtk$ClipboardTextReceivedFunc$")
-end
-export("T")
-export("_new")

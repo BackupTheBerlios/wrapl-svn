@@ -1,7 +1,0 @@
-module("Gtk", "Gtk", "Ruler")
-if WINDOWS then
-	prefix("_Gtk$Gtk$Ruler$")
-else
-	prefix("Gtk$Gtk$Ruler$")
-end
-export("T")

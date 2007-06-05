@@ -1,8 +1,0 @@
-module("Gtk", "Pango", "FontsetForeachFunc")
-if WINDOWS then
-	prefix("_Gtk$Pango$FontsetForeachFunc$")
-else
-	prefix("Gtk$Pango$FontsetForeachFunc$")
-end
-export("T")
-export("_new")

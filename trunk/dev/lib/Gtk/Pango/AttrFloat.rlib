@@ -1,7 +1,0 @@
-module("Gtk", "Pango", "AttrFloat")
-if WINDOWS then
-	prefix("_Gtk$Pango$AttrFloat$")
-else
-	prefix("Gtk$Pango$AttrFloat$")
-end
-export("T")

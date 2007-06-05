@@ -1,8 +1,0 @@
-module("Gtk", "Gtk", "AttachOptions")
-if WINDOWS then
-	prefix("_Gtk$Gtk$AttachOptions$")
-else
-	prefix("Gtk$Gtk$AttachOptions$")
-end
-export("T")
-export("_new")

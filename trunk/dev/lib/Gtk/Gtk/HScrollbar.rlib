@@ -1,7 +1,0 @@
-module("Gtk", "Gtk", "HScrollbar")
-if WINDOWS then
-	prefix("_Gtk$Gtk$HScrollbar$")
-else
-	prefix("Gtk$Gtk$HScrollbar$")
-end
-export("T")

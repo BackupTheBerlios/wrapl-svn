@@ -1,7 +1,0 @@
-module("Gtk", "Gtk", "ImageImageData")
-if WINDOWS then
-	prefix("_Gtk$Gtk$ImageImageData$")
-else
-	prefix("Gtk$Gtk$ImageImageData$")
-end
-export("T")

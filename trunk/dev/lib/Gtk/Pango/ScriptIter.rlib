@@ -1,7 +1,0 @@
-module("Gtk", "Pango", "ScriptIter")
-if WINDOWS then
-	prefix("_Gtk$Pango$ScriptIter$")
-else
-	prefix("Gtk$Pango$ScriptIter$")
-end
-export("T")

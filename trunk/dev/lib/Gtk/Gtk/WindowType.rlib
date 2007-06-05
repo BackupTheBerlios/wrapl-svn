@@ -1,8 +1,0 @@
-module("Gtk", "Gtk", "WindowType")
-if WINDOWS then
-	prefix("_Gtk$Gtk$WindowType$")
-else
-	prefix("Gtk$Gtk$WindowType$")
-end
-export("T")
-export("_new")

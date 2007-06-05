@@ -1,7 +1,0 @@
-module("Gtk", "Gtk", "PrintSettings")
-if WINDOWS then
-	prefix("_Gtk$Gtk$PrintSettings$")
-else
-	prefix("Gtk$Gtk$PrintSettings$")
-end
-export("T")

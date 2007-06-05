@@ -1,7 +1,0 @@
-module("Gtk", "Pango", "FcFont")
-if WINDOWS then
-	prefix("_Gtk$Pango$FcFont$")
-else
-	prefix("Gtk$Pango$FcFont$")
-end
-export("T")

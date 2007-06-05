@@ -1,8 +1,0 @@
-module("Gtk", "Gtk", "AssistantPageFunc")
-if WINDOWS then
-	prefix("_Gtk$Gtk$AssistantPageFunc$")
-else
-	prefix("Gtk$Gtk$AssistantPageFunc$")
-end
-export("T")
-export("_new")

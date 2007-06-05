@@ -1,7 +1,0 @@
-module("Gtk", "Gtk", "WindowGroup")
-if WINDOWS then
-	prefix("_Gtk$Gtk$WindowGroup$")
-else
-	prefix("Gtk$Gtk$WindowGroup$")
-end
-export("T")

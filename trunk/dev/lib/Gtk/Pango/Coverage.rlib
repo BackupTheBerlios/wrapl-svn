@@ -1,7 +1,0 @@
-module("Gtk", "Pango", "Coverage")
-if WINDOWS then
-	prefix("_Gtk$Pango$Coverage$")
-else
-	prefix("Gtk$Pango$Coverage$")
-end
-export("T")

@@ -1,7 +1,0 @@
-module("Gtk", "Pango", "LayoutIter")
-if WINDOWS then
-	prefix("_Gtk$Pango$LayoutIter$")
-else
-	prefix("Gtk$Pango$LayoutIter$")
-end
-export("T")

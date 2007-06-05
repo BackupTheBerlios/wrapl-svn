@@ -1,8 +1,0 @@
-module("Gtk", "Gtk", "TextBufferTargetInfo")
-if WINDOWS then
-	prefix("_Gtk$Gtk$TextBufferTargetInfo$")
-else
-	prefix("Gtk$Gtk$TextBufferTargetInfo$")
-end
-export("T")
-export("_new")

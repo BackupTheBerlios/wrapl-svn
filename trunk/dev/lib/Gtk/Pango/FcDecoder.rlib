@@ -1,7 +1,0 @@
-module("Gtk", "Pango", "FcDecoder")
-if WINDOWS then
-	prefix("_Gtk$Pango$FcDecoder$")
-else
-	prefix("Gtk$Pango$FcDecoder$")
-end
-export("T")

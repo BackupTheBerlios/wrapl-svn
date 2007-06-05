@@ -1,7 +1,0 @@
-module("Gtk", "Gtk", "RadioButton")
-if WINDOWS then
-	prefix("_Gtk$Gtk$RadioButton$")
-else
-	prefix("Gtk$Gtk$RadioButton$")
-end
-export("T")

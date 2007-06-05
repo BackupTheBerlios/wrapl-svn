@@ -1,7 +1,0 @@
-module("Gtk", "Gtk", "FileChooserDialog")
-if WINDOWS then
-	prefix("_Gtk$Gtk$FileChooserDialog$")
-else
-	prefix("Gtk$Gtk$FileChooserDialog$")
-end
-export("T")

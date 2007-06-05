@@ -1,8 +1,0 @@
-module("Gtk", "Gtk", "PrintError")
-if WINDOWS then
-	prefix("_Gtk$Gtk$PrintError$")
-else
-	prefix("Gtk$Gtk$PrintError$")
-end
-export("T")
-export("_new")

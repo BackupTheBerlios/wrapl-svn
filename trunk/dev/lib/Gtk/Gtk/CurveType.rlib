@@ -1,8 +1,0 @@
-module("Gtk", "Gtk", "CurveType")
-if WINDOWS then
-	prefix("_Gtk$Gtk$CurveType$")
-else
-	prefix("Gtk$Gtk$CurveType$")
-end
-export("T")
-export("_new")

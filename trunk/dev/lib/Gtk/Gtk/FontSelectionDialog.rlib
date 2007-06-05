@@ -1,7 +1,0 @@
-module("Gtk", "Gtk", "FontSelectionDialog")
-if WINDOWS then
-	prefix("_Gtk$Gtk$FontSelectionDialog$")
-else
-	prefix("Gtk$Gtk$FontSelectionDialog$")
-end
-export("T")

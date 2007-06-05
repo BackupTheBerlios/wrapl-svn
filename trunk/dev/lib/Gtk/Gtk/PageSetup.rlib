@@ -1,7 +1,0 @@
-module("Gtk", "Gtk", "PageSetup")
-if WINDOWS then
-	prefix("_Gtk$Gtk$PageSetup$")
-else
-	prefix("Gtk$Gtk$PageSetup$")
-end
-export("T")

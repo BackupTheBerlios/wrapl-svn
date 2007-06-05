@@ -1,7 +1,0 @@
-module("Gtk", "Gtk", "CListDestInfo")
-if WINDOWS then
-	prefix("_Gtk$Gtk$CListDestInfo$")
-else
-	prefix("Gtk$Gtk$CListDestInfo$")
-end
-export("T")

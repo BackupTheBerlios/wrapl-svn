@@ -1,8 +1,0 @@
-module("Gtk", "Gtk", "DestDefaults")
-if WINDOWS then
-	prefix("_Gtk$Gtk$DestDefaults$")
-else
-	prefix("Gtk$Gtk$DestDefaults$")
-end
-export("T")
-export("_new")

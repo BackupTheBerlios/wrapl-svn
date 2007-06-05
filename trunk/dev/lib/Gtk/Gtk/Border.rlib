@@ -1,7 +1,0 @@
-module("Gtk", "Gtk", "Border")
-if WINDOWS then
-	prefix("_Gtk$Gtk$Border$")
-else
-	prefix("Gtk$Gtk$Border$")
-end
-export("T")

@@ -1,7 +1,0 @@
-module("Gtk", "Gtk", "RecentChooserWidget")
-if WINDOWS then
-	prefix("_Gtk$Gtk$RecentChooserWidget$")
-else
-	prefix("Gtk$Gtk$RecentChooserWidget$")
-end
-export("T")

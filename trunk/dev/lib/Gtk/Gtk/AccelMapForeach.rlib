@@ -1,8 +1,0 @@
-module("Gtk", "Gtk", "AccelMapForeach")
-if WINDOWS then
-	prefix("_Gtk$Gtk$AccelMapForeach$")
-else
-	prefix("Gtk$Gtk$AccelMapForeach$")
-end
-export("T")
-export("_new")

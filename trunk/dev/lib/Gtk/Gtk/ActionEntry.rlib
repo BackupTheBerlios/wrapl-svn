@@ -1,7 +1,0 @@
-module("Gtk", "Gtk", "ActionEntry")
-if WINDOWS then
-	prefix("_Gtk$Gtk$ActionEntry$")
-else
-	prefix("Gtk$Gtk$ActionEntry$")
-end
-export("T")

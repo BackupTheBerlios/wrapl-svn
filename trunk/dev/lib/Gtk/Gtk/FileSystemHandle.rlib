@@ -1,7 +1,0 @@
-module("Gtk", "Gtk", "FileSystemHandle")
-if WINDOWS then
-	prefix("_Gtk$Gtk$FileSystemHandle$")
-else
-	prefix("Gtk$Gtk$FileSystemHandle$")
-end
-export("T")

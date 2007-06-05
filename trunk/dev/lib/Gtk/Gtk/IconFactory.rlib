@@ -1,7 +1,0 @@
-module("Gtk", "Gtk", "IconFactory")
-if WINDOWS then
-	prefix("_Gtk$Gtk$IconFactory$")
-else
-	prefix("Gtk$Gtk$IconFactory$")
-end
-export("T")

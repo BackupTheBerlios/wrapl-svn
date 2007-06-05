@@ -1,7 +1,0 @@
-module("Gtk", "Pango", "Fontset")
-if WINDOWS then
-	prefix("_Gtk$Pango$Fontset$")
-else
-	prefix("Gtk$Pango$Fontset$")
-end
-export("T")

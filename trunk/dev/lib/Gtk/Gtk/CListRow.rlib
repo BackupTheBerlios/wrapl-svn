@@ -1,7 +1,0 @@
-module("Gtk", "Gtk", "CListRow")
-if WINDOWS then
-	prefix("_Gtk$Gtk$CListRow$")
-else
-	prefix("Gtk$Gtk$CListRow$")
-end
-export("T")

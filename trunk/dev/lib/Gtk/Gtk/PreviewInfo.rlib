@@ -1,7 +1,0 @@
-module("Gtk", "Gtk", "PreviewInfo")
-if WINDOWS then
-	prefix("_Gtk$Gtk$PreviewInfo$")
-else
-	prefix("Gtk$Gtk$PreviewInfo$")
-end
-export("T")

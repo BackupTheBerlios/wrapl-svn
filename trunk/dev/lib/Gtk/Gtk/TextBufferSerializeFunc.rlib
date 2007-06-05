@@ -1,8 +1,0 @@
-module("Gtk", "Gtk", "TextBufferSerializeFunc")
-if WINDOWS then
-	prefix("_Gtk$Gtk$TextBufferSerializeFunc$")
-else
-	prefix("Gtk$Gtk$TextBufferSerializeFunc$")
-end
-export("T")
-export("_new")

@@ -1,8 +1,0 @@
-module("Gtk", "Gtk", "Visibility")
-if WINDOWS then
-	prefix("_Gtk$Gtk$Visibility$")
-else
-	prefix("Gtk$Gtk$Visibility$")
-end
-export("T")
-export("_new")

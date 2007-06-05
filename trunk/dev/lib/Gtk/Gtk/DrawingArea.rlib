@@ -1,7 +1,0 @@
-module("Gtk", "Gtk", "DrawingArea")
-if WINDOWS then
-	prefix("_Gtk$Gtk$DrawingArea$")
-else
-	prefix("Gtk$Gtk$DrawingArea$")
-end
-export("T")

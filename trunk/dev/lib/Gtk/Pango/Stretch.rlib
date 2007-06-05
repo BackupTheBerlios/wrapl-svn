@@ -1,8 +1,0 @@
-module("Gtk", "Pango", "Stretch")
-if WINDOWS then
-	prefix("_Gtk$Pango$Stretch$")
-else
-	prefix("Gtk$Pango$Stretch$")
-end
-export("T")
-export("_new")

@@ -1,8 +1,0 @@
-module("Gtk", "Gtk", "ToolbarSpaceStyle")
-if WINDOWS then
-	prefix("_Gtk$Gtk$ToolbarSpaceStyle$")
-else
-	prefix("Gtk$Gtk$ToolbarSpaceStyle$")
-end
-export("T")
-export("_new")

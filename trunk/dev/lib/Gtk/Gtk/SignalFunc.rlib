@@ -1,8 +1,0 @@
-module("Gtk", "Gtk", "SignalFunc")
-if WINDOWS then
-	prefix("_Gtk$Gtk$SignalFunc$")
-else
-	prefix("Gtk$Gtk$SignalFunc$")
-end
-export("T")
-export("_new")

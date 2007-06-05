@@ -1,7 +1,0 @@
-module("Gtk", "Gtk", "AccelKey")
-if WINDOWS then
-	prefix("_Gtk$Gtk$AccelKey$")
-else
-	prefix("Gtk$Gtk$AccelKey$")
-end
-export("T")

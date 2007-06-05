@@ -1,7 +1,0 @@
-module("Gtk", "Gtk", "RecentData")
-if WINDOWS then
-	prefix("_Gtk$Gtk$RecentData$")
-else
-	prefix("Gtk$Gtk$RecentData$")
-end
-export("T")

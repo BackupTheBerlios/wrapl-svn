@@ -1,8 +1,0 @@
-module("Gtk", "Gtk", "MovementStep")
-if WINDOWS then
-	prefix("_Gtk$Gtk$MovementStep$")
-else
-	prefix("Gtk$Gtk$MovementStep$")
-end
-export("T")
-export("_new")

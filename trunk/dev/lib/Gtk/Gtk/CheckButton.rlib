@@ -1,7 +1,0 @@
-module("Gtk", "Gtk", "CheckButton")
-if WINDOWS then
-	prefix("_Gtk$Gtk$CheckButton$")
-else
-	prefix("Gtk$Gtk$CheckButton$")
-end
-export("T")

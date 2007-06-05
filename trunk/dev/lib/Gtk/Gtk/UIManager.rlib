@@ -1,7 +1,0 @@
-module("Gtk", "Gtk", "UIManager")
-if WINDOWS then
-	prefix("_Gtk$Gtk$UIManager$")
-else
-	prefix("Gtk$Gtk$UIManager$")
-end
-export("T")

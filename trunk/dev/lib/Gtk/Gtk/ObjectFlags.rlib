@@ -1,8 +1,0 @@
-module("Gtk", "Gtk", "ObjectFlags")
-if WINDOWS then
-	prefix("_Gtk$Gtk$ObjectFlags$")
-else
-	prefix("Gtk$Gtk$ObjectFlags$")
-end
-export("T")
-export("_new")

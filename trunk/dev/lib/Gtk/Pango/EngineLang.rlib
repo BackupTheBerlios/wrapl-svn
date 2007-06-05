@@ -1,7 +1,0 @@
-module("Gtk", "Pango", "EngineLang")
-if WINDOWS then
-	prefix("_Gtk$Pango$EngineLang$")
-else
-	prefix("Gtk$Pango$EngineLang$")
-end
-export("T")

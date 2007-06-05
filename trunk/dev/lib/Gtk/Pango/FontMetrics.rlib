@@ -1,7 +1,0 @@
-module("Gtk", "Pango", "FontMetrics")
-if WINDOWS then
-	prefix("_Gtk$Pango$FontMetrics$")
-else
-	prefix("Gtk$Pango$FontMetrics$")
-end
-export("T")

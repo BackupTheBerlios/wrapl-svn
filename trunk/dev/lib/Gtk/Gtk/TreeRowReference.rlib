@@ -1,7 +1,0 @@
-module("Gtk", "Gtk", "TreeRowReference")
-if WINDOWS then
-	prefix("_Gtk$Gtk$TreeRowReference$")
-else
-	prefix("Gtk$Gtk$TreeRowReference$")
-end
-export("T")

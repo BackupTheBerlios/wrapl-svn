@@ -1,8 +1,0 @@
-module("Gtk", "Gtk", "CellRendererMode")
-if WINDOWS then
-	prefix("_Gtk$Gtk$CellRendererMode$")
-else
-	prefix("Gtk$Gtk$CellRendererMode$")
-end
-export("T")
-export("_new")

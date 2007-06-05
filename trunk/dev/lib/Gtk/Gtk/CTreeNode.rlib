@@ -1,7 +1,0 @@
-module("Gtk", "Gtk", "CTreeNode")
-if WINDOWS then
-	prefix("_Gtk$Gtk$CTreeNode$")
-else
-	prefix("Gtk$Gtk$CTreeNode$")
-end
-export("T")

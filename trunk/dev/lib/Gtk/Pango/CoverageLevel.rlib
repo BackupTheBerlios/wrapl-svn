@@ -1,8 +1,0 @@
-module("Gtk", "Pango", "CoverageLevel")
-if WINDOWS then
-	prefix("_Gtk$Pango$CoverageLevel$")
-else
-	prefix("Gtk$Pango$CoverageLevel$")
-end
-export("T")
-export("_new")

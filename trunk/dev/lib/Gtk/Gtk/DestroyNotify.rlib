@@ -1,8 +1,0 @@
-module("Gtk", "Gtk", "DestroyNotify")
-if WINDOWS then
-	prefix("_Gtk$Gtk$DestroyNotify$")
-else
-	prefix("Gtk$Gtk$DestroyNotify$")
-end
-export("T")
-export("_new")

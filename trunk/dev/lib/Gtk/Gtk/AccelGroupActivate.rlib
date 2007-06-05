@@ -1,8 +1,0 @@
-module("Gtk", "Gtk", "AccelGroupActivate")
-if WINDOWS then
-	prefix("_Gtk$Gtk$AccelGroupActivate$")
-else
-	prefix("Gtk$Gtk$AccelGroupActivate$")
-end
-export("T")
-export("_new")

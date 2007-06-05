@@ -1,7 +1,0 @@
-module("Gtk", "Gtk", "HPaned")
-if WINDOWS then
-	prefix("_Gtk$Gtk$HPaned$")
-else
-	prefix("Gtk$Gtk$HPaned$")
-end
-export("T")

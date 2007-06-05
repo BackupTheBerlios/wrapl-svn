@@ -1,8 +1,0 @@
-module("Gtk", "Gtk", "UpdateType")
-if WINDOWS then
-	prefix("_Gtk$Gtk$UpdateType$")
-else
-	prefix("Gtk$Gtk$UpdateType$")
-end
-export("T")
-export("_new")

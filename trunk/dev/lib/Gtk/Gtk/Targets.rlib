@@ -1,7 +1,0 @@
-module("Gtk", "Gtk", "Targets")
-if WINDOWS then
-	prefix("_Gtk$Gtk$Targets$")
-else
-	prefix("Gtk$Gtk$Targets$")
-end
-export("T")

@@ -1,8 +1,0 @@
-module("Gtk", "Gtk", "SizeGroupMode")
-if WINDOWS then
-	prefix("_Gtk$Gtk$SizeGroupMode$")
-else
-	prefix("Gtk$Gtk$SizeGroupMode$")
-end
-export("T")
-export("_new")

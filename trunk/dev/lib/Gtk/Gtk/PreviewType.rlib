@@ -1,8 +1,0 @@
-module("Gtk", "Gtk", "PreviewType")
-if WINDOWS then
-	prefix("_Gtk$Gtk$PreviewType$")
-else
-	prefix("Gtk$Gtk$PreviewType$")
-end
-export("T")
-export("_new")

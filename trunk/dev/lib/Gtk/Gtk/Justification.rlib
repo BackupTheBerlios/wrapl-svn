@@ -1,8 +1,0 @@
-module("Gtk", "Gtk", "Justification")
-if WINDOWS then
-	prefix("_Gtk$Gtk$Justification$")
-else
-	prefix("Gtk$Gtk$Justification$")
-end
-export("T")
-export("_new")

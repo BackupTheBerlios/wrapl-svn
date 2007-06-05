@@ -1,7 +1,0 @@
-module("Gtk", "Gtk", "Invisible")
-if WINDOWS then
-	prefix("_Gtk$Gtk$Invisible$")
-else
-	prefix("Gtk$Gtk$Invisible$")
-end
-export("T")

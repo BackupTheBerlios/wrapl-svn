@@ -1,8 +1,0 @@
-module("Gtk", "Gtk", "AnchorType")
-if WINDOWS then
-	prefix("_Gtk$Gtk$AnchorType$")
-else
-	prefix("Gtk$Gtk$AnchorType$")
-end
-export("T")
-export("_new")

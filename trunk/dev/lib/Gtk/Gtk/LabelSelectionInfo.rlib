@@ -1,7 +1,0 @@
-module("Gtk", "Gtk", "LabelSelectionInfo")
-if WINDOWS then
-	prefix("_Gtk$Gtk$LabelSelectionInfo$")
-else
-	prefix("Gtk$Gtk$LabelSelectionInfo$")
-end
-export("T")

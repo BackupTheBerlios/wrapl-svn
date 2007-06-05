@@ -1,8 +1,0 @@
-module("Gtk", "Gtk", "ItemFactoryCallback1")
-if WINDOWS then
-	prefix("_Gtk$Gtk$ItemFactoryCallback1$")
-else
-	prefix("Gtk$Gtk$ItemFactoryCallback1$")
-end
-export("T")
-export("_new")

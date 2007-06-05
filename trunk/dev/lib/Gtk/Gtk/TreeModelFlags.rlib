@@ -1,8 +1,0 @@
-module("Gtk", "Gtk", "TreeModelFlags")
-if WINDOWS then
-	prefix("_Gtk$Gtk$TreeModelFlags$")
-else
-	prefix("Gtk$Gtk$TreeModelFlags$")
-end
-export("T")
-export("_new")

@@ -1,8 +1,0 @@
-module("Gtk", "Gtk", "MenuDirectionType")
-if WINDOWS then
-	prefix("_Gtk$Gtk$MenuDirectionType$")
-else
-	prefix("Gtk$Gtk$MenuDirectionType$")
-end
-export("T")
-export("_new")

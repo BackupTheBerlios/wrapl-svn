@@ -1,7 +1,0 @@
-module("Gtk", "Gtk", "Settings")
-if WINDOWS then
-	prefix("_Gtk$Gtk$Settings$")
-else
-	prefix("Gtk$Gtk$Settings$")
-end
-export("T")

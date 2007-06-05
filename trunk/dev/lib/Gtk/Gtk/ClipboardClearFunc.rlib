@@ -1,8 +1,0 @@
-module("Gtk", "Gtk", "ClipboardClearFunc")
-if WINDOWS then
-	prefix("_Gtk$Gtk$ClipboardClearFunc$")
-else
-	prefix("Gtk$Gtk$ClipboardClearFunc$")
-end
-export("T")
-export("_new")

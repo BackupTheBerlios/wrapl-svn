@@ -1,7 +1,0 @@
-module("Gtk", "Gtk", "AccelLabel")
-if WINDOWS then
-	prefix("_Gtk$Gtk$AccelLabel$")
-else
-	prefix("Gtk$Gtk$AccelLabel$")
-end
-export("T")

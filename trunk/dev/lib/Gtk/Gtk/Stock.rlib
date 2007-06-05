@@ -1,7 +1,0 @@
-module("Gtk", "Gtk", "Stock")
-if WINDOWS then
-	prefix("_Gtk$Gtk$Stock$")
-else
-	prefix("Gtk$Gtk$Stock$")
-end
-export("T")

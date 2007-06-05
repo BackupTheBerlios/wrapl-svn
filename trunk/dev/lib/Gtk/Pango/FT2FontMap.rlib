@@ -1,7 +1,0 @@
-module("Gtk", "Pango", "FT2FontMap")
-if WINDOWS then
-	prefix("_Gtk$Pango$FT2FontMap$")
-else
-	prefix("Gtk$Pango$FT2FontMap$")
-end
-export("T")

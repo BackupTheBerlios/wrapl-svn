@@ -1,8 +1,0 @@
-module("Gtk", "Gtk", "KeySnoopFunc")
-if WINDOWS then
-	prefix("_Gtk$Gtk$KeySnoopFunc$")
-else
-	prefix("Gtk$Gtk$KeySnoopFunc$")
-end
-export("T")
-export("_new")

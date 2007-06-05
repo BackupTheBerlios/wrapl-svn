@@ -1,7 +1,0 @@
-module("Gtk", "Gtk", "SeparatorMenuItem")
-if WINDOWS then
-	prefix("_Gtk$Gtk$SeparatorMenuItem$")
-else
-	prefix("Gtk$Gtk$SeparatorMenuItem$")
-end
-export("T")

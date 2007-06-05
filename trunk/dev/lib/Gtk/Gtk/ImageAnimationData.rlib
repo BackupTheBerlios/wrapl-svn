@@ -1,7 +1,0 @@
-module("Gtk", "Gtk", "ImageAnimationData")
-if WINDOWS then
-	prefix("_Gtk$Gtk$ImageAnimationData$")
-else
-	prefix("Gtk$Gtk$ImageAnimationData$")
-end
-export("T")

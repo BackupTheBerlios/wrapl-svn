@@ -1,8 +1,0 @@
-module("Gtk", "Gtk", "CTreeLineStyle")
-if WINDOWS then
-	prefix("_Gtk$Gtk$CTreeLineStyle$")
-else
-	prefix("Gtk$Gtk$CTreeLineStyle$")
-end
-export("T")
-export("_new")

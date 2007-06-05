@@ -1,8 +1,0 @@
-module("Gtk", "Gtk", "TreeViewGridLines")
-if WINDOWS then
-	prefix("_Gtk$Gtk$TreeViewGridLines$")
-else
-	prefix("Gtk$Gtk$TreeViewGridLines$")
-end
-export("T")
-export("_new")

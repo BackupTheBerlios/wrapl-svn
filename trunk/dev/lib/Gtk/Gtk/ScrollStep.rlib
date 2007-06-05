@@ -1,8 +1,0 @@
-module("Gtk", "Gtk", "ScrollStep")
-if WINDOWS then
-	prefix("_Gtk$Gtk$ScrollStep$")
-else
-	prefix("Gtk$Gtk$ScrollStep$")
-end
-export("T")
-export("_new")

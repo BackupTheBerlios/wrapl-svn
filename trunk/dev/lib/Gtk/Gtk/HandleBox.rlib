@@ -1,7 +1,0 @@
-module("Gtk", "Gtk", "HandleBox")
-if WINDOWS then
-	prefix("_Gtk$Gtk$HandleBox$")
-else
-	prefix("Gtk$Gtk$HandleBox$")
-end
-export("T")

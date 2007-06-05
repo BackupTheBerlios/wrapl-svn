@@ -1,7 +1,0 @@
-module("Gtk", "Gtk", "ColorSelection")
-if WINDOWS then
-	prefix("_Gtk$Gtk$ColorSelection$")
-else
-	prefix("Gtk$Gtk$ColorSelection$")
-end
-export("T")

@@ -1,8 +1,0 @@
-module("Gtk", "Gtk", "CellType")
-if WINDOWS then
-	prefix("_Gtk$Gtk$CellType$")
-else
-	prefix("Gtk$Gtk$CellType$")
-end
-export("T")
-export("_new")

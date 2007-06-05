@@ -1,7 +1,0 @@
-module("Gtk", "Pango", "LogAttr")
-if WINDOWS then
-	prefix("_Gtk$Pango$LogAttr$")
-else
-	prefix("Gtk$Pango$LogAttr$")
-end
-export("T")

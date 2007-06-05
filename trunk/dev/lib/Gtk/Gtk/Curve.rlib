@@ -1,7 +1,0 @@
-module("Gtk", "Gtk", "Curve")
-if WINDOWS then
-	prefix("_Gtk$Gtk$Curve$")
-else
-	prefix("Gtk$Gtk$Curve$")
-end
-export("T")

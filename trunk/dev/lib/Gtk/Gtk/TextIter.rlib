@@ -1,7 +1,0 @@
-module("Gtk", "Gtk", "TextIter")
-if WINDOWS then
-	prefix("_Gtk$Gtk$TextIter$")
-else
-	prefix("Gtk$Gtk$TextIter$")
-end
-export("T")

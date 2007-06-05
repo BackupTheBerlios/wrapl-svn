@@ -1,7 +1,0 @@
-module("Gtk", "Gtk", "HSeparator")
-if WINDOWS then
-	prefix("_Gtk$Gtk$HSeparator$")
-else
-	prefix("Gtk$Gtk$HSeparator$")
-end
-export("T")

@@ -1,7 +1,0 @@
-module("Gtk", "Gtk", "AboutDialog")
-if WINDOWS then
-	prefix("_Gtk$Gtk$AboutDialog$")
-else
-	prefix("Gtk$Gtk$AboutDialog$")
-end
-export("T")

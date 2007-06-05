@@ -1,7 +1,0 @@
-module("Gtk", "Gtk", "ButtonBox")
-if WINDOWS then
-	prefix("_Gtk$Gtk$ButtonBox$")
-else
-	prefix("Gtk$Gtk$ButtonBox$")
-end
-export("T")

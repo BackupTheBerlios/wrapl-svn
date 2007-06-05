@@ -1,7 +1,0 @@
-module("Gtk", "Gtk", "RangeLayout")
-if WINDOWS then
-	prefix("_Gtk$Gtk$RangeLayout$")
-else
-	prefix("Gtk$Gtk$RangeLayout$")
-end
-export("T")

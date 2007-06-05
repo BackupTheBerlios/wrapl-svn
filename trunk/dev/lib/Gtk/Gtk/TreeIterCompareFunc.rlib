@@ -1,8 +1,0 @@
-module("Gtk", "Gtk", "TreeIterCompareFunc")
-if WINDOWS then
-	prefix("_Gtk$Gtk$TreeIterCompareFunc$")
-else
-	prefix("Gtk$Gtk$TreeIterCompareFunc$")
-end
-export("T")
-export("_new")

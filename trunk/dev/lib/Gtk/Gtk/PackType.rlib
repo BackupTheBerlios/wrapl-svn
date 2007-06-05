@@ -1,8 +1,0 @@
-module("Gtk", "Gtk", "PackType")
-if WINDOWS then
-	prefix("_Gtk$Gtk$PackType$")
-else
-	prefix("Gtk$Gtk$PackType$")
-end
-export("T")
-export("_new")

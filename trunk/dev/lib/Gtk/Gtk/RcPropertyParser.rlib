@@ -1,8 +1,0 @@
-module("Gtk", "Gtk", "RcPropertyParser")
-if WINDOWS then
-	prefix("_Gtk$Gtk$RcPropertyParser$")
-else
-	prefix("Gtk$Gtk$RcPropertyParser$")
-end
-export("T")
-export("_new")

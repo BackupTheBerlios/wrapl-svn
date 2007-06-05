@@ -1,8 +1,0 @@
-module("Gtk", "Gtk", "IMStatusStyle")
-if WINDOWS then
-	prefix("_Gtk$Gtk$IMStatusStyle$")
-else
-	prefix("Gtk$Gtk$IMStatusStyle$")
-end
-export("T")
-export("_new")

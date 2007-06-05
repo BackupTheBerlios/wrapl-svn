@@ -1,8 +1,0 @@
-module("Gtk", "Gtk", "TreeSelectionForeachFunc")
-if WINDOWS then
-	prefix("_Gtk$Gtk$TreeSelectionForeachFunc$")
-else
-	prefix("Gtk$Gtk$TreeSelectionForeachFunc$")
-end
-export("T")
-export("_new")

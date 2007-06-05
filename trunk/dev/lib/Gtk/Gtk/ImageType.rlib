@@ -1,8 +1,0 @@
-module("Gtk", "Gtk", "ImageType")
-if WINDOWS then
-	prefix("_Gtk$Gtk$ImageType$")
-else
-	prefix("Gtk$Gtk$ImageType$")
-end
-export("T")
-export("_new")

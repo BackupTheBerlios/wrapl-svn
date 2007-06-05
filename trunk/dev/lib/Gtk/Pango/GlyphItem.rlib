@@ -1,7 +1,0 @@
-module("Gtk", "Pango", "GlyphItem")
-if WINDOWS then
-	prefix("_Gtk$Pango$GlyphItem$")
-else
-	prefix("Gtk$Pango$GlyphItem$")
-end
-export("T")

@@ -1,8 +1,0 @@
-module("Gtk", "Pango", "Variant")
-if WINDOWS then
-	prefix("_Gtk$Pango$Variant$")
-else
-	prefix("Gtk$Pango$Variant$")
-end
-export("T")
-export("_new")

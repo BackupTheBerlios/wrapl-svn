@@ -1,8 +1,0 @@
-module("Gtk", "Gtk", "SelectionMode")
-if WINDOWS then
-	prefix("_Gtk$Gtk$SelectionMode$")
-else
-	prefix("Gtk$Gtk$SelectionMode$")
-end
-export("T")
-export("_new")

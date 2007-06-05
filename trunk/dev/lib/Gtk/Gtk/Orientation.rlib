@@ -1,8 +1,0 @@
-module("Gtk", "Gtk", "Orientation")
-if WINDOWS then
-	prefix("_Gtk$Gtk$Orientation$")
-else
-	prefix("Gtk$Gtk$Orientation$")
-end
-export("T")
-export("_new")

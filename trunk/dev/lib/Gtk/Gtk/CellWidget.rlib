@@ -1,7 +1,0 @@
-module("Gtk", "Gtk", "CellWidget")
-if WINDOWS then
-	prefix("_Gtk$Gtk$CellWidget$")
-else
-	prefix("Gtk$Gtk$CellWidget$")
-end
-export("T")

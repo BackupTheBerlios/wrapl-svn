@@ -1,7 +1,0 @@
-module("Gtk", "Gtk", "Adjustment")
-if WINDOWS then
-	prefix("_Gtk$Gtk$Adjustment$")
-else
-	prefix("Gtk$Gtk$Adjustment$")
-end
-export("T")

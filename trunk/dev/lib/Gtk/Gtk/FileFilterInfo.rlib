@@ -1,7 +1,0 @@
-module("Gtk", "Gtk", "FileFilterInfo")
-if WINDOWS then
-	prefix("_Gtk$Gtk$FileFilterInfo$")
-else
-	prefix("Gtk$Gtk$FileFilterInfo$")
-end
-export("T")

@@ -1,7 +1,0 @@
-module("Gtk", "Pango", "AttrFontDesc")
-if WINDOWS then
-	prefix("_Gtk$Pango$AttrFontDesc$")
-else
-	prefix("Gtk$Pango$AttrFontDesc$")
-end
-export("T")

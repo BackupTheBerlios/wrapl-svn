@@ -1,7 +1,0 @@
-module("Gtk", "Pango", "Cairo")
-if WINDOWS then
-	prefix("_Gtk$Pango$Cairo$")
-else
-	prefix("Gtk$Pango$Cairo$")
-end
-export("T")

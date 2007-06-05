@@ -1,7 +1,0 @@
-module("Gtk", "Gtk", "HScale")
-if WINDOWS then
-	prefix("_Gtk$Gtk$HScale$")
-else
-	prefix("Gtk$Gtk$HScale$")
-end
-export("T")

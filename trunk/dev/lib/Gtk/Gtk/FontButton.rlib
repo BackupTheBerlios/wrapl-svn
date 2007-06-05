@@ -1,7 +1,0 @@
-module("Gtk", "Gtk", "FontButton")
-if WINDOWS then
-	prefix("_Gtk$Gtk$FontButton$")
-else
-	prefix("Gtk$Gtk$FontButton$")
-end
-export("T")

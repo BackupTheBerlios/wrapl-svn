@@ -1,7 +1,0 @@
-module("Gtk", "Gtk", "ToggleButton")
-if WINDOWS then
-	prefix("_Gtk$Gtk$ToggleButton$")
-else
-	prefix("Gtk$Gtk$ToggleButton$")
-end
-export("T")

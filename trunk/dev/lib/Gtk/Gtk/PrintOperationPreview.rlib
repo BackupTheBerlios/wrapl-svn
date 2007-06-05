@@ -1,7 +1,0 @@
-module("Gtk", "Gtk", "PrintOperationPreview")
-if WINDOWS then
-	prefix("_Gtk$Gtk$PrintOperationPreview$")
-else
-	prefix("Gtk$Gtk$PrintOperationPreview$")
-end
-export("T")

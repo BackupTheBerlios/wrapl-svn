@@ -1,8 +1,0 @@
-module("Gtk", "Gtk", "TextDirection")
-if WINDOWS then
-	prefix("_Gtk$Gtk$TextDirection$")
-else
-	prefix("Gtk$Gtk$TextDirection$")
-end
-export("T")
-export("_new")

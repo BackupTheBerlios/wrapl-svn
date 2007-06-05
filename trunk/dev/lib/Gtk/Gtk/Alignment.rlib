@@ -1,7 +1,0 @@
-module("Gtk", "Gtk", "Alignment")
-if WINDOWS then
-	prefix("_Gtk$Gtk$Alignment$")
-else
-	prefix("Gtk$Gtk$Alignment$")
-end
-export("T")

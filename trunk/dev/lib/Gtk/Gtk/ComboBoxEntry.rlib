@@ -1,7 +1,0 @@
-module("Gtk", "Gtk", "ComboBoxEntry")
-if WINDOWS then
-	prefix("_Gtk$Gtk$ComboBoxEntry$")
-else
-	prefix("Gtk$Gtk$ComboBoxEntry$")
-end
-export("T")

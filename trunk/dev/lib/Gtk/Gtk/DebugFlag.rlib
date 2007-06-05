@@ -1,8 +1,0 @@
-module("Gtk", "Gtk", "DebugFlag")
-if WINDOWS then
-	prefix("_Gtk$Gtk$DebugFlag$")
-else
-	prefix("Gtk$Gtk$DebugFlag$")
-end
-export("T")
-export("_new")

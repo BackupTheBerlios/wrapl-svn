@@ -1,8 +1,0 @@
-module("Gtk", "Gtk", "PrintOperationResult")
-if WINDOWS then
-	prefix("_Gtk$Gtk$PrintOperationResult$")
-else
-	prefix("Gtk$Gtk$PrintOperationResult$")
-end
-export("T")
-export("_new")

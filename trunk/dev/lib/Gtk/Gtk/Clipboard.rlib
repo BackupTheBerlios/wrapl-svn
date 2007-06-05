@@ -1,7 +1,0 @@
-module("Gtk", "Gtk", "Clipboard")
-if WINDOWS then
-	prefix("_Gtk$Gtk$Clipboard$")
-else
-	prefix("Gtk$Gtk$Clipboard$")
-end
-export("T")

@@ -1,7 +1,0 @@
-module("Gtk", "Gtk", "IconTheme")
-if WINDOWS then
-	prefix("_Gtk$Gtk$IconTheme$")
-else
-	prefix("Gtk$Gtk$IconTheme$")
-end
-export("T")

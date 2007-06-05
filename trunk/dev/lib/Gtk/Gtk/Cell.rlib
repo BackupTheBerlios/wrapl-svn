@@ -1,7 +1,0 @@
-module("Gtk", "Gtk", "Cell")
-if WINDOWS then
-	prefix("_Gtk$Gtk$Cell$")
-else
-	prefix("Gtk$Gtk$Cell$")
-end
-export("T")

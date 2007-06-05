@@ -1,8 +1,0 @@
-module("Gtk", "Gtk", "ScrollType")
-if WINDOWS then
-	prefix("_Gtk$Gtk$ScrollType$")
-else
-	prefix("Gtk$Gtk$ScrollType$")
-end
-export("T")
-export("_new")

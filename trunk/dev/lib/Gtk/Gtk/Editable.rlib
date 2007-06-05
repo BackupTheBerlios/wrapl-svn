@@ -1,7 +1,0 @@
-module("Gtk", "Gtk", "Editable")
-if WINDOWS then
-	prefix("_Gtk$Gtk$Editable$")
-else
-	prefix("Gtk$Gtk$Editable$")
-end
-export("T")

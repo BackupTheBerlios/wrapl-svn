@@ -1,8 +1,0 @@
-module("Gtk", "Gtk", "IconSize")
-if WINDOWS then
-	prefix("_Gtk$Gtk$IconSize$")
-else
-	prefix("Gtk$Gtk$IconSize$")
-end
-export("T")
-export("_new")

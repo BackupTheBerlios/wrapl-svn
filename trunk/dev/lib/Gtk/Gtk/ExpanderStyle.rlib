@@ -1,8 +1,0 @@
-module("Gtk", "Gtk", "ExpanderStyle")
-if WINDOWS then
-	prefix("_Gtk$Gtk$ExpanderStyle$")
-else
-	prefix("Gtk$Gtk$ExpanderStyle$")
-end
-export("T")
-export("_new")

@@ -1,7 +1,0 @@
-module("Gtk", "Gtk", "Table")
-if WINDOWS then
-	prefix("_Gtk$Gtk$Table$")
-else
-	prefix("Gtk$Gtk$Table$")
-end
-export("T")

@@ -1,7 +1,0 @@
-module("Gtk", "Gtk", "RadioMenuItem")
-if WINDOWS then
-	prefix("_Gtk$Gtk$RadioMenuItem$")
-else
-	prefix("Gtk$Gtk$RadioMenuItem$")
-end
-export("T")

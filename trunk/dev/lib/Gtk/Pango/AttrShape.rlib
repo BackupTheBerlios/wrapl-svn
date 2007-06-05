@@ -1,7 +1,0 @@
-module("Gtk", "Pango", "AttrShape")
-if WINDOWS then
-	prefix("_Gtk$Pango$AttrShape$")
-else
-	prefix("Gtk$Pango$AttrShape$")
-end
-export("T")

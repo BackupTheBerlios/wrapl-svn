@@ -1,7 +1,0 @@
-module("Gtk", "Gtk", "NotebookPage")
-if WINDOWS then
-	prefix("_Gtk$Gtk$NotebookPage$")
-else
-	prefix("Gtk$Gtk$NotebookPage$")
-end
-export("T")

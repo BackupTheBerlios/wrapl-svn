@@ -1,8 +1,0 @@
-module("Gtk", "Gtk", "ButtonBoxStyle")
-if WINDOWS then
-	prefix("_Gtk$Gtk$ButtonBoxStyle$")
-else
-	prefix("Gtk$Gtk$ButtonBoxStyle$")
-end
-export("T")
-export("_new")

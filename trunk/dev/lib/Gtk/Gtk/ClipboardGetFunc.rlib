@@ -1,8 +1,0 @@
-module("Gtk", "Gtk", "ClipboardGetFunc")
-if WINDOWS then
-	prefix("_Gtk$Gtk$ClipboardGetFunc$")
-else
-	prefix("Gtk$Gtk$ClipboardGetFunc$")
-end
-export("T")
-export("_new")

@@ -1,8 +1,0 @@
-module("Gtk", "Gtk", "PathPriorityType")
-if WINDOWS then
-	prefix("_Gtk$Gtk$PathPriorityType$")
-else
-	prefix("Gtk$Gtk$PathPriorityType$")
-end
-export("T")
-export("_new")

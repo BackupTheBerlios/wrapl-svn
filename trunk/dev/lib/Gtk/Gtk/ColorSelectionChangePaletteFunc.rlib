@@ -1,8 +1,0 @@
-module("Gtk", "Gtk", "ColorSelectionChangePaletteFunc")
-if WINDOWS then
-	prefix("_Gtk$Gtk$ColorSelectionChangePaletteFunc$")
-else
-	prefix("Gtk$Gtk$ColorSelectionChangePaletteFunc$")
-end
-export("T")
-export("_new")

@@ -1,8 +1,0 @@
-module("Gtk", "Gtk", "SideType")
-if WINDOWS then
-	prefix("_Gtk$Gtk$SideType$")
-else
-	prefix("Gtk$Gtk$SideType$")
-end
-export("T")
-export("_new")

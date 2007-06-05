@@ -1,8 +1,0 @@
-module("Gtk", "Gtk", "MetricType")
-if WINDOWS then
-	prefix("_Gtk$Gtk$MetricType$")
-else
-	prefix("Gtk$Gtk$MetricType$")
-end
-export("T")
-export("_new")

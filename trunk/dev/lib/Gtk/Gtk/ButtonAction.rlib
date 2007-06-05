@@ -1,8 +1,0 @@
-module("Gtk", "Gtk", "ButtonAction")
-if WINDOWS then
-	prefix("_Gtk$Gtk$ButtonAction$")
-else
-	prefix("Gtk$Gtk$ButtonAction$")
-end
-export("T")
-export("_new")

@@ -1,8 +1,0 @@
-module("Gtk", "Gtk", "TreeViewSearchPositionFunc")
-if WINDOWS then
-	prefix("_Gtk$Gtk$TreeViewSearchPositionFunc$")
-else
-	prefix("Gtk$Gtk$TreeViewSearchPositionFunc$")
-end
-export("T")
-export("_new")

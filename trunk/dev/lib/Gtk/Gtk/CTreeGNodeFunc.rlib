@@ -1,8 +1,0 @@
-module("Gtk", "Gtk", "CTreeGNodeFunc")
-if WINDOWS then
-	prefix("_Gtk$Gtk$CTreeGNodeFunc$")
-else
-	prefix("Gtk$Gtk$CTreeGNodeFunc$")
-end
-export("T")
-export("_new")

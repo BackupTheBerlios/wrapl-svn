@@ -1,7 +1,0 @@
-module("Gtk", "Gtk", "AspectFrame")
-if WINDOWS then
-	prefix("_Gtk$Gtk$AspectFrame$")
-else
-	prefix("Gtk$Gtk$AspectFrame$")
-end
-export("T")

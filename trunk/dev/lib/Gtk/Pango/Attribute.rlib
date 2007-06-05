@@ -1,7 +1,0 @@
-module("Gtk", "Pango", "Attribute")
-if WINDOWS then
-	prefix("_Gtk$Pango$Attribute$")
-else
-	prefix("Gtk$Pango$Attribute$")
-end
-export("T")

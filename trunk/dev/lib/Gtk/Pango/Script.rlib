@@ -1,8 +1,0 @@
-module("Gtk", "Pango", "Script")
-if WINDOWS then
-	prefix("_Gtk$Pango$Script$")
-else
-	prefix("Gtk$Pango$Script$")
-end
-export("T")
-export("_new")

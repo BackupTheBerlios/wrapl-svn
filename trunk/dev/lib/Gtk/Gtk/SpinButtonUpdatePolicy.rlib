@@ -1,8 +1,0 @@
-module("Gtk", "Gtk", "SpinButtonUpdatePolicy")
-if WINDOWS then
-	prefix("_Gtk$Gtk$SpinButtonUpdatePolicy$")
-else
-	prefix("Gtk$Gtk$SpinButtonUpdatePolicy$")
-end
-export("T")
-export("_new")

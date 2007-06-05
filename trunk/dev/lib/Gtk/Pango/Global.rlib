@@ -1,7 +1,0 @@
-module("Gtk", "Pango", "Global")
-if WINDOWS then
-	prefix("_Gtk$Pango$Global$")
-else
-	prefix("Gtk$Pango$Global$")
-end
-export("T")

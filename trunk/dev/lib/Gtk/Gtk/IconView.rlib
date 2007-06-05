@@ -1,7 +1,0 @@
-module("Gtk", "Gtk", "IconView")
-if WINDOWS then
-	prefix("_Gtk$Gtk$IconView$")
-else
-	prefix("Gtk$Gtk$IconView$")
-end
-export("T")

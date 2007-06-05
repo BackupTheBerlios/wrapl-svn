@@ -1,7 +1,0 @@
-module("Gtk", "Pango", "CairoFontMap")
-if WINDOWS then
-	prefix("_Gtk$Pango$CairoFontMap$")
-else
-	prefix("Gtk$Pango$CairoFontMap$")
-end
-export("T")

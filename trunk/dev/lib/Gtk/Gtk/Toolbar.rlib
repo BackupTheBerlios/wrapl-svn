@@ -1,7 +1,0 @@
-module("Gtk", "Gtk", "Toolbar")
-if WINDOWS then
-	prefix("_Gtk$Gtk$Toolbar$")
-else
-	prefix("Gtk$Gtk$Toolbar$")
-end
-export("T")

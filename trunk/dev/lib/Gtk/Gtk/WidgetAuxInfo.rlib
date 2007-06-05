@@ -1,7 +1,0 @@
-module("Gtk", "Gtk", "WidgetAuxInfo")
-if WINDOWS then
-	prefix("_Gtk$Gtk$WidgetAuxInfo$")
-else
-	prefix("Gtk$Gtk$WidgetAuxInfo$")
-end
-export("T")

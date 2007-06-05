@@ -1,7 +1,0 @@
-module("Gtk", "Gtk", "CellEditable")
-if WINDOWS then
-	prefix("_Gtk$Gtk$CellEditable$")
-else
-	prefix("Gtk$Gtk$CellEditable$")
-end
-export("T")

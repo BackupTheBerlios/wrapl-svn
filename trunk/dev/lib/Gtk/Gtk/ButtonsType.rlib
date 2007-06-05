@@ -1,8 +1,0 @@
-module("Gtk", "Gtk", "ButtonsType")
-if WINDOWS then
-	prefix("_Gtk$Gtk$ButtonsType$")
-else
-	prefix("Gtk$Gtk$ButtonsType$")
-end
-export("T")
-export("_new")

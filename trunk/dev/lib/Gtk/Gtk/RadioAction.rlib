@@ -1,7 +1,0 @@
-module("Gtk", "Gtk", "RadioAction")
-if WINDOWS then
-	prefix("_Gtk$Gtk$RadioAction$")
-else
-	prefix("Gtk$Gtk$RadioAction$")
-end
-export("T")

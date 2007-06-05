@@ -1,8 +1,0 @@
-module("Gtk", "Gtk", "ModuleDisplayInitFunc")
-if WINDOWS then
-	prefix("_Gtk$Gtk$ModuleDisplayInitFunc$")
-else
-	prefix("Gtk$Gtk$ModuleDisplayInitFunc$")
-end
-export("T")
-export("_new")

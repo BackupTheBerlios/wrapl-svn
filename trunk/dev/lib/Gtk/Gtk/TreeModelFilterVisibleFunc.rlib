@@ -1,8 +1,0 @@
-module("Gtk", "Gtk", "TreeModelFilterVisibleFunc")
-if WINDOWS then
-	prefix("_Gtk$Gtk$TreeModelFilterVisibleFunc$")
-else
-	prefix("Gtk$Gtk$TreeModelFilterVisibleFunc$")
-end
-export("T")
-export("_new")

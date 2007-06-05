@@ -1,7 +1,0 @@
-module("Gtk", "Gtk", "TextTagTable")
-if WINDOWS then
-	prefix("_Gtk$Gtk$TextTagTable$")
-else
-	prefix("Gtk$Gtk$TextTagTable$")
-end
-export("T")

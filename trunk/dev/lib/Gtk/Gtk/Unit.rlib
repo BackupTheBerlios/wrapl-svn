@@ -1,8 +1,0 @@
-module("Gtk", "Gtk", "Unit")
-if WINDOWS then
-	prefix("_Gtk$Gtk$Unit$")
-else
-	prefix("Gtk$Gtk$Unit$")
-end
-export("T")
-export("_new")

@@ -1,7 +1,0 @@
-module("Gtk", "Gtk", "CellPixText")
-if WINDOWS then
-	prefix("_Gtk$Gtk$CellPixText$")
-else
-	prefix("Gtk$Gtk$CellPixText$")
-end
-export("T")

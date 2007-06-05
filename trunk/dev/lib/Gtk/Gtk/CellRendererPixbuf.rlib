@@ -1,7 +1,0 @@
-module("Gtk", "Gtk", "CellRendererPixbuf")
-if WINDOWS then
-	prefix("_Gtk$Gtk$CellRendererPixbuf$")
-else
-	prefix("Gtk$Gtk$CellRendererPixbuf$")
-end
-export("T")

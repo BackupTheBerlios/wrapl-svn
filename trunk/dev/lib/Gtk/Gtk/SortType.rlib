@@ -1,8 +1,0 @@
-module("Gtk", "Gtk", "SortType")
-if WINDOWS then
-	prefix("_Gtk$Gtk$SortType$")
-else
-	prefix("Gtk$Gtk$SortType$")
-end
-export("T")
-export("_new")

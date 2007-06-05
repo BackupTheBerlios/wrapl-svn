@@ -1,8 +1,0 @@
-module("Gtk", "Gtk", "TextCharPredicate")
-if WINDOWS then
-	prefix("_Gtk$Gtk$TextCharPredicate$")
-else
-	prefix("Gtk$Gtk$TextCharPredicate$")
-end
-export("T")
-export("_new")

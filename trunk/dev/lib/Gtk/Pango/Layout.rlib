@@ -1,7 +1,0 @@
-module("Gtk", "Pango", "Layout")
-if WINDOWS then
-	prefix("_Gtk$Pango$Layout$")
-else
-	prefix("Gtk$Pango$Layout$")
-end
-export("T")

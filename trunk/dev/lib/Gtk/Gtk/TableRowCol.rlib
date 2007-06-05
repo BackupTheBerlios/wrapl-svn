@@ -1,7 +1,0 @@
-module("Gtk", "Gtk", "TableRowCol")
-if WINDOWS then
-	prefix("_Gtk$Gtk$TableRowCol$")
-else
-	prefix("Gtk$Gtk$TableRowCol$")
-end
-export("T")

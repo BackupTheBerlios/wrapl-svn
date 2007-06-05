@@ -1,7 +1,0 @@
-module("Gtk", "Gtk", "EventBox")
-if WINDOWS then
-	prefix("_Gtk$Gtk$EventBox$")
-else
-	prefix("Gtk$Gtk$EventBox$")
-end
-export("T")

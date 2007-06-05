@@ -1,7 +1,0 @@
-module("Gtk", "Gtk", "PageRange")
-if WINDOWS then
-	prefix("_Gtk$Gtk$PageRange$")
-else
-	prefix("Gtk$Gtk$PageRange$")
-end
-export("T")

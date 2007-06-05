@@ -1,7 +1,0 @@
-module("Gtk", "Gtk", "IMContextSimple")
-if WINDOWS then
-	prefix("_Gtk$Gtk$IMContextSimple$")
-else
-	prefix("Gtk$Gtk$IMContextSimple$")
-end
-export("T")

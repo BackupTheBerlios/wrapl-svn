@@ -1,8 +1,0 @@
-module("Gtk", "Gtk", "RecentManagerError")
-if WINDOWS then
-	prefix("_Gtk$Gtk$RecentManagerError$")
-else
-	prefix("Gtk$Gtk$RecentManagerError$")
-end
-export("T")
-export("_new")

@@ -1,7 +1,0 @@
-module("Gtk", "Gtk", "TextLogAttrCache")
-if WINDOWS then
-	prefix("_Gtk$Gtk$TextLogAttrCache$")
-else
-	prefix("Gtk$Gtk$TextLogAttrCache$")
-end
-export("T")

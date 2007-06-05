@@ -1,7 +1,0 @@
-module("Gtk", "Gtk", "TextChildAnchor")
-if WINDOWS then
-	prefix("_Gtk$Gtk$TextChildAnchor$")
-else
-	prefix("Gtk$Gtk$TextChildAnchor$")
-end
-export("T")

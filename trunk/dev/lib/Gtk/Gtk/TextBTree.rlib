@@ -1,7 +1,0 @@
-module("Gtk", "Gtk", "TextBTree")
-if WINDOWS then
-	prefix("_Gtk$Gtk$TextBTree$")
-else
-	prefix("Gtk$Gtk$TextBTree$")
-end
-export("T")

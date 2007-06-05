@@ -1,7 +1,0 @@
-module("Gtk", "Gtk", "ImageIconNameData")
-if WINDOWS then
-	prefix("_Gtk$Gtk$ImageIconNameData$")
-else
-	prefix("Gtk$Gtk$ImageIconNameData$")
-end
-export("T")

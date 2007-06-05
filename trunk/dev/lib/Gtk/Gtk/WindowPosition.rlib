@@ -1,8 +1,0 @@
-module("Gtk", "Gtk", "WindowPosition")
-if WINDOWS then
-	prefix("_Gtk$Gtk$WindowPosition$")
-else
-	prefix("Gtk$Gtk$WindowPosition$")
-end
-export("T")
-export("_new")

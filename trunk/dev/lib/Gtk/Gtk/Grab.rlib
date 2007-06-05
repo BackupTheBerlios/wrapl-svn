@@ -1,7 +1,0 @@
-module("Gtk", "Gtk", "Grab")
-if WINDOWS then
-	prefix("_Gtk$Gtk$Grab$")
-else
-	prefix("Gtk$Gtk$Grab$")
-end
-export("T")

@@ -1,7 +1,0 @@
-module("Gtk", "Gtk", "TooltipsData")
-if WINDOWS then
-	prefix("_Gtk$Gtk$TooltipsData$")
-else
-	prefix("Gtk$Gtk$TooltipsData$")
-end
-export("T")

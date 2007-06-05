@@ -1,7 +1,0 @@
-module("Gtk", "Gtk", "Assistant")
-if WINDOWS then
-	prefix("_Gtk$Gtk$Assistant$")
-else
-	prefix("Gtk$Gtk$Assistant$")
-end
-export("T")

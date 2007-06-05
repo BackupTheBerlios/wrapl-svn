@@ -1,7 +1,0 @@
-module("Gtk", "Pango", "TabArray")
-if WINDOWS then
-	prefix("_Gtk$Pango$TabArray$")
-else
-	prefix("Gtk$Pango$TabArray$")
-end
-export("T")

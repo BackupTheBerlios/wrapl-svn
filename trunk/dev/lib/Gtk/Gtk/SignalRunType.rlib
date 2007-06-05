@@ -1,8 +1,0 @@
-module("Gtk", "Gtk", "SignalRunType")
-if WINDOWS then
-	prefix("_Gtk$Gtk$SignalRunType$")
-else
-	prefix("Gtk$Gtk$SignalRunType$")
-end
-export("T")
-export("_new")

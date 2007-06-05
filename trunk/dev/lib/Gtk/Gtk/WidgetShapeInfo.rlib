@@ -1,7 +1,0 @@
-module("Gtk", "Gtk", "WidgetShapeInfo")
-if WINDOWS then
-	prefix("_Gtk$Gtk$WidgetShapeInfo$")
-else
-	prefix("Gtk$Gtk$WidgetShapeInfo$")
-end
-export("T")

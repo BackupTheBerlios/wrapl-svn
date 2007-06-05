@@ -1,8 +1,0 @@
-module("Gtk", "Pango", "AttrType")
-if WINDOWS then
-	prefix("_Gtk$Pango$AttrType$")
-else
-	prefix("Gtk$Pango$AttrType$")
-end
-export("T")
-export("_new")

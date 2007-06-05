@@ -1,8 +1,0 @@
-module("Gtk", "Gtk", "LinkButtonUriFunc")
-if WINDOWS then
-	prefix("_Gtk$Gtk$LinkButtonUriFunc$")
-else
-	prefix("Gtk$Gtk$LinkButtonUriFunc$")
-end
-export("T")
-export("_new")

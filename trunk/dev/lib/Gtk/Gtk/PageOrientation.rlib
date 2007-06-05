@@ -1,8 +1,0 @@
-module("Gtk", "Gtk", "PageOrientation")
-if WINDOWS then
-	prefix("_Gtk$Gtk$PageOrientation$")
-else
-	prefix("Gtk$Gtk$PageOrientation$")
-end
-export("T")
-export("_new")

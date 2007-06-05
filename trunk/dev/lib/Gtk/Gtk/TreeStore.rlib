@@ -1,7 +1,0 @@
-module("Gtk", "Gtk", "TreeStore")
-if WINDOWS then
-	prefix("_Gtk$Gtk$TreeStore$")
-else
-	prefix("Gtk$Gtk$TreeStore$")
-end
-export("T")

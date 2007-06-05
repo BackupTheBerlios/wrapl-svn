@@ -1,8 +1,0 @@
-module("Gtk", "Gtk", "AboutDialogActivateLinkFunc")
-if WINDOWS then
-	prefix("_Gtk$Gtk$AboutDialogActivateLinkFunc$")
-else
-	prefix("Gtk$Gtk$AboutDialogActivateLinkFunc$")
-end
-export("T")
-export("_new")

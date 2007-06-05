@@ -1,8 +1,0 @@
-module("Gtk", "Gtk", "RecentSortFunc")
-if WINDOWS then
-	prefix("_Gtk$Gtk$RecentSortFunc$")
-else
-	prefix("Gtk$Gtk$RecentSortFunc$")
-end
-export("T")
-export("_new")

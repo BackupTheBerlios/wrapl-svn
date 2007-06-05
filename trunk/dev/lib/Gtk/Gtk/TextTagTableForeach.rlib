@@ -1,8 +1,0 @@
-module("Gtk", "Gtk", "TextTagTableForeach")
-if WINDOWS then
-	prefix("_Gtk$Gtk$TextTagTableForeach$")
-else
-	prefix("Gtk$Gtk$TextTagTableForeach$")
-end
-export("T")
-export("_new")

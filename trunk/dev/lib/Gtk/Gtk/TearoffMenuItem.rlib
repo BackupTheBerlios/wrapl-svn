@@ -1,7 +1,0 @@
-module("Gtk", "Gtk", "TearoffMenuItem")
-if WINDOWS then
-	prefix("_Gtk$Gtk$TearoffMenuItem$")
-else
-	prefix("Gtk$Gtk$TearoffMenuItem$")
-end
-export("T")

@@ -1,8 +1,0 @@
-module("Gtk", "Gtk", "TreeViewColumnDropFunc")
-if WINDOWS then
-	prefix("_Gtk$Gtk$TreeViewColumnDropFunc$")
-else
-	prefix("Gtk$Gtk$TreeViewColumnDropFunc$")
-end
-export("T")
-export("_new")

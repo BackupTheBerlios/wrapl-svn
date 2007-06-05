@@ -1,7 +1,0 @@
-module("Gtk", "Gtk", "Layout")
-if WINDOWS then
-	prefix("_Gtk$Gtk$Layout$")
-else
-	prefix("Gtk$Gtk$Layout$")
-end
-export("T")

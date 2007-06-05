@@ -1,8 +1,0 @@
-module("Gtk", "Gtk", "TreeCellDataFunc")
-if WINDOWS then
-	prefix("_Gtk$Gtk$TreeCellDataFunc$")
-else
-	prefix("Gtk$Gtk$TreeCellDataFunc$")
-end
-export("T")
-export("_new")

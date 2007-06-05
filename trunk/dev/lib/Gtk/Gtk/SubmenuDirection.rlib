@@ -1,8 +1,0 @@
-module("Gtk", "Gtk", "SubmenuDirection")
-if WINDOWS then
-	prefix("_Gtk$Gtk$SubmenuDirection$")
-else
-	prefix("Gtk$Gtk$SubmenuDirection$")
-end
-export("T")
-export("_new")

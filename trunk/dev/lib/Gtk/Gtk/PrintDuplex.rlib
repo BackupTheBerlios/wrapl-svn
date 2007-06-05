@@ -1,8 +1,0 @@
-module("Gtk", "Gtk", "PrintDuplex")
-if WINDOWS then
-	prefix("_Gtk$Gtk$PrintDuplex$")
-else
-	prefix("Gtk$Gtk$PrintDuplex$")
-end
-export("T")
-export("_new")

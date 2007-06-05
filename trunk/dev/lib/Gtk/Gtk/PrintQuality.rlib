@@ -1,8 +1,0 @@
-module("Gtk", "Gtk", "PrintQuality")
-if WINDOWS then
-	prefix("_Gtk$Gtk$PrintQuality$")
-else
-	prefix("Gtk$Gtk$PrintQuality$")
-end
-export("T")
-export("_new")

@@ -1,8 +1,0 @@
-module("Gtk", "Gtk", "CalendarDisplayOptions")
-if WINDOWS then
-	prefix("_Gtk$Gtk$CalendarDisplayOptions$")
-else
-	prefix("Gtk$Gtk$CalendarDisplayOptions$")
-end
-export("T")
-export("_new")

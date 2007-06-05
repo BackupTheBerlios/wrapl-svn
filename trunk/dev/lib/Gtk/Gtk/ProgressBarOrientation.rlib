@@ -1,8 +1,0 @@
-module("Gtk", "Gtk", "ProgressBarOrientation")
-if WINDOWS then
-	prefix("_Gtk$Gtk$ProgressBarOrientation$")
-else
-	prefix("Gtk$Gtk$ProgressBarOrientation$")
-end
-export("T")
-export("_new")

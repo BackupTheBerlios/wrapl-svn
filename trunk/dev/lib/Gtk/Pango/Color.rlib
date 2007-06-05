@@ -1,7 +1,0 @@
-module("Gtk", "Pango", "Color")
-if WINDOWS then
-	prefix("_Gtk$Pango$Color$")
-else
-	prefix("Gtk$Pango$Color$")
-end
-export("T")

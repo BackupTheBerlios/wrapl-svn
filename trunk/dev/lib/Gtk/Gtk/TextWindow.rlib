@@ -1,7 +1,0 @@
-module("Gtk", "Gtk", "TextWindow")
-if WINDOWS then
-	prefix("_Gtk$Gtk$TextWindow$")
-else
-	prefix("Gtk$Gtk$TextWindow$")
-end
-export("T")

@@ -1,7 +1,0 @@
-module("Gtk", "Gtk", "SpinButton")
-if WINDOWS then
-	prefix("_Gtk$Gtk$SpinButton$")
-else
-	prefix("Gtk$Gtk$SpinButton$")
-end
-export("T")

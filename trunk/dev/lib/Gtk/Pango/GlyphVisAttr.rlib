@@ -1,7 +1,0 @@
-module("Gtk", "Pango", "GlyphVisAttr")
-if WINDOWS then
-	prefix("_Gtk$Pango$GlyphVisAttr$")
-else
-	prefix("Gtk$Pango$GlyphVisAttr$")
-end
-export("T")

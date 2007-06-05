@@ -1,8 +1,0 @@
-module("Gtk", "Gtk", "FileChooserConfirmation")
-if WINDOWS then
-	prefix("_Gtk$Gtk$FileChooserConfirmation$")
-else
-	prefix("Gtk$Gtk$FileChooserConfirmation$")
-end
-export("T")
-export("_new")

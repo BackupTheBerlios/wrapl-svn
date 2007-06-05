@@ -1,7 +1,0 @@
-module("Gtk", "Gtk", "FileChooserButton")
-if WINDOWS then
-	prefix("_Gtk$Gtk$FileChooserButton$")
-else
-	prefix("Gtk$Gtk$FileChooserButton$")
-end
-export("T")

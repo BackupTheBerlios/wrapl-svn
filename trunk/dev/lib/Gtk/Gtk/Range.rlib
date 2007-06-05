@@ -1,7 +1,0 @@
-module("Gtk", "Gtk", "Range")
-if WINDOWS then
-	prefix("_Gtk$Gtk$Range$")
-else
-	prefix("Gtk$Gtk$Range$")
-end
-export("T")

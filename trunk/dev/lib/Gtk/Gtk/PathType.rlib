@@ -1,8 +1,0 @@
-module("Gtk", "Gtk", "PathType")
-if WINDOWS then
-	prefix("_Gtk$Gtk$PathType$")
-else
-	prefix("Gtk$Gtk$PathType$")
-end
-export("T")
-export("_new")

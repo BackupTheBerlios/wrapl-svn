@@ -1,8 +1,0 @@
-module("Gtk", "Gtk", "Callback")
-if WINDOWS then
-	prefix("_Gtk$Gtk$Callback$")
-else
-	prefix("Gtk$Gtk$Callback$")
-end
-export("T")
-export("_new")

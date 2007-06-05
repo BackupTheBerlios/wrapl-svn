@@ -1,7 +1,0 @@
-module("Gtk", "Gtk", "AccelGroupEntry")
-if WINDOWS then
-	prefix("_Gtk$Gtk$AccelGroupEntry$")
-else
-	prefix("Gtk$Gtk$AccelGroupEntry$")
-end
-export("T")

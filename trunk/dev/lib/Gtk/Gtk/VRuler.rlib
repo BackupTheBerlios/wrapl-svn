@@ -1,7 +1,0 @@
-module("Gtk", "Gtk", "VRuler")
-if WINDOWS then
-	prefix("_Gtk$Gtk$VRuler$")
-else
-	prefix("Gtk$Gtk$VRuler$")
-end
-export("T")

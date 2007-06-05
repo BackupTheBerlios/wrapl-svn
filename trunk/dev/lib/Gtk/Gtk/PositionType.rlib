@@ -1,8 +1,0 @@
-module("Gtk", "Gtk", "PositionType")
-if WINDOWS then
-	prefix("_Gtk$Gtk$PositionType$")
-else
-	prefix("Gtk$Gtk$PositionType$")
-end
-export("T")
-export("_new")

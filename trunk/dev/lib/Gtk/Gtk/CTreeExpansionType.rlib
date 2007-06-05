@@ -1,8 +1,0 @@
-module("Gtk", "Gtk", "CTreeExpansionType")
-if WINDOWS then
-	prefix("_Gtk$Gtk$CTreeExpansionType$")
-else
-	prefix("Gtk$Gtk$CTreeExpansionType$")
-end
-export("T")
-export("_new")
