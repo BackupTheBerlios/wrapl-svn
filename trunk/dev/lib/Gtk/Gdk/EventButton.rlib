@@ -1,7 +1,0 @@
-module("Gtk", "Gdk", "EventButton")
-if WINDOWS then
-	prefix("_Gtk$Gdk$EventButton$")
-else
-	prefix("Gtk$Gdk$EventButton$")
-end
-export("T")
