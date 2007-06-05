@@ -1,7 +1,0 @@
-module("Gtk", "Gdk", "EventVisibility")
-if WINDOWS then
-	prefix("_Gtk$Gdk$EventVisibility$")
-else
-	prefix("Gtk$Gdk$EventVisibility$")
-end
-export("T")
