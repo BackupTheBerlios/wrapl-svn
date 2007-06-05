@@ -1,8 +1,0 @@
-module("Gtk", "Gdk", "CapStyle")
-if WINDOWS then
-	prefix("_Gtk$Gdk$CapStyle$")
-else
-	prefix("Gtk$Gdk$CapStyle$")
-end
-export("T")
-export("_new")
