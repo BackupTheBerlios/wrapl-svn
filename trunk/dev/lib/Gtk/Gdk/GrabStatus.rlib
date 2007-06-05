@@ -1,8 +1,0 @@
-module("Gtk", "Gdk", "GrabStatus")
-if WINDOWS then
-	prefix("_Gtk$Gdk$GrabStatus$")
-else
-	prefix("Gtk$Gdk$GrabStatus$")
-end
-export("T")
-export("_new")
