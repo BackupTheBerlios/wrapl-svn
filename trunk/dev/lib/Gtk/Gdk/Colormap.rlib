@@ -1,7 +1,0 @@
-module("Gtk", "Gdk", "Colormap")
-if WINDOWS then
-	prefix("_Gtk$Gdk$Colormap$")
-else
-	prefix("Gtk$Gdk$Colormap$")
-end
-export("T")
