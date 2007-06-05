@@ -1,7 +1,0 @@
-module("Gtk", "Gdk", "EventOwnerChange")
-if WINDOWS then
-	prefix("_Gtk$Gdk$EventOwnerChange$")
-else
-	prefix("Gtk$Gdk$EventOwnerChange$")
-end
-export("T")
