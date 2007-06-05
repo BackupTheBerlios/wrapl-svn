@@ -1,8 +1,0 @@
-module("Gtk", "Gdk", "InputFunction")
-if WINDOWS then
-	prefix("_Gtk$Gdk$InputFunction$")
-else
-	prefix("Gtk$Gdk$InputFunction$")
-end
-export("T")
-export("_new")
