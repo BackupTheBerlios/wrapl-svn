@@ -1,7 +1,0 @@
-module("Gtk", "Gdk", "EventMotion")
-if WINDOWS then
-	prefix("_Gtk$Gdk$EventMotion$")
-else
-	prefix("Gtk$Gdk$EventMotion$")
-end
-export("T")
