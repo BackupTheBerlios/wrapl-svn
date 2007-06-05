@@ -1,8 +1,0 @@
-module("Gtk", "Gdk", "LineStyle")
-if WINDOWS then
-	prefix("_Gtk$Gdk$LineStyle$")
-else
-	prefix("Gtk$Gdk$LineStyle$")
-end
-export("T")
-export("_new")
