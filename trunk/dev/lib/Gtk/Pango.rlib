@@ -1,0 +1,11 @@
+if LINUX then
+	include("Gtk/Linux/libpango-1.0.rlib")
+	include("Gtk/Linux/libpangocairo-1.0.rlib")
+	include("Gtk/Linux/libpangoft2-1.0.rlib")
+end
+
+if WINDOWS then
+	include("Gtk/Win32/libpango-1.0-0.rlib")
+	include("Gtk/Win32/libpangocairo-1.0-0.rlib")
+	include("Gtk/Win32/libpangoft2-1.0-0.rlib")
+end

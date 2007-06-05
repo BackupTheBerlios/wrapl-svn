@@ -28,9 +28,9 @@ typedef struct {Std$Type_t *Type; int Access, Create;} openmode_t;
 
 static openmode_t OpenModes[] = {
 	{T, 0}, {ReaderT, GENERIC_READ, OPEN_EXISTING},
-	{WriterT, GENERIC_WRITE, OPEN_ALWAYS}, {ReaderWriterT, GENERIC_READ | GENERIC_WRITE, OPEN_ALWAYS},
+	{WriterT, GENERIC_WRITE}, {ReaderWriterT, GENERIC_READ | GENERIC_WRITE},
 	{T, 0}, {TextReaderT, GENERIC_READ, OPEN_EXISTING},
-	{TextWriterT, GENERIC_WRITE, OPEN_ALWAYS}, {TextReaderWriterT, GENERIC_READ | GENERIC_WRITE, OPEN_ALWAYS}
+	{TextWriterT, GENERIC_WRITE}, {TextReaderWriterT, GENERIC_READ | GENERIC_WRITE}
 };
 
 #else
@@ -50,6 +50,9 @@ GLOBAL_FUNCTION(Open, 2) {
 #ifdef WINDOWS
     char *FileName = Std$String$flatten(Args[0].Val);
     openmode_t OpenMode = OpenModes[Flags % 8];
+    if (Flags & IO$File$OPENWRITE) {
+    	OpenMode.Create = (Flags & IO$File$OPENAPPEND) ? OPEN_ALWAYS : CREATE_ALWAYS;
+	};
     HANDLE Handle = CreateFile(FileName, OpenMode.Access, FILE_SHARE_READ | FILE_SHARE_WRITE, 0, OpenMode.Create, 0, 0);
     if (Handle == INVALID_HANDLE_VALUE) {
         Result->Val = OpenMessage;
@@ -57,8 +60,6 @@ GLOBAL_FUNCTION(Open, 2) {
 	};
 	if (Flags & IO$File$OPENAPPEND) {
 		SetFilePointer(Handle, 0, 0, FILE_END);
-	} else if (Flags & IO$File$OPENWRITE) {
-		// truncate
 	};
 	NATIVE(_t) *Stream = new(NATIVE(_t));
 	Stream->Type = OpenMode.Type;

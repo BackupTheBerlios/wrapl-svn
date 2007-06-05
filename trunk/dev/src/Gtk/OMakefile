@@ -1,6 +1,6 @@
 .PHONY: GtkGObject GtkGtk GtkGdk GtkAtk GtkPango
 
-LDFLAGS += Std.rlib Riva.rlib
+LDFLAGS += Std.rlib Riva.rlib Gtk/Gtk.rlib
 
 GTK_LIB_DIR = $(LIB_DIR)Gtk$(DIRSEP)
 GTK_SRC_DIR = $(SRC_DIR)Gtk$(DIRSEP)

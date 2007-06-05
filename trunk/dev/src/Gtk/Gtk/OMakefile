@@ -1,7 +1,7 @@
 BASENAME = $(GTK_LIB_DIR)Gtk$(DIRSEP)
 
 CFLAGS += $(shell pkg-config --cflags gtk+-2.0) -include gtk/gtk.h -include gtk/gtkimmodule.h
-LDFLAGS += Gtk/libgobject-2.0.rlib Gtk/libgtk-x11-2.0.rlib Gtk/libglib-2.0.rlib
+LDFLAGS += Gtk/Gtk.rlib
 
 if $(file-exists $(GTK_AUTOGEN))
 	foreach(FILE, $(rootname $(basename $(glob *.c))))

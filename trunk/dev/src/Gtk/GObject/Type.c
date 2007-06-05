@@ -29,7 +29,20 @@ Std$Type_t *_to_riva(GType GtkType) {
 	return RivaType;
 };
 
+static void __free(void *Ignore) {};
+static void *__calloc(gsize N, gsize M) {return Riva$Memory$alloc(N * M);};
+
+static GMemVTable MemVTable = {
+	Riva$Memory$alloc,
+	Riva$Memory$realloc,
+	__free,
+	__calloc,
+	Riva$Memory$alloc,
+	Riva$Memory$realloc
+};
+
 void __init(Riva$Module_t *Module) {
+	g_mem_set_vtable(&MemVTable);
 	g_type_init();
 	char MapFileName[256];
 	sprintf(MapFileName, "%sTypes.map", Riva$Module$get_path(Module));

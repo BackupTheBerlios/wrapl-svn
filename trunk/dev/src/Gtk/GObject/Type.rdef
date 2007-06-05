@@ -1,6 +1,3 @@
-library("Gtk/libgobject-2.0.rlib")
-library("Gtk/libgtk-x11-2.0.rlib")
-library("Gtk/libglib-2.0.rlib")
 library("Gtk/GObject/Object.rlib")
 
 if WINDOWS then
