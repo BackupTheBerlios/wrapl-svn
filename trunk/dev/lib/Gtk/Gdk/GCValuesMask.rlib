@@ -1,8 +1,0 @@
-module("Gtk", "Gdk", "GCValuesMask")
-if WINDOWS then
-	prefix("_Gtk$Gdk$GCValuesMask$")
-else
-	prefix("Gtk$Gdk$GCValuesMask$")
-end
-export("T")
-export("_new")
