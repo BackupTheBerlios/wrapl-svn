@@ -43,7 +43,9 @@ c_func _copy
 	call strlen
 	mov [esp], eax
 	push eax
+	push eax
 	call Riva$Memory$_alloc_atomic
+	pop ecx
 	pop ecx
 	push edi
 	push esi
@@ -87,7 +89,9 @@ c_func _new_length
 c_func _copy_length
 	mov eax, [esp + 8]
 	push eax
+	push eax
 	call Riva$Memory$_alloc_atomic
+	pop ecx
 	pop ecx
 	push edi
 	push esi
