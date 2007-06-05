@@ -484,6 +484,7 @@ struct module_expr_t : expr_t {
 	globaldef_t *Defs;
 	globalvar_t *Vars;
 	expr_t *Body;
+	const char *Name;
 
 	void print(int Indent);
 	operand_t *compile(compiler_t *Compiler, label_t *Start, label_t *Success);

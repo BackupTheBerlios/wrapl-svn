@@ -28,6 +28,11 @@ TO :precall(t@T, name, arg) (
 TO :postcall(t@T, name, arg) [
 ];
 
+TO :toriva(t@T, arg, name) [
+	arg + ".Val = Std$Object$Nil;",
+	arg + ".Ref = 0;"
+];
+
 TO :return(t@T, result) (
 	unknownreturns[t] // (
 		unknownreturns:insert(t);
@@ -105,6 +110,10 @@ TO :precall(=gvaluetype, name, arg) [
 TO :return(=gvaluetype, result) [
 	"Result->Val = Gtk$GObject$Value$to_riva(" + result + ");"
 ];
+TO :toriva(=gvaluetype, arg, name) [
+	arg + ".Val = Gtk$GObject$Value$to_riva(" + name + ");",
+	arg + ".Ref = 0;"
+];
 TO :headers(=gvaluetype) ["#include <Gtk/GObject/Value.h>"];
 TO :libraries(=gvaluetype) ["Gtk/GObject/Value.rlib"];
 Define("GValue*", gvaluetype);
@@ -129,6 +138,10 @@ TO :precall(=chartype, name, arg) [
 TO :return(=chartype, result) [
 	"Result->Val = Std$String$new_char(" + result + ");"
 ];
+TO :toriva(=chartype, arg, name) [
+	arg + ".Val = Std$String$new_char(" + name + ");",
+	arg + ".Ref = 0;"
+];
 Define("char", chartype);
 Define("guchar", chartype);
 Define("gchar", chartype);
@@ -142,6 +155,10 @@ TO :precall(=stringtype, name, arg) [
 TO :return(=stringtype, result) [
 	"if (" + result + " == 0) return FAILURE;",
 	"Result->Val = Std$String$new(" + result + ");"
+];
+TO :toriva(=stringtype, arg, name) [
+	arg + ".Val = Std$String$new(" + name + ");",
+	arg + ".Ref = 0;"
 ];
 Define("char*", stringtype);
 Define("gchar*", stringtype);
@@ -158,6 +175,10 @@ TO :precall(=conststringtype, name, arg) [
 TO :return(=conststringtype, result) [
 	"if (" + result + " == 0) return FAILURE;",
 	"Result->Val = Std$String$copy(" + result + ");"
+];
+TO :toriva(=conststringtype, arg, name) [
+	arg + ".Val = Std$String$copy(" + name + ");",
+	arg + ".Ref = 0;"
 ];
 Define("const-char*", conststringtype);
 Define("const-gchar*", conststringtype);
@@ -178,6 +199,10 @@ TO :precall(=integertype, name, arg) [
 ];
 TO :return(=integertype, result) [
 	"Result->Val = Std$Integer$new_small(" + result + ");"
+];
+TO :toriva(=integertype, arg, name) [
+	arg + ".Val = Std$Integer$new_small(" + name + ");",
+	arg + ".Ref = 0;"
 ];
 Define("int", integertype);
 Define("guint", integertype);
@@ -205,6 +230,10 @@ TO :precall(=realtype, name, arg) [
 TO :return(=realtype, result) [
 	"Result->Val = Std$Real$new(" + result +");"
 ];
+TO :toriva(=realtype, arg, name) [
+	arg + ".Val = Std$Real$new(" + name + ");",
+	arg + ".Ref = 0;"
+];
 Define("gdouble", realtype);
 Define("double", realtype);
 Define("gfloat", realtype);
@@ -227,6 +256,10 @@ TO :precall(=booleantype, name, arg) [
 TO :return(=booleantype, result) [
 	"Result->Val = " + result + " ? $true : $false;"
 ];
+TO :toriva(=booleantype, arg, name) [
+	arg + ".Val = " + name + " ? $true : $false;",
+	arg + ".Ref = 0;"
+];
 TO :headers(=booleantype) [
 	"#include <Std/Boolean.h>"
 ];
@@ -240,6 +273,10 @@ TO :precall(=pointertype, name, arg) [
 ];
 TO :return(=pointertype, result) [
 	"Result->Val = Std$Address$new(" + result + ");"
+];
+TO :toriva(=pointertype, arg, name) [
+	arg + ".Val = Std$Address$new(" + name + ");",
+	arg + ".Ref = 0;"
 ];
 Define("gpointer", pointertype);
 

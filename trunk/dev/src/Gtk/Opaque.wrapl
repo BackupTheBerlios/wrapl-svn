@@ -76,6 +76,17 @@ TO :precall(t@T, name, arg) [
 	t:ctype + " " + name + "= ((Gtk$" + t:ns + "$" + t:name + "_t *)" + arg + ".Val)->Value;"
 ];
 
+TO :return(t@T, result) [
+	"if (" + result + ") {",
+	"\tGtk$" + t:ns + "$" + t:name + "_t *__" + result + " = new(Gtk$" + t:ns + "$" + t:name + "_t);",
+	"\t__" + result + "->Type = " + t:rtype + ";",
+	"\t__" + result + "->Value = " + result + ";",
+	"\tResult->Val = __" + result + ";",
+	"} else {",
+	"\treturn FAILURE;",
+	"};"
+];
+
 TO :process(t@T, srcdir, incdir, libdir) (
 	VAR headers <- {"#include <Gtk/GObject/Object.h>"};
 	VAR libraries <- {};
@@ -180,8 +191,11 @@ EOF);
 	deffile:write(>>EOF
 if WINDOWS then
 	_export = export
-	export = function(Name)
-		_export("_" .. Name, Name)
+	export = function(Name, Alias)
+		if Alias == nil then
+			Alias = Name
+		end
+		_export("_" .. Name, Alias)
 	end
 end
 

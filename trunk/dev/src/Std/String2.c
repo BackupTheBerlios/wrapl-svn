@@ -3,7 +3,10 @@
 #include <string.h>
 #include <stdarg.h>
 
+extern Std$String_t Nil[];
+
 char *_flatten(Std$String_t *String) {
+	if (String == Nil) return 0;
 	if (String->Count > 1) {
 		char *Flat = Riva$Memory$alloc_atomic(String->Length.Value + 1);
 		char *P = Flat;

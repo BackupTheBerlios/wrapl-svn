@@ -41,20 +41,23 @@ TO :process(t@T, srcdir, incdir, libdir) (
 	cfile:writes("#include <Std/Integer.h>\n\n");
 	VAR member;
 	EVERY member <- t:members:values DO (
-		cfile:writes("Std$Integer_smallt ", member:name, "[] = {{Std$Integer$SmallT, ", member:value, "}};\n");
+		cfile:writes("Std$Integer_smallt __", member:name, "[] = {{Std$Integer$SmallT, ", member:value, "}};\n");
 	);
 	cfile:close;
 VAR deffile <- File.Open(srcdir + base + ".rdef", File.WRITE + File.TEXT);
 	deffile:writes(>>EOF
 if WINDOWS then
 	_export = export
-	export = function(Name)
-		_export("_" .. Name, Name)
+	export = function(Name, Alias)
+		if Alias == nil then
+			Alias = Name
+		end
+		_export("_" .. Name, Alias)
 	end
 end
 
 EOF);
-	EVERY member <- t:members:values DO deffile:writes("export(\"", member:name, "\")\n");
+	EVERY member <- t:members:values DO deffile:writes("export(\"__", member:name, "\", \"", member:name, "\")\n");
 	deffile:close;
 	VAR libfile <- File.Open(libdir + base + ".rlib", File.WRITE + File.TEXT);
 	libfile:writes("module(\"Gtk\", \"", t:ns, "\", \"", t:name, "\")\n");

@@ -50,7 +50,7 @@ section
 	vmount($(SRC_DIR)Xml, $(OBJ_DIR)Xml)
 	.SUBDIRS: $(OBJ_DIR)Xml
 
-if $(equal $(TARGETS), Gtk)
+section
 	vmount($(SRC_DIR)Gtk, $(OBJ_DIR)Gtk)
 	.SUBDIRS: $(OBJ_DIR)Gtk
 

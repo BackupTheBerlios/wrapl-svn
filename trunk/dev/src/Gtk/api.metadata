@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
 <metadata>
+	<remove-node path="/api/namespace/callback[@cname='GtkCListCompareFunc']" />
 	<remove-node path="/api/namespace/enum[@name='FileInfoType']" />
 	<remove-node path="/api/namespace/enum[@name='FileSystemError']" />
 	<remove-node path="/api/namespace/interface[@name='FileSystem']" />

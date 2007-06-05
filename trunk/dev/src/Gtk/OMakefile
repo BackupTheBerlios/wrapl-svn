@@ -1,4 +1,4 @@
-.PHONY: GtkGObject GtkGtk GtkGdk GtkAtk GtkPango
+.PHONY: GtkGObject GtkGtk GtkGdk GtkAtk GtkPango GtkGlade
 
 LDFLAGS += Std.rlib Riva.rlib Gtk/Gtk.rlib
 
@@ -7,12 +7,12 @@ GTK_SRC_DIR = $(SRC_DIR)Gtk$(DIRSEP)
 GTK_OBJ_DIR = $(OBJ_DIR)Gtk$(DIRSEP)
 GTK_AUTOGEN = $(file Autogen.log)
 
-#api.raw: $(file api.sources)
-#	gapi2-parser $(file api.sources)
+api.raw: $(file api.sources)
+	gapi2-parser $(file api.sources)
 
-#api.xml: $(file api.raw) $(file api.metadata)
-#	cp $(file api.raw) api.xml
-#	gapi2-fixup --api=api.xml --metadata=$(file api.metadata)
+api.xml: api.raw $(file api.metadata)
+	cp $(file api.raw) api.xml
+	gapi2-fixup --api=api.xml --metadata=$(file api.metadata)
 
 $(GTK_AUTOGEN): api.xml
 	riva -L $(GTK_SRC_DIR) Main $(file api.xml)
@@ -21,6 +21,6 @@ clean:
 	$(rm api.xml)
 	$(rm $(GTK_AUTOGEN))
 
-.SUBDIRS: GObject Gtk Gdk Pango
+.SUBDIRS: GObject Gtk Gdk Pango Glade
 
-Gtk: GtkGObject $(GTK_AUTOGEN) GtkGtk GtkGdk GtkPango
+Gtk: GtkGObject $(GTK_AUTOGEN) GtkGtk GtkGdk GtkPango GtkGlade

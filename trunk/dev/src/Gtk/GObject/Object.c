@@ -8,6 +8,8 @@ SYMBOL($true, "true");
 
 TYPE(T);
 
+Gtk$GObject$Object_t Nil[] = {{T, 0}};
+
 static GQuark RivaQuark;
 
 inline Gtk$GObject$Object_t *_new(GObject *Handle, Std$Type_t *Type) {
@@ -19,6 +21,7 @@ inline Gtk$GObject$Object_t *_new(GObject *Handle, Std$Type_t *Type) {
 };
 
 Gtk$GObject$Object_t *_to_riva(GObject *Handle) {
+	if (Handle == 0) return Nil;
 	Gtk$GObject$Object_t *Object = g_object_get_qdata(Handle, RivaQuark);
 	if (Object) return Object;
 	Std$Type_t *Type = Gtk$GObject$Type$to_riva(G_OBJECT_TYPE(Handle));

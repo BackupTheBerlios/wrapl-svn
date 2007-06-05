@@ -20,7 +20,13 @@ extern strlen
 extern Std$Integer$SmallT
 extern Std$Address$T
 c_func _new
-	push dword [esp + 4]
+	mov eax, [esp + 4]
+	test eax, eax
+	jnz .notnull
+	mov eax, Nil
+	ret
+.notnull:
+	push eax
 	call strlen
 	mov [esp], eax
 	push byte sizeof(string) + 2 * sizeof(string_block)
@@ -39,7 +45,13 @@ c_func _new
 	ret
 
 c_func _copy
-	push dword [esp + 4]
+	mov eax, [esp + 4]
+	test eax, eax
+	jnz .notnull
+	mov eax, Nil
+	ret
+.notnull:
+	push eax
 	call strlen
 	mov [esp], eax
 	push eax
@@ -410,3 +422,10 @@ func $Add, 2
 	xor edx, edx
 	xor eax, eax
 	ret
+c_data Nil
+	dd T
+	dd Std$Integer$SmallT
+	dd 0, 1
+	dd Std$Integer$SmallT, 0
+	dd Std$Address$T, 0
+	dd 0, 0, 0, 0

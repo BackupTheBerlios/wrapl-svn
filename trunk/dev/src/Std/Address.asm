@@ -14,6 +14,10 @@ c_data T
 	dd T
 	dd 0
 
+c_data Nil
+	dd T
+	dd 0
+
 c_func _alloc
 	push byte sizeof(address)
 	call Riva$Memory$_alloc_small
@@ -42,6 +46,7 @@ func New, 1
 	pop dword [address(eax).Value]
 	mov ecx, eax
 	xor eax, eax
+	xor edx, edx
 	ret
 
 func FromVal, 1

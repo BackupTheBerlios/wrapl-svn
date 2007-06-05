@@ -1052,6 +1052,10 @@ operand_t *block_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t *
 
 operand_t *module_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t *Success) {
 	const char *ModulePath = Sys$Module$get_path(Module);
+	operand_t *Operand = new operand_t;
+	Operand->Type = operand_t::CNST;
+	Operand->Value = (Std$Object_t *)Module;
+	Compiler->declare(Name, Operand);
 	for (module_expr_t::globalvar_t *Var = Vars; Var; Var = Var->Next) {
 		operand_t *Operand = new operand_t;
 		Operand->Type = operand_t::GVAR;
@@ -1143,9 +1147,6 @@ operand_t *module_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t 
 			};
 		};
 	};
-	operand_t *Operand = new operand_t;
-	Operand->Type = operand_t::CNST;
-	Operand->Value = (Std$Object_t *)Module;
 	Start->link(Success);
 	return Operand;
 };

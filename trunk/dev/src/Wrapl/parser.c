@@ -750,11 +750,14 @@ static module_expr_t *accept_globalstatement(scanner_t *Scanner) {
 
 module_expr_t *accept_module(scanner_t *Scanner, Sys$Module_t *Module) {
 	bool Nested = (Module == 0);
+	const char *Name;
 	if (Nested) {
 		Module = Sys$Module$new();
+		Name = "<anonymous>";
 	} else {
 		Scanner->accept(tkMOD);
 		Scanner->accept(tkIDENT);
+		Name = Scanner->Token.Ident;
 		Scanner->accept(tkSEMICOLON);
 	};
 
@@ -762,6 +765,7 @@ module_expr_t *accept_module(scanner_t *Scanner, Sys$Module_t *Module) {
 	module_expr_t *Expr = accept_globalstatement(Scanner);
 	Expr->LineNo = LineNo;
 	Expr->Module = Module;
+	Expr->Name = Name;
 
 	Scanner->accept(tkEND);
 	if (!Nested) {

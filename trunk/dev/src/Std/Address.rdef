@@ -6,6 +6,7 @@ if WINDOWS then
 end
 
 export("T")
+export("Nil")
 export("New")
 export("_alloc")
 export("_new")
