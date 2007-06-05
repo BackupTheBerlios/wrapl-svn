@@ -1,7 +1,0 @@
-module("Gtk", "Gdk", "Keyboard")
-if WINDOWS then
-	prefix("_Gtk$Gdk$Keyboard$")
-else
-	prefix("Gtk$Gdk$Keyboard$")
-end
-export("T")
