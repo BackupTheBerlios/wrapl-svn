@@ -1,7 +1,0 @@
-module("Gtk", "Gdk", "EventSelection")
-if WINDOWS then
-	prefix("_Gtk$Gdk$EventSelection$")
-else
-	prefix("Gtk$Gdk$EventSelection$")
-end
-export("T")
