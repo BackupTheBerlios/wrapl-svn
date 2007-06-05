@@ -1,8 +1,0 @@
-module("Gtk", "Gdk", "FilterReturn")
-if WINDOWS then
-	prefix("_Gtk$Gdk$FilterReturn$")
-else
-	prefix("Gtk$Gdk$FilterReturn$")
-end
-export("T")
-export("_new")
