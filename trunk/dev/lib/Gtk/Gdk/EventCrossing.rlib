@@ -1,7 +1,0 @@
-module("Gtk", "Gdk", "EventCrossing")
-if WINDOWS then
-	prefix("_Gtk$Gdk$EventCrossing$")
-else
-	prefix("Gtk$Gdk$EventCrossing$")
-end
-export("T")
