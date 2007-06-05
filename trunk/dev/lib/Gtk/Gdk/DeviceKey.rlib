@@ -1,7 +1,0 @@
-module("Gtk", "Gdk", "DeviceKey")
-if WINDOWS then
-	prefix("_Gtk$Gdk$DeviceKey$")
-else
-	prefix("Gtk$Gdk$DeviceKey$")
-end
-export("T")
