@@ -1,8 +1,0 @@
-module("Gtk", "Gdk", "CursorType")
-if WINDOWS then
-	prefix("_Gtk$Gdk$CursorType$")
-else
-	prefix("Gtk$Gdk$CursorType$")
-end
-export("T")
-export("_new")
