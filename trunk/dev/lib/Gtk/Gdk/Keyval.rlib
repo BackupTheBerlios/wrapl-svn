@@ -1,7 +1,0 @@
-module("Gtk", "Gdk", "Keyval")
-if WINDOWS then
-	prefix("_Gtk$Gdk$Keyval$")
-else
-	prefix("Gtk$Gdk$Keyval$")
-end
-export("T")
