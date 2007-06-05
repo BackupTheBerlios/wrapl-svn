@@ -1,7 +1,0 @@
-module("Gtk", "Gdk", "EventNoExpose")
-if WINDOWS then
-	prefix("_Gtk$Gdk$EventNoExpose$")
-else
-	prefix("Gtk$Gdk$EventNoExpose$")
-end
-export("T")
