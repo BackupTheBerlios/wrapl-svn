@@ -1,7 +1,0 @@
-module("Gtk", "Gdk", "KeymapKey")
-if WINDOWS then
-	prefix("_Gtk$Gdk$KeymapKey$")
-else
-	prefix("Gtk$Gdk$KeymapKey$")
-end
-export("T")
