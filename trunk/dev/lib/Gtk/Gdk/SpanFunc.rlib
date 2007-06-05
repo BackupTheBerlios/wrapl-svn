@@ -1,8 +1,0 @@
-module("Gtk", "Gdk", "SpanFunc")
-if WINDOWS then
-	prefix("_Gtk$Gdk$SpanFunc$")
-else
-	prefix("Gtk$Gdk$SpanFunc$")
-end
-export("T")
-export("_new")

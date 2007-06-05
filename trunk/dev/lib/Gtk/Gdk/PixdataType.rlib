@@ -1,8 +1,0 @@
-module("Gtk", "Gdk", "PixdataType")
-if WINDOWS then
-	prefix("_Gtk$Gdk$PixdataType$")
-else
-	prefix("Gtk$Gdk$PixdataType$")
-end
-export("T")
-export("_new")

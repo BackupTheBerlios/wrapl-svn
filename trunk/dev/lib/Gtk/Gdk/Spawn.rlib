@@ -1,7 +1,0 @@
-module("Gtk", "Gdk", "Spawn")
-if WINDOWS then
-	prefix("_Gtk$Gdk$Spawn$")
-else
-	prefix("Gtk$Gdk$Spawn$")
-end
-export("T")

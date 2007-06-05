@@ -1,7 +1,0 @@
-module("Gtk", "Gdk", "Point")
-if WINDOWS then
-	prefix("_Gtk$Gdk$Point$")
-else
-	prefix("Gtk$Gdk$Point$")
-end
-export("T")

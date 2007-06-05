@@ -1,8 +1,0 @@
-module("Gtk", "Gdk", "WindowTypeHint")
-if WINDOWS then
-	prefix("_Gtk$Gdk$WindowTypeHint$")
-else
-	prefix("Gtk$Gdk$WindowTypeHint$")
-end
-export("T")
-export("_new")

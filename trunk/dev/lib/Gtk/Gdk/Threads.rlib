@@ -1,7 +1,0 @@
-module("Gtk", "Gdk", "Threads")
-if WINDOWS then
-	prefix("_Gtk$Gdk$Threads$")
-else
-	prefix("Gtk$Gdk$Threads$")
-end
-export("T")

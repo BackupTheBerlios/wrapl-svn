@@ -1,7 +1,0 @@
-module("Gtk", "Gdk", "PixbufFormat")
-if WINDOWS then
-	prefix("_Gtk$Gdk$PixbufFormat$")
-else
-	prefix("Gtk$Gdk$PixbufFormat$")
-end
-export("T")

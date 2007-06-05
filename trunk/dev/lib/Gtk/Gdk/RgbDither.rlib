@@ -1,8 +1,0 @@
-module("Gtk", "Gdk", "RgbDither")
-if WINDOWS then
-	prefix("_Gtk$Gdk$RgbDither$")
-else
-	prefix("Gtk$Gdk$RgbDither$")
-end
-export("T")
-export("_new")

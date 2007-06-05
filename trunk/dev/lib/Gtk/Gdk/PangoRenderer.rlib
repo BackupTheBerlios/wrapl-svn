@@ -1,7 +1,0 @@
-module("Gtk", "Gdk", "PangoRenderer")
-if WINDOWS then
-	prefix("_Gtk$Gdk$PangoRenderer$")
-else
-	prefix("Gtk$Gdk$PangoRenderer$")
-end
-export("T")

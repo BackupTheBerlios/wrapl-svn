@@ -1,7 +1,0 @@
-module("Gtk", "Gdk", "Trapezoid")
-if WINDOWS then
-	prefix("_Gtk$Gdk$Trapezoid$")
-else
-	prefix("Gtk$Gdk$Trapezoid$")
-end
-export("T")

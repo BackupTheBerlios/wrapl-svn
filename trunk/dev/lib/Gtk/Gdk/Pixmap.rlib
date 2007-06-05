@@ -1,7 +1,0 @@
-module("Gtk", "Gdk", "Pixmap")
-if WINDOWS then
-	prefix("_Gtk$Gdk$Pixmap$")
-else
-	prefix("Gtk$Gdk$Pixmap$")
-end
-export("T")

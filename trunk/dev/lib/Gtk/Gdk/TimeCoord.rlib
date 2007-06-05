@@ -1,7 +1,0 @@
-module("Gtk", "Gdk", "TimeCoord")
-if WINDOWS then
-	prefix("_Gtk$Gdk$TimeCoord$")
-else
-	prefix("Gtk$Gdk$TimeCoord$")
-end
-export("T")

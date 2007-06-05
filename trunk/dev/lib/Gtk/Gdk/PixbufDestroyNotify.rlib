@@ -1,8 +1,0 @@
-module("Gtk", "Gdk", "PixbufDestroyNotify")
-if WINDOWS then
-	prefix("_Gtk$Gdk$PixbufDestroyNotify$")
-else
-	prefix("Gtk$Gdk$PixbufDestroyNotify$")
-end
-export("T")
-export("_new")

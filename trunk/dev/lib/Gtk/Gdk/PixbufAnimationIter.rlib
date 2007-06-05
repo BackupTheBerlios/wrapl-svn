@@ -1,7 +1,0 @@
-module("Gtk", "Gdk", "PixbufAnimationIter")
-if WINDOWS then
-	prefix("_Gtk$Gdk$PixbufAnimationIter$")
-else
-	prefix("Gtk$Gdk$PixbufAnimationIter$")
-end
-export("T")

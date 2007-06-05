@@ -1,8 +1,0 @@
-module("Gtk", "Gdk", "SubwindowMode")
-if WINDOWS then
-	prefix("_Gtk$Gdk$SubwindowMode$")
-else
-	prefix("Gtk$Gdk$SubwindowMode$")
-end
-export("T")
-export("_new")

@@ -1,8 +1,0 @@
-module("Gtk", "Gdk", "WindowAttributesType")
-if WINDOWS then
-	prefix("_Gtk$Gdk$WindowAttributesType$")
-else
-	prefix("Gtk$Gdk$WindowAttributesType$")
-end
-export("T")
-export("_new")

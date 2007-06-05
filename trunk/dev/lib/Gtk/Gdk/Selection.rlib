@@ -1,7 +1,0 @@
-module("Gtk", "Gdk", "Selection")
-if WINDOWS then
-	prefix("_Gtk$Gdk$Selection$")
-else
-	prefix("Gtk$Gdk$Selection$")
-end
-export("T")

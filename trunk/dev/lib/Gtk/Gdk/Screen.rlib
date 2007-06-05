@@ -1,7 +1,0 @@
-module("Gtk", "Gdk", "Screen")
-if WINDOWS then
-	prefix("_Gtk$Gdk$Screen$")
-else
-	prefix("Gtk$Gdk$Screen$")
-end
-export("T")

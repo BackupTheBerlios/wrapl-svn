@@ -1,8 +1,0 @@
-module("Gtk", "Gdk", "WindowEdge")
-if WINDOWS then
-	prefix("_Gtk$Gdk$WindowEdge$")
-else
-	prefix("Gtk$Gdk$WindowEdge$")
-end
-export("T")
-export("_new")

@@ -1,8 +1,0 @@
-module("Gtk", "Gdk", "PixbufAlphaMode")
-if WINDOWS then
-	prefix("_Gtk$Gdk$PixbufAlphaMode$")
-else
-	prefix("Gtk$Gdk$PixbufAlphaMode$")
-end
-export("T")
-export("_new")

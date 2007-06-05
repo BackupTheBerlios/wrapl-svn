@@ -1,8 +1,0 @@
-module("Gtk", "Gdk", "PropMode")
-if WINDOWS then
-	prefix("_Gtk$Gdk$PropMode$")
-else
-	prefix("Gtk$Gdk$PropMode$")
-end
-export("T")
-export("_new")

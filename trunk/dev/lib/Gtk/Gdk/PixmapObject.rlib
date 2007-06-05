@@ -1,7 +1,0 @@
-module("Gtk", "Gdk", "PixmapObject")
-if WINDOWS then
-	prefix("_Gtk$Gdk$PixmapObject$")
-else
-	prefix("Gtk$Gdk$PixmapObject$")
-end
-export("T")

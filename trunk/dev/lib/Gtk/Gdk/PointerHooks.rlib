@@ -1,7 +1,0 @@
-module("Gtk", "Gdk", "PointerHooks")
-if WINDOWS then
-	prefix("_Gtk$Gdk$PointerHooks$")
-else
-	prefix("Gtk$Gdk$PointerHooks$")
-end
-export("T")

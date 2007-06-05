@@ -1,8 +1,0 @@
-module("Gtk", "Gdk", "WMFunction")
-if WINDOWS then
-	prefix("_Gtk$Gdk$WMFunction$")
-else
-	prefix("Gtk$Gdk$WMFunction$")
-end
-export("T")
-export("_new")

@@ -1,7 +1,0 @@
-module("Gtk", "Gdk", "Property")
-if WINDOWS then
-	prefix("_Gtk$Gdk$Property$")
-else
-	prefix("Gtk$Gdk$Property$")
-end
-export("T")

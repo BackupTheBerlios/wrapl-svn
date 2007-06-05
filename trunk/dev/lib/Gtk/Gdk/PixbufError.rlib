@@ -1,8 +1,0 @@
-module("Gtk", "Gdk", "PixbufError")
-if WINDOWS then
-	prefix("_Gtk$Gdk$PixbufError$")
-else
-	prefix("Gtk$Gdk$PixbufError$")
-end
-export("T")
-export("_new")

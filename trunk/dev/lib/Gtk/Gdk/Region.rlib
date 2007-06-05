@@ -1,7 +1,0 @@
-module("Gtk", "Gdk", "Region")
-if WINDOWS then
-	prefix("_Gtk$Gdk$Region$")
-else
-	prefix("Gtk$Gdk$Region$")
-end
-export("T")

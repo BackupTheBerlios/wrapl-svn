@@ -1,7 +1,0 @@
-module("Gtk", "Gdk", "PixbufLoader")
-if WINDOWS then
-	prefix("_Gtk$Gdk$PixbufLoader$")
-else
-	prefix("Gtk$Gdk$PixbufLoader$")
-end
-export("T")

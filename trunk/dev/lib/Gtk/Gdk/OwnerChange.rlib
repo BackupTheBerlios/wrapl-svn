@@ -1,8 +1,0 @@
-module("Gtk", "Gdk", "OwnerChange")
-if WINDOWS then
-	prefix("_Gtk$Gdk$OwnerChange$")
-else
-	prefix("Gtk$Gdk$OwnerChange$")
-end
-export("T")
-export("_new")

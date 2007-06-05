@@ -1,7 +1,0 @@
-module("Gtk", "Gdk", "PangoAttrEmbossed")
-if WINDOWS then
-	prefix("_Gtk$Gdk$PangoAttrEmbossed$")
-else
-	prefix("Gtk$Gdk$PangoAttrEmbossed$")
-end
-export("T")

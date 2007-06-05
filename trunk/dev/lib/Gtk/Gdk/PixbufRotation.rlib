@@ -1,8 +1,0 @@
-module("Gtk", "Gdk", "PixbufRotation")
-if WINDOWS then
-	prefix("_Gtk$Gdk$PixbufRotation$")
-else
-	prefix("Gtk$Gdk$PixbufRotation$")
-end
-export("T")
-export("_new")

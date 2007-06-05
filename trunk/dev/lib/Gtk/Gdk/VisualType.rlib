@@ -1,8 +1,0 @@
-module("Gtk", "Gdk", "VisualType")
-if WINDOWS then
-	prefix("_Gtk$Gdk$VisualType$")
-else
-	prefix("Gtk$Gdk$VisualType$")
-end
-export("T")
-export("_new")

@@ -1,8 +1,0 @@
-module("Gtk", "Gdk", "OverlapType")
-if WINDOWS then
-	prefix("_Gtk$Gdk$OverlapType$")
-else
-	prefix("Gtk$Gdk$OverlapType$")
-end
-export("T")
-export("_new")
