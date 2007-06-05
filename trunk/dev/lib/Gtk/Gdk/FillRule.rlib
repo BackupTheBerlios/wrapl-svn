@@ -1,8 +1,0 @@
-module("Gtk", "Gdk", "FillRule")
-if WINDOWS then
-	prefix("_Gtk$Gdk$FillRule$")
-else
-	prefix("Gtk$Gdk$FillRule$")
-end
-export("T")
-export("_new")
