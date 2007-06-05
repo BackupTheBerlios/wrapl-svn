@@ -1,8 +1,0 @@
-module("Gtk", "Gdk", "InputSource")
-if WINDOWS then
-	prefix("_Gtk$Gdk$InputSource$")
-else
-	prefix("Gtk$Gdk$InputSource$")
-end
-export("T")
-export("_new")
