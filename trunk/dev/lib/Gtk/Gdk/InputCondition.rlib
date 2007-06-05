@@ -1,8 +1,0 @@
-module("Gtk", "Gdk", "InputCondition")
-if WINDOWS then
-	prefix("_Gtk$Gdk$InputCondition$")
-else
-	prefix("Gtk$Gdk$InputCondition$")
-end
-export("T")
-export("_new")
