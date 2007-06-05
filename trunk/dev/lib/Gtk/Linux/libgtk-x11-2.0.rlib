@@ -1,7 +1,4 @@
 module("libgtk-x11-2.0")
-if WINDOWS then
-	prefix("_")
-end
 export("gtk_preview_set_reserved")
 export("gtk_menu_shell_activate_item")
 export("gtk_text_layout_new")
