@@ -1,7 +1,0 @@
-module("Gtk", "Gdk", "Fontset")
-if WINDOWS then
-	prefix("_Gtk$Gdk$Fontset$")
-else
-	prefix("Gtk$Gdk$Fontset$")
-end
-export("T")
