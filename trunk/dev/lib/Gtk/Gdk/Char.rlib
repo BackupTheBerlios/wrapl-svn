@@ -1,7 +1,0 @@
-module("Gtk", "Gdk", "Char")
-if WINDOWS then
-	prefix("_Gtk$Gdk$Char$")
-else
-	prefix("Gtk$Gdk$Char$")
-end
-export("T")
