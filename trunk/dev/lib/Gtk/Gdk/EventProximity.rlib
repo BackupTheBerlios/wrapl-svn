@@ -1,7 +1,0 @@
-module("Gtk", "Gdk", "EventProximity")
-if WINDOWS then
-	prefix("_Gtk$Gdk$EventProximity$")
-else
-	prefix("Gtk$Gdk$EventProximity$")
-end
-export("T")
