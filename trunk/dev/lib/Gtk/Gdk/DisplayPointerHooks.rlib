@@ -1,7 +1,0 @@
-module("Gtk", "Gdk", "DisplayPointerHooks")
-if WINDOWS then
-	prefix("_Gtk$Gdk$DisplayPointerHooks$")
-else
-	prefix("Gtk$Gdk$DisplayPointerHooks$")
-end
-export("T")
