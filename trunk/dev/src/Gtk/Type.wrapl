@@ -15,7 +15,7 @@ TO :addparam(method@Method, name, type) method:params:put(Param(name, type));
 
 TO :headers(t@T) [];
 TO :libraries(t@T) [];
-
+TO :sigtype(t@T) "TYP, " + t:rtype;
 TO :precall(t@T, name, arg) (
 	unknownprecalls[t] // (
 		unknownprecalls:insert(t);
@@ -112,25 +112,6 @@ TO :precall(=gtypearray, name, arg) [
 	"};"
 ];
 Define("GType*", gtypearray);
-
-VAR gvaluetype <- T();
-TO :rtype(=gvaluetype) "Std$Object$T";
-TO :ctype(=gvaluetype) "GValue *";
-TO :precall(=gvaluetype, name, arg) [
-	"GValue " + name + "[1];",
-	"Gtk$GObject$Value$to_gtk(" + arg + ".Val, " + name + ");"
-];
-TO :return(=gvaluetype, result) [
-	"Result->Val = Gtk$GObject$Value$to_riva(" + result + ");"
-];
-TO :toriva(=gvaluetype, arg, name) [
-	arg + ".Val = Gtk$GObject$Value$to_riva(" + name + ");",
-	arg + ".Ref = 0;"
-];
-TO :headers(=gvaluetype) ["#include <Gtk/GObject/Value.h>"];
-TO :libraries(=gvaluetype) ["Gtk/GObject/Value.rlib"];
-Define("GValue*", gvaluetype);
-Define("const-GValue*", gvaluetype);
 
 VAR gclosuretype <- T();
 TO :rtype(=gclosuretype) "Gtk$GObject$Closure$T";

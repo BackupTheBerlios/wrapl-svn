@@ -145,7 +145,7 @@ TO :process(t@T, srcdir, incdir, libdir) (
 		types <- params:map(<p> Type.Lookup(p:type));
 		names <- params:map(:name);
 		cfile:writes("METHOD(\"", method:name, "\", TYP, T");
-		EVERY cfile:writes(", TYP, ", types[2:to(n)]:rtype);
+		EVERY cfile:writes(", ", types[2:to(n)]:sigtype);
 		cfile:write(") {\n");
 		EVERY i <- 1:to(n) DO (
 			EVERY cfile:writes("\t", types[i]:precall(names[i], "Args[" + (i - 1)@String.T + "]"):values, "\n");

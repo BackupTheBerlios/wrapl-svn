@@ -38,6 +38,17 @@ DEF New!(ns, name, cname) (
 	RET t;
 );
 
+VAR gvalue <- T();
+gvalue:ns <- "GObject";
+gvalue:name <- "Value";
+gvalue:cname <- "GValue";
+gvalue:rtype <- "Gtk$GObject$Value$T";
+gvalue:ctype <- "GValue*";
+gvalue:headers <- ["#include <Gtk/GObject/Value.h>"];
+gvalue:libraries <- ["Gtk/GObject/Value.rlib"];
+Type.Define("GValue*", gvalue);
+Type.Define("const-GValue*", gvalue);
+
 TO :addmethod(t@T, name, cname) (
 	VAR method <- Type.Method(name, cname, []);
 	method:addparam("self", t:cname + "*");
@@ -76,12 +87,22 @@ TO :precall(t@T, name, arg) [
 	t:ctype + " " + name + "= ((Gtk$" + t:ns + "$" + t:name + "_t *)" + arg + ".Val)->Value;"
 ];
 
+TO :toriva(t@T, arg, name) [
+	"{",
+	"\tGtk$" + t:ns + "$" + t:name + "_t *_ptr_" + name + " = new(Gtk$" + t:ns + "$" + t:name + "_t);",
+	"\t_ptr_" + name + "->Type = " + t:rtype + ";",
+	"\t_ptr_" + name + "->Value = " + name + ";",
+	"\t" + arg + ".Val = _ptr_" + name + ";",
+	"\t" + arg + ".Ref = 0;",
+	"};"
+];
+
 TO :return(t@T, result) [
 	"if (" + result + ") {",
-	"\tGtk$" + t:ns + "$" + t:name + "_t *__" + result + " = new(Gtk$" + t:ns + "$" + t:name + "_t);",
-	"\t__" + result + "->Type = " + t:rtype + ";",
-	"\t__" + result + "->Value = " + result + ";",
-	"\tResult->Val = __" + result + ";",
+	"\tGtk$" + t:ns + "$" + t:name + "_t *_ptr_" + result + " = new(Gtk$" + t:ns + "$" + t:name + "_t);",
+	"\t_ptr_" + result + "->Type = " + t:rtype + ";",
+	"\t_ptr_" + result + "->Value = " + result + ";",
+	"\tResult->Val = _ptr_" + result + ";",
 	"} else {",
 	"\treturn FAILURE;",
 	"};"
@@ -125,9 +146,9 @@ TO :process(t@T, srcdir, incdir, libdir) (
 		EVERY i <- 1:to(n) DO (
 			EVERY cfile:writes("\t", types[i]:precall(names[i], "Args[" + (i - 1)@String.T + "]"):values, "\n");
 		);
-		cfile:writes("\tGtk$GObject$Object_t *result = new(Gtk$GObject$Object_t);\n");
+		cfile:writes("\tGtk$", t:ns, "$", t:name, "_t *result = new(Gtk$", t:ns, "$", t:name, "_t);\n");
 		cfile:writes("\tresult->Type = T;\n");
-		cfile:writes("\tresult->Handle = ", ctor:cname, "(");
+		cfile:writes("\tresult->Value = ", ctor:cname, "(");
 		cfile:write(names[1]) => EVERY i <- 2:to(n) DO cfile:writes(", ", names[i]);
 		cfile:write(");\n");
 		cfile:write("\tResult->Val= result;\n");
@@ -161,7 +182,7 @@ TO :process(t@T, srcdir, incdir, libdir) (
 		types <- params:map(<p> Type.Lookup(p:type));
 		names <- params:map(:name);
 		cfile:writes("METHOD(\"", method:name, "\", TYP, T");
-		EVERY cfile:writes(", TYP, ", types[2:to(n)]:rtype);
+		EVERY cfile:writes(", ", types[2:to(n)]:sigtype);
 		cfile:write(") {\n");
 		EVERY i <- 1:to(n) DO (
 			EVERY cfile:writes("\t", types[i]:precall(names[i], "Args[" + (i - 1)@String.T + "]"):values, "\n");

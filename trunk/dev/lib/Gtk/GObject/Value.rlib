@@ -4,5 +4,6 @@ if WINDOWS then
 else
 	prefix("Gtk$GObject$Value$")
 end
+export("T")
 export("_to_riva")
 export("_to_gtk")

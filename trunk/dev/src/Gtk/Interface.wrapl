@@ -57,6 +57,11 @@ TO :return(t@T, result) [
 	"Result->Val = Gtk$GObject$Object$to_riva(" + result + ");"
 ];
 
+TO :toriva(t@T, arg, name) [
+	arg + ".Val = Gtk$GObject$Object$to_riva(" + name + ");",
+	arg + ".Ref = 0;"
+];
+
 TO :process(t@T, srcdir, incdir, libdir) (
 	VAR headers <- {};
 	VAR libraries <- {};
@@ -86,7 +91,7 @@ TO :process(t@T, srcdir, incdir, libdir) (
 		names <- params:map(:name);
 		cfile:writes("GLOBAL_FUNCTION(", method:name, ", ", n, ") {\n");
 		EVERY i <- 1:to(n) DO (
-			EVERY cfile:writes("\t", types[i]:precall(names[i], "Args[" + i@String.T + "]"):values, "\n");
+			EVERY cfile:writes("\t", types[i]:precall(names[i], "Args[" + (i - 1)@String.T + "]"):values, "\n");
 		);
 		returntype <- Type.Lookup(method:type);
 		cfile:write("\t");
@@ -106,10 +111,10 @@ TO :process(t@T, srcdir, incdir, libdir) (
 		types <- params:map(<p> Type.Lookup(p:type));
 		names <- params:map(:name);
 		cfile:writes("METHOD(\"", method:name, "\", TYP, T");
-		EVERY cfile:writes(", TYP, ", types[2:to(n)]:rtype);
+		EVERY cfile:writes(", ", types[2:to(n)]:sigtype);
 		cfile:write(") {\n");
 		EVERY i <- 1:to(n) DO (
-			EVERY cfile:writes("\t", types[i]:precall(names[i], "Args[" + i@String.T + "]"):values, "\n");
+			EVERY cfile:writes("\t", types[i]:precall(names[i], "Args[" + (i - 1)@String.T + "]"):values, "\n");
 		);
 		cfile:write("\t");
 		returntype <- Type.Lookup(method:type);
@@ -118,7 +123,7 @@ TO :process(t@T, srcdir, incdir, libdir) (
 		EVERY i <- 2:to(n) DO cfile:writes(", ", names[i]);
 		cfile:writes(");\n");
 		EVERY i <- 1:to(n) DO (
-			EVERY cfile:writes("\t", types[i]:postcall(names[i], "Args[" + i@String.T + "]"):values, "\n");
+			EVERY cfile:writes("\t", types[i]:postcall(names[i], "Args[" + (i - 1)@String.T + "]"):values, "\n");
 		);
 		returntype:ctype ~= "void" => (
 			EVERY cfile:writes("\t", returntype:return("result"):values, "\n");

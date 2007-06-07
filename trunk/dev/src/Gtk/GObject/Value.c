@@ -5,6 +5,8 @@
 SYMBOL($true, "true");
 SYMBOL($false, "false");
 
+TYPE(T);
+
 Std$Object_t *_to_riva(const GValue *Value) {
 	switch (G_VALUE_TYPE(Value)) {
 	case G_TYPE_NONE: return Std$Object$Nil;
@@ -32,25 +34,62 @@ Std$Object_t *_to_riva(const GValue *Value) {
 };
 
 void _to_gtk(Std$Object_t *Source, GValue *Dest) {
+	if (G_IS_VALUE(Dest)) g_value_unset(Dest);
 	if (Source == Std$Object$Nil) {
-		if (!G_IS_VALUE(Dest)) g_value_init(Dest, G_TYPE_NONE);
+		g_value_init(Dest, G_TYPE_NONE);
 	} else if (Source->Type == Std$Integer$SmallT) {
-		if (!G_IS_VALUE(Dest)) g_value_init(Dest, G_TYPE_LONG);
+		g_value_init(Dest, G_TYPE_LONG);
 		g_value_set_long(Dest, ((Std$Integer_smallt *)Source)->Value);
 	} else if (Source->Type == Std$String$T) {
-		if (!G_IS_VALUE(Dest)) g_value_init(Dest, G_TYPE_STRING);
+		g_value_init(Dest, G_TYPE_STRING);
 		g_value_set_string(Dest, Std$String$flatten(Source));
 	} else if (Source->Type == Std$Real$T) {
-		if (!G_IS_VALUE(Dest)) g_value_init(Dest, G_TYPE_DOUBLE);
+		g_value_init(Dest, G_TYPE_DOUBLE);
 		g_value_set_double(Dest, ((Std$Real_t *)Source)->Value);
 	} else if (Source->Type == Std$Address$T) {
-		if (!G_IS_VALUE(Dest)) g_value_init(Dest, G_TYPE_POINTER);
+		g_value_init(Dest, G_TYPE_POINTER);
 		g_value_set_pointer(Dest, ((Std$Address_t *)Source)->Value);
 	} else if (Source == $true) {
-		if (!G_IS_VALUE(Dest)) g_value_init(Dest, G_TYPE_BOOLEAN);
+		g_value_init(Dest, G_TYPE_BOOLEAN);
 		g_value_set_boolean(Dest, TRUE);
 	} else if (Source == $false) {
-		if (!G_IS_VALUE(Dest)) g_value_init(Dest, G_TYPE_BOOLEAN);
+		g_value_init(Dest, G_TYPE_BOOLEAN);
 		g_value_set_boolean(Dest, FALSE);
 	};
+};
+GLOBAL_FUNCTION(New, 0) {
+	Gtk$GObject$Value_t *Value = new(Gtk$GObject$Value_t);
+	Value->Type = T;
+	Value->Value = new(GValue);
+	if (Count > 0) _to_gtk(Args[0].Val, Value->Value);
+	Result->Val = Value;
+	return SUCCESS;
+};
+
+METHOD("Get", TYP, T) {
+	Gtk$GObject$Value_t *Value = Args[0].Val;
+	Result->Val = _to_riva(Value->Value);
+	return SUCCESS;
+};
+
+METHOD("Set", TYP, T, ANY) {
+	Gtk$GObject$Value_t *Value = Args[0].Val;
+	_to_gtk(Args[1].Val, Value->Value);
+	return SUCCESS;
+};
+
+METHOD("Unset", TYP, T) {
+	Gtk$GObject$Value_t *Value = Args[0].Val;
+	g_value_unset(Value->Value);
+	return SUCCESS;
+};
+
+METHOD("Copy", TYP, T) {
+	Gtk$GObject$Value_t *Value = Args[0].Val;
+	Gtk$GObject$Value_t *Copy = new(Gtk$GObject$Value_t);
+	Copy->Type = T;
+	Copy->Value = new(GValue);
+	g_value_copy(Value->Value, Copy->Value);
+	Result->Val = Copy;
+	return SUCCESS;
 };
