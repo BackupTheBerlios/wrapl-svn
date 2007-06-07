@@ -184,6 +184,9 @@ if WINDOWS then
 end
 
 EOF);
+	EVERY ctor <- t:ctors:values DO deffile:writes("export(\"", ctor:name, "\")\n");
+	EVERY method <- t:shared:values DO deffile:writes("export(\"", method:name, "\")\n");
+	deffile:close;
 	VAR libfile <- File.Open(libdir + base + ".rlib", File.WRITE + File.TEXT);
 	libfile:writes("module(\"Gtk\", \"", t:ns, "\", \"", t:name, "\")\n");
 	libfile:write("if WINDOWS then\n");
@@ -192,10 +195,7 @@ EOF);
 	libfile:writes("\tprefix(\"Gtk$", t:ns, "$", t:name, "$\")\n");
 	libfile:write("end\n");
 	libfile:write("export(\"T\")\n");
-	libfile:close;
-	EVERY ctor <- t:ctors:values DO deffile:writes("export(\"", ctor:name, "\")\n");
-	EVERY method <- t:shared:values DO deffile:writes("export(\"", method:name, "\")\n");
-	deffile:close;
+	libfile:close;	
 	VAR hfile <- File.Open(incdir + base + ".h", File.WRITE + File.TEXT);
 	hfile:writes("#ifndef ", t:ns, "_", t:name, "_H\n");
 	hfile:writes("#define ", t:ns, "_", t:name, "_H\n\n");

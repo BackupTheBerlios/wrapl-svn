@@ -34,6 +34,12 @@
 			<return-type type="void" />
 		</method>
 	</add-node>
+	<add-node path="/api/namespace/object[@cname='GtkListStore']">
+		<implements interface="GtkTreeModel" />
+	</add-node>
+	<add-node path="/api/namespace/object[@cname='GtkTreeStore']">
+		<implements interface="GtkTreeModel" />
+	</add-node>
 	<attr path="/api/namespace/object/method[@cname='gtk_container_get_children']/return-type" name="type">reusable-GList[GObject]*</attr>
 	<attr path="/api/namespace/object/method[@cname='gtk_action_group_list_actions']/return-type" name="type">reusable-GList[GObject]*</attr>
 	<attr path="/api/namespace/object/method[@cname='gtk_cell_view_get_cell_renderers']/return-type" name="type">reusable-GList[GObject]*</attr>

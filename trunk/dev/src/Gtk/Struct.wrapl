@@ -116,6 +116,12 @@ TO :process(t@T, srcdir, incdir, libdir) (
 	EVERY cfile:writes(headers:keys, "\n");
 	cfile:writes("/***********************************/\n");
 	cfile:writes("TYPE(T);\n\n");
+	cfile:write("GLOBAL_FUNCTION(New, 0) {\n");
+	cfile:writes("\tGtk$", t:ns, "$", t:name, "_t *result = new(Gtk$", t:ns, "$", t:name, "_t);\n");
+	cfile:write("\tresult->Type = T;\n");
+	cfile:write("\tResult->Val = result;\n");
+	cfile:write("\treturn SUCCESS;\n");
+	cfile:write("};\n\n");
 	EVERY ctor <- t:ctors:values DO (
 		params <- ctor:params;
 		n <- params:size;
@@ -200,7 +206,11 @@ if WINDOWS then
 end
 
 export("T")
+export("New")
 EOF);
+	EVERY ctor <- t:ctors:values DO deffile:writes("export(\"", ctor:name, "\")\n");
+	EVERY method <- t:shared:values DO deffile:writes("export(\"", method:name, "\")\n");
+	deffile:close;
 	VAR libfile <- File.Open(libdir + base + ".rlib", File.WRITE + File.TEXT);
 	libfile:writes("module(\"Gtk\", \"", t:ns, "\", \"", t:name, "\")\n");
 	libfile:write("if WINDOWS then\n");

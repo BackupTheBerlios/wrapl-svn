@@ -45,6 +45,10 @@ DEF StartHandlers <- {
 	);
 ),
 
+"implements" IS <env, attrs> (
+	env:object:addinterface(attrs["interface"]);
+),
+
 "api" IS <env, attrs> (
 ),
 

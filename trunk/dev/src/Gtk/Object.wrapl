@@ -6,7 +6,7 @@ IMP IO.Terminal USE Out;
 IMP Std.String;
 
 DEF T <- <[Type.T, Target.T]
-	ns, name, cname, parent,
+	ns, name, cname, parent, interfaces,
 	methods, ctors, shared,
 	ctype, rtype,
 	ctor_prefix,
@@ -26,6 +26,7 @@ DEF New!(ns, name, cname, parent) (
 	t:name <- name;
 	t:cname <- cname;
 	t:parent <- parent;
+	t:interfaces <- [];
 	t:methods <- [];
 	t:shared <- [];
 	t:ctors <- [];
@@ -49,6 +50,10 @@ gobject:ctype <- "GObject*";
 gobject:headers <- [];
 gobject:libraries <- ["Gtk/Gtk/Object.rlib"];
 Type.Define("GObject*", gobject);
+
+TO :addinterface(t@T, interface) (
+	t:interfaces:put(interface + "*");
+);
 
 TO :addmethod(t@T, name, cname) (
 	VAR method <- Type.Method(name, cname, []);
@@ -135,6 +140,8 @@ TO :process(t@T, srcdir, incdir, libdir) (
 		EVERY libraries:insert(Type.Lookup(method:params:values:type):libraries:values);
 		EVERY libraries:insert(Type.Lookup(method:type):libraries:values);
 	);
+	EVERY headers:insert(Type.Lookup(t:interfaces:values):headers:values);
+	EVERY libraries:insert(Type.Lookup(t:interfaces:values):libraries:values);
 	EVERY libraries:insert(t:parents:libraries:values);
 	cfile:writes("/***********************************/\n");
 	cfile:writes("// Number of included files = ", headers:size, "\n");
@@ -142,6 +149,7 @@ TO :process(t@T, srcdir, incdir, libdir) (
 	cfile:writes("/***********************************/\n");
 	cfile:writes("TYPE(T");
 	EVERY cfile:writes(", ", t:parents:rtype);
+	EVERY cfile:writes(", ", Type.Lookup(t:interfaces:values):rtype);
 	cfile:writes(");\n\n");
 	EVERY ctor <- t:ctors:values DO (
 		params <- ctor:params;
@@ -226,6 +234,9 @@ end
 
 export("T")
 EOF);
+	EVERY ctor <- t:ctors:values DO deffile:writes("export(\"", ctor:name, "\")\n");
+	EVERY method <- t:shared:values DO deffile:writes("export(\"", method:name, "\")\n");
+	deffile:close;
 	VAR libfile <- File.Open(libdir + base + ".rlib", File.WRITE + File.TEXT);
 	libfile:writes("module(\"Gtk\", \"", t:ns, "\", \"", t:name, "\")\n");
 	libfile:write("if WINDOWS then\n");
@@ -235,9 +246,6 @@ EOF);
 	libfile:write("end\n");
 	libfile:write("export(\"T\")\n");
 	libfile:close;
-	EVERY ctor <- t:ctors:values DO deffile:writes("export(\"", ctor:name, "\")\n");
-	EVERY method <- t:shared:values DO deffile:writes("export(\"", method:name, "\")\n");
-	deffile:close;
 	VAR hfile <- File.Open(incdir + base + ".h", File.WRITE + File.TEXT);
 	hfile:writes("#ifndef ", t:ns, "_", t:name, "_H\n");
 	hfile:writes("#define ", t:ns, "_", t:name, "_H\n\n");

@@ -90,7 +90,7 @@ VAR gtype <- T();
 TO :rtype(=gtype) "Gtk$GObject$Type$T";
 TO :ctype(=gtype) "GType";
 TO :precall(=gtype, name, arg) [
-	"GType " + name + ";"
+	"GType " + name + " = ((Gtk$GObject$Type_t *)" + arg + ".Val)->Value;"
 ];
 TO :return(=gtype, result) [
 	"Result->Val = Gtk$GObject$Type$to_riva(" + result + ");"
@@ -99,6 +99,19 @@ TO :headers(=gtype) ["#include <Gtk/GObject/Type.h>"];
 TO :libraries(=gtype) ["Gtk/GObject/Type.rlib"];
 Define("GType", gtype);
 Define("GtkType", gtype);
+
+VAR gtypearray <- T();
+TO :rtype(=gtypearray) "Std$List$T";
+TO :ctype(=gtypearray) "GType*";
+TO :precall(=gtypearray, name, arg) [
+	"Std$List_t * " + name + "_list = " + arg + ".Val;",
+	"GType * " + name + " = Riva$Memory$alloc_atomic(sizeof(GType) * " + name + "_list->Length);",
+	"GType * " + name + "_ptr = " + name + ";",
+	"for (Std$List_node *Node = " + name + "_list->Head; Node; Node = Node->Next) {",
+	"\t*(" + name + "_ptr++) = ((Gtk$GObject$Type_t *)Node->Value)->Value;",
+	"};"
+];
+Define("GType*", gtypearray);
 
 VAR gvaluetype <- T();
 TO :rtype(=gvaluetype) "Std$Object$T";

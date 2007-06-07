@@ -14,6 +14,8 @@ typedef struct Util$IntegerTable_t {
 
 extern Std$Type_t Util$IntegerTable$T[];
 
+#define Util$IntegerTable$INIT {Util$IntegerTable$T, 0, 0, 0}
+
 RIVA_CFUN(void, init, Util$IntegerTable_t *Table);
 RIVA_CFUN(void, put, Util$IntegerTable_t *Table, unsigned long Key, void *Value);
 RIVA_CFUN(void *, get, const Util$IntegerTable_t *Table, unsigned long Key);
