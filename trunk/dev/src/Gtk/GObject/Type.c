@@ -45,7 +45,7 @@ Std$Type_t *_to_riva(GType GtkType) {
 	const char *GtkName = g_type_name(GtkType);
 	const char *RivaName = Util$StringTable$get(Gtk$TypeMap$Table, GtkName);
 	if (RivaName == 0) {
-		Riva$Log$errorf("Error: Gtk type is not mapped: %s\n", GtkName);
+		Riva$Log$errorf("Warning: Gtk type is not mapped: %s\n", GtkName);
 		return 0;
 	};
 	Riva$Module_t *Module = Riva$Module$load(0, RivaName);

@@ -34,7 +34,7 @@ Std$Object_t *_to_riva(const GValue *Value) {
 			Object->Handle = g_value_peek_pointer(Value);
 			return Object;
 		} else {
-			printf("Unknown parameter type %s\n", G_VALUE_TYPE_NAME(Value));
+			printf("Warning: Unknown parameter type: %s\n", G_VALUE_TYPE_NAME(Value));
 			return Std$Address$new(g_value_peek_pointer(Value));
 		};
 	};
@@ -65,6 +65,7 @@ void _to_gtk(Std$Object_t *Source, GValue *Dest) {
 		g_value_set_boolean(Dest, FALSE);
 	};
 };
+
 GLOBAL_FUNCTION(New, 0) {
 	Gtk$GObject$Value_t *Value = new(Gtk$GObject$Value_t);
 	Value->Type = T;
@@ -80,9 +81,59 @@ METHOD("Get", TYP, T) {
 	return SUCCESS;
 };
 
+/*
 METHOD("Set", TYP, T, ANY) {
 	Gtk$GObject$Value_t *Value = Args[0].Val;
 	_to_gtk(Args[1].Val, Value->Value);
+	return SUCCESS;
+};
+*/
+
+METHOD("Set", TYP, T, VAL, Std$Object$Nil) {
+	Gtk$GObject$Value_t *Value = Args[0].Val;
+	g_value_init(Value->Value, G_TYPE_NONE);
+	return SUCCESS;
+};
+
+METHOD("Set", TYP, T, TYP, Std$Integer$SmallT) {
+	Gtk$GObject$Value_t *Value = Args[0].Val;
+	g_value_init(Value->Value, G_TYPE_LONG);
+	g_value_set_long(Value->Value, ((Std$Integer_smallt *)Args[1].Val)->Value);
+	return SUCCESS;
+};
+
+METHOD("Set", TYP, T, TYP, Std$String$T) {
+	Gtk$GObject$Value_t *Value = Args[0].Val;
+	g_value_init(Value->Value, G_TYPE_STRING);
+	g_value_set_string(Value->Value, Std$String$flatten(Args[1].Val));
+	return SUCCESS;
+};
+
+METHOD("Set", TYP, T, TYP, Std$Real$T) {
+	Gtk$GObject$Value_t *Value = Args[0].Val;
+	g_value_init(Value->Value, G_TYPE_DOUBLE);
+	g_value_set_double(Value->Value, ((Std$Real_t *)Args[1].Val)->Value);
+	return SUCCESS;
+};
+
+METHOD("Set", TYP, T, TYP, Std$Address$T) {
+	Gtk$GObject$Value_t *Value = Args[0].Val;
+	g_value_init(Value->Value, G_TYPE_POINTER);
+	g_value_set_pointer(Value->Value, ((Std$Address_t *)Args[1].Val)->Value);
+	return SUCCESS;
+};
+
+METHOD("Set", TYP, T, VAL, $true) {
+	Gtk$GObject$Value_t *Value = Args[0].Val;
+	g_value_init(Value->Value, G_TYPE_BOOLEAN);
+	g_value_set_boolean(Value->Value, TRUE);
+	return SUCCESS;
+};
+
+METHOD("Set", TYP, T, VAL, $false) {
+	Gtk$GObject$Value_t *Value = Args[0].Val;
+	g_value_init(Value->Value, G_TYPE_BOOLEAN);
+	g_value_set_boolean(Value->Value, FALSE);
 	return SUCCESS;
 };
 
