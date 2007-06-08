@@ -10,6 +10,7 @@ DEF T! <- <[]>;
 
 DEF Param! <- <[] name, type>;
 DEF Method! <- <[] name, cname, params, type>;
+DEF Field! <- <[] name, cname, type>;
 
 TO :addparam(method@Method, name, type) method:params:put(Param(name, type));
 

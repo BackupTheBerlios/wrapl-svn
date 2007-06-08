@@ -3,12 +3,14 @@ BASENAME = $(GTK_LIB_DIR)GObject$(DIRSEP)
 CFLAGS += -std=gnu99 $(shell pkg-config --cflags gtk+-2.0)
 LDFLAGS += Std.rlib Riva.rlib Util.rlib Gtk/GObject.rlib
 
+RivaProgram($(BASENAME)Init, Init)
 RivaProgram($(BASENAME)Closure, Closure)
 RivaProgram($(BASENAME)Object, Object)
 RivaProgram($(BASENAME)Type, Type)
 RivaProgram($(BASENAME)Value, Value)
 
 GtkGObject:\
+	$(BASENAME)Init.riva\
 	$(BASENAME)Closure.riva\
 	$(BASENAME)Object.riva\
 	$(BASENAME)Type.riva\

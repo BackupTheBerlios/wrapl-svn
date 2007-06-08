@@ -1,10 +1,17 @@
 MOD Target;
 
 IMP IO.Terminal USE Out;
+IMP IO.File;
+
+VAR mapfile <- File.Open("Types.map", File.WRITE + File.TEXT);
 
 DEF T! <- <[]>;
 
 VAR queue <- [];
+
+TO :map(t@T) (
+	mapfile:writes(t:cname, " = Gtk/", t:ns, "/", t:name, "\n");
+);
 
 TO :queue(t@T) queue:put(t);
 

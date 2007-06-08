@@ -1,6 +1,7 @@
 if LINUX then
 	include("Gtk/Linux/libglib-2.0.rlib")
 	include("Gtk/Linux/libgobject-2.0.rlib")
+	include("Gtk/Linux/libgthread-2.0.rlib")
 end
 
 if WINDOWS then

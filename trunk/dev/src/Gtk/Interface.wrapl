@@ -6,7 +6,7 @@ IMP Std.String;
 
 DEF T <- <[Type.T, Target.T]
 	ns, name, cname,
-	methods, shared, virtual,
+	methods, shared, virtual, fields, arrays,
 	ctype, rtype,
 	headers, libraries
 >;
@@ -19,6 +19,8 @@ DEF New!(ns, name, cname) (
 	t:virtual <- [];
 	t:methods <- [];
 	t:shared <- [];
+	t:fields <- [];
+	t:arrays <- [];
 	t:rtype <- "Gtk$" + ns + "$" + name + "$T";
 	t:ctype <- cname + " *";
 	Type.Define(cname + "*", t);
@@ -26,6 +28,14 @@ DEF New!(ns, name, cname) (
 	t:libraries <- ["Gtk/" + ns + "/" + name + ".rlib"];
 	t:queue;
 	RET t;
+);
+
+TO :addfield(t@T, name, cname, type) (
+	t:fields:put(Type.Field(name, cname, type));
+);
+
+TO :addarray(t@T, name, cname, type) (
+	t:arrays:put(Type.Field(name, cname, type));
 );
 
 TO :addvirtual(t@T, name, cname) (
@@ -82,6 +92,10 @@ TO :process(t@T, srcdir, incdir, libdir) (
 		EVERY libraries:insert(Type.Lookup(method:params:values:type):libraries:values);
 		EVERY libraries:insert(Type.Lookup(method:type):libraries:values);
 	);
+	EVERY headers:insert(Type.Lookup(t:fields:values:type):headers:values);
+	EVERY libraries:insert(Type.Lookup(t:fields:values:type):libraries:values);
+	EVERY headers:insert(Type.Lookup(t:arrays:values:type):headers:values);
+	EVERY libraries:insert(Type.Lookup(t:arrays:values:type):libraries:values);
 	EVERY cfile:writes(headers:keys, "\n");
 	cfile:writes("TYPE(T);\n\n");
 	EVERY method <- t:shared:values DO (
@@ -102,6 +116,25 @@ TO :process(t@T, srcdir, incdir, libdir) (
 		returntype:ctype ~= "void" => (
 			EVERY cfile:writes("\t", returntype:return("result"):values, "\n");
 		);
+		cfile:write("\treturn SUCCESS;\n");
+		cfile:write("};\n\n");
+	);
+	EVERY method <- t:fields:values DO (
+		cfile:writes("METHOD(\"", method:name, "\", TYP, T) {\n");
+		cfile:writes("\t", t:ctype + " self = ((Gtk$GObject$Object_t *)Args[0].Val)->Handle;\n");
+		returntype <- Type.Lookup(method:type);
+		cfile:writes("\t", returntype:ctype, " result = self->", method:cname, ";\n");
+		EVERY cfile:writes("\t", returntype:return("result"):values, "\n");
+		cfile:write("\treturn SUCCESS;\n");
+		cfile:write("};\n\n");
+	);
+	EVERY method <- t:arrays:values DO (
+		cfile:writes("METHOD(\"", method:name, "\", TYP, T, TYP, Std$Integer$SmallT) {\n");
+		cfile:writes("\t", t:ctype + " self = ((Gtk$GObject$Object_t *)Args[0].Val)->Handle;\n");
+		cfile:writes("\tint index = ((Std$Integer_smallt *)Args[1].Val)->Value;\n");
+		returntype <- Type.Lookup(method:type);
+		cfile:writes("\t", returntype:ctype, " result = self->", method:cname, "[index];\n");
+		EVERY cfile:writes("\t", returntype:return("result"):values, "\n");
 		cfile:write("\treturn SUCCESS;\n");
 		cfile:write("};\n\n");
 	);

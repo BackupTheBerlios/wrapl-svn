@@ -1,7 +1,7 @@
 BASENAME = $(BIN_DIR)riva
 PROGRAM = $(BASENAME)$(EXE)
 
-CFLAGS += -std=gnu99
+CFLAGS += -std=gnu99 -g
 
 FILES[] =
 	directory
@@ -20,7 +20,7 @@ if $(equal $(OSTYPE), Win32)
 	FILES += stpcpy
 	export
 
-LDFLAGS += -lz -lgc -lconfuse -s
+LDFLAGS += -lz -lgc -lconfuse
 CProgram($(BASENAME), $(FILES))
 
 Riva: $(PROGRAM)

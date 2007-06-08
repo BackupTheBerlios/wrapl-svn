@@ -6,11 +6,13 @@ IMP Std.String;
 
 DEF T <- <[Type.T, Target.T]
 	ns, name, cname,
-	methods, shared, ctors,
+	methods, shared, ctors, fields, arrays,
 	ctype, rtype,
 	headers, libraries,
 	ctor_prefix
 >;
+
+DEF S <- <[T]>;
 
 DEF PrefixLength(cname) (
 	VAR n <- cname:length;
@@ -27,6 +29,8 @@ DEF New!(ns, name, cname) (
 	t:methods <- [];
 	t:shared <- [];
 	t:ctors <- [];
+	t:fields <- [];
+	t:arrays <- [];
 	t:rtype <- "Gtk$" + ns + "$" + name + "$T";
 	t:ctype <- cname + " *";
 	t:ctor_prefix <- PrefixLength(cname);
@@ -35,7 +39,24 @@ DEF New!(ns, name, cname) (
 	t:headers <- ["#include <Gtk/" + ns + "/" + name + ".h>"];
 	t:libraries <- ["Gtk/" + ns + "/" + name + ".rlib"];
 	t:queue;
+	VAR s <- S();
+	s:ns <- ns;
+	s:name <- name;
+	s:cname <- cname;
+	s:rtype <- t:rtype;
+	s:ctype <- cname;
+	Type.Define(cname, s);
+	s:headers <- t:headers;
+	s:libraries <- t:libraries;
 	RET t;
+);
+
+TO :addfield(t@T, name, cname, type) (
+	t:fields:put(Type.Field(name, cname, type));
+);
+
+TO :addarray(t@T, name, cname, type) (
+	t:arrays:put(Type.Field(name, cname, type));
 );
 
 TO :addmethod(t@T, name, cname) (
@@ -71,6 +92,29 @@ TO :addctor(t@T, cname) (
 	t:ctors:put(method);
 	RET method;
 );
+
+TO :precall(t@S, name, arg) [
+	t:ctype + " " + name + "= ((Gtk$" + t:ns + "$" + t:name + "_t *)" + arg + ".Val)->Value;"
+];
+
+TO :return(t@S, result) [
+	"{",
+	"\tGtk$" + t:ns + "$" + t:name + "_t * _ptr_" + result + " = new(Gtk$" + t:ns + "$" + t:name + "_t);",
+	"\t_ptr_" + result + "->Type = " + t:rtype + ";",
+	"\t_ptr_" + result + "->Value = " + result + ";",
+	"\tResult->Val = _ptr_" + result + ";",
+	"};"
+];
+
+TO :toriva(t@S, arg, name) [
+	"{",
+	"\tGtk$" + t:ns + "$" + t:name + "_t *_ptr_" + name + " = new(Gtk$" + t:ns + "$" + t:name + "_t);",
+	"\t_ptr_" + name + "->Type = " + t:rtype + ";",
+	"\t_ptr_" + name + "->Value = " + name + ";",
+	"\t" + arg + ".Val = _ptr_" + name + ";",
+	"\t" + arg + ".Ref = 0;",
+	"};"
+];
 
 TO :precall(t@T, name, arg) [
 	t:ctype + " " + name + "= &((Gtk$" + t:ns + "$" + t:name + "_t *)" + arg + ".Val)->Value;"
@@ -121,6 +165,10 @@ TO :process(t@T, srcdir, incdir, libdir) (
 		EVERY libraries:insert(Type.Lookup(method:params:values:type):libraries:values);
 		EVERY libraries:insert(Type.Lookup(method:type):libraries:values);
 	);
+	EVERY headers:insert(Type.Lookup(t:fields:values:type):headers:values);
+	EVERY libraries:insert(Type.Lookup(t:fields:values:type):libraries:values);
+	EVERY headers:insert(Type.Lookup(t:arrays:values:type):headers:values);
+	EVERY libraries:insert(Type.Lookup(t:arrays:values:type):libraries:values);
 	cfile:writes("/***********************************/\n");
 	cfile:writes("// Number of included files = ", headers:size, "\n");
 	EVERY cfile:writes(headers:keys, "\n");
@@ -168,6 +216,25 @@ TO :process(t@T, srcdir, incdir, libdir) (
 		returntype:ctype ~= "void" => (
 			EVERY cfile:writes("\t", returntype:return("result"):values, "\n");
 		);
+		cfile:write("\treturn SUCCESS;\n");
+		cfile:write("};\n\n");
+	);
+	EVERY method <- t:fields:values DO (
+		cfile:writes("METHOD(\"", method:name, "\", TYP, T) {\n");
+		cfile:writes("\tGtk$", t:ns, "$", t:name, "_t * self = Args[0].Val;\n");
+		returntype <- Type.Lookup(method:type);
+		cfile:writes("\t", returntype:ctype, " result = self->Value.", method:cname, ";\n");
+		EVERY cfile:writes("\t", returntype:return("result"):values, "\n");
+		cfile:write("\treturn SUCCESS;\n");
+		cfile:write("};\n\n");
+	);
+	EVERY method <- t:arrays:values DO (
+		cfile:writes("METHOD(\"", method:name, "\", TYP, T, TYP, Std$Integer$SmallT) {\n");
+		cfile:writes("\tGtk$", t:ns, "$", t:name, "_t * self = Args[0].Val;\n");
+		cfile:writes("\tint index = ((Std$Integer_smallt *)Args[1].Val)->Value;\n");
+		returntype <- Type.Lookup(method:type);
+		cfile:writes("\t", returntype:ctype, " result = self->Value.", method:cname, "[index];\n");
+		EVERY cfile:writes("\t", returntype:return("result"):values, "\n");
 		cfile:write("\treturn SUCCESS;\n");
 		cfile:write("};\n\n");
 	);

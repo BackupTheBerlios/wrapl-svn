@@ -19,16 +19,16 @@
 #define SECT_IMPORT		3
 #define SECT_BSS		4
 #define SECT_SYMBOL		5
-#define SECT_WRAPL		6
+
 #define RELOC_ABS	0
 #define RELOC_REL	1
-#define RELOC_DEP	2
-#define MODULE_ABS	0
-#define MODULE_REL	1
-#define MODULE_SYS	2
+
+#define LIBRARY_ABS	0
+#define LIBRARY_REL	1
+
 #define EXP_CONSTANT	0
 #define EXP_VARIABLE	1
-#define EXP_INTERNAL	2
+
 #define FLAG_GC		1
 
 typedef struct reloc_t {
@@ -188,6 +188,7 @@ static int riva_load(module_t *Module, const char *FileName) {
 
 	uint32_t NoOfSections; gzread(File, &NoOfSections, 4);
 	uint32_t NoOfExports; gzread(File, &NoOfExports, 4);
+	uint32_t NoOfRequires; gzread(File, &NoOfRequires, 4);
 
 	jmp_buf OnError[1];
 
@@ -224,18 +225,12 @@ static int riva_load(module_t *Module, const char *FileName) {
 			Section->Fixup = fixup_library_section;
 			gzread(File, &Section->Flags, 1);
 			uint32_t Length; gzread(File, &Length, 4);
-			if (Section->Flags == MODULE_ABS) {
-				gzread(File, Section->Name = (char *)GC_malloc_atomic(Length + 1), Length);
-				Section->Name[Length] = 0;
+			gzread(File, Section->Name = (char *)GC_malloc_atomic(Length + 1), Length);
+			Section->Name[Length] = 0;
+			if (Section->Flags == LIBRARY_ABS) {
 				Section->Path = 0;
-			} else if (Section->Flags == MODULE_REL) {
-				gzread(File, Section->Name = (char *)GC_malloc_atomic(Length + 1), Length);
-				Section->Name[Length] = 0;
+			} else if (Section->Flags == LIBRARY_REL) {
 				Section->Path = LoadPath;
-			} else if (Section->Flags == MODULE_SYS) {
-				gzread(File, Section->Name = (char *)GC_malloc_atomic(Length + 1), Length);
-				Section->Name[Length] = 0;
-				Section->Path = 0;
 			};
 			for (char *P = Section->Name; *P; ++P) if (*P == '/') *P = PATHCHR;
 		break;};
@@ -274,6 +269,17 @@ static int riva_load(module_t *Module, const char *FileName) {
 		gzread(File, Name, Length);
 		Name[Length] = 0;
 		stringtable_put(Riva->Exports, Name, Export);
+	};
+	for (int I = 0; I < NoOfRequires; ++I) {
+		uint8_t Flags; gzread(File, &Flags, 1);
+		uint32_t Length; gzread(File, &Length, 4);
+		char *Name = (char *)GC_malloc_atomic(Length + 1);
+		char *Path = 0;
+		gzread(File, Name, Length);
+		Name[Length] = 0;
+		if (Flags == LIBRARY_REL) Path = LoadPath;
+		for (char *P = Name; *P; ++P) if (*P == '/') *P = PATHCHR;
+		module_load(Path, Name);
 	};
 	gzclose(File);
 

@@ -71,9 +71,19 @@ struct export_t {
 	uint32_t Offset;
 };
 
+typedef struct require_t require_t;
+
+struct require_t {
+	require_t *Next;
+	uint32_t Flags;
+	const char *Library;
+};
+
 static struct {section_t *Head, *Tail;} Sections = {0, 0};
-static uint32_t NoOfSections = 0, NoOfExports = 0;
 static struct {export_t *Head, *Tail;} Exports = {0, 0};
+static struct {require_t *Head, *Tail;} Requires = {0, 0};
+
+static uint32_t NoOfSections = 0, NoOfExports = 0, NoOfRequires = 0;
 
 #ifdef WINDOWS
 static const char *Platform = "WINDOWS";
@@ -84,6 +94,20 @@ static const char *Platform = "LINUX";
 static const char *Platform = "GENERIC";
 #endif
 #endif
+
+static void new_require(uint32_t Flags, const char *Library) {
+	require_t *Require = new(require_t);
+	Require->Library = Library;
+	Require->Flags = Flags;
+	Require->Next = 0;
+	++NoOfRequires;
+	if (Requires.Head) {
+		Requires.Tail->Next = Require;
+		Requires.Tail = Require;
+	} else {
+		Requires.Head = Requires.Tail = Require;
+	};
+};
 
 static void new_export(const char *Internal, const char *External, uint32_t Flags) {
 	export_t *Export = new(export_t);
@@ -100,7 +124,7 @@ static void new_export(const char *Internal, const char *External, uint32_t Flag
 	};
 };
 
-static inline void require(section_t *Section) {
+static inline void section_require(section_t *Section) {
 	if (Section->Index != SEC_UNUSED) return;
 	Section->Index = NoOfSections++;
 	Section->Next = 0;
@@ -134,7 +158,7 @@ static void invalid_section_setup(section_t *Section) {
 };
 
 static void default_section_relocate(section_t *Section, relocation_t *Relocation, uint32_t *Target) {
-	require(Section);
+	section_require(Section);
 	Relocation->Section = Section;
 };
 
@@ -219,7 +243,7 @@ typedef struct import_section_t {
 } import_section_t;
 
 static void import_section_setup(import_section_t *Section) {
-	require((section_t *)Section->Library);
+	section_require((section_t *)Section->Library);
 };
 
 static void import_section_debug(import_section_t *Section, FILE *File) {
@@ -324,7 +348,7 @@ static void symbols_section_relocate(symbols_section_t *Section, relocation_t *R
 		Symbol = (section_t *)new_symbol_section(Name);
 		stringtable_put(SymbolTable, Name, Symbol);
 	};
-	require(Symbol);
+	section_require(Symbol);
 	Relocation->Section = Symbol;
 };
 
@@ -780,10 +804,21 @@ static int definition_file_export(lua_State *State) {
     return 0;
 };
 
+static int definition_file_require(lua_State *State) {
+	char *Library = lua_tostring(State, 1);
+	if (Library[0] == '.') {
+		new_require(LIBRARY_REL, strdup(Library + 1));
+	} else {
+		new_require(LIBRARY_ABS, strdup(Library));
+	};
+	return 0;
+};
+
 static void add_definition_file(const char *FileName) {
     lua_State *State = luaL_newstate();
     lua_register(State, "export", definition_file_export);
     lua_register(State, "library", definition_file_library);
+    lua_register(State, "require", definition_file_require);
     lua_pushstring(State, Platform);
     lua_setglobal(State, "Platform");
     for (const char **P = Platforms; *P; ++P) {
@@ -884,7 +919,7 @@ int main(int Argc, char **Argv) {
 		for (export_t *Export = Exports.Head; Export; Export = Export->Next) {
 			symbol_t *Symbol = (symbol_t *)stringtable_get(GlobalTable, Export->Internal);
 			if (Symbol) {
-				require(Export->Section = Symbol->Section);
+				section_require(Export->Section = Symbol->Section);
 				Export->Offset = Symbol->Offset;
 			} else {
 				printf("exported symbol not found: %s.\n", Export->Internal);
@@ -897,6 +932,9 @@ int main(int Argc, char **Argv) {
 			for (export_t *Export = Exports.Head; Export; Export = Export->Next) {
 				fprintf(File, "export: %s -> %d[%d]\n", Export->External, Export->Section->Index, Export->Offset);
 			};
+			for (require_t *Require = Requires.Head; Require; Require = Require->Next) {
+				fprintf(File, "require: %s[%d]\n", Require->Library, Require->Flags);
+			};
 			fclose(File);
 		};
 		if (OutFile) {
@@ -905,6 +943,7 @@ int main(int Argc, char **Argv) {
 			gzwrite(File, "RIVA", 4);
 			Temp = NoOfSections; gzwrite(File, &Temp, 4);
 			Temp = NoOfExports; gzwrite(File, &Temp, 4);
+			Temp = NoOfRequires; gzwrite(File, &Temp, 4);
 			for (section_t *Section = Sections.Head; Section; Section = Section->Next) section_write(Section, File);
 			for (export_t *Export = Exports.Head; Export; Export = Export->Next) {
 				Temp = Export->Flags; gzwrite(File, &Temp, 1);
@@ -912,6 +951,11 @@ int main(int Argc, char **Argv) {
 				Temp = Export->Offset; gzwrite(File, &Temp, 4);
 				Temp = strlen(Export->External); gzwrite(File, &Temp, 4);
 				gzwrite(File, Export->External, Temp);
+			};
+			for (require_t *Require = Requires.Head; Require; Require = Require->Next) {
+				Temp = Require->Flags; gzwrite(File, &Temp, 1);
+				Temp = strlen(Require->Library); gzwrite(File, &Temp, 4);
+				gzwrite(File, Require->Library, Temp);
 			};
 			gzclose(File);
 		};

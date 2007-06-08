@@ -1,11 +1,13 @@
 <?xml version="1.0"?>
 <metadata>
+	<remove-node path="/api/namespace/struct[@cname='GtkCell']" />
 	<remove-node path="/api/namespace/callback[@cname='GtkCListCompareFunc']" />
 	<remove-node path="/api/namespace/enum[@name='FileInfoType']" />
 	<remove-node path="/api/namespace/enum[@name='FileSystemError']" />
 	<remove-node path="/api/namespace/interface[@name='FileSystem']" />
 	<remove-node path="/api/namespace/interface[@name='FileFolder']" />
 	<remove-node path="/api/namespace/struct[@name='FileSystemHandleClass']" />
+	<remove-node path="/api/namespace/object[@name='FileSystemHandle']" />
 	<remove-node path="/api/namespace/struct[@name='FileInfo']" />
 	<remove-node path="/api/namespace/enum[@name='ArgFlags']" />
 	<remove-node path="/api/namespace/callback[@name='FileSystemGetInfoCallback']" />
@@ -40,6 +42,15 @@
 	<add-node path="/api/namespace/object[@cname='GtkTreeStore']">
 		<implements interface="GtkTreeModel" />
 	</add-node>
+	<add-node path="/api/namespace/object[@cname='GtkFileChooserButton']">
+		<implements interface="GtkFileChooser" />
+	</add-node>
+	<add-node path="/api/namespace/object[@cname='GtkFileChooserDialog']">
+		<implements interface="GtkFileChooser" />
+	</add-node>
+	<add-node path="/api/namespace/object[@cname='GtkFileChooserWidget']">
+		<implements interface="GtkFileChooser" />
+	</add-node>
 	<attr path="/api/namespace/object/method[@cname='gtk_container_get_children']/return-type" name="type">reusable-GList[GObject]*</attr>
 	<attr path="/api/namespace/object/method[@cname='gtk_action_group_list_actions']/return-type" name="type">reusable-GList[GObject]*</attr>
 	<attr path="/api/namespace/object/method[@cname='gtk_cell_view_get_cell_renderers']/return-type" name="type">reusable-GList[GObject]*</attr>
@@ -55,4 +66,23 @@
 	<attr path="/api/namespace/object/method[@cname='gdk_window_get_children']/return-type" name="type">reusable-GList[GObject]*</attr>
 	<attr path="/api/namespace/object/method[@cname='gdk_window_get_toplevels']/return-type" name="type">reusable-GList[GObject]*</attr>
 	<attr path="/api/namespace/class/method[@cname='gdk_list_visuals']/return-type" name="type">reusable-GList[GObject]*</attr>
+	<remove-node path="/api/namespace/object[@cname='GtkImage']/field[@name='Data']" />
+	<attr path="/api/namespace/object[@cname='GtkImage']/field[@name='Pixmap']" name="type">GtkImagePixmapData</attr>
+	<attr path="/api/namespace/object[@cname='GtkImage']/field[@name='Pixmap']" name="cname">data.pixmap</attr>
+	<attr path="/api/namespace/object[@cname='GtkImage']/field[@name='Image']" name="cname">data.image</attr>
+	<attr path="/api/namespace/object[@cname='GtkImage']/field[@name='Pixbuf']" name="cname">data.pixbuf</attr>
+	<attr path="/api/namespace/object[@cname='GtkImage']/field[@name='Stock']" name="cname">data.stock</attr>
+	<attr path="/api/namespace/object[@cname='GtkImage']/field[@name='IconSet']" name="cname">data.icon_set</attr>
+	<attr path="/api/namespace/object[@cname='GtkImage']/field[@name='Anim']" name="cname">data.anim</attr>
+	<attr path="/api/namespace/object[@cname='GtkImage']/field[@name='Name']" name="cname">data.name</attr>
+	<remove-node path="/api/namespace/object[@cname='GtkCurve']/field[@name='Ctlpoint']" />
+	<attr path="/api/namespace/struct[@cname='GtkBindingArg']/field[@name='LongData']" name="cname">d.long_data</attr>
+	<add-node path="/api/namespace/struct[@cname='GtkBindingArg']">
+		<field name="DoubleData" cname="d.double_data" type="gdouble"/>
+	</add-node>
+	<add-node path="/api/namespace/struct[@cname='GtkBindingArg']">
+		<field name="StringData" cname="d.string_data" type="gchar*"/>
+	</add-node>
+	<remove-node path="/api/namespace/struct[@cname='GtkArg']" />
+	<remove-node path="/api/namespace/struct[@cname='GdkEventClient']/field[@name='B']" />
 </metadata>

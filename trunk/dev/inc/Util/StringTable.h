@@ -6,10 +6,16 @@
 #define RIVA_MODULE Util$StringTable
 #include <Riva-Header.h>
 
+typedef struct Util$StringTable_node {
+	const char *Key;
+	unsigned long Length, Hash;
+	void *Value;
+} Util$StringTable_node;
+
 typedef struct Util$StringTable_t {
 	Std$Type_t *Type;
 	unsigned long Size, Space;
-	void *Entries;
+	Util$StringTable_node *Entries;
 } Util$StringTable_t;
 
 extern Std$Type_t Util$StringTable$T[];

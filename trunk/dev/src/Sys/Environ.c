@@ -18,6 +18,14 @@ GLOBAL_FUNCTION(Get, 1) {
 	return SUCCESS;
 };
 
+GLOBAL_FUNCTION(Set, 2) {
+	if (setenv(Std$String$flatten(Args[0].Val), Std$String$flatten(Args[1].Val), 1)) {
+		Result->Val = Std$String$new("Error setting environment variable");
+		return MESSAGE;
+	};
+	return SUCCESS;
+};
+
 GLOBAL_FUNCTION(GetCwd, 0) {
 #ifdef WINDOWS
 	int Length = GetCurrentDirectory(0, 0);

@@ -1,5 +1,6 @@
 #include <Gtk/GObject/Value.h>
 #include <Gtk/GObject/Object.h>
+#include <Gtk/GObject/Type.h>
 #include <Riva.h>
 
 SYMBOL($true, "true");
@@ -24,9 +25,16 @@ Std$Object_t *_to_riva(const GValue *Value) {
 	case G_TYPE_STRING: return Std$String$new(g_value_get_string(Value));
 	case G_TYPE_POINTER: return Std$Address$new(g_value_get_pointer(Value));
 	default: {
+		Std$Type_t *Type;
 		if (G_VALUE_HOLDS(Value, G_TYPE_OBJECT)) {
 			return Gtk$GObject$Object$to_riva(g_value_get_object(Value));
+		} else if (g_value_fits_pointer(Value) && (Type = Gtk$GObject$Type$to_riva(G_VALUE_TYPE(Value)))) {
+			Gtk$GObject$Object_t *Object = new(Gtk$GObject$Object_t);
+			Object->Type = Type;
+			Object->Handle = g_value_peek_pointer(Value);
+			return Object;
 		} else {
+			printf("Unknown parameter type %s\n", G_VALUE_TYPE_NAME(Value));
 			return Std$Address$new(g_value_peek_pointer(Value));
 		};
 	};

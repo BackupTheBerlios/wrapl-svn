@@ -1,3 +1,4 @@
+#include <Gtk/GObject/Init.h>
 #include <Gtk/GObject/Object.h>
 #include <Gtk/GObject/Type.h>
 #include <Gtk/GObject/Closure.h>

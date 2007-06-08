@@ -1,12 +1,21 @@
 .PHONY: GtkGObject GtkGtk GtkGdk GtkAtk GtkPango GtkGlade
 
-CFLAGS += -std=gnu99
-LDFLAGS += Std.rlib Riva.rlib Gtk/Gtk.rlib
-
 GTK_LIB_DIR = $(LIB_DIR)Gtk$(DIRSEP)
 GTK_SRC_DIR = $(SRC_DIR)Gtk$(DIRSEP)
 GTK_OBJ_DIR = $(OBJ_DIR)Gtk$(DIRSEP)
 GTK_AUTOGEN = $(file Autogen.log)
+
+CFLAGS += -std=gnu99
+LDFLAGS += Std.rlib Riva.rlib
+
+RivaProgram($(GTK_LIB_DIR)Mapgen, Mapgen)
+
+TypeMap.c: $(GTK_LIB_DIR)Mapgen.riva
+	riva Gtk/Mapgen
+
+RivaProgram($(GTK_LIB_DIR)TypeMap, TypeMap)
+
+LDFLAGS += Gtk/Gtk.rlib
 
 api.raw: $(file api.sources)
 	gapi2-parser $(file api.sources)
@@ -24,4 +33,4 @@ clean:
 
 .SUBDIRS: GObject Gtk Gdk Pango Glade
 
-Gtk: GtkGObject $(GTK_AUTOGEN) GtkGtk GtkGdk GtkPango GtkGlade
+Gtk: GtkGObject $(GTK_AUTOGEN) GtkGtk GtkGdk GtkPango GtkGlade $(GTK_LIB_DIR)TypeMap.riva
