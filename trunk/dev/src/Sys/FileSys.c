@@ -13,6 +13,13 @@
 #define PATHSEPSTR "/"
 #endif
 
+Std$Integer_smallt BLOCKFILE[] = {{Std$Integer$SmallT, S_IFBLK}};
+Std$Integer_smallt CHARFILE[] = {{Std$Integer$SmallT, S_IFCHR}};
+Std$Integer_smallt FIFOFILE[] = {{Std$Integer$SmallT, S_IFIFO}};
+Std$Integer_smallt REGFILE[] = {{Std$Integer$SmallT, S_IFREG}};
+Std$Integer_smallt DIRFILE[] = {{Std$Integer$SmallT, S_IFDIR}};
+Std$Integer_smallt LINKFILE[] = {{Std$Integer$SmallT, S_IFLNK}};
+
 GLOBAL_FUNCTION(Path, 0) {
 	
 };
@@ -167,3 +174,18 @@ GLOBAL_FUNCTION(FileSize, 1) {
 	};
 #endif
 };
+GLOBAL_FUNCTION(FileType, 1) {
+	#ifdef WINDOWS
+#else
+	char FileName[((Std$String_t *)Args[0].Val)->Length.Value + 1];
+	Std$String$flatten_to(Args[0].Val, FileName);
+	struct stat Stat;
+	if (stat(FileName, &Stat) == 0) {
+		Result->Val = Std$Integer$new_small(Stat.st_mode);
+		return SUCCESS;
+	} else {
+		return FAILURE;
+	};
+#endif
+};
+
