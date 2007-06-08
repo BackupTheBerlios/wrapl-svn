@@ -1,0 +1,7 @@
+module("Gtk", "TypeMap")
+if WINDOWS then
+	prefix("_Gtk$TypeMap$")
+else
+	prefix("Gtk$TypeMap$")
+end
+export("Table")

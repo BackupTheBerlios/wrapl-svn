@@ -1,7 +1,7 @@
 BASENAME = $(BIN_DIR)riva
 PROGRAM = $(BASENAME)$(EXE)
 
-CFLAGS += -std=gnu99 -g
+CFLAGS += -std=gnu99
 
 FILES[] =
 	directory

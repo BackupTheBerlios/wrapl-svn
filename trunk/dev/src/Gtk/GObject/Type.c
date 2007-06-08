@@ -1,6 +1,7 @@
 #include <Gtk/GObject/Init.h>
 #include <Gtk/GObject/Type.h>
 #include <Gtk/GObject/Object.h>
+#include <Gtk/TypeMap.h>
 #include <Riva.h>
 #include <Util/StringTable.h>
 #include <Util/ObjectTable.h>
@@ -37,13 +38,12 @@ Gtk$GObject$Type_t PARAM[] = {{T, G_TYPE_PARAM}};
 Gtk$GObject$Type_t OBJECT[] = {{T, G_TYPE_OBJECT}};
 
 static Util$ObjectTable_t GTypeToRiva[] = {Util$ObjectTable$INIT};
-static Util$StringTable_t GTypeModules[] = {Util$StringTable$INIT};
 
 Std$Type_t *_to_riva(GType GtkType) {
 	Std$Type_t *RivaType = Util$ObjectTable$get(GTypeToRiva, GtkType);
 	if (RivaType != (Std$Type_t *)0xFFFFFFFF) return RivaType;
 	const char *GtkName = g_type_name(GtkType);
-	const char *RivaName = Util$StringTable$get(GTypeModules, GtkName);
+	const char *RivaName = Util$StringTable$get(Gtk$TypeMap$Table, GtkName);
 	if (RivaName == 0) {
 		Riva$Log$errorf("Error: Gtk type is not mapped: %s\n", GtkName);
 		return 0;
@@ -64,16 +64,4 @@ Std$Type_t *_to_riva(GType GtkType) {
 
 void __init(Riva$Module_t *Module) {
 	g_type_init();
-	char MapFileName[256];
-	sprintf(MapFileName, "%sTypes.map", Riva$Module$get_path(Module));
-	Riva$Log$writef("Loading type map from %s\n", MapFileName);
-	FILE *MapFile = fopen(MapFileName, "r");
-	while (!feof(MapFile)) {
-		const char *GtkName, *RivaName;
-		if (fscanf(MapFile, "%a[a-zA-Z0-9] = %a[^\n]\n", &GtkName, &RivaName) == 2) {
-			Riva$Log$writef("Adding type: %s -> %s\n", GtkName, RivaName);
-			Util$StringTable$put(GTypeModules, GtkName, (void *)RivaName);
-		};
-	};
-	fclose(MapFile);
 };
