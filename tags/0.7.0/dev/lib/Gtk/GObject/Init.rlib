@@ -1,0 +1,8 @@
+module("Gtk", "GObject", "Init")
+if WINDOWS then
+	prefix("_Gtk$GObject$Init$")
+else
+	prefix("Gtk$GObject$Init$")
+end
+export("__dummy")
+

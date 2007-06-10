@@ -1,0 +1,305 @@
+MOD Type;
+
+IMP Log USE log;
+
+DEF unknownprecalls <- {};
+DEF unknownreturns <- {};
+DEF unknowntypes <- {};
+
+DEF T! <- <[]>;
+
+DEF Param! <- <[] name, type>;
+DEF Method! <- <[] name, cname, params, type>;
+DEF Field! <- <[] name, cname, type>;
+
+TO :addparam(method@Method, name, type) method:params:put(Param(name, type));
+
+TO :headers(t@T) [];
+TO :libraries(t@T) [];
+TO :sigtype(t@T) "TYP, " + t:rtype;
+TO :precall(t@T, name, arg) (
+	unknownprecalls[t] // (
+		unknownprecalls:insert(t);
+		log:writes("Cannot unbox values of type ", t:cname, "\n");
+		RECV msg DO log:writes("Cannot unbox values of unknown type\n");
+	);
+	[t:ctype + " " + name + ";"];
+);
+
+TO :postcall(t@T, name, arg) [
+];
+
+TO :toriva(t@T, arg, name) [
+	arg + ".Val = Std$Object$Nil;",
+	arg + ".Ref = 0;"
+];
+
+TO :return(t@T, result) (
+	unknownreturns[t] // (
+		unknownreturns:insert(t);
+		log:writes("Cannot return values of type ", t:cname, "\n");
+		RECV msg DO log:writes("Cannot return values of unknown type\n");
+	);
+	[
+		"Result->Val = Std$String$new_format(\"Incomplete GTK function: %s:%d\", __FILE__, __LINE__);",
+		"return MESSAGE;"
+	];
+);
+
+VAR typetable <- {};
+
+DEF FixupName(name) (
+	VAR res <- "", char;
+	EVERY char <- name:chars DO (
+		res <- res + (char = "-" => " " // char);
+	);
+	RET res;
+);
+
+DEF Lookup!(name) (
+	VAR type <- typetable[name];
+	type == NIL => (
+		--unknowntypes[name] // (
+			type <- T();
+			TO :ctype(=type) FixupName(name);
+			TO :rtype(=type) "Std$Object$T";
+			TO :precall(=type, param, arg) [FixupName(name) + " " + param + " = 0;"];
+			Define(name, type);
+			unknowntypes:insert(name);
+			log:writes(name, " not found\n");
+			RET type;
+		--);
+		--RET voidtype;
+	);
+	RET type;
+);
+
+DEF Define!(name, type) (
+--	log:writes("Adding type ", name, "\n");
+	typetable:insert(name, type);
+);
+
+VAR ellipsis <- T();
+TO :rtype(=ellipsis) "Std$Object$T";
+TO :ctype(=ellipsis) "char *";
+TO :precall(=ellipsis, name, arg) [
+	"char *" + name + " = 0;"
+];
+Define("ellipsis", ellipsis);
+
+VAR gtype <- T();
+TO :rtype(=gtype) "Gtk$GObject$Type$T";
+TO :ctype(=gtype) "GType";
+TO :precall(=gtype, name, arg) [
+	"GType " + name + " = ((Gtk$GObject$Type_t *)" + arg + ".Val)->Value;"
+];
+TO :return(=gtype, result) [
+	"Result->Val = Gtk$GObject$Type$to_riva(" + result + ");"
+];
+TO :headers(=gtype) ["#include <Gtk/GObject/Type.h>"];
+TO :libraries(=gtype) ["Gtk/GObject/Type.rlib"];
+Define("GType", gtype);
+Define("GtkType", gtype);
+
+VAR gtypearray <- T();
+TO :rtype(=gtypearray) "Std$List$T";
+TO :ctype(=gtypearray) "GType*";
+TO :precall(=gtypearray, name, arg) [
+	"Std$List_t * " + name + "_list = " + arg + ".Val;",
+	"GType * " + name + " = Riva$Memory$alloc_atomic(sizeof(GType) * " + name + "_list->Length);",
+	"GType * " + name + "_ptr = " + name + ";",
+	"for (Std$List_node *Node = " + name + "_list->Head; Node; Node = Node->Next) {",
+	"\t*(" + name + "_ptr++) = ((Gtk$GObject$Type_t *)Node->Value)->Value;",
+	"};"
+];
+Define("GType*", gtypearray);
+
+VAR gclosuretype <- T();
+TO :rtype(=gclosuretype) "Gtk$GObject$Closure$T";
+TO :ctype(=gclosuretype) "GClosure *";
+TO :precall(=gclosuretype, name, arg) [
+	"GClosure *" + name + " = Gtk$GObject$Closure$new(" + arg + ".Val);"
+];
+TO :headers(=gclosuretype) ["#include <Gtk/GObject/Closure.h>"];
+TO :libraries(=gclosuretype) ["Gtk/GObject/Closure.rlib"];
+Define("GClosure*", gclosuretype);
+
+VAR chartype <- T();
+TO :rtype(=chartype) "Std$String$T";
+TO :ctype(=chartype) "char";
+TO :precall(=chartype, name, arg) [
+	"char " + name + " = ((char *)((Std$String_t *)" + arg + ".Val)->Blocks[0].Chars.Value)[0];"
+];
+TO :return(=chartype, result) [
+	"Result->Val = Std$String$new_char(" + result + ");"
+];
+TO :toriva(=chartype, arg, name) [
+	arg + ".Val = Std$String$new_char(" + name + ");",
+	arg + ".Ref = 0;"
+];
+Define("char", chartype);
+Define("guchar", chartype);
+Define("gchar", chartype);
+
+VAR stringtype <- T();
+TO :rtype(=stringtype) "Std$String$T";
+TO :ctype(=stringtype) "char *";
+TO :precall(=stringtype, name, arg) [
+	"char *" + name + " = Std$String$flatten(" + arg + ".Val);"
+];
+TO :return(=stringtype, result) [
+	"if (" + result + " == 0) return FAILURE;",
+	"Result->Val = Std$String$new(" + result + ");"
+];
+TO :toriva(=stringtype, arg, name) [
+	arg + ".Val = Std$String$new(" + name + ");",
+	arg + ".Ref = 0;"
+];
+Define("char*", stringtype);
+Define("gchar*", stringtype);
+Define("guchar*", stringtype);
+
+VAR conststringtype <- T();
+TO :rtype(=conststringtype) "Std$String$T";
+TO :ctype(=conststringtype) "const char *";
+TO :precall(=conststringtype, name, arg) [
+	"char *" + name + " = Std$String$flatten(" + arg + ".Val);"
+	--"char " + name + "[((Std$String_t *)" + arg + ".Val)->Length.Value + 1];",
+	--"Std$String$flatten_to(" + arg + ".Val, " + name + ");"
+];
+TO :return(=conststringtype, result) [
+	"if (" + result + " == 0) return FAILURE;",
+	"Result->Val = Std$String$copy(" + result + ");"
+];
+TO :toriva(=conststringtype, arg, name) [
+	arg + ".Val = Std$String$copy(" + name + ");",
+	arg + ".Ref = 0;"
+];
+Define("const-char*", conststringtype);
+Define("const-gchar*", conststringtype);
+Define("const-guchar*", conststringtype);
+
+VAR stringarraytype <- T();
+TO :rtype(=stringarraytype) "Std$List$T";
+TO :ctype(=stringarraytype) "const char * const *";
+Define("const-gchar**", stringarraytype);
+Define("gchar**", stringarraytype);
+Define("char**", stringarraytype);
+
+VAR integertype <- T();
+TO :rtype(=integertype) "Std$Integer$SmallT";
+TO :ctype(=integertype) "int";
+TO :precall(=integertype, name, arg) [
+	"int " + name + " = ((Std$Integer_smallt *)" + arg + ".Val)->Value;"
+];
+TO :return(=integertype, result) [
+	"Result->Val = Std$Integer$new_small(" + result + ");"
+];
+TO :toriva(=integertype, arg, name) [
+	arg + ".Val = Std$Integer$new_small(" + name + ");",
+	arg + ".Ref = 0;"
+];
+Define("int", integertype);
+Define("guint", integertype);
+Define("gint", integertype);
+Define("gushort", integertype);
+Define("gshort", integertype);
+Define("gulong", integertype);
+Define("glong", integertype);
+Define("guint8", integertype);
+Define("guint16", integertype);
+Define("guint32", integertype);
+Define("gint8", integertype);
+Define("gint16", integertype);
+Define("gint32", integertype);
+Define("gsize", integertype);
+Define("gssize", integertype);
+Define("size_t", integertype);
+
+VAR realtype <- T();
+TO :rtype(=realtype) "Std$Real$T";
+TO :ctype(=realtype) "double";
+TO :precall(=realtype, name, arg) [
+	"double " + name + " = ((Std$Real_t *)" + arg + ".Val)->Value;"
+];
+TO :return(=realtype, result) [
+	"Result->Val = Std$Real$new(" + result +");"
+];
+TO :toriva(=realtype, arg, name) [
+	arg + ".Val = Std$Real$new(" + name + ");",
+	arg + ".Ref = 0;"
+];
+Define("gdouble", realtype);
+Define("double", realtype);
+Define("gfloat", realtype);
+Define("float", realtype);
+
+VAR voidtype <- T();
+TO :rtype(=voidtype) "Std$Object$T";
+TO :ctype(=voidtype) "void";
+TO :precall(=voidtype, name, arg) [];
+TO :return(=voidtype, result) [
+];
+Define("void", voidtype);
+
+VAR booleantype <- T();
+TO :rtype(=booleantype) "Std$Symbol$T";
+TO :ctype(=booleantype) "int";
+TO :precall(=booleantype, name, arg) [
+	"int " + name + " = " + arg + ".Val == $true;"
+];
+TO :return(=booleantype, result) [
+	"Result->Val = " + result + " ? $true : $false;"
+];
+TO :toriva(=booleantype, arg, name) [
+	arg + ".Val = " + name + " ? $true : $false;",
+	arg + ".Ref = 0;"
+];
+TO :headers(=booleantype) [
+	"#include <Std/Boolean.h>"
+];
+Define("gboolean", booleantype);
+
+VAR pointertype <- T();
+TO :rtype(=pointertype) "Std$Address$T";
+TO :ctype(=pointertype) "void *";
+TO :precall(=pointertype, name, arg) [
+	"void *" + name + " = ((Std$Address_t *)" + arg + ".Val)->Value;"
+];
+TO :return(=pointertype, result) [
+	"Result->Val = Std$Address$new(" + result + ");"
+];
+TO :toriva(=pointertype, arg, name) [
+	arg + ".Val = Std$Address$new(" + name + ");",
+	arg + ".Ref = 0;"
+];
+Define("gpointer", pointertype);
+
+VAR glistobjecttype <- T();
+TO :rtype(=glistobjecttype) "Std$List$T";
+TO :ctype(=glistobjecttype) "GList *";
+TO :return(=glistobjecttype, result) [
+	"if (" + result + ") {",
+	"\tint _length = 1;",
+	"\tGList *node = " + result + ";",
+	"\tnode->data = Gtk$GObject$Object$to_riva(node->data);",
+	"\twhile (node->next) {",
+	"\t\tnode = node->next;",
+	"\t\tnode->data = Gtk$GObject$Object$to_riva(node->data);",
+	"\t\t_length++;",
+	"\t};",
+	"\tStd$List_t *list = new(Std$List_t);",
+	"\tlist->Type = Std$List$T;",
+	"\tlist->Cache = list->Head = " + result + ";",
+	"\tlist->Tail = node;",
+	"\tlist->Length = _length;",
+	"\tlist->Index = 1;",
+	"\tlist->Access = 4;",
+	"\tResult->Val = list;",
+	"} else {",
+	"\tResult->Val = Std$List$new(0);",
+	"};"
+];
+Define("reusable-GList[GObject]*", glistobjecttype);
+
+END Type.

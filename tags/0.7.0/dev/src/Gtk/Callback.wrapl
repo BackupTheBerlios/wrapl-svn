@@ -1,0 +1,124 @@
+MOD Callback;
+
+IMP Type, Target;
+IMP IO.File;
+IMP Std.String;
+
+DEF T <- <[Type.T, Target.T, Type.Method]
+	ns,
+	ctype,
+	headers, libraries
+>;
+
+DEF New!(ns, name, cname) (
+	VAR t <- T();
+	t:ns <- ns;
+	t:name <- name;
+	t:cname <- cname;
+	t:ctype <- cname;
+	t:params <- [];
+	Type.Define(cname, t);
+	t:queue;
+	t:headers <- ["#include <Gtk/" + ns + "/" + name + ".h>"];
+	t:libraries <- ["Gtk/" + ns + "/" + name + ".rlib"];
+	RET t;
+);
+
+TO :rtype(t@T) "Std$Function$T";
+
+TO :precall(t@T, name, arg) [
+	t:ctype + " " + name + " = Gtk$" + t:ns + "$" + t:name + "$new(" + arg + ".Val);"
+];
+
+TO :process(t@T, srcdir, incdir, libdir) (
+	VAR headers <- {"#include <Gtk/GObject/Object.h>"};
+	VAR libraries <- {};
+	VAR base <- t:ns + "/" + t:name;
+	VAR cfile <- File.Open(srcdir + base + ".c", File.WRITE + File.TEXT);
+	cfile:writes("#include <Gtk/", base, ".h>\n");
+	cfile:write("#include <Std.h>\n");
+	cfile:write("#include <Riva/Memory.h>\n\n");
+	VAR i, n <- t:params:size;
+	VAR types <- t:params:map(<p> Type.Lookup(p:type));
+	VAR names <- t:params:map(:name);
+	VAR type <- Type.Lookup(t:type);
+	EVERY headers:insert(types:values:headers:values);
+	EVERY libraries:insert(types:values:libraries:values);
+	EVERY headers:insert(type:headers:values);
+	EVERY libraries:insert(type:libraries:values);
+	cfile:writes("/***********************************/\n");
+	cfile:writes("// Number of included files = ", headers:size, "\n");
+	EVERY cfile:writes(headers:keys, "\n");
+	cfile:writes("/***********************************/\n");
+	cfile:write("TYPE(T);\n\n");
+	cfile:writes("static ", t:type, " _invoke(Std$Object_t *Function, void *_");
+	EVERY i <- 1:to(n) DO cfile:writes(", ", types[i]:ctype, " ", names[i]);
+	cfile:write(") {\n");
+	cfile:writes("\tStd$Function_argument Args[", n, "];\n");
+	EVERY i <- 1:to(n) DO EVERY cfile:writes("\t", types[i]:toriva("Args[" + (i - 1)@String.T + "]", names[i]):values, "\n");
+	cfile:write("\tStd$Function_result Result;\n");
+	cfile:writes("\tStd$Function$invoke(Function, ", n, ", &Result, Args);\n");
+	type:ctype ~= "void" => (
+		EVERY cfile:writes("\t", type:precall("__result__", "Result"):values, "\n");
+		cfile:write("\treturn __result__;\n");
+	);
+	cfile:write("};\n\n");
+	cfile:write(t:ctype + " _new(Std$Object_t *Function) {\n");
+	cfile:write("\tunsigned char *Thunk = Riva$Memory$alloc(20);\n");
+	cfile:write("\tThunk[2] = 0xCC;\n");
+	cfile:write("\tThunk[3] = 0x68;\n");
+	cfile:write("\t*(Std$Object_t **)(Thunk + 4) = Function;\n");
+	cfile:write("\tThunk[8] = 0xE8;\n");
+	cfile:write("\t*(int*)(Thunk + 9) = ((unsigned char *)_invoke - Thunk) - 13;\n");
+	cfile:write("\tThunk[13] = 0x83;\n");
+	cfile:write("\tThunk[14] = 0xC4;\n");
+	cfile:write("\tThunk[15] = 0x04;\n");
+	cfile:write("\tThunk[16] = 0xC3;\n");
+	cfile:writes("\treturn (", t:ctype, ")(Thunk + 3);\n");
+	cfile:write("};\n");
+	cfile:close;
+	VAR deffile <- File.Open(srcdir + base + ".rdef", File.WRITE + File.TEXT);
+	deffile:write(>>EOF
+library("Gtk/GObject/Object.rlib")
+
+EOF);
+	EVERY deffile:writes("library(\"", libraries:keys, "\")\n");
+	deffile:write(>>EOF
+if WINDOWS then
+	_export = export
+	export = function(Name, Alias)
+		if Alias == nil then
+			Alias = Name
+		end
+		_export("_" .. Name, Alias)
+	end
+end
+
+export("T")
+export("_new")
+EOF);
+	deffile:close;
+	VAR libfile <- File.Open(libdir + base + ".rlib", File.WRITE + File.TEXT);
+	libfile:writes("module(\"Gtk\", \"", t:ns, "\", \"", t:name, "\")\n");
+	libfile:write("if WINDOWS then\n");
+	libfile:writes("\tprefix(\"_Gtk$", t:ns, "$", t:name, "$\")\n");
+	libfile:write("else\n");
+	libfile:writes("\tprefix(\"Gtk$", t:ns, "$", t:name, "$\")\n");
+	libfile:write("end\n");
+	libfile:write("export(\"T\")\n");
+	libfile:write("export(\"_new\")\n");
+	libfile:close;
+	VAR hfile <- File.Open(incdir + base + ".h", File.WRITE + File.TEXT);
+	hfile:writes("#ifndef ", t:ns, "_", t:name, "_H\n");
+	hfile:writes("#define ", t:ns, "_", t:name, "_H\n\n");
+	hfile:write("#include <Std.h>\n");
+	hfile:writes("#define RIVA_MODULE Gtk$", t:ns, "$", t:name, "\n");
+	hfile:writes("#include <Riva-Header.h>\n\n");
+	hfile:writes("extern Std$Type_t ", t:rtype, "[];\n\n");
+	hfile:writes("RIVA_CFUN(", t:ctype, ", new, int);\n\n");
+	hfile:write("#undef RIVA_MODULE\n\n");
+	hfile:write("#endif\n");
+	hfile:close;
+);
+
+END Callback.

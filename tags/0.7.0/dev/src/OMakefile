@@ -1,0 +1,56 @@
+CFLAGS += -O3 -fexpensive-optimizations -fomit-frame-pointer -w -D_GNU_SOURCE -fdata-sections -ffunction-sections
+ASFLAGS += -Ov
+
+if $(equal $(OSTYPE), Win32)
+	CFLAGS += -DWINDOWS -DWIN32_THREADS
+	ASFLAGS += -DWINDOWS --prefix _ -fwin32
+	INCLUDES += C:\Apps\Mingw\include C:\Apps\Mingw\local\include
+	LDFLAGS += -LC:\Apps\Mingw\lib -LC:\Apps\Mingw\local\lib
+	export
+
+if $(equal $(OSTYPE), Unix)
+	CFLAGS += -DLINUX
+	ASFLAGS += -DLINUX -felf
+	export
+
+section
+	vmount($(SRC_DIR)Riva, $(OBJ_DIR)Riva)
+	.SUBDIRS: $(OBJ_DIR)Riva
+
+section
+	vmount($(SRC_DIR)Rlink, $(OBJ_DIR)Rlink)
+	.SUBDIRS: $(OBJ_DIR)Rlink
+
+RLINK = $(DEV_BIN)rlink$(EXE)
+LDFLAGS = -L$(DEV_LIB) libc.rlib libm.rlib
+ASFLAGS += -I$(DEV_INC)$(DIRSEP)
+INCLUDES += $(DEV_INC)
+
+section
+	vmount($(SRC_DIR)Std, $(OBJ_DIR)Std)
+	.SUBDIRS: $(OBJ_DIR)Std
+
+section
+	vmount($(SRC_DIR)Sys, $(OBJ_DIR)Sys)
+	.SUBDIRS: $(OBJ_DIR)Sys
+
+section
+	vmount($(SRC_DIR)Util, $(OBJ_DIR)Util)
+	.SUBDIRS: $(OBJ_DIR)Util
+
+section
+	vmount($(SRC_DIR)IO, $(OBJ_DIR)IO)
+	.SUBDIRS: $(OBJ_DIR)IO
+
+section
+	vmount($(SRC_DIR)Wrapl, $(OBJ_DIR)Wrapl)
+	.SUBDIRS: $(OBJ_DIR)Wrapl
+
+section
+	vmount($(SRC_DIR)Xml, $(OBJ_DIR)Xml)
+	.SUBDIRS: $(OBJ_DIR)Xml
+
+section
+	vmount($(SRC_DIR)Gtk, $(OBJ_DIR)Gtk)
+	.SUBDIRS: $(OBJ_DIR)Gtk
+

@@ -1,0 +1,15 @@
+BASENAME = $(GTK_LIB_DIR)Gdk$(DIRSEP)
+
+CFLAGS += $(shell pkg-config --cflags gtk+-2.0) -include gdk/gdk.h -include gdk-pixbuf/gdk-pixbuf.h -include gdk-pixbuf/gdk-pixdata.h
+LDFLAGS += Gtk/Gtk.rlib
+
+if $(file-exists $(GTK_AUTOGEN))
+	foreach(FILE, $(rootname $(basename $(glob *.c))))
+		#println($(FILE))
+		clean:
+			$(rm $(FILE).c)
+			$(rm $(FILE).rdef)
+		RivaProgram($(BASENAME)$(FILE), $(FILE))
+		GtkGdk: $(BASENAME)$(FILE).riva
+		export
+

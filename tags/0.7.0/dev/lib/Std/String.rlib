@@ -1,0 +1,22 @@
+module("Std", "String")
+if WINDOWS then
+	prefix("_Std$String$")
+else
+	prefix("Std$String$")
+end
+export("T")
+export("_new")
+export("_copy")
+export("_new_length")
+export("_copy_length")
+export("_new_format")
+export("_new_char")
+export("_flatten")
+export("_flatten_to")
+export("GetBlockAddress")
+export("GetBlockLength")
+export("GetBlocks")
+export("Ord")
+export("Chr")
+export("Add")
+export("Add.invoke")

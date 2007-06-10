@@ -1,0 +1,11 @@
+if LINUX then
+	include("Gtk/Linux/libgdk_pixbuf-2.0.rlib")
+	include("Gtk/Linux/libgdk-x11-2.0.rlib")
+	include("Gtk/Linux/libgtk-x11-2.0.rlib")
+end
+
+if WINDOWS then
+	include("Gtk/Win32/libgdk-win32-2.0-0.rlib")
+	include("Gtk/Win32/libgdk_pixbuf-2.0-0.rlib")
+	include("Gtk/Win32/libgtk-win32-2.0-0.rlib")
+end

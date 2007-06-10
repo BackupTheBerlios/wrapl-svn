@@ -1,0 +1,16 @@
+module("Std", "Function")
+if WINDOWS then
+	prefix("_Std$Function$")
+else
+	prefix("Std$Function$")
+end
+export("T")
+export("AsmT")
+export("CheckedAsmT")
+export("CT")
+export("CheckedCT")
+export("FewArgsMessageT")
+export("_resume_c")
+export("_invoke")
+export("_call")
+export("_resume")

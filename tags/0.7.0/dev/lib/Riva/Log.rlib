@@ -1,0 +1,12 @@
+module("Riva", "Log")
+if WINDOWS then
+	prefix("_Riva$Log$")
+else
+	prefix("Riva$Log$")
+end
+export("_writes")
+export("_writef")
+export("_writen")
+export("_errors")
+export("_errorf")
+export("_errorn")

@@ -1,0 +1,151 @@
+MOD Main;
+
+IMP Xml.Parser;
+IMP IO.Terminal USE Out;
+IMP Log USE log;
+IMP IO.File;
+IMP Sys.Program USE Args;
+
+IMP Target;
+IMP Callback;
+IMP Class;
+IMP Enum;
+IMP Flags;
+IMP Interface;
+IMP Native;
+IMP Object;
+IMP Opaque;
+IMP Struct;
+IMP Type;
+
+DEF Environment <- <[]
+	namespace,
+	object,
+	method
+>;
+
+DEF StartHandlers <- {
+
+"virtual_method" IS <env, attrs> (
+	env:method <- env:object:addvirtual(attrs["name"], attrs["cname"]);
+),
+
+"field" IS <env, attrs> (
+	attrs["array_len"] => (
+		env:object:addarray(attrs["name"], attrs["cname"], attrs["type"]);
+	) // (
+		env:object:addfield(attrs["name"], attrs["cname"], attrs["type"]);
+	);
+),
+
+"return-type" IS <env, attrs> (
+	env:method:type <- attrs["type"];
+),
+
+"method" IS <env, attrs> (
+	attrs["shared"] => (
+		env:method <- env:object:addshared(attrs["name"], attrs["cname"]);
+	) // (
+		env:method <- env:object:addmethod(attrs["name"], attrs["cname"]);
+	);
+),
+
+"implements" IS <env, attrs> (
+	env:object:addinterface(attrs["interface"]);
+),
+
+"api" IS <env, attrs> (
+),
+
+"alias" IS <env, attrs> (
+),
+
+"parameters" IS <env, attrs> (
+),
+
+"callback" IS <env, attrs> (
+	attrs["name"] => (
+		env:method <- Callback.New(env:namespace, attrs["name"], attrs["cname"]);
+	) // (
+		env:method <- Type.Method("", "", [], "");
+	);
+),
+
+"interface" IS <env, attrs> (
+	env:object <- Interface.New(env:namespace, attrs["name"], attrs["cname"]);
+),
+
+"class" IS <env, attrs> (
+	env:object <- Class.New(env:namespace, attrs["name"], attrs["cname"]);
+),
+
+"namespace" IS <env, attrs> (
+	env:namespace <- attrs["name"];
+),
+
+"object" IS <env, attrs> (
+	env:object <- Object.New(env:namespace, attrs["name"], attrs["cname"], attrs["parent"] | "GObject");
+),
+
+"struct" IS <env, attrs> (
+	attrs["opaque"] => (
+		env:object <- Opaque.New(env:namespace, attrs["name"], attrs["cname"]);
+	) // (
+		env:object <- Struct.New(env:namespace, attrs["name"], attrs["cname"]);
+	);
+),
+
+"member" IS <env, attrs> (
+	env:object:member(attrs["name"], attrs["cname"], attrs["value"] | "");
+),
+
+"constructor" IS <env, attrs> (
+	env:method <- env:object:addctor(attrs["cname"]);
+),
+
+"enum" IS <env, attrs> (
+	attrs["type"] = "enum" => (
+		env:object <- Enum.New(env:namespace, attrs["name"], attrs["cname"]);
+	) // attrs["type"] = "flags" => (
+		env:object <- Flags.New(env:namespace, attrs["name"], attrs["cname"]);
+	);
+),
+
+"parameter" IS <env, attrs> (
+	attrs["ellipsis"] => (
+		env:method:addparam("___", "ellipsis");
+	) // attrs["array"] => (
+		env:method:addparam(attrs["name"], attrs["type"] + "*");
+	) // (
+		env:method:addparam(attrs["name"], attrs["type"]);
+	);
+),
+
+"static-string" IS <env, attrs> (
+)
+
+};
+
+log <- File.Open("Autogen.log", File.WRITE + File.TEXT);
+
+VAR source <- File.Open(Args[1], File.READ + File.TEXT);
+VAR parser <- Parser.New();
+parser:userdata <- Environment();
+parser:onstartelement <- <env, name, attrs> (
+	StartHandlers[name](env, attrs);
+	RECV msg DO (
+		log:writes("Error: ", name, " -> ", attrs, "\n\t", msg, "\n");
+	)
+);
+
+Out:write("Reading api file...");
+REP WHILE parser:parse(source:read(1024));
+Out:write("done.\n");
+
+Out:write("Generating files...");
+Target.Process("./", "../../inc/Gtk/", "../../lib/Gtk/");
+Out:write("done.\n");
+
+log:close;
+
+END Main.
