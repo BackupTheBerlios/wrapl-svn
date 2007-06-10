@@ -107,19 +107,16 @@ METHOD("import", TYP, T, ANY) {
 		};
 		return SUCCESS;
 	} else {
+/*
 		Result->Val = Std$String$new("Import not found");
 		return MESSAGE;
+*/
+		return FAILURE;
 	};
 };
 
-METHOD("name", TYP, T) {
-	/*module_t *Module = ((module *)Args[0].Val)->Handle;
-	Result->Val = string$new(Module->Name);*/
-	return SUCCESS;
-};
-
 METHOD("path", TYP, T) {
-	/*module_t *Module = ((module *)Args[0].Val)->Handle;
-	Result->Val = string$new(Module->Path);*/
+	Riva$Module_t *Module = ((Sys$Module_t *)Args[0].Val)->Handle;
+	Result->Val = Std$String$new(Riva$Module$get_path(Module));
 	return SUCCESS;
 };
