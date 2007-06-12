@@ -539,3 +539,42 @@ METHOD("to", TYP, Std$Real$T, TYP, Std$Real$T, TYP, Std$Real$T) {
 		return SUSPEND;
 	};
 };
+METHOD("map", TYP, Std$String$T, TYP, Std$String$T, TYP, Std$String$T) {
+	Std$String_t *Source = Args[0].Val;
+	if (Source->Length.Value == 0) {
+		Result->Val = Source;
+		return SUCCESS;
+	};
+	char Map[256];
+	for (int I = 0; I < 255; ++I) Map[I] = I;
+	if (((Std$String_t *)Args[1].Val)->Length.Value != ((Std$String_t *)Args[2].Val)->Length.Value) {
+		Result->Val = "Operands to :map must have same length";
+		return MESSAGE;
+	};
+	Std$String_block *ToBlock = ((Std$String_t *)Args[2].Val)->Blocks;
+	char *ToChars = ToBlock->Chars.Value;
+	int K = 0;
+	for (Std$String_block *FromBlock = ((Std$String_t *)Args[1].Val)->Blocks; FromBlock->Length.Value; ++FromBlock) {
+		char *FromChars = FromBlock->Chars.Value;
+		for (int J = 0; J < FromBlock->Length.Value; ++J) {
+			Map[FromChars[J]] = ToChars[K];
+			if (++K >= ToBlock->Length.Value) {
+				++ToBlock;
+				ToChars = ToBlock->Chars.Value;
+				K = 0;
+			};
+		};
+	};
+	int Size = sizeof(Std$String_t) + (Source->Count + 1) * sizeof(Std$String_block);
+	Std$String_t *Dest = Riva$Memory$alloc(Size);
+	memcpy(Dest, Source, Size);
+	for (int I = 0; I < Source->Count; ++I) {
+		int Length = Source->Blocks[I].Length.Value;
+		char *SourceChars = Source->Blocks[I].Chars.Value;
+		char *DestChars = Riva$Memory$alloc_atomic(Length);
+		for (int J = 0; J < Length; ++J) DestChars[J] = Map[SourceChars[J]];
+		Dest->Blocks[I].Chars.Value = DestChars;
+	};
+	Result->Val = Dest;
+	return SUCCESS;
+};

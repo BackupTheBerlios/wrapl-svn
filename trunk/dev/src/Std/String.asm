@@ -422,6 +422,7 @@ func $Add, 2
 	xor edx, edx
 	xor eax, eax
 	ret
+
 c_data Nil
 	dd T
 	dd Std$Integer$SmallT
@@ -429,3 +430,23 @@ c_data Nil
 	dd Std$Integer$SmallT, 0
 	dd Std$Address$T, 0
 	dd 0, 0, 0, 0
+
+c_data Lower
+	dd T
+	dd Std$Integer$SmallT
+	dd 26, 1
+	dd Std$Integer$SmallT, 26
+	dd Std$Address$T, .chars
+	dd 0, 0, 0, 0
+.chars:
+	db "abcdefghijklmnopqrstuvwxyz"
+
+c_data Upper
+	dd T
+	dd Std$Integer$SmallT
+	dd 26, 1
+	dd Std$Integer$SmallT, 26
+	dd Std$Address$T, .chars
+	dd 0, 0, 0, 0
+.chars:
+	db "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
