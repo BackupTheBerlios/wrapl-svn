@@ -427,6 +427,8 @@ struct when_expr_t : expr_t {
 		this->Cases = Cases;
 		this->Default = Default;
 	};
+	void print(int Indent);
+	operand_t *compile(compiler_t *Compiler, label_t *Start, label_t *Success);
 };
 
 struct block_expr_t : expr_t {

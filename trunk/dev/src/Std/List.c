@@ -743,6 +743,13 @@ METHOD("remove", TYP, T, ANY) {
 	return FAILURE;
 };
 
+SYMBOL($to, "to");
+
+METHOD("keys", TYP, T) {
+	Std$Integer_smallt To = {Std$Integer$SmallT, ((_list *)Args[0].Val)->Length};
+	return Std$Function$call($to, 2, Result, Std$Integer$new_small(1), 0, &To, 0);
+};
+
 typedef struct list_generator {
 	Std$Function_cstate State;
 	_node *Current;

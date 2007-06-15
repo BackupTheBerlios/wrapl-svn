@@ -3,6 +3,7 @@ MOD Struct;
 IMP Type, Target;
 IMP IO.File;
 IMP Std.String;
+IMP IO.Terminal USE Out;
 
 DEF T <- <[Type.T, Target.T]
 	ns, name, cname,
@@ -186,14 +187,11 @@ TO :process(t@T, srcdir, incdir, libdir) (
 		types <- params:map(<p> Type.Lookup(p:type));
 		names <- params:map(:name);
 		cfile:writes("GLOBAL_FUNCTION(", ctor:name, ", ", n, ") {\n");
-		EVERY i <- 1:to(n) DO (
-			EVERY cfile:writes("\t", types[i]:precall(names[i], "Args[" + (i - 1)@String.T + "]"):values, "\n");
-		);
-		cfile:writes("\tGtk$GObject$Object_t *result = new(Gtk$GObject$Object_t);\n");
+		cfile:writes("\tGtk$", t:ns, "$", t:name, "_t *result = new(Gtk$", t:ns, "$", t:name, "_t);\n");
 		cfile:writes("\tresult->Type = T;\n");
-		cfile:writes("\tresult->Handle = ", ctor:cname, "(");
-		cfile:write(names[1]) => EVERY i <- 2:to(n) DO cfile:writes(", ", names[i]);
-		cfile:write(");\n");
+		EVERY i <- 1:to(n) DO (
+			EVERY cfile:writes("\t", types[i]:fromriva("result->Value." + names[i], "Args[" + (i - 1)@String.T + "]"):values, "\n");
+		);
 		cfile:write("\tResult->Val= result;\n");
 		cfile:write("\treturn SUCCESS;\n");
 		cfile:write("};\n\n");

@@ -20,14 +20,23 @@ TO :sigtype(t@T) "TYP, " + t:rtype;
 TO :precall(t@T, name, arg) (
 	unknownprecalls[t] // (
 		unknownprecalls:insert(t);
-		log:writes("Cannot unbox values of type ", t:cname, "\n");
-		RECV msg DO log:writes("Cannot unbox values of unknown type\n");
+		log:writes("Cannot precall values of type ", t:cname, "\n");
+		RECV msg DO log:writes("Cannot precall values of unknown type\n");
 	);
 	[t:ctype + " " + name + ";"];
 );
 
 TO :postcall(t@T, name, arg) [
 ];
+
+TO :fromriva(t@T, name, arg) (
+	unknownprecalls[t] // (
+		unknownprecalls:insert(t);
+		log:writes("Cannot fromriva values of type ", t:cname, "\n");
+		RECV msg DO log:writes("Cannot fromriva values of unknown type\n");
+	);
+	[];
+);
 
 TO :toriva(t@T, arg, name) [
 	arg + ".Val = Std$Object$Nil;",
@@ -130,6 +139,9 @@ TO :ctype(=chartype) "char";
 TO :precall(=chartype, name, arg) [
 	"char " + name + " = ((char *)((Std$String_t *)" + arg + ".Val)->Blocks[0].Chars.Value)[0];"
 ];
+TO :fromriva(=chartype, name, arg) [
+	name + " = ((char *)((Std$String_t *)" + arg + ".Val)->Blocks[0].Chars.Value)[0];"
+];
 TO :return(=chartype, result) [
 	"Result->Val = Std$String$new_char(" + result + ");"
 ];
@@ -146,6 +158,9 @@ TO :rtype(=stringtype) "Std$String$T";
 TO :ctype(=stringtype) "char *";
 TO :precall(=stringtype, name, arg) [
 	"char *" + name + " = Std$String$flatten(" + arg + ".Val);"
+];
+TO :fromriva(=stringtype, name, arg) [
+	name + " = Std$String$flatten(" + arg + ".Val);"
 ];
 TO :return(=stringtype, result) [
 	"if (" + result + " == 0) return FAILURE;",
@@ -166,6 +181,9 @@ TO :precall(=conststringtype, name, arg) [
 	"char *" + name + " = Std$String$flatten(" + arg + ".Val);"
 	--"char " + name + "[((Std$String_t *)" + arg + ".Val)->Length.Value + 1];",
 	--"Std$String$flatten_to(" + arg + ".Val, " + name + ");"
+];
+TO :fromriva(=conststringtype, name, arg) [
+	name + " = Std$String$flatten(" + arg + ".Val);"
 ];
 TO :return(=conststringtype, result) [
 	"if (" + result + " == 0) return FAILURE;",
@@ -191,6 +209,9 @@ TO :rtype(=integertype) "Std$Integer$SmallT";
 TO :ctype(=integertype) "int";
 TO :precall(=integertype, name, arg) [
 	"int " + name + " = ((Std$Integer_smallt *)" + arg + ".Val)->Value;"
+];
+TO :fromriva(=integertype, name, arg) [
+	name + " = ((Std$Integer_smallt *)" + arg + ".Val)->Value;"
 ];
 TO :return(=integertype, result) [
 	"Result->Val = Std$Integer$new_small(" + result + ");"
@@ -222,6 +243,9 @@ TO :ctype(=realtype) "double";
 TO :precall(=realtype, name, arg) [
 	"double " + name + " = ((Std$Real_t *)" + arg + ".Val)->Value;"
 ];
+TO :fromriva(=realtype, name, arg) [
+	name + " = ((Std$Real_t *)" + arg + ".Val)->Value;"
+];
 TO :return(=realtype, result) [
 	"Result->Val = Std$Real$new(" + result +");"
 ];
@@ -238,6 +262,7 @@ VAR voidtype <- T();
 TO :rtype(=voidtype) "Std$Object$T";
 TO :ctype(=voidtype) "void";
 TO :precall(=voidtype, name, arg) [];
+TO :fromriva(=voidtype, name, arg) [];
 TO :return(=voidtype, result) [
 ];
 Define("void", voidtype);
@@ -247,6 +272,9 @@ TO :rtype(=booleantype) "Std$Symbol$T";
 TO :ctype(=booleantype) "int";
 TO :precall(=booleantype, name, arg) [
 	"int " + name + " = " + arg + ".Val == $true;"
+];
+TO :fromriva(=booleantype, name, arg) [
+	name + " = " + arg + ".Val == $true;"
 ];
 TO :return(=booleantype, result) [
 	"Result->Val = " + result + " ? $true : $false;"
@@ -265,6 +293,9 @@ TO :rtype(=pointertype) "Std$Address$T";
 TO :ctype(=pointertype) "void *";
 TO :precall(=pointertype, name, arg) [
 	"void *" + name + " = ((Std$Address_t *)" + arg + ".Val)->Value;"
+];
+TO :fromriva(=pointertype, name, arg) [
+	name + " = ((Std$Address_t *)" + arg + ".Val)->Value;"
 ];
 TO :return(=pointertype, result) [
 	"Result->Val = Std$Address$new(" + result + ");"

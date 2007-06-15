@@ -439,6 +439,9 @@ void comp_expr_t::print(int Indent) {
 	Right->print(Indent);
 };
 
+void when_expr_t::print(int Indent) {
+};
+
 void block_expr_t::print(int Indent) {
 	if (Vars || Body || Receiver.Body) {
 		printf("(\n");
@@ -974,6 +977,9 @@ operand_t *comp_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t *S
 		};
 	};
 	return Result;
+};
+
+operand_t *when_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t *Success) {
 };
 
 operand_t *block_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t *Success) {

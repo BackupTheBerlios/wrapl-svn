@@ -406,6 +406,9 @@ static expr_t *parse_factor(scanner_t *Scanner) {
 		new exit_expr_t(Scanner->Token.LineNo, new const_expr_t(Scanner->Token.LineNo, Std$Object$Nil)),
 		new back_expr_t(Scanner->Token.LineNo)
 	);
+	if (Scanner->parse(tkWHEN)) {
+		
+	};
 	if (Scanner->parse(tkSEND)) return new send_expr_t(Scanner->Token.LineNo, accept_expr(Scanner));
 	if (Scanner->parse(tkTO)) {
 		expr_t *Symbol = accept_factor(Scanner);

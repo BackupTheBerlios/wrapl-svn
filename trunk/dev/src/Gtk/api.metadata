@@ -85,4 +85,59 @@
 	</add-node>
 	<remove-node path="/api/namespace/struct[@cname='GtkArg']" />
 	<remove-node path="/api/namespace/struct[@cname='GdkEventClient']/field[@name='B']" />
+	<add-node path="/api/namespace/struct[@cname='GdkRectangle']">
+		<constructor cname="gdk_rectangle_new_set">
+			<parameters>
+				<parameter type="gint" name="x" />
+				<parameter type="gint" name="y" />
+				<parameter type="gint" name="width" />
+				<parameter type="gint" name="height" />
+			</parameters>
+		</constructor>
+	</add-node>
+	<add-node path="/api/namespace/struct[@cname='GdkPoint']">
+		<constructor cname="gdk_point_new_set">
+			<parameters>
+				<parameter type="gint" name="x" />
+				<parameter type="gint" name="y" />
+			</parameters>
+		</constructor>
+	</add-node>
+	<add-node path="/api/namespace/struct[@cname='GtkBorder']">
+		<constructor cname="gtk_border_new_set">
+			<parameters>
+				<parameter type="gint" name="left" />
+				<parameter type="gint" name="right" />
+				<parameter type="gint" name="top" />
+				<parameter type="gint" name="bottom" />
+			</parameters>
+		</constructor>
+	</add-node>
+	<add-node path="/api/namespace/struct[@cname='GtkRequisition']">
+		<constructor cname="gtk_requisition_new_size">
+			<parameters>
+				<parameter type="gint" name="width" />
+				<parameter type="gint" name="height" />
+			</parameters>
+		</constructor>
+	</add-node>
+	<add-node path="/api/namespace/struct[@cname='GdkColor']">
+		<constructor cname="gdk_color_new_rgb">
+			<parameters>
+				<parameter type="guint16" name="red" />
+				<parameter type="guint16" name="green" />
+				<parameter type="guint16" name="blue" />
+			</parameters>
+		</constructor>
+	</add-node>
+	<add-node path="/api/namespace/struct[@cname='GdkSegment']">
+		<constructor cname="gdk_segment_new_set">
+			<parameters>
+				<parameter type="gint" name="x1" />
+				<parameter type="gint" name="y1" />
+				<parameter type="gint" name="x2" />
+				<parameter type="gint" name="y2" />
+			</parameters>
+		</constructor>
+	</add-node>
 </metadata>
