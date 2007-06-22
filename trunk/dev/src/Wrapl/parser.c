@@ -519,13 +519,13 @@ static expr_t *accept_term(scanner_t *Scanner);
 static expr_t *parse_term(scanner_t *Scanner) {
 	PREFIX(MODULO);
 	PREFIX(POWER);
-	PREFIX(QUERY);
 	PREFIX(MINUS);
 	PREFIX(DIVIDE);
 	PREFIX(BACKSLASH);
 	PREFIX(INVERSE);
 	PREFIX(EXCLAIM);
 	PREFIX(HASH);
+	if (Scanner->parse(tkQUERY)) return new typeof_expr_t(Scanner->Token.LineNo, parse_term(Scanner));
 	if (Scanner->parse(tkOR)) return new infinite_expr_t(Scanner->Token.LineNo, parse_term(Scanner));
 	expr_t *Expr = parse_factor(Scanner);
 	if (Expr == 0) return 0;

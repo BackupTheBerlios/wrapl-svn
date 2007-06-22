@@ -433,15 +433,6 @@ struct limit_inst_t : inst_t {
 void label_t::limit(uint32_t Trap, uint32_t Trap0, long Count) {
 };
 
-struct select_inst_t : inst_t {
-};
-
-void label_t::select(operand_t *Operand, select_case_t *Cases, label_t *Else) {
-};
-
-void label_t::select(operand_t *Operand, select_case_t *Cases, uint32_t Trap) {
-};
-
 struct comp_inst_t : inst_t {
 	operand_t *Operand;
 	label_t *Failure;
@@ -516,6 +507,54 @@ void label_t::select_string(select_string_inst_t::case_t *Cases, label_t *Defaul
 	select_string_inst_t *Inst = new select_string_inst_t;
 	Inst->Cases = Cases;
 	Inst->Default = Default;
+	append(Inst);
+};
+
+void select_object_inst_t::list() {
+	printf("\tselect_object\n");
+	for (case_t *Case = Cases; Case; Case = Case->Next) {
+		printf("\t\t%x => %x\n", Case->Object, Case->Body->final());
+	};
+	printf("\t\telse %x\n", Default->final());
+};
+
+void select_object_inst_t::append_links(label_t *Start) {
+	use_label(Start, Default, true);
+	for (case_t *Case = Cases; Case; Case = Case->Next) use_label(Start, Case->Body, false);
+};
+
+int select_object_inst_t::noof_consts() {
+	int Count = 0;
+	for (case_t *Case = Cases; Case; Case = Case->Next) ++Count;
+	return Count;
+};
+
+void **select_object_inst_t::get_consts(void **Ptr) {
+	for (case_t *Case = Cases; Case; Case = Case->Next) *(Ptr++) = Case->Object;
+	return Ptr;
+};
+
+void label_t::select_object(select_object_inst_t::case_t *Cases, label_t *Default) {
+	select_object_inst_t *Inst = new select_object_inst_t;
+	Inst->Cases = Cases;
+	Inst->Default = Default;
+	append(Inst);
+};
+
+struct typeof_inst_t : load_inst_t {
+	int noof_consts() {return 0;};
+	void **get_consts(void **Ptr) {return Ptr;};
+	void add_source(load_inst_t *Load) {
+		Load->load_val();
+	};
+	void list() {
+		printf("\ttypeof %sn", listop(Operand));
+	};
+	void encode(assembler_t *Assembler);
+};
+
+void label_t::type_of() {
+	typeof_inst_t *Inst = new typeof_inst_t;
 	append(Inst);
 };
 

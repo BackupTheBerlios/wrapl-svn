@@ -138,7 +138,7 @@ struct expr_t {
 	int LineNo;
 	virtual void print(int Indent) {};
 	virtual operand_t *compile(compiler_t *Compiler, label_t *Start, label_t *Success) {return 0;};
-	virtual operand_t *constant() {return 0;};
+	virtual operand_t *constant(compiler_t *Compiler) {return 0;};
 };
 
 struct assign_expr_t : expr_t {
@@ -184,7 +184,7 @@ struct const_expr_t : expr_t {
 	};
 	void print(int Indent);
 	operand_t *compile(compiler_t *Compiler, label_t *Start, label_t *Success);
-	operand_t *constant() {return Operand;};
+	operand_t *constant(compiler_t *Compiler) {return Operand;};
 };
 
 struct func_expr_t : expr_t {
@@ -204,7 +204,7 @@ struct func_expr_t : expr_t {
 	};
 	void print(int Indent);
 	operand_t *compile(compiler_t *Compiler, label_t *Start, label_t *Success);
-	operand_t *constant() {
+	operand_t *constant(compiler_t *Compiler) {
 		Constant = new operand_t;
 		Constant->Type = operand_t::CNST;
 		closure_t *Closure = new closure_t;
@@ -234,6 +234,7 @@ struct qualident_expr_t : expr_t {
 	};
 	void print(int Indent);
 	operand_t *compile(compiler_t *Compiler, label_t *Start, label_t *Success);
+	operand_t *constant(compiler_t *Compiler);
 };
 
 struct ret_expr_t : expr_t {
@@ -334,6 +335,16 @@ struct sequence_expr_t : expr_t {
 	sequence_expr_t(int LineNo, expr_t *Exprs) {
 		this->LineNo = LineNo;
 		this->Exprs = Exprs;
+	};
+	void print(int Indent);
+	operand_t *compile(compiler_t *Compiler, label_t *Start, label_t *Success);
+};
+
+struct typeof_expr_t : expr_t {
+	expr_t *Expr;
+	typeof_expr_t(int LineNo, expr_t *Expr) {
+		this->LineNo = LineNo;
+		this->Expr = Expr;
 	};
 	void print(int Indent);
 	operand_t *compile(compiler_t *Compiler, label_t *Start, label_t *Success);

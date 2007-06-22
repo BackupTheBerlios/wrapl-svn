@@ -915,3 +915,29 @@ void select_string_inst_t::encode(assembler_t *Assembler) {
 	| .aword 0
 	| .aword =>Default->final()
 };
+
+void select_object_inst_t::encode(assembler_t *Assembler) {
+	for (case_t *Case = Cases; Case; Case = Case->Next) {
+		| cmp ecx, Case->Object
+		| je =>Case->Body->final()
+	};
+};
+
+void typeof_inst_t::encode(assembler_t *Assembler) {
+	switch (Type) {
+	case LOAD_VAL: {
+		| mov ecx, VALUE:ecx->Type
+		break;
+	};
+	case LOAD_REF: {
+		| xor edx, edx
+		break;
+	};
+	case LOAD_ARG:
+	case LOAD_BOTH: {
+		| mov ecx, VALUE:ecx->Type
+		| xor edx, edx
+		break;
+	};
+	};
+};

@@ -398,6 +398,11 @@ void sequence_expr_t::print(int Indent) {
 	};
 };
 
+void typeof_expr_t::print(int Indent) {
+	printf("?");
+	Expr->print(Indent);
+};
+
 void infinite_expr_t::print(int Indent) {
 	printf("|");
 	Expr->print(Indent);
@@ -708,6 +713,22 @@ operand_t *qualident_expr_t::compile(compiler_t *Compiler, label_t *Start, label
 	return Operand;
 };
 
+operand_t *qualident_expr_t::constant(compiler_t *Compiler) {
+	const char *Ident = Names->Ident;
+	operand_t *Operand = Compiler->lookup(LineNo, Ident);
+	for (qualident_expr_t::name_t *Name = Names->Next; Name; Name = Name->Next) {
+		if (Operand->Type != operand_t::CNST) Compiler->raise_error(LineNo, "Error: %s is not constant", Ident);
+		if (Operand->Value->Type != Sys$Module$T) Compiler->raise_error(LineNo, "Error: %s is not a module", Ident);
+		Sys$Module_t *Module = (Sys$Module_t *)Operand->Value;
+		Operand = new operand_t;
+		if (Sys$Module$import(Module, Name->Ident, (int *)&Operand->Type, (void **)&Operand->Value) == 0) {
+			Compiler->raise_error(LineNo, "Error: import not found %s.%s", Ident, Name->Ident);
+		};
+		Ident = Name->Ident;
+	};
+	return Operand;
+};
+
 operand_t *const_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t *Success) {
 	Start->link(Success);
 	return Operand;
@@ -847,6 +868,22 @@ operand_t *sequence_expr_t::compile(compiler_t *Compiler, label_t *Start, label_
 	};
 	Compiler->seq_trap(Continue);
 	Label0->link(Continue);
+	return Register;
+};
+
+operand_t *typeof_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t *Success) {
+	operand_t *Constant = Expr->constant(Compiler);
+	if (Constant) {
+		Start->link(Success);
+		operand_t *Operand = new operand_t;
+		Operand->Type = operand_t::CNST;
+		Operand->Value = (Std$Object_t *)Constant->Value->Type;
+		return Operand;
+	};
+	label_t *Label0 = new label_t;
+	Label0->load(Expr->compile(Compiler, Start, Label0));
+	Label0->type_of();
+	Label0->link(Success);
 	return Register;
 };
 
@@ -1029,14 +1066,14 @@ operand_t *when_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t *S
 	Label2->load(Case->Body->compile(Compiler, Label1, Label2));
 	Label2->link(Success);
 	case_t::range_t *Range = Case->Ranges;
-	operand_t *Operand = Range->Min->constant();
+	operand_t *Operand = Range->Min->constant(Compiler);
 	if (Operand == 0) Compiler->raise_error(Range->Min->LineNo, "Error: case is not constant");
 	Std$Object_t *Value = Operand->Value;
 	if (Value->Type == Std$Integer$SmallT) {
 		select_integer_inst_t::case_t *ICase = new select_integer_inst_t::case_t;
 		ICase->Min = ((Std$Integer_smallt *)Value)->Value;
 		if (Range->Max) {
-			Operand = Range->Max->constant();
+			Operand = Range->Max->constant(Compiler);
 			if (Operand == 0) Compiler->raise_error(Range->Max->LineNo, "Error: case is not constant");
 			Value = Operand->Value;
 			if (Value->Type != Std$Integer$SmallT) Compiler->raise_error(Range->Max->LineNo, "Error: case is not correct type");
@@ -1047,13 +1084,13 @@ operand_t *when_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t *S
 		ICase->Body = Label1;
 		while (Range = Range->Next) {
 			select_integer_inst_t::case_t *ICase0 = new select_integer_inst_t::case_t;
-			Operand = Range->Min->constant();
+			Operand = Range->Min->constant(Compiler);
 			if (Operand == 0) Compiler->raise_error(Range->Min->LineNo, "Error: case is not constant");
 			Value = Operand->Value;
 			if (Value->Type != Std$Integer$SmallT) Compiler->raise_error(Range->Min->LineNo, "Error: case is not correct type");
 			ICase0->Min = ((Std$Integer_smallt *)Value)->Value;
 			if (Range->Max) {
-				Operand = Range->Max->constant();
+				Operand = Range->Max->constant(Compiler);
 				if (Operand == 0) Compiler->raise_error(Range->Max->LineNo, "Error: case is not constant");
 				Value = Operand->Value;
 				if (Value->Type != Std$Integer$SmallT) Compiler->raise_error(Range->Max->LineNo, "Error: case is not correct type");
@@ -1072,13 +1109,13 @@ operand_t *when_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t *S
 			Label2->link(Success);
 			for (Range = Case->Ranges; Range; Range = Range->Next) {
 				select_integer_inst_t::case_t *ICase0 = new select_integer_inst_t::case_t;
-				Operand = Range->Min->constant();
+				Operand = Range->Min->constant(Compiler);
 				if (Operand == 0) Compiler->raise_error(Range->Min->LineNo, "Error: case is not constant");
 				Value = Operand->Value;
 				if (Value->Type != Std$Integer$SmallT) Compiler->raise_error(Range->Min->LineNo, "Error: case is not correct type");
 				ICase0->Min = ((Std$Integer_smallt *)Value)->Value;
 				if (Range->Max) {
-					Operand = Range->Max->constant();
+					Operand = Range->Max->constant(Compiler);
 					if (Operand == 0) Compiler->raise_error(Range->Max->LineNo, "Error: case is not constant");
 					Value = Operand->Value;
 					if (Value->Type != Std$Integer$SmallT) Compiler->raise_error(Range->Max->LineNo, "Error: case is not correct type");
@@ -1107,13 +1144,14 @@ operand_t *when_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t *S
 		Label0->select_integer(ICase, Label1);
 		return Register;
 	} else if (Value->Type == Std$String$T) {
+		if (Range->Max) Compiler->raise_error(Range->Max->LineNo, "Error: case can not be a range");
 		select_string_inst_t::case_t *ICase = new select_string_inst_t::case_t;
 		ICase->Key = Std$String$flatten((Std$String_t *)Value);
 		ICase->Length = ((Std$String_t *)Value)->Length.Value;
 		ICase->Body = Label1;
 		while (Range = Range->Next) {
 			select_string_inst_t::case_t *ICase0 = new select_string_inst_t::case_t;
-			Operand = Range->Min->constant();
+			Operand = Range->Min->constant(Compiler);
 			if (Operand == 0) Compiler->raise_error(Range->Min->LineNo, "Error: case is not constant");
 			Value = Operand->Value;
 			if (Value->Type != Std$String$T) Compiler->raise_error(Range->Min->LineNo, "Error: case is not correct type");
@@ -1131,7 +1169,7 @@ operand_t *when_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t *S
 			Label2->link(Success);
 			for (Range = Case->Ranges; Range; Range = Range->Next) {
 				select_string_inst_t::case_t *ICase0 = new select_string_inst_t::case_t;
-				Operand = Range->Min->constant();
+				Operand = Range->Min->constant(Compiler);
 				if (Operand == 0) Compiler->raise_error(Range->Min->LineNo, "Error: case is not constant");
 				Value = Operand->Value;
 				if (Value->Type != Std$String$T) Compiler->raise_error(Range->Min->LineNo, "Error: case is not correct type");
@@ -1159,7 +1197,53 @@ operand_t *when_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t *S
 		Label0->select_string(ICase, Label1);
 		return Register;
 	} else {
-		printf("Yay! Detected object when expression!\n");
+		if (Range->Max) Compiler->raise_error(Range->Max->LineNo, "Error: case can not be a range");
+		select_object_inst_t::case_t *ICase = new select_object_inst_t::case_t;
+		ICase->Object = Value;
+		ICase->Body = Label1;
+		while (Range = Range->Next) {
+			select_object_inst_t::case_t *ICase0 = new select_object_inst_t::case_t;
+			Operand = Range->Min->constant(Compiler);
+			if (Operand == 0) Compiler->raise_error(Range->Min->LineNo, "Error: case is not constant");
+			Value = Operand->Value;
+			ICase0->Object = Value;
+			if (Range->Max) Compiler->raise_error(Range->Max->LineNo, "Error: case can not be a range");
+			ICase0->Body = Label1;
+			ICase0->Next = ICase;
+			ICase = ICase0;
+		};
+		while (Case = Case->Next) {
+			Label1 = new label_t;
+			Label2 = new label_t;
+			Label2->load(Case->Body->compile(Compiler, Label1, Label2));
+			Label2->link(Success);
+			for (Range = Case->Ranges; Range; Range = Range->Next) {
+				select_object_inst_t::case_t *ICase0 = new select_object_inst_t::case_t;
+				Operand = Range->Min->constant(Compiler);
+				if (Operand == 0) Compiler->raise_error(Range->Min->LineNo, "Error: case is not constant");
+				Value = Operand->Value;
+				ICase0->Object = Value;
+				if (Range->Max) Compiler->raise_error(Range->Max->LineNo, "Error: case can not be a range");
+				ICase0->Body = Label1;
+				ICase0->Next = ICase;
+				ICase = ICase0;
+			};
+		};
+		Label1 = new label_t;
+		if (Default) {
+			Label2 = new label_t;
+			Label2->load(Default->compile(Compiler, Label1, Label2));
+			Label2->link(Success);
+		} else {
+			uint32_t Trap = Compiler->trap();
+			if (Trap != 0xFFFFFFFF) {
+				Label1->back(Trap);
+			} else {
+				Label1->link(Compiler->failure());
+			};
+		};
+		Label0->select_object(ICase, Label1);
+		return Register;
 	};
 	Compiler->raise_error(LineNo, "Muhahaha: something is not implemented yet!");
 };
@@ -1168,7 +1252,7 @@ operand_t *block_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t *
 	operand_t *Result = 0;
 	Compiler->push_scope(compiler_t::scope_t::SC_LOCAL);
 	for (block_expr_t::localdef_t *Def = Defs; Def; Def = Def->Next) {
-		operand_t *Operand = Def->Value->constant();
+		operand_t *Operand = Def->Value->constant(Compiler);
 		if (Operand) Compiler->declare(Def->Name, Operand);
 	};
 	for (block_expr_t::localdef_t *Def = Defs; Def; Def = Def->Next) {
@@ -1309,7 +1393,7 @@ operand_t *module_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t 
 		};
 	};
 	for (module_expr_t::globaldef_t *Def = Defs; Def; Def = Def->Next) {
-		operand_t *Operand = Def->Value->constant();
+		operand_t *Operand = Def->Value->constant(Compiler);
 		if (Operand) Compiler->declare(Def->Name, Operand);
 	};
 	for (module_expr_t::globaldef_t *Def = Defs; Def; Def = Def->Next) {
@@ -1410,7 +1494,7 @@ int command_expr_t::compile(compiler_t *Compiler, Std$Function_result *Result) {
 		};
 	};
 	for (command_expr_t::globaldef_t *Def = Defs; Def; Def = Def->Next) {
-		operand_t *Operand = Def->Value->constant();
+		operand_t *Operand = Def->Value->constant(Compiler);
 		if (Operand) Compiler->declare(Def->Name, Operand);
 	};
 	int Status;
