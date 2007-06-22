@@ -45,7 +45,7 @@ integertable_init:;(integertable Table) -> ()
 	mov [table(eax).Space], dword 0
 	ret
 
-integertable_put:;(integertable Table, const char *Key, void *Value) -> ()
+integertable_put:;(integertable Table, int Key, void *Value) -> ()
 	push ebx
 	push edi
 	push esi
@@ -258,7 +258,7 @@ integertable_put:;(integertable Table, const char *Key, void *Value) -> ()
 .no_recurse_2:
 	ret 8
 
-integertable_get:;(integertable Table, const char *Key) -> (void *)
+integertable_get:;(integertable Table, int Key) -> (void *)
 	push ebx
 	push edi
 	push esi

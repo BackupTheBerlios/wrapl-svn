@@ -409,24 +409,29 @@ struct comp_expr_t : expr_t {
 
 struct when_expr_t : expr_t {
 	struct case_t {
+		struct range_t {
+			range_t *Next;
+			int LineNo;
+			expr_t *Min, *Max;
+			range_t(int LineNo, expr_t *Min, expr_t *Max) {
+				this->LineNo = LineNo;
+				this->Min = Min;
+				this->Max = Max;
+			};
+		};
 		case_t *Next;
 		int LineNo;
-		expr_t *Min, *Max;
+		range_t *Ranges;
 		expr_t *Body;
-		case_t(int LineNo, expr_t *Body, expr_t *Min, expr_t *Max = 0) {
+		case_t(int LineNo, range_t *Ranges, expr_t *Body) {
 			this->LineNo = LineNo;
+			this->Ranges = Ranges;
 			this->Body = Body;
-			this->Min = Min;
-			this->Max = Max;
 		};
 	};
+	expr_t *Condition;
 	case_t *Cases;
 	expr_t *Default;
-	when_expr_t(int LineNo, case_t *Cases, expr_t *Default) {
-		this->LineNo = LineNo;
-		this->Cases = Cases;
-		this->Default = Default;
-	};
 	void print(int Indent);
 	operand_t *compile(compiler_t *Compiler, label_t *Start, label_t *Success);
 };
@@ -438,11 +443,18 @@ struct block_expr_t : expr_t {
 		const char *Name;
 		bool Reference;
 	};
+	struct localdef_t {
+		localdef_t *Next;
+		int LineNo;
+		const char *Name;
+		expr_t *Value;
+	};
 	struct receiver_t {
 		const char *Var;
 		expr_t *Body;
 	};
 	localvar_t *Vars;
+	localdef_t *Defs;
 	expr_t *Body, *Final;
 	receiver_t Receiver;
 	void print(int Indent);

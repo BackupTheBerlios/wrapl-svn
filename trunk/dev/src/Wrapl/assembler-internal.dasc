@@ -814,3 +814,104 @@ void comp_inst_t::encode(assembler_t *Assembler) {
 		| je =>Failure->final()
 	};
 };
+
+void select_integer_inst_t::encode(assembler_t *Assembler) {
+	case_t *Case;
+	for (Case = Cases; Case; Case = Case->Next) Case->Body = Case->Body->final();
+	Default = Default->final();
+	
+	Case = Cases;
+	int Min = Case->Min, Max = Case->Max;
+	int Count = Max - Min + 1;
+	while (Case = Case->Next) {
+		if (Case->Min < Min) Min = Case->Min;
+		if (Case->Max > Max) Max = Case->Max;
+		Count += (Case->Max - Case->Min + 1);
+	};
+	int Range = Max - Min + 1;
+	if (Range > 2 * Count) {
+		struct entry_t {int32_t Key; label_t *Label;};
+		entry_t Entries[2 * Count];
+		uint32_t M = Count;
+	next:
+		memset(Entries, 0, M * sizeof(entry_t));
+		for (Case = Cases; Case; Case = Case->Next) {
+			int32_t K = Case->Max;
+			uint32_t T = K - Case->Min + 1;
+			uint32_t I = ((K % M) + M) % M;
+			do {
+				if (Entries[I].Label) {
+					if (Entries[I].Key == K) {
+						printf("Stupid user has duplicate keys: %d\n", K);
+					} else {
+						if (++M > Count * 2) goto method2;
+						goto next;
+					};
+				};
+				Entries[I].Key = K;
+				Entries[I].Label = Case->Body;
+				I = I ? I - 1 : M - 1;
+				--K;
+			} while (--T);
+		};
+		| mov ecx, [ecx + 4]
+		| mov eax, ecx
+		| xor edx, edx
+		| mov ebx, M
+		| div ebx
+		| lea edx, [edx * 8 + >1]
+		| cmp [edx], ecx
+		| jne =>Default
+		| jmp dword [edx + 4]
+		| 1:
+		for (int I = 0; I < M; ++I) {
+			| .dword Entries[I].Key
+			if (Entries[I].Label) {
+				| .aword =>Entries[I].Label
+			} else {
+				| .aword =>Default
+			};
+		};
+	method2:
+		printf("Not done yet, hahaha\n");
+	} else {
+		label_t *Labels[Range];
+		memset(Labels, 0, Range * sizeof(label_t *));
+		for (Case = Cases; Case; Case = Case->Next) {
+			for (int I = Case->Min; I <= Case->Max; ++I) Labels[I - Min] = Case->Body;
+		};
+		| mov eax, [ecx + 4]
+		| sub eax, Min
+		| js =>Default
+		| cmp eax, Max
+		| ja =>Default
+		| jmp dword [eax * 4 + >1]
+		| .align 4
+		| 1:
+		for (int I = 0; I < Range; ++I) {
+			if (Labels[I]) {
+				| .aword =>Labels[I]
+			} else {
+				| .aword =>Default
+			}
+		};
+	};
+};
+
+void select_string_inst_t::encode(assembler_t *Assembler) {
+	| call &select_string
+	| 1:
+	if (Cases->Length) {
+		| .dword 0
+		| .aword 0
+		| .aword 0
+	};
+	for (case_t *Case = Cases; Case; Case = Case->Next) {
+		| .dword Case->Length
+		| .aword Case->Key
+		| .aword =>Case->Body->final()
+	};
+	| .dword 0
+	| .aword 0
+	| .aword =>Default->final()
+};

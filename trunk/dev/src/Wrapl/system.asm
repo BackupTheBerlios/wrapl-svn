@@ -105,3 +105,63 @@ backtrack:
 	pop esi
 	pop edi
 	jmp [invoke_function.returntable + 4 * eax]
+
+struct select_string_case
+	.Length: resd 1
+	.String: resd 1
+	.Jump: resd 1
+endstruct
+
+global select_string
+align 8
+select_string:
+;	int3
+	pop edx
+;	add edx, byte 0x03
+;	and edx, byte 0xFC
+	push ebp
+	mov ebp, esp
+	cmp [string(ecx).Count], dword 1
+	je .simplestring
+	mov eax, [small_int(string(ecx).Length).Value]
+	sub esp, eax
+	and esp, byte -4
+	mov edi, esp
+	lea ebx, [string(ecx).Blocks]
+.copyloop:
+	mov ecx, [small_int(string_block(ebx).Length).Value]
+	jecxz .copied
+	mov esi, [address(string_block(ebx).Chars).Value]
+	rep movsb
+	add ebx, byte sizeof(string_block)
+	jmp .copyloop
+.copied:
+	mov ebx, esp
+	jmp .anystring
+.simplestring:
+	mov ebx, [address(string_block(string(ecx).Blocks).Chars).Value]
+	mov eax, [small_int(string_block(string(ecx).Blocks).Length).Value]
+.anystring:
+	; ebx = string
+	; eax = length
+	test eax, eax
+	jz .default
+.loop:
+	add edx, sizeof(select_string_case)
+	mov ecx, [select_string_case(edx).Length]
+	jecxz .default
+	cmp ecx, eax
+	
+;	Uncomment this line once strings are sorted
+;	ja .default
+	
+	jne .loop
+	mov esi, [select_string_case(edx).String]
+	mov edi, ebx
+	repz cmpsb
+	jnz .loop
+.default:
+	mov esp, ebp
+	pop ebp
+	jmp [select_string_case(edx).Jump]
+	

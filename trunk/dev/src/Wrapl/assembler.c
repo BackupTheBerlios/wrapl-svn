@@ -2,7 +2,7 @@
 #include "missing.h"
 #include <Std/Function.h>
 #include <string.h>
-//#include <udis86.h>
+#include <udis86.h>
 
 operand_t Register[] = {{
 	0, operand_t::REGR
@@ -467,6 +467,58 @@ void label_t::comp(int Equal, operand_t *Operand, label_t *Failure) {
 	append(Inst);
 };
 
+void select_integer_inst_t::list() {
+	printf("\tselect_integer\n");
+	for (case_t *Case = Cases; Case; Case = Case->Next) {
+		printf("\t\t%x .. %x => %x\n", Case->Min, Case->Max, Case->Body->final());
+	};
+	printf("\t\telse %x\n", Default->final());
+};
+
+void select_integer_inst_t::append_links(label_t *Start) {
+	for (case_t *Case = Cases; Case; Case = Case->Next) use_label(Start, Case->Body, false);
+	use_label(Start, Default, false);
+};
+
+void label_t::select_integer(select_integer_inst_t::case_t *Cases, label_t *Default) {
+	select_integer_inst_t *Inst = new select_integer_inst_t;
+	Inst->Cases = Cases;
+	Inst->Default = Default;
+	append(Inst);
+};
+
+void select_string_inst_t::list() {
+	printf("\tselect_string\n");
+	for (case_t *Case = Cases; Case; Case = Case->Next) {
+		printf("\t\t%.*s => %x\n", Case->Length, Case->Key, Case->Body->final());
+	};
+	printf("\t\telse %x\n", Default->final());
+};
+
+void select_string_inst_t::append_links(label_t *Start) {
+	for (case_t *Case = Cases; Case; Case = Case->Next) use_label(Start, Case->Body, false);
+	use_label(Start, Default, false);
+};
+
+int select_string_inst_t::noof_consts() {
+	int Count = 0;
+	for (case_t *Case = Cases; Case; Case = Case->Next) ++Count;
+	return Count;
+};
+
+void **select_string_inst_t::get_consts(void **Ptr) {
+	for (case_t *Case = Cases; Case; Case = Case->Next) *(Ptr++) = Case->Key;
+	return Ptr;
+};
+
+void label_t::select_string(select_string_inst_t::case_t *Cases, label_t *Default) {
+	// Should sort strings into increasing size, and ensure there is at most one empty string case
+	select_string_inst_t *Inst = new select_string_inst_t;
+	Inst->Cases = Cases;
+	Inst->Default = Default;
+	append(Inst);
+};
+
 struct assembler_t {
 	struct dasm_State *Dynasm;
 	uint32_t Size;
@@ -515,9 +567,7 @@ operand_t *label_t::assemble(const frame_t *Frame, operand_t *Operand) {
 	
 	int NoOfConsts = 0;
 	for (inst_t *Inst = Assembly.Next; Inst; Inst = Inst->Next) NoOfConsts += Inst->noof_consts();
-	void **Consts = new void *[NoOfConsts];
-	void **ConstPtr = Consts;
-	for (inst_t *Inst = Assembly.Next; Inst; Inst = Inst->Next) ConstPtr = Inst->get_consts(ConstPtr);
+	
 
 	assembler_t *Assembler = new assembler_t;
 	Assembler->UpScopes = sizeof(bstate_t);
@@ -556,7 +606,9 @@ operand_t *label_t::assemble(const frame_t *Frame, operand_t *Operand) {
 	dasm_link(Dst, &Size);
 	code_header_t *Header = (code_header_t *)Riva$Memory$alloc(Size + sizeof(code_header_t));
 	uint8_t *Code = (uint8_t *)(Header + 1);
-	Header->Consts = Consts;
+	Header->Consts = new void *[NoOfConsts];
+	void **ConstPtr = Header->Consts;
+	for (inst_t *Inst = Assembly.Next; Inst; Inst = Inst->Next) ConstPtr = Inst->get_consts(ConstPtr);
 	Header->Size = Size;
 	dasm_encode(Assembler, Code);
 

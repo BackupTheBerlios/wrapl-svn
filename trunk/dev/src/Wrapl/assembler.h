@@ -115,6 +115,39 @@ struct frame_t {
 
 #include <stdio.h>
 
+struct select_integer_inst_t : inst_t {
+	struct case_t {
+		case_t *Next;
+		label_t *Body;
+		int32_t Min, Max;
+	};
+	case_t *Cases;
+	label_t *Default;
+	
+	void list();
+	void add_source(load_inst_t *Load) {Load->load_val();};
+	void append_links(label_t *Start);
+	void encode(assembler_t *Assembler);
+};
+
+struct select_string_inst_t : inst_t {
+	struct case_t {
+		case_t *Next;
+		label_t *Body;
+		const char *Key;
+		uint32_t Length;
+	};
+	case_t *Cases;
+	label_t *Default;
+	
+	void list();
+	void add_source(load_inst_t *Load) {Load->load_val();};
+	void append_links(label_t *Start);
+	int noof_consts();
+	void **get_consts(void **Ptr);
+	void encode(assembler_t *Assembler);	
+};
+
 struct label_t : inst_t {
 	label_t *Link;
 	inst_t *Tail;
@@ -162,6 +195,9 @@ struct label_t : inst_t {
 	void send();
 	void comp(int Equal, operand_t *Operand, label_t *Failure);
 	void limit(uint32_t Trap, uint32_t Trap0, long Count);
+	void select_integer(select_integer_inst_t::case_t *Cases, label_t *Default);
+	void select_string(select_string_inst_t::case_t *Cases, label_t *Default);
+	
 	void select(operand_t *Operand, select_case_t *Cases, label_t *Else);
 	void select(operand_t *Operand, select_case_t *Cases, uint32_t Trap);
 

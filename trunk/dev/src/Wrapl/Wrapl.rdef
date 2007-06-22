@@ -1,3 +1,5 @@
+library("/usr/local/lib/libudis86.a")
+
 if WINDOWS then
 	_export = export
 	export = function(Name)

@@ -236,7 +236,7 @@ bool scanner_t::parse(int Type) {
 			case '.': Start = Current++;
 				switch (*Current) {
 				case '0' ... '9': ++Current; goto scan_real_mantissa;
-				case '.': //++Current; push(Position, tkDOTDOT); goto scan_loop;
+				case '.': ++Current; NextToken.Type = tkDOTDOT; goto scan_done;
 				default: NextToken.Type = tkDOT; goto scan_done;
 				};
 			case '-': Start = Current++;
