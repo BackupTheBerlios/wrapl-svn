@@ -717,13 +717,14 @@ operand_t *qualident_expr_t::constant(compiler_t *Compiler) {
 	const char *Ident = Names->Ident;
 	operand_t *Operand = Compiler->lookup(LineNo, Ident);
 	for (qualident_expr_t::name_t *Name = Names->Next; Name; Name = Name->Next) {
-		if (Operand->Type != operand_t::CNST) Compiler->raise_error(LineNo, "Error: %s is not constant", Ident);
+		if (Operand->Type != operand_t::CNST) return 0;
 		if (Operand->Value->Type != Sys$Module$T) Compiler->raise_error(LineNo, "Error: %s is not a module", Ident);
 		Sys$Module_t *Module = (Sys$Module_t *)Operand->Value;
 		Operand = new operand_t;
 		if (Sys$Module$import(Module, Name->Ident, (int *)&Operand->Type, (void **)&Operand->Value) == 0) {
 			Compiler->raise_error(LineNo, "Error: import not found %s.%s", Ident, Name->Ident);
 		};
+		if (Operand->Type != operand_t::CNST) return 0;
 		Ident = Name->Ident;
 	};
 	return Operand;
