@@ -820,6 +820,14 @@ void select_integer_inst_t::encode(assembler_t *Assembler) {
 	for (Case = Cases; Case; Case = Case->Next) Case->Body = Case->Body->final();
 	Default = Default->final();
 	
+	| cmp dword VALUE:ecx->Type, Std$Integer$SmallT
+	| je >1
+	| mov ecx, IncorrectTypeMessage
+	| xor edx, edx
+	| mov eax, 2
+	| jmp dword BSTATE:ebp->Handler
+	| 1:
+	
 	Case = Cases;
 	int Min = Case->Min, Max = Case->Max;
 	int Count = Max - Min + 1;
@@ -883,7 +891,7 @@ void select_integer_inst_t::encode(assembler_t *Assembler) {
 		| mov eax, [ecx + 4]
 		| sub eax, Min
 		| js =>Default
-		| cmp eax, Max
+		| cmp eax, Max - Min
 		| ja =>Default
 		| jmp dword [eax * 4 + >1]
 		| .align 4

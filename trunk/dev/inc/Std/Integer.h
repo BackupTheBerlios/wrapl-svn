@@ -2,6 +2,7 @@
 #define LANG_INTEGER_H
 
 #include <Std/Object.h>
+#include <Std/Function.h>
 
 #define RIVA_MODULE Std$Integer
 #include <Riva-Header.h>
@@ -21,6 +22,7 @@ struct Std$Integer_bigt {
 
 extern Std$Type_t Std$Integer$SmallT[];
 extern Std$Type_t Std$Integer$BigT[];
+extern Std$Function_t Std$Integer$ToSmallSmall[];
 
 RIVA_CFUN(Std$Integer_smallt *, new_small, long);
 //RIVA_CFUN(Std$Object_t *, new_big, mpz_t);

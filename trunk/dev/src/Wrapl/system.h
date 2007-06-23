@@ -7,12 +7,17 @@
 
 extern "C" {
 
+extern Std$Type_t WraplT[];
+
 extern void run_state();
 extern void invoke_function();
 extern void backtrack();
 extern void send_message();
 extern void resend_message();
 extern void select_string();
+
+extern Std$Type_t IncorrectTypeMessageT[];
+extern Std$Object_t IncorrectTypeMessage[];
 
 };
 

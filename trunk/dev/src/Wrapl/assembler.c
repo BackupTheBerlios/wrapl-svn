@@ -1,6 +1,6 @@
 #include "assembler.h"
 #include "missing.h"
-#include <Std/Function.h>
+#include <Std.h>
 #include <string.h>
 #include <udis86.h>
 
@@ -586,8 +586,6 @@ static void dasm_m_grow(Dst_DECL, void **pp, size_t *szp, int need) {
 
 static void dasm_m_free(Dst_DECL, void *p, size_t sz) {
 }
-
-extern Std$Type_t WraplT[];
 
 typedef struct code_header_t {
 	void **Consts;

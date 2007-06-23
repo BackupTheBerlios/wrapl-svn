@@ -1,3 +1,6 @@
+.PHONY: Riva Rlink Std Util Sys IO Wrapl Xml Http Gtk clean
+.DEFAULT: Riva Rlink Std Util Sys IO Wrapl Xml Http
+
 CFLAGS += -O3 -fexpensive-optimizations -fomit-frame-pointer -w -D_GNU_SOURCE -fdata-sections -ffunction-sections
 ASFLAGS += -Ov
 
@@ -49,6 +52,10 @@ section
 section
 	vmount($(SRC_DIR)Xml, $(OBJ_DIR)Xml)
 	.SUBDIRS: $(OBJ_DIR)Xml
+
+section
+	vmount($(SRC_DIR)Http, $(OBJ_DIR)Http)
+	.SUBDIRS: $(OBJ_DIR)Http
 
 section
 	vmount($(SRC_DIR)Gtk, $(OBJ_DIR)Gtk)

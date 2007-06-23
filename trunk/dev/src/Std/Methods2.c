@@ -265,56 +265,119 @@ METHOD("in", TYP, Std$String$T, TYP, Std$String$T, TYP, Std$Integer$SmallT, TYP,
 	return FAILURE;
 };
 
+typedef struct find_char_generator {
+	Std$Function_cstate State;
+	char Char;
+	Std$String_block *Subject;
+	unsigned long Start, Index, Limit;
+} find_char_generator;
+
+typedef struct find_char_resume_data {
+	find_char_generator *Generator;
+	Std$Function_argument Result;
+} find_char_resume_data;
+
+static long resume_find_char_string(find_char_resume_data *Data) {
+	find_char_generator *Generator = Data->Generator;
+	Std$String_block *Subject = Generator->Subject;
+	char Char = Generator->Char;
+	unsigned long Index = Generator->Index;
+	char *SC = Subject->Chars.Value + Generator->Start;
+	unsigned long SL = Subject->Length.Value - Generator->Start;
+	for (; SC;) {
+		void *Position = memchr(SC, Char, SL);
+		if (Position) {
+			unsigned int Last = Position - Subject->Chars.Value + 1;
+			Generator->Index = Index;
+			Generator->Start = Last;
+			Generator->Subject = Subject;
+			Data->Result.Val = Std$Integer$new_small(Index + Last);
+			return SUSPEND;
+		};
+		Index += Subject->Length.Value;
+		++Subject;
+		SL = Subject->Length.Value;
+		SC = Subject->Chars.Value;
+	};
+	return FAILURE;
+};
+
+SYMBOL($to, "to");
+
 METHOD("find", TYP, Std$String$T, TYP, Std$String$T) {
 	Std$String_t *Arg0 = Args[1].Val;
 	Std$String_t *Arg1 = Args[0].Val;
-	Std$String_block *Subject = Arg1->Blocks;
-	Std$String_block *Pattern = Arg0->Blocks;
-	unsigned long Position = 0, Start = 0;
-	for (;;) {
-		++Position;
-		Std$String_block *S1 = Subject;
-		unsigned long SL = S1->Length.Value - Start;
-		if (SL == 0) {
-			S1 = ++Subject;
-			SL = S1->Length.Value;
-			if (SL == 0) return FAILURE;
-			Start = 0;
-		};
-		char *SC = S1->Chars.Value + Start;
-		++Start;
-		Std$String_block *P1 = Pattern;
-		char *PC = P1->Chars.Value;
-		unsigned long PL = P1->Length.Value;
-		for (;;) {
-			if (PL == 0) {
-				in_generator *Generator = new(in_generator);
-				Generator->Start = Start;
-				Generator->Position = Position;
-				Generator->Pattern = Pattern;
+	if (Arg0->Length.Value == 0) {
+		return Std$Function$call(Std$Integer$ToSmallSmall, 2, Result, Std$Integer$new_small(1), 0, &Arg1->Length, 0);
+	} else if (Arg0->Length.Value == 1) {
+		char Char = ((char *)Arg0->Blocks[0].Chars.Value)[0];
+		unsigned long Index = 0;
+		for (Std$String_block *Subject = Arg1->Blocks; Subject->Length.Value; ++Subject) {
+			void *Position = memchr(Subject->Chars.Value, Char, Subject->Length.Value);
+			if (Position) {
+				find_char_generator *Generator = new(find_char_generator);
+				unsigned int Last = Position - Subject->Chars.Value + 1;
+				Generator->Start = Last;
+				Generator->Index = Index;
+				Generator->Char = Char;
 				Generator->Subject = Subject;
-				Generator->Limit = 0xFFFFFFFF;
-				Generator->State.Run = Std$Function$resume_c;
-				Generator->State.Invoke = resume_in_string_string;
-				Result->Val = Std$Integer$new_small(Position);
+				Generator->State.Run = Std$Function$resume_c;				Generator->State.Invoke = resume_find_char_string;
+				Result->Val = Std$Integer$new_small(Index + Last);
 				Result->State = Generator;
 				return SUSPEND;
 			};
-			if (SL == 0) return FAILURE;
-			if (*(SC++) != *(PC++)) break;
-			if (--SL == 0) {
-				S1 += 1;
+			Index += Subject->Length.Value;
+		};
+		return FAILURE;
+	} else {
+		Std$String_block *Subject = Arg1->Blocks;
+		Std$String_block *Pattern = Arg0->Blocks;
+		unsigned long Position = 0, Start = 0;
+		for (;;) {
+			++Position;
+			Std$String_block *S1 = Subject;
+			unsigned long SL = S1->Length.Value - Start;
+			if (SL == 0) {
+				S1 = ++Subject;
 				SL = S1->Length.Value;
-				SC = S1->Chars.Value;
+				if (SL == 0) return FAILURE;
+				Start = 0;
 			};
-			if (--PL == 0) {
-				P1 += 1;
-				PL = P1->Length.Value;
-				PC = P1->Chars.Value;
+			char *SC = S1->Chars.Value + Start;
+			++Start;
+			Std$String_block *P1 = Pattern;
+			char *PC = P1->Chars.Value;
+			unsigned long PL = P1->Length.Value;
+			for (;;) {
+				if (PL == 0) {
+					in_generator *Generator = new(in_generator);
+					Generator->Start = Start;
+					Generator->Position = Position;
+					Generator->Pattern = Pattern;
+					Generator->Subject = Subject;
+					Generator->Limit = 0xFFFFFFFF;
+					Generator->State.Run = Std$Function$resume_c;
+					Generator->State.Invoke = resume_in_string_string;
+					Result->Val = Std$Integer$new_small(Position);
+					Result->State = Generator;
+					return SUSPEND;
+				};
+				if (SL == 0) return FAILURE;
+				if (*(SC++) != *(PC++)) break;
+				if (--SL == 0) {
+					S1 += 1;
+					SL = S1->Length.Value;
+					SC = S1->Chars.Value;
+				};
+				if (--PL == 0) {
+					P1 += 1;
+					PL = P1->Length.Value;
+					PC = P1->Chars.Value;
+				};
 			};
 		};
+		return FAILURE;
 	};
-	return FAILURE;
 };
 
 METHOD("find", TYP, Std$String$T, TYP, Std$String$T, TYP, Std$Integer$SmallT) {

@@ -469,6 +469,14 @@ METHOD("*", TYP, T, TYP, T) {
 	return SUCCESS;
 };
 
+void _insert(struct avl_table *Table, Std$Object_t *Key, Std$Object_t *Value) {
+	Std$Function_result Result1;
+	Std$Object_t **Slot;
+	Std$Function$call(Table->avl_hash, 1, &Result1, Key, 0);
+	Slot = avl_probe(Table, Key, ((Std$Integer_smallt *)Result1.Val)->Value);
+	*Slot = Value ? Value : Std$Object$Nil;
+};
+
 METHOD("insert", TYP, T, SKP) {
 	struct avl_table *Table = (struct avl_table *)Args[0].Val;
 	Std$Function_result Result1;
@@ -480,6 +488,16 @@ METHOD("insert", TYP, T, SKP) {
 	return SUCCESS;
 };
 
+int _delete(struct avl_table *Table, Std$Object_t *Key) {
+	Std$Function_result Result1;
+	Std$Function$call(Table->avl_hash, 1, &Result1, Key, 0);
+	if (avl_delete(Table, Key, ((Std$Integer_smallt *)Result1.Val)->Value)) {
+		return 0;
+	} else {
+		return 1;
+	};
+};
+
 METHOD("delete", TYP, T, SKP) {
 	struct avl_table *Table = (struct avl_table *)Args[0].Val;
 	Std$Function_result Result1;
@@ -489,6 +507,18 @@ METHOD("delete", TYP, T, SKP) {
 		return SUCCESS;
 	} else {
 		return FAILURE;
+	};
+};
+
+Std$Object_t *_index(struct avl_table *Table, Std$Object_t *Key) {
+	Std$Function_result Result1;
+	Std$Object_t **Slot;
+	Std$Function$call(Table->avl_hash, 1, &Result1, Key, 0);
+	Slot = avl_find(Table, Key, ((Std$Integer_smallt *)Result1.Val)->Value);
+	if (Slot != 0) {
+		return *Slot;
+	} else {
+		return 0;
 	};
 };
 

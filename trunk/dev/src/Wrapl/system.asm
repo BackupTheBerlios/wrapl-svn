@@ -6,6 +6,7 @@ struct bstate, state
 	.Ref:		resd 1
 	.Code:		resd 1
 	.Handler:	resd 1
+	.Data:		resd 1
 endstruct
 
 struct closure, value
@@ -15,6 +16,9 @@ endstruct
 
 extern Std$Type$T
 extern Std$Function$T
+extern Std$String$T
+extern Std$Integer$SmallT
+extern Std$Address$T
 
 global WraplT
 section .data
@@ -106,6 +110,39 @@ backtrack:
 	pop edi
 	jmp [invoke_function.returntable + 4 * eax]
 
+global IncorrectTypeMessageT
+section .data
+IncorrectTypeMessageT:
+	dd Std$Type$T
+	dd .types
+	dd 0
+	dd 0
+	dd 0
+.types:
+	dd IncorrectTypeMessageT
+	dd 0
+
+method "@", TYP, IncorrectTypeMessageT, VAL, Std$String$T
+	mov ecx, .String
+	xor edx, edx
+	xor eax, eax
+	ret
+section .data
+.String:
+	dd Std$String$T
+	dd Std$Integer$SmallT
+	dd 50, 1
+	dd Std$Integer$SmallT, 50
+	dd Std$Address$T, .chars
+	dd 0, 0, 0, 0
+.chars:
+	db "Object of incorrect type passed to when expression", 0
+
+global IncorrectTypeMessage
+section .data
+IncorrectTypeMessage:
+	dd IncorrectTypeMessageT
+
 struct select_string_case
 	.Length: resd 1
 	.String: resd 1
@@ -117,6 +154,13 @@ align 8
 select_string:
 ;	int3
 	pop edx
+	cmp dword [value(ecx).Type], Std$String$T
+	je .isstring
+	mov ecx, IncorrectTypeMessage
+	xor edx, edx
+	mov eax, 2
+	jmp [bstate(ebp).Handler]
+.isstring:
 ;	add edx, byte 0x03
 ;	and edx, byte 0xFC
 	push ebp
@@ -164,4 +208,3 @@ select_string:
 	mov esp, ebp
 	pop ebp
 	jmp [select_string_case(edx).Jump]
-	

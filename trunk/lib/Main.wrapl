@@ -6,9 +6,8 @@ IMP IO.Terminal USE In, Out;
 IMP Wrapl;
 
 Out:write("Interactive Wrapl Version: " + Wrapl.Version + "\n");
---wrapl.interact(terminal.In, terminal.Out);
 
-VAR Session <- Wrapl.SessionNew(In, Out);
+VAR Session <- Wrapl.SessionNew(In);
 VAR Result;
 
 REP (

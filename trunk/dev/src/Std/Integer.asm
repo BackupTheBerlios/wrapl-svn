@@ -144,3 +144,63 @@ c_func __init
 	call __gmp_set_memory_functions
 	add esp, byte 12
 	ret
+
+struct to_small_small_state, state
+	.Current:	resd 1
+	.Limit:		resd 1
+endstruct
+
+unchecked_func ToSmallSmall
+	mov eax, [argument(edi + 8).Val]
+	mov ecx, [argument(edi).Val]
+	mov eax, [small_int(eax).Value]
+	cmp eax, [small_int(ecx).Value]
+	jl .fail
+	je .return
+.suspend:
+	push ecx
+	push eax
+	push dword [small_int(ecx).Value]
+	push byte sizeof(to_small_small_state)
+	call Riva$Memory$_alloc
+	add esp, byte 4
+	pop dword [to_small_small_state(eax).Current]
+	pop dword [to_small_small_state(eax).Limit]
+	mov dword [state(eax).Run], .resume
+	pop ecx
+	mov ebx, eax
+	or eax, byte -1
+	xor edx, edx
+	ret
+.return:
+	xor edx, edx
+	xor eax, eax
+	ret
+.fail:
+	xor eax, eax
+	inc eax
+	ret
+.resume:
+	mov ecx, [to_small_small_state(eax).Current]
+	inc ecx
+	cmp ecx, [to_small_small_state(eax).Limit]
+	jg .fail
+	je .return2
+	mov [to_small_small_state(eax).Current], ecx
+	push eax
+	push ecx
+	call _alloc_small
+	mov ecx, eax
+	pop dword [small_int(ecx).Value]
+	xor edx, edx
+	or eax, byte -1
+	pop ebx
+	ret
+.return2:
+	push ecx
+	call _alloc_small
+	pop dword [small_int(eax).Value]
+	mov ecx, eax
+	xor edx, edx
+	xor eax, eax
+	ret

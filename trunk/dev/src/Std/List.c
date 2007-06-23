@@ -747,7 +747,7 @@ SYMBOL($to, "to");
 
 METHOD("keys", TYP, T) {
 	Std$Integer_smallt To = {Std$Integer$SmallT, ((_list *)Args[0].Val)->Length};
-	return Std$Function$call($to, 2, Result, Std$Integer$new_small(1), 0, &To, 0);
+	return Std$Function$call(Std$Integer$ToSmallSmall, 2, Result, Std$Integer$new_small(1), 0, &To, 0);
 };
 
 typedef struct list_generator {
@@ -923,6 +923,77 @@ finished:
 	Out->Access = 4;
 	Result->Val = Out;
 	return SUCCESS;
+};
+
+SYMBOL($QUERY, "?");
+
+static Std$Object_t *sort_list(Std$Object_t **First, Std$Object_t **Last) {
+	if (First == Last) return 0;
+	Std$Object_t **A = First;
+	Std$Object_t **B = Last;
+	Std$Object_t *S = *A;
+	Std$Object_t *T = *B;
+	
+	while (A != B) {
+		Std$Function_result Result;
+		switch (Std$Function$call($QUERY, 2, &Result, S, 0, T, 0)) {
+		case SUSPEND: case SUCCESS: {
+			if (((Std$Integer_smallt *)Result.Val)->Value < 0) {
+				*B = T; --B; T = *B;
+			} else {
+				*A = T; ++A; T = *A;
+			};
+			break;
+		};
+		case FAILURE: {
+			return Std$String$new("Comparison failed in list:sort");
+		};
+		case MESSAGE: {
+			return Result.Val;
+		};
+		};
+	};
+	*A = S;
+	if (A != First) {
+		Std$Object_t *Error = sort_list(First, A - 1);
+		if (Error) return Error;
+	};
+	if (B != Last) {
+		Std$Object_t *Error = sort_list(B + 1, Last);
+		if (Error) return Error;
+	};
+	return 0;
+};
+
+METHOD("sort", TYP, T) {
+	_list *List = Args[0].Val;
+	Result->Arg = Args[0];
+	if (List->Length == 0) return SUCCESS;
+	if (List->Length < 1024) {
+		Std$Object_t *First[List->Length];
+		Std$Object_t **Last = First - 1;
+		for (_node *Node = List->Head; Node; Node = Node->Next) *(++Last) = Node->Value;
+		Std$Object_t *Error = sort_list(First, Last);
+		if (Error) {
+			Result->Val = Error;
+			return MESSAGE;
+		};
+		Last = First - 1;
+		for (_node *Node = List->Head; Node; Node = Node->Next) Node->Value = *(++Last);
+		return SUCCESS;
+	} else {
+		Std$Object_t **First = Riva$Memory$alloc(List->Length * sizeof(Std$Object_t *));;
+		Std$Object_t **Last = First - 1;
+		for (_node *Node = List->Head; Node; Node = Node->Next) *(++Last) = Node->Value;
+		Std$Object_t *Error = sort_list(First, Last);
+		if (Error) {
+			Result->Val = Error;
+			return MESSAGE;
+		};
+		Last = First - 1;
+		for (_node *Node = List->Head; Node; Node = Node->Next) Node->Value = *(++Last);
+		return SUCCESS;
+	};
 };
 
 GLOBAL_FUNCTION(Collect, 1) {
