@@ -34,7 +34,6 @@ static int native_load(module_t *Module, const char *FileName) {
 		FORMAT_MESSAGE_FROM_SYSTEM, 0, GetLastError(),
 		MAKELANGID(LANG_NEUTRAL, SUBLANG_DEFAULT), Buffer, 256, 0
 	);
-	log_errorf("Error: %s: %s\n", FileName, Buffer);
 	return 0;
 };
 
@@ -69,7 +68,6 @@ static int native_load(module_t *Module, const char *FileName) {
 		module_setup(Module, Handle, native_import);
 		return 1;
 	};
-	log_errorf("Error: %s\n", dlerror());
 	return 0;
 };
 
