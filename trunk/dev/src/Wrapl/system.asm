@@ -1,4 +1,3 @@
-%define WRAPL2
 %include "Std.inc"
 
 struct bstate, state
@@ -19,6 +18,18 @@ extern Std$Function$T
 extern Std$String$T
 extern Std$Integer$SmallT
 extern Std$Address$T
+
+global Version
+section .data
+Version:
+	dd Std$String$T
+	dd Std$Integer$SmallT, 5
+	dd 1
+	dd Std$Integer$SmallT, 5
+	dd Std$Address$T, .chars
+	dd 0, 0, 0, 0
+.chars:
+	db "0.5.1", 0
 
 global WraplT
 section .data
@@ -130,8 +141,8 @@ method "@", TYP, IncorrectTypeMessageT, VAL, Std$String$T
 section .data
 .String:
 	dd Std$String$T
-	dd Std$Integer$SmallT
-	dd 50, 1
+	dd Std$Integer$SmallT, 50
+	dd 1
 	dd Std$Integer$SmallT, 50
 	dd Std$Address$T, .chars
 	dd 0, 0, 0, 0

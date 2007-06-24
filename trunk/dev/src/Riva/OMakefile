@@ -20,7 +20,7 @@ if $(equal $(OSTYPE), Win32)
 	FILES += stpcpy
 	export
 
-LDFLAGS += -lz -lgc -lconfuse
+LDFLAGS += -lz -lgc -lconfuse -s
 CProgram($(BASENAME), $(FILES))
 
 Riva: $(PROGRAM)
