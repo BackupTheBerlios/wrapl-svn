@@ -525,8 +525,8 @@ static expr_t *parse_term(scanner_t *Scanner) {
 	PREFIX(INVERSE);
 	PREFIX(EXCLAIM);
 	PREFIX(HASH);
-	if (Scanner->parse(tkQUERY)) return new typeof_expr_t(Scanner->Token.LineNo, parse_term(Scanner));
-	if (Scanner->parse(tkOR)) return new infinite_expr_t(Scanner->Token.LineNo, parse_term(Scanner));
+	if (Scanner->parse(tkQUERY)) return new typeof_expr_t(Scanner->Token.LineNo, accept_term(Scanner));
+	if (Scanner->parse(tkOR)) return new infinite_expr_t(Scanner->Token.LineNo, accept_term(Scanner));
 	expr_t *Expr = parse_factor(Scanner);
 	if (Expr == 0) return 0;
 start:
@@ -633,6 +633,11 @@ static expr_t *parse_expr2(scanner_t *Scanner, int Precedence = 0) {
 				Last = Last->Next;
 			};
 			Term = new sequence_expr_t(Scanner->Token.LineNo, Term);
+			goto start;
+		};
+	case 9:
+		if (Scanner->parse(tkOF)) {
+			Term = new limit_expr_t(Scanner->Token.LineNo, Term, accept_term(Scanner));
 			goto start;
 		};
 	};

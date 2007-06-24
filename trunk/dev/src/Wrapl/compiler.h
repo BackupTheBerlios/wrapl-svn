@@ -350,6 +350,17 @@ struct typeof_expr_t : expr_t {
 	operand_t *compile(compiler_t *Compiler, label_t *Start, label_t *Success);
 };
 
+struct limit_expr_t : expr_t {
+	expr_t *Limit, *Expr;
+	limit_expr_t(int LineNo, expr_t *Limit, expr_t *Expr) {
+		this->LineNo = LineNo;
+		this->Limit = Limit;
+		this->Expr = Expr;
+	};
+	void print(int Indent);
+	operand_t *compile(compiler_t *Compiler, label_t *Start, label_t *Success);
+};
+
 struct infinite_expr_t : expr_t {
 	expr_t *Expr;
 	infinite_expr_t(int LineNo, expr_t *Expr) {

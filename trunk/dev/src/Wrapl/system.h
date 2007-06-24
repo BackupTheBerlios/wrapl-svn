@@ -11,6 +11,7 @@ extern Std$Type_t WraplT[];
 
 extern void run_state();
 extern void invoke_function();
+extern void invoke_limit();
 extern void backtrack();
 extern void send_message();
 extern void resend_message();

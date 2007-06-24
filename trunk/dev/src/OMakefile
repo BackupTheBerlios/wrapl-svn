@@ -57,7 +57,7 @@ section
 	vmount($(SRC_DIR)Http, $(OBJ_DIR)Http)
 	.SUBDIRS: $(OBJ_DIR)Http
 
-section
-	vmount($(SRC_DIR)Gtk, $(OBJ_DIR)Gtk)
-	.SUBDIRS: $(OBJ_DIR)Gtk
+#section
+#	vmount($(SRC_DIR)Gtk, $(OBJ_DIR)Gtk)
+#	.SUBDIRS: $(OBJ_DIR)Gtk
 

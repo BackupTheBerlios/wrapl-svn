@@ -403,6 +403,12 @@ void typeof_expr_t::print(int Indent) {
 	Expr->print(Indent);
 };
 
+void limit_expr_t::print(int Indent) {
+	Limit->print(Indent);
+	printf(" OF ");
+	Expr->print(Indent);
+};
+
 void infinite_expr_t::print(int Indent) {
 	printf("|");
 	Expr->print(Indent);
@@ -888,6 +894,36 @@ operand_t *typeof_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t 
 	return Register;
 };
 
+operand_t *limit_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t *Success) {
+	//Compiler->raise_error(LineNo, "Error: not done yet!");
+	label_t *Label0 = new label_t;
+	label_t *Label1 = new label_t;
+	label_t *Label2 = new label_t;
+	label_t *Label3 = new label_t;
+	label_t *Label4 = new label_t;
+	
+	Label1->load(Limit->compile(Compiler, Label0, Label1));
+	Label1->limit(Compiler->use_trap());
+	
+	Compiler->push_trap(Start, Label2)->link(Label0);
+		uint32_t Index = Compiler->use_trap();
+		for (compiler_t::function_t::trap_t *Trap = Compiler->Function->Trap->Prev; Trap; Trap = Trap->Prev) {
+			Trap->Free0->reserve(Index);
+		};
+		Label1->back(Index);
+		Label2->trap(Index, Label3);
+		Label2->link(Label4);
+		operand_t *Result = Expr->compile(Compiler, Label4, Success);
+	Compiler->pop_trap();
+	Index = Compiler->trap();
+	if (Index != 0xFFFFFFFF) {
+		Label3->back(Index);
+	} else {
+		Label3->link(Compiler->failure());
+	};
+	return Result;
+};
+
 operand_t *infinite_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t *Success) {
 	label_t *Label0 = new label_t;
 	uint32_t Trap = Compiler->use_trap();
@@ -1246,7 +1282,6 @@ operand_t *when_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t *S
 		Label0->select_object(ICase, Label1);
 		return Register;
 	};
-	Compiler->raise_error(LineNo, "Muhahaha: something is not implemented yet!");
 };
 
 operand_t *block_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t *Success) {

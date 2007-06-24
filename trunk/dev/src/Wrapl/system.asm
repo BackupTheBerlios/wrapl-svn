@@ -18,10 +18,9 @@ extern Std$Function$T
 extern Std$String$T
 extern Std$Integer$SmallT
 extern Std$Address$T
+extern Riva$Memory$_alloc
 
-global Version
-section .data
-Version:
+c_data Version
 	dd Std$String$T
 	dd Std$Integer$SmallT, 5
 	dd 1
@@ -29,11 +28,9 @@ Version:
 	dd Std$Address$T, .chars
 	dd 0, 0, 0, 0
 .chars:
-	db "0.5.1", 0
+	db "0.5.2", 0
 
-global WraplT
-section .data
-WraplT:
+c_data WraplT
 	dd Std$Type$T
 	dd .types
 	dd .invoke
@@ -121,9 +118,53 @@ backtrack:
 	pop edi
 	jmp [invoke_function.returntable + 4 * eax]
 
-global IncorrectTypeMessageT
-section .data
-IncorrectTypeMessageT:
+struct limiter, state
+	.Count:	resd 1
+endstruct
+
+global invoke_limit
+section .text
+invoke_limit:
+	pop esi
+	; edi = offset to current trap
+	; ecx = limiting value
+	cmp dword [value(ecx).Type], Std$Integer$SmallT
+	jne .error
+	mov ebx, [small_int(ecx).Value]
+	dec ebx
+	js backtrack
+	jz .return
+	push byte sizeof(limiter)
+	call Riva$Memory$_alloc
+	pop ecx
+	mov [limiter(eax).Count], ebx
+	mov [state(eax).Run], dword .resume
+	mov [state(eax).Resume], esi
+	mov ebx, [trap(ebp + edi).State]
+	mov [state(eax).Chain], ebx
+	mov [trap(ebp + edi).State], eax
+.return:
+	jmp esi
+.error:
+	mov ecx, IncorrectTypeMessage
+	xor edx, edx
+	mov eax, 2
+	jmp [bstate(ebp).Handler]
+.resume:
+	dec dword [limiter(eax).Count]
+	js .resume_failure
+	jz .resume_return
+	mov ebx, eax
+	or eax, byte -1
+	ret
+.resume_failure:
+	mov eax, 1
+	ret
+.resume_return:
+	xor eax, eax
+	ret
+
+c_data IncorrectTypeMessageT
 	dd Std$Type$T
 	dd .types
 	dd 0
@@ -141,13 +182,13 @@ method "@", TYP, IncorrectTypeMessageT, VAL, Std$String$T
 section .data
 .String:
 	dd Std$String$T
-	dd Std$Integer$SmallT, 50
+	dd Std$Integer$SmallT, 25
 	dd 1
-	dd Std$Integer$SmallT, 50
+	dd Std$Integer$SmallT, 25
 	dd Std$Address$T, .chars
 	dd 0, 0, 0, 0
 .chars:
-	db "Object of incorrect type passed to when expression", 0
+	db "Object has incorrect type", 0
 
 global IncorrectTypeMessage
 section .data

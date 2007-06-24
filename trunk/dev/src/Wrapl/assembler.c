@@ -428,9 +428,18 @@ void label_t::send() {
 };
 
 struct limit_inst_t : inst_t {
+	uint32_t Trap;
+	void add_source(load_inst_t *Load) {Load->load_val();};
+	void list() {
+		printf("\limit %d\n", Trap);
+	};
+	void encode(assembler_t *Assembler);
 };
 
-void label_t::limit(uint32_t Trap, uint32_t Trap0, long Count) {
+void label_t::limit(uint32_t Trap) {
+	limit_inst_t *Inst = new limit_inst_t;
+	Inst->Trap = Trap;
+	append(Inst);
 };
 
 struct comp_inst_t : inst_t {

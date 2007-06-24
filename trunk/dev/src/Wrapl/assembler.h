@@ -211,7 +211,7 @@ struct label_t : inst_t {
 	void recv(label_t *Handler);
 	void send();
 	void comp(int Equal, operand_t *Operand, label_t *Failure);
-	void limit(uint32_t Trap, uint32_t Trap0, long Count);
+	void limit(uint32_t Trap);
 	void select_integer(select_integer_inst_t::case_t *Cases, label_t *Default);
 	void select_string(select_string_inst_t::case_t *Cases, label_t *Default);
 	void select_object(select_object_inst_t::case_t *Cases, label_t *Default);
