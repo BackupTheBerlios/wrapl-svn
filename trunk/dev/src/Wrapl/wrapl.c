@@ -73,6 +73,7 @@ GLOBAL_FUNCTION(SessionNew, 1) {
 METHOD("eval", TYP, SessionT) {
 	session_t *Session = (session_t *)Args[0].Val;
 	if (setjmp(Session->Scanner->Error.Handler)) {
+		Session->Scanner->flush();
 		errormessage_t *Error = new errormessage_t;
 		Error->Type = ErrorMessageT;
 		Error->LineNo = Session->Scanner->Error.LineNo;
@@ -96,6 +97,6 @@ METHOD("eval", TYP, SessionT) {
 extern "C" void __init(Riva$Module_t *Module);
 void __init(Riva$Module_t *Module) {
 	Riva$Module$load(0, "Std/Methods");
-	Riva$Module$export(Module, "Version", 0, Std$String$new("0.4.1"));
+	Riva$Module$export(Module, "Version", 0, Std$String$new("0.5.0"));
 	Riva$Module$add_loader(".wrapl", wrapl_load);
 };

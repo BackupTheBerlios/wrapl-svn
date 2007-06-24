@@ -511,7 +511,7 @@ static expr_t *parse_factor(scanner_t *Scanner) {
 static expr_t *accept_factor(scanner_t *Scanner) {
 	expr_t *Expr = parse_factor(Scanner);
 	if (Expr) return Expr;
-	Scanner->raise_error(Scanner->Token.LineNo, "Error: expected factor not %s\n", Tokens[Scanner->Token.Type]);
+	Scanner->raise_error(Scanner->Token.LineNo, "Error: expected factor not %s\n", Tokens[Scanner->NextToken.Type]);
 };
 
 static expr_t *accept_term(scanner_t *Scanner);
@@ -562,7 +562,7 @@ start:
 static expr_t *accept_term(scanner_t *Scanner) {
 	expr_t *Expr = parse_term(Scanner);
 	if (Expr) return Expr;
-	Scanner->raise_error(Scanner->Token.LineNo, "Error: expected term not %s\n", Tokens[Scanner->Token.Type]);
+	Scanner->raise_error(Scanner->Token.LineNo, "Error: expected term not %s\n", Tokens[Scanner->NextToken.Type]);
 };
 
 static expr_t *accept_expr2(scanner_t *Scanner, int Precedence = 0);
@@ -642,7 +642,7 @@ static expr_t *parse_expr2(scanner_t *Scanner, int Precedence = 0) {
 static expr_t *accept_expr2(scanner_t *Scanner, int Precedence) {
 	expr_t *Expr = parse_expr2(Scanner, Precedence);
 	if (Expr) return Expr;
-	Scanner->raise_error(Scanner->Token.LineNo, "Error: expected expression not %s\n", Tokens[Scanner->Token.Type]);
+	Scanner->raise_error(Scanner->Token.LineNo, "Error: expected expression not %s\n", Tokens[Scanner->NextToken.Type]);
 };
 
 static expr_t *accept_expr(scanner_t *Scanner);
@@ -664,7 +664,7 @@ static expr_t *parse_expr(scanner_t *Scanner) {
 static expr_t *accept_expr(scanner_t *Scanner) {
 	expr_t *Expr = parse_expr(Scanner);
 	if (Expr) return Expr;
-	Scanner->raise_error(Scanner->Token.LineNo, "Error: expected expression not %s\n", Tokens[Scanner->Token.Type]);
+	Scanner->raise_error(Scanner->Token.LineNo, "Error: expected expression not %s\n", Tokens[Scanner->NextToken.Type]);
 };
 
 static module_expr_t *accept_globalstatement(scanner_t *Scanner);

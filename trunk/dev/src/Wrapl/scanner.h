@@ -102,7 +102,7 @@ struct scanner_t {
 	} Error;
 
 	scanner_t(IO$Stream_t *Source);
-
+	void flush();
 	bool parse(int Type);
 	void accept(int Type);
 	__attribute__ ((noreturn)) void raise_error(int LineNo, const char *Format, ...);
