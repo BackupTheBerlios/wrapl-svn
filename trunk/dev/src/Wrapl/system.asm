@@ -28,7 +28,7 @@ c_data Version
 	dd Std$Address$T, .chars
 	dd 0, 0, 0, 0
 .chars:
-	db "0.5.2", 0
+	db "0.5.3", 0
 
 c_data WraplT
 	dd Std$Type$T

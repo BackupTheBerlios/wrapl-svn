@@ -29,7 +29,7 @@ static int wrapl_load(Riva$Module_t *Module, const char *Path) {
 	module_expr_t *Expr = accept_module(Scanner, Module0);
 	IO$Stream_t_methods *Methods = (IO$Stream_t_methods *)Util$TypeTable$get(IO$Stream$T_Methods, Source->Type);
 	Methods->close(Source);
-	Expr->print(0);
+	//Expr->print(0);
 	compiler_t *Compiler = new compiler_t();
 	if (setjmp(Compiler->Error.Handler)) {
 		printf("%s(%d): %s\n", Path, Compiler->Error.LineNo, Compiler->Error.Message);
@@ -82,7 +82,7 @@ METHOD("eval", TYP, SessionT) {
 		return MESSAGE;
 	};
 	command_expr_t *Command = accept_command(Session->Scanner);
-	Command->print(0);
+	//Command->print(0);
 	if (setjmp(Session->Compiler->Error.Handler)) {
 		errormessage_t *Error = new errormessage_t;
 		Error->Type = ErrorMessageT;
