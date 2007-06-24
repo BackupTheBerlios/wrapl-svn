@@ -4,6 +4,7 @@ IMP Std.String;
 IMP Std.Symbol;
 IMP IO.Terminal USE In, Out;
 IMP Wrapl;
+IMP Sys.Module;
 
 Out:write("Interactive Wrapl Version: " + Wrapl.Version + "\n");
 
@@ -15,7 +16,12 @@ REP (
 	(Result <- Session:eval) => (
 		Out:write(Result);
 		RECV Msg DO Msg IN Symbol.NoMethodMessageT => (
-			Out:write("<value>");
+			VAR mod;
+			(mod <- Module.FromVal(Result)) => (
+				Out:writes(mod[1]:map("/", "."), ".", mod[2]);
+			) // (
+				Out:write("<value>");
+			);
 		) // (
 			SEND Msg;
 		);
