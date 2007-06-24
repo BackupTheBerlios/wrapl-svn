@@ -90,23 +90,11 @@ struct result
 	.State:	resd 1
 endstruct
 
-%ifdef WRAPL2
-
 struct state
 	.Run:		resd 1
 	.Resume:	resd 1
 	.Chain:		resd 1
 endstruct
-
-%else
-
-struct state
-	.Run:		resd 1
-	.Resume:	resd 1
-	.Chain:		resd 2
-endstruct
-
-%endif
 
 struct asm_fun, value
 	.Invoke:	resd 1;(fun, count, args)
