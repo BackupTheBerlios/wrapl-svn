@@ -227,6 +227,19 @@ module_t *module_load(const char *Path, const char *Name) {
 	return 0;
 };
 
+module_t *module_load_file(const char *FileName) {
+	struct stat Stat;
+	if (stat(FileName, &Stat) == 0) {
+		module_t *Module = new(module_t);
+		Module->Name = FileName;
+		Module->Import = default_import;
+		for (loader_node *Loader = Loaders; Loader; Loader = Loader->Next) {
+			if (Loader->_load(Module, FileName)) return Module;
+		};
+	};
+	return 0;
+};
+
 int module_import(module_t *Module, const char *Symbol, int *IsRef, void **Data) {
 	export_t *Export = stringtable_get(Module->Symbols, Symbol);
 	if (Export) {

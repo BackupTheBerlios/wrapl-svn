@@ -182,7 +182,7 @@ static int riva_load(module_t *Module, const char *FileName) {
 
 	uint32_t Magic; gzread(File, &Magic, 4);
 	if (Magic != 0x41564952) {
-		log_errorf("Error: %s is not a valid riva module\n", FileName);
+		//log_errorf("Error: %s is not a valid riva module\n", FileName);
 		return 0;
 	};
 

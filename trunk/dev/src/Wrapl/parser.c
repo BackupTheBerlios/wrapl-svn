@@ -852,6 +852,28 @@ module_expr_t *accept_module(scanner_t *Scanner, Sys$Module_t *Module) {
 	return Expr;
 };
 
+module_expr_t *parse_module(scanner_t *Scanner, Sys$Module_t *Module) {
+	const char *Name;
+	if (Scanner->parse(tkMOD)) {
+		Scanner->accept(tkIDENT);
+		Name = Scanner->Token.Ident;
+		Scanner->accept(tkSEMICOLON);
+
+		int LineNo = Scanner->Token.LineNo;
+		module_expr_t *Expr = accept_globalstatement(Scanner);
+		Expr->LineNo = LineNo;
+		Expr->Module = Module;
+		Expr->Name = Name;
+	
+		Scanner->accept(tkEND);
+		Scanner->accept(tkIDENT);
+		Scanner->accept(tkDOT);
+		return Expr;
+	} else {
+		return 0;
+	};
+};
+
 static command_expr_t *accept_commandvar(scanner_t *Scanner) {
 	command_expr_t::globalvar_t *Var = new command_expr_t::globalvar_t;
 	Var->LineNo = Scanner->Token.LineNo;

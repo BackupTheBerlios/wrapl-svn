@@ -7,6 +7,7 @@
 #include "compiler.h"
 
 extern module_expr_t *accept_module(scanner_t *Scanner, Sys$Module_t *Module);
+extern module_expr_t *parse_module(scanner_t *Scanner, Sys$Module_t *Module);
 extern command_expr_t *accept_command(scanner_t *Scanner);
 
 #endif

@@ -30,12 +30,7 @@ static void read_config(void) {
 	char Conf[1024];
 #ifdef WINDOWS
     int Length = GetModuleFileName(0, Conf, 1024);
-    for (int I = Length; --I;) {
-		if (Conf[I] == '.') {
-			strcpy(Conf + I + 1, "conf");
-			break;
-		};
-	};
+    strcpy(strrchr(Conf, '.'), ".conf");
 #else
     char Link[1024];
 	sprintf(Link, "/proc/%i/exe", getpid());
@@ -136,7 +131,9 @@ finished: 0;
 	module_t *System = module_alias("Riva/System");
 	module_export(System, "_Args", 0, &Args);
 	module_export(System, "_NoOfArgs", 0, &NoOfArgs);
-	if (!module_load(0, MainModule)) printf("Error: module %s not found\n", MainModule);
+	module_t *Module = module_load_file(MainModule);
+	if (Module == 0) Module = module_load(0, MainModule);
+	if (Module == 0) printf("Error: module %s not found\n", MainModule);
 #ifdef WINDOWS
 #undef ExitThread
     ExitThread(0);
