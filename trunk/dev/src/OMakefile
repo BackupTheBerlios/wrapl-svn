@@ -29,6 +29,10 @@ LDFLAGS = -L$(DEV_LIB) libc.rlib libm.rlib
 ASFLAGS += -I$(DEV_INC)$(DIRSEP)
 INCLUDES += $(DEV_INC)
 
+if $(equal $(OSTYPE), Win32)
+	LDFLAGS += C:\Apps\Mingw\lib\gcc\i686-pc-mingw32\4.1.2\libgcc.a
+	export
+
 section
 	vmount($(SRC_DIR)Std, $(OBJ_DIR)Std)
 	.SUBDIRS: $(OBJ_DIR)Std
@@ -53,9 +57,9 @@ section
 	vmount($(SRC_DIR)Xml, $(OBJ_DIR)Xml)
 	.SUBDIRS: $(OBJ_DIR)Xml
 
-section
-	vmount($(SRC_DIR)Http, $(OBJ_DIR)Http)
-	.SUBDIRS: $(OBJ_DIR)Http
+#section
+#	vmount($(SRC_DIR)Http, $(OBJ_DIR)Http)
+#	.SUBDIRS: $(OBJ_DIR)Http
 
 #section
 #	vmount($(SRC_DIR)Gtk, $(OBJ_DIR)Gtk)

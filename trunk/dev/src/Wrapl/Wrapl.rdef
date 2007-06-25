@@ -1,5 +1,5 @@
 require("Std/Methods")
-library("/usr/local/lib/libudis86.a")
+--library("/usr/local/lib/libudis86.a")
 
 if WINDOWS then
 	_export = export

@@ -13,12 +13,21 @@
 #define PATHSEPSTR "/"
 #endif
 
+#ifdef WINDOWS
+Std$Integer_smallt BLOCKFILE[] = {{Std$Integer$SmallT, 0}};
+Std$Integer_smallt CHARFILE[] = {{Std$Integer$SmallT, 0}};
+Std$Integer_smallt FIFOFILE[] = {{Std$Integer$SmallT, 0}};
+Std$Integer_smallt REGFILE[] = {{Std$Integer$SmallT, 0}};
+Std$Integer_smallt DIRFILE[] = {{Std$Integer$SmallT, 0}};
+Std$Integer_smallt LINKFILE[] = {{Std$Integer$SmallT, 0}};
+#else
 Std$Integer_smallt BLOCKFILE[] = {{Std$Integer$SmallT, S_IFBLK}};
 Std$Integer_smallt CHARFILE[] = {{Std$Integer$SmallT, S_IFCHR}};
 Std$Integer_smallt FIFOFILE[] = {{Std$Integer$SmallT, S_IFIFO}};
 Std$Integer_smallt REGFILE[] = {{Std$Integer$SmallT, S_IFREG}};
 Std$Integer_smallt DIRFILE[] = {{Std$Integer$SmallT, S_IFDIR}};
 Std$Integer_smallt LINKFILE[] = {{Std$Integer$SmallT, S_IFLNK}};
+#endif
 
 GLOBAL_FUNCTION(Path, 0) {
 	
@@ -39,11 +48,11 @@ GLOBAL_FUNCTION(MakeDir, 2) {
 };
 
 GLOBAL_FUNCTION(RemoveDir, 1) {
-#ifdef WINDOWS
-	if (RemoveDirectory(Std$String$flatten(Args[0].Val)) == 0) {
-#else
 	char DirName[((Std$String_t *)Args[0].Val)->Length.Value + 1];
 	Std$String$flatten_to(Args[0].Val, DirName);
+#ifdef WINDOWS
+	if (RemoveDirectory(DirName) == 0) {
+#else
 	if (rmdir(DirName)) {
 #endif
 		Result->Val = "Error removing directory";
@@ -56,11 +65,11 @@ GLOBAL_FUNCTION(Copy, 2) {
 };
 
 GLOBAL_FUNCTION(Remove, 1) {
-#ifdef WINDOWS
-	if (DeleteFile(Std$String$flatten(Args[0].Val)) == 0) {
-#else
 	char FileName[((Std$String_t *)Args[0].Val)->Length.Value + 1];
 	Std$String$flatten_to(Args[0].Val, FileName);
+#ifdef WINDOWS
+	if (DeleteFile(FileName) == 0) {
+#else
 	if (unlink(FileName)) {
 #endif
 		Result->Val = "Error unlinking file";
@@ -70,13 +79,13 @@ GLOBAL_FUNCTION(Remove, 1) {
 };
 
 GLOBAL_FUNCTION(Rename, 2) {
-#ifdef WINDOWS
-	if (MoveFile(Std$String$flatten(Args[0].Val), Std$String$flatten(Args[1].Val)) == 0) {
-#else
 	char OldName[((Std$String_t *)Args[0].Val)->Length.Value + 1];
-	Std$String$flatten_to(Args[0].Val, OldName);
 	char NewName[((Std$String_t *)Args[1].Val)->Length.Value + 1];
 	Std$String$flatten_to(Args[1].Val, NewName);
+	Std$String$flatten_to(Args[0].Val, OldName);
+#ifdef WINDOWS
+	if (MoveFile(OldName, NewName) == 0) {
+#else
 	if (rename(OldName, NewName) == -1) {
 #endif
 		Result->Val = "Error renaming file";
@@ -161,10 +170,10 @@ GLOBAL_FUNCTION(Exists, 1) {
 };
 
 GLOBAL_FUNCTION(FileSize, 1) {
-#ifdef WINDOWS
-#else
 	char FileName[((Std$String_t *)Args[0].Val)->Length.Value + 1];
 	Std$String$flatten_to(Args[0].Val, FileName);
+#ifdef WINDOWS
+#else
 	struct stat Stat;
 	if (stat(FileName, &Stat) == 0) {
 		Result->Val = Std$Integer$new_small(Stat.st_size);
@@ -174,11 +183,12 @@ GLOBAL_FUNCTION(FileSize, 1) {
 	};
 #endif
 };
+
 GLOBAL_FUNCTION(FileType, 1) {
-	#ifdef WINDOWS
-#else
 	char FileName[((Std$String_t *)Args[0].Val)->Length.Value + 1];
 	Std$String$flatten_to(Args[0].Val, FileName);
+#ifdef WINDOWS
+#else
 	struct stat Stat;
 	if (stat(FileName, &Stat) == 0) {
 		Result->Val = Std$Integer$new_small(Stat.st_mode);
