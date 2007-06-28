@@ -933,7 +933,7 @@ static Std$Object_t *sort_list(Std$Object_t **First, Std$Object_t **Last) {
 	Std$Object_t **B = Last;
 	Std$Object_t *S = *A;
 	Std$Object_t *T = *B;
-	
+
 	while (A != B) {
 		Std$Function_result Result;
 		switch (Std$Function$call($QUERY, 2, &Result, S, 0, T, 0)) {
@@ -996,57 +996,183 @@ METHOD("sort", TYP, T) {
 	};
 };
 
-GLOBAL_FUNCTION(Collect, 1) {
+METHOD("collect", TYP, Std$Function$T) {
 	Std$Function_result Result0;
-	Std$Object_t *Function = Args[0].Val;
 	_list *List = new(_list);
-	long Return = Std$Function$invoke(Function, Count - 1, &Result0, Args + 1);
 	List->Type = T;
-	if (Return == SUCCESS) {
-		_node *Node = new(_node);
+	List->Lower = List->Upper = 0;
+	List->Access = 4;
+	Result->Val = List;
+	Std$Object_t *Function = Args[0].Val;
+	_node *Node, *Prev;
+	unsigned long NoOfElements;
+	switch (Std$Function$invoke(Function, Count - 1, &Result0, Args + 1)) {
+	case SUSPEND:
+		Node = new(_node);
+		NoOfElements = 1;
+		Node->Value = Result0.Val;
+		List->Head = Node;
+		List->Cache = Node;
+		List->Index = 1;
+		for (;;) {
+			switch (Std$Function$resume(&Result0)) {
+			case SUSPEND:
+				++NoOfElements;
+				Prev = Node;
+				Node = new(_node);
+				(Node->Prev = Prev)->Next = Node;
+				Node->Value = Result0.Val;
+				break;
+			case MESSAGE:
+				Result->Val = Result0.Val;
+				return MESSAGE;
+			case SUCCESS:
+				++NoOfElements;
+				Prev = Node;
+				Node = new(_node);
+				(Node->Prev = Prev)->Next = Node;
+				Node->Value = Result0.Val;
+			case FAILURE:
+				List->Tail = Node;
+				List->Length = NoOfElements;
+				return SUCCESS;
+			};
+		};
+	case MESSAGE:
+		Result->Val = Result0.Val;
+		return MESSAGE;
+	case SUCCESS:
+		Node = new(_node);
 		Node->Value = Result0.Val;
 		List->Head = Node;
 		List->Cache = Node;
 		List->Index = 1;
 		List->Tail = Node;
 		List->Length = 1;
-	} else if (Return == SUSPEND) {
-		_node *Node = new(_node);
-		long NoOfElements = 1;
+	case FAILURE:
+		return SUCCESS;
+	};
+};
+
+GLOBAL_FUNCTION(Collect, 1) {
+	Std$Function_result Result0;
+	_list *List = new(_list);
+	List->Type = T;
+	List->Lower = List->Upper = 0;
+	List->Access = 4;
+	Result->Val = List;
+	Std$Object_t *Function = Args[0].Val;
+	_node *Node, *Prev;
+	unsigned long NoOfElements;
+	switch (Std$Function$invoke(Function, Count - 1, &Result0, Args + 1)) {
+	case SUSPEND:
+		Node = new(_node);
+		NoOfElements = 1;
 		Node->Value = Result0.Val;
 		List->Head = Node;
 		List->Cache = Node;
 		List->Index = 1;
-		Return = Std$Function$resume(&Result0);
-		while (Return == SUSPEND) {
-			_node *Prev = Node;
-			Node = new(_node);
-			(Node->Prev = Prev)->Next = Node;
-			Node->Value = Result0.Val;
-			Return = Std$Function$resume(&Result0);
-			++NoOfElements;
+		for (;;) {
+			switch (Std$Function$resume(&Result0)) {
+			case SUSPEND:
+				++NoOfElements;
+				Prev = Node;
+				Node = new(_node);
+				(Node->Prev = Prev)->Next = Node;
+				Node->Value = Result0.Val;
+				break;
+			case MESSAGE:
+				Result->Val = Result0.Val;
+				return MESSAGE;
+			case SUCCESS:
+				++NoOfElements;
+				Prev = Node;
+				Node = new(_node);
+				(Node->Prev = Prev)->Next = Node;
+				Node->Value = Result0.Val;
+			case FAILURE:
+				List->Tail = Node;
+				List->Length = NoOfElements;
+				return SUCCESS;
+			};
 		};
-		if (Return == SUCCESS) {
-			_node *Prev = Node;
-			Node = new(_node);
-			(Node->Prev = Prev)->Next = Node;
-			Node->Value = Result0.Val;
-		} else if (Return == MESSAGE) {
-			*Result = Result0;
-			return MESSAGE;
-		};
-		List->Tail = Node;
-		List->Length = NoOfElements;
-	} else if (Return == MESSAGE) {
-		*Result = Result0;
+	case MESSAGE:
+		Result->Val = Result0.Val;
 		return MESSAGE;
-	} else {
-		List->Length = 0;
+	case SUCCESS:
+		Node = new(_node);
+		Node->Value = Result0.Val;
+		List->Head = Node;
+		List->Cache = Node;
+		List->Index = 1;
+		List->Tail = Node;
+		List->Length = 1;
+	case FAILURE:
+		return SUCCESS;
 	};
+};
+
+GLOBAL_FUNCTION(CollectN, 2) {
+	Std$Function_result Result0;
+	unsigned long Max = ((Std$Integer_smallt *)Args[0].Val)->Value;
+	_list *List = new(_list);
+	List->Type = T;
 	List->Lower = List->Upper = 0;
 	List->Access = 4;
 	Result->Val = List;
-	return SUCCESS;
+	if (Max == 0) return SUCCESS;
+	Std$Object_t *Function = Args[1].Val;
+	_node *Node, *Prev;
+	unsigned long NoOfElements;
+	switch (Std$Function$invoke(Function, Count - 2, &Result0, Args + 2)) {
+	case SUSPEND:
+		Node = new(_node);
+		NoOfElements = 1;
+		Node->Value = Result0.Val;
+		List->Head = Node;
+		List->Cache = Node;
+		List->Index = 1;
+		for (; --Max;) {
+			switch (Std$Function$resume(&Result0)) {
+			case SUSPEND:
+				++NoOfElements;
+				Prev = Node;
+				Node = new(_node);
+				(Node->Prev = Prev)->Next = Node;
+				Node->Value = Result0.Val;
+				break;
+			case MESSAGE:
+				Result->Val = Result0.Val;
+				return MESSAGE;
+			case SUCCESS:
+				++NoOfElements;
+				Prev = Node;
+				Node = new(_node);
+				(Node->Prev = Prev)->Next = Node;
+				Node->Value = Result0.Val;
+			case FAILURE:
+				List->Tail = Node;
+				List->Length = NoOfElements;
+				return SUCCESS;
+			};
+		};
+		List->Tail = Node;
+		List->Length = NoOfElements;
+		return SUCCESS;
+	case MESSAGE:
+		Result->Val = Result0.Val;
+		return MESSAGE;
+	case SUCCESS:
+		Node = new(_node);
+		Node->Value = Result0.Val;
+		List->Head = Node;
+		List->Cache = Node;
+		List->Index = 1;
+		List->Tail = Node;
+		List->Length = 1;
+	case FAILURE:
+		return SUCCESS;
+	};
 };
 
 void __init (void *Module) {

@@ -18,11 +18,13 @@ else
 
 RivaProgram($(BASENAME)File, File)
 RivaProgram($(BASENAME)Terminal, Terminal)
+RivaProgram($(BASENAME)Socket, Socket)
 
 IO:\
 	$(BASENAME)File.riva\
 	$(BASENAME)Stream.riva\
 	$(BASENAME)Terminal.riva\
+	$(BASENAME)Socket.riva\
 	$(PLATFORM_STREAM)
 
 .DEFAULT: IO

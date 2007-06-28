@@ -1,6 +1,6 @@
-#include <Std.h>
 #include <IO/Socket.h>
 #include <Riva/Memory.h>
+#include <Std.h>
 
 #include <stdarg.h>
 #include <stdio.h>
@@ -9,9 +9,9 @@
 #include <sys/un.h>
 #include <netdb.h>
 
-TYPE(T, IO$Posix$ReaderT, IO$Posix$WriterT, IO$Posix$T, IO$Stream$ReaderT, IO$Stream$WriterT, IO$Stream$T);
-TYPE(LocalT, T, IO$Posix$ReaderT, IO$Posix$WriterT, IO$Posix$T, IO$Stream$ReaderT, IO$Stream$WriterT, IO$Stream$T);
-TYPE(InetT, T, IO$Posix$ReaderT, IO$Posix$WriterT, IO$Posix$T, IO$Stream$ReaderT, IO$Stream$WriterT, IO$Stream$T);
+TYPE(T, NATIVE($ReaderT), NATIVE($WriterT), NATIVE($T), IO$Stream$ReaderT, IO$Stream$WriterT, IO$Stream$T);
+TYPE(LocalT, T, NATIVE($ReaderT), NATIVE($WriterT), NATIVE($T), IO$Stream$ReaderT, IO$Stream$WriterT, IO$Stream$T);
+TYPE(InetT, T, NATIVE($ReaderT), NATIVE($WriterT), NATIVE($T), IO$Stream$ReaderT, IO$Stream$WriterT, IO$Stream$T);
 
 static IO$Stream_messaget CreateMessage[] = {{IO$Stream$MessageT, "Create Error"}};
 static IO$Stream_messaget BindMessage[] = {{IO$Stream$MessageT, "Bind Error"}};

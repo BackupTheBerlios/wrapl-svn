@@ -320,7 +320,7 @@ static block_expr_t *accept_localdef(scanner_t *Scanner) {
 		Def->Value = accept_expr(Scanner);
 		block_expr_t *Block;
 		if (Scanner->parse(tkCOMMA)) {
-			Block = accept_localdef(Scanner);	
+			Block = accept_localdef(Scanner);
 		} else {
 			Scanner->accept(tkSEMICOLON);
 			Block = accept_localstatement(Scanner);
@@ -498,7 +498,12 @@ static expr_t *parse_factor(scanner_t *Scanner) {
 		return new invoke_expr_t(Scanner->Token.LineNo, new const_expr_t(Scanner->Token.LineNo, Std$Symbol$Set), Symbol);
 	};
 	if (Scanner->parse(tkDO)) {
-		expr_t *Function = new func_expr_t(Scanner->Token.LineNo, 0, accept_expr(Scanner));
+		expr_t *Function = new func_expr_t(Scanner->Token.LineNo, 0,
+			new every_expr_t(Scanner->Token.LineNo,
+				new susp_expr_t(Scanner->Token.LineNo, accept_expr(Scanner)),
+				new const_expr_t(Scanner->Token.LineNo, Std$Object$Nil)
+			)
+		);
 		return new invoke_expr_t(Scanner->Token.LineNo, new const_expr_t(Scanner->Token.LineNo, Std$Coexpr$New), Function);
 	};
 	if (Scanner->parse(tkYIELD)) {
@@ -753,7 +758,7 @@ static module_expr_t *accept_globaldef(scanner_t *Scanner) {
 	};
 	module_expr_t *Module;
 	if (Scanner->parse(tkCOMMA)) {
-		Module = accept_globaldef(Scanner);		
+		Module = accept_globaldef(Scanner);
 	} else {
 		Scanner->accept(tkSEMICOLON);
 		Module = accept_globalstatement(Scanner);
@@ -864,7 +869,7 @@ module_expr_t *parse_module(scanner_t *Scanner, Sys$Module_t *Module) {
 		Expr->LineNo = LineNo;
 		Expr->Module = Module;
 		Expr->Name = Name;
-	
+
 		Scanner->accept(tkEND);
 		Scanner->accept(tkIDENT);
 		Scanner->accept(tkDOT);

@@ -32,7 +32,7 @@ typedef struct coexpr_t {
 #endif
 } coexpr_t;
 
-static void switch_coexpr(coexpr_t *Old, coexpr_t *New, int Status, Std$Function_argument Transfer) {
+static coexpr_t *switch_coexpr(coexpr_t *Old, coexpr_t *New, int Status, Std$Function_argument Transfer) {
     New->Transfer = Transfer;
 	New->Status = Status;
 	New->Caller = Old;
@@ -42,28 +42,27 @@ static void switch_coexpr(coexpr_t *Old, coexpr_t *New, int Status, Std$Function
 	Riva$Thread$key_set(CoexprKey, New);
 	swapcontext(&Old->Context, &New->Context);
 #endif
+	return Old;
 };
 
 #ifdef WINDOWS
 
 static void __stdcall coexpr_func(coexpr_t *Callee) {
-    coexpr_t *Caller = Callee->Caller;
 	Std$Function_result Result;
 	int Status = Std$Function$invoke(Callee->Func, Callee->Count, &Result, Callee->Args);
-	loop: switch (Status) {
+	coexpr_t *Caller = Callee->Caller;
+	for (;;) switch (Status) {
 	case SUSPEND:
-        switch_coexpr(Callee, Caller, SUCCESS, Result.Arg);
+		Caller = switch_coexpr(Callee, Caller, SUCCESS, Result.Arg);
 		Result.Arg = Caller->Transfer;
 		Status = Std$Function$resume(&Result);
-		goto loop;
+		continue;
 	case SUCCESS:
-		switch_coexpr(Callee, Caller, SUCCESS, Result.Arg);
-	case FAILURE: for (;;) {
-		switch_coexpr(Callee, Caller, FAILURE, (Std$Function_argument){0, 0});
-	};
-	case MESSAGE: for (;;) {
-		switch_coexpr(Callee, Caller, MESSAGE, Result.Arg);
-	};
+		Caller = switch_coexpr(Callee, Caller, SUCCESS, Result.Arg);
+	case FAILURE:
+		for (;;) Caller = switch_coexpr(Callee, Caller, FAILURE, (Std$Function_argument){0, 0});
+	case MESSAGE:
+		for (;;) Caller = switch_coexpr(Callee, Caller, MESSAGE, Result.Arg);
 	};
 };
 
@@ -83,23 +82,21 @@ GLOBAL_FUNCTION(New, 1) {
 #else
 
 static void coexpr_func(coexpr_t *Callee, Std$Object_t *Fun, long Count, Std$Function_argument *Args) {
-	coexpr_t *Caller = Callee->Caller;
 	Std$Function_result Result;
 	int Status = Std$Function$invoke(Fun, Count, &Result, Args);
-	loop: switch (Status) {
+	coexpr_t *Caller = Callee->Caller;
+	for (;;) switch (Status) {
 	case SUSPEND:
-        switch_coexpr(Callee, Caller, SUCCESS, Result.Arg);
+		Caller = switch_coexpr(Callee, Caller, SUCCESS, Result.Arg);
 		Result.Arg = Caller->Transfer;
 		Status = Std$Function$resume(&Result);
-		goto loop;
+		continue;
 	case SUCCESS:
-		switch_coexpr(Callee, Caller, SUCCESS, Result.Arg);
-	case FAILURE: for (;;) {
-		switch_coexpr(Callee, Caller, FAILURE, (Std$Function_argument){0, 0});
-	};
-	case MESSAGE: for (;;) {
-		switch_coexpr(Callee, Caller, MESSAGE, Result.Arg);
-	};
+		Caller = switch_coexpr(Callee, Caller, SUCCESS, Result.Arg);
+	case FAILURE:
+		for (;;) Caller = switch_coexpr(Callee, Caller, FAILURE, (Std$Function_argument){0, 0});
+	case MESSAGE:
+		for (;;) Caller = switch_coexpr(Callee, Caller, MESSAGE, Result.Arg);
 	};
 };
 
@@ -177,6 +174,58 @@ METHOD("%", TYP, T) {
 	};
 };
 
+METHOD("collect", TYP, T) {
+#ifdef WINDOWS
+    coexpr_t *Caller = GetFiberData();
+#else
+	coexpr_t *Caller = Riva$Thread$key_get(CoexprKey);
+#endif
+	coexpr_t *Callee = Args[0].Val;
+	Std$List_t *List = new(Std$List_t);
+	List->Type = Std$List$T;
+	List->Lower = List->Upper = 0;
+	List->Access = 4;
+	Result->Val = List;
+	Std$List_node *Node, *Prev;
+	unsigned long NoOfElements;
+	Callee = switch_coexpr(Caller, Callee, SUCCESS, Args[0]);
+	switch (Caller->Status) {
+	case SUSPEND:
+	case SUCCESS:
+		Node = new(Std$List_node);
+		NoOfElements = 1;
+		Node->Value = Caller->Transfer.Val;
+		List->Head = Node;
+		List->Cache = Node;
+		List->Index = 1;
+		for (;;) {
+			Callee = switch_coexpr(Caller, Callee, SUCCESS, Args[0]);
+			switch (Caller->Status) {
+			case SUCCESS:
+			case SUSPEND:
+				++NoOfElements;
+				Prev = Node;
+				Node = new(Std$List_node);
+				(Node->Prev = Prev)->Next = Node;
+				Node->Value = Caller->Transfer.Val;
+				break;
+			case MESSAGE:
+				Result->Val = Caller->Transfer.Val;
+				return MESSAGE;
+			case FAILURE:
+				List->Tail = Node;
+				List->Length = NoOfElements;
+				return SUCCESS;
+			};
+		};
+	case MESSAGE:
+		Result->Val = Caller->Transfer.Val;
+		return MESSAGE;
+	case FAILURE:
+		return SUCCESS;
+	};
+};
+
 void __init(void *Module) {
 	coexpr_t *Coexpr = new(coexpr_t);
 	Coexpr->Type = T;
@@ -186,4 +235,6 @@ void __init(void *Module) {
 	CoexprKey = Riva$Thread$key_new(0);
 	Riva$Thread$key_set(CoexprKey, Coexpr);
 #endif
+	//switch_coexpr(Coexpr, Coexpr, SUCCESS, (Std$Function_argument){Std$Object$Nil, 0});
+	Coexpr->Caller = Coexpr;
 };

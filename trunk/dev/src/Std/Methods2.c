@@ -1,5 +1,6 @@
 #include <Std.h>
 #include <Riva/Memory.h>
+#include <stdint.h>
 
 typedef struct chars_generator {
 	Std$Function_cstate State;
@@ -284,7 +285,7 @@ static long resume_find_char_string(find_char_resume_data *Data) {
 	unsigned long Index = Generator->Index;
 	char *SC = Subject->Chars.Value + Generator->Start;
 	unsigned long SL = Subject->Length.Value - Generator->Start;
-	for (; SC;) {
+	while (SC) {
 		void *Position = memchr(SC, Char, SL);
 		if (Position) {
 			unsigned int Last = Position - Subject->Chars.Value + 1;
@@ -640,4 +641,314 @@ METHOD("map", TYP, Std$String$T, TYP, Std$String$T, TYP, Std$String$T) {
 	};
 	Result->Val = Dest;
 	return SUCCESS;
+};
+
+typedef struct any_char_generator {
+	Std$Function_cstate State;
+	uint8_t Mask[32];
+	Std$String_block *Subject;
+	unsigned long Start, Index, Limit;
+} any_char_generator;
+
+typedef struct any_char_resume_data {
+	any_char_generator *Generator;
+	Std$Function_argument Result;
+} any_char_resume_data;
+
+static inline void *findcset(const char *Chars, uint8_t *Mask, int Length) {
+    do {
+        char Char = *Chars;
+        if (Mask[Char / 8] & (1 << (Char % 8))) return Chars;
+        ++Chars;
+    } while (--Length);
+    return 0;
+};
+
+static long resume_any_char_string(any_char_resume_data *Data) {
+	any_char_generator *Generator = Data->Generator;
+	Std$String_block *Subject = Generator->Subject;
+	unsigned long Index = Generator->Index;
+	char *SC = Subject->Chars.Value + Generator->Start;
+	unsigned long SL = Subject->Length.Value - Generator->Start;
+	while (SC) {
+		void *Position = findcset(SC, Generator->Mask, SL);
+		if (Position) {
+			unsigned int Last = Position - Subject->Chars.Value + 1;
+			Generator->Index = Index;
+			Generator->Start = Last;
+			Generator->Subject = Subject;
+			Data->Result.Val = Std$Integer$new_small(Index + Last);
+			return SUSPEND;
+		};
+		Index += Subject->Length.Value;
+		++Subject;
+		SL = Subject->Length.Value;
+		SC = Subject->Chars.Value;
+	};
+	return FAILURE;
+};
+
+METHOD("any", TYP, Std$String$T, TYP, Std$String$T) {
+	Std$String_t *Arg0 = Args[1].Val;
+	Std$String_t *Arg1 = Args[0].Val;
+	if (Arg0->Length.Value == 0) {
+		return Std$Function$call(Std$Integer$ToSmallSmall, 2, Result, Std$Integer$new_small(1), 0, &Arg1->Length, 0);
+	} else {
+	    uint8_t Mask[32];
+	    memset(Mask, 0, 32);
+	    for (Std$String_block *Block = Arg0->Blocks; Block->Length.Value; ++Block) {
+	        char *Chars = Block->Chars.Value;
+	        for (int I = 0; I < Block->Length.Value; ++I) {
+	            char Char = Chars[I];
+	            Mask[Char / 8] |= 1 << (Char % 8);
+	        };
+	    };
+		unsigned long Index = 0;
+		for (Std$String_block *Subject = Arg1->Blocks; Subject->Length.Value; ++Subject) {
+			void *Position = findcset(Subject->Chars.Value, Mask, Subject->Length.Value);
+			if (Position) {
+				any_char_generator *Generator = new(any_char_generator);
+				unsigned int Last = Position - Subject->Chars.Value + 1;
+				Generator->Start = Last;
+				Generator->Index = Index;
+				memcpy(Generator->Mask, Mask, 32);
+				Generator->Subject = Subject;
+				Generator->State.Run = Std$Function$resume_c;
+				Generator->State.Invoke = resume_any_char_string;
+				Result->Val = Std$Integer$new_small(Index + Last);
+				Result->State = Generator;
+				return SUSPEND;
+			};
+			Index += Subject->Length.Value;
+		};
+		return FAILURE;
+	};
+};
+
+typedef struct split_char_generator {
+	Std$Function_cstate State;
+	uint8_t Mask[32];
+	Std$String_block *SB;
+	const char *SC;
+	unsigned long SL, SI;
+} split_char_generator;
+
+typedef struct split_char_resume_data {
+	split_char_generator *Generator;
+	Std$Function_argument Result;
+} split_char_resume_data;
+
+static inline int charcset(char Char, uint8_t *CSet) {
+    return CSet[Char / 8] & (1 << (Char % 8));
+};
+
+static long resume_split_char_string(any_char_resume_data *Data) {
+	split_char_generator *Generator = Data->Generator;
+	uint8_t *Mask = Generator->Mask;
+	unsigned long SI = Generator->SI;
+	Std$String_block *SB = Generator->SB;
+	const char *SC = Generator->SC;
+	unsigned long SL = Generator->SL;
+	while (charcset(*SC, Mask) != 0) {
+		++SI;
+		if (--SL == 0) {
+			++SB;
+			SC = SB->Chars.Value;
+			SL = SB->Length.Value;
+			if (SC == 0) return FAILURE;
+		} else {
+			++SC;
+		};
+	};
+	unsigned long SI0 = SI;
+	Std$String_block *SB0 = SB;
+	const char *SC0 = SC;
+	unsigned long SL0 = SL;
+	while (charcset(*SC, Mask) == 0) {
+		++SI;
+		if (--SL == 0) {
+			++SB;
+			SC = SB->Chars.Value;
+			SL = SB->Length.Value;
+			if (SC == 0) {
+				int NoOfBlocks = SB - SB0;
+				Std$String_t *Slice = Riva$Memory$alloc(sizeof(Std$String_t) + (NoOfBlocks + 1) * sizeof(Std$String_block));
+				Slice->Type = Std$String$T;
+				Slice->Length.Type = Std$Integer$SmallT;
+				Slice->Length.Value = SI - SI0;
+				Slice->Count = NoOfBlocks;
+				Slice->Blocks[0].Length.Type = Std$Integer$SmallT;
+				Slice->Blocks[0].Length.Value = SL0;
+				Slice->Blocks[0].Chars.Type = Std$Address$T;
+				Slice->Blocks[0].Chars.Value = SC0;
+				if (--NoOfBlocks) memcpy(Slice->Blocks + 1, SB0 + 1, NoOfBlocks * sizeof(Std$String_block));
+				Data->Result.Val = Slice;
+				return SUCCESS;
+			};
+		} else {
+			++SC;
+		};
+	};
+	if (SL == SB->Length.Value) {
+		int NoOfBlocks = SB - SB0;
+		Std$String_t *Slice = Riva$Memory$alloc(sizeof(Std$String_t) + (NoOfBlocks + 1) * sizeof(Std$String_block));
+		Slice->Type = Std$String$T;
+		Slice->Length.Type = Std$Integer$SmallT;
+		Slice->Length.Value = SI - SI0;
+		Slice->Count = NoOfBlocks;
+		Slice->Blocks[0].Length.Type = Std$Integer$SmallT;
+		Slice->Blocks[0].Length.Value = SL0;
+		Slice->Blocks[0].Chars.Type = Std$Address$T;
+		Slice->Blocks[0].Chars.Value = SC0;
+		if (--NoOfBlocks) memcpy(Slice->Blocks + 1, SB0 + 1, NoOfBlocks * sizeof(Std$String_block));
+		Data->Result.Val = Slice;
+	} else {
+		int NoOfBlocks = (SB - SB0) + 1;
+		Std$String_t *Slice = Riva$Memory$alloc(sizeof(Std$String_t) + (NoOfBlocks + 1) * sizeof(Std$String_block));
+		Slice->Type = Std$String$T;
+		Slice->Length.Type = Std$Integer$SmallT;
+		Slice->Length.Value = SI - SI0;
+		Slice->Count = NoOfBlocks;
+		if (--NoOfBlocks) {
+			Slice->Blocks[0].Length.Type = Std$Integer$SmallT;
+			Slice->Blocks[0].Length.Value = SL0;
+			Slice->Blocks[0].Chars.Type = Std$Address$T;
+			Slice->Blocks[0].Chars.Value = SC0;
+			Slice->Blocks[NoOfBlocks].Length.Type = Std$Integer$SmallT;
+			Slice->Blocks[NoOfBlocks].Length.Value = SB->Length.Value - SL;
+			Slice->Blocks[NoOfBlocks].Chars.Type = Std$Address$T;
+			Slice->Blocks[NoOfBlocks].Chars.Value = SB->Chars.Value;
+			if (--NoOfBlocks) memcpy(Slice->Blocks + 1, SB0 + 1, NoOfBlocks * sizeof(Std$String_block));
+		} else {
+			Slice->Blocks[0].Length.Type = Std$Integer$SmallT;
+			Slice->Blocks[0].Length.Value = SL0 - SL;
+			Slice->Blocks[0].Chars.Type = Std$Address$T;
+			Slice->Blocks[0].Chars.Value = SC0;
+		};
+		Data->Result.Val = Slice;
+	};
+	Generator->SC = SC;
+	Generator->SL = SL;
+	Generator->SI = SI;
+	Generator->SB = SB;
+	return SUSPEND;
+};
+
+METHOD("split", TYP, Std$String$T, TYP, Std$String$T) {
+	Std$String_t *Arg0 = Args[1].Val;
+	Std$String_t *Arg1 = Args[0].Val;
+	if (Arg0->Length.Value == 0) {
+		if (Arg1->Length.Value == 0) return FAILURE;
+		chars_generator *Gen = Riva$Memory$alloc(sizeof(chars_generator));
+		Gen->Subject = Arg1->Blocks;
+		Gen->Left = Gen->Subject->Length.Value - 1;
+		Gen->Next = Gen->Subject->Chars.Value;
+		Gen->State.Run = Std$Function$resume_c;
+		Gen->State.Invoke = resume_chars_string;
+		Result->Val = Std$String$new_length(Gen->Next++, 1);
+		Result->State = Gen;
+		return SUSPEND;
+	} else {
+	    uint8_t Mask[32];
+	    memset(Mask, 0, 32);
+	    for (Std$String_block *Block = Arg0->Blocks; Block->Length.Value; ++Block) {
+	        char *Chars = Block->Chars.Value;
+	        for (int I = 0; I < Block->Length.Value; ++I) {
+	            char Char = Chars[I];
+	            Mask[Char / 8] |= 1 << (Char % 8);
+	        };
+	    };
+		unsigned long SI = 1;
+		Std$String_block *SB = Arg1->Blocks;
+		const char *SC = SB->Chars.Value;
+		unsigned long SL = SB->Length.Value;
+		while (charcset(*SC, Mask) != 0) {
+			++SI;
+			if (--SL == 0) {
+				++SB;
+				SC = SB->Chars.Value;
+				SL = SB->Length.Value;
+				if (SC == 0) return FAILURE;
+			} else {
+				++SC;
+			};
+		};
+		unsigned long SI0 = SI;
+        Std$String_block *SB0 = SB;
+        const char *SC0 = SC;
+        unsigned long SL0 = SL;
+        while (charcset(*SC, Mask) == 0) {
+        	++SI;
+        	if (--SL == 0) {
+        		++SB;
+        		SC = SB->Chars.Value;
+        		SL = SB->Length.Value;
+        		if (SC == 0) {
+        			int NoOfBlocks = SB - SB0;
+        			Std$String_t *Slice = Riva$Memory$alloc(sizeof(Std$String_t) + (NoOfBlocks + 1) * sizeof(Std$String_block));
+        			Slice->Type = Std$String$T;
+        			Slice->Length.Type = Std$Integer$SmallT;
+        			Slice->Length.Value = SI - SI0;
+        			Slice->Count = NoOfBlocks;
+        			Slice->Blocks[0].Length.Type = Std$Integer$SmallT;
+        			Slice->Blocks[0].Length.Value = SL0;
+        			Slice->Blocks[0].Chars.Type = Std$Address$T;
+        			Slice->Blocks[0].Chars.Value = SC0;
+        			if (--NoOfBlocks) memcpy(Slice->Blocks + 1, SB0 + 1, NoOfBlocks * sizeof(Std$String_block));
+        			Result->Val = Slice;
+        			return SUCCESS;
+        		};
+        	} else {
+        		++SC;
+        	};
+        };
+        if (SL == SB->Length.Value) {
+			int NoOfBlocks = SB - SB0;
+			Std$String_t *Slice = Riva$Memory$alloc(sizeof(Std$String_t) + (NoOfBlocks + 1) * sizeof(Std$String_block));
+			Slice->Type = Std$String$T;
+			Slice->Length.Type = Std$Integer$SmallT;
+			Slice->Length.Value = SI - SI0;
+			Slice->Count = NoOfBlocks;
+			Slice->Blocks[0].Length.Type = Std$Integer$SmallT;
+			Slice->Blocks[0].Length.Value = SL0;
+			Slice->Blocks[0].Chars.Type = Std$Address$T;
+			Slice->Blocks[0].Chars.Value = SC0;
+			if (--NoOfBlocks) memcpy(Slice->Blocks + 1, SB0 + 1, NoOfBlocks * sizeof(Std$String_block));
+			Result->Val = Slice;
+        } else {
+			int NoOfBlocks = (SB - SB0) + 1;
+			Std$String_t *Slice = Riva$Memory$alloc(sizeof(Std$String_t) + (NoOfBlocks + 1) * sizeof(Std$String_block));
+			Slice->Type = Std$String$T;
+			Slice->Length.Type = Std$Integer$SmallT;
+			Slice->Length.Value = SI - SI0;
+			Slice->Count = NoOfBlocks;
+			if (--NoOfBlocks) {
+				Slice->Blocks[0].Length.Type = Std$Integer$SmallT;
+				Slice->Blocks[0].Length.Value = SL0;
+				Slice->Blocks[0].Chars.Type = Std$Address$T;
+				Slice->Blocks[0].Chars.Value = SC0;
+				Slice->Blocks[NoOfBlocks].Length.Type = Std$Integer$SmallT;
+				Slice->Blocks[NoOfBlocks].Length.Value = SB->Length.Value - SL;
+				Slice->Blocks[NoOfBlocks].Chars.Type = Std$Address$T;
+				Slice->Blocks[NoOfBlocks].Chars.Value = SB->Chars.Value;
+				if (--NoOfBlocks) memcpy(Slice->Blocks + 1, SB0 + 1, NoOfBlocks * sizeof(Std$String_block));
+			} else {
+				Slice->Blocks[0].Length.Type = Std$Integer$SmallT;
+				Slice->Blocks[0].Length.Value = SL0 - SL;
+				Slice->Blocks[0].Chars.Type = Std$Address$T;
+				Slice->Blocks[0].Chars.Value = SC0;
+			};
+			Result->Val = Slice;
+        };
+        split_char_generator *Generator = new(split_char_generator);
+        Generator->SC = SC;
+        Generator->SL = SL;
+        Generator->SI = SI;
+        Generator->SB = SB;
+        memcpy(Generator->Mask, Mask, 32);
+		Generator->State.Run = Std$Function$resume_c;
+		Generator->State.Invoke = resume_split_char_string;
+		Result->State = Generator;
+		return SUSPEND;
+	};
 };

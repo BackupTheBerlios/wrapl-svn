@@ -1,7 +1,7 @@
 #ifndef IO_SOCKET_H
 #define IO_SOCKET_H
 
-#include <IO/Posix.h>
+#include <IO/Native.h>
 
 #define RIVA_MODULE IO$Socket
 #include <Riva-Header.h>

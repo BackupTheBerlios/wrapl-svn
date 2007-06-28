@@ -1,13 +1,7 @@
 #ifndef IO_FILE_H
 #define IO_FILE_H
 
-#ifdef WINDOWS
-    #include <IO/Windows.h>
-    #define NATIVE(x) IO$Windows ## x
-#else
-    #include <IO/Posix.h>
-    #define NATIVE(x) IO$Posix ## x
-#endif
+#include <IO/Native.h>
 
 #define RIVA_MODULE IO$File
 #include <Riva-Header.h>
