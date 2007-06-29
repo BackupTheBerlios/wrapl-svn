@@ -69,7 +69,7 @@ label_t *compiler_t::function_t::push_loop(label_t *Start, label_t *Exit) {
 	Loop->Free1 = new bitset_t();
 	Loop->Start0 = Start;
 	Loop->Trap = Trap;
-	if (Block) Loop->Receiver = Block->Receiver;
+	if (Handler) Loop->Receiver = Handler->Receiver;
 	Start->link(Loop->Start = new label_t);
 	Loop->Exit = Exit;
 	Loop->Prev = this->Loop;
@@ -80,6 +80,28 @@ label_t *compiler_t::function_t::push_loop(label_t *Start, label_t *Exit) {
 void compiler_t::function_t::pop_loop() {
 	if (Loop->NoOfLocals) Loop->Start0->scope(Loop->Index, Loop->NoOfLocals);
 	Loop = Loop->Prev;
+};
+
+void compiler_t::function_t::push_exit() {
+	loop_t *Loop = this->Loop;
+	this->Loop = Loop->Prev;
+	Loop->Prev = ExitLoop;
+	ExitLoop = Loop;
+	handler_t *Handler = this->Handler;
+	this->Handler = Handler->Prev;
+	Handler->Prev = ExitHandler;
+	ExitHandler = Handler;
+};
+
+void compiler_t::function_t::pop_exit() {
+	loop_t *Loop = ExitLoop;
+	ExitLoop = Loop->Prev;
+	Loop->Prev = this->Loop;
+	this->Loop = Loop;
+	handler_t *Handler = ExitHandler;
+	ExitHandler = Handler->Prev;
+	Handler->Prev = this->Handler;
+	this->Handler = Handler;
 };
 
 void compiler_t::function_t::push_expression() {
@@ -110,15 +132,15 @@ void compiler_t::function_t::pop_assignment() {
 	Assignment = Assignment->Prev;
 };
 
-void compiler_t::function_t::push_block(label_t *Receiver) {
-	block_t *Block = new block_t;
-	Block->Receiver = Receiver;
-	Block->Prev = this->Block;
-	this->Block = Block;
+void compiler_t::function_t::push_handler(label_t *Receiver) {
+	handler_t *Handler = new handler_t;
+	Handler->Receiver = Receiver;
+	Handler->Prev = this->Handler;
+	this->Handler = Handler;
 };
 
-void compiler_t::function_t::pop_block() {
-	Block = Block->Prev;
+void compiler_t::function_t::pop_handler() {
+	Handler = Handler->Prev;
 };
 
 label_t *compiler_t::function_t::push_trap(label_t *Start, label_t *Failure) {
@@ -901,10 +923,10 @@ operand_t *limit_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t *
 	label_t *Label2 = new label_t;
 	label_t *Label3 = new label_t;
 	label_t *Label4 = new label_t;
-	
+
 	Label1->load(Limit->compile(Compiler, Label0, Label1));
 	Label1->limit(Compiler->use_trap());
-	
+
 	Compiler->push_trap(Start, Label2)->link(Label0);
 		uint32_t Index = Compiler->use_trap();
 		for (compiler_t::function_t::trap_t *Trap = Compiler->Function->Trap->Prev; Trap; Trap = Trap->Prev) {
@@ -1332,7 +1354,7 @@ operand_t *block_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t *
 			Label1->load(Receiver.Body->compile(Compiler, Label0, Label1));
 			Label1->link(Success);
 		Compiler->pop_scope();
-		Compiler->push_block(NewHandler);
+		Compiler->push_handler(NewHandler);
 			Label0 = new label_t;
 			Start->recv(NewHandler);
 			Start->link(Label0);
@@ -1357,7 +1379,7 @@ operand_t *block_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t *
 			};
 			Label0->recv(OldHandler);
 			Label0->link(Success);
-		Compiler->pop_block();
+		Compiler->pop_handler();
 	} else {
 		label_t *Label0 = Start;
 		for (expr_t *Expr = Body; Expr; Expr = Expr->Next) {

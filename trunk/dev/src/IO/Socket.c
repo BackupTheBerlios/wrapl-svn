@@ -9,9 +9,9 @@
 #include <sys/un.h>
 #include <netdb.h>
 
-TYPE(T, NATIVE($ReaderT), NATIVE($WriterT), NATIVE($T), IO$Stream$ReaderT, IO$Stream$WriterT, IO$Stream$T);
-TYPE(LocalT, T, NATIVE($ReaderT), NATIVE($WriterT), NATIVE($T), IO$Stream$ReaderT, IO$Stream$WriterT, IO$Stream$T);
-TYPE(InetT, T, NATIVE($ReaderT), NATIVE($WriterT), NATIVE($T), IO$Stream$ReaderT, IO$Stream$WriterT, IO$Stream$T);
+TYPE(T, NATIVE($TextReaderT), NATIVE($TextWriterT), NATIVE($ReaderT), NATIVE($WriterT), NATIVE($SeekerT), NATIVE($T), IO$Stream$TextReaderT, IO$Stream$TextWriterT, IO$Stream$WriterT, IO$Stream$SeekerT, IO$Stream$T);
+TYPE(LocalT, T, NATIVE($TextReaderT), NATIVE($TextWriterT), NATIVE($ReaderT), NATIVE($WriterT), NATIVE($SeekerT), NATIVE($T), IO$Stream$TextReaderT, IO$Stream$TextWriterT, IO$Stream$WriterT, IO$Stream$SeekerT, IO$Stream$T);
+TYPE(InetT, T, NATIVE($TextReaderT), NATIVE($TextWriterT), NATIVE($ReaderT), NATIVE($WriterT), NATIVE($SeekerT), NATIVE($T), IO$Stream$TextReaderT, IO$Stream$TextWriterT, IO$Stream$WriterT, IO$Stream$SeekerT, IO$Stream$T);
 
 static IO$Stream_messaget CreateMessage[] = {{IO$Stream$MessageT, "Create Error"}};
 static IO$Stream_messaget BindMessage[] = {{IO$Stream$MessageT, "Bind Error"}};

@@ -691,6 +691,7 @@ static long resume_any_char_string(any_char_resume_data *Data) {
 METHOD("any", TYP, Std$String$T, TYP, Std$String$T) {
 	Std$String_t *Arg0 = Args[1].Val;
 	Std$String_t *Arg1 = Args[0].Val;
+	if (Arg1->Length.Value == 0) return FAILURE;
 	if (Arg0->Length.Value == 0) {
 		return Std$Function$call(Std$Integer$ToSmallSmall, 2, Result, Std$Integer$new_small(1), 0, &Arg1->Length, 0);
 	} else {
@@ -837,6 +838,7 @@ static long resume_split_char_string(any_char_resume_data *Data) {
 METHOD("split", TYP, Std$String$T, TYP, Std$String$T) {
 	Std$String_t *Arg0 = Args[1].Val;
 	Std$String_t *Arg1 = Args[0].Val;
+	if (Arg1->Length.Value == 0) return FAILURE;
 	if (Arg0->Length.Value == 0) {
 		if (Arg1->Length.Value == 0) return FAILURE;
 		chars_generator *Gen = Riva$Memory$alloc(sizeof(chars_generator));
@@ -950,5 +952,87 @@ METHOD("split", TYP, Std$String$T, TYP, Std$String$T) {
 		Generator->State.Invoke = resume_split_char_string;
 		Result->State = Generator;
 		return SUSPEND;
+	};
+};
+
+typedef struct skip_char_generator {
+	Std$Function_cstate State;
+	uint8_t Mask[32];
+	Std$String_block *Subject;
+	unsigned long Start, Index, Limit;
+} skip_char_generator;
+
+typedef struct skip_char_resume_data {
+	skip_char_generator *Generator;
+	Std$Function_argument Result;
+} skip_char_resume_data;
+
+static inline void *skipcset(const char *Chars, uint8_t *Mask, int Length) {
+    do {
+        char Char = *Chars;
+        if (!(Mask[Char / 8] & (1 << (Char % 8)))) return Chars;
+        ++Chars;
+    } while (--Length);
+    return 0;
+};
+
+static long resume_skip_char_string(any_char_resume_data *Data) {
+	skip_char_generator *Generator = Data->Generator;
+	Std$String_block *Subject = Generator->Subject;
+	unsigned long Index = Generator->Index;
+	char *SC = Subject->Chars.Value + Generator->Start;
+	unsigned long SL = Subject->Length.Value - Generator->Start;
+	while (SC) {
+		void *Position = skipcset(SC, Generator->Mask, SL);
+		if (Position) {
+			unsigned int Last = Position - Subject->Chars.Value + 1;
+			Generator->Index = Index;
+			Generator->Start = Last;
+			Generator->Subject = Subject;
+			Data->Result.Val = Std$Integer$new_small(Index + Last);
+			return SUSPEND;
+		};
+		Index += Subject->Length.Value;
+		++Subject;
+		SL = Subject->Length.Value;
+		SC = Subject->Chars.Value;
+	};
+	return FAILURE;
+};
+
+METHOD("skip", TYP, Std$String$T, TYP, Std$String$T) {
+	Std$String_t *Arg0 = Args[1].Val;
+	Std$String_t *Arg1 = Args[0].Val;
+	if (Arg0->Length.Value == 0) {
+		return Std$Function$call(Std$Integer$ToSmallSmall, 2, Result, Std$Integer$new_small(1), 0, &Arg1->Length, 0);
+	} else {
+	    uint8_t Mask[32];
+	    memset(Mask, 0, 32);
+	    for (Std$String_block *Block = Arg0->Blocks; Block->Length.Value; ++Block) {
+	        char *Chars = Block->Chars.Value;
+	        for (int I = 0; I < Block->Length.Value; ++I) {
+	            char Char = Chars[I];
+	            Mask[Char / 8] |= 1 << (Char % 8);
+	        };
+	    };
+		unsigned long Index = 0;
+		for (Std$String_block *Subject = Arg1->Blocks; Subject->Length.Value; ++Subject) {
+			void *Position = skipcset(Subject->Chars.Value, Mask, Subject->Length.Value);
+			if (Position) {
+				skip_char_generator *Generator = new(skip_char_generator);
+				unsigned int Last = Position - Subject->Chars.Value + 1;
+				Generator->Start = Last;
+				Generator->Index = Index;
+				memcpy(Generator->Mask, Mask, 32);
+				Generator->Subject = Subject;
+				Generator->State.Run = Std$Function$resume_c;
+				Generator->State.Invoke = resume_skip_char_string;
+				Result->Val = Std$Integer$new_small(Index + Last);
+				Result->State = Generator;
+				return SUSPEND;
+			};
+			Index += Subject->Length.Value;
+		};
+		return FAILURE;
 	};
 };

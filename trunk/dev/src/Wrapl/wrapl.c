@@ -103,6 +103,13 @@ METHOD("eval", TYP, SessionT) {
 	return Command->compile(Session->Compiler, Result);
 };
 
+METHOD("rest", TYP, SessionT) {
+	session_t *Session = (session_t *)Args[0].Val;
+	Result->Val = (Std$Object_t *)Std$String$new(Session->Scanner->NextChar);
+	Session->Scanner->NextChar = "";
+	return SUCCESS;
+};
+
 extern "C" void __init(Riva$Module_t *Module);
 void __init(Riva$Module_t *Module) {
 	Riva$Module$add_loader(".wrapl", wrapl_load);

@@ -110,10 +110,9 @@ static char *stream_readn(IO$Stream_t *Stream, int Count) {
 	};
 };
 
-
 static char *stream_readl(IO$Stream_t *Stream) {
 	Std$Function_result Result;
-	if (Std$Function$call($read, 2, &Result, Stream, 0) < FAILURE) {
+	if (Std$Function$call($read, 1, &Result, Stream, 0) < FAILURE) {
 		return Std$String$flatten(Result.Val);
 	} else {
 		return 0;

@@ -34,8 +34,8 @@ struct compiler_t {
 			bitset_t *Temps;
 		};
 
-		struct block_t {
-			block_t *Prev;
+		struct handler_t {
+			handler_t *Prev;
 			label_t *Receiver;
 		};
 
@@ -45,9 +45,11 @@ struct compiler_t {
 		};
 
 		function_t *Up;
-		loop_t *Loop;
+		loop_t *Loop, *ExitLoop;
 		trap_t *Trap;
-		block_t *Block;
+
+		handler_t *Handler, *ExitHandler;
+
 		expression_t *Expression;
 		assignment_t *Assignment;
 		frame_t Frame;
@@ -60,12 +62,14 @@ struct compiler_t {
 		uint32_t new_temporary(uint32_t Count = 1);
 		label_t *push_loop(label_t *Start, label_t *Exit);
 		void pop_loop();
+		void push_exit();
+		void pop_exit();
 		void push_expression();
 		void pop_expression();
 		void push_assignment(operand_t *Self);
 		void pop_assignment();
-		void push_block(label_t *Receiver);
-		void pop_block();
+		void push_handler(label_t *Receiver);
+		void pop_handler();
 		label_t *push_trap(label_t *Start, label_t *Failure);
 		uint32_t use_trap();
 		uint32_t use_trap(label_t *Start, label_t *Failure);
@@ -99,12 +103,14 @@ struct compiler_t {
 	uint32_t new_temporary(uint32_t Count = 1) {return Function->new_temporary(Count);};
 	label_t *push_loop(label_t *Start, label_t *Exit) {return Function->push_loop(Start, Exit);};
 	void pop_loop() {return Function->pop_loop();};
+	void push_exit() {Function->push_exit();};
+	void pop_exit() {Function->pop_exit();};
 	void push_expression() {return Function->push_expression();};
 	void pop_expression() {return Function->pop_expression();};
 	void push_assignment(operand_t *Self) {return Function->push_assignment(Self);};
 	void pop_assignment() {return Function->pop_assignment();};
-	void push_block(label_t *Receiver) {return Function->push_block(Receiver);};
-	void pop_block() {return Function->pop_block();};
+	void push_handler(label_t *Receiver) {return Function->push_handler(Receiver);};
+	void pop_handler() {return Function->pop_handler();};
 	label_t *push_trap(label_t *Start, label_t *Failure) {return Function->push_trap(Start, Failure);};
 	uint32_t use_trap() {return Function->use_trap();};
 	uint32_t use_trap(label_t *Start, label_t *Failure) {return Function->use_trap(Start, Failure);};
@@ -115,7 +121,7 @@ struct compiler_t {
 	function_t::loop_t *loop() {return Function->Loop;};
 	label_t *start() {return Function->Trap->Start;};
 	label_t *failure() {return Function->Trap->Failure;};
-	label_t *handler() {return Function->Block ? Function->Block->Receiver : 0;};
+	label_t *handler() {return Function->Handler ? Function->Handler->Receiver : 0;};
 	void push_function();
 	frame_t *pop_function();
 	void push_scope();
