@@ -28,7 +28,7 @@ c_data Version
 	dd Std$Address$T, .chars
 	dd 0, 0, 0, 0
 .chars:
-	db "0.5.3", 0
+	db "0.5.4", 0
 
 c_data WraplT
 	dd Std$Type$T
@@ -247,10 +247,10 @@ select_string:
 	mov ecx, [select_string_case(edx).Length]
 	jecxz .default
 	cmp ecx, eax
-	
+
 ;	Uncomment this line once strings are sorted
 ;	ja .default
-	
+
 	jne .loop
 	mov esi, [select_string_case(edx).String]
 	mov edi, ebx
