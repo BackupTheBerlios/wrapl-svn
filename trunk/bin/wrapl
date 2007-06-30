@@ -29,13 +29,12 @@ REP (
 	) // (
 		Out:write("failure");
 	);
-	RECV Msg DO Msg IN Wrapl.ErrorMessageT => (
-		Out:write("console");
-		Out:write(Msg);
+	RECV msg DO msg IN Wrapl.ErrorMessageT => (
+		Out:writes("console", msg);
 	) // (
 		Out:write("Unhandled message: ");
-		Out:write(Msg);
-		RECV Msg2 DO Out:write("<value>");
+		Out:write(msg);
+		RECV msg2 DO Out:write("<value>");
 	);
 );
 
