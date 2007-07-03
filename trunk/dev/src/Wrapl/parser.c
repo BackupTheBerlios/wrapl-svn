@@ -57,7 +57,7 @@ struct typed_parameters {
 	expr_t *Types;
 };
 
-static expr_t *accept_expr(scanner_t *Scanner);
+expr_t *accept_expr(scanner_t *Scanner);
 static expr_t *parse_expr(scanner_t *Scanner);
 
 static typed_parameters accept_typed_parameters(scanner_t *Scanner) {
@@ -98,7 +98,7 @@ static typed_parameters accept_typed_parameters(scanner_t *Scanner) {
 		return new invoke_expr_t(Scanner->Token.LineNo, Function, accept_term(Scanner));\
 	};
 
-static expr_t *accept_expr_list(scanner_t *Scanner) {
+expr_t *accept_expr_list(scanner_t *Scanner) {
 	expr_t *List = parse_expr(Scanner);
 	if (List == 0) return 0;
 	expr_t *Tail = List;

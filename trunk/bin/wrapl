@@ -9,22 +9,22 @@ IMP Sys.Module;
 
 Out:write("Interactive Wrapl Version: " + Wrapl.Version + "\n");
 
-VAR Session <- Wrapl.SessionNew(In);
-VAR Result;
+VAR session <- Wrapl.SessionNew(In);
+VAR result;
 
 REP (
 	Out:write("--> ");
-	(Result <- Session:eval) => (
-		Out:write(Result);
-		RECV Msg DO Msg IN Symbol.NoMethodMessageT => (
+	(result <- Wrapl.SessionEval(session)) => (
+		Out:write(result);
+		RECV msg DO msg IN Symbol.NoMethodMessageT => (
 			VAR mod;
-			(mod <- Module.FromVal(Result)) => (
+			(mod <- Module.FromVal(result)) => (
 				Out:writes(mod[1]:map("/", "."), ".", mod[2]);
 			) // (
 				Out:write("<value>");
 			);
 		) // (
-			SEND Msg;
+			SEND msg;
 		);
 	) // (
 		Out:write("failure");
