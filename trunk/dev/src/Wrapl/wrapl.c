@@ -79,7 +79,7 @@ GLOBAL_FUNCTION(SessionNew, 1) {
 	return SUCCESS;
 };
 
-METHOD("eval", TYP, SessionT) {
+GLOBAL_FUNCTION(SessionEval, 1) {
 	session_t *Session = (session_t *)Args[0].Val;
 	if (setjmp(Session->Scanner->Error.Handler)) {
 		Session->Scanner->flush();
@@ -103,12 +103,31 @@ METHOD("eval", TYP, SessionT) {
 	return Command->compile(Session->Compiler, Result);
 };
 
-METHOD("rest", TYP, SessionT) {
+GLOBAL_FUNCTION(SessionLine, 1) {
 	session_t *Session = (session_t *)Args[0].Val;
 	Result->Val = (Std$Object_t *)Std$String$new(Session->Scanner->NextChar);
 	Session->Scanner->NextChar = "";
 	return SUCCESS;
 };
+
+GLOBAL_FUNCTION(SessionDef, 3) {
+	session_t *Session = (session_t *)Args[0].Val;
+	operand_t *Operand = new operand_t;
+	Operand->Type = operand_t::CNST;
+	Operand->Value = Args[2].Val;
+	Session->Compiler->declare(Std$String$flatten((Std$String_t *)Args[1].Val), Operand);
+	return SUCCESS;
+};
+
+GLOBAL_FUNCTION(SessionVar, 3) {
+	session_t *Session = (session_t *)Args[0].Val;
+	operand_t *Operand = new operand_t;
+	Operand->Type = operand_t::GVAR;
+	Operand->Address = Args[2].Ref;
+	Session->Compiler->declare(Std$String$flatten((Std$String_t *)Args[1].Val), Operand);
+	return SUCCESS;
+};
+
 
 extern "C" void __init(Riva$Module_t *Module);
 void __init(Riva$Module_t *Module) {
