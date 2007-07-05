@@ -237,8 +237,8 @@ static void scan_string_block(scanner_t *Scanner, const char *EndString, int End
 
 static Std$String_t *scan_string_block0_next(scanner_t *Scanner, int Index, bool *ExprMode) {
 	const char *Line = Scanner->NextChar;
-	const char *Find = strchr(Line, '$');
-	if (Find) {
+	const char *Find;
+	if (Find = strchr(Line, '$')) {
 		if (Find[1] == ';') {
 			int Length = Find + 1 - Line;
 			char *Chars = Riva$Memory$alloc(Length + 1);
@@ -252,7 +252,7 @@ static Std$String_t *scan_string_block0_next(scanner_t *Scanner, int Index, bool
 			String->Blocks[Index].Chars.Type = Std$Address$T;
 			String->Blocks[Index].Chars.Value = Line;
 			return String;
-		} else if (Find[1] == '}') {
+		/*} else if (Find[1] == '}') {
 			int Length = Find - Line;
 			char *Chars = Riva$Memory$alloc(Length + 1);
 			memcpy(Chars, Line, Length);
@@ -267,7 +267,7 @@ static Std$String_t *scan_string_block0_next(scanner_t *Scanner, int Index, bool
 			String->Blocks[Index].Length.Value = Length;
 			String->Blocks[Index].Chars.Type = Std$Address$T;
 			String->Blocks[Index].Chars.Value = Line;
-			return String;
+			return String;*/
 		} else if (Find != Line) {
 			int Length = Find - Line;
 			char *Chars = Riva$Memory$alloc(Length + 1);
@@ -290,6 +290,22 @@ static Std$String_t *scan_string_block0_next(scanner_t *Scanner, int Index, bool
 			*ExprMode = true;
 			return Std$String$Nil;
 		};
+	} else if (Find = strchr(Line, '}')) {
+		int Length = Find - Line;
+		char *Chars = Riva$Memory$alloc(Length + 1);
+		memcpy(Chars, Line, Length);
+		Chars[Length] = 0;
+		Std$String_t *String = (Std$String_t *)Riva$Memory$alloc(sizeof(Std$String_t) + (Index + 2) * sizeof(Std$String_block));
+		String->Type = Std$String$T;
+		String->Length.Type = Std$Integer$SmallT;
+		String->Count = Index + 1;
+		Scanner->NextChar = Find + 1;
+		String->Length.Value += Length;
+		String->Blocks[Index].Length.Type = Std$Integer$SmallT;
+		String->Blocks[Index].Length.Value = Length;
+		String->Blocks[Index].Chars.Type = Std$Address$T;
+		String->Blocks[Index].Chars.Value = Line;
+		return String;
 	} else {
 		const char *NextLine = Scanner->readl(Scanner->Source);
 		if (NextLine == 0) Scanner->raise_error(Scanner->NextToken.LineNo, "Error: end of input in block string");
