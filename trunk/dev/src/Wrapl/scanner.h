@@ -74,6 +74,7 @@
 #define tkRBRACE                         70
 #define tkREFASSIGN                      71
 #define tkDOTDOT                         72
+#define tkSTRBLOCK                       73
 
 extern const char *Tokens[];
 

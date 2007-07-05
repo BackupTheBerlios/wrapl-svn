@@ -425,9 +425,7 @@ func $Add, 2
 c_data Nil
 	dd T
 	dd Std$Integer$SmallT
-	dd 0, 1
-	dd Std$Integer$SmallT, 0
-	dd Std$Address$T, 0
+	dd 0, 0
 	dd 0, 0, 0, 0
 
 c_data Lower

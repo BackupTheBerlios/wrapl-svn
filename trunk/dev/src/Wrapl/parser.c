@@ -376,8 +376,43 @@ static block_expr_t *accept_localstatement(scanner_t *Scanner) {
 
 module_expr_t *accept_module(scanner_t *Scanner, Sys$Module_t *Module);
 
+SYMBOL($AS, "@");
+
+LOCAL_FUNCTION(CreateStringBlock) {
+	for (int I = 0; I < Count; ++I) {
+		Std$Object_t *Arg = Args[I].Val;
+		if (Arg->Type != Std$String$T) {
+			int Status = Std$Function$call((Std$Object_t *)$AS, 2, Result, Arg, 0, Std$String$T, 0);
+			if (Status >= FAILURE) return Status;
+			Args[I].Val = Result->Val;
+		};
+	};
+	int NoOfBlocks = 0, Length = 0;
+	for (int I = 0; I < Count; ++I) {
+		Std$String_t *String = (Std$String_t *)Args[I].Val;
+		NoOfBlocks += String->Count;
+		Length += String->Length.Value;
+	};
+	Std$String_t *String = (Std$String_t *)Riva$Memory$alloc(sizeof(Std$String_t) + (NoOfBlocks + 1) * sizeof(Std$String_block));
+	String->Type = Std$String$T;
+	String->Length.Type = Std$Integer$SmallT;
+	String->Count = NoOfBlocks;
+	void *Block = String->Blocks;
+	for (int I = 0; I < Count; ++I) {
+		Std$String_t *String0 = (Std$String_t *)Args[I].Val;
+		Block = mempcpy(Block, String0->Blocks, String0->Count * sizeof(Std$String_block));
+	};
+	Result->Val = (Std$Object_t *)String;
+	Result->Ref = 0;
+	return SUCCESS;
+};
+
 static expr_t *parse_factor(scanner_t *Scanner) {
 	if (Scanner->parse(tkCONST)) return new const_expr_t(Scanner->Token.LineNo, Scanner->Token.Const);
+	if (Scanner->parse(tkSTRBLOCK)) return new invoke_expr_t(Scanner->Token.LineNo,
+		new const_expr_t(Scanner->Token.LineNo, (Std$Object_t *)&CreateStringBlock),
+		(expr_t *)Scanner->Token.Const
+	);
 	if (Scanner->parse(tkSYMBOL)) return new const_expr_t(Scanner->Token.LineNo, Scanner->Token.Const);
 	if (Scanner->parse(tkIDENT)) {
 		const char *Ident = Scanner->Token.Ident;
@@ -655,7 +690,7 @@ static expr_t *accept_expr2(scanner_t *Scanner, int Precedence) {
 	Scanner->raise_error(Scanner->Token.LineNo, "Error: expected expression not %s\n", Tokens[Scanner->NextToken.Type]);
 };
 
-static expr_t *accept_expr(scanner_t *Scanner);
+expr_t *accept_expr(scanner_t *Scanner);
 
 static expr_t *parse_expr(scanner_t *Scanner) {
 	expr_t *Expr = parse_expr2(Scanner);

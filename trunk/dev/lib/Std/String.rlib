@@ -5,6 +5,7 @@ else
 	prefix("Std$String$")
 end
 export("T")
+export("Nil")
 export("_new")
 export("_copy")
 export("_new_length")
