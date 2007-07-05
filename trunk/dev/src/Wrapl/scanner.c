@@ -245,29 +245,27 @@ static Std$String_t *scan_string_block0_next(scanner_t *Scanner, int Index, bool
 			memcpy(Chars, Line, Length);
 			Chars[Length] = 0;
 			Scanner->NextChar = Find + 2;
-			Std$String_t *String = scan_string_block0_next(Scanner, Index + 2, ExprMode);
+			Std$String_t *String = scan_string_block0_next(Scanner, Index + 1, ExprMode);
 			String->Length.Value += Length;
 			String->Blocks[Index].Length.Type = Std$Integer$SmallT;
 			String->Blocks[Index].Length.Value = Length;
 			String->Blocks[Index].Chars.Type = Std$Address$T;
-			String->Blocks[Index].Chars.Value = Line;
+			String->Blocks[Index].Chars.Value = Chars;
 			return String;
-		/*} else if (Find[1] == '}') {
-			int Length = Find - Line;
+		} else if (Find[1] == '}') {
+			int Length = Find + 1 - Line;
 			char *Chars = Riva$Memory$alloc(Length + 1);
-			memcpy(Chars, Line, Length);
+			memcpy(Chars, Line, Length - 1);
+			Chars[Length - 1] = '}';
 			Chars[Length] = 0;
-			Std$String_t *String = (Std$String_t *)Riva$Memory$alloc(sizeof(Std$String_t) + (Index + 2) * sizeof(Std$String_block));
-			String->Type = Std$String$T;
-			String->Length.Type = Std$Integer$SmallT;
-			String->Count = Index + 1;
 			Scanner->NextChar = Find + 2;
+			Std$String_t *String = scan_string_block0_next(Scanner, Index + 1, ExprMode);
 			String->Length.Value += Length;
 			String->Blocks[Index].Length.Type = Std$Integer$SmallT;
 			String->Blocks[Index].Length.Value = Length;
 			String->Blocks[Index].Chars.Type = Std$Address$T;
-			String->Blocks[Index].Chars.Value = Line;
-			return String;*/
+			String->Blocks[Index].Chars.Value = Chars;
+			return String;
 		} else if (Find != Line) {
 			int Length = Find - Line;
 			char *Chars = Riva$Memory$alloc(Length + 1);
@@ -283,7 +281,7 @@ static Std$String_t *scan_string_block0_next(scanner_t *Scanner, int Index, bool
 			String->Blocks[Index].Length.Type = Std$Integer$SmallT;
 			String->Blocks[Index].Length.Value = Length;
 			String->Blocks[Index].Chars.Type = Std$Address$T;
-			String->Blocks[Index].Chars.Value = Line;
+			String->Blocks[Index].Chars.Value = Chars;
 			return String;
 		} else {
 			Scanner->NextChar = Find + 1;
@@ -304,7 +302,7 @@ static Std$String_t *scan_string_block0_next(scanner_t *Scanner, int Index, bool
 		String->Blocks[Index].Length.Type = Std$Integer$SmallT;
 		String->Blocks[Index].Length.Value = Length;
 		String->Blocks[Index].Chars.Type = Std$Address$T;
-		String->Blocks[Index].Chars.Value = Line;
+		String->Blocks[Index].Chars.Value = Chars;
 		return String;
 	} else {
 		const char *NextLine = Scanner->readl(Scanner->Source);

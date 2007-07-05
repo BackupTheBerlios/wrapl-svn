@@ -300,6 +300,7 @@ void module_init(void) {
 	module_export(Module, "_alias", 0, module_alias);
 	module_export(Module, "_load", 0, module_load);
 	module_export(Module, "_run", 0, module_run);
+	module_export(Module, "_load_file", 0, module_load_file);
 	module_export(Module, "_add_loader", 0, module_add_loader);
 	module_export(Module, "_add_directory", 0, module_add_directory);
 	module_export(Module, "_set_path", 0, module_set_path);
