@@ -396,6 +396,7 @@ LOCAL_FUNCTION(CreateStringBlock) {
 	Std$String_t *String = (Std$String_t *)Riva$Memory$alloc(sizeof(Std$String_t) + (NoOfBlocks + 1) * sizeof(Std$String_block));
 	String->Type = Std$String$T;
 	String->Length.Type = Std$Integer$SmallT;
+	String->Length.Value = Length;
 	String->Count = NoOfBlocks;
 	void *Block = String->Blocks;
 	for (int I = 0; I < Count; ++I) {

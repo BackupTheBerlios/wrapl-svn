@@ -1284,7 +1284,7 @@ operand_t *block_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t *
 					Label0 = Label1;
 				Compiler->pop_trap();
 				Label2->recv(OldReceiver);
-				Label2->back(Compiler->trap());
+				Compiler->back_trap(Label2);
 			};
 			Label0->recv(OldReceiver);
 			Label0->link(Success);

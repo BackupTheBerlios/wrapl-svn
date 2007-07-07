@@ -610,10 +610,10 @@ operand_t *label_t::assemble(const frame_t *Frame, operand_t *Operand) {
 	memset(&Assembly, 0, sizeof(Assembly));
 	use_label(&Assembly, this, true);
 	for (inst_t *Inst = Assembly.Next; Inst; Inst = Inst->Next) Inst->add_sources();
-	
+
 	int NoOfConsts = 0;
 	for (inst_t *Inst = Assembly.Next; Inst; Inst = Inst->Next) NoOfConsts += Inst->noof_consts();
-	
+
 
 	assembler_t *Assembler = new assembler_t;
 	Assembler->UpScopes = sizeof(bstate_t);

@@ -6,6 +6,7 @@
 #include <stdarg.h>
 #include <unistd.h>
 #include <fcntl.h>
+#include <sys/poll.h>
 
 SYMBOL($AS, "@");
 
@@ -24,6 +25,12 @@ static IO$Stream_messaget WriteMessage[] = {{IO$Stream$MessageT, "Write Error"}}
 static IO$Stream_messaget FlushMessage[] = {{IO$Stream$MessageT, "Flush Error"}};
 static IO$Stream_messaget SeekMessage[] = {{IO$Stream$MessageT, "Seek Error"}};
 static IO$Stream_messaget CloseMessage[] = {{IO$Stream$MessageT, "Close Error"}};
+static IO$Stream_messaget PollMessage[] = {{IO$Stream$MessageT, "Poll Error"}};
+
+Std$Integer_smallt __POLLIN[] = {{Std$Integer$SmallT, POLLIN}};
+Std$Integer_smallt __POLLOUT[] = {{Std$Integer$SmallT, POLLOUT}};
+Std$Integer_smallt __POLLHUP[] = {{Std$Integer$SmallT, POLLHUP}};
+Std$Integer_smallt __POLLPRI[] = {{Std$Integer$SmallT, POLLPRI}};
 
 METHOD("flush", TYP, T) {
 	IO$Posix_t *Stream = Args[0].Val;
@@ -245,6 +252,19 @@ METHOD("tell", TYP, T) {
 
 static int posix_tell(IO$Posix_t *Stream) {
 	return lseek(Stream->Handle, 0, SEEK_CUR);
+};
+
+METHOD("poll", TYP, T, TYP, Std$Integer$SmallT, TYP, Std$Integer$SmallT) {
+	IO$Posix_t *Stream = Args[0].Val;
+	struct pollfd PollFd[] = {{Stream->Handle, ((Std$Integer_smallt *)Args[1].Val)->Value, 0}};
+	int Status = poll(PollFd, 1, ((Std$Integer_smallt *)Args[2].Val)->Value);
+	if (Status < 0) {
+		Result->Val = PollMessage;
+		return MESSAGE;
+	};
+	if (Status == 0) return FAILURE;
+	Result->Val = Std$Integer$new_small(PollFd->revents);
+	return SUCCESS;
 };
 
 static IO$Stream_t_methods _T_Methods = {

@@ -726,6 +726,53 @@ METHOD("any", TYP, Std$String$T, TYP, Std$String$T) {
 	};
 };
 
+METHOD("any", TYP, Std$String$T, TYP, Std$String$T, TYP, Std$Integer$SmallT) {
+	Std$String_t *Arg0 = Args[1].Val;
+	Std$String_t *Arg1 = Args[0].Val;
+	int Start = ((Std$Integer_smallt *)Args[2].Val)->Value - 1;
+	if (Start < 0) Start = 0;
+	if (Arg1->Length.Value <= Start) return FAILURE;
+	if (Arg0->Length.Value == 0) {
+		return Std$Function$call(Std$Integer$ToSmallSmall, 2, Result, Std$Integer$new_small(1), 0, &Arg1->Length, 0);
+	} else {
+	    uint8_t Mask[32];
+	    memset(Mask, 0, 32);
+	    for (Std$String_block *Block = Arg0->Blocks; Block->Length.Value; ++Block) {
+	        char *Chars = Block->Chars.Value;
+	        for (int I = 0; I < Block->Length.Value; ++I) {
+	            char Char = Chars[I];
+	            Mask[Char / 8] |= 1 << (Char % 8);
+	        };
+	    };
+		unsigned long Index = 0;
+		Std$String_block *Subject = Arg1->Blocks;
+		while (Start >= Subject->Length.Value) Start -= (Subject++)->Length.Value;
+		char *SC = Subject->Chars.Value + Start;
+		unsigned long SL = Subject->Length.Value - Start;
+		while (Subject->Length.Value) {
+			void *Position = findcset(SC, Mask, SL);
+			if (Position) {
+				any_char_generator *Generator = new(any_char_generator);
+				unsigned int Last = Position - Subject->Chars.Value + 1;
+				Generator->Start = Last;
+				Generator->Index = Index;
+				memcpy(Generator->Mask, Mask, 32);
+				Generator->Subject = Subject;
+				Generator->State.Run = Std$Function$resume_c;
+				Generator->State.Invoke = resume_any_char_string;
+				Result->Val = Std$Integer$new_small(Index + Last);
+				Result->State = Generator;
+				return SUSPEND;
+			};
+			++Subject;
+			SC = Subject->Chars.Value;
+			SL = Subject->Length.Value;
+			Index += Subject->Length.Value;
+		};
+		return FAILURE;
+	};
+};
+
 typedef struct split_char_generator {
 	Std$Function_cstate State;
 	uint8_t Mask[32];
@@ -1031,6 +1078,53 @@ METHOD("skip", TYP, Std$String$T, TYP, Std$String$T) {
 				Result->State = Generator;
 				return SUSPEND;
 			};
+			Index += Subject->Length.Value;
+		};
+		return FAILURE;
+	};
+};
+
+METHOD("skip", TYP, Std$String$T, TYP, Std$String$T, TYP, Std$Integer$SmallT) {
+	Std$String_t *Arg0 = Args[1].Val;
+	Std$String_t *Arg1 = Args[0].Val;
+	int Start = ((Std$Integer_smallt *)Args[2].Val)->Value - 1;
+	if (Start < 0) Start = 0;
+	if (Arg1->Length.Value <= Start) return FAILURE;
+	if (Arg0->Length.Value == 0) {
+		return Std$Function$call(Std$Integer$ToSmallSmall, 2, Result, Std$Integer$new_small(1), 0, &Arg1->Length, 0);
+	} else {
+	    uint8_t Mask[32];
+	    memset(Mask, 0, 32);
+	    for (Std$String_block *Block = Arg0->Blocks; Block->Length.Value; ++Block) {
+	        char *Chars = Block->Chars.Value;
+	        for (int I = 0; I < Block->Length.Value; ++I) {
+	            char Char = Chars[I];
+	            Mask[Char / 8] |= 1 << (Char % 8);
+	        };
+	    };
+		unsigned long Index = 0;
+		Std$String_block *Subject = Arg1->Blocks;
+		while (Start >= Subject->Length.Value) Start -= (Subject++)->Length.Value;
+		char *SC = Subject->Chars.Value + Start;
+		unsigned long SL = Subject->Length.Value - Start;
+		while (Subject->Length.Value) {
+			void *Position = skipcset(SC, Mask, SL);
+			if (Position) {
+				skip_char_generator *Generator = new(skip_char_generator);
+				unsigned int Last = Position - Subject->Chars.Value + 1;
+				Generator->Start = Last;
+				Generator->Index = Index;
+				memcpy(Generator->Mask, Mask, 32);
+				Generator->Subject = Subject;
+				Generator->State.Run = Std$Function$resume_c;
+				Generator->State.Invoke = resume_skip_char_string;
+				Result->Val = Std$Integer$new_small(Index + Last);
+				Result->State = Generator;
+				return SUSPEND;
+			};
+			++Subject;
+			SC = Subject->Chars.Value;
+			SL = Subject->Length.Value;
 			Index += Subject->Length.Value;
 		};
 		return FAILURE;

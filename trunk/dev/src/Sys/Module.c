@@ -78,6 +78,21 @@ GLOBAL_FUNCTION(Load, 2) {
 	};
 };
 
+GLOBAL_FUNCTION(LoadFile, 1) {
+	char *Name = Std$String$flatten(Args[0].Val);
+	Sys$Module_t *Handle = Riva$Module$load_file(Name);
+	if (Handle) {
+		Sys$Module_t *Module = new(Sys$Module_t);
+		Module->Type = T;
+		Module->Handle = Handle;
+		Result->Val = Module;
+		return SUCCESS;
+	} else {
+		Result->Val = Std$String$new("Module not found");
+		return MESSAGE;
+	};
+};
+
 GLOBAL_FUNCTION(Run, 2) {
 	char *Path = (Args[0].Val == Std$Object$Nil) ? 0 : Std$String$flatten(Args[0].Val);
 	char *Name = Std$String$flatten(Args[1].Val);

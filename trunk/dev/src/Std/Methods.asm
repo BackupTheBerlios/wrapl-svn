@@ -505,6 +505,26 @@ section .data
 .format:
 	db "%d", 0, 0
 
+method "hex", SMALLINT
+	push byte 10
+	call Riva$Memory$_alloc_atomic
+	mov [esp], eax
+	mov ebx, [argument(edi).Val]
+	push dword [small_int(ebx).Value]
+	push dword .format
+	push eax
+	call sprintf
+	add esp, byte 12
+	call Std$String$_new
+	add esp, byte 4
+	mov ecx, eax
+	xor edx, edx
+	xor eax, eax
+	ret
+section .data
+.format:
+	db "%x", 0, 0
+
 extern __gmpz_get_str
 
 method "@", BIGINT, VAL, Std$String$T

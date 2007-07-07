@@ -12,6 +12,46 @@ In order to build Wrapl/Riva, you will need the following programs/libraries:
 6: Lua:
 	http://www.lua.org/
 
-If you want to use the GTK+ binding (still in testing), you will also need:
-7. GTK+:
-	http://www.gtk.org/
+For installation under Windows, you will also need:
+7. Mingw:
+	http://www.mingw.org/
+
+After building/installing the above libraries, change into the dev directory
+(where this file is) and run omake.
+After building, you will have to create bin/riva.conf by copying and modifying
+bin/riva.conf.<platform> where <platform> is either linux or windows.
+You will also need to edit bin/wrapl (under linux) or bin/wrapl.bat (under
+Windows) and change the first line to point to the riva binary.
+
+Run wrapl without arguments and you should get an interactive Wrapl console:
+
+Interactive Wrapl Version: 0.5.4
+--> 
+
+which you can exit by pressing Ctrl+C.
+
+To run a single Wrapl module, run riva <modulename>.
+
+For further information, including documentation and source code, please visit
+http://wrapl.berlios.de.
+
+If you have any comments or queries, please contact me at
+rajamukherji@gmail.com.
+
+This software is released under version 3 of the GNU GENERAL PUBLIC LICENSE. See
+LICENSE for more details. Note that this license does not cover any software
+written by anybody else in Wrapl, nor does it cover any works produced by such
+software.
+
+The following software/libraries are used in Wrapl/Riva:
+
+The Hans-Boehm garbage collector:
+	http://www.hpl.hp.com/personal/Hans_Boehm/gc/
+The libconfuse configuration file parser:
+	http://www.nongnu.org/confuse/
+The GNU MP Bignum library:
+	http://gmplib.org/
+The Lua programming language:
+	http://www.lua.org/
+Ben Pfaff's GNU libavl:
+	http://www.stanford.edu/~blp/avl/
