@@ -4,10 +4,14 @@
 
 #include <stdarg.h>
 #include <stdio.h>
+
+#ifdef LINUX
 #include <sys/socket.h>
 #include <netinet/in.h>
 #include <sys/un.h>
 #include <netdb.h>
+#else
+#endif
 
 TYPE(T, NATIVE($TextReaderT), NATIVE($TextWriterT), NATIVE($ReaderT), NATIVE($WriterT), NATIVE($SeekerT), NATIVE($T), IO$Stream$TextReaderT, IO$Stream$TextWriterT, IO$Stream$WriterT, IO$Stream$SeekerT, IO$Stream$T);
 TYPE(LocalT, T, NATIVE($TextReaderT), NATIVE($TextWriterT), NATIVE($ReaderT), NATIVE($WriterT), NATIVE($SeekerT), NATIVE($T), IO$Stream$TextReaderT, IO$Stream$TextWriterT, IO$Stream$WriterT, IO$Stream$SeekerT, IO$Stream$T);
@@ -20,14 +24,18 @@ static IO$Stream_messaget AcceptMessage[] = {{IO$Stream$MessageT, "Accept Error"
 static IO$Stream_messaget ConnectMessage[] = {{IO$Stream$MessageT, "Connect Error"}};
 static IO$Stream_messaget HostNotFoundMessage[] = {{IO$Stream$MessageT, "Host Not Found"}};
 
+#ifdef LINUX
 Std$Integer_smallt STREAM[] = {{Std$Integer$SmallT, IO$Socket$SOCKSTREAM}};
 Std$Integer_smallt DGRAM[] = {{Std$Integer$SmallT, IO$Socket$SOCKDGRAM}};
 Std$Integer_smallt RAW[] = {{Std$Integer$SmallT, IO$Socket$SOCKRAW}};
 
 Std$Integer_smallt INET[] = {{Std$Integer$SmallT, IO$Socket$PFINET}};
 Std$Integer_smallt LOCAL[] = {{Std$Integer$SmallT, IO$Socket$PFLOCAL}};
+#else
+#endif
 
 GLOBAL_FUNCTION(New, 2) {
+#ifdef LINUX
 	int Handle, Style;
 	Std$Type_t *Type;
 	if (Args[1].Val == STREAM) {
@@ -59,8 +67,11 @@ GLOBAL_FUNCTION(New, 2) {
 	Stream->Handle = Handle;
 	Result->Val = Stream;
 	return SUCCESS;
+#else
+#endif
 };
 
+#ifdef LINUX
 METHOD("bind", TYP, LocalT, TYP, Std$String$T) {
 	struct sockaddr_un Name;
 	Name.sun_family = AF_LOCAL;
@@ -140,3 +151,4 @@ METHOD("connect", TYP, InetT, TYP, Std$String$T, TYP, Std$Integer$SmallT) {
 	};
 	return SUCCESS;
 };
+#endif

@@ -400,7 +400,13 @@ LOCAL_FUNCTION(CreateStringBlock) {
 	void *Block = String->Blocks;
 	for (int I = 0; I < Count; ++I) {
 		Std$String_t *String0 = (Std$String_t *)Args[I].Val;
+#ifdef LINUX
 		Block = mempcpy(Block, String0->Blocks, String0->Count * sizeof(Std$String_block));
+#else
+		int Length = String0->Count * sizeof(Std$String_block);
+		memcpy(Block, String0->Blocks, Length);
+		Block = Block + Length;
+#endif
 	};
 	Result->Val = (Std$Object_t *)String;
 	Result->Ref = 0;

@@ -29,7 +29,7 @@ static int wrapl_load(Riva$Module_t *Module, const char *Path) {
 		return 0;
 	};
 	module_expr_t *Expr;
-	if (Scanner->parse(tkHASH)) {
+	if (Scanner->parse(tkHASH) || Scanner->parse(tkAT)) {
 		Scanner->flush();
 		Expr = parse_module(Scanner, Module0);
 		Methods->close(Source);
