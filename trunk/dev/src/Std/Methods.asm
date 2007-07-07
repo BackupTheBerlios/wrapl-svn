@@ -599,6 +599,14 @@ method "apply", TYP, Std$Array$T, TYP, Std$Function$T
 	mov eax, [value(ecx).Type]
 	jmp [type(eax).Invoke]
 
+method "apply", TYP, Std$Function$T, TYP, Std$Array$T
+	mov eax, [argument(edi + 8).Val]
+	mov ecx, [argument(edi).Val]
+	mov esi, [small_int(array(eax).Length).Value]
+	mov edi, [array(eax).Values]
+	mov eax, [value(ecx).Type]
+	jmp [type(eax).Invoke]
+
 extern __gmpz_init_set_si
 extern __gmpz_add_ui
 extern __gmpz_sub_ui
@@ -964,7 +972,7 @@ method "^", SMALLINT, SMALLINT
 	call __gmpz_init_set_si
 	add esp, byte 8
 	mov eax, [argument(edi + 8).Val]
-	push dword [small_int(eax).Value]	
+	push dword [small_int(eax).Value]
 	push ebx
 	push ebx
 	call __gmpz_pow_ui

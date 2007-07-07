@@ -462,6 +462,9 @@ public.CProgram(name, files) =
        $(rm -f $(OFILES))
        $(rm -f $(NAME))
    
+   package: $(NAME)
+       cp($(NAME), $(PKG_DIR))
+   
    return $(NAME)
 
 
@@ -481,6 +484,9 @@ public.RivaProgram(name, files) =
        $(rm -f $(OFILES))
        $(rm -f $(NAME))
        $(rm -f $(LIST))
+
+   package: $(NAME)
+       cp(-v $(NAME), $(PKG_DIR)$(NAME))
 
    return $(NAME)
 #
