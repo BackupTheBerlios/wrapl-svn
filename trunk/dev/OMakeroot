@@ -14,8 +14,6 @@ LIB_DIR = $(dir ../lib)$(DIRSEP)
 SRC_DIR = $(dir src)$(DIRSEP)
 OBJ_DIR = $(dir obj)$(DIRSEP)
 
-PKG_DIR = $(dir pkg)$(DIRSEP)
-
 DEV_BIN = $(dir bin)$(DIRSEP)
 DEV_LIB = $(dir lib)$(DIRSEP)
 DEV_INC = $(dir inc)
