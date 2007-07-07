@@ -2,6 +2,9 @@
 #include <Riva/Memory.h>
 //#include <stdlib.h>
 
+/*
+This file was modified from avl.c in GNU libavl
+*/
 
 SYMBOL($AT, "@");
 SYMBOL($COMP, "?");
