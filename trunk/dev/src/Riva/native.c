@@ -44,6 +44,8 @@ void native_init(void) {
 
 #else
 
+#define LINUX_THREADS
+
 #include <pthread.h>
 #include <dlfcn.h>
 #include <unistd.h>
@@ -76,7 +78,11 @@ void native_init(void) {
 	void *Handle = GC_dlopen(0, RTLD_LOCAL | RTLD_LAZY);
 	module_setup(module_alias("libc"), Handle, native_import);
 	module_setup(module_alias("libgcc"), Handle, native_import);
-	module_setup(module_alias("libpthread"), Handle, native_import);
+	module_t *Module = module_alias("libpthread");
+	module_setup(Module, Handle, native_import);
+	module_export(Module, "pthread_create", 0, GC_pthread_create);
+	module_export(Module, "pthread_join", 0, GC_pthread_join);
+	module_export(Module, "pthread_detach", 0, GC_pthread_detach);
 };
 
 #endif

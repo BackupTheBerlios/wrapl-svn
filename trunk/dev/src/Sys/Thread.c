@@ -1,85 +1,70 @@
 #include <Std.h>
 #include <Riva/Memory.h>
-#include <Riva/Thread.h>
 
 TYPE(T);
 TYPE(KeyT);
 TYPE(MutexT);
 
-static Riva$Thread_key *ThreadKey;
+#ifdef WINDOWS
+#else
 
-typedef struct thread {
+#include <pthread.h>
+
+static pthread_key_t ThreadKey;
+
+typedef struct thread_t {
 	Std$Type_t *Type;
-	Riva$Thread_t *Handle;
+	pthread_t Handle;
 	Std$Function_result Result;
-	long Return;
+	long Status;
 	Std$Object_t *Function;
 	Std$Function_argument *Args;
 	unsigned long Count;
-} thread;
+} thread_t;
 
-typedef struct mutex {
+typedef struct mutex_t {
 	Std$Type_t *Type;
-	Riva$Thread_mutex *Handle;
-} mutex;
+	pthread_mutex_t Handle;
+} mutex_t;
 
-typedef struct key {
+typedef struct key_t {
 	Std$Type_t *Type;
-	Riva$Thread_key *Handle;
-} key;
+	pthread_key_t Handle;
+} key_t;
 
-/*static long invoke_suspend(c_fun *Fun, unsigned long Count, argument *Args, result *Result) {
-	Result->Val = integer$new_small(SuspendThread(((thread *)Args[0].Val)->Handle));
-	Result->Ref = 0;
-	return SUCCESS;
-};
-
-static long invoke_resume(c_fun *Fun, unsigned long Count, argument *Args, result *Result) {
-	Result->Val = integer$new_small(ResumeThread(((thread *)Args[0].Val)->Handle));
-	Result->Ref = 0;
-	return SUCCESS;
-};*/
-
-/*local_function(_result) {
-	thread *Thread = Args[0].Val;
-	//if (Thread->Result.Val == 0) pthread_join(Thread->Handle, 0);
-	*Result = Thread->Result;
-	return Thread->Return;
-};*/
-
-static void *thread_func(thread *Thread) {
-	Riva$Thread$key_set(ThreadKey, Thread);
+static void *thread_func(thread_t *Thread) {
+	pthread_setspecific(ThreadKey, Thread);
 	Std$Function$invoke(Thread->Function, Thread->Count, &Thread->Result, Thread->Args);
 };
 
 GLOBAL_FUNCTION(New, 1) {
-	thread *Thread = new(thread);
+	thread_t *Thread = new(thread_t);
 	Thread->Type = T;
 	Thread->Function = Args[0].Val;
 	Thread->Count = Count - 1;
 	Thread->Args = Riva$Memory$alloc(Thread->Count * sizeof(Std$Function_argument));
-	__builtin_memcpy(Thread->Args, &Args[1], Thread->Count * sizeof(Std$Function_argument));
-	Thread->Handle = Riva$Thread$new(thread_func, Thread);
+	memcpy(Thread->Args, &Args[1], Thread->Count * sizeof(Std$Function_argument));
+	pthread_create(&Thread->Handle, 0, thread_func, Thread);
 	Result->Val = Thread;
 	return SUCCESS;
 };
 
 GLOBAL_FUNCTION(Self, 0) {
-	Result->Val = Riva$Thread$key_get(ThreadKey);
+	Result->Val = pthread_getspecific(ThreadKey);
 	return SUCCESS;
 };
 
 GLOBAL_FUNCTION(MutexNew, 0) {
-	mutex *Mutex = new(mutex);
+	mutex_t *Mutex = new(mutex_t);
 	Mutex->Type = MutexT;
-	Mutex->Handle = Riva$Thread$mutex_new();
+	pthread_mutex_init(&Mutex->Handle, 0);
 	Result->Val = Mutex;
 	return SUCCESS;
 };
 
 METHOD("lock", TYP, MutexT) {
-	Riva$Thread_mutex *Mutex = ((mutex *)Args[0].Val)->Handle;
-	if (Riva$Thread$mutex_lock(Mutex)) {
+	mutex_t *Mutex = Args[0].Val;
+	if (pthread_mutex_lock(&Mutex->Handle)) {
 		Result->Val = Std$String$new("Error locking mutex");
 		return MESSAGE;
 	};
@@ -87,30 +72,30 @@ METHOD("lock", TYP, MutexT) {
 };
 
 METHOD("trylock", TYP, MutexT) {
-	Riva$Thread_mutex *Mutex = ((mutex *)Args[0].Val)->Handle;
-	return Riva$Thread$mutex_trylock(Mutex) ? FAILURE : SUCCESS;
+	mutex_t *Mutex = Args[0].Val;
+	return pthread_mutex_trylock(&Mutex->Handle) ? FAILURE : SUCCESS;
 };
 
 METHOD("lock", TYP, MutexT) {
-	Riva$Thread_mutex *Mutex = ((mutex *)Args[0].Val)->Handle;
-	if (Riva$Thread$mutex_unlock(Mutex)) {
-		Result->Val = Std$String$new("Error unlocking mutex");
+	mutex_t *Mutex = Args[0].Val;
+	if (pthread_mutex_unlock(&Mutex->Handle)) {
+		Result->Val = Std$String$new("Error locking mutex");
 		return MESSAGE;
 	};
 	return SUCCESS;
 };
 
 GLOBAL_FUNCTION(key_new, 0) {
-	key *Key = new(key);
+	key_t *Key = new(key_t);
 	Key->Type = KeyT;
-	Key->Handle = Riva$Thread$key_new(0);
+	pthread_key_create(&Key->Handle, 0);
 	Result->Val = Key;
 	return SUCCESS;
 };
 
 METHOD("get", TYP, KeyT) {
-	Riva$Thread_key *Key = ((key *)Args[0].Val)->Handle;
-	void *Value = Riva$Thread$key_get(Key);
+	key_t *Key = Args[0].Val;
+	void *Value = pthread_getspecific(Key->Handle);
 	if (Value) {
 		Result->Val = Value;
 		return SUCCESS;
@@ -120,15 +105,17 @@ METHOD("get", TYP, KeyT) {
 };
 
 METHOD("set", TYP, KeyT, SKP) {
-	Riva$Thread_key *Key = ((key *)Args[0].Val)->Handle;
-	Riva$Thread$key_set(Key, Args[1].Val);
+	key_t *Key = Args[0].Val;
+	pthread_setspecific(Key->Handle, Args[1].Val);
 	return SUCCESS;
 };
 
 void __init (void *Module) {
-	ThreadKey = Riva$Thread$key_new(0);
-	thread *Thread = new(thread);
+	pthread_key_create(&ThreadKey, 0);
+	thread_t *Thread = new(thread_t);
 	Thread->Type = T;
-	Thread->Handle = Riva$Thread$self();
-	Riva$Thread$key_set(ThreadKey, Thread);
+	Thread->Handle = pthread_self();
+	pthread_setspecific(ThreadKey, Thread);
 };
+
+#endif
