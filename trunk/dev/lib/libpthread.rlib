@@ -1,4 +1,4 @@
-module("libpthread.so")
+module("libpthread")
 export("recv")
 export("__pthread_rwlock_unlock")
 export("__pthread_rwlock_rdlock")

@@ -63,11 +63,9 @@ static unsigned long __stdcall ThreadFunc(thread_init_t *Init) {
 };
 
 static void *thread_new(void *(*StartFunc)(void *), void *Arg) {
-    WaitForSingleObject(ThreadMutex, INFINITE);
     thread_init_t Init = {StartFunc, Arg};
     unsigned long ThreadID;
 	void *Thread = CreateThread(0, 0, ThreadFunc, &Init, 0, &ThreadID);
-	ReleaseMutex(ThreadMutex);
 	return (void *)Thread;
 };
 
@@ -107,7 +105,7 @@ static int thread_mutex_unlock(void *Mutex) {
 };
 
 void thread_init(void) {
-    ThreadMutex = CreateMutex(0, 0, 0);
+    //ThreadMutex = CreateMutex(0, 0, 0);
 	module_t *Module = module_alias("Riva/Thread");
 	module_export(Module, "_new", 0, thread_new);
 	module_export(Module, "_self", 0, thread_self);

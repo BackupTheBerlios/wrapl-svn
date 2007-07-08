@@ -1,6 +1,5 @@
 #include <Std.h>
 #include <Riva/Memory.h>
-#include <Riva/Thread.h>
 #include <string.h>
 
 TYPE(T);
@@ -12,16 +11,17 @@ TYPE(T);
 #else
 
 #include <ucontext.h>
+#include <pthread.h>
 
-static Riva$Thread_key *CoexprKey;
+static pthread_key_t CoexprKey;
 
 #endif
 
 typedef struct coexpr_t {
 	Std$Type_t *Type;
-	struct coexpr_t *Caller;
-	Std$Function_argument Transfer;
-	int Status;
+	volatile struct coexpr_t *Caller;
+	volatile Std$Function_argument Transfer;
+	volatile int Status;
 #ifdef WINDOWS
     void *Fiber;
     Std$Function_argument *Args;
@@ -32,17 +32,17 @@ typedef struct coexpr_t {
 #endif
 } coexpr_t;
 
-static coexpr_t *switch_coexpr(coexpr_t *Old, coexpr_t *New, int Status, Std$Function_argument Transfer) {
+static inline coexpr_t *switch_coexpr(coexpr_t *Old, coexpr_t *New, int Status, Std$Function_argument Transfer) {
     New->Transfer = Transfer;
 	New->Status = Status;
 	New->Caller = Old;
 #ifdef WINDOWS
     SwitchToFiber(New->Fiber);
 #else
-	Riva$Thread$key_set(CoexprKey, New);
+	pthread_setspecific(CoexprKey, New);
 	swapcontext(&Old->Context, &New->Context);
 #endif
-	return Old;
+	return Old->Caller;
 };
 
 #ifdef WINDOWS
@@ -115,21 +115,21 @@ GLOBAL_FUNCTION(New, 1) {
 
 #endif
 
-GLOBAL_FUNCTION(Self, 0) {
+static inline coexpr_t *self(void) {
 #ifdef WINDOWS
-    Result->Val = GetFiberData();
+    return GetFiberData();
 #else
-	Result->Val = Riva$Thread$key_get(CoexprKey);
+	return pthread_getspecific(CoexprKey);
 #endif
+};
+
+GLOBAL_FUNCTION(Self, 0) {
+	Result->Val = self();
 	return SUCCESS;
 };
 
 GLOBAL_FUNCTION(Yield, 1) {
-#ifdef WINDOWS
-    coexpr_t *Caller = GetFiberData();
-#else
-	coexpr_t *Caller = Riva$Thread$key_get(CoexprKey);
-#endif
+    coexpr_t *Caller = self();
 	coexpr_t *Callee = Caller->Caller;
 	switch_coexpr(Caller, Callee, SUCCESS, Args[0]);
 	Result->Arg = Caller->Transfer;
@@ -137,11 +137,7 @@ GLOBAL_FUNCTION(Yield, 1) {
 };
 
 METHOD("^", SKP, TYP, T) {
-#ifdef WINDOWS
-    coexpr_t *Caller = GetFiberData();
-#else
-	coexpr_t *Caller = Riva$Thread$key_get(CoexprKey);
-#endif
+	coexpr_t *Caller = self();
 	coexpr_t *Callee = Args[1].Val;
 	switch_coexpr(Caller, Callee, SUCCESS, Args[0]);
 	Result->Arg = Caller->Transfer;
@@ -149,11 +145,7 @@ METHOD("^", SKP, TYP, T) {
 };
 
 METHOD("^", TYP, T) {
-#ifdef WINDOWS
-    coexpr_t *Caller = GetFiberData();
-#else
-	coexpr_t *Caller = Riva$Thread$key_get(CoexprKey);
-#endif
+	coexpr_t *Caller = self();
 	coexpr_t *Callee = Args[0].Val;
 	switch_coexpr(Caller, Callee, SUCCESS, (Std$Function_argument){Std$Object$Nil, 0});
 	Result->Arg = Caller->Transfer;
@@ -161,11 +153,7 @@ METHOD("^", TYP, T) {
 };
 
 METHOD("%", TYP, T) {
-#ifdef WINDOWS
-    coexpr_t *Coexpr = GetFiberData();
-#else
-	coexpr_t *Coexpr = Riva$Thread$key_get(CoexprKey);
-#endif
+	coexpr_t *Coexpr = self();
 	if (Coexpr->Caller) {
 		Result->Val = Coexpr->Caller;
 		return SUCCESS;
@@ -175,11 +163,7 @@ METHOD("%", TYP, T) {
 };
 
 METHOD("collect", TYP, T) {
-#ifdef WINDOWS
-    coexpr_t *Caller = GetFiberData();
-#else
-	coexpr_t *Caller = Riva$Thread$key_get(CoexprKey);
-#endif
+	coexpr_t *Caller = self();
 	coexpr_t *Callee = Args[0].Val;
 	Std$List_t *List = new(Std$List_t);
 	List->Type = Std$List$T;
@@ -232,8 +216,8 @@ void __init(void *Module) {
 #ifdef WINDOWS
     Coexpr->Fiber = ConvertThreadToFiber(Coexpr);
 #else
-	CoexprKey = Riva$Thread$key_new(0);
-	Riva$Thread$key_set(CoexprKey, Coexpr);
+	pthread_key_create(&CoexprKey, 0);
+	pthread_setspecific(CoexprKey, Coexpr);
 #endif
 	//switch_coexpr(Coexpr, Coexpr, SUCCESS, (Std$Function_argument){Std$Object$Nil, 0});
 	Coexpr->Caller = Coexpr;

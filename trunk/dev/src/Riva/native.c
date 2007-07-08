@@ -76,7 +76,7 @@ void native_init(void) {
 	void *Handle = GC_dlopen(0, RTLD_LOCAL | RTLD_LAZY);
 	module_setup(module_alias("libc"), Handle, native_import);
 	module_setup(module_alias("libgcc"), Handle, native_import);
-	//module_setup(module_alias("libpthread"), Handle, native_import);
+	module_setup(module_alias("libpthread"), Handle, native_import);
 };
 
 #endif
