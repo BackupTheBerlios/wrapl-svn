@@ -2845,7 +2845,7 @@ method "[]", STRING, SMALLINT, SMALLINT
 	sub edx, ecx
 	push edx
 	sub esi, [esp + 8]
-	lea eax, [sizeof(string) + (esi + 1) + sizeof(string_block)]
+	lea eax, [sizeof(string) + esi + 2 * sizeof(string_block)]
 	shr esi, 4
 	push ecx
 	inc esi
