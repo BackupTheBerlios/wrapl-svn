@@ -818,7 +818,7 @@ operand_t *send_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t *S
 	label_t *Label0 = new label_t;
 	Label0->load(Value->compile(Compiler, Start, Label0));
 	Label0->send();
-	return 0;
+	return Register;
 };
 
 operand_t *self_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t *Success) {DEBUG
