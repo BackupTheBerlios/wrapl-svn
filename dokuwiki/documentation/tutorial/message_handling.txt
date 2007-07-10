@@ -15,3 +15,5 @@ DEF ConvertToString(x) (
 );
 </code>
 This function will convert its argument to a string (using ''@'') but return ''"<value>"'' if no method exists for the conversion.
+
+If the body of a handler does not send any message, then in completion, the block which contains that handler will exit with the value produced by the body of that handler. The body of a handler can contain a ''STEP'' expression which will cause the current loop to restart, allowing a piece of code to be executed until it does not produce any messages.
