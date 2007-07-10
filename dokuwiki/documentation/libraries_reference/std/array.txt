@@ -1,0 +1,14 @@
+====== Array ======
+===== Overview =====
+''Std.Array'' provides a basic array type.
+
+===== Exports =====
+
+==== T ====
+Instances of ''Std.Array.T'' are arrays of other elements. The length of an array is fixed when it is created. The elements in an array can be of any type and do not have to have same type as other elements in the same array.
+
+=== :"[]"(array@T, index@Std.Integer.SmallT) ===
+Returns the element at position ''index'' in ''array'' where the first element has index 0, the second has index 1, and so on. The returned value is a variable and so may be assigned to.
+
+==== New(size) ====
+Returns a new array with ''size'' elements, all initialized to ''[[.Object#Nil|Std.Object.Nil]]''.

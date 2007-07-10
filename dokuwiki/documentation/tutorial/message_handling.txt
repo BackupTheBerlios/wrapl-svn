@@ -1,0 +1,17 @@
+===== Message Handling =====
+
+Messages in Wrapl are like exceptions, except that they are not intended to be used just for error handling. To send a message, use the expresssion "''SEND ''//value//". Any value can be sent as a message. A "''SEND ''//value//" expression does not produce any values, instead execution jumps immediately to the current message handler. To set the current message handler, you use a //receive// expression in a block, "''RECV ''//name//'' DO ''//expression//" where //name// is the variable that will be assigned the value of the message before //expression// is evaluated.
+
+Note that when a handler is entered, the previous handler is restored, hence messages not intended for the current handler should be resent using ''SEND''. The previous handler is also restored when the block is exited normally, i.e. at the end of the block or when the function returns.
+
+For example:
+<code>
+DEF ConvertToString(x) (
+    VAR s <- x @ String.T;
+    RECV msg DO (
+        msg IN Symbol.NoMethodMessageT => RET "<value>";
+        SEND msg;
+    );
+);
+</code>
+This function will convert its argument to a string (using ''@'') but return ''"<value>"'' if no method exists for the conversion.

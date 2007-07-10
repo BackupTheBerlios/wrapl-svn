@@ -1,0 +1,33 @@
+===== Modules =====
+Code in Wrapl can be separated into modules. Each module consists of any number of variable and/or constant declarations, any of which can be exported allowing their use in other modules. To export a variable or constant, follow its declaration with an exclamation mark, "''!''". To use such an exported variable/constant in another module, you can use an import declaration. For example:
+<code>
+MOD Mod1;
+
+IMP IO.Terminal;
+
+DEF f!(x) (
+    Terminal.Out:write("x = ");
+    Terminal.Out:write(x);
+    Terminal.Out:write("\n");
+);
+
+END Mod1.
+</code>
+is a module which exports a single constant, ''f''. In addition, it imports the module ''IO.Terminal'' and uses the constant ''Out'' exported by that module.
+
+If you use the same imported variable/constant repeatedly, you can define the name of that variable/constant in the current scope by using a ''USE'' clause.
+<code>
+MOD Mod1;
+
+IMP IO.Terminal USE Out;
+
+DEF f!(x) (
+    Out:write("x = ");
+    Out:write(x);
+    Out:write("\n");
+);
+
+END Mod1.
+</code>
+
+The full list of modules that are provided with Wrapl can be found in the [[:Documentation:Libraries Reference]].

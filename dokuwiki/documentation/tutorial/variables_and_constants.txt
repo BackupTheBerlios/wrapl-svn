@@ -1,0 +1,43 @@
+===== Variables and Constants =====
+In Wrapl, all identifiers must be declared. Variables are declared as "''VAR ''//name//'' ;''". This declares a new variable //name// in the current scope, which will be initialized to ''NIL''. A variable can optionally be initialized when declared, "''VAR ''//name//'' <- ''//value//'' ;''".
+
+Variables can be used at any point within the scope they are declared in, even before the actual declarations (i.e. foward declarations are unnecessary). However, the variable is only assigned its initial value at the actual declaration, prior to this it will have the value ''NIL''. For example:
+<code>
+Out:writes("x = ", x, "\n");
+VAR x <- 200;
+Out:writes("x = ", x, "\n");
+</code>
+will output
+<code>
+x = NIL
+x = 200
+</code>
+
+The alternative syntax "''VAR ''//name//''(''//parameters//'') ''//body//'' ;''" can be used to initialize a variable to hold a function. For example:
+<code>
+VAR fact <- <n> (
+    VAR r <- 1;
+    EVERY r <- r * 1:to(n);
+    RET r;
+);
+</code>
+can be written as
+<code>
+VAR f(n) (
+    VAR r <- 1;
+    EVERY r <- r * 1:to(n);
+    RET r;
+);
+</code>
+
+Constants can be declared in Wrapl using "''DEF''" instead of "''VAR''". All constants must be given an initial value when declared, however a constant is assigned its initial value before any variables are initialized or any other expressions are evaluated in the same scope. For example:
+<code>
+Out:writes("x = ", x, "\n");
+DEF x <- 200;
+Out:writes("x = ", x, "\n");
+</code>
+will output
+<code>
+x = 200
+x = 200
+</code>

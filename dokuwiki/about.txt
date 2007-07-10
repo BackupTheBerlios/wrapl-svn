@@ -1,0 +1,18 @@
+====== About Wrapl ======
+Wrapl is a high level programming language designed for writing both small scripts as well as large gui based applications. It is also intended to be embedded into applications written in other languages, allowing Wrapl to be used as an extension language. Wrapl's flexibility and power allows small scripts to written quickly whereas its modularity and consistency allows larger applications to be developed efficiently.
+===== Origins =====
+The rapl in Wrapl stand for Raja's Attempt at a Programming Language and is simply my attempt at designing and implementing my own programming language. The extra w stands for Was and is simply there to avoid confusion with an existing language called RAPL. Wrapl has changed in design since its original conception, mainly due to the other programming languages I have used over the years to implement a compiler for Wrapl. The current and most likely final version of Wrapl gets its goal directed evaluation and high level data types from the [[Links#Icon]] programming language, while it gets its modularity from [[Links#Modula-3]]. Both languages were used to implement a Wrapl compiler at some stage. Although multiple dispatch in Wrapl was conceived and implemented independently, it was refined after using [[Links#Cecil]] to implement a compiler for Wrapl. Wrapl owes a lot to these and other languages which have all inspired its development.
+
+===== Features =====
+Here are some of Wrapl's main features
+
+  - Goal Directed Evaluation
+    * Expression don't just evaluate to a single value, rather they can produce more than one value or even fail to produce a value at all.
+  - Expression Based
+    * Everything that isn't a declaration in Wrapl is an expression 
+  - Object Oriented
+    * Wrapl uses a class based object model with multiple inheritance allowing code to be reused in larger projects.
+  - Multiple Dispatch
+    * Methods in Wrapl dispatch on the types and values of all their arguments, making it easier to extend methods for subtypes.
+  - Modularity
+    * Code can be placed in separate modules with explicit control over imported and exported variables preventing namespace clashes.

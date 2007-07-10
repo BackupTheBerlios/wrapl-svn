@@ -1,0 +1,46 @@
+====== Links ======
+===== Programming Languages =====
+
+==== Icon ====
+The [[http://www.cs.arizona.edu/icon/|Icon programming language]] forms the main basis for Wrapl's execution model. It is a mature project and has not had any major changes to language in some time. In my opinion, Icon is probably the best scripting language ever made, and it is only the lack of newer language features such as object-orientation and multiple dispatch that pushed me to develop Wrapl in the first place. The first Wrapl compilers were written in Icon.
+
+==== Unicon ====
+The [[http://www.unicon.org|Unicon programming language]] is an extended dialect of Icon which also adds object orientation to the language. However it maintains 99% backwards compatibility with Icon and targets the same/very similar virtual machine.
+
+==== Modula-3 ====
+The [[http://www.m3.org|Modula-3 programming language]] is the a descendant of the Modula-2/Pascal family of languages. It provides object-orientation, generic modules, garbage collection and probably the best module system ever. It also comes with a huge library including a platform independent gui toolkit. Basically the best application development language I have ever come across. Several Wrapl compilers were also written in Modula-3 and the current Modula-2/Oberon-2 version is based on the last Modula-3 version.
+
+==== Modula-2 and Oberon-2 ====
+The [[http://www.excelsior-usa.com/xdsx86.html|XDS compiler]] compiles both Modula-2 and Oberon-2 (and allows features from each language to be mixed) and is altogether an excellent development enviroment. It does not come with a large library but the installation is small and straightfoward and is able to interface nicely with libraries written in C. The current Wrapl compiler is written with this compiler.
+
+==== Cecil ====
+[[http://www.cs.washington.edu/research/projects/cecil/|Cecil]] is a prototype based object oriented language which uses multiple dispatch (including predicate dispatch) to form quite a powerful language. It does not have a module system yet and the compiler takes a long time to compile even simple programs producing very large executables, but the language is still worth looking at. There was a Wrapl compiler written in Cecil, I've lost it now but the experience was useful in adjusting multiple dispatch features in Wrapl.
+
+==== C ====
+[[http://en.wikipedia.org/wiki/C_programming_language|C]] is a horrible programming language. However since I have now written my compiler/loader in it, I feel it deserves a link. But it still sucks and the more I use it, the more I believe that.
+
+===== Development Tools =====
+
+==== Nasm ====
+[[http://nasm.sourceforge.net|Nasm]] is in my opinion the only x86 assembler that can be used to write large programs. Although the Wrapl compiler has been written in several different languages, the runtime has always almost been written in Nasm.
+
+==== Crimson Editor ====
+[[http://www.crimsoneditor.com|Crimson Editor]] has been my editor of choice for a long time.
+
+==== Ollydbg ====
+[[http://www.ollydbg.de/|Ollydbg]] is an excellent assembly level debugger for Windows.
+
+==== CC386 ====
+[[http://members.tripod.com/~ladsoft/cc386.htm|CC386]] is a good open source C compiler that is easy to modify and can produce [[Links#Nasm]] assembly code.
+
+==== Pelles C ====
+[[http://www.smorgasbordet.com/pellesc/|Pelles C]] is a good C compiler that is being used to develop the current version of the compiler/loader.
+
+==== Code::Blocks ====
+[[http://www.codeblocks.org|Code::Blocks]] is a good I.D.E. to use with the Pelles C compiler (although Pelles C does come with its own I.D.E.).
+
+==== GCC ====
+[[http://gcc.gnu.org|GCC]] is a C compiler. That's all I'm going to say about it.
+
+==== GTK+ ====
+I am currently using [[http://www.gtk.org|GTK+]] for my debugger and find it fairly easy and straightfoward to produce nice gui applications. Also it doesn't force you to use C++ like so many other gui toolkits.

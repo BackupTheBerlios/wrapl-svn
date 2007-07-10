@@ -1,0 +1,20 @@
+====== Symbol ======
+===== Overview =====
+''Std.Symbol'' provides the symbol type, which are used as multimethods.
+
+===== Exports =====
+
+==== T ====
+Instances of ''Std.Symbol.T'' are called symbols. They are essential multimethods; type/value signatures can be added to a symbol with corresponding functions. When invoked, a symbol will first find its closest matching signature to the current arguments and then call the corresponding function with those arguments.
+
+==== New() ====
+Returns a new symbol.
+
+==== In ====
+Used for adding signatures using ''[[.Symbol#Set]]''. Specifies that in order to match the signature, the corresponding argument must be in the following type.
+
+==== Is ====
+Used for adding signatures using ''[[.Symbol#Set]]''. Specifies that in order to match the signature, the corresponding argument must be the following value.
+
+==== Set(symbol, function, {In, type | Is, value | NIL, NIL}) ====
+Adds a new signature to ''symbol'' with corresponding function ''function''. Two arguments are required for each argument in the signature. ''In, type'' denotes a type match. ''Is, value'' denotes a value match. ''NIL, NIL'' matches any argument. This function is automatically called by a ''TO ...'' expression, see [[..:..:Tutorial#Multiple Dispatch]].

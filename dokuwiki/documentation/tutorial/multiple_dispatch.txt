@@ -1,0 +1,31 @@
+===== Multiple Dispatch =====
+Being object-oriented, Wrapl provides methods; functions whose behaviour depend on the types of their arguments. In most OOP languages, methods depend only on the type of the first argument (which is usually written preceding the rest of the function call). However in Wrapl, methods depend on the types //and// values of all arguments.
+
+Methods in Wrapl are stored in //symbols//; a colon '':'' followed immediately by either an identifier or a string. For example, '':x'', '':write'' and '':"*"'' are all symbols. A symbol represented by an identifier is the same as the symbol represented by the equivalent string. Thus '':write'' and '':"write"'' represent the same symbol. In addition, any symbols represented by the same string are the same. Symbols are created implicitly when they are first used.
+
+Each symbol has a set of //signatures// and corresponding functions, where each signature is a list of types or values. When a symbol is called with arguments, the types and values of the arguments are checked against the various signatures and the function corresponding to the closet matching signature is called with the same arguments. If no signature matches the call, then a ''Lang.Symbol.NoMethodMessageT'' message is sent. When calling a symbol, the first argument can be placed before the symbol for convenience. For example: ''t:x'' is equivalent to '':x(t)'' and ''t:m(a, b, c)'' is equivalent to '':m(t, a, b, c)''.
+
+To add a new signature and corresponding function, the syntax "''TO ''//symbol//''(''//signature//'') DO ''//function//" is used. Here a signature looks like a list of parameters, each of which can be followed by either "''@ ''//type//" or "''= ''//value//". If "''@ ''//type//" is present then the signature matches a call if the type of the corresponding argument is either //type// or a subtype of //type//. If "''= ''//value//" is present then the signature matches a call if the corresponding argument is the same object as //value// (not just equal in value). If neither is present, then the signature matches a call if any argument is supplied for that parameter. The actual names of the parameters are ignored.
+
+The syntax "''TO ''//symbol//''(''//signature//'') ''//expression//" is shorthand for "''TO ''//symbol//''(''//signature//'') DO <''//parameters//''> ''//expression//" where the parameter names are taken from the signature.
+
+Note that ''TO ...'' expressions are translated into calls to ''Lang.Symbol.Set''. Hence they may occur in other expressions, for example within a conditional expression. Also, the signature and corresponding function will not work until after the call to ''Lang.Symbol.Set'' has returned, allowing signature/function pairs to be temporarily overridden, or even prevent them being overridden by calling the symbol with the correct arguments and checking for a ''Lang.Symbol.NoMethodMessageT'' message.
+
+Example:
+<code>
+DEF T <- <[]>;
+DEF U <- <[T]>;
+
+TO :a(t@T) Out:write(":a(t@T)");
+TO :a(u@U) Out:write(":a(u@U)");
+TO :b(t@T) Out:write(":b(t@T)"):
+
+VAR t <- T(), u <- U();
+
+t:a;    // writes ":a(t@T)"
+t:b;    // writes ":b(t@T)"
+u:a;    // writes ":a(u@U)"
+u:b;    // writes ":b(t@T)"
+t:c;    // sends a Symbol.NoMethodMessageT message
+
+</code>

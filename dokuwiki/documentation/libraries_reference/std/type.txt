@@ -1,0 +1,23 @@
+====== Type ======
+===== Overview =====
+''Std.Type'' provides the type of all types as well as function for dynamically creating new types.
+
+===== Exports =====
+
+==== T ====
+All types in Wrapl are instances of ''Std.Type.T''.
+Invoking an instance of ''Std.Type.T'' will create a new instance of that type, with its field initialized to the arguments of the call. Note that subtypes of types with fields will not order their fields in any particular way and so should not be invoked with arguments, instead use "//type//'':new(''//args//'')''".
+
+=== :new(type@T, ...) ===
+The method "'':new(t@T, ''//args//'')''" will create an instance of ''t'' and call "//instance//'':init(''//args//'')''". There should be little need to override '':new'' for most types, however, it can be used for example to reuse an existing instance or to preemptively fail.
+
+=== :init(object, ...) ===
+The default implementation of '':init'' is to simply copy the arguments into the fields of the instance in order and so should not be used for subtypes of types with fields (as explained above). Of course, '':init'' can and should be overridden for each type as necessary.
+
+
+
+
+
+
+==== New(Fields, Parents) ====
+Returns a new type which inherits from ''Parents'' and adds the fields in ''Fields'', an instance of ''[[.Array#T|Std.Array.T]]''. Each element in ''Fields'' must be an instance of ''[[.Symbol#T|Std.Symbol.T]]''. ''New'' is primarily intended for use by the Wrapl compiler, see [[Documentation:Tutorial#Types]].

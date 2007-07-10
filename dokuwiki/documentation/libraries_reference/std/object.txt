@@ -1,0 +1,11 @@
+====== Object ======
+===== Overview =====
+''Std.Object'' provides the base type of all types as well as the constant ''NIL''.
+
+===== Exports =====
+
+==== T ====
+All types in Wrapl are subtypes of ''Std.Object.T''. There is no need to specify this when creating a type, this inheritance is implicit.
+
+==== Nil ====
+The constant ''Object.Nil'' is an instance of ''Object.T'' used as the value of ''NIL''.

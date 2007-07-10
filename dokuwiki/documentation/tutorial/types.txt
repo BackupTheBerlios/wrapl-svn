@@ -1,0 +1,36 @@
+===== Types =====
+Wrapl supports object-oriented programming (OOP) and provides a class-based object model; i.e. there are classes, called types in Wrapl, and instances of those classes, called objects. Every value in Wrapl is an object and therefore is an instance of some type. Types may inherit from any number of other types (multiple inheritance) and in turn may be extended by any number of subtypes.
+
+Wrapl provides a number of predefined types, some of which are listed in the table below.
+^Type (''Lang.''*)   ^Description                                      ^Representation                   ^
+|''Object.T''        |The base type of all other objects.              |''NIL'' is the only notable instance.|
+|''Type.T''          |The type of all types.                           |''<[''//parent//'', ''//...//'']''//field//'', ''//...//''>''.|
+|''Integer.T''       |Integer values of unlimited size.                |Any number of digits.|
+|''Real.T''          |Limited (64bit) precision floating point numbers.|Any number of digits containing a decimal point and/or exponent.|
+|''String.T''        |Immutable strings.                               |Characters enclosed in quotes, ''""''. May contain escaped control characters.|
+|''Function.T''      |The base type of all functions.                  |''<''//parameters//''> ''//expression//.|
+|''Symbol.T''        |Multiple dispatch functions.                     |'':''//identifier// or '':"''//string//''"''.|
+|''List.T''          |Mutable lists of objects.                        |''[''//expr//'',''//...//'']''.|
+|''Table.T''         |Key/Value maps.                                  |''{''//expr//'' is ''//expr//'', ''//...//''}''.|
+|''Coexpr.T''        |Encapsulated expression evaluation.              |''DO ''//expr//.|
+
+New types can be created in Wrapl using the syntax "''<[''//parent//'', ''//...//'']''//field//'', ''//...//''>''". A new instance of a type can be created by calling the type like a function.
+
+Each field should be an identifier or a symbol. This is because fields in an object are accessed by calling a symbol with the object as the first parameter. If the field is supplied as an identifier, then the symbol with that name is used to access the field, however if a symbol is supplied directly, then that symbol is used. Note that the expression ''t:x'' is equivalent to '':x(t)''. For example:
+<code>
+DEF T <- <[] x, :":)">;
+
+VAR t <- T();
+t:x <- 100;
+t:":)" <- 200;
+</code>
+
+Each parent  should evaluate to a type. Any number of parents, including none, is allowed. All types implicitly inherit from ''Object.T''. A type will inherit all fields from each of its parents. If a same field is defined in more than one parent, then  only one instance of the field will be allocated. Hence multiple inheritance should be used carefully (as in any language which supports it).
+<code>
+DEF T <- <[] x>;
+DEF U <- <[T] y>;
+
+VAR u <- U();
+u:x <- 100;
+u:y <- 200;
+</code>

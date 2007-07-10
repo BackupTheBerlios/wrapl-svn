@@ -1,0 +1,85 @@
+====== Loops ======
+There are two different forms of looping in Wrapl.
+
+===== REP loops =====
+These have the form "''REP ''//body//" and simply keep evaluating //body//. Thus
+<code>
+REP Out:write("Hello world!\n");
+</code>
+would write:
+<code>
+Hello world!
+Hello world!
+Hello world!
+Hello world!
+...
+</code>
+forever.
+
+However, //body// may be a block which may contain exit expressions "''EXIT ''//value//" which cause the loop to terminate producing the values of //value//. For example:
+<code>
+VAR n <- 1;
+Out:write(REP (
+    n > 1000 => EXIT n;
+    n <- n + n;
+));
+</code>
+would write 1024.
+The //value// after ''EXIT'' is optional; if no value is provided, then the loop produces ''NIL''. The two expressions "''WHILE ''//condition//" and "''UNTIL ''//condition//" are syntax sugar for "//condition//'' /''''/ EXIT NIL''" and "//condition//'' =''''> EXIT NIL''" respectively. Thus a loop like:
+<code>
+while condition do {
+    body
+};
+</code>
+in [[:Links#C]] would look like
+<code>
+REP (WHILE condition;
+    body
+);
+</code>
+in Wrapl. You can have any number of exit expressions (and hence while and until expressions) in a loop.
+
+In addition, the step expression "''STEP''" causes the loop to start the next iteration immediately.
+
+
+===== EVERY loops =====
+These have the form "''EVERY ''//condition//'' DO ''//body//" and for each value produced by //condition//, //body// is executed once. For example:
+<code>
+VAR i;
+EVERY i <- 1:to(5) DO (
+    Out:writes("i = ", i, "\n");
+);
+</code>
+would output
+<code>
+i = 1
+i = 2
+i = 3
+i = 4
+i = 5
+</code>
+Both exit and step expressions (including while/until expressions) will work within //body//. Also, the "''DO ''//body//" clause is optional, if omitted, the body is taken to be NIL, in which the effect of the every expression is to simply cause //condition// to produce all its values. Note that when //condition// fails to produce another value, the entire every expression fails. The only way for an every expression to produce a value is via an exit (while/until) expression.
+
+
+===== Variables in Loops =====
+Unlike most other languages, Wrapl allocates a new instance of any variable declared in a loop for //each// iteration of the loop. This means that if the variable is passed by reference, or used within a closure created inside the loop, on each iteration a different address is used. This is quite useful for generating complex GUIs for example, but can waste time if the variables are not used in this way. In this case, it is more efficient to declare the variable outside the loop.
+<code>
+VAR l <- [];
+VAR i; EVERY i <- 1:to(5) DO (
+    VAR j <- i;
+    l:put(<> i + j);
+);
+
+EVERY Out:writes((l:values)(), "\n");
+</code>
+will output
+<code>
+6
+7
+8
+9
+10
+</code>
+since all closures will use the same instance of ''i'' (which will have the value ''5'' after the every loop ends), but each instance of ''j'' will be different (and assigned the value of ''i'' when the instance was created).
+
+Note that ''(l:values)()'' has to be written since ''l:values()'' would be treated as a simple method call.
