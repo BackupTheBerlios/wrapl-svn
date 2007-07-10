@@ -550,20 +550,51 @@ void label_t::select_object(select_object_inst_t::case_t *Cases, label_t *Defaul
 	append(Inst);
 };
 
-struct typeof_inst_t : load_inst_t {
+struct type_of_inst_t : load_inst_t {
 	int noof_consts() {return 0;};
 	void **get_consts(void **Ptr) {return Ptr;};
 	void add_source(load_inst_t *Load) {
 		Load->load_val();
 	};
 	void list() {
-		printf("\ttypeof %sn", listop(Operand));
+		printf("\ttype_of %s\n", listop(Operand));
 	};
 	void encode(assembler_t *Assembler);
 };
 
 void label_t::type_of() {
-	typeof_inst_t *Inst = new typeof_inst_t;
+	type_of_inst_t *Inst = new type_of_inst_t;
+	append(Inst);
+};
+
+struct new_list_inst_t : inst_t {
+	uint32_t Index;
+	void list() {
+		printf("\tnew_list %d\n", Index);
+	};
+	void encode(assembler_t *Assembler);
+};
+
+void label_t::new_list(uint32_t Index) {
+	new_list_inst_t *Inst = new new_list_inst_t;
+	Inst->Index = Index;
+	append(Inst);
+};
+
+struct store_list_inst_t : inst_t {
+	uint32_t Index;
+	void list() {
+		printf("\tstore_list %d\n", Index);
+	};
+	void add_source(load_inst_t *Load) {
+		Load->load_val();
+	};
+	void encode(assembler_t *Assembler);
+};
+
+void label_t::store_list(uint32_t Index) {
+	store_list_inst_t *Inst = new store_list_inst_t;
+	Inst->Index = Index;
 	append(Inst);
 };
 

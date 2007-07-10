@@ -17,6 +17,10 @@ extern void send_message();
 extern void resend_message();
 extern void select_string();
 
+extern void detect_cpu_features();
+
+extern bool CmovSupport;
+
 extern Std$Type_t IncorrectTypeMessageT[];
 extern Std$Object_t IncorrectTypeMessage[];
 

@@ -493,6 +493,7 @@ static expr_t *parse_factor(scanner_t *Scanner) {
 	};
 	if (Scanner->parse(tkSUSP)) return new susp_expr_t(Scanner->Token.LineNo, accept_expr(Scanner));
 	if (Scanner->parse(tkREP)) return new rep_expr_t(Scanner->Token.LineNo, accept_expr(Scanner));
+	if (Scanner->parse(tkALL)) return new all_expr_t(Scanner->Token.LineNo, accept_expr(Scanner));
 	if (Scanner->parse(tkEXIT)) {
 		expr_t *Value = parse_expr(Scanner);
 		if (Value == 0) Value = new const_expr_t(Scanner->Token.LineNo, Std$Object$Nil);

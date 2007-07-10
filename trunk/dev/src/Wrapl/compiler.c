@@ -369,6 +369,11 @@ void every_expr_t::print(int Indent) {
 	Body->print(Indent);
 };
 
+void all_expr_t::print(int Indent) {
+	printf("ALL ");
+	Value->print(Indent);
+};
+
 void send_expr_t::print(int Indent) {
 	printf("SEND ");
 	Value->print(Indent);
@@ -812,6 +817,29 @@ operand_t *every_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t *
 	Compiler->pop_trap();
 	Compiler->back_trap(Label1);
 	return Register;
+};
+
+operand_t *all_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t *Success) {DEBUG
+	uint32_t Index = Compiler->new_temporary();
+	operand_t *Result = new operand_t;
+
+	label_t *Label0 = new label_t;
+	label_t *Label1 = new label_t;
+	label_t *Label2 = new label_t;
+
+	Start->new_list(Index);
+	Start->link(Label0);
+
+	Label0 = Compiler->push_trap(Label0, Success);
+		Label1->load(Value->compile(Compiler, Label0, Label1));
+		Label1->store_list(Index);
+		Compiler->back_trap(Label1);
+	Compiler->pop_trap();
+
+	Result->Type = operand_t::LVAR;
+	Result->Index = Index;
+	Result->Loop = -1;
+	return Result;
 };
 
 operand_t *send_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t *Success) {DEBUG

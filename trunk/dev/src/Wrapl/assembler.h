@@ -123,7 +123,7 @@ struct select_integer_inst_t : inst_t {
 	};
 	case_t *Cases;
 	label_t *Default;
-	
+
 	void list();
 	void add_source(load_inst_t *Load) {Load->load_val();};
 	void append_links(label_t *Start);
@@ -139,13 +139,13 @@ struct select_string_inst_t : inst_t {
 	};
 	case_t *Cases;
 	label_t *Default;
-	
+
 	void list();
 	void add_source(load_inst_t *Load) {Load->load_val();};
 	void append_links(label_t *Start);
 	int noof_consts();
 	void **get_consts(void **Ptr);
-	void encode(assembler_t *Assembler);	
+	void encode(assembler_t *Assembler);
 };
 
 struct select_object_inst_t : inst_t {
@@ -156,7 +156,7 @@ struct select_object_inst_t : inst_t {
 	};
 	case_t *Cases;
 	label_t *Default;
-	
+
 	void list();
 	void add_source(load_inst_t *Load) {Load->load_val();};
 	void append_links(label_t *Start);
@@ -216,7 +216,9 @@ struct label_t : inst_t {
 	void select_string(select_string_inst_t::case_t *Cases, label_t *Default);
 	void select_object(select_object_inst_t::case_t *Cases, label_t *Default);
 	void type_of();
-	
+	void new_list(uint32_t Index);
+	void store_list(uint32_t Index);
+
 	operand_t *assemble(const frame_t *Function, operand_t *Closure = 0);
 
 	void add_source(load_inst_t *Load) {

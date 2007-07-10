@@ -8,6 +8,8 @@
 |.type CLOSURE, closure_t
 |.type VALUE, Std$Object_t
 |.type TYPE, Std$Type_t
+|.type LIST, Std$List_t
+|.type LISTNODE, Std$List_node
 
 |.actionlist ActionList
 |.globals Globals_
@@ -819,7 +821,7 @@ void select_integer_inst_t::encode(assembler_t *Assembler) {
 	case_t *Case;
 	for (Case = Cases; Case; Case = Case->Next) Case->Body = Case->Body->final();
 	Default = Default->final();
-	
+
 	| cmp dword VALUE:ecx->Type, Std$Integer$SmallT
 	| je >1
 	| mov ecx, IncorrectTypeMessage
@@ -827,7 +829,7 @@ void select_integer_inst_t::encode(assembler_t *Assembler) {
 	| mov eax, 2
 	| jmp dword BSTATE:ebp->Handler
 	| 1:
-	
+
 	Case = Cases;
 	int Min = Case->Min, Max = Case->Max;
 	int Count = Max - Min + 1;
@@ -936,7 +938,7 @@ void limit_inst_t::encode(assembler_t *Assembler) {
 	| call &invoke_limit
 };
 
-void typeof_inst_t::encode(assembler_t *Assembler) {
+void type_of_inst_t::encode(assembler_t *Assembler) {
 	switch (Type) {
 	case LOAD_VAL: {
 		| mov ecx, VALUE:ecx->Type
@@ -953,4 +955,37 @@ void typeof_inst_t::encode(assembler_t *Assembler) {
 		break;
 	};
 	};
+};
+
+void new_list_inst_t::encode(assembler_t *Assembler) {
+	| push sizeof(Std$List_t);
+	| call &Riva$Memory$alloc
+	| pop edx
+	| mov dword LIST:eax->Type, Std$List$T
+	| mov dword LIST:eax->Access, 4
+	| mov [ebp + Assembler->Temps + 8 * Index], eax
+};
+
+void store_list_inst_t::encode(assembler_t *Assembler) {
+	| mov ebx, ecx
+	| push sizeof(Std$List_node);
+	| call &Riva$Memory$alloc
+	| pop edx
+	| mov LISTNODE:eax->Value, ebx
+	| mov edx, [ebp + Assembler->Temps + 8 * Index]
+	| inc dword LIST:edx->Length
+	| mov ecx, LIST:edx->Tail
+	| xor LISTNODE:eax->Prev, ecx
+	if ((offsetof(Std$List_t, Head) == offsetof(Std$List_node, Next)) && CmovSupport) {
+		| cmovz ecx, edx
+		| mov LISTNODE:ecx->Next, eax
+	} else {
+		| jz >1
+		| mov LISTNODE:ecx->Next, eax
+		| jmp >2
+		| 1:
+		| mov LIST:edx->Head, eax
+		| 2:
+	};
+	| mov LIST:edx->Tail, eax
 };

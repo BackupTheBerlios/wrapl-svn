@@ -7,6 +7,7 @@
 #include "parser.h"
 #include "compiler.h"
 #include "missing.h"
+#include "system.h"
 
 static int wrapl_load(Riva$Module_t *Module, const char *Path) {
 	char *LoadPath = 0;
@@ -132,4 +133,5 @@ GLOBAL_FUNCTION(SessionVar, 3) {
 extern "C" void __init(Riva$Module_t *Module);
 void __init(Riva$Module_t *Module) {
 	Riva$Module$add_loader(".wrapl", wrapl_load);
+	detect_cpu_features();
 };

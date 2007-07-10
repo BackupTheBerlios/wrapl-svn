@@ -287,6 +287,16 @@ struct every_expr_t : expr_t {
 	operand_t *compile(compiler_t *Compiler, label_t *Start, label_t *Success);
 };
 
+struct all_expr_t : expr_t {
+	expr_t *Value;
+	all_expr_t(int LineNo, expr_t *Value) {
+		this->LineNo = LineNo;
+		this->Value = Value;
+	};
+	void print(int Indent);
+	operand_t *compile(compiler_t *Compiler, label_t *Start, label_t *Success);
+};
+
 struct send_expr_t : expr_t {
 	expr_t *Value;
 	send_expr_t(int LineNo, expr_t *Value) {
