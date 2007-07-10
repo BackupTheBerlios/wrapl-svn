@@ -59,10 +59,16 @@ void encode_entry(assembler_t *Assembler) {
 	| mov [eax + Assembler->Scopes], edi
 	if (Assembler->NoOfParams) {
 		| pop ebx
-		| sub ebx, Assembler->NoOfParams
-		| sbb edx, edx
-		| and edx, ebx
-		| add edx, Assembler->NoOfParams
+		if (CmovSupport) {
+			| mov edx, Assembler->NoOfParams
+			| cmp edx, ebx
+			| cmova edx, ebx
+		} else {
+			| sub ebx, Assembler->NoOfParams
+			| sbb edx, edx
+			| and edx, ebx
+			| add edx, Assembler->NoOfParams
+		};
 		| lea ecx, [edx * 2]
 		| pop esi
 		| rep; movsd
