@@ -1,0 +1,17 @@
+if WINDOWS then
+	_export = export
+	export = function(Name)
+		_export("_" .. Name, Name)
+	end
+end
+
+export("T")
+export("AsmT")
+export("CheckedAsmT")
+export("CT")
+export("CheckedCT")
+export("FewArgsMessageT")
+export("_resume_c")
+export("_invoke")
+export("_call")
+export("_resume")

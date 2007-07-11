@@ -1,0 +1,2 @@
+vmount($(SRC_DIR), $(OBJ_DIR))
+.SUBDIRS: $(OBJ_DIR)

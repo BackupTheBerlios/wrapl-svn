@@ -1,0 +1,7 @@
+module("Wrapl")
+if WINDOWS then
+	prefix("_Wrapl$")
+else
+	prefix("Wrapl$")
+end
+export("SessionNew")

@@ -1,0 +1,17 @@
+if WINDOWS then
+	_export = export
+	export = function(Name)
+		_export("_" .. Name, Name)
+	end
+end
+
+export("T")
+export("New")
+
+if LINUX then
+	export("INET")
+	export("LOCAL")
+	export("STREAM")
+	export("DGRAM")
+	export("RAW")
+end

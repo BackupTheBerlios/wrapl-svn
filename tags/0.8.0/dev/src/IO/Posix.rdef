@@ -1,0 +1,18 @@
+if WINDOWS then
+	_export = export
+	export = function(Name)
+		_export("_" .. Name, Name)
+	end
+end
+
+export("__init")
+export("T")
+export("ReaderT")
+export("WriterT")
+export("SeekerT")
+export("TextReaderT")
+export("TextWriterT")
+export("__POLLIN", "POLLIN")
+export("__POLLOUT", "POLLOUT")
+export("__POLLHUP", "POLLHUP")
+export("__POLLPRI", "POLLPRI")

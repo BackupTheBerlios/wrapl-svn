@@ -1,0 +1,99 @@
+MOD Enum;
+
+IMP Type, Target;
+IMP IO.File;
+
+DEF T <- <[Type.T, Target.T]
+	ns, name, cname, members,
+	ctype, rtype,
+	headers, libraries
+>;
+
+DEF Member <- <[] name, cname>;
+
+DEF New!(ns, name, cname) (
+	VAR t <- T();
+	t:ns <- ns;
+	t:name <- name;
+	t:cname <- cname;
+	t:rtype <- "Gtk$" + ns + "$" + name + "$T";
+	t:ctype <- cname;
+	t:members <- [];
+	Type.Define(cname, t);
+	t:queue;
+	t:headers <- ["#include <Gtk/" + ns + "/" + name + ".h>"];
+	t:libraries <- ["Gtk/" + ns + "/" + name + ".rlib"];
+	RET t;
+);
+
+TO :member(t@T, name, cname) (
+	t:members:put(Member(name, cname));
+);
+
+TO :precall(t@T, name, arg) [
+	t:cname + " " + name + " = ((Std$Integer_smallt *)" + arg + ".Val)->Value;"
+];
+
+TO :return(t@T, result) [
+	"Gtk$" + t:ns + "$" + t:name + "_t *_" + result + " = new(Gtk$" + t:ns + "$" + t:name + "_t);",
+	"_" + result + "->Type = " + t:rtype + ";",
+	"_" + result + "->Value = " + result + ";",
+	"Result->Val = _" + result + ";"
+];
+
+TO :process(t@T, srcdir, incdir, libdir) (
+	VAR base <- t:ns + "/" + t:name;
+	VAR cfile <- File.Open(srcdir + base + ".c", File.WRITE + File.TEXT);
+	cfile:writes("#include <Gtk/", base, ".h>\n\n");
+	-- BEGIN HACK
+	t:name = "FileSystemError" => cfile:write("#include <gtk/gtkfilesystem.h>\n");
+	-- END HACK
+	cfile:writes("TYPE(T);\n\n");
+	VAR member;
+	EVERY member <- t:members:values DO (
+		cfile:writes("Gtk$", t:ns, "$", t:name, "_t __", member:name, "[] = {{T, ", member:cname, "}};\n");
+	);
+	cfile:close;
+VAR deffile <- File.Open(srcdir + base + ".rdef", File.WRITE + File.TEXT);
+	deffile:writes(>>EOF
+if WINDOWS then
+	_export = export
+	export = function(Name, Alias)
+		if Alias == nil then
+			Alias = Name
+		end
+		_export("_" .. Name, Alias)
+	end
+end
+
+export("T")
+EOF);
+	EVERY member <- t:members:values DO deffile:writes("export(\"__", member:name, "\", \"", member:name, "\")\n");
+	deffile:close;
+	VAR libfile <- File.Open(libdir + base + ".rlib", File.WRITE + File.TEXT);
+	libfile:writes("module(\"Gtk\", \"", t:ns, "\", \"", t:name, "\")\n");
+	libfile:write("if WINDOWS then\n");
+	libfile:writes("\tprefix(\"_Gtk$", t:ns, "$", t:name, "$\")\n");
+	libfile:write("else\n");
+	libfile:writes("\tprefix(\"Gtk$", t:ns, "$", t:name, "$\")\n");
+	libfile:write("end\n");
+	libfile:write("export(\"T\")\n");
+	libfile:write("export(\"_new\")\n");
+	libfile:close;
+	VAR hfile <- File.Open(incdir + base + ".h", File.WRITE + File.TEXT);
+	hfile:writes("#ifndef ", t:ns, "_", t:name, "_H\n");
+	hfile:writes("#define ", t:ns, "_", t:name, "_H\n\n");
+	hfile:write("#include <Std.h>\n");
+	hfile:writes("#define RIVA_MODULE Gtk$", t:ns, "$", t:name, "\n");
+	hfile:writes("#include <Riva-Header.h>\n\n");
+	hfile:writes("typedef struct Gtk$", t:ns, "$", t:name, "_t {\n");
+	hfile:writes("\tStd$Type_t *Type;\n");
+	hfile:writes("\t", t:ctype, " Value;\n");
+	hfile:writes("} Gtk$", t:ns, "$", t:name, "_t;\n\n");
+	hfile:writes("extern Std$Type_t ", t:rtype, "[];\n\n");
+	hfile:write("#undef RIVA_MODULE\n\n");
+	hfile:write("#endif\n");
+	hfile:close;
+);
+
+END Enum.

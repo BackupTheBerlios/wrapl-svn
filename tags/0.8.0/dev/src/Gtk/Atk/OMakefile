@@ -1,0 +1,8 @@
+BASENAME = $(GTK_LIB_DIR)Atk$(DIRSEP)
+
+foreach(FILE, $(rootname $(basename $(glob $(SRC_DIR)Gtk/Atk/*.c))))
+	RivaProgram($(BASENAME)$(FILE), $(FILE))
+	GtkAtk: $(BASENAME)$(FILE).riva
+	export
+
+.DEFAULT: GtkAtk

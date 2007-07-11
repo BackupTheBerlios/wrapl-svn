@@ -1,0 +1,6 @@
+if LINUX then
+	include("Gtk/Linux/libglade-2.0.rlib")
+end
+
+if WINDOWS then
+end

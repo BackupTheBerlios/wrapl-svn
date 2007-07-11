@@ -1,0 +1,20 @@
+require("Std/Methods")
+--library("/usr/local/lib/libudis86.a")
+
+if WINDOWS then
+	_export = export
+	export = function(Name)
+		_export("_" .. Name, Name)
+	end
+end
+
+export("__init")
+export("WraplT")
+export("SessionNew")
+export("SessionEval")
+export("SessionLine")
+export("SessionDef")
+export("SessionVar")
+export("ErrorMessageT")
+export("IncorrectTypeMessageT")
+export("Version")

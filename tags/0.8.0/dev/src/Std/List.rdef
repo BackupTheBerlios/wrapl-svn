@@ -1,0 +1,16 @@
+if WINDOWS then
+	_export = export
+	export = function(Name)
+		_export("_" .. Name, Name)
+	end
+end
+
+export("__init")
+export("T")
+export("New")
+export("_new")
+export("_newv")
+export("Make")
+export("Collect")
+export("CollectN")
+--export("New2")

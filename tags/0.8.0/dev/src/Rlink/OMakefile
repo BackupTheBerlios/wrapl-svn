@@ -1,0 +1,22 @@
+BASENAME = $(DEV_BIN)rlink
+PROGRAM = $(BASENAME)$(EXE)
+
+CFLAGS += -std=gnu99
+
+FILES[] =
+	rlink
+	stringtable
+
+if $(equal $(OSTYPE), Win32)
+	LDFLAGS += -lz -llua -lbfd -liberty -s
+	export
+
+if $(equal $(OSTYPE), Unix)
+	LDFLAGS += -lz -llua5.1 -lbfd -s
+	export
+
+CProgram($(BASENAME), $(FILES))
+
+Rlink: $(PROGRAM)
+
+.DEFAULT: Rlink

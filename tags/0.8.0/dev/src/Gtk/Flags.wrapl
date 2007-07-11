@@ -1,0 +1,83 @@
+MOD Enum;
+
+IMP Type, Target;
+IMP IO.File;
+
+DEF T <- <[Type.T, Target.T]
+	ns, name, cname, members
+>;
+
+DEF Member <- <[] name, value>;
+
+DEF New!(ns, name, cname) (
+	VAR t <- T();
+	t:ns <- ns;
+	t:name <- name;
+	t:cname <- cname;
+	t:members <- [];
+	Type.Define(cname, t);
+	t:queue;
+	RET t;
+);
+
+TO :rtype(t@T) "Std$Integer$SmallT";
+TO :ctype(t@T) "int";
+
+TO :member(t@T, name, cname, value) (
+	t:members:put(Member(name, value));
+);
+
+TO :precall(t@T, name, arg) [
+	"int " + name + " = ((Std$Integer_smallt *)" + arg + ".Val)->Value;"
+];
+
+TO :return(t@T, result) [
+	"Result->Val = Std$Integer$new_small(" + result + ");"
+];
+
+TO :process(t@T, srcdir, incdir, libdir) (
+	VAR base <- t:ns + "/" + t:name;
+	VAR cfile <- File.Open(srcdir + base + ".c", File.WRITE + File.TEXT);
+	cfile:writes("#include <Std/Integer.h>\n\n");
+	VAR member;
+	EVERY member <- t:members:values DO (
+		cfile:writes("Std$Integer_smallt __", member:name, "[] = {{Std$Integer$SmallT, ", member:value, "}};\n");
+	);
+	cfile:close;
+VAR deffile <- File.Open(srcdir + base + ".rdef", File.WRITE + File.TEXT);
+	deffile:writes(>>EOF
+if WINDOWS then
+	_export = export
+	export = function(Name, Alias)
+		if Alias == nil then
+			Alias = Name
+		end
+		_export("_" .. Name, Alias)
+	end
+end
+
+EOF);
+	EVERY member <- t:members:values DO deffile:writes("export(\"__", member:name, "\", \"", member:name, "\")\n");
+	deffile:close;
+	VAR libfile <- File.Open(libdir + base + ".rlib", File.WRITE + File.TEXT);
+	libfile:writes("module(\"Gtk\", \"", t:ns, "\", \"", t:name, "\")\n");
+	libfile:write("if WINDOWS then\n");
+	libfile:writes("\tprefix(\"_Gtk$", t:ns, "$", t:name, "$\")\n");
+	libfile:write("else\n");
+	libfile:writes("\tprefix(\"Gtk$", t:ns, "$", t:name, "$\")\n");
+	libfile:write("end\n");
+	libfile:write("export(\"T\")\n");
+	libfile:write("export(\"_new\")\n");
+	libfile:close;
+	VAR hfile <- File.Open(incdir + base + ".h", File.WRITE + File.TEXT);
+	hfile:writes("#ifndef ", t:ns, "_", t:name, "_H\n");
+	hfile:writes("#define ", t:ns, "_", t:name, "_H\n\n");
+	hfile:writes("#include <Std.h>\n\n");
+	hfile:writes("#define RIVA_MODULE Gtk$", t:ns, "$", t:name, "\n");
+	hfile:writes("#include <Riva-Header.h>\n\n");
+	hfile:write("#undef RIVA_MODULE\n\n");
+	hfile:write("#endif\n");
+	hfile:close;
+);
+
+END Enum.
