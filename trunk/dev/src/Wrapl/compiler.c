@@ -124,10 +124,11 @@ label_t *compiler_t::push_trap(label_t *Start, label_t *Failure) {DEBUG
 uint32_t compiler_t::use_trap() {DEBUG
 	function_t::loop_t::trap_t *Trap = Function->Loop->Trap;
 	if (Trap->Index == 0xFFFFFFFF) {
-		uint32_t Index = Trap->Free0->allocate(Trap->Free1);
-		for (function_t::loop_t::trap_t *Prev = Trap->Prev; Prev; Prev = Prev->Prev) Prev->Free1->reserve(Index);
+		//uint32_t Index = Trap->Free0->allocate(Trap->Free1);
+		//for (function_t::loop_t::trap_t *Prev = Trap->Prev; Prev; Prev = Prev->Prev) Prev->Free1->reserve(Index);
+		uint32_t Index = new_temporary();
 		Trap->Index = Index;
-		if (Index >= Function->Frame.NoOfTraps) Function->Frame.NoOfTraps = Index + 1;
+		//if (Index >= Function->Frame.NoOfTraps) Function->Frame.NoOfTraps = Index + 1;
 		Trap->Start0->init_trap(Index, Trap->Failure);
 	};
 	return Trap->Index;
@@ -951,9 +952,9 @@ operand_t *parallel_expr_t::compile(compiler_t *Compiler, label_t *Start, label_
 
 	Label4 = Compiler->push_trap(Label4, Label5);
 		uint32_t Index = Compiler->use_trap();
-		for (compiler_t::function_t::loop_t::trap_t *Trap = Compiler->Function->Loop->Trap->Prev; Trap; Trap = Trap->Prev) {DEBUG
-			Trap->Free0->reserve(Index);
-		};
+		//for (compiler_t::function_t::loop_t::trap_t *Trap = Compiler->Function->Loop->Trap->Prev; Trap; Trap = Trap->Prev) {DEBUG
+			//Trap->Free0->reserve(Index);
+		//};
 		operand_t *Result = Right->compile(Compiler, Label4, Success);
 		Compiler->back_trap(Label3);
 	Compiler->pop_trap();

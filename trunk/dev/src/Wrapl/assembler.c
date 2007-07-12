@@ -28,7 +28,15 @@ operand_t Register[] = {{
 static const char *listop(operand_t *Operand) {
 	char *List;
 	switch (Operand->Type) {
-	case operand_t::CNST: asprintf(&List, "CNST:%x", Operand->Value); return List;
+	case operand_t::CNST: {
+		char *Module, *Import;
+		if (Riva$Module$lookup(Operand->Value, &Module, &Import)) {
+			asprintf(&List, "CNST:%s.%s", Module, Import);
+		} else {
+			asprintf(&List, "CNST:%x", Operand->Value);
+		};
+		return List;
+	};
 	case operand_t::GVAR: asprintf(&List, "GVAR:%x", Operand->Address); return List;
 	case operand_t::LVAR: asprintf(&List, "LVAR:%d[%d]", Operand->Loop, Operand->Index); return List;
 	case operand_t::LREF: asprintf(&List, "LREF:%d[%d]", Operand->Loop, Operand->Index); return List;
@@ -51,7 +59,7 @@ struct link_inst_t : inst_t {
 };
 
 static void use_label(label_t *Start, label_t *Next, bool Follow) {
-	if (!Follow) Next->Referenced = true;
+	if (!Follow) Next->final()->Referenced = true;
 	if (Next->Done) {
 		if (Follow) {
 			link_inst_t *Inst = new link_inst_t;
@@ -741,7 +749,7 @@ operand_t *label_t::assemble(const frame_t *Frame, operand_t *Operand) {
 	Assembler->NoOfUpScopes = Frame->NoOfUpScopes;
 	Assembler->NoOfLocals = Frame->NoOfLocals;
 
-/*
+
 	printf("ASSEMBLY\n");
 		for (inst_t *Inst = Assembly.Next; Inst; Inst = Inst->Next) Inst->list();
 	printf("END\n");
@@ -755,7 +763,7 @@ operand_t *label_t::assemble(const frame_t *Frame, operand_t *Operand) {
 	printf("NoOfParams = %d\n", Assembler->NoOfParams);
 	printf("NoOfUpScopes = %d\n", Assembler->NoOfUpScopes);
 	printf("NoOfLocals = %d\n", Assembler->NoOfLocals);
-*/
+
 
 	dasm_init(Dst, DASM_MAXSECTION);
 	void **Globals = new void *[20];

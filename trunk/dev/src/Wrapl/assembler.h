@@ -178,7 +178,7 @@ struct label_t : inst_t {
 	};
 
 	void list() {
-		if (Next) printf("%x:\n", this);
+		if (Referenced) printf("%x:\n", this);
 	};
 
 	void append(inst_t *Inst) {
