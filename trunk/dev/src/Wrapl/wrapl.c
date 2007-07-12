@@ -129,7 +129,6 @@ GLOBAL_FUNCTION(SessionVar, 3) {
 	return SUCCESS;
 };
 
-
 extern "C" void __init(Riva$Module_t *Module);
 void __init(Riva$Module_t *Module) {
 	Riva$Module$add_loader(".wrapl", wrapl_load);

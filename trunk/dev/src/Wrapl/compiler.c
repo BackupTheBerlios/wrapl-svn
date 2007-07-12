@@ -879,10 +879,11 @@ operand_t *limit_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t *
 	label_t *Label4 = new label_t;
 
 	uint32_t Trap = Compiler->use_trap();
-	uint32_t Temp = Compiler->new_temporary(2);
+	uint32_t Temp0 = Compiler->new_temporary();
+	uint32_t Temp1 = Compiler->new_temporary();
 
 	Label0->load(Limit->compile(Compiler, Start, Label0));
-	Label0->limit(Trap, Temp);
+	Label0->limit(Trap, Temp0);
 	Label0->link(Label1);
 
 	Label1 = Compiler->push_trap(Label1, Label2);
@@ -890,9 +891,9 @@ operand_t *limit_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t *
 		Compiler->back_trap(Label4);
 	Compiler->pop_trap();
 
-	Label3->test_limit(Temp, Success);
-	Label3->push_trap(Trap, Label4, Temp + 1);
-	Label2->back(Trap);
+	Label3->test_limit(Temp0, Success);
+	Label3->push_trap(Trap, Label4, Temp1);
+	Compiler->back_trap(Label2);
 
 	return Result;
 };
@@ -930,7 +931,6 @@ operand_t *parallel_expr_t::compile(compiler_t *Compiler, label_t *Start, label_
 	Compiler->back_trap(Label5);
 	return Result;
 };
-
 
 operand_t *left_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t *Success) {DEBUG
 	label_t *Label0 = new label_t;
