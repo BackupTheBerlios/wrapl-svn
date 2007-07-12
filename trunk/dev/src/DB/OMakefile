@@ -1,0 +1,13 @@
+.PHONY: DB
+
+BASENAME = $(LIB_DIR)DB$(DIRSEP)
+
+CFLAGS += -std=gnu99
+LDFLAGS += Std.rlib Riva.rlib 
+
+RivaProgram($(BASENAME)Sqlite3, Sqlite3 Sqlite3Riva)
+
+DB:\
+	$(BASENAME)Sqlite3.riva
+
+.DEFAULT:
