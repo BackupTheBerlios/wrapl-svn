@@ -693,7 +693,6 @@ void label_t::store_list(uint32_t Index) {
 struct assembler_t {
 	struct dasm_State *Dynasm;
 	uint32_t Size;
-	uint32_t Traps;
 	uint32_t Temps;
 	uint32_t Locals;
 	uint32_t UpScopes;
@@ -741,8 +740,7 @@ operand_t *label_t::assemble(const frame_t *Frame, operand_t *Operand) {
 	assembler_t *Assembler = new assembler_t;
 	Assembler->UpScopes = sizeof(bstate_t);
 	Assembler->Scopes = Assembler->UpScopes + 4 * Frame->NoOfUpScopes;
-	Assembler->Traps = Assembler->Scopes + 4 * Frame->NoOfScopes;
-	Assembler->Temps = Assembler->Traps + 8 * Frame->NoOfTraps;
+	Assembler->Temps = Assembler->Scopes + 4 * Frame->NoOfScopes;
 	Assembler->Locals = Assembler->Temps + 8 * Frame->NoOfTemps;
 	Assembler->Size = Assembler->Locals + 8 * Frame->NoOfLocals;
 	Assembler->NoOfParams = Frame->NoOfParams;
@@ -756,7 +754,6 @@ operand_t *label_t::assemble(const frame_t *Frame, operand_t *Operand) {
 	printf("NoOfTemps = %d\n", Frame->NoOfTemps);
 	printf("UpScopes = %d\n", Assembler->UpScopes);
 	printf("Scopes = %d\n", Assembler->Scopes);
-	printf("Traps = %d\n", Assembler->Traps);
 	printf("Temps = %d\n", Assembler->Temps);
 	printf("Locals = %d\n", Assembler->Locals);
 	printf("Size = %d\n", Assembler->Size);

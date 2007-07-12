@@ -77,15 +77,15 @@ void link_inst_t::encode(assembler_t *Assembler) {
 };
 
 void init_trap_inst_t::encode(assembler_t *Assembler) {
-	| lea eax, [ebp + Assembler->Traps + 8 * Trap + 4]
+	| lea eax, [ebp + Assembler->Temps + 8 * Trap + 4]
 	| mov [eax - 4], eax
 	| mov [eax], =>Failure
 };
 
 void push_trap_inst_t::encode(assembler_t *Assembler) {
 	| lea ebx, [ebp + Assembler->Temps + 8 * Temp]
-	| mov eax, [ebp + Assembler->Traps + 8 * Trap]
-	| mov [ebp + Assembler->Traps + 8 * Trap], ebx
+	| mov eax, [ebp + Assembler->Temps + 8 * Trap]
+	| mov [ebp + Assembler->Temps + 8 * Trap], ebx
 	| mov STATE:ebx->Run, =>Failure
 	| mov STATE:ebx->Chain, eax
 };
@@ -682,12 +682,12 @@ void invoke_inst_t::encode(assembler_t *Assembler) {
 	} else {
 		| xor esi, esi
 	};
-	| push Assembler->Traps + 8 * Trap
+	| push Assembler->Temps + 8 * Trap
 	| call &invoke_function
 };
 
 void back_inst_t::encode(assembler_t *Assembler) {
-	| mov edi, Assembler->Traps + 8 * Trap
+	| mov edi, Assembler->Temps + 8 * Trap
 	| jmp &backtrack
 };
 
@@ -927,7 +927,7 @@ void limit_inst_t::encode(assembler_t *Assembler) {
 	| cmp dword VALUE:ecx->Type, Std$Integer$SmallT
 	| jne &incorrect_type
 	| mov ecx, SMALL:ecx->Value
-	| mov edi, Assembler->Traps + 8 * Trap
+	| mov edi, Assembler->Temps + 8 * Trap
 	| test ecx, ecx
 	| jz &backtrack
 	| mov [ebp + Assembler->Temps + 8 * Temp], ecx

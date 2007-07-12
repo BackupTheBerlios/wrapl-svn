@@ -17,7 +17,6 @@ struct compiler_t {
 			struct trap_t {
 				trap_t *Prev;
 				uint32_t Index;
-				bitset_t *Free0, *Free1;
 				label_t *Start, *Start0, *Failure, *Continue;
 			};
 
@@ -83,7 +82,6 @@ struct compiler_t {
 
 	label_t *push_trap(label_t *Start, label_t *Failure);
 	uint32_t use_trap();
-	uint32_t use_trap(label_t *Start, label_t *Failure, uint32_t Temp);
 	void pop_trap();
 	void back_trap(label_t *Start);
 	uint32_t trap() {return Function->Loop->Trap->Index;};
