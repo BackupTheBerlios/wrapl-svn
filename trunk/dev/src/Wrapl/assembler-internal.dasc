@@ -16,7 +16,7 @@
 
 void encode_entry(assembler_t *Assembler) {
 	|.code
-	| int3
+	//| int3
 	if (Assembler->NoOfUpScopes) {
 		| lea esi, CLOSURE:ecx->Scopes
 	};

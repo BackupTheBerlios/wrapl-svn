@@ -509,6 +509,7 @@ void label_t::limit(uint32_t Trap, uint32_t Temp) {
 struct test_limit_inst_t : inst_t {
 	uint32_t Temp;
 	label_t *Target;
+	void add_source(load_inst_t *Load) {Load->load_val();};
 	void append_links(label_t *Start) {
 		use_label(Start, Target, false);
 	};
