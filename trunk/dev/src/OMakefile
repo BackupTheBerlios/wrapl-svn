@@ -57,6 +57,10 @@ section
 	vmount($(SRC_DIR)Xml, $(OBJ_DIR)Xml)
 	.SUBDIRS: $(OBJ_DIR)Xml
 
+section
+	vmount($(SRC_DIR)DB, $(OBJ_DIR)DB)
+	.SUBDIRS: $(OBJ_DIR)DB
+
 #section
 #	vmount($(SRC_DIR)Http, $(OBJ_DIR)Http)
 #	.SUBDIRS: $(OBJ_DIR)Http

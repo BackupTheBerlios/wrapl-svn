@@ -128,21 +128,21 @@ uint32_t compiler_t::use_trap() {DEBUG
 		for (function_t::loop_t::trap_t *Prev = Trap->Prev; Prev; Prev = Prev->Prev) Prev->Free1->reserve(Index);
 		Trap->Index = Index;
 		if (Index >= Function->Frame.NoOfTraps) Function->Frame.NoOfTraps = Index + 1;
-		Trap->Start0->zero(Index, Trap->Failure);
+		Trap->Start0->init_trap(Index, Trap->Failure);
 	};
 	return Trap->Index;
 };
 
-uint32_t compiler_t::use_trap(label_t *Start, label_t *Failure) {DEBUG
+uint32_t compiler_t::use_trap(label_t *Start, label_t *Failure, uint32_t Temp) {DEBUG
 	function_t::loop_t::trap_t *Trap = Function->Loop->Trap;
 	if (Trap->Index == 0xFFFFFFFF) {
 		uint32_t Index = Trap->Free0->allocate(Trap->Free1);
 		for (function_t::loop_t::trap_t *Prev = Trap->Prev; Prev; Prev = Prev->Prev) Prev->Free1->reserve(Index);
 		Trap->Index = Index;
 		if (Index >= Function->Frame.NoOfTraps) Function->Frame.NoOfTraps = Index + 1;
-		Trap->Start0->zero(Index, Failure);
+		Trap->Start0->init_trap(Index, Failure);
 	} else {
-		Start->trap(Trap->Index, Failure);
+		Start->push_trap(Trap->Index, Failure, Temp);
 	};
 	return Trap->Index;
 };
@@ -854,38 +854,6 @@ operand_t *self_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t *S
 	return Compiler->Function->Loop->Self;
 };
 
-operand_t *sequence_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t *Success) {DEBUG
-	label_t *Label0 = Start;
-	label_t *Label1 = new label_t;
-	label_t *Label2 = new label_t;
-	label_t *Label3 = new label_t;
-
-	expr_t *Expr = Exprs;
-
-	Compiler->use_trap(Label0, Label3);
-	compiler_t::function_t::loop_t::trap_t *Trap = Compiler->Function->Loop->Trap;
-	Label0->link(Label1);
-	label_t *Continue = Trap->Continue;
-	Trap->Continue = Label3;
-	Label2->load(Expr->compile(Compiler, Label1, Label2));
-	Label2->link(Success);
-	Label0 = Label3;
-	while ((Expr = Expr->Next)) {
-		Label1 = new label_t;
-		Label2 = new label_t;
-		Label3 = new label_t;
-		Label0->trap(Trap->Index, Label3);
-		Label0->link(Label1);
-		Trap->Continue = Label3;
-		Label2->load(Expr->compile(Compiler, Label1, Label2));
-		Label2->link(Success);
-		Label0 = Label3;
-	};
-	Trap->Continue = Continue;
-	Label0->link(Continue);
-	return Register;
-};
-
 operand_t *typeof_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t *Success) {DEBUG
 	operand_t *Constant = Expr->constant(Compiler);
 	if (Constant) {
@@ -902,42 +870,66 @@ operand_t *typeof_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t 
 	return Register;
 };
 
+operand_t *sequence_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t *Success) {DEBUG
+	label_t *Label0 = Start;
+	uint32_t Temp = Compiler->new_temporary();
+	uint32_t Trap = Compiler->use_trap();
+
+	expr_t *Expr = Exprs;
+	while (Expr->Next) {
+		label_t *Label1 = new label_t;
+		label_t *Label2 = new label_t;
+		label_t *Label3 = new label_t;
+		Label0->push_trap(Trap, Label3, Temp);
+		Label0->link(Label1);
+		Label2->load(Expr->compile(Compiler, Label1, Label2));
+		Label2->link(Success);
+		Label0 = Label3;
+		Expr = Expr->Next;
+	};
+	label_t *Label2 = new label_t;
+	Label2->load(Expr->compile(Compiler, Label0, Label2));
+	Label2->link(Success);
+	return Register;
+};
+
 operand_t *limit_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t *Success) {DEBUG
-	//Compiler->raise_error(LineNo, "Error: not done yet!");
 	label_t *Label0 = new label_t;
 	label_t *Label1 = new label_t;
 	label_t *Label2 = new label_t;
 	label_t *Label3 = new label_t;
 	label_t *Label4 = new label_t;
 
-	Label1->load(Limit->compile(Compiler, Label0, Label1));
-	Label1->limit(Compiler->use_trap());
+	uint32_t Trap = Compiler->use_trap();
+	uint32_t Temp = Compiler->new_temporary(2);
 
-	Compiler->push_trap(Start, Label2)->link(Label0);
-		uint32_t Index = Compiler->use_trap();
+	Label0->load(Limit->compile(Compiler, Start, Label0));
+	Label0->limit(Trap, Temp);
+	Label0->link(Label1);
+
+	Label1 = Compiler->push_trap(Label1, Label2);
+		uint32_t Trap1 = Compiler->use_trap();
 		for (compiler_t::function_t::loop_t::trap_t *Trap = Compiler->Function->Loop->Trap->Prev; Trap; Trap = Trap->Prev) {DEBUG
-			Trap->Free0->reserve(Index);
+			Trap->Free0->reserve(Trap1);
 		};
-		Label1->back(Index);
-		Label2->trap(Index, Label3);
-		Label2->link(Label4);
-		operand_t *Result = Expr->compile(Compiler, Label4, Success);
+		operand_t *Result = Expr->compile(Compiler, Label1, Label3);
 	Compiler->pop_trap();
-	Compiler->back_trap(Label3);
+
+	Label3->test_limit(Temp, Success);
+	Label3->push_trap(Trap, Label4, Temp + 1);
+	Label4->back(Trap1);
+	Label2->back(Trap);
+
 	return Result;
 };
 
 operand_t *infinite_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t *Success) {DEBUG
 	label_t *Label0 = new label_t;
-	Compiler->use_trap();
-	compiler_t::function_t::loop_t::trap_t *Trap = Compiler->Function->Loop->Trap;
-	Start->trap(Trap->Index, Start);
+	uint32_t Temp = Compiler->new_temporary();
+	uint32_t Trap = Compiler->use_trap();
+	Start->push_trap(Trap, Start, Temp);
 	Start->link(Label0);
-	label_t *Continue = Trap->Continue;
-	Trap->Continue = Start;
-	operand_t *Result = Expr->compile(Compiler, Label0, Success);
-	Trap->Continue = Continue;
-	return Result;
+	return Expr->compile(Compiler, Label0, Success);
 };
 
 operand_t *parallel_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t *Success) {DEBUG
@@ -946,18 +938,26 @@ operand_t *parallel_expr_t::compile(compiler_t *Compiler, label_t *Start, label_
 	label_t *Label2 = new label_t;
 	label_t *Label3 = new label_t;
 	label_t *Label4 = new label_t;
+	label_t *Label5 = new label_t;
+
+	uint32_t Temp = Compiler->new_temporary();
+
+	Start->store_link(Temp, Label2);
+	Start->link(Label0);
 	Left->compile(Compiler, Label0, Label1);
-	Compiler->push_trap(Start, Label2)->link(Label0);
+	Label1->jump_link(Temp);
+	Label2->store_link(Temp, Label3);
+	Label2->link(Label4);
+
+	Label4 = Compiler->push_trap(Label4, Label5);
 		uint32_t Index = Compiler->use_trap();
 		for (compiler_t::function_t::loop_t::trap_t *Trap = Compiler->Function->Loop->Trap->Prev; Trap; Trap = Trap->Prev) {DEBUG
 			Trap->Free0->reserve(Index);
 		};
-		Label1->back(Index);
-		Label2->trap(Index, Label3);
-		Label2->link(Label4);
 		operand_t *Result = Right->compile(Compiler, Label4, Success);
+		Compiler->back_trap(Label3);
 	Compiler->pop_trap();
-	Compiler->back_trap(Label3);
+	Compiler->back_trap(Label5);
 	return Result;
 };
 

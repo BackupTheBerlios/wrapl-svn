@@ -2,7 +2,6 @@
 
 |.arch x86
 |.section code, data
-|.type TRAP, trap_t
 |.type STATE, state_t
 |.type BSTATE, bstate_t
 |.type CLOSURE, closure_t
@@ -10,36 +9,14 @@
 |.type TYPE, Std$Type_t
 |.type LIST, Std$List_t
 |.type LISTNODE, Std$List_node
+|.type SMALL, Std$Integer_smallt
 
 |.actionlist ActionList
 |.globals Globals_
 
-struct state_t {
-	void *Run;
-	void *Resume;
-	state_t *Chain;
-};
-
-struct trap_t {
-	void *Run;
-	state_t *State;
-	state_t *Chain;
-};
-
-struct bstate_t {
-	void *Run;
-	void *Resume;
-	state_t *Chain;
-	Std$Object_t *Val;
-	Std$Object_t **Ref;
-	void *Code;
-	void *Handler;
-	void *Data;
-};
-
 void encode_entry(assembler_t *Assembler) {
 	|.code
-	//| int3
+	| int3
 	if (Assembler->NoOfUpScopes) {
 		| lea esi, CLOSURE:ecx->Scopes
 	};
@@ -90,26 +67,27 @@ void encode_entry(assembler_t *Assembler) {
 };
 
 void label_t::encode(assembler_t *Assembler) {
-	| =>this:
+	if (Referenced) {
+		| =>this:
+	};
 };
 
 void link_inst_t::encode(assembler_t *Assembler) {
-	| jmp =>Link->final()
+	| jmp =>Link
 };
 
-void zero_inst_t::encode(assembler_t *Assembler) {
-	| lea ebx, [ebp + Assembler->Traps + 12 * Trap]
-	| mov TRAP:ebx->Chain, ebx
-	| mov TRAP:ebx->State, ebx
-	| mov TRAP:ebx->Run, =>Failure->final()
+void init_trap_inst_t::encode(assembler_t *Assembler) {
+	| lea eax, [ebp + Assembler->Traps + 8 * Trap + 4]
+	| mov [eax - 4], eax
+	| mov [eax], =>Failure
 };
 
-void trap_inst_t::encode(assembler_t *Assembler) {
-	| lea ebx, [ebp + Assembler->Traps + 12 * Trap]
-	| mov eax, TRAP:ebx->State
-	| mov TRAP:ebx->Chain, eax
-	| mov TRAP:ebx->State, ebx
-	| mov TRAP:ebx->Run, =>Failure->final()
+void push_trap_inst_t::encode(assembler_t *Assembler) {
+	| lea ebx, [ebp + Assembler->Temps + 8 * Temp]
+	| mov eax, [ebp + Assembler->Traps + 8 * Trap]
+	| mov [ebp + Assembler->Traps + 8 * Trap], ebx
+	| mov STATE:ebx->Run, =>Failure
+	| mov STATE:ebx->Chain, eax
 };
 
 void resume_inst_t::encode(assembler_t *Assembler) {
@@ -704,12 +682,12 @@ void invoke_inst_t::encode(assembler_t *Assembler) {
 	} else {
 		| xor esi, esi
 	};
-	| push Assembler->Traps + 12 * Trap
+	| push Assembler->Traps + 8 * Trap
 	| call &invoke_function
 };
 
 void back_inst_t::encode(assembler_t *Assembler) {
-	| mov edi, Assembler->Traps + 12 * Trap
+	| mov edi, Assembler->Traps + 8 * Trap
 	| jmp &backtrack
 };
 
@@ -739,7 +717,7 @@ void fail_inst_t::encode(assembler_t *Assembler) {
 
 void recv_inst_t::encode(assembler_t *Assembler) {
 	if (Handler) {
-		| mov BSTATE:ebp->Handler, =>Handler->final()
+		| mov BSTATE:ebp->Handler, =>Handler
 	} else {
 		| mov BSTATE:ebp->Handler, &resend_message
 	};
@@ -817,24 +795,17 @@ void comp_inst_t::encode(assembler_t *Assembler) {
 	};
 	};
 	if (Equal) {
-		| jne =>Failure->final()
+		| jne =>Failure
 	} else {
-		| je =>Failure->final()
+		| je =>Failure
 	};
 };
 
 void select_integer_inst_t::encode(assembler_t *Assembler) {
 	case_t *Case;
-	for (Case = Cases; Case; Case = Case->Next) Case->Body = Case->Body->final();
-	Default = Default->final();
 
 	| cmp dword VALUE:ecx->Type, Std$Integer$SmallT
-	| je >1
-	| mov ecx, IncorrectTypeMessage
-	| xor edx, edx
-	| mov eax, 2
-	| jmp dword BSTATE:ebp->Handler
-	| 1:
+	| jne &incorrect_type
 
 	Case = Cases;
 	int Min = Case->Min, Max = Case->Max;
@@ -925,23 +896,41 @@ void select_string_inst_t::encode(assembler_t *Assembler) {
 	for (case_t *Case = Cases; Case; Case = Case->Next) {
 		| .dword Case->Length
 		| .aword Case->Key
-		| .aword =>Case->Body->final()
+		| .aword =>Case->Body
 	};
 	| .dword 0
 	| .aword 0
-	| .aword =>Default->final()
+	| .aword =>Default
 };
 
 void select_object_inst_t::encode(assembler_t *Assembler) {
 	for (case_t *Case = Cases; Case; Case = Case->Next) {
 		| cmp ecx, Case->Object
-		| je =>Case->Body->final()
+		| je =>Case->Body
 	};
 };
 
+void store_link_inst_t::encode(assembler_t *Assembler) {
+	| mov dword [ebp + Assembler->Temps + 8 * Temp], =>Target
+};
+
+void jump_link_inst_t::encode(assembler_t *Assembler) {
+	| jmp dword [ebp + Assembler->Temps + 8 * Temp]
+};
+
+void test_limit_inst_t::encode(assembler_t *Assembler) {
+	| dec dword [ebp + Assembler->Temps + 8 * Temp]
+	| jz =>Target
+};
+
 void limit_inst_t::encode(assembler_t *Assembler) {
-	| mov edi, Assembler->Traps + 12 * Trap
-	| call &invoke_limit
+	| cmp dword VALUE:ecx->Type, Std$Integer$SmallT
+	| jne &incorrect_type
+	| mov ecx, SMALL:ecx->Value
+	| mov edi, Assembler->Traps + 8 * Trap
+	| test ecx, ecx
+	| jz &backtrack
+	| mov [ebp + Assembler->Temps + 8 * Temp], ecx
 };
 
 void type_of_inst_t::encode(assembler_t *Assembler) {

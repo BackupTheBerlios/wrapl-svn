@@ -92,8 +92,8 @@ endstruct
 
 struct state
 	.Run:		resd 1
-	.Resume:	resd 1
 	.Chain:		resd 1
+	.Resume:	resd 1
 endstruct
 
 struct asm_fun, value

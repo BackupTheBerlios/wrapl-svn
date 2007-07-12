@@ -168,8 +168,8 @@ struct select_object_inst_t : inst_t {
 struct label_t : inst_t {
 	label_t *Link;
 	inst_t *Tail;
-	bool Done, Used;
-	int Offset;
+	bool Done, Referenced;
+	int Label;
 
 	label_t *final() {
 		if (Link == 0) return this;
@@ -192,8 +192,10 @@ struct label_t : inst_t {
 
 	void link(label_t *U) {Link = U;};
 	void scope(uint32_t Level, uint32_t Size);
-	void zero(uint32_t Trap, label_t *Failure);
-	void trap(uint32_t Trap, label_t *Failure);
+	void init_trap(uint32_t Trap, label_t *Failure);
+	void push_trap(uint32_t Trap, label_t *Failure, uint32_t Temp);
+	void store_link(uint32_t Temp, label_t *Target);
+	void jump_link(uint32_t Temp);
 	void resume();
 	void load(operand_t *Operand);
 	void store_val(operand_t *Operand);
@@ -211,7 +213,8 @@ struct label_t : inst_t {
 	void recv(label_t *Handler);
 	void send();
 	void comp(int Equal, operand_t *Operand, label_t *Failure);
-	void limit(uint32_t Trap);
+	void limit(uint32_t Trap, uint32_t Temp);
+	void test_limit(uint32_t Temp, label_t *Failure);
 	void select_integer(select_integer_inst_t::case_t *Cases, label_t *Default);
 	void select_string(select_string_inst_t::case_t *Cases, label_t *Default);
 	void select_object(select_object_inst_t::case_t *Cases, label_t *Default);

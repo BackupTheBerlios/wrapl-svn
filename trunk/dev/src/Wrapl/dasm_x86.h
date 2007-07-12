@@ -206,7 +206,7 @@ void dasm_put(Dst_DECL, int start, ...)
 	if (n < 0) n = 0;  /* Start new chain for fwd rel if label exists. */
 	goto linkrel;
       case DASM_REL_PC:
-      case DASM_IMM_PC: pl = &(va_arg(ap, label_t *)->Offset); CKPL(pc, PC);
+      case DASM_IMM_PC: pl = &(va_arg(ap, label_t *)->final()->Label); CKPL(pc, PC);
       putrel:
 	n = *pl;
 	if (n < 0) {  /* Label exists. Get label pos and store it. */
@@ -222,7 +222,7 @@ void dasm_put(Dst_DECL, int start, ...)
 	  b[pos++] = ofs;  /* Store pass1 offset estimate. */
 	break;
       case DASM_LABEL_LG: pl = D->lglabels + *p++; CKPL(lg, LG); goto putlabel;
-      case DASM_LABEL_PC: pl = &(va_arg(ap, label_t *)->Offset); CKPL(pc, PC);
+      case DASM_LABEL_PC: pl = &(va_arg(ap, label_t *)->final()->Label); CKPL(pc, PC);
       putlabel:
 	n = *pl;  /* n > 0: Collapse rel chain and replace with label pos. */
 	while (n > 0) { int *pb = DASM_POS2PTR(D, n); n = *pb; *pb = pos; }

@@ -4,6 +4,23 @@
 #include <string.h>
 //#include <udis86.h>
 
+struct state_t {
+	void *Run;
+	state_t *Chain;
+	void *Resume;
+};
+
+struct bstate_t {
+	void *Run;
+	state_t *Chain;
+	void *Resume;
+	Std$Object_t *Val;
+	Std$Object_t **Ref;
+	void *Code;
+	void *Handler;
+	void *Data;
+};
+
 operand_t Register[] = {{
 	0, operand_t::REGR
 }};
@@ -34,11 +51,12 @@ struct link_inst_t : inst_t {
 };
 
 static void use_label(label_t *Start, label_t *Next, bool Follow) {
-	if (!Follow) Next->Used = true;
+	if (!Follow) Next->Referenced = true;
 	if (Next->Done) {
 		if (Follow) {
 			link_inst_t *Inst = new link_inst_t;
-			Inst->Link = Next->final();
+			Inst->Link = Next;
+			Next->final()->Referenced = true;
 			Start->append(Inst);
 		};
 	} else {
@@ -79,33 +97,46 @@ void label_t::scope(uint32_t Index, uint32_t Size) {
 	append(Inst);
 };
 
-struct zero_inst_t : inst_t {
+struct init_trap_inst_t : inst_t {
 	uint32_t Trap;
 	label_t *Failure;
+	state_t *State;
 
-	void append_links(label_t *Start) {Failure->Used = true; use_label(Start, Failure, false);};
+	int noof_consts() {return 1;};
+	void **get_consts(void **);
+
+
+	void append_links(label_t *Start) {
+		use_label(Start, Failure, false);
+	};
 	void list() {
 		printf("\tzero %d <- %x\n", Trap, Failure->final());
 	};
 	void encode(assembler_t *Assembler);
 };
 
-void label_t::zero(uint32_t Trap, label_t *Failure) {
-	zero_inst_t *Inst = new zero_inst_t;
+void **init_trap_inst_t::get_consts(void **Ptr) {
+	Ptr[0] = State;
+	return Ptr + 1;
+};
+
+void label_t::init_trap(uint32_t Trap, label_t *Failure) {
+	init_trap_inst_t *Inst = new init_trap_inst_t;
 	Inst->Trap = Trap;
 	label_t *Failure0 = new label_t();
 	Failure0->resume();
 	Failure0->link(Failure);
 	Inst->Failure = Failure0;
+	Inst->State = new state_t;
 	append(Inst);
 };
 
-struct trap_inst_t : inst_t {
+struct push_trap_inst_t : inst_t {
 	uint32_t Trap;
 	label_t *Failure;
+	uint32_t Temp;
 
 	void append_links(label_t *Start) {
-		Failure->Used = true;
 		use_label(Start, Failure, false);
 	};
 	void list() {
@@ -114,9 +145,10 @@ struct trap_inst_t : inst_t {
 	void encode(assembler_t *Assembler);
 };
 
-void label_t::trap(uint32_t Trap, label_t *Failure) {
-	trap_inst_t *Inst = new trap_inst_t;
+void label_t::push_trap(uint32_t Trap, label_t *Failure, uint32_t Temp) {
+	push_trap_inst_t *Inst = new push_trap_inst_t;
 	Inst->Trap = Trap;
+	Inst->Temp = Temp;
 	label_t *Failure0 = new label_t();
 	Failure0->resume();
 	Failure0->link(Failure);
@@ -144,7 +176,6 @@ int load_inst_t::noof_consts() {
 	default: return 0;
 	};
 };
-
 
 void **load_inst_t::get_consts(void **Ptr) {
 	switch (Operand->Type) {
@@ -398,7 +429,6 @@ struct recv_inst_t : inst_t {
 
 	void append_links(label_t *Start) {
 		if (Handler) {
-			Handler->Used = true;
 			use_label(Start, Handler, false);
 		};
 	};
@@ -427,18 +457,71 @@ void label_t::send() {
 	append(new send_inst_t);
 };
 
-struct limit_inst_t : inst_t {
-	uint32_t Trap;
-	void add_source(load_inst_t *Load) {Load->load_val();};
+struct store_link_inst_t : inst_t {
+	uint32_t Temp;
+	label_t *Target;
 	void list() {
-		printf("\limit %d\n", Trap);
+		printf("\tstore_link %d, %x\n", Temp, Target);
+	};
+	void append_links(label_t *Start) {
+		use_label(Start, Target, false);
 	};
 	void encode(assembler_t *Assembler);
 };
 
-void label_t::limit(uint32_t Trap) {
+void label_t::store_link(uint32_t Temp, label_t *Target) {
+	store_link_inst_t *Inst = new store_link_inst_t;
+	Inst->Temp = Temp;
+	Inst->Target = Target;
+	append(Inst);
+};
+
+struct jump_link_inst_t : inst_t {
+	uint32_t Temp;
+	void list() {
+		printf("\tjump_link %d\n", Temp);
+	};
+	void encode(assembler_t *Assembler);
+};
+
+void label_t::jump_link(uint32_t Temp) {
+	jump_link_inst_t *Inst = new jump_link_inst_t;
+	Inst->Temp = Temp;
+	append(Inst);
+};
+
+struct limit_inst_t : inst_t {
+	uint32_t Trap, Temp;
+	void add_source(load_inst_t *Load) {Load->load_val();};
+	void list() {
+		printf("\limit %d, %d\n", Trap, Temp);
+	};
+	void encode(assembler_t *Assembler);
+};
+
+void label_t::limit(uint32_t Trap, uint32_t Temp) {
 	limit_inst_t *Inst = new limit_inst_t;
 	Inst->Trap = Trap;
+	Inst->Temp = Temp;
+	append(Inst);
+};
+
+struct test_limit_inst_t : inst_t {
+	uint32_t Temp;
+	label_t *Target;
+	void append_links(label_t *Start) {
+		use_label(Start, Target, false);
+	};
+	void list() {
+		printf("\limit %d, %x\n", Temp, Target);
+	};
+	void encode(assembler_t *Assembler);
+};
+
+void label_t::test_limit(uint32_t Temp, label_t *Target) {
+	test_limit_inst_t *Inst = new test_limit_inst_t;
+	Inst->Target = Target;
+	Inst->Temp = Temp;
 	append(Inst);
 };
 
@@ -650,7 +733,7 @@ operand_t *label_t::assemble(const frame_t *Frame, operand_t *Operand) {
 	Assembler->UpScopes = sizeof(bstate_t);
 	Assembler->Scopes = Assembler->UpScopes + 4 * Frame->NoOfUpScopes;
 	Assembler->Traps = Assembler->Scopes + 4 * Frame->NoOfScopes;
-	Assembler->Temps = Assembler->Traps + 12 * Frame->NoOfTraps;
+	Assembler->Temps = Assembler->Traps + 8 * Frame->NoOfTraps;
 	Assembler->Locals = Assembler->Temps + 8 * Frame->NoOfTemps;
 	Assembler->Size = Assembler->Locals + 8 * Frame->NoOfLocals;
 	Assembler->NoOfParams = Frame->NoOfParams;

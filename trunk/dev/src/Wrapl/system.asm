@@ -55,9 +55,8 @@ run_state:
 	jmp [bstate(eax).Code]
 
 struct trap
-	.Run:		resd 1
 	.State:		resd 1
-	.Chain:		resd 1
+	.Run:		resd 1
 endstruct
 
 %macro deref_arg 1.nolist
@@ -195,6 +194,14 @@ section .data
 IncorrectTypeMessage:
 	dd IncorrectTypeMessageT
 
+global incorrect_type
+section .text
+incorrect_type:
+	mov ecx, IncorrectTypeMessage
+	xor edx, edx
+	mov eax, 2
+	jmp [bstate(ebp).Handler]
+
 struct select_string_case
 	.Length: resd 1
 	.String: resd 1
@@ -207,12 +214,7 @@ select_string:
 ;	int3
 	pop edx
 	cmp dword [value(ecx).Type], Std$String$T
-	je .isstring
-	mov ecx, IncorrectTypeMessage
-	xor edx, edx
-	mov eax, 2
-	jmp [bstate(ebp).Handler]
-.isstring:
+	jne incorrect_type
 ;	add edx, byte 0x03
 ;	and edx, byte 0xFC
 	push ebp
