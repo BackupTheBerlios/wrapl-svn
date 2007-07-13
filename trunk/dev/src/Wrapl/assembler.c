@@ -747,7 +747,7 @@ operand_t *label_t::assemble(const frame_t *Frame, operand_t *Operand) {
 	Assembler->NoOfUpScopes = Frame->NoOfUpScopes;
 	Assembler->NoOfLocals = Frame->NoOfLocals;
 
-
+/*
 	printf("ASSEMBLY\n");
 		for (inst_t *Inst = Assembly.Next; Inst; Inst = Inst->Next) Inst->list();
 	printf("END\n");
@@ -760,7 +760,7 @@ operand_t *label_t::assemble(const frame_t *Frame, operand_t *Operand) {
 	printf("NoOfParams = %d\n", Assembler->NoOfParams);
 	printf("NoOfUpScopes = %d\n", Assembler->NoOfUpScopes);
 	printf("NoOfLocals = %d\n", Assembler->NoOfLocals);
-
+*/
 
 	dasm_init(Dst, DASM_MAXSECTION);
 	void **Globals = new void *[20];

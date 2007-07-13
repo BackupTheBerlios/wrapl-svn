@@ -619,6 +619,8 @@ bool scanner_t::parse(int Type) {
 							} else {
 								++NextToken.LineNo;
 							};
+						case '=': ++Level;
+							goto comment_loop;
 						};
 					};
 					goto comment_loop;
