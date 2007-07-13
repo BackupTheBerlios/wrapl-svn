@@ -485,6 +485,10 @@ void store_con_inst_t::encode(assembler_t *Assembler) {
 			| mov dword [eax], Value
 			break;
 		};
+		case operand_t::REGR: {
+			| mov dword [edx], Value
+			break;
+		};
 		};
 		break;
 	case LOAD_ARG: case LOAD_BOTH:
