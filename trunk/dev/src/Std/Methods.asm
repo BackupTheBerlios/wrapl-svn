@@ -2237,6 +2237,88 @@ repeat_small:
 	xor edx, edx
 	ret
 
+struct up_small_state, state
+	.Current:	resd 1
+endstruct
+
+method "up", SMALLINT
+	mov ecx, [argument(edi).Val]
+.suspend:
+	push ecx
+	push dword [small_int(ecx).Value]
+	push byte sizeof(up_small_state)
+	call Riva$Memory$_alloc
+	add esp, byte 4
+	pop dword [up_small_state(eax).Current]
+	mov dword [state(eax).Run], .resume
+	pop ecx
+	mov ebx, eax
+	or eax, byte -1
+	xor edx, edx
+	ret
+.return:
+	xor edx, edx
+	xor eax, eax
+	ret
+.fail:
+	xor eax, eax
+	inc eax
+	ret
+.resume:
+	mov ecx, [up_small_state(eax).Current]
+	inc ecx
+	mov [up_small_state(eax).Current], ecx
+	push eax
+	push ecx
+	call Std$Integer$_alloc_small
+	mov ecx, eax
+	pop dword [small_int(ecx).Value]
+	xor edx, edx
+	or eax, byte -1
+	pop ebx
+	ret
+
+struct down_small_state, state
+	.Current:	resd 1
+endstruct
+
+method "down", SMALLINT
+	mov ecx, [argument(edi).Val]
+.suspend:
+	push ecx
+	push dword [small_int(ecx).Value]
+	push byte sizeof(up_small_state)
+	call Riva$Memory$_alloc
+	add esp, byte 4
+	pop dword [down_small_state(eax).Current]
+	mov dword [state(eax).Run], .resume
+	pop ecx
+	mov ebx, eax
+	or eax, byte -1
+	xor edx, edx
+	ret
+.return:
+	xor edx, edx
+	xor eax, eax
+	ret
+.fail:
+	xor eax, eax
+	inc eax
+	ret
+.resume:
+	mov ecx, [down_small_state(eax).Current]
+	dec ecx
+	mov [down_small_state(eax).Current], ecx
+	push eax
+	push ecx
+	call Std$Integer$_alloc_small
+	mov ecx, eax
+	pop dword [small_int(ecx).Value]
+	xor edx, edx
+	or eax, byte -1
+	pop ebx
+	ret
+
 extern sprintf
 method "@", REAL, VAL, Std$String$T
 	push byte 12
