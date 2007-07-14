@@ -6,6 +6,22 @@ TYPE(KeyT);
 TYPE(MutexT);
 
 #ifdef WINDOWS
+
+GLOBAL_FUNCTION(New, 1) {
+	return SUCCESS;
+};
+
+GLOBAL_FUNCTION(Self, 0) {
+	return SUCCESS;
+};
+
+GLOBAL_FUNCTION(MutexNew, 0) {
+	return SUCCESS;
+};
+
+void __init(void *Module) {
+};
+
 #else
 
 #include <pthread.h>
