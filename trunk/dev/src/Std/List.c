@@ -925,6 +925,19 @@ finished:
 	return SUCCESS;
 };
 
+METHOD("fold", TYP, Std$Function$T, TYP, T) {
+	Std$Object_t *Function = Args[0].Val;
+	_list *List = Args[1].Val;
+	_node *Node = List->Head;
+	if (Node == 0) return FAILURE;
+	Result->Val = Node->Value;
+	while (Node = Node->Next) {
+		int Status = Std$Function$call(Function, 2, Result, Result->Val, 0, Node->Value, 0);
+		if (Status > SUCCESS) return Status;
+	};
+	return SUCCESS;
+};
+
 SYMBOL($QUERY, "?");
 
 static Std$Object_t *sort_list(Std$Object_t **First, Std$Object_t **Last) {
