@@ -925,7 +925,7 @@ finished:
 	return SUCCESS;
 };
 
-METHOD("fold", TYP, Std$Function$T, TYP, T) {
+METHOD("foldl", TYP, Std$Function$T, TYP, T) {
 	Std$Object_t *Function = Args[0].Val;
 	_list *List = Args[1].Val;
 	_node *Node = List->Head;
@@ -933,6 +933,45 @@ METHOD("fold", TYP, Std$Function$T, TYP, T) {
 	Result->Val = Node->Value;
 	while (Node = Node->Next) {
 		int Status = Std$Function$call(Function, 2, Result, Result->Val, 0, Node->Value, 0);
+		if (Status > SUCCESS) return Status;
+	};
+	return SUCCESS;
+};
+
+METHOD("foldr", TYP, Std$Function$T, TYP, T) {
+	Std$Object_t *Function = Args[0].Val;
+	_list *List = Args[1].Val;
+	_node *Node = List->Head;
+	if (Node == 0) return FAILURE;
+	Result->Val = Node->Value;
+	while (Node = Node->Next) {
+		int Status = Std$Function$call(Function, 2, Result, Node->Value, 0, Result->Val, 0);
+		if (Status > SUCCESS) return Status;
+	};
+	return SUCCESS;
+};
+
+METHOD("foldl", TYP, T, TYP, Std$Function$T) {
+	Std$Object_t *Function = Args[1].Val;
+	_list *List = Args[0].Val;
+	_node *Node = List->Head;
+	if (Node == 0) return FAILURE;
+	Result->Val = Node->Value;
+	while (Node = Node->Next) {
+		int Status = Std$Function$call(Function, 2, Result, Result->Val, 0, Node->Value, 0);
+		if (Status > SUCCESS) return Status;
+	};
+	return SUCCESS;
+};
+
+METHOD("foldr", TYP, T, TYP, Std$Function$T) {
+	Std$Object_t *Function = Args[1].Val;
+	_list *List = Args[0].Val;
+	_node *Node = List->Head;
+	if (Node == 0) return FAILURE;
+	Result->Val = Node->Value;
+	while (Node = Node->Next) {
+		int Status = Std$Function$call(Function, 2, Result, Node->Value, 0, Result->Val, 0);
 		if (Status > SUCCESS) return Status;
 	};
 	return SUCCESS;
