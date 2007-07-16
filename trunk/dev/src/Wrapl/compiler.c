@@ -107,7 +107,7 @@ void compiler_t::pop_expression() {DEBUG
 label_t *compiler_t::push_trap(label_t *Start, label_t *Failure) {DEBUG
 	function_t::loop_t::trap_t *Trap = new function_t::loop_t::trap_t;
 	Trap->Continue = Trap->Failure = Failure;
-
+	Trap->Reserved = new_temporary();
 	(Trap->Start0 = Start)->link(Trap->Start = new label_t);
 	Trap->Index = 0xFFFFFFFF;
 	Trap->Prev = Function->Loop->Trap;
@@ -117,8 +117,9 @@ label_t *compiler_t::push_trap(label_t *Start, label_t *Failure) {DEBUG
 
 uint32_t compiler_t::use_trap() {DEBUG
 	function_t::loop_t::trap_t *Trap = Function->Loop->Trap;
+	function_t::loop_t::expression_t *Expr = Function->Loop->Expression;
 	if (Trap->Index == 0xFFFFFFFF) {
-		uint32_t Index = new_temporary();
+		uint32_t Index = Trap->Reserved;
 		Trap->Index = Index;
 		Trap->Start0->init_trap(Index, Trap->Failure);
 	};
@@ -274,6 +275,19 @@ void invoke_expr_t::print(int Indent) {
 		};
 	};
 	printf(")");
+};
+
+void parallel_invoke_expr_t::print(int Indent) {
+	Function->print(Indent);
+	printf("{");
+	if (Args) {
+		Args->print(Indent);
+		for (expr_t *Arg = Args->Next; Arg; Arg = Arg->Next) {
+			printf(", ");
+			Arg->print(Indent);
+		};
+	};
+	printf("}");
 };
 
 void func_expr_t::print(int Indent) {
@@ -629,21 +643,90 @@ operand_t *invoke_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t 
 				Label0->link(Label1);
 				Label0 = Label1;
 			};
-			uint32_t I = 0;
+			uint32_t Index = ArgsArray;
 			for (expr_t *Arg = Args; Arg; Arg = Arg->Next) {
-				uint32_t Index = ArgsArray + I++;
 				label_t *Label1 = new label_t;
 				operand_t *Value = Arg->compile(Compiler, Label0, Label1);
 				Label1->store_arg(Index, Value);
 				Label2->fixup_arg(Index, Value);
 				Label0 = new label_t;
 				Label1->link(Label0);
+				++Index;
 			};
 		};
 		Label0->link(Label2);
 		Label2->load(FunctionOperand);
 		Label2->invoke(Trap, ArgsArray, Count, Label2);
 		Label2->link(Success);
+	//};
+	return Register;
+};
+
+operand_t *parallel_invoke_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t *Success) {DEBUG
+	label_t *Label0 = new label_t;
+	operand_t *FunctionOperand = Function->compile(Compiler, Start, Label0);
+	//if ((FunctionOperand->Type == operand_t::CNST) && (FunctionOperand->Value->Type == Std$Integer$SmallT)) {
+	//	printf("%s:%d: I'm not done yet!\n", __FILE__, __LINE__);
+	//} else {
+		label_t *LabelF = new label_t;
+		label_t *LabelG = new label_t;
+		uint32_t Count = 0;
+		uint32_t ArgsArray = 0;
+		uint32_t Trap = Compiler->use_trap();
+		if (Args) {
+			for (expr_t *Arg = Args; Arg; Arg = Arg->Next) ++Count;
+			ArgsArray = Compiler->new_temporary(Count);
+			if (FunctionOperand == Register) {
+				FunctionOperand = new operand_t;
+				FunctionOperand->Type = operand_t::LVAR;
+				FunctionOperand->Index = Compiler->new_temporary();
+				FunctionOperand->Loop = -1;
+				label_t *Label1 = new label_t;
+				Label0->store_val(FunctionOperand);
+				Label0->link(Label1);
+				Label0 = Label1;
+			};
+			uint32_t Index = ArgsArray;
+			expr_t *Arg = Args;
+			
+			label_t *Label1 = new label_t;
+			label_t *Label2 = new label_t;
+			
+			uint32_t Gate = Compiler->new_temporary();
+			Label0->store_link(Gate, Label2);
+			operand_t *Value = Arg->compile(Compiler, Label0, Label1);
+			Label1->store_arg(Index, Value);
+			Label1->jump_link(Gate);
+			
+			LabelF->fixup_arg(Index, Value);
+			
+			Label0 = Label2;
+			
+			while ((Arg = Arg->Next)) {
+				Label1 = new label_t;
+				Label2 = new label_t;
+				label_t *Label3 = new label_t;
+				++Index;
+				Label0->store_link(Gate, Label3);
+				Gate = Compiler->new_temporary();
+				Label0->store_link(Gate, Label2);
+				Label0 = Compiler->push_trap(Label0, LabelG);
+					operand_t *Value = Arg->compile(Compiler, Label0, Label1);
+					Label1->store_arg(Index, Value);
+					Label1->jump_link(Gate);
+					LabelF->fixup_arg(Index, Value);
+					
+					Label0 = Label2;
+					
+					Compiler->back_trap(Label3);
+				Compiler->pop_trap();
+			};
+		};
+		LabelG->back(Trap);
+		Label0->link(LabelF);
+		LabelF->load(FunctionOperand);
+		LabelF->invoke(Trap, ArgsArray, Count, LabelF);
+		LabelF->link(Success);
 	//};
 	return Register;
 };
@@ -853,6 +936,10 @@ operand_t *sequence_expr_t::compile(compiler_t *Compiler, label_t *Start, label_
 	uint32_t Temp = Compiler->new_temporary();
 	uint32_t Trap = Compiler->use_trap();
 
+	compiler_t::function_t::loop_t::expression_t *Expr0 = Compiler->Function->Loop->Expression;
+	bitset_t *Temps = Expr0->Temps;
+	bitset_t *TotalTemps = new bitset_t(Temps);
+	
 	expr_t *Expr = Exprs;
 	while (Expr->Next) {
 		label_t *Label1 = new label_t;
@@ -860,13 +947,20 @@ operand_t *sequence_expr_t::compile(compiler_t *Compiler, label_t *Start, label_
 		label_t *Label3 = new label_t;
 		Label0->push_trap(Trap, Label3, Temp);
 		Label0->link(Label1);
+		
+		Expr0->Temps = new bitset_t(Temps);
 		Label2->load(Expr->compile(Compiler, Label1, Label2));
+		TotalTemps->update(Expr0->Temps);
+		
 		Label2->link(Success);
 		Label0 = Label3;
 		Expr = Expr->Next;
 	};
 	label_t *Label2 = new label_t;
+	Expr0->Temps = new bitset_t(Temps);
 	Label2->load(Expr->compile(Compiler, Label0, Label2));
+	TotalTemps->update(Expr0->Temps);
+	Expr0->Temps = TotalTemps;
 	Label2->link(Success);
 	return Register;
 };
@@ -987,10 +1081,19 @@ operand_t *cond_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t *S
 			Compiler->pop_trap();
 		Compiler->pop_expression();
 
+		compiler_t::function_t::loop_t::expression_t *Expr = Compiler->Function->Loop->Expression;
+		bitset_t *SuccessTemps = new bitset_t(Expr->Temps);
+		bitset_t *FailureTemps = Expr->Temps;
+		
+		Expr->Temps = SuccessTemps;
 		Success1->load(this->Success->compile(Compiler, Success0, Success1));
 		Success1->link(Success);
+
+		Expr->Temps = FailureTemps;
 		Failure1->load(this->Failure->compile(Compiler, Failure0, Failure1));
 		Failure1->link(Success);
+		
+		Expr->Temps = new bitset_t(SuccessTemps, FailureTemps);
 	};
 	return Register;
 };
@@ -1248,6 +1351,10 @@ operand_t *block_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t *
 	};
 	if (Receiver.Body) {
 		compiler_t::function_t::loop_t *Loop = Compiler->Function->Loop;
+		compiler_t::function_t::loop_t::expression_t *Expr0 = Loop->Expression;
+		bitset_t *RecvTemps = new bitset_t(Expr0->Temps);
+		bitset_t *FinalTemps = Expr0->Temps;
+		Expr0->Temps = RecvTemps;
 		label_t *OldReceiver = Loop->Receiver;
 		label_t *NewReceiver = new label_t;
 		Compiler->push_scope();
@@ -1274,6 +1381,7 @@ operand_t *block_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t *
 				Compiler->pop_expression();
 				Label0 = Label1;
 			};
+			Expr0->Temps = FinalTemps;
 			if (Final) {
 				Label1 = new label_t;
 				label_t *Label2 = new label_t;
@@ -1283,6 +1391,7 @@ operand_t *block_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t *
 				Compiler->pop_trap();
 				Label2->recv(OldReceiver);
 				Compiler->back_trap(Label2);
+				Expr0->Temps = new bitset_t(RecvTemps, FinalTemps);
 			};
 			Label0->recv(OldReceiver);
 			Label0->link(Success);

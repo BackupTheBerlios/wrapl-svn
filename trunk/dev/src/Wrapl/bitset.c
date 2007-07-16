@@ -5,6 +5,7 @@
 
 struct bitset_internal_t : bitset_t {
 	uint32_t Lo, Hi;
+	bitset_internal_t() {};
 	bitset_internal_t(uint32_t Lo, uint32_t Hi) : bitset_t(0) {
 		this->Lo = Lo;
 		this->Hi = Hi;
@@ -24,6 +25,33 @@ bitset_t::bitset_t(bitset_t *Copy) {
 		Prev = Copy;
 		Node = Node->Next;
 	} while (Node);
+};
+
+bitset_t::bitset_t(bitset_t *A, bitset_t *B) {
+	bitset_internal_t *A0 = A->Next;
+	bitset_internal_t *B0 = B->Next;
+	bitset_internal_t *Node = Next = new bitset_internal_t;
+	for (;;) {
+		if (A0->Lo > B0->Hi) {
+			B0 = B0->Next;
+		} else if (B0->Lo > A0->Hi) {
+			A0 = A0->Next;
+		} else {
+			Node->Lo = A0->Lo >? B0->Lo;
+			if (A0->Hi > B0->Hi) {
+				Node->Hi = B0->Hi;
+				B0 = B0->Next;
+			} else if (A0->Hi < B0->Hi) {
+				Node->Hi = A0->Hi;
+				A0 = A0->Next;
+			} else {
+				Node->Hi = A0->Hi;
+				if ((A0 = A0->Next) == 0) return;
+				if ((B0 = B0->Next) == 0) return;
+			};
+			Node = (Node->Next = new bitset_internal_t);
+		};
+	};
 };
 
 void bitset_t::reserve(uint32_t N) {
@@ -182,4 +210,8 @@ uint32_t bitset_t::allocate(uint32_t Count, const bitset_t *With0) {
 			};
 		};
 	};
+};
+
+void bitset_t::update(bitset_t *With) {
+	Next = (new bitset_t(this, With))->Next;
 };

@@ -18,13 +18,14 @@ struct compiler_t {
 				trap_t *Prev;
 				uint32_t Index;
 				label_t *Start, *Start0, *Failure, *Continue;
+				uint32_t Reserved;
 			};
 
 			struct expression_t {
 				expression_t *Prev;
 				bitset_t *Temps;
 			};
-
+			
 			struct assignment_t {
 				assignment_t *Prev;
 				operand_t *Self;
@@ -79,7 +80,7 @@ struct compiler_t {
 
 	void push_expression();
 	void pop_expression();
-
+	
 	label_t *push_trap(label_t *Start, label_t *Failure);
 	uint32_t use_trap();
 	void pop_trap();
@@ -144,6 +145,17 @@ struct invoke_expr_t : expr_t {
 		this->Args = Args;
 	};
 	void print(int Indent);
+	operand_t *compile(compiler_t *Compiler, label_t *Start, label_t *Success);
+};
+
+struct parallel_invoke_expr_t : expr_t {
+	expr_t *Function, *Args;
+	parallel_invoke_expr_t(int LineNo, expr_t *Function, expr_t *Args) {
+		this->LineNo = LineNo;
+		this->Function = Function;
+		this->Args = Args;
+	};
+	void print(int Index);
 	operand_t *compile(compiler_t *Compiler, label_t *Start, label_t *Success);
 };
 

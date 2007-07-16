@@ -12,6 +12,7 @@ struct bitset_t {
 	bitset_t();
 	bitset_t(int I) {};
 	bitset_t(bitset_t *Copy);
+	bitset_t(bitset_t *A, bitset_t *B);
 	void reserve(uint32_t N);
 	void reserve(uint32_t Lo, uint32_t Hi);
 	uint32_t below(uint32_t Max);
@@ -20,6 +21,7 @@ struct bitset_t {
 	uint32_t allocate(uint32_t Count);
 	uint32_t allocate(uint32_t Count, const bitset_t *With);
 	uint32_t size();
+	void update(bitset_t *With);
 };
 
 #endif

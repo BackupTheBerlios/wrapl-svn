@@ -598,6 +598,11 @@ start:
 		Scanner->accept(tkRPAREN);
 		goto start;
 	};
+	if (Scanner->parse(tkLBRACE)) {
+		Expr = new parallel_invoke_expr_t(Scanner->Token.LineNo, Expr, accept_expr_list(Scanner));
+		Scanner->accept(tkRBRACE);
+		goto start;
+	};
 	if (Scanner->parse(tkLBRACKET)) {
 		Expr->Next = accept_expr_list(Scanner);
 		Expr = new invoke_expr_t(Scanner->Token.LineNo, new const_expr_t(Scanner->Token.LineNo, $INDEX), Expr);
