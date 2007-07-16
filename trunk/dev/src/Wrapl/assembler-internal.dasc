@@ -974,17 +974,15 @@ void store_list_inst_t::encode(assembler_t *Assembler) {
 	| mov edx, [ebp + Assembler->Temps + 8 * Index]
 	| inc dword LIST:edx->Length
 	| mov ecx, LIST:edx->Tail
-	| xor LISTNODE:eax->Prev, ecx
-	if ((offsetof(Std$List_t, Head) == offsetof(Std$List_node, Next)) && CmovSupport) {
-		| cmovz ecx, edx
-		| mov LISTNODE:ecx->Next, eax
-	} else {
-		| jz >1
-		| mov LISTNODE:ecx->Next, eax
-		| jmp >2
-		| 1:
-		| mov LIST:edx->Head, eax
-		| 2:
-	};
+	| test ecx, ecx
+	| jz >1
+	| mov LISTNODE:eax->Prev, ecx
+	| mov LISTNODE:ecx->Next, eax
+	| jmp >2
+	| 1:
+	| mov LIST:edx->Head, eax
+	| mov LIST:edx->Cache, eax
+	| inc dword LIST:edx->Index
+	| 2:
 	| mov LIST:edx->Tail, eax
 };
