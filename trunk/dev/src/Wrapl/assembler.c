@@ -25,6 +25,8 @@ operand_t Register[] = {{
 	0, operand_t::REGR
 }};
 
+#ifdef ASSEMBLER_LISTING
+
 static const char *listop(operand_t *Operand) {
 	char *List;
 	switch (Operand->Type) {
@@ -47,11 +49,15 @@ static const char *listop(operand_t *Operand) {
 	};
 };
 
+#endif
+
 struct link_inst_t : inst_t {
 	label_t *Link;
+#ifdef ASSEMBLER_LISTING
 	void list() {
 		printf("\tlink %x\n", Link->final());
 	};
+#endif
 	void add_source(load_inst_t *Load) {
 		Link->add_source(Load);
 	};
@@ -92,9 +98,11 @@ static void use_label(label_t *Start, label_t *Next, bool Follow) {
 
 struct scope_inst_t : inst_t {
 	uint32_t Index, Size;
+#ifdef ASSEMBLER_LISTING
 	void list() {
 		printf("\tscope %d <- %d\n", Index, Size);
 	};
+#endif
 	void encode(assembler_t *Assembler);
 };
 
@@ -117,9 +125,11 @@ struct init_trap_inst_t : inst_t {
 	void append_links(label_t *Start) {
 		use_label(Start, Failure, false);
 	};
+#ifdef ASSEMBLER_LISTING
 	void list() {
 		printf("\tzero %d <- %x\n", Trap, Failure->final());
 	};
+#endif
 	void encode(assembler_t *Assembler);
 };
 
@@ -147,9 +157,11 @@ struct push_trap_inst_t : inst_t {
 	void append_links(label_t *Start) {
 		use_label(Start, Failure, false);
 	};
+#ifdef ASSEMBLER_LISTING
 	void list() {
 		printf("\ttrap %d <- %x\n", Trap, Failure);
 	};
+#endif
 	void encode(assembler_t *Assembler);
 };
 
@@ -165,9 +177,11 @@ void label_t::push_trap(uint32_t Trap, label_t *Failure, uint32_t Temp) {
 };
 
 struct resume_inst_t : inst_t {
+#ifdef ASSEMBLER_LISTING
 	void list() {
 		printf("\tresume\n");
 	};
+#endif
 	void encode(assembler_t *Assembler);
 };
 
@@ -200,12 +214,14 @@ void **load_inst_t::get_consts(void **Ptr) {
 	};
 };
 
+#ifdef ASSEMBLER_LISTING
 void load_inst_t::list() {
 	static const char *Types[] = {
 		"_none", "_val", "_ref", "_both", "_arg"
 	};
 	printf("\tload%s %s\n", Types[Type], listop(Operand));
 };
+#endif
 
 void label_t::load(operand_t *Operand) {
 	if (Operand == Register) return;
@@ -216,9 +232,11 @@ void label_t::load(operand_t *Operand) {
 
 struct store_con_inst_t : load_inst_t {
 	Std$Object_t *Value;
+#ifdef ASSEMBLER_LISTING
 	void list() {
 		printf("\tstore_con %s <- %x\n", listop(Operand), Value);
 	};
+#endif
 	int noof_consts() {return 1;};
 	void **get_consts(void **Ptr) {Ptr[0] = Value; return Ptr + 1;};
 	void encode(assembler_t *Assembler);
@@ -237,9 +255,11 @@ struct store_val_inst_t : inst_t {
 		Load->load_val();
 		Next->add_source(Load);
 	};
+#ifdef ASSEMBLER_LISTING
 	void list() {
 		printf("\tstore_val %s\n", listop(Operand));
 	};
+#endif
 	void encode(assembler_t *Assembler);
 };
 
@@ -249,9 +269,11 @@ struct store_ref_inst_t : inst_t {
 		Load->load_ref();
 		Next->add_source(Load);
 	};
+#ifdef ASSEMBLER_LISTING
 	void list() {
 		printf("\tstore_ref %s\n", listop(Operand));
 	};
+#endif
 	void encode(assembler_t *Assembler);
 };
 
@@ -261,9 +283,11 @@ struct store_tmp_inst_t : inst_t {
 		Load->load_both();
 		Next->add_source(Load);
 	};
+#ifdef ASSEMBLER_LISTING
 	void list() {
 		printf("\tstore_tmp %d\n", Index);
 	};
+#endif
 	void encode(assembler_t *Assembler);
 };
 
@@ -286,9 +310,11 @@ void label_t::store_tmp(uint32_t Index) {
 };
 
 struct flush_inst_t : inst_t {
+#ifdef ASSEMBLER_LISTING
 	void list() {
 		printf("\tflush\n");
 	};
+#endif
 	void encode(assembler_t *Assembler);
 };
 
@@ -302,9 +328,11 @@ struct store_arg_inst_t : inst_t {
 	void add_source(load_inst_t *Load) {
 		if (Operand == Register) Load->load_arg();
 	};
+#ifdef ASSEMBLER_LISTING
 	void list() {
 		printf("\tstore_arg %d <- %s\n", Index, listop(Operand));
 	};
+#endif
 	int noof_consts();
 	void **get_consts(void **);
 	void encode(assembler_t *Assembler);
@@ -345,9 +373,11 @@ void label_t::store_arg(uint32_t Index, operand_t *Operand) {
 struct fixup_arg_inst_t : inst_t {
 	uint32_t Index;
 	operand_t *Operand;
+#ifdef ASSEMBLER_LISTING
 	void list() {
 		printf("\tfixup_arg %d <- %s\n", Index, listop(Operand));
 	};
+#endif
 	void encode(assembler_t *Assembler);
 };
 
@@ -362,9 +392,11 @@ struct invoke_inst_t : inst_t {
 	uint32_t Trap, Args, Count;
 	label_t *Fixup;
 	void add_source(load_inst_t *Load) {Load->load_val();};
+#ifdef ASSEMBLER_LISTING
 	void list() {
 		printf("\tinvoke %d, %d, %d\n", Trap, Args, Count);
 	};
+#endif
 	void encode(assembler_t *Assembler);
 	void append_links(label_t *Start) {use_label(Start, Fixup, false);};
 };
@@ -380,9 +412,11 @@ void label_t::invoke(uint32_t Trap, uint32_t Args, uint32_t Count, label_t *Fixu
 
 struct back_inst_t : inst_t {
 	uint32_t Trap;
+#ifdef ASSEMBLER_LISTING
 	void list() {
 		printf("\tback %d\n", Trap);
 	};
+#endif
 	void encode(assembler_t *Assembler);
 };
 
@@ -393,9 +427,11 @@ void label_t::back(uint32_t Trap) {
 };
 
 struct fail_inst_t : inst_t {
+#ifdef ASSEMBLER_LISTING
 	void list() {
 		printf("\tfail\n");
 	};
+#endif
 	void encode(assembler_t *Assembler);
 };
 
@@ -407,9 +443,11 @@ struct ret_inst_t : inst_t {
 	void add_source(load_inst_t *Load) {
 		Load->load_both();
 	};
+#ifdef ASSEMBLER_LISTING
 	void list() {
 		printf("\tret\n");
 	};
+#endif
 	void encode(assembler_t *Assembler);
 };
 
@@ -422,9 +460,11 @@ struct susp_inst_t : inst_t {
 		Load->load_both();
 		Next->add_source(Load);
 	};
+#ifdef ASSEMBLER_LISTING
 	void list() {
 		printf("\tsusp\n");
 	};
+#endif
 	void encode(assembler_t *Assembler);
 };
 
@@ -441,9 +481,11 @@ struct recv_inst_t : inst_t {
 		};
 	};
 	void add_source(load_inst_t *Load) {Next->add_source(Load);};
+#ifdef ASSEMBLER_LISTING
 	void list() {
 		printf("\trecv %x\n", Handler ? Handler->final() : 0);
 	};
+#endif
 	void encode(assembler_t *Assembler);
 };
 
@@ -455,9 +497,11 @@ void label_t::recv(label_t *Handler) {
 
 struct send_inst_t : inst_t {
 	void add_source(load_inst_t *Load) {Load->load_val();};
+#ifdef ASSEMBLER_LISTING
 	void list() {
 		printf("\tsend\n");
 	};
+#endif
 	void encode(assembler_t *Assembler);
 };
 
@@ -468,9 +512,11 @@ void label_t::send() {
 struct store_link_inst_t : inst_t {
 	uint32_t Temp;
 	label_t *Target;
+#ifdef ASSEMBLER_LISTING
 	void list() {
 		printf("\tstore_link %d, %x\n", Temp, Target);
 	};
+#endif
 	void append_links(label_t *Start) {
 		use_label(Start, Target, false);
 	};
@@ -486,9 +532,11 @@ void label_t::store_link(uint32_t Temp, label_t *Target) {
 
 struct jump_link_inst_t : inst_t {
 	uint32_t Temp;
+#ifdef ASSEMBLER_LISTING
 	void list() {
 		printf("\tjump_link %d\n", Temp);
 	};
+#endif
 	void encode(assembler_t *Assembler);
 };
 
@@ -501,9 +549,11 @@ void label_t::jump_link(uint32_t Temp) {
 struct limit_inst_t : inst_t {
 	uint32_t Trap, Temp;
 	void add_source(load_inst_t *Load) {Load->load_val();};
+#ifdef ASSEMBLER_LISTING
 	void list() {
 		printf("\limit %d, %d\n", Trap, Temp);
 	};
+#endif
 	void encode(assembler_t *Assembler);
 };
 
@@ -521,9 +571,11 @@ struct test_limit_inst_t : inst_t {
 	void append_links(label_t *Start) {
 		use_label(Start, Target, false);
 	};
+#ifdef ASSEMBLER_LISTING
 	void list() {
 		printf("\limit %d, %x\n", Temp, Target);
 	};
+#endif
 	void encode(assembler_t *Assembler);
 };
 
@@ -545,9 +597,11 @@ struct comp_inst_t : inst_t {
 		Load->load_val();
 		Next->add_source(Load);
 	};
+#ifdef ASSEMBLER_LISTING
 	void list() {
 		printf("\tcomp %s %s // %x\n", Equal ? "==" : "~==", listop(Operand), Failure);
 	};
+#endif
 	void encode(assembler_t *Assembler);
 };
 
@@ -559,6 +613,7 @@ void label_t::comp(int Equal, operand_t *Operand, label_t *Failure) {
 	append(Inst);
 };
 
+#ifdef ASSEMBLER_LISTING
 void select_integer_inst_t::list() {
 	printf("\tselect_integer\n");
 	for (case_t *Case = Cases; Case; Case = Case->Next) {
@@ -566,6 +621,7 @@ void select_integer_inst_t::list() {
 	};
 	printf("\t\telse %x\n", Default->final());
 };
+#endif
 
 void select_integer_inst_t::append_links(label_t *Start) {
 	for (case_t *Case = Cases; Case; Case = Case->Next) use_label(Start, Case->Body, false);
@@ -579,6 +635,7 @@ void label_t::select_integer(select_integer_inst_t::case_t *Cases, label_t *Defa
 	append(Inst);
 };
 
+#ifdef ASSEMBLER_LISTING
 void select_string_inst_t::list() {
 	printf("\tselect_string\n");
 	for (case_t *Case = Cases; Case; Case = Case->Next) {
@@ -586,6 +643,7 @@ void select_string_inst_t::list() {
 	};
 	printf("\t\telse %x\n", Default->final());
 };
+#endif
 
 void select_string_inst_t::append_links(label_t *Start) {
 	for (case_t *Case = Cases; Case; Case = Case->Next) use_label(Start, Case->Body, false);
@@ -611,6 +669,7 @@ void label_t::select_string(select_string_inst_t::case_t *Cases, label_t *Defaul
 	append(Inst);
 };
 
+#ifdef ASSEMBLER_LISTING
 void select_object_inst_t::list() {
 	printf("\tselect_object\n");
 	for (case_t *Case = Cases; Case; Case = Case->Next) {
@@ -618,6 +677,7 @@ void select_object_inst_t::list() {
 	};
 	printf("\t\telse %x\n", Default->final());
 };
+#endif
 
 void select_object_inst_t::append_links(label_t *Start) {
 	use_label(Start, Default, true);
@@ -648,9 +708,11 @@ struct type_of_inst_t : load_inst_t {
 	void add_source(load_inst_t *Load) {
 		Load->load_val();
 	};
+#ifdef ASSEMBLER_LISTING
 	void list() {
 		printf("\ttype_of %s\n", listop(Operand));
 	};
+#endif
 	void encode(assembler_t *Assembler);
 };
 
@@ -661,9 +723,11 @@ void label_t::type_of() {
 
 struct new_list_inst_t : inst_t {
 	uint32_t Index;
+#ifdef ASSEMBLER_LISTING
 	void list() {
 		printf("\tnew_list %d\n", Index);
 	};
+#endif
 	void encode(assembler_t *Assembler);
 };
 
@@ -675,9 +739,11 @@ void label_t::new_list(uint32_t Index) {
 
 struct store_list_inst_t : inst_t {
 	uint32_t Index;
+#ifdef ASSEMBLER_LISTING
 	void list() {
 		printf("\tstore_list %d\n", Index);
 	};
+#endif
 	void add_source(load_inst_t *Load) {
 		Load->load_val();
 	};
@@ -747,7 +813,7 @@ operand_t *label_t::assemble(const frame_t *Frame, operand_t *Operand) {
 	Assembler->NoOfUpScopes = Frame->NoOfUpScopes;
 	Assembler->NoOfLocals = Frame->NoOfLocals;
 
-
+#ifdef ASSEMBLER_LISTING
 	printf("ASSEMBLY\n");
 		for (inst_t *Inst = Assembly.Next; Inst; Inst = Inst->Next) Inst->list();
 	printf("END\n");
@@ -760,7 +826,7 @@ operand_t *label_t::assemble(const frame_t *Frame, operand_t *Operand) {
 	printf("NoOfParams = %d\n", Assembler->NoOfParams);
 	printf("NoOfUpScopes = %d\n", Assembler->NoOfUpScopes);
 	printf("NoOfLocals = %d\n", Assembler->NoOfLocals);
-
+#endif
 
 	dasm_init(Dst, DASM_MAXSECTION);
 	void **Globals = new void *[20];

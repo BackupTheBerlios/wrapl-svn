@@ -92,7 +92,7 @@ GLOBAL_FUNCTION(SessionEval, 1) {
 		return MESSAGE;
 	};
 	command_expr_t *Command = accept_command(Session->Scanner);
-	Command->print(0);
+	//Command->print(0);
 	if (setjmp(Session->Compiler->Error.Handler)) {
 		errormessage_t *Error = new errormessage_t;
 		Error->Type = ErrorMessageT;

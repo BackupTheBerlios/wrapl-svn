@@ -8,6 +8,8 @@
 #include <stdarg.h>
 #include <unistd.h>
 
+SYMBOL($AT, "@");
+
 #if 0
 #define DEBUG printf("%s.%d\n", __FILE__, __LINE__);
 #else
@@ -152,7 +154,6 @@ uint32_t compiler_t::function_t::lookup(loop_t *Loop) {DEBUG
 	return Index;
 };
 
-
 void compiler_t::push_function() {DEBUG
 	function_t *Function = new function_t();
 	Function->Up = this->Function;
@@ -252,6 +253,8 @@ operand_t *compiler_t::lookup(int LineNo, const char *Name) {DEBUG
 	raise_error(LineNo, "Error: identifier %s not declared", Name);
 };
 
+#ifdef ASSEMBLER_LISTING
+
 void assign_expr_t::print(int Indent) {
 	Left->print(Indent);
 	printf(" <- ");
@@ -310,8 +313,6 @@ void qualident_expr_t::print(int Indent) {
 	printf("%s", Names->Ident);
 	for (qualident_expr_t::name_t *Name = Names->Next; Name; Name = Name->Next) printf(".%s", Name->Ident);
 };
-
-SYMBOL($AT, "@");
 
 void const_expr_t::print(int Indent) {
 	Std$Function_result Result;
@@ -578,9 +579,16 @@ void command_expr_t::print(int Indent) {
 	};
 };
 
+#endif
+
 operand_t *assign_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t *Success) {DEBUG
 	label_t *Label0 = new label_t;
 	operand_t *Dest = Left->compile(Compiler, Start, Label0);
+	if (operand_t *Src = Right->constant(Compiler, true)) {
+		Label0->store_con(Dest, Src->Value);
+		Label0->link(Success);
+		return Src;
+	};
 	if (Dest == Register) {
 		label_t *Label1 = new label_t;
 		operand_t *Self = new operand_t;
@@ -752,6 +760,15 @@ operand_t *func_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t *S
 	return Closure;
 };
 
+operand_t *func_expr_t::constant(compiler_t *Compiler, bool Relaxed) {DEBUG
+	if (Relaxed) return 0;
+	Constant = new operand_t;
+	Constant->Type = operand_t::CNST;
+	closure_t *Closure = new closure_t;
+	Constant->Value = (Std$Object_t *)Closure;
+	return Constant;
+};
+
 operand_t *ident_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t *Success) {DEBUG
 	Start->link(Success);
 	return Compiler->lookup(LineNo, Name);
@@ -774,7 +791,7 @@ operand_t *qualident_expr_t::compile(compiler_t *Compiler, label_t *Start, label
 	return Operand;
 };
 
-operand_t *qualident_expr_t::constant(compiler_t *Compiler) {DEBUG
+operand_t *qualident_expr_t::constant(compiler_t *Compiler, bool Relaxed) {DEBUG
 	const char *Ident = Names->Ident;
 	operand_t *Operand = Compiler->lookup(LineNo, Ident);
 	for (qualident_expr_t::name_t *Name = Names->Next; Name; Name = Name->Next) {

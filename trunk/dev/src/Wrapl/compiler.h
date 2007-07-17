@@ -11,6 +11,12 @@
 
 #include <setjmp.h>
 
+#ifdef ASSEMBLER_LISTING
+#define PRINT_METHOD void print(int Indent);
+#else
+#define PRINT_METHOD
+#endif
+
 struct compiler_t {
 	struct function_t {
 		struct loop_t {
@@ -110,9 +116,11 @@ struct compiler_t {
 struct expr_t {
 	expr_t *Next;
 	int LineNo;
+#ifdef ASSEMBLER_LISTING
 	virtual void print(int Indent) {};
+#endif
 	virtual operand_t *compile(compiler_t *Compiler, label_t *Start, label_t *Success) {return 0;};
-	virtual operand_t *constant(compiler_t *Compiler) {return 0;};
+	virtual operand_t *constant(compiler_t *Compiler, bool Relaxed = false) {return 0;};
 };
 
 struct assign_expr_t : expr_t {
@@ -122,7 +130,7 @@ struct assign_expr_t : expr_t {
 		this->Left = Left;
 		this->Right = Right;
 	};
-	void print(int Indent);
+	PRINT_METHOD
 	operand_t *compile(compiler_t *Compiler, label_t *Start, label_t *Success);
 };
 
@@ -133,7 +141,7 @@ struct ref_assign_expr_t : expr_t {
 		this->Left = Left;
 		this->Right = Right;
 	};
-	void print(int Indent);
+	PRINT_METHOD
 	operand_t *compile(compiler_t *Compiler, label_t *Start, label_t *Success);
 };
 
@@ -144,7 +152,7 @@ struct invoke_expr_t : expr_t {
 		this->Function = Function;
 		this->Args = Args;
 	};
-	void print(int Indent);
+	PRINT_METHOD
 	operand_t *compile(compiler_t *Compiler, label_t *Start, label_t *Success);
 };
 
@@ -167,9 +175,9 @@ struct const_expr_t : expr_t {
 		Operand->Type = operand_t::CNST;
 		Operand->Value = (Std$Object_t *)Value;
 	};
-	void print(int Indent);
+	PRINT_METHOD
 	operand_t *compile(compiler_t *Compiler, label_t *Start, label_t *Success);
-	operand_t *constant(compiler_t *Compiler) {return Operand;};
+	operand_t *constant(compiler_t *Compiler, bool Relaxed) {return Operand;};
 };
 
 struct func_expr_t : expr_t {
@@ -187,15 +195,9 @@ struct func_expr_t : expr_t {
 		this->Parameters = Parameters;
 		this->Body = Body;
 	};
-	void print(int Indent);
+	PRINT_METHOD
 	operand_t *compile(compiler_t *Compiler, label_t *Start, label_t *Success);
-	operand_t *constant(compiler_t *Compiler) {
-		Constant = new operand_t;
-		Constant->Type = operand_t::CNST;
-		closure_t *Closure = new closure_t;
-		Constant->Value = (Std$Object_t *)Closure;
-		return Constant;
-	};
+	operand_t *constant(compiler_t *Compiler, bool Relaxed);
 };
 
 struct ident_expr_t : expr_t {
@@ -204,7 +206,7 @@ struct ident_expr_t : expr_t {
 		this->LineNo = LineNo;
 		this->Name = Name;
 	};
-	void print(int Indent);
+	PRINT_METHOD
 	operand_t *compile(compiler_t *Compiler, label_t *Start, label_t *Success);
 };
 
@@ -217,9 +219,9 @@ struct qualident_expr_t : expr_t {
 		this->LineNo = LineNo;
 		this->Names = Names;
 	};
-	void print(int Indent);
+	PRINT_METHOD
 	operand_t *compile(compiler_t *Compiler, label_t *Start, label_t *Success);
-	operand_t *constant(compiler_t *Compiler);
+	operand_t *constant(compiler_t *Compiler, bool Relaxed);
 };
 
 struct ret_expr_t : expr_t {
@@ -228,7 +230,7 @@ struct ret_expr_t : expr_t {
 		this->LineNo = LineNo;
 		this->Value = Value;
 	};
-	void print(int Indent);
+	PRINT_METHOD
 	operand_t *compile(compiler_t *Compiler, label_t *Start, label_t *Success);
 };
 
@@ -238,7 +240,7 @@ struct susp_expr_t : expr_t {
 		this->LineNo = LineNo;
 		this->Value = Value;
 	};
-	void print(int Indent);
+	PRINT_METHOD
 	operand_t *compile(compiler_t *Compiler, label_t *Start, label_t *Success);
 };
 
@@ -246,7 +248,7 @@ struct fail_expr_t : expr_t {
 	fail_expr_t(int LineNo) {
 		this->LineNo = LineNo;
 	};
-	void print(int Indent);
+	PRINT_METHOD
 	operand_t *compile(compiler_t *Compiler, label_t *Start, label_t *Success);
 };
 
@@ -254,7 +256,7 @@ struct back_expr_t : expr_t {
 	back_expr_t(int LineNo) {
 		this->LineNo = LineNo;
 	};
-	void print(int Indent);
+	PRINT_METHOD
 	operand_t *compile(compiler_t *Compiler, label_t *Start, label_t *Success);
 };
 
@@ -264,7 +266,7 @@ struct rep_expr_t : expr_t {
 		this->LineNo = LineNo;
 		this->Body = Body;
 	};
-	void print(int Indent);
+	PRINT_METHOD
 	operand_t *compile(compiler_t *Compiler, label_t *Start, label_t *Success);
 };
 
@@ -274,7 +276,7 @@ struct exit_expr_t : expr_t {
 		this->LineNo = LineNo;
 		this->Value = Value;
 	};
-	void print(int Indent);
+	PRINT_METHOD
 	operand_t *compile(compiler_t *Compiler, label_t *Start, label_t *Success);
 };
 
@@ -282,7 +284,7 @@ struct step_expr_t : expr_t {
 	step_expr_t(int LineNo) {
 		this->LineNo = LineNo;
 	};
-	void print(int Indent);
+	PRINT_METHOD
 	operand_t *compile(compiler_t *Compiler, label_t *Start, label_t *Success);
 };
 
@@ -293,7 +295,7 @@ struct every_expr_t : expr_t {
 		this->Condition = Condition;
 		this->Body = Body;
 	};
-	void print(int Indent);
+	PRINT_METHOD
 	operand_t *compile(compiler_t *Compiler, label_t *Start, label_t *Success);
 };
 
@@ -303,7 +305,7 @@ struct all_expr_t : expr_t {
 		this->LineNo = LineNo;
 		this->Value = Value;
 	};
-	void print(int Indent);
+	PRINT_METHOD
 	operand_t *compile(compiler_t *Compiler, label_t *Start, label_t *Success);
 };
 
@@ -313,7 +315,7 @@ struct send_expr_t : expr_t {
 		this->LineNo = LineNo;
 		this->Value = Value;
 	};
-	void print(int Indent);
+	PRINT_METHOD
 	operand_t *compile(compiler_t *Compiler, label_t *Start, label_t *Success);
 };
 
@@ -321,7 +323,7 @@ struct self_expr_t : expr_t {
 	self_expr_t(int LineNo) {
 		this->LineNo = LineNo;
 	};
-	void print(int Indent);
+	PRINT_METHOD
 	operand_t *compile(compiler_t *Compiler, label_t *Start, label_t *Success);
 };
 
@@ -331,7 +333,7 @@ struct sequence_expr_t : expr_t {
 		this->LineNo = LineNo;
 		this->Exprs = Exprs;
 	};
-	void print(int Indent);
+	PRINT_METHOD
 	operand_t *compile(compiler_t *Compiler, label_t *Start, label_t *Success);
 };
 
@@ -341,7 +343,7 @@ struct typeof_expr_t : expr_t {
 		this->LineNo = LineNo;
 		this->Expr = Expr;
 	};
-	void print(int Indent);
+	PRINT_METHOD
 	operand_t *compile(compiler_t *Compiler, label_t *Start, label_t *Success);
 };
 
@@ -352,7 +354,7 @@ struct limit_expr_t : expr_t {
 		this->Limit = Limit;
 		this->Expr = Expr;
 	};
-	void print(int Indent);
+	PRINT_METHOD
 	operand_t *compile(compiler_t *Compiler, label_t *Start, label_t *Success);
 };
 
@@ -362,7 +364,7 @@ struct infinite_expr_t : expr_t {
 		this->LineNo = LineNo;
 		this->Expr = Expr;
 	};
-	void print(int Indent);
+	PRINT_METHOD
 	operand_t *compile(compiler_t *Compiler, label_t *Start, label_t *Success);
 };
 
@@ -373,7 +375,7 @@ struct parallel_expr_t : expr_t {
 		this->Left = Left;
 		this->Right = Right;
 	};
-	void print(int Indent);
+	PRINT_METHOD
 	operand_t *compile(compiler_t *Compiler, label_t *Start, label_t *Success);
 };
 
@@ -384,7 +386,7 @@ struct left_expr_t : expr_t {
 		this->Left = Left;
 		this->Right = Right;
 	};
-	void print(int Indent);
+	PRINT_METHOD
 	operand_t *compile(compiler_t *Compiler, label_t *Start, label_t *Success);
 };
 
@@ -395,7 +397,7 @@ struct right_expr_t : expr_t {
 		this->Left = Left;
 		this->Right = Right;
 	};
-	void print(int Indent);
+	PRINT_METHOD
 	operand_t *compile(compiler_t *Compiler, label_t *Start, label_t *Success);
 };
 
@@ -407,7 +409,7 @@ struct cond_expr_t : expr_t {
 		this->Success = Success;
 		this->Failure = Failure;
 	};
-	void print(int Indent);
+	PRINT_METHOD
 	operand_t *compile(compiler_t *Compiler, label_t *Start, label_t *Success);
 };
 
@@ -420,7 +422,7 @@ struct comp_expr_t : expr_t {
 		this->Left = Left;
 		this->Right = Right;
 	};
-	void print(int Indent);
+	PRINT_METHOD
 	operand_t *compile(compiler_t *Compiler, label_t *Start, label_t *Success);
 };
 
@@ -449,7 +451,7 @@ struct when_expr_t : expr_t {
 	expr_t *Condition;
 	case_t *Cases;
 	expr_t *Default;
-	void print(int Indent);
+	PRINT_METHOD
 	operand_t *compile(compiler_t *Compiler, label_t *Start, label_t *Success);
 };
 
@@ -474,7 +476,7 @@ struct block_expr_t : expr_t {
 	localdef_t *Defs;
 	expr_t *Body, *Final;
 	receiver_t Receiver;
-	void print(int Indent);
+	PRINT_METHOD
 	operand_t *compile(compiler_t *Compiler, label_t *Start, label_t *Success);
 };
 
@@ -517,7 +519,7 @@ struct module_expr_t : expr_t {
 	expr_t *Body;
 	const char *Name;
 
-	void print(int Indent);
+	PRINT_METHOD
 	operand_t *compile(compiler_t *Compiler, label_t *Start, label_t *Success);
 	void compile(compiler_t *Compiler);
 };
@@ -556,7 +558,7 @@ struct command_expr_t : expr_t {
 	globalvar_t *Vars;
 	expr_t *Body;
 
-	void print(int Indent);
+	PRINT_METHOD
 	int compile(compiler_t *Compiler, Std$Function_result *Result);
 };
 

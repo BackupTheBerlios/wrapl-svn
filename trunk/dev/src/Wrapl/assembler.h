@@ -4,6 +4,7 @@
 #include <Riva/Memory.h>
 
 #define TRACE {printf("%s:%d\n", __FILE__, __LINE__);}
+//#define ASSEMBLER_LISTING
 
 #include <stdint.h>
 #include <Sys/Module.h>
@@ -45,7 +46,9 @@ struct inst_t {
 	operand_t *Ecx, *Edx;
 	int LineNo;
 
+#ifdef ASSEMBLER_LISTING
 	virtual void list() {};
+#endif
 	virtual void add_sources() {};
 	virtual void add_source(load_inst_t *Load) {};
 	virtual void append_links(label_t *Start) {};
@@ -58,7 +61,9 @@ struct load_inst_t : inst_t {
 	enum {LOAD_NONE, LOAD_VAL, LOAD_REF, LOAD_BOTH, LOAD_ARG} Type;
 	operand_t *Operand;
 
+#ifdef ASSEMBLER_LISTING
 	void list();
+#endif
 	void add_sources() {Next->add_source(this);};
 	int noof_consts();
 	void **get_consts(void **);
@@ -124,7 +129,9 @@ struct select_integer_inst_t : inst_t {
 	case_t *Cases;
 	label_t *Default;
 
+#ifdef ASSEMBLER_LISTING
 	void list();
+#endif
 	void add_source(load_inst_t *Load) {Load->load_val();};
 	void append_links(label_t *Start);
 	void encode(assembler_t *Assembler);
@@ -140,7 +147,9 @@ struct select_string_inst_t : inst_t {
 	case_t *Cases;
 	label_t *Default;
 
+#ifdef ASSEMBLER_LISTING
 	void list();
+#endif
 	void add_source(load_inst_t *Load) {Load->load_val();};
 	void append_links(label_t *Start);
 	int noof_consts();
@@ -157,7 +166,9 @@ struct select_object_inst_t : inst_t {
 	case_t *Cases;
 	label_t *Default;
 
+#ifdef ASSEMBLER_LISTING
 	void list();
+#endif
 	void add_source(load_inst_t *Load) {Load->load_val();};
 	void append_links(label_t *Start);
 	int noof_consts();
@@ -177,9 +188,11 @@ struct label_t : inst_t {
 		return Link->final();
 	};
 
+#ifdef ASSEMBLER_LISTING
 	void list() {
 		if (Referenced) printf("%x:\n", this);
 	};
+#endif
 
 	void append(inst_t *Inst) {
 		if (Tail) {
