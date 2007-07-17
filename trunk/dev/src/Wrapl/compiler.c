@@ -1023,23 +1023,33 @@ operand_t *parallel_expr_t::compile(compiler_t *Compiler, label_t *Start, label_
 	label_t *Label1 = new label_t;
 	label_t *Label2 = new label_t;
 	label_t *Label3 = new label_t;
-	label_t *Label4 = new label_t;
 	label_t *Label5 = new label_t;
+	label_t *Label6 = new label_t;
+	label_t *Label7 = new label_t;
 
 	uint32_t Temp = Compiler->new_temporary();
+	uint32_t Trap = Compiler->use_trap();
+	//uint32_t Temp1 = Compiler->new_temporary();
 
 	Start->store_link(Temp, Label2);
 	Start->link(Label0);
-	Left->compile(Compiler, Label0, Label1);
+	Label0 = Compiler->push_trap(Label0, Label5);
+		Left->compile(Compiler, Label0, Label1);
+		Label6->store_link(Temp, Label3);
+		Compiler->back_trap(Label6);
+	Compiler->pop_trap();
+	
 	Label1->jump_link(Temp);
-	Label2->store_link(Temp, Label3);
-	Label2->link(Label4);
 
-	Label4 = Compiler->push_trap(Label4, Label5);
-		operand_t *Result = Right->compile(Compiler, Label4, Success);
+	Label2 = Compiler->push_trap(Label2, Label5);
+		operand_t *Result = Right->compile(Compiler, Label2, Label7);
 		Compiler->back_trap(Label3);
 	Compiler->pop_trap();
-	Compiler->back_trap(Label5);
+	
+	Label5->back(Trap);
+	Label7->push_trap(Trap, Label6, Temp);
+	Label7->link(Success);
+	
 	return Result;
 };
 

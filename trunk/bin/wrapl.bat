@@ -1,4 +1,4 @@
-@riva %~f0 %*
+@rivabat %~f0 %*
 MOD Main;
 
 IMP Std.String;
