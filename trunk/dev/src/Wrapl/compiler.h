@@ -337,6 +337,16 @@ struct sequence_expr_t : expr_t {
 	operand_t *compile(compiler_t *Compiler, label_t *Start, label_t *Success);
 };
 
+struct parallel_expr_t : expr_t {
+	expr_t *Exprs;
+	parallel_expr_t(int LineNo, expr_t *Exprs) {
+		this->LineNo = LineNo;
+		this->Exprs = Exprs;
+	};
+	PRINT_METHOD
+	operand_t *compile(compiler_t *Compiler, label_t *Start, label_t *Success);
+};
+
 struct typeof_expr_t : expr_t {
 	expr_t *Expr;
 	typeof_expr_t(int LineNo, expr_t *Expr) {
@@ -363,17 +373,6 @@ struct infinite_expr_t : expr_t {
 	infinite_expr_t(int LineNo, expr_t *Expr) {
 		this->LineNo = LineNo;
 		this->Expr = Expr;
-	};
-	PRINT_METHOD
-	operand_t *compile(compiler_t *Compiler, label_t *Start, label_t *Success);
-};
-
-struct parallel_expr_t : expr_t {
-	expr_t *Left, *Right;
-	parallel_expr_t(int LineNo, expr_t *Left, expr_t *Right) {
-		this->LineNo = LineNo;
-		this->Left = Left;
-		this->Right = Right;
 	};
 	PRINT_METHOD
 	operand_t *compile(compiler_t *Compiler, label_t *Start, label_t *Success);

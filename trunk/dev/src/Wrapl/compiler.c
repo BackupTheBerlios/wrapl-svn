@@ -401,9 +401,11 @@ void infinite_expr_t::print(int Indent) {
 };
 
 void parallel_expr_t::print(int Indent) {
-	Left->print(Indent);
-	printf(" ! ");
-	Right->print(Indent);
+	Exprs->print(Indent);
+	for (expr_t *Expr = Exprs->Next; Expr; Expr = Expr->Next) {
+		printf(" ! ");
+		Expr->print(Indent);
+	};
 };
 
 void left_expr_t::print(int Indent) {
@@ -677,7 +679,6 @@ operand_t *parallel_invoke_expr_t::compile(compiler_t *Compiler, label_t *Start,
 	//	printf("%s:%d: I'm not done yet!\n", __FILE__, __LINE__);
 	//} else {
 		label_t *LabelF = new label_t;
-		label_t *LabelG = new label_t;
 		uint32_t Count = 0;
 		uint32_t ArgsArray = 0;
 		uint32_t Trap = Compiler->use_trap();
@@ -696,41 +697,45 @@ operand_t *parallel_invoke_expr_t::compile(compiler_t *Compiler, label_t *Start,
 			};
 			uint32_t Index = ArgsArray;
 			expr_t *Arg = Args;
-			
-			label_t *Label1 = new label_t;
-			label_t *Label2 = new label_t;
-			
 			uint32_t Gate = Compiler->new_temporary();
-			Label0->store_link(Gate, Label2);
-			operand_t *Value = Arg->compile(Compiler, Label0, Label1);
-			Label1->store_arg(Index, Value);
-			Label1->jump_link(Gate);
-			
-			LabelF->fixup_arg(Index, Value);
-			
-			Label0 = Label2;
-			
-			while ((Arg = Arg->Next)) {
-				Label1 = new label_t;
-				Label2 = new label_t;
+		
+			label_t *LabelH = new label_t;
+			label_t *LabelG = new label_t;
+			label_t *Label4 = LabelH;
+
+			while (Arg->Next) {
+				label_t *Label2 = new label_t;
 				label_t *Label3 = new label_t;
-				++Index;
-				Label0->store_link(Gate, Label3);
-				Gate = Compiler->new_temporary();
-				Label0->store_link(Gate, Label2);
+				label_t *Label5 = new label_t;
+				label_t *Label6 = new label_t;
+		
 				Label0 = Compiler->push_trap(Label0, LabelG);
-					operand_t *Value = Arg->compile(Compiler, Label0, Label1);
-					Label1->store_arg(Index, Value);
-					Label1->jump_link(Gate);
+					Label0->store_link(Gate, Label2);
+					Label0->link(Label6);
+					operand_t *Value = Arg->compile(Compiler, Label6, Label3);
+					Label3->store_arg(Index, Value);
 					LabelF->fixup_arg(Index, Value);
-					
+					Label4->store_link(Gate, Label5);
+					Compiler->back_trap(Label4);
+					Label4 = Label5;
+					Label3->jump_link(Gate);
 					Label0 = Label2;
-					
-					Compiler->back_trap(Label3);
 				Compiler->pop_trap();
+				
+				Arg = Arg->Next;
+				++Index;
 			};
+			label_t *Label3 = new label_t;
+			Label0 = Compiler->push_trap(Label0, LabelG);
+				operand_t *Value = Arg->compile(Compiler, Label0, Label3);
+				Label3->store_arg(Index, Value);
+				LabelF->fixup_arg(Index, Value);
+				Compiler->back_trap(Label4);
+			Compiler->pop_trap();
+			Label3->push_trap(Trap, LabelH, Gate);
+			Label0 = Label3;
+			LabelG->back(Trap);
 		};
-		LabelG->back(Trap);
 		Label0->link(LabelF);
 		LabelF->load(FunctionOperand);
 		LabelF->invoke(Trap, ArgsArray, Count, LabelF);
@@ -1019,37 +1024,42 @@ operand_t *infinite_expr_t::compile(compiler_t *Compiler, label_t *Start, label_
 };
 
 operand_t *parallel_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t *Success) {DEBUG
-	label_t *Label0 = new label_t;
-	label_t *Label1 = new label_t;
-	label_t *Label2 = new label_t;
-	label_t *Label3 = new label_t;
-	label_t *Label5 = new label_t;
-	label_t *Label6 = new label_t;
-	label_t *Label7 = new label_t;
-
-	uint32_t Temp = Compiler->new_temporary();
+	uint32_t Gate = Compiler->new_temporary();
 	uint32_t Trap = Compiler->use_trap();
-	//uint32_t Temp1 = Compiler->new_temporary();
 
-	Start->store_link(Temp, Label2);
-	Start->link(Label0);
-	Label0 = Compiler->push_trap(Label0, Label5);
-		Left->compile(Compiler, Label0, Label1);
-		Label6->store_link(Temp, Label3);
-		Compiler->back_trap(Label6);
-	Compiler->pop_trap();
-	
-	Label1->jump_link(Temp);
+	label_t *Label1 = Start;
+	label_t *LabelF = new label_t;
+	label_t *LabelG = new label_t;
+	label_t *Label4 = LabelF;
 
-	Label2 = Compiler->push_trap(Label2, Label5);
-		operand_t *Result = Right->compile(Compiler, Label2, Label7);
-		Compiler->back_trap(Label3);
+	expr_t *Expr = Exprs;
+	while (Expr->Next) {
+		label_t *Label2 = new label_t;
+		label_t *Label3 = new label_t;
+		label_t *Label5 = new label_t;
+		label_t *Label6 = new label_t;
+
+		Label1 = Compiler->push_trap(Label1, LabelG);
+			Label1->store_link(Gate, Label2);
+			Label1->link(Label6);
+			Expr->compile(Compiler, Label6, Label3);
+			Label4->store_link(Gate, Label5);
+			Compiler->back_trap(Label4);
+			Label4 = Label5;
+			Label3->jump_link(Gate);
+			Label1 = Label2;
+		Compiler->pop_trap();
+		
+		Expr = Expr->Next;
+	};
+	label_t *Label3 = new label_t;
+	Label1 = Compiler->push_trap(Label1, LabelG);
+		operand_t *Result = Expr->compile(Compiler, Label1, Label3);
+		Compiler->back_trap(Label4);
 	Compiler->pop_trap();
-	
-	Label5->back(Trap);
-	Label7->push_trap(Trap, Label6, Temp);
-	Label7->link(Success);
-	
+	Label3->push_trap(Trap, LabelF, Gate);
+	Label3->link(Success);
+	LabelG->back(Trap);
 	return Result;
 };
 

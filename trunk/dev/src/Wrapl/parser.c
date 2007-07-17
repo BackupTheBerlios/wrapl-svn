@@ -688,6 +688,16 @@ static expr_t *parse_expr2(scanner_t *Scanner, int Precedence = 0) {
 			Term = new sequence_expr_t(Scanner->Token.LineNo, Term);
 			goto start;
 		};
+		if (Scanner->parse(tkEXCLAIM)) {
+			expr_t *Last = accept_term(Scanner);
+			Term->Next = Last;
+			while (Scanner->parse(tkEXCLAIM)) {
+				Last->Next = accept_term(Scanner);
+				Last = Last->Next;
+			};
+			Term = new parallel_expr_t(Scanner->Token.LineNo, Term);
+			goto start;
+		};
 	case 9:
 		if (Scanner->parse(tkOF)) {
 			Term = new limit_expr_t(Scanner->Token.LineNo, Term, accept_term(Scanner));
@@ -708,7 +718,7 @@ expr_t *accept_expr(scanner_t *Scanner);
 static expr_t *parse_expr(scanner_t *Scanner) {
 	expr_t *Expr = parse_expr2(Scanner);
 	if (Expr == 0) return 0;
-	if (Scanner->parse(tkEXCLAIM)) return new parallel_expr_t(Scanner->Token.LineNo, Expr, accept_expr(Scanner));
+	//if (Scanner->parse(tkEXCLAIM)) return new parallel_expr_t(Scanner->Token.LineNo, Expr, accept_expr(Scanner));
 	if (Scanner->parse(tkASSIGN)) return new assign_expr_t(Scanner->Token.LineNo, Expr, accept_expr(Scanner));
 	if (Scanner->parse(tkTHEN)) {
 		expr_t *Expr2 = accept_expr2(Scanner);

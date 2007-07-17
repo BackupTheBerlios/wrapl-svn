@@ -4,7 +4,7 @@
 #include <Riva/Memory.h>
 
 #define TRACE {printf("%s:%d\n", __FILE__, __LINE__);}
-#define ASSEMBLER_LISTING
+//#define ASSEMBLER_LISTING
 
 #include <stdint.h>
 #include <Sys/Module.h>
