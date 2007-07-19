@@ -69,7 +69,6 @@ static void posix_close(IO$Posix_t *Stream) {
 static int posix_eoi(IO$Posix_t *Stream) {
 	off_t Current = lseek(Stream->Handle, 0, SEEK_CUR);
 	if (Current == -1) return 0;
-
 	return 0;
 };
 

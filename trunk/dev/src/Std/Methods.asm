@@ -2826,6 +2826,51 @@ method "/", SMALLINT, REAL
 	xor eax, eax
 	ret
 
+method "ord", STRING
+	mov eax, [argument(edi).Val]
+	cmp [small_int(string(eax).Length).Value], dword 0
+	jne .nonempty
+	xor eax, eax
+	inc eax
+	ret
+.nonempty:
+	xor edx, edx
+	mov eax, [address(string_block(string(eax).Blocks).Chars).Value]
+	mov dl, [eax]
+	push edx
+	call Std$Integer$_alloc_small
+	pop dword [small_int(eax).Value]
+	mov ecx, eax
+	xor edx, edx
+	xor eax, eax
+	ret
+
+method "chr", SMALLINT
+	push byte 2
+	call Riva$Memory$_alloc_atomic
+	add esp, byte 4
+	mov ecx, [argument(edi).Val]
+	mov ecx, [small_int(ecx).Value]
+	mov [eax], cl
+	mov [eax + 1], byte 0
+	mov ebx, eax
+	push byte sizeof(string) + 2 * sizeof(string_block)
+	call Riva$Memory$_alloc
+	add esp, byte 4
+	mov edx, 1
+	mov [value(eax).Type], dword Std$String$T
+	mov [value(string(eax).Length).Type], dword Std$Integer$SmallT
+	mov [small_int(string(eax).Length).Value], edx
+	mov [string(eax).Count], edx
+	mov [value(string_block(string(eax).Blocks).Length).Type], dword Std$Integer$SmallT
+	mov [small_int(string_block(string(eax).Blocks).Length).Value], edx
+	mov [value(string_block(string(eax).Blocks).Chars).Type], dword Std$Address$T
+	mov [address(string_block(string(eax).Blocks).Chars).Value], ebx
+	mov ecx, eax
+	xor edx, edx
+	xor eax, eax
+	ret
+
 _method "+", Std$String$Add, STRING, STRING
 
 method "[]", STRING, SMALLINT

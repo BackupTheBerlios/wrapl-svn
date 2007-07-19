@@ -112,6 +112,17 @@ GLOBAL_FUNCTION(Make, 0) {
 	return SUCCESS;
 };
 
+METHOD("empty", TYP, T) {
+	_list *List = (_list *)Args[0].Val;
+	List->Head = List->Tail = List->Cache = 0;
+	List->Index = List->Lower = List->Upper = 0;
+	List->Array = 0;
+	List->Length = 0;
+	List->Access = 4;
+	Result->Val = List;
+	return SUCCESS;
+};
+
 METHOD("copy", TYP, T) {
 	const _list *List0 = (_list *)Args[0].Val;
 	_list *List = new(_list);

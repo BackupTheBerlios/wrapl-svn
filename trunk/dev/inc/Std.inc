@@ -37,6 +37,7 @@ align 8
 %macro func 2
 	global %1
 	global %1.invoke
+	global %1.unchecked
 section .d %+ %s, class=data,use32
 align 8
 %1:

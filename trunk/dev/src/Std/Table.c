@@ -371,6 +371,15 @@ GLOBAL_FUNCTION(New, 0) {
 	return SUCCESS;
 };
 
+METHOD("empty", TYP, T) {
+	struct avl_table *Table = (struct avl_table *)Args[0].Val;
+	Table->avl_root = 0;
+	Table->avl_count = 0;
+	Table->avl_generation = 0;
+	Result->Val = Table;
+	return SUCCESS;
+};
+
 GLOBAL_FUNCTION(Make, 0) {
 	struct avl_table *Table = avl_create($COMP, $HASH);
 	int I;
