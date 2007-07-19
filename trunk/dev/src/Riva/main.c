@@ -55,6 +55,7 @@ static void read_config(void) {
 		const char *Path = cfg_getnstr(Cfg, "library", I);
 		module_add_directory(Path);
 	};
+	module_load(0, "Std/Methods");
 	for (int I = 0; I < cfg_size(Cfg, "modules"); ++I) {
 		const char *Path = cfg_getnstr(Cfg, "modules", I);
 		log_writef("Preloading module: %s\n", Path);
@@ -77,6 +78,7 @@ int main(int Argc, char **Argv) {
 	module_init();
 	memory_init();
 	log_init();
+	//log_enable();
 	thread_init();
 	directory_init();
 	native_init();
