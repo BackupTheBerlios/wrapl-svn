@@ -360,6 +360,10 @@ static Std$Object_t *avl_t_next (struct avl_traverser *trav) {
 	return x;
 }
 
+Std$Object_t *_new(Std$Object_t *Comp, Std$Object_t *Hash) {
+	return Result->Val = avl_create(Comp ?: $COMP, Hash ?: $HASH);
+};
+
 GLOBAL_FUNCTION(New, 0) {
 	if (Count == 0) {
 		Result->Val = avl_create($COMP, $HASH);

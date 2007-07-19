@@ -44,13 +44,18 @@ static void characterdatahandler(parser_t *Parser, const XML_Char *String, int L
 	if (Parser->CharacterDataHandler != Std$Object$Nil) {
 		Std$Function_result Result0;
 		Std$Function$call(Parser->CharacterDataHandler, 2, &Result0, Parser->UserData, &Parser->UserData, Std$String$copy_length(String, Length), 0);
-	};	
+	};
 };
 
 GLOBAL_FUNCTION(New, 0) {
+	XML_Memory_Handling_Suite Suite = {
+		Riva$Memory$alloc,
+		Riva$Memory$realloc,
+		Riva$Memory$free
+	};
 	parser_t *Parser = new(parser_t);
 	Parser->Type = T;
-	Parser->Handle = XML_ParserCreate(0);
+	Parser->Handle = XML_ParserCreateMM(0, &Suite, ":");
 	XML_SetUserData(Parser->Handle, Parser);
 
 	Parser->UserData = Std$Object$Nil;
