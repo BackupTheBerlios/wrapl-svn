@@ -55,7 +55,7 @@ GLOBAL_FUNCTION(New, 0) {
 	};
 	parser_t *Parser = new(parser_t);
 	Parser->Type = T;
-	Parser->Handle = XML_ParserCreateMM(0, &Suite, ":");
+	Parser->Handle = XML_ParserCreate_MM(0, &Suite, ":");
 	XML_SetUserData(Parser->Handle, Parser);
 
 	Parser->UserData = Std$Object$Nil;
