@@ -97,6 +97,24 @@ static char posix_readc(IO$Posix_t *Stream) {
 	return Char;
 };
 
+METHOD("rest", TYP, ReaderT) {
+	IO$Posix_t *Stream = Args[0].Val;
+	size_t Pos = lseek(Stream->Handle, 0, SEEK_CUR);
+	size_t Length = lseek(Stream->Handle, 0, SEEK_END) - Pos;
+	lseek(Stream->Handle, Pos, SEEK_SET);
+	char *Buffer = Riva$Memory$alloc_atomic(Length);
+	char *Ptr = Buffer;
+	size_t Rem = Length;
+	while (Rem) {
+		size_t BytesRead = read(Stream->Handle, Ptr, Rem);
+		Rem -= BytesRead;
+		Ptr += BytesRead;
+	};
+	
+	Result->Val = Std$String$new_length(Buffer, Length);
+	return SUCCESS;
+};
+
 METHOD("read", TYP, ReaderT, TYP, Std$Integer$SmallT) {
 	IO$Posix_t *Stream = Args[0].Val;
 	unsigned long Length = ((Std$Integer_smallt *)Args[1].Val)->Value;

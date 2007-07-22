@@ -63,6 +63,22 @@ static int windows_eoi(IO$Windows_t *Stream) {
 	return (ReadFile(Stream->Handle, &Buffer, 0, &BytesRead, 0) == 0);
 };
 
+METHOD("rest", TYP, ReaderT) {
+	IO$Windows_t *Stream = Args[0].Val;
+	unsigned long Length = GetFileSize(Stream->Handle, 0) - SetFilePointer(Stream->Handle, 0, 0, FILE_CURRENT);
+	char *Buffer = Riva$Memory$alloc_atomic(Length);
+	char *Ptr = Buffer;
+	unsigned long Rem = Length;
+	while (Rem) {
+		unsigned long BytesRead;
+		ReadFile(Stream->Handle, Ptr, Rem, &BytesRead, 0);
+		Rem -= BytesRead;
+		Ptr += BytesRead;
+	};
+	Result->Val = Std$String$new_length(Buffer, Length);
+	return SUCCESS;
+};
+
 METHOD("read", TYP, ReaderT, TYP, Std$Address$T, TYP, Std$Integer$SmallT) {
 	IO$Windows_t *Stream = Args[0].Val;
 	char *Buffer = ((Std$Address_t *)Args[1].Val)->Value;

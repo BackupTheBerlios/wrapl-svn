@@ -198,13 +198,15 @@ METHOD("+", TYP, T, TYP, T) {
 
 METHOD("push", TYP, T, SKP) {
 	_list *List = (_list *)Args[0].Val;
-	_node *Node = new(_node);
-	Node->Value = Count < 2 ? Std$Object$Nil : Args[1].Val;
-	Node->Next = List->Head;
-	if (List->Head) List->Head->Prev = Node; else List->Tail = Node;
-	List->Head = Node;
-	++List->Length;
-	if (List->Array) {++List->Lower; ++List->Upper;};
+	for (int I = 1; I < Count; ++I) {
+		_node *Node = new(_node);
+		Node->Value = Args[I].Val;
+		Node->Next = List->Head;
+		if (List->Head) List->Head->Prev = Node; else List->Tail = Node;
+		List->Head = Node;
+		++List->Length;
+		if (List->Array) {++List->Lower; ++List->Upper;};
+	};
 	List->Index = 1; List->Cache = List->Head;
 	List->Access = 4;
 	Result->Arg = Args[0];
@@ -213,12 +215,14 @@ METHOD("push", TYP, T, SKP) {
 
 METHOD("put", TYP, T, SKP) {
 	_list *List = (_list *)Args[0].Val;
-	_node *Node = new(_node);
-	Node->Value = Count < 2 ? Std$Object$Nil : Args[1].Val;
-	Node->Prev = List->Tail;
-	if (List->Tail) List->Tail->Next = Node; else List->Head = Node;
-	List->Tail = Node;
-	++List->Length;
+	for (int I = 1; I < Count; ++I) {
+		_node *Node = new(_node);
+		Node->Value = Args[I].Val;
+		Node->Prev = List->Tail;
+		if (List->Tail) List->Tail->Next = Node; else List->Head = Node;
+		List->Tail = Node;
+		++List->Length;
+	};
 	List->Index = 1; List->Cache = List->Head;
 	List->Access = 4;
 	Result->Arg = Args[0];
