@@ -2826,6 +2826,198 @@ method "/", SMALLINT, REAL
 	xor eax, eax
 	ret
 
+method "left", STRING, SMALLINT
+	mov eax, [argument(edi + 8).Val]
+	mov eax, [small_int(eax).Value]
+	mov ebx, [argument(edi).Val]
+	cmp eax, [small_int(string(ebx).Length).Value]
+	jbe .nopad
+	push eax
+	sub eax, [small_int(string(ebx).Length).Value]
+	push eax
+	call Riva$Memory$_alloc_atomic
+	push eax
+	mov eax, [string(ebx).Count]
+	inc eax
+	push eax
+	shl eax, 4
+	add eax, byte sizeof(string) + sizeof(string_block)
+	push eax
+	call Riva$Memory$_alloc
+	pop edx
+	pop ecx
+	mov [string(eax).Count], ecx
+	lea edi, [string(eax).Blocks]
+	lea esi, [string(ebx).Blocks]
+	lea ecx, [4 * ecx - 4]
+	rep movsd
+	pop edx
+	pop ecx
+	mov [value(string_block(edi).Chars).Type], dword Std$Address$T
+	mov [address(string_block(edi).Chars).Value], edx
+	mov [value(string_block(edi).Length).Type], dword Std$Integer$SmallT
+	mov [small_int(string_block(edi).Length).Value], ecx
+	mov dword [value(string(eax).Length).Type], Std$Integer$SmallT
+	pop dword [small_int(string(eax).Length).Value]
+	mov dword [value(eax).Type], Std$String$T
+	mov ebx, eax
+	mov edi, edx
+	mov al, ' '
+	rep stosb
+.nopad:
+	mov ecx, ebx
+	xor edx, edx
+	xor eax, eax
+	ret
+
+method "right", STRING, SMALLINT
+	mov eax, [argument(edi + 8).Val]
+	mov eax, [small_int(eax).Value]
+	mov ebx, [argument(edi).Val]
+	cmp eax, [small_int(string(ebx).Length).Value]
+	jbe .nopad
+	push eax
+	sub eax, [small_int(string(ebx).Length).Value]
+	push eax
+	call Riva$Memory$_alloc_atomic
+	push eax
+	mov eax, [string(ebx).Count]
+	inc eax
+	push eax
+	shl eax, 4
+	add eax, byte sizeof(string) + sizeof(string_block)
+	push eax
+	call Riva$Memory$_alloc
+	pop edx
+	pop ecx
+	mov [string(eax).Count], ecx
+	lea edi, [string(eax).Blocks + sizeof(string_block)]
+	lea esi, [string(ebx).Blocks]
+	lea ecx, [4 * ecx - 4]
+	rep movsd
+	pop edx
+	pop ecx
+	mov [value(string_block(string(eax).Blocks).Chars).Type], dword Std$Address$T
+	mov [address(string_block(string(eax).Blocks).Chars).Value], edx
+	mov [value(string_block(string(eax).Blocks).Length).Type], dword Std$Integer$SmallT
+	mov [small_int(string_block(string(eax).Blocks).Length).Value], ecx
+	mov dword [value(string(eax).Length).Type], Std$Integer$SmallT
+	pop dword [small_int(string(eax).Length).Value]
+	mov dword [value(eax).Type], Std$String$T
+	mov ebx, eax
+	mov edi, edx
+	mov al, ' '
+	rep stosb
+.nopad:
+	mov ecx, ebx
+	xor edx, edx
+	xor eax, eax
+	ret
+
+method "left", STRING, SMALLINT, STRING
+	mov eax, [argument(edi + 8).Val]
+	mov eax, [small_int(eax).Value]
+	mov ebx, [argument(edi).Val]
+	cmp eax, [small_int(string(ebx).Length).Value]
+	jbe .nopad
+	push byte ' '
+	mov edx, [argument(edi + 16).Val]
+	cmp [small_int(string(edx).Length).Value], dword 0
+	je .default
+	mov edx, [address(string_block(string(edx).Blocks).Chars).Value]
+	mov edx, [edx]
+	mov [esp], edx
+.default:
+	push eax
+	sub eax, [small_int(string(ebx).Length).Value]
+	push eax
+	call Riva$Memory$_alloc_atomic
+	push eax
+	mov eax, [string(ebx).Count]
+	inc eax
+	push eax
+	shl eax, 4
+	add eax, byte sizeof(string) + sizeof(string_block)
+	push eax
+	call Riva$Memory$_alloc
+	pop edx
+	pop ecx
+	mov [string(eax).Count], ecx
+	lea edi, [string(eax).Blocks]
+	lea esi, [string(ebx).Blocks]
+	lea ecx, [4 * ecx - 4]
+	rep movsd
+	pop edx
+	pop ecx
+	mov [value(string_block(edi).Chars).Type], dword Std$Address$T
+	mov [address(string_block(edi).Chars).Value], edx
+	mov [value(string_block(edi).Length).Type], dword Std$Integer$SmallT
+	mov [small_int(string_block(edi).Length).Value], ecx
+	mov dword [value(string(eax).Length).Type], Std$Integer$SmallT
+	pop dword [small_int(string(eax).Length).Value]
+	mov dword [value(eax).Type], Std$String$T
+	mov ebx, eax
+	mov edi, edx
+	pop eax
+	rep stosb
+.nopad:
+	mov ecx, ebx
+	xor edx, edx
+	xor eax, eax
+	ret
+
+method "right", STRING, SMALLINT, STRING
+	mov eax, [argument(edi + 8).Val]
+	mov eax, [small_int(eax).Value]
+	mov ebx, [argument(edi).Val]
+	cmp eax, [small_int(string(ebx).Length).Value]
+	jbe .nopad
+	push byte ' '
+	mov edx, [argument(edi + 16).Val]
+	cmp [small_int(string(edx).Length).Value], dword 0
+	je .default
+	mov edx, [address(string_block(string(edx).Blocks).Chars).Value]
+	mov edx, [edx]
+	mov [esp], edx
+.default:
+	push eax
+	sub eax, [small_int(string(ebx).Length).Value]
+	push eax
+	call Riva$Memory$_alloc_atomic
+	push eax
+	mov eax, [string(ebx).Count]
+	inc eax
+	push eax
+	shl eax, 4
+	add eax, byte sizeof(string) + sizeof(string_block)
+	push eax
+	call Riva$Memory$_alloc
+	pop edx
+	pop ecx
+	mov [string(eax).Count], ecx
+	lea edi, [string(eax).Blocks + sizeof(string_block)]
+	lea esi, [string(ebx).Blocks]
+	lea ecx, [4 * ecx - 4]
+	rep movsd
+	pop edx
+	pop ecx
+	mov [value(string_block(string(eax).Blocks).Chars).Type], dword Std$Address$T
+	mov [address(string_block(string(eax).Blocks).Chars).Value], edx
+	mov [value(string_block(string(eax).Blocks).Length).Type], dword Std$Integer$SmallT
+	mov [small_int(string_block(string(eax).Blocks).Length).Value], ecx
+	mov dword [value(string(eax).Length).Type], Std$Integer$SmallT
+	pop dword [small_int(string(eax).Length).Value]
+	mov dword [value(eax).Type], Std$String$T
+	mov ebx, eax
+	mov edi, edx
+	pop eax
+	rep stosb
+.nopad:
+	mov ecx, ebx
+	xor edx, edx
+	xor eax, eax
+	ret
+
 method "ord", STRING
 	mov eax, [argument(edi).Val]
 	cmp [small_int(string(eax).Length).Value], dword 0
