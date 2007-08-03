@@ -167,7 +167,8 @@ static int riva_import(riva_t *Riva, const char *Symbol, int *IsRef, void **Data
 };
 
 static int riva_load(module_t *Module, const char *FileName) {
-	riva_t *Riva = unew(riva_t); // This really should be new...
+	//riva_t *Riva = unew(riva_t); // This really should be new...
+	riva_t *Riva = new(riva_t);
 	module_setup(Module, Riva, (module_importer)riva_import);
 
 	gzFile File = gzopen(FileName, "rb");
@@ -208,8 +209,10 @@ static int riva_load(module_t *Module, const char *FileName) {
 			reloc_t *Relocs = (Section->Relocs = (reloc_t *)GC_malloc_uncollectable(NoOfRelocs * sizeof(reloc_t)));
 			if (Section->Flags & FLAG_GC) {
 				Section->Data = GC_malloc_uncollectable(Length);
+				//Section->Data = GC_malloc(Length);
 			} else {
 				Section->Data = GC_malloc_atomic_uncollectable(Length);
+				//Section->Data = GC_malloc_atomic(Length);
 			};
 			gzread(File, Section->Data, Length);
 			for (int J = 0; J < NoOfRelocs; ++J) {

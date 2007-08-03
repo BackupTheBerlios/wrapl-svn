@@ -22,13 +22,10 @@ static void startelementhandler(parser_t *Parser, const XML_Char *Name, const XM
 	if (Parser->StartElementHandler != Std$Object$Nil) {
 		Std$Function_result Result0;
 		int NoOfAttrs = 0;
-		for (const XML_Char **Attr = Attrs; Attr[0]; ++Attr) ++NoOfAttrs;
-		Std$Function_argument Args0[NoOfAttrs];
-		for (int I = 0; I < NoOfAttrs; ++I) {
-			Args0[I].Val = Std$String$copy(Attrs[I]);
-			Args0[I].Ref = 0;
+		Std$Object_t *Table = Std$Table$new(0, 0);
+		for (const XML_Char **Attr = Attrs; Attr[0]; Attr += 2) {
+			Std$Table$insert(Table, Std$String$copy(Attr[0]), Std$String$copy(Attr[1]));
 		};
-		Std$Function$invoke(Std$Table$Make, NoOfAttrs, &Result0, Args0);
 		Std$Function$call(Parser->StartElementHandler, 3, &Result0, Parser->UserData, &Parser->UserData, Std$String$copy(Name), 0, Result0.Val, 0);
 	};
 };
