@@ -115,7 +115,9 @@ DEF StartHandlers <- {
 	attrs["ellipsis"] => (
 		env:method:addparam("___", "ellipsis");
 	) // attrs["array"] => (
+		log:writes("type = ", attrs["type"] + "*", "\n");
 		env:method:addparam(attrs["name"], attrs["type"] + "*");
+		--env:method:addparam(attrs["name"], attrs["type"] + "*");
 	) // (
 		env:method:addparam(attrs["name"], attrs["type"]);
 	);

@@ -21,12 +21,11 @@ TYPE(T);
 static void startelementhandler(parser_t *Parser, const XML_Char *Name, const XML_Char **Attrs) {
 	if (Parser->StartElementHandler != Std$Object$Nil) {
 		Std$Function_result Result0;
-		int NoOfAttrs = 0;
 		Std$Object_t *Table = Std$Table$new(0, 0);
 		for (const XML_Char **Attr = Attrs; Attr[0]; Attr += 2) {
 			Std$Table$insert(Table, Std$String$copy(Attr[0]), Std$String$copy(Attr[1]));
 		};
-		Std$Function$call(Parser->StartElementHandler, 3, &Result0, Parser->UserData, &Parser->UserData, Std$String$copy(Name), 0, Result0.Val, 0);
+		Std$Function$call(Parser->StartElementHandler, 3, &Result0, Parser->UserData, &Parser->UserData, Std$String$copy(Name), 0, Table, 0);
 	};
 };
 

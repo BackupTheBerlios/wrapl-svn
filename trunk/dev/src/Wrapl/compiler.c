@@ -760,6 +760,10 @@ operand_t *func_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t *S
 			Compiler->pop_trap();
 		Compiler->pop_scope();
 	frame_t *Frame = Compiler->pop_function();
+#ifdef ASSEMBLER_LISTING
+	print(0);
+	printf("\n");
+#endif
 	operand_t *Closure = Start0->assemble(Frame, Constant);
 	Start->link(Success);
 	return Closure;

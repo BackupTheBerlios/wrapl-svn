@@ -1,6 +1,7 @@
 #include "native.h"
 #include "module.h"
 #include <stdio.h>
+#include <stdlib.h>
 #include "log.h"
 
 #ifdef WINDOWS
@@ -76,9 +77,15 @@ static int native_load(module_t *Module, const char *FileName) {
 void native_init(void) {
 	module_add_loader(".so", native_load);
 	void *Handle = GC_dlopen(0, RTLD_LOCAL | RTLD_LAZY);
-	module_setup(module_alias("libc"), Handle, native_import);
+	module_t *Module;
+	
+	Module = module_alias("libc");
+	module_setup(Module, Handle, native_import);
+	module_export(Module, "atexit", 0, &atexit);
+	
 	module_setup(module_alias("libgcc"), Handle, native_import);
-	module_t *Module = module_alias("libpthread");
+	
+	Module = module_alias("libpthread");
 	module_setup(Module, Handle, native_import);
 	module_export(Module, "pthread_create", 0, GC_pthread_create);
 	module_export(Module, "pthread_join", 0, GC_pthread_join);
