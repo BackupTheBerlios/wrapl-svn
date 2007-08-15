@@ -4,6 +4,7 @@ IMP IO.Terminal USE Out;
 IMP IO.File;
 
 VAR mapfile <- File.Open("Types.map", File.WRITE + File.TEXT);
+mapfile:writes("GdkEvent = Gtk/Gdk/Event\n");
 
 DEF T! <- <[]>;
 

@@ -80,6 +80,31 @@ TO :process(t@T, srcdir, incdir, libdir) (
 	cfile:writes("#include <Gtk/", base, ".h>\n");
 	cfile:writes("#include <Riva/Memory.h>\n");
 	VAR method, param, i, returntype, types, names, n, params, ctor, type;
+	t:cname = "GdkEvent_" => (
+		VAR Convert(type, field) (
+			EVERY headers:insert(Type.Lookup("Gdk" + type):headers:values);
+			EVERY libraries:insert(Type.Lookup("Gdk" + type):libraries:values);
+		);
+		Convert("EventExpose", "expose");
+		Convert("EventNoExpose", "no_expose");
+		Convert("EventVisibility", "visibility");
+		Convert("EventMotion", "motion");
+		Convert("EventButton", "button");
+		Convert("EventScroll", "scroll");
+		Convert("EventKey", "key");
+		Convert("EventCrossing", "crossing");
+		Convert("EventFocus", "focus_change");
+		Convert("EventConfigure", "configure");
+		Convert("EventProperty", "property");
+		Convert("EventSelection", "selection");
+		Convert("EventOwnerChange", "owner_change");
+		Convert("EventProximity", "proximity");
+		Convert("EventClient", "client");
+		Convert("EventDND", "dnd");
+		Convert("EventWindowState", "window_state");
+		Convert("EventSetting", "setting");
+		Convert("EventGrabBroken", "grab_broken");
+	);
 	EVERY ctor <- t:ctors:values DO (
 		EVERY headers:insert(Type.Lookup(ctor:params:values:type):headers:values);
 		EVERY libraries:insert(Type.Lookup(ctor:params:values:type):libraries:values);
@@ -100,6 +125,38 @@ TO :process(t@T, srcdir, incdir, libdir) (
 	cfile:writes("// Number of included files = ", headers:size, "\n");
 	EVERY cfile:writes(headers:keys, "\n");
 	cfile:writes("/***********************************/\n");
+	t:cname = "GdkEvent_" => (
+		cfile:writes("TYPE(T);\n\n");
+		VAR Convert(type, field) (
+			cfile:writes("METHOD(\"", type[6, 0], "\", TYP, T) {\n");
+			cfile:writes("\tGtk$", t:ns, "$", t:name, "_t *self = Args[0].Val;\n");
+			cfile:writes("\tGtk$Gdk$", type, "_t *result = new(Gtk$Gdk$", type, "_t);\n");
+			cfile:writes("\tresult->Type = Gtk$Gdk$", type, "$T;\n");
+			cfile:writes("\tresult->Value = self->Value->", field, ";\n");
+			cfile:writes("\tResult->Val = result;\n");
+			cfile:write("\treturn SUCCESS;\n");
+			cfile:write("};\n\n");
+		);
+		Convert("EventExpose", "expose");
+		Convert("EventNoExpose", "no_expose");
+		Convert("EventVisibility", "visibility");
+		Convert("EventMotion", "motion");
+		Convert("EventButton", "button");
+		Convert("EventScroll", "scroll");
+		Convert("EventKey", "key");
+		Convert("EventCrossing", "crossing");
+		Convert("EventFocus", "focus_change");
+		Convert("EventConfigure", "configure");
+		Convert("EventProperty", "property");
+		Convert("EventSelection", "selection");
+		Convert("EventOwnerChange", "owner_change");
+		Convert("EventProximity", "proximity");
+		Convert("EventClient", "client");
+		Convert("EventDND", "dnd");
+		Convert("EventWindowState", "window_state");
+		Convert("EventSetting", "setting");
+		Convert("EventGrabBroken", "grab_broken");
+	);
 	EVERY ctor <- t:ctors:values DO (
 		params <- ctor:params;
 		n <- params:size;
@@ -181,9 +238,10 @@ if WINDOWS then
 		end
 		_export("_" .. Name, Alias)
 	end
+	
 end
-
 EOF);
+	t:cname = "GdkEvent_" => deffile:writes("export(\"T\");\n");
 	EVERY ctor <- t:ctors:values DO deffile:writes("export(\"", ctor:name, "\")\n");
 	EVERY method <- t:shared:values DO deffile:writes("export(\"", method:name, "\")\n");
 	deffile:close;
@@ -202,6 +260,12 @@ EOF);
 	hfile:write("#include <Std.h>\n\n");
 	hfile:writes("#define RIVA_MODULE Gtk$", t:ns, "$", t:name, "\n");
 	hfile:writes("#include <Riva-Header.h>\n\n");
+	t:cname = "GdkEvent_" => (
+		hfile:writes("typedef struct Gtk$", t:ns, "$", t:name, "_t {\n");
+		hfile:writes("\tStd$Type_t *Type;\n");
+		hfile:writes("\tGdkEvent *Value;\n");
+		hfile:writes("} Gtk$", t:ns, "$", t:name, "_t;\n\n");
+	);
 	hfile:writes("extern Std$Type_t ", t:rtype, "[];\n\n");
 	hfile:write("#undef RIVA_MODULE\n\n");
 	hfile:write("#endif\n");

@@ -33,4 +33,8 @@ clean:
 
 .SUBDIRS: GObject Gtk Gdk Pango Glade Gnome
 
-Gtk: GtkGObject $(GTK_AUTOGEN) GtkGtk GtkGdk GtkPango GtkGlade $(GTK_LIB_DIR)TypeMap.riva
+CFLAGS += $(shell pkg-config --cflags libglade-2.0)
+RivaProgram($(GTK_LIB_DIR)Glade, Glade)
+
+Gtk: GtkGObject $(GTK_AUTOGEN) GtkGtk GtkGdk GtkPango GtkGlade\
+	$(GTK_LIB_DIR)TypeMap.riva $(GTK_LIB_DIR)Glade.riva

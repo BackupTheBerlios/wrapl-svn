@@ -22,7 +22,7 @@ static void __marshal(closure_t *Closure, GValue *Result, guint NoOfArgs, const 
 	if (Result) Gtk$GObject$Value$to_gtk(Result0.Val, Result);
 };
 
-Gtk$GObject$Object_t *_new(Std$Object_t *Function) {
+Gtk$GObject$Closure_t *_new(Std$Object_t *Function) {
 	closure_t *Handle = g_closure_new_simple(sizeof(closure_t), 0);
 	Handle->Function = Function;
 	g_closure_set_marshal(Handle, __marshal);

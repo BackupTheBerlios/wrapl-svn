@@ -107,6 +107,17 @@ int main(int Argc, char **Argv) {
 				log_enable();
 				break;
 			};
+			case 'P': {
+				if (Argv[I][2]) {
+					module_load(0, Argv[I] + 2);
+				} else if (Argc > ++I) {
+					module_load(0, Argv[I]);
+				} else {
+					puts("Error: -P must be followed by a module");
+					return 1;
+				};
+				break;
+			};
 			case '-': {
 				++I;
 				Args = Argv + I;

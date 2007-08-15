@@ -13,6 +13,7 @@ RIVA_CFUN(void, add_loader, const char *, Riva$Module_loader);
 RIVA_CFUN(void, add_directory, const char *);
 RIVA_CFUN(Riva$Module_t *, setup, Riva$Module_t *, void *, Riva$Module_importer);
 RIVA_CFUN(Riva$Module_t *, alias, const char *, void *, Riva$Module_importer);
+RIVA_CFUN(Riva$Module_t *, new, void);
 RIVA_CFUN(Riva$Module_t *, load, const char *, const char *);
 RIVA_CFUN(Riva$Module_t *, load_file, const char *);
 RIVA_CFUN(Riva$Module_t *, run, const char *, const char *);

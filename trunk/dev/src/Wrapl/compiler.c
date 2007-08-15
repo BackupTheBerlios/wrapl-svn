@@ -1509,7 +1509,13 @@ operand_t *module_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t 
 	};
 	for (module_expr_t::globaldef_t *Def = Defs; Def; Def = Def->Next) {
 		operand_t *Operand = Def->Value->constant(Compiler);
-		if (Operand) Compiler->declare(Def->Name, Operand);
+		if (Operand) {
+			Compiler->declare(Def->Name, Operand);
+			if (Def->Exported) {
+				Sys$Module$export(Module, Def->Name, Operand->Type, Operand->Value);
+				Def->Exported = false;
+			};
+		};
 	};
 	for (module_expr_t::globaldef_t *Def = Defs; Def; Def = Def->Next) {
 		Compiler->push_function();
@@ -1530,7 +1536,7 @@ operand_t *module_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t 
 			Operand->Type = operand_t::CNST;
 			Operand->Value = Result.Val;
 			Compiler->declare(Def->Name, Operand);
-			if (Def->Exported) Sys$Module$export(Module, Def->Name, 0, Result.Val);
+			Sys$Module$export(Module, Def->Name, 0, Result.Val);
 		} else {
 			Compiler->raise_error(LineNo, "Error: constant initialization failed");
 		};

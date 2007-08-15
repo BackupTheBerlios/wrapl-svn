@@ -48,7 +48,7 @@ TO :process(t@T, srcdir, incdir, libdir) (
 	-- BEGIN HACK
 	t:name = "FileSystemError" => cfile:write("#include <gtk/gtkfilesystem.h>\n");
 	-- END HACK
-	cfile:writes("TYPE(T);\n\n");
+	cfile:writes("TYPE(T, Std$Integer$SmallT);\n\n");
 	VAR member;
 	EVERY member <- t:members:values DO (
 		cfile:writes("Gtk$", t:ns, "$", t:name, "_t __", member:name, "[] = {{T, ", member:cname, "}};\n");
