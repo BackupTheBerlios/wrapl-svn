@@ -1,5 +1,7 @@
 <?xml version="1.0"?>
 <metadata>
+	<remove-node path="/api/namespace/class/method[@cname='gnome_config_set_set_handler']" />
+	<remove-node path="/api/namespace/class/method[@cname='gnome_config_set_sync_handler']" />
 	<remove-node path="/api/namespace/struct[@cname='GtkCell']" />
 	<remove-node path="/api/namespace/callback[@cname='GtkCListCompareFunc']" />
 	<remove-node path="/api/namespace/enum[@name='FileInfoType']" />
@@ -140,4 +142,6 @@
 			</parameters>
 		</constructor>
 	</add-node>
+	<attr path="/api/namespace/struct[@cname='GnomeTrigger']/field[@cname='function']" name="cname">u.function</attr>
+	<remove-node path="/api/namespace/struct[@cname='GnomeModuleInfo']/field[@cname='_options']" />
 </metadata>
