@@ -1,0 +1,15 @@
+BASENAME = $(GTK_LIB_DIR)Gnome$(DIRSEP)
+
+CFLAGS += $(shell pkg-config --cflags libgnome-2.0) -include libgnome/libgnome.h
+LDFLAGS += Gtk/Gnome.rlib
+
+if $(file-exists $(GTK_AUTOGEN))
+	foreach(FILE, $(rootname $(basename $(glob *.c))))
+		#println($(FILE))
+		clean:
+			$(rm $(FILE).c)
+			$(rm $(FILE).rdef)
+		RivaProgram($(BASENAME)$(FILE), $(FILE))
+		GtkGnome: $(BASENAME)$(FILE).riva
+		export
+
