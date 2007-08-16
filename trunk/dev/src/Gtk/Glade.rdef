@@ -1,0 +1,16 @@
+require("Gtk/GObject/Init")
+library("Gtk/GObject/Object.rlib")
+library("Gtk/GObject/Closure.rlib")
+library("Sys/Module.rlib")
+library("Gtk/Glade.rlib")
+library("Gtk/GObject.rlib")
+
+if WINDOWS then
+	_export = export
+	export = function(Name)
+		_export("_" .. Name, Name)
+	end
+end
+
+export("__init")
+export("Load")
