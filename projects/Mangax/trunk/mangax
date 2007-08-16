@@ -1,0 +1,53 @@
+#!/usr/local/bin/riva
+MOD Main;
+
+IMP IO.Terminal USE Out;
+IMP Gtk.Gtk;
+IMP Gtk.Glade;
+IMP Gtk.GObject;
+IMP Sys.FileSys;
+IMP Std.Address;
+IMP Std.Function;
+
+DEF UI <- Glade.Load("mangax.glade", Main);
+
+Gtk.Init.Check(NIL, NIL);
+
+DEF OnQuit!() (
+	Gtk.Main.Quit();
+	RET :false;
+);
+
+DEF OnAbout!() (
+	UI.AboutDialog:Run;
+	UI.AboutDialog:Hide;
+);
+
+DEF OnFileOpen!() (
+	UI.FileChooserDialog:Run;
+	UI.FileChooserDialog:Hide;
+);
+
+DEF OnEditPreferences!() (
+	UI.PrefsDialog:Run;
+	UI.PrefsDialog:Hide;
+);
+
+DEF OnToolbarStyleChanged!(combobox) (
+	UI.MainToolbar:SetStyle(WHEN combobox:GetActive
+		IS 0 DO Gtk.ToolbarStyle.Icons
+		IS 1 DO Gtk.ToolbarStyle.Text
+		IS 2 DO Gtk.ToolbarStyle.Both
+	);
+);
+
+DEF OnImageButtonPressed!(eventbox, event) (
+	event <- event:Button;
+	event:Button = 3 => UI.PopupMenu:Popup(Gtk.Widget.Nil, Gtk.Widget.Nil, Function.Nil, Address.Nil, 3, event:Time);
+	RET :true;
+);
+
+UI.MainWindow:ShowAll;
+Gtk.Main.Run();
+
+END Main.
