@@ -64,6 +64,7 @@ TO :process(t@T, srcdir, incdir, libdir) (
 	);
 	cfile:write("};\n\n");
 	cfile:write(t:ctype + " _new(Std$Object_t *Function) {\n");
+	cfile:write("\tif (Function == Std$Function$Nil) return 0;\n");
 	cfile:write("\tunsigned char *Thunk = Riva$Memory$alloc(20);\n");
 	cfile:write("\tThunk[2] = 0xCC;\n");
 	cfile:write("\tThunk[3] = 0x68;\n");

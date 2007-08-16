@@ -14,6 +14,7 @@ DEF T <- <[Type.T, Target.T]
 >;
 
 DEF PrefixLength(cname) (
+	cname = "GladeXML" => RET 10;
 	VAR n <- cname:length;
 	EVERY "A" <= cname:chars <= "Z" DO n <- n + 1;
 	--Out:writes("PrefixLength(", cname, ") = ", n, "\n");
@@ -163,6 +164,7 @@ TO :process(t@T, srcdir, incdir, libdir) (
 	EVERY cfile:writes(", ", t:parents:rtype);
 	EVERY cfile:writes(", ", Type.Lookup(t:interfaces:values):rtype);
 	cfile:writes(");\n\n");
+	cfile:writes("Gtk$GObject$Object_t Nil[] = {{T, 0}};\n\n");
 	EVERY ctor <- t:ctors:values DO (
 		params <- ctor:params;
 		n <- params:size;
@@ -264,6 +266,7 @@ if WINDOWS then
 end
 
 export("T")
+export("Nil")
 EOF);
 	EVERY ctor <- t:ctors:values DO deffile:writes("export(\"", ctor:name, "\")\n");
 	EVERY method <- t:shared:values DO deffile:writes("export(\"", method:name, "\")\n");

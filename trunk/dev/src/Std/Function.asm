@@ -24,6 +24,9 @@ c_data T
 	dd T
 	dd 0
 
+c_data Nil
+	dd T
+
 c_data AsmT
 	dd Std$Type$T
 	dd .types
