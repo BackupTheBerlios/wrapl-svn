@@ -8,11 +8,12 @@ RivaProgram($(BASENAME)Closure, Closure)
 RivaProgram($(BASENAME)Object, Object)
 RivaProgram($(BASENAME)Type, Type)
 RivaProgram($(BASENAME)Value, Value)
+#RivaProgram($(BASENAME)Struct, Struct)
 
 GtkGObject:\
 	$(BASENAME)Init.riva\
 	$(BASENAME)Closure.riva\
 	$(BASENAME)Object.riva\
 	$(BASENAME)Type.riva\
-	$(BASENAME)Value.riva
-
+	$(BASENAME)Value.riva\
+#	$(BASENAME)Struct.riva

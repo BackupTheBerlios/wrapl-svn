@@ -89,6 +89,14 @@ METHOD("Set", TYP, T, ANY) {
 };
 */
 
+METHOD("Set", TYP, T, TYP, Gtk$GObject$Object$T) {
+	Gtk$GObject$Value_t *Value = Args[0].Val;
+	Gtk$GObject$Object_t *Object = Args[1].Val;
+	g_value_init(Value->Value, G_OBJECT_TYPE(Object->Handle));
+	g_value_set_object(Value->Value, Object->Handle);
+	return SUCCESS;
+};
+
 METHOD("Set", TYP, T, VAL, Std$Object$Nil) {
 	Gtk$GObject$Value_t *Value = Args[0].Val;
 	g_value_init(Value->Value, G_TYPE_NONE);

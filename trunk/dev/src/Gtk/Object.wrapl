@@ -177,6 +177,10 @@ TO :process(t@T, srcdir, incdir, libdir) (
 		cfile:writes("\t", t:ctype, " result = ", ctor:cname, "(");
 		cfile:write(names[1]) => EVERY i <- 2:to(n) DO cfile:writes(", ", names[i]);
 		cfile:write(");\n");
+		cfile:write("\tif (result == 0) {\n");
+		cfile:writes("\t\tResult->Val = Std$String$new(\"Error: ", t:name, ".", ctor:name, " failed.\");\n");
+		cfile:write("\t\treturn MESSAGE;\n");
+		cfile:write("\t};\n");
 		cfile:write("\tResult->Val= Gtk$GObject$Object$new(result, T);\n");
 		cfile:write("\treturn SUCCESS;\n");
 		cfile:write("};\n\n");

@@ -1,0 +1,30 @@
+MOD Alias;
+
+IMP Type, Target;
+
+DEF T <- <[Type.T]
+	ns, name, cname, alias
+>;
+
+TO :headers(t@T) Type.Lookup(t:alias):headers;
+TO :libraries(t@T) Type.Lookup(t:alias):libraries;
+TO :sigtype(t@T) Type.Lookup(t:alias):sigtype;
+TO :precall(t@T, name, arg) Type.Lookup(t:alias):precall(name, arg);
+TO :postcall(t@T, name, arg) Type.Lookup(t:alias):postcall(name, arg);
+TO :fromriva(t@T, name, arg) Type.Lookup(t:alias):fromriva(name, arg);
+TO :toriva(t@T, arg, name) Type.Lookup(t:alias):toriva(arg, name);
+TO :return(t@T, result) Type.Lookup(t:alias):return(result);
+TO :ctype(t@T) Type.Lookup(t:alias):ctype;
+TO :rtype(t@T) Type.Lookup(t:alias):rtype;
+
+DEF New!(ns, name, cname, alias) (
+	VAR t <- T();
+	t:ns <- ns;
+	t:name <- name;
+	t:cname <- cname;
+	t:alias <- alias;
+	Type.Define(cname, t);
+	RET t;
+);
+
+END Alias.

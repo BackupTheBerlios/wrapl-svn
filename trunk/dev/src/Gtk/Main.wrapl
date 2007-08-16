@@ -17,6 +17,7 @@ IMP Object;
 IMP Opaque;
 IMP Struct;
 IMP Type;
+IMP Alias;
 
 DEF Environment <- <[]
 	namespace,
@@ -58,6 +59,7 @@ DEF StartHandlers <- {
 ),
 
 "alias" IS <env, attrs> (
+	Alias.New(env:namespace, attrs["name"], attrs["cname"], attrs["type"]);
 ),
 
 "parameters" IS <env, attrs> (

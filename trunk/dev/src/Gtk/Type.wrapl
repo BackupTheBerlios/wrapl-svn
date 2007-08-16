@@ -103,7 +103,10 @@ TO :precall(=gtype, name, arg) [
 	"GType " + name + " = ((Gtk$GObject$Type_t *)" + arg + ".Val)->Value;"
 ];
 TO :return(=gtype, result) [
-	"Result->Val = Gtk$GObject$Type$to_riva(" + result + ");"
+	"Gtk$GObject$Type_t *type = new(Gtk$GObject$Type_t);",
+	"type->Type = Gtk$GObject$Type$T;",
+	"type->Value = result;",
+	"Result->Val = type;"
 ];
 TO :headers(=gtype) ["#include <Gtk/GObject/Type.h>"];
 TO :libraries(=gtype) ["Gtk/GObject/Type.rlib"];
