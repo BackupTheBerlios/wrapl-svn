@@ -2,16 +2,20 @@
 MOD Main;
 
 IMP IO.Terminal USE Out;
+IMP Gtk.Gdk;
 IMP Gtk.Gtk;
 IMP Gtk.Glade;
 IMP Gtk.GObject;
 IMP Sys.FileSys;
 IMP Std.Address;
 IMP Std.Function;
+IMP Std.String;
 
 DEF UI <- Glade.Load("mangax.glade", Main);
-
-Gtk.Init.Check(NIL, NIL);
+VAR thumbnailStore <- Gtk.ListStore.Newv(3, [GObject.Type.STRING, Gdk.Pixbuf.GetType(), GObject.Type.STRING]);
+UI.ThumbnailView:SetModel(thumbnailStore);
+UI.ThumbnailView:SetTextColumn(0);
+UI.ThumbnailView:SetPixbufColumn(1);
 
 DEF OnQuit!() (
 	Gtk.Main.Quit();
@@ -24,8 +28,39 @@ DEF OnAbout!() (
 );
 
 DEF OnFileOpen!() (
-	UI.FileChooserDialog:Run;
+	thumbnailStore:Clear;
+	UI.FileChooserDialog:Run = Gtk.ResponseType.Ok => (
+		VAR value <- GObject.Value.New();
+		VAR iter <- Gtk.TreeIter.New();
+		VAR dir <- UI.FileChooserDialog:GetCurrentFolder;
+		VAR index <- 0;
+		VAR file, path; EVERY path <- dir + "/" + (file <- FileSys.ListDir(dir)) DO (
+			value:Set(Gdk.Pixbuf.NewFromFileAtScale(path, 64, 128, :true, NIL));
+			thumbnailStore:Append(iter);
+			thumbnailStore:SetValue(iter, 1, value);
+			value:Unset;
+			value:Set(path);
+			thumbnailStore:SetValue(iter, 2, value);
+			value:Unset;
+			index <- index + 1;
+			value:Set(index @ String.T);
+			thumbnailStore:SetValue(iter, 0, value);
+			value:Unset;
+			RECV msg DO ();
+		);
+	);
 	UI.FileChooserDialog:Hide;
+);
+
+DEF OnThumbnaiilActivated!(iconview, path) (
+	VAR iter <- Gtk.TreeIter.New();
+	VAR value <- GObject.Value.New();
+	thumbnailStore:GetIter(iter, path);
+	thumbnailStore:GetValue(iter, 2, value);
+	VAR rect <- UI.MainImage:Allocation;
+	VAR pixbuf <- Gdk.Pixbuf.NewFromFileAtScale(value:Get, rect:Width, rect:Height, :true, NIL);
+	value:Unset;
+	UI.MainImage:SetFromPixbuf(pixbuf);
 );
 
 DEF OnEditPreferences!() (
