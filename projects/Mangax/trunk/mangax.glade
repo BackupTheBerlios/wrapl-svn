@@ -3,7 +3,7 @@
 
 <glade-interface>
 
-<widget class="GtkWindow" id="MainWindow">
+<widget class="GtkWindow" id="mainWindow">
   <property name="width_request">800</property>
   <property name="height_request">600</property>
   <property name="visible">True</property>
@@ -21,6 +21,7 @@
   <property name="focus_on_map">True</property>
   <property name="urgency_hint">False</property>
   <signal name="delete_event" handler="OnQuit" last_modification_time="Wed, 15 Aug 2007 08:20:49 GMT"/>
+  <signal name="configure_event" handler="OnMainWindowConfigure" last_modification_time="Fri, 17 Aug 2007 07:46:31 GMT"/>
 
   <child>
     <widget class="GtkVBox" id="vbox1">
@@ -286,7 +287,7 @@
       </child>
 
       <child>
-	<widget class="GtkToolbar" id="MainToolbar">
+	<widget class="GtkToolbar" id="mainToolbar">
 	  <property name="visible">True</property>
 	  <property name="orientation">GTK_ORIENTATION_HORIZONTAL</property>
 	  <property name="toolbar_style">GTK_TOOLBAR_BOTH</property>
@@ -426,7 +427,7 @@
 	      <property name="window_placement">GTK_CORNER_TOP_LEFT</property>
 
 	      <child>
-		<widget class="GtkIconView" id="ThumbnailView">
+		<widget class="GtkIconView" id="thumbnailView">
 		  <property name="visible">True</property>
 		  <property name="can_focus">True</property>
 		  <property name="selection_mode">GTK_SELECTION_SINGLE</property>
@@ -465,7 +466,7 @@
 		      <signal name="button_press_event" handler="OnImageButtonPressed" last_modification_time="Wed, 15 Aug 2007 15:06:27 GMT"/>
 
 		      <child>
-			<widget class="GtkImage" id="MainImage">
+			<widget class="GtkImage" id="mainImage">
 			  <property name="visible">True</property>
 			  <property name="xalign">0.5</property>
 			  <property name="yalign">0.5</property>
@@ -507,7 +508,7 @@
   </child>
 </widget>
 
-<widget class="GtkDialog" id="PrefsDialog">
+<widget class="GtkDialog" id="prefsDialog">
   <property name="title" translatable="yes">Preferences</property>
   <property name="type">GTK_WINDOW_TOPLEVEL</property>
   <property name="window_position">GTK_WIN_POS_NONE</property>
@@ -860,7 +861,7 @@ Icons and Text</property>
   </child>
 </widget>
 
-<widget class="GtkColorSelectionDialog" id="ColourSelectDialog">
+<widget class="GtkColorSelectionDialog" id="colourSelectDialog">
   <property name="border_width">5</property>
   <property name="title" translatable="yes">Select Color</property>
   <property name="type">GTK_WINDOW_TOPLEVEL</property>
@@ -921,7 +922,7 @@ Icons and Text</property>
   </child>
 </widget>
 
-<widget class="GtkFileChooserDialog" id="FileChooserDialog">
+<widget class="GtkFileChooserDialog" id="fileChooserDialog">
   <property name="action">GTK_FILE_CHOOSER_ACTION_OPEN</property>
   <property name="local_only">True</property>
   <property name="select_multiple">False</property>
@@ -990,7 +991,7 @@ Icons and Text</property>
   </child>
 </widget>
 
-<widget class="GtkAboutDialog" id="AboutDialog">
+<widget class="GtkAboutDialog" id="aboutDialog">
   <property name="destroy_with_parent">False</property>
   <property name="name" translatable="yes">Mangax</property>
   <property name="wrap_license">False</property>
@@ -998,7 +999,7 @@ Icons and Text</property>
   <property name="translator_credits" translatable="yes" comments="TRANSLATORS: Replace this string with your names, one name per line.">translator-credits</property>
 </widget>
 
-<widget class="GtkMenu" id="PopupMenu">
+<widget class="GtkMenu" id="popupMenu">
 
   <child>
     <widget class="GtkImageMenuItem" id="next1">

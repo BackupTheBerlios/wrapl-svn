@@ -11,11 +11,20 @@ IMP Std.Address;
 IMP Std.Function;
 IMP Std.String;
 
-DEF UI <- Glade.Load("mangax.glade", Main);
+DEF ui <- Glade.Load("mangax.glade", Main);
 VAR thumbnailStore <- Gtk.ListStore.Newv(3, [GObject.Type.STRING, Gdk.Pixbuf.GetType(), GObject.Type.STRING]);
-UI.ThumbnailView:SetModel(thumbnailStore);
-UI.ThumbnailView:SetTextColumn(0);
-UI.ThumbnailView:SetPixbufColumn(1);
+ui.thumbnailView:SetModel(thumbnailStore);
+ui.thumbnailView:SetTextColumn(0);
+ui.thumbnailView:SetPixbufColumn(1);
+
+VAR mainImageWidth, mainImageHeight;
+
+DEF OnMainWindowConfigure!(window, event) (
+	VAR rect <- ui.mainImage:Allocation;
+	mainImageWidth <- rect:Width;
+	mainImageHeight <- rect:Height;
+	RET :false;
+);
 
 DEF OnQuit!() (
 	Gtk.Main.Quit();
@@ -23,19 +32,19 @@ DEF OnQuit!() (
 );
 
 DEF OnAbout!() (
-	UI.AboutDialog:Run;
-	UI.AboutDialog:Hide;
+	ui.aboutDialog:Run;
+	ui.aboutDialog:Hide;
 );
 
 DEF OnFileOpen!() (
 	thumbnailStore:Clear;
-	UI.FileChooserDialog:Run = Gtk.ResponseType.Ok => (
+	ui.fileChooserDialog:Run = Gtk.ResponseType.Ok => (
 		VAR value <- GObject.Value.New();
 		VAR iter <- Gtk.TreeIter.New();
-		VAR dir <- UI.FileChooserDialog:GetCurrentFolder;
+		VAR dir <- ui.fileChooserDialog:GetCurrentFolder;
 		VAR index <- 0;
 		VAR file, path; EVERY path <- dir + "/" + (file <- FileSys.ListDir(dir)) DO (
-			value:Set(Gdk.Pixbuf.NewFromFileAtScale(path, 64, 128, :true, NIL));
+			value:Set(Gdk.Pixbuf.NewFromFileAtSize(path, 64, 128, NIL));
 			thumbnailStore:Append(iter);
 			thumbnailStore:SetValue(iter, 1, value);
 			value:Unset;
@@ -49,7 +58,7 @@ DEF OnFileOpen!() (
 			RECV msg DO ();
 		);
 	);
-	UI.FileChooserDialog:Hide;
+	ui.fileChooserDialog:Hide;
 );
 
 DEF OnThumbnaiilActivated!(iconview, path) (
@@ -57,19 +66,19 @@ DEF OnThumbnaiilActivated!(iconview, path) (
 	VAR value <- GObject.Value.New();
 	thumbnailStore:GetIter(iter, path);
 	thumbnailStore:GetValue(iter, 2, value);
-	VAR rect <- UI.MainImage:Allocation;
-	VAR pixbuf <- Gdk.Pixbuf.NewFromFileAtScale(value:Get, rect:Width, rect:Height, :true, NIL);
+	VAR rect <- ui.mainImage:Allocation;
+	VAR pixbuf <- Gdk.Pixbuf.NewFromFileAtSize(value:Get, mainImageWidth, mainImageHeight, NIL);
 	value:Unset;
-	UI.MainImage:SetFromPixbuf(pixbuf);
+	ui.mainImage:SetFromPixbuf(pixbuf);
 );
 
 DEF OnEditPreferences!() (
-	UI.PrefsDialog:Run;
-	UI.PrefsDialog:Hide;
+	ui.prefsDialog:Run;
+	ui.prefsDialog:Hide;
 );
 
 DEF OnToolbarStyleChanged!(combobox) (
-	UI.MainToolbar:SetStyle(WHEN combobox:GetActive
+	ui.mainToolbar:SetStyle(WHEN combobox:GetActive
 		IS 0 DO Gtk.ToolbarStyle.Icons
 		IS 1 DO Gtk.ToolbarStyle.Text
 		IS 2 DO Gtk.ToolbarStyle.Both
@@ -78,11 +87,11 @@ DEF OnToolbarStyleChanged!(combobox) (
 
 DEF OnImageButtonPressed!(eventbox, event) (
 	event <- event:Button;
-	event:Button = 3 => UI.PopupMenu:Popup(Gtk.Widget.Nil, Gtk.Widget.Nil, Function.Nil, Address.Nil, 3, event:Time);
+	event:Button = 3 => ui.popupMenu:Popup(Gtk.Widget.Nil, Gtk.Widget.Nil, Function.Nil, Address.Nil, 3, event:Time);
 	RET :true;
 );
 
-UI.MainWindow:ShowAll;
+ui.mainWindow:ShowAll;
 Gtk.Main.Run();
 
 END Main.
