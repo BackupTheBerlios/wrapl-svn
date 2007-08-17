@@ -16,9 +16,9 @@ static GMemVTable MemVTable = {
 };
 
 void __init(void) {
-	Riva$Log$writes("Initializing glib-gobject interface...");
+//	Riva$Log$writes("Initializing glib-gobject interface...");
 	g_slice_set_config(G_SLICE_CONFIG_ALWAYS_MALLOC, 1);
 	//g_thread_init(0);
 	g_mem_set_vtable(&MemVTable);
-	Riva$Log$writes("done.\n");
+//	Riva$Log$writes("done.\n");
 };
