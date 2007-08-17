@@ -1,0 +1,34 @@
+MOD Archive;
+
+IMP IO.Terminal USE Out;
+IMP Sys.Process;
+
+DEF List!(archive) (
+	VAR proc <- Process.Execute("7z", ["7z", "l", archive]);
+	proc:wait;
+	VAR stream <- proc:stream;
+	stream:read;
+	stream:read;
+	stream:read;
+	stream:read;
+	VAR line <- stream:read;
+	line[1, 7] = "Error:" => SEND line[7, 0];
+	stream:read;
+	stream:read;
+	stream:read;
+	REP (
+		line <-proc:stream:read;
+		UNTIL line = "------------------- ----- ------------ ------------  ------------"; 
+		SUSP line[54, 0];
+	);
+	stream:close;
+);
+
+DEF Extract!(archive, dir, files) (
+	VAR args <- ["7z", "x", "-y", "-o" + dir, archive];
+	files ~== NIL => (args <- args + files);
+	VAR proc <- Process.Execute("7z", args);
+	proc:wait = 0;
+);
+
+END Archive.
