@@ -11,6 +11,10 @@ TYPE(T);
 
 Gtk$GObject$Object_t Nil[] = {{T, 0}};
 
+static void finalize(Gtk$GObject$Object_t *Object, void *Data) {
+	g_object_unref(Object);
+};
+
 static GQuark RivaQuark;
 
 inline Gtk$GObject$Object_t *_new(GObject *Handle, Std$Type_t *Type) {
@@ -18,6 +22,12 @@ inline Gtk$GObject$Object_t *_new(GObject *Handle, Std$Type_t *Type) {
 	Object->Type = Type;
 	Object->Handle = Handle;
 	g_object_set_qdata(Handle, RivaQuark, Object);
+/*	
+	g_object_ref_sink(Object);
+	Riva$Memory_finalizer *OldFinalizer;
+	void *OldData;
+	Riva$Memory$register_finalizer(Object, finalize, 0, &OldFinalizer, &OldData);
+*/
 	return Object;
 };
 
