@@ -39,7 +39,7 @@ GLOBAL_FUNCTION(Execute, 2) {
 		Argv[I] = 0;
 		if (execvp(Std$String$flatten(Args[0].Val), Argv) == -1) {
 			close(Pair[0]);
-			_exit(0);
+			_exit(-1);
 		};
 	} else {
 		IO$Posix_t *Stream = new(IO$Posix_t);
