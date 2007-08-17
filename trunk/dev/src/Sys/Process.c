@@ -10,6 +10,7 @@ typedef struct process_t {
 	Std$Type_t *Type;
 	pid_t Pid;
 	IO$Posix_t *Stream;
+	int Child;
 } process_t;
 
 TYPE(T);
@@ -18,14 +19,14 @@ GLOBAL_FUNCTION(Execute, 2) {
 	int Pair[2];
 	pid_t Pid;
 	if (socketpair(AF_LOCAL, SOCK_STREAM, 0, Pair) == -1) {
-		Result->Val = "Error: Pipe creation failed.";
+		Result->Val = Std$String$new("Error: Pipe creation failed.");
 		return MESSAGE;
 	};
 	Pid = fork();
 	if (Pid == -1) {
 		close(Pair[0]);
 		close(Pair[1]);
-		Result->Val = "Error: Fork failed.";
+		Result->Val = Std$String$new("Error: Fork failed.");
 		return MESSAGE;
 	};
 	if (Pid == 0) {
@@ -49,6 +50,7 @@ GLOBAL_FUNCTION(Execute, 2) {
 		Process->Type = T;
 		Process->Pid = Pid;
 		Process->Stream = Stream;
+		Process->Child = Pair[0];
 		Result->Val = Process;
 		return SUCCESS;
 	};
@@ -64,9 +66,23 @@ METHOD("result", TYP, T) {
 	process_t *Process = Args[0].Val;
 	int Status;
 	if (waitpid(Process->Pid, &Status, WNOHANG) == Process->Pid) {
+		close(Process->Child);
 		Result->Val = Std$Integer$new_small(Status);
 		return SUCCESS;
 	} else {
 		return FAILURE;
+	};
+};
+
+METHOD("wait", TYP, T) {
+	process_t *Process = Args[0].Val;
+	int Status;
+	if (waitpid(Process->Pid, &Status, 0) == Process->Pid) {
+		close(Process->Child);
+		Result->Val = Std$Integer$new_small(Status);
+		return SUCCESS;
+	} else {
+		Result->Val = Std$String$new("Error: Wait failed.");
+		return MESSAGE;
 	};
 };
