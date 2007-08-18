@@ -2,6 +2,8 @@
 #include <IO/Socket.h>
 #include <Riva/Memory.h>
 
+#ifdef LINUX
+
 #include <sys/socket.h>
 #include <sys/un.h>
 #include <sys/wait.h>
@@ -86,3 +88,31 @@ METHOD("wait", TYP, T) {
 		return MESSAGE;
 	};
 };
+
+#else
+
+typedef struct process_t {
+	Std$Type_t *Type;
+	IO$Windows_t *Stream;
+} process_t;
+
+TYPE(T);
+
+GLOBAL_FUNCTION(Execute, 2) {
+};
+
+METHOD("stream", TYP, T) {
+	process_t *Process = Args[0].Val;
+	Result->Val = Process->Stream;
+	return SUCCESS;
+};
+
+METHOD("result", TYP, T) {
+	process_t *Process = Args[0].Val;
+};
+
+METHOD("wait", TYP, T) {
+	process_t *Process = Args[0].Val;
+};
+
+#endif

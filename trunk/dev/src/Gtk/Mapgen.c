@@ -6,11 +6,23 @@ static Util$StringTable_t GTypeModules[] = {Util$StringTable$INIT};
 
 void __init() {
 	FILE *MapFile = fopen("Types.map", "r");
-	while (!feof(MapFile)) {
-		const char *GtkName, *RivaName;
-		if (fscanf(MapFile, "%a[a-zA-Z0-9] = %a[^\n]\n", &GtkName, &RivaName) == 2) {
+	char Buffer[256];
+	while (fgets(Buffer, 256, MapFile)) {
+		int Length = strlen(Buffer);
+		char *Temp = strchr(Buffer, '=');
+		if (Temp) {
+			int L0 = Temp - Buffer - 1;
+			int L1 = Length - L0 - 4;
+			char *GtkName = Riva$Memory$alloc_atomic(L0 + 1);
+			char *RivaName = Riva$Memory$alloc_atomic(L1 + 1);
+			memcpy(GtkName, Buffer, L0);
+			GtkName[L0] = 0;
+			memcpy(RivaName, Temp + 2, L1);
+			RivaName[L1] = 0;
 			printf("Adding type: %s -> %s\n", GtkName, RivaName);
 			Util$StringTable$put(GTypeModules, GtkName, (void *)RivaName);
+		} else {
+			printf("Skipping line: %s", Buffer);
 		};
 	};
 	fclose(MapFile);

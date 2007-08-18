@@ -3,4 +3,5 @@ if LINUX then
 end
 
 if WINDOWS then
+	include("Gtk/Win32/libglade-2.0-0.rlib")
 end

@@ -8,21 +8,21 @@ GTK_AUTOGEN = $(file Autogen.log)
 CFLAGS += -std=gnu99
 LDFLAGS += Std.rlib Riva.rlib
 
-RivaProgram($(GTK_LIB_DIR)Mapgen, Mapgen)
+RivaProgram(Mapgen, Mapgen)
 
-TypeMap.c: $(GTK_LIB_DIR)Mapgen.riva
-	riva Gtk/Mapgen
+TypeMap.c: Mapgen.riva
+	riva Mapgen
 
 RivaProgram($(GTK_LIB_DIR)TypeMap, TypeMap)
 
 LDFLAGS += Gtk/Gtk.rlib
 
-api.raw: $(file api.sources)
-	gapi2-parser $(file api.sources)
+#api.raw: $(file api.sources)
+#	gapi2-parser $(file api.sources)
 
-api.xml: api.raw $(file api.metadata)
-	cp $(file api.raw) api.xml
-	gapi2-fixup --api=api.xml --metadata=$(file api.metadata)
+#api.xml: api.raw $(file api.metadata)
+#	cp $(file api.raw) api.xml
+#	gapi2-fixup --api=api.xml --metadata=$(file api.metadata)
 
 $(GTK_AUTOGEN): api.xml
 	riva -L $(GTK_SRC_DIR) Main $(file api.xml)
@@ -31,7 +31,7 @@ clean:
 	$(rm api.xml)
 	$(rm $(GTK_AUTOGEN))
 
-.SUBDIRS: GObject Gtk Gdk Pango Glade Gnome
+.SUBDIRS: GObject Gtk Gdk Pango Glade
 
 CFLAGS += $(shell pkg-config --cflags libglade-2.0)
 RivaProgram($(GTK_LIB_DIR)Glade, Glade)
