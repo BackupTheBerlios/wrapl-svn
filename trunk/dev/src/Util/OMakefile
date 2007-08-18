@@ -7,7 +7,6 @@ RivaProgram($(BASENAME)StringTable, StringTable)
 RivaProgram($(BASENAME)TypeTable, TypeTable)
 RivaProgram($(BASENAME)ObjectTable, ObjectTable)
 
-
 Util:\
 	$(BASENAME)StringTable.riva\
 	$(BASENAME)TypeTable.riva\

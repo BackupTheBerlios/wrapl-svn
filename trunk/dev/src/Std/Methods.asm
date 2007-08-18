@@ -291,8 +291,8 @@ method "gets", ADDRESS, SMALLINT, SMALLINT
 	xor eax, eax
 	ret
 
-method "add", SMALLINT, ADDRESS
-method "add", ADDRESS, SMALLINT
+method "+", SMALLINT, ADDRESS
+method "+", ADDRESS, SMALLINT
 	mov eax, [argument(edi).Val]
 	mov ebx, [argument(edi + 8).Val]
 	mov eax, [eax + 4]
@@ -305,7 +305,7 @@ method "add", ADDRESS, SMALLINT
 	xor eax, eax
 	ret
 
-method "sub", ADDRESS, SMALLINT
+method "-", ADDRESS, SMALLINT
 	mov eax, [argument(edi).Val]
 	mov ebx, [argument(edi + 8).Val]
 	mov eax, [eax + 4]
@@ -318,7 +318,7 @@ method "sub", ADDRESS, SMALLINT
 	xor eax, eax
 	ret
 
-method "sub", ADDRESS, ADDRESS
+method "-", ADDRESS, ADDRESS
 	mov eax, [argument(edi).Val]
 	mov ebx, [argument(edi + 8).Val]
 	mov eax, [eax + 4]

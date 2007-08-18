@@ -13,3 +13,6 @@ if $(file-exists $(GTK_AUTOGEN))
 		GtkGlade: $(BASENAME)$(FILE).riva
 		export
 
+RivaProgram($(BASENAME)Loader, Loader)
+
+GtkGlade: $(BASENAME)Loader.riva
