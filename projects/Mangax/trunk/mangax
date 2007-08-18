@@ -1,8 +1,7 @@
 #!/usr/local/bin/riva
 MOD Main;
 
-IMP Sys;
-IMP Std;
+IMP Sys, Std, IO, Util;
 
 IMP IO.Terminal USE Out;
 IMP Gtk.Gdk;
@@ -10,7 +9,13 @@ IMP Gtk.Gtk;
 IMP Gtk.Glade;
 IMP Gtk.GObject;
 
-DEF ui <- Glade.Load("mangax.glade", Main);
+DEF conf <- (Util.Persist.Load("config"); RECV msg DO {
+	"toolbar-style" IS Gtk.ToolbarStyle.Both,
+	"zoom-level" IS :"fit-both"
+	
+});
+
+DEF ui <- Glade.Loader.Load("mangax.glade", Main);
 VAR thumbnailStore <- Gtk.ListStore.Newv(3, [GObject.Type.STRING, Gdk.Pixbuf.GetType(), GObject.Type.STRING]);
 ui.thumbnailView:SetModel(thumbnailStore);
 ui.thumbnailView:SetTextColumn(0);
@@ -27,6 +32,8 @@ DEF OnMainWindowConfigure!(window, event) (
 
 DEF OnQuit!() (
 	Gtk.Main.Quit();
+	Util.Persist.Store("config", conf);
+	RECV msg DO Out:writes(msg, "\n");
 	RET :false;
 );
 
@@ -60,7 +67,7 @@ DEF OnFileOpen!() (
 	ui.fileChooserDialog:Hide;
 );
 
-DEF OnThumbnaiilActivated!(iconview, path) (
+DEF OnThumbnailActivated!(iconview, path) (
 	VAR iter <- Gtk.TreeIter.New();
 	VAR value <- GObject.Value.New();
 	thumbnailStore:GetIter(iter, path);
@@ -71,17 +78,20 @@ DEF OnThumbnaiilActivated!(iconview, path) (
 	ui.mainImage:SetFromPixbuf(pixbuf);
 );
 
+VAR preferenceChanges;
+
 DEF OnEditPreferences!() (
+	preferenceChanges <- {};
 	ui.prefsDialog:Run;
 	ui.prefsDialog:Hide;
 );
 
 DEF OnToolbarStyleChanged!(combobox) (
-	ui.mainToolbar:SetStyle(WHEN combobox:GetActive
-		IS 0 DO Gtk.ToolbarStyle.Icons
-		IS 1 DO Gtk.ToolbarStyle.Text
-		IS 2 DO Gtk.ToolbarStyle.Both
-	);
+	WHEN combobox:GetActive
+	IS 0 DO preferenceChanges:insert("toolbar-style", <> ui.mainToolbar:SetStyle(conf["toolbar-style"] <- Gtk.ToolbarStyle.Icons))
+	IS 1 DO preferenceChanges:insert("toolbar-style", <> ui.mainToolbar:SetStyle(conf["toolbar-style"] <- Gtk.ToolbarStyle.Text))
+	IS 2 DO preferenceChanges:insert("toolbar-style", <> ui.mainToolbar:SetStyle(conf["toolbar-style"] <- Gtk.ToolbarStyle.Both))
+	;
 );
 
 DEF OnImageButtonPressed!(eventbox, event) (
