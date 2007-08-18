@@ -1,15 +1,14 @@
 #!/usr/local/bin/riva
 MOD Main;
 
+IMP Sys;
+IMP Std;
+
 IMP IO.Terminal USE Out;
 IMP Gtk.Gdk;
 IMP Gtk.Gtk;
 IMP Gtk.Glade;
 IMP Gtk.GObject;
-IMP Sys.FileSys;
-IMP Std.Address;
-IMP Std.Function;
-IMP Std.String;
 
 DEF ui <- Glade.Load("mangax.glade", Main);
 VAR thumbnailStore <- Gtk.ListStore.Newv(3, [GObject.Type.STRING, Gdk.Pixbuf.GetType(), GObject.Type.STRING]);
@@ -43,7 +42,7 @@ DEF OnFileOpen!() (
 		VAR iter <- Gtk.TreeIter.New();
 		VAR dir <- ui.fileChooserDialog:GetCurrentFolder;
 		VAR index <- 0;
-		VAR file, path; EVERY path <- dir + "/" + (file <- FileSys.ListDir(dir)) DO (
+		VAR file, path; EVERY path <- dir + "/" + (file <- Sys.FileSys.ListDir(dir)) DO (
 			value:Set(Gdk.Pixbuf.NewFromFileAtSize(path, 64, 128, NIL));
 			thumbnailStore:Append(iter);
 			thumbnailStore:SetValue(iter, 1, value);
@@ -52,7 +51,7 @@ DEF OnFileOpen!() (
 			thumbnailStore:SetValue(iter, 2, value);
 			value:Unset;
 			index <- index + 1;
-			value:Set(index @ String.T);
+			value:Set(index @ Std.String.T);
 			thumbnailStore:SetValue(iter, 0, value);
 			value:Unset;
 			RECV msg DO ();
@@ -87,7 +86,7 @@ DEF OnToolbarStyleChanged!(combobox) (
 
 DEF OnImageButtonPressed!(eventbox, event) (
 	event <- event:Button;
-	event:Button = 3 => ui.popupMenu:Popup(Gtk.Widget.Nil, Gtk.Widget.Nil, Function.Nil, Address.Nil, 3, event:Time);
+	event:Button = 3 => ui.popupMenu:Popup(Gtk.Widget.Nil, Gtk.Widget.Nil, Std.Function.Nil, Std.Address.Nil, 3, event:Time);
 	RET :true;
 );
 
