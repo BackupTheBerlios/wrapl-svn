@@ -17,12 +17,12 @@ RivaProgram($(GTK_LIB_DIR)TypeMap, TypeMap)
 
 LDFLAGS += Gtk/Gtk.rlib
 
-#api.raw: $(file api.sources)
-#	gapi2-parser $(file api.sources)
+api.raw: $(file api.sources)
+	gapi2-parser $(file api.sources)
 
-#api.xml: api.raw $(file api.metadata)
-#	cp $(file api.raw) api.xml
-#	gapi2-fixup --api=api.xml --metadata=$(file api.metadata)
+api.xml: api.raw $(file api.metadata)
+	cp $(file api.raw) api.xml
+	gapi2-fixup --api=api.xml --metadata=$(file api.metadata)
 
 $(GTK_AUTOGEN): api.xml
 	riva -L $(GTK_SRC_DIR) Main $(file api.xml)
