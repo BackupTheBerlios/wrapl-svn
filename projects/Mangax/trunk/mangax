@@ -94,10 +94,51 @@ DEF OnToolbarStyleChanged!(combobox) (
 	;
 );
 
-DEF OnImageButtonPressed!(eventbox, event) (
+VAR imageDragged;
+VAR imageDragX;
+VAR imageDragY;
+VAR imageDragHandler <- DragHandlerIgnore;
+
+DEF OnImageButtonPress!(widget, event) (
 	event <- event:Button;
-	event:Button = 3 => ui.popupMenu:Popup(Gtk.Widget.Nil, Gtk.Widget.Nil, Std.Function.Nil, Std.Address.Nil, 3, event:Time);
+	WHEN event:Button
+	IS 1 DO (
+		imageDragged <- :false;
+		imageDragX <- event:X;
+		imageDragY <- event:Y;
+		imageDragHandler <- DragHandlerMoveImage;
+	)
+	IS 3 DO ui.popupMenu:Popup(Gtk.Widget.Nil, Gtk.Widget.Nil, Std.Function.Nil, Std.Address.Nil, 3, event:Time);
 	RET :true;
+);
+
+DEF OnImageButtonRelease!(widget, event) (
+	event <- event:Button;
+	imageDragHandler <- DragHandlerIgnore;
+	RET :true;
+);
+
+DEF DragHandlerIgnore() (
+	Out:writes("Ignoring drag\n");
+	:true;
+);
+
+DEF DragHandlerMoveImage(event) (
+	Out:writes("Moving image\n");
+	event <- event:Motion;
+	imageDragged <- :true;
+	VAR hadjust <- ui.mainScrolledWindow:GetHadjustment;
+	VAR vadjust <- ui.mainScrolledWindow:GetVadjustment;
+	Out:writes("[", hadjust:Lower, " - ", hadjust:Upper, "]\n");
+	Out:writes("[", vadjust:Lower, " - ", vadjust:Upper, "]\n");
+	--hadjust:SetValue(hadjust:GetValue + event:X - imageDragX);
+	--vadjust:SetValue(vadjust:GetValue + event:Y - imageDragY);
+	RECV msg DO Out:writes("msg = ", msg, "\n");
+	RET :true;
+);
+
+DEF OnImageMotionNotify!(widget, event) (
+	imageDragHandler(event);
 );
 
 ui.mainWindow:ShowAll;
