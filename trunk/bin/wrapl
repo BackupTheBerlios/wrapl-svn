@@ -3,6 +3,7 @@ MOD Main;
 
 IMP Std.String;
 IMP Std.Symbol;
+IMP Std.Address;
 IMP IO.Terminal USE In, Out;
 IMP Wrapl;
 IMP Sys.Module;
@@ -20,6 +21,8 @@ REP (
 			VAR mod;
 			(mod <- Module.FromVal(result)) => (
 				Out:writes(mod[1]:map("/", "."), ".", mod[2]);
+			) // (mod <- Module.FromVal(?result)) => (
+				Out:writes("<", mod[1]:map("/", "."), ".", mod[2], ":", Address.FromVal(result), ">");
 			) // (
 				Out:write("<value>");
 			);
