@@ -65,7 +65,7 @@ struct Std$Function_cresumedata {
 };
 
 struct Std$Function_cstate {
-	void *Run, *Resume, *Chain;
+	void *Run, *Chain, *Resume;
 	long (* Invoke)(Std$Function_cresumedata *Data);
 };
 
