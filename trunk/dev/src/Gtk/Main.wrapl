@@ -4,7 +4,7 @@ IMP Xml.Parser;
 IMP IO.Terminal USE Out;
 IMP Log USE log;
 IMP IO.File;
-IMP Sys.Program USE Args;
+IMP Sys.Process USE Args;
 
 IMP Target;
 IMP Callback;
