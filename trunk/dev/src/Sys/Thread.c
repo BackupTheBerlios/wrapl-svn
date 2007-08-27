@@ -101,7 +101,7 @@ METHOD("lock", TYP, MutexT) {
 	return SUCCESS;
 };
 
-GLOBAL_FUNCTION(key_new, 0) {
+GLOBAL_FUNCTION(KeyNew, 0) {
 	key_t *Key = new(key_t);
 	Key->Type = KeyT;
 	pthread_key_create(&Key->Handle, 0);
