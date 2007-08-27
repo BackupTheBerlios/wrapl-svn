@@ -9,7 +9,6 @@ if $(equal $(OSTYPE), Win32)
 RivaProgram($(BASENAME)Thread, Thread)
 RivaProgram($(BASENAME)Module, Module)
 RivaProgram($(BASENAME)Environ, Environ)
-RivaProgram($(BASENAME)Program, Program)
 RivaProgram($(BASENAME)FileSys, FileSys)
 RivaProgram($(BASENAME)Time, Time)
 RivaProgram($(BASENAME)Memory, Memory)
@@ -20,7 +19,6 @@ Sys:\
 	$(BASENAME)Thread.riva\
 	$(BASENAME)Module.riva\
 	$(BASENAME)Environ.riva\
-	$(BASENAME)Program.riva\
 	$(BASENAME)FileSys.riva\
 	$(BASENAME)Time.riva\
 	$(BASENAME)Memory.riva\
