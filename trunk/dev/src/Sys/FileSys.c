@@ -116,11 +116,7 @@ static long listdir_resume(listdir_resume_data *Data) {
 		closedir(Generator->Dir);
 		return FAILURE;
 	};
-	int Length = strlen(Entry->d_name);
-	char *FileName = Riva$Memory$alloc_atomic(Length + 1);
-	strcpy(FileName, Entry->d_name);
-	FileName[Length] = 0;
-	Data->Result.Val = Std$String$new_length(FileName, Length);
+	Data->Result.Val = Std$String$copy(Entry->d_name);
 	return SUSPEND;
 #endif
 };
@@ -140,11 +136,7 @@ GLOBAL_FUNCTION(ListDir, 1) {
 		closedir(Dir);
 		return FAILURE;
 	};
-	int Length = strlen(Entry->d_name);
-	char *FileName = Riva$Memory$alloc_atomic(Length + 1);
-	strcpy(FileName, Entry->d_name);
-	FileName[Length] = 0;
-	Result->Val = Std$String$new_length(FileName, Length);
+	Result->Val = Std$String$copy(Entry->d_name);
 	listdir_generator *Generator = new(listdir_generator);
 	Generator->State.Run = Std$Function$resume_c;
 	Generator->State.Invoke = listdir_resume;
