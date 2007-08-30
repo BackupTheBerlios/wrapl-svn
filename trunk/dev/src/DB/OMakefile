@@ -6,8 +6,10 @@ CFLAGS += -std=gnu99
 LDFLAGS += Std.rlib Riva.rlib 
 
 RivaProgram($(BASENAME)Sqlite, Sqlite3 SqliteRiva)
+RivaProgram($(BASENAME)Mysql, Mysql)
 
 DB:\
-	$(BASENAME)Sqlite.riva
+	$(BASENAME)Sqlite.riva\
+	$(BASENAME)Mysql.riva
 
 .DEFAULT:
