@@ -143,22 +143,22 @@ static inline Std$Object_t *convert_field(MYSQL_FIELD *Field, void *Data, unsign
 	if (Data == 0) return Std$Object$Nil;
 	printf("Field type = %d\n", Field->type);
 	switch (Field->type) {
-	case MYSQL_TYPE_TINY: return Std$Integer$new_small(*(signed char *)Data);
-	case MYSQL_TYPE_SHORT: return Std$Integer$new_small(*(short *)Data);
-	case MYSQL_TYPE_LONG: return Std$Integer$new_small(*(long *)Data);
-	case MYSQL_TYPE_INT24: return Std$Integer$new_small(*(long *)Data);
-	case MYSQL_TYPE_LONGLONG:
+	case MYSQL_TYPE_TINY:
+	case MYSQL_TYPE_SHORT:
+	case MYSQL_TYPE_LONG:
+	case MYSQL_TYPE_INT24:
+	case MYSQL_TYPE_LONGLONG: return Std$Integer$new_string(Data);
 	case MYSQL_TYPE_DECIMAL:
 	case MYSQL_TYPE_NEWDECIMAL:
-	case MYSQL_TYPE_FLOAT: return Std$Real$new(*(float *)Data);
-	case MYSQL_TYPE_DOUBLE: return Std$Real$new(*(double *)Data);
+	case MYSQL_TYPE_FLOAT:
+	case MYSQL_TYPE_DOUBLE: return Std$Real$new_string(Data);
 	case MYSQL_TYPE_BIT:
 	case MYSQL_TYPE_TIMESTAMP:
 	case MYSQL_TYPE_DATE:
 	case MYSQL_TYPE_TIME:
 	case MYSQL_TYPE_DATETIME:
 	case MYSQL_TYPE_YEAR:
-	case MYSQL_TYPE_STRING: return Std$String$copy_length(Data, Length);
+	case MYSQL_TYPE_STRING:
 	case MYSQL_TYPE_VAR_STRING: return Std$String$copy_length(Data, Length);
 	case MYSQL_TYPE_BLOB:
 	case MYSQL_TYPE_SET:
@@ -188,7 +188,7 @@ METHOD("row", TYP, ResultT) {
 		Node = new(Std$List_node);
 		Node->Prev = Prev;
 		Prev->Next = Node;
-		Node->Value = Std$String$copy_length(Row[I], Lengths[I]);
+		Node->Value = convert_field(Fields + I, Row[I], Lengths[I]);
 		Prev = Node;
 	};
 	FieldList->Tail = Node;
