@@ -188,7 +188,7 @@ METHOD("row", TYP, ResultT) {
 		Node = new(Std$List_node);
 		Node->Prev = Prev;
 		Prev->Next = Node;
-		Node->Value = convert_field(Fields + I, Row[I], Lengths[I]);
+		Node->Value = Std$String$copy_length(Row[I], Lengths[I]);
 		Prev = Node;
 	};
 	FieldList->Tail = Node;
