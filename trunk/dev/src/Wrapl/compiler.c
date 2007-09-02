@@ -395,6 +395,12 @@ void limit_expr_t::print(int Indent) {
 	Expr->print(Indent);
 };
 
+void skip_expr_t::print(int Indent) {
+	Expr->print(Indent);
+	printf(" SKIP ");
+	Skip->print(Indent);
+};
+
 void infinite_expr_t::print(int Indent) {
 	printf("|");
 	Expr->print(Indent);
@@ -1016,6 +1022,10 @@ operand_t *limit_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t *
 	Compiler->back_trap(Label2);
 
 	return Result;
+};
+
+operand_t *skip_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t *Success) {DEBUG
+	return Register;
 };
 
 operand_t *infinite_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t *Success) {DEBUG

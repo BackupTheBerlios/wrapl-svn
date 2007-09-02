@@ -368,6 +368,17 @@ struct limit_expr_t : expr_t {
 	operand_t *compile(compiler_t *Compiler, label_t *Start, label_t *Success);
 };
 
+struct skip_expr_t : expr_t {
+	expr_t *Expr, *Skip;
+	skip_expr_t(int LineNo, expr_t *Expr, expr_t *Skip) {
+		this->LineNo = LineNo;
+		this->Expr = Expr;
+		this->Skip = Skip;
+	};
+	PRINT_METHOD;
+	operand_t *compile(compiler_t *Compiler, label_t *Start, label_t *Success);
+};
+
 struct infinite_expr_t : expr_t {
 	expr_t *Expr;
 	infinite_expr_t(int LineNo, expr_t *Expr) {

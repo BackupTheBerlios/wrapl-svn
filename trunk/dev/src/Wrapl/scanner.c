@@ -85,6 +85,7 @@ const char *Tokens[] = {
 	"<<=", //tkREFASSIGN                      71
 	"..", //tkDOTDOT                         72
 	"<block>", //tkSTRBLOCK                       73
+	"SKIP", //tkSKIP                           74
 };
 
 scanner_t::scanner_t(IO$Stream_t *Source) {

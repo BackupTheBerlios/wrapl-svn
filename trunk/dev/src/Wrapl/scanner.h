@@ -75,6 +75,7 @@
 #define tkREFASSIGN                      71
 #define tkDOTDOT                         72
 #define tkSTRBLOCK                       73
+#define tkSKIP                           74
 
 extern const char *Tokens[];
 
