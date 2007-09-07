@@ -48,6 +48,12 @@ typedef struct statement_t {
 	sqlite3_stmt *Handle;
 } statement_t;
 
+METHOD("error", TYP, T) {
+	database_t *DB = Args[0].Val;
+	Result->Val = Std$String$copy(sqlite3_errmsg(DB->Handle));
+	return SUCCESS;
+};
+
 METHOD("close", TYP, T) {
 	database_t *DB = Args[0].Val;
 	return (sqlite3_close(DB->Handle) == SQLITE_BUSY) ? FAILURE : SUCCESS;
