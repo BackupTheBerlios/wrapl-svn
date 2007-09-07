@@ -48,7 +48,7 @@ typedef struct statement_t {
 	sqlite3_stmt *Handle;
 } statement_t;
 
-METHOD("error", TYP, T) {
+METHOD("errmsg", TYP, T) {
 	database_t *DB = Args[0].Val;
 	Result->Val = Std$String$copy(sqlite3_errmsg(DB->Handle));
 	return SUCCESS;
