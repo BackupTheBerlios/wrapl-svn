@@ -147,7 +147,7 @@ METHOD("bind", TYP, StatementT, TYP, Std$Integer$SmallT, VAL, Std$Object$Nil) {
 
 METHOD("bind", TYP, StatementT, TYP, Std$Integer$SmallT, TYP, Std$String$T) {
 	statement_t *S = Args[0].Val;
-	sqlite3_bind_blob(S->Handle,
+	sqlite3_bind_text(S->Handle,
 		((Std$Integer_smallt *)Args[1].Val)->Value,
 		Std$String$flatten(Args[2].Val),
 		((Std$String_t *)Args[2].Val)->Length.Value,

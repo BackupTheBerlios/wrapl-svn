@@ -835,7 +835,8 @@ void select_integer_inst_t::encode(assembler_t *Assembler) {
 					if (Entries[I].Key == K) {
 						printf("Stupid user has duplicate keys: %d\n", K);
 					} else {
-						if (++M > Count * 2) goto method2;
+						//if (++M > Count * 2) goto method2;
+						++M;
 						goto next;
 					};
 				};
@@ -863,8 +864,14 @@ void select_integer_inst_t::encode(assembler_t *Assembler) {
 				| .aword =>Default
 			};
 		};
+		return;
 	method2:
 		printf("Not done yet, hahaha\n");
+		printf("M = %d\n", M);
+		printf("Count = %d\n", Count);
+		for (Case = Cases; Case; Case = Case->Next) {
+			printf("Case %d - %d\n", Case->Min, Case->Max);
+		};
 	} else {
 		label_t *Labels[Range];
 		memset(Labels, 0, Range * sizeof(label_t *));
