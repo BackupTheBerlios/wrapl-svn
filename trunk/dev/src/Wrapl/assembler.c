@@ -2,7 +2,7 @@
 #include "missing.h"
 #include <Std.h>
 #include <string.h>
-//#include <udis86.h>
+#include <udis86.h>
 
 struct state_t {
 	void *Run;
@@ -745,7 +745,7 @@ struct type_of_inst_t : load_inst_t {
 	};
 #ifdef ASSEMBLER_LISTING
 	void list() {
-		printf("\ttype_of %s\n", listop(Operand));
+		printf("\ttype_of\n");
 	};
 #endif
 	void encode(assembler_t *Assembler);

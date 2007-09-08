@@ -469,6 +469,7 @@ void when_expr_t::print(int Indent) {
 		Case->Body->print(Indent);
 		printf("\n");
 	};
+	for (int I = Indent; I--;) printf("    ");
 	printf("DO ");
 	Default->print(Indent);
 };

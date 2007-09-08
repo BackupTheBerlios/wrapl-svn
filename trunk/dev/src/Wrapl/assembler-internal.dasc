@@ -805,6 +805,31 @@ void comp_inst_t::encode(assembler_t *Assembler) {
 	};
 };
 
+typedef struct select_integer_entry_t {
+	uint32_t Key;
+	label_t *Label;
+} select_integer_entry_t;
+
+static void select_integer_entries_sort(select_integer_entry_t *A, select_integer_entry_t *B) {
+	if (A >= B) return;
+	select_integer_entry_t *C = A, *D = B;
+	select_integer_entry_t T = *A, S = *B;
+	while (C < D) {
+		if (S.Key < T.Key) {
+			*C = S;
+			++C;
+			S = *C;
+		} else {
+			*D = S;
+			--D;
+			S = *D;
+		};
+	};
+	*C = T;
+	select_integer_entries_sort(A, C - 1);
+	select_integer_entries_sort(C + 1, B);
+};
+
 void select_integer_inst_t::encode(assembler_t *Assembler) {
 	case_t *Case;
 
@@ -820,12 +845,12 @@ void select_integer_inst_t::encode(assembler_t *Assembler) {
 		Count += (Case->Max - Case->Min + 1);
 	};
 	int Range = Max - Min + 1;
+	int DispFix = 1;
 	if (Range > 2 * Count) {
-		struct entry_t {int32_t Key; label_t *Label;};
-		entry_t Entries[2 * Count];
+		select_integer_entry_t Entries[2 * Count];
 		uint32_t M = Count;
 	next:
-		memset(Entries, 0, M * sizeof(entry_t));
+		memset(Entries, 0, M * sizeof(select_integer_entry_t));
 		for (Case = Cases; Case; Case = Case->Next) {
 			int32_t K = Case->Max;
 			uint32_t T = K - Case->Min + 1;
@@ -834,11 +859,66 @@ void select_integer_inst_t::encode(assembler_t *Assembler) {
 				if (Entries[I].Label) {
 					if (Entries[I].Key == K) {
 						printf("Stupid user has duplicate keys: %d\n", K);
-					} else {
-						//if (++M > Count * 2) goto method2;
-						++M;
-						goto next;
+					} else if (++M >= Count * 2) {
+						M = 1; while (M < Count) M <<= 1;
+						uint32_t A = (M - Count) / 2;
+						uint32_t B = (M - Count) - A;
+						select_integer_entry_t *Top = Entries;
+						for (Case = Cases; Case; Case = Case->Next) {
+							for (I = Case->Min; I <= Case->Max; ++I) {
+								Top->Key = I;
+								Top->Label = Case->Body;
+								++Top;
+							};
+						};
+						--Top;
+						select_integer_entries_sort(Entries, Top);
+						| mov eax, [ecx + 4]
+						| mov edx, M / 2
+						| mov ebx, M / 2 - 1
+						| 1:
+						| cmp eax, [ebx * 8 + >2]
+						| ja >3
+						| jb >4
+						| jmp dword [ebx * 8 + >5]
+						| 3:
+						| shr edx, 1
+						| jz =>Default
+						| add ebx, edx
+						| jmp <1
+						| 4:
+						| shr edx, 1
+						| jz =>Default
+						| sub ebx, edx
+						| jmp <1
+						| 2:
+						for (int I = 0; I < A; ++I) {
+							| .dword Entries[0].Key
+							if (DispFix) {
+								| 5:
+								DispFix = 0;
+							};
+							| .aword =>Entries[0].Label
+						};
+						for (int I = 0; I < Count; ++I) {
+							| .dword Entries[I].Key
+							if (DispFix) {
+								| 5:
+								DispFix = 0;
+							};
+							| .aword =>Entries[I].Label
+						};
+						for (int I = 0; I < B; ++I) {
+							| .dword Top->Key
+							if (DispFix) {
+								| 5:
+								DispFix = 0;
+							};
+							| .aword =>Top->Label;
+						};
+						return;
 					};
+					goto next;
 				};
 				Entries[I].Key = K;
 				Entries[I].Label = Case->Body;
@@ -851,13 +931,16 @@ void select_integer_inst_t::encode(assembler_t *Assembler) {
 		| xor edx, edx
 		| mov ebx, M
 		| div ebx
-		| lea edx, [edx * 8 + >1]
-		| cmp [edx], ecx
+		| cmp [edx * 8 + >1], ecx
 		| jne =>Default
-		| jmp dword [edx + 4]
+		| jmp dword [edx * 8 + >2]
 		| 1:
 		for (int I = 0; I < M; ++I) {
 			| .dword Entries[I].Key
+			if (DispFix) {
+				| 2:
+				DispFix = 0;
+			};
 			if (Entries[I].Label) {
 				| .aword =>Entries[I].Label
 			} else {
@@ -865,13 +948,6 @@ void select_integer_inst_t::encode(assembler_t *Assembler) {
 			};
 		};
 		return;
-	method2:
-		printf("Not done yet, hahaha\n");
-		printf("M = %d\n", M);
-		printf("Count = %d\n", Count);
-		for (Case = Cases; Case; Case = Case->Next) {
-			printf("Case %d - %d\n", Case->Min, Case->Max);
-		};
 	} else {
 		label_t *Labels[Range];
 		memset(Labels, 0, Range * sizeof(label_t *));

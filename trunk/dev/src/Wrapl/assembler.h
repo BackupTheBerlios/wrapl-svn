@@ -7,6 +7,7 @@
 //#define ASSEMBLER_LISTING
 
 #include <stdint.h>
+#include <stdio.h>
 #include <Sys/Module.h>
 #include "stringtable.h"
 
@@ -47,7 +48,7 @@ struct inst_t {
 	int LineNo;
 
 #ifdef ASSEMBLER_LISTING
-	virtual void list() {};
+	virtual void list() {printf("\tunknown\n");};
 #endif
 	virtual void add_sources() {};
 	virtual void add_source(load_inst_t *Load) {};
