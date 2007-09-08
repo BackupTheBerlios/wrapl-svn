@@ -1025,7 +1025,20 @@ operand_t *limit_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t *
 };
 
 operand_t *skip_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t *Success) {DEBUG
-	return Register;
+	label_t *Label0 = new label_t;
+	label_t *Label1 = new label_t;
+	label_t *Label2 = new label_t;
+
+	uint32_t Trap = Compiler->use_trap();
+	uint32_t Temp = Compiler->new_temporary();
+
+	Label0->load(Skip->compile(Compiler, Start, Label0));
+	Label0->skip(Temp);
+	Label0->link(Label1);
+	operand_t *Result = Expr->compile(Compiler, Label1, Label2);
+	Label2->test_skip(Trap, Temp);
+	Label2->link(Success);
+	return Result;
 };
 
 operand_t *infinite_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t *Success) {DEBUG

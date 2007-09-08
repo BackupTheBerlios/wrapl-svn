@@ -228,6 +228,8 @@ struct label_t : inst_t {
 	void comp(int Equal, operand_t *Operand, label_t *Failure);
 	void limit(uint32_t Trap, uint32_t Temp);
 	void test_limit(uint32_t Temp, label_t *Failure);
+	void skip(uint32_t Temp);
+	void test_skip(uint32_t Trap, uint32_t Temp);
 	void select_integer(select_integer_inst_t::case_t *Cases, label_t *Default);
 	void select_string(select_string_inst_t::case_t *Cases, label_t *Default);
 	void select_object(select_object_inst_t::case_t *Cases, label_t *Default);

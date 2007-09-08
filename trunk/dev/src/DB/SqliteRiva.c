@@ -59,6 +59,12 @@ METHOD("close", TYP, T) {
 	return (sqlite3_close(DB->Handle) == SQLITE_BUSY) ? FAILURE : SUCCESS;
 };
 
+METHOD("last_insert_rowid", TYP, T) {
+	database_t *DB = Args[0].Val;
+	Result->Val = Std$Integer$new_small(sqlite3_last_insert_rowid(DB->Handle));
+	return SUCCESS;
+};
+
 METHOD("interrupt", TYP, T) {
 	database_t *DB = Args[0].Val;
 	return SUCCESS;

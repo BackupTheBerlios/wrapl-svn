@@ -370,10 +370,10 @@ struct limit_expr_t : expr_t {
 
 struct skip_expr_t : expr_t {
 	expr_t *Expr, *Skip;
-	skip_expr_t(int LineNo, expr_t *Expr, expr_t *Skip) {
+	skip_expr_t(int LineNo, expr_t *Skip, expr_t *Expr) {
 		this->LineNo = LineNo;
-		this->Expr = Expr;
 		this->Skip = Skip;
+		this->Expr = Expr;
 	};
 	PRINT_METHOD;
 	operand_t *compile(compiler_t *Compiler, label_t *Start, label_t *Success);

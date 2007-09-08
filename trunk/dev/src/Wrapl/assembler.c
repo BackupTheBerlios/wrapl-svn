@@ -551,7 +551,7 @@ struct limit_inst_t : inst_t {
 	void add_source(load_inst_t *Load) {Load->load_val();};
 #ifdef ASSEMBLER_LISTING
 	void list() {
-		printf("\limit %d, %d\n", Trap, Temp);
+		printf("\tlimit %d, %d\n", Trap, Temp);
 	};
 #endif
 	void encode(assembler_t *Assembler);
@@ -573,7 +573,7 @@ struct test_limit_inst_t : inst_t {
 	};
 #ifdef ASSEMBLER_LISTING
 	void list() {
-		printf("\limit %d, %x\n", Temp, Target);
+		printf("\tlimit %d, %x\n", Temp, Target);
 	};
 #endif
 	void encode(assembler_t *Assembler);
@@ -582,6 +582,41 @@ struct test_limit_inst_t : inst_t {
 void label_t::test_limit(uint32_t Temp, label_t *Target) {
 	test_limit_inst_t *Inst = new test_limit_inst_t;
 	Inst->Target = Target;
+	Inst->Temp = Temp;
+	append(Inst);
+};
+
+struct skip_inst_t : inst_t {
+	uint32_t Temp;
+	void add_source(load_inst_t *Load) {Load->load_val();};
+#ifdef ASSEMBLER_LISTING
+	void list() {
+		printf("\tskip %d, %x\n", Temp);
+	};
+#endif
+	void encode(assembler_t *Assembler);
+};
+
+void label_t::skip(uint32_t Temp) {
+	skip_inst_t *Inst = new skip_inst_t;
+	Inst->Temp = Temp;
+	append(Inst);
+};
+
+struct test_skip_inst_t : inst_t {
+	uint32_t Temp;
+	uint32_t Trap;
+#ifdef ASSEMBLER_LISTING
+	void list() {
+		printf("\ttest_skip %d, %d\n", Temp, Trap);
+	};
+#endif
+	void encode(assembler_t *Assembler);
+};
+
+void label_t::test_skip(uint32_t Trap, uint32_t Temp) {
+	test_skip_inst_t *Inst = new test_skip_inst_t;
+	Inst->Trap = Trap;
 	Inst->Temp = Temp;
 	append(Inst);
 };

@@ -944,6 +944,20 @@ void limit_inst_t::encode(assembler_t *Assembler) {
 	| mov [ebp + Assembler->Temps + 8 * Temp], ecx
 };
 
+void skip_inst_t::encode(assembler_t *Assembler) {
+	| cmp dword VALUE:ecx->Type, Std$Integer$SmallT
+	| jne &incorrect_type
+	| mov ecx, SMALL:ecx->Value
+	| mov [ebp + Assembler->Temps + 8 * Temp], ecx
+};
+
+void test_skip_inst_t::encode(assembler_t *Assembler) {
+	| dec dword [ebp + Assembler->Temps + 8 * Temp]
+	| mov edi, Assembler->Temps + 8 * Trap
+	| jns &backtrack
+	| inc dword [ebp + Assembler->Temps + 8 * Temp]
+};
+
 void type_of_inst_t::encode(assembler_t *Assembler) {
 	switch (Type) {
 	case LOAD_VAL: {
