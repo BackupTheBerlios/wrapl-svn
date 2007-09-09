@@ -703,7 +703,6 @@ static expr_t *parse_expr2(scanner_t *Scanner, int Precedence = 0) {
 			Term = new limit_expr_t(Scanner->Token.LineNo, Term, accept_term(Scanner));
 			goto start;
 		};
-	case 10:
 		if (Scanner->parse(tkSKIP)) {
 			Term = new skip_expr_t(Scanner->Token.LineNo, Term, accept_term(Scanner));
 			goto start;

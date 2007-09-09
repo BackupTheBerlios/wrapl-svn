@@ -2,7 +2,7 @@
 #include "missing.h"
 #include <Std.h>
 #include <string.h>
-#include <udis86.h>
+//#include <udis86.h>
 
 struct state_t {
 	void *Run;

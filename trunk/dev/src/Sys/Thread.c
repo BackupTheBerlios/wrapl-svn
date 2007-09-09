@@ -7,19 +7,43 @@ TYPE(MutexT);
 
 #ifdef WINDOWS
 
+typedef struct thread_t {
+} thread_t;
+
+typedef struct mutex_t {
+} mutex_t;
+
+typedef struct key_t {
+} key_t;
+
 GLOBAL_FUNCTION(New, 1) {
-	return SUCCESS;
 };
 
 GLOBAL_FUNCTION(Self, 0) {
-	return SUCCESS;
 };
 
 GLOBAL_FUNCTION(MutexNew, 0) {
-	return SUCCESS;
 };
 
-void __init(void *Module) {
+METHOD("lock", TYP, MutexT) {
+};
+
+METHOD("trylock", TYP, MutexT) {
+};
+
+METHOD("lock", TYP, MutexT) {
+};
+
+GLOBAL_FUNCTION(KeyNew, 0) {
+};
+
+METHOD("get", TYP, KeyT) {
+};
+
+METHOD("set", TYP, KeyT, SKP) {
+};
+
+void __init (void *Module) {
 };
 
 #else
