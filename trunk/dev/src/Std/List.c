@@ -992,7 +992,7 @@ METHOD("foldr", TYP, T, TYP, Std$Function$T) {
 	return SUCCESS;
 };
 
-SYMBOL($QUERY, "?");
+SYMBOL($COMPARE, "?");
 
 static Std$Object_t *sort_list(Std$Object_t **First, Std$Object_t **Last) {
 	if (First == Last) return 0;
@@ -1003,7 +1003,7 @@ static Std$Object_t *sort_list(Std$Object_t **First, Std$Object_t **Last) {
 
 	while (A != B) {
 		Std$Function_result Result;
-		switch (Std$Function$call($QUERY, 2, &Result, S, 0, T, 0)) {
+		switch (Std$Function$call($COMPARE, 2, &Result, S, 0, T, 0)) {
 		case SUSPEND: case SUCCESS: {
 			if (((Std$Integer_smallt *)Result.Val)->Value < 0) {
 				*B = T; --B; T = *B;
