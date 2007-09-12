@@ -56,7 +56,7 @@ METHOD("close", TYP, T) {
 	return SUCCESS;
 };
 
-METHOD("Closed", TYP, T) {
+METHOD("closed", TYP, T) {
 	IO$Posix_t *Stream = Args[0].Val;
 	// TO BE FIXED
 	return FAILURE;

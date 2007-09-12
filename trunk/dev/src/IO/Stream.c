@@ -9,7 +9,7 @@ SYMBOL($read, "read");
 SYMBOL($write, "write");
 SYMBOL($flush, "flush");
 SYMBOL($close, "close");
-SYMBOL($EOI, "EOI");
+SYMBOL($eoi, "eoi");
 SYMBOL($seek, "seek");
 SYMBOL($tell, "tell");
 SYMBOL($AS, "@");
@@ -75,7 +75,7 @@ static void stream_close(IO$Stream_t *Stream) {
 
 static int stream_eoi(IO$Stream_t *Stream) {
 	Std$Function_result Result;
-	if (Std$Function$call($EOI, 1, &Result, Stream, 0) < FAILURE) {
+	if (Std$Function$call($eoi, 1, &Result, Stream, 0) < FAILURE) {
 		return 1;
 	} else {
 		return 0;
@@ -200,6 +200,39 @@ Util$TypeTable_t T_Methods[] = {Util$TypeTable$INIT};
 Util$TypeTable_t ReaderT_Methods[] = {Util$TypeTable$INIT};
 Util$TypeTable_t WriterT_Methods[] = {Util$TypeTable$INIT};
 Util$TypeTable_t SeekerT_Methods[] = {Util$TypeTable$INIT};
+
+METHOD("copy", TYP, ReaderT, TYP, WriterT, TYP, Std$Integer$SmallT) {
+	IO$Stream_t *Rd = Args[0].Val;
+	IO$Stream_t *Wr = Args[1].Val;
+	int Rem = ((Std$Integer_smallt *)Args[2].Val)->Value;
+	IO$Stream_reader_methods *RdMethods = Util$TypeTable$get(ReaderT_Methods, Rd->Type);
+	IO$Stream_writer_methods *WrMethods = Util$TypeTable$get(WriterT_Methods, Wr->Type);
+	char Buffer[1024];
+	while (Rem > 1024) {
+		int Read = RdMethods->read(Rd, Buffer, 1024);
+		Rem -= Read;
+		char *Ptr = Buffer;
+		while (Read) {
+			int Written = WrMethods->write(Wr, Ptr, Read);
+			Read -= Written;
+			Ptr += Written;
+		};
+	};
+	char *Ptr = Buffer;
+	int Rem2 = Rem;
+	while (Rem) {
+		int Read = RdMethods->read(Rd, Ptr, Rem);
+		Rem -= Read;
+		Ptr += Read;
+	};
+	Ptr = Buffer;
+	while (Rem2) {
+		int Written = WrMethods->write(Wr, Ptr, Rem2);
+		Rem2 -= Written;
+		Ptr += Written;
+	};
+	return SUCCESS;
+};
 
 void __init(void *Module) {
 	Util$TypeTable$put(T_Methods, T, &_T_Methods);
