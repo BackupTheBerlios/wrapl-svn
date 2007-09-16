@@ -1,0 +1,6 @@
+===== Lexical Description =====
+Wrapl source code is written in ASCII characters. Tabs, carriage returns and spaces are considered whitespace and are ignored except to separate tokens or in string literals. Identifiers are case sensitive sequences of 1 or more letters, digits or underscores, beginning with a letter or underscore.
+
+^//identifier//:|''( **a**-**z** | **A**-**Z** ) { **a**-**z** | **A**-**Z** | **_** | **0**-**9** }''|
+^//number//:|''{ **0**-**9** } [ **.** ] { **0**-**9** } [ ( **e** | **E** ) { **0** - **9** } ]''|
+^//string//:|''**"**{''//printable character//''|**\**''//escape character//''}**"**''|

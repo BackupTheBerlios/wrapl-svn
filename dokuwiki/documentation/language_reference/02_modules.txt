@@ -1,0 +1,14 @@
+===== Modules =====
+Wrapl is based on the [[Documentation:Riva]] module system, which allows modules to be loaded and identifiers exported from one module to be imported into other modules.The Wrapl loader loads each Wrapl source file as a single module. A module consists of any number of [[.03_declarations]] and [[.05_expressions]]. Identifiers declared as exported are accessible from outside the module. An identifier is declared as exported by using an exclamation mark in its declaration.
+<code wrapl>
+MOD ModuleName;
+
+VAR ExportedVariable!;
+DEF ExportedConstant! <- 100;
+
+VAR NonExportedVariable;
+DEF NonExportedConstant <- 100;
+
+END ModuleName.
+</code>
+
