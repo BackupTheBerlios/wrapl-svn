@@ -17,7 +17,7 @@ Wrapl provides a number of predefined types, some of which are listed in the tab
 New types can be created in Wrapl using the syntax "''<[''//parent//'', ''//...//'']''//field//'', ''//...//''>''". A new instance of a type can be created by calling the type like a function.
 
 Each field should be an identifier or a symbol. This is because fields in an object are accessed by calling a symbol with the object as the first parameter. If the field is supplied as an identifier, then the symbol with that name is used to access the field, however if a symbol is supplied directly, then that symbol is used. Note that the expression ''t:x'' is equivalent to '':x(t)''. For example:
-<code>
+<code wrapl>
 DEF T <- <[] x, :":)">;
 
 VAR t <- T();
@@ -26,7 +26,7 @@ t:":)" <- 200;
 </code>
 
 Each parent  should evaluate to a type. Any number of parents, including none, is allowed. All types implicitly inherit from ''Object.T''. A type will inherit all fields from each of its parents. If a same field is defined in more than one parent, then  only one instance of the field will be allocated. Hence multiple inheritance should be used carefully (as in any language which supports it).
-<code>
+<code wrapl>
 DEF T <- <[] x>;
 DEF U <- <[T] y>;
 

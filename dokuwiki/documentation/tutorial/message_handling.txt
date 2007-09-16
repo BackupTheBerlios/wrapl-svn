@@ -5,7 +5,7 @@ Messages in Wrapl are like exceptions, except that they are not intended to be u
 Note that when a handler is entered, the previous handler is restored, hence messages not intended for the current handler should be resent using ''SEND''. The previous handler is also restored when the block is exited normally, i.e. at the end of the block or when the function returns.
 
 For example:
-<code>
+<code wrapl>
 DEF ConvertToString(x) (
     VAR s <- x @ String.T;
     RECV msg DO (

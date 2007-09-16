@@ -3,7 +3,7 @@ Riva is the module loader which forms the base of the current implementation of 
 
 ^Module Type          ^Extension            ^Description                                                    ^
 |Directories          |                     |These behave as modules which export the files within them.    |
-|Shared libraries     |''.so'' (Linux)      |The native shared libraries of the underlying operating system.|
+|Shared libraries     |''.so'', ''.dll''    |The native shared libraries of the underlying operating system.|
 |Riva binaries        |''.riva''            |Custom [[.Riva:Formats#riva]] format binary modules (linked with ''rlink''). |
 |Wrapl                |''.wrapl''           |Compiles Wrapl source code to machine code in memory.          |
 

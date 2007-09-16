@@ -1,24 +1,24 @@
 ===== Functions and Blocks =====
 Functions in Wrapl are written as follows: "''< ''//parameters//'' > ''//expression//". When a function is called, the parameters are assigned values and the expression is evaluated. The value of the expression is returned as the result of the function. If too many arguments are supplied to a function, the extra arguments are ignored. If too few arguments are supplied, the missing parameters are set to ''NIL''. For example:
-<code>
+<code wrapl>
 DEF f <- <x, y> x + y;
 Out:write(f(10, 20));
 </code>
 will output ''30'', whereas
-<code>
+<code wrapl>
 DEF f <- <a, b, c> Out:writes(a, b, c);
 f(1, 2);
 </code>
 will output ''12NIL''.
 
 The code above could also be written as:
-<code>
+<code wrapl>
 DEF f(a, b, c) Out:writes(a, b, c);
 f(1, 2);
 </code>
 
 Even though a function can only contain a single expression, this is not a restriction since the expression can be a block. Blocks in Wrapl are written in parentheses ''('' //...// '')'' and may contain any number (including zero) of expressions or declarations. Each declaration and each expression except the last one must be terminated by a semicolon. A semicolon is not required after the last expression, but it is allowed. For example:
-<code>
+<code wrapl>
 DEF fact(n) (
     VAR f <- 1, i <- 1;
     REP (
@@ -30,4 +30,4 @@ DEF fact(n) (
 </code>
 An empty block is equivalent to NIL whereas a block with only one expression is equivalent to bracketed expressions in other languages, for example ''2 * (3 + 4)'' returns ''14''.
 
-Blocks may also contain message handlers, a sort of exception handling construct. For more information see [[Documentation:Tutorial#Message Handling]].
+Blocks may also contain message handlers, a sort of exception handling construct. For more information see [[.Message_Handling]].

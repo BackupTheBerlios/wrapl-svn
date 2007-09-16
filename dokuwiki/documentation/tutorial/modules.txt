@@ -1,6 +1,6 @@
 ===== Modules =====
 Code in Wrapl can be separated into modules. Each module consists of any number of variable and/or constant declarations, any of which can be exported allowing their use in other modules. To export a variable or constant, follow its declaration with an exclamation mark, "''!''". To use such an exported variable/constant in another module, you can use an import declaration. For example:
-<code>
+<code wrapl>
 MOD Mod1;
 
 IMP IO.Terminal;
@@ -16,7 +16,7 @@ END Mod1.
 is a module which exports a single constant, ''f''. In addition, it imports the module ''IO.Terminal'' and uses the constant ''Out'' exported by that module.
 
 If you use the same imported variable/constant repeatedly, you can define the name of that variable/constant in the current scope by using a ''USE'' clause.
-<code>
+<code wrapl>
 MOD Mod1;
 
 IMP IO.Terminal USE Out;

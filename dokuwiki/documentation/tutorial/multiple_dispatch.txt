@@ -12,7 +12,7 @@ The syntax "''TO ''//symbol//''(''//signature//'') ''//expression//" is shorthan
 Note that ''TO ...'' expressions are translated into calls to ''Lang.Symbol.Set''. Hence they may occur in other expressions, for example within a conditional expression. Also, the signature and corresponding function will not work until after the call to ''Lang.Symbol.Set'' has returned, allowing signature/function pairs to be temporarily overridden, or even prevent them being overridden by calling the symbol with the correct arguments and checking for a ''Lang.Symbol.NoMethodMessageT'' message.
 
 Example:
-<code>
+<code wrapl>
 DEF T <- <[]>;
 DEF U <- <[T]>;
 
