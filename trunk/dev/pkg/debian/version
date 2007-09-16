@@ -1,0 +1,1 @@
+echo $1 "(>=" `dpkg-query -W $1 | cut -f 2`")"

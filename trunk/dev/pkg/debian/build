@@ -1,7 +1,19 @@
+rm -rf wrapl-$1
 mkdir wrapl-$1
 cd wrapl-$1
 mkdir DEBIAN
 cp ../src/control DEBIAN/
+cat > DEBIAN/control <<EOF
+Package: wrapl
+Version: 0.7
+Architecture: i386
+Depends: `../version libconfuse0`, `../version libgmp3c2`, `../version libc6`
+Section: devel
+Priority: optional
+Maintainer: Raja Mukherji <rajamukherji@gmail.com>
+Description: Wrapl, The Programming Language
+  Wrapl is a high level dynamically compiled programming language.
+EOF
 mkdir usr
 mkdir usr/bin
 mkdir usr/lib
@@ -17,3 +29,5 @@ cd usr/lib/riva
 rm -rf `find -name "\.svn"`
 cd ../../..
 cp ../src/copyright usr/share/doc/wrapl/
+cd ..
+dpkg-deb --build wrapl-0.7
