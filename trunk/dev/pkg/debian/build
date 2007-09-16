@@ -1,0 +1,19 @@
+mkdir wrapl-$1
+cd wrapl-$1
+mkdir DEBIAN
+cp ../src/control DEBIAN/
+mkdir usr
+mkdir usr/bin
+mkdir usr/lib
+mkdir usr/lib/riva
+mkdir usr/share
+mkdir usr/share/doc
+mkdir usr/share/doc/wrapl
+cp ../../../../bin/riva usr/bin
+cp ../../../../bin/wrapl usr/bin
+cp ../../../../bin/riva.conf usr/bin
+cp -r ../../../../lib/* usr/lib/riva/
+cd usr/lib/riva
+rm -rf `find -name "\.svn"`
+cd ../../..
+cp ../src/copyright usr/share/doc/wrapl/
