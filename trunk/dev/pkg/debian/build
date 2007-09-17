@@ -1,7 +1,6 @@
 mkdir wrapl-$1
 cd wrapl-$1
 mkdir DEBIAN
-cp ../src/control DEBIAN/
 cat > DEBIAN/control <<EOF
 Package: wrapl
 Version: 0.7
