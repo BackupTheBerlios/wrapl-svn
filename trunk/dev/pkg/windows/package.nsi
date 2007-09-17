@@ -17,13 +17,13 @@ Section "Installer Section"
 		FileWrite $0 'library = {'
 		FileWriteByte $0 "13"
 		FileWriteByte $0 "10"
-		FileWrite $0 '    "$SYSDIR",'
+		FileWrite $0 '    $SYSDIR,'
 		FileWriteByte $0 "13"
 		FileWriteByte $0 "10"
-		FileWrite $0 '    "$WINDIR",'
+		FileWrite $0 '    $WINDIR,'
 		FileWriteByte $0 "13"
 		FileWriteByte $0 "10"
-		FileWrite $0 '    "$INSTDIR\lib"'
+		FileWrite $0 '    $INSTDIR\lib'
 		FileWriteByte $0 "13"
 		FileWriteByte $0 "10"
 		FileWrite $0 '}'
@@ -39,14 +39,17 @@ Section "Installer Section"
 		FileWrite $0 'modules = {'
 		FileWriteByte $0 "13"
 		FileWriteByte $0 "10"
-		FileWrite $0 '    "Wrapl"'
+		FileWrite $0 '    Wrapl'
 		FileWriteByte $0 "13"
 		FileWriteByte $0 "10"
 		FileWrite $0 '}'
 	FileClose $0
-	CreateDirectory "$SMPROGRAMS\Wrapl"
-	CreateShortCut "$SMPROGRAMS\Wrapl\Wrapl.lnk" "$INSTDIR\bin\wrapl.bat"
 	WriteUninstaller "uninstall.exe"
+	CreateDirectory "$SMPROGRAMS\Wrapl"
+	SetOutPath "$INSTDIR\bin"
+	CreateShortCut "$SMPROGRAMS\Wrapl\Wrapl.lnk" "$INSTDIR\bin\riva" "wrapl"
+	SetOutPath "$INSTDIR"
+	CreateShortCut "$SMPROGRAMS\Wrapl\Uninstall.lnk" "$INSTDIR\uninstall.exe"
 SectionEnd
 
 Section "un.Uninstaller Section"
