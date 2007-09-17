@@ -1,3 +1,5 @@
+!include "StrFunc.nsh"
+
 Name "Wrapl"
 Outfile "wrapl-${VERSION}.exe"
 InstallDir "$PROGRAMFILES\Wrapl"
@@ -6,6 +8,8 @@ LicenseData "license.txt"
 Page license
 Page directory
 Page instfiles
+
+${StrRep}
 
 Section "Installer Section"
 	SetOutPath $INSTDIR
@@ -17,13 +21,16 @@ Section "Installer Section"
 		FileWrite $0 'library = {'
 		FileWriteByte $0 "13"
 		FileWriteByte $0 "10"
-		FileWrite $0 '    $SYSDIR,'
+		${StrRep} $1 $SYSDIR '\' '\\'
+		FileWrite $0 '    "$1",'
 		FileWriteByte $0 "13"
 		FileWriteByte $0 "10"
-		FileWrite $0 '    $WINDIR,'
+		${StrRep} $1 $WINDIR '\' '\\'
+		FileWrite $0 '    "$1",'
 		FileWriteByte $0 "13"
 		FileWriteByte $0 "10"
-		FileWrite $0 '    $INSTDIR\lib'
+		${StrRep} $1 $INSTDIR\lib '\' '\\'
+		FileWrite $0 '    "$1"'
 		FileWriteByte $0 "13"
 		FileWriteByte $0 "10"
 		FileWrite $0 '}'
@@ -53,13 +60,15 @@ Section "Installer Section"
 SectionEnd
 
 Section "un.Uninstaller Section"
-	Push $INSTDIR\bin
-	Call un.RemoveFromPath
-	Rmdir /r $INSTDIR\bin
-	Rmdir /r $INSTDIR\lib
-	Rmdir /r "$SMPROGRAMS\Wrapl"
-	Delete "$INSTDIR\uninstall.exe"
-	Rmdir $INSTDIR
+	MessageBox MB_YESNO "Do you want to remove Wrapl?" IDNO cancel
+		Push $INSTDIR\bin
+		Call un.RemoveFromPath
+		Rmdir /r $INSTDIR\bin
+		Rmdir /r $INSTDIR\lib
+		Rmdir /r "$SMPROGRAMS\Wrapl"
+		Delete "$INSTDIR\uninstall.exe"
+		Rmdir $INSTDIR
+	cancel:
 SectionEnd
 
 !ifndef _AddToPath_nsh
