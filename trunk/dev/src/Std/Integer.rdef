@@ -1,3 +1,5 @@
+require("Std/Methods")
+
 if WINDOWS then
 	_export = export
 	export = function(Name)

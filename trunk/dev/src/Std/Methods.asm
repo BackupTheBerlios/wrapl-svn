@@ -145,7 +145,7 @@ method "put", ADDRESS, STRING
 	xor eax, eax
 	ret
 
-method "puts", ADDRESS, STRING, SMALLINT
+method "put", ADDRESS, STRING, SMALLINT
 	mov eax, [argument(edi + 8).Val]
 	mov ebx, [argument(edi + 16).Val]
 	lea eax, [string(eax).Blocks]

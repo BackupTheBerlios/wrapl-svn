@@ -1,3 +1,5 @@
+require("Std/Methods")
+
 if LINUX then
 	library("libpthread.rlib")
 end

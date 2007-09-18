@@ -47,19 +47,15 @@ static void read_config(void) {
 		CFG_END()
 	};
 	cfg_t *Cfg = cfg_init(OptsMain, CFGF_NONE);
-	switch (cfg_parse(Cfg, Conf)) {
-	case CFG_PARSE_ERROR:
-		log_errorf("Error: configuration file corrupt: %s\n", Conf);
-		exit(1);
-	case CFG_FILE_ERROR:
-		log_errorf("Error: configuration file not present: %s\n", Conf);
+	if (cfg_parse(Cfg, Conf) == CFG_PARSE_ERROR) {
+		log_errorf("Error: configuration file not present or corrupt\n");
 		exit(1);
 	};
 	for (int I = 0; I < cfg_size(Cfg, "library"); ++I) {
 		const char *Path = cfg_getnstr(Cfg, "library", I);
 		module_add_directory(Path);
 	};
-	module_load(0, "Std/Methods");
+//	module_load(0, "Std/Methods");
 	for (int I = 0; I < cfg_size(Cfg, "modules"); ++I) {
 		const char *Path = cfg_getnstr(Cfg, "modules", I);
 		log_writef("Preloading module: %s\n", Path);
@@ -82,7 +78,7 @@ int main(int Argc, char **Argv) {
 	module_init();
 	memory_init();
 	log_init();
-	//log_enable();
+	log_enable();
 	thread_init();
 	directory_init();
 	native_init();
