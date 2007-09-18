@@ -54,7 +54,7 @@ Section "Installer Section"
 	WriteUninstaller "uninstall.exe"
 	CreateDirectory "$SMPROGRAMS\Wrapl"
 	SetOutPath "$INSTDIR\bin"
-	CreateShortCut "$SMPROGRAMS\Wrapl\Wrapl.lnk" "$INSTDIR\bin\riva" "wrapl"
+	CreateShortCut "$SMPROGRAMS\Wrapl\Wrapl.lnk" "$INSTDIR\bin\riva" "Interact"
 	SetOutPath "$INSTDIR"
 	CreateShortCut "$SMPROGRAMS\Wrapl\Uninstall.lnk" "$INSTDIR\uninstall.exe"
 SectionEnd

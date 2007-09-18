@@ -1,7 +1,6 @@
 @echo off
 mkdir bin
 copy ..\..\..\bin\riva.exe bin\riva.exe
-copy ..\..\..\bin\wrapl.bat bin\wrapl.bat
 copy ..\..\..\bin\libconfuse.dll bin\libconfuse.dll
 copy ..\..\..\bin\libgc.dll bin\libgc.dll
 mkdir lib

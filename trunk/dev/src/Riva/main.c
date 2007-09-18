@@ -47,8 +47,12 @@ static void read_config(void) {
 		CFG_END()
 	};
 	cfg_t *Cfg = cfg_init(OptsMain, CFGF_NONE);
-	if (cfg_parse(Cfg, Conf) == CFG_PARSE_ERROR) {
-		log_errorf("Error: configuration file not present or corrupt\n");
+	switch (cfg_parse(Cfg, Conf)) {
+	case CFG_PARSE_ERROR:
+		log_errorf("Error: configuration file corrupt: %s\n", Conf);
+		exit(1);
+	case CFG_FILE_ERROR:
+		log_errorf("Error: configuration file not present: %s\n", Conf);
 		exit(1);
 	};
 	for (int I = 0; I < cfg_size(Cfg, "library"); ++I) {
