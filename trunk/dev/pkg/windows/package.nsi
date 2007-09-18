@@ -13,8 +13,8 @@ ${StrRep}
 
 Section "Installer Section"
 	SetOutPath $INSTDIR
-	File /r bin
-	File /r lib
+	File /r /x .svn bin
+	File /r /x .svn lib
 	Push $INSTDIR\bin
 	Call AddToPath
 	FileOpen $0 $INSTDIR\bin\riva.conf w
