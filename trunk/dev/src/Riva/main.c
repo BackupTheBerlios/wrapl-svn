@@ -73,7 +73,6 @@ static unsigned int NoOfArgs = 0;
 int main(int Argc, char **Argv) {
 	GC_init();
 	//GC_disable();
-	//path_init();
 	module_init();
 	memory_init();
 	log_init();
