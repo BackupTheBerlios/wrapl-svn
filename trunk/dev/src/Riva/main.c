@@ -26,6 +26,17 @@ static int BatchMode = 0;
 static int ParseArgs = 0;
 static char *MainModule;
 
+static int add_config(cfg_t *Cfg, cfg_opt_t *Opt, int Argc, const char *Argv) {
+	if (Argc == 1) {
+		config_set(Argv[0], "");
+	} else if (Argc == 2) {
+		config_set(Argv[0], Argv[1]);
+	} else {
+		log_errorf("Error: invalid number of arguments to config() in configuration file\n");
+		exit(1);
+	};
+};
+
 static void read_config(void) {
 	char Conf[1024];
 #ifdef WINDOWS
@@ -37,13 +48,13 @@ static void read_config(void) {
 	int Length = readlink(Link, Conf, 1024);
 	strcpy(Conf + Length, ".conf");
 #endif
-
 	static cfg_opt_t OptsMain[] = {
 		CFG_STR_LIST("library", 0, CFGF_NONE),
 		CFG_STR_LIST("modules", 0, CFGF_NONE),
 		CFG_BOOL("batch", 0, CFGF_NONE),
 		CFG_BOOL("parseargs", 0, CFGF_NONE),
 		CFG_STR("module", "Main", CFGF_NONE),
+		CFG_FUNC("config", add_config),
 		CFG_END()
 	};
 	cfg_t *Cfg = cfg_init(OptsMain, CFGF_NONE);
@@ -76,6 +87,7 @@ int main(int Argc, char **Argv) {
 	module_init();
 	memory_init();
 	log_init();
+	config_init();
 	//log_enable();
 	thread_init();
 	directory_init();

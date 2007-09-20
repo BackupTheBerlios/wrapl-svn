@@ -4,6 +4,7 @@ PROGRAM = $(BASENAME)$(EXE)
 CFLAGS += -std=gnu99
 
 FILES[] =
+	config
 	directory
 	log
 	log2
