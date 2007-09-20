@@ -11,7 +11,11 @@ GLOBAL_FUNCTION(Get, 1) {
 	};
 };
 
-GLOBAL_FUNCTION(Set, 2) {
-	Riva$Config$set(Std$String$flatten(Args[0].Val), Std$String$flatten(Args[1].Val));
+GLOBAL_FUNCTION(Set, 1) {
+	if (Count > 1) {
+		Riva$Config$set(Std$String$flatten(Args[0].Val), Std$String$flatten(Args[1].Val));
+	} else {
+		Riva$Config$set(Std$String$flatten(Args[0].Val), "");
+	};
 	return SUCCESS;
 };

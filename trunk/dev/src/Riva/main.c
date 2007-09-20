@@ -58,8 +58,12 @@ static void read_config(void) {
 		CFG_END()
 	};
 	cfg_t *Cfg = cfg_init(OptsMain, CFGF_NONE);
-	if (cfg_parse(Cfg, Conf) == CFG_PARSE_ERROR) {
-		log_errorf("Error: configuration file not present or corrupt\n");
+	switch (cfg_parse(Cfg, Conf)) {
+	case CFG_FILE_ERROR:
+		log_errorf("Error: configuration file %s not present\n", Conf);
+		exit(1);
+	case CFG_PARSE_ERROR:
+		log_errorf("Error: configuration file %s corrupt\n", Conf);
 		exit(1);
 	};
 	for (int I = 0; I < cfg_size(Cfg, "library"); ++I) {
@@ -76,7 +80,7 @@ static void read_config(void) {
 	BatchMode = cfg_getbool(Cfg, "batch");
 	ParseArgs = cfg_getbool(Cfg, "parseargs");
 	MainModule = cfg_getstr(Cfg, "module");
-};
+};	
 
 static const char **Args;
 static unsigned int NoOfArgs = 0;
