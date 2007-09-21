@@ -100,7 +100,7 @@ scanner_t::scanner_t(IO$Stream_t *Source) {
 void scanner_t::flush() {
 	NextChar = "";
 	NextToken.Type = 0;
-	NextToken.LineNo = 0;
+//	NextToken.LineNo = 0;
 };
 
 static char *scan_string_next(const char **Next, int Index) {

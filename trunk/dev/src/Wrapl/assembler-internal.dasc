@@ -1083,3 +1083,8 @@ void store_list_inst_t::encode(assembler_t *Assembler) {
 	| 2:
 	| mov LIST:edx->Tail, eax
 };
+
+void encode_potential_breakpoint(assembler_t *Assembler, uint32_t LineNo) {
+//	| mov eax, LineNo
+//	| call &potential_breakpoint
+};

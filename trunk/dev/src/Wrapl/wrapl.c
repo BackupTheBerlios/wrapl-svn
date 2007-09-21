@@ -8,6 +8,7 @@
 #include "compiler.h"
 #include "missing.h"
 #include "system.h"
+#include "assembler.h"
 
 static int wrapl_load(Riva$Module_t *Module, const char *Path) {
 	char *LoadPath = 0;
@@ -39,7 +40,9 @@ static int wrapl_load(Riva$Module_t *Module, const char *Path) {
 		Expr = accept_module(Scanner, Module0);
 		Methods->close(Source);
 	};
-	//Expr->print(0);
+#ifdef PARSER_LISTING
+	Expr->print(0);
+#endif
 	compiler_t *Compiler = new compiler_t();
 	if (setjmp(Compiler->Error.Handler)) {
 		printf("%s(%d): %s\n", Path, Compiler->Error.LineNo, Compiler->Error.Message);
@@ -92,7 +95,9 @@ GLOBAL_FUNCTION(SessionEval, 1) {
 		return MESSAGE;
 	};
 	command_expr_t *Command = accept_command(Session->Scanner);
-	//Command->print(0);
+#ifdef PARSER_LISTING
+	Command->print(0);
+#endif
 	if (setjmp(Session->Compiler->Error.Handler)) {
 		errormessage_t *Error = new errormessage_t;
 		Error->Type = ErrorMessageT;

@@ -26,15 +26,16 @@ static int BatchMode = 0;
 static int ParseArgs = 0;
 static char *MainModule;
 
-static int add_config(cfg_t *Cfg, cfg_opt_t *Opt, int Argc, const char *Argv) {
+static int add_config(cfg_t *Cfg, cfg_opt_t *Opt, int Argc, const char **Argv) {
 	if (Argc == 1) {
-		config_set(Argv[0], "");
+		config_set(GC_strdup(Argv[0]), "");
 	} else if (Argc == 2) {
-		config_set(Argv[0], Argv[1]);
+		config_set(GC_strdup(Argv[0]), GC_strdup(Argv[1]));
 	} else {
-		log_errorf("Error: invalid number of arguments to config() in configuration file\n");
-		exit(1);
+		cfg_error(Cfg, "Error: invalid number of arguments to config() in configuration file\n");
+		return -1;
 	};
+	return 0;
 };
 
 static void read_config(void) {
@@ -130,6 +131,39 @@ int main(int Argc, char **Argv) {
 					puts("Error: -P must be followed by a module");
 					return 1;
 				};
+				break;
+			};
+			case 'D': {
+				char *Key, *Value;
+				if (Argv[I][2]) {
+					char *Tmp = strchr(Argv[I], '=');
+					if (Tmp) {
+						int KeyLen = Tmp - Argv[I] - 2;
+						Key = GC_malloc_atomic(KeyLen + 1);
+						memcpy(Key, Argv[I] + 2, KeyLen);
+						Key[KeyLen] = 0;
+						Value = GC_strdup(Tmp + 1);
+					} else {
+						Key = GC_strdup(Argv[I] + 2);
+						Value = "";
+					}
+				} else if (Argc > ++I) {
+					char *Tmp = strchr(Argv[I], '=');
+					if (Tmp) {
+						int KeyLen = Tmp - Argv[I];
+						Key = GC_malloc_atomic(KeyLen + 1);
+						memcpy(Key, Argv[I], KeyLen);
+						Key[KeyLen] = 0;
+						Value = GC_strdup(Tmp + 1);
+					} else {
+						Key = GC_strdup(Argv[I]);
+						Value = "";
+					};
+				} else {
+					puts("Error: -D must be followed by a key/value pair");
+					return 1;
+				};
+				config_set(Key, Value);
 				break;
 			};
 			case '-': {

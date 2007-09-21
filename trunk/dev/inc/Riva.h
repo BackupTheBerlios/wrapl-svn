@@ -5,5 +5,6 @@
 #include <Riva/Memory.h>
 #include <Riva/Module.h>
 #include <Riva/Thread.h>
+#include <Riva/Config.h>
 
 #endif

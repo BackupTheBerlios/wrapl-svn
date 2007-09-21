@@ -11,7 +11,9 @@
 
 #include <setjmp.h>
 
-#ifdef ASSEMBLER_LISTING
+//#define PARSER_LISTING
+
+#if defined(PARSER_LISTING) || defined(ASSEMBLER_LISTING)
 #define PRINT_METHOD void print(int Indent);
 #else
 #define PRINT_METHOD
@@ -25,6 +27,7 @@ struct compiler_t {
 				uint32_t Index;
 				label_t *Start, *Start0, *Failure, *Continue;
 				uint32_t Reserved;
+				uint32_t LineNo;
 			};
 
 			struct expression_t {
@@ -45,6 +48,7 @@ struct compiler_t {
 			trap_t *Trap;
 			expression_t *Expression;
 			operand_t *Self;
+			uint32_t LineNo;
 		};
 
 		loop_t *Loop;
@@ -81,13 +85,13 @@ struct compiler_t {
 	operand_t *new_local(bool Reference = false);
 	uint32_t new_temporary(uint32_t Count = 1);
 
-	label_t *push_loop(label_t *Start, label_t *Exit);
+	label_t *push_loop(uint32_t LineNo, label_t *Start, label_t *Exit);
 	void pop_loop();
 
 	void push_expression();
 	void pop_expression();
 	
-	label_t *push_trap(label_t *Start, label_t *Failure);
+	label_t *push_trap(uint32_t LineNo, label_t *Start, label_t *Failure);
 	uint32_t use_trap();
 	void pop_trap();
 	void back_trap(label_t *Start);
@@ -116,7 +120,7 @@ struct compiler_t {
 struct expr_t {
 	expr_t *Next;
 	int LineNo;
-#ifdef ASSEMBLER_LISTING
+#if defined(PARSER_LISTING) || defined(ASSEMBLER_LISTING)
 	virtual void print(int Indent) {};
 #endif
 	virtual operand_t *compile(compiler_t *Compiler, label_t *Start, label_t *Success) {return 0;};

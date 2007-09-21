@@ -70,7 +70,7 @@ uint32_t compiler_t::new_temporary(uint32_t Count) {DEBUG
 	return Function->Loop->Expression->Temps->allocate(Count);
 };
 
-label_t *compiler_t::push_loop(label_t *Start, label_t *Exit) {DEBUG
+label_t *compiler_t::push_loop(uint32_t LineNo, label_t *Start, label_t *Exit) {DEBUG
 	function_t::loop_t *Loop = new function_t::loop_t;
 	Loop->Index = -1;
 	Loop->Free0 = new bitset_t(Function->Loop->Free0);
@@ -78,16 +78,18 @@ label_t *compiler_t::push_loop(label_t *Start, label_t *Exit) {DEBUG
 	Loop->Start0 = Start;
 	Loop->Trap = Function->Loop->Trap;
 	Loop->Receiver = Function->Loop->Receiver;
-	Start->link(Loop->Start = new label_t);
+	Start->link(LineNo, Loop->Start = new label_t);
 	Loop->Exit = Exit;
 	Loop->Prev = Function->Loop;
 	Loop->Expression = Function->Loop->Expression;
+	Loop->LineNo = LineNo;
 	Function->Loop = Loop;
 	return Loop->Start;
 };
 
 void compiler_t::pop_loop() {DEBUG
-	if (Function->Loop->NoOfLocals) Function->Loop->Start0->scope(Function->Loop->Index, Function->Loop->NoOfLocals);
+	if (Function->Loop->NoOfLocals)
+		Function->Loop->Start0->scope(Function->Loop->LineNo, Function->Loop->Index, Function->Loop->NoOfLocals);
 	Function->Loop = Function->Loop->Prev;
 };
 
@@ -106,13 +108,14 @@ void compiler_t::pop_expression() {DEBUG
 	Function->Loop->Expression = Expression->Prev;
 };
 
-label_t *compiler_t::push_trap(label_t *Start, label_t *Failure) {DEBUG
+label_t *compiler_t::push_trap(uint32_t LineNo, label_t *Start, label_t *Failure) {DEBUG
 	function_t::loop_t::trap_t *Trap = new function_t::loop_t::trap_t;
 	Trap->Continue = Trap->Failure = Failure;
 	Trap->Reserved = new_temporary();
-	(Trap->Start0 = Start)->link(Trap->Start = new label_t);
+	(Trap->Start0 = Start)->link(LineNo, Trap->Start = new label_t);
 	Trap->Index = 0xFFFFFFFF;
 	Trap->Prev = Function->Loop->Trap;
+	Trap->LineNo = LineNo;
 	Function->Loop->Trap = Trap;
 	return Trap->Start;
 };
@@ -123,7 +126,7 @@ uint32_t compiler_t::use_trap() {DEBUG
 	if (Trap->Index == 0xFFFFFFFF) {
 		uint32_t Index = Trap->Reserved;
 		Trap->Index = Index;
-		Trap->Start0->init_trap(Index, Trap->Failure);
+		Trap->Start0->init_trap(Trap->LineNo, Index, Trap->Failure);
 	};
 	return Trap->Index;
 };
@@ -131,9 +134,9 @@ uint32_t compiler_t::use_trap() {DEBUG
 void compiler_t::back_trap(label_t *Start) {DEBUG
 	function_t::loop_t::trap_t *Trap = Function->Loop->Trap;
 	if (Trap->Index == 0xFFFFFFFF) {
-		Start->link(Trap->Failure);
+		Start->link(Trap->LineNo, Trap->Failure);
 	} else {
-		Start->back(Trap->Index);
+		Start->back(Trap->LineNo, Trap->Index);
 	};
 };
 
@@ -253,21 +256,24 @@ operand_t *compiler_t::lookup(int LineNo, const char *Name) {DEBUG
 	raise_error(LineNo, "Error: identifier %s not declared", Name);
 };
 
-#ifdef ASSEMBLER_LISTING
+#if defined(PARSER_LISTING) || defined(ASSEMBLER_LISTING)
 
 void assign_expr_t::print(int Indent) {
+	printf("[L%d]", LineNo);
 	Left->print(Indent);
 	printf(" <- ");
 	Right->print(Indent);
 };
 
 void ref_assign_expr_t::print(int Indent) {
+	printf("[L%d]", LineNo);
 	Left->print(Indent);
 	printf(" <<= ");
 	Right->print(Indent);
 };
 
 void invoke_expr_t::print(int Indent) {
+	printf("[L%d]", LineNo);
 	Function->print(Indent);
 	printf("(");
 	if (Args) {
@@ -281,6 +287,7 @@ void invoke_expr_t::print(int Indent) {
 };
 
 void parallel_invoke_expr_t::print(int Indent) {
+	printf("[L%d]", LineNo);
 	Function->print(Indent);
 	printf("{");
 	if (Args) {
@@ -294,6 +301,7 @@ void parallel_invoke_expr_t::print(int Indent) {
 };
 
 void func_expr_t::print(int Indent) {
+	printf("[L%d]", LineNo);
 	printf("<");
 	if (Parameters) {
 		printf("%s", Parameters->Name);
@@ -306,15 +314,18 @@ void func_expr_t::print(int Indent) {
 };
 
 void ident_expr_t::print(int Indent) {
+	printf("[L%d]", LineNo);
 	printf("%s", Name);
 };
 
 void qualident_expr_t::print(int Indent) {
+	printf("[L%d]", LineNo);
 	printf("%s", Names->Ident);
 	for (qualident_expr_t::name_t *Name = Names->Next; Name; Name = Name->Next) printf(".%s", Name->Ident);
 };
 
 void const_expr_t::print(int Indent) {
+	printf("[L%d]", LineNo);
 	Std$Function_result Result;
 	if (Std$Function$call((Std$Object_t *)$AT, 2, &Result, Operand->Value, 0, Std$String$T, 0) < FAILURE) {
 		printf("%s", Std$String$flatten((Std$String_t *)Result.Val));
@@ -324,38 +335,46 @@ void const_expr_t::print(int Indent) {
 };
 
 void ret_expr_t::print(int Indent) {
+	printf("[L%d]", LineNo);
 	printf("RET ");
 	Value->print(Indent);
 };
 
 void susp_expr_t::print(int Indent) {
+	printf("[L%d]", LineNo);
 	printf("SUSP ");
 	Value->print(Indent);
 };
 
 void fail_expr_t::print(int Indent) {
+	printf("[L%d]", LineNo);
 	printf("FAIL");
 };
 
 void back_expr_t::print(int Indent) {
+	printf("[L%d]", LineNo);
 	printf("BACK");
 };
 
 void rep_expr_t::print(int Indent) {
+	printf("[L%d]", LineNo);
 	printf("REP ");
 	Body->print(Indent);
 };
 
 void exit_expr_t::print(int Indent) {
+	printf("[L%d]", LineNo);
 	printf("EXIT ");
 	Value->print(Indent);
 };
 
 void step_expr_t::print(int Indent) {
+	printf("[L%d]", LineNo);
 	printf("STEP");
 };
 
 void every_expr_t::print(int Indent) {
+	printf("[L%d]", LineNo);
 	printf("EVERY ");
 	Condition->print(Indent);
 	printf(" DO ");
@@ -363,20 +382,24 @@ void every_expr_t::print(int Indent) {
 };
 
 void all_expr_t::print(int Indent) {
+	printf("[L%d]", LineNo);
 	printf("ALL ");
 	Value->print(Indent);
 };
 
 void send_expr_t::print(int Indent) {
+	printf("[L%d]", LineNo);
 	printf("SEND ");
 	Value->print(Indent);
 };
 
 void self_expr_t::print(int Indent) {
+	printf("[L%d]", LineNo);
 	printf("$");
 };
 
 void sequence_expr_t::print(int Indent) {
+	printf("[L%d]", LineNo);
 	Exprs->print(Indent);
 	for (expr_t *Expr = Exprs->Next; Expr; Expr = Expr->Next) {
 		printf(" | ");
@@ -385,28 +408,33 @@ void sequence_expr_t::print(int Indent) {
 };
 
 void typeof_expr_t::print(int Indent) {
+	printf("[L%d]", LineNo);
 	printf("?");
 	Expr->print(Indent);
 };
 
 void limit_expr_t::print(int Indent) {
+	printf("[L%d]", LineNo);
 	Limit->print(Indent);
 	printf(" OF ");
 	Expr->print(Indent);
 };
 
 void skip_expr_t::print(int Indent) {
+	printf("[L%d]", LineNo);
 	Expr->print(Indent);
 	printf(" SKIP ");
 	Skip->print(Indent);
 };
 
 void infinite_expr_t::print(int Indent) {
+	printf("[L%d]", LineNo);
 	printf("|");
 	Expr->print(Indent);
 };
 
 void parallel_expr_t::print(int Indent) {
+	printf("[L%d]", LineNo);
 	Exprs->print(Indent);
 	for (expr_t *Expr = Exprs->Next; Expr; Expr = Expr->Next) {
 		printf(" ! ");
@@ -415,18 +443,21 @@ void parallel_expr_t::print(int Indent) {
 };
 
 void left_expr_t::print(int Indent) {
+	printf("[L%d]", LineNo);
 	Left->print(Indent);
 	printf(" \\ ");
 	Right->print(Indent);
 };
 
 void right_expr_t::print(int Indent) {
+	printf("[L%d]", LineNo);
 	Left->print(Indent);
 	printf(" & ");
 	Right->print(Indent);
 };
 
 void cond_expr_t::print(int Indent) {
+	printf("[L%d]", LineNo);
 	Condition->print(Indent);
 	if (Success) {
 		printf(" => ");
@@ -439,12 +470,14 @@ void cond_expr_t::print(int Indent) {
 };
 
 void comp_expr_t::print(int Indent) {
+	printf("[L%d]", LineNo);
 	Left->print(Indent);
 	printf(Eq ? " == " : " ~== ");
 	Right->print(Indent);
 };
 
 void when_expr_t::print(int Indent) {
+	printf("[L%d]", LineNo);
 	printf("WHEN ");
 	Condition->print(Indent);
 	printf("\n");
@@ -475,6 +508,7 @@ void when_expr_t::print(int Indent) {
 };
 
 void block_expr_t::print(int Indent) {
+	printf("[L%d]", LineNo);
 	if (Vars || Body || Receiver.Body) {
 		printf("(\n");
 		++Indent;
@@ -512,6 +546,7 @@ void block_expr_t::print(int Indent) {
 };
 
 void module_expr_t::print(int Indent) {
+	printf("[L%d]", LineNo);
 	printf("MOD %s;\n", Name);
 	printf("\n");
 	if (Imps) {
@@ -554,6 +589,7 @@ void module_expr_t::print(int Indent) {
 };
 
 void command_expr_t::print(int Indent) {
+	printf("[L%d]", LineNo);
 	if (Imps) {
 		for (globalimp_t *Imp = Imps; Imp; Imp = Imp->Next) {
 			printf("IMP ");
@@ -594,8 +630,8 @@ operand_t *assign_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t 
 	label_t *Label0 = new label_t;
 	operand_t *Dest = Left->compile(Compiler, Start, Label0);
 	if (operand_t *Src = Right->constant(Compiler, true)) {
-		Label0->store_con(Dest, Src->Value);
-		Label0->link(Success);
+		Label0->store_con(LineNo, Dest, Src->Value);
+		Label0->link(LineNo, Success);
 		return Src;
 	};
 	if (Dest == Register) {
@@ -604,8 +640,8 @@ operand_t *assign_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t 
 		Self->Type = operand_t::LREF;
 		Self->Index = Compiler->new_temporary();
 		Self->Loop = -1;
-		Label0->store_ref(Self);
-		Label0->link(Label1);
+		Label0->store_ref(LineNo, Self);
+		Label0->link(LineNo, Label1);
 		Label0 = Label1;
 		Dest = Self;
 	};
@@ -614,12 +650,12 @@ operand_t *assign_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t 
 		label_t *Label1 = new label_t;
 		operand_t *Src = Right->compile(Compiler, Label0, Label1);
 		if (Src->Type == operand_t::CNST) {
-			Label1->store_con(Dest, Src->Value);
+			Label1->store_con(LineNo, Dest, Src->Value);
 		} else {
-			Label1->load(Src);
-			Label1->store_val(Dest);
+			Label1->load(LineNo, Src);
+			Label1->store_val(LineNo, Dest);
 		};
-		Label1->link(Success);
+		Label1->link(LineNo, Success);
 	Compiler->Function->Loop->Self = OldSelf;
 	return Register;
 };
@@ -631,9 +667,9 @@ operand_t *ref_assign_expr_t::compile(compiler_t *Compiler, label_t *Start, labe
 		Compiler->raise_error(LineNo, "Error: can only assign addresses to reference variables");
 	};
 	label_t *Label1 = new label_t;
-	Label1->load(Right->compile(Compiler, Label0, Label1));
-	Label1->store_ref(Dest);
-	Label1->link(Success);
+	Label1->load(LineNo, Right->compile(Compiler, Label0, Label1));
+	Label1->store_ref(LineNo, Dest);
+	Label1->link(LineNo, Success);
 	return Register;
 };
 
@@ -656,25 +692,25 @@ operand_t *invoke_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t 
 				FunctionOperand->Index = Compiler->new_temporary();
 				FunctionOperand->Loop = -1;
 				label_t *Label1 = new label_t;
-				Label0->store_val(FunctionOperand);
-				Label0->link(Label1);
+				Label0->store_val(LineNo, FunctionOperand);
+				Label0->link(LineNo, Label1);
 				Label0 = Label1;
 			};
 			uint32_t Index = ArgsArray;
 			for (expr_t *Arg = Args; Arg; Arg = Arg->Next) {
 				label_t *Label1 = new label_t;
 				operand_t *Value = Arg->compile(Compiler, Label0, Label1);
-				Label1->store_arg(Index, Value);
-				Label2->fixup_arg(Index, Value);
+				Label1->store_arg(LineNo, Index, Value);
+				Label2->fixup_arg(LineNo, Index, Value);
 				Label0 = new label_t;
-				Label1->link(Label0);
+				Label1->link(LineNo, Label0);
 				++Index;
 			};
 		};
-		Label0->link(Label2);
-		Label2->load(FunctionOperand);
-		Label2->invoke(Trap, ArgsArray, Count, Label2);
-		Label2->link(Success);
+		Label0->link(LineNo, Label2);
+		Label2->load(LineNo, FunctionOperand);
+		Label2->invoke(LineNo, Trap, ArgsArray, Count, Label2);
+		Label2->link(LineNo, Success);
 	//};
 	return Register;
 };
@@ -698,8 +734,8 @@ operand_t *parallel_invoke_expr_t::compile(compiler_t *Compiler, label_t *Start,
 				FunctionOperand->Index = Compiler->new_temporary();
 				FunctionOperand->Loop = -1;
 				label_t *Label1 = new label_t;
-				Label0->store_val(FunctionOperand);
-				Label0->link(Label1);
+				Label0->store_val(LineNo, FunctionOperand);
+				Label0->link(LineNo, Label1);
 				Label0 = Label1;
 			};
 			uint32_t Index = ArgsArray;
@@ -716,16 +752,16 @@ operand_t *parallel_invoke_expr_t::compile(compiler_t *Compiler, label_t *Start,
 				label_t *Label5 = new label_t;
 				label_t *Label6 = new label_t;
 		
-				Label0 = Compiler->push_trap(Label0, LabelG);
-					Label0->store_link(Gate, Label2);
-					Label0->link(Label6);
+				Label0 = Compiler->push_trap(LineNo, Label0, LabelG);
+					Label0->store_link(LineNo, Gate, Label2);
+					Label0->link(LineNo, Label6);
 					operand_t *Value = Arg->compile(Compiler, Label6, Label3);
-					Label3->store_arg(Index, Value);
-					LabelF->fixup_arg(Index, Value);
-					Label4->store_link(Gate, Label5);
+					Label3->store_arg(LineNo, Index, Value);
+					LabelF->fixup_arg(LineNo, Index, Value);
+					Label4->store_link(LineNo, Gate, Label5);
 					Compiler->back_trap(Label4);
 					Label4 = Label5;
-					Label3->jump_link(Gate);
+					Label3->jump_link(LineNo, Gate);
 					Label0 = Label2;
 				Compiler->pop_trap();
 				
@@ -733,20 +769,20 @@ operand_t *parallel_invoke_expr_t::compile(compiler_t *Compiler, label_t *Start,
 				++Index;
 			};
 			label_t *Label3 = new label_t;
-			Label0 = Compiler->push_trap(Label0, LabelG);
+			Label0 = Compiler->push_trap(LineNo, Label0, LabelG);
 				operand_t *Value = Arg->compile(Compiler, Label0, Label3);
-				Label3->store_arg(Index, Value);
-				LabelF->fixup_arg(Index, Value);
+				Label3->store_arg(LineNo, Index, Value);
+				LabelF->fixup_arg(LineNo, Index, Value);
 				Compiler->back_trap(Label4);
 			Compiler->pop_trap();
-			Label3->push_trap(Trap, LabelH, Gate);
+			Label3->push_trap(LineNo, Trap, LabelH, Gate);
 			Label0 = Label3;
-			LabelG->back(Trap);
+			LabelG->back(LineNo, Trap);
 		};
-		Label0->link(LabelF);
-		LabelF->load(FunctionOperand);
-		LabelF->invoke(Trap, ArgsArray, Count, LabelF);
-		LabelF->link(Success);
+		Label0->link(LineNo, LabelF);
+		LabelF->load(LineNo, FunctionOperand);
+		LabelF->invoke(LineNo, Trap, ArgsArray, Count, LabelF);
+		LabelF->link(LineNo, Success);
 	//};
 	return Register;
 };
@@ -761,18 +797,18 @@ operand_t *func_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t *S
 			label_t *Start0 = new label_t;
 			label_t *Success0 = new label_t;
 			label_t *Failure0 = new label_t;
-			Success0->load(Body->compile(Compiler, Compiler->push_trap(Start0, Failure0), Success0));
-			Success0->ret();
-			Failure0->fail();
+			Success0->load(LineNo, Body->compile(Compiler, Compiler->push_trap(LineNo, Start0, Failure0), Success0));
+			Success0->ret(LineNo);
+			Failure0->fail(LineNo);
 			Compiler->pop_trap();
 		Compiler->pop_scope();
 	frame_t *Frame = Compiler->pop_function();
-#ifdef ASSEMBLER_LISTING
-	print(0);
-	printf("\n");
-#endif
+//#ifdef ASSEMBLER_LISTING
+//	print(0);
+//	printf("\n");
+//#endif
 	operand_t *Closure = Start0->assemble(Frame, Constant);
-	Start->link(Success);
+	Start->link(LineNo, Success);
 	return Closure;
 };
 
@@ -786,7 +822,7 @@ operand_t *func_expr_t::constant(compiler_t *Compiler, bool Relaxed) {DEBUG
 };
 
 operand_t *ident_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t *Success) {DEBUG
-	Start->link(Success);
+	Start->link(LineNo, Success);
 	return Compiler->lookup(LineNo, Name);
 };
 
@@ -803,7 +839,7 @@ operand_t *qualident_expr_t::compile(compiler_t *Compiler, label_t *Start, label
 		};
 		Ident = Name->Ident;
 	};
-	Start->link(Success);
+	Start->link(LineNo, Success);
 	return Operand;
 };
 
@@ -825,31 +861,31 @@ operand_t *qualident_expr_t::constant(compiler_t *Compiler, bool Relaxed) {DEBUG
 };
 
 operand_t *const_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t *Success) {DEBUG
-	Start->link(Success);
+	Start->link(LineNo, Success);
 	return Operand;
 };
 
 operand_t *ret_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t *Success) {DEBUG
 	label_t *Label0 = new label_t;
 	label_t *Label1 = new label_t;
-	Start = Compiler->push_trap(Start, Label1);
-		Label0->load(Value->compile(Compiler, Start, Label0));
-		Label0->ret();
-		Label1->fail();
+	Start = Compiler->push_trap(LineNo, Start, Label1);
+		Label0->load(LineNo, Value->compile(Compiler, Start, Label0));
+		Label0->ret(LineNo);
+		Label1->fail(LineNo);
 	Compiler->pop_trap();
 	return Register;
 };
 
 operand_t *susp_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t *Success) {DEBUG
 	label_t *Label0 = new label_t;
-	Label0->load(Value->compile(Compiler, Start, Label0));
-	Label0->susp();
-	Label0->link(Success);
+	Label0->load(LineNo, Value->compile(Compiler, Start, Label0));
+	Label0->susp(LineNo);
+	Label0->link(LineNo, Success);
 	return Register;
 };
 
 operand_t *fail_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t *Success) {DEBUG
-	Start->fail();
+	Start->fail(LineNo);
 	return Register;
 };
 
@@ -860,9 +896,9 @@ operand_t *back_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t *S
 
 operand_t *rep_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t *Success) {DEBUG
 	label_t *Label0 = new label_t;
-	Label0->link(Start);
-	label_t *Label1 = Compiler->push_trap(Start, Label0);
-		Label1 = Compiler->push_loop(Label1, Success);
+	Label0->link(LineNo, Start);
+	label_t *Label1 = Compiler->push_trap(LineNo, Start, Label0);
+		Label1 = Compiler->push_loop(LineNo, Label1, Success);
 			Body->compile(Compiler, Label1, Start);
 		Compiler->pop_loop();
 	Compiler->pop_trap();
@@ -874,16 +910,16 @@ operand_t *exit_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t *S
 	compiler_t::function_t::loop_t *Prev = Loop->Prev;
 	if (Prev->Receiver != Loop->Receiver) {
 		label_t *Label1 = new label_t;
-		Start->recv(Prev->Receiver);
-		Start->link(Label1);
+		Start->recv(LineNo, Prev->Receiver);
+		Start->link(LineNo, Label1);
 		Start = Label1;
 	};
 	label_t *Label1 = new label_t;
 	label_t *Label2 = new label_t;
 	Compiler->Function->Loop = Prev;
-		label_t *Label0 = Compiler->push_trap(Start, Label2);
-			Label1->load(Value->compile(Compiler, Label0, Label1));
-			Label1->link(Loop->Exit);
+		label_t *Label0 = Compiler->push_trap(LineNo, Start, Label2);
+			Label1->load(LineNo, Value->compile(Compiler, Label0, Label1));
+			Label1->link(LineNo, Loop->Exit);
 		Compiler->pop_trap();
 		Compiler->back_trap(Label2);
 	Compiler->Function->Loop = Loop;
@@ -894,9 +930,9 @@ operand_t *step_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t *S
 	compiler_t::function_t::loop_t *Loop = Compiler->Function->Loop;
 	compiler_t::function_t::loop_t *Prev = Loop->Prev;
 	if (Prev->Receiver != Loop->Receiver) {
-		Start->recv(Prev->Receiver);
+		Start->recv(LineNo, Prev->Receiver);
 	};
-	Start->link(Loop->Start);
+	Start->link(LineNo, Loop->Start);
 	return Register;
 };
 
@@ -904,8 +940,8 @@ operand_t *every_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t *
 	label_t *Label0 = new label_t;
 	label_t *Label1 = new label_t;
 	Condition->compile(Compiler, Start, Label0);
-	Label0 = Compiler->push_trap(Label0, Label1);
-		Label0 = Compiler->push_loop(Label0, Success);
+	Label0 = Compiler->push_trap(LineNo, Label0, Label1);
+		Label0 = Compiler->push_loop(LineNo, Label0, Success);
 			Body->compile(Compiler, Label0, Label1);
 		Compiler->pop_loop();
 	Compiler->pop_trap();
@@ -921,12 +957,12 @@ operand_t *all_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t *Su
 	label_t *Label1 = new label_t;
 	label_t *Label2 = new label_t;
 
-	Start->new_list(Index);
-	Start->link(Label0);
+	Start->new_list(LineNo, Index);
+	Start->link(LineNo, Label0);
 
-	Label0 = Compiler->push_trap(Label0, Success);
-		Label1->load(Value->compile(Compiler, Label0, Label1));
-		Label1->store_list(Index);
+	Label0 = Compiler->push_trap(LineNo, Label0, Success);
+		Label1->load(LineNo, Value->compile(Compiler, Label0, Label1));
+		Label1->store_list(LineNo, Index);
 		Compiler->back_trap(Label1);
 	Compiler->pop_trap();
 
@@ -938,29 +974,29 @@ operand_t *all_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t *Su
 
 operand_t *send_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t *Success) {DEBUG
 	label_t *Label0 = new label_t;
-	Label0->load(Value->compile(Compiler, Start, Label0));
-	Label0->send();
+	Label0->load(LineNo, Value->compile(Compiler, Start, Label0));
+	Label0->send(LineNo);
 	return Register;
 };
 
 operand_t *self_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t *Success) {DEBUG
-	Start->link(Success);
+	Start->link(LineNo, Success);
 	return Compiler->Function->Loop->Self;
 };
 
 operand_t *typeof_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t *Success) {DEBUG
 	operand_t *Constant = Expr->constant(Compiler);
 	if (Constant) {
-		Start->link(Success);
+		Start->link(LineNo, Success);
 		operand_t *Operand = new operand_t;
 		Operand->Type = operand_t::CNST;
 		Operand->Value = (Std$Object_t *)Constant->Value->Type;
 		return Operand;
 	};
 	label_t *Label0 = new label_t;
-	Label0->load(Expr->compile(Compiler, Start, Label0));
-	Label0->type_of();
-	Label0->link(Success);
+	Label0->load(LineNo, Expr->compile(Compiler, Start, Label0));
+	Label0->type_of(LineNo);
+	Label0->link(LineNo, Success);
 	return Register;
 };
 
@@ -978,23 +1014,23 @@ operand_t *sequence_expr_t::compile(compiler_t *Compiler, label_t *Start, label_
 		label_t *Label1 = new label_t;
 		label_t *Label2 = new label_t;
 		label_t *Label3 = new label_t;
-		Label0->push_trap(Trap, Label3, Temp);
-		Label0->link(Label1);
+		Label0->push_trap(LineNo, Trap, Label3, Temp);
+		Label0->link(LineNo, Label1);
 		
 		Expr0->Temps = new bitset_t(Temps);
-		Label2->load(Expr->compile(Compiler, Label1, Label2));
+		Label2->load(LineNo, Expr->compile(Compiler, Label1, Label2));
 		TotalTemps->update(Expr0->Temps);
 		
-		Label2->link(Success);
+		Label2->link(LineNo, Success);
 		Label0 = Label3;
 		Expr = Expr->Next;
 	};
 	label_t *Label2 = new label_t;
 	Expr0->Temps = new bitset_t(Temps);
-	Label2->load(Expr->compile(Compiler, Label0, Label2));
+	Label2->load(LineNo, Expr->compile(Compiler, Label0, Label2));
 	TotalTemps->update(Expr0->Temps);
 	Expr0->Temps = TotalTemps;
-	Label2->link(Success);
+	Label2->link(LineNo, Success);
 	return Register;
 };
 
@@ -1009,17 +1045,17 @@ operand_t *limit_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t *
 	uint32_t Temp0 = Compiler->new_temporary();
 	uint32_t Temp1 = Compiler->new_temporary();
 
-	Label0->load(Limit->compile(Compiler, Start, Label0));
-	Label0->limit(Trap, Temp0);
-	Label0->link(Label1);
+	Label0->load(LineNo, Limit->compile(Compiler, Start, Label0));
+	Label0->limit(LineNo, Trap, Temp0);
+	Label0->link(LineNo, Label1);
 
-	Label1 = Compiler->push_trap(Label1, Label2);
+	Label1 = Compiler->push_trap(LineNo, Label1, Label2);
 		operand_t *Result = Expr->compile(Compiler, Label1, Label3);
 		Compiler->back_trap(Label4);
 	Compiler->pop_trap();
 
-	Label3->test_limit(Temp0, Success);
-	Label3->push_trap(Trap, Label4, Temp1);
+	Label3->test_limit(LineNo, Temp0, Success);
+	Label3->push_trap(LineNo, Trap, Label4, Temp1);
 	Compiler->back_trap(Label2);
 
 	return Result;
@@ -1033,12 +1069,12 @@ operand_t *skip_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t *S
 	uint32_t Trap = Compiler->use_trap();
 	uint32_t Temp = Compiler->new_temporary();
 
-	Label0->load(Skip->compile(Compiler, Start, Label0));
-	Label0->skip(Temp);
-	Label0->link(Label1);
+	Label0->load(LineNo, Skip->compile(Compiler, Start, Label0));
+	Label0->skip(LineNo, Temp);
+	Label0->link(LineNo, Label1);
 	operand_t *Result = Expr->compile(Compiler, Label1, Label2);
-	Label2->test_skip(Trap, Temp);
-	Label2->link(Success);
+	Label2->test_skip(LineNo, Trap, Temp);
+	Label2->link(LineNo, Success);
 	return Result;
 };
 
@@ -1046,8 +1082,8 @@ operand_t *infinite_expr_t::compile(compiler_t *Compiler, label_t *Start, label_
 	label_t *Label0 = new label_t;
 	uint32_t Temp = Compiler->new_temporary();
 	uint32_t Trap = Compiler->use_trap();
-	Start->push_trap(Trap, Start, Temp);
-	Start->link(Label0);
+	Start->push_trap(LineNo, Trap, Start, Temp);
+	Start->link(LineNo, Label0);
 	return Expr->compile(Compiler, Label0, Success);
 };
 
@@ -1067,27 +1103,27 @@ operand_t *parallel_expr_t::compile(compiler_t *Compiler, label_t *Start, label_
 		label_t *Label5 = new label_t;
 		label_t *Label6 = new label_t;
 
-		Label1 = Compiler->push_trap(Label1, LabelG);
-			Label1->store_link(Gate, Label2);
-			Label1->link(Label6);
+		Label1 = Compiler->push_trap(LineNo, Label1, LabelG);
+			Label1->store_link(LineNo, Gate, Label2);
+			Label1->link(LineNo, Label6);
 			Expr->compile(Compiler, Label6, Label3);
-			Label4->store_link(Gate, Label5);
+			Label4->store_link(LineNo, Gate, Label5);
 			Compiler->back_trap(Label4);
 			Label4 = Label5;
-			Label3->jump_link(Gate);
+			Label3->jump_link(LineNo, Gate);
 			Label1 = Label2;
 		Compiler->pop_trap();
 		
 		Expr = Expr->Next;
 	};
 	label_t *Label3 = new label_t;
-	Label1 = Compiler->push_trap(Label1, LabelG);
+	Label1 = Compiler->push_trap(LineNo, Label1, LabelG);
 		operand_t *Result = Expr->compile(Compiler, Label1, Label3);
 		Compiler->back_trap(Label4);
 	Compiler->pop_trap();
-	Label3->push_trap(Trap, LabelF, Gate);
-	Label3->link(Success);
-	LabelG->back(Trap);
+	Label3->push_trap(LineNo, Trap, LabelF, Gate);
+	Label3->link(LineNo, Success);
+	LabelG->back(LineNo, Trap);
 	return Result;
 };
 
@@ -1100,8 +1136,8 @@ operand_t *left_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t *S
 		Result->Index = Compiler->new_temporary();
 		Result->Loop = -1;
 		label_t *Label1 = new label_t;
-		Label0->store_tmp(Result->Index);
-		Label0->link(Label1);
+		Label0->store_tmp(LineNo, Result->Index);
+		Label0->link(LineNo, Label1);
 		Label0 = Label1;
 	};
 	Right->compile(Compiler, Label0, Success);
@@ -1119,7 +1155,7 @@ operand_t *cond_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t *S
 		label_t *Success0 = new label_t;
 		label_t *Failure0 = new label_t;
 		Compiler->push_expression();
-			Start = Compiler->push_trap(Start, Failure0);
+			Start = Compiler->push_trap(LineNo, Start, Failure0);
 				Condition->compile(Compiler, Start, Success0);
 			Compiler->pop_trap();
 		Compiler->pop_expression();
@@ -1129,7 +1165,7 @@ operand_t *cond_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t *S
 		label_t *Success0 = new label_t;
 		label_t *Failure0 = new label_t;
 		Compiler->push_expression();
-			Start = Compiler->push_trap(Start, Failure0);
+			Start = Compiler->push_trap(LineNo, Start, Failure0);
 				Condition->compile(Compiler, Start, Success0);
 			Compiler->pop_trap();
 		Compiler->pop_expression();
@@ -1141,7 +1177,7 @@ operand_t *cond_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t *S
 		label_t *Success1 = new label_t;
 		label_t *Failure1 = new label_t;
 		Compiler->push_expression();
-			Start = Compiler->push_trap(Start, Failure0);
+			Start = Compiler->push_trap(LineNo, Start, Failure0);
 				Condition->compile(Compiler, Start, Success0);
 			Compiler->pop_trap();
 		Compiler->pop_expression();
@@ -1151,12 +1187,12 @@ operand_t *cond_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t *S
 		bitset_t *FailureTemps = Expr->Temps;
 		
 		Expr->Temps = SuccessTemps;
-		Success1->load(this->Success->compile(Compiler, Success0, Success1));
-		Success1->link(Success);
+		Success1->load(LineNo, this->Success->compile(Compiler, Success0, Success1));
+		Success1->link(LineNo, Success);
 
 		Expr->Temps = FailureTemps;
-		Failure1->load(this->Failure->compile(Compiler, Failure0, Failure1));
-		Failure1->link(Success);
+		Failure1->load(LineNo, this->Failure->compile(Compiler, Failure0, Failure1));
+		Failure1->link(LineNo, Success);
 		
 		Expr->Temps = new bitset_t(SuccessTemps, FailureTemps);
 	};
@@ -1171,9 +1207,9 @@ operand_t *comp_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t *S
 		Operand->Type = operand_t::LVAR;
 		Operand->Index = Compiler->new_temporary();
 		Operand->Loop = -1;
-		Label0->store_val(Operand);
+		Label0->store_val(LineNo, Operand);
 		label_t *Label1 = new label_t;
-		Label0->link(Label1);
+		Label0->link(LineNo, Label1);
 		Label0 = Label1;
 	};
 	label_t *Label1 = new label_t;
@@ -1181,14 +1217,14 @@ operand_t *comp_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t *S
 	operand_t *Result = Right->compile(Compiler, Label0, Label1);
 	if (Result->Type == operand_t::CNST && Operand->Type == operand_t::CNST) {
 		if ((Result->Value == Operand->Value) == Eq) {
-			Label1->link(Success);
+			Label1->link(LineNo, Success);
 		} else {
 			Compiler->back_trap(Label1);
 		};
 	} else {
-		Label1->load(Result);
-		Label1->comp(Eq, Operand, Label2);
-		Label1->link(Success);
+		Label1->load(LineNo, Result);
+		Label1->comp(LineNo, Eq, Operand, Label2);
+		Label1->link(LineNo, Success);
 		Compiler->back_trap(Label2);
 	};
 	return Result;
@@ -1197,8 +1233,8 @@ operand_t *comp_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t *S
 operand_t *when_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t *Success) {DEBUG
 	label_t *Label0 = new label_t;
 	label_t *Label1 = new label_t;
-	Label0->load(Condition->compile(Compiler, Start, Label0));
-	Label0->link(Label1);
+	Label0->load(LineNo, Condition->compile(Compiler, Start, Label0));
+	Label0->link(LineNo, Label1);
 	Label0 = Label1;
 	if (Cases == 0) {
 		if (Default) {
@@ -1211,8 +1247,8 @@ operand_t *when_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t *S
 	case_t *Case = Cases;
 	Label1 = new label_t;
 	label_t *Label2 = new label_t;
-	Label2->load(Case->Body->compile(Compiler, Label1, Label2));
-	Label2->link(Success);
+	Label2->load(LineNo, Case->Body->compile(Compiler, Label1, Label2));
+	Label2->link(LineNo, Success);
 	case_t::range_t *Range = Case->Ranges;
 	operand_t *Operand = Range->Min->constant(Compiler);
 	if (Operand == 0) Compiler->raise_error(Range->Min->LineNo, "Error: case is not constant");
@@ -1253,8 +1289,8 @@ operand_t *when_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t *S
 		while (Case = Case->Next) {
 			Label1 = new label_t;
 			Label2 = new label_t;
-			Label2->load(Case->Body->compile(Compiler, Label1, Label2));
-			Label2->link(Success);
+			Label2->load(LineNo, Case->Body->compile(Compiler, Label1, Label2));
+			Label2->link(LineNo, Success);
 			for (Range = Case->Ranges; Range; Range = Range->Next) {
 				select_integer_inst_t::case_t *ICase0 = new select_integer_inst_t::case_t;
 				Operand = Range->Min->constant(Compiler);
@@ -1279,12 +1315,12 @@ operand_t *when_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t *S
 		Label1 = new label_t;
 		if (Default) {
 			Label2 = new label_t;
-			Label2->load(Default->compile(Compiler, Label1, Label2));
-			Label2->link(Success);
+			Label2->load(LineNo, Default->compile(Compiler, Label1, Label2));
+			Label2->link(LineNo, Success);
 		} else {
 			Compiler->back_trap(Label1);
 		};
-		Label0->select_integer(ICase, Label1);
+		Label0->select_integer(LineNo, ICase, Label1);
 		return Register;
 	} else if (Value->Type == Std$String$T) {
 		if (Range->Max) Compiler->raise_error(Range->Max->LineNo, "Error: case can not be a range");
@@ -1308,8 +1344,8 @@ operand_t *when_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t *S
 		while (Case = Case->Next) {
 			Label1 = new label_t;
 			Label2 = new label_t;
-			Label2->load(Case->Body->compile(Compiler, Label1, Label2));
-			Label2->link(Success);
+			Label2->load(LineNo, Case->Body->compile(Compiler, Label1, Label2));
+			Label2->link(LineNo, Success);
 			for (Range = Case->Ranges; Range; Range = Range->Next) {
 				select_string_inst_t::case_t *ICase0 = new select_string_inst_t::case_t;
 				Operand = Range->Min->constant(Compiler);
@@ -1327,12 +1363,12 @@ operand_t *when_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t *S
 		Label1 = new label_t;
 		if (Default) {
 			Label2 = new label_t;
-			Label2->load(Default->compile(Compiler, Label1, Label2));
-			Label2->link(Success);
+			Label2->load(LineNo, Default->compile(Compiler, Label1, Label2));
+			Label2->link(LineNo, Success);
 		} else {
 			Compiler->back_trap(Label1);
 		};
-		Label0->select_string(ICase, Label1);
+		Label0->select_string(LineNo, ICase, Label1);
 		return Register;
 	} else {
 		if (Range->Max) Compiler->raise_error(Range->Max->LineNo, "Error: case can not be a range");
@@ -1353,8 +1389,8 @@ operand_t *when_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t *S
 		while (Case = Case->Next) {
 			Label1 = new label_t;
 			Label2 = new label_t;
-			Label2->load(Case->Body->compile(Compiler, Label1, Label2));
-			Label2->link(Success);
+			Label2->load(LineNo, Case->Body->compile(Compiler, Label1, Label2));
+			Label2->link(LineNo, Success);
 			for (Range = Case->Ranges; Range; Range = Range->Next) {
 				select_object_inst_t::case_t *ICase0 = new select_object_inst_t::case_t;
 				Operand = Range->Min->constant(Compiler);
@@ -1370,12 +1406,12 @@ operand_t *when_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t *S
 		Label1 = new label_t;
 		if (Default) {
 			Label2 = new label_t;
-			Label2->load(Default->compile(Compiler, Label1, Label2));
-			Label2->link(Success);
+			Label2->load(LineNo, Default->compile(Compiler, Label1, Label2));
+			Label2->link(LineNo, Success);
 		} else {
 			Compiler->back_trap(Label1);
 		};
-		Label0->select_object(ICase, Label1);
+		Label0->select_object(LineNo, ICase, Label1);
 		return Register;
 	};
 };
@@ -1393,10 +1429,10 @@ operand_t *block_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t *
 		label_t *Success = new label_t;
 		label_t *Failure = new label_t;
 			Compiler->push_expression();
-				Success->load(Def->Value->compile(Compiler, Compiler->push_trap(Start, Failure), Success));
+				Success->load(LineNo, Def->Value->compile(Compiler, Compiler->push_trap(LineNo, Start, Failure), Success));
 				Compiler->pop_trap();
-				Success->ret();
-				Failure->fail();
+				Success->ret(LineNo);
+				Failure->fail(LineNo);
 			Compiler->pop_expression();
 		frame_t *Frame = Compiler->pop_function();
 		operand_t *Closure = Start->assemble(Frame);
@@ -1425,51 +1461,52 @@ operand_t *block_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t *
 		Compiler->push_scope();
 			operand_t *Message = Compiler->new_local();
 			Compiler->declare(Receiver.Var, Message);
-			NewReceiver->store_val(Message);
-			NewReceiver->recv(OldReceiver);
+			NewReceiver->store_val(LineNo, Message);
+			NewReceiver->recv(LineNo, OldReceiver);
 			label_t *Label0 = new label_t;
 			label_t *Label1 = new label_t;
-			NewReceiver->link(Label0);
-			Label1->load(Receiver.Body->compile(Compiler, Label0, Label1));
-			Label1->link(Success);
+			NewReceiver->link(LineNo, Label0);
+			Label1->load(LineNo, Receiver.Body->compile(Compiler, Label0, Label1));
+			Label1->link(LineNo, Success);
 		Compiler->pop_scope();
 		Loop->Receiver = NewReceiver;
 			Label0 = new label_t;
-			Start->recv(NewReceiver);
-			Start->link(Label0);
+			Start->recv(LineNo, NewReceiver);
+			Start->link(LineNo, Label0);
 			for (expr_t *Expr = Body; Expr; Expr = Expr->Next) {
 				Label1 = new label_t;
 				Compiler->push_expression();
-					Label0 = Compiler->push_trap(Label0, Label1);
+					Label0 = Compiler->push_trap(Expr->LineNo, Label0, Label1);
 						Expr->compile(Compiler, Label0, Label1);
+						Label1->flush(Expr->LineNo);
+						Label1->link(Expr->LineNo, Label0 = new label_t);
 					Compiler->pop_trap();
 				Compiler->pop_expression();
-				Label0 = Label1;
 			};
 			Expr0->Temps = FinalTemps;
 			if (Final) {
 				Label1 = new label_t;
 				label_t *Label2 = new label_t;
-				Label0 = Compiler->push_trap(Label0, Label2);
+				Label0 = Compiler->push_trap(Final->LineNo, Label0, Label2);
 					Result = Final->compile(Compiler, Label0, Label1);
 					Label0 = Label1;
 				Compiler->pop_trap();
-				Label2->recv(OldReceiver);
+				Label2->recv(Final->LineNo, OldReceiver);
 				Compiler->back_trap(Label2);
 				Expr0->Temps = new bitset_t(RecvTemps, FinalTemps);
 			};
-			Label0->recv(OldReceiver);
-			Label0->link(Success);
+			Label0->recv(LineNo, OldReceiver);
+			Label0->link(LineNo, Success);
 		Loop->Receiver = OldReceiver;
 	} else {
 		label_t *Label0 = Start;
 		for (expr_t *Expr = Body; Expr; Expr = Expr->Next) {
 			label_t *Label1 = new label_t;
 			Compiler->push_expression();
-				Label0 = Compiler->push_trap(Label0, Label1);
+				Label0 = Compiler->push_trap(Expr->LineNo, Label0, Label1);
 					Expr->compile(Compiler, Label0, Label1);
-					Label1->flush();
-					Label1->link(Label0 = new label_t);
+					Label1->flush(Expr->LineNo);
+					Label1->link(Expr->LineNo, Label0 = new label_t);
 				Compiler->pop_trap();
 			Compiler->pop_expression();
 		};
@@ -1482,7 +1519,7 @@ operand_t *block_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t *
 			Result->Type = operand_t::CNST;
 			Result->Value = Std$Object$Nil;
 		};
-		Label0->link(Success);
+		Label0->link(LineNo, Success);
 	};
 	Compiler->pop_scope();
 	return Result;
@@ -1547,10 +1584,10 @@ operand_t *module_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t 
 		label_t *Success = new label_t;
 		label_t *Failure = new label_t;
 			Compiler->push_expression();
-				Success->load(Def->Value->compile(Compiler, Compiler->push_trap(Start, Failure), Success));
+				Success->load(LineNo, Def->Value->compile(Compiler, Compiler->push_trap(LineNo, Start, Failure), Success));
 				Compiler->pop_trap();
-				Success->ret();
-				Failure->fail();
+				Success->ret(LineNo);
+				Failure->fail(LineNo);
 			Compiler->pop_expression();
 		frame_t *Frame = Compiler->pop_function();
 		operand_t *Closure = Start->assemble(Frame);
@@ -1572,14 +1609,14 @@ operand_t *module_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t 
 			for (expr_t *Expr = Body; Expr; Expr = Expr->Next) {
 				label_t *Label1 = new label_t;
 				Compiler->push_expression();
-					Label0 = Compiler->push_trap(Label0, Label1);
+					Label0 = Compiler->push_trap(Expr->LineNo, Label0, Label1);
 						Expr->compile(Compiler, Label0, Label1);
-						Label1->flush();
-						Label1->link(Label0 = new label_t);
+						Label1->flush(Expr->LineNo);
+						Label1->link(Expr->LineNo, Label0 = new label_t);
 					Compiler->pop_trap();
 				Compiler->pop_expression();
 			};
-			Label0->ret();
+			Label0->ret(LineNo);
 		frame_t *Frame = Compiler->pop_function();
 		operand_t *Closure = Start->assemble(Frame);
 		Std$Function_result Result;
@@ -1591,7 +1628,7 @@ operand_t *module_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t 
 			};
 		};
 	};
-	Start->link(Success);
+	Start->link(LineNo, Success);
 	return Operand;
 };
 
@@ -1649,10 +1686,10 @@ int command_expr_t::compile(compiler_t *Compiler, Std$Function_result *Result) {
 		label_t *Success = new label_t;
 		label_t *Failure = new label_t;
 			Compiler->push_expression();
-				Success->load(Def->Value->compile(Compiler, Compiler->push_trap(Start, Failure), Success));
+				Success->load(LineNo, Def->Value->compile(Compiler, Compiler->push_trap(LineNo, Start, Failure), Success));
 				Compiler->pop_trap();
-				Success->ret();
-				Failure->fail();
+				Success->ret(LineNo);
+				Failure->fail(LineNo);
 			Compiler->pop_expression();
 		frame_t *Frame = Compiler->pop_function();
 		operand_t *Closure = Start->assemble(Frame);
@@ -1676,20 +1713,20 @@ int command_expr_t::compile(compiler_t *Compiler, Std$Function_result *Result) {
 				label_t *Label1 = new label_t;
 				Compiler->push_expression();
 					if (Expr->Next) {
-						Label0 = Compiler->push_trap(Label0, Label1);
+						Label0 = Compiler->push_trap(Expr->LineNo, Label0, Label1);
 							Expr->compile(Compiler, Label0, Label1);
-							Label1->flush();
-							Label1->link(Label0 = new label_t);
+							Label1->flush(Expr->LineNo);
+							Label1->link(Expr->LineNo, Label0 = new label_t);
 						Compiler->pop_trap();
 					} else {
-						Label0 = Compiler->push_trap(Label0, Failure);
-							Success->load(Expr->compile(Compiler, Label0, Success));
+						Label0 = Compiler->push_trap(LineNo, Label0, Failure);
+							Success->load(LineNo, Expr->compile(Compiler, Label0, Success));
 						Compiler->pop_trap();
 					};
 				Compiler->pop_expression();
 			};
-			Success->ret();
-			Failure->fail();
+			Success->ret(LineNo);
+			Failure->fail(LineNo);
 		frame_t *Frame = Compiler->pop_function();
 		operand_t *Closure = Start->assemble(Frame);
 		Status = Std$Function$call(Closure->Value, 0, Result);
