@@ -1,0 +1,14 @@
+BASENAME = $(LIB_DIR)Util$(DIRSEP)
+
+LDFLAGS += Std.rlib Riva.rlib Util.rlib
+CFLAGS += -std=gnu99 -I$(SRC_DIR)/NME
+
+FILES[] =
+	NMERiva
+	NME
+
+RivaProgram($(BASENAME)NME, $(FILES))
+
+NME: $(BASENAME)NME.riva
+
+.DEFAULT: NME

@@ -1,0 +1,15 @@
+if WINDOWS then
+	_export = export
+	export = function(Name)
+		_export("_" .. Name, Name)
+	end
+end
+
+export("Process")
+export("FormatText")
+export("FormatNull")
+export("FormatNME")
+export("FormatHTML")
+export("FormatRTF")
+export("FormatLaTeX")
+export("FormatMan")
