@@ -21,7 +21,7 @@ mkdir usr/share
 mkdir usr/share/doc
 mkdir usr/share/doc/wrapl
 cp ../../../../bin/riva usr/bin
-sed s/"#!*riva"/"#!\/usr\/bin\/riva"/ ../../../../bin/wrapl > usr/bin/wrapl
+sed s/"#!INTERPRETER"/"#!\/usr\/bin\/riva"/ ../../../bin/wrapl > usr/bin/wrapl
 chmod a+x usr/bin/wrapl
 cp ../../../../bin/riva.conf usr/bin
 cp -r ../../../../lib/* usr/lib/riva/
