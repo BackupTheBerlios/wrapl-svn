@@ -1053,7 +1053,7 @@ operand_t *label_t::assemble(const frame_t *Frame, operand_t *Operand) {
 	int NoOfConsts = 0;
 	for (inst_t *Inst = Assembly.Next; Inst; Inst = Inst->Next) NoOfConsts += Inst->noof_consts();
 
-	// if (DebuggerMode) {
+	//if (DebuggerMode) {
 	//	Assembly.Next->IsPotentialBreakpoint = true;
 	//	for (inst_t *Inst = Assembly.Next; Inst; Inst = Inst->Next) Inst->find_breakpoints();
 	//};
@@ -1089,7 +1089,7 @@ operand_t *label_t::assemble(const frame_t *Frame, operand_t *Operand) {
 	dasm_setup(Dst, ActionList);
 	encode_entry(Assembler);
 	for (inst_t *Inst = Assembly.Next; Inst; Inst = Inst->Next) {
-		// if (DebuggerMode) {
+		//if (DebuggerMode) {
 		//	if (Inst->IsPotentialBreakpoint) {
 		//		encode_potential_breakpoint(Assembler, Inst->LineNo);
 		//	};
@@ -1117,7 +1117,7 @@ operand_t *label_t::assemble(const frame_t *Frame, operand_t *Operand) {
 #endif
 
 	if (Operand) {
-		// Make sure Operand->Value doesn't use surrounding dynamic scopes
+		//Make sure Operand->Value doesn't use surrounding dynamic scopes
 		//if (Function->UpScopes) ERROR;
 		closure_t *Closure = (closure_t *)Operand->Value;
 		Closure->Type = WraplT;
