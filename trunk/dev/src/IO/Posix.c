@@ -51,9 +51,11 @@ METHOD("close", TYP, T) {
 	if (close(Stream->Handle)) {
 		Result->Val = CloseMessage;
 		return MESSAGE;
+	} else {
+		Riva$Memory$register_finalizer(Stream, 0, 0, 0, 0);
+		Result->Val = Std$Object$Nil;
+		return SUCCESS;
 	};
-	Result->Val = Std$Object$Nil;
-	return SUCCESS;
 };
 
 METHOD("closed", TYP, T) {
@@ -63,8 +65,9 @@ METHOD("closed", TYP, T) {
 };
 
 static void posix_close(IO$Posix_t *Stream) {
-	close(Stream->Handle);
-	Riva$Memory$register_finalizer(Stream, 0, 0, 0, 0);
+	if (close(Stream->Handle) == 0) {
+		Riva$Memory$register_finalizer(Stream, 0, 0, 0, 0);
+	};
 };
 
 static void posix_finalize(IO$Posix_t *Stream, void *Data) {

@@ -1,9 +1,9 @@
-mkdir wrapl-$1
-cd wrapl-$1
+mkdir wrapl-$1-$2
+cd wrapl-$1-$2
 mkdir DEBIAN
 cat > DEBIAN/control <<EOF
 Package: wrapl
-Version: 0.7
+Version: $1
 Architecture: i386
 Depends: `../version libconfuse0`, `../version libgmp3c2`, `../version libc6`
 Section: devel
@@ -30,5 +30,5 @@ rm -rf `find -name "\.svn"`
 cd ../../..
 cp ../src/copyright usr/share/doc/wrapl/
 cd ..
-dpkg-deb --build wrapl-$1
-rm -rf wrapl-$1
+dpkg-deb --build wrapl-$1-$2
+rm -rf wrapl-$1-$2

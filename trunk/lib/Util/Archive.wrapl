@@ -5,7 +5,7 @@ IMP IO.Process;
 IMP Std.Integer;
 
 DEF Type!(archive) (
-	VAR proc <- Process.Execute("7z", ["7z", "l", archive]);
+	VAR proc <- Process.Open("7z", ["7z", "l", archive]);
 	proc:wait;
 	proc:read;
 	proc:read;
@@ -16,7 +16,7 @@ DEF Type!(archive) (
 );
 
 DEF Contents!(archive) (
-	VAR proc <- Process.Execute("7z", ["7z", "l", archive]);
+	VAR proc <- Process.Open("7z", ["7z", "l", archive]);
 	proc:wait;
 	proc:read;
 	proc:read;
@@ -29,7 +29,7 @@ DEF Contents!(archive) (
 	proc:read;
 	VAR contents <- [];
 	REP (
-		line <-stream:read;
+		line <-proc:read;
 		UNTIL line = "------------------- ----- ------------ ------------  ------------"; 
 		contents:put(line[54, 0]);
 	);
@@ -39,7 +39,7 @@ DEF Contents!(archive) (
 
 DEF Details!(archive) (
 	DEF T <- <[] name, size, attr, time, date>;
-	VAR proc <- Process.Execute("7z", ["7z", "l", archive]);
+	VAR proc <- Process.Open("7z", ["7z", "l", archive]);
 	proc:wait;
 	proc:read;
 	proc:read;
@@ -70,7 +70,7 @@ DEF Details!(archive) (
 DEF Extract!(archive, dir, files) (
 	VAR args <- ["7z", "x", "-y", "-o" + dir, archive];
 	files ~== NIL => (args <- args + files);
-	VAR proc <- Process.Execute("7z", args);
+	VAR proc <- Process.Open("7z", args);
 	proc:wait = 0;
 );
 
