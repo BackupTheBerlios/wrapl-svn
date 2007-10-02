@@ -35,6 +35,7 @@ typedef void (*Riva$Memory_finalizer)(void *, void *);
 
 RIVA_CFUN(void, register_finalizer, void *, Riva$Memory_finalizer, void *, Riva$Memory_finalizer *, void **);
 RIVA_CFUN(void, register_finalizer_ignore_self, void *, Riva$Memory_finalizer, void *, Riva$Memory_finalizer *, void **);
+RIVA_CFUN(void, register_disappearing_link, void **);
 
 #undef RIVA_MODULE
 

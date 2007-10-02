@@ -5,6 +5,8 @@ else
 	prefix("IO$Posix$")
 end
 export("T")
+export("_new")
+export("_register_finalizer")
 export("ReaderT")
 export("WriterT")
 export("SeekerT")

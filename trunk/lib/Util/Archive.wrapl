@@ -1,27 +1,70 @@
 MOD Archive;
 
 IMP IO.Terminal USE Out;
-IMP Sys.Process;
+IMP IO.Process;
+IMP Std.Integer;
 
-DEF List!(archive) (
+DEF Type!(archive) (
 	VAR proc <- Process.Execute("7z", ["7z", "l", archive]);
 	proc:wait;
-	VAR stream <- proc:stream;
-	stream:read;
-	stream:read;
-	stream:read;
-	stream:read;
-	VAR line <- stream:read;
+	proc:read;
+	proc:read;
+	proc:read;
+	proc:read;
+	VAR line <- proc:read;
+	NOT line[1, 7] = "Error:";
+);
+
+DEF Contents!(archive) (
+	VAR proc <- Process.Execute("7z", ["7z", "l", archive]);
+	proc:wait;
+	proc:read;
+	proc:read;
+	proc:read;
+	proc:read;
+	VAR line <- proc:read;
 	line[1, 7] = "Error:" => SEND line[7, 0];
-	stream:read;
-	stream:read;
-	stream:read;
+	proc:read;
+	proc:read;
+	proc:read;
+	VAR contents <- [];
 	REP (
-		line <-proc:stream:read;
+		line <-stream:read;
 		UNTIL line = "------------------- ----- ------------ ------------  ------------"; 
-		SUSP line[54, 0];
+		contents:put(line[54, 0]);
 	);
-	stream:close;
+	proc:close;
+	RET contents;
+);
+
+DEF Details!(archive) (
+	DEF T <- <[] name, size, attr, time, date>;
+	VAR proc <- Process.Execute("7z", ["7z", "l", archive]);
+	proc:wait;
+	proc:read;
+	proc:read;
+	proc:read;
+	proc:read;
+	VAR line <- proc:read;
+	line[1, 7] = "Error:" => SEND line[7, 0];
+	proc:read;
+	proc:read;
+	proc:read;
+	VAR contents <- [];
+	VAR name, size, attr, time, date;
+	REP (
+		line <-proc:read;
+		UNTIL line = "------------------- ----- ------------ ------------  ------------"; 
+		name <- line[54, 0];
+		size <- line[27, 39];
+		size <- size[size:skip(" "), 0] @ Integer.T;
+		attr <- line[21, 26];
+		time <- line[12, 20];
+		date <- line[1, 11];
+		contents:put(T(name, size, attr, time, date));
+	);
+	proc:close;
+	RET contents;
 );
 
 DEF Extract!(archive, dir, files) (

@@ -7,6 +7,8 @@ end
 
 export("__init")
 export("T")
+export("_posix_new", "_new")
+export("_posix_register_finalizer", "_register_finalizer")
 export("ReaderT")
 export("WriterT")
 export("SeekerT")

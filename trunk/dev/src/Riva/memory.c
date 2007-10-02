@@ -42,6 +42,7 @@ void memory_init(void) {
 	module_export(Module, "_base", 0, GC_base);
 	module_export(Module, "_register_finalizer", 0, GC_register_finalizer);
 	module_export(Module, "_register_finalizer_ignore_self", 0, GC_register_finalizer_ignore_self);
+	module_export(Module, "_register_disappearing_link", 0, GC_register_disappearing_link);
 	module_export(Module, "_is_visible", 0, GC_is_visible);
 	module_export(Module, "_size", 0, GC_size);
 };

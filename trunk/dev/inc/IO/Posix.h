@@ -22,6 +22,9 @@ extern Std$Type_t IO$Posix$SeekerT[];
 extern Std$Type_t IO$Posix$TextReaderT[];
 extern Std$Type_t IO$Posix$TextWriterT[];
 
+RIVA_CFUN(IO$Posix_t *, new, Std$Type_t *, int);
+RIVA_CFUN(void, register_finalizer, IO$Posix_t *);
+
 #undef RIVA_MODULE
 
 #endif

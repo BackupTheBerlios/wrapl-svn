@@ -61,9 +61,8 @@ GLOBAL_FUNCTION(Open, 2) {
 	if (Flags & IO$File$OPENAPPEND) {
 		SetFilePointer(Handle, 0, 0, FILE_END);
 	};
-	NATIVE(_t) *Stream = new(NATIVE(_t));
-	Stream->Type = OpenMode.Type;
-	Stream->Handle = Handle;
+	Result->Val = NATIVE($new)(OpenMode.Type, Handle);
+	return Success;
 #else
 	char FileName[Arg0->Length.Value + 1];
 	Std$String$flatten_to(Args[0].Val, FileName);
@@ -78,12 +77,9 @@ GLOBAL_FUNCTION(Open, 2) {
 	} else if (Flags & IO$File$OPENWRITE) {
 		ftruncate(Handle, 0);
 	};
-	NATIVE(_t) *Stream = new(NATIVE(_t));
-	Stream->Type = OpenMode.Type;
-	Stream->Handle = Handle;
-#endif
-	Result->Val = Stream;
+	Result->Val = NATIVE($new)(OpenMode.Type, Handle);
 	return SUCCESS;
+#endif
 };
 
 #ifdef WINDOWS
@@ -92,10 +88,7 @@ NATIVE(_t) *__file_open(const char *FileName, int Flags) {
     HANDLE Handle = CreateFile(FileName, OpenMode.Access, FILE_SHARE_READ | FILE_SHARE_WRITE, 0, OpenMode.Create, 0, 0);
     if (Handle == INVALID_HANDLE_VALUE) return 0;
 	if (Flags & IO$File$OPENAPPEND) SetFilePointer(Handle, 0, 0, FILE_END);
-	NATIVE(_t) *Stream = new(NATIVE(_t));
-	Stream->Type = OpenMode.Type;
-	Stream->Handle = Handle;
-	return Stream;
+	return NATIVE($new)(OpenMode.Type, Handle);
 };
 
 #else
@@ -106,10 +99,18 @@ NATIVE(_t) *__file_open(const char *FileName, int Flags) {
 	int Handle = open(FileName, OpenMode.Mode, 0644);
 	if (Handle < 0) return 0;
 	if (Flags & IO$File$OPENAPPEND) lseek(Handle, 0, SEEK_END);
-	NATIVE(_t) *Stream = new(NATIVE(_t));
-	Stream->Type = OpenMode.Type;
-	Stream->Handle = Handle;
-	return Stream;
+	return NATIVE($new)(OpenMode.Type, Handle);
+};
+
+GLOBAL_FUNCTION(Temp, 0) {
+	int Handle = tmpfile();
+	if (Handle) {
+		Result->Val = NATIVE($new)(TextReaderWriterT, Handle);;
+		return SUCCESS;
+	} else {
+		Result->Val = OpenMessage;
+		return MESSAGE;
+	};
 };
 
 #endif

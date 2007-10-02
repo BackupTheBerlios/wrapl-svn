@@ -64,6 +64,23 @@ METHOD("closed", TYP, T) {
 
 static void posix_close(IO$Posix_t *Stream) {
 	close(Stream->Handle);
+	Riva$Memory$register_finalizer(Stream, 0, 0, 0, 0);
+};
+
+static void posix_finalize(IO$Posix_t *Stream, void *Data) {
+	close(Stream->Handle);
+};
+
+void _posix_register_finalizer(IO$Posix_t *Stream) {
+	Riva$Memory$register_finalizer(Stream, posix_finalize, 0, 0, 0);
+};
+
+IO$Posix_t *_posix_new(Std$Type_t *Type, int Handle) {
+	IO$Posix_t *Stream = new(IO$Posix_t);
+	Stream->Type = Type;
+	Stream->Handle = Handle;
+	Riva$Memory$register_finalizer(Stream, posix_finalize, 0, 0, 0);
+	return Stream;
 };
 
 static int posix_eoi(IO$Posix_t *Stream) {

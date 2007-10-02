@@ -62,10 +62,7 @@ GLOBAL_FUNCTION(New, 2) {
 		Result->Val = CreateMessage;
 		return MESSAGE;
 	};
-	IO$Posix_t *Stream = new(IO$Posix_t);
-	Stream->Type = Type;
-	Stream->Handle = Handle;
-	Result->Val = Stream;
+	Result->Val = NATIVE($new)(Type, Handle);
 	return SUCCESS;
 #else
 #endif
@@ -113,10 +110,7 @@ METHOD("accept", TYP, T) {
 		Result->Val = AcceptMessage;
 		return MESSAGE;
 	};
-	IO$Posix_t *Socket1 = new(IO$Posix_t);
-	Socket1->Type = Args[0].Val->Type;
-	Socket1->Handle = Socket0;
-	Result->Val = Socket1;
+	Result->Val = NATIVE($new)(Args[0].Val->Type, Socket0);
 	return SUCCESS;
 };
 
