@@ -22,8 +22,8 @@ inline Gtk$GObject$Object_t *_new(GObject *Handle, Std$Type_t *Type) {
 	Object->Type = Type;
 	Object->Handle = Handle;
 	g_object_set_qdata(Handle, RivaQuark, Object);	
-	g_object_ref_sink(Handle);
-	Riva$Memory$register_finalizer(Object, finalize, 0, 0, 0);
+//	g_object_ref_sink(Handle);
+//	Riva$Memory$register_finalizer(Object, finalize, 0, 0, 0);
 	return Object;
 };
 

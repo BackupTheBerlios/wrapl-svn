@@ -3,7 +3,7 @@
 
 #include <glib-object.h>
 
-static void __free(void *Ignore) {};
+static void __free(void *P) {};
 static void *__calloc(gsize N, gsize M) {return Riva$Memory$alloc(N * M);};
 
 static GMemVTable MemVTable = {

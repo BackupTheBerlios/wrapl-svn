@@ -741,11 +741,44 @@ METHOD("find", TYP, T, ANY) {
 };
 
 METHOD("remove", TYP, T, ANY) {
-	for (_node *Node = ((_list *)Args[0].Val)->Head; Node; Node = Node->Next) {
+	_list *List = Args[0].Val;
+	for (_node *Node = List->Head; Node; Node = Node->Next) {
 		Std$Function_result Result0;
 		switch (Std$Function$call($EQUAL, 2, &Result0, Args[1].Val, 0, Node->Value, 0)) {
 		case SUSPEND: case SUCCESS: {
-			Result->Val = delete_node(Args[0].Val, Node);
+			if (Node->Next) {
+				if (Node->Prev) {
+					Result->Val = delete_node(Args[0].Val, Node);
+				} else {
+					(List->Head = Node->Next)->Prev = 0;
+					--List->Length;
+					if (List->Array) {
+						if (List->Lower > 1) --List->Lower; else ++List->Array;
+					--List->Upper;
+					};
+					List->Index = 1; List->Cache = List->Head;
+					List->Access = 4;
+					Result->Val = Node->Value;
+				};
+			} else {
+				if (Node->Prev) {
+					(List->Tail = Node->Prev)->Next = 0;
+					--List->Length;
+					if (List->Array) {
+						if (List->Upper > List->Length) --List->Upper;
+					};
+					List->Index = 1; List->Cache = List->Head;
+					List->Access = 4;
+					Result->Val = Node->Value;
+				} else {
+					List->Head = List->Tail = List->Cache = 0;
+					List->Index = List->Lower = List->Upper = 0;
+					List->Array = 0;
+					List->Length = 0;
+					List->Access = 4;
+					Result->Val = Node->Value;
+				};
+			};
 			return SUCCESS;
 		};
 		case FAILURE: continue;

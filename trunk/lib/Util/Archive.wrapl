@@ -72,6 +72,7 @@ DEF Extract!(archive, dir, files) (
 	files ~== NIL => (args <- args + files);
 	VAR proc <- Process.Open("7z", args);
 	proc:wait = 0;
+	proc:close;
 );
 
 END Archive.

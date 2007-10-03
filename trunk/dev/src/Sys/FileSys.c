@@ -66,7 +66,7 @@ GLOBAL_FUNCTION(MakeDir, 2) {
 #else
 	char DirName[((Std$String_t *)Args[0].Val)->Length.Value + 1];
 	Std$String$flatten_to(Args[0].Val, DirName);
-	if (mkdir(DirName, ((Std$Integer_smallt *)Args[0].Val)->Value)) {
+	if (mkdir(DirName, ((Std$Integer_smallt *)Args[1].Val)->Value)) {
 #endif
 		Result->Val = "Error creating directory";
 		return MESSAGE;
