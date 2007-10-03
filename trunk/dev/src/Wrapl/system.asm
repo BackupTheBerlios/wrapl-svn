@@ -117,51 +117,6 @@ backtrack:
 	pop edi
 	jmp [invoke_function.returntable + 4 * eax]
 
-struct limiter, state
-	.Count:	resd 1
-endstruct
-
-global invoke_limit
-section .text
-invoke_limit:
-	pop esi
-	; edi = offset to current trap
-	; ecx = limiting value
-	cmp dword [value(ecx).Type], Std$Integer$SmallT
-	jne .error
-	mov ebx, [small_int(ecx).Value]
-	dec ebx
-	js backtrack
-	jz .return
-	push byte sizeof(limiter)
-	call Riva$Memory$_alloc
-	pop ecx
-	mov [limiter(eax).Count], ebx
-	mov [state(eax).Run], dword .resume
-	mov [state(eax).Resume], esi
-	mov ebx, [trap(ebp + edi).State]
-	mov [state(eax).Chain], ebx
-	mov [trap(ebp + edi).State], eax
-.return:
-	jmp esi
-.error:
-	mov ecx, IncorrectTypeMessage
-	xor edx, edx
-	mov eax, 2
-	jmp [bstate(ebp).Handler]
-.resume:
-	dec dword [limiter(eax).Count]
-	js .resume_failure
-	jz .resume_return
-	mov ebx, eax
-	or eax, byte -1
-	ret
-.resume_failure:
-	mov eax, 1
-	ret
-.resume_return:
-	xor eax, eax
-	ret
 
 c_data IncorrectTypeMessageT
 	dd Std$Type$T
