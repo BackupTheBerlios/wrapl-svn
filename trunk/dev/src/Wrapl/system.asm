@@ -175,7 +175,9 @@ select_string:
 	push ebp
 	mov ebp, esp
 	cmp [string(ecx).Count], dword 1
-	je .simplestring
+	mov ebx, [address(string_block(string(ecx).Blocks).Chars).Value]
+	mov eax, [small_int(string_block(string(ecx).Blocks).Length).Value]
+	jle .simplestring
 	mov eax, [small_int(string(ecx).Length).Value]
 	sub esp, eax
 	and esp, byte -4
@@ -190,11 +192,7 @@ select_string:
 	jmp .copyloop
 .copied:
 	mov ebx, esp
-	jmp .anystring
 .simplestring:
-	mov ebx, [address(string_block(string(ecx).Blocks).Chars).Value]
-	mov eax, [small_int(string_block(string(ecx).Blocks).Length).Value]
-.anystring:
 	; ebx = string
 	; eax = length
 	test eax, eax
