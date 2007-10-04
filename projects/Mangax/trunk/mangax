@@ -1,7 +1,10 @@
-#!/usr/local/bin/riva
+#!/usr/bin/riva
 MOD Main;
 
-IMP Sys, Std, IO, Util;
+IMP Std, IO;
+
+IMP Util USE Archive, Persist;
+IMP Sys USE FileSys;
 
 IMP IO.Terminal USE Out;
 IMP Gtk.Gdk;
@@ -9,8 +12,14 @@ IMP Gtk.Gtk;
 IMP Gtk.Glade;
 IMP Gtk.GObject;
 
-DEF conf <- (Util.Persist.Load("config"); RECV msg DO {
-	"toolbar-style" IS Gtk.ToolbarStyle.Both,
+DEF ToolbarStyles <- {
+	0 IS Gtk.ToolbarStyle.Icons,
+	1 IS Gtk.ToolbarStyle.Text,
+	2 IS Gtk.ToolbarStyle.Both
+};
+
+DEF conf <- (Persist.Load("config"); RECV msg DO {
+	"toolbar-style" IS 0,
 	"zoom-level" IS :"fit-both"
 	
 });
@@ -21,18 +30,27 @@ ui.thumbnailView:SetModel(thumbnailStore);
 ui.thumbnailView:SetTextColumn(0);
 ui.thumbnailView:SetPixbufColumn(1);
 
-VAR mainImageWidth, mainImageHeight;
+VAR mainImageWidth <- -1, mainImageHeight <- -1;
 
 DEF OnMainWindowConfigure!(window, event) (
 	VAR rect <- ui.mainImage:Allocation;
-	mainImageWidth <- rect:Width;
-	mainImageHeight <- rect:Height;
+	WHEN conf["zoom-level"]
+	IS :"fit-both" DO (
+		mainImageWidth <- rect:Width;
+		mainImageHeight <- rect:Height;
+	)
+	IS :"fit-height" DO (
+		mainImageHeight <- rect:Height;
+	)
+	IS :"fit-width" DO (
+		mainImageWidth <- rect:Width;
+	);
 	RET :false;
 );
 
 DEF OnQuit!() (
 	Gtk.Main.Quit();
-	Util.Persist.Store("config", conf);
+	Persist.Store("config", conf);
 	RECV msg DO Out:writes(msg, "\n");
 	RET :false;
 );
@@ -42,14 +60,44 @@ DEF OnAbout!() (
 	ui.aboutDialog:Hide;
 );
 
+DEF FlattenDir(base, subdir) (
+	VAR file, path;
+	VAR files <- ALL FileSys.ListDir(subdir);
+	files:remove(".");
+	files:remove("..");
+	EVERY path <- subdir + "/" + (file <- files:values) DO (
+		FileSys.FileType(path):and(FileSys.DIRFILE) ~= 0 => (
+			FlattenDir(base, path);
+			FileSys.RemoveDir(path);
+		) // (
+			FileSys.Rename(path, base + "/" + file);
+		);
+	);
+);
+
+DEF FlattenArchive(file) (
+	VAR dir <- FileSys.TempFile();
+	FileSys.MakeDir(dir, 511);
+	Archive.Extract(file, dir);
+	FlattenDir(dir, dir);
+	RET dir;
+);
+
 DEF OnFileOpen!() (
 	thumbnailStore:Clear;
 	ui.fileChooserDialog:Run = Gtk.ResponseType.Ok => (
-		VAR value <- GObject.Value.New();
+		VAR file <- ui.fileChooserDialog:GetFilename;
+		VAR dir;
+		Archive.Type(file) => (
+			dir <- FlattenArchive(file);
+		) // (
+			dir <- ui.fileChooserDialog:GetCurrentFolder;
+		);
 		VAR iter <- Gtk.TreeIter.New();
-		VAR dir <- ui.fileChooserDialog:GetCurrentFolder;
+		VAR value <- GObject.Value.New();
 		VAR index <- 0;
-		VAR file, path; EVERY path <- dir + "/" + (file <- Sys.FileSys.ListDir(dir)) DO (
+		VAR file, path;
+		EVERY path <- dir + "/" + (file <- Sys.FileSys.ListDir(dir)) DO (
 			value:Set(Gdk.Pixbuf.NewFromFileAtSize(path, 64, 128, NIL));
 			thumbnailStore:Append(iter);
 			thumbnailStore:SetValue(iter, 1, value);
@@ -76,22 +124,34 @@ DEF OnThumbnailActivated!(iconview, path) (
 	VAR pixbuf <- Gdk.Pixbuf.NewFromFileAtSize(value:Get, mainImageWidth, mainImageHeight, NIL);
 	value:Unset;
 	ui.mainImage:SetFromPixbuf(pixbuf);
+	pixbuf:Unref;
 );
 
-VAR preferenceChanges;
+DEF OnPrefsDialogRealize!() (
+	ui.toolbarStyleComboBox:SetActive(conf["toolbar-style"]);
+);
+
+DEF preferenceChanges <- {};
+
+DEF ApplyPreferences!() (
+	EVERY (preferenceChanges:values)();
+	preferenceChanges:empty;
+);
 
 DEF OnEditPreferences!() (
-	preferenceChanges <- {};
-	ui.prefsDialog:Run;
+	preferenceChanges:empty;
+	ui.prefsDialog:Run = Gtk.ResponseType.Ok => ApplyPreferences();
 	ui.prefsDialog:Hide;
 );
 
 DEF OnToolbarStyleChanged!(combobox) (
-	WHEN combobox:GetActive
-	IS 0 DO preferenceChanges:insert("toolbar-style", <> ui.mainToolbar:SetStyle(conf["toolbar-style"] <- Gtk.ToolbarStyle.Icons))
-	IS 1 DO preferenceChanges:insert("toolbar-style", <> ui.mainToolbar:SetStyle(conf["toolbar-style"] <- Gtk.ToolbarStyle.Text))
-	IS 2 DO preferenceChanges:insert("toolbar-style", <> ui.mainToolbar:SetStyle(conf["toolbar-style"] <- Gtk.ToolbarStyle.Both))
-	;
+	ui.mainToolbar:SetStyle(ToolbarStyles[conf["toolbar-style"] <- combobox:GetActive]);
+);
+
+DEF OnViewFitNone!() (
+	mainImageWidth <- -1;
+	mainImageHeight <- -1;
+	conf["zoom-level"] <- :"fit-none";
 );
 
 VAR imageDragged;
@@ -104,8 +164,8 @@ DEF OnImageButtonPress!(widget, event) (
 	WHEN event:Button
 	IS 1 DO (
 		imageDragged <- :false;
-		imageDragX <- event:X;
-		imageDragY <- event:Y;
+		imageDragX <- event:XRoot;
+		imageDragY <- event:YRoot;
 		imageDragHandler <- DragHandlerMoveImage;
 	)
 	IS 3 DO ui.popupMenu:Popup(Gtk.Widget.Nil, Gtk.Widget.Nil, Std.Function.Nil, Std.Address.Nil, 3, event:Time);
@@ -124,15 +184,16 @@ DEF DragHandlerIgnore() (
 );
 
 DEF DragHandlerMoveImage(event) (
-	Out:writes("Moving image\n");
 	event <- event:Motion;
 	imageDragged <- :true;
-	VAR hadjust <- ui.mainScrolledWindow:GetHadjustment;
-	VAR vadjust <- ui.mainScrolledWindow:GetVadjustment;
-	Out:writes("[", hadjust:Lower, " - ", hadjust:Upper, "]\n");
-	Out:writes("[", vadjust:Lower, " - ", vadjust:Upper, "]\n");
-	--hadjust:SetValue(hadjust:GetValue + event:X - imageDragX);
-	--vadjust:SetValue(vadjust:GetValue + event:Y - imageDragY);
+	DEF hadjust <- ui.mainScrolledWindow:GetHadjustment;
+	DEF vadjust <- ui.mainScrolledWindow:GetVadjustment;
+	VAR x <- event:XRoot;
+	VAR y <- event:YRoot;
+	hadjust:ClampPage(hadjust:GetValue - x + imageDragX, hadjust:Upper);
+	vadjust:ClampPage(vadjust:GetValue - y + imageDragY, vadjust:Upper);
+	imageDragX <- x;
+	imageDragY <- y;
 	RECV msg DO Out:writes("msg = ", msg, "\n");
 	RET :true;
 );
@@ -141,6 +202,7 @@ DEF OnImageMotionNotify!(widget, event) (
 	imageDragHandler(event);
 );
 
+--ui.mainToolbar:SetStyle(ToolbarStyles[conf["toolbar-style"]]);
 ui.mainWindow:ShowAll;
 Gtk.Main.Run();
 
