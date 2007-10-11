@@ -49,7 +49,7 @@ METHOD("Connect", TYP, T, TYP, Std$String$T, TYP, Gtk$GObject$Closure$T) {
 METHOD("Connect", TYP, T, TYP, Std$String$T, TYP, Std$Function$T) {
 	Gtk$GObject$Object_t *Object = Args[0].Val;
 	const char *Signal = Std$String$flatten(Args[1].Val);
-	Gtk$GObject$Closure_t *Closure = Gtk$GObject$Closure$new(Args[2].Val);
+	Gtk$GObject$Closure_t *Closure = Gtk$GObject$Closure$from_val(Args[2].Val);
 	gboolean After = (Count > 3) && (Args[3].Val == $true);
 	g_signal_connect_closure(Object->Handle, Signal, Closure->Handle, After);
 	Result->Arg = Args[0];

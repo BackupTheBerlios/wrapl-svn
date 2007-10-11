@@ -5,27 +5,81 @@
 
 TYPE(T);
 
-typedef struct closure_t {
+SYMBOL(AS, "@");
+
+typedef struct val_closure_t {
 	GClosure Parent;
 	Std$Object_t *Function;
 	Gtk$GObject$Closure_t *Closure;
-} closure_t;
+} val_closure_t;
 
-static void __marshal(closure_t *Closure, GValue *Result, guint NoOfArgs, const GValue *Args, gpointer Hint, gpointer Data) {
+static void __marshal_val(val_closure_t *Closure, GValue *Result, guint NoOfArgs, const GValue *Args, gpointer Hint, gpointer Data) {
 	Std$Function_argument Args0[NoOfArgs];
 	for (guint I = 0; I < NoOfArgs; ++I) {
 		Args0[I].Val = Gtk$GObject$Value$to_riva(Args + I);
 		Args0[I].Ref = 0;
 	};
 	Std$Function_result Result0;
-	if (Std$Function$invoke(Closure->Function, NoOfArgs, &Result0, Args0) >= FAILURE) return;
+	switch (Std$Function$call(Closure->Function, NoOfArgs, &Result0, Args0)) {
+	case MESSAGE:
+		if (Std$Function$call(AS, 2, &Result0, Result0.Val, 0, Std$String$T, 0) < FAILURE) {
+			printf("Warning: Closure sent message: %s.\n", Std$String$flatten(Result0.Val));
+		} else {
+			printf("Warning: Closure sent message: <unknown>.\n");
+		};
+	case FAILURE:
+		return;
+	case SUSPEND:
+	case SUCCESS:
+		break;
+	};
 	if (Result) Gtk$GObject$Value$to_gtk(Result0.Val, Result);
 };
 
-Gtk$GObject$Closure_t *_new(Std$Object_t *Function) {
-	closure_t *Handle = g_closure_new_simple(sizeof(closure_t), 0);
+Gtk$GObject$Closure_t *_from_val(Std$Object_t *Function) {
+	val_closure_t *Handle = g_closure_new_simple(sizeof(val_closure_t), 0);
 	Handle->Function = Function;
-	g_closure_set_marshal(Handle, __marshal);
+	g_closure_set_marshal(Handle, __marshal_val);
+	Gtk$GObject$Closure_t *Closure = new(Gtk$GObject$Closure_t);
+	Closure->Type = T;
+	Closure->Handle = Handle;
+	Handle->Closure = Closure;
+	return Closure;
+};
+
+typedef struct ref_closure_t {
+	GClosure Parent;
+	Std$Object_t **Function;
+	Gtk$GObject$Closure_t *Closure;
+} ref_closure_t;
+
+static void __marshal_ref(ref_closure_t *Closure, GValue *Result, guint NoOfArgs, const GValue *Args, gpointer Hint, gpointer Data) {
+	Std$Function_argument Args0[NoOfArgs];
+	for (guint I = 0; I < NoOfArgs; ++I) {
+		Args0[I].Val = Gtk$GObject$Value$to_riva(Args + I);
+		Args0[I].Ref = 0;
+	};
+	Std$Function_result Result0;
+	switch (Std$Function$call(Closure->Function[0], NoOfArgs, &Result0, Args0)) {
+	case MESSAGE:
+		if (Std$Function$call(AS, 2, &Result0, Result0.Val, 0, Std$String$T, 0) < FAILURE) {
+			printf("Warning: Closure sent message: %s.\n", Std$String$flatten(Result0.Val));
+		} else {
+			printf("Warning: Closure sent message: <unknown>.\n");
+		};
+	case FAILURE:
+		return;
+	case SUSPEND:
+	case SUCCESS:
+		break;
+	};
+	if (Result) Gtk$GObject$Value$to_gtk(Result0.Val, Result);
+};
+
+Gtk$GObject$Closure_t *_from_ref(Std$Object_t **Function) {
+	ref_closure_t *Handle = g_closure_new_simple(sizeof(ref_closure_t), 0);
+	Handle->Function = Function;
+	g_closure_set_marshal(Handle, __marshal_ref);
 	Gtk$GObject$Closure_t *Closure = new(Gtk$GObject$Closure_t);
 	Closure->Type = T;
 	Closure->Handle = Handle;
@@ -34,6 +88,6 @@ Gtk$GObject$Closure_t *_new(Std$Object_t *Function) {
 };
 
 GLOBAL_FUNCTION(New, 1) {
-	Result->Val = _new(Args[0].Val);
+	Result->Val = _from_val(Args[0].Val);
 	return SUCCESS;
 };

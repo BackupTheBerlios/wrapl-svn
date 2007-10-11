@@ -130,7 +130,7 @@ VAR gclosuretype <- T();
 TO :rtype(=gclosuretype) "Gtk$GObject$Closure$T";
 TO :ctype(=gclosuretype) "GClosure *";
 TO :precall(=gclosuretype, name, arg) [
-	"GClosure *" + name + " = Gtk$GObject$Closure$new(" + arg + ".Val);"
+	"GClosure *" + name + " = Gtk$GObject$Closure$from_val(" + arg + ".Val);"
 ];
 TO :headers(=gclosuretype) ["#include <Gtk/GObject/Closure.h>"];
 TO :libraries(=gclosuretype) ["Gtk/GObject/Closure.rlib"];

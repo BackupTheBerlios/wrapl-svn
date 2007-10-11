@@ -95,7 +95,7 @@ TO Write(file, value) (
 );
 
 DEF Load!(filename) (
-	VAR file <- File.Open(filename, File.READ);
+	VAR file <- (File.Open(filename, File.READ); RECV msg DO FAIL);
 	VAR value <- Read(file);
 	file:close;
 	RET value;

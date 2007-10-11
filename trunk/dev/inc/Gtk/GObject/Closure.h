@@ -14,7 +14,8 @@ typedef struct Gtk$GObject$Closure_t {
 
 extern Std$Type_t Gtk$GObject$Closure$T[];
 
-RIVA_CFUN(Gtk$GObject$Closure_t *, new, Std$Object_t *);
+RIVA_CFUN(Gtk$GObject$Closure_t *, from_val, Std$Object_t *);
+RIVA_CFUN(Gtk$GObject$Closure_t *, from_ref, Std$Object_t *);
 
 #undef RIVA_MODULE
 

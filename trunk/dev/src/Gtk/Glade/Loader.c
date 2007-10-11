@@ -30,7 +30,11 @@ static void glade_connect_func(const gchar *HandlerName, GObject *Object, const 
 		Std$Function_t *Function;
 		int IsRef;
 		if (Riva$Module$import(Module, HandlerImport, &IsRef, &Function)) {
-			g_signal_connect_closure(Object, SignalName, Gtk$GObject$Closure$new(Function)->Handle, 0);
+			if (IsRef) {
+				g_signal_connect_closure(Object, SignalName, Gtk$GObject$Closure$from_ref(Function)->Handle, 0);
+			} else {
+				g_signal_connect_closure(Object, SignalName, Gtk$GObject$Closure$from_val(Function)->Handle, 0);
+			};
 			return;
 		};
 	};

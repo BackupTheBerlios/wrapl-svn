@@ -5,4 +5,5 @@ else
 	prefix("Gtk$GObject$Closure$")
 end
 export("T")
-export("_new")
+export("_from_val")
+export("_from_ref")

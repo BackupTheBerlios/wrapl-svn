@@ -8,5 +8,6 @@ if WINDOWS then
 end
 
 export("T")
-export("_new")
+export("_from_val")
+export("_from_ref")
 export("New")
