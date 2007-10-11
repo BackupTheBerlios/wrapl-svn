@@ -18,46 +18,51 @@ DEF ToolbarStyles <- {
 	2 IS Gtk.ToolbarStyle.Both
 };
 
-DEF conf <- (Persist.Load("config"); RECV msg DO {
+DEF conf <- Persist.Load("config") | {
 	"toolbar-style" IS 0,
-	"zoom-level" IS :"fit-both"
-	
-});
+	"zoom-level" IS :"fit-none"	
+};
 
 DEF ui <- Glade.Loader.Load("mangax.glade", Main);
+
 VAR thumbnailStore <- Gtk.ListStore.Newv(3, [GObject.Type.STRING, Gdk.Pixbuf.GetType(), GObject.Type.STRING]);
 ui.thumbnailView:SetModel(thumbnailStore);
 ui.thumbnailView:SetTextColumn(0);
 ui.thumbnailView:SetPixbufColumn(1);
 
-VAR mainImageWidth <- -1, mainImageHeight <- -1;
+VAR mainImageWidth, mainImageHeight;
+VAR zoomImageWidth <- -1, zoomImageHeight <- -1;
+VAR zoomLevel <- conf["zoom-level"];
 
-DEF OnMainWindowConfigure!(window, event) (
-	VAR rect <- ui.mainImage:Allocation;
-	WHEN conf["zoom-level"]
-	IS :"fit-both" DO (
-		mainImageWidth <- rect:Width;
-		mainImageHeight <- rect:Height;
-	)
-	IS :"fit-height" DO (
-		mainImageHeight <- rect:Height;
-	)
-	IS :"fit-width" DO (
-		mainImageWidth <- rect:Width;
-	);
-	RET :false;
-);
-
-DEF OnQuit!() (
+DEF Quit!() (
 	Gtk.Main.Quit();
 	Persist.Store("config", conf);
 	RECV msg DO Out:writes(msg, "\n");
 	RET :false;
 );
 
-DEF OnAbout!() (
+DEF About!() (
 	ui.aboutDialog:Run;
 	ui.aboutDialog:Hide;
+);
+
+DEF MainWindowConfigure!(window, event) (
+	VAR rect <- ui.mainViewport:Allocation;
+	mainImageWidth <- rect:Width;
+	mainImageHeight <- rect:Height;
+	Out:writes("Main image size = ", mainImageWidth, " x ", mainImageHeight, "\n");
+	WHEN zoomLevel
+	IS :"fit-both" DO (
+		zoomImageWidth <- mainImageWidth;
+		zoomImageHeight <- mainImageHeight;
+	)
+	IS :"fit-height" DO (
+		zoomImageHeight <- mainImageHeight;
+	)
+	IS :"fit-width" DO (
+		zoomImageWidth <- mainImageWidth;
+	);
+	RET :false;
 );
 
 DEF FlattenDir(base, subdir) (
@@ -83,8 +88,9 @@ DEF FlattenArchive(file) (
 	RET dir;
 );
 
-DEF OnFileOpen!() (
+DEF OpenFile!() (
 	thumbnailStore:Clear;
+	ui.fileChooserDialog:SetAction(Gtk.FileChooserAction.Open);
 	ui.fileChooserDialog:Run = Gtk.ResponseType.Ok => (
 		VAR file <- ui.fileChooserDialog:GetFilename;
 		VAR dir;
@@ -115,19 +121,25 @@ DEF OnFileOpen!() (
 	ui.fileChooserDialog:Hide;
 );
 
-DEF OnThumbnailActivated!(iconview, path) (
+DEF OpenFolder!() (
+	ui.fileChooserDialog:SetAction(Gtk.FileChooserAction.SelectFolder);
+	ui.fileChooserDialog:Run = Gtk.ResponseType.Ok => (
+		Out:writes("You selected ", ui.fileChooserDialog:GetFilename, "\n");
+	);
+);
+
+DEF ThumbnailActivated!(iconview, path) (
 	VAR iter <- Gtk.TreeIter.New();
 	VAR value <- GObject.Value.New();
 	thumbnailStore:GetIter(iter, path);
 	thumbnailStore:GetValue(iter, 2, value);
-	VAR rect <- ui.mainImage:Allocation;
-	VAR pixbuf <- Gdk.Pixbuf.NewFromFileAtSize(value:Get, mainImageWidth, mainImageHeight, NIL);
+	VAR pixbuf <- Gdk.Pixbuf.NewFromFileAtSize(value:Get, zoomImageWidth, zoomImageHeight, NIL);
 	value:Unset;
 	ui.mainImage:SetFromPixbuf(pixbuf);
 	pixbuf:Unref;
 );
 
-DEF OnPrefsDialogRealize!() (
+DEF PrefsDialogRealize!() (
 	ui.toolbarStyleComboBox:SetActive(conf["toolbar-style"]);
 );
 
@@ -138,71 +150,81 @@ DEF ApplyPreferences!() (
 	preferenceChanges:empty;
 );
 
-DEF OnEditPreferences!() (
+DEF Preferences!() (
 	preferenceChanges:empty;
 	ui.prefsDialog:Run = Gtk.ResponseType.Ok => ApplyPreferences();
 	ui.prefsDialog:Hide;
 );
 
-DEF OnToolbarStyleChanged!(combobox) (
+DEF ToolbarStyleChanged!(combobox) (
 	ui.mainToolbar:SetStyle(ToolbarStyles[conf["toolbar-style"] <- combobox:GetActive]);
 );
 
-DEF OnViewFitNone!() (
-	mainImageWidth <- -1;
-	mainImageHeight <- -1;
-	conf["zoom-level"] <- :"fit-none";
+DEF ViewFitNone!() (
+	zoomImageWidth <- -1;
+	zoomImageHeight <- -1;
+	zoomLevel <- :"fit-none";
 );
 
-VAR imageDragged;
+DEF ViewFitScreen!() (
+	zoomImageWidth <- mainImageWidth;
+	zoomImageHeight <- mainImageHeight;
+	zoomLevel <- :"fit-both";
+);
+
+DEF ViewFitHeight!() (
+	zoomImageWidth <- -1;
+	zoomImageHeight <- mainImageHeight;
+	zoomLevel <- :"fit-height";
+);
+
+DEF ViewFitWidth!() (
+	zoomImageWidth <- mainImageWidth;
+	zoomImageHeight <- -1;
+	zoomLevel <- :"fit-width";
+);
+
+DEF ShowNextImage!() (
+);
+
+VAR imageMotionHandler() :true;
+VAR imageReleaseHandler() :true;
+
+DEF ImageRelease!(widget, event) imageReleaseHandler(event);
+DEF ImageMotion!(widget, event) imageMotionHandler(event);
+
 VAR imageDragX;
 VAR imageDragY;
-VAR imageDragHandler <- DragHandlerIgnore;
 
-DEF OnImageButtonPress!(widget, event) (
+DEF ImagePress!(widget, event) (
 	event <- event:Button;
 	WHEN event:Button
 	IS 1 DO (
-		imageDragged <- :false;
 		imageDragX <- event:XRoot;
 		imageDragY <- event:YRoot;
-		imageDragHandler <- DragHandlerMoveImage;
+		imageReleaseHandler <- <event> (
+			imageReleaseHandler <- <> :true;
+		);
+		imageMotionHandler <- <event> (
+			event <- event:Motion;
+			imageReleaseHandler <- <> :true;
+			DEF hadjust <- ui.mainScrolledWindow:GetHadjustment;
+			DEF vadjust <- ui.mainScrolledWindow:GetVadjustment;
+			VAR x <- event:XRoot;
+			VAR y <- event:YRoot;
+			hadjust:ClampPage(hadjust:GetValue - x + imageDragX, hadjust:Upper);
+			vadjust:ClampPage(vadjust:GetValue - y + imageDragY, vadjust:Upper);
+			imageDragX <- x;
+			imageDragY <- y;
+			:true;
+		);
 	)
-	IS 3 DO ui.popupMenu:Popup(Gtk.Widget.Nil, Gtk.Widget.Nil, Std.Function.Nil, Std.Address.Nil, 3, event:Time);
-	RET :true;
-);
-
-DEF OnImageButtonRelease!(widget, event) (
-	event <- event:Button;
-	imageDragHandler <- DragHandlerIgnore;
-	RET :true;
-);
-
-DEF DragHandlerIgnore() (
-	Out:writes("Ignoring drag\n");
+	IS 3 DO
+		ui.popupMenu:Popup(Gtk.Widget.Nil, Gtk.Widget.Nil, Std.Function.Nil, Std.Address.Nil, 3, event:Time);
 	:true;
 );
 
-DEF DragHandlerMoveImage(event) (
-	event <- event:Motion;
-	imageDragged <- :true;
-	DEF hadjust <- ui.mainScrolledWindow:GetHadjustment;
-	DEF vadjust <- ui.mainScrolledWindow:GetVadjustment;
-	VAR x <- event:XRoot;
-	VAR y <- event:YRoot;
-	hadjust:ClampPage(hadjust:GetValue - x + imageDragX, hadjust:Upper);
-	vadjust:ClampPage(vadjust:GetValue - y + imageDragY, vadjust:Upper);
-	imageDragX <- x;
-	imageDragY <- y;
-	RECV msg DO Out:writes("msg = ", msg, "\n");
-	RET :true;
-);
-
-DEF OnImageMotionNotify!(widget, event) (
-	imageDragHandler(event);
-);
-
---ui.mainToolbar:SetStyle(ToolbarStyles[conf["toolbar-style"]]);
+ui.mainToolbar:SetStyle(ToolbarStyles[conf["toolbar-style"]]);
 ui.mainWindow:ShowAll;
 Gtk.Main.Run();
 

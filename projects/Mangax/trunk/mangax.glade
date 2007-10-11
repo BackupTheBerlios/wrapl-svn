@@ -7,8 +7,8 @@
     <property name="height_request">600</property>
     <property name="visible">True</property>
     <property name="title" translatable="yes">Mangax</property>
-    <signal name="configure_event" handler="OnMainWindowConfigure"/>
-    <signal name="delete_event" handler="OnQuit"/>
+    <signal name="configure_event" handler="MainWindowConfigure"/>
+    <signal name="delete_event" handler="Quit"/>
     <child>
       <widget class="GtkVBox" id="vbox1">
         <property name="visible">True</property>
@@ -25,14 +25,28 @@
                     <child>
                       <widget class="GtkImageMenuItem" id="open2">
                         <property name="visible">True</property>
-                        <property name="label" translatable="yes">_Open</property>
+                        <property name="label" translatable="yes">_Open File</property>
                         <property name="use_underline">True</property>
-                        <signal name="activate" handler="OnFileOpen"/>
+                        <signal name="activate" handler="OpenFile"/>
                         <child internal-child="image">
                           <widget class="GtkImage" id="image48">
                             <property name="visible">True</property>
                             <property name="stock">gtk-open</property>
                             <property name="icon_size">1</property>
+                          </widget>
+                        </child>
+                      </widget>
+                    </child>
+                    <child>
+                      <widget class="GtkImageMenuItem" id="">
+                        <property name="visible">True</property>
+                        <property name="events">GDK_POINTER_MOTION_MASK | GDK_POINTER_MOTION_HINT_MASK | GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK</property>
+                        <property name="label" translatable="yes">Open _Folder</property>
+                        <property name="use_underline">True</property>
+                        <signal name="activate" handler="OpenFolder"/>
+                        <child internal-child="image">
+                          <widget class="GtkImage" id="menu-item-image11">
+                            <property name="stock">gtk-open</property>
                           </widget>
                         </child>
                       </widget>
@@ -90,7 +104,7 @@
                         <property name="visible">True</property>
                         <property name="label" translatable="yes">_Close</property>
                         <property name="use_underline">True</property>
-                        <signal name="activate" handler="OnFileClose"/>
+                        <signal name="activate" handler="CloseFile"/>
                         <child internal-child="image">
                           <widget class="GtkImage" id="image51">
                             <property name="visible">True</property>
@@ -105,7 +119,7 @@
                         <property name="visible">True</property>
                         <property name="label" translatable="yes">_Quit</property>
                         <property name="use_underline">True</property>
-                        <signal name="activate" handler="OnQuit"/>
+                        <signal name="activate" handler="Quit"/>
                         <child internal-child="image">
                           <widget class="GtkImage" id="image52">
                             <property name="visible">True</property>
@@ -131,7 +145,7 @@
                         <property name="visible">True</property>
                         <property name="label" translatable="yes">_Preferences</property>
                         <property name="use_underline">True</property>
-                        <signal name="activate" handler="OnEditPreferences"/>
+                        <signal name="activate" handler="EditPreferences"/>
                         <child internal-child="image">
                           <widget class="GtkImage" id="image53">
                             <property name="visible">True</property>
@@ -157,7 +171,7 @@
                         <property name="visible">True</property>
                         <property name="label" translatable="yes">_Fullscreen</property>
                         <property name="use_underline">True</property>
-                        <signal name="activate" handler="OnViewFullscreen"/>
+                        <signal name="activate" handler="ViewFullscreen"/>
                         <child internal-child="image">
                           <widget class="GtkImage" id="image54">
                             <property name="visible">True</property>
@@ -177,7 +191,7 @@
                         <property name="visible">True</property>
                         <property name="label" translatable="yes">Fit _Height</property>
                         <property name="use_underline">True</property>
-                        <signal name="activate" handler="OnViewFitHeight"/>
+                        <signal name="activate" handler="ViewFitHeight"/>
                       </widget>
                     </child>
                     <child>
@@ -185,7 +199,7 @@
                         <property name="visible">True</property>
                         <property name="label" translatable="yes">Fit _Width</property>
                         <property name="use_underline">True</property>
-                        <signal name="activate" handler="OnViewFitWidth"/>
+                        <signal name="activate" handler="ViewFitWidth"/>
                       </widget>
                     </child>
                     <child>
@@ -193,7 +207,7 @@
                         <property name="visible">True</property>
                         <property name="label" translatable="yes">_Fit Screen</property>
                         <property name="use_underline">True</property>
-                        <signal name="activate" handler="OnViewFitScreen"/>
+                        <signal name="activate" handler="ViewFitScreen"/>
                       </widget>
                     </child>
                     <child>
@@ -201,7 +215,7 @@
                         <property name="visible">True</property>
                         <property name="label" translatable="yes">Fit _None</property>
                         <property name="use_underline">True</property>
-                        <signal name="activate" handler="OnViewFitNone"/>
+                        <signal name="activate" handler="ViewFitNone"/>
                       </widget>
                     </child>
                   </widget>
@@ -248,6 +262,7 @@
               <widget class="GtkToolButton" id="toolbutton5">
                 <property name="visible">True</property>
                 <property name="stock_id">gtk-goto-first</property>
+                <signal name="clicked" handler="GoFileFirst"/>
               </widget>
               <packing>
                 <property name="expand">False</property>
@@ -257,7 +272,7 @@
               <widget class="GtkToolButton" id="toolbutton6">
                 <property name="visible">True</property>
                 <property name="stock_id">gtk-go-back</property>
-                <signal name="clicked" handler="OnFilePrev"/>
+                <signal name="clicked" handler="GoFilePrev"/>
               </widget>
               <packing>
                 <property name="expand">False</property>
@@ -267,7 +282,7 @@
               <widget class="GtkToolButton" id="toolbutton7">
                 <property name="visible">True</property>
                 <property name="stock_id">gtk-go-forward</property>
-                <signal name="clicked" handler="OnFileNext"/>
+                <signal name="clicked" handler="GoFileNext"/>
               </widget>
               <packing>
                 <property name="expand">False</property>
@@ -277,6 +292,7 @@
               <widget class="GtkToolButton" id="toolbutton8">
                 <property name="visible">True</property>
                 <property name="stock_id">gtk-goto-last</property>
+                <signal name="clicked" handler="GoFileLast"/>
               </widget>
               <packing>
                 <property name="expand">False</property>
@@ -322,6 +338,7 @@
               <widget class="GtkToolButton" id="toolbutton10">
                 <property name="visible">True</property>
                 <property name="stock_id">gtk-zoom-100</property>
+                <signal name="clicked" handler="ViewFitNone"/>
               </widget>
               <packing>
                 <property name="expand">False</property>
@@ -331,6 +348,7 @@
               <widget class="GtkToolButton" id="toolbutton11">
                 <property name="visible">True</property>
                 <property name="stock_id">gtk-zoom-fit</property>
+                <signal name="clicked" handler="ViewFitBoth"/>
               </widget>
               <packing>
                 <property name="expand">False</property>
@@ -340,6 +358,7 @@
               <widget class="GtkToolButton" id="toolbutton12">
                 <property name="visible">True</property>
                 <property name="stock_id">gtk-zoom-in</property>
+                <signal name="clicked" handler="ZoomIn"/>
               </widget>
               <packing>
                 <property name="expand">False</property>
@@ -349,6 +368,7 @@
               <widget class="GtkToolButton" id="toolbutton13">
                 <property name="visible">True</property>
                 <property name="stock_id">gtk-zoom-out</property>
+                <signal name="clicked" handler="ZoomOut"/>
               </widget>
               <packing>
                 <property name="expand">False</property>
@@ -369,7 +389,8 @@
                 <property name="width_request">90</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
-                <property name="hscrollbar_policy">GTK_POLICY_NEVER</property>
+                <property name="hscrollbar_policy">GTK_POLICY_AUTOMATIC</property>
+                <property name="vscrollbar_policy">GTK_POLICY_AUTOMATIC</property>
                 <property name="shadow_type">GTK_SHADOW_IN</property>
                 <child>
                   <widget class="GtkIconView" id="thumbnailView">
@@ -387,15 +408,15 @@
               <widget class="GtkScrolledWindow" id="mainScrolledWindow">
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
-                <property name="hscrollbar_policy">GTK_POLICY_AUTOMATIC</property>
-                <property name="vscrollbar_policy">GTK_POLICY_AUTOMATIC</property>
+                <property name="hscrollbar_policy">GTK_POLICY_NEVER</property>
+                <property name="vscrollbar_policy">GTK_POLICY_NEVER</property>
                 <child>
                   <widget class="GtkViewport" id="mainViewport">
                     <property name="visible">True</property>
                     <property name="events">GDK_BUTTON_MOTION_MASK | GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK</property>
-                    <signal name="button_press_event" handler="OnImageButtonPress"/>
-                    <signal name="motion_notify_event" handler="OnImageMotionNotify"/>
-                    <signal name="button_release_event" handler="OnImageButtonRelease"/>
+                    <signal name="button_press_event" handler="ImageButtonPress"/>
+                    <signal name="motion_notify_event" handler="ImageMotionNotify"/>
+                    <signal name="button_release_event" handler="ImageButtonRelease"/>
                     <child>
                       <widget class="GtkImage" id="mainImage">
                         <property name="visible">True</property>
@@ -431,7 +452,7 @@
     <property name="title" translatable="yes">Preferences</property>
     <property name="modal">True</property>
     <property name="type_hint">GDK_WINDOW_TYPE_HINT_DIALOG</property>
-    <signal name="realize" handler="OnPrefsDialogRealize"/>
+    <signal name="realize" handler="PrefsDialogRealize"/>
     <child internal-child="vbox">
       <widget class="GtkVBox" id="dialog-vbox1">
         <property name="visible">True</property>
@@ -453,7 +474,7 @@
                         <property name="items" translatable="yes">Icons only
 Text only
 Icons and Text</property>
-                        <signal name="changed" handler="OnToolbarStyleChanged"/>
+                        <signal name="changed" handler="ChangeToolbarStyle"/>
                       </widget>
                       <packing>
                         <property name="left_attach">1</property>
@@ -660,6 +681,7 @@ Icons and Text</property>
     <property name="title" translatable="yes">Select File</property>
     <property name="modal">True</property>
     <property name="type_hint">GDK_WINDOW_TYPE_HINT_DIALOG</property>
+    <property name="preview_widget_active">False</property>
     <child internal-child="vbox">
       <widget class="GtkVBox" id="dialog-vbox2">
         <property name="visible">True</property>
@@ -725,7 +747,7 @@ Icons and Text</property>
         <property name="visible">True</property>
         <property name="label" translatable="yes">_Next</property>
         <property name="use_underline">True</property>
-        <signal name="activate" handler="OnFileNext"/>
+        <signal name="activate" handler="GoFileNext"/>
         <child internal-child="image">
           <widget class="GtkImage" id="image46">
             <property name="visible">True</property>
@@ -740,7 +762,7 @@ Icons and Text</property>
         <property name="visible">True</property>
         <property name="label" translatable="yes">_Prev</property>
         <property name="use_underline">True</property>
-        <signal name="activate" handler="OnFilePrev"/>
+        <signal name="activate" handler="GoFilePrev"/>
         <child internal-child="image">
           <widget class="GtkImage" id="image47">
             <property name="visible">True</property>
