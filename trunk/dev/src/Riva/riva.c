@@ -100,7 +100,6 @@ static uint32_t fixup_code_section(section_t *Section, jmp_buf *OnError) {
 
 static uint32_t fixup_library_section(section_t *Section, jmp_buf *OnError) {
 	if (Section->State == UNLOADED) {
-		Section->State = LOADING;
 		Section->Data = (uint8_t *)module_load(Section->Path, Section->Name);
 		if (Section->Data == 0) {
 			log_errorf("Error: module not found %s\n", Section->Name);
@@ -113,7 +112,6 @@ static uint32_t fixup_library_section(section_t *Section, jmp_buf *OnError) {
 
 static uint32_t fixup_import_section(section_t *Section, jmp_buf *OnError) {
 	if (Section->State == UNLOADED) {
-		Section->State = LOADING;
 		module_t *Module = (module_t *)Section->Library->Fixup(Section->Library, OnError);
 		int IsRef;
 		if (module_import(Module, Section->Name, &IsRef, (void **)&Section->Data)) {
@@ -127,13 +125,12 @@ static uint32_t fixup_import_section(section_t *Section, jmp_buf *OnError) {
 };
 
 static uint32_t fixup_bss_section(section_t *Section, jmp_buf *OnError) {
-	if (Section->State == UNLOADED) Section->State = LOADED;
+	Section->State = LOADED;
 	return (uint32_t)Section->Data;
 };
 
 static uint32_t fixup_symbol_section(section_t *Section, jmp_buf *OnError) {
 	if (Section->State == UNLOADED) {
-		Section->State = LOADING;
 		int IsRef;
 		module_import(Symbol, Section->Name, &IsRef, (void **)&Section->Data);
 		Section->State = LOADED;

@@ -144,4 +144,12 @@
 	</add-node>
 	<attr path="/api/namespace/struct[@cname='GnomeTrigger']/field[@cname='function']" name="cname">u.function</attr>
 	<remove-node path="/api/namespace/struct[@cname='GnomeModuleInfo']/field[@cname='_options']" />
+	<remove-node path="/api/namespace/callback[@cname='GtkFileSystemModelPathFunc']" />
+	<remove-node path="/api/namespace/callback[@cname='GtkFileSystemModelFilter']" />
+	<remove-node path="/api/namespace/enum[@cname='GtkFileChooserProp']" />
+	<remove-node path="/api/namespace/enum[@cname='GtkFileSystemModelColumns']" />
+	<remove-node path="/api/namespace/object[@cname='GtkSearchEngine']" />
+	<remove-node path="/api/namespace/object[@cname='GtkQuery']" />
+	<remove-node path="/api/namespace/object[@cname='GtkToolbar']/field[@name='GtkTooltips']" />
+	<remove-node path="/api/namespace/object[@cname='GtkToolbar']/field[@name='Gpointer']" />
 </metadata>
