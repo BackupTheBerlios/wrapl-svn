@@ -22,13 +22,16 @@ extern Riva$Memory$_alloc
 
 c_data Version
 	dd Std$String$T
-	dd Std$Integer$SmallT, 5
+	dd Std$Integer$SmallT, .end - .chars
 	dd 1
-	dd Std$Integer$SmallT, 5
+	dd Std$Integer$SmallT, .end - .chars
 	dd Std$Address$T, .chars
 	dd 0, 0, 0, 0
 .chars:
-	db "0.7.1", 0
+	db "0.7."
+	incbin "version"
+	db 0
+.end:
 
 c_data WraplT
 	dd Std$Type$T
