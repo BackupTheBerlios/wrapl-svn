@@ -18,6 +18,7 @@ extern module_t *module_setup(module_t *, void *, module_importer);
 extern module_t *module_alias(const char *);
 extern module_t *module_run(const char *Path, const char *Name);
 extern module_t *module_load_file(const char *FileName);
+extern module_t *module_load_file_type(const char *FileName, const char *Type);
 
 extern int module_import(module_t *, const char *Name, int *IsRef, void **Data);
 extern void module_export(module_t *, const char *Name, int IsRef, void *Data);

@@ -100,6 +100,8 @@ int main(int Argc, char **Argv) {
 	riva_init();
 	symbol_init();
 
+	const char *Type = 0;
+
 	read_config();
 	if (ParseArgs) {
 		for (int I = 1; I < Argc; ++I) {
@@ -129,6 +131,17 @@ int main(int Argc, char **Argv) {
 					module_load(0, Argv[I]);
 				} else {
 					puts("Error: -P must be followed by a module");
+					return 1;
+				};
+				break;
+			};
+			case 't': {
+				if (Argv[I][2]) {
+					Type = Argv[I] + 2;
+				} else if (Argc > ++I) {
+					Type = Argv[I];
+				} else {
+					puts("Error: -t must be followed by a type");
 					return 1;
 				};
 				break;
@@ -192,7 +205,12 @@ finished: 0;
 	module_t *System = module_alias("Riva/System");
 	module_export(System, "_Args", 0, &Args);
 	module_export(System, "_NoOfArgs", 0, &NoOfArgs);
-	module_t *Module = module_load_file(MainModule);
+	module_t *Module;
+	if (Type) {
+		Module = module_load_file_type(MainModule, Type);
+	} else {
+		Module = module_load_file(MainModule);
+	};
 	if (Module == 0) Module = module_load(0, MainModule);
 	if (Module == 0) printf("Error: module %s not found\n", MainModule);
 #ifdef WINDOWS

@@ -61,5 +61,5 @@ GLOBAL_FUNCTION(Load, 1) {
 
 void __init(Riva$Module_t *Module) {
 	gtk_init(0, 0);
-	//Riva$Module$add_loader(".glade", glade_load);
+	Riva$Module$add_loader(".glade", glade_load);
 };

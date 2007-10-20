@@ -152,4 +152,6 @@
 	<remove-node path="/api/namespace/object[@cname='GtkQuery']" />
 	<remove-node path="/api/namespace/object[@cname='GtkToolbar']/field[@name='GtkTooltips']" />
 	<remove-node path="/api/namespace/object[@cname='GtkToolbar']/field[@name='Gpointer']" />
+	<remove-node path="/api/namespace/object[@cname='GtkObject']/method[@cname='gtk_object_get_data']" />
+	<remove-node path="/api/namespace/object[@cname='GtkObject']/method[@cname='gtk_object_set_data']" />
 </metadata>

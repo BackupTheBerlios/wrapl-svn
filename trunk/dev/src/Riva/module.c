@@ -237,7 +237,22 @@ module_t *module_load_file(const char *FileName) {
 			if (Loader->_load(Module, FileName)) return Module;
 		};
 	};
-	return 0;
+	return 0;
+};
+
+module_t *module_load_file_type(const char *FileName, const char *Type) {
+	struct stat Stat;
+	if (stat(FileName, &Stat) == 0) {
+		module_t *Module = new(module_t);
+		Module->Name = FileName;
+		Module->Import = default_import;
+		for (loader_node *Loader = Loaders; Loader; Loader = Loader->Next) {
+			if (strcmp(Loader->Extension, Type) == 0) {
+				if (Loader->_load(Module, FileName)) return Module;
+			};
+		};
+	};
+	return 0;
 };
 
 int module_import(module_t *Module, const char *Symbol, int *IsRef, void **Data) {

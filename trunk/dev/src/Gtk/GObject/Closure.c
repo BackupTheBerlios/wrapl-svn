@@ -20,7 +20,7 @@ static void __marshal_val(val_closure_t *Closure, GValue *Result, guint NoOfArgs
 		Args0[I].Ref = 0;
 	};
 	Std$Function_result Result0;
-	switch (Std$Function$call(Closure->Function, NoOfArgs, &Result0, Args0)) {
+	switch (Std$Function$invoke(Closure->Function, NoOfArgs, &Result0, Args0)) {
 	case MESSAGE:
 		if (Std$Function$call(AS, 2, &Result0, Result0.Val, 0, Std$String$T, 0) < FAILURE) {
 			printf("Warning: Closure sent message: %s.\n", Std$String$flatten(Result0.Val));
@@ -60,7 +60,7 @@ static void __marshal_ref(ref_closure_t *Closure, GValue *Result, guint NoOfArgs
 		Args0[I].Ref = 0;
 	};
 	Std$Function_result Result0;
-	switch (Std$Function$call(Closure->Function[0], NoOfArgs, &Result0, Args0)) {
+	switch (Std$Function$invoke(Closure->Function[0], NoOfArgs, &Result0, Args0)) {
 	case MESSAGE:
 		if (Std$Function$call(AS, 2, &Result0, Result0.Val, 0, Std$String$T, 0) < FAILURE) {
 			printf("Warning: Closure sent message: %s.\n", Std$String$flatten(Result0.Val));
