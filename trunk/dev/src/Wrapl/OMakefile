@@ -33,7 +33,7 @@ RivaProgram($(LIB_DIR)Wrapl, $(FILES))
 system.o: version
 
 version: :value: $(shell svnversion -n ../../..)
-	$(shell svnversion -n ../../.. > version)
+	svnversion -n ../../.. > version
 
 Wrapl: $(LIB_DIR)Wrapl.riva
 
