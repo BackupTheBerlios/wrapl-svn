@@ -30,8 +30,10 @@ $(file keywords.c): $(file keywords.lst)
 	gperf -S 3 -L C++ -C -t -K Name -Z keyword -H hash -N lookup $(file keywords.lst) > $(file keywords.c)
 
 RivaProgram($(LIB_DIR)Wrapl, $(FILES))
-wrapl.o: :value: $(shell svnversion -n)
-	echo $(shell svnversion -n) > version
+system.o: version
+
+version: :value: $(shell svnversion -n ../../..)
+	$(shell svnversion -n ../../.. > version)
 
 Wrapl: $(LIB_DIR)Wrapl.riva
 
