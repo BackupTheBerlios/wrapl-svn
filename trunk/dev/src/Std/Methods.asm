@@ -601,12 +601,19 @@ method "@", STRING, VAL, Std$Real$T
 	xor edx, edx
 	ret
 
+method "length", TYP, Std$Array$T
+	mov eax, [argument(edi).Val]
+	lea ecx, [array(eax).Length]
+	xor edx, edx
+	xor eax, eax
+	ret
+
 method "[]", TYP, Std$Array$T, SMALLINT
 	mov eax, [argument(edi + 8).Val]
 	mov eax, [small_int(eax).Value]
 	mov ecx, [argument(edi).Val]
 	mov edx, [array(ecx).Values]
-	lea edx, [edx + 8 * eax]
+	lea edx, [edx + 4 * eax]
 	mov ecx, [edx]
 	xor eax, eax
 	ret
@@ -615,6 +622,7 @@ method "apply", TYP, Std$Array$T, TYP, Std$Function$T
 	mov eax, [argument(edi).Val]
 	mov ecx, [argument(edi + 8).Val]
 	mov esi, [small_int(array(eax).Length).Value]
+	shr esi, 1
 	mov edi, [array(eax).Values]
 	mov eax, [value(ecx).Type]
 	jmp [type(eax).Invoke]
@@ -3207,6 +3215,13 @@ symbol ?init, "init"
 
 extern Std$Type$T.invoke
 extern Std$Symbol$T.invoke
+
+method "fields", TYP, Std$Type$T
+	mov ecx, [argument(edi).Val]
+	mov ecx, [type(ecx).Fields]
+	xor edx, edx
+	xor eax, eax
+	ret
 
 method "new", TYP, Std$Type$T
 	push esi

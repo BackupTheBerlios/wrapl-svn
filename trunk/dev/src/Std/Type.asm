@@ -4,11 +4,6 @@ extern Riva$Memory$_alloc
 extern Riva$Memory$_alloc_atomic
 extern Std$Object$Nil
 
-struct fields
-	.Length:	resd 1
-	.Fields:
-endstruct
-
 struct levels
 	.Length:	resd 1
 	.Levels:
@@ -69,25 +64,25 @@ func Of, 1
 	ret
 
 c_func _new
-	push byte sizeof(fields)
-	call Riva$Memory$_alloc
-	mov [esp], eax
-	push byte sizeof(levels)
-	call Riva$Memory$_alloc
-	mov [esp], eax
-	push byte 8
-	call Riva$Memory$_alloc
-	mov [esp], eax
-	push byte sizeof(type)
-	call Riva$Memory$_alloc
-	add esp, byte 4
-	mov [value(eax).Type], dword T
-	pop ecx
-	pop dword [type(eax).Levels]
-	pop dword [type(eax).Fields]
-	mov [ecx], eax
-	mov [type(eax).Types], ecx
-	ret
+;	push byte sizeof(fields)
+;	call Riva$Memory$_alloc
+;	mov [esp], eax
+;	push byte sizeof(levels)
+;	call Riva$Memory$_alloc
+;	mov [esp], eax
+;	push byte 8
+;	call Riva$Memory$_alloc
+;	mov [esp], eax
+;	push byte sizeof(type)
+;	call Riva$Memory$_alloc
+;	add esp, byte 4
+;	mov [value(eax).Type], dword T
+;	pop ecx
+;	pop dword [type(eax).Levels]
+;	pop dword [type(eax).Fields]
+;	mov [ecx], eax
+;	mov [type(eax).Types], ecx
+;	ret
 
 extern Std$Symbol$_typetable_put
 extern Std$Array$_new
