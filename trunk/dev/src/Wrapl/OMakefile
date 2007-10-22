@@ -32,8 +32,8 @@ $(file keywords.c): $(file keywords.lst)
 RivaProgram($(LIB_DIR)Wrapl, $(FILES))
 system.o: version
 
-version: :value: $(shell svnversion -n ../../..)
-	svnversion -n ../../.. > version
+version: :value: $(shell svnversion -n ../..)
+	svnversion -n ../.. > version
 
 Wrapl: $(LIB_DIR)Wrapl.riva
 
