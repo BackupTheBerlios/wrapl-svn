@@ -155,4 +155,6 @@
 	<remove-node path="/api/namespace/object[@cname='GtkObject']/method[@cname='gtk_object_get_data']" />
 	<remove-node path="/api/namespace/object[@cname='GtkObject']/method[@cname='gtk_object_set_data']" />
 	<remove-node path="/api/namespace/class[@cname='GnomeScore_']/method[@cname='gnome_score_log']" />
+	<remove-node path="/api/namespace/struct[@cname='ArtSVP']/method[@cname='art_svp_render_aa']" />
+	<remove-node path="/api/namespace/callback[@cname='RenderAaCallback']" />
 </metadata>
