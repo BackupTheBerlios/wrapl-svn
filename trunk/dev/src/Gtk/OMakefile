@@ -31,7 +31,8 @@ clean:
 	$(rm api.xml)
 	$(rm $(GTK_AUTOGEN))
 
-.SUBDIRS: GObject Gtk Gdk Pango Glade Gnome GnomeCanvas Art
+.SUBDIRS: GObject Gtk Gdk Pango Glade\
+	#Gnome GnomeCanvas Art
 
 Gtk: GtkGObject $(GTK_AUTOGEN) GtkGtk GtkGdk GtkPango GtkGlade\
 #	GtkGnome GtkGnomeCanvas GtkArt\
