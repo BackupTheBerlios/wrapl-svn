@@ -154,4 +154,5 @@
 	<remove-node path="/api/namespace/object[@cname='GtkToolbar']/field[@name='Gpointer']" />
 	<remove-node path="/api/namespace/object[@cname='GtkObject']/method[@cname='gtk_object_get_data']" />
 	<remove-node path="/api/namespace/object[@cname='GtkObject']/method[@cname='gtk_object_set_data']" />
+	<remove-node path="/api/namespace/class[@cname='GnomeScore_']/method[@cname='gnome_score_log']" />
 </metadata>
