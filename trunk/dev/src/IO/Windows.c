@@ -55,6 +55,24 @@ METHOD("Closed", TYP, T) {
 
 static void windows_close(IO$Windows_t *Stream) {
 	CloseHandle(Stream->Handle);
+	Riva$Memory$register_finalizer(Stream, 0, 0, 0, 0);
+};
+
+static void windows_finalize(IO$Windows_t *Stream, void *Data) {
+	CloseHandle(Stream->Handle);
+};
+
+void _windows_register_finalizer(IO$Windows_t *Stream) {
+	Riva$Memory$register_finalizer(Stream, windows_finalize, 0, 0, 0);
+};
+
+
+IO$Windows_t *_windows_new(Std$Type_t *Type, int Handle) {
+	IO$Windows_t *Stream = new(IO$Windows_t);
+	Stream->Type = Type;
+	Stream->Handle = Handle;
+	Riva$Memory$register_finalizer(Stream, windows_finalize, 0, 0, 0);
+	return Stream;
 };
 
 static int windows_eoi(IO$Windows_t *Stream) {

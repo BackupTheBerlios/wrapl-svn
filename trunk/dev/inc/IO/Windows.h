@@ -21,6 +21,9 @@ extern Std$Type_t IO$Windows$SeekerT[];
 extern Std$Type_t IO$Windows$TextReaderT[];
 extern Std$Type_t IO$Windows$TextWriterT[];
 
+RIVA_CFUN(IO$Windows_t *, new, Std$Type_t *, int);
+RIVA_CFUN(void, register_finalizer, IO$Windows_t *);
+
 #undef RIVA_MODULE
 
 #endif

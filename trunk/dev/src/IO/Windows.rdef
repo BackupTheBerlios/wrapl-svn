@@ -6,6 +6,8 @@ if WINDOWS then
 end
 
 export("T")
+export("_windows_new", "_new")
+export("_windows_register_finalizer", "_register_finalizer")
 export("ReaderT")
 export("WriterT")
 export("SeekerT")

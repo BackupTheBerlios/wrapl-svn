@@ -62,7 +62,7 @@ GLOBAL_FUNCTION(Open, 2) {
 		SetFilePointer(Handle, 0, 0, FILE_END);
 	};
 	Result->Val = NATIVE($new)(OpenMode.Type, Handle);
-	return Success;
+	return SUCCESS;
 #else
 	char FileName[Arg0->Length.Value + 1];
 	Std$String$flatten_to(Args[0].Val, FileName);
@@ -89,6 +89,9 @@ NATIVE(_t) *__file_open(const char *FileName, int Flags) {
     if (Handle == INVALID_HANDLE_VALUE) return 0;
 	if (Flags & IO$File$OPENAPPEND) SetFilePointer(Handle, 0, 0, FILE_END);
 	return NATIVE($new)(OpenMode.Type, Handle);
+};
+
+GLOBAL_FUNCTION(Temp, 0) {
 };
 
 #else

@@ -134,7 +134,9 @@ typedef struct listdir_resume_data {
 } listdir_resume_data;
 
 static void listdir_finalize(listdir_generator *Gen, void *Arg) {
+#ifdef LINUX
 	closedir(Gen->Dir);
+#endif
 };
 
 static long listdir_resume(listdir_resume_data *Data) {
