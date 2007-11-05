@@ -20,6 +20,7 @@ RivaProgram($(BASENAME)File, File)
 RivaProgram($(BASENAME)Terminal, Terminal)
 RivaProgram($(BASENAME)Socket, Socket)
 RivaProgram($(BASENAME)Process, Process)
+RivaProgram($(BASENAME)Buffer, Buffer)
 
 IO:\
 	$(BASENAME)File.riva\
@@ -27,6 +28,7 @@ IO:\
 	$(BASENAME)Terminal.riva\
 	$(BASENAME)Socket.riva\
 	$(PLATFORM_STREAM)\
-	$(BASENAME)Process.riva
+	$(BASENAME)Process.riva\
+	$(BASENAME)Buffer.riva
 
 .DEFAULT: IO

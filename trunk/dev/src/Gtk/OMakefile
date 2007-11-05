@@ -10,7 +10,7 @@ LDFLAGS += Std.rlib Riva.rlib
 
 RivaProgram(Mapgen, Mapgen)
 
-TypeMap.c: Mapgen.riva
+TypeMap.c: $(GTK_AUTOGEN) Mapgen.riva
 	riva Mapgen
 
 RivaProgram($(GTK_LIB_DIR)TypeMap, TypeMap)
@@ -34,6 +34,5 @@ clean:
 .SUBDIRS: GObject Gtk Gdk Pango Glade\
 	#Gnome GnomeCanvas Art
 
-Gtk: GtkGObject $(GTK_AUTOGEN) GtkGtk GtkGdk GtkPango GtkGlade\
+Gtk: GtkGObject $(GTK_AUTOGEN) GtkGtk GtkGdk GtkPango GtkGlade $(GTK_LIB_DIR)TypeMap.riva\
 #	GtkGnome GtkGnomeCanvas GtkArt\
-	$(GTK_LIB_DIR)TypeMap.riva

@@ -8,3 +8,7 @@ struct IO$String_t {
 	uint32_t BlockOffset;
 	uint32_t Offset;
 };
+
+TYPE(T, IO$Stream$Reader$T, IO$Stream$SeekerT, IO$Stream$T);
+
+
