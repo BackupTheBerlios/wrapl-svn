@@ -1,5 +1,5 @@
-.PHONY: Riva Rlink Std Util Sys IO Wrapl Xml Gtk NME clean
-.DEFAULT: Riva Rlink Std Util Sys IO Wrapl Xml
+.PHONY: Riva Rlink Std Util Sys IO Wrapl Math Xml Gtk NME clean
+.DEFAULT: Riva Rlink Std Util Sys IO Wrapl Math Xml
 
 CFLAGS += -O3 -fexpensive-optimizations -fomit-frame-pointer -w -D_GNU_SOURCE -fdata-sections -ffunction-sections
 ASFLAGS += -Ov
@@ -52,6 +52,10 @@ section
 section
 	vmount($(SRC_DIR)Wrapl, $(OBJ_DIR)Wrapl)
 	.SUBDIRS: $(OBJ_DIR)Wrapl
+
+section
+	vmount($(SRC_DIR)Math, $(OBJ_DIR)Math)
+	.SUBDIRS: $(OBJ_DIR)Math
 
 section
 	vmount($(SRC_DIR)Xml, $(OBJ_DIR)Xml)

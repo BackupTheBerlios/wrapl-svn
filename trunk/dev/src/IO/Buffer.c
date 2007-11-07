@@ -35,9 +35,9 @@ METHOD("read", TYP, T, TYP, Std$Address$T, TYP, Std$Integer$SmallT) {
 	node_t *Node = Stream->Current;
 	uint32_t Total = 0;
 	const char *Src = Node->Chars;
-	const char *Dst = ((Std$Address_t *)Args[1])->Value;
-	uint32_t Rem0 = Chars->Length - Stream->Offset;
-	uint32_t Rem1 = ((Std$Integer_smallt *)Args[2])->Value;
+	const char *Dst = ((Std$Address_t *)Args[1].Val)->Value;
+	uint32_t Rem0 = Node->Length - Stream->Offset;
+	uint32_t Rem1 = ((Std$Integer_smallt *)Args[2].Val)->Value;
 	while (Rem0 <= Rem1) {
 		Dst = mempcpy(Dst, Src, Rem0);
 		Rem1 -= Rem0;
