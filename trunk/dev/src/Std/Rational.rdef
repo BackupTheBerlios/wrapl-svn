@@ -1,0 +1,14 @@
+require("Std/Methods")
+library("libgmp.rlib")
+
+if WINDOWS then
+	_export = export
+	export = function(Name)
+		_export("_" .. Name, Name)
+	end
+end
+
+export("T")
+export("_alloc")
+export("_new")
+symbol("Rational.New", "New")

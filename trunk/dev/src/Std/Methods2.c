@@ -1130,3 +1130,327 @@ METHOD("skip", TYP, Std$String$T, TYP, Std$String$T, TYP, Std$Integer$SmallT) {
 		return FAILURE;
 	};
 };
+
+METHOD("/", TYP, Std$Integer$BigT, TYP, Std$Integer$BigT) {
+	Std$Integer_bigt *A = Args[0].Val;
+	Std$Integer_bigt *B = Args[1].Val;
+	mpq_t C;
+	mpq_init(C);
+	mpz_set(mpq_numref(C), A->Value);
+	mpz_set(mpq_denref(C), B->Value);
+	mpq_canonicalize(C);
+	if (mpz_cmp_si(mpq_denref(C), 1)) {
+		Result->Val = Std$Rational$new(C);
+		return SUCCESS;
+	} else if (mpz_fits_slong_p(mpq_numref(C))) {
+		Result->Val = Std$Integer$new_small(mpz_get_si(mpq_numref(C)));
+		return SUCCESS;
+	} else {
+		Result->Val = Std$Integer$new_big(mpq_numref(C));
+		return SUCCESS;
+	};
+};
+
+METHOD("@", TYP, Std$Rational$T, VAL, Std$String$T) {
+	Std$Rational_t *R = Args[0].Val;
+	Result->Val = Std$String$new(mpq_get_str(0, 10, R->Value));
+	return SUCCESS;
+};
+
+METHOD("-", TYP, Std$Rational$T) {
+	Std$Rational_t *A = Args[0].Val;
+	Std$Rational_t *C = new(Std$Rational_t);
+	C->Type = Std$Rational$T;
+	mpq_init(C->Value);
+	mpq_neg(C->Value, A->Value);
+	Result->Val = C;
+	return SUCCESS;
+};
+
+METHOD("+", TYP, Std$Rational$T, TYP, Std$Rational$T) {
+	Std$Rational_t *A = Args[0].Val;
+	Std$Rational_t *B = Args[1].Val;
+	Std$Rational_t *C = new(Std$Rational_t);
+	C->Type = Std$Rational$T;
+	mpq_init(C->Value);
+	mpq_add(C->Value, A->Value, B->Value);
+	Result->Val = C;
+	return SUCCESS;
+};
+	
+METHOD("-", TYP, Std$Rational$T, TYP, Std$Rational$T) {
+	Std$Rational_t *A = Args[0].Val;
+	Std$Rational_t *B = Args[1].Val;
+	Std$Rational_t *C = new(Std$Rational_t);
+	C->Type = Std$Rational$T;
+	mpq_init(C->Value);
+	mpq_sub(C->Value, A->Value, B->Value);
+	Result->Val = C;
+	return SUCCESS;
+};
+
+METHOD("*", TYP, Std$Rational$T, TYP, Std$Rational$T) {
+	Std$Rational_t *A = Args[0].Val;
+	Std$Rational_t *B = Args[1].Val;
+	Std$Rational_t *C = new(Std$Rational_t);
+	C->Type = Std$Rational$T;
+	mpq_init(C->Value);
+	mpq_mul(C->Value, A->Value, B->Value);
+	Result->Val = C;
+	return SUCCESS;
+};
+
+METHOD("/", TYP, Std$Rational$T, TYP, Std$Rational$T) {
+	Std$Rational_t *A = Args[0].Val;
+	Std$Rational_t *B = Args[1].Val;
+	Std$Rational_t *C = new(Std$Rational_t);
+	C->Type = Std$Rational$T;
+	mpq_init(C->Value);
+	mpq_div(C->Value, A->Value, B->Value);
+	Result->Val = C;
+	return SUCCESS;
+};
+
+METHOD("+", TYP, Std$Rational$T, TYP, Std$Integer$SmallT) {
+	Std$Rational_t *A = Args[0].Val;
+	mpq_t B;
+	mpq_init(B);
+	mpq_set_si(B, ((Std$Integer_smallt *)Args[1].Val)->Value, 1);
+	Std$Rational_t *C = new(Std$Rational_t);
+	C->Type = Std$Rational$T;
+	mpq_init(C->Value);
+	mpq_add(C->Value, A->Value, B);
+	Result->Val = C;
+	return SUCCESS;
+};
+
+METHOD("-", TYP, Std$Rational$T, TYP, Std$Integer$SmallT) {
+	Std$Rational_t *A = Args[0].Val;
+	mpq_t B;
+	mpq_init(B);
+	mpq_set_si(B, ((Std$Integer_smallt *)Args[1].Val)->Value, 1);
+	Std$Rational_t *C = new(Std$Rational_t);
+	C->Type = Std$Rational$T;
+	mpq_init(C->Value);
+	mpq_sub(C->Value, A->Value, B);
+	Result->Val = C;
+	return SUCCESS;
+};
+
+METHOD("*", TYP, Std$Rational$T, TYP, Std$Integer$SmallT) {
+	Std$Rational_t *A = Args[0].Val;
+	mpq_t B;
+	mpq_init(B);
+	mpq_set_si(B, ((Std$Integer_smallt *)Args[1].Val)->Value, 1);
+	Std$Rational_t *C = new(Std$Rational_t);
+	C->Type = Std$Rational$T;
+	mpq_init(C->Value);
+	mpq_mul(C->Value, A->Value, B);
+	Result->Val = C;
+	return SUCCESS;
+};
+
+METHOD("/", TYP, Std$Rational$T, TYP, Std$Integer$SmallT) {
+	Std$Rational_t *A = Args[0].Val;
+	mpq_t B;
+	mpq_init(B);
+	mpq_set_si(B, ((Std$Integer_smallt *)Args[1].Val)->Value, 1);
+	Std$Rational_t *C = new(Std$Rational_t);
+	C->Type = Std$Rational$T;
+	mpq_init(C->Value);
+	mpq_div(C->Value, A->Value, B);
+	Result->Val = C;
+	return SUCCESS;
+};
+
+METHOD("+", TYP, Std$Integer$SmallT, TYP, Std$Rational$T) {
+	mpq_t A;
+	mpq_init(A);
+	mpq_set_si(A, ((Std$Integer_smallt *)Args[0].Val)->Value, 1);
+	Std$Rational_t *B = Args[1].Val;
+	Std$Rational_t *C = new(Std$Rational_t);
+	C->Type = Std$Rational$T;
+	mpq_init(C->Value);
+	mpq_add(C->Value, A, B->Value);
+	Result->Val = C;
+	return SUCCESS;
+};
+
+METHOD("-", TYP, Std$Integer$SmallT, TYP, Std$Rational$T) {
+	mpq_t A;
+	mpq_init(A);
+	mpq_set_si(A, ((Std$Integer_smallt *)Args[0].Val)->Value, 1);
+	Std$Rational_t *B = Args[1].Val;
+	Std$Rational_t *C = new(Std$Rational_t);
+	C->Type = Std$Rational$T;
+	mpq_init(C->Value);
+	mpq_sub(C->Value, A, B->Value);
+	Result->Val = C;
+	return SUCCESS;
+};
+
+METHOD("*", TYP, Std$Integer$SmallT, TYP, Std$Rational$T) {
+	mpq_t A;
+	mpq_init(A);
+	mpq_set_si(A, ((Std$Integer_smallt *)Args[0].Val)->Value, 1);
+	Std$Rational_t *B = Args[1].Val;
+	Std$Rational_t *C = new(Std$Rational_t);
+	C->Type = Std$Rational$T;
+	mpq_init(C->Value);
+	mpq_mul(C->Value, A, B->Value);
+	Result->Val = C;
+	return SUCCESS;
+};
+
+METHOD("/", TYP, Std$Integer$SmallT, TYP, Std$Rational$T) {
+	mpq_t A;
+	mpq_init(A);
+	mpq_set_si(A, ((Std$Integer_smallt *)Args[0].Val)->Value, 1);
+	Std$Rational_t *B = Args[1].Val;
+	Std$Rational_t *C = new(Std$Rational_t);
+	C->Type = Std$Rational$T;
+	mpq_init(C->Value);
+	mpq_div(C->Value, A, B->Value);
+	Result->Val = C;
+	return SUCCESS;
+};
+
+METHOD("+", TYP, Std$Rational$T, TYP, Std$Integer$BigT) {
+	Std$Rational_t *A = Args[0].Val;
+	mpq_t B;
+	mpq_init(B);
+	mpq_set_z(B, ((Std$Integer_bigt *)Args[1].Val)->Value);
+	Std$Rational_t *C = new(Std$Rational_t);
+	C->Type = Std$Rational$T;
+	mpq_init(C->Value);
+	mpq_add(C->Value, A->Value, B);
+	Result->Val = C;
+	return SUCCESS;
+};
+
+METHOD("-", TYP, Std$Rational$T, TYP, Std$Integer$BigT) {
+	Std$Rational_t *A = Args[0].Val;
+	mpq_t B;
+	mpq_init(B);
+	mpq_set_z(B, ((Std$Integer_bigt *)Args[1].Val)->Value);
+	Std$Rational_t *C = new(Std$Rational_t);
+	C->Type = Std$Rational$T;
+	mpq_init(C->Value);
+	mpq_sub(C->Value, A->Value, B);
+	Result->Val = C;
+	return SUCCESS;
+};
+
+METHOD("*", TYP, Std$Rational$T, TYP, Std$Integer$BigT) {
+	Std$Rational_t *A = Args[0].Val;
+	mpq_t B;
+	mpq_init(B);
+	mpq_set_z(B, ((Std$Integer_bigt *)Args[1].Val)->Value);
+	Std$Rational_t *C = new(Std$Rational_t);
+	C->Type = Std$Rational$T;
+	mpq_init(C->Value);
+	mpq_mul(C->Value, A->Value, B);
+	Result->Val = C;
+	return SUCCESS;
+};
+
+METHOD("/", TYP, Std$Rational$T, TYP, Std$Integer$BigT) {
+	Std$Rational_t *A = Args[0].Val;
+	mpq_t B;
+	mpq_init(B);
+	mpq_set_z(B, ((Std$Integer_bigt *)Args[1].Val)->Value);
+	Std$Rational_t *C = new(Std$Rational_t);
+	C->Type = Std$Rational$T;
+	mpq_init(C->Value);
+	mpq_div(C->Value, A->Value, B);
+	Result->Val = C;
+	return SUCCESS;
+};
+
+METHOD("+", TYP, Std$Integer$BigT, TYP, Std$Rational$T) {
+	mpq_t A;
+	mpq_init(A);
+	mpq_set_z(A, ((Std$Integer_bigt *)Args[0].Val)->Value);
+	Std$Rational_t *B = Args[1].Val;
+	Std$Rational_t *C = new(Std$Rational_t);
+	C->Type = Std$Rational$T;
+	mpq_init(C->Value);
+	mpq_add(C->Value, A, B->Value);
+	Result->Val = C;
+	return SUCCESS;
+};
+
+METHOD("-", TYP, Std$Integer$BigT, TYP, Std$Rational$T) {
+	mpq_t A;
+	mpq_init(A);
+	mpq_set_z(A, ((Std$Integer_bigt *)Args[0].Val)->Value);
+	Std$Rational_t *B = Args[1].Val;
+	Std$Rational_t *C = new(Std$Rational_t);
+	C->Type = Std$Rational$T;
+	mpq_init(C->Value);
+	mpq_sub(C->Value, A, B->Value);
+	Result->Val = C;
+	return SUCCESS;
+};
+
+METHOD("*", TYP, Std$Integer$BigT, TYP, Std$Rational$T) {
+	mpq_t A;
+	mpq_init(A);
+	mpq_set_z(A, ((Std$Integer_bigt *)Args[0].Val)->Value);
+	Std$Rational_t *B = Args[1].Val;
+	Std$Rational_t *C = new(Std$Rational_t);
+	C->Type = Std$Rational$T;
+	mpq_init(C->Value);
+	mpq_mul(C->Value, A, B->Value);
+	Result->Val = C;
+	return SUCCESS;
+};
+
+METHOD("/", TYP, Std$Integer$BigT, TYP, Std$Rational$T) {
+	mpq_t A;
+	mpq_init(A);
+	mpq_set_z(A, ((Std$Integer_bigt *)Args[0].Val)->Value);
+	Std$Rational_t *B = Args[1].Val;
+	Std$Rational_t *C = new(Std$Rational_t);
+	C->Type = Std$Rational$T;
+	mpq_init(C->Value);
+	mpq_div(C->Value, A, B->Value);
+	Result->Val = C;
+	return SUCCESS;
+};
+
+METHOD("<", TYP, Std$Rational$T, TYP, Std$Rational$T) {
+	Std$Rational_t *A = Args[0].Val;
+	Std$Rational_t *B = Args[1].Val;
+	return mpq_cmp(A->Value, B->Value) < 0 ? SUCCESS : FAILURE;
+};
+
+METHOD(">", TYP, Std$Rational$T, TYP, Std$Rational$T) {
+	Std$Rational_t *A = Args[0].Val;
+	Std$Rational_t *B = Args[1].Val;
+	return mpq_cmp(A->Value, B->Value) > 0 ? SUCCESS : FAILURE;
+};
+
+METHOD("<=", TYP, Std$Rational$T, TYP, Std$Rational$T) {
+	Std$Rational_t *A = Args[0].Val;
+	Std$Rational_t *B = Args[1].Val;
+	return mpq_cmp(A->Value, B->Value) <= 0 ? SUCCESS : FAILURE;
+};
+
+METHOD(">=", TYP, Std$Rational$T, TYP, Std$Rational$T) {
+	Std$Rational_t *A = Args[0].Val;
+	Std$Rational_t *B = Args[1].Val;
+	return mpq_cmp(A->Value, B->Value) >= 0 ? SUCCESS : FAILURE;
+};
+
+METHOD("=", TYP, Std$Rational$T, TYP, Std$Rational$T) {
+	Std$Rational_t *A = Args[0].Val;
+	Std$Rational_t *B = Args[1].Val;
+	return mpq_equal(A->Value, B->Value) ? SUCCESS : FAILURE;
+};
+
+METHOD("~=", TYP, Std$Rational$T, TYP, Std$Rational$T) {
+	Std$Rational_t *A = Args[0].Val;
+	Std$Rational_t *B = Args[1].Val;
+	return mpq_equal(A->Value, B->Value) ? FAILURE : SUCCESS;
+};

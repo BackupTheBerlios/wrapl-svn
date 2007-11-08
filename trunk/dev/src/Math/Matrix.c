@@ -2,13 +2,13 @@
 #include <Riva/Memory.h>
 #include <stdint.h>
 
-TYPE(T);
-
 typedef struct matrix_t {
 	Std$Type_t *Type;
 	Std$Integer_smallt NoOfRows, NoOfCols;
 	Std$Object_t *Entries[];
 } matrix_t;
+
+TYPE(T);
 
 GLOBAL_FUNCTION(New, 2) {
 	uint32_t NoOfRows = ((Std$Integer_smallt *)Args[0].Val)->Value;

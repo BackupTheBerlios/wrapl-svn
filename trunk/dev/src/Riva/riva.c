@@ -150,8 +150,8 @@ static int riva_import(riva_t *Riva, const char *Symbol, int *IsRef, void **Data
 		jmp_buf OnError[1];
 		if (setjmp(OnError)) return 0;
 		*IsRef = Export->Flags & EXP_VARIABLE;
-		*Data = Export->Section->Data + Export->Offset;
 		Export->Section->Fixup(Export->Section, OnError);
+		*Data = Export->Section->Data + Export->Offset;		
 		return 1;
 	} else {
 		return 0;

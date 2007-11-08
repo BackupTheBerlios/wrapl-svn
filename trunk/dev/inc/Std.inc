@@ -136,6 +136,10 @@ struct big_int, value
 	.Value: resd 3
 endstruct
 
+struct rational, value
+	.Value: resd 6
+endstruct
+
 struct real, value
 	.Value:	resq 1
 endstruct

@@ -123,7 +123,20 @@ c_func _new_small ;(long  Value)
 	mov [small_int(eax).Value], ecx
 	ret
 
+extern __gmpz_init_set
 c_func _new_big ;(mpz_t Value)
+	push byte sizeof(big_int)
+	call Riva$Memory$_alloc_small
+	pop ecx
+	mov [value(eax).Type], dword BigT
+	push eax
+	lea eax, [big_int(eax).Value]
+	push dword [esp + 8]
+	push eax
+	call __gmpz_init_set
+	add esp, byte 8
+	pop eax
+	ret
 
 extern Riva$Memory$_realloc
 extern __gmp_set_memory_functions

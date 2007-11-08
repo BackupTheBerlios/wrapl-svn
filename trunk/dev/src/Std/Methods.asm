@@ -777,7 +777,7 @@ method "*", SMALLINT, SMALLINT
 	xor eax, eax
 	ret
 
-method "/", SMALLINT, SMALLINT
+method "div", SMALLINT, SMALLINT
 	call Std$Integer$_alloc_small
 	mov ecx, eax
 	mov eax, [argument(edi).Val]
@@ -786,6 +786,49 @@ method "/", SMALLINT, SMALLINT
 	cdq
 	idiv dword [small_int(ebx).Value]
 	mov [small_int(ecx).Value], eax
+	xor edx, edx
+	xor eax, eax
+	ret
+
+extern Std$Rational$_alloc
+
+extern __gmpq_set_si
+extern __gmpq_canonicalize
+method "/", SMALLINT, SMALLINT
+	mov eax, [argument(edi).Val]
+	mov ebx, [argument(edi + 8).Val]
+	mov eax, [small_int(eax).Value]
+	cdq
+	idiv dword [small_int(ebx).Value]
+	test edx, edx
+	jnz .rational
+	push eax
+	call Std$Integer$_alloc_small
+	pop dword [small_int(eax).Value]
+	mov ecx, eax
+	xor edx, edx
+	xor eax, eax
+	ret
+.rational:
+	call Std$Rational$_alloc
+	push eax
+	lea eax, [rational(eax).Value]
+	mov ebx, [argument(edi + 8).Val]
+	mov edx, [argument(edi).Val]
+	mov ebx, [small_int(ebx).Value]
+	mov edx, [small_int(edx).Value]
+	test ebx, ebx
+	jns .positive
+	neg ebx
+	neg edx
+.positive:
+	push ebx
+	push edx
+	push eax
+	call __gmpq_set_si
+	call __gmpq_canonicalize
+	add esp, byte 12
+	pop ecx
 	xor edx, edx
 	xor eax, eax
 	ret
@@ -1243,7 +1286,7 @@ method "*", BIGINT, BIGINT
 	jmp finish_integer
 
 extern __gmpz_tdiv_q
-method "/", BIGINT, BIGINT
+method "div", BIGINT, BIGINT
 	sub esp, byte 12
 	push esp
 	call __gmpz_init
@@ -1499,7 +1542,7 @@ method "*", BIGINT, SMALLINT
 
 extern __gmpz_tdiv_q_ui
 extern __gmpz_neg
-method "/", BIGINT, SMALLINT
+method "div", BIGINT, SMALLINT
 	sub esp, byte 12
 	push esp
 	call __gmpz_init
@@ -1888,7 +1931,7 @@ method "*", SMALLINT, BIGINT
 	add esp, byte 12
 	jmp finish_integer
 
-method "/", SMALLINT, BIGINT
+method "div", SMALLINT, BIGINT
 section .data
 	mov ecx, .zero
 	xor edx, edx

@@ -6,6 +6,7 @@
 #include <Std/Integer.h>
 #include <Std/Methods.h>
 #include <Std/Object.h>
+#include <Std/Rational.h>
 #include <Std/Real.h>
 #include <Std/String.h>
 #include <Std/Symbol.h>

@@ -114,6 +114,7 @@ static void new_export(const char *Internal, const char *External, uint32_t Flag
 	Export->Internal = Internal;
 	Export->External = External;
 	Export->Flags = Flags;
+	Export->Section = 0;
 	Export->Next = 0;
 	++NoOfExports;
 	if (Exports.Head) {
@@ -804,6 +805,36 @@ static int definition_file_export(lua_State *State) {
     return 0;
 };
 
+static int definition_file_symbol(lua_State *State) {
+    const char *Internal = strdup(lua_tostring(State, 1));
+    const char *External = strdup(lua_tostring(State, 2));
+ 
+    //printf("Adding symbol: %s -> %s\n", Internal, External);
+
+    section_t *Symbol = (section_t *)stringtable_get(SymbolTable, Internal);
+	if (!Symbol) {
+		Internal = strdup(Internal);
+		Symbol = (section_t *)new_symbol_section(Internal);
+		stringtable_put(SymbolTable, Internal, Symbol);
+	};
+	section_require(Symbol);
+	export_t *Export = new(export_t);
+	Export->Internal = Internal;
+	Export->External = External;
+	Export->Section = Symbol;
+	Export->Offset = 0;
+	Export->Flags = 0;
+	Export->Next = 0;
+	++NoOfExports;
+	if (Exports.Head) {
+		Exports.Tail->Next = Export;
+		Exports.Tail = Export;
+	} else {
+		Exports.Head = Exports.Tail = Export;
+	};
+    return 0;
+};
+
 static int definition_file_require(lua_State *State) {
 	char *Library = lua_tostring(State, 1);
 	if (Library[0] == '.') {
@@ -817,6 +848,7 @@ static int definition_file_require(lua_State *State) {
 static void add_definition_file(const char *FileName) {
     lua_State *State = luaL_newstate();
     lua_register(State, "export", definition_file_export);
+	lua_register(State, "symbol", definition_file_symbol);
     lua_register(State, "library", definition_file_library);
     lua_register(State, "require", definition_file_require);
     lua_pushstring(State, Platform);
@@ -917,13 +949,15 @@ int main(int Argc, char **Argv) {
 			};
 		};
 		for (export_t *Export = Exports.Head; Export; Export = Export->Next) {
-			symbol_t *Symbol = (symbol_t *)stringtable_get(GlobalTable, Export->Internal);
-			if (Symbol) {
-				section_require(Export->Section = Symbol->Section);
-				Export->Offset = Symbol->Offset;
-			} else {
-				printf("exported symbol not found: %s.\n", Export->Internal);
-				exit(1);
+			if (Export->Section == 0) {
+				symbol_t *Symbol = (symbol_t *)stringtable_get(GlobalTable, Export->Internal);
+				if (Symbol) {
+					section_require(Export->Section = Symbol->Section);
+					Export->Offset = Symbol->Offset;
+				} else {
+					printf("exported symbol not found: %s.\n", Export->Internal);
+					exit(1);
+				};
 			};
 		};
 		if (ListFile) {

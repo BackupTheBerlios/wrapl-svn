@@ -14,6 +14,7 @@ RivaProgram($(BASENAME)Integer, Integer)
 RivaProgram($(BASENAME)Methods, Methods Methods2)
 RivaProgram($(BASENAME)List, List)
 RivaProgram($(BASENAME)Object, Object)
+RivaProgram($(BASENAME)Rational, Rational)
 RivaProgram($(BASENAME)Real, Real)
 RivaProgram($(BASENAME)String, String String2)
 RivaProgram($(BASENAME)Symbol, Symbol)
@@ -30,6 +31,7 @@ Std:\
 	$(BASENAME)List.riva\
 	$(BASENAME)Methods.riva\
 	$(BASENAME)Object.riva\
+	$(BASENAME)Rational.riva\
 	$(BASENAME)Real.riva\
 	$(BASENAME)String.riva\
 	$(BASENAME)Symbol.riva\

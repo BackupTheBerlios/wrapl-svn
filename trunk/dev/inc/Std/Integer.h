@@ -1,6 +1,7 @@
 #ifndef LANG_INTEGER_H
 #define LANG_INTEGER_H
 
+#include <gmp.h>
 #include <Std/Object.h>
 #include <Std/Function.h>
 
@@ -17,7 +18,7 @@ struct Std$Integer_smallt {
 
 struct Std$Integer_bigt {
 	Std$Type_t *Type;
-	//mpz_t Value;
+	mpz_t Value;
 };
 
 extern Std$Type_t Std$Integer$SmallT[];
@@ -25,7 +26,7 @@ extern Std$Type_t Std$Integer$BigT[];
 extern Std$Function_t Std$Integer$ToSmallSmall[];
 
 RIVA_CFUN(Std$Integer_smallt *, new_small, long);
-//RIVA_CFUN(Std$Object_t *, new_big, mpz_t);
+RIVA_CFUN(Std$Object_t *, new_big, mpz_t);
 RIVA_CFUN(Std$Object_t *, new_string, const char *);
 
 #undef RIVA_MODULE
