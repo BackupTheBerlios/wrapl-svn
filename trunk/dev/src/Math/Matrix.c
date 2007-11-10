@@ -33,6 +33,16 @@ GLOBAL_FUNCTION(New, 2) {
 	return SUCCESS;
 };
 
+METHOD("rows", TYP, T) {
+	Result->Val = &((matrix_t *)Args[0].Val)->NoOfRows;
+	return SUCCESS;
+};
+
+METHOD("cols", TYP, T) {
+	Result->Val = &((matrix_t *)Args[0].Val)->NoOfCols;
+	return SUCCESS;
+};
+
 static Std$Object_t *LeftBracket, *RightBracket, *CommaSpace, *LeftRightBracket, *ValueString;
 
 SYMBOL($AT, "@");
@@ -213,6 +223,72 @@ static Std$Object_t *determinant2(matrix_t *M, int N, int *Rows, int *Cols) {
 	return Det;
 };
 
+inline matrix_t *inverse(matrix_t *M) {
+	int N = M->NoOfRows.Value;
+	if (N != M->NoOfCols.Value) return 0;
+	matrix_t *C = Riva$Memory$alloc(sizeof(matrix_t) + N * N * sizeof(Std$Object_t **));
+	C->Type = T;
+	C->NoOfRows.Type = C->NoOfCols.Type = Std$Integer$SmallT;
+	C->NoOfRows.Value = N;
+	C->NoOfCols.Value = N;
+
+	int Rows[N], Cols[N];
+	for (int I = 0; I < N; ++I) Rows[I] = Cols[I] = I;
+	Std$Object_t *Det = determinant2(M, N, Rows, Cols);
+	for (int I = 1; I < N; ++I) Rows[I - 1] = I;
+
+	for (int I = 0; I < N; ++I) {
+		for (int J = 1; J < N; ++J) Cols[J - 1] = J;
+		for (int J = 0; J < N; ++J) {
+			Std$Function_result Buffer;
+			if ((I + J) % 2) {
+				Std$Function$call($SUB, 1, &Buffer, determinant2(M, N - 1, Rows, Cols), 0);
+				Std$Function$call($DIV, 2, &Buffer, Buffer.Val, 0, Det, 0);
+			} else {
+				Std$Function$call($DIV, 2, &Buffer, determinant2(M, N - 1, Rows, Cols), 0, Det, 0);
+			};
+			C->Entries[I + J * N] = Buffer.Val;
+			Cols[J] = J;
+		};
+		Rows[I] = I;
+	};
+	return C;
+};
+
+METHOD("/", TYP, T, TYP, T) {
+	matrix_t *A = Args[0].Val;
+	matrix_t *B = inverse(Args[1].Val);
+	uint32_t NoOfRows = A->NoOfRows.Value;
+	uint32_t NoOfCols = B->NoOfCols.Value;
+	uint32_t Temp = A->NoOfCols.Value;
+	if (Temp != B->NoOfRows.Value) {
+		Result->Val = Std$String$new("Matrices not of compatible dimension");
+		return MESSAGE;
+	};
+	matrix_t *C = Riva$Memory$alloc(sizeof(matrix_t) + NoOfCols * NoOfRows * sizeof(Std$Object_t **));
+	C->Type = T;
+	C->NoOfRows.Type = C->NoOfCols.Type = Std$Integer$SmallT;
+	C->NoOfRows.Value = NoOfRows;
+	C->NoOfCols.Value = NoOfCols;
+	for (int I = 0; I < NoOfRows; ++I) {
+		for (int J = 0; J < NoOfCols; ++J) {
+			Std$Function_result Buffer;
+			Std$Object_t **AP = A->Entries + I * Temp;
+			Std$Object_t **BP = B->Entries + J;
+			Std$Function$call($MUL, 2, &Buffer, *(AP), 0, *(BP), 0);
+			Std$Object_t *Value = Buffer.Val;
+			for (int K = Temp; --K;) {
+				Std$Function$call($MUL, 2, &Buffer, *(++AP), 0, *(BP += NoOfCols), 0);
+				Std$Function$call($ADD, 2, &Buffer, Value, 0, Buffer.Val, 0);
+				Value = Buffer.Val;
+			};
+			C->Entries[I * NoOfCols + J] = Value;
+		};
+	};
+	Result->Val = C;
+	return SUCCESS;
+};
+
 METHOD("det", TYP, T) {
 	matrix_t *M = Args[0].Val;
 	int N = M->NoOfRows.Value;
@@ -297,6 +373,195 @@ METHOD("inv", TYP, T) {
 	};
 
 	Result->Val = C;
+	return SUCCESS;
+};
+
+METHOD("+", TYP, T, ANY) {
+	matrix_t *A = Args[0].Val;
+	Std$Object_t *B = Args[1].Val;
+	uint32_t NoOfRows = A->NoOfRows.Value;
+	uint32_t NoOfCols = A->NoOfCols.Value;
+	matrix_t *C = Riva$Memory$alloc(sizeof(matrix_t) + NoOfCols * NoOfRows * sizeof(Std$Object_t **));
+	C->Type = T;
+	C->NoOfRows.Type = C->NoOfCols.Type = Std$Integer$SmallT;
+	C->NoOfRows.Value = NoOfRows;
+	C->NoOfCols.Value = NoOfCols;
+	memcpy(C->Entries, A->Entries, NoOfRows * NoOfCols * sizeof(Std$Object_t **));
+	Std$Object_t **Ptr = C->Entries;
+	for (int I = (NoOfRows < NoOfCols ? NoOfRows : NoOfCols); --I >= 0;) {
+		Std$Function_result Buffer;
+		Std$Function$call($ADD, 2, &Buffer, Ptr[0], 0, B, 0);
+		Ptr[0] = Buffer.Val;
+		Ptr += NoOfCols + 1;
+	};
+	Result->Val = C;
+	return SUCCESS;
+};
+
+METHOD("-", TYP, T, ANY) {
+	matrix_t *A = Args[0].Val;
+	Std$Object_t *B = Args[1].Val;
+	uint32_t NoOfRows = A->NoOfRows.Value;
+	uint32_t NoOfCols = A->NoOfCols.Value;
+	matrix_t *C = Riva$Memory$alloc(sizeof(matrix_t) + NoOfCols * NoOfRows * sizeof(Std$Object_t **));
+	C->Type = T;
+	C->NoOfRows.Type = C->NoOfCols.Type = Std$Integer$SmallT;
+	C->NoOfRows.Value = NoOfRows;
+	C->NoOfCols.Value = NoOfCols;
+	memcpy(C->Entries, A->Entries, NoOfRows * NoOfCols * sizeof(Std$Object_t **));
+	Std$Object_t **Ptr = C->Entries;
+	for (int I = (NoOfRows < NoOfCols ? NoOfRows : NoOfCols); --I >= 0;) {
+		Std$Function_result Buffer;
+		Std$Function$call($SUB, 2, &Buffer, Ptr[0], 0, B, 0);
+		Ptr[0] = Buffer.Val;
+		Ptr += NoOfCols + 1;
+	};
+	Result->Val = C;
+	return SUCCESS;
+};
+
+METHOD("+", ANY, TYP, T) {
+	matrix_t *A = Args[1].Val;
+	Std$Object_t *B = Args[0].Val;
+	uint32_t NoOfRows = A->NoOfRows.Value;
+	uint32_t NoOfCols = A->NoOfCols.Value;
+	matrix_t *C = Riva$Memory$alloc(sizeof(matrix_t) + NoOfCols * NoOfRows * sizeof(Std$Object_t **));
+	C->Type = T;
+	C->NoOfRows.Type = C->NoOfCols.Type = Std$Integer$SmallT;
+	C->NoOfRows.Value = NoOfRows;
+	C->NoOfCols.Value = NoOfCols;
+	memcpy(C->Entries, A->Entries, NoOfRows * NoOfCols * sizeof(Std$Object_t **));
+	Std$Object_t **Ptr = C->Entries;
+	for (int I = (NoOfRows < NoOfCols ? NoOfRows : NoOfCols); --I >= 0;) {
+		Std$Function_result Buffer;
+		Std$Function$call($ADD, 2, &Buffer, B, 0, Ptr[0], 0);
+		Ptr[0] = Buffer.Val;
+		Ptr += NoOfCols + 1;
+	};
+	Result->Val = C;
+	return SUCCESS;
+};
+
+METHOD("-", ANY, TYP, T) {
+	matrix_t *A = Args[1].Val;
+	Std$Object_t *B = Args[0].Val;
+	uint32_t NoOfRows = A->NoOfRows.Value;
+	uint32_t NoOfCols = A->NoOfCols.Value;
+	matrix_t *C = Riva$Memory$alloc(sizeof(matrix_t) + NoOfCols * NoOfRows * sizeof(Std$Object_t **));
+	C->Type = T;
+	C->NoOfRows.Type = C->NoOfCols.Type = Std$Integer$SmallT;
+	C->NoOfRows.Value = NoOfRows;
+	C->NoOfCols.Value = NoOfCols;
+	memcpy(C->Entries, A->Entries, NoOfRows * NoOfCols * sizeof(Std$Object_t **));
+	Std$Object_t **Ptr = C->Entries;
+	for (int I = (NoOfRows < NoOfCols ? NoOfRows : NoOfCols); --I >= 0;) {
+		Std$Function_result Buffer;
+		Std$Function$call($SUB, 2, &Buffer, B, 0, Ptr[0], 0);
+		Ptr[0] = Buffer.Val;
+		Ptr += NoOfCols + 1;
+	};
+	Result->Val = C;
+	return SUCCESS;
+};
+
+METHOD("*", TYP, T, ANY) {
+	matrix_t *A = Args[0].Val;
+	Std$Object_t *B = Args[1].Val;
+	uint32_t NoOfRows = A->NoOfRows.Value;
+	uint32_t NoOfCols = A->NoOfCols.Value;
+	matrix_t *C = Riva$Memory$alloc(sizeof(matrix_t) + NoOfCols * NoOfRows * sizeof(Std$Object_t **));
+	C->Type = T;
+	C->NoOfRows.Type = C->NoOfCols.Type = Std$Integer$SmallT;
+	C->NoOfRows.Value = NoOfRows;
+	C->NoOfCols.Value = NoOfCols;
+	Std$Object_t **AP = A->Entries;
+	Std$Object_t **CP = C->Entries;
+	for (int I = NoOfRows * NoOfCols; --I >= 0;) {
+		Std$Function_result Buffer;
+		Std$Function$call($MUL, 2, &Buffer, *(AP++), 0, B, 0);
+		*(CP++) = Buffer.Val;
+	};
+	Result->Val = C;
+	return SUCCESS;
+};
+
+METHOD("*", ANY, TYP, T) {
+	matrix_t *A = Args[1].Val;
+	Std$Object_t *B = Args[0].Val;
+	uint32_t NoOfRows = A->NoOfRows.Value;
+	uint32_t NoOfCols = A->NoOfCols.Value;
+	matrix_t *C = Riva$Memory$alloc(sizeof(matrix_t) + NoOfCols * NoOfRows * sizeof(Std$Object_t **));
+	C->Type = T;
+	C->NoOfRows.Type = C->NoOfCols.Type = Std$Integer$SmallT;
+	C->NoOfRows.Value = NoOfRows;
+	C->NoOfCols.Value = NoOfCols;
+	Std$Object_t **AP = A->Entries;
+	Std$Object_t **CP = C->Entries;
+	for (int I = NoOfRows * NoOfCols; --I >= 0;) {
+		Std$Function_result Buffer;
+		Std$Function$call($MUL, 2, &Buffer, B, 0, *(AP++), 0);
+		*(CP++) = Buffer.Val;
+	};
+	Result->Val = C;
+	return SUCCESS;
+};
+
+METHOD("/", TYP, T, ANY) {
+	matrix_t *A = Args[0].Val;
+	Std$Object_t *B = Args[1].Val;
+	uint32_t NoOfRows = A->NoOfRows.Value;
+	uint32_t NoOfCols = A->NoOfCols.Value;
+	matrix_t *C = Riva$Memory$alloc(sizeof(matrix_t) + NoOfCols * NoOfRows * sizeof(Std$Object_t **));
+	C->Type = T;
+	C->NoOfRows.Type = C->NoOfCols.Type = Std$Integer$SmallT;
+	C->NoOfRows.Value = NoOfRows;
+	C->NoOfCols.Value = NoOfCols;
+	Std$Object_t **AP = A->Entries;
+	Std$Object_t **CP = C->Entries;
+	for (int I = NoOfRows * NoOfCols; --I >= 0;) {
+		Std$Function_result Buffer;
+		Std$Function$call($DIV, 2, &Buffer, *(AP++), 0, B, 0);
+		*(CP++) = Buffer.Val;
+	};
+	Result->Val = C;
+	return SUCCESS;
+};
+
+METHOD("/", ANY, TYP, T) {
+	matrix_t *A = inverse(Args[1].Val);
+	Std$Object_t *B = Args[0].Val;
+	uint32_t NoOfRows = A->NoOfRows.Value;
+	uint32_t NoOfCols = A->NoOfCols.Value;
+	matrix_t *C = Riva$Memory$alloc(sizeof(matrix_t) + NoOfCols * NoOfRows * sizeof(Std$Object_t **));
+	C->Type = T;
+	C->NoOfRows.Type = C->NoOfCols.Type = Std$Integer$SmallT;
+	C->NoOfRows.Value = NoOfRows;
+	C->NoOfCols.Value = NoOfCols;
+	Std$Object_t **AP = A->Entries;
+	Std$Object_t **CP = C->Entries;
+	for (int I = NoOfRows * NoOfCols; --I >= 0;) {
+		Std$Function_result Buffer;
+		Std$Function$call($MUL, 2, &Buffer, *(AP++), 0, B, 0);
+		*(CP++) = Buffer.Val;
+	};
+	Result->Val = C;
+	return SUCCESS;
+};
+
+SYMBOL($is0, "is0");
+
+METHOD("is0", TYP, T) {
+	matrix_t *A = Args[0].Val;
+	Std$Object_t **AP = A->Entries;
+	for (int I = A->NoOfRows.Value * A->NoOfCols.Value; --I >= 0;) {
+		Std$Function_result Buffer;
+		switch (Std$Function$call($is0, 1, &Buffer, *(AP++), 0)) {
+		case FAILURE: return FAILURE;
+		case MESSAGE: Result->Val = Buffer.Val; return MESSAGE;
+		default: break;
+		};
+	};
+	Result->Val = A;
 	return SUCCESS;
 };
 

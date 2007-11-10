@@ -4,10 +4,12 @@ CFLAGS += -std=gnu99
 LDFLAGS += Std.rlib Riva.rlib
 
 RivaProgram($(BASENAME)Matrix, Matrix)
+RivaProgram($(BASENAME)Polynomial, Polynomial)
 RivaProgram($(BASENAME)Methods, Methods)
 
 Math:\
 	$(BASENAME)Matrix.riva\
+	$(BASENAME)Polynomial.riva\
 	$(BASENAME)Methods.riva
 
 .DEFAULT: Math

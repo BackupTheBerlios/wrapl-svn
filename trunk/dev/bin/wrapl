@@ -13,6 +13,8 @@ Out:write("Interactive Wrapl Version: " + Wrapl.Version + "\n");
 VAR session <- Wrapl.SessionNew(In);
 VAR result;
 
+Wrapl.SessionVar(session, "_", result);
+
 REP (
 	Out:write("--> ");
 	(result <- Wrapl.SessionEval(session)) => (

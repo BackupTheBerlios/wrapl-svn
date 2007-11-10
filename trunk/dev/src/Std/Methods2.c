@@ -1151,6 +1151,46 @@ METHOD("/", TYP, Std$Integer$BigT, TYP, Std$Integer$BigT) {
 	};
 };
 
+METHOD("/", TYP, Std$Integer$SmallT, TYP, Std$Integer$BigT) {
+	Std$Integer_smallt *A = Args[0].Val;
+	Std$Integer_bigt *B = Args[1].Val;
+	mpq_t C;
+	mpq_init(C);
+	mpz_set_si(mpq_numref(C), A->Value);
+	mpz_set(mpq_denref(C), B->Value);
+	mpq_canonicalize(C);
+	if (mpz_cmp_si(mpq_denref(C), 1)) {
+		Result->Val = Std$Rational$new(C);
+		return SUCCESS;
+	} else if (mpz_fits_slong_p(mpq_numref(C))) {
+		Result->Val = Std$Integer$new_small(mpz_get_si(mpq_numref(C)));
+		return SUCCESS;
+	} else {
+		Result->Val = Std$Integer$new_big(mpq_numref(C));
+		return SUCCESS;
+	};
+};
+
+METHOD("/", TYP, Std$Integer$BigT, TYP, Std$Integer$SmallT) {
+	Std$Integer_bigt *A = Args[0].Val;
+	Std$Integer_smallt *B = Args[1].Val;
+	mpq_t C;
+	mpq_init(C);
+	mpz_set(mpq_numref(C), A->Value);
+	mpz_set_si(mpq_denref(C), B->Value);
+	mpq_canonicalize(C);
+	if (mpz_cmp_si(mpq_denref(C), 1)) {
+		Result->Val = Std$Rational$new(C);
+		return SUCCESS;
+	} else if (mpz_fits_slong_p(mpq_numref(C))) {
+		Result->Val = Std$Integer$new_small(mpz_get_si(mpq_numref(C)));
+		return SUCCESS;
+	} else {
+		Result->Val = Std$Integer$new_big(mpq_numref(C));
+		return SUCCESS;
+	};
+};
+
 METHOD("@", TYP, Std$Rational$T, VAL, Std$String$T) {
 	Std$Rational_t *R = Args[0].Val;
 	Result->Val = Std$String$new(mpq_get_str(0, 10, R->Value));
@@ -1422,35 +1462,114 @@ METHOD("/", TYP, Std$Integer$BigT, TYP, Std$Rational$T) {
 METHOD("<", TYP, Std$Rational$T, TYP, Std$Rational$T) {
 	Std$Rational_t *A = Args[0].Val;
 	Std$Rational_t *B = Args[1].Val;
-	return mpq_cmp(A->Value, B->Value) < 0 ? SUCCESS : FAILURE;
+	if (mpq_cmp(A->Value, B->Value) < 0) {Result->Val = B; return SUCCESS;} else {return FAILURE;};
 };
 
 METHOD(">", TYP, Std$Rational$T, TYP, Std$Rational$T) {
 	Std$Rational_t *A = Args[0].Val;
 	Std$Rational_t *B = Args[1].Val;
-	return mpq_cmp(A->Value, B->Value) > 0 ? SUCCESS : FAILURE;
+	if (mpq_cmp(A->Value, B->Value) > 0) {Result->Val = B; return SUCCESS;} else {return FAILURE;};
 };
 
 METHOD("<=", TYP, Std$Rational$T, TYP, Std$Rational$T) {
 	Std$Rational_t *A = Args[0].Val;
 	Std$Rational_t *B = Args[1].Val;
-	return mpq_cmp(A->Value, B->Value) <= 0 ? SUCCESS : FAILURE;
+	if (mpq_cmp(A->Value, B->Value) <= 0) {Result->Val = B; return SUCCESS;} else {return FAILURE;};
 };
 
 METHOD(">=", TYP, Std$Rational$T, TYP, Std$Rational$T) {
 	Std$Rational_t *A = Args[0].Val;
 	Std$Rational_t *B = Args[1].Val;
-	return mpq_cmp(A->Value, B->Value) >= 0 ? SUCCESS : FAILURE;
+	if (mpq_cmp(A->Value, B->Value) >= 0) {Result->Val = B; return SUCCESS;} else {return FAILURE;};
 };
 
 METHOD("=", TYP, Std$Rational$T, TYP, Std$Rational$T) {
 	Std$Rational_t *A = Args[0].Val;
 	Std$Rational_t *B = Args[1].Val;
-	return mpq_equal(A->Value, B->Value) ? SUCCESS : FAILURE;
+	if (mpq_equal(A->Value, B->Value)) {Result->Val = B; return SUCCESS;} else {return FAILURE;};
 };
 
 METHOD("~=", TYP, Std$Rational$T, TYP, Std$Rational$T) {
 	Std$Rational_t *A = Args[0].Val;
 	Std$Rational_t *B = Args[1].Val;
-	return mpq_equal(A->Value, B->Value) ? FAILURE : SUCCESS;
+	if (mpq_equal(A->Value, B->Value)) {Result->Val = B; return SUCCESS;} else {return FAILURE;};
+};
+
+METHOD("<", TYP, Std$Rational$T, TYP, Std$Integer$SmallT) {
+	Std$Rational_t *A = Args[0].Val;
+	Std$Integer_smallt *B = Args[1].Val;
+	if (mpq_cmp_si(A->Value, B->Value, 1) < 0) {Result->Val = B; return SUCCESS;} else {return FAILURE;};
+};
+
+METHOD(">", TYP, Std$Rational$T, TYP, Std$Integer$SmallT) {
+	Std$Rational_t *A = Args[0].Val;
+	Std$Integer_smallt *B = Args[1].Val;
+	if (mpq_cmp_si(A->Value, B->Value, 1) > 0) {Result->Val = B; return SUCCESS;} else {return FAILURE;};
+};
+
+METHOD("<=", TYP, Std$Rational$T, TYP, Std$Integer$SmallT) {
+	Std$Rational_t *A = Args[0].Val;
+	Std$Integer_smallt *B = Args[1].Val;
+	if (mpq_cmp_si(A->Value, B->Value, 1) <= 0) {Result->Val = B; return SUCCESS;} else {return FAILURE;};
+};
+
+METHOD(">=", TYP, Std$Rational$T, TYP, Std$Integer$SmallT) {
+	Std$Rational_t *A = Args[0].Val;
+	Std$Integer_smallt *B = Args[1].Val;
+	if (mpq_cmp_si(A->Value, B->Value, 1) >= 0) {Result->Val = B; return SUCCESS;} else {return FAILURE;};
+};
+
+METHOD("=", TYP, Std$Rational$T, TYP, Std$Integer$SmallT) {
+	Std$Rational_t *A = Args[0].Val;
+	Std$Integer_smallt *B = Args[1].Val;
+	if (mpq_cmp_si(A->Value, B->Value, 1) == 0) {Result->Val = B; return SUCCESS;} else {return FAILURE;};
+};
+
+METHOD("~=", TYP, Std$Rational$T, TYP, Std$Integer$SmallT) {
+	Std$Rational_t *A = Args[0].Val;
+	Std$Integer_smallt *B = Args[1].Val;
+	if (mpq_cmp_si(A->Value, B->Value, 1) != 0) {Result->Val = B; return SUCCESS;} else {return FAILURE;};
+};
+
+METHOD("<", TYP, Std$Integer$SmallT, TYP, Std$Rational$T) {
+	Std$Rational_t *A = Args[1].Val;
+	Std$Integer_smallt *B = Args[0].Val;
+	if (mpq_cmp_si(A->Value, B->Value, 1) >= 0) {Result->Val = A; return SUCCESS;} else {return FAILURE;};
+};
+
+METHOD(">", TYP, Std$Integer$SmallT, TYP, Std$Rational$T) {
+	Std$Rational_t *A = Args[1].Val;
+	Std$Integer_smallt *B = Args[0].Val;
+	if (mpq_cmp_si(A->Value, B->Value, 1) <= 0) {Result->Val = A; return SUCCESS;} else {return FAILURE;};
+};
+
+METHOD("<=", TYP, Std$Integer$SmallT, TYP, Std$Rational$T) {
+	Std$Rational_t *A = Args[1].Val;
+	Std$Integer_smallt *B = Args[0].Val;
+	if (mpq_cmp_si(A->Value, B->Value, 1) > 0) {Result->Val = Args[1].Val; return SUCCESS;} else {return FAILURE;};
+};
+
+METHOD(">=", TYP, Std$Integer$SmallT, TYP, Std$Rational$T) {
+	Std$Rational_t *A = Args[1].Val;
+	Std$Integer_smallt *B = Args[0].Val;
+	if (mpq_cmp_si(A->Value, B->Value, 1) < 0) {Result->Val = A; return SUCCESS;} else {return FAILURE;};
+};
+
+METHOD("=", TYP, Std$Integer$SmallT, TYP, Std$Rational$T) {
+	Std$Rational_t *A = Args[1].Val;
+	Std$Integer_smallt *B = Args[0].Val;
+	if (mpq_cmp_si(A->Value, B->Value, 1) != 0) {Result->Val = A; return SUCCESS;} else {return FAILURE;};
+};
+
+METHOD("~=", TYP, Std$Integer$SmallT, TYP, Std$Rational$T) {
+	Std$Rational_t *A = Args[1].Val;
+	Std$Integer_smallt *B = Args[0].Val;
+	if (mpq_cmp_si(A->Value, B->Value, 1) == 0) {Result->Val = A; return SUCCESS;} else {return FAILURE;};
+};
+
+METHOD("is0", TYP, Std$Rational$T) {
+	Std$Rational_t *R = Args[0].Val;
+	if (mpq_sgn(R->Value)) return FAILURE;
+	Result->Val = R;
+	return SUCCESS;
 };

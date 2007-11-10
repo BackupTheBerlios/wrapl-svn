@@ -497,12 +497,12 @@ c_func _add
 	pop dword [small_int(string(eax).Length).Value]
 	mov edx, edi
 	lea edi, [string(eax).Blocks]
-	mov ebx, [argument(edx).Val]
+	mov ebx, [esp + 16]
 	lea esi, [string(ebx).Blocks]
 	mov ecx, [string(ebx).Count]
 	shl ecx, 2
 	rep movsd
-	mov ebx, [argument(edx + 8).Val]
+	mov ebx, [esp + 20]
 	lea esi, [string(ebx).Blocks]
 	mov ecx, [string(ebx).Count]
 	shl ecx, 2

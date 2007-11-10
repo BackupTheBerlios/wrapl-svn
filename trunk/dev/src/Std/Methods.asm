@@ -1080,6 +1080,14 @@ method ">", SMALLINT, SMALLINT
 	inc eax
 	ret
 
+method "is0", SMALLINT
+	mov ecx, [argument(edi).Val]
+	xor eax, eax
+	cmp [small_int(ecx).Value], dword 0
+	setne al
+	xor edx, edx
+	ret
+
 method "=", ADDRESS, ADDRESS
 method "=", SMALLINT, SMALLINT
 	mov eax, [argument(edi).Val]
