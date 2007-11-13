@@ -7,6 +7,16 @@ IMP Std.Address;
 IMP IO.Terminal USE In, Out;
 IMP Wrapl;
 IMP Sys.Module;
+IMP Sys.Process;
+IMP Sys.Config;
+
+VAR arg;
+EVERY WHEN arg <- Process.Args:values
+IS "-u" DO
+	Config.Set("Wrapl.AllowUndeclared")
+DO
+	Out:writes("Warning: unknown argument: ", arg, ".\n")
+;
 
 Out:write("Interactive Wrapl Version: " + Wrapl.Version + "\n");
 
