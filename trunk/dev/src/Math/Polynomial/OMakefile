@@ -1,0 +1,11 @@
+BASENAME = $(LIB_DIR)Math$(DIRSEP)Polynomial.fset$(DIRSEP)
+
+CFLAGS += -std=gnu99
+LDFLAGS += Std.rlib Riva.rlib
+
+RivaProgram($(BASENAME)PolynomialC, PolynomialC)
+
+Math:\
+	$(BASENAME)PolynomialC.riva
+
+.DEFAULT: Math
