@@ -55,11 +55,11 @@ void _export(Sys$Module_t *Module, const char *Name, int IsRef, void *Data) {
 };
 
 void _set_path(Sys$Module_t *Module, const char *Path) {
-	Riva$Module$set_path(Module, Path);
+	Riva$Module$set_path(Module->Handle, Path);
 };
 
 const char *_get_path(Sys$Module_t *Module) {
-	return Riva$Module$get_path(Module);
+	return Riva$Module$get_path(Module->Handle);
 };
 
 GLOBAL_FUNCTION(Load, 2) {

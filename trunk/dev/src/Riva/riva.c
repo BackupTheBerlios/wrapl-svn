@@ -174,10 +174,7 @@ static int riva_load(module_t *Module, const char *FileName) {
 	module_set_path(Module, LoadPath);
 
 	uint32_t Magic; gzread(File, &Magic, 4);
-	if (Magic != 0x41564952) {
-		//log_errorf("Error: %s is not a valid riva module\n", FileName);
-		return 0;
-	};
+	if (Magic != 0x41564952) return 0;
 
 	uint32_t NoOfSections; gzread(File, &NoOfSections, 4);
 	uint32_t NoOfExports; gzread(File, &NoOfExports, 4);

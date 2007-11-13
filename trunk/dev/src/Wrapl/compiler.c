@@ -2,6 +2,7 @@
 #include "missing.h"
 
 #include <Std.h>
+#include <Riva/Config.h>
 
 #include <stdlib.h>
 #include <string.h>
@@ -237,23 +238,26 @@ operand_t *compiler_t::lookup(int LineNo, const char *Name) {DEBUG
 			};
 		};
 	};
-	/*switch (this->Scope->Type) {
-	case scope_t::SC_GLOBAL: {
-		operand_t *Operand = new operand_t;
-		Operand->Type = operand_t::GVAR;
-		Std$Object_t **Address = new Std$Object_t *;
-		Address[0] = Std$Object$Nil;
-		Operand->Address = Address;
-		declare(Name, Operand);
-		return Operand;
+	if (Riva$Config$get("Wrapl.AllowUndeclared")) {
+		switch (this->Scope->Type) {
+		case scope_t::SC_GLOBAL: {
+			operand_t *Operand = new operand_t;
+			Operand->Type = operand_t::GVAR;
+			Std$Object_t **Address = new Std$Object_t *;
+			Address[0] = Std$Object$Nil;
+			Operand->Address = Address;
+			declare(Name, Operand);
+			return Operand;
+		};
+		case scope_t::SC_LOCAL: {
+			operand_t *Operand = new_local();
+			declare(Name, Operand);
+			return Operand;
+		};
+		};
+	} else {
+		raise_error(LineNo, "Error: identifier %s not declared", Name);
 	};
-	case scope_t::SC_LOCAL: {
-		operand_t *Operand = new_local();
-		declare(Name, Operand);
-		return Operand;
-	};
-	};*/
-	raise_error(LineNo, "Error: identifier %s not declared", Name);
 };
 
 #if defined(PARSER_LISTING) || defined(ASSEMBLER_LISTING)

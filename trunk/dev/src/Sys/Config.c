@@ -19,3 +19,8 @@ GLOBAL_FUNCTION(Set, 1) {
 	};
 	return SUCCESS;
 };
+
+GLOBAL_FUNCTION(UnSet, 1) {
+	Riva$Config$set(Std$String$flatten(Args[0].Val), 0);
+	return SUCCESS;
+};

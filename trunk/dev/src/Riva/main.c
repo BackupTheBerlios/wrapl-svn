@@ -21,6 +21,7 @@
 #include "riva.h"
 #include "native.h"
 #include "directory.h"
+#include "fileset.h"
 
 static int BatchMode = 0;
 static int ParseArgs = 0;
@@ -97,6 +98,7 @@ int main(int Argc, char **Argv) {
 	thread_init();
 	directory_init();
 	native_init();
+	fileset_init();
 	riva_init();
 	symbol_init();
 
