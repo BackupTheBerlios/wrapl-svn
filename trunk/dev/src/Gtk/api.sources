@@ -29,6 +29,9 @@
 			<namespace name="Art">
 				<dir>/usr/include/libart-2.0/libart_lgpl/</dir>
 			</namespace>
+                        <namespace name="Cairo">
+                                <dir>/usr/include/cairo/</dir>
+                        </namespace>
 		</library>
 	</api>
  </gapi-parser-input>

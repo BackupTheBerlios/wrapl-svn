@@ -51,7 +51,7 @@ gobject:name <- "Object";
 gobject:cname <- "GObject";
 gobject:rtype <- "Gtk$GObject$Object$T";
 gobject:ctype <- "GObject*";
-gobject:headers <- [];
+gobject:headers <- ["#include <Gtk/GObject/Object.h>"];
 gobject:libraries <- ["Gtk/GObject/Object.rlib"];
 Type.Define("GObject*", gobject);
 

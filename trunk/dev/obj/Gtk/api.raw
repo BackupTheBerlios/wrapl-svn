@@ -34656,4 +34656,192 @@
       </method>
     </class>
   </namespace>
+  <namespace name="Cairo" library="libgtk">
+    <enum name="CairoAntialiasT" cname="cairo_antialias_t" type="enum">
+      <member cname="CAIRO_ANTIALIAS_DEFAULT" name="Default" />
+      <member cname="CAIRO_ANTIALIAS_NONE" name="None" />
+      <member cname="CAIRO_ANTIALIAS_GRAY" name="Gray" />
+      <member cname="CAIRO_ANTIALIAS_SUBPIXEL" name="Subpixel" />
+    </enum>
+    <enum name="CairoContentT" cname="cairo_content_t" type="enum">
+      <member cname="CAIRO_CONTENT_COLOR" name="Color" value="0x1000" />
+      <member cname="CAIRO_CONTENT_ALPHA" name="Alpha" value="0x2000" />
+      <member cname="CAIRO_CONTENT_COLOR_ALPHA" name="ColorAlpha" value="0x3000" />
+    </enum>
+    <enum name="CairoFillRuleT" cname="cairo_fill_rule_t" type="enum">
+      <member cname="CAIRO_FILL_RULE_WINDING" name="Winding" />
+      <member cname="CAIRO_FILL_RULE_EVEN_ODD" name="EvenOdd" />
+    </enum>
+    <enum name="CairoFilterT" cname="cairo_filter_t" type="enum">
+      <member cname="CAIRO_FILTER_FAST" name="Fast" />
+      <member cname="CAIRO_FILTER_GOOD" name="Good" />
+      <member cname="CAIRO_FILTER_BEST" name="Best" />
+      <member cname="CAIRO_FILTER_NEAREST" name="Nearest" />
+      <member cname="CAIRO_FILTER_BILINEAR" name="Bilinear" />
+      <member cname="CAIRO_FILTER_GAUSSIAN" name="Gaussian" />
+    </enum>
+    <enum name="CairoFontSlantT" cname="cairo_font_slant_t" type="enum">
+      <member cname="CAIRO_FONT_SLANT_NORMAL" name="Normal" />
+      <member cname="CAIRO_FONT_SLANT_ITALIC" name="Italic" />
+      <member cname="CAIRO_FONT_SLANT_OBLIQUE" name="Oblique" />
+    </enum>
+    <enum name="CairoFontTypeT" cname="cairo_font_type_t" type="enum">
+      <member cname="CAIRO_FONT_TYPE_TOY" name="Toy" />
+      <member cname="CAIRO_FONT_TYPE_FT" name="Ft" />
+      <member cname="CAIRO_FONT_TYPE_WIN32" name="Win32" />
+      <member cname="CAIRO_FONT_TYPE_ATSUI" name="Atsui" />
+    </enum>
+    <enum name="CairoFontWeightT" cname="cairo_font_weight_t" type="enum">
+      <member cname="CAIRO_FONT_WEIGHT_NORMAL" name="Normal" />
+      <member cname="CAIRO_FONT_WEIGHT_BOLD" name="Bold" />
+    </enum>
+    <enum name="CairoHintMetricsT" cname="cairo_hint_metrics_t" type="enum">
+      <member cname="CAIRO_HINT_METRICS_DEFAULT" name="Default" />
+      <member cname="CAIRO_HINT_METRICS_OFF" name="Off" />
+      <member cname="CAIRO_HINT_METRICS_ON" name="On" />
+    </enum>
+    <enum name="CairoHintStyleT" cname="cairo_hint_style_t" type="enum">
+      <member cname="CAIRO_HINT_STYLE_DEFAULT" name="Default" />
+      <member cname="CAIRO_HINT_STYLE_NONE" name="None" />
+      <member cname="CAIRO_HINT_STYLE_SLIGHT" name="Slight" />
+      <member cname="CAIRO_HINT_STYLE_MEDIUM" name="Medium" />
+      <member cname="CAIRO_HINT_STYLE_FULL" name="Full" />
+    </enum>
+    <enum name="CairoLineCapT" cname="cairo_line_cap_t" type="enum">
+      <member cname="CAIRO_LINE_CAP_BUTT" name="Butt" />
+      <member cname="CAIRO_LINE_CAP_ROUND" name="Round" />
+      <member cname="CAIRO_LINE_CAP_SQUARE" name="Square" />
+    </enum>
+    <enum name="CairoLineJoinT" cname="cairo_line_join_t" type="enum">
+      <member cname="CAIRO_LINE_JOIN_MITER" name="Miter" />
+      <member cname="CAIRO_LINE_JOIN_ROUND" name="Round" />
+      <member cname="CAIRO_LINE_JOIN_BEVEL" name="Bevel" />
+    </enum>
+    <enum name="CairoOperatorT" cname="cairo_operator_t" type="enum">
+      <member cname="CAIRO_OPERATOR_CLEAR" name="Clear" />
+      <member cname="CAIRO_OPERATOR_SOURCE" name="Source" />
+      <member cname="CAIRO_OPERATOR_OVER" name="Over" />
+      <member cname="CAIRO_OPERATOR_IN" name="In" />
+      <member cname="CAIRO_OPERATOR_OUT" name="Out" />
+      <member cname="CAIRO_OPERATOR_ATOP" name="Atop" />
+      <member cname="CAIRO_OPERATOR_DEST" name="Dest" />
+      <member cname="CAIRO_OPERATOR_DEST_OVER" name="DestOver" />
+      <member cname="CAIRO_OPERATOR_DEST_IN" name="DestIn" />
+      <member cname="CAIRO_OPERATOR_DEST_OUT" name="DestOut" />
+      <member cname="CAIRO_OPERATOR_DEST_ATOP" name="DestAtop" />
+      <member cname="CAIRO_OPERATOR_XOR" name="Xor" />
+      <member cname="CAIRO_OPERATOR_ADD" name="Add" />
+      <member cname="CAIRO_OPERATOR_SATURATE" name="Saturate" />
+    </enum>
+    <enum name="CairoPatternTypeT" cname="cairo_pattern_type_t" type="enum">
+      <member cname="CAIRO_PATTERN_TYPE_SOLID" name="Solid" />
+      <member cname="CAIRO_PATTERN_TYPE_SURFACE" name="Surface" />
+      <member cname="CAIRO_PATTERN_TYPE_LINEAR" name="Linear" />
+      <member cname="CAIRO_PATTERN_TYPE_RADIAL" name="Radial" />
+    </enum>
+    <enum name="CairoStatusT" cname="cairo_status_t" type="enum">
+      <member cname="CAIRO_STATUS_SUCCESS" name="Success" />
+      <member cname="CAIRO_STATUS_NO_MEMORY" name="NoMemory" />
+      <member cname="CAIRO_STATUS_INVALID_RESTORE" name="InvalidRestore" />
+      <member cname="CAIRO_STATUS_INVALID_POP_GROUP" name="InvalidPopGroup" />
+      <member cname="CAIRO_STATUS_NO_CURRENT_POINT" name="NoCurrentPoint" />
+      <member cname="CAIRO_STATUS_INVALID_MATRIX" name="InvalidMatrix" />
+      <member cname="CAIRO_STATUS_INVALID_STATUS" name="InvalidStatus" />
+      <member cname="CAIRO_STATUS_NULL_POINTER" name="NullPointer" />
+      <member cname="CAIRO_STATUS_INVALID_STRING" name="InvalidString" />
+      <member cname="CAIRO_STATUS_INVALID_PATH_DATA" name="InvalidPathData" />
+      <member cname="CAIRO_STATUS_READ_ERROR" name="ReadError" />
+      <member cname="CAIRO_STATUS_WRITE_ERROR" name="WriteError" />
+      <member cname="CAIRO_STATUS_SURFACE_FINISHED" name="SurfaceFinished" />
+      <member cname="CAIRO_STATUS_SURFACE_TYPE_MISMATCH" name="SurfaceTypeMismatch" />
+      <member cname="CAIRO_STATUS_PATTERN_TYPE_MISMATCH" name="PatternTypeMismatch" />
+      <member cname="CAIRO_STATUS_INVALID_CONTENT" name="InvalidContent" />
+      <member cname="CAIRO_STATUS_INVALID_FORMAT" name="InvalidFormat" />
+      <member cname="CAIRO_STATUS_INVALID_VISUAL" name="InvalidVisual" />
+      <member cname="CAIRO_STATUS_FILE_NOT_FOUND" name="FileNotFound" />
+      <member cname="CAIRO_STATUS_INVALID_DASH" name="InvalidDash" />
+      <member cname="CAIRO_STATUS_INVALID_DSC_COMMENT" name="InvalidDscComment" />
+      <member cname="CAIRO_STATUS_INVALID_INDEX" name="InvalidIndex" />
+      <member cname="CAIRO_STATUS_CLIP_NOT_REPRESENTABLE" name="ClipNotRepresentable" />
+    </enum>
+    <enum name="CairoSubpixelOrderT" cname="cairo_subpixel_order_t" type="enum">
+      <member cname="CAIRO_SUBPIXEL_ORDER_DEFAULT" name="Default" />
+      <member cname="CAIRO_SUBPIXEL_ORDER_RGB" name="Rgb" />
+      <member cname="CAIRO_SUBPIXEL_ORDER_BGR" name="Bgr" />
+      <member cname="CAIRO_SUBPIXEL_ORDER_VRGB" name="Vrgb" />
+      <member cname="CAIRO_SUBPIXEL_ORDER_VBGR" name="Vbgr" />
+    </enum>
+    <enum name="CairoSurfaceTypeT" cname="cairo_surface_type_t" type="enum">
+      <member cname="CAIRO_SURFACE_TYPE_IMAGE" name="Image" />
+      <member cname="CAIRO_SURFACE_TYPE_PDF" name="Pdf" />
+      <member cname="CAIRO_SURFACE_TYPE_PS" name="Ps" />
+      <member cname="CAIRO_SURFACE_TYPE_XLIB" name="Xlib" />
+      <member cname="CAIRO_SURFACE_TYPE_XCB" name="Xcb" />
+      <member cname="CAIRO_SURFACE_TYPE_GLITZ" name="Glitz" />
+      <member cname="CAIRO_SURFACE_TYPE_QUARTZ" name="Quartz" />
+      <member cname="CAIRO_SURFACE_TYPE_WIN32" name="Win32" />
+      <member cname="CAIRO_SURFACE_TYPE_BEOS" name="Beos" />
+      <member cname="CAIRO_SURFACE_TYPE_DIRECTFB" name="Directfb" />
+      <member cname="CAIRO_SURFACE_TYPE_SVG" name="Svg" />
+      <member cname="CAIRO_SURFACE_TYPE_OS2" name="Os2" />
+    </enum>
+    <enum name="CairoSvgVersionT" cname="cairo_svg_version_t" type="enum">
+      <member cname="CAIRO_SVG_VERSION_1_1" name="1_" />
+      <member cname="CAIRO_SVG_VERSION_1_2" name="Two_" />
+    </enum>
+    <callback name="CairoDestroyFuncT" cname="cairo_destroy_func_t">
+      <return-type type="void" />
+      <parameters>
+        <parameter type="void*" name="data" />
+      </parameters>
+    </callback>
+    <callback name="CairoReadFuncT" cname="cairo_read_func_t">
+      <return-type type="cairo_status_t" />
+      <parameters>
+        <parameter type="void*" name="closure" />
+        <parameter type="unsigned-char*" name="data" />
+        <parameter type="unsigned-int" name="length" />
+      </parameters>
+    </callback>
+    <callback name="CairoWriteFuncT" cname="cairo_write_func_t">
+      <return-type type="cairo_status_t" />
+      <parameters>
+        <parameter type="void*" name="closure" />
+        <parameter type="const-unsigned-char*" name="data" />
+        <parameter type="unsigned-int" name="length" />
+      </parameters>
+    </callback>
+    <alias name="CairoBoolT" cname="cairo_bool_t" type="int" />
+    <struct name="CairoFontExtentsT" cname="cairo_font_extents_t">
+      <field name="Ascent" cname="ascent" type="double" />
+      <field name="Descent" cname="descent" type="double" />
+      <field name="Height" cname="height" type="double" />
+      <field name="MaxXAdvance" cname="max_x_advance" type="double" />
+      <field name="MaxYAdvance" cname="max_y_advance" type="double" />
+    </struct>
+    <struct name="CairoFontFaceT" cname="cairo_font_face_t" opaque="true" />
+    <struct name="CairoFontOptionsT" cname="cairo_font_options_t" opaque="true" />
+    <struct name="CairoGlyphT" cname="cairo_glyph_t">
+      <field name="Index" cname="index" type="unsigned long" />
+      <field name="X" cname="x" type="double" />
+      <field name="Y" cname="y" type="double" />
+    </struct>
+    <struct name="CairoMatrixT" cname="cairo_matrix_t" opaque="true" />
+    <struct name="CairoPathT" cname="cairo_path_t" opaque="true" />
+    <struct name="CairoPatternT" cname="cairo_pattern_t" opaque="true" />
+    <struct name="CairoRectangleListT" cname="cairo_rectangle_list_t" opaque="true" />
+    <struct name="CairoRectangleT" cname="cairo_rectangle_t" opaque="true" />
+    <struct name="CairoScaledFontT" cname="cairo_scaled_font_t" opaque="true" />
+    <struct name="CairoSurfaceT" cname="cairo_surface_t" opaque="true" />
+    <struct name="CairoT" cname="cairo_t" opaque="true" />
+    <struct name="CairoTextExtentsT" cname="cairo_text_extents_t">
+      <field name="XBearing" cname="x_bearing" type="double" />
+      <field name="YBearing" cname="y_bearing" type="double" />
+      <field name="Width" cname="width" type="double" />
+      <field name="Height" cname="height" type="double" />
+      <field name="XAdvance" cname="x_advance" type="double" />
+      <field name="YAdvance" cname="y_advance" type="double" />
+    </struct>
+    <struct name="CairoUserDataKeyT" cname="cairo_user_data_key_t" opaque="true" />
+  </namespace>
 </api>

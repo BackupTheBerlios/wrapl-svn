@@ -144,98 +144,6 @@ static char *scan_string_next(const char **Next, int Index) {
 	};
 };
 
-static Std$String_t *scan_string_block_next(scanner_t *Scanner, const char *EndString, int EndLength, int Index, bool *ExprMode) {
-	const char *Line = Scanner->NextChar;
-	const char *Find = strchr(Line, '$');
-	if (Find) {
-		if (Find[1] == ';') {
-			int Length = Find + 1 - Line;
-			char *Chars = Riva$Memory$alloc(Length + 1);
-			memcpy(Chars, Line, Length);
-			Chars[Length] = 0;
-			Scanner->NextChar = Find + 2;
-			Std$String_t *String = scan_string_block_next(Scanner, EndString, EndLength, Index + 2, ExprMode);
-			String->Length.Value += Length;
-			String->Blocks[Index].Length.Type = Std$Integer$SmallT;
-			String->Blocks[Index].Length.Value = Length;
-			String->Blocks[Index].Chars.Type = Std$Address$T;
-			String->Blocks[Index].Chars.Value = Line;
-			return String;
-		} else if (Find != Line) {
-			int Length = Find - Line;
-			char *Chars = Riva$Memory$alloc(Length + 1);
-			memcpy(Chars, Line, Length);
-			Chars[Length] = 0;
-			Std$String_t *String = (Std$String_t *)Riva$Memory$alloc(sizeof(Std$String_t) + (Index + 2) * sizeof(Std$String_block));
-			String->Type = Std$String$T;
-			String->Length.Type = Std$Integer$SmallT;
-			String->Count = Index + 1;
-			Scanner->NextChar = Find + 1;
-			*ExprMode = true;
-			String->Length.Value += Length;
-			String->Blocks[Index].Length.Type = Std$Integer$SmallT;
-			String->Blocks[Index].Length.Value = Length;
-			String->Blocks[Index].Chars.Type = Std$Address$T;
-			String->Blocks[Index].Chars.Value = Line;
-			return String;
-		} else {
-			Scanner->NextChar = Find + 1;
-			*ExprMode = true;
-			return Std$String$Nil;
-		};
-	} else {
-		const char *NextLine = Scanner->readl(Scanner->Source);
-		if (NextLine == 0) Scanner->raise_error(Scanner->NextToken.LineNo, "Error: end of input in block string");
-		++Scanner->NextToken.LineNo;
-		Std$String_t *String;
-		if (strncmp(NextLine, EndString, EndLength) == 0) {
-			Scanner->NextChar = NextLine + EndLength;
-			String = (Std$String_t *)Riva$Memory$alloc(sizeof(Std$String_t) + (Index + 2) * sizeof(Std$String_block));
-			String->Type = Std$String$T;
-			String->Length.Type = Std$Integer$SmallT;
-			String->Count = Index + 1;
-		} else {
-			Scanner->NextChar = NextLine;
-			String = scan_string_block_next(Scanner, EndString, EndLength, Index + 1, ExprMode);
-		};
-		int Length = strlen(Line);
-		char *Chars = Riva$Memory$alloc(Length + 2);
-		memcpy(Chars, Line, Length);
-		Chars[Length] = '\n';
-		Chars[++Length] = 0;
-		String->Length.Value += Length;
-		String->Blocks[Index].Length.Type = Std$Integer$SmallT;
-		String->Blocks[Index].Length.Value = Length;
-		String->Blocks[Index].Chars.Type = Std$Address$T;
-		String->Blocks[Index].Chars.Value = Chars;
-		return String;
-	};
-};
-
-static void scan_string_block(scanner_t *Scanner, const char *EndString, int EndLength) {
-	const char *Line = Scanner->readl(Scanner->Source);
-	if (Line == 0) Scanner->raise_error(Scanner->NextToken.LineNo, "Error: end of input in block string");
-	++Scanner->NextToken.LineNo;
-	if (strncmp(Line, EndString, EndLength) == 0) {
-		Scanner->NextToken.Type = tkCONST;
-		Scanner->NextToken.Const = (Std$Object_t *)Std$String$Nil;
-		Scanner->NextChar = Line + EndLength;
-		return;
-	};
-	Scanner->NextChar = Line;
-	expr_t *Head, *Tail;
-	bool ExprMode = false;
-	Head = Tail = new const_expr_t(Scanner->Token.LineNo, scan_string_block_next(Scanner, EndString, EndLength, 0, &ExprMode));
-	while (ExprMode) {
-		Scanner->NextToken.Type = 0;
-		Tail = (Tail->Next = accept_expr(Scanner));
-		ExprMode = false;
-		Tail = (Tail->Next = new const_expr_t(Scanner->Token.LineNo, scan_string_block_next(Scanner, EndString, EndLength, 0, &ExprMode)));
-	};
-	Scanner->NextToken.Type = tkSTRBLOCK;
-	Scanner->NextToken.Const = (Std$Object_t *)Head;
-};
-
 static Std$String_t *scan_string_block0_next(scanner_t *Scanner, int Index, bool *ExprMode) {
 	const char *Line = Scanner->NextChar;
 	const char *Find;
@@ -340,7 +248,7 @@ static void scan_string_block0(scanner_t *Scanner) {
 	Scanner->NextToken.Const = (Std$Object_t *)Head;
 };
 
-/*static Std$String_t *scan_string_block_next(scanner_t *Scanner, const char *End, int EndLength, const char **Current, int Index) {
+static Std$String_t *scan_string_block_next(scanner_t *Scanner, const char *End, int EndLength, const char **Current, int Index) {
 	char *Line = Scanner->readl(Scanner->Source);
 	if (Line) {
 		++Scanner->NextToken.LineNo;
@@ -366,7 +274,7 @@ static void scan_string_block0(scanner_t *Scanner) {
 		String->Blocks[Index].Chars.Value = Line;
 	};
 	return String;
-};*/
+};
 
 #include "keywords.c"
 
@@ -589,11 +497,8 @@ bool scanner_t::parse(int Type) {
 			};
 			scan_block_string: {
 				const char *End = Current;
-				//NextToken.Type = tkCONST;
-				//NextToken.Const = (Std$Object_t *)scan_string_block_next(this, End, strlen(End), &Current, 0);
-				//goto scan_done;
-				scan_string_block(this, End, strlen(End));
-				Current = NextChar;
+				NextToken.Type = tkCONST;
+				NextToken.Const = (Std$Object_t *)scan_string_block_next(this, End, strlen(End), &Current, 0);
 				goto scan_done;
 			};
 			scan_comment: {

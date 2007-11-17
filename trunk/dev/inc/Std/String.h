@@ -21,6 +21,8 @@ typedef struct Std$String_t {
 
 extern Std$Type_t Std$String$T[];
 extern Std$Function_t Std$String$Add[];
+extern Std$Function_t Std$String$Hash[];
+extern Std$Function_t Std$String$Compare[];
 extern Std$String_t Std$String$Nil[];
 
 RIVA_CFUN(char *, flatten, Std$String_t *);

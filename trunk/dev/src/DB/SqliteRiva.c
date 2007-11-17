@@ -217,3 +217,60 @@ METHOD("column_type", TYP, StatementT, TYP, Std$Integer$SmallT) {
 	Result->Val = Std$Integer$new_small(sqlite3_column_type(S->Handle, ((Std$Integer_smallt *)Args[1].Val)->Value));
 	return SUCCESS;
 };
+
+typedef struct callback_t {
+    Std$Object_t *Function;
+    Std$Function_argument Arg;
+} callback_t;
+
+static int exec_callback(callback_t *Callback, int Count, char **Values, char **Keys) {
+    Std$Object_t *Table = Std$Table$new(Std$String$Compare, Std$String$Hash);
+    for (int I = 0; I < Count; ++I) {
+        Std$Table$insert(Table, Std$String$new(Keys[I]), Std$String$new(Values[I]));
+    };
+    Std$Function_result Buffer;
+    return (Std$Function$call(Callback->Function, 2, &Buffer, Table, 0, Callback->Arg.Val, Callback->Arg.Ref) >= FAILURE);
+};
+
+METHOD("exec", TYP, T, TYP, Std$String$T, TYP, Std$Function$T) {
+    database_t *DB = Args[0].Val;
+    callback_t Callback = {
+        Args[2].Val,
+        Count > 3 ? Args[3] : (Std$Function_argument){Std$Object$Nil, 0}
+    };
+    char *ErrMsg;
+    if (sqlite3_exec(DB->Handle, Std$String$flatten(Args[1].Val), exec_callback, &Callback, &ErrMsg) == SQLITE_OK) {
+        Result->Arg = Args[0];
+        return SUCCESS;
+    } else {
+        Result->Val = Std$String$new(ErrMsg);
+        return MESSAGE;
+    };
+};
+
+static int execv_callback(callback_t *Callback, int Count, char **Values, char **Keys) {
+    Std$Function_argument Args[Count + 1];
+    for (int I = 0; I < Count; ++I) {
+        Args[I].Val = Std$String$new(Values[I]);
+        Args[I].Ref = 0;
+    };
+    Args[Count] = Callback->Arg;
+    Std$Function_result Buffer;
+    return (Std$Function$invoke(Callback->Function, Count + 1, &Buffer, Args) >= FAILURE);
+};
+
+METHOD("execv", TYP, T, TYP, Std$String$T, TYP, Std$Function$T) {
+    database_t *DB = Args[0].Val;
+    callback_t Callback = {
+        Args[2].Val,
+        Count > 3 ? Args[3] : (Std$Function_argument){Std$Object$Nil, 0}
+    };
+    char *ErrMsg;
+    if (sqlite3_exec(DB->Handle, Std$String$flatten(Args[1].Val), execv_callback, &Callback, &ErrMsg) == SQLITE_OK) {
+        Result->Arg = Args[0];
+        return SUCCESS;
+    } else {
+        Result->Val = Std$String$new(ErrMsg);
+        return MESSAGE;
+    };
+};

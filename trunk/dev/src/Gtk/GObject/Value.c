@@ -63,7 +63,17 @@ void _to_gtk(Std$Object_t *Source, GValue *Dest) {
 	} else if (Source == $false) {
 		g_value_init(Dest, G_TYPE_BOOLEAN);
 		g_value_set_boolean(Dest, FALSE);
-	};
+	} else {
+            for (Std$Type_t **P = Source->Type->Types; *P; ++P) {
+                if (*P == Gtk$GObject$Object$T) {
+                    void *Object = ((Gtk$GObject$Object_t *)Source)->Handle;
+                    g_value_init(Dest, G_OBJECT_TYPE(Object));
+                    g_value_set_object(Dest, Object);
+                    return;
+                };
+            };
+            printf("Error: unable to convert object to GValue.\n");
+        };
 };
 
 GLOBAL_FUNCTION(New, 0) {

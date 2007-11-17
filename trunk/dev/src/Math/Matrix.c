@@ -11,26 +11,24 @@ typedef struct matrix_t {
 TYPE(T);
 
 GLOBAL_FUNCTION(New, 2) {
-	uint32_t NoOfRows = ((Std$Integer_smallt *)Args[0].Val)->Value;
-	uint32_t NoOfCols = ((Std$Integer_smallt *)Args[1].Val)->Value;
-	if (NoOfRows * NoOfCols != Count - 2) {
-		Result->Val = Std$String$new("Incorrect number of arguments to Matrix.New");
-		return MESSAGE;
-	};
-	matrix_t *Matrix = Riva$Memory$alloc(sizeof(matrix_t) + NoOfCols * NoOfRows * sizeof(Std$Object_t **));
-	Matrix->Type = T;
-	Matrix->NoOfRows.Type = Matrix->NoOfCols.Type = Std$Integer$SmallT;
-	Matrix->NoOfRows.Value = NoOfRows;
-	Matrix->NoOfCols.Value = NoOfCols;
-	Std$Function_argument *Arg = Args + 2;
-	Std$Object_t **Ptr = Matrix->Entries;
-	for (int I = 0; I < NoOfRows; ++I) {
-		for (int J = 0; J < NoOfCols; ++J) {
-			*(Ptr++) = (Arg++)->Val;
-		};
-	};
-	Result->Val = Matrix;
-	return SUCCESS;
+    uint32_t NoOfRows = ((Std$Integer_smallt *)Args[0].Val)->Value;
+    uint32_t NoOfCols = ((Std$Integer_smallt *)Args[1].Val)->Value;
+    matrix_t *Matrix = Riva$Memory$alloc(sizeof(matrix_t) + NoOfCols * NoOfRows * sizeof(Std$Object_t **));
+    Matrix->Type = T;
+    Matrix->NoOfRows.Type = Matrix->NoOfCols.Type = Std$Integer$SmallT;
+    Matrix->NoOfRows.Value = NoOfRows;
+    Matrix->NoOfCols.Value = NoOfCols;
+    Std$Function_argument *Arg = Args + 1;
+    Std$Object_t **Ptr = Matrix->Entries;
+    if (NoOfRows * NoOfCols != Count - 2) {
+        Std$Object_t **Limit = Ptr + NoOfRows * NoOfCols;
+        for (int I = Count - 1; --I;) *(Ptr++) = (++Arg)->Val;
+        while (Ptr < Limit) *(Ptr++) = Arg->Val;
+    } else {            
+        for (int I = Count - 1; --I;) *(Ptr++) = (++Arg)->Val;    
+    };
+    Result->Val = Matrix;
+    return SUCCESS;
 };
 
 METHOD("rows", TYP, T) {
@@ -563,6 +561,14 @@ METHOD("is0", TYP, T) {
 	};
 	Result->Val = A;
 	return SUCCESS;
+};
+
+METHOD("[]", TYP, T, TYP, Std$Integer$SmallT, TYP, Std$Integer$SmallT) {
+    matrix_t *A = Args[0].Val;
+    Std$Integer_smallt *B = Args[1].Val;
+    Std$Integer_smallt *C = Args[2].Val;
+    Result->Val = *(Result->Ref = A->Entries + (B->Value - 1) * A->NoOfCols.Value + C->Value - 1);
+    return SUCCESS;
 };
 
 void __init (void *Module) {

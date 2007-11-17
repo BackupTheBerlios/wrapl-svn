@@ -567,3 +567,94 @@ c_func _add
 	pop esi
 	pop ebx
 	ret
+
+func Hash, 1
+	mov eax, [argument(edi).Val]
+	lea edi, [string(eax).Blocks]
+	xor ebx, ebx
+	xor eax, eax
+	mov ecx, [small_int(string_block(edi).Length).Value]
+	jecxz .done
+.outer_loop:
+	mov esi, [address(string_block(edi).Chars).Value]
+.inner_loop:
+	lodsb
+	ror ebx, 4
+	add ebx, eax
+	dec ecx
+	jnz .inner_loop
+	add edi, byte sizeof(string_block)
+	mov ecx, [small_int(string_block(edi).Length).Value]
+	test ecx, ecx
+	jnz .outer_loop
+.done:
+	call Std$Integer$_alloc_small
+	mov [small_int(eax).Value], ebx
+	mov ecx, eax
+	xor edx, edx
+	xor eax, eax
+	ret
+
+section .data
+LESS: dd Std$Integer$SmallT, -1
+ZERO:
+EQUAL: dd Std$Integer$SmallT, 0
+ONE:
+GREATER: dd Std$Integer$SmallT, 1
+
+func Compare, 2
+    	mov eax, [argument(edi).Val]
+	mov ebx, [argument(edi + 8).Val]
+	lea eax, [string(eax).Blocks]
+	lea ebx, [string(ebx).Blocks]
+	mov ecx, [small_int(string_block(eax).Length).Value]
+	mov esi, [address(string_block(eax).Chars).Value]
+	mov edx, [small_int(string_block(ebx).Length).Value]
+	mov edi, [address(string_block(ebx).Chars).Value]
+	test ecx, ecx
+	jnz .first_not_empty0
+	test edx, edx
+	jz .equal
+	jmp .less
+.first_not_empty0:
+	test edx, edx
+	jz .greater
+.compare_loop:
+	cmpsb
+	jb .less
+	ja .greater
+	dec ecx
+	jz .reload_first
+.first_not_empty:
+	dec edx
+	jnz .compare_loop
+	add ebx, byte sizeof(string_block)
+	mov edx, [small_int(string_block(ebx).Length).Value]
+	test edx, edx
+	mov edi, [address(string_block(ebx).Chars).Value]
+	jnz .compare_loop
+.greater:
+	mov ecx, GREATER
+	xor edx, edx
+	xor eax, eax
+	ret
+.reload_first:
+	add eax, byte sizeof(string_block)
+	mov ecx, [small_int(string_block(eax + 8).Length).Value]
+	test ecx, ecx
+	mov esi, [address(string_block(eax).Chars).Value]
+	jnz .first_not_empty
+	dec edx
+	jnz .less
+	cmp [small_int(string_block(ebx + sizeof(string_block)).Length).Value], dword 0
+	jne .less
+.equal:
+	mov ecx, EQUAL
+	xor edx, edx
+	xor eax, eax
+	ret
+.less:
+	mov ecx, LESS
+	xor edx, edx
+	xor eax, eax
+	ret

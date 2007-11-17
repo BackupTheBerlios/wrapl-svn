@@ -150,6 +150,11 @@ METHOD("set", TYP, KeyT, SKP) {
 	return SUCCESS;
 };
 
+GLOBAL_FUNCTION(Sleep, 1) {
+    sleep(((Std$Integer_smallt *)Args[0].Val)->Value);
+    return SUCCESS;
+};
+
 void __init (void *Module) {
 	pthread_key_create(&ThreadKey, 0);
 	thread_t *Thread = new(thread_t);

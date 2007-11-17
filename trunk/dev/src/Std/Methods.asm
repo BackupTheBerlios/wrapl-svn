@@ -193,6 +193,19 @@ method "get8", ADDRESS
 	xor edx, edx
 	ret
 
+method "get24", ADDRESS
+	mov eax, [argument(edi).Val]
+	mov eax, [address(eax).Value]
+        mov eax, [eax]
+        and eax, 0xFFFFFF
+	push eax
+	call Std$Integer$_alloc_small
+	pop dword [small_int(eax).Value]
+	mov ecx, eax
+	xor eax, eax
+	xor edx, edx
+	ret
+
 method "get32", ADDRESS
 	mov eax, [argument(edi).Val]
 	mov eax, [address(eax).Value]
@@ -210,6 +223,21 @@ method "get8", ADDRESS, SMALLINT
 	mov eax, [address(eax).Value]
 	add eax, [small_int(ebx).Value]
 	movzx eax, byte [eax]
+	push eax
+	call Std$Integer$_alloc_small
+	pop dword [small_int(eax).Value]
+	mov ecx, eax
+	xor eax, eax
+	xor edx, edx
+	ret
+
+method "get24", ADDRESS, SMALLINT
+	mov eax, [argument(edi).Val]
+	mov ebx, [argument(edi + 8).Val]
+	mov eax, [address(eax).Value]
+	add eax, [small_int(ebx).Value]
+	mov eax, [eax]
+        and eax, 0xFFFFFF
 	push eax
 	call Std$Integer$_alloc_small
 	pop dword [small_int(eax).Value]

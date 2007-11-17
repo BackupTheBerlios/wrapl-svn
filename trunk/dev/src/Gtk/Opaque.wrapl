@@ -120,7 +120,7 @@ TO :return(t@T, result) [
 ];
 
 TO :process(t@T, srcdir, incdir, libdir) (
-	VAR headers <- {"#include <Gtk/GObject/Object.h>"};
+	VAR headers <- {}; --"#include <Gtk/GObject/Object.h>"};
 	VAR libraries <- {};
 	VAR base <- t:ns + "/" + t:name;
 	VAR cfile <- File.Open(srcdir + base + ".c", File.WRITE + File.TEXT);

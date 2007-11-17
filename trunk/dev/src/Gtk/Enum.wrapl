@@ -79,6 +79,45 @@ EOF);
 	libfile:write("end\n");
 	libfile:write("export(\"T\")\n");
 	libfile:write("export(\"_new\")\n");
+        t:cname = "GdkEventType" => libfile:write(>>EOF
+export("Nothing")
+export("Delete")
+export("Destroy")
+export("Expose")
+export("MotionNotify")
+export("ButtonPress")
+export("TwoButtonPress")
+export("ThreeButtonPress")
+export("ButtonRelease")
+export("KeyPress")
+export("KeyRelease")
+export("EnterNotify")
+export("LeaveNotify")
+export("FocusChange")
+export("Configure")
+export("Map")
+export("Unmap")
+export("PropertyNotify")
+export("SelectionClear")
+export("SelectionRequest")
+export("SelectionNotify")
+export("ProximityIn")
+export("ProximityOut")
+export("DragEnter")
+export("DragLeave")
+export("DragMotion")
+export("DragStatus")
+export("DropStart")
+export("DropFinished")
+export("ClientEvent")
+export("VisibilityNotify")
+export("NoExpose")
+export("Scroll")
+export("WindowState")
+export("Setting")
+export("OwnerChange")
+export("GrabBroken")
+EOF);
 	libfile:close;
 	VAR hfile <- File.Open(incdir + base + ".h", File.WRITE + File.TEXT);
 	hfile:writes("#ifndef ", t:ns, "_", t:name, "_H\n");

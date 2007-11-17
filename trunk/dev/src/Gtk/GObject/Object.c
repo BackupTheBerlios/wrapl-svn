@@ -70,7 +70,6 @@ METHOD("SetProperty", TYP, T, TYP, Std$String$T, ANY) {
 	const char *Prop = Std$String$flatten(Args[1].Val);
 	GValue Value[1] = {{0,}};
 	Gtk$GObject$Value$to_gtk(Args[2].Val, Value);
-	printf("Here!\n");
 	g_object_set_property(Object->Handle, Prop, Value);
 	return SUCCESS;
 };

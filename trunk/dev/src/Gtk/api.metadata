@@ -37,6 +37,13 @@
 		<method name="Run" cname="gtk_main" shared="true">
 			<return-type type="void" />
 		</method>
+		<method name="InitAdd" cname="gtk_init_add" shared="true">
+		    <parameters>
+			<parameter type="GtkFunction" name="function" />
+			<parameter type="gpointer" name="data" />
+		    </parameters>
+		    <return-type type="void" />
+		</method>
 	</add-node>
 	<add-node path="/api/namespace/object[@cname='GtkListStore']">
 		<implements interface="GtkTreeModel" />
@@ -157,4 +164,10 @@
 	<remove-node path="/api/namespace/class[@cname='GnomeScore_']/method[@cname='gnome_score_log']" />
 	<remove-node path="/api/namespace/struct[@cname='ArtSVP']/method[@cname='art_svp_render_aa']" />
 	<remove-node path="/api/namespace/callback[@cname='RenderAaCallback']" />
+        <attr path="/api/namespace/object[@cname='GdkPixmap']" name="parent">GdkDrawable</attr>
+        <attr path="/api/namespace/object[@cname='GdkWindow']" name="parent">GdkDrawable</attr>
+        <attr path="/api/namespace/object/method[@cname='gdk_pixbuf_add_alpha']/parameters/parameter[@name='r']" name="type">int</attr>
+        <attr path="/api/namespace/object/method[@cname='gdk_pixbuf_add_alpha']/parameters/parameter[@name='g']" name="type">int</attr>
+        <attr path="/api/namespace/object/method[@cname='gdk_pixbuf_add_alpha']/parameters/parameter[@name='b']" name="type">int</attr>
+        <attr path="/api/namespace/object/method[@cname='gdk_pixbuf_get_pixels']/return-type" name="type">gpointer</attr>
 </metadata>
