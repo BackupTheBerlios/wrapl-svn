@@ -1,173 +1,781 @@
-<?xml version="1.0"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <metadata>
-	<remove-node path="/api/namespace/class/method[@cname='gnome_config_set_set_handler']" />
-	<remove-node path="/api/namespace/class/method[@cname='gnome_config_set_sync_handler']" />
-	<remove-node path="/api/namespace/struct[@cname='GtkCell']" />
-	<remove-node path="/api/namespace/callback[@cname='GtkCListCompareFunc']" />
-	<remove-node path="/api/namespace/enum[@name='FileInfoType']" />
-	<remove-node path="/api/namespace/enum[@name='FileSystemError']" />
-	<remove-node path="/api/namespace/interface[@name='FileSystem']" />
-	<remove-node path="/api/namespace/interface[@name='FileFolder']" />
-	<remove-node path="/api/namespace/struct[@name='FileSystemHandleClass']" />
-	<remove-node path="/api/namespace/object[@name='FileSystemHandle']" />
-	<remove-node path="/api/namespace/struct[@name='FileInfo']" />
-	<remove-node path="/api/namespace/enum[@name='ArgFlags']" />
-	<remove-node path="/api/namespace/callback[@name='FileSystemGetInfoCallback']" />
-	<remove-node path="/api/namespace/callback[@name='FileSystemCreateFolderCallback']" />
-	<remove-node path="/api/namespace/callback[@name='FileSystemGetFolderCallback']" />
-	<remove-node path="/api/namespace/callback[@name='FileSystemVolumeMountCallback']" />
-	<remove-node path="/api/namespace/struct[@name='FileSystemVolume']" />
-	<remove-node path="/api/namespace/struct[@name='FilePath']" />
-	<remove-node path="/api/namespace/object[@cname='GdkWindow']/method[@name='InvalidateMaybeRecurse']" />
-	<remove-node path="/api/namespace/callback[@name='InvalidateMaybeRecurseChildFunc']" />
-	<remove-node path="/api/namespace/callback[@name='XftSubstituteFunc']" />
-	<remove-node path="/api/namespace/object[@name='XftFont']" />
-	<remove-node path="/api/namespace/object[@name='XftFontMap']" />
-	<remove-node path="/api/namespace/object[@name='XftRenderer']" />
-	<remove-node path="/api/namespace/class[@name='Xft']" />
-	<remove-node path="/api/namespace/class[@cname='GdkXid_']" />
-	<remove-node path="/api/namespace/class[@cname='PangoX_']" />
-	<remove-node path="/api/namespace/struct[@name='XFontCache']" />
-	<remove-node path="/api/namespace/callback[@cname='PangoFreeGCFunc']" />
-	<remove-node path="/api/namespace/callback[@cname='PangoGetGCFunc']" />
-	<remove-node path="/api/namespace/class/method[@cname='gtk_text_layout_draw']" />
-	<remove-node path="/api/namespace/class/method[@cname='gtk_init_abi_check']" />
-	<remove-node path="/api/namespace/class/method[@cname='gtk_init_check_abi_check']" />
-	<add-node path="/api/namespace/class[@cname='GtkMain_']">
-		<method name="Run" cname="gtk_main" shared="true">
-			<return-type type="void" />
-		</method>
-		<method name="InitAdd" cname="gtk_init_add" shared="true">
-		    <parameters>
-			<parameter type="GtkFunction" name="function" />
-			<parameter type="gpointer" name="data" />
-		    </parameters>
-		    <return-type type="void" />
-		</method>
-	</add-node>
-	<add-node path="/api/namespace/object[@cname='GtkListStore']">
-		<implements interface="GtkTreeModel" />
-	</add-node>
-	<add-node path="/api/namespace/object[@cname='GtkTreeStore']">
-		<implements interface="GtkTreeModel" />
-	</add-node>
-	<add-node path="/api/namespace/object[@cname='GtkFileChooserButton']">
-		<implements interface="GtkFileChooser" />
-	</add-node>
-	<add-node path="/api/namespace/object[@cname='GtkFileChooserDialog']">
-		<implements interface="GtkFileChooser" />
-	</add-node>
-	<add-node path="/api/namespace/object[@cname='GtkFileChooserWidget']">
-		<implements interface="GtkFileChooser" />
-	</add-node>
-	<attr path="/api/namespace/object/method[@cname='gtk_container_get_children']/return-type" name="type">reusable-GList[GObject]*</attr>
-	<attr path="/api/namespace/object/method[@cname='gtk_action_group_list_actions']/return-type" name="type">reusable-GList[GObject]*</attr>
-	<attr path="/api/namespace/object/method[@cname='gtk_cell_view_get_cell_renderers']/return-type" name="type">reusable-GList[GObject]*</attr>
-	<attr path="/api/namespace/object/method[@cname='gtk_text_child_anchor_get_widgets']/return-type" name="type">reusable-GList[GObject]*</attr>
-	<attr path="/api/namespace/object/method[@cname='gtk_tree_view_get_columns']/return-type" name="type">reusable-GList[GObject]*</attr>
-	<attr path="/api/namespace/object/method[@cname='gtk_tree_view_column_get_cell_renderers']/return-type" name="type">reusable-GList[GObject]*</attr>
-	<attr path="/api/namespace/object/method[@cname='gtk_window_get_default_icon_list']/return-type" name="type">reusable-GList[GObject]*</attr>
-	<attr path="/api/namespace/object/method[@cname='gtk_window_get_icon_list']/return-type" name="type">reusable-GList[GObject]*</attr>
-	<attr path="/api/namespace/object/method[@cname='gtk_window_list_toplevels']/return-type" name="type">reusable-GList[GObject]*</attr>
-	<attr path="/api/namespace/object/method[@cname='gdk_screen_get_toplevel_windows']/return-type" name="type">reusable-GList[GObject]*</attr>
-	<attr path="/api/namespace/object/method[@cname='gdk_screen_get_window_stack']/return-type" name="type">reusable-GList[GObject]*</attr>
-	<attr path="/api/namespace/object/method[@cname='gdk_screen_list_visuals']/return-type" name="type">reusable-GList[GObject]*</attr>
-	<attr path="/api/namespace/object/method[@cname='gdk_window_get_children']/return-type" name="type">reusable-GList[GObject]*</attr>
-	<attr path="/api/namespace/object/method[@cname='gdk_window_get_toplevels']/return-type" name="type">reusable-GList[GObject]*</attr>
-	<attr path="/api/namespace/class/method[@cname='gdk_list_visuals']/return-type" name="type">reusable-GList[GObject]*</attr>
-	<remove-node path="/api/namespace/object[@cname='GtkImage']/field[@name='Data']" />
-	<attr path="/api/namespace/object[@cname='GtkImage']/field[@name='Pixmap']" name="type">GtkImagePixmapData</attr>
-	<attr path="/api/namespace/object[@cname='GtkImage']/field[@name='Pixmap']" name="cname">data.pixmap</attr>
-	<attr path="/api/namespace/object[@cname='GtkImage']/field[@name='Image']" name="cname">data.image</attr>
-	<attr path="/api/namespace/object[@cname='GtkImage']/field[@name='Pixbuf']" name="cname">data.pixbuf</attr>
-	<attr path="/api/namespace/object[@cname='GtkImage']/field[@name='Stock']" name="cname">data.stock</attr>
-	<attr path="/api/namespace/object[@cname='GtkImage']/field[@name='IconSet']" name="cname">data.icon_set</attr>
-	<attr path="/api/namespace/object[@cname='GtkImage']/field[@name='Anim']" name="cname">data.anim</attr>
-	<attr path="/api/namespace/object[@cname='GtkImage']/field[@name='Name']" name="cname">data.name</attr>
-	<remove-node path="/api/namespace/object[@cname='GtkCurve']/field[@name='Ctlpoint']" />
-	<attr path="/api/namespace/struct[@cname='GtkBindingArg']/field[@name='LongData']" name="cname">d.long_data</attr>
-	<add-node path="/api/namespace/struct[@cname='GtkBindingArg']">
-		<field name="DoubleData" cname="d.double_data" type="gdouble"/>
-	</add-node>
-	<add-node path="/api/namespace/struct[@cname='GtkBindingArg']">
-		<field name="StringData" cname="d.string_data" type="gchar*"/>
-	</add-node>
-	<remove-node path="/api/namespace/struct[@cname='GtkArg']" />
-	<remove-node path="/api/namespace/struct[@cname='GdkEventClient']/field[@name='B']" />
-	<add-node path="/api/namespace/struct[@cname='GdkRectangle']">
-		<constructor cname="gdk_rectangle_new_set">
-			<parameters>
-				<parameter type="gint" name="x" />
-				<parameter type="gint" name="y" />
-				<parameter type="gint" name="width" />
-				<parameter type="gint" name="height" />
-			</parameters>
-		</constructor>
-	</add-node>
-	<add-node path="/api/namespace/struct[@cname='GdkPoint']">
-		<constructor cname="gdk_point_new_set">
-			<parameters>
-				<parameter type="gint" name="x" />
-				<parameter type="gint" name="y" />
-			</parameters>
-		</constructor>
-	</add-node>
-	<add-node path="/api/namespace/struct[@cname='GtkBorder']">
-		<constructor cname="gtk_border_new_set">
-			<parameters>
-				<parameter type="gint" name="left" />
-				<parameter type="gint" name="right" />
-				<parameter type="gint" name="top" />
-				<parameter type="gint" name="bottom" />
-			</parameters>
-		</constructor>
-	</add-node>
-	<add-node path="/api/namespace/struct[@cname='GtkRequisition']">
-		<constructor cname="gtk_requisition_new_size">
-			<parameters>
-				<parameter type="gint" name="width" />
-				<parameter type="gint" name="height" />
-			</parameters>
-		</constructor>
-	</add-node>
-	<add-node path="/api/namespace/struct[@cname='GdkColor']">
-		<constructor cname="gdk_color_new_rgb">
-			<parameters>
-				<parameter type="guint16" name="red" />
-				<parameter type="guint16" name="green" />
-				<parameter type="guint16" name="blue" />
-			</parameters>
-		</constructor>
-	</add-node>
-	<add-node path="/api/namespace/struct[@cname='GdkSegment']">
-		<constructor cname="gdk_segment_new_set">
-			<parameters>
-				<parameter type="gint" name="x1" />
-				<parameter type="gint" name="y1" />
-				<parameter type="gint" name="x2" />
-				<parameter type="gint" name="y2" />
-			</parameters>
-		</constructor>
-	</add-node>
-	<attr path="/api/namespace/struct[@cname='GnomeTrigger']/field[@cname='function']" name="cname">u.function</attr>
-	<remove-node path="/api/namespace/struct[@cname='GnomeModuleInfo']/field[@cname='_options']" />
-	<remove-node path="/api/namespace/callback[@cname='GtkFileSystemModelPathFunc']" />
-	<remove-node path="/api/namespace/callback[@cname='GtkFileSystemModelFilter']" />
-	<remove-node path="/api/namespace/enum[@cname='GtkFileChooserProp']" />
-	<remove-node path="/api/namespace/enum[@cname='GtkFileSystemModelColumns']" />
-	<remove-node path="/api/namespace/object[@cname='GtkSearchEngine']" />
-	<remove-node path="/api/namespace/object[@cname='GtkQuery']" />
-	<remove-node path="/api/namespace/object[@cname='GtkToolbar']/field[@name='GtkTooltips']" />
-	<remove-node path="/api/namespace/object[@cname='GtkToolbar']/field[@name='Gpointer']" />
-	<remove-node path="/api/namespace/object[@cname='GtkObject']/method[@cname='gtk_object_get_data']" />
-	<remove-node path="/api/namespace/object[@cname='GtkObject']/method[@cname='gtk_object_set_data']" />
-	<remove-node path="/api/namespace/class[@cname='GnomeScore_']/method[@cname='gnome_score_log']" />
-	<remove-node path="/api/namespace/struct[@cname='ArtSVP']/method[@cname='art_svp_render_aa']" />
-	<remove-node path="/api/namespace/callback[@cname='RenderAaCallback']" />
-        <attr path="/api/namespace/object[@cname='GdkPixmap']" name="parent">GdkDrawable</attr>
-        <attr path="/api/namespace/object[@cname='GdkWindow']" name="parent">GdkDrawable</attr>
-        <attr path="/api/namespace/object/method[@cname='gdk_pixbuf_add_alpha']/parameters/parameter[@name='r']" name="type">int</attr>
-        <attr path="/api/namespace/object/method[@cname='gdk_pixbuf_add_alpha']/parameters/parameter[@name='g']" name="type">int</attr>
-        <attr path="/api/namespace/object/method[@cname='gdk_pixbuf_add_alpha']/parameters/parameter[@name='b']" name="type">int</attr>
-        <attr path="/api/namespace/object/method[@cname='gdk_pixbuf_get_pixels']/return-type" name="type">gpointer</attr>
+  <remove-node path="/api/namespace/class/method[@cname='gnome_config_set_set_handler']"/>
+  <remove-node path="/api/namespace/class/method[@cname='gnome_config_set_sync_handler']"/>
+  <remove-node path="/api/namespace/struct[@cname='GtkCell']"/>
+  <remove-node path="/api/namespace/callback[@cname='GtkCListCompareFunc']"/>
+  <remove-node path="/api/namespace/enum[@name='FileInfoType']"/>
+  <remove-node path="/api/namespace/enum[@name='FileSystemError']"/>
+  <remove-node path="/api/namespace/interface[@name='FileSystem']"/>
+  <remove-node path="/api/namespace/interface[@name='FileFolder']"/>
+  <remove-node path="/api/namespace/struct[@name='FileSystemHandleClass']"/>
+  <remove-node path="/api/namespace/object[@name='FileSystemHandle']"/>
+  <remove-node path="/api/namespace/struct[@name='FileInfo']"/>
+  <remove-node path="/api/namespace/enum[@name='ArgFlags']"/>
+  <remove-node path="/api/namespace/callback[@name='FileSystemGetInfoCallback']"/>
+  <remove-node path="/api/namespace/callback[@name='FileSystemCreateFolderCallback']"/>
+  <remove-node path="/api/namespace/callback[@name='FileSystemGetFolderCallback']"/>
+  <remove-node path="/api/namespace/callback[@name='FileSystemVolumeMountCallback']"/>
+  <remove-node path="/api/namespace/struct[@name='FileSystemVolume']"/>
+  <remove-node path="/api/namespace/struct[@name='FilePath']"/>
+  <remove-node path="/api/namespace/object[@cname='GdkWindow']/method[@name='InvalidateMaybeRecurse']"/>
+  <remove-node path="/api/namespace/callback[@name='InvalidateMaybeRecurseChildFunc']"/>
+  <remove-node path="/api/namespace/callback[@name='XftSubstituteFunc']"/>
+  <remove-node path="/api/namespace/object[@name='XftFont']"/>
+  <remove-node path="/api/namespace/object[@name='XftFontMap']"/>
+  <remove-node path="/api/namespace/object[@name='XftRenderer']"/>
+  <remove-node path="/api/namespace/class[@name='Xft']"/>
+  <remove-node path="/api/namespace/class[@cname='GdkXid_']"/>
+  <remove-node path="/api/namespace/class[@cname='PangoX_']"/>
+  <remove-node path="/api/namespace/struct[@name='XFontCache']"/>
+  <remove-node path="/api/namespace/callback[@cname='PangoFreeGCFunc']"/>
+  <remove-node path="/api/namespace/callback[@cname='PangoGetGCFunc']"/>
+  <remove-node path="/api/namespace/class/method[@cname='gtk_text_layout_draw']"/>
+  <remove-node path="/api/namespace/class/method[@cname='gtk_init_abi_check']"/>
+  <remove-node path="/api/namespace/class/method[@cname='gtk_init_check_abi_check']"/>
+  <add-node path="/api/namespace/class[@cname='GtkMain_']">
+    <method name="Run" cname="gtk_main" shared="true">
+      <return-type type="void"/>
+    </method>
+    <method name="InitAdd" cname="gtk_init_add" shared="true">
+      <parameters>
+        <parameter type="GtkFunction" name="function"/>
+        <parameter type="gpointer" name="data"/>
+      </parameters>
+      <return-type type="void"/>
+    </method>
+  </add-node>
+  <add-node path="/api/namespace/object[@cname='GtkListStore']">
+    <implements interface="GtkTreeModel"/>
+  </add-node>
+  <add-node path="/api/namespace/object[@cname='GtkTreeStore']">
+    <implements interface="GtkTreeModel"/>
+  </add-node>
+  <add-node path="/api/namespace/object[@cname='GtkFileChooserButton']">
+    <implements interface="GtkFileChooser"/>
+  </add-node>
+  <add-node path="/api/namespace/object[@cname='GtkFileChooserDialog']">
+    <implements interface="GtkFileChooser"/>
+  </add-node>
+  <add-node path="/api/namespace/object[@cname='GtkFileChooserWidget']">
+    <implements interface="GtkFileChooser"/>
+  </add-node>
+  <attr path="/api/namespace/object/method[@cname='gtk_container_get_children']/return-type" name="type">reusable-GList[GObject]*</attr>
+  <attr path="/api/namespace/object/method[@cname='gtk_action_group_list_actions']/return-type" name="type">reusable-GList[GObject]*</attr>
+  <attr path="/api/namespace/object/method[@cname='gtk_cell_view_get_cell_renderers']/return-type" name="type">reusable-GList[GObject]*</attr>
+  <attr path="/api/namespace/object/method[@cname='gtk_text_child_anchor_get_widgets']/return-type" name="type">reusable-GList[GObject]*</attr>
+  <attr path="/api/namespace/object/method[@cname='gtk_tree_view_get_columns']/return-type" name="type">reusable-GList[GObject]*</attr>
+  <attr path="/api/namespace/object/method[@cname='gtk_tree_view_column_get_cell_renderers']/return-type" name="type">reusable-GList[GObject]*</attr>
+  <attr path="/api/namespace/object/method[@cname='gtk_window_get_default_icon_list']/return-type" name="type">reusable-GList[GObject]*</attr>
+  <attr path="/api/namespace/object/method[@cname='gtk_window_get_icon_list']/return-type" name="type">reusable-GList[GObject]*</attr>
+  <attr path="/api/namespace/object/method[@cname='gtk_window_list_toplevels']/return-type" name="type">reusable-GList[GObject]*</attr>
+  <attr path="/api/namespace/object/method[@cname='gdk_screen_get_toplevel_windows']/return-type" name="type">reusable-GList[GObject]*</attr>
+  <attr path="/api/namespace/object/method[@cname='gdk_screen_get_window_stack']/return-type" name="type">reusable-GList[GObject]*</attr>
+  <attr path="/api/namespace/object/method[@cname='gdk_screen_list_visuals']/return-type" name="type">reusable-GList[GObject]*</attr>
+  <attr path="/api/namespace/object/method[@cname='gdk_window_get_children']/return-type" name="type">reusable-GList[GObject]*</attr>
+  <attr path="/api/namespace/object/method[@cname='gdk_window_get_toplevels']/return-type" name="type">reusable-GList[GObject]*</attr>
+  <attr path="/api/namespace/class/method[@cname='gdk_list_visuals']/return-type" name="type">reusable-GList[GObject]*</attr>
+  <remove-node path="/api/namespace/object[@cname='GtkImage']/field[@name='Data']"/>
+  <attr path="/api/namespace/object[@cname='GtkImage']/field[@name='Pixmap']" name="type">GtkImagePixmapData</attr>
+  <attr path="/api/namespace/object[@cname='GtkImage']/field[@name='Pixmap']" name="cname">data.pixmap</attr>
+  <attr path="/api/namespace/object[@cname='GtkImage']/field[@name='Image']" name="cname">data.image</attr>
+  <attr path="/api/namespace/object[@cname='GtkImage']/field[@name='Pixbuf']" name="cname">data.pixbuf</attr>
+  <attr path="/api/namespace/object[@cname='GtkImage']/field[@name='Stock']" name="cname">data.stock</attr>
+  <attr path="/api/namespace/object[@cname='GtkImage']/field[@name='IconSet']" name="cname">data.icon_set</attr>
+  <attr path="/api/namespace/object[@cname='GtkImage']/field[@name='Anim']" name="cname">data.anim</attr>
+  <attr path="/api/namespace/object[@cname='GtkImage']/field[@name='Name']" name="cname">data.name</attr>
+  <remove-node path="/api/namespace/object[@cname='GtkCurve']/field[@name='Ctlpoint']"/>
+  <attr path="/api/namespace/struct[@cname='GtkBindingArg']/field[@name='LongData']" name="cname">d.long_data</attr>
+  <add-node path="/api/namespace/struct[@cname='GtkBindingArg']">
+    <field name="DoubleData" cname="d.double_data" type="gdouble"/>
+  </add-node>
+  <add-node path="/api/namespace/struct[@cname='GtkBindingArg']">
+    <field name="StringData" cname="d.string_data" type="gchar*"/>
+  </add-node>
+  <remove-node path="/api/namespace/struct[@cname='GtkArg']"/>
+  <remove-node path="/api/namespace/struct[@cname='GdkEventClient']/field[@name='B']"/>
+  <add-node path="/api/namespace/struct[@cname='GdkRectangle']">
+    <constructor cname="gdk_rectangle_new_set">
+      <parameters>
+        <parameter type="gint" name="x"/>
+        <parameter type="gint" name="y"/>
+        <parameter type="gint" name="width"/>
+        <parameter type="gint" name="height"/>
+      </parameters>
+    </constructor>
+  </add-node>
+  <add-node path="/api/namespace/struct[@cname='GdkPoint']">
+    <constructor cname="gdk_point_new_set">
+      <parameters>
+        <parameter type="gint" name="x"/>
+        <parameter type="gint" name="y"/>
+      </parameters>
+    </constructor>
+  </add-node>
+  <add-node path="/api/namespace/struct[@cname='GtkBorder']">
+    <constructor cname="gtk_border_new_set">
+      <parameters>
+        <parameter type="gint" name="left"/>
+        <parameter type="gint" name="right"/>
+        <parameter type="gint" name="top"/>
+        <parameter type="gint" name="bottom"/>
+      </parameters>
+    </constructor>
+  </add-node>
+  <add-node path="/api/namespace/struct[@cname='GtkRequisition']">
+    <constructor cname="gtk_requisition_new_size">
+      <parameters>
+        <parameter type="gint" name="width"/>
+        <parameter type="gint" name="height"/>
+      </parameters>
+    </constructor>
+  </add-node>
+  <add-node path="/api/namespace/struct[@cname='GdkColor']">
+    <constructor cname="gdk_color_new_rgb">
+      <parameters>
+        <parameter type="guint16" name="red"/>
+        <parameter type="guint16" name="green"/>
+        <parameter type="guint16" name="blue"/>
+      </parameters>
+    </constructor>
+  </add-node>
+  <add-node path="/api/namespace/struct[@cname='GdkSegment']">
+    <constructor cname="gdk_segment_new_set">
+      <parameters>
+        <parameter type="gint" name="x1"/>
+        <parameter type="gint" name="y1"/>
+        <parameter type="gint" name="x2"/>
+        <parameter type="gint" name="y2"/>
+      </parameters>
+    </constructor>
+  </add-node>
+  <attr path="/api/namespace/struct[@cname='GnomeTrigger']/field[@cname='function']" name="cname">u.function</attr>
+  <remove-node path="/api/namespace/struct[@cname='GnomeModuleInfo']/field[@cname='_options']"/>
+  <remove-node path="/api/namespace/callback[@cname='GtkFileSystemModelPathFunc']"/>
+  <remove-node path="/api/namespace/callback[@cname='GtkFileSystemModelFilter']"/>
+  <remove-node path="/api/namespace/enum[@cname='GtkFileChooserProp']"/>
+  <remove-node path="/api/namespace/enum[@cname='GtkFileSystemModelColumns']"/>
+  <remove-node path="/api/namespace/object[@cname='GtkSearchEngine']"/>
+  <remove-node path="/api/namespace/object[@cname='GtkQuery']"/>
+  <remove-node path="/api/namespace/object[@cname='GtkToolbar']/field[@name='GtkTooltips']"/>
+  <remove-node path="/api/namespace/object[@cname='GtkToolbar']/field[@name='Gpointer']"/>
+  <remove-node path="/api/namespace/object[@cname='GtkObject']/method[@cname='gtk_object_get_data']"/>
+  <remove-node path="/api/namespace/object[@cname='GtkObject']/method[@cname='gtk_object_set_data']"/>
+  <remove-node path="/api/namespace/class[@cname='GnomeScore_']/method[@cname='gnome_score_log']"/>
+  <remove-node path="/api/namespace/struct[@cname='ArtSVP']/method[@cname='art_svp_render_aa']"/>
+  <remove-node path="/api/namespace/callback[@cname='RenderAaCallback']"/>
+  <attr path="/api/namespace/object[@cname='GdkPixmap']" name="parent">GdkDrawable</attr>
+  <attr path="/api/namespace/object[@cname='GdkWindow']" name="parent">GdkDrawable</attr>
+  <attr path="/api/namespace/object/method[@cname='gdk_pixbuf_add_alpha']/parameters/parameter[@name='r']" name="type">int</attr>
+  <attr path="/api/namespace/object/method[@cname='gdk_pixbuf_add_alpha']/parameters/parameter[@name='g']" name="type">int</attr>
+  <attr path="/api/namespace/object/method[@cname='gdk_pixbuf_add_alpha']/parameters/parameter[@name='b']" name="type">int</attr>
+  <attr path="/api/namespace/object/method[@cname='gdk_pixbuf_get_pixels']/return-type" name="type">gpointer</attr>
+  <add-node path="/api/namespace/struct[@cname='cairo_t']">
+    <method name="Create" cname="cairo_create" shared="true">
+      <return-type type="cairo_t*"/>
+      <parameters>
+        <parameter name="target" type="cairo_surface_t*"/>
+      </parameters>
+    </method>
+    <method name="SetOperator" cname="cairo_set_operator">
+      <return-type type="void"/>
+      <parameters>
+        <parameter name="op" type="cairo_operator_t"/>
+      </parameters>
+    </method>
+    <method name="SetSource" cname="cairo_set_source">
+      <return-type type="void"/>
+      <parameters><parameter name="source" type="cairo_pattern_t*"/>"</parameters>
+    </method>
+    <method name="SetSourceRgb" cname="cairo_set_source_rgb">
+      <return-type type="void"/>
+      <parameters>
+        <parameter name="red" type="double"/>
+        <parameter name="green" type="double"/>
+        <parameter name="blue" type="double"/>
+      </parameters>
+    </method>
+    <method name="SetSourceRgba" cname="cairo_set_source_rgba">
+      <return-type type="void"/>
+      <parameters>
+        <parameter name="red" type="double"/>
+        <parameter name="green" type="double"/>
+        <parameter name="blue" type="double"/>
+        <parameter name="alpha" type="double"/>
+      </parameters>
+    </method>
+    <method name="SetSourceSurface" cname="cairo_set_source_surface">
+      <return-type type="void"/>
+      <parameters>
+        <parameter name="surface" type="cairo_surface_t*"/>
+        <parameter name="x" type="double"/>
+        <parameter name="y" type="double"/>
+      </parameters>
+    </method>
+    <method name="SetTolerance" cname="cairo_set_tolerance">
+      <return-type type="void"/>
+      <parameters>
+        <parameter name="tolerance" type="double"/>
+      </parameters>
+    </method>
+    <method name="SetAntialias" cname="cairo_set_antialias">
+      <return-type type="void"/>
+      <parameters>
+        <parameter name="antialias" type="cairo_antialias_t"/>
+      </parameters>
+    </method>
+    <method name="SetFillRule" cname="cairo_set_fill_rule">
+      <return-type type="void"/>
+      <parameters>
+        <parameter name="fill_rule" type="cairo_fill_rule_t"/>
+      </parameters>
+    </method>
+    <method name="SetLineWidth" cname="cairo_set_line_width">
+      <return-type type="void"/>
+      <parameters>
+        <parameter name="width" type="double"/>
+      </parameters>
+    </method>
+    <method name="SetLineCap" cname="cairo_set_line_cap">
+      <return-type type="void"/>
+      <parameters>
+        <parameter name="line_cap" type="cairo_line_cap_t"/>
+      </parameters>
+    </method>
+    <method name="SetLineJoin" cname="cairo_set_line_join">
+      <return-type type="void"/>
+      <parameters>
+        <parameter name="line_join" type="cairo_line_join_t"/>
+      </parameters>
+    </method>
+    <method name="SetDash" cname="cairo_set_dash">
+      <return-type type="void"/>
+      <parameters>
+        <parameter name="dashes" type="const double*"/>
+        <parameter name="num_dashes" type="int"/>
+        <parameter name="offset" type="double"/>
+      </parameters>
+    </method>
+    <method name="SetMiterLimit" cname="cairo_set_miter_limit">
+      <return-type type="void"/>
+      <parameters>
+        <parameter name="limit" type="double"/>
+      </parameters>
+    </method>
+    <method name="Translate" cname="cairo_translate">
+      <return-type type="void"/>
+      <parameters>
+        <parameter name="tx" type="double"/>
+        <parameter name="ty" type="double"/>
+      </parameters>
+    </method>
+    <method name="Scale" cname="cairo_scale">
+      <return-type type="void"/>
+      <parameters>
+        <parameter name="sx" type="double"/>
+        <parameter name="sy" type="double"/>
+      </parameters>
+    </method>
+    <method name="Rotate" cname="cairo_rotate">
+      <return-type type="void"/>
+      <parameters>
+        <parameter name="angle" type="double"/>
+      </parameters>
+    </method>
+    <method name="Transform" cname="cairo_transform">
+      <return-type type="void"/>
+      <parameters>
+        <parameter name="matrix" type="const cairo_matrix_t*"/>
+      </parameters>
+    </method>
+    <method name="SetMatrix" cname="cairo_set_matrix">
+      <return-type type="void"/>
+      <parameters>
+        <parameter name="matrix" type="const cairo_matrix_t*"/>
+      </parameters>
+    </method>
+    <method name="IdentityMatrix" cname="cairo_identity_matrix">
+      <return-type type="void"/>
+    </method>
+    <method name="UserToDevice" cname="cairo_user_to_device">
+      <return-type type="void"/>
+      <parameters>
+        <parameter name="x" type="double*"/>
+        <parameter name="y" type="double*"/>
+      </parameters>
+    </method>
+    <method name="UserToDeviceDistance" cname="cairo_user_to_device_distance">
+      <return-type type="void"/>
+      <parameters>
+        <parameter name="dx" type="double*"/>
+        <parameter name="dy" type="double*"/>
+      </parameters>
+    </method>
+    <method name="DeviceToUser" cname="cairo_device_to_user">
+      <return-type type="void"/>
+      <parameters>
+        <parameter name="x" type="double*"/>
+        <parameter name="y" type="double*"/>
+      </parameters>
+    </method>
+    <method name="DeviceToUserDistance" cname="cairo_device_to_user_distance">
+      <return-type type="void"/>
+      <parameters>
+        <parameter name="dx" type="double*"/>
+        <parameter name="dy" type="double*"/>
+      </parameters>
+    </method>
+    <method name="NewPath" cname="cairo_new_path">
+      <return-type type="void"/>
+    </method>
+    <method name="MoveTo" cname="cairo_move_to">
+      <return-type type="void"/>
+      <parameters>
+        <parameter name="x" type="double"/>
+        <parameter name="y" type="double"/>
+      </parameters>
+    </method>
+    <method name="NewSubPath" cname="cairo_new_sub_path">
+      <return-type type="void"/>
+    </method>
+    <method name="LineTo" cname="cairo_line_to">
+      <return-type type="void"/>
+      <parameters>
+        <parameter name="x" type="double"/>
+        <parameter name="y" type="double"/>
+      </parameters>
+    </method>
+    <method name="CurveTo" cname="cairo_curve_to">
+      <return-type type="void"/>
+      <parameters>
+        <parameter name="x1" type="double"/>
+        <parameter name="y1" type="double"/>
+        <parameter name="x2" type="double"/>
+        <parameter name="y2" type="double"/>
+        <parameter name="x3" type="double"/>
+        <parameter name="y3" type="double"/>
+      </parameters>
+    </method>
+    <method name="Arc" cname="cairo_arc">
+      <return-type type="void"/>
+      <parameters>
+        <parameter name="xc" type="double"/>
+        <parameter name="yc" type="double"/>
+        <parameter name="radius" type="double"/>
+        <parameter name="angle1" type="double"/>
+        <parameter name="angle2" type="double"/>
+      </parameters>
+    </method>
+    <method name="ArcNegative" cname="cairo_arc_negative">
+      <return-type type="void"/>
+      <parameters>
+        <parameter name="xc" type="double"/>
+        <parameter name="yc" type="double"/>
+        <parameter name="radius" type="double"/>
+        <parameter name="angle1" type="double"/>
+        <parameter name="angle2" type="double"/>
+      </parameters>
+    </method>
+    <method name="RelMoveTo" cname="cairo_rel_move_to">
+      <return-type type="void"/>
+      <parameters>
+        <parameter name="x" type="double"/>
+        <parameter name="y" type="double"/>
+      </parameters>
+    </method>
+    <method name="RelLineTo" cname="cairo_rel_line_to">
+      <return-type type="void"/>
+      <parameters>
+        <parameter name="x" type="double"/>
+        <parameter name="y" type="double"/>
+      </parameters>
+    </method>
+    <method name="RelCurveTo" cname="cairo_rel_curve_to">
+      <return-type type="void"/>
+      <parameters>
+        <parameter name="x1" type="double"/>
+        <parameter name="y1" type="double"/>
+        <parameter name="x2" type="double"/>
+        <parameter name="y2" type="double"/>
+        <parameter name="x3" type="double"/>
+        <parameter name="y3" type="double"/>
+      </parameters>
+    </method>
+    <method name="Rectangle" cname="cairo_rectangle">
+      <return-type type="void"/>
+      <parameters>
+        <parameter name="x" type="double"/>
+        <parameter name="y" type="double"/>
+        <parameter name="width" type="double"/>
+        <parameter name="height" type="double"/>
+      </parameters>
+    </method>
+    <method name="ClosePath" cname="cairo_close_path">
+      <return-type type="void"/>
+    </method>
+    <method name="Paint" cname="cairo_paint">
+      <return-type type="void"/>
+    </method>
+    <method name="PaintWithAlpha" cname="cairo_paint_with_alpha">
+      <return-type type="void"/>
+      <parameters>
+        <parameter name="alpha" type="double"/>
+      </parameters>
+    </method>
+    <method name="Mask" cname="cairo_mask">
+      <return-type type="void"/>
+      <parameters>
+        <parameter name="pattern" type="cairo_pattern_t*"/>
+      </parameters>
+    </method>
+    <method name="MaskSurface" cname="cairo_mask_surface">
+      <return-type type="void"/>
+      <parameters>
+        <parameter name="surface" type="cairo_surface_t*"/>
+        <parameter name="surface_x" type="double"/>
+        <parameter name="surface_y" type="double"/>
+      </parameters>
+    </method>
+    <method name="Stroke" cname="cairo_stroke">
+      <return-type type="void"/>
+    </method>
+    <method name="StrokePreserve" cname="cairo_stroke_preserve">
+      <return-type type="void"/>
+    </method>
+    <method name="Fill" cname="cairo_fill">
+      <return-type type="void"/>
+    </method>
+    <method name="FillPreserve" cname="cairo_fill_preserve">
+      <return-type type="void"/>
+    </method>
+    <method name="CopyPage" cname="cairo_copy_page">
+      <return-type type="void"/>
+    </method>
+    <method name="ShowPage" cname="cairo_show_page">
+      <return-type type="void"/>
+    </method>
+    <method name="InStroke" cname="cairo_in_stroke">
+      <return-type type="void"/>
+      <parameters>
+        <parameter name="x" type="double"/>
+        <parameter name="y" type="double"/>
+      </parameters>
+    </method>
+    <method name="InFill" cname="cairo_in_stroke">
+      <return-type type="void"/>
+      <parameters>
+        <parameter name="x" type="double"/>
+        <parameter name="y" type="double"/>
+      </parameters>
+    </method>
+    <method name="StrokeExtents" cname="cairo_stroke_extents">
+      <return-type type="void"/>
+      <parameters>
+        <parameter name="x1" type="double*"/>
+        <parameter name="y1" type="double*"/>
+        <parameter name="x2" type="double*"/>
+        <parameter name="y2" type="double*"/>
+      </parameters>
+    </method>
+    <method name="FillExtents" cname="cairo_fill_extents">
+      <return-type type="void"/>
+      <parameters>
+        <parameter name="x1" type="double*"/>
+        <parameter name="y1" type="double*"/>
+        <parameter name="x2" type="double*"/>
+        <parameter name="y2" type="double*"/>
+      </parameters>
+    </method>
+    <method name="ResetClip" cname="cairo_reset_clip">
+      <return-type type="void"/>
+    </method>
+    <method name="Clip" cname="cairo_clip">
+      <return-type type="void"/>
+    </method>
+    <method name="ClipExtents" cname="cairo_clip_extents">
+      <return-type type="void"/>
+      <parameters>
+        <parameter name="x1" type="double*"/>
+        <parameter name="y1" type="double*"/>
+        <parameter name="x2" type="double*"/>
+        <parameter name="y2" type="double*"/>
+      </parameters>
+    </method>
+    <method name="CopyClipRectangleList" cname="cairo_copy_clip_rectangle_list">
+      <return-type type="cairo_rectangle_list_t*"/>
+    </method>
+    <method name="SelectFontFace" cname="cairo_select_font_face">
+      <return-type type="void"/>
+      <parameters>
+        <parameter name="family" type="const char *"/>
+        <parameter name="slant" type="cairo_font_slant_t"/>
+        <parameter name="weight" type="cairo_font_weight_t"/>
+      </parameters>
+    </method>
+    <method name="SetFontSize" cname="cairo_set_font_size">
+      <return-type type="void"/>
+      <parameters>
+        <parameter name="size" type="double"/>
+      </parameters>
+    </method>
+    <method name="SetFontMatrix" cname="cairo_set_font_matrix">
+      <return-type type="void"/>
+      <parameters>
+        <parameter name="matrix" type="cairo_matrix_t*"/>
+      </parameters>
+    </method>
+    <method name="GetFontMatrix" cname="cairo_get_font_matrix">
+      <return-type type="void"/>
+      <parameters>
+        <parameter name="matrix" type="cairo_matrix_t*"/>
+      </parameters>
+    </method>
+    <method name="SetFontOptions" cname="cairo_set_font_options">
+      <return-type type="void"/>
+      <parameters>
+        <parameter name="options" type="cairo_font_options_t*"/>
+      </parameters>
+    </method>
+    <method name="GetFontOptions" cname="cairo_get_font_options">
+      <return-type type="void"/>
+      <parameters>
+        <parameter name="options" type="cairo_font_options_t*"/>
+      </parameters>
+    </method>
+    <method name="SetFontFace" cname="cairo_set_font_face">
+      <return-type type="void"/>
+      <parameters>
+        <parameter name="font_face" type="cairo_font_face_t*"/>
+      </parameters>
+    </method>
+    <method name="GetFontFace" cname="cairo_get_font_face">
+      <return-type type="cairo_font_face_t*"/>
+    </method>
+    <method name="SetScaledFont" cname="cairo_set_scaled_font">
+      <return-type type="void"/>
+      <parameters>
+        <parameter name="font_face" type="cairo_scaled_font_t*"/>
+      </parameters>
+    </method>
+    <method name="GetScaledFont" cname="cairo_get_scaled_font">
+      <return-type type="cairo_scaled_font_t*"/>
+    </method>
+    <method name="ShowText" cname="cairo_show_text">
+      <return-type type="void"/>
+      <parameters>
+        <parameter name="utf8" type="const char *"/>
+      </parameters>
+    </method>
+    <method name="ShowGlyphs" cname="cairo_show_glyphs">
+      <return-type type="void"/>
+      <parameters>
+        <parameter name="glyphs" type="cairo_glyph_t*"/>
+        <parameter name="num_glyphs" type="int"/>
+      </parameters>
+    </method>
+    <method name="TextPath" cname="cairo_text_path">
+      <return-type type="void"/>
+      <parameters>
+        <parameter name="utf8" type="const char *"/>
+      </parameters>
+    </method>
+    <method name="GlyphPath" cname="cairo_glyph_path">
+      <return-type type="void"/>
+      <parameters>
+        <parameter name="glyphs" type="cairo_glyph_t*"/>
+        <parameter name="num_glyphs" type="int"/>
+      </parameters>
+    </method>
+    <method name="TextExtents" cname="cairo_text_extents">
+      <return-type type="void"/>
+      <parameters>
+        <parameter name="utf8" type="const char*"/>
+        <parameter name="extents" type="cairo_text_extents_t*"/>
+      </parameters>
+    </method>
+    <method name="GlyphExtents" cname="cairo_glyph_extents">
+      <return-type type="void"/>
+      <parameters>
+        <parameter name="glyphs" type="cairo_glyph_t*"/>
+        <parameter name="num_glyphs" type="int"/>
+        <parameter name="extents" type="cairo_text_extents_t*"/>
+      </parameters>
+    </method>
+    <method name="FontExtents" cname="cairo_font_extents">
+      <return-type type="void"/>
+      <parameters>
+        <parameter name="extents" type="cairo_font_extents_t*"/>
+      </parameters>
+    </method>
+    <method name="GetOperator" cname="cairo_get_operator">
+      <return-type type="cairo_operator_t"/>
+    </method>
+    <method name="GetSource" cname="cairo_get_source">
+      <return-type type="cairo_pattern_t*"/>
+    </method>
+    <method name="GetTolerance" cname="cairo_get_tolerance">
+      <return-type type="double"/>
+    </method>
+    <method name="GetAntialias" cname="cairo_get_antialias">
+      <return-type type="cairo_antialias_t"/>
+    </method>
+    <method name="GetCurrentPoint" cname="cairo_get_current_point">
+      <return-type type="void"/>
+      <parameters>
+        <parameter name="x" type="double*"/>
+        <parameter name="y" type="double*"/>
+      </parameters>
+    </method>
+    <method name="GetFillRule" cname="cairo_get_fill_rule">
+      <return-type type="cairo_fill_rule_t"/>
+    </method>
+    <method name="GetLineWidth" cname="cairo_get_line_width">
+      <return-type type="double"/>
+    </method>
+    <method name="GetLineCap" cname="cairo_get_line_cap">
+      <return-type type="cairo_line_cap_t"/>
+    </method>
+    <method name="GetMiterLimit" cname="cairo_get_miter_limit">
+      <return-type type="double"/>
+    </method>
+    <method name="GetLineJoin" cname="cairo_get_line_join">
+      <return-type type="cairo_line_join_t"/>
+    </method>
+    <method name="GetDashCount" cname="cairo_get_dash_count">
+      <return-type type="int"/>
+    </method>
+    <method name="GetDash" cname="cairo_get_dash">
+      <return-type type="void"/>
+      <parameters>
+        <parameter name="dashes" type="double*"/>
+        <parameter name="offset" type="double*"/>
+      </parameters>
+    </method>
+    <method name="GetMatrix" cname="cairo_get_matrix">
+      <return-type type="void"/>
+      <parameters>
+        <parameter name="matrix" type="cairo_matrix_t*"/>
+      </parameters>
+    </method>
+    <method name="GetTarget" cname="cairo_get_target">
+      <return-type type="cairo_surface_t*"/>
+    </method>
+    <method name="GetGroupTarget" cname="cairo_get_group_target">
+      <return-type type="cairo_surface_t*"/>
+    </method>
+    <method name="CopyPath" cname="cairo_copy_path">
+      <return-type type="cairo_path_t*"/>
+    </method>
+    <method name="CopyPathFlat" cname="cairo_copy_path_flat">
+      <return-type type="cairo_path_t*"/>
+    </method>
+    <method name="AppendPath" cname="cairo_append_path">
+      <return-type type="void"/>
+      <parameters>
+        <parameter name="path" type="cairo_path_t*"/>
+      </parameters>
+    </method>
+    <method name="Status" cname="cairo_status">
+      <return-type type="cairo_status_t"/>
+    </method>
+  </add-node>
+  <add-node path="/api/namespace/struct[@cname='cairo_rectangle_list_t']">
+    <method name="Destroy" cname="cairo_rectangle_list_destroy">
+      <return-type type="void"/>
+    </method>
+  </add-node>
+  <add-node path="/api/namespace/struct[@cname='cairo_font_options_t']">
+    <method name="Create" cname="cairo_font_options_create" shared="true">
+      <return-type type="cairo_font_options_t*"/>
+    </method>
+    <method name="Copy" cname="cairo_font_options_copy">
+      <return-type type="cairo_font_options_t*"/>
+    </method>
+    <method name="Destroy" cname="cairo_font_options_destroy">
+      <return-type type="void"/>
+    </method>
+    <method name="Status" cname="cairo_font_options_status">
+      <return-type type="cairo_status_t"/>
+    </method>
+    <method name="Merge" cname="cairo_font_options_merge">
+      <return-type type="void"/>
+      <parameters>
+        <parameter name="other" type="cairo_font_options_t*"/>
+      </parameters>
+    </method>
+    <method name="Equal" cname="cairo_font_options_equal">
+      <return-type type="cairo_bool_t"/>
+      <parameters>
+        <parameter name="other" type="cairo_font_options_t*"/>
+      </parameters>
+    </method>
+    <method name="Hash" cname="cairo_font_options_hash">
+      <return-type type="unsigned long"/>
+    </method>
+    <method name="SetAntialias" cname="cairo_font_options_set_antialias">
+      <return-type type="void"/>
+      <parameters>
+        <parameter name="antialias" type="cairo_antialias_t"/>
+      </parameters>
+    </method>
+    <method name="GetAntialias" cname="cairo_font_options_get_antialias">
+      <return-type type="cairo_antialias_t"/>
+    </method>
+    <method name="SetSubpixelOrder" cname="cairo_font_options_set_subpixel_order">
+      <return-type type="void"/>
+      <parameters>
+        <parameter name="subpixel_order" type="cairo_subpixel_order_t"/>
+      </parameters>
+    </method>
+    <method name="GetSubpixelOrder" cname="cairo_font_options_get_subpixel_order">
+      <return-type type="cairo_subpixel_order_t"/>
+    </method>
+    <method name="SetHintStyle" cname="cairo_font_options_set_hint_style">
+      <return-type type="void"/>
+      <parameters>
+        <parameter name="hint_style" type="cairo_hint_style_t"/>
+      </parameters>
+    </method>
+    <method name="GetHintStyle" cname="cairo_font_options_get_hint_style">
+      <return-type type="cairo_hint_style_t"/>
+    </method>
+    <method name="SetHintMetrics" cname="cairo_font_options_set_hint_metrics">
+      <return-type type="void"/>
+      <parameters>
+        <parameter name="hint_metrics" type="cairo_hint_metrics_t"/>
+      </parameters>
+    </method>
+    <method name="GetHintMetrics" cname="cairo_font_options_get_hint_metrics">
+      <return-type type="cairo_hint_metrics_t"/>
+    </method>
+  </add-node>
+  <add-node path="/api/namespace/struct[@cname='cairo_surface_t']">
+    <method name="ImageSurfaceCreate" cname="cairo_image_surface_create" shared="true">
+      <return-type type="cairo_surface_t*"/>
+      <parameters>
+        <parameter name="format" type="cairo_format_t"/>
+        <parameter name="width" type="int"/>
+        <parameter name="height" type="int"/>
+      </parameters>
+    </method>
+    <method name="ImageSurfaceCreateForData" cname="cairo_image_surface_create_for_data" shared="true">
+      <return-type type="cairo_surface_t*"/>
+      <parameters>
+        <parameter name="data" type="gpointer"/>
+        <parameter name="format" type="cairo_format_t"/>
+        <parameter name="width" type="int"/>
+        <parameter name="height" type="int"/>
+        <parameter name="stride" type="int"/>
+      </parameters>
+    </method>
+  </add-node>
+  <add-node path="/api/namespace[@name='Cairo']">
+    <enum name="CairoFormatT" cname="cairo_format_t" type="enum">
+      <member cname="CAIRO_FORMAT_ARGB32" name="Argb32"/>
+      <member cname="CAIRO_FORMAT_RGB24" name="Rgb24"/>
+      <member cname="CAIRO_FORMAT_A8" name="A8"/>
+      <member cname="CAIRO_FORMAT_A1" name="A1"/>
+      <member cname="CAIRO_FORMAT_RGB16_565" name="Rgb16_565"/>
+    </enum>
+  </add-node>
 </metadata>

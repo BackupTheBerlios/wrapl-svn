@@ -1,7 +1,7 @@
 BASENAME = $(GTK_LIB_DIR)Cairo$(DIRSEP)
 
 CFLAGS += $(shell pkg-config --cflags cairo) -include cairo.h -include cairo-svg.h
-LDFLAGS += Gtk/Gtk.rlib
+LDFLAGS += Gtk/Gtk.rlib Gtk/Cairo.rlib
 
 if $(file-exists $(GTK_AUTOGEN))
 	foreach(FILE, $(rootname $(basename $(glob *.c))))
