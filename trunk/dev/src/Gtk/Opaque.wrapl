@@ -152,6 +152,7 @@ TO :process(t@T, srcdir, incdir, libdir) (
 	EVERY cfile:writes(headers:keys, "\n");
 	cfile:writes("/***********************************/\n");
 	cfile:writes("TYPE(T);\n\n");
+        cfile:writes("Gtk$", t:ns, "$", t:name, "_t Nil[] = {{T, 0}};\n\n");
 	EVERY ctor <- t:ctors:values DO (
 		params <- ctor:params;
 		n <- params:size;
@@ -255,6 +256,7 @@ if WINDOWS then
 end
 
 export("T")
+export("Nil")
 EOF);
 	EVERY ctor <- t:ctors:values DO deffile:writes("export(\"", ctor:name, "\")\n");
 	EVERY method <- t:shared:values DO deffile:writes("export(\"", method:name, "\")\n");
