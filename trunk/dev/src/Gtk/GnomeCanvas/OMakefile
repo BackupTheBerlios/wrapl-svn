@@ -1,0 +1,15 @@
+BASENAME = $(GTK_LIB_DIR)GnomeCanvas$(DIRSEP)
+
+CFLAGS += $(shell pkg-config --cflags libgnomecanvas-2.0) -include libgnomecanvas/libgnomecanvas.h
+LDFLAGS += Gtk/GnomeCanvas.rlib
+
+if $(file-exists $(GTK_AUTOGEN))
+	foreach(FILE, $(rootname $(basename $(glob *.c))))
+		#println($(FILE))
+		clean:
+			$(rm $(FILE).c)
+			$(rm $(FILE).rdef)
+		RivaProgram($(BASENAME)$(FILE), $(FILE))
+		GtkGnomeCanvas: $(BASENAME)$(FILE).riva
+		export
+
