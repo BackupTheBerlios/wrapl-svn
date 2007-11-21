@@ -101,6 +101,17 @@ method "put32", ADDRESS, SMALLINT
 	xor eax, eax
 	ret
 
+method "puta", ADDRESS, SMALLINT
+	mov esi, [argument(edi).Val]
+	mov eax, [argument(edi + 8).Val]
+	mov esi, [address(esi).Value]
+	mov eax, [address(eax).Value]
+	mov [esi], eax
+	mov ecx, Std$Object$Nil
+	xor edx, edx
+	xor eax, eax
+	ret
+
 method "put8", ADDRESS, SMALLINT, SMALLINT
 	mov esi, [argument(edi).Val]
 	mov eax, [argument(edi + 8).Val]
@@ -121,6 +132,19 @@ method "put32", ADDRESS, SMALLINT, SMALLINT
 	mov esi, [address(esi).Value]
 	add esi, [small_int(ebx).Value]
 	mov eax, [small_int(eax).Value]
+	mov [esi], eax
+	mov ecx, Std$Object$Nil
+	xor edx, edx
+	xor eax, eax
+	ret
+
+method "puta", ADDRESS, SMALLINT, SMALLINT
+	mov esi, [argument(edi).Val]
+	mov eax, [argument(edi + 8).Val]
+	mov ebx, [argument(edi + 16).Val]
+	mov esi, [address(esi).Value]
+	add esi, [small_int(ebx).Value]
+	mov eax, [address(eax).Value]
 	mov [esi], eax
 	mov ecx, Std$Object$Nil
 	xor edx, edx
@@ -217,6 +241,17 @@ method "get32", ADDRESS
 	xor edx, edx
 	ret
 
+method "geta", ADDRESS
+	mov eax, [argument(edi).Val]
+	mov eax, [address(eax).Value]
+	push dword [eax]
+	call Std$Address$_alloc
+	pop dword [address(eax).Value]
+	mov ecx, eax
+	xor eax, eax
+	xor edx, edx
+	ret
+
 method "get8", ADDRESS, SMALLINT
 	mov eax, [argument(edi).Val]
 	mov ebx, [argument(edi + 8).Val]
@@ -254,6 +289,19 @@ method "get32", ADDRESS, SMALLINT
 	push dword [eax]
 	call Std$Integer$_alloc_small
 	pop dword [small_int(eax).Value]
+	mov ecx, eax
+	xor eax, eax
+	xor edx, edx
+	ret
+
+method "geta", ADDRESS, SMALLINT
+	mov eax, [argument(edi).Val]
+	mov ebx, [argument(edi + 8).Val]
+	mov eax, [address(eax).Value]
+	add eax, [small_int(ebx).Value]
+	push dword [eax]
+	call Std$Address$_alloc
+	pop dword [address(eax).Value]
 	mov ecx, eax
 	xor eax, eax
 	xor edx, edx
@@ -2429,7 +2477,7 @@ method "@", REAL, VAL, Std$String$T
 	db "%f", 0
 
 extern __gmpz_init_set_d
-method "@", REAL, VAL, Std$Integer$SmallT
+method "@", REAL, VAL, Std$Integer$T
 	sub esp, byte 12
 	mov ebx, esp
 	mov eax, [argument(edi).Val]

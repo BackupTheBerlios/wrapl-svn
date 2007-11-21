@@ -20,7 +20,9 @@ GLOBAL_FUNCTION(New, 2) {
     Matrix->NoOfCols.Value = NoOfCols;
     Std$Function_argument *Arg = Args + 1;
     Std$Object_t **Ptr = Matrix->Entries;
-    if (NoOfRows * NoOfCols != Count - 2) {
+    if (Count == 2) {
+        for (int I = NoOfRows * NoOfCols; --I >= 0;) *(Ptr++) = Std$Object$Nil;
+    } else if (NoOfRows * NoOfCols != Count - 2) {
         Std$Object_t **Limit = Ptr + NoOfRows * NoOfCols;
         for (int I = Count - 1; --I;) *(Ptr++) = (++Arg)->Val;
         while (Ptr < Limit) *(Ptr++) = Arg->Val;

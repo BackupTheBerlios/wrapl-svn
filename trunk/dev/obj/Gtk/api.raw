@@ -34844,4 +34844,1012 @@
     </struct>
     <struct name="CairoUserDataKeyT" cname="cairo_user_data_key_t" opaque="true" />
   </namespace>
+  <namespace name="CCC" library="libgtk">
+    <enum name="CcItemFlags" cname="CcItemFlags" type="flags">
+      <member cname="CC_CAN_FOCUS" name="CanFocus" value="1 &lt;&lt; 1" />
+      <member cname="CC_DISPOSED" name="Disposed" value="1 &lt;&lt; 2" />
+      <member cname="CC_GRID_ALIGNED" name="GridAligned" value="1 &lt;&lt; 3" />
+    </enum>
+    <enum name="CcUnit" cname="CcUnit" type="enum">
+      <member cname="CC_UNIT_DISPLAY_PIXEL" name="DisplayPixel" />
+      <member cname="CC_UNIT_POINT" name="Point" />
+      <member cname="CC_UNIT_PT" name="Pt" value="Point" />
+    </enum>
+    <enum name="CcZoomMode" cname="CcZoomMode" type="enum">
+      <member cname="CC_ZOOM_PIXELS" name="Pixels" />
+      <member cname="CC_ZOOM_WIDTH" name="Width" />
+      <member cname="CC_ZOOM_HEIGHT" name="Height" />
+      <member cname="CC_ZOOM_AUTO" name="Auto" />
+    </enum>
+    <callback name="CcItemFunc" cname="CcItemFunc">
+      <return-type type="void" />
+      <parameters>
+        <parameter type="CcItem*" name="item" />
+        <parameter type="CcView*" name="view" />
+        <parameter type="gpointer" name="data" />
+      </parameters>
+    </callback>
+    <interface name="CcBrush" cname="CcBrush">
+      <virtual_method name="Apply" cname="apply">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="CcBrush*" name="brush" />
+          <parameter type="CcView*" name="view" />
+          <parameter type="CcItem*" name="item" />
+          <parameter type="cairo_t*" name="cr" />
+        </parameters>
+      </virtual_method>
+      <method name="Apply" cname="cc_brush_apply">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="CcView*" name="view" />
+          <parameter type="CcItem*" name="item" />
+          <parameter type="cairo_t*" name="cr" />
+        </parameters>
+      </method>
+      <method name="GetType" cname="cc_brush_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+    </interface>
+    <interface name="CcItemView" cname="CcItemView">
+      <virtual_method name="ItemAdded" cname="item_added">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="CcItemView*" name="self" />
+          <parameter type="CcItem*" name="item" />
+          <parameter type="gint" name="position" />
+          <parameter type="CcItem*" name="child" />
+        </parameters>
+      </virtual_method>
+      <virtual_method name="ItemRemoved" cname="item_removed">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="CcItemView*" name="self" />
+          <parameter type="CcItem*" name="item" />
+          <parameter type="gint" name="position" />
+          <parameter type="CcItem*" name="child" />
+        </parameters>
+      </virtual_method>
+      <virtual_method name="ItemDirty" cname="item_dirty">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="CcItemView*" name="self" />
+          <parameter type="CcItem*" name="item" />
+          <parameter type="const-CcView*" name="view" />
+          <parameter type="const-CcDRect*" name="dirty" />
+        </parameters>
+      </virtual_method>
+      <virtual_method name="NotifyAllBounds" cname="notify_all_bounds">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="CcItemView*" name="self" />
+          <parameter type="CcItem*" name="item" />
+          <parameter type="CcView*" name="view" />
+          <parameter type="const-CcDRect*" name="all_bounds" />
+        </parameters>
+      </virtual_method>
+      <method name="GetType" cname="cc_item_view_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+      <method name="Register" cname="cc_item_view_register">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="CcItem*" name="item" />
+        </parameters>
+      </method>
+      <method name="Unregister" cname="cc_item_view_unregister">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="CcItem*" name="item" />
+        </parameters>
+      </method>
+    </interface>
+    <interface name="CcView" cname="CcView">
+      <virtual_method name="GrabItem" cname="grab_item">
+        <return-type type="GdkGrabStatus" />
+        <parameters>
+          <parameter type="CcView*" name="self" />
+          <parameter type="CcItem*" name="item" />
+          <parameter type="GdkEventMask" name="mask" />
+          <parameter type="GdkCursor*" name="cursor" />
+          <parameter type="guint32" name="time" />
+        </parameters>
+      </virtual_method>
+      <virtual_method name="UngrabItem" cname="ungrab_item">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="CcView*" name="self" />
+          <parameter type="CcItem*" name="item" />
+          <parameter type="guint32" name="time" />
+        </parameters>
+      </virtual_method>
+      <virtual_method name="WindowToWorld" cname="window_to_world">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="const-CcView*" name="self" />
+          <parameter type="gdouble*" name="x" />
+          <parameter type="gdouble*" name="y" />
+        </parameters>
+      </virtual_method>
+      <virtual_method name="WorldToWindow" cname="world_to_window">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="const-CcView*" name="self" />
+          <parameter type="gdouble*" name="x" />
+          <parameter type="gdouble*" name="y" />
+        </parameters>
+      </virtual_method>
+      <virtual_method name="WorldToWindowDistance" cname="world_to_window_distance">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="const-CcView*" name="self" />
+          <parameter type="gdouble*" name="x" />
+          <parameter type="gdouble*" name="y" />
+        </parameters>
+      </virtual_method>
+      <method name="GetFocus" cname="cc_view_get_focus">
+        <return-type type="CcItem*" />
+      </method>
+      <method name="GetRoot" cname="cc_view_get_root">
+        <return-type type="CcItem*" />
+      </method>
+      <method name="GetScrolledRegion" cname="cc_view_get_scrolled_region">
+        <return-type type="CcDRect*" />
+      </method>
+      <method name="GetType" cname="cc_view_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+      <method name="GetZoom" cname="cc_view_get_zoom">
+        <return-type type="gdouble" />
+      </method>
+      <method name="GrabItem" cname="cc_view_grab_item">
+        <return-type type="gint" />
+        <parameters>
+          <parameter type="CcItem*" name="item" />
+          <parameter type="GdkEventMask" name="mask" />
+          <parameter type="GdkCursor*" name="cursor" />
+          <parameter type="guint32" name="time" />
+        </parameters>
+      </method>
+      <method name="SetFocus" cname="cc_view_set_focus">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="CcItem*" name="focus" />
+        </parameters>
+      </method>
+      <method name="SetRoot" cname="cc_view_set_root">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="CcItem*" name="root" />
+        </parameters>
+      </method>
+      <method name="SetScrolledRegion" cname="cc_view_set_scrolled_region">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="const-CcDRect*" name="scrolled_region" />
+        </parameters>
+      </method>
+      <method name="SetZoom" cname="cc_view_set_zoom">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="gdouble" name="zoom" />
+        </parameters>
+      </method>
+      <method name="UngrabItem" cname="cc_view_ungrab_item">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="CcItem*" name="item" />
+          <parameter type="guint32" name="time" />
+        </parameters>
+      </method>
+      <method name="WindowToWorld" cname="cc_view_window_to_world">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="gdouble*" name="x" />
+          <parameter type="gdouble*" name="y" />
+        </parameters>
+      </method>
+      <method name="WorldToWindow" cname="cc_view_world_to_window">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="gdouble*" name="x" />
+          <parameter type="gdouble*" name="y" />
+        </parameters>
+      </method>
+      <method name="WorldToWindowDistance" cname="cc_view_world_to_window_distance">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="gdouble*" name="x" />
+          <parameter type="gdouble*" name="y" />
+        </parameters>
+      </method>
+    </interface>
+    <object name="CcBrushColor" cname="CcBrushColor" deprecated="1" parent="GInitiallyUnowned">
+      <field name="Color" cname="color" type="CcColor*" />
+      <method name="GetColor" cname="cc_brush_color_get_color" deprecated="1">
+        <return-type type="CcColor*" />
+      </method>
+      <method name="GetType" cname="cc_brush_color_get_type" deprecated="1" shared="true">
+        <return-type type="GType" />
+      </method>
+      <constructor cname="cc_brush_color_new" deprecated="1">
+        <parameters>
+          <parameter type="CcColor*" name="color" />
+        </parameters>
+      </constructor>
+      <method name="SetColor" cname="cc_brush_color_set_color" deprecated="1">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="CcColor*" name="color" />
+        </parameters>
+      </method>
+    </object>
+    <object name="CcCamera" cname="CcCamera">
+      <method name="GetRoot" cname="cc_camera_get_root" shared="true">
+        <return-type type="CcItem*" />
+        <parameters>
+          <parameter type="const-CcItem*" name="self" />
+        </parameters>
+      </method>
+      <method name="GetType" cname="cc_camera_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+      <constructor cname="cc_camera_new" />
+      <constructor cname="cc_camera_new_root">
+        <parameters>
+          <parameter type="CcItem*" name="root" />
+        </parameters>
+      </constructor>
+      <method name="SetRoot" cname="cc_camera_set_root">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="CcItem*" name="root" />
+        </parameters>
+      </method>
+    </object>
+    <object name="CcCaret" cname="CcCaret">
+      <method name="GetType" cname="cc_caret_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+      <constructor cname="cc_caret_new" />
+      <method name="SetPosition" cname="cc_caret_set_position">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="gdouble" name="x1" />
+          <parameter type="gdouble" name="y1" />
+          <parameter type="gdouble" name="x2" />
+          <parameter type="gdouble" name="y2" />
+        </parameters>
+      </method>
+    </object>
+    <object name="CcCircle" cname="CcCircle" parent="CcShape">
+      <field name="X" cname="x" type="gdouble" />
+      <field name="Y" cname="y" type="gdouble" />
+      <field name="Radius" cname="radius" type="gdouble" />
+      <method name="GetType" cname="cc_circle_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+      <constructor cname="cc_circle_new" />
+      <method name="SetAnchor" cname="cc_circle_set_anchor">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="gdouble" name="x" />
+          <parameter type="gdouble" name="y" />
+        </parameters>
+      </method>
+      <method name="SetRadius" cname="cc_circle_set_radius">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="gdouble" name="radius" />
+        </parameters>
+      </method>
+    </object>
+    <object name="CcColor" cname="CcColor" parent="GInitiallyUnowned">
+      <field name="Alpha" cname="alpha" type="gdouble" />
+      <method name="Apply" cname="cc_color_apply">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="gdouble*" name="red" />
+          <parameter type="gdouble*" name="green" />
+          <parameter type="gdouble*" name="blue" />
+          <parameter type="gdouble*" name="alpha" />
+        </parameters>
+      </method>
+      <method name="GetType" cname="cc_color_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+      <method name="HsvGetType" cname="cc_color_hsv_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+      <constructor cname="cc_color_new_hsv">
+        <parameters>
+          <parameter type="gdouble" name="hue" />
+          <parameter type="gdouble" name="saturation" />
+          <parameter type="gdouble" name="value" />
+        </parameters>
+      </constructor>
+      <constructor cname="cc_color_new_hsva">
+        <parameters>
+          <parameter type="gdouble" name="hue" />
+          <parameter type="gdouble" name="saturation" />
+          <parameter type="gdouble" name="value" />
+          <parameter type="gdouble" name="alpha" />
+        </parameters>
+      </constructor>
+      <constructor cname="cc_color_new_rgb">
+        <parameters>
+          <parameter type="gdouble" name="red" />
+          <parameter type="gdouble" name="green" />
+          <parameter type="gdouble" name="blue" />
+        </parameters>
+      </constructor>
+      <constructor cname="cc_color_new_rgba">
+        <parameters>
+          <parameter type="gdouble" name="red" />
+          <parameter type="gdouble" name="green" />
+          <parameter type="gdouble" name="blue" />
+          <parameter type="gdouble" name="alpha" />
+        </parameters>
+      </constructor>
+      <method name="RgbGetType" cname="cc_color_rgb_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+      <method name="Stop" cname="cc_color_stop">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="cairo_pattern_t*" name="pattern" />
+          <parameter type="gdouble" name="offset" />
+        </parameters>
+      </method>
+    </object>
+    <object name="CcGradient" cname="CcGradient" parent="GInitiallyUnowned">
+      <field name="Private" cname="_private" type="CcGradientPrivate*" />
+      <method name="AddStop" cname="cc_gradient_add_stop">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="gdouble" name="offset" />
+          <parameter type="CcColor*" name="color" />
+        </parameters>
+      </method>
+      <method name="CreatePattern" cname="cc_gradient_create_pattern">
+        <return-type type="cairo_pattern_t*" />
+        <parameters>
+          <parameter type="const-CcView*" name="view" />
+          <parameter type="const-CcItem*" name="item" />
+        </parameters>
+      </method>
+      <method name="GetType" cname="cc_gradient_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+    </object>
+    <object name="CcHashMap" cname="CcHashMap" parent="GObject">
+      <field name="Fundamental" cname="fundamental" type="GType" />
+      <field name="Content" cname="content" type="GType" />
+      <field name="HashTable" cname="hash_table" type="GHashTable*" />
+      <method name="Foreach" cname="cc_hash_map_foreach">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GHFunc" name="func" />
+          <parameter type="gpointer" name="user_data" />
+        </parameters>
+      </method>
+      <method name="GetType" cname="cc_hash_map_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+      <method name="Insert" cname="cc_hash_map_insert">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="gpointer" name="key" />
+          <parameter type="gpointer" name="data" />
+        </parameters>
+      </method>
+      <method name="Lookup" cname="cc_hash_map_lookup">
+        <return-type type="gpointer" />
+        <parameters>
+          <parameter type="gconstpointer" name="key" />
+        </parameters>
+      </method>
+      <constructor cname="cc_hash_map_new">
+        <parameters>
+          <parameter type="GType" name="content_type" />
+        </parameters>
+      </constructor>
+      <method name="Remove" cname="cc_hash_map_remove">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="gconstpointer" name="key" />
+        </parameters>
+      </method>
+    </object>
+    <object name="CcHeap" cname="CcHeap" parent="GObject">
+      <field name="Private" cname="_private" type="CcHeapPrivate*" />
+      <method name="GetSize" cname="cc_heap_get_size">
+        <return-type type="guint" />
+      </method>
+      <method name="GetType" cname="cc_heap_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+      <constructor cname="cc_heap_new" />
+      <method name="Pop" cname="cc_heap_pop">
+        <return-type type="gpointer" />
+      </method>
+      <method name="Push" cname="cc_heap_push">
+        <return-type type="CcHeapNode*" />
+        <parameters>
+          <parameter type="gint" name="priority" />
+          <parameter type="gpointer" name="data" />
+        </parameters>
+      </method>
+      <method name="Remove" cname="cc_heap_remove">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="CcHeapNode*" name="node" />
+        </parameters>
+      </method>
+    </object>
+    <object name="CcItem" cname="CcItem" parent="GInitiallyUnowned">
+      <field name="Parent" cname="parent" type="CcItem*" />
+      <field name="Flags" cname="flags" type="CcItemFlags" />
+      <field name="Bounds" cname="bounds" type="CcHashMap*" />
+      <field name="Views" cname="views" type="GList*" />
+      <field name="Private" cname="_private" type="CcItemPrivate*" />
+      <method name="AddView" cname="cc_item_add_view">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="CcView*" name="view" />
+        </parameters>
+      </method>
+      <method name="Append" cname="cc_item_append">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="CcItem*" name="child" />
+        </parameters>
+      </method>
+      <method name="BoundsChanged" cname="cc_item_bounds_changed">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="const-CcView*" name="view" />
+        </parameters>
+      </method>
+      <method name="ClassAddViewData" cname="cc_item_class_add_view_data" shared="true">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="gpointer" name="item_class" />
+          <parameter type="gsize" name="view_data_size" />
+        </parameters>
+      </method>
+      <method name="Dirty" cname="cc_item_dirty">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="const-CcView*" name="view" />
+          <parameter type="CcDRect" name="dirty_region" />
+        </parameters>
+      </method>
+      <method name="Distance" cname="cc_item_distance">
+        <return-type type="gdouble" />
+        <parameters>
+          <parameter type="const-CcView*" name="view" />
+          <parameter type="gdouble" name="x" />
+          <parameter type="gdouble" name="y" />
+          <parameter type="CcItem**" name="found" />
+        </parameters>
+      </method>
+      <method name="ForeachChild" cname="cc_item_foreach_child">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GFunc" name="func" />
+          <parameter type="gpointer" name="user_data" />
+        </parameters>
+      </method>
+      <method name="ForeachView" cname="cc_item_foreach_view">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="CcItemFunc" name="func" />
+          <parameter type="gpointer" name="data" />
+        </parameters>
+      </method>
+      <method name="GetAllBounds" cname="cc_item_get_all_bounds">
+        <return-type type="const-CcDRect*" />
+        <parameters>
+          <parameter type="const-CcView*" name="view" />
+        </parameters>
+      </method>
+      <method name="GetChildren" cname="cc_item_get_children">
+        <return-type type="const-GList*" />
+      </method>
+      <method name="GetType" cname="cc_item_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+      <method name="GetViewData" cname="cc_item_get_view_data">
+        <return-type type="gpointer" />
+        <parameters>
+          <parameter type="const-CcView*" name="view" />
+          <parameter type="GType" name="type" />
+        </parameters>
+      </method>
+      <method name="GrabFocus" cname="cc_item_grab_focus">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="CcView*" name="view" />
+        </parameters>
+      </method>
+      <method name="Insert" cname="cc_item_insert">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="CcItem*" name="child" />
+          <parameter type="gint" name="position" />
+        </parameters>
+      </method>
+      <method name="IsChildOf" cname="cc_item_is_child_of">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="const-CcItem*" name="parent" />
+        </parameters>
+      </method>
+      <method name="Lower" cname="cc_item_lower">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="CcItem*" name="parent" />
+        </parameters>
+      </method>
+      <method name="LowerToBottom" cname="cc_item_lower_to_bottom">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="CcItem*" name="parent" />
+        </parameters>
+      </method>
+      <constructor cname="cc_item_new" />
+      <method name="Raise" cname="cc_item_raise">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="CcItem*" name="parent" />
+        </parameters>
+      </method>
+      <method name="RaiseToTop" cname="cc_item_raise_to_top">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="CcItem*" name="parent" />
+        </parameters>
+      </method>
+      <method name="Remove" cname="cc_item_remove">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="CcItem*" name="child" />
+        </parameters>
+      </method>
+      <method name="RemoveView" cname="cc_item_remove_view">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="CcView*" name="view" />
+        </parameters>
+      </method>
+      <method name="Render" cname="cc_item_render">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="CcView*" name="view" />
+          <parameter type="cairo_t*" name="cr" />
+        </parameters>
+      </method>
+      <method name="Repaint" cname="cc_item_repaint">
+        <return-type type="void" />
+      </method>
+      <method name="SetGridAligned" cname="cc_item_set_grid_aligned">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="gboolean" name="grid_aligned" />
+        </parameters>
+      </method>
+      <method name="SetPosition" cname="cc_item_set_position">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="CcItem*" name="parent" />
+          <parameter type="gint" name="position" />
+        </parameters>
+      </method>
+      <method name="UpdateBounds" cname="cc_item_update_bounds">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="gpointer" name="data" />
+        </parameters>
+      </method>
+      <method name="UpdateBoundsForView" cname="cc_item_update_bounds_for_view">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="CcView*" name="view" />
+        </parameters>
+      </method>
+    </object>
+    <object name="CcLine" cname="CcLine">
+      <method name="Clear" cname="cc_line_clear">
+        <return-type type="void" />
+      </method>
+      <method name="GetType" cname="cc_line_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+      <method name="Line" cname="cc_line_line">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="gdouble" name="x" />
+          <parameter type="gdouble" name="y" />
+        </parameters>
+      </method>
+      <method name="Move" cname="cc_line_move">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="gdouble" name="x" />
+          <parameter type="gdouble" name="y" />
+        </parameters>
+      </method>
+      <constructor cname="cc_line_new" />
+    </object>
+    <object name="CcPixbuf" cname="CcPixbuf">
+      <method name="GetRotation" cname="cc_pixbuf_get_rotation">
+        <return-type type="gdouble" />
+      </method>
+      <method name="GetType" cname="cc_pixbuf_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+      <constructor cname="cc_pixbuf_new" />
+      <method name="SetPixbuf" cname="cc_pixbuf_set_pixbuf">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GdkPixbuf*" name="pixbuf" />
+        </parameters>
+      </method>
+      <method name="SetPosition" cname="cc_pixbuf_set_position">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="gdouble" name="x" />
+          <parameter type="gdouble" name="y" />
+          <parameter type="gdouble" name="w" />
+          <parameter type="gdouble" name="h" />
+        </parameters>
+      </method>
+      <method name="SetPositionX" cname="cc_pixbuf_set_position_x">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="gdouble" name="pos_x" />
+        </parameters>
+      </method>
+      <method name="SetPositionY" cname="cc_pixbuf_set_position_y">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="gdouble" name="pos_y" />
+        </parameters>
+      </method>
+      <method name="SetRotation" cname="cc_pixbuf_set_rotation">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="gdouble" name="rotation" />
+        </parameters>
+      </method>
+    </object>
+    <object name="CcPrinter" cname="CcPrinter" parent="GInitiallyUnowned">
+      <field name="Filename" cname="filename" type="gchar*" />
+      <method name="GetType" cname="cc_printer_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+      <constructor cname="cc_printer_new">
+        <parameters>
+          <parameter type="const-gchar*" name="filename" />
+        </parameters>
+      </constructor>
+      <method name="PrintPage" cname="cc_printer_print_page">
+        <return-type type="void" />
+      </method>
+    </object>
+    <object name="CcRadialGradient" cname="CcRadialGradient">
+      <method name="GetType" cname="cc_radial_gradient_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+      <constructor cname="cc_radial_gradient_new">
+        <parameters>
+          <parameter type="gdouble" name="x" />
+          <parameter type="gdouble" name="y" />
+          <parameter type="gdouble" name="radius" />
+        </parameters>
+      </constructor>
+    </object>
+    <object name="CcRectangle" cname="CcRectangle" parent="CcShape">
+      <field name="X" cname="x" type="gdouble" />
+      <field name="Y" cname="y" type="gdouble" />
+      <field name="W" cname="w" type="gdouble" />
+      <field name="H" cname="h" type="gdouble" />
+      <method name="GetType" cname="cc_rectangle_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+      <constructor cname="cc_rectangle_new" />
+      <method name="SetHeight" cname="cc_rectangle_set_height">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="gdouble" name="height" />
+        </parameters>
+      </method>
+      <method name="SetPosition" cname="cc_rectangle_set_position">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="gdouble" name="x" />
+          <parameter type="gdouble" name="y" />
+          <parameter type="gdouble" name="w" />
+          <parameter type="gdouble" name="h" />
+        </parameters>
+      </method>
+      <method name="SetWidth" cname="cc_rectangle_set_width">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="gdouble" name="width" />
+        </parameters>
+      </method>
+      <method name="SetX" cname="cc_rectangle_set_x">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="gdouble" name="x" />
+        </parameters>
+      </method>
+      <method name="SetY" cname="cc_rectangle_set_y">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="gdouble" name="y" />
+        </parameters>
+      </method>
+    </object>
+    <object name="CcRoundedRectangle" cname="CcRoundedRectangle">
+      <method name="GetType" cname="cc_rounded_rectangle_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+      <constructor cname="cc_rounded_rectangle_new" />
+      <method name="SetRadius" cname="cc_rounded_rectangle_set_radius">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="gdouble" name="radius" />
+        </parameters>
+      </method>
+    </object>
+    <object name="CcShape" cname="CcShape" parent="CcItem">
+      <field name="BrushBorder" cname="brush_border" type="CcBrush*" />
+      <field name="BrushContent" cname="brush_content" type="CcBrush*" />
+      <method name="GetBrushBorder" cname="cc_shape_get_brush_border">
+        <return-type type="CcBrush*" />
+      </method>
+      <method name="GetBrushContent" cname="cc_shape_get_brush_content">
+        <return-type type="CcBrush*" />
+      </method>
+      <method name="GetType" cname="cc_shape_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+      <method name="GetWidth" cname="cc_shape_get_width">
+        <return-type type="gdouble" />
+        <parameters>
+          <parameter type="const-CcView*" name="view" />
+        </parameters>
+      </method>
+      <method name="SetBrushBorder" cname="cc_shape_set_brush_border">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="CcBrush*" name="brush" />
+        </parameters>
+      </method>
+      <method name="SetBrushContent" cname="cc_shape_set_brush_content">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="CcBrush*" name="brush" />
+        </parameters>
+      </method>
+      <method name="SetLineWidth" cname="cc_shape_set_line_width">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="CcDistance*" name="width" />
+        </parameters>
+      </method>
+      <method name="SetWidthPixels" cname="cc_shape_set_width_pixels">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="gdouble" name="width" />
+        </parameters>
+      </method>
+      <method name="SetWidthUnits" cname="cc_shape_set_width_units">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="gdouble" name="width" />
+        </parameters>
+      </method>
+    </object>
+    <object name="CcSimpleItem" cname="CcSimpleItem">
+      <method name="GetType" cname="cc_simple_item_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+      <constructor cname="cc_simple_item_new" />
+    </object>
+    <object name="CcText" cname="CcText" parent="CcShape">
+      <field name="Anchor" cname="anchor" type="GtkAnchorType" />
+      <field name="X" cname="x" type="gdouble" />
+      <field name="Y" cname="y" type="gdouble" />
+      <field name="SizePixels" cname="size_pixels" type="gboolean" />
+      <field name="Layout" cname="layout" type="PangoLayout*" />
+      <field name="FontDescription" cname="font_description" type="PangoFontDescription*" />
+      <field name="Editable" cname="editable" type="gboolean" />
+      <field name="Cursor" cname="cursor" type="gint" />
+      <field name="CursorTrail" cname="cursor_trail" type="gint" />
+      <method name="GetText" cname="cc_text_get_text">
+        <return-type type="const-gchar*" />
+      </method>
+      <method name="GetType" cname="cc_text_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+      <method name="IsEditable" cname="cc_text_is_editable">
+        <return-type type="gboolean" />
+      </method>
+      <constructor cname="cc_text_new">
+        <parameters>
+          <parameter type="const-gchar*" name="text" />
+        </parameters>
+      </constructor>
+      <method name="SetAnchor" cname="cc_text_set_anchor">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="gdouble" name="x" />
+          <parameter type="gdouble" name="y" />
+        </parameters>
+      </method>
+      <method name="SetAnchorType" cname="cc_text_set_anchor_type">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GtkAnchorType" name="anchor" />
+        </parameters>
+      </method>
+      <method name="SetAttributes" cname="cc_text_set_attributes">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="PangoAttrList*" name="attrs" />
+        </parameters>
+      </method>
+      <method name="SetEditable" cname="cc_text_set_editable">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="gboolean" name="editable" />
+        </parameters>
+      </method>
+      <method name="SetFontDescription" cname="cc_text_set_font_description">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="PangoFontDescription*" name="desc" />
+        </parameters>
+      </method>
+      <method name="SetMarkup" cname="cc_text_set_markup">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="const-gchar*" name="markup" />
+        </parameters>
+      </method>
+      <method name="SetSizePixels" cname="cc_text_set_size_pixels">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="gboolean" name="size_pixels" />
+        </parameters>
+      </method>
+      <method name="SetText" cname="cc_text_set_text">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="const-gchar*" name="text" />
+        </parameters>
+      </method>
+    </object>
+    <object name="CcViewCellRenderer" cname="CcViewCellRenderer" parent="GtkCellRenderer">
+      <field name="Zoom" cname="zoom" type="gdouble" />
+      <method name="GetType" cname="cc_view_cell_renderer_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+      <constructor cname="cc_view_cell_renderer_new" />
+    </object>
+    <object name="CcViewPNG" cname="CcViewPNG" parent="GInitiallyUnowned">
+      <field name="Filename" cname="filename" type="gchar*" />
+      <field name="Surface" cname="surface" type="cairo_surface_t*" />
+      <method name="GetType" cname="cc_view_png_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+      <constructor cname="cc_view_png_new">
+        <parameters>
+          <parameter type="const-gchar*" name="filename" />
+        </parameters>
+      </constructor>
+    </object>
+    <object name="CcViewWidget" cname="CcViewWidget" parent="GtkDrawingArea">
+      <field name="ScrolledRegion" cname="scrolled_region" type="CcDRect*" />
+      <field name="Zoom" cname="zoom" type="gdouble" />
+      <field name="ZoomMode" cname="zoom_mode" type="CcZoomMode" />
+      <field name="DisplayMatrix" cname="display_matrix" type="cairo_matrix_t" />
+      <field name="Root" cname="root" type="CcItem*" />
+      <field name="CenterView" cname="center_view" type="gboolean" />
+      <field name="HAdjustment" cname="h_adjustment" type="GtkAdjustment*" />
+      <field name="VAdjustment" cname="v_adjustment" type="GtkAdjustment*" />
+      <field name="Current" cname="current" type="CcItem*" />
+      <field name="Focus" cname="focus" type="CcItem*" />
+      <field name="Grabbed" cname="grabbed" type="CcItem*" />
+      <field name="OverGrabbed" cname="over_grabbed" type="gboolean" />
+      <field name="GrabMask" cname="grab_mask" type="GdkEventMask" />
+      <field name="Priv" cname="priv" type="struct-CcViewWidgetPrivate*" />
+      <method name="GetCenterView" cname="cc_view_widget_get_center_view">
+        <return-type type="gboolean" />
+      </method>
+      <method name="GetType" cname="cc_view_widget_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+      <method name="GetZoomMode" cname="cc_view_widget_get_zoom_mode">
+        <return-type type="CcZoomMode" />
+      </method>
+      <constructor cname="cc_view_widget_new" />
+      <constructor cname="cc_view_widget_new_root">
+        <parameters>
+          <parameter type="CcItem*" name="root" />
+        </parameters>
+      </constructor>
+      <method name="SetCenterView" cname="cc_view_widget_set_center_view">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="gboolean" name="center_view" />
+        </parameters>
+      </method>
+      <method name="SetZoomMode" cname="cc_view_widget_set_zoom_mode">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="CcZoomMode" name="zoom_mode" />
+        </parameters>
+      </method>
+    </object>
+    <alias name="CcColorHsv" cname="CcColorHsv" type="CcColor" />
+    <alias name="CcColorRgb" cname="CcColorRgb" type="CcColor" />
+    <struct name="CcDRect" cname="CcDRect">
+      <field name="X1" cname="x1" type="gdouble" />
+      <field name="Y1" cname="y1" type="gdouble" />
+      <field name="X2" cname="x2" type="gdouble" />
+      <field name="Y2" cname="y2" type="gdouble" />
+      <method name="Copy" cname="cc_d_rect_copy">
+        <return-type type="CcDRect*" owned="true" />
+      </method>
+      <method name="Equal" cname="cc_d_rect_equal">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="CcDRect" name="two" />
+        </parameters>
+      </method>
+      <method name="GetType" cname="cc_d_rect_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+      <method name="Intersect" cname="cc_d_rect_intersect">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="CcDRect" name="two" />
+        </parameters>
+      </method>
+      <method name="Union" cname="cc_d_rect_union">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="CcDRect" name="two" />
+          <parameter type="CcDRect*" name="merged" />
+        </parameters>
+      </method>
+    </struct>
+    <struct name="CcDistance" cname="CcDistance" opaque="true">
+      <field name="Value" cname="value" type="gdouble" access="private" />
+      <field name="Unit" cname="unit" type="CcUnit" access="private" />
+      <method name="Copy" cname="cc_distance_copy">
+        <return-type type="CcDistance*" owned="true" />
+      </method>
+      <method name="Free" cname="cc_distance_free">
+        <return-type type="void" />
+      </method>
+      <method name="GetType" cname="cc_distance_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+      <constructor cname="cc_distance_new">
+        <parameters>
+          <parameter type="gdouble" name="value" />
+          <parameter type="CcUnit" name="unit" />
+        </parameters>
+      </constructor>
+    </struct>
+    <struct name="CcHeapNode" cname="CcHeapNode" opaque="true" />
+    <alias name="CcLinearGradient" cname="CcLinearGradient" type="CcGradient" />
+    <alias name="CcLinearGradientClass" cname="CcLinearGradientClass" type="CcGradientClass" />
+  </namespace>
 </api>

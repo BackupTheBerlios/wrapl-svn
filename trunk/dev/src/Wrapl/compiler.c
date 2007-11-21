@@ -1144,7 +1144,12 @@ operand_t *left_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t *S
 		Label0->link(LineNo, Label1);
 		Label0 = Label1;
 	};
-	Right->compile(Compiler, Label0, Success);
+
+        operand_t *OldSelf = Compiler->Function->Loop->Self;
+	Compiler->Function->Loop->Self = Result;
+		label_t *Label1 = new label_t;
+		Right->compile(Compiler, Label0, Success);
+	Compiler->Function->Loop->Self = OldSelf;
 	return Result;
 };
 

@@ -112,6 +112,28 @@ GLOBAL_FUNCTION(Make, 0) {
 	return SUCCESS;
 };
 
+METHOD("_check", TYP, T) {
+    _list *List = (_list *)Args[0].Val;
+    if (List->Array == 0) {
+        printf("List has no array.\n");
+        return SUCCESS;
+    } else {
+        printf("List has array [%d - %d]...", List->Lower, List->Upper);
+        _node *Node = List->Head;
+        for (int I = 1; I < List->Lower; ++I) Node = Node->Next;
+        _node **Array = List->Array;
+        for (int I = List->Lower; I <= List->Upper; ++I) {
+            if (*(Array++) != Node) {
+                printf("\n\tArray is incorrect at %d...");
+                return SUCCESS;
+            };
+            Node = Node->Next;
+        };
+        printf("done.\n");
+        return SUCCESS;
+    };
+};
+
 METHOD("empty", TYP, T) {
 	_list *List = (_list *)Args[0].Val;
 	List->Head = List->Tail = List->Cache = 0;
@@ -416,6 +438,109 @@ METHOD("[]", TYP, T, TYP, Std$Integer$SmallT, TYP, Std$Integer$SmallT) {
 	List2->Access = 4;
 	Result->Val = List2;
 	return SUCCESS;
+};
+
+static void shift_array_right(_list *List, long Lower, long Upper) {
+    if (List->Array == 0) return;
+    if ((List->Lower > Upper) || (List->Upper < Lower)) return;
+    if ((List->Lower > Lower) || (List->Upper < Upper)) {
+        List->Access = 4;
+        List->Array = 0;
+    };
+    _node **Array = List->Array + (Lower - List->Lower);
+    _node *Temp = Array[Upper - Lower];
+    memmove(Array + 1, Array, (Upper - Lower) * sizeof(_node *));
+    Array[0] = Temp;
+};
+
+static void shift_array_left(_list *List, long Lower, long Upper) {
+    if (List->Array == 0) return;
+    if ((List->Lower > Upper) || (List->Upper < Lower)) return;
+    if ((List->Lower > Lower) || (List->Upper < Upper)) {
+        List->Access = 4;
+        List->Array = 0;
+    };
+    _node **Array = List->Array + (Lower - List->Lower);
+    _node *Temp = Array[0];
+    memmove(Array, Array + 1, (Upper - Lower) * sizeof(_node *));
+    Array[Upper - Lower] = Temp;
+};
+
+METHOD("shift", TYP, T, TYP, Std$Integer$SmallT, TYP, Std$Integer$SmallT) {
+    _list *List = Args[0].Val;
+    long Index = ((Std$Integer_smallt *)Args[1].Val)->Value;
+    long Shift = ((Std$Integer_smallt *)Args[2].Val)->Value;
+    long Cache = List->Index;
+    long Length = List->Length;
+    if (Index < 0) Index += Length + 1;
+    if ((Index < 1) || (Length < Index)) return FAILURE;
+    if (Shift < 0) {
+        if (Index + Shift <= 1) {
+            if (Index > 1) {
+                List->Access = 4;
+                _node *Node = find_node(List, Index);
+                if (Node->Prev->Next = Node->Next) {
+                    Node->Next->Prev = Node->Prev;
+                } else {
+                    List->Tail = Node->Prev;
+                };
+                (Node->Next = List->Head)->Prev = Node;
+                Node->Prev = 0;
+                List->Head = Node;
+                //List->Array = 0;
+                //List->Access = 4;
+                shift_array_right(List, 1, Index);
+            };
+        } else {
+            List->Access = 4;
+            _node *Node1 = find_node(List, Index);
+            _node *Node2 = find_node(List, Index + Shift);
+            if (Node1->Prev->Next = Node1->Next) {
+                Node1->Next->Prev = Node1->Prev;
+            } else {
+                List->Tail = Node1->Prev;
+            };
+            (Node1->Prev = Node2->Prev)->Next = Node1;
+            (Node2->Prev = Node1)->Next = Node2;
+            //List->Array = 0;
+            //List->Access = 4;
+            shift_array_right(List, Index + Shift, Index);
+        };
+    } else if (Shift > 0) {
+        if (Index + Shift >= Length) {
+            if (Index < Length) {
+                List->Access = 4;
+                _node *Node = find_node(List, Index);
+                if (Node->Next->Prev = Node->Prev) {
+                    Node->Prev->Next = Node->Next;
+                } else {
+                    List->Head = Node->Next;
+                };
+                (Node->Prev = List->Tail)->Next = Node;
+                Node->Next = 0;
+                List->Tail = Node;
+                //List->Array = 0;
+                //List->Access = 4;
+                shift_array_left(List, Index, Length);
+            };
+        } else {
+            List->Access = 4;
+            _node *Node1 = find_node(List, Index);
+            _node *Node2 = find_node(List, Index + Shift);
+            if (Node1->Next->Prev = Node1->Prev) {
+                Node1->Prev->Next = Node1->Next;
+            } else {
+                List->Head = Node1->Next;
+            };
+            (Node1->Next = Node2->Next)->Prev = Node1;
+            (Node2->Next = Node1)->Prev = Node2;
+            //List->Array = 0;
+            //List->Access = 4;
+            shift_array_left(List, Index, Index + Shift);
+        };
+    };
+    Result->Val = List;
+    return SUCCESS;
 };
 
 static Std$Object_t *delete_node(_list *List, _node *Node) {

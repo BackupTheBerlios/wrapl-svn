@@ -778,4 +778,22 @@
       <member cname="CAIRO_FORMAT_RGB16_565" name="Rgb16_565"/>
     </enum>
   </add-node>
+  <remove-node path="/api/namespace/struct[@name='CcDRect']/method[@name='Equal']"/>
+  <remove-node path="/api/namespace/struct[@name='CcDRect']/method[@name='Intersect']"/>
+  <remove-node path="/api/namespace/struct[@name='CcDRect']/method[@name='Union']"/>
+  <remove-node path="/api/namespace/object[@name='CcItem']/method[@name='GetChildren']"/>
+  <add-node path="/api/namespace/object[@cname='CcViewWidget']">
+    <implements interface="CcView"/>
+    <implements interface="CcItemView"/>
+  </add-node>
+  <add-node path="/api/namespace/object[@cname='CcBrushColor']">
+    <implements interface="CcBrush"/>
+  </add-node>
+  <add-node path="/api/namespace/object[@cname='CcColor']">
+    <implements interface="CcBrush"/>
+  </add-node>
+  <attr path="/api/namespace/object[@cname='CcPixbuf']" name="parent">CcItem</attr>
+  <add-node path="/api/namespace/object[@cname='CcPixbuf']">
+    <implements interface="CcItemView"/>
+  </add-node>
 </metadata>
