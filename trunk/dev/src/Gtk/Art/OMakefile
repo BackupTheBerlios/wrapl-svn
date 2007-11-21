@@ -1,0 +1,15 @@
+BASENAME = $(GTK_LIB_DIR)Art$(DIRSEP)
+
+CFLAGS += $(shell pkg-config --cflags libart-2.0 libgnome-2.0) -include libart_lgpl/libart.h -include libart_lgpl/art_render_gradient.h -include libart_lgpl/art_svp_intersect.h
+LDFLAGS += Gtk/Art.rlib
+
+if $(file-exists $(GTK_AUTOGEN))
+	foreach(FILE, $(rootname $(basename $(glob *.c))))
+		#println($(FILE))
+		clean:
+			$(rm $(FILE).c)
+			$(rm $(FILE).rdef)
+		RivaProgram($(BASENAME)$(FILE), $(FILE))
+		GtkArt: $(BASENAME)$(FILE).riva
+		export
+
