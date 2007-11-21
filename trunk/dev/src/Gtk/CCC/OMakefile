@@ -1,0 +1,15 @@
+BASENAME = $(GTK_LIB_DIR)CCC$(DIRSEP)
+
+CFLAGS += $(shell pkg-config --cflags ccc-0.1) -include ccc.h -include ccc/cc-heap.h
+LDFLAGS += Gtk/Gtk.rlib Gtk/CCC.rlib
+
+if $(file-exists $(GTK_AUTOGEN))
+	foreach(FILE, $(rootname $(basename $(glob *.c))))
+		#println($(FILE))
+		clean:
+			$(rm $(FILE).c)
+			$(rm $(FILE).rdef)
+		RivaProgram($(BASENAME)$(FILE), $(FILE))
+		GtkGdk: $(BASENAME)$(FILE).riva
+		export
+
