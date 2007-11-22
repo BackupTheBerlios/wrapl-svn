@@ -132,7 +132,7 @@ TO :process(t@T, srcdir, incdir, libdir) (
 			cfile:writes("\tGtk$", t:ns, "$", t:name, "_t *self = Args[0].Val;\n");
 			cfile:writes("\tGtk$Gdk$", type, "_t *result = new(Gtk$Gdk$", type, "_t);\n");
 			cfile:writes("\tresult->Type = Gtk$Gdk$", type, "$T;\n");
-			cfile:writes("\tresult->Value = self->Value->", field, ";\n");
+			cfile:writes("\tresult->Value = &self->Value->", field, ";\n");
 			cfile:writes("\tResult->Val = result;\n");
 			cfile:write("\treturn SUCCESS;\n");
 			cfile:write("};\n\n");

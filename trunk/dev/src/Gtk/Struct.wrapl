@@ -40,6 +40,7 @@ DEF New!(ns, name, cname) (
 	t:headers <- ["#include <Gtk/" + ns + "/" + name + ".h>"];
 	t:libraries <- ["Gtk/" + ns + "/" + name + ".rlib"];
 	t:queue;
+        t:map;
 	VAR s <- S();
 	s:ns <- ns;
 	s:name <- name;
@@ -95,15 +96,15 @@ TO :addctor(t@T, cname) (
 );
 
 TO :precall(t@S, name, arg) [
-	t:ctype + " " + name + "= ((Gtk$" + t:ns + "$" + t:name + "_t *)" + arg + ".Val)->Value;"
+	t:ctype + " " + name + "= ((Gtk$" + t:ns + "$" + t:name + "_t *)" + arg + ".Val)->Value[0];"
 ];
 
 TO :return(t@S, result) [
 	"{",
 	"\tGtk$" + t:ns + "$" + t:name + "_t * _ptr_" + result + " = new(Gtk$" + t:ns + "$" + t:name + "_t);",
 	"\t_ptr_" + result + "->Type = " + t:rtype + ";",
-        "\t_ptr_" + result + "->Address = &_ptr_" + result + "->Value;",
-	"\t_ptr_" + result + "->Value = " + result + ";",
+        "\t_ptr_" + result + "->Value = new(" + t:cname + ");",
+	"\t_ptr_" + result + "->Value[0] = " + result + ";",
 	"\tResult->Val = _ptr_" + result + ";",
 	"};"
 ];
@@ -112,23 +113,21 @@ TO :toriva(t@S, arg, name) [
 	"{",
 	"\tGtk$" + t:ns + "$" + t:name + "_t *_ptr_" + name + " = new(Gtk$" + t:ns + "$" + t:name + "_t);",
 	"\t_ptr_" + name + "->Type = " + t:rtype + ";",
-        "\t_ptr_" + name + "->Address = &_ptr_" + name + "->Value;",
-	"\t_ptr_" + name + "->Value = " + name + ";",
+	"\t_ptr_" + name + "->Value = &" + name + ";",
 	"\t" + arg + ".Val = _ptr_" + name + ";",
 	"\t" + arg + ".Ref = 0;",
 	"};"
 ];
 
 TO :precall(t@T, name, arg) [
-	t:ctype + " " + name + "= ((Gtk$" + t:ns + "$" + t:name + "_t *)" + arg + ".Val)->Address;"
+	t:ctype + " " + name + "= ((Gtk$" + t:ns + "$" + t:name + "_t *)" + arg + ".Val)->Value;"
 ];
 
 TO :return(t@T, result) [
 	"if (" + result + ") {",
 	"\tGtk$" + t:ns + "$" + t:name + "_t * _ptr_" + result + " = new(Gtk$" + t:ns + "$" + t:name + "_t);",
 	"\t_ptr_" + result + "->Type = " + t:rtype + ";",
-        "\t_ptr_" + result + "->Address = &_ptr_" + result + "->Value;",
-	"\t_ptr_" + result + "->Value = " + result + "[0];",
+	"\t_ptr_" + result + "->Value = " + result + ";",
 	"\tResult->Val = _ptr_" + result + ";",
 	"} else {",
 	"\treturn FAILURE;",
@@ -139,8 +138,8 @@ TO :toriva(t@T, arg, name) [
 	"{",
 	"\tGtk$" + t:ns + "$" + t:name + "_t *_ptr_" + name + " = new(Gtk$" + t:ns + "$" + t:name + "_t);",
 	"\t_ptr_" + name + "->Type = " + t:rtype + ";",
-        "\t_ptr_" + name + "->Address = &_ptr_" + name + "->Value;", 
-	"\t_ptr_" + name + "->Value = *" + name + ";",
+        "\t_ptr_" + name + "->Value = new(" + t:cname + ");",
+	"\t_ptr_" + name + "->Value = " + name + ";",
 	"\t" + arg + ".Val = _ptr_" + name + ";",
 	"\t" + arg + ".Ref = 0;",
 	"};"
@@ -179,11 +178,11 @@ TO :process(t@T, srcdir, incdir, libdir) (
 	EVERY cfile:writes(headers:keys, "\n");
 	cfile:writes("/***********************************/\n");
 	cfile:writes("TYPE(T);\n\n");
-        cfile:writes("Gtk$", t:ns, "$", t:name, "_t Nil[] = {{T, 0, {0, }}};\n\n");
+        cfile:writes("Gtk$", t:ns, "$", t:name, "_t Nil[] = {{T, 0}};\n\n");
 	cfile:write("GLOBAL_FUNCTION(New, 0) {\n");
 	cfile:writes("\tGtk$", t:ns, "$", t:name, "_t *result = new(Gtk$", t:ns, "$", t:name, "_t);\n");
 	cfile:write("\tresult->Type = T;\n");
-        cfile:write("\tresult->Address = &result->Value;\n");
+        cfile:writes("\tresult->Value = new(", t:cname, ");\n");
 	cfile:write("\tResult->Val = result;\n");
 	cfile:write("\treturn SUCCESS;\n");
 	cfile:write("};\n\n");
@@ -195,8 +194,9 @@ TO :process(t@T, srcdir, incdir, libdir) (
 		cfile:writes("GLOBAL_FUNCTION(", ctor:name, ", ", n, ") {\n");
 		cfile:writes("\tGtk$", t:ns, "$", t:name, "_t *result = new(Gtk$", t:ns, "$", t:name, "_t);\n");
 		cfile:writes("\tresult->Type = T;\n");
+                cfile:writes("\tresult->Value = new(", t:cname, ");\n");
 		EVERY i <- 1:to(n) DO (
-			EVERY cfile:writes("\t", types[i]:fromriva("result->Value." + names[i], "Args[" + (i - 1)@String.T + "]"):values, "\n");
+			EVERY cfile:writes("\t", types[i]:fromriva("result->Value->" + names[i], "Args[" + (i - 1)@String.T + "]"):values, "\n");
 		);
 		cfile:write("\tResult->Val= result;\n");
 		cfile:write("\treturn SUCCESS;\n");
@@ -227,7 +227,7 @@ TO :process(t@T, srcdir, incdir, libdir) (
 		cfile:writes("METHOD(\"", method:name, "\", TYP, T) {\n");
 		cfile:writes("\tGtk$", t:ns, "$", t:name, "_t * self = Args[0].Val;\n");
 		returntype <- Type.Lookup(method:type);
-		cfile:writes("\t", returntype:ctype, " result = self->Value.", method:cname, ";\n");
+		cfile:writes("\t", returntype:ctype, " result = self->Value->", method:cname, ";\n");
 		EVERY cfile:writes("\t", returntype:return("result"):values, "\n");
 		cfile:write("\treturn SUCCESS;\n");
 		cfile:write("};\n\n");
@@ -237,7 +237,7 @@ TO :process(t@T, srcdir, incdir, libdir) (
 		cfile:writes("\tGtk$", t:ns, "$", t:name, "_t * self = Args[0].Val;\n");
 		cfile:writes("\tint index = ((Std$Integer_smallt *)Args[1].Val)->Value;\n");
 		returntype <- Type.Lookup(method:type);
-		cfile:writes("\t", returntype:ctype, " result = self->Value.", method:cname, "[index];\n");
+		cfile:writes("\t", returntype:ctype, " result = self->Value->", method:cname, "[index];\n");
 		EVERY cfile:writes("\t", returntype:return("result"):values, "\n");
 		cfile:write("\treturn SUCCESS;\n");
 		cfile:write("};\n\n");
@@ -310,8 +310,7 @@ EOF);
 	hfile:writes("#include <Riva-Header.h>\n\n");
 	hfile:writes("typedef struct Gtk$", t:ns, "$", t:name, "_t {\n");
 	hfile:writes("\tStd$Type_t *Type;\n");
-        hfile:writes("\t", t:cname, " *Address;\n");
-	hfile:writes("\t", t:cname, " Value;\n");
+	hfile:writes("\t", t:cname, " *Value;\n");
 	hfile:writes("} Gtk$", t:ns, "$", t:name, "_t;\n\n");
 	hfile:writes("extern Std$Type_t ", t:rtype, "[];\n\n");
 	hfile:write("#undef RIVA_MODULE\n\n");
