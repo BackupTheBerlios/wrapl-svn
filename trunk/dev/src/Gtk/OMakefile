@@ -31,8 +31,10 @@ clean:
 	$(rm api.xml)
 	$(rm $(GTK_AUTOGEN))
 
-.SUBDIRS: GObject Gtk Gdk Pango Glade\
-	Gnome GnomeCanvas Art Cairo CCC GooCanvas
+.SUBDIRS: GObject Gtk Gdk Pango Glade
+
+if $(equal $(OSTYPE), Linux)
+	.SUBDIRS: Gnome GnomeCanvas Art Cairo CCC GooCanvas
 
 Gtk: GtkGObject $(GTK_AUTOGEN) GtkGtk GtkGdk GtkPango GtkGlade $(GTK_LIB_DIR)TypeMap.riva
 

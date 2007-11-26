@@ -22,15 +22,10 @@ static int fileset_import(fileset_t *FileSet, const char *Symbol, int *IsRef, vo
 };
 
 static fileset_t *fileset_load_next(const char *Path, FILE *List, int Index) {
-	size_t Length = 0;
-	char *Name = 0;
-	size_t Count = getline(&Name, &Length, List);
-	if (Count == -1) {
-		fileset_t *FileSet = GC_malloc(sizeof(fileset_t) + Index * sizeof(module_t *));
-		FileSet->NoOfModules = Index;
-		return FileSet;
-	} else {
-		Name[Count - 1] = 0;
+	char Name[256];
+	if (fgets(Name, 256, List) && Name[0]) {
+		char *End = Name + strlen(Name);
+		while (*End < ' ') *(End--) = 0;
 		module_t *Module = module_load(Path, Name);
 		if (Module == 0) {
 			log_errorf("Error: module not found %s%s\n", Path, Name);
@@ -40,6 +35,9 @@ static fileset_t *fileset_load_next(const char *Path, FILE *List, int Index) {
 		if (FileSet == 0) return 0;
 		FileSet->Modules[Index] = Module;
 		return FileSet;
+	} else {
+		fileset_t *FileSet = GC_malloc(sizeof(fileset_t) + Index * sizeof(module_t *));
+		FileSet->NoOfModules = Index;
 	};
 };
 

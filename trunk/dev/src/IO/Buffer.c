@@ -39,7 +39,7 @@ METHOD("read", TYP, T, TYP, Std$Address$T, TYP, Std$Integer$SmallT) {
 	uint32_t Rem0 = Node->Length - Stream->Offset;
 	uint32_t Rem1 = ((Std$Integer_smallt *)Args[2].Val)->Value;
 	while (Rem0 <= Rem1) {
-		Dst = mempcpy(Dst, Src, Rem0);
+		//Dst = mempcpy(Dst, Src, Rem0);
 		Rem1 -= Rem0;
 		if (Node = Node->Next) {
 			Rem0 = Node->Length;
