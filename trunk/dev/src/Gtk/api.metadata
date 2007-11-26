@@ -796,4 +796,6 @@
   <add-node path="/api/namespace/object[@cname='CcPixbuf']">
     <implements interface="CcItemView"/>
   </add-node>
+  <attr path="/api/namespace/enum[@name='PointerEvents']/member[@name='Fill']" name="value">GOO_CANVAS_EVENTS_FILL_MASK</attr>
+  <attr path="/api/namespace/enum[@name='PointerEvents']/member[@name='Stroke']" name="value">GOO_CANVAS_EVENTS_STROKE_MASK</attr>
 </metadata>

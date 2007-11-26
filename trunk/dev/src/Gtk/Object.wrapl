@@ -116,7 +116,6 @@ TO :precall(t@T, name, arg) [
 ];
 
 TO :return(t@T, result) [
-	"if (" + result + " == 0) return FAILURE;",
 	"Result->Val = Gtk$GObject$Object$to_riva(" + result + ");"
 ];
 
@@ -283,6 +282,7 @@ EOF);
 	libfile:writes("\tprefix(\"Gtk$", t:ns, "$", t:name, "$\")\n");
 	libfile:write("end\n");
 	libfile:write("export(\"T\")\n");
+        libfile:write("export(\"Nil\")\n");
 	libfile:close;
 	VAR hfile <- File.Open(incdir + base + ".h", File.WRITE + File.TEXT);
 	hfile:writes("#ifndef ", t:ns, "_", t:name, "_H\n");
@@ -292,7 +292,8 @@ EOF);
 	hfile:write("#include <Std.h>\n\n");
 	hfile:writes("#define RIVA_MODULE Gtk$", t:ns, "$", t:name, "\n");
 	hfile:writes("#include <Riva-Header.h>\n\n");
-	hfile:writes("extern Std$Type_t ", t:rtype, "[];\n\n");
+	hfile:writes("extern Std$Type_t ", t:rtype, "[];\n");
+        hfile:writes("extern Gtk$GObject$Object_t Gtk$", t:ns, "$", t:name, "$Nil[];\n\n");
 	hfile:write("#undef RIVA_MODULE\n\n");
 	hfile:write("#endif\n");
 	hfile:close;

@@ -91,6 +91,28 @@ METHOD("SetData", TYP, T, TYP, Std$String$T, ANY) {
 	return SUCCESS;
 };
 
+METHOD("=", TYP, T, TYP, T) {
+    Gtk$GObject$Object_t *A = Args[0].Val;
+    Gtk$GObject$Object_t *B = Args[1].Val;
+    if (A->Handle == B->Handle) {
+        Result->Arg = Args[1];
+        return SUCCESS;
+    } else {
+        return FAILURE;
+    };
+};
+
+METHOD("~=", TYP, T, TYP, T) {
+    Gtk$GObject$Object_t *A = Args[0].Val;
+    Gtk$GObject$Object_t *B = Args[1].Val;
+    if (A->Handle != B->Handle) {
+        Result->Arg = Args[1];
+        return SUCCESS;
+    } else {
+        return FAILURE;
+    };
+};
+
 void __init(Riva$Module_t *Module) {
 	RivaQuark = g_quark_from_static_string("<<riva>>");
 };

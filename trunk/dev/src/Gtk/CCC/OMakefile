@@ -10,6 +10,6 @@ if $(file-exists $(GTK_AUTOGEN))
 			$(rm $(FILE).c)
 			$(rm $(FILE).rdef)
 		RivaProgram($(BASENAME)$(FILE), $(FILE))
-		GtkGdk: $(BASENAME)$(FILE).riva
+		GtkCCC: $(BASENAME)$(FILE).riva
 		export
 

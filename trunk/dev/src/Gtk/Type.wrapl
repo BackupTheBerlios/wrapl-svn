@@ -166,8 +166,11 @@ TO :fromriva(=stringtype, name, arg) [
 	name + " = Std$String$flatten(" + arg + ".Val);"
 ];
 TO :return(=stringtype, result) [
-	"if (" + result + " == 0) return FAILURE;",
-	"Result->Val = Std$String$new(" + result + ");"
+	"if (" + result + " == 0) {",
+        "\tResult->Val = Std$String$Nil;",
+        "} else {",
+	"\tResult->Val = Std$String$new(" + result + ");",
+        "}"
 ];
 TO :toriva(=stringtype, arg, name) [
 	arg + ".Val = Std$String$new(" + name + ");",
@@ -189,8 +192,11 @@ TO :fromriva(=conststringtype, name, arg) [
 	name + " = Std$String$flatten(" + arg + ".Val);"
 ];
 TO :return(=conststringtype, result) [
-	"if (" + result + " == 0) return FAILURE;",
-	"Result->Val = Std$String$copy(" + result + ");"
+	"if (" + result + " == 0) {",
+        "\tResult->Val = Std$String$Nil;",
+        "} else {",
+	"\rResult->Val = Std$String$copy(" + result + ");",
+        "}"
 ];
 TO :toriva(=conststringtype, arg, name) [
 	arg + ".Val = Std$String$copy(" + name + ");",

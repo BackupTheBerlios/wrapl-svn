@@ -35852,4 +35852,1769 @@
     <alias name="CcLinearGradient" cname="CcLinearGradient" type="CcGradient" />
     <alias name="CcLinearGradientClass" cname="CcLinearGradientClass" type="CcGradientClass" />
   </namespace>
+  <namespace name="GooCanvas" library="libgtk">
+    <enum name="AnimateType" cname="GooCanvasAnimateType" type="enum">
+      <member cname="GOO_CANVAS_ANIMATE_FREEZE" name="Freeze" />
+      <member cname="GOO_CANVAS_ANIMATE_RESET" name="Reset" />
+      <member cname="GOO_CANVAS_ANIMATE_RESTART" name="Restart" />
+      <member cname="GOO_CANVAS_ANIMATE_BOUNCE" name="Bounce" />
+    </enum>
+    <enum name="ItemVisibility" cname="GooCanvasItemVisibility" type="enum">
+      <member cname="GOO_CANVAS_ITEM_HIDDEN" name="Hidden" />
+      <member cname="GOO_CANVAS_ITEM_INVISIBLE" name="Invisible" value="1" />
+      <member cname="GOO_CANVAS_ITEM_VISIBLE" name="Visible" value="2" />
+      <member cname="GOO_CANVAS_ITEM_VISIBLE_ABOVE_THRESHOLD" name="VisibleAboveThreshold" value="3" />
+    </enum>
+    <enum name="PathCommandType" cname="GooCanvasPathCommandType" type="enum">
+      <member cname="GOO_CANVAS_PATH_MOVE_TO" name="MoveTo" />
+      <member cname="GOO_CANVAS_PATH_CLOSE_PATH" name="ClosePath" />
+      <member cname="GOO_CANVAS_PATH_LINE_TO" name="LineTo" />
+      <member cname="GOO_CANVAS_PATH_HORIZONTAL_LINE_TO" name="HorizontalLineTo" />
+      <member cname="GOO_CANVAS_PATH_VERTICAL_LINE_TO" name="VerticalLineTo" />
+      <member cname="GOO_CANVAS_PATH_CURVE_TO" name="CurveTo" />
+      <member cname="GOO_CANVAS_PATH_SMOOTH_CURVE_TO" name="SmoothCurveTo" />
+      <member cname="GOO_CANVAS_PATH_QUADRATIC_CURVE_TO" name="QuadraticCurveTo" />
+      <member cname="GOO_CANVAS_PATH_SMOOTH_QUADRATIC_CURVE_TO" name="SmoothQuadraticCurveTo" />
+      <member cname="GOO_CANVAS_PATH_ELLIPTICAL_ARC" name="EllipticalArc" />
+    </enum>
+    <enum name="PointerEvents" cname="GooCanvasPointerEvents" type="flags">
+      <member cname="GOO_CANVAS_EVENTS_VISIBLE_MASK" name="VisibleMask" value="1 &lt;&lt; 0" />
+      <member cname="GOO_CANVAS_EVENTS_PAINTED_MASK" name="PaintedMask" value="1 &lt;&lt; 1" />
+      <member cname="GOO_CANVAS_EVENTS_FILL_MASK" name="FillMask" value="1 &lt;&lt; 2" />
+      <member cname="GOO_CANVAS_EVENTS_STROKE_MASK" name="StrokeMask" value="1 &lt;&lt; 3" />
+      <member cname="GOO_CANVAS_EVENTS_NONE" name="None" />
+      <member cname="GOO_CANVAS_EVENTS_VISIBLE_PAINTED" name="VisiblePainted" value="GOO_CANVAS_EVENTS_VISIBLE_MASK | GOO_CANVAS_EVENTS_PAINTED_MASK | GOO_CANVAS_EVENTS_FILL_MASK | GOO_CANVAS_EVENTS_STROKE_MASK" />
+      <member cname="GOO_CANVAS_EVENTS_VISIBLE_FILL" name="VisibleFill" value="GOO_CANVAS_EVENTS_VISIBLE_MASK | GOO_CANVAS_EVENTS_FILL_MASK" />
+      <member cname="GOO_CANVAS_EVENTS_VISIBLE_STROKE" name="VisibleStroke" value="GOO_CANVAS_EVENTS_VISIBLE_MASK | GOO_CANVAS_EVENTS_STROKE_MASK" />
+      <member cname="GOO_CANVAS_EVENTS_VISIBLE" name="Visible" value="GOO_CANVAS_EVENTS_VISIBLE_MASK | GOO_CANVAS_EVENTS_FILL_MASK | GOO_CANVAS_EVENTS_STROKE_MASK" />
+      <member cname="GOO_CANVAS_EVENTS_PAINTED" name="Painted" value="GOO_CANVAS_EVENTS_PAINTED_MASK | GOO_CANVAS_EVENTS_FILL_MASK | GOO_CANVAS_EVENTS_STROKE_MASK" />
+      <member cname="GOO_CANVAS_EVENTS_FILL" name="Fill" value="FillMask" />
+      <member cname="GOO_CANVAS_EVENTS_STROKE" name="Stroke" value="StrokeMask" />
+      <member cname="GOO_CANVAS_EVENTS_ALL" name="All" value="GOO_CANVAS_EVENTS_FILL_MASK | GOO_CANVAS_EVENTS_STROKE_MASK" />
+    </enum>
+    <interface name="Item" cname="GooCanvasItem">
+      <virtual_method name="GetCanvas" cname="get_canvas">
+        <return-type type="GooCanvas*" />
+        <parameters>
+          <parameter type="GooCanvasItem*" name="item" />
+        </parameters>
+      </virtual_method>
+      <virtual_method name="SetCanvas" cname="set_canvas">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GooCanvasItem*" name="item" />
+          <parameter type="GooCanvas*" name="canvas" />
+        </parameters>
+      </virtual_method>
+      <virtual_method name="GetNChildren" cname="get_n_children">
+        <return-type type="gint" />
+        <parameters>
+          <parameter type="GooCanvasItem*" name="item" />
+        </parameters>
+      </virtual_method>
+      <virtual_method name="GetChild" cname="get_child">
+        <return-type type="GooCanvasItem*" />
+        <parameters>
+          <parameter type="GooCanvasItem*" name="item" />
+          <parameter type="gint" name="child_num" />
+        </parameters>
+      </virtual_method>
+      <virtual_method name="RequestUpdate" cname="request_update">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GooCanvasItem*" name="item" />
+        </parameters>
+      </virtual_method>
+      <virtual_method name="AddChild" cname="add_child">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GooCanvasItem*" name="item" />
+          <parameter type="GooCanvasItem*" name="child" />
+          <parameter type="gint" name="position" />
+        </parameters>
+      </virtual_method>
+      <virtual_method name="MoveChild" cname="move_child">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GooCanvasItem*" name="item" />
+          <parameter type="gint" name="old_position" />
+          <parameter type="gint" name="new_position" />
+        </parameters>
+      </virtual_method>
+      <virtual_method name="RemoveChild" cname="remove_child">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GooCanvasItem*" name="item" />
+          <parameter type="gint" name="child_num" />
+        </parameters>
+      </virtual_method>
+      <virtual_method name="GetChildProperty" cname="get_child_property">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GooCanvasItem*" name="item" />
+          <parameter type="GooCanvasItem*" name="child" />
+          <parameter type="guint" name="property_id" />
+          <parameter type="GValue*" name="value" />
+          <parameter type="GParamSpec*" name="pspec" />
+        </parameters>
+      </virtual_method>
+      <virtual_method name="SetChildProperty" cname="set_child_property">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GooCanvasItem*" name="item" />
+          <parameter type="GooCanvasItem*" name="child" />
+          <parameter type="guint" name="property_id" />
+          <parameter type="const-GValue*" name="value" />
+          <parameter type="GParamSpec*" name="pspec" />
+        </parameters>
+      </virtual_method>
+      <virtual_method name="GetTransformForChild" cname="get_transform_for_child">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="GooCanvasItem*" name="item" />
+          <parameter type="GooCanvasItem*" name="child" />
+          <parameter type="cairo_matrix_t*" name="transform" />
+        </parameters>
+      </virtual_method>
+      <virtual_method name="GetParent" cname="get_parent">
+        <return-type type="GooCanvasItem*" />
+        <parameters>
+          <parameter type="GooCanvasItem*" name="item" />
+        </parameters>
+      </virtual_method>
+      <virtual_method name="SetParent" cname="set_parent">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GooCanvasItem*" name="item" />
+          <parameter type="GooCanvasItem*" name="parent" />
+        </parameters>
+      </virtual_method>
+      <virtual_method name="GetBounds" cname="get_bounds">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GooCanvasItem*" name="item" />
+          <parameter type="GooCanvasBounds*" name="bounds" />
+        </parameters>
+      </virtual_method>
+      <virtual_method name="GetItemsAt" cname="get_items_at">
+        <return-type type="GList*" />
+        <parameters>
+          <parameter type="GooCanvasItem*" name="item" />
+          <parameter type="gdouble" name="x" />
+          <parameter type="gdouble" name="y" />
+          <parameter type="cairo_t*" name="cr" />
+          <parameter type="gboolean" name="is_pointer_event" />
+          <parameter type="gboolean" name="parent_is_visible" />
+          <parameter type="GList*" name="found_items" />
+        </parameters>
+      </virtual_method>
+      <virtual_method name="Update" cname="update">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GooCanvasItem*" name="item" />
+          <parameter type="gboolean" name="entire_tree" />
+          <parameter type="cairo_t*" name="cr" />
+          <parameter type="GooCanvasBounds*" name="bounds" />
+        </parameters>
+      </virtual_method>
+      <virtual_method name="Paint" cname="paint">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GooCanvasItem*" name="item" />
+          <parameter type="cairo_t*" name="cr" />
+          <parameter type="const-GooCanvasBounds*" name="bounds" />
+          <parameter type="gdouble" name="scale" />
+        </parameters>
+      </virtual_method>
+      <virtual_method name="GetRequestedArea" cname="get_requested_area">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="GooCanvasItem*" name="item" />
+          <parameter type="cairo_t*" name="cr" />
+          <parameter type="GooCanvasBounds*" name="requested_area" />
+        </parameters>
+      </virtual_method>
+      <virtual_method name="AllocateArea" cname="allocate_area">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GooCanvasItem*" name="item" />
+          <parameter type="cairo_t*" name="cr" />
+          <parameter type="const-GooCanvasBounds*" name="requested_area" />
+          <parameter type="const-GooCanvasBounds*" name="allocated_area" />
+          <parameter type="gdouble" name="x_offset" />
+          <parameter type="gdouble" name="y_offset" />
+        </parameters>
+      </virtual_method>
+      <virtual_method name="GetTransform" cname="get_transform">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="GooCanvasItem*" name="item" />
+          <parameter type="cairo_matrix_t*" name="transform" />
+        </parameters>
+      </virtual_method>
+      <virtual_method name="SetTransform" cname="set_transform">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GooCanvasItem*" name="item" />
+          <parameter type="const-cairo_matrix_t*" name="transform" />
+        </parameters>
+      </virtual_method>
+      <virtual_method name="GetStyle" cname="get_style">
+        <return-type type="GooCanvasStyle*" />
+        <parameters>
+          <parameter type="GooCanvasItem*" name="item" />
+        </parameters>
+      </virtual_method>
+      <virtual_method name="SetStyle" cname="set_style">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GooCanvasItem*" name="item" />
+          <parameter type="GooCanvasStyle*" name="style" />
+        </parameters>
+      </virtual_method>
+      <virtual_method name="IsVisible" cname="is_visible">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="GooCanvasItem*" name="item" />
+        </parameters>
+      </virtual_method>
+      <virtual_method name="GetRequestedHeight" cname="get_requested_height">
+        <return-type type="gdouble" />
+        <parameters>
+          <parameter type="GooCanvasItem*" name="item" />
+          <parameter type="cairo_t*" name="cr" />
+          <parameter type="gdouble" name="width" />
+        </parameters>
+      </virtual_method>
+      <virtual_method name="GetModel" cname="get_model">
+        <return-type type="GooCanvasItemModel*" />
+        <parameters>
+          <parameter type="GooCanvasItem*" name="item" />
+        </parameters>
+      </virtual_method>
+      <virtual_method name="SetModel" cname="set_model">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GooCanvasItem*" name="item" />
+          <parameter type="GooCanvasItemModel*" name="model" />
+        </parameters>
+      </virtual_method>
+      <virtual_method name="EnterNotifyEvent" cname="enter_notify_event">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="GooCanvasItem*" name="item" />
+          <parameter type="GooCanvasItem*" name="target" />
+          <parameter type="GdkEventCrossing*" name="event" />
+        </parameters>
+      </virtual_method>
+      <virtual_method name="LeaveNotifyEvent" cname="leave_notify_event">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="GooCanvasItem*" name="item" />
+          <parameter type="GooCanvasItem*" name="target" />
+          <parameter type="GdkEventCrossing*" name="event" />
+        </parameters>
+      </virtual_method>
+      <virtual_method name="MotionNotifyEvent" cname="motion_notify_event">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="GooCanvasItem*" name="item" />
+          <parameter type="GooCanvasItem*" name="target" />
+          <parameter type="GdkEventMotion*" name="event" />
+        </parameters>
+      </virtual_method>
+      <virtual_method name="ButtonPressEvent" cname="button_press_event">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="GooCanvasItem*" name="item" />
+          <parameter type="GooCanvasItem*" name="target" />
+          <parameter type="GdkEventButton*" name="event" />
+        </parameters>
+      </virtual_method>
+      <virtual_method name="ButtonReleaseEvent" cname="button_release_event">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="GooCanvasItem*" name="item" />
+          <parameter type="GooCanvasItem*" name="target" />
+          <parameter type="GdkEventButton*" name="event" />
+        </parameters>
+      </virtual_method>
+      <virtual_method name="FocusInEvent" cname="focus_in_event">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="GooCanvasItem*" name="item" />
+          <parameter type="GooCanvasItem*" name="target" />
+          <parameter type="GdkEventFocus*" name="event" />
+        </parameters>
+      </virtual_method>
+      <virtual_method name="FocusOutEvent" cname="focus_out_event">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="GooCanvasItem*" name="item" />
+          <parameter type="GooCanvasItem*" name="target" />
+          <parameter type="GdkEventFocus*" name="event" />
+        </parameters>
+      </virtual_method>
+      <virtual_method name="KeyPressEvent" cname="key_press_event">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="GooCanvasItem*" name="item" />
+          <parameter type="GooCanvasItem*" name="target" />
+          <parameter type="GdkEventKey*" name="event" />
+        </parameters>
+      </virtual_method>
+      <virtual_method name="KeyReleaseEvent" cname="key_release_event">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="GooCanvasItem*" name="item" />
+          <parameter type="GooCanvasItem*" name="target" />
+          <parameter type="GdkEventKey*" name="event" />
+        </parameters>
+      </virtual_method>
+      <virtual_method name="GrabBrokenEvent" cname="grab_broken_event">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="GooCanvasItem*" name="item" />
+          <parameter type="GooCanvasItem*" name="target" />
+          <parameter type="GdkEventGrabBroken*" name="event" />
+        </parameters>
+      </virtual_method>
+      <virtual_method name="ChildNotify" cname="child_notify">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GooCanvasItem*" name="item" />
+          <parameter type="GParamSpec*" name="pspec" />
+        </parameters>
+      </virtual_method>
+      <virtual_method name="QueryTooltip" cname="query_tooltip">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="GooCanvasItem*" name="item" />
+          <parameter type="gdouble" name="x" />
+          <parameter type="gdouble" name="y" />
+          <parameter type="gboolean" name="keyboard_tooltip" />
+          <parameter type="gpointer*" name="tooltip" />
+        </parameters>
+      </virtual_method>
+      <method name="AddChild" cname="goo_canvas_item_add_child">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GooCanvasItem*" name="child" />
+          <parameter type="gint" name="position" />
+        </parameters>
+      </method>
+      <method name="AllocateArea" cname="goo_canvas_item_allocate_area">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="cairo_t*" name="cr" />
+          <parameter type="const-GooCanvasBounds*" name="requested_area" />
+          <parameter type="const-GooCanvasBounds*" name="allocated_area" />
+          <parameter type="gdouble" name="x_offset" />
+          <parameter type="gdouble" name="y_offset" />
+        </parameters>
+      </method>
+      <method name="Animate" cname="goo_canvas_item_animate">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="gdouble" name="x" />
+          <parameter type="gdouble" name="y" />
+          <parameter type="gdouble" name="scale" />
+          <parameter type="gdouble" name="degrees" />
+          <parameter type="gboolean" name="absolute" />
+          <parameter type="gint" name="duration" />
+          <parameter type="gint" name="step_time" />
+          <parameter type="GooCanvasAnimateType" name="type" />
+        </parameters>
+      </method>
+      <method name="ClassFindChildProperty" cname="goo_canvas_item_class_find_child_property" shared="true">
+        <return-type type="GParamSpec*" />
+        <parameters>
+          <parameter type="GObjectClass*" name="iclass" />
+          <parameter type="const-gchar*" name="property_name" />
+        </parameters>
+      </method>
+      <method name="ClassInstallChildProperty" cname="goo_canvas_item_class_install_child_property" shared="true">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GObjectClass*" name="iclass" />
+          <parameter type="guint" name="property_id" />
+          <parameter type="GParamSpec*" name="pspec" />
+        </parameters>
+      </method>
+      <method name="ClassListChildProperties" cname="goo_canvas_item_class_list_child_properties" shared="true">
+        <return-type type="GParamSpec**" />
+        <parameters>
+          <parameter type="GObjectClass*" name="iclass" />
+          <parameter type="guint*" name="n_properties" />
+        </parameters>
+      </method>
+      <method name="EnsureUpdated" cname="goo_canvas_item_ensure_updated">
+        <return-type type="void" />
+      </method>
+      <method name="FindChild" cname="goo_canvas_item_find_child">
+        <return-type type="gint" />
+        <parameters>
+          <parameter type="GooCanvasItem*" name="child" />
+        </parameters>
+      </method>
+      <method name="GetBounds" cname="goo_canvas_item_get_bounds">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GooCanvasBounds*" name="bounds" />
+        </parameters>
+      </method>
+      <method name="GetCanvas" cname="goo_canvas_item_get_canvas">
+        <return-type type="GooCanvas*" />
+      </method>
+      <method name="GetChild" cname="goo_canvas_item_get_child">
+        <return-type type="GooCanvasItem*" />
+        <parameters>
+          <parameter type="gint" name="child_num" />
+        </parameters>
+      </method>
+      <method name="GetChildProperties" cname="goo_canvas_item_get_child_properties">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GooCanvasItem*" name="child" />
+          <parameter ellipsis="true" />
+        </parameters>
+      </method>
+      <method name="GetChildPropertiesValist" cname="goo_canvas_item_get_child_properties_valist">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GooCanvasItem*" name="child" />
+          <parameter type="va_list" name="var_args" />
+        </parameters>
+      </method>
+      <method name="GetItemsAt" cname="goo_canvas_item_get_items_at">
+        <return-type type="GList*" />
+        <parameters>
+          <parameter type="gdouble" name="x" />
+          <parameter type="gdouble" name="y" />
+          <parameter type="cairo_t*" name="cr" />
+          <parameter type="gboolean" name="is_pointer_event" />
+          <parameter type="gboolean" name="parent_is_visible" />
+          <parameter type="GList*" name="found_items" />
+        </parameters>
+      </method>
+      <method name="GetModel" cname="goo_canvas_item_get_model">
+        <return-type type="GooCanvasItemModel*" />
+      </method>
+      <method name="GetNChildren" cname="goo_canvas_item_get_n_children">
+        <return-type type="gint" />
+      </method>
+      <method name="GetParent" cname="goo_canvas_item_get_parent">
+        <return-type type="GooCanvasItem*" />
+      </method>
+      <method name="GetRequestedArea" cname="goo_canvas_item_get_requested_area">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="cairo_t*" name="cr" />
+          <parameter type="GooCanvasBounds*" name="requested_area" />
+        </parameters>
+      </method>
+      <method name="GetRequestedHeight" cname="goo_canvas_item_get_requested_height">
+        <return-type type="gdouble" />
+        <parameters>
+          <parameter type="cairo_t*" name="cr" />
+          <parameter type="gdouble" name="width" />
+        </parameters>
+      </method>
+      <method name="GetStyle" cname="goo_canvas_item_get_style">
+        <return-type type="GooCanvasStyle*" />
+      </method>
+      <method name="GetTransform" cname="goo_canvas_item_get_transform">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="cairo_matrix_t*" name="transform" />
+        </parameters>
+      </method>
+      <method name="GetTransformForChild" cname="goo_canvas_item_get_transform_for_child">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="GooCanvasItem*" name="child" />
+          <parameter type="cairo_matrix_t*" name="transform" />
+        </parameters>
+      </method>
+      <method name="GetType" cname="goo_canvas_item_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+      <method name="IsContainer" cname="goo_canvas_item_is_container">
+        <return-type type="gboolean" />
+      </method>
+      <method name="IsVisible" cname="goo_canvas_item_is_visible">
+        <return-type type="gboolean" />
+      </method>
+      <method name="Lower" cname="goo_canvas_item_lower">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GooCanvasItem*" name="below" />
+        </parameters>
+      </method>
+      <method name="MoveChild" cname="goo_canvas_item_move_child">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="gint" name="old_position" />
+          <parameter type="gint" name="new_position" />
+        </parameters>
+      </method>
+      <method name="Paint" cname="goo_canvas_item_paint">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="cairo_t*" name="cr" />
+          <parameter type="const-GooCanvasBounds*" name="bounds" />
+          <parameter type="gdouble" name="scale" />
+        </parameters>
+      </method>
+      <method name="Raise" cname="goo_canvas_item_raise">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GooCanvasItem*" name="above" />
+        </parameters>
+      </method>
+      <method name="Remove" cname="goo_canvas_item_remove">
+        <return-type type="void" />
+      </method>
+      <method name="RemoveChild" cname="goo_canvas_item_remove_child">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="gint" name="child_num" />
+        </parameters>
+      </method>
+      <method name="RequestUpdate" cname="goo_canvas_item_request_update">
+        <return-type type="void" />
+      </method>
+      <method name="Rotate" cname="goo_canvas_item_rotate">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="gdouble" name="degrees" />
+          <parameter type="gdouble" name="cx" />
+          <parameter type="gdouble" name="cy" />
+        </parameters>
+      </method>
+      <method name="Scale" cname="goo_canvas_item_scale">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="gdouble" name="sx" />
+          <parameter type="gdouble" name="sy" />
+        </parameters>
+      </method>
+      <method name="SetCanvas" cname="goo_canvas_item_set_canvas">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GooCanvas*" name="canvas" />
+        </parameters>
+      </method>
+      <method name="SetChildProperties" cname="goo_canvas_item_set_child_properties">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GooCanvasItem*" name="child" />
+          <parameter ellipsis="true" />
+        </parameters>
+      </method>
+      <method name="SetChildPropertiesValist" cname="goo_canvas_item_set_child_properties_valist">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GooCanvasItem*" name="child" />
+          <parameter type="va_list" name="var_args" />
+        </parameters>
+      </method>
+      <method name="SetModel" cname="goo_canvas_item_set_model">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GooCanvasItemModel*" name="model" />
+        </parameters>
+      </method>
+      <method name="SetParent" cname="goo_canvas_item_set_parent">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GooCanvasItem*" name="parent" />
+        </parameters>
+      </method>
+      <method name="SetSimpleTransform" cname="goo_canvas_item_set_simple_transform">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="gdouble" name="x" />
+          <parameter type="gdouble" name="y" />
+          <parameter type="gdouble" name="scale" />
+          <parameter type="gdouble" name="rotation" />
+        </parameters>
+      </method>
+      <method name="SetStyle" cname="goo_canvas_item_set_style">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GooCanvasStyle*" name="style" />
+        </parameters>
+      </method>
+      <method name="SetTransform" cname="goo_canvas_item_set_transform">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="const-cairo_matrix_t*" name="transform" />
+        </parameters>
+      </method>
+      <method name="SkewX" cname="goo_canvas_item_skew_x">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="gdouble" name="degrees" />
+          <parameter type="gdouble" name="cx" />
+          <parameter type="gdouble" name="cy" />
+        </parameters>
+      </method>
+      <method name="SkewY" cname="goo_canvas_item_skew_y">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="gdouble" name="degrees" />
+          <parameter type="gdouble" name="cx" />
+          <parameter type="gdouble" name="cy" />
+        </parameters>
+      </method>
+      <method name="StopAnimation" cname="goo_canvas_item_stop_animation">
+        <return-type type="void" />
+      </method>
+      <method name="Translate" cname="goo_canvas_item_translate">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="gdouble" name="tx" />
+          <parameter type="gdouble" name="ty" />
+        </parameters>
+      </method>
+      <method name="Update" cname="goo_canvas_item_update">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="gboolean" name="entire_tree" />
+          <parameter type="cairo_t*" name="cr" />
+          <parameter type="GooCanvasBounds*" name="bounds" />
+        </parameters>
+      </method>
+    </interface>
+    <interface name="ItemModel" cname="GooCanvasItemModel">
+      <virtual_method name="GetNChildren" cname="get_n_children">
+        <return-type type="gint" />
+        <parameters>
+          <parameter type="GooCanvasItemModel*" name="model" />
+        </parameters>
+      </virtual_method>
+      <virtual_method name="GetChild" cname="get_child">
+        <return-type type="GooCanvasItemModel*" />
+        <parameters>
+          <parameter type="GooCanvasItemModel*" name="model" />
+          <parameter type="gint" name="child_num" />
+        </parameters>
+      </virtual_method>
+      <virtual_method name="AddChild" cname="add_child">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GooCanvasItemModel*" name="model" />
+          <parameter type="GooCanvasItemModel*" name="child" />
+          <parameter type="gint" name="position" />
+        </parameters>
+      </virtual_method>
+      <virtual_method name="MoveChild" cname="move_child">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GooCanvasItemModel*" name="model" />
+          <parameter type="gint" name="old_position" />
+          <parameter type="gint" name="new_position" />
+        </parameters>
+      </virtual_method>
+      <virtual_method name="RemoveChild" cname="remove_child">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GooCanvasItemModel*" name="model" />
+          <parameter type="gint" name="child_num" />
+        </parameters>
+      </virtual_method>
+      <virtual_method name="GetChildProperty" cname="get_child_property">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GooCanvasItemModel*" name="model" />
+          <parameter type="GooCanvasItemModel*" name="child" />
+          <parameter type="guint" name="property_id" />
+          <parameter type="GValue*" name="value" />
+          <parameter type="GParamSpec*" name="pspec" />
+        </parameters>
+      </virtual_method>
+      <virtual_method name="SetChildProperty" cname="set_child_property">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GooCanvasItemModel*" name="item" />
+          <parameter type="GooCanvasItemModel*" name="child" />
+          <parameter type="guint" name="property_id" />
+          <parameter type="const-GValue*" name="value" />
+          <parameter type="GParamSpec*" name="pspec" />
+        </parameters>
+      </virtual_method>
+      <virtual_method name="GetParent" cname="get_parent">
+        <return-type type="GooCanvasItemModel*" />
+        <parameters>
+          <parameter type="GooCanvasItemModel*" name="model" />
+        </parameters>
+      </virtual_method>
+      <virtual_method name="SetParent" cname="set_parent">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GooCanvasItemModel*" name="model" />
+          <parameter type="GooCanvasItemModel*" name="parent" />
+        </parameters>
+      </virtual_method>
+      <virtual_method name="CreateItem" cname="create_item">
+        <return-type type="GooCanvasItem*" />
+        <parameters>
+          <parameter type="GooCanvasItemModel*" name="model" />
+          <parameter type="GooCanvas*" name="canvas" />
+        </parameters>
+      </virtual_method>
+      <virtual_method name="GetTransform" cname="get_transform">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="GooCanvasItemModel*" name="model" />
+          <parameter type="cairo_matrix_t*" name="transform" />
+        </parameters>
+      </virtual_method>
+      <virtual_method name="SetTransform" cname="set_transform">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GooCanvasItemModel*" name="model" />
+          <parameter type="const-cairo_matrix_t*" name="transform" />
+        </parameters>
+      </virtual_method>
+      <virtual_method name="GetStyle" cname="get_style">
+        <return-type type="GooCanvasStyle*" />
+        <parameters>
+          <parameter type="GooCanvasItemModel*" name="model" />
+        </parameters>
+      </virtual_method>
+      <virtual_method name="SetStyle" cname="set_style">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GooCanvasItemModel*" name="model" />
+          <parameter type="GooCanvasStyle*" name="style" />
+        </parameters>
+      </virtual_method>
+      <virtual_method name="ChildAdded" cname="child_added">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GooCanvasItemModel*" name="model" />
+          <parameter type="gint" name="child_num" />
+        </parameters>
+      </virtual_method>
+      <virtual_method name="ChildMoved" cname="child_moved">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GooCanvasItemModel*" name="model" />
+          <parameter type="gint" name="old_child_num" />
+          <parameter type="gint" name="new_child_num" />
+        </parameters>
+      </virtual_method>
+      <virtual_method name="ChildRemoved" cname="child_removed">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GooCanvasItemModel*" name="model" />
+          <parameter type="gint" name="child_num" />
+        </parameters>
+      </virtual_method>
+      <virtual_method name="Changed" cname="changed">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GooCanvasItemModel*" name="model" />
+          <parameter type="gboolean" name="recompute_bounds" />
+        </parameters>
+      </virtual_method>
+      <virtual_method name="ChildNotify" cname="child_notify">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GooCanvasItemModel*" name="model" />
+          <parameter type="GParamSpec*" name="pspec" />
+        </parameters>
+      </virtual_method>
+      <method name="AddChild" cname="goo_canvas_item_model_add_child">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GooCanvasItemModel*" name="child" />
+          <parameter type="gint" name="position" />
+        </parameters>
+      </method>
+      <method name="Animate" cname="goo_canvas_item_model_animate">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="gdouble" name="x" />
+          <parameter type="gdouble" name="y" />
+          <parameter type="gdouble" name="scale" />
+          <parameter type="gdouble" name="degrees" />
+          <parameter type="gboolean" name="absolute" />
+          <parameter type="gint" name="duration" />
+          <parameter type="gint" name="step_time" />
+          <parameter type="GooCanvasAnimateType" name="type" />
+        </parameters>
+      </method>
+      <method name="ClassFindChildProperty" cname="goo_canvas_item_model_class_find_child_property" shared="true">
+        <return-type type="GParamSpec*" />
+        <parameters>
+          <parameter type="GObjectClass*" name="mclass" />
+          <parameter type="const-gchar*" name="property_name" />
+        </parameters>
+      </method>
+      <method name="ClassInstallChildProperty" cname="goo_canvas_item_model_class_install_child_property" shared="true">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GObjectClass*" name="mclass" />
+          <parameter type="guint" name="property_id" />
+          <parameter type="GParamSpec*" name="pspec" />
+        </parameters>
+      </method>
+      <method name="ClassListChildProperties" cname="goo_canvas_item_model_class_list_child_properties" shared="true">
+        <return-type type="GParamSpec**" />
+        <parameters>
+          <parameter type="GObjectClass*" name="mclass" />
+          <parameter type="guint*" name="n_properties" />
+        </parameters>
+      </method>
+      <method name="FindChild" cname="goo_canvas_item_model_find_child">
+        <return-type type="gint" />
+        <parameters>
+          <parameter type="GooCanvasItemModel*" name="child" />
+        </parameters>
+      </method>
+      <method name="GetChild" cname="goo_canvas_item_model_get_child">
+        <return-type type="GooCanvasItemModel*" />
+        <parameters>
+          <parameter type="gint" name="child_num" />
+        </parameters>
+      </method>
+      <method name="GetChildProperties" cname="goo_canvas_item_model_get_child_properties">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GooCanvasItemModel*" name="child" />
+          <parameter ellipsis="true" />
+        </parameters>
+      </method>
+      <method name="GetChildPropertiesValist" cname="goo_canvas_item_model_get_child_properties_valist">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GooCanvasItemModel*" name="child" />
+          <parameter type="va_list" name="var_args" />
+        </parameters>
+      </method>
+      <method name="GetNChildren" cname="goo_canvas_item_model_get_n_children">
+        <return-type type="gint" />
+      </method>
+      <method name="GetParent" cname="goo_canvas_item_model_get_parent">
+        <return-type type="GooCanvasItemModel*" />
+      </method>
+      <method name="GetStyle" cname="goo_canvas_item_model_get_style">
+        <return-type type="GooCanvasStyle*" />
+      </method>
+      <method name="GetTransform" cname="goo_canvas_item_model_get_transform">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="cairo_matrix_t*" name="transform" />
+        </parameters>
+      </method>
+      <method name="GetType" cname="goo_canvas_item_model_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+      <method name="IsContainer" cname="goo_canvas_item_model_is_container">
+        <return-type type="gboolean" />
+      </method>
+      <method name="Lower" cname="goo_canvas_item_model_lower">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GooCanvasItemModel*" name="below" />
+        </parameters>
+      </method>
+      <method name="MoveChild" cname="goo_canvas_item_model_move_child">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="gint" name="old_position" />
+          <parameter type="gint" name="new_position" />
+        </parameters>
+      </method>
+      <method name="Raise" cname="goo_canvas_item_model_raise">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GooCanvasItemModel*" name="above" />
+        </parameters>
+      </method>
+      <method name="Remove" cname="goo_canvas_item_model_remove">
+        <return-type type="void" />
+      </method>
+      <method name="RemoveChild" cname="goo_canvas_item_model_remove_child">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="gint" name="child_num" />
+        </parameters>
+      </method>
+      <method name="Rotate" cname="goo_canvas_item_model_rotate">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="gdouble" name="degrees" />
+          <parameter type="gdouble" name="cx" />
+          <parameter type="gdouble" name="cy" />
+        </parameters>
+      </method>
+      <method name="Scale" cname="goo_canvas_item_model_scale">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="gdouble" name="sx" />
+          <parameter type="gdouble" name="sy" />
+        </parameters>
+      </method>
+      <method name="SetChildProperties" cname="goo_canvas_item_model_set_child_properties">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GooCanvasItemModel*" name="child" />
+          <parameter ellipsis="true" />
+        </parameters>
+      </method>
+      <method name="SetChildPropertiesValist" cname="goo_canvas_item_model_set_child_properties_valist">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GooCanvasItemModel*" name="child" />
+          <parameter type="va_list" name="var_args" />
+        </parameters>
+      </method>
+      <method name="SetParent" cname="goo_canvas_item_model_set_parent">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GooCanvasItemModel*" name="parent" />
+        </parameters>
+      </method>
+      <method name="SetSimpleTransform" cname="goo_canvas_item_model_set_simple_transform">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="gdouble" name="x" />
+          <parameter type="gdouble" name="y" />
+          <parameter type="gdouble" name="scale" />
+          <parameter type="gdouble" name="rotation" />
+        </parameters>
+      </method>
+      <method name="SetStyle" cname="goo_canvas_item_model_set_style">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GooCanvasStyle*" name="style" />
+        </parameters>
+      </method>
+      <method name="SetTransform" cname="goo_canvas_item_model_set_transform">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="const-cairo_matrix_t*" name="transform" />
+        </parameters>
+      </method>
+      <method name="SkewX" cname="goo_canvas_item_model_skew_x">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="gdouble" name="degrees" />
+          <parameter type="gdouble" name="cx" />
+          <parameter type="gdouble" name="cy" />
+        </parameters>
+      </method>
+      <method name="SkewY" cname="goo_canvas_item_model_skew_y">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="gdouble" name="degrees" />
+          <parameter type="gdouble" name="cx" />
+          <parameter type="gdouble" name="cy" />
+        </parameters>
+      </method>
+      <method name="StopAnimation" cname="goo_canvas_item_model_stop_animation">
+        <return-type type="void" />
+      </method>
+      <method name="Translate" cname="goo_canvas_item_model_translate">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="gdouble" name="tx" />
+          <parameter type="gdouble" name="ty" />
+        </parameters>
+      </method>
+    </interface>
+    <object name="GooCanvas" cname="GooCanvas" parent="GtkContainer">
+      <field name="RootItemModel" cname="root_item_model" type="GooCanvasItemModel*" />
+      <field name="RootItem" cname="root_item" type="GooCanvasItem*" />
+      <field name="Bounds" cname="bounds" type="GooCanvasBounds" />
+      <field name="ScaleX" cname="scale_x" type="gdouble" />
+      <field name="ScaleY" cname="scale_y" type="gdouble" />
+      <field name="Scale" cname="scale" type="gdouble" />
+      <field name="Anchor" cname="anchor" type="GtkAnchorType" />
+      <field name="IdleId" cname="idle_id" type="guint" />
+      <field name="NeedUpdate" cname="need_update" bits="1" type="guint" />
+      <field name="NeedEntireSubtreeUpdate" cname="need_entire_subtree_update" bits="1" type="guint" />
+      <field name="IntegerLayout" cname="integer_layout" bits="1" type="guint" />
+      <field name="AutomaticBounds" cname="automatic_bounds" bits="1" type="guint" />
+      <field name="BoundsFromOrigin" cname="bounds_from_origin" bits="1" type="guint" />
+      <field name="BoundsPadding" cname="bounds_padding" type="gdouble" />
+      <field name="PointerItem" cname="pointer_item" type="GooCanvasItem*" />
+      <field name="PointerGrabItem" cname="pointer_grab_item" type="GooCanvasItem*" />
+      <field name="PointerGrabInitialItem" cname="pointer_grab_initial_item" type="GooCanvasItem*" />
+      <field name="PointerGrabButton" cname="pointer_grab_button" type="guint" />
+      <field name="FocusedItem" cname="focused_item" type="GooCanvasItem*" />
+      <field name="KeyboardGrabItem" cname="keyboard_grab_item" type="GooCanvasItem*" />
+      <field name="CrossingEvent" cname="crossing_event" type="GdkEventCrossing" />
+      <field name="CanvasWindow" cname="canvas_window" type="GdkWindow*" />
+      <field name="CanvasXOffset" cname="canvas_x_offset" type="gint" />
+      <field name="CanvasYOffset" cname="canvas_y_offset" type="gint" />
+      <field name="Hadjustment" cname="hadjustment" type="GtkAdjustment*" />
+      <field name="Vadjustment" cname="vadjustment" type="GtkAdjustment*" />
+      <field name="FreezeCount" cname="freeze_count" type="gint" />
+      <field name="TmpWindow" cname="tmp_window" type="GdkWindow*" />
+      <field name="ModelToItem" cname="model_to_item" type="GHashTable*" />
+      <field name="Units" cname="units" type="GtkUnit" />
+      <field name="ResolutionX" cname="resolution_x" type="gdouble" />
+      <field name="ResolutionY" cname="resolution_y" type="gdouble" />
+      <field name="DeviceToPixelsX" cname="device_to_pixels_x" type="gdouble" />
+      <field name="DeviceToPixelsY" cname="device_to_pixels_y" type="gdouble" />
+      <field name="WidgetItems" cname="widget_items" type="GList*" />
+      <method name="ConvertFromItemSpace" cname="goo_canvas_convert_from_item_space">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GooCanvasItem*" name="item" />
+          <parameter type="gdouble*" name="x" />
+          <parameter type="gdouble*" name="y" />
+        </parameters>
+      </method>
+      <method name="ConvertFromPixels" cname="goo_canvas_convert_from_pixels">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="gdouble*" name="x" />
+          <parameter type="gdouble*" name="y" />
+        </parameters>
+      </method>
+      <method name="ConvertToItemSpace" cname="goo_canvas_convert_to_item_space">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GooCanvasItem*" name="item" />
+          <parameter type="gdouble*" name="x" />
+          <parameter type="gdouble*" name="y" />
+        </parameters>
+      </method>
+      <method name="ConvertToPixels" cname="goo_canvas_convert_to_pixels">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="gdouble*" name="x" />
+          <parameter type="gdouble*" name="y" />
+        </parameters>
+      </method>
+      <method name="CreateCairoContext" cname="goo_canvas_create_cairo_context">
+        <return-type type="cairo_t*" />
+      </method>
+      <method name="CreateItem" cname="goo_canvas_create_item">
+        <return-type type="GooCanvasItem*" />
+        <parameters>
+          <parameter type="GooCanvasItemModel*" name="model" />
+        </parameters>
+      </method>
+      <method name="CreatePath" cname="goo_canvas_create_path" shared="true">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GArray*" name="commands" />
+          <parameter type="cairo_t*" name="cr" />
+        </parameters>
+      </method>
+      <method name="GetBounds" cname="goo_canvas_get_bounds">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="gdouble*" name="left" />
+          <parameter type="gdouble*" name="top" />
+          <parameter type="gdouble*" name="right" />
+          <parameter type="gdouble*" name="bottom" />
+        </parameters>
+      </method>
+      <method name="GetDefaultLineWidth" cname="goo_canvas_get_default_line_width">
+        <return-type type="gdouble" />
+      </method>
+      <method name="GetItem" cname="goo_canvas_get_item">
+        <return-type type="GooCanvasItem*" />
+        <parameters>
+          <parameter type="GooCanvasItemModel*" name="model" />
+        </parameters>
+      </method>
+      <method name="GetItemAt" cname="goo_canvas_get_item_at">
+        <return-type type="GooCanvasItem*" />
+        <parameters>
+          <parameter type="gdouble" name="x" />
+          <parameter type="gdouble" name="y" />
+          <parameter type="gboolean" name="is_pointer_event" />
+        </parameters>
+      </method>
+      <method name="GetItemsAt" cname="goo_canvas_get_items_at">
+        <return-type type="GList*" />
+        <parameters>
+          <parameter type="gdouble" name="x" />
+          <parameter type="gdouble" name="y" />
+          <parameter type="gboolean" name="is_pointer_event" />
+        </parameters>
+      </method>
+      <method name="GetItemsInArea" cname="goo_canvas_get_items_in_area">
+        <return-type type="GList*" />
+        <parameters>
+          <parameter type="const-GooCanvasBounds*" name="area" />
+          <parameter type="gboolean" name="inside_area" />
+          <parameter type="gboolean" name="allow_overlaps" />
+          <parameter type="gboolean" name="include_containers" />
+        </parameters>
+      </method>
+      <method name="GetRootItem" cname="goo_canvas_get_root_item">
+        <return-type type="GooCanvasItem*" />
+      </method>
+      <method name="GetRootItemModel" cname="goo_canvas_get_root_item_model">
+        <return-type type="GooCanvasItemModel*" />
+      </method>
+      <method name="GetScale" cname="goo_canvas_get_scale">
+        <return-type type="gdouble" />
+      </method>
+      <method name="GetType" cname="goo_canvas_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+      <method name="GrabFocus" cname="goo_canvas_grab_focus">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GooCanvasItem*" name="item" />
+        </parameters>
+      </method>
+      <method name="KeyboardGrab" cname="goo_canvas_keyboard_grab">
+        <return-type type="GdkGrabStatus" />
+        <parameters>
+          <parameter type="GooCanvasItem*" name="item" />
+          <parameter type="gboolean" name="owner_events" />
+          <parameter type="guint32" name="time" />
+        </parameters>
+      </method>
+      <method name="KeyboardUngrab" cname="goo_canvas_keyboard_ungrab">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GooCanvasItem*" name="item" />
+          <parameter type="guint32" name="time" />
+        </parameters>
+      </method>
+      <constructor cname="goo_canvas_new" />
+      <method name="ParsePathData" cname="goo_canvas_parse_path_data" shared="true">
+        <return-type type="GArray*" />
+        <parameters>
+          <parameter type="const-gchar*" name="path_data" />
+        </parameters>
+      </method>
+      <method name="PointerGrab" cname="goo_canvas_pointer_grab">
+        <return-type type="GdkGrabStatus" />
+        <parameters>
+          <parameter type="GooCanvasItem*" name="item" />
+          <parameter type="GdkEventMask" name="event_mask" />
+          <parameter type="GdkCursor*" name="cursor" />
+          <parameter type="guint32" name="time" />
+        </parameters>
+      </method>
+      <method name="PointerUngrab" cname="goo_canvas_pointer_ungrab">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GooCanvasItem*" name="item" />
+          <parameter type="guint32" name="time" />
+        </parameters>
+      </method>
+      <method name="RegisterWidgetItem" cname="goo_canvas_register_widget_item">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GooCanvasWidget*" name="witem" />
+        </parameters>
+      </method>
+      <method name="Render" cname="goo_canvas_render">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="cairo_t*" name="cr" />
+          <parameter type="const-GooCanvasBounds*" name="bounds" />
+          <parameter type="gdouble" name="scale" />
+        </parameters>
+      </method>
+      <method name="RequestRedraw" cname="goo_canvas_request_redraw">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="const-GooCanvasBounds*" name="bounds" />
+        </parameters>
+      </method>
+      <method name="RequestUpdate" cname="goo_canvas_request_update">
+        <return-type type="void" />
+      </method>
+      <method name="ScrollTo" cname="goo_canvas_scroll_to">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="gdouble" name="left" />
+          <parameter type="gdouble" name="top" />
+        </parameters>
+      </method>
+      <method name="SetBounds" cname="goo_canvas_set_bounds">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="gdouble" name="left" />
+          <parameter type="gdouble" name="top" />
+          <parameter type="gdouble" name="right" />
+          <parameter type="gdouble" name="bottom" />
+        </parameters>
+      </method>
+      <method name="SetRootItem" cname="goo_canvas_set_root_item">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GooCanvasItem*" name="item" />
+        </parameters>
+      </method>
+      <method name="SetRootItemModel" cname="goo_canvas_set_root_item_model">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GooCanvasItemModel*" name="model" />
+        </parameters>
+      </method>
+      <method name="SetScale" cname="goo_canvas_set_scale">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="gdouble" name="scale" />
+        </parameters>
+      </method>
+      <method name="UnregisterItem" cname="goo_canvas_unregister_item">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GooCanvasItemModel*" name="model" />
+        </parameters>
+      </method>
+      <method name="UnregisterWidgetItem" cname="goo_canvas_unregister_widget_item">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GooCanvasWidget*" name="witem" />
+        </parameters>
+      </method>
+      <method name="Update" cname="goo_canvas_update">
+        <return-type type="void" />
+      </method>
+    </object>
+    <object name="Ellipse" cname="GooCanvasEllipse" parent="GooCanvasItemSimple">
+      <field name="EllipseData" cname="ellipse_data" type="GooCanvasEllipseData*" />
+      <method name="GetType" cname="goo_canvas_ellipse_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+      <constructor cname="goo_canvas_ellipse_new">
+        <parameters>
+          <parameter type="GooCanvasItem*" name="parent" />
+          <parameter type="gdouble" name="center_x" />
+          <parameter type="gdouble" name="center_y" />
+          <parameter type="gdouble" name="radius_x" />
+          <parameter type="gdouble" name="radius_y" />
+          <parameter ellipsis="true" />
+        </parameters>
+      </constructor>
+    </object>
+    <object name="EllipseModel" cname="GooCanvasEllipseModel" parent="GooCanvasItemModelSimple">
+      <field name="EllipseData" cname="ellipse_data" type="GooCanvasEllipseData" />
+      <method name="GetType" cname="goo_canvas_ellipse_model_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+      <constructor cname="goo_canvas_ellipse_model_new">
+        <parameters>
+          <parameter type="GooCanvasItemModel*" name="parent" />
+          <parameter type="gdouble" name="center_x" />
+          <parameter type="gdouble" name="center_y" />
+          <parameter type="gdouble" name="radius_x" />
+          <parameter type="gdouble" name="radius_y" />
+          <parameter ellipsis="true" />
+        </parameters>
+      </constructor>
+    </object>
+    <object name="Group" cname="GooCanvasGroup" parent="GooCanvasItemSimple">
+      <field name="Items" cname="items" type="GPtrArray*" />
+      <method name="GetType" cname="goo_canvas_group_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+      <constructor cname="goo_canvas_group_new">
+        <parameters>
+          <parameter type="GooCanvasItem*" name="parent" />
+          <parameter ellipsis="true" />
+        </parameters>
+      </constructor>
+    </object>
+    <object name="GroupModel" cname="GooCanvasGroupModel" parent="GooCanvasItemModelSimple">
+      <field name="Children" cname="children" type="GPtrArray*" />
+      <method name="GetType" cname="goo_canvas_group_model_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+      <constructor cname="goo_canvas_group_model_new">
+        <parameters>
+          <parameter type="GooCanvasItemModel*" name="parent" />
+          <parameter ellipsis="true" />
+        </parameters>
+      </constructor>
+    </object>
+    <object name="Image" cname="GooCanvasImage" parent="GooCanvasItemSimple">
+      <field name="ImageData" cname="image_data" type="GooCanvasImageData*" />
+      <method name="GetType" cname="goo_canvas_image_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+      <constructor cname="goo_canvas_image_new">
+        <parameters>
+          <parameter type="GooCanvasItem*" name="parent" />
+          <parameter type="GdkPixbuf*" name="pixbuf" />
+          <parameter type="gdouble" name="x" />
+          <parameter type="gdouble" name="y" />
+          <parameter ellipsis="true" />
+        </parameters>
+      </constructor>
+    </object>
+    <object name="ImageModel" cname="GooCanvasImageModel" parent="GooCanvasItemModelSimple">
+      <field name="ImageData" cname="image_data" type="GooCanvasImageData" />
+      <method name="GetType" cname="goo_canvas_image_model_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+      <constructor cname="goo_canvas_image_model_new">
+        <parameters>
+          <parameter type="GooCanvasItemModel*" name="parent" />
+          <parameter type="GdkPixbuf*" name="pixbuf" />
+          <parameter type="gdouble" name="x" />
+          <parameter type="gdouble" name="y" />
+          <parameter ellipsis="true" />
+        </parameters>
+      </constructor>
+    </object>
+    <object name="ItemModelSimple" cname="GooCanvasItemModelSimple" parent="GObject">
+      <field name="Parent" cname="parent" type="GooCanvasItemModel*" access="public" />
+      <field name="SimpleData" cname="simple_data" type="GooCanvasItemSimpleData" access="public" />
+      <field name="Title" cname="title" type="gchar*" />
+      <field name="Description" cname="description" type="gchar*" />
+      <method name="GetType" cname="goo_canvas_item_model_simple_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+    </object>
+    <object name="ItemSimple" cname="GooCanvasItemSimple" parent="GObject">
+      <field name="Canvas" cname="canvas" type="GooCanvas*" />
+      <field name="Parent" cname="parent" type="GooCanvasItem*" />
+      <field name="Model" cname="model" type="GooCanvasItemModelSimple*" />
+      <field name="SimpleData" cname="simple_data" type="GooCanvasItemSimpleData*" />
+      <field name="Bounds" cname="bounds" type="GooCanvasBounds" />
+      <field name="NeedUpdate" cname="need_update" bits="1" type="guint" />
+      <field name="NeedEntireSubtreeUpdate" cname="need_entire_subtree_update" bits="1" type="guint" />
+      <field name="Priv" cname="priv" type="gpointer" />
+      <method name="Changed" cname="goo_canvas_item_simple_changed">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="gboolean" name="recompute_bounds" />
+        </parameters>
+      </method>
+      <method name="CheckInPath" cname="goo_canvas_item_simple_check_in_path">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="gdouble" name="x" />
+          <parameter type="gdouble" name="y" />
+          <parameter type="cairo_t*" name="cr" />
+          <parameter type="GooCanvasPointerEvents" name="pointer_events" />
+        </parameters>
+      </method>
+      <method name="CheckStyle" cname="goo_canvas_item_simple_check_style">
+        <return-type type="void" />
+      </method>
+      <method name="GetLineWidth" cname="goo_canvas_item_simple_get_line_width">
+        <return-type type="gdouble" />
+      </method>
+      <method name="GetPathBounds" cname="goo_canvas_item_simple_get_path_bounds">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="cairo_t*" name="cr" />
+          <parameter type="GooCanvasBounds*" name="bounds" />
+        </parameters>
+      </method>
+      <method name="GetType" cname="goo_canvas_item_simple_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+      <method name="PaintPath" cname="goo_canvas_item_simple_paint_path">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="cairo_t*" name="cr" />
+        </parameters>
+      </method>
+      <method name="SetModel" cname="goo_canvas_item_simple_set_model">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GooCanvasItemModel*" name="model" />
+        </parameters>
+      </method>
+      <method name="UserBoundsToDevice" cname="goo_canvas_item_simple_user_bounds_to_device">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="cairo_t*" name="cr" />
+          <parameter type="GooCanvasBounds*" name="bounds" />
+        </parameters>
+      </method>
+      <method name="UserBoundsToParent" cname="goo_canvas_item_simple_user_bounds_to_parent">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="cairo_t*" name="cr" />
+          <parameter type="GooCanvasBounds*" name="bounds" />
+        </parameters>
+      </method>
+    </object>
+    <object name="Path" cname="GooCanvasPath" parent="GooCanvasItemSimple">
+      <field name="PathData" cname="path_data" type="GooCanvasPathData*" />
+      <method name="GetType" cname="goo_canvas_path_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+      <constructor cname="goo_canvas_path_new">
+        <parameters>
+          <parameter type="GooCanvasItem*" name="parent" />
+          <parameter type="const-gchar*" name="path_data" />
+          <parameter ellipsis="true" />
+        </parameters>
+      </constructor>
+    </object>
+    <object name="PathModel" cname="GooCanvasPathModel" parent="GooCanvasItemModelSimple">
+      <field name="PathData" cname="path_data" type="GooCanvasPathData" />
+      <method name="GetType" cname="goo_canvas_path_model_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+      <constructor cname="goo_canvas_path_model_new">
+        <parameters>
+          <parameter type="GooCanvasItemModel*" name="parent" />
+          <parameter type="const-gchar*" name="path_data" />
+          <parameter ellipsis="true" />
+        </parameters>
+      </constructor>
+    </object>
+    <object name="Polyline" cname="GooCanvasPolyline" parent="GooCanvasItemSimple">
+      <field name="PolylineData" cname="polyline_data" type="GooCanvasPolylineData*" />
+      <method name="GetType" cname="goo_canvas_polyline_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+      <constructor cname="goo_canvas_polyline_new">
+        <parameters>
+          <parameter type="GooCanvasItem*" name="parent" />
+          <parameter type="gboolean" name="close_path" />
+          <parameter type="gint" name="num_points" />
+          <parameter ellipsis="true" />
+        </parameters>
+      </constructor>
+      <constructor cname="goo_canvas_polyline_new_line">
+        <parameters>
+          <parameter type="GooCanvasItem*" name="parent" />
+          <parameter type="gdouble" name="x1" />
+          <parameter type="gdouble" name="y1" />
+          <parameter type="gdouble" name="x2" />
+          <parameter type="gdouble" name="y2" />
+          <parameter ellipsis="true" />
+        </parameters>
+      </constructor>
+    </object>
+    <object name="PolylineModel" cname="GooCanvasPolylineModel" parent="GooCanvasItemModelSimple">
+      <field name="PolylineData" cname="polyline_data" type="GooCanvasPolylineData" />
+      <method name="GetType" cname="goo_canvas_polyline_model_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+      <constructor cname="goo_canvas_polyline_model_new">
+        <parameters>
+          <parameter type="GooCanvasItemModel*" name="parent" />
+          <parameter type="gboolean" name="close_path" />
+          <parameter type="gint" name="num_points" />
+          <parameter ellipsis="true" />
+        </parameters>
+      </constructor>
+      <constructor cname="goo_canvas_polyline_model_new_line">
+        <parameters>
+          <parameter type="GooCanvasItemModel*" name="parent" />
+          <parameter type="gdouble" name="x1" />
+          <parameter type="gdouble" name="y1" />
+          <parameter type="gdouble" name="x2" />
+          <parameter type="gdouble" name="y2" />
+          <parameter ellipsis="true" />
+        </parameters>
+      </constructor>
+    </object>
+    <object name="Rect" cname="GooCanvasRect" parent="GooCanvasItemSimple">
+      <field name="RectData" cname="rect_data" type="GooCanvasRectData*" />
+      <method name="GetType" cname="goo_canvas_rect_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+      <constructor cname="goo_canvas_rect_new">
+        <parameters>
+          <parameter type="GooCanvasItem*" name="parent" />
+          <parameter type="gdouble" name="x" />
+          <parameter type="gdouble" name="y" />
+          <parameter type="gdouble" name="width" />
+          <parameter type="gdouble" name="height" />
+          <parameter ellipsis="true" />
+        </parameters>
+      </constructor>
+    </object>
+    <object name="RectModel" cname="GooCanvasRectModel" parent="GooCanvasItemModelSimple">
+      <field name="RectData" cname="rect_data" type="GooCanvasRectData" />
+      <method name="GetType" cname="goo_canvas_rect_model_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+      <constructor cname="goo_canvas_rect_model_new">
+        <parameters>
+          <parameter type="GooCanvasItemModel*" name="parent" />
+          <parameter type="gdouble" name="x" />
+          <parameter type="gdouble" name="y" />
+          <parameter type="gdouble" name="width" />
+          <parameter type="gdouble" name="height" />
+          <parameter ellipsis="true" />
+        </parameters>
+      </constructor>
+    </object>
+    <object name="Style" cname="GooCanvasStyle" parent="GObject">
+      <field name="Parent" cname="parent" type="GooCanvasStyle*" />
+      <field name="Properties" cname="properties" type="GArray*" />
+      <method name="Copy" cname="goo_canvas_style_copy">
+        <return-type type="GooCanvasStyle*" owned="true" />
+      </method>
+      <method name="GetParent" cname="goo_canvas_style_get_parent">
+        <return-type type="GooCanvasStyle*" />
+      </method>
+      <method name="GetProperty" cname="goo_canvas_style_get_property">
+        <return-type type="GValue*" />
+        <parameters>
+          <parameter type="GQuark" name="property_id" />
+        </parameters>
+      </method>
+      <method name="GetType" cname="goo_canvas_style_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+      <constructor cname="goo_canvas_style_new" />
+      <method name="SetFillOptions" cname="goo_canvas_style_set_fill_options">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="cairo_t*" name="cr" />
+        </parameters>
+      </method>
+      <method name="SetParent" cname="goo_canvas_style_set_parent">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GooCanvasStyle*" name="parent" />
+        </parameters>
+      </method>
+      <method name="SetProperty" cname="goo_canvas_style_set_property">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GQuark" name="property_id" />
+          <parameter type="const-GValue*" name="value" />
+        </parameters>
+      </method>
+      <method name="SetStrokeOptions" cname="goo_canvas_style_set_stroke_options">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="cairo_t*" name="cr" />
+        </parameters>
+      </method>
+    </object>
+    <object name="Table" cname="GooCanvasTable" parent="GooCanvasGroup">
+      <field name="TableData" cname="table_data" type="GooCanvasTableData*" />
+      <method name="GetType" cname="goo_canvas_table_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+      <constructor cname="goo_canvas_table_new">
+        <parameters>
+          <parameter type="GooCanvasItem*" name="parent" />
+          <parameter ellipsis="true" />
+        </parameters>
+      </constructor>
+    </object>
+    <object name="TableModel" cname="GooCanvasTableModel" parent="GooCanvasGroupModel">
+      <field name="TableData" cname="table_data" type="GooCanvasTableData" />
+      <method name="GetType" cname="goo_canvas_table_model_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+      <constructor cname="goo_canvas_table_model_new">
+        <parameters>
+          <parameter type="GooCanvasItemModel*" name="parent" />
+          <parameter ellipsis="true" />
+        </parameters>
+      </constructor>
+    </object>
+    <object name="Text" cname="GooCanvasText" parent="GooCanvasItemSimple">
+      <field name="TextData" cname="text_data" type="GooCanvasTextData*" />
+      <field name="LayoutWidth" cname="layout_width" type="gdouble" />
+      <method name="GetType" cname="goo_canvas_text_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+      <constructor cname="goo_canvas_text_new">
+        <parameters>
+          <parameter type="GooCanvasItem*" name="parent" />
+          <parameter type="const-char*" name="string" />
+          <parameter type="gdouble" name="x" />
+          <parameter type="gdouble" name="y" />
+          <parameter type="gdouble" name="width" />
+          <parameter type="GtkAnchorType" name="anchor" />
+          <parameter ellipsis="true" />
+        </parameters>
+      </constructor>
+    </object>
+    <object name="TextModel" cname="GooCanvasTextModel" parent="GooCanvasItemModelSimple">
+      <field name="TextData" cname="text_data" type="GooCanvasTextData" />
+      <method name="GetType" cname="goo_canvas_text_model_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+      <constructor cname="goo_canvas_text_model_new">
+        <parameters>
+          <parameter type="GooCanvasItemModel*" name="parent" />
+          <parameter type="const-char*" name="string" />
+          <parameter type="gdouble" name="x" />
+          <parameter type="gdouble" name="y" />
+          <parameter type="gdouble" name="width" />
+          <parameter type="GtkAnchorType" name="anchor" />
+          <parameter ellipsis="true" />
+        </parameters>
+      </constructor>
+    </object>
+    <object name="Widget" cname="GooCanvasWidget" parent="GooCanvasItemSimple">
+      <field name="Widget" cname="widget" type="GtkWidget*" />
+      <field name="X" cname="x" type="gdouble" />
+      <field name="Y" cname="y" type="gdouble" />
+      <field name="Width" cname="width" type="gdouble" />
+      <field name="Height" cname="height" type="gdouble" />
+      <field name="Anchor" cname="anchor" type="GtkAnchorType" />
+      <method name="GetType" cname="goo_canvas_widget_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+      <constructor cname="goo_canvas_widget_new">
+        <parameters>
+          <parameter type="GooCanvasItem*" name="parent" />
+          <parameter type="GtkWidget*" name="widget" />
+          <parameter type="gdouble" name="x" />
+          <parameter type="gdouble" name="y" />
+          <parameter type="gdouble" name="width" />
+          <parameter type="gdouble" name="height" />
+          <parameter ellipsis="true" />
+        </parameters>
+      </constructor>
+    </object>
+    <struct name="Bounds" cname="GooCanvasBounds">
+      <field name="X1" cname="x1" type="gdouble" />
+      <field name="Y1" cname="y1" type="gdouble" />
+      <field name="X2" cname="x2" type="gdouble" />
+      <field name="Y2" cname="y2" type="gdouble" />
+      <method name="GetType" cname="goo_canvas_bounds_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+    </struct>
+    <struct name="EllipseData" cname="GooCanvasEllipseData">
+      <field name="CenterX" cname="center_x" type="gdouble" />
+      <field name="CenterY" cname="center_y" type="gdouble" />
+      <field name="RadiusX" cname="radius_x" type="gdouble" />
+      <field name="RadiusY" cname="radius_y" type="gdouble" />
+    </struct>
+    <struct name="ImageData" cname="GooCanvasImageData">
+      <field name="Pattern" cname="pattern" type="cairo_pattern_t*" />
+      <field name="X" cname="x" type="gdouble" />
+      <field name="Y" cname="y" type="gdouble" />
+      <field name="Width" cname="width" type="gdouble" />
+      <field name="Height" cname="height" type="gdouble" />
+    </struct>
+    <struct name="ItemSimpleData" cname="GooCanvasItemSimpleData">
+      <field name="Style" cname="style" type="GooCanvasStyle*" />
+      <field name="Transform" cname="transform" type="cairo_matrix_t*" />
+      <field name="ClipPathCommands" cname="clip_path_commands" type="GArray*" />
+      <field name="Tooltip" cname="tooltip" type="gchar*" access="private" />
+      <field name="VisibilityThreshold" cname="visibility_threshold" type="gdouble" />
+      <field name="Visibility" cname="visibility" bits="2" type="guint" />
+      <field name="PointerEvents" cname="pointer_events" bits="4" type="guint" />
+      <field name="CanFocus" cname="can_focus" bits="1" type="guint" />
+      <field name="OwnStyle" cname="own_style" bits="1" type="guint" />
+      <field name="ClipFillRule" cname="clip_fill_rule" bits="4" type="guint" />
+      <field name="CacheSetting" cname="cache_setting" bits="3" type="guint" access="private" />
+      <field name="HasTooltip" cname="has_tooltip" bits="1" type="guint" access="private" />
+    </struct>
+    <struct name="LineDash" cname="GooCanvasLineDash" opaque="true">
+      <field name="RefCount" cname="ref_count" type="int" access="public" writeable="true" />
+      <field name="NumDashes" cname="num_dashes" type="int" access="public" writeable="true" />
+      <field name="Dashes" cname="dashes" type="double*" access="public" writeable="true" />
+      <field name="DashOffset" cname="dash_offset" type="double" access="public" writeable="true" />
+      <method name="GetType" cname="goo_canvas_line_dash_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+      <constructor cname="goo_canvas_line_dash_new">
+        <parameters>
+          <parameter type="gint" name="num_dashes" />
+          <parameter ellipsis="true" />
+        </parameters>
+      </constructor>
+      <constructor cname="goo_canvas_line_dash_newv">
+        <parameters>
+          <parameter type="gint" name="num_dashes" />
+          <parameter type="double*" name="dashes" />
+        </parameters>
+      </constructor>
+      <method name="Ref" cname="goo_canvas_line_dash_ref">
+        <return-type type="GooCanvasLineDash*" />
+      </method>
+      <method name="Unref" cname="goo_canvas_line_dash_unref">
+        <return-type type="void" />
+      </method>
+    </struct>
+    <struct name="PathData" cname="GooCanvasPathData">
+      <field name="PathCommands" cname="path_commands" type="GArray*" />
+    </struct>
+    <struct name="Points" cname="GooCanvasPoints" opaque="true">
+      <field name="Coords" cname="coords" type="double*" access="public" writeable="true" />
+      <field name="NumPoints" cname="num_points" type="int" access="public" writeable="true" />
+      <field name="RefCount" cname="ref_count" type="int" access="public" writeable="true" />
+      <method name="GetType" cname="goo_canvas_points_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+      <constructor cname="goo_canvas_points_new">
+        <parameters>
+          <parameter type="int" name="num_points" />
+        </parameters>
+      </constructor>
+      <method name="Ref" cname="goo_canvas_points_ref">
+        <return-type type="GooCanvasPoints*" />
+      </method>
+      <method name="Unref" cname="goo_canvas_points_unref">
+        <return-type type="void" />
+      </method>
+    </struct>
+    <struct name="PolylineArrowData" cname="GooCanvasPolylineArrowData">
+      <field name="ArrowWidth" cname="arrow_width" type="gdouble" />
+      <field name="ArrowLength" cname="arrow_length" type="gdouble" />
+      <field name="ArrowTipLength" cname="arrow_tip_length" type="gdouble" />
+      <field name="LineStart" cname="line_start" array_len="2" type="gdouble" />
+      <field name="LineEnd" cname="line_end" array_len="2" type="gdouble" />
+      <field name="StartArrowCoords" cname="start_arrow_coords" array_len="NUM_ARROW_POINTS*  2" type="gdouble" />
+      <field name="EndArrowCoords" cname="end_arrow_coords" array_len="NUM_ARROW_POINTS*  2" type="gdouble" />
+    </struct>
+    <struct name="PolylineData" cname="GooCanvasPolylineData">
+      <field name="Coords" cname="coords" type="gdouble*" />
+      <field name="ArrowData" cname="arrow_data" type="GooCanvasPolylineArrowData*" />
+      <field name="NumPoints" cname="num_points" bits="16" type="guint" />
+      <field name="ClosePath" cname="close_path" bits="1" type="guint" />
+      <field name="StartArrow" cname="start_arrow" bits="1" type="guint" />
+      <field name="EndArrow" cname="end_arrow" bits="1" type="guint" />
+      <field name="ReconfigureArrows" cname="reconfigure_arrows" bits="1" type="guint" />
+    </struct>
+    <struct name="RectData" cname="GooCanvasRectData">
+      <field name="X" cname="x" type="gdouble" />
+      <field name="Y" cname="y" type="gdouble" />
+      <field name="Width" cname="width" type="gdouble" />
+      <field name="Height" cname="height" type="gdouble" />
+      <field name="RadiusX" cname="radius_x" type="gdouble" />
+      <field name="RadiusY" cname="radius_y" type="gdouble" />
+    </struct>
+    <struct name="StyleProperty" cname="GooCanvasStyleProperty">
+      <field name="Id" cname="id" type="GQuark" />
+      <field name="Value" cname="value" type="GValue" />
+    </struct>
+    <struct name="TableData" cname="GooCanvasTableData">
+      <field name="Width" cname="width" type="gdouble" />
+      <field name="Height" cname="height" type="gdouble" />
+      <field name="Dimensions" cname="dimensions" array_len="2" type="GooCanvasTableDimension" />
+      <field name="BorderWidth" cname="border_width" type="gdouble" />
+      <field name="Children" cname="children" type="GArray*" />
+      <field name="LayoutData" cname="layout_data" type="GooCanvasTableLayoutData*" />
+    </struct>
+    <struct name="TableDimension" cname="GooCanvasTableDimension">
+      <field name="Size" cname="size" type="gint" />
+      <field name="DefaultSpacing" cname="default_spacing" type="gdouble" />
+      <field name="Spacings" cname="spacings" type="gdouble*" />
+      <field name="Homogeneous" cname="homogeneous" bits="1" type="guint" />
+    </struct>
+    <struct name="TableLayoutData" cname="GooCanvasTableLayoutData" opaque="true" />
+    <struct name="TextData" cname="GooCanvasTextData">
+      <field name="Text" cname="text" type="gchar*" />
+      <field name="X" cname="x" type="gdouble" />
+      <field name="Y" cname="y" type="gdouble" />
+      <field name="Width" cname="width" type="gdouble" />
+      <field name="UseMarkup" cname="use_markup" bits="1" type="guint" />
+      <field name="Anchor" cname="anchor" bits="5" type="guint" />
+      <field name="Alignment" cname="alignment" bits="3" type="guint" />
+      <field name="Ellipsize" cname="ellipsize" bits="3" type="guint" />
+      <field name="Wrap" cname="wrap" bits="3" type="guint" />
+    </struct>
+  </namespace>
 </api>

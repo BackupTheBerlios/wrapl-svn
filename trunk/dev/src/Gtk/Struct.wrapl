@@ -124,14 +124,10 @@ TO :precall(t@T, name, arg) [
 ];
 
 TO :return(t@T, result) [
-	"if (" + result + ") {",
-	"\tGtk$" + t:ns + "$" + t:name + "_t * _ptr_" + result + " = new(Gtk$" + t:ns + "$" + t:name + "_t);",
-	"\t_ptr_" + result + "->Type = " + t:rtype + ";",
-	"\t_ptr_" + result + "->Value = " + result + ";",
-	"\tResult->Val = _ptr_" + result + ";",
-	"} else {",
-	"\treturn FAILURE;",
-	"};"
+	"Gtk$" + t:ns + "$" + t:name + "_t * _ptr_" + result + " = new(Gtk$" + t:ns + "$" + t:name + "_t);",
+	"_ptr_" + result + "->Type = " + t:rtype + ";",
+	"_ptr_" + result + "->Value = " + result + ";",
+	"Result->Val = _ptr_" + result + ";"
 ];
 
 TO :toriva(t@T, arg, name) [
@@ -301,6 +297,7 @@ EOF);
 	libfile:writes("\tprefix(\"Gtk$", t:ns, "$", t:name, "$\")\n");
 	libfile:write("end\n");
 	libfile:write("export(\"T\")\n");
+        libfile:write("export(\"Nil\")\n");
 	libfile:close;
 	VAR hfile <- File.Open(incdir + base + ".h", File.WRITE + File.TEXT);
 	hfile:writes("#ifndef ", t:ns, "_", t:name, "_H\n");
@@ -312,7 +309,8 @@ EOF);
 	hfile:writes("\tStd$Type_t *Type;\n");
 	hfile:writes("\t", t:cname, " *Value;\n");
 	hfile:writes("} Gtk$", t:ns, "$", t:name, "_t;\n\n");
-	hfile:writes("extern Std$Type_t ", t:rtype, "[];\n\n");
+	hfile:writes("extern Std$Type_t ", t:rtype, "[];\n");
+        hfile:writes("extern Gtk$", t:ns, "$", t:name, "_t Gtk$", t:ns, "$", t:name, "$Nil[];\n\n");
 	hfile:write("#undef RIVA_MODULE\n\n");
 	hfile:write("#endif\n");
 	hfile:close;

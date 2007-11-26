@@ -1,4 +1,4 @@
-.PHONY: GtkGObject GtkGtk GtkGdk GtkAtk GtkPango GtkGlade GtkGnome GtkGnomeCanvas GtkArt GtkCairo GtkCCC
+.PHONY: GtkAll GtkGObject GtkGtk GtkGdk GtkAtk GtkPango GtkGlade GtkGnome GtkGnomeCanvas GtkArt GtkCairo GtkCCC GtkGooCanvas
 
 GTK_LIB_DIR = $(LIB_DIR)Gtk$(DIRSEP)
 GTK_SRC_DIR = $(SRC_DIR)Gtk$(DIRSEP)
@@ -32,7 +32,8 @@ clean:
 	$(rm $(GTK_AUTOGEN))
 
 .SUBDIRS: GObject Gtk Gdk Pango Glade\
-	Gnome GnomeCanvas Art Cairo CCC
+	Gnome GnomeCanvas Art Cairo CCC GooCanvas
 
-Gtk: GtkGObject $(GTK_AUTOGEN) GtkGtk GtkGdk GtkPango GtkGlade $(GTK_LIB_DIR)TypeMap.riva\
-#	GtkGnome GtkGnomeCanvas GtkArt GtkCairo GtkCCC\
+Gtk: GtkGObject $(GTK_AUTOGEN) GtkGtk GtkGdk GtkPango GtkGlade $(GTK_LIB_DIR)TypeMap.riva
+
+GtkAll: Gtk GtkGnome GtkGnomeCanvas GtkArt GtkCairo GtkCCC GtkGooCanvas

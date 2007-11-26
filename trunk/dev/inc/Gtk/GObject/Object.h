@@ -13,6 +13,7 @@ typedef struct GtkGOobject$Object_t {
 } Gtk$GObject$Object_t;
 
 extern Std$Type_t Gtk$GObject$Object$T[];
+extern Gtk$GObject$Object_t Gtk$GObject$Object$Nil[];
 
 RIVA_CFUN(Gtk$GObject$Object_t *, new, GObject *, Std$Type_t *);
 RIVA_CFUN(Gtk$GObject$Object_t *, to_riva, GObject *);

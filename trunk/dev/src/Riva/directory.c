@@ -52,6 +52,7 @@ static int directory_load(module_t *Module, const char *FileName) {
 		Path[Length] = '/';
 		Path[Length + 1] = 0;
 		module_setup(Module, Path, (module_importer)directory_import);
+                module_set_path(Module, Path);
 	} else {
 		return 0;
 	};
