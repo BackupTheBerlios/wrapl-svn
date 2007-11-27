@@ -18,55 +18,55 @@
 
 
 ==== :Stamp ====
-'':Stamp( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':Stamp(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Seq ====
-'':Seq( @ [[#T|T]]) : [[..:..:Std:Address#T|Std.Address.T]]''
+'':Seq(self @ [[#T|T]]) : [[..:..:Std:Address#T|Std.Address.T]]''
 
 
 ==== :GtkReserved1 ====
-'':GtkReserved1( @ [[#T|T]]) : [[..:..:Std:Address#T|Std.Address.T]]''
+'':GtkReserved1(self @ [[#T|T]]) : [[..:..:Std:Address#T|Std.Address.T]]''
 
 
 ==== :SortList ====
-'':SortList( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SortList(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :NColumns ====
-'':NColumns( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':NColumns(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :SortColumnId ====
-'':SortColumnId( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':SortColumnId(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Order ====
-'':Order( @ [[#T|T]]) : [[..:..:Gtk:Gtk:SortType#T|Gtk.Gtk.SortType.T]]''
+'':Order(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:SortType#T|Gtk.Gtk.SortType.T]]''
 
 
 ==== :ColumnHeaders ====
-'':ColumnHeaders( @ [[#T|T]]) : [[..:..:Std:List#T|Std.List.T]]''
+'':ColumnHeaders(self @ [[#T|T]]) : [[..:..:Std:List#T|Std.List.T]]''
 
 
 ==== :Length ====
-'':Length( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':Length(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :DefaultSortFunc ====
-'':DefaultSortFunc( @ [[#T|T]]) : [[..:..:Std:Function#T|Std.Function.T]]''
+'':DefaultSortFunc(self @ [[#T|T]]) : [[..:..:Std:Function#T|Std.Function.T]]''
 
 
 ==== :DefaultSortData ====
-'':DefaultSortData( @ [[#T|T]]) : [[..:..:Std:Address#T|Std.Address.T]]''
+'':DefaultSortData(self @ [[#T|T]]) : [[..:..:Std:Address#T|Std.Address.T]]''
 
 
 ==== :DefaultSortDestroy ====
-'':DefaultSortDestroy( @ [[#T|T]]) : [[..:..:Std:Function#T|Std.Function.T]]''
+'':DefaultSortDestroy(self @ [[#T|T]]) : [[..:..:Std:Function#T|Std.Function.T]]''
 
 
 ==== :ColumnsDirty ====
-'':ColumnsDirty( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':ColumnsDirty(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Append ====

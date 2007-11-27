@@ -29,23 +29,23 @@
 
 
 ==== :Closed ====
-'':Closed( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':Closed(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :FontOptions ====
-'':FontOptions( @ [[#T|T]]) : [[..:..:Gtk:Cairo:CairoFontOptionsT#T|Gtk.Cairo.CairoFontOptionsT.T]]''
+'':FontOptions(self @ [[#T|T]]) : [[..:..:Gtk:Cairo:CairoFontOptionsT#T|Gtk.Cairo.CairoFontOptionsT.T]]''
 
 
 ==== :Resolution ====
-'':Resolution( @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
+'':Resolution(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :NormalGcs ====
-'':NormalGcs( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]]''
+'':NormalGcs(self @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]]''
 
 
 ==== :ExposureGcs ====
-'':ExposureGcs( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]]''
+'':ExposureGcs(self @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]]''
 
 
 ==== :BroadcastClientMessage ====

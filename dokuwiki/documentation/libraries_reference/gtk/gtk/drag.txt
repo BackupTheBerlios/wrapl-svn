@@ -1,145 +1,145 @@
 ====== Drag ======
 ==== Begin ====
-''Begin()''
+''Begin(widget, targets, actions, button, event) : [[..:..:Gtk:Gdk:DragContext#T|Gtk.Gdk.DragContext.T]]''
 
 
 ==== CheckThreshold ====
-''CheckThreshold()''
+''CheckThreshold(widget, start_x, start_y, current_x, current_y) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== DestAddImageTargets ====
-''DestAddImageTargets()''
+''DestAddImageTargets(widget) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== DestAddTextTargets ====
-''DestAddTextTargets()''
+''DestAddTextTargets(widget) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== DestAddUriTargets ====
-''DestAddUriTargets()''
+''DestAddUriTargets(widget) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== DestFindTarget ====
-''DestFindTarget()''
+''DestFindTarget(widget, context, target_list) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== DestGetTargetList ====
-''DestGetTargetList()''
+''DestGetTargetList(widget) : [[..:..:Gtk:Gtk:TargetList#T|Gtk.Gtk.TargetList.T]]''
 
 
 ==== DestGetTrackMotion ====
-''DestGetTrackMotion()''
+''DestGetTrackMotion(widget) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== DestSet ====
-''DestSet()''
+''DestSet(widget, flags, targets, n_targets, actions) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== DestSetProxy ====
-''DestSetProxy()''
+''DestSetProxy(widget, proxy_window, protocol, use_coordinates) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== DestSetTargetList ====
-''DestSetTargetList()''
+''DestSetTargetList(widget, target_list) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== DestSetTrackMotion ====
-''DestSetTrackMotion()''
+''DestSetTrackMotion(widget, track_motion) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== DestUnset ====
-''DestUnset()''
+''DestUnset(widget) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== Finish ====
-''Finish()''
+''Finish(context, success, del, time_) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== GetData ====
-''GetData()''
+''GetData(widget, context, target, time_) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== GetSourceWidget ====
-''GetSourceWidget()''
+''GetSourceWidget(context) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
 
 ==== Highlight ====
-''Highlight()''
+''Highlight(widget) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== SetDefaultIcon ====
-''SetDefaultIcon()''
+''SetDefaultIcon(colormap, pixmap, mask, hot_x, hot_y) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== SetIconDefault ====
-''SetIconDefault()''
+''SetIconDefault(context) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== SetIconName ====
-''SetIconName()''
+''SetIconName(context, icon_name, hot_x, hot_y) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== SetIconPixbuf ====
-''SetIconPixbuf()''
+''SetIconPixbuf(context, pixbuf, hot_x, hot_y) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== SetIconPixmap ====
-''SetIconPixmap()''
+''SetIconPixmap(context, colormap, pixmap, mask, hot_x, hot_y) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== SetIconStock ====
-''SetIconStock()''
+''SetIconStock(context, stock_id, hot_x, hot_y) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== SetIconWidget ====
-''SetIconWidget()''
+''SetIconWidget(context, widget, hot_x, hot_y) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== SourceAddImageTargets ====
-''SourceAddImageTargets()''
+''SourceAddImageTargets(widget) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== SourceAddTextTargets ====
-''SourceAddTextTargets()''
+''SourceAddTextTargets(widget) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== SourceAddUriTargets ====
-''SourceAddUriTargets()''
+''SourceAddUriTargets(widget) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== SourceGetTargetList ====
-''SourceGetTargetList()''
+''SourceGetTargetList(widget) : [[..:..:Gtk:Gtk:TargetList#T|Gtk.Gtk.TargetList.T]]''
 
 
 ==== SourceSet ====
-''SourceSet()''
+''SourceSet(widget, start_button_mask, targets, n_targets, actions) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== SourceSetIcon ====
-''SourceSetIcon()''
+''SourceSetIcon(widget, colormap, pixmap, mask) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== SourceSetIconName ====
-''SourceSetIconName()''
+''SourceSetIconName(widget, icon_name) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== SourceSetIconPixbuf ====
-''SourceSetIconPixbuf()''
+''SourceSetIconPixbuf(widget, pixbuf) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== SourceSetIconStock ====
-''SourceSetIconStock()''
+''SourceSetIconStock(widget, stock_id) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== SourceSetTargetList ====
-''SourceSetTargetList()''
+''SourceSetTargetList(widget, target_list) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== SourceUnset ====
-''SourceUnset()''
+''SourceUnset(widget) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== Unhighlight ====
-''Unhighlight()''
+''Unhighlight(widget) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 

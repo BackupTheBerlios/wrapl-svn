@@ -3,23 +3,23 @@
 
 
 ==== :Affine ====
-'':Affine( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Real#T|Std.Real.T]]''
+'':Affine(self @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :Fx ====
-'':Fx( @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
+'':Fx(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :Fy ====
-'':Fy( @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
+'':Fy(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :NStops ====
-'':NStops( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':NStops(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Stops ====
-'':Stops( @ [[#T|T]]) : [[..:..:Gtk:Art:GradientStop#T|Gtk.Art.GradientStop.T]]''
+'':Stops(self @ [[#T|T]]) : [[..:..:Gtk:Art:GradientStop#T|Gtk.Art.GradientStop.T]]''
 
 
 ==== New ====

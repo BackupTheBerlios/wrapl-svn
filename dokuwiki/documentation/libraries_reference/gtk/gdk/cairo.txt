@@ -1,25 +1,25 @@
 ====== Cairo ======
 ==== Create ====
-''Create()''
+''Create(drawable) : [[..:..:Gtk:Cairo:CairoT#T|Gtk.Cairo.CairoT.T]]''
 
 
 ==== Rectangle ====
-''Rectangle()''
+''Rectangle(cr, rectangle) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== Region ====
-''Region()''
+''Region(cr, region) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== SetSourceColor ====
-''SetSourceColor()''
+''SetSourceColor(cr, color) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== SetSourcePixbuf ====
-''SetSourcePixbuf()''
+''SetSourcePixbuf(cr, pixbuf, pixbuf_x, pixbuf_y) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== SetSourcePixmap ====
-''SetSourcePixmap()''
+''SetSourcePixmap(cr, pixmap, pixmap_x, pixmap_y) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 

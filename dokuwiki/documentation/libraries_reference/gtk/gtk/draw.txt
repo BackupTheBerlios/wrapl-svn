@@ -1,89 +1,89 @@
 ====== Draw ======
 ==== Arrow ====
-''Arrow()''
+''Arrow(style, window, state_type, shadow_type, arrow_type, fill, x, y, width, height) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== Box ====
-''Box()''
+''Box(style, window, state_type, shadow_type, x, y, width, height) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== BoxGap ====
-''BoxGap()''
+''BoxGap(style, window, state_type, shadow_type, x, y, width, height, gap_side, gap_x, gap_width) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== Check ====
-''Check()''
+''Check(style, window, state_type, shadow_type, x, y, width, height) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== Diamond ====
-''Diamond()''
+''Diamond(style, window, state_type, shadow_type, x, y, width, height) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== Expander ====
-''Expander()''
+''Expander(style, window, state_type, x, y, expander_style) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== Extension ====
-''Extension()''
+''Extension(style, window, state_type, shadow_type, x, y, width, height, gap_side) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== FlatBox ====
-''FlatBox()''
+''FlatBox(style, window, state_type, shadow_type, x, y, width, height) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== Focus ====
-''Focus()''
+''Focus(style, window, x, y, width, height) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== Handle ====
-''Handle()''
+''Handle(style, window, state_type, shadow_type, x, y, width, height, orientation) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== Hline ====
-''Hline()''
+''Hline(style, window, state_type, x1, x2, y) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== InsertionCursor ====
-''InsertionCursor()''
+''InsertionCursor(widget, drawable, area, location, is_primary, direction, draw_arrow) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== Layout ====
-''Layout()''
+''Layout(style, window, state_type, use_text, x, y, layout) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== Option ====
-''Option()''
+''Option(style, window, state_type, shadow_type, x, y, width, height) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== Polygon ====
-''Polygon()''
+''Polygon(style, window, state_type, shadow_type, points, npoints, fill) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== ResizeGrip ====
-''ResizeGrip()''
+''ResizeGrip(style, window, state_type, edge, x, y, width, height) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== Shadow ====
-''Shadow()''
+''Shadow(style, window, state_type, shadow_type, x, y, width, height) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== ShadowGap ====
-''ShadowGap()''
+''ShadowGap(style, window, state_type, shadow_type, x, y, width, height, gap_side, gap_x, gap_width) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== Slider ====
-''Slider()''
+''Slider(style, window, state_type, shadow_type, x, y, width, height, orientation) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== String ====
-''String()''
+''String(style, window, state_type, x, y, string) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== Tab ====
-''Tab()''
+''Tab(style, window, state_type, shadow_type, x, y, width, height) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== Vline ====
-''Vline()''
+''Vline(style, window, state_type, y1_, y2_, x) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 

@@ -15,43 +15,43 @@
 
 
 ==== :Destroy ====
-'':Destroy( @ [[#T|T]]) : [[..:..:Std:Function#T|Std.Function.T]]''
+'':Destroy(self @ [[#T|T]]) : [[..:..:Std:Function#T|Std.Function.T]]''
 
 
 ==== :DestroyData ====
-'':DestroyData( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':DestroyData(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Rowstride ====
-'':Rowstride( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':Rowstride(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Format ====
-'':Format( @ [[#T|T]]) : [[..:..:Gtk:Art:PixFormat#T|Gtk.Art.PixFormat.T]]''
+'':Format(self @ [[#T|T]]) : [[..:..:Gtk:Art:PixFormat#T|Gtk.Art.PixFormat.T]]''
 
 
 ==== :NChannels ====
-'':NChannels( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':NChannels(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :HasAlpha ====
-'':HasAlpha( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':HasAlpha(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :BitsPerSample ====
-'':BitsPerSample( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':BitsPerSample(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Pixels ====
-'':Pixels( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Pixels(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Width ====
-'':Width( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':Width(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Height ====
-'':Height( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':Height(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== NewConstRgb ====

@@ -17,51 +17,51 @@
 
 
 ==== :Type ====
-'':Type( @ [[#T|T]]) : [[..:..:Gtk:Gdk:ImageType#T|Gtk.Gdk.ImageType.T]]''
+'':Type(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:ImageType#T|Gtk.Gdk.ImageType.T]]''
 
 
 ==== :Visual ====
-'':Visual( @ [[#T|T]]) : [[..:..:Gtk:Gdk:Visual#T|Gtk.Gdk.Visual.T]]''
+'':Visual(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Visual#T|Gtk.Gdk.Visual.T]]''
 
 
 ==== :ByteOrder ====
-'':ByteOrder( @ [[#T|T]]) : [[..:..:Gtk:Gdk:ByteOrder#T|Gtk.Gdk.ByteOrder.T]]''
+'':ByteOrder(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:ByteOrder#T|Gtk.Gdk.ByteOrder.T]]''
 
 
 ==== :Width ====
-'':Width( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':Width(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Height ====
-'':Height( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':Height(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Depth ====
-'':Depth( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':Depth(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Bpp ====
-'':Bpp( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':Bpp(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Bpl ====
-'':Bpl( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':Bpl(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :BitsPerPixel ====
-'':BitsPerPixel( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':BitsPerPixel(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Mem ====
-'':Mem( @ [[#T|T]]) : [[..:..:Std:Address#T|Std.Address.T]]''
+'':Mem(self @ [[#T|T]]) : [[..:..:Std:Address#T|Std.Address.T]]''
 
 
 ==== :Colormap ====
-'':Colormap( @ [[#T|T]]) : [[..:..:Gtk:Gdk:Colormap#T|Gtk.Gdk.Colormap.T]]''
+'':Colormap(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Colormap#T|Gtk.Gdk.Colormap.T]]''
 
 
 ==== :WindowingData ====
-'':WindowingData( @ [[#T|T]]) : [[..:..:Std:Address#T|Std.Address.T]]''
+'':WindowingData(self @ [[#T|T]]) : [[..:..:Std:Address#T|Std.Address.T]]''
 
 
 ==== :GetColormap ====

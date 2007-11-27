@@ -1,25 +1,25 @@
 ====== Icon ======
 ==== SizeFromName ====
-''SizeFromName()''
+''SizeFromName(name) : [[..:..:Gtk:Gtk:IconSize#T|Gtk.Gtk.IconSize.T]]''
 
 
 ==== SizeGetName ====
-''SizeGetName()''
+''SizeGetName(size) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== SizeLookup ====
-''SizeLookup()''
+''SizeLookup(width, height) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== SizeLookupForSettings ====
-''SizeLookupForSettings()''
+''SizeLookupForSettings(size, width, height) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== SizeRegister ====
-''SizeRegister()''
+''SizeRegister(width, height) : [[..:..:Gtk:Gtk:IconSize#T|Gtk.Gtk.IconSize.T]]''
 
 
 ==== SizeRegisterAlias ====
-''SizeRegisterAlias()''
+''SizeRegisterAlias(target) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 

@@ -3,35 +3,35 @@
 
 
 ==== :BaseClassInitFunc ====
-'':BaseClassInitFunc( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':BaseClassInitFunc(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :TypeName ====
-'':TypeName( @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
+'':TypeName(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== :ObjectSize ====
-'':ObjectSize( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':ObjectSize(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :ClassSize ====
-'':ClassSize( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':ClassSize(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :ClassInitFunc ====
-'':ClassInitFunc( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':ClassInitFunc(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :ObjectInitFunc ====
-'':ObjectInitFunc( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':ObjectInitFunc(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Reserved1 ====
-'':Reserved1( @ [[#T|T]]) : [[..:..:Std:Address#T|Std.Address.T]]''
+'':Reserved1(self @ [[#T|T]]) : [[..:..:Std:Address#T|Std.Address.T]]''
 
 
 ==== :Reserved2 ====
-'':Reserved2( @ [[#T|T]]) : [[..:..:Std:Address#T|Std.Address.T]]''
+'':Reserved2(self @ [[#T|T]]) : [[..:..:Std:Address#T|Std.Address.T]]''
 
 
 ==== New ====

@@ -13,67 +13,67 @@
 
 
 ==== :Root ====
-'':Root( @ [[#T|T]]) : [[..:..:Std:Address#T|Std.Address.T]]''
+'':Root(self @ [[#T|T]]) : [[..:..:Std:Address#T|Std.Address.T]]''
 
 
 ==== :Stamp ====
-'':Stamp( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':Stamp(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :ChildFlags ====
-'':ChildFlags( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':ChildFlags(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :ChildModel ====
-'':ChildModel( @ [[#T|T]]) : [[..:..:Gtk:Gtk:TreeModel#T|Gtk.Gtk.TreeModel.T]]''
+'':ChildModel(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:TreeModel#T|Gtk.Gtk.TreeModel.T]]''
 
 
 ==== :ZeroRefCount ====
-'':ZeroRefCount( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':ZeroRefCount(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :SortList ====
-'':SortList( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SortList(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SortColumnId ====
-'':SortColumnId( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':SortColumnId(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Order ====
-'':Order( @ [[#T|T]]) : [[..:..:Gtk:Gtk:SortType#T|Gtk.Gtk.SortType.T]]''
+'':Order(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:SortType#T|Gtk.Gtk.SortType.T]]''
 
 
 ==== :DefaultSortFunc ====
-'':DefaultSortFunc( @ [[#T|T]]) : [[..:..:Std:Function#T|Std.Function.T]]''
+'':DefaultSortFunc(self @ [[#T|T]]) : [[..:..:Std:Function#T|Std.Function.T]]''
 
 
 ==== :DefaultSortData ====
-'':DefaultSortData( @ [[#T|T]]) : [[..:..:Std:Address#T|Std.Address.T]]''
+'':DefaultSortData(self @ [[#T|T]]) : [[..:..:Std:Address#T|Std.Address.T]]''
 
 
 ==== :DefaultSortDestroy ====
-'':DefaultSortDestroy( @ [[#T|T]]) : [[..:..:Std:Function#T|Std.Function.T]]''
+'':DefaultSortDestroy(self @ [[#T|T]]) : [[..:..:Std:Function#T|Std.Function.T]]''
 
 
 ==== :ChangedId ====
-'':ChangedId( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':ChangedId(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :InsertedId ====
-'':InsertedId( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':InsertedId(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :HasChildToggledId ====
-'':HasChildToggledId( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':HasChildToggledId(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :DeletedId ====
-'':DeletedId( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':DeletedId(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :ReorderedId ====
-'':ReorderedId( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':ReorderedId(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :ClearCache ====

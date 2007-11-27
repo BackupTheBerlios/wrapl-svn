@@ -1,109 +1,109 @@
 ====== Config ======
 ==== AssembleVector ====
-''AssembleVector()''
+''AssembleVector(argc, argv) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== CleanFile_ ====
-''CleanFile_()''
+''CleanFile_(path, priv) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== CleanKey_ ====
-''CleanKey_()''
+''CleanKey_(path, priv) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== CleanSection_ ====
-''CleanSection_()''
+''CleanSection_(path, priv) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== DropAll ====
-''DropAll()''
+''DropAll() : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== DropFile_ ====
-''DropFile_()''
+''DropFile_(path, priv) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== GetBoolWithDefault_ ====
-''GetBoolWithDefault_()''
+''GetBoolWithDefault_(path, def, priv) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== GetFloatWithDefault_ ====
-''GetFloatWithDefault_()''
+''GetFloatWithDefault_(path, def, priv) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== GetIntWithDefault_ ====
-''GetIntWithDefault_()''
+''GetIntWithDefault_(path, def, priv) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== GetStringWithDefault_ ====
-''GetStringWithDefault_()''
+''GetStringWithDefault_(path, def, priv) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== GetTranslatedStringWithDefault_ ====
-''GetTranslatedStringWithDefault_()''
+''GetTranslatedStringWithDefault_(path, def, priv) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== GetVectorWithDefault_ ====
-''GetVectorWithDefault_()''
+''GetVectorWithDefault_(path, argcp, argvp, def, priv) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== HasSection_ ====
-''HasSection_()''
+''HasSection_(path, priv) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== InitIterator_ ====
-''InitIterator_()''
+''InitIterator_(path, priv) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== InitIteratorSections_ ====
-''InitIteratorSections_()''
+''InitIteratorSections_(path, priv) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== IteratorNext ====
-''IteratorNext()''
+''IteratorNext(iterator_handle, key, value) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== MakeVector ====
-''MakeVector()''
+''MakeVector(string, argcp, argvp) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== PopPrefix ====
-''PopPrefix()''
+''PopPrefix() : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== PushPrefix ====
-''PushPrefix()''
+''PushPrefix(path) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== SetBool_ ====
-''SetBool_()''
+''SetBool_(path, value, priv) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== SetFloat_ ====
-''SetFloat_()''
+''SetFloat_(path, value, priv) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== SetInt_ ====
-''SetInt_()''
+''SetInt_(path, value, priv) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== SetString_ ====
-''SetString_()''
+''SetString_(path, value, priv) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== SetTranslatedString_ ====
-''SetTranslatedString_()''
+''SetTranslatedString_(path, value, priv) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== SetVector_ ====
-''SetVector_()''
+''SetVector_(path, argc, argv, priv) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== Sync ====
-''Sync()''
+''Sync() : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== SyncFile_ ====
-''SyncFile_()''
+''SyncFile_(path, priv) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 

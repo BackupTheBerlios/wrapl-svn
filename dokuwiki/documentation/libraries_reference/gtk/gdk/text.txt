@@ -1,41 +1,41 @@
 ====== Text ======
 ==== Extents ====
-''Extents()''
+''Extents(font, text, text_length, lbearing, rbearing, width, ascent, descent) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== ExtentsWc ====
-''ExtentsWc()''
+''ExtentsWc(font, text, text_length, lbearing, rbearing, width, ascent, descent) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== Height ====
-''Height()''
+''Height(font, text, text_length) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== Measure ====
-''Measure()''
+''Measure(font, text, text_length) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== PropertyToTextList ====
-''PropertyToTextList()''
+''PropertyToTextList(encoding, format, text, length, list) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== PropertyToTextListForDisplay ====
-''PropertyToTextListForDisplay()''
+''PropertyToTextListForDisplay(display, encoding, format, text, length, list) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== PropertyToUtf8List ====
-''PropertyToUtf8List()''
+''PropertyToUtf8List(encoding, format, text, length, list) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== PropertyToUtf8ListForDisplay ====
-''PropertyToUtf8ListForDisplay()''
+''PropertyToUtf8ListForDisplay(display, encoding, format, text, length, list) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== Width ====
-''Width()''
+''Width(font, text, text_length) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== WidthWc ====
-''WidthWc()''
+''WidthWc(font, text, text_length) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 

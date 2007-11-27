@@ -45,139 +45,139 @@
 
 
 ==== :Root ====
-'':Root( @ [[#T|T]]) : [[..:..:Gtk:GnomeCanvas:Item#T|Gtk.GnomeCanvas.Item.T]]''
+'':Root(self @ [[#T|T]]) : [[..:..:Gtk:GnomeCanvas:Item#T|Gtk.GnomeCanvas.Item.T]]''
 
 
 ==== :RedrawArea ====
-'':RedrawArea( @ [[#T|T]]) : [[..:..:Gtk:Art:Uta#T|Gtk.Art.Uta.T]]''
+'':RedrawArea(self @ [[#T|T]]) : [[..:..:Gtk:Art:Uta#T|Gtk.Art.Uta.T]]''
 
 
 ==== :CurrentItem ====
-'':CurrentItem( @ [[#T|T]]) : [[..:..:Gtk:GnomeCanvas:Item#T|Gtk.GnomeCanvas.Item.T]]''
+'':CurrentItem(self @ [[#T|T]]) : [[..:..:Gtk:GnomeCanvas:Item#T|Gtk.GnomeCanvas.Item.T]]''
 
 
 ==== :NewCurrentItem ====
-'':NewCurrentItem( @ [[#T|T]]) : [[..:..:Gtk:GnomeCanvas:Item#T|Gtk.GnomeCanvas.Item.T]]''
+'':NewCurrentItem(self @ [[#T|T]]) : [[..:..:Gtk:GnomeCanvas:Item#T|Gtk.GnomeCanvas.Item.T]]''
 
 
 ==== :GrabbedItem ====
-'':GrabbedItem( @ [[#T|T]]) : [[..:..:Gtk:GnomeCanvas:Item#T|Gtk.GnomeCanvas.Item.T]]''
+'':GrabbedItem(self @ [[#T|T]]) : [[..:..:Gtk:GnomeCanvas:Item#T|Gtk.GnomeCanvas.Item.T]]''
 
 
 ==== :FocusedItem ====
-'':FocusedItem( @ [[#T|T]]) : [[..:..:Gtk:GnomeCanvas:Item#T|Gtk.GnomeCanvas.Item.T]]''
+'':FocusedItem(self @ [[#T|T]]) : [[..:..:Gtk:GnomeCanvas:Item#T|Gtk.GnomeCanvas.Item.T]]''
 
 
 ==== :PixmapGc ====
-'':PixmapGc( @ [[#T|T]]) : [[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]]''
+'':PixmapGc(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]]''
 
 
 ==== :PickEvent ====
-'':PickEvent( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':PickEvent(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :ScrollX1 ====
-'':ScrollX1( @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
+'':ScrollX1(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :ScrollY1 ====
-'':ScrollY1( @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
+'':ScrollY1(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :ScrollX2 ====
-'':ScrollX2( @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
+'':ScrollX2(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :ScrollY2 ====
-'':ScrollY2( @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
+'':ScrollY2(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :PixelsPerUnit ====
-'':PixelsPerUnit( @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
+'':PixelsPerUnit(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :IdleId ====
-'':IdleId( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':IdleId(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :RootDestroyId ====
-'':RootDestroyId( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':RootDestroyId(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :RedrawX1 ====
-'':RedrawX1( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':RedrawX1(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :RedrawY1 ====
-'':RedrawY1( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':RedrawY1(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :RedrawX2 ====
-'':RedrawX2( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':RedrawX2(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :RedrawY2 ====
-'':RedrawY2( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':RedrawY2(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :DrawXofs ====
-'':DrawXofs( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':DrawXofs(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :DrawYofs ====
-'':DrawYofs( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':DrawYofs(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :ZoomXofs ====
-'':ZoomXofs( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':ZoomXofs(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :ZoomYofs ====
-'':ZoomYofs( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':ZoomYofs(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :State ====
-'':State( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':State(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :GrabbedEventMask ====
-'':GrabbedEventMask( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':GrabbedEventMask(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :CloseEnough ====
-'':CloseEnough( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':CloseEnough(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :CenterScrollRegion ====
-'':CenterScrollRegion( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':CenterScrollRegion(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :NeedUpdate ====
-'':NeedUpdate( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':NeedUpdate(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :NeedRedraw ====
-'':NeedRedraw( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':NeedRedraw(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :NeedRepick ====
-'':NeedRepick( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':NeedRepick(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :LeftGrabbedItem ====
-'':LeftGrabbedItem( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':LeftGrabbedItem(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :InRepick ====
-'':InRepick( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':InRepick(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Aa ====
-'':Aa( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Aa(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Dither ====
-'':Dither( @ [[#T|T]]) : [[..:..:Gtk:Gdk:RgbDither#T|Gtk.Gdk.RgbDither.T]]''
+'':Dither(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:RgbDither#T|Gtk.Gdk.RgbDither.T]]''
 
 
 ==== :C2w ====

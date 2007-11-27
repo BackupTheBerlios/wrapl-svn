@@ -1,153 +1,153 @@
 ====== Global ======
 ==== AlternativeDialogButtonOrder ====
-''AlternativeDialogButtonOrder()''
+''AlternativeDialogButtonOrder(screen) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== BindingParseBinding ====
-''BindingParseBinding()''
+''BindingParseBinding(scanner) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== CheckVersion ====
-''CheckVersion()''
+''CheckVersion(required_major, required_minor, required_micro) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== DisableSetlocale ====
-''DisableSetlocale()''
+''DisableSetlocale() : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== EventsPending ====
-''EventsPending()''
+''EventsPending() : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== GetCurrentEvent ====
-''GetCurrentEvent()''
+''GetCurrentEvent() : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== GetCurrentEventState ====
-''GetCurrentEventState()''
+''GetCurrentEventState(state) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== GetCurrentEventTime ====
-''GetCurrentEventTime()''
+''GetCurrentEventTime() : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== GetDefaultLanguage ====
-''GetDefaultLanguage()''
+''GetDefaultLanguage() : [[..:..:Gtk:Pango:Language#T|Gtk.Pango.Language.T]]''
 
 
 ==== GetEventWidget ====
-''GetEventWidget()''
+''GetEventWidget(event) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
 
 ==== GetOptionGroup ====
-''GetOptionGroup()''
+''GetOptionGroup(open_default_display) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== IdentifierGetType ====
-''IdentifierGetType()''
+''IdentifierGetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 
 ==== PaintArrow ====
-''PaintArrow()''
+''PaintArrow(style, window, state_type, shadow_type, area, widget, detail, arrow_type, fill, x, y, width, height) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== PaintBox ====
-''PaintBox()''
+''PaintBox(style, window, state_type, shadow_type, area, widget, detail, x, y, width, height) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== PaintBoxGap ====
-''PaintBoxGap()''
+''PaintBoxGap(style, window, state_type, shadow_type, area, widget, detail, x, y, width, height, gap_side, gap_x, gap_width) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== PaintCheck ====
-''PaintCheck()''
+''PaintCheck(style, window, state_type, shadow_type, area, widget, detail, x, y, width, height) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== PaintDiamond ====
-''PaintDiamond()''
+''PaintDiamond(style, window, state_type, shadow_type, area, widget, detail, x, y, width, height) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== PaintExpander ====
-''PaintExpander()''
+''PaintExpander(style, window, state_type, area, widget, detail, x, y, expander_style) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== PaintExtension ====
-''PaintExtension()''
+''PaintExtension(style, window, state_type, shadow_type, area, widget, detail, x, y, width, height, gap_side) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== PaintFlatBox ====
-''PaintFlatBox()''
+''PaintFlatBox(style, window, state_type, shadow_type, area, widget, detail, x, y, width, height) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== PaintFocus ====
-''PaintFocus()''
+''PaintFocus(style, window, state_type, area, widget, detail, x, y, width, height) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== PaintHandle ====
-''PaintHandle()''
+''PaintHandle(style, window, state_type, shadow_type, area, widget, detail, x, y, width, height, orientation) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== PaintHline ====
-''PaintHline()''
+''PaintHline(style, window, state_type, area, widget, detail, x1, x2, y) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== PaintLayout ====
-''PaintLayout()''
+''PaintLayout(style, window, state_type, use_text, area, widget, detail, x, y, layout) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== PaintOption ====
-''PaintOption()''
+''PaintOption(style, window, state_type, shadow_type, area, widget, detail, x, y, width, height) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== PaintPolygon ====
-''PaintPolygon()''
+''PaintPolygon(style, window, state_type, shadow_type, area, widget, detail, points, npoints, fill) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== PaintResizeGrip ====
-''PaintResizeGrip()''
+''PaintResizeGrip(style, window, state_type, area, widget, detail, edge, x, y, width, height) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== PaintShadow ====
-''PaintShadow()''
+''PaintShadow(style, window, state_type, shadow_type, area, widget, detail, x, y, width, height) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== PaintShadowGap ====
-''PaintShadowGap()''
+''PaintShadowGap(style, window, state_type, shadow_type, area, widget, detail, x, y, width, height, gap_side, gap_x, gap_width) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== PaintSlider ====
-''PaintSlider()''
+''PaintSlider(style, window, state_type, shadow_type, area, widget, detail, x, y, width, height, orientation) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== PaintString ====
-''PaintString()''
+''PaintString(style, window, state_type, area, widget, detail, x, y, string) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== PaintTab ====
-''PaintTab()''
+''PaintTab(style, window, state_type, shadow_type, area, widget, detail, x, y, width, height) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== PaintVline ====
-''PaintVline()''
+''PaintVline(style, window, state_type, area, widget, detail, y1_, y2_, x) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== ParseArgs ====
-''ParseArgs()''
+''ParseArgs(argc, argv) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== PrivateFlagsGetType ====
-''PrivateFlagsGetType()''
+''PrivateFlagsGetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 
 ==== PropagateEvent ====
-''PropagateEvent()''
+''PropagateEvent(widget, event) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== SetLocale ====
-''SetLocale()''
+''SetLocale() : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== ShowAboutDialog ====
-''ShowAboutDialog()''
+''ShowAboutDialog(parent, first_property_name, ___) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 

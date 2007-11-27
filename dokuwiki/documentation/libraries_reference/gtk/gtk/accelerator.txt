@@ -1,25 +1,25 @@
 ====== Accelerator ======
 ==== GetDefaultModMask ====
-''GetDefaultModMask()''
+''GetDefaultModMask() : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== GetLabel ====
-''GetLabel()''
+''GetLabel(accelerator_key, accelerator_mods) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== Name ====
-''Name()''
+''Name(accelerator_key, accelerator_mods) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== Parse ====
-''Parse()''
+''Parse(accelerator, accelerator_key, accelerator_mods) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== SetDefaultModMask ====
-''SetDefaultModMask()''
+''SetDefaultModMask(default_mod_mask) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== Valid ====
-''Valid()''
+''Valid(keyval, modifiers) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 

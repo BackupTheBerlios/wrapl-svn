@@ -1,13 +1,13 @@
 ====== Rgba ======
 ==== FillRun ====
-''FillRun()''
+''FillRun(buf, r, g, b, n) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== RgbaComposite ====
-''RgbaComposite()''
+''RgbaComposite(dst, src, n) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== RunAlpha ====
-''RunAlpha()''
+''RunAlpha(buf, r, g, b, alpha, n) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 

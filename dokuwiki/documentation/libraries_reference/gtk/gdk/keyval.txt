@@ -1,33 +1,33 @@
 ====== Keyval ======
 ==== ConvertCase ====
-''ConvertCase()''
+''ConvertCase(symbol, lower, upper) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== FromName ====
-''FromName()''
+''FromName(keyval_name) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== IsLower ====
-''IsLower()''
+''IsLower(keyval) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== IsUpper ====
-''IsUpper()''
+''IsUpper(keyval) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== Name ====
-''Name()''
+''Name(keyval) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== ToLower ====
-''ToLower()''
+''ToLower(keyval) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== ToUnicode ====
-''ToUnicode()''
+''ToUnicode(keyval) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== ToUpper ====
-''ToUpper()''
+''ToUpper(keyval) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 

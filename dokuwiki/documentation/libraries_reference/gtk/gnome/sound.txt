@@ -1,21 +1,21 @@
 ====== Sound ======
 ==== ConnectionGet ====
-''ConnectionGet()''
+''ConnectionGet() : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== Init ====
-''Init()''
+''Init(hostname) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== Play ====
-''Play()''
+''Play(filename) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== SampleLoad ====
-''SampleLoad()''
+''SampleLoad(sample_name, filename) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== Shutdown ====
-''Shutdown()''
+''Shutdown() : [[..:..:Std:Object#T|Std.Object.T]]''
 
 

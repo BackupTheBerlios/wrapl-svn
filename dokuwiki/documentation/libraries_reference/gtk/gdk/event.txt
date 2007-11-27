@@ -7,158 +7,158 @@
 
 
 ==== :Expose ====
-'':Expose( @ [[#T|T]])''
+'':Expose(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:EventExpose#T|Gtk.Gdk.EventExpose.T]]''
 
 
 ==== :NoExpose ====
-'':NoExpose( @ [[#T|T]])''
+'':NoExpose(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:EventNoExpose#T|Gtk.Gdk.EventNoExpose.T]]''
 
 
 ==== :Visibility ====
-'':Visibility( @ [[#T|T]])''
+'':Visibility(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:EventVisibility#T|Gtk.Gdk.EventVisibility.T]]''
 
 
 ==== :Motion ====
-'':Motion( @ [[#T|T]])''
+'':Motion(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:EventMotion#T|Gtk.Gdk.EventMotion.T]]''
 
 
 ==== :Button ====
-'':Button( @ [[#T|T]])''
+'':Button(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:EventButton#T|Gtk.Gdk.EventButton.T]]''
 
 
 ==== :Scroll ====
-'':Scroll( @ [[#T|T]])''
+'':Scroll(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:EventScroll#T|Gtk.Gdk.EventScroll.T]]''
 
 
 ==== :Key ====
-'':Key( @ [[#T|T]])''
+'':Key(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:EventKey#T|Gtk.Gdk.EventKey.T]]''
 
 
 ==== :Crossing ====
-'':Crossing( @ [[#T|T]])''
+'':Crossing(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:EventCrossing#T|Gtk.Gdk.EventCrossing.T]]''
 
 
 ==== :Focus ====
-'':Focus( @ [[#T|T]])''
+'':Focus(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:EventFocus#T|Gtk.Gdk.EventFocus.T]]''
 
 
 ==== :Configure ====
-'':Configure( @ [[#T|T]])''
+'':Configure(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:EventConfigure#T|Gtk.Gdk.EventConfigure.T]]''
 
 
 ==== :Property ====
-'':Property( @ [[#T|T]])''
+'':Property(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:EventProperty#T|Gtk.Gdk.EventProperty.T]]''
 
 
 ==== :Selection ====
-'':Selection( @ [[#T|T]])''
+'':Selection(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:EventSelection#T|Gtk.Gdk.EventSelection.T]]''
 
 
 ==== :OwnerChange ====
-'':OwnerChange( @ [[#T|T]])''
+'':OwnerChange(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:EventOwnerChange#T|Gtk.Gdk.EventOwnerChange.T]]''
 
 
 ==== :Proximity ====
-'':Proximity( @ [[#T|T]])''
+'':Proximity(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:EventProximity#T|Gtk.Gdk.EventProximity.T]]''
 
 
 ==== :Client ====
-'':Client( @ [[#T|T]])''
+'':Client(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:EventClient#T|Gtk.Gdk.EventClient.T]]''
 
 
 ==== :DND ====
-'':DND( @ [[#T|T]])''
+'':DND(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:EventDND#T|Gtk.Gdk.EventDND.T]]''
 
 
 ==== :WindowState ====
-'':WindowState( @ [[#T|T]])''
+'':WindowState(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:EventWindowState#T|Gtk.Gdk.EventWindowState.T]]''
 
 
 ==== :Setting ====
-'':Setting( @ [[#T|T]])''
+'':Setting(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:EventSetting#T|Gtk.Gdk.EventSetting.T]]''
 
 
 ==== :GrabBroken ====
-'':GrabBroken( @ [[#T|T]])''
+'':GrabBroken(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:EventGrabBroken#T|Gtk.Gdk.EventGrabBroken.T]]''
 
 
 ==== Copy ====
-''Copy()''
+''Copy(event) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== Free ====
-''Free()''
+''Free(event) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== Get ====
-''Get()''
+''Get() : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== GetAxis ====
-''GetAxis()''
+''GetAxis(event, axis_use, value) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== GetCoords ====
-''GetCoords()''
+''GetCoords(event, x_win, y_win) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== GetGraphicsExpose ====
-''GetGraphicsExpose()''
+''GetGraphicsExpose(window) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== GetRootCoords ====
-''GetRootCoords()''
+''GetRootCoords(event, x_root, y_root) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== GetScreen ====
-''GetScreen()''
+''GetScreen(event) : [[..:..:Gtk:Gdk:Screen#T|Gtk.Gdk.Screen.T]]''
 
 
 ==== GetState ====
-''GetState()''
+''GetState(event, state) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== GetTime ====
-''GetTime()''
+''GetTime(event) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 
 ==== HandlerSet ====
-''HandlerSet()''
+''HandlerSet(func, data, notify) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====
-''New()''
+''New(type) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== Peek ====
-''Peek()''
+''Peek() : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== Put ====
-''Put()''
+''Put(event) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== RequestMotions ====
-''RequestMotions()''
+''RequestMotions(event) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== SendClientMessage ====
-''SendClientMessage()''
+''SendClientMessage(event, winid) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== SendClientMessageForDisplay ====
-''SendClientMessageForDisplay()''
+''SendClientMessageForDisplay(display, event, winid) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== SendClientmessageToall ====
-''SendClientmessageToall()''
+''SendClientmessageToall(event) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== SetScreen ====
-''SetScreen()''
+''SetScreen(event, screen) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 

@@ -3,18 +3,18 @@
 
 
 ==== :StartEditing ====
-'':StartEditing( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':StartEditing(self @ [[#T|T]], event @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :EditingDone ====
-'':EditingDone( @ [[#T|T]])''
+'':EditingDone(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :RemoveWidget ====
-'':RemoveWidget( @ [[#T|T]])''
+'':RemoveWidget(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 

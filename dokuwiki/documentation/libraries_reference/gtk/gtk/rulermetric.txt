@@ -3,23 +3,23 @@
 
 
 ==== :Subdivide ====
-'':Subdivide( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':Subdivide(self @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :MetricName ====
-'':MetricName( @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
+'':MetricName(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== :Abbrev ====
-'':Abbrev( @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
+'':Abbrev(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== :PixelsPerUnit ====
-'':PixelsPerUnit( @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
+'':PixelsPerUnit(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :RulerScale ====
-'':RulerScale( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Real#T|Std.Real.T]]''
+'':RulerScale(self @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== New ====

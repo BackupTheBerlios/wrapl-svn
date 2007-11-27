@@ -1,33 +1,33 @@
 ====== Selection ======
 ==== AddTarget ====
-''AddTarget()''
+''AddTarget(widget, selection, target, info) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== AddTargets ====
-''AddTargets()''
+''AddTargets(widget, selection, targets, ntargets) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== Clear ====
-''Clear()''
+''Clear(widget, event) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== ClearTargets ====
-''ClearTargets()''
+''ClearTargets(widget, selection) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== Convert ====
-''Convert()''
+''Convert(widget, selection, target, time_) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== OwnerSet ====
-''OwnerSet()''
+''OwnerSet(widget, selection, time_) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== OwnerSetForDisplay ====
-''OwnerSetForDisplay()''
+''OwnerSetForDisplay(display, widget, selection, time_) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== RemoveAll ====
-''RemoveAll()''
+''RemoveAll(widget) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 

@@ -3,63 +3,63 @@
 
 
 ==== :TypeHint ====
-'':TypeHint( @ [[#T|T]]) : [[..:..:Gtk:Gdk:WindowTypeHint#T|Gtk.Gdk.WindowTypeHint.T]]''
+'':TypeHint(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:WindowTypeHint#T|Gtk.Gdk.WindowTypeHint.T]]''
 
 
 ==== :Title ====
-'':Title( @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
+'':Title(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== :EventMask ====
-'':EventMask( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':EventMask(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :X ====
-'':X( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':X(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Y ====
-'':Y( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':Y(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Width ====
-'':Width( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':Width(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Height ====
-'':Height( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':Height(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Wclass ====
-'':Wclass( @ [[#T|T]]) : [[..:..:Gtk:Gdk:WindowClass#T|Gtk.Gdk.WindowClass.T]]''
+'':Wclass(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:WindowClass#T|Gtk.Gdk.WindowClass.T]]''
 
 
 ==== :Visual ====
-'':Visual( @ [[#T|T]]) : [[..:..:Gtk:Gdk:Visual#T|Gtk.Gdk.Visual.T]]''
+'':Visual(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Visual#T|Gtk.Gdk.Visual.T]]''
 
 
 ==== :Colormap ====
-'':Colormap( @ [[#T|T]]) : [[..:..:Gtk:Gdk:Colormap#T|Gtk.Gdk.Colormap.T]]''
+'':Colormap(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Colormap#T|Gtk.Gdk.Colormap.T]]''
 
 
 ==== :WindowType ====
-'':WindowType( @ [[#T|T]]) : [[..:..:Gtk:Gdk:WindowType#T|Gtk.Gdk.WindowType.T]]''
+'':WindowType(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:WindowType#T|Gtk.Gdk.WindowType.T]]''
 
 
 ==== :Cursor ====
-'':Cursor( @ [[#T|T]]) : [[..:..:Gtk:Gdk:Cursor#T|Gtk.Gdk.Cursor.T]]''
+'':Cursor(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Cursor#T|Gtk.Gdk.Cursor.T]]''
 
 
 ==== :WmclassName ====
-'':WmclassName( @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
+'':WmclassName(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== :WmclassClass ====
-'':WmclassClass( @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
+'':WmclassClass(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== :OverrideRedirect ====
-'':OverrideRedirect( @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':OverrideRedirect(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== New ====

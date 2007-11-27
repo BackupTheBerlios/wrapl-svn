@@ -3,35 +3,35 @@
 
 
 ==== :SelectionTime ====
-'':SelectionTime( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':SelectionTime(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Type ====
-'':Type( @ [[#T|T]]) : [[..:..:Gtk:Gdk:EventType#T|Gtk.Gdk.EventType.T]]''
+'':Type(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:EventType#T|Gtk.Gdk.EventType.T]]''
 
 
 ==== :Window ====
-'':Window( @ [[#T|T]]) : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]]''
+'':Window(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]]''
 
 
 ==== :SendEvent ====
-'':SendEvent( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':SendEvent(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Owner ====
-'':Owner( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':Owner(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Reason ====
-'':Reason( @ [[#T|T]]) : [[..:..:Gtk:Gdk:OwnerChange#T|Gtk.Gdk.OwnerChange.T]]''
+'':Reason(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:OwnerChange#T|Gtk.Gdk.OwnerChange.T]]''
 
 
 ==== :Selection ====
-'':Selection( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Selection(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Time ====
-'':Time( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':Time(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== New ====

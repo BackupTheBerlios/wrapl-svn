@@ -3,14 +3,14 @@
 
 
 ==== :RowDropPossible ====
-'':RowDropPossible( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]],  @ [[..:..:Gtk:Gtk:SelectionData#T|Gtk.Gtk.SelectionData.T]])''
+'':RowDropPossible(self @ [[#T|T]], dest_path @ [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]], selection_data @ [[..:..:Gtk:Gtk:SelectionData#T|Gtk.Gtk.SelectionData.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :DragDataReceived ====
-'':DragDataReceived( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]],  @ [[..:..:Gtk:Gtk:SelectionData#T|Gtk.Gtk.SelectionData.T]])''
+'':DragDataReceived(self @ [[#T|T]], dest @ [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]], selection_data @ [[..:..:Gtk:Gtk:SelectionData#T|Gtk.Gtk.SelectionData.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 

@@ -21,19 +21,19 @@
 
 
 ==== :Size ====
-'':Size( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':Size(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Colors ====
-'':Colors( @ [[#T|T]]) : [[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]]''
+'':Colors(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]]''
 
 
 ==== :Visual ====
-'':Visual( @ [[#T|T]]) : [[..:..:Gtk:Gdk:Visual#T|Gtk.Gdk.Visual.T]]''
+'':Visual(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Visual#T|Gtk.Gdk.Visual.T]]''
 
 
 ==== :WindowingData ====
-'':WindowingData( @ [[#T|T]]) : [[..:..:Std:Address#T|Std.Address.T]]''
+'':WindowingData(self @ [[#T|T]]) : [[..:..:Std:Address#T|Std.Address.T]]''
 
 
 ==== :AllocColor ====

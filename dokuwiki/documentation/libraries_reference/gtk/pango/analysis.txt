@@ -3,39 +3,39 @@
 
 
 ==== :ExtraAttrs ====
-'':ExtraAttrs( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':ExtraAttrs(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :ShapeEngine ====
-'':ShapeEngine( @ [[#T|T]]) : [[..:..:Gtk:Pango:EngineShape#T|Gtk.Pango.EngineShape.T]]''
+'':ShapeEngine(self @ [[#T|T]]) : [[..:..:Gtk:Pango:EngineShape#T|Gtk.Pango.EngineShape.T]]''
 
 
 ==== :LangEngine ====
-'':LangEngine( @ [[#T|T]]) : [[..:..:Gtk:Pango:EngineLang#T|Gtk.Pango.EngineLang.T]]''
+'':LangEngine(self @ [[#T|T]]) : [[..:..:Gtk:Pango:EngineLang#T|Gtk.Pango.EngineLang.T]]''
 
 
 ==== :Font ====
-'':Font( @ [[#T|T]]) : [[..:..:Gtk:Pango:Font#T|Gtk.Pango.Font.T]]''
+'':Font(self @ [[#T|T]]) : [[..:..:Gtk:Pango:Font#T|Gtk.Pango.Font.T]]''
 
 
 ==== :Level ====
-'':Level( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':Level(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Gravity ====
-'':Gravity( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':Gravity(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Flags ====
-'':Flags( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':Flags(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Script ====
-'':Script( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':Script(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Language ====
-'':Language( @ [[#T|T]]) : [[..:..:Gtk:Pango:Language#T|Gtk.Pango.Language.T]]''
+'':Language(self @ [[#T|T]]) : [[..:..:Gtk:Pango:Language#T|Gtk.Pango.Language.T]]''
 
 
 ==== New ====

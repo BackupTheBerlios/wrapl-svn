@@ -1,21 +1,21 @@
 ====== Quit ======
 ==== Add ====
-''Add()''
+''Add(main_level, function, data) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== AddDestroy ====
-''AddDestroy()''
+''AddDestroy(main_level, object) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== AddFull ====
-''AddFull()''
+''AddFull(main_level, function, marshal, data, destroy) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== Remove ====
-''Remove()''
+''Remove(quit_handler_id) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== RemoveByData ====
-''RemoveByData()''
+''RemoveByData(data) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 

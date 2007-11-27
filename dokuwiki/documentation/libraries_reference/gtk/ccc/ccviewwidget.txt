@@ -22,59 +22,59 @@
 
 
 ==== :ScrolledRegion ====
-'':ScrolledRegion( @ [[#T|T]]) : [[..:..:Gtk:CCC:CcDRect#T|Gtk.CCC.CcDRect.T]]''
+'':ScrolledRegion(self @ [[#T|T]]) : [[..:..:Gtk:CCC:CcDRect#T|Gtk.CCC.CcDRect.T]]''
 
 
 ==== :Zoom ====
-'':Zoom( @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
+'':Zoom(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :ZoomMode ====
-'':ZoomMode( @ [[#T|T]]) : [[..:..:Gtk:CCC:CcZoomMode#T|Gtk.CCC.CcZoomMode.T]]''
+'':ZoomMode(self @ [[#T|T]]) : [[..:..:Gtk:CCC:CcZoomMode#T|Gtk.CCC.CcZoomMode.T]]''
 
 
 ==== :DisplayMatrix ====
-'':DisplayMatrix( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':DisplayMatrix(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Root ====
-'':Root( @ [[#T|T]]) : [[..:..:Gtk:CCC:CcItem#T|Gtk.CCC.CcItem.T]]''
+'':Root(self @ [[#T|T]]) : [[..:..:Gtk:CCC:CcItem#T|Gtk.CCC.CcItem.T]]''
 
 
 ==== :CenterView ====
-'':CenterView( @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':CenterView(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :HAdjustment ====
-'':HAdjustment( @ [[#T|T]]) : [[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]]''
+'':HAdjustment(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]]''
 
 
 ==== :VAdjustment ====
-'':VAdjustment( @ [[#T|T]]) : [[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]]''
+'':VAdjustment(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]]''
 
 
 ==== :Current ====
-'':Current( @ [[#T|T]]) : [[..:..:Gtk:CCC:CcItem#T|Gtk.CCC.CcItem.T]]''
+'':Current(self @ [[#T|T]]) : [[..:..:Gtk:CCC:CcItem#T|Gtk.CCC.CcItem.T]]''
 
 
 ==== :Focus ====
-'':Focus( @ [[#T|T]]) : [[..:..:Gtk:CCC:CcItem#T|Gtk.CCC.CcItem.T]]''
+'':Focus(self @ [[#T|T]]) : [[..:..:Gtk:CCC:CcItem#T|Gtk.CCC.CcItem.T]]''
 
 
 ==== :Grabbed ====
-'':Grabbed( @ [[#T|T]]) : [[..:..:Gtk:CCC:CcItem#T|Gtk.CCC.CcItem.T]]''
+'':Grabbed(self @ [[#T|T]]) : [[..:..:Gtk:CCC:CcItem#T|Gtk.CCC.CcItem.T]]''
 
 
 ==== :OverGrabbed ====
-'':OverGrabbed( @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':OverGrabbed(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :GrabMask ====
-'':GrabMask( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':GrabMask(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Priv ====
-'':Priv( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Priv(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetCenterView ====

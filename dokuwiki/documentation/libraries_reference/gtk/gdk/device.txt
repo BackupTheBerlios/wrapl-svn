@@ -17,35 +17,35 @@
 
 
 ==== :Name ====
-'':Name( @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
+'':Name(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== :Source ====
-'':Source( @ [[#T|T]]) : [[..:..:Gtk:Gdk:InputSource#T|Gtk.Gdk.InputSource.T]]''
+'':Source(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:InputSource#T|Gtk.Gdk.InputSource.T]]''
 
 
 ==== :Mode ====
-'':Mode( @ [[#T|T]]) : [[..:..:Gtk:Gdk:InputMode#T|Gtk.Gdk.InputMode.T]]''
+'':Mode(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:InputMode#T|Gtk.Gdk.InputMode.T]]''
 
 
 ==== :HasCursor ====
-'':HasCursor( @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':HasCursor(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :NumAxes ====
-'':NumAxes( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':NumAxes(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Axes ====
-'':Axes( @ [[#T|T]]) : [[..:..:Gtk:Gdk:DeviceAxis#T|Gtk.Gdk.DeviceAxis.T]]''
+'':Axes(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:DeviceAxis#T|Gtk.Gdk.DeviceAxis.T]]''
 
 
 ==== :NumKeys ====
-'':NumKeys( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':NumKeys(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Keys ====
-'':Keys( @ [[#T|T]]) : [[..:..:Gtk:Gdk:DeviceKey#T|Gtk.Gdk.DeviceKey.T]]''
+'':Keys(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:DeviceKey#T|Gtk.Gdk.DeviceKey.T]]''
 
 
 ==== :GetAxis ====

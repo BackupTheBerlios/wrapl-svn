@@ -3,27 +3,27 @@
 
 
 ==== :Requires ====
-'':Requires( @ [[#T|T]]) : [[..:..:Std:List#T|Std.List.T]]''
+'':Requires(self @ [[#T|T]]) : [[..:..:Std:List#T|Std.List.T]]''
 
 
 ==== :NRequires ====
-'':NRequires( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':NRequires(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Toplevels ====
-'':Toplevels( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Toplevels(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :NToplevels ====
-'':NToplevels( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':NToplevels(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Names ====
-'':Names( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Names(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Strings ====
-'':Strings( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Strings(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Destroy ====

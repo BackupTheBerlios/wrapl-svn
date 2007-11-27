@@ -1,45 +1,45 @@
 ====== Signal ======
 ==== CompatMatched ====
-''CompatMatched()''
+''CompatMatched(object, func, data, match, action) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== ConnectFull ====
-''ConnectFull()''
+''ConnectFull(object, name, func, unsupported, data, destroy_func, object_signal, after) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== ConnectObjectWhileAlive ====
-''ConnectObjectWhileAlive()''
+''ConnectObjectWhileAlive(object, name, func, alive_object) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== ConnectWhileAlive ====
-''ConnectWhileAlive()''
+''ConnectWhileAlive(object, name, func, func_data, alive_object) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== Emit ====
-''Emit()''
+''Emit(object, signal_id, ___) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== EmitByName ====
-''EmitByName()''
+''EmitByName(object, name, ___) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== EmitStopByName ====
-''EmitStopByName()''
+''EmitStopByName(object, name) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== Emitv ====
-''Emitv()''
+''Emitv(object, signal_id, args) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== EmitvByName ====
-''EmitvByName()''
+''EmitvByName(object, name, args) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====
-''New()''
+''New(name, signal_flags, object_type, function_offset, marshaller, return_val, n_args, ___) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== Newv ====
-''Newv()''
+''Newv(name, signal_flags, object_type, function_offset, marshaller, return_val, n_args, args) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 

@@ -18,59 +18,59 @@
 
 
 ==== :FontEntry ====
-'':FontEntry( @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
+'':FontEntry(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
 
 ==== :FamilyList ====
-'':FamilyList( @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
+'':FamilyList(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
 
 ==== :FontStyleEntry ====
-'':FontStyleEntry( @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
+'':FontStyleEntry(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
 
 ==== :FaceList ====
-'':FaceList( @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
+'':FaceList(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
 
 ==== :SizeEntry ====
-'':SizeEntry( @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
+'':SizeEntry(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
 
 ==== :SizeList ====
-'':SizeList( @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
+'':SizeList(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
 
 ==== :PixelsButton ====
-'':PixelsButton( @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
+'':PixelsButton(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
 
 ==== :PointsButton ====
-'':PointsButton( @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
+'':PointsButton(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
 
 ==== :FilterButton ====
-'':FilterButton( @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
+'':FilterButton(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
 
 ==== :PreviewEntry ====
-'':PreviewEntry( @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
+'':PreviewEntry(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
 
 ==== :Family ====
-'':Family( @ [[#T|T]]) : [[..:..:Gtk:Pango:FontFamily#T|Gtk.Pango.FontFamily.T]]''
+'':Family(self @ [[#T|T]]) : [[..:..:Gtk:Pango:FontFamily#T|Gtk.Pango.FontFamily.T]]''
 
 
 ==== :Face ====
-'':Face( @ [[#T|T]]) : [[..:..:Gtk:Pango:FontFace#T|Gtk.Pango.FontFace.T]]''
+'':Face(self @ [[#T|T]]) : [[..:..:Gtk:Pango:FontFace#T|Gtk.Pango.FontFace.T]]''
 
 
 ==== :Size ====
-'':Size( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':Size(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Font ====
-'':Font( @ [[#T|T]]) : [[..:..:Gtk:Gdk:Font#T|Gtk.Gdk.Font.T]]''
+'':Font(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Font#T|Gtk.Gdk.Font.T]]''
 
 
 ==== :GetFont ====

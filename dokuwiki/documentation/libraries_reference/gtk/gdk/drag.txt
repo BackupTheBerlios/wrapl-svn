@@ -1,45 +1,45 @@
 ====== Drag ======
 ==== Abort ====
-''Abort()''
+''Abort(context, time_) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== Begin ====
-''Begin()''
+''Begin(window, targets) : [[..:..:Gtk:Gdk:DragContext#T|Gtk.Gdk.DragContext.T]]''
 
 
 ==== Drop ====
-''Drop()''
+''Drop(context, time_) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== DropSucceeded ====
-''DropSucceeded()''
+''DropSucceeded(context) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== FindWindow ====
-''FindWindow()''
+''FindWindow(context, drag_window, x_root, y_root, dest_window, protocol) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== FindWindowForScreen ====
-''FindWindowForScreen()''
+''FindWindowForScreen(context, drag_window, screen, x_root, y_root, dest_window, protocol) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== GetProtocol ====
-''GetProtocol()''
+''GetProtocol(xid, protocol) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== GetProtocolForDisplay ====
-''GetProtocolForDisplay()''
+''GetProtocolForDisplay(display, xid, protocol) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== GetSelection ====
-''GetSelection()''
+''GetSelection(context) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== Motion ====
-''Motion()''
+''Motion(context, dest_window, protocol, x_root, y_root, suggested_action, possible_actions, time_) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== Status ====
-''Status()''
+''Status(context, action, time_) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 

@@ -1,13 +1,13 @@
 ====== Property ======
 ==== Change ====
-''Change()''
+''Change(window, property, type, format, mode, data, nelements) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== Delete ====
-''Delete()''
+''Delete(window, property) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== Get ====
-''Get()''
+''Get(window, property, type, offset, length, pdelete, actual_property_type, actual_format, actual_length, data) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 

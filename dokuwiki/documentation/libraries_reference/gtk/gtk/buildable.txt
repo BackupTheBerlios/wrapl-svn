@@ -3,46 +3,46 @@
 
 
 ==== :SetName ====
-'':SetName( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+'':SetName(name @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :AddChild ====
-'':AddChild( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Builder#T|Gtk.Gtk.Builder.T]],  @ [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+'':AddChild(self @ [[#T|T]], builder @ [[..:..:Gtk:Gtk:Builder#T|Gtk.Gtk.Builder.T]], child @ [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]], type @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :ConstructChild ====
-'':ConstructChild( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Builder#T|Gtk.Gtk.Builder.T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+'':ConstructChild(self @ [[#T|T]], builder @ [[..:..:Gtk:Gtk:Builder#T|Gtk.Gtk.Builder.T]], name @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]''
 
 
 ==== :CustomFinished ====
-'':CustomFinished( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Builder#T|Gtk.Gtk.Builder.T]],  @ [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Address#T|Std.Address.T]])''
+'':CustomFinished(self @ [[#T|T]], builder @ [[..:..:Gtk:Gtk:Builder#T|Gtk.Gtk.Builder.T]], child @ [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]], tagname @ [[..:..:Std:String#T|Std.String.T]], data @ [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :CustomTagEnd ====
-'':CustomTagEnd( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Builder#T|Gtk.Gtk.Builder.T]],  @ [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':CustomTagEnd(self @ [[#T|T]], builder @ [[..:..:Gtk:Gtk:Builder#T|Gtk.Gtk.Builder.T]], child @ [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]], tagname @ [[..:..:Std:String#T|Std.String.T]], data @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :CustomTagStart ====
-'':CustomTagStart( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Builder#T|Gtk.Gtk.Builder.T]],  @ [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':CustomTagStart(self @ [[#T|T]], builder @ [[..:..:Gtk:Gtk:Builder#T|Gtk.Gtk.Builder.T]], child @ [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]], tagname @ [[..:..:Std:String#T|Std.String.T]], parser @ [[..:..:Std:Object#T|Std.Object.T]], data @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :GetInternalChild ====
-'':GetInternalChild( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Builder#T|Gtk.Gtk.Builder.T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+'':GetInternalChild(self @ [[#T|T]], builder @ [[..:..:Gtk:Gtk:Builder#T|Gtk.Gtk.Builder.T]], childname @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]''
 
 
 ==== :GetName ====
-'':GetName( @ [[#T|T]])''
+'':GetName(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== :ParserFinished ====
-'':ParserFinished( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Builder#T|Gtk.Gtk.Builder.T]])''
+'':ParserFinished(builder @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Builder#T|Gtk.Gtk.Builder.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetBuildableProperty ====
-'':SetBuildableProperty( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Builder#T|Gtk.Gtk.Builder.T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Gtk:GObject:Value#T|Gtk.GObject.Value.T]])''
+'':SetBuildableProperty(builder @ [[#T|T]], name @ [[..:..:Gtk:Gtk:Builder#T|Gtk.Gtk.Builder.T]], value @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Gtk:GObject:Value#T|Gtk.GObject.Value.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 

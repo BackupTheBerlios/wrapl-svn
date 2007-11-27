@@ -11,31 +11,31 @@
 
 
 ==== :Selection ====
-'':Selection( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Selection(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Target ====
-'':Target( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Target(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Type ====
-'':Type( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Type(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Format ====
-'':Format( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':Format(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Data ====
-'':Data( @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
+'':Data(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== :Length ====
-'':Length( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':Length(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Display ====
-'':Display( @ [[#T|T]]) : [[..:..:Gtk:Gdk:Display#T|Gtk.Gdk.Display.T]]''
+'':Display(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Display#T|Gtk.Gdk.Display.T]]''
 
 
 ==== :Copy ====

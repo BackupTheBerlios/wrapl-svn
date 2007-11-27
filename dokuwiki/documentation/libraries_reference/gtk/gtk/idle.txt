@@ -1,21 +1,21 @@
 ====== Idle ======
 ==== Add ====
-''Add()''
+''Add(function, data) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== AddFull ====
-''AddFull()''
+''AddFull(priority, function, marshal, data, destroy) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== AddPriority ====
-''AddPriority()''
+''AddPriority(priority, function, data) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== Remove ====
-''Remove()''
+''Remove(idle_handler_id) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== RemoveByData ====
-''RemoveByData()''
+''RemoveByData(data) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 

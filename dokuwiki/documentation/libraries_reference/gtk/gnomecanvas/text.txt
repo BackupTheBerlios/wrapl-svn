@@ -7,143 +7,143 @@
 
 
 ==== :Affine ====
-'':Affine( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Real#T|Std.Real.T]]''
+'':Affine(self @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :FontDesc ====
-'':FontDesc( @ [[#T|T]]) : [[..:..:Gtk:Pango:FontDescription#T|Gtk.Pango.FontDescription.T]]''
+'':FontDesc(self @ [[#T|T]]) : [[..:..:Gtk:Pango:FontDescription#T|Gtk.Pango.FontDescription.T]]''
 
 
 ==== :AttrList ====
-'':AttrList( @ [[#T|T]]) : [[..:..:Gtk:Pango:AttrList#T|Gtk.Pango.AttrList.T]]''
+'':AttrList(self @ [[#T|T]]) : [[..:..:Gtk:Pango:AttrList#T|Gtk.Pango.AttrList.T]]''
 
 
 ==== :Underline ====
-'':Underline( @ [[#T|T]]) : [[..:..:Gtk:Pango:Underline#T|Gtk.Pango.Underline.T]]''
+'':Underline(self @ [[#T|T]]) : [[..:..:Gtk:Pango:Underline#T|Gtk.Pango.Underline.T]]''
 
 
 ==== :Strikethrough ====
-'':Strikethrough( @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':Strikethrough(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :Rise ====
-'':Rise( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':Rise(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Scale ====
-'':Scale( @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
+'':Scale(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :Text ====
-'':Text( @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
+'':Text(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== :Stipple ====
-'':Stipple( @ [[#T|T]]) : [[..:..:Gtk:Gdk:Bitmap#T|Gtk.Gdk.Bitmap.T]]''
+'':Stipple(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Bitmap#T|Gtk.Gdk.Bitmap.T]]''
 
 
 ==== :Gc ====
-'':Gc( @ [[#T|T]]) : [[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]]''
+'':Gc(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]]''
 
 
 ==== :Layout ====
-'':Layout( @ [[#T|T]]) : [[..:..:Gtk:Pango:Layout#T|Gtk.Pango.Layout.T]]''
+'':Layout(self @ [[#T|T]]) : [[..:..:Gtk:Pango:Layout#T|Gtk.Pango.Layout.T]]''
 
 
 ==== :Pixel ====
-'':Pixel( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':Pixel(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :X ====
-'':X( @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
+'':X(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :Y ====
-'':Y( @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
+'':Y(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :ClipWidth ====
-'':ClipWidth( @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
+'':ClipWidth(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :ClipHeight ====
-'':ClipHeight( @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
+'':ClipHeight(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :Xofs ====
-'':Xofs( @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
+'':Xofs(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :Yofs ====
-'':Yofs( @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
+'':Yofs(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :Anchor ====
-'':Anchor( @ [[#T|T]]) : [[..:..:Gtk:Gtk:AnchorType#T|Gtk.Gtk.AnchorType.T]]''
+'':Anchor(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:AnchorType#T|Gtk.Gtk.AnchorType.T]]''
 
 
 ==== :Justification ====
-'':Justification( @ [[#T|T]]) : [[..:..:Gtk:Gtk:Justification#T|Gtk.Gtk.Justification.T]]''
+'':Justification(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Justification#T|Gtk.Gtk.Justification.T]]''
 
 
 ==== :Cx ====
-'':Cx( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':Cx(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Cy ====
-'':Cy( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':Cy(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :ClipCx ====
-'':ClipCx( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':ClipCx(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :ClipCy ====
-'':ClipCy( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':ClipCy(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :ClipCwidth ====
-'':ClipCwidth( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':ClipCwidth(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :ClipCheight ====
-'':ClipCheight( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':ClipCheight(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :MaxWidth ====
-'':MaxWidth( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':MaxWidth(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Height ====
-'':Height( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':Height(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Rgba ====
-'':Rgba( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':Rgba(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Clip ====
-'':Clip( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':Clip(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :UnderlineSet ====
-'':UnderlineSet( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':UnderlineSet(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :StrikeSet ====
-'':StrikeSet( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':StrikeSet(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :RiseSet ====
-'':RiseSet( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':RiseSet(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :ScaleSet ====
-'':ScaleSet( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':ScaleSet(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Priv ====
-'':Priv( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Priv(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== GetType ====

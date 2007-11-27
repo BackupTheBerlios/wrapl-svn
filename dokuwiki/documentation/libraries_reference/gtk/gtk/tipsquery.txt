@@ -17,31 +17,31 @@
 
 
 ==== :EmitAlways ====
-'':EmitAlways( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':EmitAlways(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :InQuery ====
-'':InQuery( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':InQuery(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :LabelInactive ====
-'':LabelInactive( @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
+'':LabelInactive(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== :LabelNoTip ====
-'':LabelNoTip( @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
+'':LabelNoTip(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== :Caller ====
-'':Caller( @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
+'':Caller(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
 
 ==== :LastCrossed ====
-'':LastCrossed( @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
+'':LastCrossed(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
 
 ==== :QueryCursor ====
-'':QueryCursor( @ [[#T|T]]) : [[..:..:Gtk:Gdk:Cursor#T|Gtk.Gdk.Cursor.T]]''
+'':QueryCursor(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Cursor#T|Gtk.Gdk.Cursor.T]]''
 
 
 ==== :SetCaller ====

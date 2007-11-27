@@ -3,106 +3,106 @@
 
 
 ==== :UnrefNode ====
-'':UnrefNode( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]])''
+'':UnrefNode(self @ [[#T|T]], iter @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Foreach ====
-'':Foreach( @ [[#T|T]],  @ [[..:..:Std:Function#T|Std.Function.T]],  @ [[..:..:Std:Address#T|Std.Address.T]])''
+'':Foreach(self @ [[#T|T]], func @ [[..:..:Std:Function#T|Std.Function.T]], user_data @ [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Get ====
-'':Get( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':Get(self @ [[#T|T]], iter @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]], ___ @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetColumnType ====
-'':GetColumnType( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':GetColumnType(self @ [[#T|T]], index_ @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 
 ==== :GetFlags ====
-'':GetFlags( @ [[#T|T]])''
+'':GetFlags(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :GetIter ====
-'':GetIter( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]],  @ [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]])''
+'':GetIter(self @ [[#T|T]], iter @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]], path @ [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :GetIterFirst ====
-'':GetIterFirst( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]])''
+'':GetIterFirst(self @ [[#T|T]], iter @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :GetIterFromString ====
-'':GetIterFromString( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+'':GetIterFromString(self @ [[#T|T]], iter @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]], path_string @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :GetNColumns ====
-'':GetNColumns( @ [[#T|T]])''
+'':GetNColumns(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :GetPath ====
-'':GetPath( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]])''
+'':GetPath(self @ [[#T|T]], iter @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]]) : [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]]''
 
 
 ==== :GetStringFromIter ====
-'':GetStringFromIter( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]])''
+'':GetStringFromIter(self @ [[#T|T]], iter @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== :GetValist ====
-'':GetValist( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':GetValist(self @ [[#T|T]], iter @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]], var_args @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetValue ====
-'':GetValue( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Gtk:GObject:Value#T|Gtk.GObject.Value.T]])''
+'':GetValue(self @ [[#T|T]], iter @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]], column @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], value @ [[..:..:Gtk:GObject:Value#T|Gtk.GObject.Value.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :IterChildren ====
-'':IterChildren( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]],  @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]])''
+'':IterChildren(self @ [[#T|T]], iter @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]], parent @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :IterHasChild ====
-'':IterHasChild( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]])''
+'':IterHasChild(self @ [[#T|T]], iter @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :IterNChildren ====
-'':IterNChildren( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]])''
+'':IterNChildren(self @ [[#T|T]], iter @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :IterNext ====
-'':IterNext( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]])''
+'':IterNext(self @ [[#T|T]], iter @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :IterNthChild ====
-'':IterNthChild( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]],  @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':IterNthChild(self @ [[#T|T]], iter @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]], parent @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]], n @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :IterParent ====
-'':IterParent( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]],  @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]])''
+'':IterParent(self @ [[#T|T]], iter @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]], child @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :RefNode ====
-'':RefNode( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]])''
+'':RefNode(self @ [[#T|T]], iter @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :RowChanged ====
-'':RowChanged( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]],  @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]])''
+'':RowChanged(self @ [[#T|T]], path @ [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]], iter @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :RowDeleted ====
-'':RowDeleted( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]])''
+'':RowDeleted(self @ [[#T|T]], path @ [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :RowHasChildToggled ====
-'':RowHasChildToggled( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]],  @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]])''
+'':RowHasChildToggled(self @ [[#T|T]], path @ [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]], iter @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :RowInserted ====
-'':RowInserted( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]],  @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]])''
+'':RowInserted(self @ [[#T|T]], path @ [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]], iter @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :RowsReordered ====
-'':RowsReordered( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]],  @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':RowsReordered(self @ [[#T|T]], path @ [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]], iter @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]], new_order @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 

@@ -1,33 +1,33 @@
 ====== Selection ======
 ==== Convert ====
-''Convert()''
+''Convert(requestor, selection, target, time_) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== OwnerGet ====
-''OwnerGet()''
+''OwnerGet(selection) : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]]''
 
 
 ==== OwnerGetForDisplay ====
-''OwnerGetForDisplay()''
+''OwnerGetForDisplay(display, selection) : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]]''
 
 
 ==== OwnerSet ====
-''OwnerSet()''
+''OwnerSet(owner, selection, time_, send_event) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== OwnerSetForDisplay ====
-''OwnerSetForDisplay()''
+''OwnerSetForDisplay(display, owner, selection, time_, send_event) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== PropertyGet ====
-''PropertyGet()''
+''PropertyGet(requestor, data, prop_type, prop_format) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== SendNotify ====
-''SendNotify()''
+''SendNotify(requestor, selection, target, property, time_) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== SendNotifyForDisplay ====
-''SendNotifyForDisplay()''
+''SendNotifyForDisplay(display, requestor, selection, target, property, time_) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 

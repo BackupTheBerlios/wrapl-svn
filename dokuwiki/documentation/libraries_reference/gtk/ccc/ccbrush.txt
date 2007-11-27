@@ -3,10 +3,10 @@
 
 
 ==== :Apply ====
-'':Apply( @ [[#T|T]],  @ [[..:..:Gtk:CCC:CcView#T|Gtk.CCC.CcView.T]],  @ [[..:..:Gtk:CCC:CcItem#T|Gtk.CCC.CcItem.T]],  @ [[..:..:Gtk:Cairo:CairoT#T|Gtk.Cairo.CairoT.T]])''
+'':Apply(self @ [[#T|T]], view @ [[..:..:Gtk:CCC:CcView#T|Gtk.CCC.CcView.T]], item @ [[..:..:Gtk:CCC:CcItem#T|Gtk.CCC.CcItem.T]], cr @ [[..:..:Gtk:Cairo:CairoT#T|Gtk.Cairo.CairoT.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 

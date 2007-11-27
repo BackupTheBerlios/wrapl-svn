@@ -1,38 +1,38 @@
 ====== Global ======
 ==== AddClientMessageFilter ====
-''AddClientMessageFilter()''
+''AddClientMessageFilter(message_type, func, data) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== AddOptionEntriesLibgtkOnly ====
-''AddOptionEntriesLibgtkOnly()''
+''AddOptionEntriesLibgtkOnly(group) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== DevicesList ====
-''DevicesList()''
+''DevicesList() : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== EventsPending ====
-''EventsPending()''
+''EventsPending() : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== FreeCompoundText ====
-''FreeCompoundText()''
+''FreeCompoundText(ctext) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== FreeTextList ====
-''FreeTextList()''
+''FreeTextList(list) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== GetDefaultRootWindow ====
-''GetDefaultRootWindow()''
+''GetDefaultRootWindow() : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]]''
 
 
 ==== GetDisplay ====
-''GetDisplay()''
+''GetDisplay() : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== GetDisplayArgName ====
-''GetDisplayArgName()''
+''GetDisplayArgName() : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== GetProgramClass ====
@@ -48,7 +48,7 @@
 
 
 ==== InitCheck ====
-''InitCheck()''
+''InitCheck() : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== ListVisuals ====
@@ -60,7 +60,7 @@
 
 
 ==== ParseArgs ====
-''ParseArgs()''
+''ParseArgs() : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== PreParseLibgtkOnly ====
@@ -96,31 +96,31 @@
 
 
 ==== SettingGet ====
-''SettingGet()''
+''SettingGet() : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== StringExtents ====
-''StringExtents()''
+''StringExtents(lbearing, rbearing, width, ascent, descent) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== StringHeight ====
-''StringHeight()''
+''StringHeight() : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== StringMeasure ====
-''StringMeasure()''
+''StringMeasure() : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== StringToCompoundText ====
-''StringToCompoundText()''
+''StringToCompoundText(format, ctext, length) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== StringToCompoundTextForDisplay ====
-''StringToCompoundTextForDisplay()''
+''StringToCompoundTextForDisplay(encoding, format, ctext, length) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== StringWidth ====
-''StringWidth()''
+''StringWidth() : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== UnicodeToKeyval ====

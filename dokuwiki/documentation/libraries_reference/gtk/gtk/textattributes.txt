@@ -11,99 +11,99 @@
 
 
 ==== :Refcount ====
-'':Refcount( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':Refcount(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Appearance ====
-'':Appearance( @ [[#T|T]]) : [[..:..:Gtk:Gtk:TextAppearance#T|Gtk.Gtk.TextAppearance.T]]''
+'':Appearance(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:TextAppearance#T|Gtk.Gtk.TextAppearance.T]]''
 
 
 ==== :Justification ====
-'':Justification( @ [[#T|T]]) : [[..:..:Gtk:Gtk:Justification#T|Gtk.Gtk.Justification.T]]''
+'':Justification(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Justification#T|Gtk.Gtk.Justification.T]]''
 
 
 ==== :Direction ====
-'':Direction( @ [[#T|T]]) : [[..:..:Gtk:Gtk:TextDirection#T|Gtk.Gtk.TextDirection.T]]''
+'':Direction(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:TextDirection#T|Gtk.Gtk.TextDirection.T]]''
 
 
 ==== :Font ====
-'':Font( @ [[#T|T]]) : [[..:..:Gtk:Pango:FontDescription#T|Gtk.Pango.FontDescription.T]]''
+'':Font(self @ [[#T|T]]) : [[..:..:Gtk:Pango:FontDescription#T|Gtk.Pango.FontDescription.T]]''
 
 
 ==== :FontScale ====
-'':FontScale( @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
+'':FontScale(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :LeftMargin ====
-'':LeftMargin( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':LeftMargin(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Indent ====
-'':Indent( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':Indent(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :RightMargin ====
-'':RightMargin( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':RightMargin(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :PixelsAboveLines ====
-'':PixelsAboveLines( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':PixelsAboveLines(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :PixelsBelowLines ====
-'':PixelsBelowLines( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':PixelsBelowLines(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :PixelsInsideWrap ====
-'':PixelsInsideWrap( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':PixelsInsideWrap(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Tabs ====
-'':Tabs( @ [[#T|T]]) : [[..:..:Gtk:Pango:TabArray#T|Gtk.Pango.TabArray.T]]''
+'':Tabs(self @ [[#T|T]]) : [[..:..:Gtk:Pango:TabArray#T|Gtk.Pango.TabArray.T]]''
 
 
 ==== :WrapMode ====
-'':WrapMode( @ [[#T|T]]) : [[..:..:Gtk:Gtk:WrapMode#T|Gtk.Gtk.WrapMode.T]]''
+'':WrapMode(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:WrapMode#T|Gtk.Gtk.WrapMode.T]]''
 
 
 ==== :Language ====
-'':Language( @ [[#T|T]]) : [[..:..:Gtk:Pango:Language#T|Gtk.Pango.Language.T]]''
+'':Language(self @ [[#T|T]]) : [[..:..:Gtk:Pango:Language#T|Gtk.Pango.Language.T]]''
 
 
 ==== :PgBgColor ====
-'':PgBgColor( @ [[#T|T]]) : [[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]]''
+'':PgBgColor(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]]''
 
 
 ==== :Invisible ====
-'':Invisible( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':Invisible(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :BgFullHeight ====
-'':BgFullHeight( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':BgFullHeight(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Editable ====
-'':Editable( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':Editable(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Realized ====
-'':Realized( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':Realized(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Pad1 ====
-'':Pad1( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':Pad1(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Pad2 ====
-'':Pad2( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':Pad2(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Pad3 ====
-'':Pad3( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':Pad3(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Pad4 ====
-'':Pad4( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':Pad4(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Copy ====

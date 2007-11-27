@@ -1,33 +1,33 @@
 ====== Type ======
 ==== Class ====
-''Class()''
+''Class(type) : [[..:..:Std:Address#T|Std.Address.T]]''
 
 
 ==== EnumFindValue ====
-''EnumFindValue()''
+''EnumFindValue(enum_type, value_name) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== EnumGetValues ====
-''EnumGetValues()''
+''EnumGetValues(enum_type) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== FlagsFindValue ====
-''FlagsFindValue()''
+''FlagsFindValue(flags_type, value_name) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== FlagsGetValues ====
-''FlagsGetValues()''
+''FlagsGetValues(flags_type) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== Init ====
-''Init()''
+''Init(debug_flags) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====
-''New()''
+''New(type) : [[..:..:Std:Address#T|Std.Address.T]]''
 
 
 ==== Unique ====
-''Unique()''
+''Unique(parent_type, gtkinfo) : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 

@@ -1,21 +1,21 @@
 ====== Pango ======
 ==== ContextGet ====
-''ContextGet()''
+''ContextGet() : [[..:..:Gtk:Pango:Context#T|Gtk.Pango.Context.T]]''
 
 
 ==== ContextGetForScreen ====
-''ContextGetForScreen()''
+''ContextGetForScreen(screen) : [[..:..:Gtk:Pango:Context#T|Gtk.Pango.Context.T]]''
 
 
 ==== ContextSetColormap ====
-''ContextSetColormap()''
+''ContextSetColormap(context, colormap) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== LayoutGetClipRegion ====
-''LayoutGetClipRegion()''
+''LayoutGetClipRegion(layout, x_origin, y_origin, index_ranges, n_ranges) : [[..:..:Gtk:Gdk:Region#T|Gtk.Gdk.Region.T]]''
 
 
 ==== LayoutLineGetClipRegion ====
-''LayoutLineGetClipRegion()''
+''LayoutLineGetClipRegion(line, x_origin, y_origin, index_ranges, n_ranges) : [[..:..:Gtk:Gdk:Region#T|Gtk.Gdk.Region.T]]''
 
 

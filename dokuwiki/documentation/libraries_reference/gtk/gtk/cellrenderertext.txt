@@ -11,79 +11,79 @@
 
 
 ==== :CalcFixedHeight ====
-'':CalcFixedHeight( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':CalcFixedHeight(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Text ====
-'':Text( @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
+'':Text(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== :Font ====
-'':Font( @ [[#T|T]]) : [[..:..:Gtk:Pango:FontDescription#T|Gtk.Pango.FontDescription.T]]''
+'':Font(self @ [[#T|T]]) : [[..:..:Gtk:Pango:FontDescription#T|Gtk.Pango.FontDescription.T]]''
 
 
 ==== :FontScale ====
-'':FontScale( @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
+'':FontScale(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :Foreground ====
-'':Foreground( @ [[#T|T]]) : [[..:..:Gtk:Pango:Color#T|Gtk.Pango.Color.T]]''
+'':Foreground(self @ [[#T|T]]) : [[..:..:Gtk:Pango:Color#T|Gtk.Pango.Color.T]]''
 
 
 ==== :Background ====
-'':Background( @ [[#T|T]]) : [[..:..:Gtk:Pango:Color#T|Gtk.Pango.Color.T]]''
+'':Background(self @ [[#T|T]]) : [[..:..:Gtk:Pango:Color#T|Gtk.Pango.Color.T]]''
 
 
 ==== :ExtraAttrs ====
-'':ExtraAttrs( @ [[#T|T]]) : [[..:..:Gtk:Pango:AttrList#T|Gtk.Pango.AttrList.T]]''
+'':ExtraAttrs(self @ [[#T|T]]) : [[..:..:Gtk:Pango:AttrList#T|Gtk.Pango.AttrList.T]]''
 
 
 ==== :UnderlineStyle ====
-'':UnderlineStyle( @ [[#T|T]]) : [[..:..:Gtk:Pango:Underline#T|Gtk.Pango.Underline.T]]''
+'':UnderlineStyle(self @ [[#T|T]]) : [[..:..:Gtk:Pango:Underline#T|Gtk.Pango.Underline.T]]''
 
 
 ==== :Rise ====
-'':Rise( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':Rise(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :FixedHeightRows ====
-'':FixedHeightRows( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':FixedHeightRows(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Strikethrough ====
-'':Strikethrough( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':Strikethrough(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Editable ====
-'':Editable( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':Editable(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :ScaleSet ====
-'':ScaleSet( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':ScaleSet(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :ForegroundSet ====
-'':ForegroundSet( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':ForegroundSet(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :BackgroundSet ====
-'':BackgroundSet( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':BackgroundSet(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :UnderlineSet ====
-'':UnderlineSet( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':UnderlineSet(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :RiseSet ====
-'':RiseSet( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':RiseSet(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :StrikethroughSet ====
-'':StrikethroughSet( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':StrikethroughSet(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :EditableSet ====
-'':EditableSet( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':EditableSet(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== New ====

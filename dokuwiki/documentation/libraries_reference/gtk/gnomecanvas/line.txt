@@ -7,99 +7,99 @@
 
 
 ==== :Smooth ====
-'':Smooth( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':Smooth(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Coords ====
-'':Coords( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Coords(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :FirstCoords ====
-'':FirstCoords( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':FirstCoords(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :LastCoords ====
-'':LastCoords( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':LastCoords(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Gc ====
-'':Gc( @ [[#T|T]]) : [[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]]''
+'':Gc(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]]''
 
 
 ==== :Stipple ====
-'':Stipple( @ [[#T|T]]) : [[..:..:Gtk:Gdk:Bitmap#T|Gtk.Gdk.Bitmap.T]]''
+'':Stipple(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Bitmap#T|Gtk.Gdk.Bitmap.T]]''
 
 
 ==== :FillSvp ====
-'':FillSvp( @ [[#T|T]]) : [[..:..:Gtk:Art:SVP#T|Gtk.Art.SVP.T]]''
+'':FillSvp(self @ [[#T|T]]) : [[..:..:Gtk:Art:SVP#T|Gtk.Art.SVP.T]]''
 
 
 ==== :FirstSvp ====
-'':FirstSvp( @ [[#T|T]]) : [[..:..:Gtk:Art:SVP#T|Gtk.Art.SVP.T]]''
+'':FirstSvp(self @ [[#T|T]]) : [[..:..:Gtk:Art:SVP#T|Gtk.Art.SVP.T]]''
 
 
 ==== :LastSvp ====
-'':LastSvp( @ [[#T|T]]) : [[..:..:Gtk:Art:SVP#T|Gtk.Art.SVP.T]]''
+'':LastSvp(self @ [[#T|T]]) : [[..:..:Gtk:Art:SVP#T|Gtk.Art.SVP.T]]''
 
 
 ==== :Width ====
-'':Width( @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
+'':Width(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :ShapeA ====
-'':ShapeA( @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
+'':ShapeA(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :ShapeB ====
-'':ShapeB( @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
+'':ShapeB(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :ShapeC ====
-'':ShapeC( @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
+'':ShapeC(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :Cap ====
-'':Cap( @ [[#T|T]]) : [[..:..:Gtk:Gdk:CapStyle#T|Gtk.Gdk.CapStyle.T]]''
+'':Cap(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:CapStyle#T|Gtk.Gdk.CapStyle.T]]''
 
 
 ==== :Join ====
-'':Join( @ [[#T|T]]) : [[..:..:Gtk:Gdk:JoinStyle#T|Gtk.Gdk.JoinStyle.T]]''
+'':Join(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:JoinStyle#T|Gtk.Gdk.JoinStyle.T]]''
 
 
 ==== :LineStyle ====
-'':LineStyle( @ [[#T|T]]) : [[..:..:Gtk:Gdk:LineStyle#T|Gtk.Gdk.LineStyle.T]]''
+'':LineStyle(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:LineStyle#T|Gtk.Gdk.LineStyle.T]]''
 
 
 ==== :FillPixel ====
-'':FillPixel( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':FillPixel(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :FillRgba ====
-'':FillRgba( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':FillRgba(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :NumPoints ====
-'':NumPoints( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':NumPoints(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :FillColor ====
-'':FillColor( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':FillColor(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :SplineSteps ====
-'':SplineSteps( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':SplineSteps(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :WidthPixels ====
-'':WidthPixels( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':WidthPixels(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :FirstArrow ====
-'':FirstArrow( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':FirstArrow(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :LastArrow ====
-'':LastArrow( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':LastArrow(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== GetType ====

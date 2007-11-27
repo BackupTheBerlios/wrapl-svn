@@ -70,39 +70,39 @@
 
 
 ==== :PrivateFlags ====
-'':PrivateFlags( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':PrivateFlags(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :State ====
-'':State( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':State(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :SavedState ====
-'':SavedState( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':SavedState(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Name ====
-'':Name( @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
+'':Name(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== :Style ====
-'':Style( @ [[#T|T]]) : [[..:..:Gtk:Gtk:Style#T|Gtk.Gtk.Style.T]]''
+'':Style(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Style#T|Gtk.Gtk.Style.T]]''
 
 
 ==== :Requisition ====
-'':Requisition( @ [[#T|T]]) : [[..:..:Gtk:Gtk:Requisition#T|Gtk.Gtk.Requisition.T]]''
+'':Requisition(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Requisition#T|Gtk.Gtk.Requisition.T]]''
 
 
 ==== :Allocation ====
-'':Allocation( @ [[#T|T]]) : [[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]]''
+'':Allocation(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]]''
 
 
 ==== :Window ====
-'':Window( @ [[#T|T]]) : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]]''
+'':Window(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]]''
 
 
 ==== :Parent ====
-'':Parent( @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
+'':Parent(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
 
 ==== :Activate ====

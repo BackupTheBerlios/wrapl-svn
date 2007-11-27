@@ -3,30 +3,30 @@
 
 
 ==== :SortColumnChanged ====
-'':SortColumnChanged( @ [[#T|T]])''
+'':SortColumnChanged(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetSortColumnId ====
-'':GetSortColumnId( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':GetSortColumnId(self @ [[#T|T]], sort_column_id @ [[..:..:Std:Object#T|Std.Object.T]], order @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :HasDefaultSortFunc ====
-'':HasDefaultSortFunc( @ [[#T|T]])''
+'':HasDefaultSortFunc(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :SetDefaultSortFunc ====
-'':SetDefaultSortFunc( @ [[#T|T]],  @ [[..:..:Std:Function#T|Std.Function.T]],  @ [[..:..:Std:Address#T|Std.Address.T]],  @ [[..:..:Std:Function#T|Std.Function.T]])''
+'':SetDefaultSortFunc(self @ [[#T|T]], sort_func @ [[..:..:Std:Function#T|Std.Function.T]], user_data @ [[..:..:Std:Address#T|Std.Address.T]], destroy @ [[..:..:Std:Function#T|Std.Function.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetSortColumnId ====
-'':SetSortColumnId( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Gtk:Gtk:SortType#T|Gtk.Gtk.SortType.T]])''
+'':SetSortColumnId(self @ [[#T|T]], sort_column_id @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], order @ [[..:..:Gtk:Gtk:SortType#T|Gtk.Gtk.SortType.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetSortFunc ====
-'':SetSortFunc( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Function#T|Std.Function.T]],  @ [[..:..:Std:Address#T|Std.Address.T]],  @ [[..:..:Std:Function#T|Std.Function.T]])''
+'':SetSortFunc(self @ [[#T|T]], sort_column_id @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], sort_func @ [[..:..:Std:Function#T|Std.Function.T]], user_data @ [[..:..:Std:Address#T|Std.Address.T]], destroy @ [[..:..:Std:Function#T|Std.Function.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 

@@ -48,43 +48,43 @@
 
 
 ==== :StorageType ====
-'':StorageType( @ [[#T|T]]) : [[..:..:Gtk:Gtk:ImageType#T|Gtk.Gtk.ImageType.T]]''
+'':StorageType(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:ImageType#T|Gtk.Gtk.ImageType.T]]''
 
 
 ==== :Pixmap ====
-'':Pixmap( @ [[#T|T]]) : [[..:..:Gtk:Gtk:ImagePixmapData#T|Gtk.Gtk.ImagePixmapData.T]]''
+'':Pixmap(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:ImagePixmapData#T|Gtk.Gtk.ImagePixmapData.T]]''
 
 
 ==== :Image ====
-'':Image( @ [[#T|T]]) : [[..:..:Gtk:Gtk:ImageImageData#T|Gtk.Gtk.ImageImageData.T]]''
+'':Image(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:ImageImageData#T|Gtk.Gtk.ImageImageData.T]]''
 
 
 ==== :Pixbuf ====
-'':Pixbuf( @ [[#T|T]]) : [[..:..:Gtk:Gtk:ImagePixbufData#T|Gtk.Gtk.ImagePixbufData.T]]''
+'':Pixbuf(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:ImagePixbufData#T|Gtk.Gtk.ImagePixbufData.T]]''
 
 
 ==== :Stock ====
-'':Stock( @ [[#T|T]]) : [[..:..:Gtk:Gtk:ImageStockData#T|Gtk.Gtk.ImageStockData.T]]''
+'':Stock(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:ImageStockData#T|Gtk.Gtk.ImageStockData.T]]''
 
 
 ==== :IconSet ====
-'':IconSet( @ [[#T|T]]) : [[..:..:Gtk:Gtk:ImageIconSetData#T|Gtk.Gtk.ImageIconSetData.T]]''
+'':IconSet(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:ImageIconSetData#T|Gtk.Gtk.ImageIconSetData.T]]''
 
 
 ==== :Anim ====
-'':Anim( @ [[#T|T]]) : [[..:..:Gtk:Gtk:ImageAnimationData#T|Gtk.Gtk.ImageAnimationData.T]]''
+'':Anim(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:ImageAnimationData#T|Gtk.Gtk.ImageAnimationData.T]]''
 
 
 ==== :Name ====
-'':Name( @ [[#T|T]]) : [[..:..:Gtk:Gtk:ImageIconNameData#T|Gtk.Gtk.ImageIconNameData.T]]''
+'':Name(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:ImageIconNameData#T|Gtk.Gtk.ImageIconNameData.T]]''
 
 
 ==== :Mask ====
-'':Mask( @ [[#T|T]]) : [[..:..:Gtk:Gdk:Bitmap#T|Gtk.Gdk.Bitmap.T]]''
+'':Mask(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Bitmap#T|Gtk.Gdk.Bitmap.T]]''
 
 
 ==== :IconSize ====
-'':IconSize( @ [[#T|T]]) : [[..:..:Gtk:Gtk:IconSize#T|Gtk.Gtk.IconSize.T]]''
+'':IconSize(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:IconSize#T|Gtk.Gtk.IconSize.T]]''
 
 
 ==== :Clear ====

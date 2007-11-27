@@ -1,33 +1,33 @@
 ====== Global ======
 ==== EnumFromString ====
-''EnumFromString()''
+''EnumFromString(type, string) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== FlagsFromString ====
-''FlagsFromString()''
+''FlagsFromString(type, string) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== GetWidgetName ====
-''GetWidgetName()''
+''GetWidgetName(widget) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== GetWidgetTree ====
-''GetWidgetTree()''
+''GetWidgetTree() : [[..:..:Gtk:Glade:XML#T|Gtk.Glade.XML.T]]''
 
 
 ==== ModuleCheckVersion ====
-''ModuleCheckVersion()''
+''ModuleCheckVersion() : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== RegisterCustomProp ====
-''RegisterCustomProp()''
+''RegisterCustomProp(prop_name, apply_prop) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== RegisterWidget ====
-''RegisterWidget()''
+''RegisterWidget(new_func, build_children, find_internal_child) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== SetCustomHandler ====
-''SetCustomHandler()''
+''SetCustomHandler(user_data) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 

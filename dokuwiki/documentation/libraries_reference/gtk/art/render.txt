@@ -7,95 +7,95 @@
 
 
 ==== :X0 ====
-'':X0( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':X0(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Y0 ====
-'':Y0( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':Y0(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :X1 ====
-'':X1( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':X1(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Y1 ====
-'':Y1( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':Y1(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Pixels ====
-'':Pixels( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Pixels(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Rowstride ====
-'':Rowstride( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':Rowstride(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :NChan ====
-'':NChan( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':NChan(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Depth ====
-'':Depth( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':Depth(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :AlphaType ====
-'':AlphaType( @ [[#T|T]]) : [[..:..:Gtk:Art:AlphaType#T|Gtk.Art.AlphaType.T]]''
+'':AlphaType(self @ [[#T|T]]) : [[..:..:Gtk:Art:AlphaType#T|Gtk.Art.AlphaType.T]]''
 
 
 ==== :Clear ====
-'':Clear( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':Clear(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Opacity ====
-'':Opacity( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Opacity(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :CompositingMode ====
-'':CompositingMode( @ [[#T|T]]) : [[..:..:Gtk:Art:CompositingMode#T|Gtk.Art.CompositingMode.T]]''
+'':CompositingMode(self @ [[#T|T]]) : [[..:..:Gtk:Art:CompositingMode#T|Gtk.Art.CompositingMode.T]]''
 
 
 ==== :Alphagamma ====
-'':Alphagamma( @ [[#T|T]]) : [[..:..:Gtk:Art:AlphaGamma#T|Gtk.Art.AlphaGamma.T]]''
+'':Alphagamma(self @ [[#T|T]]) : [[..:..:Gtk:Art:AlphaGamma#T|Gtk.Art.AlphaGamma.T]]''
 
 
 ==== :AlphaBuf ====
-'':AlphaBuf( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':AlphaBuf(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :BufDepth ====
-'':BufDepth( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':BufDepth(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :BufAlpha ====
-'':BufAlpha( @ [[#T|T]]) : [[..:..:Gtk:Art:AlphaType#T|Gtk.Art.AlphaType.T]]''
+'':BufAlpha(self @ [[#T|T]]) : [[..:..:Gtk:Art:AlphaType#T|Gtk.Art.AlphaType.T]]''
 
 
 ==== :ImageBuf ====
-'':ImageBuf( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':ImageBuf(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :NRun ====
-'':NRun( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':NRun(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Run ====
-'':Run( @ [[#T|T]]) : [[..:..:Gtk:Art:RenderMaskRun#T|Gtk.Art.RenderMaskRun.T]]''
+'':Run(self @ [[#T|T]]) : [[..:..:Gtk:Art:RenderMaskRun#T|Gtk.Art.RenderMaskRun.T]]''
 
 
 ==== :NSpan ====
-'':NSpan( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':NSpan(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :SpanX ====
-'':SpanX( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SpanX(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :NeedSpan ====
-'':NeedSpan( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':NeedSpan(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :ClearColor ====
-'':ClearColor( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':ClearColor(self @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :AddImageSource ====

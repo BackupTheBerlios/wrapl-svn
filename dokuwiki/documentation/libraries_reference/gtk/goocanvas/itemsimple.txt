@@ -9,35 +9,35 @@
 
 
 ==== :Canvas ====
-'':Canvas( @ [[#T|T]]) : [[..:..:Gtk:GooCanvas:GooCanvas#T|Gtk.GooCanvas.GooCanvas.T]]''
+'':Canvas(self @ [[#T|T]]) : [[..:..:Gtk:GooCanvas:GooCanvas#T|Gtk.GooCanvas.GooCanvas.T]]''
 
 
 ==== :Parent ====
-'':Parent( @ [[#T|T]]) : [[..:..:Gtk:GooCanvas:Item#T|Gtk.GooCanvas.Item.T]]''
+'':Parent(self @ [[#T|T]]) : [[..:..:Gtk:GooCanvas:Item#T|Gtk.GooCanvas.Item.T]]''
 
 
 ==== :Model ====
-'':Model( @ [[#T|T]]) : [[..:..:Gtk:GooCanvas:ItemModelSimple#T|Gtk.GooCanvas.ItemModelSimple.T]]''
+'':Model(self @ [[#T|T]]) : [[..:..:Gtk:GooCanvas:ItemModelSimple#T|Gtk.GooCanvas.ItemModelSimple.T]]''
 
 
 ==== :SimpleData ====
-'':SimpleData( @ [[#T|T]]) : [[..:..:Gtk:GooCanvas:ItemSimpleData#T|Gtk.GooCanvas.ItemSimpleData.T]]''
+'':SimpleData(self @ [[#T|T]]) : [[..:..:Gtk:GooCanvas:ItemSimpleData#T|Gtk.GooCanvas.ItemSimpleData.T]]''
 
 
 ==== :Bounds ====
-'':Bounds( @ [[#T|T]]) : [[..:..:Gtk:GooCanvas:Bounds#T|Gtk.GooCanvas.Bounds.T]]''
+'':Bounds(self @ [[#T|T]]) : [[..:..:Gtk:GooCanvas:Bounds#T|Gtk.GooCanvas.Bounds.T]]''
 
 
 ==== :NeedUpdate ====
-'':NeedUpdate( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':NeedUpdate(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :NeedEntireSubtreeUpdate ====
-'':NeedEntireSubtreeUpdate( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':NeedEntireSubtreeUpdate(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Priv ====
-'':Priv( @ [[#T|T]]) : [[..:..:Std:Address#T|Std.Address.T]]''
+'':Priv(self @ [[#T|T]]) : [[..:..:Std:Address#T|Std.Address.T]]''
 
 
 ==== :Changed ====

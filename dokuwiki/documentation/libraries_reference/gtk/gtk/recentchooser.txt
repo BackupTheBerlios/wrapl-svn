@@ -3,142 +3,142 @@
 
 
 ==== :UnselectUri ====
-'':UnselectUri( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+'':UnselectUri(self @ [[#T|T]], uri @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :UnselectAll ====
-'':UnselectAll( @ [[#T|T]])''
+'':UnselectAll(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :AddFilter ====
-'':AddFilter( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:RecentFilter#T|Gtk.Gtk.RecentFilter.T]])''
+'':AddFilter(self @ [[#T|T]], filter @ [[..:..:Gtk:Gtk:RecentFilter#T|Gtk.Gtk.RecentFilter.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetCurrentItem ====
-'':GetCurrentItem( @ [[#T|T]])''
+'':GetCurrentItem(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:RecentInfo#T|Gtk.Gtk.RecentInfo.T]]''
 
 
 ==== :GetCurrentUri ====
-'':GetCurrentUri( @ [[#T|T]])''
+'':GetCurrentUri(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== :GetFilter ====
-'':GetFilter( @ [[#T|T]])''
+'':GetFilter(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:RecentFilter#T|Gtk.Gtk.RecentFilter.T]]''
 
 
 ==== :GetItems ====
-'':GetItems( @ [[#T|T]])''
+'':GetItems(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetLimit ====
-'':GetLimit( @ [[#T|T]])''
+'':GetLimit(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :GetLocalOnly ====
-'':GetLocalOnly( @ [[#T|T]])''
+'':GetLocalOnly(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :GetSelectMultiple ====
-'':GetSelectMultiple( @ [[#T|T]])''
+'':GetSelectMultiple(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :GetShowIcons ====
-'':GetShowIcons( @ [[#T|T]])''
+'':GetShowIcons(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :GetShowNotFound ====
-'':GetShowNotFound( @ [[#T|T]])''
+'':GetShowNotFound(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :GetShowNumbers ====
-'':GetShowNumbers( @ [[#T|T]])''
+'':GetShowNumbers(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :GetShowPrivate ====
-'':GetShowPrivate( @ [[#T|T]])''
+'':GetShowPrivate(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :GetShowTips ====
-'':GetShowTips( @ [[#T|T]])''
+'':GetShowTips(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :GetSortType ====
-'':GetSortType( @ [[#T|T]])''
+'':GetSortType(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:RecentSortType#T|Gtk.Gtk.RecentSortType.T]]''
 
 
 ==== :GetUris ====
-'':GetUris( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':GetUris(self @ [[#T|T]], length @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:List#T|Std.List.T]]''
 
 
 ==== :ListFilters ====
-'':ListFilters( @ [[#T|T]])''
+'':ListFilters(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :RemoveFilter ====
-'':RemoveFilter( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:RecentFilter#T|Gtk.Gtk.RecentFilter.T]])''
+'':RemoveFilter(self @ [[#T|T]], filter @ [[..:..:Gtk:Gtk:RecentFilter#T|Gtk.Gtk.RecentFilter.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SelectAll ====
-'':SelectAll( @ [[#T|T]])''
+'':SelectAll(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SelectUri ====
-'':SelectUri( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':SelectUri(self @ [[#T|T]], uri @ [[..:..:Std:String#T|Std.String.T]], error @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :SetCurrentUri ====
-'':SetCurrentUri( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':SetCurrentUri(self @ [[#T|T]], uri @ [[..:..:Std:String#T|Std.String.T]], error @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :SetFilter ====
-'':SetFilter( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:RecentFilter#T|Gtk.Gtk.RecentFilter.T]])''
+'':SetFilter(self @ [[#T|T]], filter @ [[..:..:Gtk:Gtk:RecentFilter#T|Gtk.Gtk.RecentFilter.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetLimit ====
-'':SetLimit( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':SetLimit(self @ [[#T|T]], limit @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetLocalOnly ====
-'':SetLocalOnly( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+'':SetLocalOnly(self @ [[#T|T]], local_only @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetSelectMultiple ====
-'':SetSelectMultiple( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+'':SetSelectMultiple(self @ [[#T|T]], select_multiple @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetShowIcons ====
-'':SetShowIcons( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+'':SetShowIcons(self @ [[#T|T]], show_icons @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetShowNotFound ====
-'':SetShowNotFound( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+'':SetShowNotFound(self @ [[#T|T]], show_not_found @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetShowNumbers ====
-'':SetShowNumbers( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+'':SetShowNumbers(self @ [[#T|T]], show_numbers @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetShowPrivate ====
-'':SetShowPrivate( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+'':SetShowPrivate(self @ [[#T|T]], show_private @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetShowTips ====
-'':SetShowTips( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+'':SetShowTips(self @ [[#T|T]], show_tips @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetSortFunc ====
-'':SetSortFunc( @ [[#T|T]],  @ [[..:..:Std:Function#T|Std.Function.T]],  @ [[..:..:Std:Address#T|Std.Address.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':SetSortFunc(self @ [[#T|T]], sort_func @ [[..:..:Std:Function#T|Std.Function.T]], sort_data @ [[..:..:Std:Address#T|Std.Address.T]], data_destroy @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetSortType ====
-'':SetSortType( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:RecentSortType#T|Gtk.Gtk.RecentSortType.T]])''
+'':SetSortType(self @ [[#T|T]], sort_type @ [[..:..:Gtk:Gtk:RecentSortType#T|Gtk.Gtk.RecentSortType.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== ErrorQuark ====
-''ErrorQuark()''
+''ErrorQuark() : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 

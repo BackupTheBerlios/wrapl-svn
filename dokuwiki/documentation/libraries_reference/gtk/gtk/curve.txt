@@ -16,55 +16,55 @@
 
 
 ==== :CursorType ====
-'':CursorType( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':CursorType(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :MinX ====
-'':MinX( @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
+'':MinX(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :MaxX ====
-'':MaxX( @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
+'':MaxX(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :MinY ====
-'':MinY( @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
+'':MinY(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :MaxY ====
-'':MaxY( @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
+'':MaxY(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :Pixmap ====
-'':Pixmap( @ [[#T|T]]) : [[..:..:Gtk:Gdk:Pixmap#T|Gtk.Gdk.Pixmap.T]]''
+'':Pixmap(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Pixmap#T|Gtk.Gdk.Pixmap.T]]''
 
 
 ==== :CurveType ====
-'':CurveType( @ [[#T|T]]) : [[..:..:Gtk:Gtk:CurveType#T|Gtk.Gtk.CurveType.T]]''
+'':CurveType(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:CurveType#T|Gtk.Gtk.CurveType.T]]''
 
 
 ==== :Height ====
-'':Height( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':Height(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :GrabPoint ====
-'':GrabPoint( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':GrabPoint(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Last ====
-'':Last( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':Last(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :NumPoints ====
-'':NumPoints( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':NumPoints(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Point ====
-'':Point( @ [[#T|T]]) : [[..:..:Gtk:Gdk:Point#T|Gtk.Gdk.Point.T]]''
+'':Point(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Point#T|Gtk.Gdk.Point.T]]''
 
 
 ==== :NumCtlpoints ====
-'':NumCtlpoints( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':NumCtlpoints(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :GetVector ====

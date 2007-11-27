@@ -1,13 +1,13 @@
 ====== Spawn ======
 ==== CommandLineOnScreen ====
-''CommandLineOnScreen()''
+''CommandLineOnScreen(screen, command_line, error) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== OnScreen ====
-''OnScreen()''
+''OnScreen(screen, working_directory, argv, envp, flags, child_setup, user_data, child_pid, error) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== OnScreenWithPipes ====
-''OnScreenWithPipes()''
+''OnScreenWithPipes(screen, working_directory, argv, envp, flags, child_setup, user_data, child_pid, standard_input, standard_output, standard_error, error) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 

@@ -3,58 +3,58 @@
 
 
 ==== :WorldToWindowDistance ====
-'':WorldToWindowDistance( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':WorldToWindowDistance(self @ [[#T|T]], x @ [[..:..:Std:Object#T|Std.Object.T]], y @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetFocus ====
-'':GetFocus( @ [[#T|T]])''
+'':GetFocus(self @ [[#T|T]]) : [[..:..:Gtk:CCC:CcItem#T|Gtk.CCC.CcItem.T]]''
 
 
 ==== :GetRoot ====
-'':GetRoot( @ [[#T|T]])''
+'':GetRoot(self @ [[#T|T]]) : [[..:..:Gtk:CCC:CcItem#T|Gtk.CCC.CcItem.T]]''
 
 
 ==== :GetScrolledRegion ====
-'':GetScrolledRegion( @ [[#T|T]])''
+'':GetScrolledRegion(self @ [[#T|T]]) : [[..:..:Gtk:CCC:CcDRect#T|Gtk.CCC.CcDRect.T]]''
 
 
 ==== :GetZoom ====
-'':GetZoom( @ [[#T|T]])''
+'':GetZoom(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :GrabItem ====
-'':GrabItem( @ [[#T|T]],  @ [[..:..:Gtk:CCC:CcItem#T|Gtk.CCC.CcItem.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Gtk:Gdk:Cursor#T|Gtk.Gdk.Cursor.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':GrabItem(self @ [[#T|T]], item @ [[..:..:Gtk:CCC:CcItem#T|Gtk.CCC.CcItem.T]], mask @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], cursor @ [[..:..:Gtk:Gdk:Cursor#T|Gtk.Gdk.Cursor.T]], time @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :SetFocus ====
-'':SetFocus( @ [[#T|T]],  @ [[..:..:Gtk:CCC:CcItem#T|Gtk.CCC.CcItem.T]])''
+'':SetFocus(self @ [[#T|T]], focus @ [[..:..:Gtk:CCC:CcItem#T|Gtk.CCC.CcItem.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetRoot ====
-'':SetRoot( @ [[#T|T]],  @ [[..:..:Gtk:CCC:CcItem#T|Gtk.CCC.CcItem.T]])''
+'':SetRoot(self @ [[#T|T]], root @ [[..:..:Gtk:CCC:CcItem#T|Gtk.CCC.CcItem.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetScrolledRegion ====
-'':SetScrolledRegion( @ [[#T|T]],  @ [[..:..:Gtk:CCC:CcDRect#T|Gtk.CCC.CcDRect.T]])''
+'':SetScrolledRegion(self @ [[#T|T]], scrolled_region @ [[..:..:Gtk:CCC:CcDRect#T|Gtk.CCC.CcDRect.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetZoom ====
-'':SetZoom( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+'':SetZoom(self @ [[#T|T]], zoom @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :UngrabItem ====
-'':UngrabItem( @ [[#T|T]],  @ [[..:..:Gtk:CCC:CcItem#T|Gtk.CCC.CcItem.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':UngrabItem(self @ [[#T|T]], item @ [[..:..:Gtk:CCC:CcItem#T|Gtk.CCC.CcItem.T]], time @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :WindowToWorld ====
-'':WindowToWorld( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':WindowToWorld(self @ [[#T|T]], x @ [[..:..:Std:Object#T|Std.Object.T]], y @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :WorldToWindow ====
-'':WorldToWindow( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':WorldToWindow(self @ [[#T|T]], x @ [[..:..:Std:Object#T|Std.Object.T]], y @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 

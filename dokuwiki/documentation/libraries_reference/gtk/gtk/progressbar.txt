@@ -20,47 +20,47 @@
 
 
 ==== :BarStyle ====
-'':BarStyle( @ [[#T|T]]) : [[..:..:Gtk:Gtk:ProgressBarStyle#T|Gtk.Gtk.ProgressBarStyle.T]]''
+'':BarStyle(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:ProgressBarStyle#T|Gtk.Gtk.ProgressBarStyle.T]]''
 
 
 ==== :Orientation ====
-'':Orientation( @ [[#T|T]]) : [[..:..:Gtk:Gtk:ProgressBarOrientation#T|Gtk.Gtk.ProgressBarOrientation.T]]''
+'':Orientation(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:ProgressBarOrientation#T|Gtk.Gtk.ProgressBarOrientation.T]]''
 
 
 ==== :Blocks ====
-'':Blocks( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':Blocks(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :InBlock ====
-'':InBlock( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':InBlock(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :ActivityPos ====
-'':ActivityPos( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':ActivityPos(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :ActivityStep ====
-'':ActivityStep( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':ActivityStep(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :ActivityBlocks ====
-'':ActivityBlocks( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':ActivityBlocks(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :PulseFraction ====
-'':PulseFraction( @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
+'':PulseFraction(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :ActivityDir ====
-'':ActivityDir( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':ActivityDir(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Ellipsize ====
-'':Ellipsize( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':Ellipsize(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Dirty ====
-'':Dirty( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':Dirty(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :GetEllipsize ====

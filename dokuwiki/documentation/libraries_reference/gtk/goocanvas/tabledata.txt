@@ -3,27 +3,27 @@
 
 
 ==== :Dimensions ====
-'':Dimensions( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Gtk:GooCanvas:TableDimension#T|Gtk.GooCanvas.TableDimension.T]]''
+'':Dimensions(self @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Gtk:GooCanvas:TableDimension#T|Gtk.GooCanvas.TableDimension.T]]''
 
 
 ==== :Width ====
-'':Width( @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
+'':Width(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :Height ====
-'':Height( @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
+'':Height(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :BorderWidth ====
-'':BorderWidth( @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
+'':BorderWidth(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :Children ====
-'':Children( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Children(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :LayoutData ====
-'':LayoutData( @ [[#T|T]]) : [[..:..:Gtk:GooCanvas:TableLayoutData#T|Gtk.GooCanvas.TableLayoutData.T]]''
+'':LayoutData(self @ [[#T|T]]) : [[..:..:Gtk:GooCanvas:TableLayoutData#T|Gtk.GooCanvas.TableLayoutData.T]]''
 
 
 ==== New ====

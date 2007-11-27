@@ -17,23 +17,23 @@
 
 
 ==== :LockCount ====
-'':LockCount( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':LockCount(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :ModifierMask ====
-'':ModifierMask( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':ModifierMask(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Acceleratables ====
-'':Acceleratables( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Acceleratables(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :NAccels ====
-'':NAccels( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':NAccels(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :PrivAccels ====
-'':PrivAccels( @ [[#T|T]]) : [[..:..:Gtk:Gtk:AccelGroupEntry#T|Gtk.Gtk.AccelGroupEntry.T]]''
+'':PrivAccels(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:AccelGroupEntry#T|Gtk.Gtk.AccelGroupEntry.T]]''
 
 
 ==== :Activate ====

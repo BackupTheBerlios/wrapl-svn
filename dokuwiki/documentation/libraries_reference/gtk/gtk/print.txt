@@ -1,13 +1,13 @@
 ====== Print ======
 ==== ErrorQuark ====
-''ErrorQuark()''
+''ErrorQuark() : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== RunPageSetupDialog ====
-''RunPageSetupDialog()''
+''RunPageSetupDialog(parent, page_setup, settings) : [[..:..:Gtk:Gtk:PageSetup#T|Gtk.Gtk.PageSetup.T]]''
 
 
 ==== RunPageSetupDialogAsync ====
-''RunPageSetupDialogAsync()''
+''RunPageSetupDialogAsync(parent, page_setup, settings, done_cb, data) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 

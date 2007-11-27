@@ -1,33 +1,33 @@
 ====== Help ======
 ==== Display ====
-''Display()''
+''Display(file_name, link_id, error) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== DisplayDesktop ====
-''DisplayDesktop()''
+''DisplayDesktop(program, doc_id, file_name, link_id, error) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== DisplayDesktopWithEnv ====
-''DisplayDesktopWithEnv()''
+''DisplayDesktopWithEnv(program, doc_id, file_name, link_id, envp, error) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== DisplayUri ====
-''DisplayUri()''
+''DisplayUri(help_uri, error) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== DisplayUriWithEnv ====
-''DisplayUriWithEnv()''
+''DisplayUriWithEnv(help_uri, envp, error) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== DisplayWithDocId ====
-''DisplayWithDocId()''
+''DisplayWithDocId(program, doc_id, file_name, link_id, error) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== DisplayWithDocIdAndEnv ====
-''DisplayWithDocIdAndEnv()''
+''DisplayWithDocIdAndEnv(program, doc_id, file_name, link_id, envp, error) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== ErrorQuark ====
-''ErrorQuark()''
+''ErrorQuark() : [[..:..:Std:Object#T|Std.Object.T]]''
 
 

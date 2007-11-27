@@ -3,18 +3,18 @@
 
 
 ==== :RowDraggable ====
-'':RowDraggable( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]])''
+'':RowDraggable(self @ [[#T|T]], path @ [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :DragDataDelete ====
-'':DragDataDelete( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]])''
+'':DragDataDelete(self @ [[#T|T]], path @ [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :DragDataGet ====
-'':DragDataGet( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]],  @ [[..:..:Gtk:Gtk:SelectionData#T|Gtk.Gtk.SelectionData.T]])''
+'':DragDataGet(self @ [[#T|T]], path @ [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]], selection_data @ [[..:..:Gtk:Gtk:SelectionData#T|Gtk.Gtk.SelectionData.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 

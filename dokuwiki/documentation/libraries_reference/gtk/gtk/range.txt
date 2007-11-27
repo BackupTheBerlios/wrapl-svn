@@ -11,99 +11,99 @@
 
 
 ==== :Adjustment ====
-'':Adjustment( @ [[#T|T]]) : [[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]]''
+'':Adjustment(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]]''
 
 
 ==== :UpdatePolicy ====
-'':UpdatePolicy( @ [[#T|T]]) : [[..:..:Gtk:Gtk:UpdateType#T|Gtk.Gtk.UpdateType.T]]''
+'':UpdatePolicy(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:UpdateType#T|Gtk.Gtk.UpdateType.T]]''
 
 
 ==== :Inverted ====
-'':Inverted( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':Inverted(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Flippable ====
-'':Flippable( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':Flippable(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :HasStepperA ====
-'':HasStepperA( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':HasStepperA(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :HasStepperB ====
-'':HasStepperB( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':HasStepperB(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :HasStepperC ====
-'':HasStepperC( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':HasStepperC(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :HasStepperD ====
-'':HasStepperD( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':HasStepperD(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :NeedRecalc ====
-'':NeedRecalc( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':NeedRecalc(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :SliderSizeFixed ====
-'':SliderSizeFixed( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':SliderSizeFixed(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :MinSliderSize ====
-'':MinSliderSize( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':MinSliderSize(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Orientation ====
-'':Orientation( @ [[#T|T]]) : [[..:..:Gtk:Gtk:Orientation#T|Gtk.Gtk.Orientation.T]]''
+'':Orientation(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Orientation#T|Gtk.Gtk.Orientation.T]]''
 
 
 ==== :RangeRect ====
-'':RangeRect( @ [[#T|T]]) : [[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]]''
+'':RangeRect(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]]''
 
 
 ==== :SliderStart ====
-'':SliderStart( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':SliderStart(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :SliderEnd ====
-'':SliderEnd( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':SliderEnd(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :RoundDigits ====
-'':RoundDigits( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':RoundDigits(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :TroughClickForward ====
-'':TroughClickForward( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':TroughClickForward(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :UpdatePending ====
-'':UpdatePending( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':UpdatePending(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Layout ====
-'':Layout( @ [[#T|T]]) : [[..:..:Gtk:Gtk:RangeLayout#T|Gtk.Gtk.RangeLayout.T]]''
+'':Layout(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:RangeLayout#T|Gtk.Gtk.RangeLayout.T]]''
 
 
 ==== :Timer ====
-'':Timer( @ [[#T|T]]) : [[..:..:Gtk:Gtk:RangeStepTimer#T|Gtk.Gtk.RangeStepTimer.T]]''
+'':Timer(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:RangeStepTimer#T|Gtk.Gtk.RangeStepTimer.T]]''
 
 
 ==== :SlideInitialSliderPosition ====
-'':SlideInitialSliderPosition( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':SlideInitialSliderPosition(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :SlideInitialCoordinate ====
-'':SlideInitialCoordinate( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':SlideInitialCoordinate(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :UpdateTimeoutId ====
-'':UpdateTimeoutId( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':UpdateTimeoutId(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :EventWindow ====
-'':EventWindow( @ [[#T|T]]) : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]]''
+'':EventWindow(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]]''
 
 
 ==== :GetAdjustment ====

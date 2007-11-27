@@ -1,113 +1,113 @@
 ====== Global ======
 ==== ExtentsToPixels ====
-''ExtentsToPixels()''
+''ExtentsToPixels(ink_rect, logical_rect) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== FindBaseDir ====
-''FindBaseDir()''
+''FindBaseDir(text, length) : [[..:..:Gtk:Pango:Direction#T|Gtk.Pango.Direction.T]]''
 
 
 ==== FindParagraphBoundary ====
-''FindParagraphBoundary()''
+''FindParagraphBoundary(text, length, paragraph_delimiter_index, next_paragraph_start) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== GetLogAttrs ====
-''GetLogAttrs()''
+''GetLogAttrs(text, length, level, language, log_attrs, attrs_len) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== GetMirrorChar ====
-''GetMirrorChar()''
+''GetMirrorChar(ch, mirrored_ch) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== GravityGetForMatrix ====
-''GravityGetForMatrix()''
+''GravityGetForMatrix(matrix) : [[..:..:Gtk:Pango:Gravity#T|Gtk.Pango.Gravity.T]]''
 
 
 ==== GravityGetForScript ====
-''GravityGetForScript()''
+''GravityGetForScript(script, base_gravity, hint) : [[..:..:Gtk:Pango:Gravity#T|Gtk.Pango.Gravity.T]]''
 
 
 ==== GravityToRotation ====
-''GravityToRotation()''
+''GravityToRotation(gravity) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== IsZeroWidth ====
-''IsZeroWidth()''
+''IsZeroWidth(ch) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== ItemizeWithBaseDir ====
-''ItemizeWithBaseDir()''
+''ItemizeWithBaseDir(context, base_dir, text, start_index, length, attrs, cached_iter) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== ParseEnum ====
-''ParseEnum()''
+''ParseEnum(type, str, value, warn, possible_values) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== ParseMarkup ====
-''ParseMarkup()''
+''ParseMarkup(markup_text, length, accel_marker, attr_list, text, accel_char, error) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== ParseStretch ====
-''ParseStretch()''
+''ParseStretch(str, stretch, warn) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== ParseStyle ====
-''ParseStyle()''
+''ParseStyle(str, style, warn) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== ParseVariant ====
-''ParseVariant()''
+''ParseVariant(str, variant, warn) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== ParseWeight ====
-''ParseWeight()''
+''ParseWeight(str, weight, warn) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== QuantizeLineGeometry ====
-''QuantizeLineGeometry()''
+''QuantizeLineGeometry(thickness, position) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== ReadLine ====
-''ReadLine()''
+''ReadLine(stream, str) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== ReorderItems ====
-''ReorderItems()''
+''ReorderItems(logical_items) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== ScanInt ====
-''ScanInt()''
+''ScanInt(pos, out) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== ScanString ====
-''ScanString()''
+''ScanString(pos, out) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== ScanWord ====
-''ScanWord()''
+''ScanWord(pos, out) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== ScriptForUnichar ====
-''ScriptForUnichar()''
+''ScriptForUnichar(ch) : [[..:..:Gtk:Pango:Script#T|Gtk.Pango.Script.T]]''
 
 
 ==== ScriptGetSampleLanguage ====
-''ScriptGetSampleLanguage()''
+''ScriptGetSampleLanguage(script) : [[..:..:Gtk:Pango:Language#T|Gtk.Pango.Language.T]]''
 
 
 ==== SkipSpace ====
-''SkipSpace()''
+''SkipSpace(pos) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== SplitFileList ====
-''SplitFileList()''
+''SplitFileList(str) : [[..:..:Std:List#T|Std.List.T]]''
 
 
 ==== TrimString ====
-''TrimString()''
+''TrimString(str) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== UnicharDirection ====
-''UnicharDirection()''
+''UnicharDirection(ch) : [[..:..:Gtk:Pango:Direction#T|Gtk.Pango.Direction.T]]''
 
 

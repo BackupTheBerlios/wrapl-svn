@@ -1,97 +1,97 @@
 ====== Rc ======
 ==== AddClassStyle ====
-''AddClassStyle()''
+''AddClassStyle(rc_style, pattern) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== AddDefaultFile ====
-''AddDefaultFile()''
+''AddDefaultFile(filename) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== AddWidgetClassStyle ====
-''AddWidgetClassStyle()''
+''AddWidgetClassStyle(rc_style, pattern) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== AddWidgetNameStyle ====
-''AddWidgetNameStyle()''
+''AddWidgetNameStyle(rc_style, pattern) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== FindModuleInPath ====
-''FindModuleInPath()''
+''FindModuleInPath(module_file) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== FindPixmapInPath ====
-''FindPixmapInPath()''
+''FindPixmapInPath(settings, scanner, pixmap_file) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== GetDefaultFiles ====
-''GetDefaultFiles()''
+''GetDefaultFiles() : [[..:..:Std:List#T|Std.List.T]]''
 
 
 ==== GetImModuleFile ====
-''GetImModuleFile()''
+''GetImModuleFile() : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== GetImModulePath ====
-''GetImModulePath()''
+''GetImModulePath() : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== GetModuleDir ====
-''GetModuleDir()''
+''GetModuleDir() : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== GetStyle ====
-''GetStyle()''
+''GetStyle(widget) : [[..:..:Gtk:Gtk:Style#T|Gtk.Gtk.Style.T]]''
 
 
 ==== GetStyleByPaths ====
-''GetStyleByPaths()''
+''GetStyleByPaths(settings, widget_path, class_path, type) : [[..:..:Gtk:Gtk:Style#T|Gtk.Gtk.Style.T]]''
 
 
 ==== GetThemeDir ====
-''GetThemeDir()''
+''GetThemeDir() : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== Parse ====
-''Parse()''
+''Parse(filename) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== ParseColor ====
-''ParseColor()''
+''ParseColor(scanner, color) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== ParseColorFull ====
-''ParseColorFull()''
+''ParseColorFull(scanner, style, color) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== ParsePriority ====
-''ParsePriority()''
+''ParsePriority(scanner, priority) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== ParseState ====
-''ParseState()''
+''ParseState(scanner, state) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== ParseString ====
-''ParseString()''
+''ParseString(rc_string) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== ReparseAll ====
-''ReparseAll()''
+''ReparseAll() : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== ReparseAllForSettings ====
-''ReparseAllForSettings()''
+''ReparseAllForSettings(settings, force_load) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== ResetStyles ====
-''ResetStyles()''
+''ResetStyles(settings) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== ScannerNew ====
-''ScannerNew()''
+''ScannerNew() : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== SetDefaultFiles ====
-''SetDefaultFiles()''
+''SetDefaultFiles(filenames) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 

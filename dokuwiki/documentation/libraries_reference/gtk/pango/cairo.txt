@@ -1,69 +1,69 @@
 ====== Cairo ======
 ==== ContextGetFontOptions ====
-''ContextGetFontOptions()''
+''ContextGetFontOptions(context) : [[..:..:Gtk:Cairo:CairoFontOptionsT#T|Gtk.Cairo.CairoFontOptionsT.T]]''
 
 
 ==== ContextGetResolution ====
-''ContextGetResolution()''
+''ContextGetResolution(context) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== ContextGetShapeRenderer ====
-''ContextGetShapeRenderer()''
+''ContextGetShapeRenderer(context, data) : [[..:..:Std:Function#T|Std.Function.T]]''
 
 
 ==== ContextSetFontOptions ====
-''ContextSetFontOptions()''
+''ContextSetFontOptions(context, options) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== ContextSetResolution ====
-''ContextSetResolution()''
+''ContextSetResolution(context, dpi) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== ContextSetShapeRenderer ====
-''ContextSetShapeRenderer()''
+''ContextSetShapeRenderer(context, func, data, dnotify) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== CreateLayout ====
-''CreateLayout()''
+''CreateLayout(cr) : [[..:..:Gtk:Pango:Layout#T|Gtk.Pango.Layout.T]]''
 
 
 ==== ErrorUnderlinePath ====
-''ErrorUnderlinePath()''
+''ErrorUnderlinePath(cr, x, y, width, height) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== GlyphStringPath ====
-''GlyphStringPath()''
+''GlyphStringPath(cr, font, glyphs) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== LayoutLinePath ====
-''LayoutLinePath()''
+''LayoutLinePath(cr, line) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== LayoutPath ====
-''LayoutPath()''
+''LayoutPath(cr, layout) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== ShowErrorUnderline ====
-''ShowErrorUnderline()''
+''ShowErrorUnderline(cr, x, y, width, height) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== ShowGlyphString ====
-''ShowGlyphString()''
+''ShowGlyphString(cr, font, glyphs) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== ShowLayout ====
-''ShowLayout()''
+''ShowLayout(cr, layout) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== ShowLayoutLine ====
-''ShowLayoutLine()''
+''ShowLayoutLine(cr, line) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== UpdateContext ====
-''UpdateContext()''
+''UpdateContext(cr, context) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== UpdateLayout ====
-''UpdateLayout()''
+''UpdateLayout(cr, layout) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 

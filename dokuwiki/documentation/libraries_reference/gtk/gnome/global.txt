@@ -1,45 +1,45 @@
 ====== Global ======
 ==== BonoboModuleInfoGet ====
-''BonoboModuleInfoGet()''
+''BonoboModuleInfoGet() : [[..:..:Gtk:Gnome:ModuleInfo#T|Gtk.Gnome.ModuleInfo.T]]''
 
 
 ==== ExecuteAsync ====
-''ExecuteAsync()''
+''ExecuteAsync(dir, argc, argv) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== ExecuteAsyncFds ====
-''ExecuteAsyncFds()''
+''ExecuteAsyncFds(dir, argc, argv, close_fds) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== ExecuteAsyncWithEnv ====
-''ExecuteAsyncWithEnv()''
+''ExecuteAsyncWithEnv(dir, argc, argv, envc, envv) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== ExecuteAsyncWithEnvFds ====
-''ExecuteAsyncWithEnvFds()''
+''ExecuteAsyncWithEnvFds(dir, argc, argv, envc, envv, close_fds) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== ExecuteShell ====
-''ExecuteShell()''
+''ExecuteShell(dir, commandline) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== ExecuteShellFds ====
-''ExecuteShellFds()''
+''ExecuteShellFds(dir, commandline, close_fds) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== ExecuteTerminalShell ====
-''ExecuteTerminalShell()''
+''ExecuteTerminalShell(dir, commandline) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== ExecuteTerminalShellFds ====
-''ExecuteTerminalShellFds()''
+''ExecuteTerminalShellFds(dir, commandline, close_fds) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== PrependTerminalToVector ====
-''PrependTerminalToVector()''
+''PrependTerminalToVector(argc, argv) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== UtilUserShell ====
-''UtilUserShell()''
+''UtilUserShell() : [[..:..:Std:String#T|Std.String.T]]''
 
 

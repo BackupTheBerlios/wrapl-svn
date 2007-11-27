@@ -16,35 +16,35 @@
 
 
 ==== :Children ====
-'':Children( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Children(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Rows ====
-'':Rows( @ [[#T|T]]) : [[..:..:Gtk:Gtk:TableRowCol#T|Gtk.Gtk.TableRowCol.T]]''
+'':Rows(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:TableRowCol#T|Gtk.Gtk.TableRowCol.T]]''
 
 
 ==== :Cols ====
-'':Cols( @ [[#T|T]]) : [[..:..:Gtk:Gtk:TableRowCol#T|Gtk.Gtk.TableRowCol.T]]''
+'':Cols(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:TableRowCol#T|Gtk.Gtk.TableRowCol.T]]''
 
 
 ==== :Nrows ====
-'':Nrows( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':Nrows(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Ncols ====
-'':Ncols( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':Ncols(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :ColumnSpacing ====
-'':ColumnSpacing( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':ColumnSpacing(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :RowSpacing ====
-'':RowSpacing( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':RowSpacing(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Homogeneous ====
-'':Homogeneous( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':Homogeneous(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Attach ====

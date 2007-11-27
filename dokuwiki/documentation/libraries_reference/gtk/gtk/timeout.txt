@@ -1,13 +1,13 @@
 ====== Timeout ======
 ==== Add ====
-''Add()''
+''Add(interval, function, data) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== AddFull ====
-''AddFull()''
+''AddFull(interval, function, marshal, data, destroy) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== Remove ====
-''Remove()''
+''Remove(timeout_handler_id) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 

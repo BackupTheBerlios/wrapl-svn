@@ -7,27 +7,27 @@
 
 
 ==== :Buf ====
-'':Buf( @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
+'':Buf(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== :Rect ====
-'':Rect( @ [[#T|T]]) : [[..:..:Gtk:Art:IRect#T|Gtk.Art.IRect.T]]''
+'':Rect(self @ [[#T|T]]) : [[..:..:Gtk:Art:IRect#T|Gtk.Art.IRect.T]]''
 
 
 ==== :BufRowstride ====
-'':BufRowstride( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':BufRowstride(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :BgColor ====
-'':BgColor( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':BgColor(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :IsBg ====
-'':IsBg( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':IsBg(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :IsBuf ====
-'':IsBuf( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':IsBuf(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====

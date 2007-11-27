@@ -3,71 +3,71 @@
 
 
 ==== :NChildren ====
-'':NChildren( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':NChildren(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Parent ====
-'':Parent( @ [[#T|T]]) : [[..:..:Gtk:Glade:WidgetInfo#T|Gtk.Glade.WidgetInfo.T]]''
+'':Parent(self @ [[#T|T]]) : [[..:..:Gtk:Glade:WidgetInfo#T|Gtk.Glade.WidgetInfo.T]]''
 
 
 ==== :Classname ====
-'':Classname( @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
+'':Classname(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== :Name ====
-'':Name( @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
+'':Name(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== :Properties ====
-'':Properties( @ [[#T|T]]) : [[..:..:Gtk:Glade:Property#T|Gtk.Glade.Property.T]]''
+'':Properties(self @ [[#T|T]]) : [[..:..:Gtk:Glade:Property#T|Gtk.Glade.Property.T]]''
 
 
 ==== :NProperties ====
-'':NProperties( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':NProperties(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :AtkProps ====
-'':AtkProps( @ [[#T|T]]) : [[..:..:Gtk:Glade:Property#T|Gtk.Glade.Property.T]]''
+'':AtkProps(self @ [[#T|T]]) : [[..:..:Gtk:Glade:Property#T|Gtk.Glade.Property.T]]''
 
 
 ==== :NAtkProps ====
-'':NAtkProps( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':NAtkProps(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Signals ====
-'':Signals( @ [[#T|T]]) : [[..:..:Gtk:Glade:SignalInfo#T|Gtk.Glade.SignalInfo.T]]''
+'':Signals(self @ [[#T|T]]) : [[..:..:Gtk:Glade:SignalInfo#T|Gtk.Glade.SignalInfo.T]]''
 
 
 ==== :NSignals ====
-'':NSignals( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':NSignals(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :AtkActions ====
-'':AtkActions( @ [[#T|T]]) : [[..:..:Gtk:Glade:AtkActionInfo#T|Gtk.Glade.AtkActionInfo.T]]''
+'':AtkActions(self @ [[#T|T]]) : [[..:..:Gtk:Glade:AtkActionInfo#T|Gtk.Glade.AtkActionInfo.T]]''
 
 
 ==== :NAtkActions ====
-'':NAtkActions( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':NAtkActions(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Relations ====
-'':Relations( @ [[#T|T]]) : [[..:..:Gtk:Glade:AtkRelationInfo#T|Gtk.Glade.AtkRelationInfo.T]]''
+'':Relations(self @ [[#T|T]]) : [[..:..:Gtk:Glade:AtkRelationInfo#T|Gtk.Glade.AtkRelationInfo.T]]''
 
 
 ==== :NRelations ====
-'':NRelations( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':NRelations(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Accels ====
-'':Accels( @ [[#T|T]]) : [[..:..:Gtk:Glade:AccelInfo#T|Gtk.Glade.AccelInfo.T]]''
+'':Accels(self @ [[#T|T]]) : [[..:..:Gtk:Glade:AccelInfo#T|Gtk.Glade.AccelInfo.T]]''
 
 
 ==== :NAccels ====
-'':NAccels( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':NAccels(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Children ====
-'':Children( @ [[#T|T]]) : [[..:..:Gtk:Glade:ChildInfo#T|Gtk.Glade.ChildInfo.T]]''
+'':Children(self @ [[#T|T]]) : [[..:..:Gtk:Glade:ChildInfo#T|Gtk.Glade.ChildInfo.T]]''
 
 
 ==== New ====

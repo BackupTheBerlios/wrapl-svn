@@ -1,13 +1,13 @@
 ====== Init ======
 ==== Add ====
-''Add()''
+''Add(function, data) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== Check ====
-''Check()''
+''Check(argc, argv) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== WithArgs ====
-''WithArgs()''
+''WithArgs(argc, argv, parameter_string, entries, translation_domain, error) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 

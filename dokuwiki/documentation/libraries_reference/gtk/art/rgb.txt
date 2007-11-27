@@ -1,37 +1,37 @@
 ====== Rgb ======
 ==== AAffine ====
-''AAffine()''
+''AAffine(dst, x0, y0, x1, y1, dst_rowstride, src, src_width, src_height, src_rowstride, rgb, affine, level, alphagamma) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== Affine ====
-''Affine()''
+''Affine(dst, x0, y0, x1, y1, dst_rowstride, src, src_width, src_height, src_rowstride, affine, level, alphagamma) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== BitmapAffine ====
-''BitmapAffine()''
+''BitmapAffine(dst, x0, y0, x1, y1, dst_rowstride, src, src_width, src_height, src_rowstride, rgba, affine, level, alphagamma) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== FillRun ====
-''FillRun()''
+''FillRun(buf, r, g, b, n) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== PixbufAffine ====
-''PixbufAffine()''
+''PixbufAffine(dst, x0, y0, x1, y1, dst_rowstride, pixbuf, affine, level, alphagamma) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== RgbaAffine ====
-''RgbaAffine()''
+''RgbaAffine(dst, x0, y0, x1, y1, dst_rowstride, src, src_width, src_height, src_rowstride, affine, level, alphagamma) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== RunAlpha ====
-''RunAlpha()''
+''RunAlpha(buf, r, g, b, alpha, n) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== SvpAa ====
-''SvpAa()''
+''SvpAa(svp, x0, y0, x1, y1, fg_color, bg_color, buf, rowstride, alphagamma) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== SvpAlpha ====
-''SvpAlpha()''
+''SvpAlpha(svp, x0, y0, x1, y1, rgba, buf, rowstride, alphagamma) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 

@@ -3,55 +3,55 @@
 
 
 ==== :State ====
-'':State( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':State(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Type ====
-'':Type( @ [[#T|T]]) : [[..:..:Gtk:Gdk:EventType#T|Gtk.Gdk.EventType.T]]''
+'':Type(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:EventType#T|Gtk.Gdk.EventType.T]]''
 
 
 ==== :Window ====
-'':Window( @ [[#T|T]]) : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]]''
+'':Window(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]]''
 
 
 ==== :SendEvent ====
-'':SendEvent( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':SendEvent(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Subwindow ====
-'':Subwindow( @ [[#T|T]]) : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]]''
+'':Subwindow(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]]''
 
 
 ==== :Time ====
-'':Time( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':Time(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :X ====
-'':X( @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
+'':X(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :Y ====
-'':Y( @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
+'':Y(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :XRoot ====
-'':XRoot( @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
+'':XRoot(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :YRoot ====
-'':YRoot( @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
+'':YRoot(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :Mode ====
-'':Mode( @ [[#T|T]]) : [[..:..:Gtk:Gdk:CrossingMode#T|Gtk.Gdk.CrossingMode.T]]''
+'':Mode(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:CrossingMode#T|Gtk.Gdk.CrossingMode.T]]''
 
 
 ==== :Detail ====
-'':Detail( @ [[#T|T]]) : [[..:..:Gtk:Gdk:NotifyType#T|Gtk.Gdk.NotifyType.T]]''
+'':Detail(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:NotifyType#T|Gtk.Gdk.NotifyType.T]]''
 
 
 ==== :Focus ====
-'':Focus( @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':Focus(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== New ====

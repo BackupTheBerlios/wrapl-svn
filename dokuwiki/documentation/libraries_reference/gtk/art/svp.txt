@@ -19,11 +19,11 @@
 
 
 ==== :NSegs ====
-'':NSegs( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':NSegs(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Segs ====
-'':Segs( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Gtk:Art:SVPSeg#T|Gtk.Art.SVPSeg.T]]''
+'':Segs(self @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Gtk:Art:SVPSeg#T|Gtk.Art.SVPSeg.T]]''
 
 
 ==== :AddSegment ====

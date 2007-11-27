@@ -11,43 +11,43 @@
 
 
 ==== :BackingStore ====
-'':BackingStore( @ [[#T|T]]) : [[..:..:Gtk:Gdk:Pixmap#T|Gtk.Gdk.Pixmap.T]]''
+'':BackingStore(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Pixmap#T|Gtk.Gdk.Pixmap.T]]''
 
 
 ==== :NonGrExpGc ====
-'':NonGrExpGc( @ [[#T|T]]) : [[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]]''
+'':NonGrExpGc(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]]''
 
 
 ==== :Metric ====
-'':Metric( @ [[#T|T]]) : [[..:..:Gtk:Gtk:RulerMetric#T|Gtk.Gtk.RulerMetric.T]]''
+'':Metric(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:RulerMetric#T|Gtk.Gtk.RulerMetric.T]]''
 
 
 ==== :Xsrc ====
-'':Xsrc( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':Xsrc(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Ysrc ====
-'':Ysrc( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':Ysrc(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :SliderSize ====
-'':SliderSize( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':SliderSize(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Lower ====
-'':Lower( @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
+'':Lower(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :Upper ====
-'':Upper( @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
+'':Upper(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :Position ====
-'':Position( @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
+'':Position(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :MaxSize ====
-'':MaxSize( @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
+'':MaxSize(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :DrawPos ====

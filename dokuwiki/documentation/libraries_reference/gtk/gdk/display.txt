@@ -21,51 +21,51 @@
 
 
 ==== :QueuedEvents ====
-'':QueuedEvents( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':QueuedEvents(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :QueuedTail ====
-'':QueuedTail( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':QueuedTail(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :DoubleClickTime ====
-'':DoubleClickTime( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':DoubleClickTime(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :CorePointer ====
-'':CorePointer( @ [[#T|T]]) : [[..:..:Gtk:Gdk:Device#T|Gtk.Gdk.Device.T]]''
+'':CorePointer(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Device#T|Gtk.Gdk.Device.T]]''
 
 
 ==== :PointerHooks ====
-'':PointerHooks( @ [[#T|T]]) : [[..:..:Gtk:Gdk:DisplayPointerHooks#T|Gtk.Gdk.DisplayPointerHooks.T]]''
+'':PointerHooks(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:DisplayPointerHooks#T|Gtk.Gdk.DisplayPointerHooks.T]]''
 
 
 ==== :Closed ====
-'':Closed( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':Closed(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :DoubleClickDistance ====
-'':DoubleClickDistance( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':DoubleClickDistance(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :ButtonClickTime ====
-'':ButtonClickTime( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':ButtonClickTime(self @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :ButtonWindow ====
-'':ButtonWindow( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]]''
+'':ButtonWindow(self @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]]''
 
 
 ==== :ButtonNumber ====
-'':ButtonNumber( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':ButtonNumber(self @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :ButtonX ====
-'':ButtonX( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':ButtonX(self @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :ButtonY ====
-'':ButtonY( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':ButtonY(self @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :AddClientMessageFilter ====

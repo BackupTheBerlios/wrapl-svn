@@ -1,13 +1,13 @@
 ====== Colors ======
 ==== Alloc ====
-''Alloc()''
+''Alloc(colormap, contiguous, planes, nplanes, pixels, npixels) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== Free ====
-''Free()''
+''Free(colormap, pixels, npixels, planes) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== Store ====
-''Store()''
+''Store(colormap, colors, ncolors) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 

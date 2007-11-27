@@ -3,31 +3,31 @@
 
 
 ==== :IsPrivate ====
-'':IsPrivate( @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':IsPrivate(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :DisplayName ====
-'':DisplayName( @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
+'':DisplayName(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== :Description ====
-'':Description( @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
+'':Description(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== :MimeType ====
-'':MimeType( @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
+'':MimeType(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== :AppName ====
-'':AppName( @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
+'':AppName(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== :AppExec ====
-'':AppExec( @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
+'':AppExec(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== :Groups ====
-'':Groups( @ [[#T|T]]) : [[..:..:Std:List#T|Std.List.T]]''
+'':Groups(self @ [[#T|T]]) : [[..:..:Std:List#T|Std.List.T]]''
 
 
 ==== New ====

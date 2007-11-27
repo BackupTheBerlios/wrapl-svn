@@ -1,17 +1,17 @@
 ====== Input ======
 ==== Add ====
-''Add()''
+''Add(source, condition, function, data) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== AddFull ====
-''AddFull()''
+''AddFull(source, condition, function, data, destroy) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== Remove ====
-''Remove()''
+''Remove(tag) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== SetExtensionEvents ====
-''SetExtensionEvents()''
+''SetExtensionEvents(window, mask, mode) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
