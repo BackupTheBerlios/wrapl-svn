@@ -481,8 +481,37 @@ public.RivaProgram(name, files) =
        $(rm -f $(OFILES))
        $(rm -f $(NAME))
        $(rm -f $(LIST))
+   return $(name).riva
+   
+public.RivaModule(module, files) =
+    private.OFILES = $(addsuffix $(EXT_OBJ), $(files))
+    private.NAME = $(LIB_DIR)$(module).riva
+    private.RDEF = $(file $(basename $(module)).rdef)
+    private.LIST = $(file $(basename $(module)).lst)
+    private.HTML = $(DOC_DIR)$(module).html
+    private.SOURCEDIR = $(dirname $(RDEF))$(DIRSEP)
+    private.SOURCES =
+        foreach(name, $(files))
+            value $(SOURCEDIR)$(name)$(if $(file-exists $(SOURCEDIR)$(name).c), .c, .asm)
+    
+    $(NAME): $(OFILES) $(RLINK) $(RDEF) $(HTML)
+        $(RLINK) -o$@ $(OFILES) $(LDFLAGS) $(RDEF) -?$(LIST)
+    
+    $(HTML): $(OFILES)
+        $(GENDOC) -I$(DEV_INC)$(DIRSEP) -o$(HTML) $(module) $(SOURCES)
 
-   return $(NAME)
+    return $(NAME)
+
+public.RivaProgramDoc(name, files) =
+   private.HTML   = $(DOC_DIR)$(name).html
+
+   $(HTML): $(files)
+       $(GENDOC) -I$(DEV_INC) -o$@ $(name) $(FILES)
+   
+   clean:
+       $(rm $(HTML))
+
+   return $(HTML)
 #
 # Copy to a bin directory
 #

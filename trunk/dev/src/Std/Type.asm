@@ -12,7 +12,7 @@ endstruct
 %define Std$Type$T T
 
 c_type T
-;the base type of all other types
+;the type of all types
 c_func T.invoke
 	push ecx
 	mov eax, [type(ecx).Fields]

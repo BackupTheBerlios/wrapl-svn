@@ -6,36 +6,20 @@ if $(equal $(OSTYPE), Win32)
 	LDFLAGS += kernel32.rlib
 	export
 
-RivaProgram($(BASENAME)Address, Address)
-RivaProgram($(BASENAME)Array, Array)
-RivaProgram($(BASENAME)Coexpr, Coexpr)
-RivaProgram($(BASENAME)Function, Function)
-RivaProgram($(BASENAME)Integer, Integer)
-RivaProgram($(BASENAME)Methods, Methods Methods2)
-RivaProgram($(BASENAME)List, List)
-RivaProgram($(BASENAME)Object, Object)
-RivaProgram($(BASENAME)Rational, Rational)
-RivaProgram($(BASENAME)Real, Real)
-RivaProgram($(BASENAME)String, String String2)
-RivaProgram($(BASENAME)Symbol, Symbol)
-RivaProgram($(BASENAME)Table, Table)
-RivaProgram($(BASENAME)Type, Type)
-
-
 Std:\
-	$(BASENAME)Address.riva\
-	$(BASENAME)Array.riva\
-	$(BASENAME)Coexpr.riva\
-	$(BASENAME)Function.riva\
-	$(BASENAME)Integer.riva\
-	$(BASENAME)List.riva\
-	$(BASENAME)Methods.riva\
-	$(BASENAME)Object.riva\
-	$(BASENAME)Rational.riva\
-	$(BASENAME)Real.riva\
-	$(BASENAME)String.riva\
-	$(BASENAME)Symbol.riva\
-	$(BASENAME)Table.riva\
-	$(BASENAME)Type.riva
+    $(RivaModule Std/Address, Address)\
+    $(RivaModule Std/Array, Array)\
+    $(RivaModule Std/Coexpr, Coexpr)\
+    $(RivaModule Std/Function, Function)\
+    $(RivaModule Std/Integer, Integer)\
+    $(RivaModule Std/Methods, Methods Methods2)\
+    $(RivaModule Std/List, List)\
+    $(RivaModule Std/Object, Object)\
+    $(RivaModule Std/Rational, Rational)\
+    $(RivaModule Std/Real, Real)\
+    $(RivaModule Std/String, String String2)\
+    $(RivaModule Std/Symbol, Symbol)\
+    $(RivaModule Std/Table, Table)\
+    $(RivaModule Std/Type, Type)
 
 .DEFAULT: Std
