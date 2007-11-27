@@ -1,7 +1,5 @@
 %include "Std.inc"
 
-module Std, Methods
-
 extern Riva$Memory$_alloc
 extern Riva$Memory$_alloc_atomic
 

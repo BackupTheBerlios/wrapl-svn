@@ -207,18 +207,7 @@ Proceed:
 	%assign i i + 1
 %endrep
 
-c_data T
-	dd Std$Type$T
-	dd .types
-	dd .invoke
-	dd 0
-	dd 0
-.types:
-	dd T
-	dd Std$Function$T
-	dd 0
-section .text
-align 8
+c_type T, Std$Function$T
 c_data T.invoke
 	push esi
 	push edi

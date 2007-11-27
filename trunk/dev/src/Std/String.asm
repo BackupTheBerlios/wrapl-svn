@@ -6,15 +6,8 @@ extern Riva$Memory$_alloc_atomic
 extern Std$Object$Nil
 extern Std$Integer$_alloc_small
 
-c_data T
-	dd Std$Type$T
-	dd .types
-	dd 0
-	dd 0
-	dd 0
-.types:
-	dd T
-	dd 0
+c_type T
+.invoke: equ 0
 
 extern strlen
 extern Std$Integer$SmallT

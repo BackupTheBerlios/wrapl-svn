@@ -4,57 +4,20 @@ extern Std$Type$T
 extern Riva$Memory$_alloc
 extern Std$Object$Nil
 
-c_data FewArgsMessageT
-	dd Std$Type$T
-	dd .types
-	dd 0
-	dd 0
-	dd 0
-.types:
-	dd FewArgsMessageT
-	dd 0
+c_type FewArgsMessageT
+.invoke: equ 0
 
-c_data T
-	dd Std$Type$T
-	dd .types
-	dd 0
-	dd 0
-	dd 0
-.types:
-	dd T
-	dd 0
+c_type T
+.invoke: equ 0
 
 c_data Nil
 	dd T
 
-c_data AsmT
-	dd Std$Type$T
-	dd .types
-	dd .invoke
-	dd 0
-	dd 0
-.types:
-	dd AsmT
-	dd T
-	dd 0
-section .text
-align 8
+c_type AsmT, T
 .invoke:
 	jmp [asm_fun(ecx).Invoke]
 
-c_data CheckedAsmT
-	dd Std$Type$T
-	dd .types
-	dd .invoke
-	dd 0
-	dd 0
-.types:
-	dd CheckedAsmT
-	dd AsmT
-	dd T
-	dd 0
-section .text
-align 8
+c_type CheckedAsmT, AsmT, T
 .invoke:
 	cmp esi, [checkedasm_fun(ecx).Count]
 	jb .toofewargs
@@ -72,17 +35,7 @@ align 8
 	mov eax, 2
 	ret
 
-c_data CT
-	dd Std$Type$T
-	dd .types
-	dd .invoke
-	dd 0
-	dd 0
-.types:
-	dd CT
-	dd T
-	dd 0
-section .text
+c_type CT, T
 .invoke:
 	push byte 0
 	push byte 0
@@ -98,18 +51,7 @@ section .text
 	pop ebx
 	ret
 
-c_data CheckedCT
-	dd Std$Type$T
-	dd .types
-	dd .invoke
-	dd 0
-	dd 0
-.types:
-	dd CheckedCT
-	dd CT
-	dd T
-	dd 0
-section .text
+c_type CheckedCT, CT, T
 .invoke:
 	cmp esi, [checkedc_fun(ecx).Count]
 	jb .toofewargs

@@ -9,16 +9,10 @@ struct levels
 	.Levels:
 endstruct
 
-c_data T
-	dd T
-	dd .types
-	dd .invoke
-	dd 0
-	dd 0
-.types:
-	dd T
-	dd 0
-section .text
+%define Std$Type$T T
+
+c_type T
+;the base type of all other types
 c_func T.invoke
 	push ecx
 	mov eax, [type(ecx).Fields]
@@ -57,6 +51,9 @@ c_func T.invoke
 	ret
 
 func Of, 1
+;returns the type of value
+;@value
+;:T
 	mov eax, [argument(edi).Val]
 	mov ecx, [value(eax).Type]
 	xor edx, edx
@@ -88,6 +85,10 @@ extern Std$Symbol$_typetable_put
 extern Std$Array$_new
 
 unchecked_func New
+;creates a new type derived from parents and adding fields
+;@fields : Std$Array$T
+;@parents... : T
+;:T
 	push edi
 	push esi
 	push byte sizeof(type)

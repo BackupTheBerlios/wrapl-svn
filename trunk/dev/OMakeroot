@@ -10,6 +10,7 @@ DefineCommandVars()
 
 BIN_DIR = $(dir ../bin)$(DIRSEP)
 LIB_DIR = $(dir ../lib)$(DIRSEP)
+DOC_DIR = $(dir ../doc)$(DIRSEP)
 
 SRC_DIR = $(dir src)$(DIRSEP)
 OBJ_DIR = $(dir obj)$(DIRSEP)

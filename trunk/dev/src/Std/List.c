@@ -1,9 +1,6 @@
 #include <Std.h>
 #include <Riva/Memory.h>
 
-MODULE(Std, List);
-//Provides a general purpose extensible list type
-
 typedef struct Std$List_t _list;
 typedef struct Std$List_node _node;
 
@@ -11,7 +8,8 @@ TYPE(T);
 //A general purpose extensible list type
 
 GLOBAL_FUNCTION(New, 0) {
-//@Length : Std.Integer.T := 0
+//@length : Std$Integer$T := 0
+//:T
 //Returns a new list with Length elements
 	_list *List = new(_list);
 	List->Type = T;
@@ -93,6 +91,9 @@ Std$Object_t *_newv(long Count, Std$Object_t **Values) {
 };
 
 GLOBAL_FUNCTION(Make, 0) {
+//@values...
+//:T
+//returns a list with <em>values</em> as its elements
 	_list *List = new(_list);
 	List->Type = T;
 	if (Count > 0) {
@@ -119,6 +120,7 @@ GLOBAL_FUNCTION(Make, 0) {
 };
 
 METHOD("_check", TYP, T) {
+//internal function
     _list *List = (_list *)Args[0].Val;
     if (List->Array == 0) {
         printf("List has no array.\n");
@@ -141,6 +143,9 @@ METHOD("_check", TYP, T) {
 };
 
 METHOD("empty", TYP, T) {
+//@list
+//:T
+//empties <em>list</em> and returns it
 	_list *List = (_list *)Args[0].Val;
 	List->Head = List->Tail = List->Cache = 0;
 	List->Index = List->Lower = List->Upper = 0;
@@ -152,6 +157,9 @@ METHOD("empty", TYP, T) {
 };
 
 METHOD("copy", TYP, T) {
+//@list
+//:T
+//returns a shallow copy of <em>list</em>
 	const _list *List0 = (_list *)Args[0].Val;
 	_list *List = new(_list);
 	List->Type = T;
@@ -178,6 +186,10 @@ METHOD("copy", TYP, T) {
 };
 
 METHOD("+", TYP, T, TYP, T) {
+//@a
+//@b
+//:T
+//returns the concatenation of <em>a</em> and <em>b</em>
 	const _list *List0 = (_list *)Args[0].Val;
 	const _list *List1 = (_list *)Args[1].Val;
 	_list *List = new(_list);
@@ -225,6 +237,10 @@ METHOD("+", TYP, T, TYP, T) {
 };
 
 METHOD("push", TYP, T, SKP) {
+//@list
+//@value
+//:T
+//inserts <em>value</em> onto the start <em>list</em> and returns <em>list</em>
 	_list *List = (_list *)Args[0].Val;
 	for (int I = 1; I < Count; ++I) {
 		_node *Node = new(_node);
@@ -242,6 +258,10 @@ METHOD("push", TYP, T, SKP) {
 };
 
 METHOD("put", TYP, T, SKP) {
+//@list
+//@value
+//:T
+//inserts <em>value</em> onto the end <em>list</em> and returns <em>list</em>
 	_list *List = (_list *)Args[0].Val;
 	for (int I = 1; I < Count; ++I) {
 		_node *Node = new(_node);
@@ -258,6 +278,9 @@ METHOD("put", TYP, T, SKP) {
 };
 
 METHOD("pop", TYP, T) {
+//@list
+//:ANY
+//removes and returns the first element of <em>list</em>
 	_list *List = (_list *)Args[0].Val;
 	_node *Node = List->Head;
 	if (!Node) return FAILURE;
@@ -274,6 +297,9 @@ METHOD("pop", TYP, T) {
 };
 
 METHOD("pull", TYP, T) {
+//@list
+//:ANY
+//removes and returns the last element of <em>list</em>
 	_list *List = (_list *)Args[0].Val;
 	_node *Node = List->Tail;
 	if (!Node) return FAILURE;
@@ -299,6 +325,12 @@ static void build_index_array(_list *List) {
 };
 
 METHOD("[]", TYP, T, TYP, Std$Integer$SmallT) {
+//@list
+//@n
+//:ANY
+//returns an assignable reference to the <em>n</em><sup>th</sup> element of <em>list</em>
+//negative indices are taken from the end of the list
+//fails if <em>n</em> is outside the <em>-list:length .. list:length</em>
 	_list *List = (_list *)Args[0].Val;
 	long Index = ((Std$Integer_smallt *)Args[1].Val)->Value;
 	long Cache = List->Index;
@@ -399,6 +431,13 @@ static _node *find_node(_list *List, long Index) {
 };
 
 METHOD("[]", TYP, T, TYP, Std$Integer$SmallT, TYP, Std$Integer$SmallT) {
+//@list
+//@m
+//@n
+//:T
+//returns the sublist of <em>list</em> from the <em>m</em><sup>th</sup> to the <em>n - 1</em><sup>th</sup> element inclusively
+//fails if either <em>m</em> or <em>n</em> is outside the range of the list
+//returns an empty list if <em>m > n</em>
 	_list *List = (_list *)Args[0].Val;
 	long Length = List->Length;
 	long Index0 = ((Std$Integer_smallt *)Args[1].Val)->Value;
@@ -473,6 +512,11 @@ static void shift_array_left(_list *List, long Lower, long Upper) {
 };
 
 METHOD("shift", TYP, T, TYP, Std$Integer$SmallT, TYP, Std$Integer$SmallT) {
+//@list
+//@n
+//@r
+//:T
+//shifts the <em>n</em><sup>th</sup> element by <em>n</em> positions within <em>list</em>
     _list *List = Args[0].Val;
     long Index = ((Std$Integer_smallt *)Args[1].Val)->Value;
     long Shift = ((Std$Integer_smallt *)Args[2].Val)->Value;
@@ -557,7 +601,11 @@ static Std$Object_t *delete_node(_list *List, _node *Node) {
 	return Node->Value;
 };
 
-METHOD("delete", TYP, T) {
+METHOD("delete", TYP, T, TYP, Std$Integer$SmallT) {
+//@list
+//@n
+//:T
+//removes the <em>n</em><sup>th</sup> element from <em>list</em>
 	_list *List = (_list *)Args[0].Val;
 	long Index = ((Std$Integer_smallt *)Args[1].Val)->Value;
 	long Cache = List->Index;
@@ -653,6 +701,11 @@ static void insert_node(_list *List, _node *Node, Std$Object_t *Value) {
 };
 
 METHOD("insert", TYP, T, TYP, Std$Integer$SmallT, SKP) {
+//@list
+//@n
+//@value
+//:T
+//inserts <em>value</em> into the <em>n</em><sup>th</sup> position in <em>list</em>
 	_list *List = (_list *)Args[0].Val;
 	long Index = ((Std$Integer_smallt *)Args[1].Val)->Value;
 	Std$Object_t *Value = Args[2].Val;
@@ -744,12 +797,18 @@ METHOD("insert", TYP, T, TYP, Std$Integer$SmallT, SKP) {
 };
 
 METHOD("length", TYP, T) {
+//@list
+//:Std$Integer$SmallT
+//returns the length of <em>list</em>
 	_list *List = (_list *)Args[0].Val;
 	Result->Val = Std$Integer$new_small(List->Length);
 	return SUCCESS;
 };
 
 METHOD("size", TYP, T) {
+//@list
+//:Std$Integer$SmallT
+//returns the length of <em>list</em>
 	_list *List = (_list *)Args[0].Val;
 	Result->Val = Std$Integer$new_small(List->Length);
 	return SUCCESS;
@@ -788,6 +847,10 @@ METHOD("@", TYP, T, VAL, Std$String$T) {
 SYMBOL($EQUAL, "=");
 
 METHOD("in", ANY, TYP, T) {
+//@value
+//@list
+//:ANY
+//returns <em>value</em> if it is in <em>list</em>, fails otherwise
 	for (_node *Node = ((_list *)Args[1].Val)->Head; Node; Node = Node->Next) {
 		long Status = Std$Function$call($EQUAL, 2, Result, Args[0].Val, 0, Node->Value, 0);
 		if (Status != FAILURE) return Status;

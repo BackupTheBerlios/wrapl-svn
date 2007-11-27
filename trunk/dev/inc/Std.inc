@@ -36,6 +36,10 @@ unchecked_func __LINE__, %1
 func __LINE__, %1
 %endmacro
 
+%macro c_type 1+
+c_type __LINE__, %1
+%endmacro
+
 %else
 
 %macro module 1+
@@ -86,6 +90,38 @@ align 8
 	align 8
 	global %1
 	%1:
+%endmacro
+
+%macro c_type 1
+    section .e %+ %s, class=data,use32
+    align 8
+    global %1
+    %1:
+        dd Std$Type$T
+        dd .types
+        dd .invoke
+        dd 0
+        dd 0
+    .types:
+        dd %1
+	dd 0
+    section .u %+ %s, class=text, use32
+%endmacro
+
+%macro c_type 2+
+    section .e %+ %s, class=data,use32
+    align 8
+    global %1
+    %1:
+        dd Std$Type$T
+        dd .types
+        dd .invoke
+        dd 0
+        dd 0
+    .types:
+        dd %1, %2
+	dd 0
+    section .u %+ %s, class=text, use32
 %endmacro
 
 %endif

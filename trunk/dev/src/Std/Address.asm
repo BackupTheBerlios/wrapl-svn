@@ -4,15 +4,8 @@ extern Std$Type$T
 extern Riva$Memory$_alloc
 extern Riva$Memory$_alloc_small
 
-c_data T
-	dd Std$Type$T
-	dd .types
-	dd 0
-	dd 0
-	dd 0
-.types:
-	dd T
-	dd 0
+c_type T
+.invoke: equ 0
 
 c_data Nil
 	dd T

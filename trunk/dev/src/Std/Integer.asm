@@ -7,28 +7,12 @@ extern Std$Type$T
 
 section .data
 
-c_data T
-	dd Std$Type$T
-	dd .types
-	dd 0
-	dd 0
-	dd 0
-.types:
-	dd T
-	dd 0
+c_type T
+;base type of all integer types
+.invoke: equ 0
 
-c_data SmallT
-	dd Std$Type$T
-	dd .types
-	dd .invoke
-	dd 0
-	dd 0
-.types:
-	dd SmallT
-	dd T
-	dd 0
-section .text
-align 8
+c_type SmallT, T
+;integers that fit into a signed machine word.
 .invoke:
 	mov eax, [small_int(ecx).Value]
 	dec eax
@@ -48,18 +32,9 @@ align 8
 	inc eax
 	ret
 
-c_data BigT
-	dd Std$Type$T
-	dd .types
-	dd .invoke
-	dd 0
-	dd 0
-.types:
-	dd BigT
-	dd T
-	dd 0
-section .text
-align 8
+c_type BigT, T
+;arbritrary precision integers.<br/>
+;note: instances of type <em>BigT</em> should never contain values which can fit into a signed machine word.
 .invoke:
 	; simply fail (we can't have this many arguments anyway)
 	xor eax, eax
@@ -164,6 +139,10 @@ struct to_small_small_state, state
 endstruct
 
 unchecked_func ToSmallSmall
+;generates the values from <em>from</em> to <em>to</em> inclusive
+;@from : SmallT
+;@to : SmallT
+;:SmallT
 	mov eax, [argument(edi + 8).Val]
 	mov ecx, [argument(edi).Val]
 	mov eax, [small_int(eax).Value]

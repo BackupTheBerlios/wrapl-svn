@@ -5,17 +5,13 @@ extern Std$Integer$SmallT
 extern Std$Object$Nil
 extern Riva$Memory$_alloc
 
-c_data T
-	dd Std$Type$T
-	dd .types
-	dd 0
-	dd 0
-	dd 0
-.types:
-	dd T
-	dd 0
+c_type T
+.invoke: equ 0
 
 func New, 1
+;creates a new array with length elements, all initialized to NIL
+;@length : Std$Integer$SmallT
+;:T
 	mov eax, [argument(edi).Val]
 	mov eax, [small_int(eax).Value]
 	push eax
