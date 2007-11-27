@@ -18,6 +18,13 @@ struct Std$Type_t {
 
 extern Std$Type_t Std$Type$T[];
 
+#ifdef DOCUMENTING
+
+#define TYPE(ARGS...) TYPE(__LINE__, ARGS)
+#define ITYPE(ARGS...) ITYPE(__LINE__, ARGS)
+
+#else
+
 #define TYPE(NAME, PARENTS...)\
 	extern Std$Type_t *NAME ## _parents[];\
 	Std$Type_t NAME[] = {{Std$Type$T, NAME ## _parents}};\
@@ -47,6 +54,8 @@ extern Std$Type_t Std$Type$T[];
 #define LEVELS_6 {6, 0, 1, 2, 3, 4, 5}
 #define LEVELS_7 {7, 0, 1, 2, 3, 4, 5, 6}
 #define LEVELS_8 {8, 0, 1, 2, 3, 4, 5, 6, 7}
+
+#endif
 
 #undef RIVA_MODULE
 

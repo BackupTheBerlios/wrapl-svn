@@ -978,7 +978,7 @@ void select_string_inst_t::encode(assembler_t *Assembler) {
 	if (Cases->Length) {
 		| .dword 0
 		| .aword 0
-		| .aword 0
+		| .aword =>Default
 	};
 	for (case_t *Case = Cases; Case; Case = Case->Next) {
 		| .dword Case->Length

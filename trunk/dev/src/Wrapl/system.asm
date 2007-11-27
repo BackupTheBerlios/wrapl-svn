@@ -180,7 +180,9 @@ select_string:
 	cmp [string(ecx).Count], dword 1
 	mov ebx, [address(string_block(string(ecx).Blocks).Chars).Value]
 	mov eax, [small_int(string_block(string(ecx).Blocks).Length).Value]
-	jle .simplestring
+        ;int3
+        jb .default
+	je .simplestring
 	mov eax, [small_int(string(ecx).Length).Value]
 	sub esp, eax
 	and esp, byte -4

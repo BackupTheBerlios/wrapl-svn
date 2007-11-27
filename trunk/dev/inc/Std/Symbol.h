@@ -23,6 +23,14 @@ extern Std$Object_t Std$Symbol$Is[];
 RIVA_CFUN(Std$Symbol_t *, new, void);
 RIVA_CFUN(Std$Symbol_t *, new_string, char *);
 
+#ifdef DOCUMENTING
+
+#define SYMBOL(ARGS...) SYMBOL(__LINE__, ARGS)
+#define METHOD(ARGS...) METHOD(__LINE__, ARGS)
+#define SET_METHOD(ARGS...) SET_METHOD(__LINE__, ARGS)
+
+#else
+
 #define SYMBOL(Name, Value)\
 	static char Name[] __attribute__ ((section (".symbols"))) = Value;
 
@@ -47,6 +55,8 @@ RIVA_CFUN(Std$Symbol_t *, new_string, char *);
 	union {void *Adr; long Val;} method_hint(instance, __LINE__)[] __attribute__ ((section (".methods"))) = {\
 		method_hint(symbol, __LINE__), SIGNATURE, 0, &FUNCTION\
 	};
+
+#endif
 
 #undef RIVA_MODULE
 

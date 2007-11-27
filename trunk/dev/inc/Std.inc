@@ -22,6 +22,25 @@
 extern Std$Function$AsmT
 extern Std$Function$CheckedAsmT
 
+%ifdef DOCUMENTING
+
+%macro module 1+
+module __LINE__, %1
+%endmacro
+
+%macro unchecked_func 1+
+unchecked_func __LINE__, %1
+%endmacro
+
+%macro func 1+
+func __LINE__, %1
+%endmacro
+
+%else
+
+%macro module 1+
+%endmacro
+
 %macro unchecked_func 1
 	global %1
 section .d %+ %s, class=data,use32
@@ -68,6 +87,8 @@ align 8
 	global %1
 	%1:
 %endmacro
+
+%endif
 
 struct value
 	.Type:		resd 1
@@ -183,6 +204,22 @@ struct coexpr, value
 	.Scope:		resd 1
 endstruct
 
+%ifdef DOCUMENTING
+
+%macro symbol 1+
+symbol __LINE__, %1
+%endmacro
+
+%macro method 1+
+method __LINE__, %1
+%endmacro
+
+%macro _method 1+
+_method __LINE__, %1
+%endmacro
+
+%else
+
 %define ANY 1
 %define SKP 1
 %define VAL 2
@@ -218,5 +255,7 @@ section .methods
 	dd %3, 0
 	dd %2
 %endmacro
+
+%endif
 
 %endif

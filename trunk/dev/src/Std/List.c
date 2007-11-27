@@ -1,12 +1,18 @@
 #include <Std.h>
 #include <Riva/Memory.h>
 
+MODULE(Std, List);
+//Provides a general purpose extensible list type
+
 typedef struct Std$List_t _list;
 typedef struct Std$List_node _node;
 
 TYPE(T);
+//A general purpose extensible list type
 
 GLOBAL_FUNCTION(New, 0) {
+//@Length : Std.Integer.T := 0
+//Returns a new list with Length elements
 	_list *List = new(_list);
 	List->Type = T;
 	if (Count > 0) {
@@ -1206,6 +1212,69 @@ METHOD("sort", TYP, T) {
 		Std$Object_t **Last = First - 1;
 		for (_node *Node = List->Head; Node; Node = Node->Next) *(++Last) = Node->Value;
 		Std$Object_t *Error = sort_list(First, Last);
+		if (Error) {
+			Result->Val = Error;
+			return MESSAGE;
+		};
+		Last = First - 1;
+		for (_node *Node = List->Head; Node; Node = Node->Next) Node->Value = *(++Last);
+		return SUCCESS;
+	};
+};
+
+static Std$Object_t *sort_list_f(Std$Object_t **First, Std$Object_t **Last, Std$Object_t *Compare) {
+	if (First == Last) return 0;
+	Std$Object_t **A = First;
+	Std$Object_t **B = Last;
+	Std$Object_t *S = *A;
+	Std$Object_t *T = *B;
+
+	while (A != B) {
+		Std$Function_result Result;
+		switch (Std$Function$call(Compare, 2, &Result, S, 0, T, 0)) {
+		case SUSPEND: case SUCCESS:
+                    *B = T; --B; T = *B;
+                    break;
+                case FAILURE:
+                    *A = T; ++A; T = *A;
+                    break;
+		case MESSAGE:
+                    return Result.Val;
+		};
+	};
+	*A = S;
+	if (A != First) {
+		Std$Object_t *Error = sort_list_f(First, A - 1, Compare);
+		if (Error) return Error;
+	};
+	if (B != Last) {
+		Std$Object_t *Error = sort_list_f(B + 1, Last, Compare);
+		if (Error) return Error;
+	};
+	return 0;
+};
+
+METHOD("sort", TYP, T, TYP, Std$Function$T) {
+	_list *List = Args[0].Val;
+	Result->Arg = Args[0];
+	if (List->Length == 0) return SUCCESS;
+	if (List->Length < 1024) {
+		Std$Object_t *First[List->Length];
+		Std$Object_t **Last = First - 1;
+		for (_node *Node = List->Head; Node; Node = Node->Next) *(++Last) = Node->Value;
+		Std$Object_t *Error = sort_list_f(First, Last, Args[1].Val);
+		if (Error) {
+			Result->Val = Error;
+			return MESSAGE;
+		};
+		Last = First - 1;
+		for (_node *Node = List->Head; Node; Node = Node->Next) Node->Value = *(++Last);
+		return SUCCESS;
+	} else {
+		Std$Object_t **First = Riva$Memory$alloc(List->Length * sizeof(Std$Object_t *));;
+		Std$Object_t **Last = First - 1;
+		for (_node *Node = List->Head; Node; Node = Node->Next) *(++Last) = Node->Value;
+		Std$Object_t *Error = sort_list_f(First, Last, Args[1].Val);
 		if (Error) {
 			Result->Val = Error;
 			return MESSAGE;

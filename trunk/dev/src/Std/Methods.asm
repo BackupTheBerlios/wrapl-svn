@@ -1,5 +1,7 @@
 %include "Std.inc"
 
+module Std, Methods
+
 extern Riva$Memory$_alloc
 extern Riva$Memory$_alloc_atomic
 
@@ -4266,6 +4268,8 @@ method "~=", ANY, ANY
 	ret
 
 method "length", STRING
+;@string
+;Returns the length of string
 	mov ecx, [argument(edi).Val]
 	lea ecx, [string(ecx).Length]
 	xor edx, edx

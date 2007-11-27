@@ -24,6 +24,7 @@ ITYPE(TextWriterT, 3, WriterT, T);
 TYPE(MessageT);
 
 METHOD("@", TYP, MessageT, VAL, Std$String$T) {
+//@msg
 	IO$Stream_messaget *Msg = Args[0].Val;
 	Result->Val = Std$String$new(Msg->Message);
 	return SUCCESS;

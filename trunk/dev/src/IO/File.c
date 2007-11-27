@@ -45,6 +45,10 @@ static openmode_t OpenModes[] = {
 #endif
 
 GLOBAL_FUNCTION(Open, 2) {
+//@filename : Std$String$T
+//@mode : Std$Integer$T
+//:T
+//Opens filename with the correct mode and returns a file object
 	Std$String_t *Arg0 = Args[0].Val;
 	int Flags = ((Std$Integer_smallt *)Args[1].Val)->Value;
 #ifdef WINDOWS

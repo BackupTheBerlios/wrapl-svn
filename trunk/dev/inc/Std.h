@@ -1,5 +1,5 @@
-#ifndef LANG_H
-#define LANG_H
+#ifndef STD_H
+#define STD_H
 
 #include <Std/Address.h>
 #include <Std/Function.h>
@@ -15,5 +15,15 @@
 #include <Std/Type.h>
 #include <Std/Array.h>
 #include <Std/Coexpr.h>
+
+#ifdef DOCUMENTING
+
+#define MODULE(ARGS...) MODULE(__LINE__, ARGS)
+
+#else
+
+#define MODULE(path...)
+
+#endif 
 
 #endif
