@@ -5,22 +5,22 @@
 
 
 ==== :OnCurrentlyLoadingFrame ====
-'':OnCurrentlyLoadingFrame( @ [[#T|T]])''
+'':OnCurrentlyLoadingFrame(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :Advance ====
-'':Advance( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':Advance(self @ [[#T|T]], current_time @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :GetDelayTime ====
-'':GetDelayTime( @ [[#T|T]])''
+'':GetDelayTime(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :GetPixbuf ====
-'':GetPixbuf( @ [[#T|T]])''
+'':GetPixbuf(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Pixbuf#T|Gtk.Gdk.Pixbuf.T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 

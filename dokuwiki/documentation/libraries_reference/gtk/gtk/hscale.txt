@@ -9,14 +9,14 @@
 
 
 ==== New ====
-''New()''
+''New(adjustment : [[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]]) : [[# T| T]]''
 
 
 ==== NewWithRange ====
-''NewWithRange()''
+''NewWithRange(min : [[..:..:Std:Real#T|Std.Real.T]], max : [[..:..:Std:Real#T|Std.Real.T]], step : [[..:..:Std:Real#T|Std.Real.T]]) : [[# T| T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 

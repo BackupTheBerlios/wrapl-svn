@@ -8,30 +8,30 @@
 
 
 ==== :SetHasWindow ====
-'':SetHasWindow( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+'':SetHasWindow(self @ [[#T|T]], has_window @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Put ====
-'':Put( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':Put(self @ [[#T|T]], widget @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], x @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Children ====
-'':Children( @ [[#T|T]])''
+'':Children( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetHasWindow ====
-'':GetHasWindow( @ [[#T|T]])''
+'':GetHasWindow(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :Move ====
-'':Move( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':Move(self @ [[#T|T]], widget @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], x @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====
-''New()''
+''New() : [[# T| T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 

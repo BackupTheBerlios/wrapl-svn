@@ -9,22 +9,22 @@
 
 
 ==== :Toggle ====
-'':Toggle( @ [[#T|T]])''
+'':Toggle(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Select ====
-'':Select( @ [[#T|T]])''
+'':Select(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Deselect ====
-'':Deselect( @ [[#T|T]])''
+'':Deselect(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== FactoriesPathDelete ====
-''FactoriesPathDelete()''
+''FactoriesPathDelete(ifactory_path, path) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 

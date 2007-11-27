@@ -7,30 +7,30 @@
 
 
 ==== :SetScreen ====
-'':SetScreen( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Screen#T|Gtk.Gdk.Screen.T]])''
+'':SetScreen(self @ [[#T|T]], screen @ [[..:..:Gtk:Gdk:Screen#T|Gtk.Gdk.Screen.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetScreen ====
-'':GetScreen( @ [[#T|T]])''
+'':GetScreen(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Screen#T|Gtk.Gdk.Screen.T]]''
 
 
 ==== :Screen ====
-'':Screen( @ [[#T|T]])''
+'':Screen( @ [[#T|T]]) : [[..:..:Gtk:Gdk:Screen#T|Gtk.Gdk.Screen.T]]''
 
 
 ==== :HasUserRefCount ====
-'':HasUserRefCount( @ [[#T|T]])''
+'':HasUserRefCount( @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== New ====
-''New()''
+''New() : [[# T| T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 
 ==== NewForScreen ====
-''NewForScreen()''
+''NewForScreen(screen : [[..:..:Gtk:Gdk:Screen#T|Gtk.Gdk.Screen.T]]) : [[# T| T]]''
 
 

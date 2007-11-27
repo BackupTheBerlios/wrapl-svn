@@ -9,66 +9,66 @@
 
 
 ==== :SetUseUnderline ====
-'':SetUseUnderline( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+'':SetUseUnderline(use_underline @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetUseMarkup ====
-'':SetUseMarkup( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+'':SetUseMarkup(use_markup @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetSpacing ====
-'':SetSpacing( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':SetSpacing(spacing @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Priv ====
-'':Priv( @ [[#T|T]])''
+'':Priv( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetExpanded ====
-'':GetExpanded( @ [[#T|T]])''
+'':GetExpanded(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :GetLabel ====
-'':GetLabel( @ [[#T|T]])''
+'':GetLabel(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== :GetLabelWidget ====
-'':GetLabelWidget( @ [[#T|T]])''
+'':GetLabelWidget( @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
 
 ==== :GetSpacing ====
-'':GetSpacing( @ [[#T|T]])''
+'':GetSpacing( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :GetUseMarkup ====
-'':GetUseMarkup( @ [[#T|T]])''
+'':GetUseMarkup( @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :GetUseUnderline ====
-'':GetUseUnderline( @ [[#T|T]])''
+'':GetUseUnderline( @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :SetExpanded ====
-'':SetExpanded( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+'':SetExpanded(expanded @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetLabel ====
-'':SetLabel( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+'':SetLabel(label @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetLabelWidget ====
-'':SetLabelWidget( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]])''
+'':SetLabelWidget(label_widget @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====
-''New()''
+''New(label : [[..:..:Std:String#T|Std.String.T]]) : [[# T| T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 
 ==== NewWithMnemonic ====
-''NewWithMnemonic()''
+''NewWithMnemonic(label : [[..:..:Std:String#T|Std.String.T]]) : [[# T| T]]''
 
 

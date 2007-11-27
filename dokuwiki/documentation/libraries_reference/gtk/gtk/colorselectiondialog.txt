@@ -11,26 +11,26 @@
 
 
 ==== :HelpButton ====
-'':HelpButton( @ [[#T|T]])''
+'':HelpButton( @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
 
 ==== :CancelButton ====
-'':CancelButton( @ [[#T|T]])''
+'':CancelButton( @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
 
 ==== :Colorsel ====
-'':Colorsel( @ [[#T|T]])''
+'':Colorsel( @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
 
 ==== :OkButton ====
-'':OkButton( @ [[#T|T]])''
+'':OkButton( @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
 
 ==== New ====
-''New()''
+''New(title : [[..:..:Std:String#T|Std.String.T]]) : [[# T| T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 

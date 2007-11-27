@@ -11,38 +11,38 @@
 
 
 ==== :SetMenu ====
-'':SetMenu( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]])''
+'':SetMenu(self @ [[#T|T]], menu @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetArrowTooltipText ====
-'':SetArrowTooltipText( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+'':SetArrowTooltipText(self @ [[#T|T]], text @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetArrowTooltipMarkup ====
-'':SetArrowTooltipMarkup( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+'':SetArrowTooltipMarkup(self @ [[#T|T]], markup @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Priv ====
-'':Priv( @ [[#T|T]])''
+'':Priv( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetMenu ====
-'':GetMenu( @ [[#T|T]])''
+'':GetMenu(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
 
 ==== :SetArrowTooltip ====
-'':SetArrowTooltip( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Tooltips#T|Gtk.Gtk.Tooltips.T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+'':SetArrowTooltip(self @ [[#T|T]], tooltips @ [[..:..:Gtk:Gtk:Tooltips#T|Gtk.Gtk.Tooltips.T]], tip_text @ [[..:..:Std:String#T|Std.String.T]], tip_private @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====
-''New()''
+''New(icon_widget : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], label : [[..:..:Std:String#T|Std.String.T]]) : [[# T| T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 
 ==== NewFromStock ====
-''NewFromStock()''
+''NewFromStock(stock_id : [[..:..:Std:String#T|Std.String.T]]) : [[# T| T]]''
 
 

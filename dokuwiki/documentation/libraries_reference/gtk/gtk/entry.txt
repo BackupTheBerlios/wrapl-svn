@@ -7,302 +7,302 @@
 
 
 ==== :TextIndexToLayoutIndex ====
-'':TextIndexToLayoutIndex( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':TextIndexToLayoutIndex(text_index @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :SetWidthChars ====
-'':SetWidthChars( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':SetWidthChars(n_chars @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetVisibility ====
-'':SetVisibility( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+'':SetVisibility(visible @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Text ====
-'':Text( @ [[#T|T]])''
+'':Text( @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== :Editable ====
-'':Editable( @ [[#T|T]])''
+'':Editable( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Visible ====
-'':Visible( @ [[#T|T]])''
+'':Visible( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :OverwriteMode ====
-'':OverwriteMode( @ [[#T|T]])''
+'':OverwriteMode( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :InDrag ====
-'':InDrag( @ [[#T|T]])''
+'':InDrag( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :TextLength ====
-'':TextLength( @ [[#T|T]])''
+'':TextLength( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :TextMaxLength ====
-'':TextMaxLength( @ [[#T|T]])''
+'':TextMaxLength( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :TextArea ====
-'':TextArea( @ [[#T|T]])''
+'':TextArea( @ [[#T|T]]) : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]]''
 
 
 ==== :ImContext ====
-'':ImContext( @ [[#T|T]])''
+'':ImContext( @ [[#T|T]]) : [[..:..:Gtk:Gtk:IMContext#T|Gtk.Gtk.IMContext.T]]''
 
 
 ==== :PopupMenu ====
-'':PopupMenu( @ [[#T|T]])''
+'':PopupMenu( @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
 
 ==== :CurrentPos ====
-'':CurrentPos( @ [[#T|T]])''
+'':CurrentPos( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :SelectionBound ====
-'':SelectionBound( @ [[#T|T]])''
+'':SelectionBound( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :CachedLayout ====
-'':CachedLayout( @ [[#T|T]])''
+'':CachedLayout( @ [[#T|T]]) : [[..:..:Gtk:Pango:Layout#T|Gtk.Pango.Layout.T]]''
 
 
 ==== :CacheIncludesPreedit ====
-'':CacheIncludesPreedit( @ [[#T|T]])''
+'':CacheIncludesPreedit( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :NeedImReset ====
-'':NeedImReset( @ [[#T|T]])''
+'':NeedImReset( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :HasFrame ====
-'':HasFrame( @ [[#T|T]])''
+'':HasFrame( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :ActivatesDefault ====
-'':ActivatesDefault( @ [[#T|T]])''
+'':ActivatesDefault( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :CursorVisible ====
-'':CursorVisible( @ [[#T|T]])''
+'':CursorVisible( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :InClick ====
-'':InClick( @ [[#T|T]])''
+'':InClick( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :IsCellRenderer ====
-'':IsCellRenderer( @ [[#T|T]])''
+'':IsCellRenderer( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :EditingCanceled ====
-'':EditingCanceled( @ [[#T|T]])''
+'':EditingCanceled( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :MouseCursorObscured ====
-'':MouseCursorObscured( @ [[#T|T]])''
+'':MouseCursorObscured( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :SelectWords ====
-'':SelectWords( @ [[#T|T]])''
+'':SelectWords( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :SelectLines ====
-'':SelectLines( @ [[#T|T]])''
+'':SelectLines( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :ResolvedDir ====
-'':ResolvedDir( @ [[#T|T]])''
+'':ResolvedDir( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :TruncateMultiline ====
-'':TruncateMultiline( @ [[#T|T]])''
+'':TruncateMultiline( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Button ====
-'':Button( @ [[#T|T]])''
+'':Button( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :BlinkTimeout ====
-'':BlinkTimeout( @ [[#T|T]])''
+'':BlinkTimeout( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :RecomputeIdle ====
-'':RecomputeIdle( @ [[#T|T]])''
+'':RecomputeIdle( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :ScrollOffset ====
-'':ScrollOffset( @ [[#T|T]])''
+'':ScrollOffset( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Ascent ====
-'':Ascent( @ [[#T|T]])''
+'':Ascent( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Descent ====
-'':Descent( @ [[#T|T]])''
+'':Descent( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :TextSize ====
-'':TextSize( @ [[#T|T]])''
+'':TextSize( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :NBytes ====
-'':NBytes( @ [[#T|T]])''
+'':NBytes( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :PreeditLength ====
-'':PreeditLength( @ [[#T|T]])''
+'':PreeditLength( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :PreeditCursor ====
-'':PreeditCursor( @ [[#T|T]])''
+'':PreeditCursor( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :DndPosition ====
-'':DndPosition( @ [[#T|T]])''
+'':DndPosition( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :DragStartX ====
-'':DragStartX( @ [[#T|T]])''
+'':DragStartX( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :DragStartY ====
-'':DragStartY( @ [[#T|T]])''
+'':DragStartY( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :InvisibleChar ====
-'':InvisibleChar( @ [[#T|T]])''
+'':InvisibleChar( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :WidthChars ====
-'':WidthChars( @ [[#T|T]])''
+'':WidthChars( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :AppendText ====
-'':AppendText( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+'':AppendText(self @ [[#T|T]], text @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetActivatesDefault ====
-'':GetActivatesDefault( @ [[#T|T]])''
+'':GetActivatesDefault(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :GetAlignment ====
-'':GetAlignment( @ [[#T|T]])''
+'':GetAlignment(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :GetCompletion ====
-'':GetCompletion( @ [[#T|T]])''
+'':GetCompletion(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:EntryCompletion#T|Gtk.Gtk.EntryCompletion.T]]''
 
 
 ==== :GetCursorHadjustment ====
-'':GetCursorHadjustment( @ [[#T|T]])''
+'':GetCursorHadjustment(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]]''
 
 
 ==== :GetHasFrame ====
-'':GetHasFrame( @ [[#T|T]])''
+'':GetHasFrame(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :GetInnerBorder ====
-'':GetInnerBorder( @ [[#T|T]])''
+'':GetInnerBorder(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Border#T|Gtk.Gtk.Border.T]]''
 
 
 ==== :GetInvisibleChar ====
-'':GetInvisibleChar( @ [[#T|T]])''
+'':GetInvisibleChar(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetLayout ====
-'':GetLayout( @ [[#T|T]])''
+'':GetLayout(self @ [[#T|T]]) : [[..:..:Gtk:Pango:Layout#T|Gtk.Pango.Layout.T]]''
 
 
 ==== :GetLayoutOffsets ====
-'':GetLayoutOffsets( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':GetLayoutOffsets(self @ [[#T|T]], x @ [[..:..:Std:Object#T|Std.Object.T]], y @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetMaxLength ====
-'':GetMaxLength( @ [[#T|T]])''
+'':GetMaxLength(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :GetText ====
-'':GetText( @ [[#T|T]])''
+'':GetText(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== :GetVisibility ====
-'':GetVisibility( @ [[#T|T]])''
+'':GetVisibility( @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :GetWidthChars ====
-'':GetWidthChars( @ [[#T|T]])''
+'':GetWidthChars( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :LayoutIndexToTextIndex ====
-'':LayoutIndexToTextIndex( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':LayoutIndexToTextIndex(layout_index @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :PrependText ====
-'':PrependText( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+'':PrependText(text @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SelectRegion ====
-'':SelectRegion( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':SelectRegion(start @ [[#T|T]], end @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetActivatesDefault ====
-'':SetActivatesDefault( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+'':SetActivatesDefault(setting @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetAlignment ====
-'':SetAlignment( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+'':SetAlignment(xalign @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetCompletion ====
-'':SetCompletion( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:EntryCompletion#T|Gtk.Gtk.EntryCompletion.T]])''
+'':SetCompletion(completion @ [[#T|T]],  @ [[..:..:Gtk:Gtk:EntryCompletion#T|Gtk.Gtk.EntryCompletion.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetCursorHadjustment ====
-'':SetCursorHadjustment( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]])''
+'':SetCursorHadjustment(adjustment @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetEditable ====
-'':SetEditable( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+'':SetEditable(editable @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetHasFrame ====
-'':SetHasFrame( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+'':SetHasFrame(setting @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetInnerBorder ====
-'':SetInnerBorder( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Border#T|Gtk.Gtk.Border.T]])''
+'':SetInnerBorder(border @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Border#T|Gtk.Gtk.Border.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetInvisibleChar ====
-'':SetInvisibleChar( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':SetInvisibleChar(ch @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetMaxLength ====
-'':SetMaxLength( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':SetMaxLength(max @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetPosition ====
-'':SetPosition( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':SetPosition(position @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetText ====
-'':SetText( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+'':SetText(text @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====
-''New()''
+''New() : [[# T| T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 
 ==== NewWithMaxLength ====
-''NewWithMaxLength()''
+''NewWithMaxLength(max : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[# T| T]]''
 
 

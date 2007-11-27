@@ -5,70 +5,70 @@
 
 
 ==== :Unref ====
-'':Unref( @ [[#T|T]])''
+'':Unref(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Ref ====
-'':Ref( @ [[#T|T]])''
+'':Ref(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Colormap#T|Gtk.Gdk.Colormap.T]]''
 
 
 ==== :QueryColor ====
-'':QueryColor( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]])''
+'':QueryColor(self @ [[#T|T]], pixel @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], result @ [[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetVisual ====
-'':GetVisual( @ [[#T|T]])''
+'':GetVisual(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Visual#T|Gtk.Gdk.Visual.T]]''
 
 
 ==== :Size ====
-'':Size( @ [[#T|T]])''
+'':Size( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Colors ====
-'':Colors( @ [[#T|T]])''
+'':Colors( @ [[#T|T]]) : [[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]]''
 
 
 ==== :Visual ====
-'':Visual( @ [[#T|T]])''
+'':Visual( @ [[#T|T]]) : [[..:..:Gtk:Gdk:Visual#T|Gtk.Gdk.Visual.T]]''
 
 
 ==== :WindowingData ====
-'':WindowingData( @ [[#T|T]])''
+'':WindowingData( @ [[#T|T]]) : [[..:..:Std:Address#T|Std.Address.T]]''
 
 
 ==== :AllocColor ====
-'':AllocColor( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+'':AllocColor(self @ [[#T|T]], color @ [[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]], writeable @ [[..:..:Std:Symbol#T|Std.Symbol.T]], best_match @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :AllocColors ====
-'':AllocColors( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':AllocColors(self @ [[#T|T]], colors @ [[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]], ncolors @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], writeable @ [[..:..:Std:Symbol#T|Std.Symbol.T]], best_match @ [[..:..:Std:Symbol#T|Std.Symbol.T]], success @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Change ====
-'':Change( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':Change(self @ [[#T|T]], ncolors @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :FreeColors ====
-'':FreeColors( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':FreeColors(self @ [[#T|T]], colors @ [[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]], ncolors @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetScreen ====
-'':GetScreen( @ [[#T|T]])''
+'':GetScreen(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Screen#T|Gtk.Gdk.Screen.T]]''
 
 
 ==== New ====
-''New()''
+''New(visual : [[..:..:Gtk:Gdk:Visual#T|Gtk.Gdk.Visual.T]], allocate : [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[# T| T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 
 ==== GetSystemSize ====
-''GetSystemSize()''
+''GetSystemSize() : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== GetSystem ====
-''GetSystem()''
+''GetSystem() : [[..:..:Gtk:Gdk:Colormap#T|Gtk.Gdk.Colormap.T]]''
 
 

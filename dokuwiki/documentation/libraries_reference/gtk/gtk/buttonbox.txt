@@ -9,58 +9,58 @@
 
 
 ==== :SetLayout ====
-'':SetLayout( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:ButtonBoxStyle#T|Gtk.Gtk.ButtonBoxStyle.T]])''
+'':SetLayout(self @ [[#T|T]], layout_style @ [[..:..:Gtk:Gtk:ButtonBoxStyle#T|Gtk.Gtk.ButtonBoxStyle.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :ChildMinWidth ====
-'':ChildMinWidth( @ [[#T|T]])''
+'':ChildMinWidth( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :ChildMinHeight ====
-'':ChildMinHeight( @ [[#T|T]])''
+'':ChildMinHeight( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :ChildIpadX ====
-'':ChildIpadX( @ [[#T|T]])''
+'':ChildIpadX( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :ChildIpadY ====
-'':ChildIpadY( @ [[#T|T]])''
+'':ChildIpadY( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :LayoutStyle ====
-'':LayoutStyle( @ [[#T|T]])''
+'':LayoutStyle( @ [[#T|T]]) : [[..:..:Gtk:Gtk:ButtonBoxStyle#T|Gtk.Gtk.ButtonBoxStyle.T]]''
 
 
 ==== :GetChildIpadding ====
-'':GetChildIpadding( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':GetChildIpadding(self @ [[#T|T]], ipad_x @ [[..:..:Std:Object#T|Std.Object.T]], ipad_y @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetChildSecondary ====
-'':GetChildSecondary( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]])''
+'':GetChildSecondary(self @ [[#T|T]], child @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :GetChildSize ====
-'':GetChildSize( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':GetChildSize(self @ [[#T|T]], min_width @ [[..:..:Std:Object#T|Std.Object.T]], min_height @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetLayout ====
-'':GetLayout( @ [[#T|T]])''
+'':GetLayout(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:ButtonBoxStyle#T|Gtk.Gtk.ButtonBoxStyle.T]]''
 
 
 ==== :SetChildIpadding ====
-'':SetChildIpadding( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':SetChildIpadding(self @ [[#T|T]], ipad_x @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], ipad_y @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetChildSecondary ====
-'':SetChildSecondary( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+'':SetChildSecondary(self @ [[#T|T]], child @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], is_secondary @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetChildSize ====
-'':SetChildSize( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':SetChildSize(self @ [[#T|T]], min_width @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], min_height @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 

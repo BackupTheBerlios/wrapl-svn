@@ -8,234 +8,234 @@
 
 
 ==== :UnsetModelDragSource ====
-'':UnsetModelDragSource( @ [[#T|T]])''
+'':UnsetModelDragSource(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :UnsetModelDragDest ====
-'':UnsetModelDragDest( @ [[#T|T]])''
+'':UnsetModelDragDest(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :UnselectPath ====
-'':UnselectPath( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]])''
+'':UnselectPath(self @ [[#T|T]], path @ [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Priv ====
-'':Priv( @ [[#T|T]])''
+'':Priv( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :ConvertWidgetToBinWindowCoords ====
-'':ConvertWidgetToBinWindowCoords( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':ConvertWidgetToBinWindowCoords(self @ [[#T|T]], wx @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], wy @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], bx @ [[..:..:Std:Object#T|Std.Object.T]], by @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :CreateDragIcon ====
-'':CreateDragIcon( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]])''
+'':CreateDragIcon(self @ [[#T|T]], path @ [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]]) : [[..:..:Gtk:Gdk:Pixmap#T|Gtk.Gdk.Pixmap.T]]''
 
 
 ==== :EnableModelDragDest ====
-'':EnableModelDragDest( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TargetEntry#T|Gtk.Gtk.TargetEntry.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':EnableModelDragDest(self @ [[#T|T]], targets @ [[..:..:Gtk:Gtk:TargetEntry#T|Gtk.Gtk.TargetEntry.T]], n_targets @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], actions @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :EnableModelDragSource ====
-'':EnableModelDragSource( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Gtk:Gtk:TargetEntry#T|Gtk.Gtk.TargetEntry.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':EnableModelDragSource(self @ [[#T|T]], start_button_mask @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], targets @ [[..:..:Gtk:Gtk:TargetEntry#T|Gtk.Gtk.TargetEntry.T]], n_targets @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], actions @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetColumnSpacing ====
-'':GetColumnSpacing( @ [[#T|T]])''
+'':GetColumnSpacing(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :GetColumns ====
-'':GetColumns( @ [[#T|T]])''
+'':GetColumns(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :GetCursor ====
-'':GetCursor( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':GetCursor(self @ [[#T|T]], path @ [[..:..:Std:Object#T|Std.Object.T]], cell @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :GetDestItemAtPos ====
-'':GetDestItemAtPos( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':GetDestItemAtPos(self @ [[#T|T]], drag_x @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], drag_y @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], path @ [[..:..:Std:Object#T|Std.Object.T]], pos @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :GetDragDestItem ====
-'':GetDragDestItem( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':GetDragDestItem(self @ [[#T|T]], path @ [[..:..:Std:Object#T|Std.Object.T]], pos @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetItemAtPos ====
-'':GetItemAtPos( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':GetItemAtPos(self @ [[#T|T]], x @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], path @ [[..:..:Std:Object#T|Std.Object.T]], cell @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :GetItemWidth ====
-'':GetItemWidth( @ [[#T|T]])''
+'':GetItemWidth(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :GetMargin ====
-'':GetMargin( @ [[#T|T]])''
+'':GetMargin(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :GetMarkupColumn ====
-'':GetMarkupColumn( @ [[#T|T]])''
+'':GetMarkupColumn(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :GetModel ====
-'':GetModel( @ [[#T|T]])''
+'':GetModel(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:TreeModel#T|Gtk.Gtk.TreeModel.T]]''
 
 
 ==== :GetOrientation ====
-'':GetOrientation( @ [[#T|T]])''
+'':GetOrientation(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Orientation#T|Gtk.Gtk.Orientation.T]]''
 
 
 ==== :GetPathAtPos ====
-'':GetPathAtPos( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':GetPathAtPos(self @ [[#T|T]], x @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]]''
 
 
 ==== :GetPixbufColumn ====
-'':GetPixbufColumn( @ [[#T|T]])''
+'':GetPixbufColumn(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :GetReorderable ====
-'':GetReorderable( @ [[#T|T]])''
+'':GetReorderable(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :GetRowSpacing ====
-'':GetRowSpacing( @ [[#T|T]])''
+'':GetRowSpacing(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :GetSelectedItems ====
-'':GetSelectedItems( @ [[#T|T]])''
+'':GetSelectedItems(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetSelectionMode ====
-'':GetSelectionMode( @ [[#T|T]])''
+'':GetSelectionMode(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:SelectionMode#T|Gtk.Gtk.SelectionMode.T]]''
 
 
 ==== :GetSpacing ====
-'':GetSpacing( @ [[#T|T]])''
+'':GetSpacing(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :GetTextColumn ====
-'':GetTextColumn( @ [[#T|T]])''
+'':GetTextColumn(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :GetTooltipColumn ====
-'':GetTooltipColumn( @ [[#T|T]])''
+'':GetTooltipColumn(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :GetTooltipContext ====
-'':GetTooltipContext( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]])''
+'':GetTooltipContext(self @ [[#T|T]], x @ [[..:..:Std:Object#T|Std.Object.T]], y @ [[..:..:Std:Object#T|Std.Object.T]], keyboard_tip @ [[..:..:Std:Symbol#T|Std.Symbol.T]], model @ [[..:..:Std:Object#T|Std.Object.T]], path @ [[..:..:Std:Object#T|Std.Object.T]], iter @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :GetVisibleRange ====
-'':GetVisibleRange( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':GetVisibleRange(self @ [[#T|T]], start_path @ [[..:..:Std:Object#T|Std.Object.T]], end_path @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :ItemActivated ====
-'':ItemActivated( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]])''
+'':ItemActivated(self @ [[#T|T]], path @ [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :PathIsSelected ====
-'':PathIsSelected( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]])''
+'':PathIsSelected(self @ [[#T|T]], path @ [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :ScrollToPath ====
-'':ScrollToPath( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+'':ScrollToPath(self @ [[#T|T]], path @ [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]], use_align @ [[..:..:Std:Symbol#T|Std.Symbol.T]], row_align @ [[..:..:Std:Real#T|Std.Real.T]], col_align @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SelectAll ====
-'':SelectAll( @ [[#T|T]])''
+'':SelectAll(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SelectPath ====
-'':SelectPath( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]])''
+'':SelectPath(self @ [[#T|T]], path @ [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SelectedForeach ====
-'':SelectedForeach( @ [[#T|T]],  @ [[..:..:Std:Function#T|Std.Function.T]],  @ [[..:..:Std:Address#T|Std.Address.T]])''
+'':SelectedForeach(self @ [[#T|T]], func @ [[..:..:Std:Function#T|Std.Function.T]], data @ [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetColumnSpacing ====
-'':SetColumnSpacing( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':SetColumnSpacing(self @ [[#T|T]], column_spacing @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetColumns ====
-'':SetColumns( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':SetColumns(self @ [[#T|T]], columns @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetCursor ====
-'':SetCursor( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]],  @ [[..:..:Gtk:Gtk:CellRenderer#T|Gtk.Gtk.CellRenderer.T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+'':SetCursor(self @ [[#T|T]], path @ [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]], cell @ [[..:..:Gtk:Gtk:CellRenderer#T|Gtk.Gtk.CellRenderer.T]], start_editing @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetDragDestItem ====
-'':SetDragDestItem( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]],  @ [[..:..:Gtk:Gtk:IconViewDropPosition#T|Gtk.Gtk.IconViewDropPosition.T]])''
+'':SetDragDestItem(self @ [[#T|T]], path @ [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]], pos @ [[..:..:Gtk:Gtk:IconViewDropPosition#T|Gtk.Gtk.IconViewDropPosition.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetItemWidth ====
-'':SetItemWidth( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':SetItemWidth(self @ [[#T|T]], item_width @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetMargin ====
-'':SetMargin( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':SetMargin(self @ [[#T|T]], margin @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetMarkupColumn ====
-'':SetMarkupColumn( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':SetMarkupColumn(self @ [[#T|T]], column @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetModel ====
-'':SetModel( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TreeModel#T|Gtk.Gtk.TreeModel.T]])''
+'':SetModel(self @ [[#T|T]], model @ [[..:..:Gtk:Gtk:TreeModel#T|Gtk.Gtk.TreeModel.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetOrientation ====
-'':SetOrientation( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Orientation#T|Gtk.Gtk.Orientation.T]])''
+'':SetOrientation(self @ [[#T|T]], orientation @ [[..:..:Gtk:Gtk:Orientation#T|Gtk.Gtk.Orientation.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetPixbufColumn ====
-'':SetPixbufColumn( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':SetPixbufColumn(self @ [[#T|T]], column @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetReorderable ====
-'':SetReorderable( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+'':SetReorderable(self @ [[#T|T]], reorderable @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetRowSpacing ====
-'':SetRowSpacing( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':SetRowSpacing(self @ [[#T|T]], row_spacing @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetSelectionMode ====
-'':SetSelectionMode( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:SelectionMode#T|Gtk.Gtk.SelectionMode.T]])''
+'':SetSelectionMode(self @ [[#T|T]], mode @ [[..:..:Gtk:Gtk:SelectionMode#T|Gtk.Gtk.SelectionMode.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetSpacing ====
-'':SetSpacing( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':SetSpacing(self @ [[#T|T]], spacing @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetTextColumn ====
-'':SetTextColumn( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':SetTextColumn(self @ [[#T|T]], column @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetTooltipCell ====
-'':SetTooltipCell( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Tooltip#T|Gtk.Gtk.Tooltip.T]],  @ [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]],  @ [[..:..:Gtk:Gtk:CellRenderer#T|Gtk.Gtk.CellRenderer.T]])''
+'':SetTooltipCell(self @ [[#T|T]], tooltip @ [[..:..:Gtk:Gtk:Tooltip#T|Gtk.Gtk.Tooltip.T]], path @ [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]], cell @ [[..:..:Gtk:Gtk:CellRenderer#T|Gtk.Gtk.CellRenderer.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetTooltipColumn ====
-'':SetTooltipColumn( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':SetTooltipColumn(self @ [[#T|T]], column @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetTooltipItem ====
-'':SetTooltipItem( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Tooltip#T|Gtk.Gtk.Tooltip.T]],  @ [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]])''
+'':SetTooltipItem(self @ [[#T|T]], tooltip @ [[..:..:Gtk:Gtk:Tooltip#T|Gtk.Gtk.Tooltip.T]], path @ [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :UnselectAll ====
-'':UnselectAll( @ [[#T|T]])''
+'':UnselectAll(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====
-''New()''
+''New() : [[# T| T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 
 ==== NewWithModel ====
-''NewWithModel()''
+''NewWithModel(model : [[..:..:Gtk:Gtk:TreeModel#T|Gtk.Gtk.TreeModel.T]]) : [[# T| T]]''
 
 

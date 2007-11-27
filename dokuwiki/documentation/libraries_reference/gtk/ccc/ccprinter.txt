@@ -5,18 +5,18 @@
 
 
 ==== :PrintPage ====
-'':PrintPage( @ [[#T|T]])''
+'':PrintPage(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Filename ====
-'':Filename( @ [[#T|T]])''
+'':Filename( @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== New ====
-''New()''
+''New(filename : [[..:..:Std:String#T|Std.String.T]]) : [[# T| T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 

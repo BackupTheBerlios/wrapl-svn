@@ -8,50 +8,50 @@
 
 
 ==== :SetValuePos ====
-'':SetValuePos( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:PositionType#T|Gtk.Gtk.PositionType.T]])''
+'':SetValuePos(self @ [[#T|T]], pos @ [[..:..:Gtk:Gtk:PositionType#T|Gtk.Gtk.PositionType.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Digits ====
-'':Digits( @ [[#T|T]])''
+'':Digits( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :DrawValue ====
-'':DrawValue( @ [[#T|T]])''
+'':DrawValue( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :ValuePos ====
-'':ValuePos( @ [[#T|T]])''
+'':ValuePos( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :GetDigits ====
-'':GetDigits( @ [[#T|T]])''
+'':GetDigits(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :GetDrawValue ====
-'':GetDrawValue( @ [[#T|T]])''
+'':GetDrawValue(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :GetLayout ====
-'':GetLayout( @ [[#T|T]])''
+'':GetLayout(self @ [[#T|T]]) : [[..:..:Gtk:Pango:Layout#T|Gtk.Pango.Layout.T]]''
 
 
 ==== :GetLayoutOffsets ====
-'':GetLayoutOffsets( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':GetLayoutOffsets(self @ [[#T|T]], x @ [[..:..:Std:Object#T|Std.Object.T]], y @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetValuePos ====
-'':GetValuePos( @ [[#T|T]])''
+'':GetValuePos(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:PositionType#T|Gtk.Gtk.PositionType.T]]''
 
 
 ==== :SetDigits ====
-'':SetDigits( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':SetDigits(self @ [[#T|T]], digits @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetDrawValue ====
-'':SetDrawValue( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+'':SetDrawValue(self @ [[#T|T]], draw_value @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 

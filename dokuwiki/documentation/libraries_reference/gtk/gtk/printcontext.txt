@@ -5,46 +5,46 @@
 
 
 ==== :SetCairoContext ====
-'':SetCairoContext( @ [[#T|T]],  @ [[..:..:Gtk:Cairo:CairoT#T|Gtk.Cairo.CairoT.T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+'':SetCairoContext(self @ [[#T|T]], cr @ [[..:..:Gtk:Cairo:CairoT#T|Gtk.Cairo.CairoT.T]], dpi_x @ [[..:..:Std:Real#T|Std.Real.T]], dpi_y @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :CreatePangoContext ====
-'':CreatePangoContext( @ [[#T|T]])''
+'':CreatePangoContext(self @ [[#T|T]]) : [[..:..:Gtk:Pango:Context#T|Gtk.Pango.Context.T]]''
 
 
 ==== :CreatePangoLayout ====
-'':CreatePangoLayout( @ [[#T|T]])''
+'':CreatePangoLayout(self @ [[#T|T]]) : [[..:..:Gtk:Pango:Layout#T|Gtk.Pango.Layout.T]]''
 
 
 ==== :GetCairoContext ====
-'':GetCairoContext( @ [[#T|T]])''
+'':GetCairoContext(self @ [[#T|T]]) : [[..:..:Gtk:Cairo:CairoT#T|Gtk.Cairo.CairoT.T]]''
 
 
 ==== :GetDpiX ====
-'':GetDpiX( @ [[#T|T]])''
+'':GetDpiX(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :GetDpiY ====
-'':GetDpiY( @ [[#T|T]])''
+'':GetDpiY(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :GetHeight ====
-'':GetHeight( @ [[#T|T]])''
+'':GetHeight(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :GetPageSetup ====
-'':GetPageSetup( @ [[#T|T]])''
+'':GetPageSetup(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:PageSetup#T|Gtk.Gtk.PageSetup.T]]''
 
 
 ==== :GetPangoFontmap ====
-'':GetPangoFontmap( @ [[#T|T]])''
+'':GetPangoFontmap(self @ [[#T|T]]) : [[..:..:Gtk:Pango:FontMap#T|Gtk.Pango.FontMap.T]]''
 
 
 ==== :GetWidth ====
-'':GetWidth( @ [[#T|T]])''
+'':GetWidth(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 

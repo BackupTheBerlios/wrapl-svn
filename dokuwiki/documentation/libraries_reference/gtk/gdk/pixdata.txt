@@ -3,47 +3,47 @@
 
 
 ==== :ToCsource ====
-'':ToCsource( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':ToCsource(self @ [[#T|T]], name @ [[..:..:Std:String#T|Std.String.T]], dump_type @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Magic ====
-'':Magic( @ [[#T|T]])''
+'':Magic( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Length ====
-'':Length( @ [[#T|T]])''
+'':Length( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :PixdataType ====
-'':PixdataType( @ [[#T|T]])''
+'':PixdataType( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Rowstride ====
-'':Rowstride( @ [[#T|T]])''
+'':Rowstride( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Width ====
-'':Width( @ [[#T|T]])''
+'':Width( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Height ====
-'':Height( @ [[#T|T]])''
+'':Height( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :PixelData ====
-'':PixelData( @ [[#T|T]])''
+'':PixelData( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Deserialize ====
-'':Deserialize( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':Deserialize(self @ [[#T|T]], stream_length @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], stream @ [[..:..:Std:Object#T|Std.Object.T]], error @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :FromPixbuf ====
-'':FromPixbuf( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Pixbuf#T|Gtk.Gdk.Pixbuf.T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+'':FromPixbuf(self @ [[#T|T]], pixbuf @ [[..:..:Gtk:Gdk:Pixbuf#T|Gtk.Gdk.Pixbuf.T]], use_rle @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Address#T|Std.Address.T]]''
 
 
 ==== :Serialize ====
-'':Serialize( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':Serialize(self @ [[#T|T]], stream_length_p @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====

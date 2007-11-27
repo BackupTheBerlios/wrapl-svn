@@ -7,86 +7,86 @@
 
 
 ==== :SetText ====
-'':SetText( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+'':SetText(text @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetSizePixels ====
-'':SetSizePixels( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+'':SetSizePixels(size_pixels @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Anchor ====
-'':Anchor( @ [[#T|T]])''
+'':Anchor( @ [[#T|T]]) : [[..:..:Gtk:Gtk:AnchorType#T|Gtk.Gtk.AnchorType.T]]''
 
 
 ==== :X ====
-'':X( @ [[#T|T]])''
+'':X( @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :Y ====
-'':Y( @ [[#T|T]])''
+'':Y( @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :SizePixels ====
-'':SizePixels( @ [[#T|T]])''
+'':SizePixels( @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :Layout ====
-'':Layout( @ [[#T|T]])''
+'':Layout( @ [[#T|T]]) : [[..:..:Gtk:Pango:Layout#T|Gtk.Pango.Layout.T]]''
 
 
 ==== :FontDescription ====
-'':FontDescription( @ [[#T|T]])''
+'':FontDescription( @ [[#T|T]]) : [[..:..:Gtk:Pango:FontDescription#T|Gtk.Pango.FontDescription.T]]''
 
 
 ==== :Editable ====
-'':Editable( @ [[#T|T]])''
+'':Editable( @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :Cursor ====
-'':Cursor( @ [[#T|T]])''
+'':Cursor( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :CursorTrail ====
-'':CursorTrail( @ [[#T|T]])''
+'':CursorTrail( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :GetText ====
-'':GetText( @ [[#T|T]])''
+'':GetText(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== :IsEditable ====
-'':IsEditable( @ [[#T|T]])''
+'':IsEditable( @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :SetAnchor ====
-'':SetAnchor( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+'':SetAnchor(x @ [[#T|T]], y @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetAnchorType ====
-'':SetAnchorType( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:AnchorType#T|Gtk.Gtk.AnchorType.T]])''
+'':SetAnchorType(anchor @ [[#T|T]],  @ [[..:..:Gtk:Gtk:AnchorType#T|Gtk.Gtk.AnchorType.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetAttributes ====
-'':SetAttributes( @ [[#T|T]],  @ [[..:..:Gtk:Pango:AttrList#T|Gtk.Pango.AttrList.T]])''
+'':SetAttributes(attrs @ [[#T|T]],  @ [[..:..:Gtk:Pango:AttrList#T|Gtk.Pango.AttrList.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetEditable ====
-'':SetEditable( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+'':SetEditable(editable @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetFontDescription ====
-'':SetFontDescription( @ [[#T|T]],  @ [[..:..:Gtk:Pango:FontDescription#T|Gtk.Pango.FontDescription.T]])''
+'':SetFontDescription(desc @ [[#T|T]],  @ [[..:..:Gtk:Pango:FontDescription#T|Gtk.Pango.FontDescription.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetMarkup ====
-'':SetMarkup( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+'':SetMarkup(markup @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====
-''New()''
+''New(text : [[..:..:Std:String#T|Std.String.T]]) : [[# T| T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 

@@ -5,18 +5,18 @@
 
 
 ==== :GetMetrics ====
-'':GetMetrics( @ [[#T|T]])''
+'':GetMetrics(self @ [[#T|T]]) : [[..:..:Gtk:Pango:FontMetrics#T|Gtk.Pango.FontMetrics.T]]''
 
 
 ==== :Foreach ====
-'':Foreach( @ [[#T|T]],  @ [[..:..:Std:Function#T|Std.Function.T]],  @ [[..:..:Std:Address#T|Std.Address.T]])''
+'':Foreach(self @ [[#T|T]], func @ [[..:..:Std:Function#T|Std.Function.T]], data @ [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetFont ====
-'':GetFont( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':GetFont(self @ [[#T|T]], wc @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Gtk:Pango:Font#T|Gtk.Pango.Font.T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 

@@ -3,62 +3,62 @@
 
 
 ==== :GetHintMetrics ====
-'':GetHintMetrics( @ [[#T|T]])''
+'':GetHintMetrics(self @ [[#T|T]]) : [[..:..:Gtk:Cairo:CairoHintMetricsT#T|Gtk.Cairo.CairoHintMetricsT.T]]''
 
 
 ==== :Copy ====
-'':Copy( @ [[#T|T]])''
+'':Copy(self @ [[#T|T]]) : [[..:..:Gtk:Cairo:CairoFontOptionsT#T|Gtk.Cairo.CairoFontOptionsT.T]]''
 
 
 ==== :Destroy ====
-'':Destroy( @ [[#T|T]])''
+'':Destroy(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Status ====
-'':Status( @ [[#T|T]])''
+'':Status(self @ [[#T|T]]) : [[..:..:Gtk:Cairo:CairoStatusT#T|Gtk.Cairo.CairoStatusT.T]]''
 
 
 ==== :Merge ====
-'':Merge( @ [[#T|T]],  @ [[..:..:Gtk:Cairo:CairoFontOptionsT#T|Gtk.Cairo.CairoFontOptionsT.T]])''
+'':Merge(self @ [[#T|T]], other @ [[..:..:Gtk:Cairo:CairoFontOptionsT#T|Gtk.Cairo.CairoFontOptionsT.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Equal ====
-'':Equal( @ [[#T|T]],  @ [[..:..:Gtk:Cairo:CairoFontOptionsT#T|Gtk.Cairo.CairoFontOptionsT.T]])''
+'':Equal(self @ [[#T|T]], other @ [[..:..:Gtk:Cairo:CairoFontOptionsT#T|Gtk.Cairo.CairoFontOptionsT.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Hash ====
-'':Hash( @ [[#T|T]])''
+'':Hash(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetAntialias ====
-'':SetAntialias( @ [[#T|T]],  @ [[..:..:Gtk:Cairo:CairoAntialiasT#T|Gtk.Cairo.CairoAntialiasT.T]])''
+'':SetAntialias(self @ [[#T|T]], antialias @ [[..:..:Gtk:Cairo:CairoAntialiasT#T|Gtk.Cairo.CairoAntialiasT.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetAntialias ====
-'':GetAntialias( @ [[#T|T]])''
+'':GetAntialias(self @ [[#T|T]]) : [[..:..:Gtk:Cairo:CairoAntialiasT#T|Gtk.Cairo.CairoAntialiasT.T]]''
 
 
 ==== :SetSubpixelOrder ====
-'':SetSubpixelOrder( @ [[#T|T]],  @ [[..:..:Gtk:Cairo:CairoSubpixelOrderT#T|Gtk.Cairo.CairoSubpixelOrderT.T]])''
+'':SetSubpixelOrder(self @ [[#T|T]], subpixel_order @ [[..:..:Gtk:Cairo:CairoSubpixelOrderT#T|Gtk.Cairo.CairoSubpixelOrderT.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetSubpixelOrder ====
-'':GetSubpixelOrder( @ [[#T|T]])''
+'':GetSubpixelOrder(self @ [[#T|T]]) : [[..:..:Gtk:Cairo:CairoSubpixelOrderT#T|Gtk.Cairo.CairoSubpixelOrderT.T]]''
 
 
 ==== :SetHintStyle ====
-'':SetHintStyle( @ [[#T|T]],  @ [[..:..:Gtk:Cairo:CairoHintStyleT#T|Gtk.Cairo.CairoHintStyleT.T]])''
+'':SetHintStyle(self @ [[#T|T]], hint_style @ [[..:..:Gtk:Cairo:CairoHintStyleT#T|Gtk.Cairo.CairoHintStyleT.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetHintStyle ====
-'':GetHintStyle( @ [[#T|T]])''
+'':GetHintStyle(self @ [[#T|T]]) : [[..:..:Gtk:Cairo:CairoHintStyleT#T|Gtk.Cairo.CairoHintStyleT.T]]''
 
 
 ==== :SetHintMetrics ====
-'':SetHintMetrics( @ [[#T|T]],  @ [[..:..:Gtk:Cairo:CairoHintMetricsT#T|Gtk.Cairo.CairoHintMetricsT.T]])''
+'':SetHintMetrics(self @ [[#T|T]], hint_metrics @ [[..:..:Gtk:Cairo:CairoHintMetricsT#T|Gtk.Cairo.CairoHintMetricsT.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== Create ====
-''Create()''
+''Create() : [[..:..:Gtk:Cairo:CairoFontOptionsT#T|Gtk.Cairo.CairoFontOptionsT.T]]''
 
 

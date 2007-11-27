@@ -3,46 +3,46 @@
 
 
 ==== :Perturb ====
-'':Perturb( @ [[#T|T]])''
+'':Perturb(self @ [[#T|T]]) : [[..:..:Gtk:Art:Vpath#T|Gtk.Art.Vpath.T]]''
 
 
 ==== :Dash ====
-'':Dash( @ [[#T|T]],  @ [[..:..:Gtk:Art:VpathDash#T|Gtk.Art.VpathDash.T]])''
+'':Dash(self @ [[#T|T]], dash @ [[..:..:Gtk:Art:VpathDash#T|Gtk.Art.VpathDash.T]]) : [[..:..:Gtk:Art:Vpath#T|Gtk.Art.Vpath.T]]''
 
 
 ==== :Code ====
-'':Code( @ [[#T|T]])''
+'':Code( @ [[#T|T]]) : [[..:..:Gtk:Art:Pathcode#T|Gtk.Art.Pathcode.T]]''
 
 
 ==== :X ====
-'':X( @ [[#T|T]])''
+'':X( @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :Y ====
-'':Y( @ [[#T|T]])''
+'':Y( @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :AddPoint ====
-'':AddPoint( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Gtk:Art:Pathcode#T|Gtk.Art.Pathcode.T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+'':AddPoint(self @ [[#T|T]], pn_points @ [[..:..:Std:Object#T|Std.Object.T]], pn_points_max @ [[..:..:Std:Object#T|Std.Object.T]], code @ [[..:..:Gtk:Art:Pathcode#T|Gtk.Art.Pathcode.T]], x @ [[..:..:Std:Real#T|Std.Real.T]], y @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :AffineTransform ====
-'':AffineTransform( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':AffineTransform(self @ [[#T|T]], matrix @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Gtk:Art:Vpath#T|Gtk.Art.Vpath.T]]''
 
 
 ==== :BboxDrect ====
-'':BboxDrect( @ [[#T|T]],  @ [[..:..:Gtk:Art:DRect#T|Gtk.Art.DRect.T]])''
+'':BboxDrect(self @ [[#T|T]], drect @ [[..:..:Gtk:Art:DRect#T|Gtk.Art.DRect.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :BboxIrect ====
-'':BboxIrect( @ [[#T|T]],  @ [[..:..:Gtk:Art:IRect#T|Gtk.Art.IRect.T]])''
+'':BboxIrect(self @ [[#T|T]], irect @ [[..:..:Gtk:Art:IRect#T|Gtk.Art.IRect.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== NewCircle ====
-''NewCircle()''
+''NewCircle(x : [[..:..:Std:Real#T|Std.Real.T]], y : [[..:..:Std:Real#T|Std.Real.T]], r : [[..:..:Std:Real#T|Std.Real.T]]) : [[# T| T]]''
 
 
 ==== FromSvp ====
-''FromSvp()''
+''FromSvp(svp) : [[..:..:Gtk:Art:Vpath#T|Gtk.Art.Vpath.T]]''
 
 

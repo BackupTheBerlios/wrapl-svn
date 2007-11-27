@@ -8,162 +8,162 @@
 
 
 ==== :Update ====
-'':Update( @ [[#T|T]])''
+'':Update(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Spin ====
-'':Spin( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:SpinType#T|Gtk.Gtk.SpinType.T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+'':Spin(self @ [[#T|T]], direction @ [[..:..:Gtk:Gtk:SpinType#T|Gtk.Gtk.SpinType.T]], increment @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetWrap ====
-'':SetWrap( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+'':SetWrap(self @ [[#T|T]], wrap @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Adjustment ====
-'':Adjustment( @ [[#T|T]])''
+'':Adjustment( @ [[#T|T]]) : [[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]]''
 
 
 ==== :Panel ====
-'':Panel( @ [[#T|T]])''
+'':Panel( @ [[#T|T]]) : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]]''
 
 
 ==== :Timer ====
-'':Timer( @ [[#T|T]])''
+'':Timer( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :ClimbRate ====
-'':ClimbRate( @ [[#T|T]])''
+'':ClimbRate( @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :TimerStep ====
-'':TimerStep( @ [[#T|T]])''
+'':TimerStep( @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :UpdatePolicy ====
-'':UpdatePolicy( @ [[#T|T]])''
+'':UpdatePolicy( @ [[#T|T]]) : [[..:..:Gtk:Gtk:SpinButtonUpdatePolicy#T|Gtk.Gtk.SpinButtonUpdatePolicy.T]]''
 
 
 ==== :InChild ====
-'':InChild( @ [[#T|T]])''
+'':InChild( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :ClickChild ====
-'':ClickChild( @ [[#T|T]])''
+'':ClickChild( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Button ====
-'':Button( @ [[#T|T]])''
+'':Button( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :NeedTimer ====
-'':NeedTimer( @ [[#T|T]])''
+'':NeedTimer( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :TimerCalls ====
-'':TimerCalls( @ [[#T|T]])''
+'':TimerCalls( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Digits ====
-'':Digits( @ [[#T|T]])''
+'':Digits( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Numeric ====
-'':Numeric( @ [[#T|T]])''
+'':Numeric( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Wrap ====
-'':Wrap( @ [[#T|T]])''
+'':Wrap( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :SnapToTicks ====
-'':SnapToTicks( @ [[#T|T]])''
+'':SnapToTicks( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Configure ====
-'':Configure( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':Configure(self @ [[#T|T]], adjustment @ [[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]], climb_rate @ [[..:..:Std:Real#T|Std.Real.T]], digits @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetAdjustment ====
-'':GetAdjustment( @ [[#T|T]])''
+'':GetAdjustment(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]]''
 
 
 ==== :GetDigits ====
-'':GetDigits( @ [[#T|T]])''
+'':GetDigits(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :GetIncrements ====
-'':GetIncrements( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':GetIncrements(self @ [[#T|T]], step @ [[..:..:Std:Object#T|Std.Object.T]], page @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetNumeric ====
-'':GetNumeric( @ [[#T|T]])''
+'':GetNumeric(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :GetRange ====
-'':GetRange( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':GetRange(self @ [[#T|T]], min @ [[..:..:Std:Object#T|Std.Object.T]], max @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetSnapToTicks ====
-'':GetSnapToTicks( @ [[#T|T]])''
+'':GetSnapToTicks(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :GetUpdatePolicy ====
-'':GetUpdatePolicy( @ [[#T|T]])''
+'':GetUpdatePolicy(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:SpinButtonUpdatePolicy#T|Gtk.Gtk.SpinButtonUpdatePolicy.T]]''
 
 
 ==== :GetValue ====
-'':GetValue( @ [[#T|T]])''
+'':GetValue(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :GetValueAsInt ====
-'':GetValueAsInt( @ [[#T|T]])''
+'':GetValueAsInt(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :GetWrap ====
-'':GetWrap( @ [[#T|T]])''
+'':GetWrap(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :SetAdjustment ====
-'':SetAdjustment( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]])''
+'':SetAdjustment(self @ [[#T|T]], adjustment @ [[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetDigits ====
-'':SetDigits( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':SetDigits(self @ [[#T|T]], digits @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetIncrements ====
-'':SetIncrements( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+'':SetIncrements(self @ [[#T|T]], step @ [[..:..:Std:Real#T|Std.Real.T]], page @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetNumeric ====
-'':SetNumeric( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+'':SetNumeric(self @ [[#T|T]], numeric @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetRange ====
-'':SetRange( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+'':SetRange(self @ [[#T|T]], min @ [[..:..:Std:Real#T|Std.Real.T]], max @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetSnapToTicks ====
-'':SetSnapToTicks( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+'':SetSnapToTicks(self @ [[#T|T]], snap_to_ticks @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetUpdatePolicy ====
-'':SetUpdatePolicy( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:SpinButtonUpdatePolicy#T|Gtk.Gtk.SpinButtonUpdatePolicy.T]])''
+'':SetUpdatePolicy(self @ [[#T|T]], policy @ [[..:..:Gtk:Gtk:SpinButtonUpdatePolicy#T|Gtk.Gtk.SpinButtonUpdatePolicy.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetValue ====
-'':SetValue( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+'':SetValue(self @ [[#T|T]], value @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====
-''New()''
+''New(adjustment : [[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]], climb_rate : [[..:..:Std:Real#T|Std.Real.T]], digits : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[# T| T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 
 ==== NewWithRange ====
-''NewWithRange()''
+''NewWithRange(min : [[..:..:Std:Real#T|Std.Real.T]], max : [[..:..:Std:Real#T|Std.Real.T]], step : [[..:..:Std:Real#T|Std.Real.T]]) : [[# T| T]]''
 
 

@@ -3,59 +3,59 @@
 
 
 ==== :Union ====
-'':Union( @ [[#T|T]],  @ [[..:..:Gtk:Art:SVP#T|Gtk.Art.SVP.T]])''
+'':Union(self @ [[#T|T]], svp2 @ [[..:..:Gtk:Art:SVP#T|Gtk.Art.SVP.T]]) : [[..:..:Gtk:Art:SVP#T|Gtk.Art.SVP.T]]''
 
 
 ==== :Uncross ====
-'':Uncross( @ [[#T|T]])''
+'':Uncross(self @ [[#T|T]]) : [[..:..:Gtk:Art:SVP#T|Gtk.Art.SVP.T]]''
 
 
 ==== :RewindUncrossed ====
-'':RewindUncrossed( @ [[#T|T]],  @ [[..:..:Gtk:Art:WindRule#T|Gtk.Art.WindRule.T]])''
+'':RewindUncrossed(self @ [[#T|T]], rule @ [[..:..:Gtk:Art:WindRule#T|Gtk.Art.WindRule.T]]) : [[..:..:Gtk:Art:SVP#T|Gtk.Art.SVP.T]]''
 
 
 ==== :RenderAaIter ====
-'':RenderAaIter( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':RenderAaIter(self @ [[#T|T]], x0 @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y0 @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], x1 @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y1 @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Gtk:Art:SVPRenderAAIter#T|Gtk.Art.SVPRenderAAIter.T]]''
 
 
 ==== :NSegs ====
-'':NSegs( @ [[#T|T]])''
+'':NSegs( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Segs ====
-'':Segs( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':Segs( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Gtk:Art:SVPSeg#T|Gtk.Art.SVPSeg.T]]''
 
 
 ==== :AddSegment ====
-'':AddSegment( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Gtk:Art:Point#T|Gtk.Art.Point.T]],  @ [[..:..:Gtk:Art:DRect#T|Gtk.Art.DRect.T]])''
+'':AddSegment(self @ [[#T|T]], pn_segs_max @ [[..:..:Std:Object#T|Std.Object.T]], pn_points_max @ [[..:..:Std:Object#T|Std.Object.T]], n_points @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], dir @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], points @ [[..:..:Gtk:Art:Point#T|Gtk.Art.Point.T]], bbox @ [[..:..:Gtk:Art:DRect#T|Gtk.Art.DRect.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Diff ====
-'':Diff( @ [[#T|T]],  @ [[..:..:Gtk:Art:SVP#T|Gtk.Art.SVP.T]])''
+'':Diff(self @ [[#T|T]], svp2 @ [[..:..:Gtk:Art:SVP#T|Gtk.Art.SVP.T]]) : [[..:..:Gtk:Art:SVP#T|Gtk.Art.SVP.T]]''
 
 
 ==== :Free ====
-'':Free( @ [[#T|T]])''
+'':Free(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Intersect ====
-'':Intersect( @ [[#T|T]],  @ [[..:..:Gtk:Art:SVP#T|Gtk.Art.SVP.T]])''
+'':Intersect(self @ [[#T|T]], svp2 @ [[..:..:Gtk:Art:SVP#T|Gtk.Art.SVP.T]]) : [[..:..:Gtk:Art:SVP#T|Gtk.Art.SVP.T]]''
 
 
 ==== :Intersector ====
-'':Intersector( @ [[#T|T]],  @ [[..:..:Gtk:Art:SvpWriter#T|Gtk.Art.SvpWriter.T]])''
+'':Intersector(self @ [[#T|T]], out @ [[..:..:Gtk:Art:SvpWriter#T|Gtk.Art.SvpWriter.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Minus ====
-'':Minus( @ [[#T|T]],  @ [[..:..:Gtk:Art:SVP#T|Gtk.Art.SVP.T]])''
+'':Minus(self @ [[#T|T]], svp2 @ [[..:..:Gtk:Art:SVP#T|Gtk.Art.SVP.T]]) : [[..:..:Gtk:Art:SVP#T|Gtk.Art.SVP.T]]''
 
 
 ==== :PointDist ====
-'':PointDist( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+'':PointDist(self @ [[#T|T]], x @ [[..:..:Std:Real#T|Std.Real.T]], y @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :PointWind ====
-'':PointWind( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+'':PointWind(self @ [[#T|T]], x @ [[..:..:Std:Real#T|Std.Real.T]], y @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== New ====
@@ -63,14 +63,14 @@
 
 
 ==== VpathStrokeRaw ====
-''VpathStrokeRaw()''
+''VpathStrokeRaw(vpath, join, cap, line_width, miter_limit, flatness) : [[..:..:Gtk:Art:Vpath#T|Gtk.Art.Vpath.T]]''
 
 
 ==== VpathStroke ====
-''VpathStroke()''
+''VpathStroke(vpath, join, cap, line_width, miter_limit, flatness) : [[..:..:Gtk:Art:SVP#T|Gtk.Art.SVP.T]]''
 
 
 ==== FromVpath ====
-''FromVpath()''
+''FromVpath(vpath) : [[..:..:Gtk:Art:SVP#T|Gtk.Art.SVP.T]]''
 
 

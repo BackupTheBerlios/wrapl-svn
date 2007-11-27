@@ -9,54 +9,54 @@
 
 
 ==== :StopQuery ====
-'':StopQuery( @ [[#T|T]])''
+'':StopQuery(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :StartQuery ====
-'':StartQuery( @ [[#T|T]])''
+'':StartQuery(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :EmitAlways ====
-'':EmitAlways( @ [[#T|T]])''
+'':EmitAlways( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :InQuery ====
-'':InQuery( @ [[#T|T]])''
+'':InQuery( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :LabelInactive ====
-'':LabelInactive( @ [[#T|T]])''
+'':LabelInactive( @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== :LabelNoTip ====
-'':LabelNoTip( @ [[#T|T]])''
+'':LabelNoTip( @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== :Caller ====
-'':Caller( @ [[#T|T]])''
+'':Caller( @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
 
 ==== :LastCrossed ====
-'':LastCrossed( @ [[#T|T]])''
+'':LastCrossed( @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
 
 ==== :QueryCursor ====
-'':QueryCursor( @ [[#T|T]])''
+'':QueryCursor( @ [[#T|T]]) : [[..:..:Gtk:Gdk:Cursor#T|Gtk.Gdk.Cursor.T]]''
 
 
 ==== :SetCaller ====
-'':SetCaller( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]])''
+'':SetCaller(self @ [[#T|T]], caller @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetLabels ====
-'':SetLabels( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+'':SetLabels(self @ [[#T|T]], label_inactive @ [[..:..:Std:String#T|Std.String.T]], label_no_tip @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====
-''New()''
+''New() : [[# T| T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 

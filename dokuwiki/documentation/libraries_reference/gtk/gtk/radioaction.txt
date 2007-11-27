@@ -7,30 +7,30 @@
 
 
 ==== :SetGroup ====
-'':SetGroup( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':SetGroup(self @ [[#T|T]], group @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetCurrentValue ====
-'':SetCurrentValue( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':SetCurrentValue(self @ [[#T|T]], current_value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :PrivateData ====
-'':PrivateData( @ [[#T|T]])''
+'':PrivateData( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetCurrentValue ====
-'':GetCurrentValue( @ [[#T|T]])''
+'':GetCurrentValue(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :GetGroup ====
-'':GetGroup( @ [[#T|T]])''
+'':GetGroup(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====
-''New()''
+''New(name : [[..:..:Std:String#T|Std.String.T]], label : [[..:..:Std:String#T|Std.String.T]], tooltip : [[..:..:Std:String#T|Std.String.T]], stock_id : [[..:..:Std:String#T|Std.String.T]], value : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[# T| T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 

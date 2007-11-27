@@ -12,18 +12,18 @@
 
 
 ==== :Priv ====
-'':Priv( @ [[#T|T]])''
+'':Priv( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====
-''New()''
+''New(title : [[..:..:Std:String#T|Std.String.T]], parent : [[..:..:Gtk:Gtk:Window#T|Gtk.Gtk.Window.T]], action : [[..:..:Gtk:Gtk:FileChooserAction#T|Gtk.Gtk.FileChooserAction.T]], first_button_text : [[..:..:Std:String#T|Std.String.T]], ___ : [[..:..:Std:Object#T|Std.Object.T]]) : [[# T| T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 
 ==== NewWithBackend ====
-''NewWithBackend()''
+''NewWithBackend(title : [[..:..:Std:String#T|Std.String.T]], parent : [[..:..:Gtk:Gtk:Window#T|Gtk.Gtk.Window.T]], action : [[..:..:Gtk:Gtk:FileChooserAction#T|Gtk.Gtk.FileChooserAction.T]], backend : [[..:..:Std:String#T|Std.String.T]], first_button_text : [[..:..:Std:String#T|Std.String.T]], ___ : [[..:..:Std:Object#T|Std.Object.T]]) : [[# T| T]]''
 
 

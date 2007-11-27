@@ -5,7 +5,7 @@
 
 
 ==== :Preinit ====
-'':Preinit( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:List#T|Std.List.T]])''
+'':Preinit(argc @ [[#T|T]], argv @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:List#T|Std.List.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Postinit ====
@@ -17,7 +17,7 @@
 
 
 ==== :LocateFile ====
-'':LocateFile( @ [[#T|T]],  @ [[..:..:Gtk:Gnome:FileDomain#T|Gtk.Gnome.FileDomain.T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':LocateFile(only_if_exists @ [[#T|T]], ret_locations @ [[..:..:Gtk:Gnome:FileDomain#T|Gtk.Gnome.FileDomain.T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]],  @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== :GetHumanReadableName ====
@@ -25,50 +25,50 @@
 
 
 ==== :GetAppVersion ====
-'':GetAppVersion( @ [[#T|T]])''
+'':GetAppVersion( @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== :GetAppId ====
-'':GetAppId( @ [[#T|T]])''
+'':GetAppId(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== :Priv ====
-'':Priv( @ [[#T|T]])''
+'':Priv( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== Get ====
-''Get()''
+''Get() : [[..:..:Gtk:Gnome:Program#T|Gtk.Gnome.Program.T]]''
 
 
 ==== ModuleRegistered ====
-''ModuleRegistered()''
+''ModuleRegistered(module_info) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== ModuleRegister ====
-''ModuleRegister()''
+''ModuleRegister(module_info) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== ModuleLoad ====
-''ModuleLoad()''
+''ModuleLoad(mod_name) : [[..:..:Gtk:Gnome:ModuleInfo#T|Gtk.Gnome.ModuleInfo.T]]''
 
 
 ==== InstallProperty ====
-''InstallProperty()''
+''InstallProperty(pclass, get_fn, set_fn, pspec) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== Initv ====
-''Initv()''
+''Initv(type, app_id, app_version, module_info, argc, argv, first_property_name, args) : [[..:..:Gtk:Gnome:Program#T|Gtk.Gnome.Program.T]]''
 
 
 ==== InitParamv ====
-''InitParamv()''
+''InitParamv(type, app_id, app_version, module_info, argc, argv, nparams, params) : [[..:..:Gtk:Gnome:Program#T|Gtk.Gnome.Program.T]]''
 
 
 ==== Init ====
-''Init()''
+''Init(app_id, app_version, module_info, argc, argv, first_property_name, ___) : [[..:..:Gtk:Gnome:Program#T|Gtk.Gnome.Program.T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 

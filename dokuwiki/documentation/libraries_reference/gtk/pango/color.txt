@@ -3,31 +3,31 @@
 
 
 ==== :ToString ====
-'':ToString( @ [[#T|T]])''
+'':ToString(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== :Parse ====
-'':Parse( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+'':Parse(self @ [[#T|T]], spec @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :Red ====
-'':Red( @ [[#T|T]])''
+'':Red( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Green ====
-'':Green( @ [[#T|T]])''
+'':Green( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Blue ====
-'':Blue( @ [[#T|T]])''
+'':Blue( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Copy ====
-'':Copy( @ [[#T|T]])''
+'':Copy(self @ [[#T|T]]) : [[..:..:Gtk:Pango:Color#T|Gtk.Pango.Color.T]]''
 
 
 ==== :Free ====
-'':Free( @ [[#T|T]])''
+'':Free(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====
@@ -35,6 +35,6 @@
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 

@@ -7,18 +7,18 @@
 
 
 ==== :SetPathDef ====
-'':SetPathDef( @ [[#T|T]],  @ [[..:..:Gtk:GnomeCanvas:PathDef#T|Gtk.GnomeCanvas.PathDef.T]])''
+'':SetPathDef(self @ [[#T|T]], def @ [[..:..:Gtk:GnomeCanvas:PathDef#T|Gtk.GnomeCanvas.PathDef.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Priv ====
-'':Priv( @ [[#T|T]])''
+'':Priv( @ [[#T|T]]) : [[..:..:Gtk:GnomeCanvas:ShapePriv#T|Gtk.GnomeCanvas.ShapePriv.T]]''
 
 
 ==== :GetPathDef ====
-'':GetPathDef( @ [[#T|T]])''
+'':GetPathDef(self @ [[#T|T]]) : [[..:..:Gtk:GnomeCanvas:PathDef#T|Gtk.GnomeCanvas.PathDef.T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 

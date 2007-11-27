@@ -8,422 +8,422 @@
 
 
 ==== :WindowToBufferCoords ====
-'':WindowToBufferCoords( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TextWindowType#T|Gtk.Gtk.TextWindowType.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':WindowToBufferCoords(self @ [[#T|T]], win @ [[..:..:Gtk:Gtk:TextWindowType#T|Gtk.Gtk.TextWindowType.T]], window_x @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], window_y @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], buffer_x @ [[..:..:Std:Object#T|Std.Object.T]], buffer_y @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :StartsDisplayLine ====
-'':StartsDisplayLine( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]])''
+'':StartsDisplayLine(self @ [[#T|T]], iter @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :SetWrapMode ====
-'':SetWrapMode( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:WrapMode#T|Gtk.Gtk.WrapMode.T]])''
+'':SetWrapMode(self @ [[#T|T]], wrap_mode @ [[..:..:Gtk:Gtk:WrapMode#T|Gtk.Gtk.WrapMode.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Layout ====
-'':Layout( @ [[#T|T]])''
+'':Layout( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Buffer ====
-'':Buffer( @ [[#T|T]])''
+'':Buffer( @ [[#T|T]]) : [[..:..:Gtk:Gtk:TextBuffer#T|Gtk.Gtk.TextBuffer.T]]''
 
 
 ==== :SelectionDragHandler ====
-'':SelectionDragHandler( @ [[#T|T]])''
+'':SelectionDragHandler( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :ScrollTimeout ====
-'':ScrollTimeout( @ [[#T|T]])''
+'':ScrollTimeout( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :PixelsAboveLines ====
-'':PixelsAboveLines( @ [[#T|T]])''
+'':PixelsAboveLines( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :PixelsBelowLines ====
-'':PixelsBelowLines( @ [[#T|T]])''
+'':PixelsBelowLines( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :PixelsInsideWrap ====
-'':PixelsInsideWrap( @ [[#T|T]])''
+'':PixelsInsideWrap( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :WrapMode ====
-'':WrapMode( @ [[#T|T]])''
+'':WrapMode( @ [[#T|T]]) : [[..:..:Gtk:Gtk:WrapMode#T|Gtk.Gtk.WrapMode.T]]''
 
 
 ==== :Justify ====
-'':Justify( @ [[#T|T]])''
+'':Justify( @ [[#T|T]]) : [[..:..:Gtk:Gtk:Justification#T|Gtk.Gtk.Justification.T]]''
 
 
 ==== :LeftMargin ====
-'':LeftMargin( @ [[#T|T]])''
+'':LeftMargin( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :RightMargin ====
-'':RightMargin( @ [[#T|T]])''
+'':RightMargin( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Indent ====
-'':Indent( @ [[#T|T]])''
+'':Indent( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Tabs ====
-'':Tabs( @ [[#T|T]])''
+'':Tabs( @ [[#T|T]]) : [[..:..:Gtk:Pango:TabArray#T|Gtk.Pango.TabArray.T]]''
 
 
 ==== :Editable ====
-'':Editable( @ [[#T|T]])''
+'':Editable( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :OverwriteMode ====
-'':OverwriteMode( @ [[#T|T]])''
+'':OverwriteMode( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :CursorVisible ====
-'':CursorVisible( @ [[#T|T]])''
+'':CursorVisible( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :NeedImReset ====
-'':NeedImReset( @ [[#T|T]])''
+'':NeedImReset( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :AcceptsTab ====
-'':AcceptsTab( @ [[#T|T]])''
+'':AcceptsTab( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :WidthChanged ====
-'':WidthChanged( @ [[#T|T]])''
+'':WidthChanged( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :OnscreenValidated ====
-'':OnscreenValidated( @ [[#T|T]])''
+'':OnscreenValidated( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :MouseCursorObscured ====
-'':MouseCursorObscured( @ [[#T|T]])''
+'':MouseCursorObscured( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :TextWindow ====
-'':TextWindow( @ [[#T|T]])''
+'':TextWindow( @ [[#T|T]]) : [[..:..:Gtk:Gtk:TextWindow#T|Gtk.Gtk.TextWindow.T]]''
 
 
 ==== :LeftWindow ====
-'':LeftWindow( @ [[#T|T]])''
+'':LeftWindow( @ [[#T|T]]) : [[..:..:Gtk:Gtk:TextWindow#T|Gtk.Gtk.TextWindow.T]]''
 
 
 ==== :RightWindow ====
-'':RightWindow( @ [[#T|T]])''
+'':RightWindow( @ [[#T|T]]) : [[..:..:Gtk:Gtk:TextWindow#T|Gtk.Gtk.TextWindow.T]]''
 
 
 ==== :TopWindow ====
-'':TopWindow( @ [[#T|T]])''
+'':TopWindow( @ [[#T|T]]) : [[..:..:Gtk:Gtk:TextWindow#T|Gtk.Gtk.TextWindow.T]]''
 
 
 ==== :BottomWindow ====
-'':BottomWindow( @ [[#T|T]])''
+'':BottomWindow( @ [[#T|T]]) : [[..:..:Gtk:Gtk:TextWindow#T|Gtk.Gtk.TextWindow.T]]''
 
 
 ==== :Hadjustment ====
-'':Hadjustment( @ [[#T|T]])''
+'':Hadjustment( @ [[#T|T]]) : [[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]]''
 
 
 ==== :Vadjustment ====
-'':Vadjustment( @ [[#T|T]])''
+'':Vadjustment( @ [[#T|T]]) : [[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]]''
 
 
 ==== :Xoffset ====
-'':Xoffset( @ [[#T|T]])''
+'':Xoffset( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Yoffset ====
-'':Yoffset( @ [[#T|T]])''
+'':Yoffset( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Width ====
-'':Width( @ [[#T|T]])''
+'':Width( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Height ====
-'':Height( @ [[#T|T]])''
+'':Height( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :VirtualCursorX ====
-'':VirtualCursorX( @ [[#T|T]])''
+'':VirtualCursorX( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :VirtualCursorY ====
-'':VirtualCursorY( @ [[#T|T]])''
+'':VirtualCursorY( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :FirstParaMark ====
-'':FirstParaMark( @ [[#T|T]])''
+'':FirstParaMark( @ [[#T|T]]) : [[..:..:Gtk:Gtk:TextMark#T|Gtk.Gtk.TextMark.T]]''
 
 
 ==== :FirstParaPixels ====
-'':FirstParaPixels( @ [[#T|T]])''
+'':FirstParaPixels( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :DndMark ====
-'':DndMark( @ [[#T|T]])''
+'':DndMark( @ [[#T|T]]) : [[..:..:Gtk:Gtk:TextMark#T|Gtk.Gtk.TextMark.T]]''
 
 
 ==== :BlinkTimeout ====
-'':BlinkTimeout( @ [[#T|T]])''
+'':BlinkTimeout( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :FirstValidateIdle ====
-'':FirstValidateIdle( @ [[#T|T]])''
+'':FirstValidateIdle( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :IncrementalValidateIdle ====
-'':IncrementalValidateIdle( @ [[#T|T]])''
+'':IncrementalValidateIdle( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :ImContext ====
-'':ImContext( @ [[#T|T]])''
+'':ImContext( @ [[#T|T]]) : [[..:..:Gtk:Gtk:IMContext#T|Gtk.Gtk.IMContext.T]]''
 
 
 ==== :PopupMenu ====
-'':PopupMenu( @ [[#T|T]])''
+'':PopupMenu( @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
 
 ==== :DragStartX ====
-'':DragStartX( @ [[#T|T]])''
+'':DragStartX( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :DragStartY ====
-'':DragStartY( @ [[#T|T]])''
+'':DragStartY( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Children ====
-'':Children( @ [[#T|T]])''
+'':Children( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :PendingScroll ====
-'':PendingScroll( @ [[#T|T]])''
+'':PendingScroll( @ [[#T|T]]) : [[..:..:Gtk:Gtk:TextPendingScroll#T|Gtk.Gtk.TextPendingScroll.T]]''
 
 
 ==== :PendingPlaceCursorButton ====
-'':PendingPlaceCursorButton( @ [[#T|T]])''
+'':PendingPlaceCursorButton( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :AddChildAtAnchor ====
-'':AddChildAtAnchor( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]],  @ [[..:..:Gtk:Gtk:TextChildAnchor#T|Gtk.Gtk.TextChildAnchor.T]])''
+'':AddChildAtAnchor(self @ [[#T|T]], child @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], anchor @ [[..:..:Gtk:Gtk:TextChildAnchor#T|Gtk.Gtk.TextChildAnchor.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :AddChildInWindow ====
-'':AddChildInWindow( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]],  @ [[..:..:Gtk:Gtk:TextWindowType#T|Gtk.Gtk.TextWindowType.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':AddChildInWindow(self @ [[#T|T]], child @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], which_window @ [[..:..:Gtk:Gtk:TextWindowType#T|Gtk.Gtk.TextWindowType.T]], xpos @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], ypos @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :BackwardDisplayLine ====
-'':BackwardDisplayLine( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]])''
+'':BackwardDisplayLine(self @ [[#T|T]], iter @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :BackwardDisplayLineStart ====
-'':BackwardDisplayLineStart( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]])''
+'':BackwardDisplayLineStart(self @ [[#T|T]], iter @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :BufferToWindowCoords ====
-'':BufferToWindowCoords( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TextWindowType#T|Gtk.Gtk.TextWindowType.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':BufferToWindowCoords(self @ [[#T|T]], win @ [[..:..:Gtk:Gtk:TextWindowType#T|Gtk.Gtk.TextWindowType.T]], buffer_x @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], buffer_y @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], window_x @ [[..:..:Std:Object#T|Std.Object.T]], window_y @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :ForwardDisplayLine ====
-'':ForwardDisplayLine( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]])''
+'':ForwardDisplayLine(self @ [[#T|T]], iter @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :ForwardDisplayLineEnd ====
-'':ForwardDisplayLineEnd( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]])''
+'':ForwardDisplayLineEnd(self @ [[#T|T]], iter @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :GetAcceptsTab ====
-'':GetAcceptsTab( @ [[#T|T]])''
+'':GetAcceptsTab(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :GetBorderWindowSize ====
-'':GetBorderWindowSize( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TextWindowType#T|Gtk.Gtk.TextWindowType.T]])''
+'':GetBorderWindowSize(self @ [[#T|T]], type @ [[..:..:Gtk:Gtk:TextWindowType#T|Gtk.Gtk.TextWindowType.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :GetBuffer ====
-'':GetBuffer( @ [[#T|T]])''
+'':GetBuffer(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:TextBuffer#T|Gtk.Gtk.TextBuffer.T]]''
 
 
 ==== :GetCursorVisible ====
-'':GetCursorVisible( @ [[#T|T]])''
+'':GetCursorVisible(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :GetDefaultAttributes ====
-'':GetDefaultAttributes( @ [[#T|T]])''
+'':GetDefaultAttributes(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:TextAttributes#T|Gtk.Gtk.TextAttributes.T]]''
 
 
 ==== :GetEditable ====
-'':GetEditable( @ [[#T|T]])''
+'':GetEditable(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :GetIndent ====
-'':GetIndent( @ [[#T|T]])''
+'':GetIndent(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :GetIterAtLocation ====
-'':GetIterAtLocation( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':GetIterAtLocation(self @ [[#T|T]], iter @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]], x @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetIterAtPosition ====
-'':GetIterAtPosition( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':GetIterAtPosition(self @ [[#T|T]], iter @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]], trailing @ [[..:..:Std:Object#T|Std.Object.T]], x @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetIterLocation ====
-'':GetIterLocation( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]],  @ [[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]])''
+'':GetIterLocation(self @ [[#T|T]], iter @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]], location @ [[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetJustification ====
-'':GetJustification( @ [[#T|T]])''
+'':GetJustification(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Justification#T|Gtk.Gtk.Justification.T]]''
 
 
 ==== :GetLeftMargin ====
-'':GetLeftMargin( @ [[#T|T]])''
+'':GetLeftMargin(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :GetLineAtY ====
-'':GetLineAtY( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':GetLineAtY(self @ [[#T|T]], target_iter @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]], y @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], line_top @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetLineYrange ====
-'':GetLineYrange( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':GetLineYrange(self @ [[#T|T]], iter @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]], y @ [[..:..:Std:Object#T|Std.Object.T]], height @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetOverwrite ====
-'':GetOverwrite( @ [[#T|T]])''
+'':GetOverwrite(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :GetPixelsAboveLines ====
-'':GetPixelsAboveLines( @ [[#T|T]])''
+'':GetPixelsAboveLines(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :GetPixelsBelowLines ====
-'':GetPixelsBelowLines( @ [[#T|T]])''
+'':GetPixelsBelowLines(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :GetPixelsInsideWrap ====
-'':GetPixelsInsideWrap( @ [[#T|T]])''
+'':GetPixelsInsideWrap(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :GetRightMargin ====
-'':GetRightMargin( @ [[#T|T]])''
+'':GetRightMargin(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :GetTabs ====
-'':GetTabs( @ [[#T|T]])''
+'':GetTabs(self @ [[#T|T]]) : [[..:..:Gtk:Pango:TabArray#T|Gtk.Pango.TabArray.T]]''
 
 
 ==== :GetVisibleRect ====
-'':GetVisibleRect( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]])''
+'':GetVisibleRect(self @ [[#T|T]], visible_rect @ [[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetWindow ====
-'':GetWindow( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TextWindowType#T|Gtk.Gtk.TextWindowType.T]])''
+'':GetWindow(self @ [[#T|T]], win @ [[..:..:Gtk:Gtk:TextWindowType#T|Gtk.Gtk.TextWindowType.T]]) : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]]''
 
 
 ==== :GetWindowType ====
-'':GetWindowType( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]])''
+'':GetWindowType(self @ [[#T|T]], window @ [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]]) : [[..:..:Gtk:Gtk:TextWindowType#T|Gtk.Gtk.TextWindowType.T]]''
 
 
 ==== :GetWrapMode ====
-'':GetWrapMode( @ [[#T|T]])''
+'':GetWrapMode(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:WrapMode#T|Gtk.Gtk.WrapMode.T]]''
 
 
 ==== :MoveChild ====
-'':MoveChild( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':MoveChild(self @ [[#T|T]], child @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], xpos @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], ypos @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :MoveMarkOnscreen ====
-'':MoveMarkOnscreen( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TextMark#T|Gtk.Gtk.TextMark.T]])''
+'':MoveMarkOnscreen(self @ [[#T|T]], mark @ [[..:..:Gtk:Gtk:TextMark#T|Gtk.Gtk.TextMark.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :MoveVisually ====
-'':MoveVisually( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':MoveVisually(self @ [[#T|T]], iter @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]], count @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :PlaceCursorOnscreen ====
-'':PlaceCursorOnscreen( @ [[#T|T]])''
+'':PlaceCursorOnscreen(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :ScrollMarkOnscreen ====
-'':ScrollMarkOnscreen( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TextMark#T|Gtk.Gtk.TextMark.T]])''
+'':ScrollMarkOnscreen(self @ [[#T|T]], mark @ [[..:..:Gtk:Gtk:TextMark#T|Gtk.Gtk.TextMark.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :ScrollToIter ====
-'':ScrollToIter( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+'':ScrollToIter(self @ [[#T|T]], iter @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]], within_margin @ [[..:..:Std:Real#T|Std.Real.T]], use_align @ [[..:..:Std:Symbol#T|Std.Symbol.T]], xalign @ [[..:..:Std:Real#T|Std.Real.T]], yalign @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :ScrollToMark ====
-'':ScrollToMark( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TextMark#T|Gtk.Gtk.TextMark.T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+'':ScrollToMark(self @ [[#T|T]], mark @ [[..:..:Gtk:Gtk:TextMark#T|Gtk.Gtk.TextMark.T]], within_margin @ [[..:..:Std:Real#T|Std.Real.T]], use_align @ [[..:..:Std:Symbol#T|Std.Symbol.T]], xalign @ [[..:..:Std:Real#T|Std.Real.T]], yalign @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetAcceptsTab ====
-'':SetAcceptsTab( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+'':SetAcceptsTab(self @ [[#T|T]], accepts_tab @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetBorderWindowSize ====
-'':SetBorderWindowSize( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TextWindowType#T|Gtk.Gtk.TextWindowType.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':SetBorderWindowSize(self @ [[#T|T]], type @ [[..:..:Gtk:Gtk:TextWindowType#T|Gtk.Gtk.TextWindowType.T]], size @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetBuffer ====
-'':SetBuffer( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TextBuffer#T|Gtk.Gtk.TextBuffer.T]])''
+'':SetBuffer(self @ [[#T|T]], buffer @ [[..:..:Gtk:Gtk:TextBuffer#T|Gtk.Gtk.TextBuffer.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetCursorVisible ====
-'':SetCursorVisible( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+'':SetCursorVisible(self @ [[#T|T]], setting @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetEditable ====
-'':SetEditable( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+'':SetEditable(self @ [[#T|T]], setting @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetIndent ====
-'':SetIndent( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':SetIndent(self @ [[#T|T]], indent @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetJustification ====
-'':SetJustification( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Justification#T|Gtk.Gtk.Justification.T]])''
+'':SetJustification(self @ [[#T|T]], justification @ [[..:..:Gtk:Gtk:Justification#T|Gtk.Gtk.Justification.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetLeftMargin ====
-'':SetLeftMargin( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':SetLeftMargin(self @ [[#T|T]], left_margin @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetOverwrite ====
-'':SetOverwrite( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+'':SetOverwrite(self @ [[#T|T]], overwrite @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetPixelsAboveLines ====
-'':SetPixelsAboveLines( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':SetPixelsAboveLines(self @ [[#T|T]], pixels_above_lines @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetPixelsBelowLines ====
-'':SetPixelsBelowLines( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':SetPixelsBelowLines(self @ [[#T|T]], pixels_below_lines @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetPixelsInsideWrap ====
-'':SetPixelsInsideWrap( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':SetPixelsInsideWrap(self @ [[#T|T]], pixels_inside_wrap @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetRightMargin ====
-'':SetRightMargin( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':SetRightMargin(self @ [[#T|T]], right_margin @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetTabs ====
-'':SetTabs( @ [[#T|T]],  @ [[..:..:Gtk:Pango:TabArray#T|Gtk.Pango.TabArray.T]])''
+'':SetTabs(self @ [[#T|T]], tabs @ [[..:..:Gtk:Pango:TabArray#T|Gtk.Pango.TabArray.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====
-''New()''
+''New() : [[# T| T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 
 ==== NewWithBuffer ====
-''NewWithBuffer()''
+''NewWithBuffer(buffer : [[..:..:Gtk:Gtk:TextBuffer#T|Gtk.Gtk.TextBuffer.T]]) : [[# T| T]]''
 
 

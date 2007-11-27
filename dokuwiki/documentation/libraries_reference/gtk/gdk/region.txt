@@ -3,78 +3,78 @@
 
 
 ==== :Xor ====
-'':Xor( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Region#T|Gtk.Gdk.Region.T]])''
+'':Xor(self @ [[#T|T]], source2 @ [[..:..:Gtk:Gdk:Region#T|Gtk.Gdk.Region.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :UnionWithRect ====
-'':UnionWithRect( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]])''
+'':UnionWithRect(self @ [[#T|T]], rect @ [[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Union ====
-'':Union( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Region#T|Gtk.Gdk.Region.T]])''
+'':Union(self @ [[#T|T]], source2 @ [[..:..:Gtk:Gdk:Region#T|Gtk.Gdk.Region.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Copy ====
-'':Copy( @ [[#T|T]])''
+'':Copy(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Region#T|Gtk.Gdk.Region.T]]''
 
 
 ==== :Destroy ====
-'':Destroy( @ [[#T|T]])''
+'':Destroy(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Empty ====
-'':Empty( @ [[#T|T]])''
+'':Empty(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :Equal ====
-'':Equal( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Region#T|Gtk.Gdk.Region.T]])''
+'':Equal(self @ [[#T|T]], region2 @ [[..:..:Gtk:Gdk:Region#T|Gtk.Gdk.Region.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :GetClipbox ====
-'':GetClipbox( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]])''
+'':GetClipbox(self @ [[#T|T]], rectangle @ [[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetRectangles ====
-'':GetRectangles( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':GetRectangles(self @ [[#T|T]], rectangles @ [[..:..:Std:Object#T|Std.Object.T]], n_rectangles @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Intersect ====
-'':Intersect( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Region#T|Gtk.Gdk.Region.T]])''
+'':Intersect(self @ [[#T|T]], source2 @ [[..:..:Gtk:Gdk:Region#T|Gtk.Gdk.Region.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Offset ====
-'':Offset( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':Offset(self @ [[#T|T]], dx @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], dy @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :PointIn ====
-'':PointIn( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':PointIn(self @ [[#T|T]], x @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :RectIn ====
-'':RectIn( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]])''
+'':RectIn(self @ [[#T|T]], rectangle @ [[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]]) : [[..:..:Gtk:Gdk:OverlapType#T|Gtk.Gdk.OverlapType.T]]''
 
 
 ==== :Shrink ====
-'':Shrink( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':Shrink(self @ [[#T|T]], dx @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], dy @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SpansIntersectForeach ====
-'':SpansIntersectForeach( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Span#T|Gtk.Gdk.Span.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]],  @ [[..:..:Std:Function#T|Std.Function.T]],  @ [[..:..:Std:Address#T|Std.Address.T]])''
+'':SpansIntersectForeach(self @ [[#T|T]], spans @ [[..:..:Gtk:Gdk:Span#T|Gtk.Gdk.Span.T]], n_spans @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], sorted @ [[..:..:Std:Symbol#T|Std.Symbol.T]], function @ [[..:..:Std:Function#T|Std.Function.T]], data @ [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Subtract ====
-'':Subtract( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Region#T|Gtk.Gdk.Region.T]])''
+'':Subtract(self @ [[#T|T]], source2 @ [[..:..:Gtk:Gdk:Region#T|Gtk.Gdk.Region.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====
-''New()''
+''New() : [[# T| T]]''
 
 
 ==== Rectangle ====
-''Rectangle()''
+''Rectangle(rectangle) : [[..:..:Gtk:Gdk:Region#T|Gtk.Gdk.Region.T]]''
 
 
 ==== Polygon ====
-''Polygon()''
+''Polygon(points, npoints, fill_rule) : [[..:..:Gtk:Gdk:Region#T|Gtk.Gdk.Region.T]]''
 
 

@@ -8,166 +8,166 @@
 
 
 ==== :SetPixelSize ====
-'':SetPixelSize( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':SetPixelSize(self @ [[#T|T]], pixel_size @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetFromStock ====
-'':SetFromStock( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Gtk:Gtk:IconSize#T|Gtk.Gtk.IconSize.T]])''
+'':SetFromStock(self @ [[#T|T]], stock_id @ [[..:..:Std:String#T|Std.String.T]], size @ [[..:..:Gtk:Gtk:IconSize#T|Gtk.Gtk.IconSize.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetFromPixmap ====
-'':SetFromPixmap( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Pixmap#T|Gtk.Gdk.Pixmap.T]],  @ [[..:..:Gtk:Gdk:Bitmap#T|Gtk.Gdk.Bitmap.T]])''
+'':SetFromPixmap(self @ [[#T|T]], pixmap @ [[..:..:Gtk:Gdk:Pixmap#T|Gtk.Gdk.Pixmap.T]], mask @ [[..:..:Gtk:Gdk:Bitmap#T|Gtk.Gdk.Bitmap.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetFromPixbuf ====
-'':SetFromPixbuf( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Pixbuf#T|Gtk.Gdk.Pixbuf.T]])''
+'':SetFromPixbuf(self @ [[#T|T]], pixbuf @ [[..:..:Gtk:Gdk:Pixbuf#T|Gtk.Gdk.Pixbuf.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetFromImage ====
-'':SetFromImage( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Image#T|Gtk.Gdk.Image.T]],  @ [[..:..:Gtk:Gdk:Bitmap#T|Gtk.Gdk.Bitmap.T]])''
+'':SetFromImage(self @ [[#T|T]], gdk_image @ [[..:..:Gtk:Gdk:Image#T|Gtk.Gdk.Image.T]], mask @ [[..:..:Gtk:Gdk:Bitmap#T|Gtk.Gdk.Bitmap.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetFromIconSet ====
-'':SetFromIconSet( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:IconSet#T|Gtk.Gtk.IconSet.T]],  @ [[..:..:Gtk:Gtk:IconSize#T|Gtk.Gtk.IconSize.T]])''
+'':SetFromIconSet(self @ [[#T|T]], icon_set @ [[..:..:Gtk:Gtk:IconSet#T|Gtk.Gtk.IconSet.T]], size @ [[..:..:Gtk:Gtk:IconSize#T|Gtk.Gtk.IconSize.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetFromIconName ====
-'':SetFromIconName( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Gtk:Gtk:IconSize#T|Gtk.Gtk.IconSize.T]])''
+'':SetFromIconName(self @ [[#T|T]], icon_name @ [[..:..:Std:String#T|Std.String.T]], size @ [[..:..:Gtk:Gtk:IconSize#T|Gtk.Gtk.IconSize.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetFromFile ====
-'':SetFromFile( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+'':SetFromFile(self @ [[#T|T]], filename @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetFromAnimation ====
-'':SetFromAnimation( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:PixbufAnimation#T|Gtk.Gdk.PixbufAnimation.T]])''
+'':SetFromAnimation(self @ [[#T|T]], animation @ [[..:..:Gtk:Gdk:PixbufAnimation#T|Gtk.Gdk.PixbufAnimation.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Set ====
-'':Set( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Image#T|Gtk.Gdk.Image.T]],  @ [[..:..:Gtk:Gdk:Bitmap#T|Gtk.Gdk.Bitmap.T]])''
+'':Set(self @ [[#T|T]], val @ [[..:..:Gtk:Gdk:Image#T|Gtk.Gdk.Image.T]], mask @ [[..:..:Gtk:Gdk:Bitmap#T|Gtk.Gdk.Bitmap.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :StorageType ====
-'':StorageType( @ [[#T|T]])''
+'':StorageType( @ [[#T|T]]) : [[..:..:Gtk:Gtk:ImageType#T|Gtk.Gtk.ImageType.T]]''
 
 
 ==== :Pixmap ====
-'':Pixmap( @ [[#T|T]])''
+'':Pixmap( @ [[#T|T]]) : [[..:..:Gtk:Gtk:ImagePixmapData#T|Gtk.Gtk.ImagePixmapData.T]]''
 
 
 ==== :Image ====
-'':Image( @ [[#T|T]])''
+'':Image( @ [[#T|T]]) : [[..:..:Gtk:Gtk:ImageImageData#T|Gtk.Gtk.ImageImageData.T]]''
 
 
 ==== :Pixbuf ====
-'':Pixbuf( @ [[#T|T]])''
+'':Pixbuf( @ [[#T|T]]) : [[..:..:Gtk:Gtk:ImagePixbufData#T|Gtk.Gtk.ImagePixbufData.T]]''
 
 
 ==== :Stock ====
-'':Stock( @ [[#T|T]])''
+'':Stock( @ [[#T|T]]) : [[..:..:Gtk:Gtk:ImageStockData#T|Gtk.Gtk.ImageStockData.T]]''
 
 
 ==== :IconSet ====
-'':IconSet( @ [[#T|T]])''
+'':IconSet( @ [[#T|T]]) : [[..:..:Gtk:Gtk:ImageIconSetData#T|Gtk.Gtk.ImageIconSetData.T]]''
 
 
 ==== :Anim ====
-'':Anim( @ [[#T|T]])''
+'':Anim( @ [[#T|T]]) : [[..:..:Gtk:Gtk:ImageAnimationData#T|Gtk.Gtk.ImageAnimationData.T]]''
 
 
 ==== :Name ====
-'':Name( @ [[#T|T]])''
+'':Name( @ [[#T|T]]) : [[..:..:Gtk:Gtk:ImageIconNameData#T|Gtk.Gtk.ImageIconNameData.T]]''
 
 
 ==== :Mask ====
-'':Mask( @ [[#T|T]])''
+'':Mask( @ [[#T|T]]) : [[..:..:Gtk:Gdk:Bitmap#T|Gtk.Gdk.Bitmap.T]]''
 
 
 ==== :IconSize ====
-'':IconSize( @ [[#T|T]])''
+'':IconSize( @ [[#T|T]]) : [[..:..:Gtk:Gtk:IconSize#T|Gtk.Gtk.IconSize.T]]''
 
 
 ==== :Clear ====
-'':Clear( @ [[#T|T]])''
+'':Clear(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Get ====
-'':Get( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':Get(self @ [[#T|T]], val @ [[..:..:Std:Object#T|Std.Object.T]], mask @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetAnimation ====
-'':GetAnimation( @ [[#T|T]])''
+'':GetAnimation(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:PixbufAnimation#T|Gtk.Gdk.PixbufAnimation.T]]''
 
 
 ==== :GetIconName ====
-'':GetIconName( @ [[#T|T]],  @ [[..:..:Std:List#T|Std.List.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':GetIconName(self @ [[#T|T]], icon_name @ [[..:..:Std:List#T|Std.List.T]], size @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetIconSet ====
-'':GetIconSet( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':GetIconSet(self @ [[#T|T]], icon_set @ [[..:..:Std:Object#T|Std.Object.T]], size @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetImage ====
-'':GetImage( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':GetImage(self @ [[#T|T]], gdk_image @ [[..:..:Std:Object#T|Std.Object.T]], mask @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetPixbuf ====
-'':GetPixbuf( @ [[#T|T]])''
+'':GetPixbuf(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Pixbuf#T|Gtk.Gdk.Pixbuf.T]]''
 
 
 ==== :GetPixelSize ====
-'':GetPixelSize( @ [[#T|T]])''
+'':GetPixelSize(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :GetPixmap ====
-'':GetPixmap( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':GetPixmap(self @ [[#T|T]], pixmap @ [[..:..:Std:Object#T|Std.Object.T]], mask @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetStock ====
-'':GetStock( @ [[#T|T]],  @ [[..:..:Std:List#T|Std.List.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':GetStock(self @ [[#T|T]], stock_id @ [[..:..:Std:List#T|Std.List.T]], size @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetStorageType ====
-'':GetStorageType( @ [[#T|T]])''
+'':GetStorageType(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:ImageType#T|Gtk.Gtk.ImageType.T]]''
 
 
 ==== New ====
-''New()''
+''New() : [[# T| T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 
 ==== NewFromStock ====
-''NewFromStock()''
+''NewFromStock(stock_id : [[..:..:Std:String#T|Std.String.T]], size : [[..:..:Gtk:Gtk:IconSize#T|Gtk.Gtk.IconSize.T]]) : [[# T| T]]''
 
 
 ==== NewFromPixmap ====
-''NewFromPixmap()''
+''NewFromPixmap(pixmap : [[..:..:Gtk:Gdk:Pixmap#T|Gtk.Gdk.Pixmap.T]], mask : [[..:..:Gtk:Gdk:Bitmap#T|Gtk.Gdk.Bitmap.T]]) : [[# T| T]]''
 
 
 ==== NewFromPixbuf ====
-''NewFromPixbuf()''
+''NewFromPixbuf(pixbuf : [[..:..:Gtk:Gdk:Pixbuf#T|Gtk.Gdk.Pixbuf.T]]) : [[# T| T]]''
 
 
 ==== NewFromImage ====
-''NewFromImage()''
+''NewFromImage(image : [[..:..:Gtk:Gdk:Image#T|Gtk.Gdk.Image.T]], mask : [[..:..:Gtk:Gdk:Bitmap#T|Gtk.Gdk.Bitmap.T]]) : [[# T| T]]''
 
 
 ==== NewFromIconSet ====
-''NewFromIconSet()''
+''NewFromIconSet(icon_set : [[..:..:Gtk:Gtk:IconSet#T|Gtk.Gtk.IconSet.T]], size : [[..:..:Gtk:Gtk:IconSize#T|Gtk.Gtk.IconSize.T]]) : [[# T| T]]''
 
 
 ==== NewFromIconName ====
-''NewFromIconName()''
+''NewFromIconName(icon_name : [[..:..:Std:String#T|Std.String.T]], size : [[..:..:Gtk:Gtk:IconSize#T|Gtk.Gtk.IconSize.T]]) : [[# T| T]]''
 
 
 ==== NewFromFile ====
-''NewFromFile()''
+''NewFromFile(filename : [[..:..:Std:String#T|Std.String.T]]) : [[# T| T]]''
 
 
 ==== NewFromAnimation ====
-''NewFromAnimation()''
+''NewFromAnimation(animation : [[..:..:Gtk:Gdk:PixbufAnimation#T|Gtk.Gdk.PixbufAnimation.T]]) : [[# T| T]]''
 
 

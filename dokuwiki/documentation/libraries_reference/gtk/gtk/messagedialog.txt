@@ -11,38 +11,38 @@
 
 
 ==== :SetMarkup ====
-'':SetMarkup( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+'':SetMarkup(self @ [[#T|T]], str @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetImage ====
-'':SetImage( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]])''
+'':SetImage(self @ [[#T|T]], image @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :FormatSecondaryText ====
-'':FormatSecondaryText( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':FormatSecondaryText(self @ [[#T|T]], message_format @ [[..:..:Std:String#T|Std.String.T]], ___ @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Image ====
-'':Image( @ [[#T|T]])''
+'':Image( @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
 
 ==== :Label ====
-'':Label( @ [[#T|T]])''
+'':Label( @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
 
 ==== :FormatSecondaryMarkup ====
-'':FormatSecondaryMarkup( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':FormatSecondaryMarkup(self @ [[#T|T]], message_format @ [[..:..:Std:String#T|Std.String.T]], ___ @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====
-''New()''
+''New(parent : [[..:..:Gtk:Gtk:Window#T|Gtk.Gtk.Window.T]], flags : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], type : [[..:..:Gtk:Gtk:MessageType#T|Gtk.Gtk.MessageType.T]], buttons : [[..:..:Gtk:Gtk:ButtonsType#T|Gtk.Gtk.ButtonsType.T]], message_format : [[..:..:Std:String#T|Std.String.T]], ___ : [[..:..:Std:Object#T|Std.Object.T]]) : [[# T| T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 
 ==== NewWithMarkup ====
-''NewWithMarkup()''
+''NewWithMarkup(parent : [[..:..:Gtk:Gtk:Window#T|Gtk.Gtk.Window.T]], flags : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], type : [[..:..:Gtk:Gtk:MessageType#T|Gtk.Gtk.MessageType.T]], buttons : [[..:..:Gtk:Gtk:ButtonsType#T|Gtk.Gtk.ButtonsType.T]], message_format : [[..:..:Std:String#T|Std.String.T]], ___ : [[..:..:Std:Object#T|Std.Object.T]]) : [[# T| T]]''
 
 

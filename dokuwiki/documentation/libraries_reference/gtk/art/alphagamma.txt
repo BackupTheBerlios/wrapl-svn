@@ -3,26 +3,26 @@
 
 
 ==== :Free ====
-'':Free( @ [[#T|T]])''
+'':Free(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Gamma ====
-'':Gamma( @ [[#T|T]])''
+'':Gamma( @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :InvtableSize ====
-'':InvtableSize( @ [[#T|T]])''
+'':InvtableSize( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Table ====
-'':Table( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':Table( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Invtable ====
-'':Invtable( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':Invtable( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====
-''New()''
+''New(gamma : [[..:..:Std:Real#T|Std.Real.T]]) : [[# T| T]]''
 
 

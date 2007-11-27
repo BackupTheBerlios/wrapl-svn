@@ -9,274 +9,274 @@
 
 
 ==== :WorldToWindow ====
-'':WorldToWindow( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':WorldToWindow(self @ [[#T|T]], worldx @ [[..:..:Std:Real#T|Std.Real.T]], worldy @ [[..:..:Std:Real#T|Std.Real.T]], winx @ [[..:..:Std:Object#T|Std.Object.T]], winy @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :WindowToWorld ====
-'':WindowToWorld( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':WindowToWorld(self @ [[#T|T]], winx @ [[..:..:Std:Real#T|Std.Real.T]], winy @ [[..:..:Std:Real#T|Std.Real.T]], worldx @ [[..:..:Std:Object#T|Std.Object.T]], worldy @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :W2cD ====
-'':W2cD( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':W2cD(self @ [[#T|T]], wx @ [[..:..:Std:Real#T|Std.Real.T]], wy @ [[..:..:Std:Real#T|Std.Real.T]], cx @ [[..:..:Std:Object#T|Std.Object.T]], cy @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :W2cAffine ====
-'':W2cAffine( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':W2cAffine(self @ [[#T|T]], affine @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :W2c ====
-'':W2c( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':W2c(self @ [[#T|T]], wx @ [[..:..:Std:Real#T|Std.Real.T]], wy @ [[..:..:Std:Real#T|Std.Real.T]], cx @ [[..:..:Std:Object#T|Std.Object.T]], cy @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :UpdateSvpClip ====
-'':UpdateSvpClip( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Gtk:Art:SVP#T|Gtk.Art.SVP.T]],  @ [[..:..:Gtk:Art:SVP#T|Gtk.Art.SVP.T]])''
+'':UpdateSvpClip(self @ [[#T|T]], p_svp @ [[..:..:Std:Object#T|Std.Object.T]], new_svp @ [[..:..:Gtk:Art:SVP#T|Gtk.Art.SVP.T]], clip_svp @ [[..:..:Gtk:Art:SVP#T|Gtk.Art.SVP.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :UpdateSvp ====
-'':UpdateSvp( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Gtk:Art:SVP#T|Gtk.Art.SVP.T]])''
+'':UpdateSvp(self @ [[#T|T]], p_svp @ [[..:..:Std:Object#T|Std.Object.T]], new_svp @ [[..:..:Gtk:Art:SVP#T|Gtk.Art.SVP.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :UpdateNow ====
-'':UpdateNow( @ [[#T|T]])''
+'':UpdateNow(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetStippleOrigin ====
-'':SetStippleOrigin( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]])''
+'':SetStippleOrigin(self @ [[#T|T]], gc @ [[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Root ====
-'':Root( @ [[#T|T]])''
+'':Root( @ [[#T|T]]) : [[..:..:Gtk:GnomeCanvas:Item#T|Gtk.GnomeCanvas.Item.T]]''
 
 
 ==== :RedrawArea ====
-'':RedrawArea( @ [[#T|T]])''
+'':RedrawArea( @ [[#T|T]]) : [[..:..:Gtk:Art:Uta#T|Gtk.Art.Uta.T]]''
 
 
 ==== :CurrentItem ====
-'':CurrentItem( @ [[#T|T]])''
+'':CurrentItem( @ [[#T|T]]) : [[..:..:Gtk:GnomeCanvas:Item#T|Gtk.GnomeCanvas.Item.T]]''
 
 
 ==== :NewCurrentItem ====
-'':NewCurrentItem( @ [[#T|T]])''
+'':NewCurrentItem( @ [[#T|T]]) : [[..:..:Gtk:GnomeCanvas:Item#T|Gtk.GnomeCanvas.Item.T]]''
 
 
 ==== :GrabbedItem ====
-'':GrabbedItem( @ [[#T|T]])''
+'':GrabbedItem( @ [[#T|T]]) : [[..:..:Gtk:GnomeCanvas:Item#T|Gtk.GnomeCanvas.Item.T]]''
 
 
 ==== :FocusedItem ====
-'':FocusedItem( @ [[#T|T]])''
+'':FocusedItem( @ [[#T|T]]) : [[..:..:Gtk:GnomeCanvas:Item#T|Gtk.GnomeCanvas.Item.T]]''
 
 
 ==== :PixmapGc ====
-'':PixmapGc( @ [[#T|T]])''
+'':PixmapGc( @ [[#T|T]]) : [[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]]''
 
 
 ==== :PickEvent ====
-'':PickEvent( @ [[#T|T]])''
+'':PickEvent( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :ScrollX1 ====
-'':ScrollX1( @ [[#T|T]])''
+'':ScrollX1( @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :ScrollY1 ====
-'':ScrollY1( @ [[#T|T]])''
+'':ScrollY1( @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :ScrollX2 ====
-'':ScrollX2( @ [[#T|T]])''
+'':ScrollX2( @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :ScrollY2 ====
-'':ScrollY2( @ [[#T|T]])''
+'':ScrollY2( @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :PixelsPerUnit ====
-'':PixelsPerUnit( @ [[#T|T]])''
+'':PixelsPerUnit( @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :IdleId ====
-'':IdleId( @ [[#T|T]])''
+'':IdleId( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :RootDestroyId ====
-'':RootDestroyId( @ [[#T|T]])''
+'':RootDestroyId( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :RedrawX1 ====
-'':RedrawX1( @ [[#T|T]])''
+'':RedrawX1( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :RedrawY1 ====
-'':RedrawY1( @ [[#T|T]])''
+'':RedrawY1( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :RedrawX2 ====
-'':RedrawX2( @ [[#T|T]])''
+'':RedrawX2( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :RedrawY2 ====
-'':RedrawY2( @ [[#T|T]])''
+'':RedrawY2( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :DrawXofs ====
-'':DrawXofs( @ [[#T|T]])''
+'':DrawXofs( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :DrawYofs ====
-'':DrawYofs( @ [[#T|T]])''
+'':DrawYofs( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :ZoomXofs ====
-'':ZoomXofs( @ [[#T|T]])''
+'':ZoomXofs( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :ZoomYofs ====
-'':ZoomYofs( @ [[#T|T]])''
+'':ZoomYofs( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :State ====
-'':State( @ [[#T|T]])''
+'':State( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :GrabbedEventMask ====
-'':GrabbedEventMask( @ [[#T|T]])''
+'':GrabbedEventMask( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :CloseEnough ====
-'':CloseEnough( @ [[#T|T]])''
+'':CloseEnough( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :CenterScrollRegion ====
-'':CenterScrollRegion( @ [[#T|T]])''
+'':CenterScrollRegion( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :NeedUpdate ====
-'':NeedUpdate( @ [[#T|T]])''
+'':NeedUpdate( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :NeedRedraw ====
-'':NeedRedraw( @ [[#T|T]])''
+'':NeedRedraw( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :NeedRepick ====
-'':NeedRepick( @ [[#T|T]])''
+'':NeedRepick( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :LeftGrabbedItem ====
-'':LeftGrabbedItem( @ [[#T|T]])''
+'':LeftGrabbedItem( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :InRepick ====
-'':InRepick( @ [[#T|T]])''
+'':InRepick( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Aa ====
-'':Aa( @ [[#T|T]])''
+'':Aa( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Dither ====
-'':Dither( @ [[#T|T]])''
+'':Dither( @ [[#T|T]]) : [[..:..:Gtk:Gdk:RgbDither#T|Gtk.Gdk.RgbDither.T]]''
 
 
 ==== :C2w ====
-'':C2w( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':C2w(self @ [[#T|T]], cx @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], cy @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], wx @ [[..:..:Std:Object#T|Std.Object.T]], wy @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetCenterScrollRegion ====
-'':GetCenterScrollRegion( @ [[#T|T]])''
+'':GetCenterScrollRegion(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :GetColor ====
-'':GetColor( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]])''
+'':GetColor(self @ [[#T|T]], spec @ [[..:..:Std:String#T|Std.String.T]], color @ [[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :GetColorPixel ====
-'':GetColorPixel( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':GetColorPixel(self @ [[#T|T]], rgba @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :GetDither ====
-'':GetDither( @ [[#T|T]])''
+'':GetDither(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:RgbDither#T|Gtk.Gdk.RgbDither.T]]''
 
 
 ==== :GetItemAt ====
-'':GetItemAt( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+'':GetItemAt(self @ [[#T|T]], x @ [[..:..:Std:Real#T|Std.Real.T]], y @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Gtk:GnomeCanvas:Item#T|Gtk.GnomeCanvas.Item.T]]''
 
 
 ==== :GetScrollOffsets ====
-'':GetScrollOffsets( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':GetScrollOffsets(self @ [[#T|T]], cx @ [[..:..:Std:Object#T|Std.Object.T]], cy @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetScrollRegion ====
-'':GetScrollRegion( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':GetScrollRegion(self @ [[#T|T]], x1 @ [[..:..:Std:Object#T|Std.Object.T]], y1 @ [[..:..:Std:Object#T|Std.Object.T]], x2 @ [[..:..:Std:Object#T|Std.Object.T]], y2 @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :RequestRedraw ====
-'':RequestRedraw( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':RequestRedraw(self @ [[#T|T]], x1 @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y1 @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], x2 @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y2 @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :RequestRedrawUta ====
-'':RequestRedrawUta( @ [[#T|T]],  @ [[..:..:Gtk:Art:Uta#T|Gtk.Art.Uta.T]])''
+'':RequestRedrawUta(self @ [[#T|T]], uta @ [[..:..:Gtk:Art:Uta#T|Gtk.Art.Uta.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Root ====
-'':Root( @ [[#T|T]])''
+'':Root(self @ [[#T|T]]) : [[..:..:Gtk:GnomeCanvas:Group#T|Gtk.GnomeCanvas.Group.T]]''
 
 
 ==== :ScrollTo ====
-'':ScrollTo( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':ScrollTo(self @ [[#T|T]], cx @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], cy @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetCenterScrollRegion ====
-'':SetCenterScrollRegion( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+'':SetCenterScrollRegion(self @ [[#T|T]], center_scroll_region @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetDither ====
-'':SetDither( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:RgbDither#T|Gtk.Gdk.RgbDither.T]])''
+'':SetDither(self @ [[#T|T]], dither @ [[..:..:Gtk:Gdk:RgbDither#T|Gtk.Gdk.RgbDither.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetPixelsPerUnit ====
-'':SetPixelsPerUnit( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+'':SetPixelsPerUnit(self @ [[#T|T]], n @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetScrollRegion ====
-'':SetScrollRegion( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+'':SetScrollRegion(self @ [[#T|T]], x1 @ [[..:..:Std:Real#T|Std.Real.T]], y1 @ [[..:..:Std:Real#T|Std.Real.T]], x2 @ [[..:..:Std:Real#T|Std.Real.T]], y2 @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====
-''New()''
+''New() : [[# T| T]]''
 
 
 ==== UpdateBbox ====
-''UpdateBbox()''
+''UpdateBbox(item, x1, y1, x2, y2) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== RenderSvp ====
-''RenderSvp()''
+''RenderSvp(buf, svp, rgba) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== JoinGdkToArt ====
-''JoinGdkToArt()''
+''JoinGdkToArt(gdk_join) : [[..:..:Gtk:Art:PathStrokeJoinType#T|Gtk.Art.PathStrokeJoinType.T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 
 ==== GetMiterPoints ====
-''GetMiterPoints()''
+''GetMiterPoints(x1, y1, x2, y2, x3, y3, width, mx1, my1, mx2, my2) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== GetButtPoints ====
-''GetButtPoints()''
+''GetButtPoints(x1, y1, x2, y2, width, project, bx1, by1, bx2, by2) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== CapGdkToArt ====
-''CapGdkToArt()''
+''CapGdkToArt(gdk_cap) : [[..:..:Gtk:Art:PathStrokeCapType#T|Gtk.Art.PathStrokeCapType.T]]''
 
 
 ==== NewAa ====
-''NewAa()''
+''NewAa() : [[# T| T]]''
 
 

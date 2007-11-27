@@ -5,330 +5,330 @@
 
 
 ==== :UnregisterSerializeFormat ====
-'':UnregisterSerializeFormat( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':UnregisterSerializeFormat(self @ [[#T|T]], format @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :UnregisterDeserializeFormat ====
-'':UnregisterDeserializeFormat( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':UnregisterDeserializeFormat(self @ [[#T|T]], format @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :TagTable ====
-'':TagTable( @ [[#T|T]])''
+'':TagTable( @ [[#T|T]]) : [[..:..:Gtk:Gtk:TextTagTable#T|Gtk.Gtk.TextTagTable.T]]''
 
 
 ==== :Btree ====
-'':Btree( @ [[#T|T]])''
+'':Btree( @ [[#T|T]]) : [[..:..:Gtk:Gtk:TextBTree#T|Gtk.Gtk.TextBTree.T]]''
 
 
 ==== :ClipboardContentsBuffers ====
-'':ClipboardContentsBuffers( @ [[#T|T]])''
+'':ClipboardContentsBuffers( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SelectionClipboards ====
-'':SelectionClipboards( @ [[#T|T]])''
+'':SelectionClipboards( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :LogAttrCache ====
-'':LogAttrCache( @ [[#T|T]])''
+'':LogAttrCache( @ [[#T|T]]) : [[..:..:Gtk:Gtk:TextLogAttrCache#T|Gtk.Gtk.TextLogAttrCache.T]]''
 
 
 ==== :UserActionCount ====
-'':UserActionCount( @ [[#T|T]])''
+'':UserActionCount( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Modified ====
-'':Modified( @ [[#T|T]])''
+'':Modified( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :HasSelection ====
-'':HasSelection( @ [[#T|T]])''
+'':HasSelection( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :AddMark ====
-'':AddMark( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TextMark#T|Gtk.Gtk.TextMark.T]],  @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]])''
+'':AddMark(self @ [[#T|T]], mark @ [[..:..:Gtk:Gtk:TextMark#T|Gtk.Gtk.TextMark.T]], where @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :AddSelectionClipboard ====
-'':AddSelectionClipboard( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Clipboard#T|Gtk.Gtk.Clipboard.T]])''
+'':AddSelectionClipboard(self @ [[#T|T]], clipboard @ [[..:..:Gtk:Gtk:Clipboard#T|Gtk.Gtk.Clipboard.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :ApplyTag ====
-'':ApplyTag( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TextTag#T|Gtk.Gtk.TextTag.T]],  @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]],  @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]])''
+'':ApplyTag(self @ [[#T|T]], tag @ [[..:..:Gtk:Gtk:TextTag#T|Gtk.Gtk.TextTag.T]], start @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]], end @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :ApplyTagByName ====
-'':ApplyTagByName( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]],  @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]])''
+'':ApplyTagByName(self @ [[#T|T]], name @ [[..:..:Std:String#T|Std.String.T]], start @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]], end @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Backspace ====
-'':Backspace( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+'':Backspace(self @ [[#T|T]], iter @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]], interactive @ [[..:..:Std:Symbol#T|Std.Symbol.T]], default_editable @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :BeginUserAction ====
-'':BeginUserAction( @ [[#T|T]])''
+'':BeginUserAction(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :CopyClipboard ====
-'':CopyClipboard( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Clipboard#T|Gtk.Gtk.Clipboard.T]])''
+'':CopyClipboard(self @ [[#T|T]], clipboard @ [[..:..:Gtk:Gtk:Clipboard#T|Gtk.Gtk.Clipboard.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :CreateChildAnchor ====
-'':CreateChildAnchor( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]])''
+'':CreateChildAnchor(self @ [[#T|T]], iter @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]]) : [[..:..:Gtk:Gtk:TextChildAnchor#T|Gtk.Gtk.TextChildAnchor.T]]''
 
 
 ==== :CreateMark ====
-'':CreateMark( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+'':CreateMark(self @ [[#T|T]], mark_name @ [[..:..:Std:String#T|Std.String.T]], where @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]], left_gravity @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Gtk:Gtk:TextMark#T|Gtk.Gtk.TextMark.T]]''
 
 
 ==== :CreateTag ====
-'':CreateTag( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':CreateTag(self @ [[#T|T]], tag_name @ [[..:..:Std:String#T|Std.String.T]], first_property_name @ [[..:..:Std:String#T|Std.String.T]], ___ @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Gtk:Gtk:TextTag#T|Gtk.Gtk.TextTag.T]]''
 
 
 ==== :CutClipboard ====
-'':CutClipboard( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Clipboard#T|Gtk.Gtk.Clipboard.T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+'':CutClipboard(self @ [[#T|T]], clipboard @ [[..:..:Gtk:Gtk:Clipboard#T|Gtk.Gtk.Clipboard.T]], default_editable @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Delete ====
-'':Delete( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]],  @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]])''
+'':Delete(self @ [[#T|T]], start @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]], end @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :DeleteInteractive ====
-'':DeleteInteractive( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]],  @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+'':DeleteInteractive(self @ [[#T|T]], start_iter @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]], end_iter @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]], default_editable @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :DeleteMark ====
-'':DeleteMark( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TextMark#T|Gtk.Gtk.TextMark.T]])''
+'':DeleteMark(self @ [[#T|T]], mark @ [[..:..:Gtk:Gtk:TextMark#T|Gtk.Gtk.TextMark.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :DeleteMarkByName ====
-'':DeleteMarkByName( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+'':DeleteMarkByName(self @ [[#T|T]], name @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :DeleteSelection ====
-'':DeleteSelection( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+'':DeleteSelection(self @ [[#T|T]], interactive @ [[..:..:Std:Symbol#T|Std.Symbol.T]], default_editable @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :Deserialize ====
-'':Deserialize( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TextBuffer#T|Gtk.Gtk.TextBuffer.T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':Deserialize(self @ [[#T|T]], content_buffer @ [[..:..:Gtk:Gtk:TextBuffer#T|Gtk.Gtk.TextBuffer.T]], format @ [[..:..:Std:Object#T|Std.Object.T]], iter @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]], data @ [[..:..:Std:Object#T|Std.Object.T]], length @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], error @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :DeserializeGetCanCreateTags ====
-'':DeserializeGetCanCreateTags( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':DeserializeGetCanCreateTags(self @ [[#T|T]], format @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :DeserializeSetCanCreateTags ====
-'':DeserializeSetCanCreateTags( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+'':DeserializeSetCanCreateTags(self @ [[#T|T]], format @ [[..:..:Std:Object#T|Std.Object.T]], can_create_tags @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :EndUserAction ====
-'':EndUserAction( @ [[#T|T]])''
+'':EndUserAction(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetBounds ====
-'':GetBounds( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]],  @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]])''
+'':GetBounds(self @ [[#T|T]], start @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]], end @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetCharCount ====
-'':GetCharCount( @ [[#T|T]])''
+'':GetCharCount(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :GetCopyTargetList ====
-'':GetCopyTargetList( @ [[#T|T]])''
+'':GetCopyTargetList(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:TargetList#T|Gtk.Gtk.TargetList.T]]''
 
 
 ==== :GetDeserializeFormats ====
-'':GetDeserializeFormats( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':GetDeserializeFormats(self @ [[#T|T]], n_formats @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Gtk:Gdk:Atom#T|Gtk.Gdk.Atom.T]]''
 
 
 ==== :GetEndIter ====
-'':GetEndIter( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]])''
+'':GetEndIter(self @ [[#T|T]], iter @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetHasSelection ====
-'':GetHasSelection( @ [[#T|T]])''
+'':GetHasSelection(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :GetInsert ====
-'':GetInsert( @ [[#T|T]])''
+'':GetInsert(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:TextMark#T|Gtk.Gtk.TextMark.T]]''
 
 
 ==== :GetIterAtChildAnchor ====
-'':GetIterAtChildAnchor( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]],  @ [[..:..:Gtk:Gtk:TextChildAnchor#T|Gtk.Gtk.TextChildAnchor.T]])''
+'':GetIterAtChildAnchor(self @ [[#T|T]], iter @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]], anchor @ [[..:..:Gtk:Gtk:TextChildAnchor#T|Gtk.Gtk.TextChildAnchor.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetIterAtLine ====
-'':GetIterAtLine( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':GetIterAtLine(self @ [[#T|T]], iter @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]], line_number @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetIterAtLineIndex ====
-'':GetIterAtLineIndex( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':GetIterAtLineIndex(self @ [[#T|T]], iter @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]], line_number @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], byte_index @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetIterAtLineOffset ====
-'':GetIterAtLineOffset( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':GetIterAtLineOffset(self @ [[#T|T]], iter @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]], line_number @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], char_offset @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetIterAtMark ====
-'':GetIterAtMark( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]],  @ [[..:..:Gtk:Gtk:TextMark#T|Gtk.Gtk.TextMark.T]])''
+'':GetIterAtMark(self @ [[#T|T]], iter @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]], mark @ [[..:..:Gtk:Gtk:TextMark#T|Gtk.Gtk.TextMark.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetIterAtOffset ====
-'':GetIterAtOffset( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':GetIterAtOffset(self @ [[#T|T]], iter @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]], char_offset @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetLineCount ====
-'':GetLineCount( @ [[#T|T]])''
+'':GetLineCount(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :GetMark ====
-'':GetMark( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+'':GetMark(self @ [[#T|T]], name @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Gtk:Gtk:TextMark#T|Gtk.Gtk.TextMark.T]]''
 
 
 ==== :GetModified ====
-'':GetModified( @ [[#T|T]])''
+'':GetModified(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :GetPasteTargetList ====
-'':GetPasteTargetList( @ [[#T|T]])''
+'':GetPasteTargetList(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:TargetList#T|Gtk.Gtk.TargetList.T]]''
 
 
 ==== :GetSelectionBound ====
-'':GetSelectionBound( @ [[#T|T]])''
+'':GetSelectionBound(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:TextMark#T|Gtk.Gtk.TextMark.T]]''
 
 
 ==== :GetSelectionBounds ====
-'':GetSelectionBounds( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]],  @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]])''
+'':GetSelectionBounds(self @ [[#T|T]], start @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]], end @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :GetSerializeFormats ====
-'':GetSerializeFormats( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':GetSerializeFormats(self @ [[#T|T]], n_formats @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Gtk:Gdk:Atom#T|Gtk.Gdk.Atom.T]]''
 
 
 ==== :GetSlice ====
-'':GetSlice( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]],  @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+'':GetSlice(self @ [[#T|T]], start @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]], end @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]], include_hidden_chars @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== :GetStartIter ====
-'':GetStartIter( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]])''
+'':GetStartIter(self @ [[#T|T]], iter @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetTagTable ====
-'':GetTagTable( @ [[#T|T]])''
+'':GetTagTable(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:TextTagTable#T|Gtk.Gtk.TextTagTable.T]]''
 
 
 ==== :GetText ====
-'':GetText( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]],  @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+'':GetText(self @ [[#T|T]], start @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]], end @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]], include_hidden_chars @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== :Insert ====
-'':Insert( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':Insert(self @ [[#T|T]], iter @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]], text @ [[..:..:Std:String#T|Std.String.T]], len @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :InsertAtCursor ====
-'':InsertAtCursor( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':InsertAtCursor(self @ [[#T|T]], text @ [[..:..:Std:String#T|Std.String.T]], len @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :InsertChildAnchor ====
-'':InsertChildAnchor( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]],  @ [[..:..:Gtk:Gtk:TextChildAnchor#T|Gtk.Gtk.TextChildAnchor.T]])''
+'':InsertChildAnchor(self @ [[#T|T]], iter @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]], anchor @ [[..:..:Gtk:Gtk:TextChildAnchor#T|Gtk.Gtk.TextChildAnchor.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :InsertInteractive ====
-'':InsertInteractive( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+'':InsertInteractive(self @ [[#T|T]], iter @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]], text @ [[..:..:Std:String#T|Std.String.T]], len @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], default_editable @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :InsertInteractiveAtCursor ====
-'':InsertInteractiveAtCursor( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+'':InsertInteractiveAtCursor(self @ [[#T|T]], text @ [[..:..:Std:String#T|Std.String.T]], len @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], default_editable @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :InsertPixbuf ====
-'':InsertPixbuf( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]],  @ [[..:..:Gtk:Gdk:Pixbuf#T|Gtk.Gdk.Pixbuf.T]])''
+'':InsertPixbuf(self @ [[#T|T]], iter @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]], pixbuf @ [[..:..:Gtk:Gdk:Pixbuf#T|Gtk.Gdk.Pixbuf.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :InsertRange ====
-'':InsertRange( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]],  @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]],  @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]])''
+'':InsertRange(self @ [[#T|T]], iter @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]], start @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]], end @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :InsertRangeInteractive ====
-'':InsertRangeInteractive( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]],  @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]],  @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+'':InsertRangeInteractive(self @ [[#T|T]], iter @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]], start @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]], end @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]], default_editable @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :InsertWithTags ====
-'':InsertWithTags( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Gtk:Gtk:TextTag#T|Gtk.Gtk.TextTag.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':InsertWithTags(self @ [[#T|T]], iter @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]], text @ [[..:..:Std:String#T|Std.String.T]], len @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], first_tag @ [[..:..:Gtk:Gtk:TextTag#T|Gtk.Gtk.TextTag.T]], ___ @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :InsertWithTagsByName ====
-'':InsertWithTagsByName( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':InsertWithTagsByName(self @ [[#T|T]], iter @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]], text @ [[..:..:Std:String#T|Std.String.T]], len @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], first_tag_name @ [[..:..:Std:String#T|Std.String.T]], ___ @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :MoveMark ====
-'':MoveMark( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TextMark#T|Gtk.Gtk.TextMark.T]],  @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]])''
+'':MoveMark(self @ [[#T|T]], mark @ [[..:..:Gtk:Gtk:TextMark#T|Gtk.Gtk.TextMark.T]], where @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :MoveMarkByName ====
-'':MoveMarkByName( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]])''
+'':MoveMarkByName(self @ [[#T|T]], name @ [[..:..:Std:String#T|Std.String.T]], where @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :PasteClipboard ====
-'':PasteClipboard( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Clipboard#T|Gtk.Gtk.Clipboard.T]],  @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+'':PasteClipboard(self @ [[#T|T]], clipboard @ [[..:..:Gtk:Gtk:Clipboard#T|Gtk.Gtk.Clipboard.T]], override_location @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]], default_editable @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :PlaceCursor ====
-'':PlaceCursor( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]])''
+'':PlaceCursor(self @ [[#T|T]], where @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :RegisterDeserializeFormat ====
-'':RegisterDeserializeFormat( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Function#T|Std.Function.T]],  @ [[..:..:Std:Address#T|Std.Address.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':RegisterDeserializeFormat(self @ [[#T|T]], mime_type @ [[..:..:Std:String#T|Std.String.T]], function @ [[..:..:Std:Function#T|Std.Function.T]], user_data @ [[..:..:Std:Address#T|Std.Address.T]], user_data_destroy @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :RegisterDeserializeTagset ====
-'':RegisterDeserializeTagset( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+'':RegisterDeserializeTagset(self @ [[#T|T]], tagset_name @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :RegisterSerializeFormat ====
-'':RegisterSerializeFormat( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Function#T|Std.Function.T]],  @ [[..:..:Std:Address#T|Std.Address.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':RegisterSerializeFormat(self @ [[#T|T]], mime_type @ [[..:..:Std:String#T|Std.String.T]], function @ [[..:..:Std:Function#T|Std.Function.T]], user_data @ [[..:..:Std:Address#T|Std.Address.T]], user_data_destroy @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :RegisterSerializeTagset ====
-'':RegisterSerializeTagset( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+'':RegisterSerializeTagset(self @ [[#T|T]], tagset_name @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :RemoveAllTags ====
-'':RemoveAllTags( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]],  @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]])''
+'':RemoveAllTags(self @ [[#T|T]], start @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]], end @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :RemoveSelectionClipboard ====
-'':RemoveSelectionClipboard( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Clipboard#T|Gtk.Gtk.Clipboard.T]])''
+'':RemoveSelectionClipboard(self @ [[#T|T]], clipboard @ [[..:..:Gtk:Gtk:Clipboard#T|Gtk.Gtk.Clipboard.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :RemoveTag ====
-'':RemoveTag( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TextTag#T|Gtk.Gtk.TextTag.T]],  @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]],  @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]])''
+'':RemoveTag(self @ [[#T|T]], tag @ [[..:..:Gtk:Gtk:TextTag#T|Gtk.Gtk.TextTag.T]], start @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]], end @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :RemoveTagByName ====
-'':RemoveTagByName( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]],  @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]])''
+'':RemoveTagByName(self @ [[#T|T]], name @ [[..:..:Std:String#T|Std.String.T]], start @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]], end @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SelectRange ====
-'':SelectRange( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]],  @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]])''
+'':SelectRange(self @ [[#T|T]], ins @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]], bound @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Serialize ====
-'':Serialize( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TextBuffer#T|Gtk.Gtk.TextBuffer.T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]],  @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':Serialize(self @ [[#T|T]], content_buffer @ [[..:..:Gtk:Gtk:TextBuffer#T|Gtk.Gtk.TextBuffer.T]], format @ [[..:..:Std:Object#T|Std.Object.T]], start @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]], end @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]], length @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetModified ====
-'':SetModified( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+'':SetModified(self @ [[#T|T]], setting @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetText ====
-'':SetText( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':SetText(self @ [[#T|T]], text @ [[..:..:Std:String#T|Std.String.T]], len @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====
-''New()''
+''New(table : [[..:..:Gtk:Gtk:TextTagTable#T|Gtk.Gtk.TextTagTable.T]]) : [[# T| T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 

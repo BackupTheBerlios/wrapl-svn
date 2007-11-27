@@ -6,90 +6,90 @@
 
 
 ==== :StopEditing ====
-'':StopEditing( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+'':StopEditing(self @ [[#T|T]], canceled @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Xalign ====
-'':Xalign( @ [[#T|T]])''
+'':Xalign( @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :Yalign ====
-'':Yalign( @ [[#T|T]])''
+'':Yalign( @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :Width ====
-'':Width( @ [[#T|T]])''
+'':Width( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Height ====
-'':Height( @ [[#T|T]])''
+'':Height( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Xpad ====
-'':Xpad( @ [[#T|T]])''
+'':Xpad( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Ypad ====
-'':Ypad( @ [[#T|T]])''
+'':Ypad( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Mode ====
-'':Mode( @ [[#T|T]])''
+'':Mode( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Visible ====
-'':Visible( @ [[#T|T]])''
+'':Visible( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :IsExpander ====
-'':IsExpander( @ [[#T|T]])''
+'':IsExpander( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :IsExpanded ====
-'':IsExpanded( @ [[#T|T]])''
+'':IsExpanded( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :CellBackgroundSet ====
-'':CellBackgroundSet( @ [[#T|T]])''
+'':CellBackgroundSet( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Sensitive ====
-'':Sensitive( @ [[#T|T]])''
+'':Sensitive( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Editing ====
-'':Editing( @ [[#T|T]])''
+'':Editing( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Activate ====
-'':Activate( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]],  @ [[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':Activate(self @ [[#T|T]], event @ [[..:..:Std:Object#T|Std.Object.T]], widget @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], path @ [[..:..:Std:String#T|Std.String.T]], background_area @ [[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]], cell_area @ [[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]], flags @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :EditingCanceled ====
-'':EditingCanceled( @ [[#T|T]])''
+'':EditingCanceled(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetFixedSize ====
-'':GetFixedSize( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':GetFixedSize(self @ [[#T|T]], width @ [[..:..:Std:Object#T|Std.Object.T]], height @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetSize ====
-'':GetSize( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]],  @ [[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':GetSize(self @ [[#T|T]], widget @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], cell_area @ [[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]], x_offset @ [[..:..:Std:Object#T|Std.Object.T]], y_offset @ [[..:..:Std:Object#T|Std.Object.T]], width @ [[..:..:Std:Object#T|Std.Object.T]], height @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Render ====
-'':Render( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]],  @ [[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]],  @ [[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]],  @ [[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':Render(self @ [[#T|T]], window @ [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]], widget @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], background_area @ [[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]], cell_area @ [[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]], expose_area @ [[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]], flags @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetFixedSize ====
-'':SetFixedSize( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':SetFixedSize(self @ [[#T|T]], width @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], height @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :StartEditing ====
-'':StartEditing( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]],  @ [[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':StartEditing(self @ [[#T|T]], event @ [[..:..:Std:Object#T|Std.Object.T]], widget @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], path @ [[..:..:Std:String#T|Std.String.T]], background_area @ [[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]], cell_area @ [[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]], flags @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Gtk:Gtk:CellEditable#T|Gtk.Gtk.CellEditable.T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 

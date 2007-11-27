@@ -5,206 +5,206 @@
 
 
 ==== :WarpPointer ====
-'':WarpPointer( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Screen#T|Gtk.Gdk.Screen.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':WarpPointer(screen @ [[#T|T]], x @ [[..:..:Gtk:Gdk:Screen#T|Gtk.Gdk.Screen.T]], y @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Sync ====
-'':Sync( @ [[#T|T]])''
+'':Sync( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SupportsShapes ====
-'':SupportsShapes( @ [[#T|T]])''
+'':SupportsShapes( @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :SupportsSelectionNotification ====
-'':SupportsSelectionNotification( @ [[#T|T]])''
+'':SupportsSelectionNotification( @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :QueuedEvents ====
-'':QueuedEvents( @ [[#T|T]])''
+'':QueuedEvents( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :QueuedTail ====
-'':QueuedTail( @ [[#T|T]])''
+'':QueuedTail( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :DoubleClickTime ====
-'':DoubleClickTime( @ [[#T|T]])''
+'':DoubleClickTime( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :CorePointer ====
-'':CorePointer( @ [[#T|T]])''
+'':CorePointer( @ [[#T|T]]) : [[..:..:Gtk:Gdk:Device#T|Gtk.Gdk.Device.T]]''
 
 
 ==== :PointerHooks ====
-'':PointerHooks( @ [[#T|T]])''
+'':PointerHooks( @ [[#T|T]]) : [[..:..:Gtk:Gdk:DisplayPointerHooks#T|Gtk.Gdk.DisplayPointerHooks.T]]''
 
 
 ==== :Closed ====
-'':Closed( @ [[#T|T]])''
+'':Closed( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :DoubleClickDistance ====
-'':DoubleClickDistance( @ [[#T|T]])''
+'':DoubleClickDistance( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :ButtonClickTime ====
-'':ButtonClickTime( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':ButtonClickTime( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :ButtonWindow ====
-'':ButtonWindow( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':ButtonWindow( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]]''
 
 
 ==== :ButtonNumber ====
-'':ButtonNumber( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':ButtonNumber( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :ButtonX ====
-'':ButtonX( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':ButtonX( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :ButtonY ====
-'':ButtonY( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':ButtonY( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :AddClientMessageFilter ====
-'':AddClientMessageFilter( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Function#T|Std.Function.T]],  @ [[..:..:Std:Address#T|Std.Address.T]])''
+'':AddClientMessageFilter(self @ [[#T|T]], message_type @ [[..:..:Std:Object#T|Std.Object.T]], func @ [[..:..:Std:Function#T|Std.Function.T]], data @ [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Beep ====
-'':Beep( @ [[#T|T]])''
+'':Beep(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Close ====
-'':Close( @ [[#T|T]])''
+'':Close(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Flush ====
-'':Flush( @ [[#T|T]])''
+'':Flush(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetCorePointer ====
-'':GetCorePointer( @ [[#T|T]])''
+'':GetCorePointer(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Device#T|Gtk.Gdk.Device.T]]''
 
 
 ==== :GetDefaultCursorSize ====
-'':GetDefaultCursorSize( @ [[#T|T]])''
+'':GetDefaultCursorSize(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :GetDefaultGroup ====
-'':GetDefaultGroup( @ [[#T|T]])''
+'':GetDefaultGroup(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]]''
 
 
 ==== :GetDefaultScreen ====
-'':GetDefaultScreen( @ [[#T|T]])''
+'':GetDefaultScreen(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Screen#T|Gtk.Gdk.Screen.T]]''
 
 
 ==== :GetEvent ====
-'':GetEvent( @ [[#T|T]])''
+'':GetEvent(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetMaximalCursorSize ====
-'':GetMaximalCursorSize( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':GetMaximalCursorSize(self @ [[#T|T]], width @ [[..:..:Std:Object#T|Std.Object.T]], height @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetNScreens ====
-'':GetNScreens( @ [[#T|T]])''
+'':GetNScreens(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :GetName ====
-'':GetName( @ [[#T|T]])''
+'':GetName(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== :GetPointer ====
-'':GetPointer( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':GetPointer(screen @ [[#T|T]], x @ [[..:..:Std:Object#T|Std.Object.T]], y @ [[..:..:Std:Object#T|Std.Object.T]], mask @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetScreen ====
-'':GetScreen( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':GetScreen(screen_num @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Gtk:Gdk:Screen#T|Gtk.Gdk.Screen.T]]''
 
 
 ==== :GetWindowAtPointer ====
-'':GetWindowAtPointer( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':GetWindowAtPointer(win_x @ [[#T|T]], win_y @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]]''
 
 
 ==== :KeyboardUngrab ====
-'':KeyboardUngrab( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':KeyboardUngrab(time_ @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :ListDevices ====
-'':ListDevices( @ [[#T|T]])''
+'':ListDevices( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :PeekEvent ====
-'':PeekEvent( @ [[#T|T]])''
+'':PeekEvent( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :PointerIsGrabbed ====
-'':PointerIsGrabbed( @ [[#T|T]])''
+'':PointerIsGrabbed( @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :PointerUngrab ====
-'':PointerUngrab( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':PointerUngrab(time_ @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :PutEvent ====
-'':PutEvent( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':PutEvent(event @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :RequestSelectionNotification ====
-'':RequestSelectionNotification( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':RequestSelectionNotification(selection @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :SetDoubleClickDistance ====
-'':SetDoubleClickDistance( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':SetDoubleClickDistance(distance @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetDoubleClickTime ====
-'':SetDoubleClickTime( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':SetDoubleClickTime(msec @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetPointerHooks ====
-'':SetPointerHooks( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:DisplayPointerHooks#T|Gtk.Gdk.DisplayPointerHooks.T]])''
+'':SetPointerHooks(new_hooks @ [[#T|T]],  @ [[..:..:Gtk:Gdk:DisplayPointerHooks#T|Gtk.Gdk.DisplayPointerHooks.T]]) : [[..:..:Gtk:Gdk:DisplayPointerHooks#T|Gtk.Gdk.DisplayPointerHooks.T]]''
 
 
 ==== :StoreClipboard ====
-'':StoreClipboard( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Gtk:Gdk:Atom#T|Gtk.Gdk.Atom.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':StoreClipboard(clipboard_window @ [[#T|T]], time_ @ [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]], targets @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], n_targets @ [[..:..:Gtk:Gdk:Atom#T|Gtk.Gdk.Atom.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SupportsClipboardPersistence ====
-'':SupportsClipboardPersistence( @ [[#T|T]])''
+'':SupportsClipboardPersistence( @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :SupportsComposite ====
-'':SupportsComposite( @ [[#T|T]])''
+'':SupportsComposite( @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :SupportsCursorAlpha ====
-'':SupportsCursorAlpha( @ [[#T|T]])''
+'':SupportsCursorAlpha( @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :SupportsCursorColor ====
-'':SupportsCursorColor( @ [[#T|T]])''
+'':SupportsCursorColor( @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :SupportsInputShapes ====
-'':SupportsInputShapes( @ [[#T|T]])''
+'':SupportsInputShapes( @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== GetDefault ====
-''GetDefault()''
+''GetDefault() : [[..:..:Gtk:Gdk:Display#T|Gtk.Gdk.Display.T]]''
 
 
 ==== OpenDefaultLibgtkOnly ====
-''OpenDefaultLibgtkOnly()''
+''OpenDefaultLibgtkOnly() : [[..:..:Gtk:Gdk:Display#T|Gtk.Gdk.Display.T]]''
 
 
 ==== Open ====
-''Open()''
+''Open(display_name) : [[..:..:Gtk:Gdk:Display#T|Gtk.Gdk.Display.T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 

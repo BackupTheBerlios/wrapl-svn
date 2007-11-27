@@ -9,26 +9,26 @@
 
 
 ==== :SetVisibleWindow ====
-'':SetVisibleWindow( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+'':SetVisibleWindow(self @ [[#T|T]], visible_window @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetAboveChild ====
-'':SetAboveChild( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+'':SetAboveChild(self @ [[#T|T]], above_child @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetAboveChild ====
-'':GetAboveChild( @ [[#T|T]])''
+'':GetAboveChild(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :GetVisibleWindow ====
-'':GetVisibleWindow( @ [[#T|T]])''
+'':GetVisibleWindow(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== New ====
-''New()''
+''New() : [[# T| T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 

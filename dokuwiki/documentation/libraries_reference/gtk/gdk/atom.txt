@@ -3,14 +3,14 @@
 
 
 ==== :Name ====
-'':Name( @ [[#T|T]])''
+'':Name(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== Intern ====
-''Intern()''
+''Intern(atom_name, only_if_exists) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== InternStaticString ====
-''InternStaticString()''
+''InternStaticString(atom_name) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 

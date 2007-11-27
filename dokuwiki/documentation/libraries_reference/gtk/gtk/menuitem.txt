@@ -10,110 +10,110 @@
 
 
 ==== :ToggleSizeRequest ====
-'':ToggleSizeRequest( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':ToggleSizeRequest(self @ [[#T|T]], requisition @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :ToggleSizeAllocate ====
-'':ToggleSizeAllocate( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':ToggleSizeAllocate(self @ [[#T|T]], allocation @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetSubmenu ====
-'':SetSubmenu( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]])''
+'':SetSubmenu(self @ [[#T|T]], submenu @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetRightJustified ====
-'':SetRightJustified( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+'':SetRightJustified(self @ [[#T|T]], right_justified @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Submenu ====
-'':Submenu( @ [[#T|T]])''
+'':Submenu( @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
 
 ==== :EventWindow ====
-'':EventWindow( @ [[#T|T]])''
+'':EventWindow( @ [[#T|T]]) : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]]''
 
 
 ==== :ToggleSize ====
-'':ToggleSize( @ [[#T|T]])''
+'':ToggleSize( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :AcceleratorWidth ====
-'':AcceleratorWidth( @ [[#T|T]])''
+'':AcceleratorWidth( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :AccelPath ====
-'':AccelPath( @ [[#T|T]])''
+'':AccelPath( @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== :ShowSubmenuIndicator ====
-'':ShowSubmenuIndicator( @ [[#T|T]])''
+'':ShowSubmenuIndicator( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :SubmenuPlacement ====
-'':SubmenuPlacement( @ [[#T|T]])''
+'':SubmenuPlacement( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :SubmenuDirection ====
-'':SubmenuDirection( @ [[#T|T]])''
+'':SubmenuDirection( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :RightJustify ====
-'':RightJustify( @ [[#T|T]])''
+'':RightJustify( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :TimerFromKeypress ====
-'':TimerFromKeypress( @ [[#T|T]])''
+'':TimerFromKeypress( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :FromMenubar ====
-'':FromMenubar( @ [[#T|T]])''
+'':FromMenubar( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Timer ====
-'':Timer( @ [[#T|T]])''
+'':Timer( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Activate ====
-'':Activate( @ [[#T|T]])''
+'':Activate(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Deselect ====
-'':Deselect( @ [[#T|T]])''
+'':Deselect(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetRightJustified ====
-'':GetRightJustified( @ [[#T|T]])''
+'':GetRightJustified(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :GetSubmenu ====
-'':GetSubmenu( @ [[#T|T]])''
+'':GetSubmenu(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
 
 ==== :RemoveSubmenu ====
-'':RemoveSubmenu( @ [[#T|T]])''
+'':RemoveSubmenu(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Select ====
-'':Select( @ [[#T|T]])''
+'':Select(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetAccelPath ====
-'':SetAccelPath( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+'':SetAccelPath(self @ [[#T|T]], accel_path @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====
-''New()''
+''New() : [[# T| T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 
 ==== NewWithMnemonic ====
-''NewWithMnemonic()''
+''NewWithMnemonic(label : [[..:..:Std:String#T|Std.String.T]]) : [[# T| T]]''
 
 
 ==== NewWithLabel ====
-''NewWithLabel()''
+''NewWithLabel(label : [[..:..:Std:String#T|Std.String.T]]) : [[# T| T]]''
 
 

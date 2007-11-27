@@ -5,22 +5,22 @@
 
 
 ==== :GetWidgets ====
-'':GetWidgets( @ [[#T|T]])''
+'':GetWidgets(self @ [[#T|T]]) : [[..:..:Std:List#T|Std.List.T]]''
 
 
 ==== :GetDeleted ====
-'':GetDeleted( @ [[#T|T]])''
+'':GetDeleted(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :Segment ====
-'':Segment( @ [[#T|T]])''
+'':Segment( @ [[#T|T]]) : [[..:..:Std:Address#T|Std.Address.T]]''
 
 
 ==== New ====
-''New()''
+''New() : [[# T| T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 

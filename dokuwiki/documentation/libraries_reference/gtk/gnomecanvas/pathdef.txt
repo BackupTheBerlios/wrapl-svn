@@ -3,142 +3,142 @@
 
 
 ==== :Unref ====
-'':Unref( @ [[#T|T]])''
+'':Unref(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Split ====
-'':Split( @ [[#T|T]])''
+'':Split(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Reset ====
-'':Reset( @ [[#T|T]])''
+'':Reset(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Ref ====
-'':Ref( @ [[#T|T]])''
+'':Ref(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :OpenParts ====
-'':OpenParts( @ [[#T|T]])''
+'':OpenParts(self @ [[#T|T]]) : [[..:..:Gtk:GnomeCanvas:PathDef#T|Gtk.GnomeCanvas.PathDef.T]]''
 
 
 ==== :Moveto ====
-'':Moveto( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+'':Moveto(self @ [[#T|T]], x @ [[..:..:Std:Real#T|Std.Real.T]], y @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :LinetoMoving ====
-'':LinetoMoving( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+'':LinetoMoving(self @ [[#T|T]], x @ [[..:..:Std:Real#T|Std.Real.T]], y @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :AllClosed ====
-'':AllClosed( @ [[#T|T]])''
+'':AllClosed(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :AllOpen ====
-'':AllOpen( @ [[#T|T]])''
+'':AllOpen(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :AnyClosed ====
-'':AnyClosed( @ [[#T|T]])''
+'':AnyClosed(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :AnyOpen ====
-'':AnyOpen( @ [[#T|T]])''
+'':AnyOpen(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :Bpath ====
-'':Bpath( @ [[#T|T]])''
+'':Bpath(self @ [[#T|T]]) : [[..:..:Gtk:Art:Bpath#T|Gtk.Art.Bpath.T]]''
 
 
 ==== :CloseAll ====
-'':CloseAll( @ [[#T|T]])''
+'':CloseAll(self @ [[#T|T]]) : [[..:..:Gtk:GnomeCanvas:PathDef#T|Gtk.GnomeCanvas.PathDef.T]]''
 
 
 ==== :ClosedParts ====
-'':ClosedParts( @ [[#T|T]])''
+'':ClosedParts(self @ [[#T|T]]) : [[..:..:Gtk:GnomeCanvas:PathDef#T|Gtk.GnomeCanvas.PathDef.T]]''
 
 
 ==== :Closepath ====
-'':Closepath( @ [[#T|T]])''
+'':Closepath(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :ClosepathCurrent ====
-'':ClosepathCurrent( @ [[#T|T]])''
+'':ClosepathCurrent(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Copy ====
-'':Copy( @ [[#T|T]],  @ [[..:..:Gtk:GnomeCanvas:PathDef#T|Gtk.GnomeCanvas.PathDef.T]])''
+'':Copy(self @ [[#T|T]], src @ [[..:..:Gtk:GnomeCanvas:PathDef#T|Gtk.GnomeCanvas.PathDef.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Currentpoint ====
-'':Currentpoint( @ [[#T|T]],  @ [[..:..:Gtk:Art:Point#T|Gtk.Art.Point.T]])''
+'':Currentpoint(self @ [[#T|T]], p @ [[..:..:Gtk:Art:Point#T|Gtk.Art.Point.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Curveto ====
-'':Curveto( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+'':Curveto(self @ [[#T|T]], x0 @ [[..:..:Std:Real#T|Std.Real.T]], y0 @ [[..:..:Std:Real#T|Std.Real.T]], x1 @ [[..:..:Std:Real#T|Std.Real.T]], y1 @ [[..:..:Std:Real#T|Std.Real.T]], x2 @ [[..:..:Std:Real#T|Std.Real.T]], y2 @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Duplicate ====
-'':Duplicate( @ [[#T|T]])''
+'':Duplicate(self @ [[#T|T]]) : [[..:..:Gtk:GnomeCanvas:PathDef#T|Gtk.GnomeCanvas.PathDef.T]]''
 
 
 ==== :EnsureSpace ====
-'':EnsureSpace( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':EnsureSpace(self @ [[#T|T]], space @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Finish ====
-'':Finish( @ [[#T|T]])''
+'':Finish(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :FirstBpath ====
-'':FirstBpath( @ [[#T|T]])''
+'':FirstBpath(self @ [[#T|T]]) : [[..:..:Gtk:Art:Bpath#T|Gtk.Art.Bpath.T]]''
 
 
 ==== :HasCurrentpoint ====
-'':HasCurrentpoint( @ [[#T|T]])''
+'':HasCurrentpoint(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :IsEmpty ====
-'':IsEmpty( @ [[#T|T]])''
+'':IsEmpty(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :LastBpath ====
-'':LastBpath( @ [[#T|T]])''
+'':LastBpath(self @ [[#T|T]]) : [[..:..:Gtk:Art:Bpath#T|Gtk.Art.Bpath.T]]''
 
 
 ==== :Length ====
-'':Length( @ [[#T|T]])''
+'':Length(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Lineto ====
-'':Lineto( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+'':Lineto(self @ [[#T|T]], x @ [[..:..:Std:Real#T|Std.Real.T]], y @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====
-''New()''
+''New() : [[# T| T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 
 ==== Concat ====
-''Concat()''
+''Concat(list) : [[..:..:Gtk:GnomeCanvas:PathDef#T|Gtk.GnomeCanvas.PathDef.T]]''
 
 
 ==== NewSized ====
-''NewSized()''
+''NewSized(length : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[# T| T]]''
 
 
 ==== NewFromStaticBpath ====
-''NewFromStaticBpath()''
+''NewFromStaticBpath(bpath : [[..:..:Gtk:Art:Bpath#T|Gtk.Art.Bpath.T]]) : [[# T| T]]''
 
 
 ==== NewFromForeignBpath ====
-''NewFromForeignBpath()''
+''NewFromForeignBpath(bpath : [[..:..:Gtk:Art:Bpath#T|Gtk.Art.Bpath.T]]) : [[# T| T]]''
 
 
 ==== NewFromBpath ====
-''NewFromBpath()''
+''NewFromBpath(bpath : [[..:..:Gtk:Art:Bpath#T|Gtk.Art.Bpath.T]]) : [[# T| T]]''
 
 

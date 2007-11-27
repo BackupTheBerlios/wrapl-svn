@@ -10,46 +10,46 @@
 
 
 ==== :GetId ====
-'':GetId( @ [[#T|T]])''
+'':GetId(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :ConstructForDisplay ====
-'':ConstructForDisplay( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Display#T|Gtk.Gdk.Display.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':ConstructForDisplay(self @ [[#T|T]], display @ [[..:..:Gtk:Gdk:Display#T|Gtk.Gdk.Display.T]], socket_id @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Construct ====
-'':Construct( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':Construct(self @ [[#T|T]], socket_id @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SocketWindow ====
-'':SocketWindow( @ [[#T|T]])''
+'':SocketWindow( @ [[#T|T]]) : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]]''
 
 
 ==== :ModalityWindow ====
-'':ModalityWindow( @ [[#T|T]])''
+'':ModalityWindow( @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
 
 ==== :ModalityGroup ====
-'':ModalityGroup( @ [[#T|T]])''
+'':ModalityGroup( @ [[#T|T]]) : [[..:..:Gtk:Gtk:WindowGroup#T|Gtk.Gtk.WindowGroup.T]]''
 
 
 ==== :GrabbedKeys ====
-'':GrabbedKeys( @ [[#T|T]])''
+'':GrabbedKeys( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SameApp ====
-'':SameApp( @ [[#T|T]])''
+'':SameApp( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== New ====
-''New()''
+''New(socket_id : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[# T| T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 
 ==== NewForDisplay ====
-''NewForDisplay()''
+''NewForDisplay(display : [[..:..:Gtk:Gdk:Display#T|Gtk.Gdk.Display.T]], socket_id : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[# T| T]]''
 
 

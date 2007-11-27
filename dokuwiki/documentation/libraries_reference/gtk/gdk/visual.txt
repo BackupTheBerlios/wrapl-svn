@@ -5,94 +5,94 @@
 
 
 ==== :GetScreen ====
-'':GetScreen( @ [[#T|T]])''
+'':GetScreen(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Screen#T|Gtk.Gdk.Screen.T]]''
 
 
 ==== :BluePrec ====
-'':BluePrec( @ [[#T|T]])''
+'':BluePrec( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :BlueShift ====
-'':BlueShift( @ [[#T|T]])''
+'':BlueShift( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :BlueMask ====
-'':BlueMask( @ [[#T|T]])''
+'':BlueMask( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :GreenPrec ====
-'':GreenPrec( @ [[#T|T]])''
+'':GreenPrec( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :GreenShift ====
-'':GreenShift( @ [[#T|T]])''
+'':GreenShift( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :GreenMask ====
-'':GreenMask( @ [[#T|T]])''
+'':GreenMask( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :RedPrec ====
-'':RedPrec( @ [[#T|T]])''
+'':RedPrec( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Type ====
-'':Type( @ [[#T|T]])''
+'':Type( @ [[#T|T]]) : [[..:..:Gtk:Gdk:VisualType#T|Gtk.Gdk.VisualType.T]]''
 
 
 ==== :Depth ====
-'':Depth( @ [[#T|T]])''
+'':Depth( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :ByteOrder ====
-'':ByteOrder( @ [[#T|T]])''
+'':ByteOrder( @ [[#T|T]]) : [[..:..:Gtk:Gdk:ByteOrder#T|Gtk.Gdk.ByteOrder.T]]''
 
 
 ==== :ColormapSize ====
-'':ColormapSize( @ [[#T|T]])''
+'':ColormapSize( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :BitsPerRgb ====
-'':BitsPerRgb( @ [[#T|T]])''
+'':BitsPerRgb( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :RedMask ====
-'':RedMask( @ [[#T|T]])''
+'':RedMask( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :RedShift ====
-'':RedShift( @ [[#T|T]])''
+'':RedShift( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== GetBest ====
-''GetBest()''
+''GetBest() : [[..:..:Gtk:Gdk:Visual#T|Gtk.Gdk.Visual.T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 
 ==== GetSystem ====
-''GetSystem()''
+''GetSystem() : [[..:..:Gtk:Gdk:Visual#T|Gtk.Gdk.Visual.T]]''
 
 
 ==== GetBestWithType ====
-''GetBestWithType()''
+''GetBestWithType(visual_type) : [[..:..:Gtk:Gdk:Visual#T|Gtk.Gdk.Visual.T]]''
 
 
 ==== GetBestWithDepth ====
-''GetBestWithDepth()''
+''GetBestWithDepth(depth) : [[..:..:Gtk:Gdk:Visual#T|Gtk.Gdk.Visual.T]]''
 
 
 ==== GetBestWithBoth ====
-''GetBestWithBoth()''
+''GetBestWithBoth(depth, visual_type) : [[..:..:Gtk:Gdk:Visual#T|Gtk.Gdk.Visual.T]]''
 
 
 ==== GetBestType ====
-''GetBestType()''
+''GetBestType() : [[..:..:Gtk:Gdk:VisualType#T|Gtk.Gdk.VisualType.T]]''
 
 
 ==== GetBestDepth ====
-''GetBestDepth()''
+''GetBestDepth() : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 

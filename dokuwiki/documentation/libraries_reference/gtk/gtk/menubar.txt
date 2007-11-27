@@ -9,26 +9,26 @@
 
 
 ==== :SetPackDirection ====
-'':SetPackDirection( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:PackDirection#T|Gtk.Gtk.PackDirection.T]])''
+'':SetPackDirection(self @ [[#T|T]], pack_dir @ [[..:..:Gtk:Gtk:PackDirection#T|Gtk.Gtk.PackDirection.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetChildPackDirection ====
-'':SetChildPackDirection( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:PackDirection#T|Gtk.Gtk.PackDirection.T]])''
+'':SetChildPackDirection(self @ [[#T|T]], child_pack_dir @ [[..:..:Gtk:Gtk:PackDirection#T|Gtk.Gtk.PackDirection.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetChildPackDirection ====
-'':GetChildPackDirection( @ [[#T|T]])''
+'':GetChildPackDirection(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:PackDirection#T|Gtk.Gtk.PackDirection.T]]''
 
 
 ==== :GetPackDirection ====
-'':GetPackDirection( @ [[#T|T]])''
+'':GetPackDirection(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:PackDirection#T|Gtk.Gtk.PackDirection.T]]''
 
 
 ==== New ====
-''New()''
+''New() : [[# T| T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 

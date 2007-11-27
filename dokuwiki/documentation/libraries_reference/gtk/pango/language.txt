@@ -3,26 +3,26 @@
 
 
 ==== :Matches ====
-'':Matches( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+'':Matches(range_list @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :IncludesScript ====
-'':IncludesScript( @ [[#T|T]],  @ [[..:..:Gtk:Pango:Script#T|Gtk.Pango.Script.T]])''
+'':IncludesScript(script @ [[#T|T]],  @ [[..:..:Gtk:Pango:Script#T|Gtk.Pango.Script.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :GetSampleString ====
-'':GetSampleString( @ [[#T|T]])''
+'':GetSampleString(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== FromString ====
-''FromString()''
+''FromString(language) : [[..:..:Gtk:Pango:Language#T|Gtk.Pango.Language.T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 
 ==== GetDefault ====
-''GetDefault()''
+''GetDefault() : [[..:..:Gtk:Pango:Language#T|Gtk.Pango.Language.T]]''
 
 

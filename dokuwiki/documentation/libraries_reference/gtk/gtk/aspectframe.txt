@@ -10,34 +10,34 @@
 
 
 ==== :Set ====
-'':Set( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+'':Set(self @ [[#T|T]], xalign @ [[..:..:Std:Real#T|Std.Real.T]], yalign @ [[..:..:Std:Real#T|Std.Real.T]], ratio @ [[..:..:Std:Real#T|Std.Real.T]], obey_child @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :CenterAllocation ====
-'':CenterAllocation( @ [[#T|T]])''
+'':CenterAllocation( @ [[#T|T]]) : [[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]]''
 
 
 ==== :Xalign ====
-'':Xalign( @ [[#T|T]])''
+'':Xalign( @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :Yalign ====
-'':Yalign( @ [[#T|T]])''
+'':Yalign( @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :Ratio ====
-'':Ratio( @ [[#T|T]])''
+'':Ratio( @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :ObeyChild ====
-'':ObeyChild( @ [[#T|T]])''
+'':ObeyChild( @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== New ====
-''New()''
+''New(label : [[..:..:Std:String#T|Std.String.T]], xalign : [[..:..:Std:Real#T|Std.Real.T]], yalign : [[..:..:Std:Real#T|Std.Real.T]], ratio : [[..:..:Std:Real#T|Std.Real.T]], obey_child : [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[# T| T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 

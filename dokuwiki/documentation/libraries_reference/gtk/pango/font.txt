@@ -5,38 +5,38 @@
 
 
 ==== :GetMetrics ====
-'':GetMetrics( @ [[#T|T]],  @ [[..:..:Gtk:Pango:Language#T|Gtk.Pango.Language.T]])''
+'':GetMetrics(self @ [[#T|T]], language @ [[..:..:Gtk:Pango:Language#T|Gtk.Pango.Language.T]]) : [[..:..:Gtk:Pango:FontMetrics#T|Gtk.Pango.FontMetrics.T]]''
 
 
 ==== :GetGlyphExtents ====
-'':GetGlyphExtents( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Gtk:Pango:Rectangle#T|Gtk.Pango.Rectangle.T]],  @ [[..:..:Gtk:Pango:Rectangle#T|Gtk.Pango.Rectangle.T]])''
+'':GetGlyphExtents(self @ [[#T|T]], glyph @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], ink_rect @ [[..:..:Gtk:Pango:Rectangle#T|Gtk.Pango.Rectangle.T]], logical_rect @ [[..:..:Gtk:Pango:Rectangle#T|Gtk.Pango.Rectangle.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Describe ====
-'':Describe( @ [[#T|T]])''
+'':Describe(self @ [[#T|T]]) : [[..:..:Gtk:Pango:FontDescription#T|Gtk.Pango.FontDescription.T]]''
 
 
 ==== :DescribeWithAbsoluteSize ====
-'':DescribeWithAbsoluteSize( @ [[#T|T]])''
+'':DescribeWithAbsoluteSize(self @ [[#T|T]]) : [[..:..:Gtk:Pango:FontDescription#T|Gtk.Pango.FontDescription.T]]''
 
 
 ==== :FindShaper ====
-'':FindShaper( @ [[#T|T]],  @ [[..:..:Gtk:Pango:Language#T|Gtk.Pango.Language.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':FindShaper(self @ [[#T|T]], language @ [[..:..:Gtk:Pango:Language#T|Gtk.Pango.Language.T]], ch @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Gtk:Pango:EngineShape#T|Gtk.Pango.EngineShape.T]]''
 
 
 ==== :GetCoverage ====
-'':GetCoverage( @ [[#T|T]],  @ [[..:..:Gtk:Pango:Language#T|Gtk.Pango.Language.T]])''
+'':GetCoverage(self @ [[#T|T]], language @ [[..:..:Gtk:Pango:Language#T|Gtk.Pango.Language.T]]) : [[..:..:Gtk:Pango:Coverage#T|Gtk.Pango.Coverage.T]]''
 
 
 ==== :GetFontMap ====
-'':GetFontMap( @ [[#T|T]])''
+'':GetFontMap(self @ [[#T|T]]) : [[..:..:Gtk:Pango:FontMap#T|Gtk.Pango.FontMap.T]]''
 
 
 ==== DescriptionsFree ====
-''DescriptionsFree()''
+''DescriptionsFree(descs, n_descs) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 

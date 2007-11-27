@@ -8,138 +8,138 @@
 
 
 ==== :SetPosition ====
-'':SetPosition( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':SetPosition(self @ [[#T|T]], position @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Child1 ====
-'':Child1( @ [[#T|T]])''
+'':Child1( @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
 
 ==== :Child2 ====
-'':Child2( @ [[#T|T]])''
+'':Child2( @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
 
 ==== :Handle ====
-'':Handle( @ [[#T|T]])''
+'':Handle( @ [[#T|T]]) : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]]''
 
 
 ==== :XorGc ====
-'':XorGc( @ [[#T|T]])''
+'':XorGc( @ [[#T|T]]) : [[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]]''
 
 
 ==== :CursorType ====
-'':CursorType( @ [[#T|T]])''
+'':CursorType( @ [[#T|T]]) : [[..:..:Gtk:Gdk:CursorType#T|Gtk.Gdk.CursorType.T]]''
 
 
 ==== :HandlePos ====
-'':HandlePos( @ [[#T|T]])''
+'':HandlePos( @ [[#T|T]]) : [[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]]''
 
 
 ==== :Child1Size ====
-'':Child1Size( @ [[#T|T]])''
+'':Child1Size( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :LastAllocation ====
-'':LastAllocation( @ [[#T|T]])''
+'':LastAllocation( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :MinPosition ====
-'':MinPosition( @ [[#T|T]])''
+'':MinPosition( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :MaxPosition ====
-'':MaxPosition( @ [[#T|T]])''
+'':MaxPosition( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :PositionSet ====
-'':PositionSet( @ [[#T|T]])''
+'':PositionSet( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :InDrag ====
-'':InDrag( @ [[#T|T]])''
+'':InDrag( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Child1Shrink ====
-'':Child1Shrink( @ [[#T|T]])''
+'':Child1Shrink( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Child1Resize ====
-'':Child1Resize( @ [[#T|T]])''
+'':Child1Resize( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Child2Shrink ====
-'':Child2Shrink( @ [[#T|T]])''
+'':Child2Shrink( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Child2Resize ====
-'':Child2Resize( @ [[#T|T]])''
+'':Child2Resize( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Orientation ====
-'':Orientation( @ [[#T|T]])''
+'':Orientation( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :InRecursion ====
-'':InRecursion( @ [[#T|T]])''
+'':InRecursion( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :HandlePrelit ====
-'':HandlePrelit( @ [[#T|T]])''
+'':HandlePrelit( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :LastChild1Focus ====
-'':LastChild1Focus( @ [[#T|T]])''
+'':LastChild1Focus( @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
 
 ==== :LastChild2Focus ====
-'':LastChild2Focus( @ [[#T|T]])''
+'':LastChild2Focus( @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
 
 ==== :Priv ====
-'':Priv( @ [[#T|T]])''
+'':Priv( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :DragPos ====
-'':DragPos( @ [[#T|T]])''
+'':DragPos( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :OriginalPosition ====
-'':OriginalPosition( @ [[#T|T]])''
+'':OriginalPosition( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Add1 ====
-'':Add1( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]])''
+'':Add1(self @ [[#T|T]], child @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Add2 ====
-'':Add2( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]])''
+'':Add2(self @ [[#T|T]], child @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :ComputePosition ====
-'':ComputePosition( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':ComputePosition(self @ [[#T|T]], allocation @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], child1_req @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], child2_req @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetChild1 ====
-'':GetChild1( @ [[#T|T]])''
+'':GetChild1(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
 
 ==== :GetChild2 ====
-'':GetChild2( @ [[#T|T]])''
+'':GetChild2(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
 
 ==== :GetPosition ====
-'':GetPosition( @ [[#T|T]])''
+'':GetPosition(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Pack1 ====
-'':Pack1( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+'':Pack1(self @ [[#T|T]], child @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], resize @ [[..:..:Std:Symbol#T|Std.Symbol.T]], shrink @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Pack2 ====
-'':Pack2( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+'':Pack2(self @ [[#T|T]], child @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], resize @ [[..:..:Std:Symbol#T|Std.Symbol.T]], shrink @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 

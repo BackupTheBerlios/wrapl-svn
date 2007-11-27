@@ -3,87 +3,87 @@
 
 
 ==== :TargetsIncludeUri ====
-'':TargetsIncludeUri( @ [[#T|T]])''
+'':TargetsIncludeUri(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :TargetsIncludeText ====
-'':TargetsIncludeText( @ [[#T|T]])''
+'':TargetsIncludeText(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :Selection ====
-'':Selection( @ [[#T|T]])''
+'':Selection( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Target ====
-'':Target( @ [[#T|T]])''
+'':Target( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Type ====
-'':Type( @ [[#T|T]])''
+'':Type( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Format ====
-'':Format( @ [[#T|T]])''
+'':Format( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Data ====
-'':Data( @ [[#T|T]])''
+'':Data( @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== :Length ====
-'':Length( @ [[#T|T]])''
+'':Length( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Display ====
-'':Display( @ [[#T|T]])''
+'':Display( @ [[#T|T]]) : [[..:..:Gtk:Gdk:Display#T|Gtk.Gdk.Display.T]]''
 
 
 ==== :Copy ====
-'':Copy( @ [[#T|T]])''
+'':Copy(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:SelectionData#T|Gtk.Gtk.SelectionData.T]]''
 
 
 ==== :Free ====
-'':Free( @ [[#T|T]])''
+'':Free(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetPixbuf ====
-'':GetPixbuf( @ [[#T|T]])''
+'':GetPixbuf(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Pixbuf#T|Gtk.Gdk.Pixbuf.T]]''
 
 
 ==== :GetTargets ====
-'':GetTargets( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':GetTargets(self @ [[#T|T]], targets @ [[..:..:Std:Object#T|Std.Object.T]], n_atoms @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :GetText ====
-'':GetText( @ [[#T|T]])''
+'':GetText(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== :GetUris ====
-'':GetUris( @ [[#T|T]])''
+'':GetUris(self @ [[#T|T]]) : [[..:..:Std:List#T|Std.List.T]]''
 
 
 ==== :Set ====
-'':Set( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':Set(self @ [[#T|T]], type @ [[..:..:Std:Object#T|Std.Object.T]], format @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], data @ [[..:..:Std:String#T|Std.String.T]], length @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetPixbuf ====
-'':SetPixbuf( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Pixbuf#T|Gtk.Gdk.Pixbuf.T]])''
+'':SetPixbuf(self @ [[#T|T]], pixbuf @ [[..:..:Gtk:Gdk:Pixbuf#T|Gtk.Gdk.Pixbuf.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :SetText ====
-'':SetText( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':SetText(self @ [[#T|T]], str @ [[..:..:Std:String#T|Std.String.T]], len @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :SetUris ====
-'':SetUris( @ [[#T|T]],  @ [[..:..:Std:List#T|Std.List.T]])''
+'':SetUris(self @ [[#T|T]], uris @ [[..:..:Std:List#T|Std.List.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :TargetsIncludeImage ====
-'':TargetsIncludeImage( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+'':TargetsIncludeImage(self @ [[#T|T]], writable @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :TargetsIncludeRichText ====
-'':TargetsIncludeRichText( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TextBuffer#T|Gtk.Gtk.TextBuffer.T]])''
+'':TargetsIncludeRichText(self @ [[#T|T]], buffer @ [[..:..:Gtk:Gtk:TextBuffer#T|Gtk.Gtk.TextBuffer.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== New ====
@@ -91,6 +91,6 @@
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 

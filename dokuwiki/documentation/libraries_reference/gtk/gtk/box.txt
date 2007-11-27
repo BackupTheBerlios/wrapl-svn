@@ -8,62 +8,62 @@
 
 
 ==== :SetSpacing ====
-'':SetSpacing( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':SetSpacing(self @ [[#T|T]], spacing @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Children ====
-'':Children( @ [[#T|T]])''
+'':Children( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Spacing ====
-'':Spacing( @ [[#T|T]])''
+'':Spacing( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Homogeneous ====
-'':Homogeneous( @ [[#T|T]])''
+'':Homogeneous( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :GetHomogeneous ====
-'':GetHomogeneous( @ [[#T|T]])''
+'':GetHomogeneous(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :GetSpacing ====
-'':GetSpacing( @ [[#T|T]])''
+'':GetSpacing(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :PackEnd ====
-'':PackEnd( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':PackEnd(self @ [[#T|T]], child @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], expand @ [[..:..:Std:Symbol#T|Std.Symbol.T]], fill @ [[..:..:Std:Symbol#T|Std.Symbol.T]], padding @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :PackEndDefaults ====
-'':PackEndDefaults( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]])''
+'':PackEndDefaults(self @ [[#T|T]], widget @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :PackStart ====
-'':PackStart( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':PackStart(self @ [[#T|T]], child @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], expand @ [[..:..:Std:Symbol#T|Std.Symbol.T]], fill @ [[..:..:Std:Symbol#T|Std.Symbol.T]], padding @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :PackStartDefaults ====
-'':PackStartDefaults( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]])''
+'':PackStartDefaults(self @ [[#T|T]], widget @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :QueryChildPacking ====
-'':QueryChildPacking( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':QueryChildPacking(self @ [[#T|T]], child @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], expand @ [[..:..:Std:Object#T|Std.Object.T]], fill @ [[..:..:Std:Object#T|Std.Object.T]], padding @ [[..:..:Std:Object#T|Std.Object.T]], pack_type @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :ReorderChild ====
-'':ReorderChild( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':ReorderChild(self @ [[#T|T]], child @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], position @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetChildPacking ====
-'':SetChildPacking( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Gtk:Gtk:PackType#T|Gtk.Gtk.PackType.T]])''
+'':SetChildPacking(self @ [[#T|T]], child @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], expand @ [[..:..:Std:Symbol#T|Std.Symbol.T]], fill @ [[..:..:Std:Symbol#T|Std.Symbol.T]], padding @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], pack_type @ [[..:..:Gtk:Gtk:PackType#T|Gtk.Gtk.PackType.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetHomogeneous ====
-'':SetHomogeneous( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+'':SetHomogeneous(self @ [[#T|T]], homogeneous @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 

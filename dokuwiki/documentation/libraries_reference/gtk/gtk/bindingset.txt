@@ -3,54 +3,54 @@
 
 
 ==== :AddPath ====
-'':AddPath( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:PathType#T|Gtk.Gtk.PathType.T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Gtk:Gtk:PathPriorityType#T|Gtk.Gtk.PathPriorityType.T]])''
+'':AddPath(self @ [[#T|T]], path_type @ [[..:..:Gtk:Gtk:PathType#T|Gtk.Gtk.PathType.T]], path_pattern @ [[..:..:Std:String#T|Std.String.T]], priority @ [[..:..:Gtk:Gtk:PathPriorityType#T|Gtk.Gtk.PathPriorityType.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Activate ====
-'':Activate( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]])''
+'':Activate(self @ [[#T|T]], keyval @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], modifiers @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], object @ [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :Parsed ====
-'':Parsed( @ [[#T|T]])''
+'':Parsed( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :SetName ====
-'':SetName( @ [[#T|T]])''
+'':SetName( @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== :Priority ====
-'':Priority( @ [[#T|T]])''
+'':Priority( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :WidgetPathPspecs ====
-'':WidgetPathPspecs( @ [[#T|T]])''
+'':WidgetPathPspecs( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :WidgetClassPspecs ====
-'':WidgetClassPspecs( @ [[#T|T]])''
+'':WidgetClassPspecs( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :ClassBranchPspecs ====
-'':ClassBranchPspecs( @ [[#T|T]])''
+'':ClassBranchPspecs( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Entries ====
-'':Entries( @ [[#T|T]])''
+'':Entries( @ [[#T|T]]) : [[..:..:Gtk:Gtk:BindingEntry#T|Gtk.Gtk.BindingEntry.T]]''
 
 
 ==== :Current ====
-'':Current( @ [[#T|T]])''
+'':Current( @ [[#T|T]]) : [[..:..:Gtk:Gtk:BindingEntry#T|Gtk.Gtk.BindingEntry.T]]''
 
 
 ==== New ====
-''New()''
+''New(set_name : [[..:..:Std:String#T|Std.String.T]]) : [[# T| T]]''
 
 
 ==== Find ====
-''Find()''
+''Find(set_name) : [[..:..:Gtk:Gtk:BindingSet#T|Gtk.Gtk.BindingSet.T]]''
 
 
 ==== ByClass ====
-''ByClass()''
+''ByClass(object_class) : [[..:..:Gtk:Gtk:BindingSet#T|Gtk.Gtk.BindingSet.T]]''
 
 

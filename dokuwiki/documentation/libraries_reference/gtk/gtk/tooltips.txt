@@ -6,74 +6,74 @@
 
 
 ==== :SetTip ====
-'':SetTip( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+'':SetTip(self @ [[#T|T]], widget @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], tip_text @ [[..:..:Std:String#T|Std.String.T]], tip_private @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetDelay ====
-'':SetDelay( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':SetDelay(self @ [[#T|T]], delay @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :ForceWindow ====
-'':ForceWindow( @ [[#T|T]])''
+'':ForceWindow(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :TipWindow ====
-'':TipWindow( @ [[#T|T]])''
+'':TipWindow( @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
 
 ==== :TipLabel ====
-'':TipLabel( @ [[#T|T]])''
+'':TipLabel( @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
 
 ==== :ActiveTipsData ====
-'':ActiveTipsData( @ [[#T|T]])''
+'':ActiveTipsData( @ [[#T|T]]) : [[..:..:Gtk:Gtk:TooltipsData#T|Gtk.Gtk.TooltipsData.T]]''
 
 
 ==== :TipsDataList ====
-'':TipsDataList( @ [[#T|T]])''
+'':TipsDataList( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Delay ====
-'':Delay( @ [[#T|T]])''
+'':Delay( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Enabled ====
-'':Enabled( @ [[#T|T]])''
+'':Enabled( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :HaveGrab ====
-'':HaveGrab( @ [[#T|T]])''
+'':HaveGrab( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :UseStickyDelay ====
-'':UseStickyDelay( @ [[#T|T]])''
+'':UseStickyDelay( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :TimerTag ====
-'':TimerTag( @ [[#T|T]])''
+'':TimerTag( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :LastPopdown ====
-'':LastPopdown( @ [[#T|T]])''
+'':LastPopdown( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Disable ====
-'':Disable( @ [[#T|T]])''
+'':Disable(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Enable ====
-'':Enable( @ [[#T|T]])''
+'':Enable(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====
-''New()''
+''New() : [[# T| T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 
 ==== GetInfoFromTipWindow ====
-''GetInfoFromTipWindow()''
+''GetInfoFromTipWindow(tip_window, tooltips, current_widget) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 

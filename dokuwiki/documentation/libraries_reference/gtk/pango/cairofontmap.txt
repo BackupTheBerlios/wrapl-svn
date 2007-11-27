@@ -5,34 +5,34 @@
 
 
 ==== :SetResolution ====
-'':SetResolution( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+'':SetResolution(self @ [[#T|T]], dpi @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetResolution ====
-'':GetResolution( @ [[#T|T]])''
+'':GetResolution(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :GetFontType ====
-'':GetFontType( @ [[#T|T]])''
+'':GetFontType(self @ [[#T|T]]) : [[..:..:Gtk:Cairo:CairoFontTypeT#T|Gtk.Cairo.CairoFontTypeT.T]]''
 
 
 ==== :CreateContext ====
-'':CreateContext( @ [[#T|T]])''
+'':CreateContext(self @ [[#T|T]]) : [[..:..:Gtk:Pango:Context#T|Gtk.Pango.Context.T]]''
 
 
 ==== New ====
-''New()''
+''New() : [[# T| T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 
 ==== GetDefault ====
-''GetDefault()''
+''GetDefault() : [[..:..:Gtk:Pango:FontMap#T|Gtk.Pango.FontMap.T]]''
 
 
 ==== NewForFontType ====
-''NewForFontType()''
+''NewForFontType(fonttype : [[..:..:Gtk:Cairo:CairoFontTypeT#T|Gtk.Cairo.CairoFontTypeT.T]]) : [[# T| T]]''
 
 

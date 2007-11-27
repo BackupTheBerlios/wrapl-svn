@@ -9,62 +9,62 @@
 
 
 ==== :SetShadowType ====
-'':SetShadowType( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:ShadowType#T|Gtk.Gtk.ShadowType.T]])''
+'':SetShadowType(type @ [[#T|T]],  @ [[..:..:Gtk:Gtk:ShadowType#T|Gtk.Gtk.ShadowType.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetLabelWidget ====
-'':SetLabelWidget( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]])''
+'':SetLabelWidget(label_widget @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :LabelWidget ====
-'':LabelWidget( @ [[#T|T]])''
+'':LabelWidget( @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
 
 ==== :ShadowType ====
-'':ShadowType( @ [[#T|T]])''
+'':ShadowType( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :LabelXalign ====
-'':LabelXalign( @ [[#T|T]])''
+'':LabelXalign( @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :LabelYalign ====
-'':LabelYalign( @ [[#T|T]])''
+'':LabelYalign( @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :ChildAllocation ====
-'':ChildAllocation( @ [[#T|T]])''
+'':ChildAllocation( @ [[#T|T]]) : [[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]]''
 
 
 ==== :GetLabel ====
-'':GetLabel( @ [[#T|T]])''
+'':GetLabel(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== :GetLabelAlign ====
-'':GetLabelAlign( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':GetLabelAlign(xalign @ [[#T|T]], yalign @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetLabelWidget ====
-'':GetLabelWidget( @ [[#T|T]])''
+'':GetLabelWidget( @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
 
 ==== :GetShadowType ====
-'':GetShadowType( @ [[#T|T]])''
+'':GetShadowType( @ [[#T|T]]) : [[..:..:Gtk:Gtk:ShadowType#T|Gtk.Gtk.ShadowType.T]]''
 
 
 ==== :SetLabel ====
-'':SetLabel( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+'':SetLabel(label @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetLabelAlign ====
-'':SetLabelAlign( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+'':SetLabelAlign(xalign @ [[#T|T]], yalign @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====
-''New()''
+''New(label : [[..:..:Std:String#T|Std.String.T]]) : [[# T| T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 

@@ -5,46 +5,46 @@
 
 
 ==== :Write ====
-'':Write( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':Write(self @ [[#T|T]], buf @ [[..:..:Std:String#T|Std.String.T]], count @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], error @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :SetSize ====
-'':SetSize( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':SetSize(self @ [[#T|T]], width @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], height @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetPixbuf ====
-'':GetPixbuf( @ [[#T|T]])''
+'':GetPixbuf(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Pixbuf#T|Gtk.Gdk.Pixbuf.T]]''
 
 
 ==== :GetFormat ====
-'':GetFormat( @ [[#T|T]])''
+'':GetFormat(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:PixbufFormat#T|Gtk.Gdk.PixbufFormat.T]]''
 
 
 ==== :Priv ====
-'':Priv( @ [[#T|T]])''
+'':Priv( @ [[#T|T]]) : [[..:..:Std:Address#T|Std.Address.T]]''
 
 
 ==== :Close ====
-'':Close( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':Close(self @ [[#T|T]], error @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :GetAnimation ====
-'':GetAnimation( @ [[#T|T]])''
+'':GetAnimation(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:PixbufAnimation#T|Gtk.Gdk.PixbufAnimation.T]]''
 
 
 ==== New ====
-''New()''
+''New() : [[# T| T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 
 ==== NewWithType ====
-''NewWithType()''
+''NewWithType(image_type : [[..:..:Std:String#T|Std.String.T]], error : [[..:..:Std:Object#T|Std.Object.T]]) : [[# T| T]]''
 
 
 ==== NewWithMimeType ====
-''NewWithMimeType()''
+''NewWithMimeType(mime_type : [[..:..:Std:String#T|Std.String.T]], error : [[..:..:Std:Object#T|Std.Object.T]]) : [[# T| T]]''
 
 

@@ -3,46 +3,46 @@
 
 
 ==== :Unref ====
-'':Unref( @ [[#T|T]])''
+'':Unref(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Splice ====
-'':Splice( @ [[#T|T]],  @ [[..:..:Gtk:Pango:AttrList#T|Gtk.Pango.AttrList.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':Splice(self @ [[#T|T]], other @ [[..:..:Gtk:Pango:AttrList#T|Gtk.Pango.AttrList.T]], pos @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], len @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Change ====
-'':Change( @ [[#T|T]],  @ [[..:..:Gtk:Pango:Attribute#T|Gtk.Pango.Attribute.T]])''
+'':Change(self @ [[#T|T]], attr @ [[..:..:Gtk:Pango:Attribute#T|Gtk.Pango.Attribute.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Copy ====
-'':Copy( @ [[#T|T]])''
+'':Copy(self @ [[#T|T]]) : [[..:..:Gtk:Pango:AttrList#T|Gtk.Pango.AttrList.T]]''
 
 
 ==== :Filter ====
-'':Filter( @ [[#T|T]],  @ [[..:..:Std:Function#T|Std.Function.T]],  @ [[..:..:Std:Address#T|Std.Address.T]])''
+'':Filter(self @ [[#T|T]], func @ [[..:..:Std:Function#T|Std.Function.T]], data @ [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Gtk:Pango:AttrList#T|Gtk.Pango.AttrList.T]]''
 
 
 ==== :GetIterator ====
-'':GetIterator( @ [[#T|T]])''
+'':GetIterator(self @ [[#T|T]]) : [[..:..:Gtk:Pango:AttrIterator#T|Gtk.Pango.AttrIterator.T]]''
 
 
 ==== :Insert ====
-'':Insert( @ [[#T|T]],  @ [[..:..:Gtk:Pango:Attribute#T|Gtk.Pango.Attribute.T]])''
+'':Insert(self @ [[#T|T]], attr @ [[..:..:Gtk:Pango:Attribute#T|Gtk.Pango.Attribute.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :InsertBefore ====
-'':InsertBefore( @ [[#T|T]],  @ [[..:..:Gtk:Pango:Attribute#T|Gtk.Pango.Attribute.T]])''
+'':InsertBefore(self @ [[#T|T]], attr @ [[..:..:Gtk:Pango:Attribute#T|Gtk.Pango.Attribute.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Ref ====
-'':Ref( @ [[#T|T]])''
+'':Ref(self @ [[#T|T]]) : [[..:..:Gtk:Pango:AttrList#T|Gtk.Pango.AttrList.T]]''
 
 
 ==== New ====
-''New()''
+''New() : [[# T| T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 

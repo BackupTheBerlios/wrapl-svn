@@ -3,38 +3,38 @@
 
 
 ==== :Unref ====
-'':Unref( @ [[#T|T]])''
+'':Unref(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :RenderIcon ====
-'':RenderIcon( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Style#T|Gtk.Gtk.Style.T]],  @ [[..:..:Gtk:Gtk:TextDirection#T|Gtk.Gtk.TextDirection.T]],  @ [[..:..:Gtk:Gtk:StateType#T|Gtk.Gtk.StateType.T]],  @ [[..:..:Gtk:Gtk:IconSize#T|Gtk.Gtk.IconSize.T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+'':RenderIcon(self @ [[#T|T]], style @ [[..:..:Gtk:Gtk:Style#T|Gtk.Gtk.Style.T]], direction @ [[..:..:Gtk:Gtk:TextDirection#T|Gtk.Gtk.TextDirection.T]], state @ [[..:..:Gtk:Gtk:StateType#T|Gtk.Gtk.StateType.T]], size @ [[..:..:Gtk:Gtk:IconSize#T|Gtk.Gtk.IconSize.T]], widget @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], detail @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Gtk:Gdk:Pixbuf#T|Gtk.Gdk.Pixbuf.T]]''
 
 
 ==== :Ref ====
-'':Ref( @ [[#T|T]])''
+'':Ref(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:IconSet#T|Gtk.Gtk.IconSet.T]]''
 
 
 ==== :AddSource ====
-'':AddSource( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:IconSource#T|Gtk.Gtk.IconSource.T]])''
+'':AddSource(self @ [[#T|T]], source @ [[..:..:Gtk:Gtk:IconSource#T|Gtk.Gtk.IconSource.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Copy ====
-'':Copy( @ [[#T|T]])''
+'':Copy(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:IconSet#T|Gtk.Gtk.IconSet.T]]''
 
 
 ==== :GetSizes ====
-'':GetSizes( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':GetSizes(self @ [[#T|T]], sizes @ [[..:..:Std:Object#T|Std.Object.T]], n_sizes @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====
-''New()''
+''New() : [[# T| T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 
 ==== NewFromPixbuf ====
-''NewFromPixbuf()''
+''NewFromPixbuf(pixbuf : [[..:..:Gtk:Gdk:Pixbuf#T|Gtk.Gdk.Pixbuf.T]]) : [[# T| T]]''
 
 

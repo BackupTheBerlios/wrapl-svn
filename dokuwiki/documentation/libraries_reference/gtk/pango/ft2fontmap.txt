@@ -5,30 +5,30 @@
 
 
 ==== :SubstituteChanged ====
-'':SubstituteChanged( @ [[#T|T]])''
+'':SubstituteChanged(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetResolution ====
-'':SetResolution( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+'':SetResolution(self @ [[#T|T]], dpi_x @ [[..:..:Std:Real#T|Std.Real.T]], dpi_y @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetDefaultSubstitute ====
-'':SetDefaultSubstitute( @ [[#T|T]],  @ [[..:..:Std:Function#T|Std.Function.T]],  @ [[..:..:Std:Address#T|Std.Address.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':SetDefaultSubstitute(self @ [[#T|T]], func @ [[..:..:Std:Function#T|Std.Function.T]], data @ [[..:..:Std:Address#T|Std.Address.T]], notify @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :CreateContext ====
-'':CreateContext( @ [[#T|T]])''
+'':CreateContext(self @ [[#T|T]]) : [[..:..:Gtk:Pango:Context#T|Gtk.Pango.Context.T]]''
 
 
 ==== New ====
-''New()''
+''New() : [[# T| T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 
 ==== ForDisplay ====
-''ForDisplay()''
+''ForDisplay() : [[..:..:Gtk:Pango:FontMap#T|Gtk.Pango.FontMap.T]]''
 
 

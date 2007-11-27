@@ -5,70 +5,70 @@
 
 
 ==== :SetScreen ====
-'':SetScreen( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Screen#T|Gtk.Gdk.Screen.T]])''
+'':SetScreen(self @ [[#T|T]], screen @ [[..:..:Gtk:Gdk:Screen#T|Gtk.Gdk.Screen.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetLimit ====
-'':SetLimit( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':SetLimit(self @ [[#T|T]], limit @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :RemoveItem ====
-'':RemoveItem( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':RemoveItem(self @ [[#T|T]], uri @ [[..:..:Std:String#T|Std.String.T]], error @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :PurgeItems ====
-'':PurgeItems( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':PurgeItems(self @ [[#T|T]], error @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :MoveItem ====
-'':MoveItem( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':MoveItem(self @ [[#T|T]], uri @ [[..:..:Std:String#T|Std.String.T]], new_uri @ [[..:..:Std:String#T|Std.String.T]], error @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :Priv ====
-'':Priv( @ [[#T|T]])''
+'':Priv( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :AddFull ====
-'':AddFull( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Gtk:Gtk:RecentData#T|Gtk.Gtk.RecentData.T]])''
+'':AddFull(self @ [[#T|T]], uri @ [[..:..:Std:String#T|Std.String.T]], recent_data @ [[..:..:Gtk:Gtk:RecentData#T|Gtk.Gtk.RecentData.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :AddItem ====
-'':AddItem( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+'':AddItem(self @ [[#T|T]], uri @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :GetItems ====
-'':GetItems( @ [[#T|T]])''
+'':GetItems(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetLimit ====
-'':GetLimit( @ [[#T|T]])''
+'':GetLimit(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :HasItem ====
-'':HasItem( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+'':HasItem(self @ [[#T|T]], uri @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :LookupItem ====
-'':LookupItem( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':LookupItem(self @ [[#T|T]], uri @ [[..:..:Std:String#T|Std.String.T]], error @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Gtk:Gtk:RecentInfo#T|Gtk.Gtk.RecentInfo.T]]''
 
 
 ==== New ====
-''New()''
+''New() : [[# T| T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 
 ==== GetForScreen ====
-''GetForScreen()''
+''GetForScreen(screen) : [[..:..:Gtk:Gtk:RecentManager#T|Gtk.Gtk.RecentManager.T]]''
 
 
 ==== GetDefault ====
-''GetDefault()''
+''GetDefault() : [[..:..:Gtk:Gtk:RecentManager#T|Gtk.Gtk.RecentManager.T]]''
 
 
 ==== ErrorQuark ====
-''ErrorQuark()''
+''ErrorQuark() : [[..:..:Std:Object#T|Std.Object.T]]''
 
 

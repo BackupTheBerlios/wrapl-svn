@@ -5,106 +5,106 @@
 
 
 ==== :ResetDefaultSortFunc ====
-'':ResetDefaultSortFunc( @ [[#T|T]])''
+'':ResetDefaultSortFunc(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :IterIsValid ====
-'':IterIsValid( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]])''
+'':IterIsValid(self @ [[#T|T]], iter @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :Root ====
-'':Root( @ [[#T|T]])''
+'':Root( @ [[#T|T]]) : [[..:..:Std:Address#T|Std.Address.T]]''
 
 
 ==== :Stamp ====
-'':Stamp( @ [[#T|T]])''
+'':Stamp( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :ChildFlags ====
-'':ChildFlags( @ [[#T|T]])''
+'':ChildFlags( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :ChildModel ====
-'':ChildModel( @ [[#T|T]])''
+'':ChildModel( @ [[#T|T]]) : [[..:..:Gtk:Gtk:TreeModel#T|Gtk.Gtk.TreeModel.T]]''
 
 
 ==== :ZeroRefCount ====
-'':ZeroRefCount( @ [[#T|T]])''
+'':ZeroRefCount( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :SortList ====
-'':SortList( @ [[#T|T]])''
+'':SortList( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SortColumnId ====
-'':SortColumnId( @ [[#T|T]])''
+'':SortColumnId( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Order ====
-'':Order( @ [[#T|T]])''
+'':Order( @ [[#T|T]]) : [[..:..:Gtk:Gtk:SortType#T|Gtk.Gtk.SortType.T]]''
 
 
 ==== :DefaultSortFunc ====
-'':DefaultSortFunc( @ [[#T|T]])''
+'':DefaultSortFunc( @ [[#T|T]]) : [[..:..:Std:Function#T|Std.Function.T]]''
 
 
 ==== :DefaultSortData ====
-'':DefaultSortData( @ [[#T|T]])''
+'':DefaultSortData( @ [[#T|T]]) : [[..:..:Std:Address#T|Std.Address.T]]''
 
 
 ==== :DefaultSortDestroy ====
-'':DefaultSortDestroy( @ [[#T|T]])''
+'':DefaultSortDestroy( @ [[#T|T]]) : [[..:..:Std:Function#T|Std.Function.T]]''
 
 
 ==== :ChangedId ====
-'':ChangedId( @ [[#T|T]])''
+'':ChangedId( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :InsertedId ====
-'':InsertedId( @ [[#T|T]])''
+'':InsertedId( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :HasChildToggledId ====
-'':HasChildToggledId( @ [[#T|T]])''
+'':HasChildToggledId( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :DeletedId ====
-'':DeletedId( @ [[#T|T]])''
+'':DeletedId( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :ReorderedId ====
-'':ReorderedId( @ [[#T|T]])''
+'':ReorderedId( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :ClearCache ====
-'':ClearCache( @ [[#T|T]])''
+'':ClearCache(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :ConvertChildIterToIter ====
-'':ConvertChildIterToIter( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]],  @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]])''
+'':ConvertChildIterToIter(self @ [[#T|T]], sort_iter @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]], child_iter @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :ConvertChildPathToPath ====
-'':ConvertChildPathToPath( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]])''
+'':ConvertChildPathToPath(self @ [[#T|T]], child_path @ [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]]) : [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]]''
 
 
 ==== :ConvertIterToChildIter ====
-'':ConvertIterToChildIter( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]],  @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]])''
+'':ConvertIterToChildIter(self @ [[#T|T]], child_iter @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]], sorted_iter @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :ConvertPathToChildPath ====
-'':ConvertPathToChildPath( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]])''
+'':ConvertPathToChildPath(self @ [[#T|T]], sorted_path @ [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]]) : [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]]''
 
 
 ==== :GetModel ====
-'':GetModel( @ [[#T|T]])''
+'':GetModel(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:TreeModel#T|Gtk.Gtk.TreeModel.T]]''
 
 
 ==== NewWithModel ====
-''NewWithModel()''
+''NewWithModel(child_model : [[..:..:Gtk:Gtk:TreeModel#T|Gtk.Gtk.TreeModel.T]]) : [[# T| T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 

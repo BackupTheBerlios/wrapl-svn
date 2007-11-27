@@ -7,34 +7,34 @@
 
 
 ==== :SetRotation ====
-'':SetRotation( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+'':SetRotation(self @ [[#T|T]], rotation @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetPositionY ====
-'':SetPositionY( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+'':SetPositionY(self @ [[#T|T]], pos_y @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetRotation ====
-'':GetRotation( @ [[#T|T]])''
+'':GetRotation(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :SetPixbuf ====
-'':SetPixbuf( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Pixbuf#T|Gtk.Gdk.Pixbuf.T]])''
+'':SetPixbuf(self @ [[#T|T]], pixbuf @ [[..:..:Gtk:Gdk:Pixbuf#T|Gtk.Gdk.Pixbuf.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetPosition ====
-'':SetPosition( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+'':SetPosition(self @ [[#T|T]], x @ [[..:..:Std:Real#T|Std.Real.T]], y @ [[..:..:Std:Real#T|Std.Real.T]], w @ [[..:..:Std:Real#T|Std.Real.T]], h @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetPositionX ====
-'':SetPositionX( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+'':SetPositionX(self @ [[#T|T]], pos_x @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====
-''New()''
+''New() : [[# T| T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 

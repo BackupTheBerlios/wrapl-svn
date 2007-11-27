@@ -5,22 +5,22 @@
 
 
 ==== :RemoveWindow ====
-'':RemoveWindow( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Window#T|Gtk.Gtk.Window.T]])''
+'':RemoveWindow(self @ [[#T|T]], window @ [[..:..:Gtk:Gtk:Window#T|Gtk.Gtk.Window.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :AddWindow ====
-'':AddWindow( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Window#T|Gtk.Gtk.Window.T]])''
+'':AddWindow(self @ [[#T|T]], window @ [[..:..:Gtk:Gtk:Window#T|Gtk.Gtk.Window.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Grabs ====
-'':Grabs( @ [[#T|T]])''
+'':Grabs( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====
-''New()''
+''New() : [[# T| T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 

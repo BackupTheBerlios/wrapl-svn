@@ -11,62 +11,62 @@
 
 
 ==== :SetPreviewText ====
-'':SetPreviewText( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+'':SetPreviewText(text @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetFontName ====
-'':SetFontName( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+'':SetFontName(fontname @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :Fontsel ====
-'':Fontsel( @ [[#T|T]])''
+'':Fontsel( @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
 
 ==== :MainVbox ====
-'':MainVbox( @ [[#T|T]])''
+'':MainVbox( @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
 
 ==== :ActionArea ====
-'':ActionArea( @ [[#T|T]])''
+'':ActionArea( @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
 
 ==== :OkButton ====
-'':OkButton( @ [[#T|T]])''
+'':OkButton( @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
 
 ==== :ApplyButton ====
-'':ApplyButton( @ [[#T|T]])''
+'':ApplyButton( @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
 
 ==== :CancelButton ====
-'':CancelButton( @ [[#T|T]])''
+'':CancelButton( @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
 
 ==== :DialogWidth ====
-'':DialogWidth( @ [[#T|T]])''
+'':DialogWidth( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :AutoResize ====
-'':AutoResize( @ [[#T|T]])''
+'':AutoResize( @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :GetFont ====
-'':GetFont( @ [[#T|T]])''
+'':GetFont(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Font#T|Gtk.Gdk.Font.T]]''
 
 
 ==== :GetFontName ====
-'':GetFontName( @ [[#T|T]])''
+'':GetFontName(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== :GetPreviewText ====
-'':GetPreviewText( @ [[#T|T]])''
+'':GetPreviewText(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== New ====
-''New()''
+''New(title : [[..:..:Std:String#T|Std.String.T]]) : [[# T| T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 

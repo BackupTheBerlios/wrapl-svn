@@ -3,38 +3,38 @@
 
 
 ==== :Unref ====
-'':Unref( @ [[#T|T]])''
+'':Unref(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :ToBytes ====
-'':ToBytes( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':ToBytes(self @ [[#T|T]], bytes @ [[..:..:Std:Object#T|Std.Object.T]], n_bytes @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Copy ====
-'':Copy( @ [[#T|T]])''
+'':Copy(self @ [[#T|T]]) : [[..:..:Gtk:Pango:Coverage#T|Gtk.Pango.Coverage.T]]''
 
 
 ==== :Get ====
-'':Get( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':Get(self @ [[#T|T]], index_ @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Gtk:Pango:CoverageLevel#T|Gtk.Pango.CoverageLevel.T]]''
 
 
 ==== :Max ====
-'':Max( @ [[#T|T]],  @ [[..:..:Gtk:Pango:Coverage#T|Gtk.Pango.Coverage.T]])''
+'':Max(self @ [[#T|T]], other @ [[..:..:Gtk:Pango:Coverage#T|Gtk.Pango.Coverage.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Ref ====
-'':Ref( @ [[#T|T]])''
+'':Ref(self @ [[#T|T]]) : [[..:..:Gtk:Pango:Coverage#T|Gtk.Pango.Coverage.T]]''
 
 
 ==== :Set ====
-'':Set( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Gtk:Pango:CoverageLevel#T|Gtk.Pango.CoverageLevel.T]])''
+'':Set(self @ [[#T|T]], index_ @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], level @ [[..:..:Gtk:Pango:CoverageLevel#T|Gtk.Pango.CoverageLevel.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====
-''New()''
+''New() : [[# T| T]]''
 
 
 ==== FromBytes ====
-''FromBytes()''
+''FromBytes(bytes, n_bytes) : [[..:..:Gtk:Pango:Coverage#T|Gtk.Pango.Coverage.T]]''
 
 

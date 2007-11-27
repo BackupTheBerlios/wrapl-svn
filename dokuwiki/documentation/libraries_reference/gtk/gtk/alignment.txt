@@ -9,38 +9,38 @@
 
 
 ==== :SetPadding ====
-'':SetPadding( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':SetPadding(self @ [[#T|T]], padding_top @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], padding_bottom @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], padding_left @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], padding_right @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Set ====
-'':Set( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+'':Set(self @ [[#T|T]], xalign @ [[..:..:Std:Real#T|Std.Real.T]], yalign @ [[..:..:Std:Real#T|Std.Real.T]], xscale @ [[..:..:Std:Real#T|Std.Real.T]], yscale @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Xalign ====
-'':Xalign( @ [[#T|T]])''
+'':Xalign( @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :Yalign ====
-'':Yalign( @ [[#T|T]])''
+'':Yalign( @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :Xscale ====
-'':Xscale( @ [[#T|T]])''
+'':Xscale( @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :Yscale ====
-'':Yscale( @ [[#T|T]])''
+'':Yscale( @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :GetPadding ====
-'':GetPadding( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':GetPadding(self @ [[#T|T]], padding_top @ [[..:..:Std:Object#T|Std.Object.T]], padding_bottom @ [[..:..:Std:Object#T|Std.Object.T]], padding_left @ [[..:..:Std:Object#T|Std.Object.T]], padding_right @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====
-''New()''
+''New(xalign : [[..:..:Std:Real#T|Std.Real.T]], yalign : [[..:..:Std:Real#T|Std.Real.T]], xscale : [[..:..:Std:Real#T|Std.Real.T]], yscale : [[..:..:Std:Real#T|Std.Real.T]]) : [[# T| T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 

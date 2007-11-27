@@ -3,26 +3,26 @@
 
 
 ==== :Free ====
-'':Free( @ [[#T|T]])''
+'':Free(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Copy ====
-'':Copy( @ [[#T|T]])''
+'':Copy(self @ [[#T|T]]) : [[..:..:Gtk:CCC:CcDistance#T|Gtk.CCC.CcDistance.T]]''
 
 
 ==== :Value ====
-'':Value( @ [[#T|T]])''
+'':Value( @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :Unit ====
-'':Unit( @ [[#T|T]])''
+'':Unit( @ [[#T|T]]) : [[..:..:Gtk:CCC:CcUnit#T|Gtk.CCC.CcUnit.T]]''
 
 
 ==== New ====
-''New()''
+''New(value : [[..:..:Std:Real#T|Std.Real.T]], unit : [[..:..:Gtk:CCC:CcUnit#T|Gtk.CCC.CcUnit.T]]) : [[# T| T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 

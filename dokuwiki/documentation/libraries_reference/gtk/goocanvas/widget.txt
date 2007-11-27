@@ -6,34 +6,34 @@
 
 
 ==== :Anchor ====
-'':Anchor( @ [[#T|T]])''
+'':Anchor( @ [[#T|T]]) : [[..:..:Gtk:Gtk:AnchorType#T|Gtk.Gtk.AnchorType.T]]''
 
 
 ==== :Height ====
-'':Height( @ [[#T|T]])''
+'':Height( @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :Widget ====
-'':Widget( @ [[#T|T]])''
+'':Widget( @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
 
 ==== :X ====
-'':X( @ [[#T|T]])''
+'':X( @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :Y ====
-'':Y( @ [[#T|T]])''
+'':Y( @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :Width ====
-'':Width( @ [[#T|T]])''
+'':Width( @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== New ====
-''New()''
+''New(parent : [[..:..:Gtk:GooCanvas:Item#T|Gtk.GooCanvas.Item.T]], widget : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], x : [[..:..:Std:Real#T|Std.Real.T]], y : [[..:..:Std:Real#T|Std.Real.T]], width : [[..:..:Std:Real#T|Std.Real.T]], height : [[..:..:Std:Real#T|Std.Real.T]], ___ : [[..:..:Std:Object#T|Std.Object.T]]) : [[# T| T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 

@@ -22,19 +22,19 @@
 
 
 ==== :Priv ====
-'':Priv( @ [[#T|T]])''
+'':Priv( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetIconName ====
-'':GetIconName( @ [[#T|T]])''
+'':GetIconName(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== :GetIconWidget ====
-'':GetIconWidget( @ [[#T|T]])''
+'':GetIconWidget( @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
 
 ==== :GetLabel ====
-'':GetLabel( @ [[#T|T]])''
+'':GetLabel( @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== :GetLabelWidget ====
@@ -62,14 +62,14 @@
 
 
 ==== New ====
-''New()''
+''New(icon_widget : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], label : [[..:..:Std:String#T|Std.String.T]]) : [[# T| T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 
 ==== NewFromStock ====
-''NewFromStock()''
+''NewFromStock(stock_id : [[..:..:Std:String#T|Std.String.T]]) : [[# T| T]]''
 
 

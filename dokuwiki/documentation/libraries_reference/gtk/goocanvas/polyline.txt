@@ -6,18 +6,18 @@
 
 
 ==== :PolylineData ====
-'':PolylineData( @ [[#T|T]])''
+'':PolylineData( @ [[#T|T]]) : [[..:..:Gtk:GooCanvas:PolylineData#T|Gtk.GooCanvas.PolylineData.T]]''
 
 
 ==== New ====
-''New()''
+''New(parent : [[..:..:Gtk:GooCanvas:Item#T|Gtk.GooCanvas.Item.T]], close_path : [[..:..:Std:Symbol#T|Std.Symbol.T]], num_points : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], ___ : [[..:..:Std:Object#T|Std.Object.T]]) : [[# T| T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 
 ==== NewLine ====
-''NewLine()''
+''NewLine(parent : [[..:..:Gtk:GooCanvas:Item#T|Gtk.GooCanvas.Item.T]], x1 : [[..:..:Std:Real#T|Std.Real.T]], y1 : [[..:..:Std:Real#T|Std.Real.T]], x2 : [[..:..:Std:Real#T|Std.Real.T]], y2 : [[..:..:Std:Real#T|Std.Real.T]], ___ : [[..:..:Std:Object#T|Std.Object.T]]) : [[# T| T]]''
 
 

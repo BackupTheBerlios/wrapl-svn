@@ -6,454 +6,454 @@
 
 
 ==== :Withdraw ====
-'':Withdraw( @ [[#T|T]])''
+'':Withdraw(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Unstick ====
-'':Unstick( @ [[#T|T]])''
+'':Unstick(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Unmaximize ====
-'':Unmaximize( @ [[#T|T]])''
+'':Unmaximize(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Unfullscreen ====
-'':Unfullscreen( @ [[#T|T]])''
+'':Unfullscreen(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :ThawUpdates ====
-'':ThawUpdates( @ [[#T|T]])''
+'':ThawUpdates(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :ThawToplevelUpdatesLibgtkOnly ====
-'':ThawToplevelUpdatesLibgtkOnly( @ [[#T|T]])''
+'':ThawToplevelUpdatesLibgtkOnly(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Stick ====
-'':Stick( @ [[#T|T]])''
+'':Stick(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :ShowUnraised ====
-'':ShowUnraised( @ [[#T|T]])''
+'':ShowUnraised(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Show ====
-'':Show( @ [[#T|T]])''
+'':Show(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :ShapeCombineRegion ====
-'':ShapeCombineRegion( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Region#T|Gtk.Gdk.Region.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':ShapeCombineRegion(self @ [[#T|T]], shape_region @ [[..:..:Gtk:Gdk:Region#T|Gtk.Gdk.Region.T]], offset_x @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], offset_y @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :AddFilter ====
-'':AddFilter( @ [[#T|T]],  @ [[..:..:Std:Function#T|Std.Function.T]],  @ [[..:..:Std:Address#T|Std.Address.T]])''
+'':AddFilter(self @ [[#T|T]], function @ [[..:..:Std:Function#T|Std.Function.T]], data @ [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Beep ====
-'':Beep( @ [[#T|T]])''
+'':Beep(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :BeginMoveDrag ====
-'':BeginMoveDrag( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':BeginMoveDrag(self @ [[#T|T]], button @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], root_x @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], root_y @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], timestamp @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :BeginPaintRect ====
-'':BeginPaintRect( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]])''
+'':BeginPaintRect(self @ [[#T|T]], rectangle @ [[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :BeginPaintRegion ====
-'':BeginPaintRegion( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Region#T|Gtk.Gdk.Region.T]])''
+'':BeginPaintRegion(self @ [[#T|T]], region @ [[..:..:Gtk:Gdk:Region#T|Gtk.Gdk.Region.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :BeginResizeDrag ====
-'':BeginResizeDrag( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:WindowEdge#T|Gtk.Gdk.WindowEdge.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':BeginResizeDrag(self @ [[#T|T]], edge @ [[..:..:Gtk:Gdk:WindowEdge#T|Gtk.Gdk.WindowEdge.T]], button @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], root_x @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], root_y @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], timestamp @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Clear ====
-'':Clear( @ [[#T|T]])''
+'':Clear(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :ClearArea ====
-'':ClearArea( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':ClearArea(self @ [[#T|T]], x @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], width @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], height @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :ClearAreaE ====
-'':ClearAreaE( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':ClearAreaE(self @ [[#T|T]], x @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], width @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], height @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :ConfigureFinished ====
-'':ConfigureFinished( @ [[#T|T]])''
+'':ConfigureFinished(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Deiconify ====
-'':Deiconify( @ [[#T|T]])''
+'':Deiconify(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Destroy ====
-'':Destroy( @ [[#T|T]])''
+'':Destroy(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :EnableSynchronizedConfigure ====
-'':EnableSynchronizedConfigure( @ [[#T|T]])''
+'':EnableSynchronizedConfigure(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :EndPaint ====
-'':EndPaint( @ [[#T|T]])''
+'':EndPaint(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Focus ====
-'':Focus( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':Focus(self @ [[#T|T]], timestamp @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :FreezeToplevelUpdatesLibgtkOnly ====
-'':FreezeToplevelUpdatesLibgtkOnly( @ [[#T|T]])''
+'':FreezeToplevelUpdatesLibgtkOnly(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :FreezeUpdates ====
-'':FreezeUpdates( @ [[#T|T]])''
+'':FreezeUpdates(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Fullscreen ====
-'':Fullscreen( @ [[#T|T]])''
+'':Fullscreen(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetChildren ====
-'':GetChildren( @ [[#T|T]])''
+'':GetChildren(self @ [[#T|T]]) : [[..:..:Std:List#T|Std.List.T]]''
 
 
 ==== :GetDecorations ====
-'':GetDecorations( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':GetDecorations(self @ [[#T|T]], decorations @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :GetDeskrelativeOrigin ====
-'':GetDeskrelativeOrigin( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':GetDeskrelativeOrigin(self @ [[#T|T]], x @ [[..:..:Std:Object#T|Std.Object.T]], y @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :GetEvents ====
-'':GetEvents( @ [[#T|T]])''
+'':GetEvents(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :GetFrameExtents ====
-'':GetFrameExtents( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]])''
+'':GetFrameExtents(self @ [[#T|T]], rect @ [[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetGeometry ====
-'':GetGeometry( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':GetGeometry(self @ [[#T|T]], x @ [[..:..:Std:Object#T|Std.Object.T]], y @ [[..:..:Std:Object#T|Std.Object.T]], width @ [[..:..:Std:Object#T|Std.Object.T]], height @ [[..:..:Std:Object#T|Std.Object.T]], depth @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetGroup ====
-'':GetGroup( @ [[#T|T]])''
+'':GetGroup(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]]''
 
 
 ==== :GetInternalPaintInfo ====
-'':GetInternalPaintInfo( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':GetInternalPaintInfo(self @ [[#T|T]], real_drawable @ [[..:..:Std:Object#T|Std.Object.T]], x_offset @ [[..:..:Std:Object#T|Std.Object.T]], y_offset @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetOrigin ====
-'':GetOrigin( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':GetOrigin(self @ [[#T|T]], x @ [[..:..:Std:Object#T|Std.Object.T]], y @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :GetParent ====
-'':GetParent( @ [[#T|T]])''
+'':GetParent(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]]''
 
 
 ==== :GetPointer ====
-'':GetPointer( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':GetPointer(self @ [[#T|T]], x @ [[..:..:Std:Object#T|Std.Object.T]], y @ [[..:..:Std:Object#T|Std.Object.T]], mask @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]]''
 
 
 ==== :GetPosition ====
-'':GetPosition( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':GetPosition(self @ [[#T|T]], x @ [[..:..:Std:Object#T|Std.Object.T]], y @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetRootOrigin ====
-'':GetRootOrigin( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':GetRootOrigin(self @ [[#T|T]], x @ [[..:..:Std:Object#T|Std.Object.T]], y @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetState ====
-'':GetState( @ [[#T|T]])''
+'':GetState(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :GetToplevel ====
-'':GetToplevel( @ [[#T|T]])''
+'':GetToplevel(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]]''
 
 
 ==== :GetTypeHint ====
-'':GetTypeHint( @ [[#T|T]])''
+'':GetTypeHint(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:WindowTypeHint#T|Gtk.Gdk.WindowTypeHint.T]]''
 
 
 ==== :GetUpdateArea ====
-'':GetUpdateArea( @ [[#T|T]])''
+'':GetUpdateArea(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Region#T|Gtk.Gdk.Region.T]]''
 
 
 ==== :GetUserData ====
-'':GetUserData( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':GetUserData(self @ [[#T|T]], data @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetWindowType ====
-'':GetWindowType( @ [[#T|T]])''
+'':GetWindowType(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:WindowType#T|Gtk.Gdk.WindowType.T]]''
 
 
 ==== :Hide ====
-'':Hide( @ [[#T|T]])''
+'':Hide(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Iconify ====
-'':Iconify( @ [[#T|T]])''
+'':Iconify(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :InputShapeCombineMask ====
-'':InputShapeCombineMask( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Bitmap#T|Gtk.Gdk.Bitmap.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':InputShapeCombineMask(self @ [[#T|T]], mask @ [[..:..:Gtk:Gdk:Bitmap#T|Gtk.Gdk.Bitmap.T]], x @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :InputShapeCombineRegion ====
-'':InputShapeCombineRegion( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Region#T|Gtk.Gdk.Region.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':InputShapeCombineRegion(self @ [[#T|T]], shape_region @ [[..:..:Gtk:Gdk:Region#T|Gtk.Gdk.Region.T]], offset_x @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], offset_y @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :InvalidateRect ====
-'':InvalidateRect( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+'':InvalidateRect(self @ [[#T|T]], rect @ [[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]], invalidate_children @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :InvalidateRegion ====
-'':InvalidateRegion( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Region#T|Gtk.Gdk.Region.T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+'':InvalidateRegion(self @ [[#T|T]], region @ [[..:..:Gtk:Gdk:Region#T|Gtk.Gdk.Region.T]], invalidate_children @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :IsViewable ====
-'':IsViewable( @ [[#T|T]])''
+'':IsViewable(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :IsVisible ====
-'':IsVisible( @ [[#T|T]])''
+'':IsVisible(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :Lower ====
-'':Lower( @ [[#T|T]])''
+'':Lower(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Maximize ====
-'':Maximize( @ [[#T|T]])''
+'':Maximize(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :MergeChildInputShapes ====
-'':MergeChildInputShapes( @ [[#T|T]])''
+'':MergeChildInputShapes(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :MergeChildShapes ====
-'':MergeChildShapes( @ [[#T|T]])''
+'':MergeChildShapes(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Move ====
-'':Move( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':Move(self @ [[#T|T]], x @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :MoveRegion ====
-'':MoveRegion( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Region#T|Gtk.Gdk.Region.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':MoveRegion(self @ [[#T|T]], region @ [[..:..:Gtk:Gdk:Region#T|Gtk.Gdk.Region.T]], dx @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], dy @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :MoveResize ====
-'':MoveResize( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':MoveResize(self @ [[#T|T]], x @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], width @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], height @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :PeekChildren ====
-'':PeekChildren( @ [[#T|T]])''
+'':PeekChildren(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :ProcessUpdates ====
-'':ProcessUpdates( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+'':ProcessUpdates(self @ [[#T|T]], update_children @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Raise ====
-'':Raise( @ [[#T|T]])''
+'':Raise(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :RegisterDnd ====
-'':RegisterDnd( @ [[#T|T]])''
+'':RegisterDnd(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :RemoveFilter ====
-'':RemoveFilter( @ [[#T|T]],  @ [[..:..:Std:Function#T|Std.Function.T]],  @ [[..:..:Std:Address#T|Std.Address.T]])''
+'':RemoveFilter(self @ [[#T|T]], function @ [[..:..:Std:Function#T|Std.Function.T]], data @ [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Reparent ====
-'':Reparent( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':Reparent(self @ [[#T|T]], new_parent @ [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]], x @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Resize ====
-'':Resize( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':Resize(self @ [[#T|T]], width @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], height @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Scroll ====
-'':Scroll( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':Scroll(self @ [[#T|T]], dx @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], dy @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetAcceptFocus ====
-'':SetAcceptFocus( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+'':SetAcceptFocus(self @ [[#T|T]], accept_focus @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetBackPixmap ====
-'':SetBackPixmap( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Pixmap#T|Gtk.Gdk.Pixmap.T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+'':SetBackPixmap(self @ [[#T|T]], pixmap @ [[..:..:Gtk:Gdk:Pixmap#T|Gtk.Gdk.Pixmap.T]], parent_relative @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetBackground ====
-'':SetBackground( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]])''
+'':SetBackground(self @ [[#T|T]], color @ [[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetChildInputShapes ====
-'':SetChildInputShapes( @ [[#T|T]])''
+'':SetChildInputShapes(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetChildShapes ====
-'':SetChildShapes( @ [[#T|T]])''
+'':SetChildShapes(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetComposited ====
-'':SetComposited( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+'':SetComposited(self @ [[#T|T]], composited @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetCursor ====
-'':SetCursor( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Cursor#T|Gtk.Gdk.Cursor.T]])''
+'':SetCursor(self @ [[#T|T]], cursor @ [[..:..:Gtk:Gdk:Cursor#T|Gtk.Gdk.Cursor.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetDecorations ====
-'':SetDecorations( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':SetDecorations(self @ [[#T|T]], decorations @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetEvents ====
-'':SetEvents( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':SetEvents(self @ [[#T|T]], event_mask @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetFocusOnMap ====
-'':SetFocusOnMap( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+'':SetFocusOnMap(self @ [[#T|T]], focus_on_map @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetFunctions ====
-'':SetFunctions( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':SetFunctions(self @ [[#T|T]], functions @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetGeometryHints ====
-'':SetGeometryHints( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Geometry#T|Gtk.Gdk.Geometry.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':SetGeometryHints(self @ [[#T|T]], geometry @ [[..:..:Gtk:Gdk:Geometry#T|Gtk.Gdk.Geometry.T]], geom_mask @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetGroup ====
-'':SetGroup( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]])''
+'':SetGroup(self @ [[#T|T]], leader @ [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetHints ====
-'':SetHints( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':SetHints(self @ [[#T|T]], x @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], min_width @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], min_height @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], max_width @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], max_height @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], flags @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetIcon ====
-'':SetIcon( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]],  @ [[..:..:Gtk:Gdk:Pixmap#T|Gtk.Gdk.Pixmap.T]],  @ [[..:..:Gtk:Gdk:Bitmap#T|Gtk.Gdk.Bitmap.T]])''
+'':SetIcon(self @ [[#T|T]], icon_window @ [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]], pixmap @ [[..:..:Gtk:Gdk:Pixmap#T|Gtk.Gdk.Pixmap.T]], mask @ [[..:..:Gtk:Gdk:Bitmap#T|Gtk.Gdk.Bitmap.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetIconList ====
-'':SetIconList( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':SetIconList(self @ [[#T|T]], pixbufs @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetIconName ====
-'':SetIconName( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+'':SetIconName(self @ [[#T|T]], name @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetKeepAbove ====
-'':SetKeepAbove( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+'':SetKeepAbove(self @ [[#T|T]], setting @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetKeepBelow ====
-'':SetKeepBelow( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+'':SetKeepBelow(self @ [[#T|T]], setting @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetModalHint ====
-'':SetModalHint( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+'':SetModalHint(self @ [[#T|T]], modal @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetOpacity ====
-'':SetOpacity( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+'':SetOpacity(self @ [[#T|T]], opacity @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetOverrideRedirect ====
-'':SetOverrideRedirect( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+'':SetOverrideRedirect(self @ [[#T|T]], override_redirect @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetRole ====
-'':SetRole( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+'':SetRole(self @ [[#T|T]], role @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetSkipPagerHint ====
-'':SetSkipPagerHint( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+'':SetSkipPagerHint(self @ [[#T|T]], skips_pager @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetSkipTaskbarHint ====
-'':SetSkipTaskbarHint( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+'':SetSkipTaskbarHint(self @ [[#T|T]], skips_taskbar @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetStartupId ====
-'':SetStartupId( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+'':SetStartupId(self @ [[#T|T]], startup_id @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetStaticGravities ====
-'':SetStaticGravities( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+'':SetStaticGravities(self @ [[#T|T]], use_static @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :SetTitle ====
-'':SetTitle( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+'':SetTitle(self @ [[#T|T]], title @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetTransientFor ====
-'':SetTransientFor( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]])''
+'':SetTransientFor(self @ [[#T|T]], parent @ [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetTypeHint ====
-'':SetTypeHint( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:WindowTypeHint#T|Gtk.Gdk.WindowTypeHint.T]])''
+'':SetTypeHint(self @ [[#T|T]], hint @ [[..:..:Gtk:Gdk:WindowTypeHint#T|Gtk.Gdk.WindowTypeHint.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetUrgencyHint ====
-'':SetUrgencyHint( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+'':SetUrgencyHint(self @ [[#T|T]], urgent @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetUserData ====
-'':SetUserData( @ [[#T|T]],  @ [[..:..:Std:Address#T|Std.Address.T]])''
+'':SetUserData(self @ [[#T|T]], user_data @ [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :ShapeCombineMask ====
-'':ShapeCombineMask( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Bitmap#T|Gtk.Gdk.Bitmap.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':ShapeCombineMask(self @ [[#T|T]], mask @ [[..:..:Gtk:Gdk:Bitmap#T|Gtk.Gdk.Bitmap.T]], x @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====
-''New()''
+''New(parent : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]], attributes : [[..:..:Gtk:Gdk:WindowAttr#T|Gtk.Gdk.WindowAttr.T]], attributes_mask : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[# T| T]]''
 
 
 ==== SetDebugUpdates ====
-''SetDebugUpdates()''
+''SetDebugUpdates(setting) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== ProcessAllUpdates ====
-''ProcessAllUpdates()''
+''ProcessAllUpdates() : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== LookupForDisplay ====
-''LookupForDisplay()''
+''LookupForDisplay(display, anid) : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]]''
 
 
 ==== Lookup ====
-''Lookup()''
+''Lookup(anid) : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]]''
 
 
 ==== GetToplevels ====
-''GetToplevels()''
+''GetToplevels() : [[..:..:Std:List#T|Std.List.T]]''
 
 
 ==== ForeignNewForDisplay ====
-''ForeignNewForDisplay()''
+''ForeignNewForDisplay(display, anid) : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]]''
 
 
 ==== ForeignNew ====
-''ForeignNew()''
+''ForeignNew(anid) : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]]''
 
 
 ==== ConstrainSize ====
-''ConstrainSize()''
+''ConstrainSize(geometry, flags, width, height, new_width, new_height) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== AtPointer ====
-''AtPointer()''
+''AtPointer(win_x, win_y) : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]]''
 
 

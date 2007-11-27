@@ -7,7 +7,7 @@
 
 
 ==== :SetSize ====
-'':SetSize( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Gtk:Gtk:Unit#T|Gtk.Gtk.Unit.T]])''
+'':SetSize( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Gtk:Gtk:Unit#T|Gtk.Gtk.Unit.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :IsEqual ====
@@ -31,39 +31,39 @@
 
 
 ==== :Copy ====
-'':Copy( @ [[#T|T]])''
+'':Copy( @ [[#T|T]]) : [[..:..:Gtk:Gtk:PaperSize#T|Gtk.Gtk.PaperSize.T]]''
 
 
 ==== :Free ====
-'':Free( @ [[#T|T]])''
+'':Free( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetDefaultBottomMargin ====
-'':GetDefaultBottomMargin( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Unit#T|Gtk.Gtk.Unit.T]])''
+'':GetDefaultBottomMargin(unit @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Unit#T|Gtk.Gtk.Unit.T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :GetDefaultLeftMargin ====
-'':GetDefaultLeftMargin( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Unit#T|Gtk.Gtk.Unit.T]])''
+'':GetDefaultLeftMargin(unit @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Unit#T|Gtk.Gtk.Unit.T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :GetDefaultRightMargin ====
-'':GetDefaultRightMargin( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Unit#T|Gtk.Gtk.Unit.T]])''
+'':GetDefaultRightMargin(unit @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Unit#T|Gtk.Gtk.Unit.T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :GetDefaultTopMargin ====
-'':GetDefaultTopMargin( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Unit#T|Gtk.Gtk.Unit.T]])''
+'':GetDefaultTopMargin(unit @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Unit#T|Gtk.Gtk.Unit.T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :GetDisplayName ====
-'':GetDisplayName( @ [[#T|T]])''
+'':GetDisplayName( @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== :GetHeight ====
-'':GetHeight( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Unit#T|Gtk.Gtk.Unit.T]])''
+'':GetHeight( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Unit#T|Gtk.Gtk.Unit.T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== New ====
-''New()''
+''New(name : [[..:..:Std:String#T|Std.String.T]]) : [[# T| T]]''
 
 
 ==== GetType ====
@@ -71,22 +71,22 @@
 
 
 ==== GetPaperSizes ====
-''GetPaperSizes()''
+''GetPaperSizes() : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== GetDefault ====
-''GetDefault()''
+''GetDefault() : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== NewFromPpd ====
-''NewFromPpd()''
+''NewFromPpd(ppd_name : [[..:..:Std:String#T|Std.String.T]], ppd_display_name : [[..:..:Std:String#T|Std.String.T]], width : [[..:..:Std:Real#T|Std.Real.T]], height : [[..:..:Std:Real#T|Std.Real.T]]) : [[# T| T]]''
 
 
 ==== NewFromKeyFile ====
-''NewFromKeyFile()''
+''NewFromKeyFile(key_file : [[..:..:Std:Object#T|Std.Object.T]], group_name : [[..:..:Std:String#T|Std.String.T]], error : [[..:..:Std:Object#T|Std.Object.T]]) : [[# T| T]]''
 
 
 ==== NewCustom ====
-''NewCustom()''
+''NewCustom(name : [[..:..:Std:String#T|Std.String.T]], display_name : [[..:..:Std:String#T|Std.String.T]], width : [[..:..:Std:Real#T|Std.Real.T]], height : [[..:..:Std:Real#T|Std.Real.T]], unit : [[..:..:Gtk:Gtk:Unit#T|Gtk.Gtk.Unit.T]]) : [[# T| T]]''
 
 

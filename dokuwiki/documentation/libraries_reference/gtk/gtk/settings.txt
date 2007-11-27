@@ -5,54 +5,54 @@
 
 
 ==== :SetStringProperty ====
-'':SetStringProperty( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+'':SetStringProperty(self @ [[#T|T]], name @ [[..:..:Std:String#T|Std.String.T]], v_string @ [[..:..:Std:String#T|Std.String.T]], origin @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetPropertyValue ====
-'':SetPropertyValue( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Gtk:Gtk:SettingsValue#T|Gtk.Gtk.SettingsValue.T]])''
+'':SetPropertyValue(self @ [[#T|T]], name @ [[..:..:Std:String#T|Std.String.T]], svalue @ [[..:..:Gtk:Gtk:SettingsValue#T|Gtk.Gtk.SettingsValue.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetLongProperty ====
-'':SetLongProperty( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:String#T|Std.String.T]])''
+'':SetLongProperty(self @ [[#T|T]], name @ [[..:..:Std:String#T|Std.String.T]], v_long @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], origin @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetDoubleProperty ====
-'':SetDoubleProperty( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+'':SetDoubleProperty(self @ [[#T|T]], name @ [[..:..:Std:String#T|Std.String.T]], v_double @ [[..:..:Std:Real#T|Std.Real.T]], origin @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Screen ====
-'':Screen( @ [[#T|T]])''
+'':Screen( @ [[#T|T]]) : [[..:..:Gtk:Gdk:Screen#T|Gtk.Gdk.Screen.T]]''
 
 
 ==== :QueuedSettings ====
-'':QueuedSettings( @ [[#T|T]])''
+'':QueuedSettings( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :PropertyValues ====
-'':PropertyValues( @ [[#T|T]])''
+'':PropertyValues( @ [[#T|T]]) : [[..:..:Gtk:Gtk:SettingsPropertyValue#T|Gtk.Gtk.SettingsPropertyValue.T]]''
 
 
 ==== :RcContext ====
-'':RcContext( @ [[#T|T]])''
+'':RcContext( @ [[#T|T]]) : [[..:..:Gtk:Gtk:RcContext#T|Gtk.Gtk.RcContext.T]]''
 
 
 ==== GetDefault ====
-''GetDefault()''
+''GetDefault() : [[..:..:Gtk:Gtk:Settings#T|Gtk.Gtk.Settings.T]]''
 
 
 ==== InstallPropertyParser ====
-''InstallPropertyParser()''
+''InstallPropertyParser(pspec, parser) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== InstallProperty ====
-''InstallProperty()''
+''InstallProperty(pspec) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 
 ==== GetForScreen ====
-''GetForScreen()''
+''GetForScreen(screen) : [[..:..:Gtk:Gtk:Settings#T|Gtk.Gtk.Settings.T]]''
 
 

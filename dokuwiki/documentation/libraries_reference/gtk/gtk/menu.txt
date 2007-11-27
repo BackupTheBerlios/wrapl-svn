@@ -9,202 +9,202 @@
 
 
 ==== :SetTitle ====
-'':SetTitle( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+'':SetTitle(title @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetTearoffState ====
-'':SetTearoffState( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+'':SetTearoffState(torn_off @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetScreen ====
-'':SetScreen( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Screen#T|Gtk.Gdk.Screen.T]])''
+'':SetScreen(screen @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Screen#T|Gtk.Gdk.Screen.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :ParentMenuItem ====
-'':ParentMenuItem( @ [[#T|T]])''
+'':ParentMenuItem( @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
 
 ==== :OldActiveMenuItem ====
-'':OldActiveMenuItem( @ [[#T|T]])''
+'':OldActiveMenuItem( @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
 
 ==== :AccelGroup ====
-'':AccelGroup( @ [[#T|T]])''
+'':AccelGroup( @ [[#T|T]]) : [[..:..:Gtk:Gtk:AccelGroup#T|Gtk.Gtk.AccelGroup.T]]''
 
 
 ==== :AccelPath ====
-'':AccelPath( @ [[#T|T]])''
+'':AccelPath( @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== :PositionFunc ====
-'':PositionFunc( @ [[#T|T]])''
+'':PositionFunc( @ [[#T|T]]) : [[..:..:Std:Function#T|Std.Function.T]]''
 
 
 ==== :PositionFuncData ====
-'':PositionFuncData( @ [[#T|T]])''
+'':PositionFuncData( @ [[#T|T]]) : [[..:..:Std:Address#T|Std.Address.T]]''
 
 
 ==== :ToggleSize ====
-'':ToggleSize( @ [[#T|T]])''
+'':ToggleSize( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Toplevel ====
-'':Toplevel( @ [[#T|T]])''
+'':Toplevel( @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
 
 ==== :TearoffWindow ====
-'':TearoffWindow( @ [[#T|T]])''
+'':TearoffWindow( @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
 
 ==== :TearoffHbox ====
-'':TearoffHbox( @ [[#T|T]])''
+'':TearoffHbox( @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
 
 ==== :TearoffScrollbar ====
-'':TearoffScrollbar( @ [[#T|T]])''
+'':TearoffScrollbar( @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
 
 ==== :TearoffAdjustment ====
-'':TearoffAdjustment( @ [[#T|T]])''
+'':TearoffAdjustment( @ [[#T|T]]) : [[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]]''
 
 
 ==== :ViewWindow ====
-'':ViewWindow( @ [[#T|T]])''
+'':ViewWindow( @ [[#T|T]]) : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]]''
 
 
 ==== :BinWindow ====
-'':BinWindow( @ [[#T|T]])''
+'':BinWindow( @ [[#T|T]]) : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]]''
 
 
 ==== :ScrollOffset ====
-'':ScrollOffset( @ [[#T|T]])''
+'':ScrollOffset( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :SavedScrollOffset ====
-'':SavedScrollOffset( @ [[#T|T]])''
+'':SavedScrollOffset( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :ScrollStep ====
-'':ScrollStep( @ [[#T|T]])''
+'':ScrollStep( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :TimeoutId ====
-'':TimeoutId( @ [[#T|T]])''
+'':TimeoutId( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :NavigationRegion ====
-'':NavigationRegion( @ [[#T|T]])''
+'':NavigationRegion( @ [[#T|T]]) : [[..:..:Gtk:Gdk:Region#T|Gtk.Gdk.Region.T]]''
 
 
 ==== :NavigationTimeout ====
-'':NavigationTimeout( @ [[#T|T]])''
+'':NavigationTimeout( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :NeedsDestructionRefCount ====
-'':NeedsDestructionRefCount( @ [[#T|T]])''
+'':NeedsDestructionRefCount( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :TornOff ====
-'':TornOff( @ [[#T|T]])''
+'':TornOff( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :TearoffActive ====
-'':TearoffActive( @ [[#T|T]])''
+'':TearoffActive( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :ScrollFast ====
-'':ScrollFast( @ [[#T|T]])''
+'':ScrollFast( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :UpperArrowVisible ====
-'':UpperArrowVisible( @ [[#T|T]])''
+'':UpperArrowVisible( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :LowerArrowVisible ====
-'':LowerArrowVisible( @ [[#T|T]])''
+'':LowerArrowVisible( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :UpperArrowPrelight ====
-'':UpperArrowPrelight( @ [[#T|T]])''
+'':UpperArrowPrelight( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :LowerArrowPrelight ====
-'':LowerArrowPrelight( @ [[#T|T]])''
+'':LowerArrowPrelight( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Attach ====
-'':Attach( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':Attach(self @ [[#T|T]], child @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], left_attach @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], right_attach @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], top_attach @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], bottom_attach @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :AttachToWidget ====
-'':AttachToWidget( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]],  @ [[..:..:Std:Function#T|Std.Function.T]])''
+'':AttachToWidget(self @ [[#T|T]], attach_widget @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], detacher @ [[..:..:Std:Function#T|Std.Function.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Detach ====
-'':Detach( @ [[#T|T]])''
+'':Detach(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetAccelGroup ====
-'':GetAccelGroup( @ [[#T|T]])''
+'':GetAccelGroup(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:AccelGroup#T|Gtk.Gtk.AccelGroup.T]]''
 
 
 ==== :GetActive ====
-'':GetActive( @ [[#T|T]])''
+'':GetActive(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
 
 ==== :GetAttachWidget ====
-'':GetAttachWidget( @ [[#T|T]])''
+'':GetAttachWidget(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
 
 ==== :GetTearoffState ====
-'':GetTearoffState( @ [[#T|T]])''
+'':GetTearoffState(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :GetTitle ====
-'':GetTitle( @ [[#T|T]])''
+'':GetTitle(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== :Popdown ====
-'':Popdown( @ [[#T|T]])''
+'':Popdown( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Popup ====
-'':Popup( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]],  @ [[..:..:Std:Function#T|Std.Function.T]],  @ [[..:..:Std:Address#T|Std.Address.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':Popup(parent_menu_shell @ [[#T|T]], parent_menu_item @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], func @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], data @ [[..:..:Std:Function#T|Std.Function.T]], button @ [[..:..:Std:Address#T|Std.Address.T]], activate_time @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :ReorderChild ====
-'':ReorderChild( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':ReorderChild(child @ [[#T|T]], position @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Reposition ====
-'':Reposition( @ [[#T|T]])''
+'':Reposition( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetAccelGroup ====
-'':SetAccelGroup( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:AccelGroup#T|Gtk.Gtk.AccelGroup.T]])''
+'':SetAccelGroup(accel_group @ [[#T|T]],  @ [[..:..:Gtk:Gtk:AccelGroup#T|Gtk.Gtk.AccelGroup.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetAccelPath ====
-'':SetAccelPath( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+'':SetAccelPath(accel_path @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetActive ====
-'':SetActive( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':SetActive(index_ @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetMonitor ====
-'':SetMonitor( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':SetMonitor(monitor_num @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====
-''New()''
+''New() : [[# T| T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 
 ==== GetForAttachWidget ====
-''GetForAttachWidget()''
+''GetForAttachWidget(widget) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 

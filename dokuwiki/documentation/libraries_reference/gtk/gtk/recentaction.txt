@@ -6,26 +6,26 @@
 
 
 ==== :SetShowNumbers ====
-'':SetShowNumbers( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+'':SetShowNumbers(self @ [[#T|T]], show_numbers @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetShowNumbers ====
-'':GetShowNumbers( @ [[#T|T]])''
+'':GetShowNumbers(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :Priv ====
-'':Priv( @ [[#T|T]])''
+'':Priv( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====
-''New()''
+''New(name : [[..:..:Std:String#T|Std.String.T]], label : [[..:..:Std:String#T|Std.String.T]], tooltip : [[..:..:Std:String#T|Std.String.T]], stock_id : [[..:..:Std:String#T|Std.String.T]]) : [[# T| T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 
 ==== NewForManager ====
-''NewForManager()''
+''NewForManager(name : [[..:..:Std:String#T|Std.String.T]], label : [[..:..:Std:String#T|Std.String.T]], tooltip : [[..:..:Std:String#T|Std.String.T]], stock_id : [[..:..:Std:String#T|Std.String.T]], manager : [[..:..:Gtk:Gtk:RecentManager#T|Gtk.Gtk.RecentManager.T]]) : [[# T| T]]''
 
 

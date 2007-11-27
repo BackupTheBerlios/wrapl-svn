@@ -10,86 +10,86 @@
 
 
 ==== :SetZoomMode ====
-'':SetZoomMode( @ [[#T|T]],  @ [[..:..:Gtk:CCC:CcZoomMode#T|Gtk.CCC.CcZoomMode.T]])''
+'':SetZoomMode(self @ [[#T|T]], zoom_mode @ [[..:..:Gtk:CCC:CcZoomMode#T|Gtk.CCC.CcZoomMode.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetCenterView ====
-'':SetCenterView( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+'':SetCenterView(self @ [[#T|T]], center_view @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetZoomMode ====
-'':GetZoomMode( @ [[#T|T]])''
+'':GetZoomMode(self @ [[#T|T]]) : [[..:..:Gtk:CCC:CcZoomMode#T|Gtk.CCC.CcZoomMode.T]]''
 
 
 ==== :ScrolledRegion ====
-'':ScrolledRegion( @ [[#T|T]])''
+'':ScrolledRegion( @ [[#T|T]]) : [[..:..:Gtk:CCC:CcDRect#T|Gtk.CCC.CcDRect.T]]''
 
 
 ==== :Zoom ====
-'':Zoom( @ [[#T|T]])''
+'':Zoom( @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :ZoomMode ====
-'':ZoomMode( @ [[#T|T]])''
+'':ZoomMode( @ [[#T|T]]) : [[..:..:Gtk:CCC:CcZoomMode#T|Gtk.CCC.CcZoomMode.T]]''
 
 
 ==== :DisplayMatrix ====
-'':DisplayMatrix( @ [[#T|T]])''
+'':DisplayMatrix( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Root ====
-'':Root( @ [[#T|T]])''
+'':Root( @ [[#T|T]]) : [[..:..:Gtk:CCC:CcItem#T|Gtk.CCC.CcItem.T]]''
 
 
 ==== :CenterView ====
-'':CenterView( @ [[#T|T]])''
+'':CenterView( @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :HAdjustment ====
-'':HAdjustment( @ [[#T|T]])''
+'':HAdjustment( @ [[#T|T]]) : [[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]]''
 
 
 ==== :VAdjustment ====
-'':VAdjustment( @ [[#T|T]])''
+'':VAdjustment( @ [[#T|T]]) : [[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]]''
 
 
 ==== :Current ====
-'':Current( @ [[#T|T]])''
+'':Current( @ [[#T|T]]) : [[..:..:Gtk:CCC:CcItem#T|Gtk.CCC.CcItem.T]]''
 
 
 ==== :Focus ====
-'':Focus( @ [[#T|T]])''
+'':Focus( @ [[#T|T]]) : [[..:..:Gtk:CCC:CcItem#T|Gtk.CCC.CcItem.T]]''
 
 
 ==== :Grabbed ====
-'':Grabbed( @ [[#T|T]])''
+'':Grabbed( @ [[#T|T]]) : [[..:..:Gtk:CCC:CcItem#T|Gtk.CCC.CcItem.T]]''
 
 
 ==== :OverGrabbed ====
-'':OverGrabbed( @ [[#T|T]])''
+'':OverGrabbed( @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :GrabMask ====
-'':GrabMask( @ [[#T|T]])''
+'':GrabMask( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Priv ====
-'':Priv( @ [[#T|T]])''
+'':Priv( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetCenterView ====
-'':GetCenterView( @ [[#T|T]])''
+'':GetCenterView(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== New ====
-''New()''
+''New() : [[# T| T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 
 ==== NewRoot ====
-''NewRoot()''
+''NewRoot(root : [[..:..:Gtk:CCC:CcItem#T|Gtk.CCC.CcItem.T]]) : [[# T| T]]''
 
 

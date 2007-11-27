@@ -8,286 +8,286 @@
 
 
 ==== :Update ====
-'':Update( @ [[#T|T]])''
+'':Update(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :UnregisterWidgetItem ====
-'':UnregisterWidgetItem( @ [[#T|T]],  @ [[..:..:Gtk:GooCanvas:Widget#T|Gtk.GooCanvas.Widget.T]])''
+'':UnregisterWidgetItem(self @ [[#T|T]], witem @ [[..:..:Gtk:GooCanvas:Widget#T|Gtk.GooCanvas.Widget.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :UnregisterItem ====
-'':UnregisterItem( @ [[#T|T]],  @ [[..:..:Gtk:GooCanvas:ItemModel#T|Gtk.GooCanvas.ItemModel.T]])''
+'':UnregisterItem(self @ [[#T|T]], model @ [[..:..:Gtk:GooCanvas:ItemModel#T|Gtk.GooCanvas.ItemModel.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetScale ====
-'':SetScale( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+'':SetScale(self @ [[#T|T]], scale @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :RootItemModel ====
-'':RootItemModel( @ [[#T|T]])''
+'':RootItemModel( @ [[#T|T]]) : [[..:..:Gtk:GooCanvas:ItemModel#T|Gtk.GooCanvas.ItemModel.T]]''
 
 
 ==== :RootItem ====
-'':RootItem( @ [[#T|T]])''
+'':RootItem( @ [[#T|T]]) : [[..:..:Gtk:GooCanvas:Item#T|Gtk.GooCanvas.Item.T]]''
 
 
 ==== :Bounds ====
-'':Bounds( @ [[#T|T]])''
+'':Bounds( @ [[#T|T]]) : [[..:..:Gtk:GooCanvas:Bounds#T|Gtk.GooCanvas.Bounds.T]]''
 
 
 ==== :ScaleX ====
-'':ScaleX( @ [[#T|T]])''
+'':ScaleX( @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :ScaleY ====
-'':ScaleY( @ [[#T|T]])''
+'':ScaleY( @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :Scale ====
-'':Scale( @ [[#T|T]])''
+'':Scale( @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :Anchor ====
-'':Anchor( @ [[#T|T]])''
+'':Anchor( @ [[#T|T]]) : [[..:..:Gtk:Gtk:AnchorType#T|Gtk.Gtk.AnchorType.T]]''
 
 
 ==== :IdleId ====
-'':IdleId( @ [[#T|T]])''
+'':IdleId( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :NeedUpdate ====
-'':NeedUpdate( @ [[#T|T]])''
+'':NeedUpdate( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :NeedEntireSubtreeUpdate ====
-'':NeedEntireSubtreeUpdate( @ [[#T|T]])''
+'':NeedEntireSubtreeUpdate( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :IntegerLayout ====
-'':IntegerLayout( @ [[#T|T]])''
+'':IntegerLayout( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :AutomaticBounds ====
-'':AutomaticBounds( @ [[#T|T]])''
+'':AutomaticBounds( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :BoundsFromOrigin ====
-'':BoundsFromOrigin( @ [[#T|T]])''
+'':BoundsFromOrigin( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :BoundsPadding ====
-'':BoundsPadding( @ [[#T|T]])''
+'':BoundsPadding( @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :PointerItem ====
-'':PointerItem( @ [[#T|T]])''
+'':PointerItem( @ [[#T|T]]) : [[..:..:Gtk:GooCanvas:Item#T|Gtk.GooCanvas.Item.T]]''
 
 
 ==== :PointerGrabItem ====
-'':PointerGrabItem( @ [[#T|T]])''
+'':PointerGrabItem( @ [[#T|T]]) : [[..:..:Gtk:GooCanvas:Item#T|Gtk.GooCanvas.Item.T]]''
 
 
 ==== :PointerGrabInitialItem ====
-'':PointerGrabInitialItem( @ [[#T|T]])''
+'':PointerGrabInitialItem( @ [[#T|T]]) : [[..:..:Gtk:GooCanvas:Item#T|Gtk.GooCanvas.Item.T]]''
 
 
 ==== :PointerGrabButton ====
-'':PointerGrabButton( @ [[#T|T]])''
+'':PointerGrabButton( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :FocusedItem ====
-'':FocusedItem( @ [[#T|T]])''
+'':FocusedItem( @ [[#T|T]]) : [[..:..:Gtk:GooCanvas:Item#T|Gtk.GooCanvas.Item.T]]''
 
 
 ==== :KeyboardGrabItem ====
-'':KeyboardGrabItem( @ [[#T|T]])''
+'':KeyboardGrabItem( @ [[#T|T]]) : [[..:..:Gtk:GooCanvas:Item#T|Gtk.GooCanvas.Item.T]]''
 
 
 ==== :CrossingEvent ====
-'':CrossingEvent( @ [[#T|T]])''
+'':CrossingEvent( @ [[#T|T]]) : [[..:..:Gtk:Gdk:EventCrossing#T|Gtk.Gdk.EventCrossing.T]]''
 
 
 ==== :CanvasWindow ====
-'':CanvasWindow( @ [[#T|T]])''
+'':CanvasWindow( @ [[#T|T]]) : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]]''
 
 
 ==== :CanvasXOffset ====
-'':CanvasXOffset( @ [[#T|T]])''
+'':CanvasXOffset( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :CanvasYOffset ====
-'':CanvasYOffset( @ [[#T|T]])''
+'':CanvasYOffset( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Hadjustment ====
-'':Hadjustment( @ [[#T|T]])''
+'':Hadjustment( @ [[#T|T]]) : [[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]]''
 
 
 ==== :Vadjustment ====
-'':Vadjustment( @ [[#T|T]])''
+'':Vadjustment( @ [[#T|T]]) : [[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]]''
 
 
 ==== :FreezeCount ====
-'':FreezeCount( @ [[#T|T]])''
+'':FreezeCount( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :TmpWindow ====
-'':TmpWindow( @ [[#T|T]])''
+'':TmpWindow( @ [[#T|T]]) : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]]''
 
 
 ==== :ModelToItem ====
-'':ModelToItem( @ [[#T|T]])''
+'':ModelToItem( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Units ====
-'':Units( @ [[#T|T]])''
+'':Units( @ [[#T|T]]) : [[..:..:Gtk:Gtk:Unit#T|Gtk.Gtk.Unit.T]]''
 
 
 ==== :ResolutionX ====
-'':ResolutionX( @ [[#T|T]])''
+'':ResolutionX( @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :ResolutionY ====
-'':ResolutionY( @ [[#T|T]])''
+'':ResolutionY( @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :DeviceToPixelsX ====
-'':DeviceToPixelsX( @ [[#T|T]])''
+'':DeviceToPixelsX( @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :DeviceToPixelsY ====
-'':DeviceToPixelsY( @ [[#T|T]])''
+'':DeviceToPixelsY( @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :WidgetItems ====
-'':WidgetItems( @ [[#T|T]])''
+'':WidgetItems( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :ConvertFromItemSpace ====
-'':ConvertFromItemSpace( @ [[#T|T]],  @ [[..:..:Gtk:GooCanvas:Item#T|Gtk.GooCanvas.Item.T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':ConvertFromItemSpace(self @ [[#T|T]], item @ [[..:..:Gtk:GooCanvas:Item#T|Gtk.GooCanvas.Item.T]], x @ [[..:..:Std:Object#T|Std.Object.T]], y @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :ConvertFromPixels ====
-'':ConvertFromPixels( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':ConvertFromPixels(self @ [[#T|T]], x @ [[..:..:Std:Object#T|Std.Object.T]], y @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :ConvertToItemSpace ====
-'':ConvertToItemSpace( @ [[#T|T]],  @ [[..:..:Gtk:GooCanvas:Item#T|Gtk.GooCanvas.Item.T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':ConvertToItemSpace(self @ [[#T|T]], item @ [[..:..:Gtk:GooCanvas:Item#T|Gtk.GooCanvas.Item.T]], x @ [[..:..:Std:Object#T|Std.Object.T]], y @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :ConvertToPixels ====
-'':ConvertToPixels( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':ConvertToPixels(self @ [[#T|T]], x @ [[..:..:Std:Object#T|Std.Object.T]], y @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :CreateCairoContext ====
-'':CreateCairoContext( @ [[#T|T]])''
+'':CreateCairoContext(self @ [[#T|T]]) : [[..:..:Gtk:Cairo:CairoT#T|Gtk.Cairo.CairoT.T]]''
 
 
 ==== :CreateItem ====
-'':CreateItem( @ [[#T|T]],  @ [[..:..:Gtk:GooCanvas:ItemModel#T|Gtk.GooCanvas.ItemModel.T]])''
+'':CreateItem(self @ [[#T|T]], model @ [[..:..:Gtk:GooCanvas:ItemModel#T|Gtk.GooCanvas.ItemModel.T]]) : [[..:..:Gtk:GooCanvas:Item#T|Gtk.GooCanvas.Item.T]]''
 
 
 ==== :GetBounds ====
-'':GetBounds( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':GetBounds(self @ [[#T|T]], left @ [[..:..:Std:Object#T|Std.Object.T]], top @ [[..:..:Std:Object#T|Std.Object.T]], right @ [[..:..:Std:Object#T|Std.Object.T]], bottom @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetDefaultLineWidth ====
-'':GetDefaultLineWidth( @ [[#T|T]])''
+'':GetDefaultLineWidth(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :GetItem ====
-'':GetItem( @ [[#T|T]],  @ [[..:..:Gtk:GooCanvas:ItemModel#T|Gtk.GooCanvas.ItemModel.T]])''
+'':GetItem(self @ [[#T|T]], model @ [[..:..:Gtk:GooCanvas:ItemModel#T|Gtk.GooCanvas.ItemModel.T]]) : [[..:..:Gtk:GooCanvas:Item#T|Gtk.GooCanvas.Item.T]]''
 
 
 ==== :GetItemAt ====
-'':GetItemAt( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+'':GetItemAt(self @ [[#T|T]], x @ [[..:..:Std:Real#T|Std.Real.T]], y @ [[..:..:Std:Real#T|Std.Real.T]], is_pointer_event @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Gtk:GooCanvas:Item#T|Gtk.GooCanvas.Item.T]]''
 
 
 ==== :GetItemsAt ====
-'':GetItemsAt( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+'':GetItemsAt(self @ [[#T|T]], x @ [[..:..:Std:Real#T|Std.Real.T]], y @ [[..:..:Std:Real#T|Std.Real.T]], is_pointer_event @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetItemsInArea ====
-'':GetItemsInArea( @ [[#T|T]],  @ [[..:..:Gtk:GooCanvas:Bounds#T|Gtk.GooCanvas.Bounds.T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+'':GetItemsInArea(self @ [[#T|T]], area @ [[..:..:Gtk:GooCanvas:Bounds#T|Gtk.GooCanvas.Bounds.T]], inside_area @ [[..:..:Std:Symbol#T|Std.Symbol.T]], allow_overlaps @ [[..:..:Std:Symbol#T|Std.Symbol.T]], include_containers @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetRootItem ====
-'':GetRootItem( @ [[#T|T]])''
+'':GetRootItem(self @ [[#T|T]]) : [[..:..:Gtk:GooCanvas:Item#T|Gtk.GooCanvas.Item.T]]''
 
 
 ==== :GetRootItemModel ====
-'':GetRootItemModel( @ [[#T|T]])''
+'':GetRootItemModel(self @ [[#T|T]]) : [[..:..:Gtk:GooCanvas:ItemModel#T|Gtk.GooCanvas.ItemModel.T]]''
 
 
 ==== :GetScale ====
-'':GetScale( @ [[#T|T]])''
+'':GetScale(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :GrabFocus ====
-'':GrabFocus( @ [[#T|T]],  @ [[..:..:Gtk:GooCanvas:Item#T|Gtk.GooCanvas.Item.T]])''
+'':GrabFocus(self @ [[#T|T]], item @ [[..:..:Gtk:GooCanvas:Item#T|Gtk.GooCanvas.Item.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :KeyboardGrab ====
-'':KeyboardGrab( @ [[#T|T]],  @ [[..:..:Gtk:GooCanvas:Item#T|Gtk.GooCanvas.Item.T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':KeyboardGrab(self @ [[#T|T]], item @ [[..:..:Gtk:GooCanvas:Item#T|Gtk.GooCanvas.Item.T]], owner_events @ [[..:..:Std:Symbol#T|Std.Symbol.T]], time @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Gtk:Gdk:GrabStatus#T|Gtk.Gdk.GrabStatus.T]]''
 
 
 ==== :KeyboardUngrab ====
-'':KeyboardUngrab( @ [[#T|T]],  @ [[..:..:Gtk:GooCanvas:Item#T|Gtk.GooCanvas.Item.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':KeyboardUngrab(self @ [[#T|T]], item @ [[..:..:Gtk:GooCanvas:Item#T|Gtk.GooCanvas.Item.T]], time @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :PointerGrab ====
-'':PointerGrab( @ [[#T|T]],  @ [[..:..:Gtk:GooCanvas:Item#T|Gtk.GooCanvas.Item.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Gtk:Gdk:Cursor#T|Gtk.Gdk.Cursor.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':PointerGrab(self @ [[#T|T]], item @ [[..:..:Gtk:GooCanvas:Item#T|Gtk.GooCanvas.Item.T]], event_mask @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], cursor @ [[..:..:Gtk:Gdk:Cursor#T|Gtk.Gdk.Cursor.T]], time @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Gtk:Gdk:GrabStatus#T|Gtk.Gdk.GrabStatus.T]]''
 
 
 ==== :PointerUngrab ====
-'':PointerUngrab( @ [[#T|T]],  @ [[..:..:Gtk:GooCanvas:Item#T|Gtk.GooCanvas.Item.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':PointerUngrab(self @ [[#T|T]], item @ [[..:..:Gtk:GooCanvas:Item#T|Gtk.GooCanvas.Item.T]], time @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :RegisterWidgetItem ====
-'':RegisterWidgetItem( @ [[#T|T]],  @ [[..:..:Gtk:GooCanvas:Widget#T|Gtk.GooCanvas.Widget.T]])''
+'':RegisterWidgetItem(self @ [[#T|T]], witem @ [[..:..:Gtk:GooCanvas:Widget#T|Gtk.GooCanvas.Widget.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Render ====
-'':Render( @ [[#T|T]],  @ [[..:..:Gtk:Cairo:CairoT#T|Gtk.Cairo.CairoT.T]],  @ [[..:..:Gtk:GooCanvas:Bounds#T|Gtk.GooCanvas.Bounds.T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+'':Render(self @ [[#T|T]], cr @ [[..:..:Gtk:Cairo:CairoT#T|Gtk.Cairo.CairoT.T]], bounds @ [[..:..:Gtk:GooCanvas:Bounds#T|Gtk.GooCanvas.Bounds.T]], scale @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :RequestRedraw ====
-'':RequestRedraw( @ [[#T|T]],  @ [[..:..:Gtk:GooCanvas:Bounds#T|Gtk.GooCanvas.Bounds.T]])''
+'':RequestRedraw(self @ [[#T|T]], bounds @ [[..:..:Gtk:GooCanvas:Bounds#T|Gtk.GooCanvas.Bounds.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :RequestUpdate ====
-'':RequestUpdate( @ [[#T|T]])''
+'':RequestUpdate(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :ScrollTo ====
-'':ScrollTo( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+'':ScrollTo(self @ [[#T|T]], left @ [[..:..:Std:Real#T|Std.Real.T]], top @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetBounds ====
-'':SetBounds( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+'':SetBounds(self @ [[#T|T]], left @ [[..:..:Std:Real#T|Std.Real.T]], top @ [[..:..:Std:Real#T|Std.Real.T]], right @ [[..:..:Std:Real#T|Std.Real.T]], bottom @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetRootItem ====
-'':SetRootItem( @ [[#T|T]],  @ [[..:..:Gtk:GooCanvas:Item#T|Gtk.GooCanvas.Item.T]])''
+'':SetRootItem(self @ [[#T|T]], item @ [[..:..:Gtk:GooCanvas:Item#T|Gtk.GooCanvas.Item.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetRootItemModel ====
-'':SetRootItemModel( @ [[#T|T]],  @ [[..:..:Gtk:GooCanvas:ItemModel#T|Gtk.GooCanvas.ItemModel.T]])''
+'':SetRootItemModel(self @ [[#T|T]], model @ [[..:..:Gtk:GooCanvas:ItemModel#T|Gtk.GooCanvas.ItemModel.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====
-''New()''
+''New() : [[# T| T]]''
 
 
 ==== ParsePathData ====
-''ParsePathData()''
+''ParsePathData(path_data) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 
 ==== CreatePath ====
-''CreatePath()''
+''CreatePath(commands, cr) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 

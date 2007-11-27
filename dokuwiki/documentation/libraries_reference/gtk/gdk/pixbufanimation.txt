@@ -5,38 +5,38 @@
 
 
 ==== :Unref ====
-'':Unref( @ [[#T|T]])''
+'':Unref(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Ref ====
-'':Ref( @ [[#T|T]])''
+'':Ref(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:PixbufAnimation#T|Gtk.Gdk.PixbufAnimation.T]]''
 
 
 ==== :GetHeight ====
-'':GetHeight( @ [[#T|T]])''
+'':GetHeight(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :GetIter ====
-'':GetIter( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':GetIter(self @ [[#T|T]], start_time @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Gtk:Gdk:PixbufAnimationIter#T|Gtk.Gdk.PixbufAnimationIter.T]]''
 
 
 ==== :GetStaticImage ====
-'':GetStaticImage( @ [[#T|T]])''
+'':GetStaticImage(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Pixbuf#T|Gtk.Gdk.Pixbuf.T]]''
 
 
 ==== :GetWidth ====
-'':GetWidth( @ [[#T|T]])''
+'':GetWidth(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :IsStaticImage ====
-'':IsStaticImage( @ [[#T|T]])''
+'':IsStaticImage(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== NewFromFile ====
-''NewFromFile()''
+''NewFromFile(filename : [[..:..:Std:String#T|Std.String.T]], error : [[..:..:Std:Object#T|Std.Object.T]]) : [[# T| T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 

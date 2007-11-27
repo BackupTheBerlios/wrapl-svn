@@ -5,14 +5,14 @@
 
 
 ==== :SetRadius ====
-'':SetRadius( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+'':SetRadius(self @ [[#T|T]], radius @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====
-''New()''
+''New() : [[# T| T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 

@@ -3,39 +3,39 @@
 
 
 ==== :Signals ====
-'':Signals( @ [[#T|T]])''
+'':Signals( @ [[#T|T]]) : [[..:..:Gtk:Gtk:BindingSignal#T|Gtk.Gtk.BindingSignal.T]]''
 
 
 ==== :HashNext ====
-'':HashNext( @ [[#T|T]])''
+'':HashNext( @ [[#T|T]]) : [[..:..:Gtk:Gtk:BindingEntry#T|Gtk.Gtk.BindingEntry.T]]''
 
 
 ==== :SetNext ====
-'':SetNext( @ [[#T|T]])''
+'':SetNext( @ [[#T|T]]) : [[..:..:Gtk:Gtk:BindingEntry#T|Gtk.Gtk.BindingEntry.T]]''
 
 
 ==== :MarksUnbound ====
-'':MarksUnbound( @ [[#T|T]])''
+'':MarksUnbound( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :InEmission ====
-'':InEmission( @ [[#T|T]])''
+'':InEmission( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Destroyed ====
-'':Destroyed( @ [[#T|T]])''
+'':Destroyed( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Keyval ====
-'':Keyval( @ [[#T|T]])''
+'':Keyval( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Modifiers ====
-'':Modifiers( @ [[#T|T]])''
+'':Modifiers( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :BindingSet ====
-'':BindingSet( @ [[#T|T]])''
+'':BindingSet( @ [[#T|T]]) : [[..:..:Gtk:Gtk:BindingSet#T|Gtk.Gtk.BindingSet.T]]''
 
 
 ==== New ====
@@ -43,22 +43,22 @@
 
 
 ==== Skip ====
-''Skip()''
+''Skip(binding_set, keyval, modifiers) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== Remove ====
-''Remove()''
+''Remove(binding_set, keyval, modifiers) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== Clear ====
-''Clear()''
+''Clear(binding_set, keyval, modifiers) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== AddSignall ====
-''AddSignall()''
+''AddSignall(binding_set, keyval, modifiers, signal_name, binding_args) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== AddSignal ====
-''AddSignal()''
+''AddSignal(binding_set, keyval, modifiers, signal_name, n_args, ___) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 

@@ -3,30 +3,30 @@
 
 
 ==== :Copy ====
-'':Copy( @ [[#T|T]])''
+'':Copy(self @ [[#T|T]]) : [[..:..:Gtk:Pango:AttrIterator#T|Gtk.Pango.AttrIterator.T]]''
 
 
 ==== :Destroy ====
-'':Destroy( @ [[#T|T]])''
+'':Destroy(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Get ====
-'':Get( @ [[#T|T]],  @ [[..:..:Gtk:Pango:AttrType#T|Gtk.Pango.AttrType.T]])''
+'':Get(self @ [[#T|T]], type @ [[..:..:Gtk:Pango:AttrType#T|Gtk.Pango.AttrType.T]]) : [[..:..:Gtk:Pango:Attribute#T|Gtk.Pango.Attribute.T]]''
 
 
 ==== :GetAttrs ====
-'':GetAttrs( @ [[#T|T]])''
+'':GetAttrs(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetFont ====
-'':GetFont( @ [[#T|T]],  @ [[..:..:Gtk:Pango:FontDescription#T|Gtk.Pango.FontDescription.T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':GetFont(self @ [[#T|T]], desc @ [[..:..:Gtk:Pango:FontDescription#T|Gtk.Pango.FontDescription.T]], language @ [[..:..:Std:Object#T|Std.Object.T]], extra_attrs @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Next ====
-'':Next( @ [[#T|T]])''
+'':Next(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :Range ====
-'':Range( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':Range(self @ [[#T|T]], start @ [[..:..:Std:Object#T|Std.Object.T]], end @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 

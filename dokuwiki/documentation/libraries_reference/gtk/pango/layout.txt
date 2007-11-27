@@ -5,210 +5,210 @@
 
 
 ==== :XyToIndex ====
-'':XyToIndex( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':XyToIndex(x @ [[#T|T]], y @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], index_ @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], trailing @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :SetWrap ====
-'':SetWrap( @ [[#T|T]],  @ [[..:..:Gtk:Pango:WrapMode#T|Gtk.Pango.WrapMode.T]])''
+'':SetWrap(wrap @ [[#T|T]],  @ [[..:..:Gtk:Pango:WrapMode#T|Gtk.Pango.WrapMode.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :ContextChanged ====
-'':ContextChanged( @ [[#T|T]])''
+'':ContextChanged(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Copy ====
-'':Copy( @ [[#T|T]])''
+'':Copy(self @ [[#T|T]]) : [[..:..:Gtk:Pango:Layout#T|Gtk.Pango.Layout.T]]''
 
 
 ==== :GetAlignment ====
-'':GetAlignment( @ [[#T|T]])''
+'':GetAlignment(self @ [[#T|T]]) : [[..:..:Gtk:Pango:Alignment#T|Gtk.Pango.Alignment.T]]''
 
 
 ==== :GetAttributes ====
-'':GetAttributes( @ [[#T|T]])''
+'':GetAttributes(self @ [[#T|T]]) : [[..:..:Gtk:Pango:AttrList#T|Gtk.Pango.AttrList.T]]''
 
 
 ==== :GetAutoDir ====
-'':GetAutoDir( @ [[#T|T]])''
+'':GetAutoDir(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :GetContext ====
-'':GetContext( @ [[#T|T]])''
+'':GetContext(self @ [[#T|T]]) : [[..:..:Gtk:Pango:Context#T|Gtk.Pango.Context.T]]''
 
 
 ==== :GetCursorPos ====
-'':GetCursorPos( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Gtk:Pango:Rectangle#T|Gtk.Pango.Rectangle.T]],  @ [[..:..:Gtk:Pango:Rectangle#T|Gtk.Pango.Rectangle.T]])''
+'':GetCursorPos(self @ [[#T|T]], index_ @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], strong_pos @ [[..:..:Gtk:Pango:Rectangle#T|Gtk.Pango.Rectangle.T]], weak_pos @ [[..:..:Gtk:Pango:Rectangle#T|Gtk.Pango.Rectangle.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetEllipsize ====
-'':GetEllipsize( @ [[#T|T]])''
+'':GetEllipsize(self @ [[#T|T]]) : [[..:..:Gtk:Pango:EllipsizeMode#T|Gtk.Pango.EllipsizeMode.T]]''
 
 
 ==== :GetExtents ====
-'':GetExtents( @ [[#T|T]],  @ [[..:..:Gtk:Pango:Rectangle#T|Gtk.Pango.Rectangle.T]],  @ [[..:..:Gtk:Pango:Rectangle#T|Gtk.Pango.Rectangle.T]])''
+'':GetExtents(self @ [[#T|T]], ink_rect @ [[..:..:Gtk:Pango:Rectangle#T|Gtk.Pango.Rectangle.T]], logical_rect @ [[..:..:Gtk:Pango:Rectangle#T|Gtk.Pango.Rectangle.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetFontDescription ====
-'':GetFontDescription( @ [[#T|T]])''
+'':GetFontDescription(self @ [[#T|T]]) : [[..:..:Gtk:Pango:FontDescription#T|Gtk.Pango.FontDescription.T]]''
 
 
 ==== :GetIndent ====
-'':GetIndent( @ [[#T|T]])''
+'':GetIndent(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :GetIter ====
-'':GetIter( @ [[#T|T]])''
+'':GetIter(self @ [[#T|T]]) : [[..:..:Gtk:Pango:LayoutIter#T|Gtk.Pango.LayoutIter.T]]''
 
 
 ==== :GetJustify ====
-'':GetJustify( @ [[#T|T]])''
+'':GetJustify(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :GetLine ====
-'':GetLine( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':GetLine(self @ [[#T|T]], line @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Gtk:Pango:LayoutLine#T|Gtk.Pango.LayoutLine.T]]''
 
 
 ==== :GetLineCount ====
-'':GetLineCount( @ [[#T|T]])''
+'':GetLineCount(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :GetLineReadonly ====
-'':GetLineReadonly( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':GetLineReadonly(self @ [[#T|T]], line @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Gtk:Pango:LayoutLine#T|Gtk.Pango.LayoutLine.T]]''
 
 
 ==== :GetLines ====
-'':GetLines( @ [[#T|T]])''
+'':GetLines(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetLinesReadonly ====
-'':GetLinesReadonly( @ [[#T|T]])''
+'':GetLinesReadonly(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetLogAttrs ====
-'':GetLogAttrs( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':GetLogAttrs(self @ [[#T|T]], attrs @ [[..:..:Std:Object#T|Std.Object.T]], n_attrs @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetPixelExtents ====
-'':GetPixelExtents( @ [[#T|T]],  @ [[..:..:Gtk:Pango:Rectangle#T|Gtk.Pango.Rectangle.T]],  @ [[..:..:Gtk:Pango:Rectangle#T|Gtk.Pango.Rectangle.T]])''
+'':GetPixelExtents(self @ [[#T|T]], ink_rect @ [[..:..:Gtk:Pango:Rectangle#T|Gtk.Pango.Rectangle.T]], logical_rect @ [[..:..:Gtk:Pango:Rectangle#T|Gtk.Pango.Rectangle.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetPixelSize ====
-'':GetPixelSize( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':GetPixelSize(self @ [[#T|T]], width @ [[..:..:Std:Object#T|Std.Object.T]], height @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetSingleParagraphMode ====
-'':GetSingleParagraphMode( @ [[#T|T]])''
+'':GetSingleParagraphMode(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :GetSize ====
-'':GetSize( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':GetSize(self @ [[#T|T]], width @ [[..:..:Std:Object#T|Std.Object.T]], height @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetSpacing ====
-'':GetSpacing( @ [[#T|T]])''
+'':GetSpacing(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :GetTabs ====
-'':GetTabs( @ [[#T|T]])''
+'':GetTabs(self @ [[#T|T]]) : [[..:..:Gtk:Pango:TabArray#T|Gtk.Pango.TabArray.T]]''
 
 
 ==== :GetText ====
-'':GetText( @ [[#T|T]])''
+'':GetText(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== :GetUnknownGlyphsCount ====
-'':GetUnknownGlyphsCount( @ [[#T|T]])''
+'':GetUnknownGlyphsCount( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :GetWidth ====
-'':GetWidth( @ [[#T|T]])''
+'':GetWidth( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :GetWrap ====
-'':GetWrap( @ [[#T|T]])''
+'':GetWrap( @ [[#T|T]]) : [[..:..:Gtk:Pango:WrapMode#T|Gtk.Pango.WrapMode.T]]''
 
 
 ==== :IndexToLineX ====
-'':IndexToLineX( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':IndexToLineX(index_ @ [[#T|T]], trailing @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], line @ [[..:..:Std:Symbol#T|Std.Symbol.T]], x_pos @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :IndexToPos ====
-'':IndexToPos( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Gtk:Pango:Rectangle#T|Gtk.Pango.Rectangle.T]])''
+'':IndexToPos(index_ @ [[#T|T]], pos @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Gtk:Pango:Rectangle#T|Gtk.Pango.Rectangle.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :IsEllipsized ====
-'':IsEllipsized( @ [[#T|T]])''
+'':IsEllipsized( @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :IsWrapped ====
-'':IsWrapped( @ [[#T|T]])''
+'':IsWrapped( @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :MoveCursorVisually ====
-'':MoveCursorVisually( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':MoveCursorVisually(strong @ [[#T|T]], old_index @ [[..:..:Std:Symbol#T|Std.Symbol.T]], old_trailing @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], direction @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], new_index @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], new_trailing @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetAlignment ====
-'':SetAlignment( @ [[#T|T]],  @ [[..:..:Gtk:Pango:Alignment#T|Gtk.Pango.Alignment.T]])''
+'':SetAlignment(alignment @ [[#T|T]],  @ [[..:..:Gtk:Pango:Alignment#T|Gtk.Pango.Alignment.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetAttributes ====
-'':SetAttributes( @ [[#T|T]],  @ [[..:..:Gtk:Pango:AttrList#T|Gtk.Pango.AttrList.T]])''
+'':SetAttributes(attrs @ [[#T|T]],  @ [[..:..:Gtk:Pango:AttrList#T|Gtk.Pango.AttrList.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetAutoDir ====
-'':SetAutoDir( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+'':SetAutoDir(auto_dir @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetEllipsize ====
-'':SetEllipsize( @ [[#T|T]],  @ [[..:..:Gtk:Pango:EllipsizeMode#T|Gtk.Pango.EllipsizeMode.T]])''
+'':SetEllipsize(ellipsize @ [[#T|T]],  @ [[..:..:Gtk:Pango:EllipsizeMode#T|Gtk.Pango.EllipsizeMode.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetFontDescription ====
-'':SetFontDescription( @ [[#T|T]],  @ [[..:..:Gtk:Pango:FontDescription#T|Gtk.Pango.FontDescription.T]])''
+'':SetFontDescription(desc @ [[#T|T]],  @ [[..:..:Gtk:Pango:FontDescription#T|Gtk.Pango.FontDescription.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetIndent ====
-'':SetIndent( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':SetIndent(indent @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetJustify ====
-'':SetJustify( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+'':SetJustify(justify @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetMarkup ====
-'':SetMarkup( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':SetMarkup(markup @ [[#T|T]], length @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetMarkupWithAccel ====
-'':SetMarkupWithAccel( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':SetMarkupWithAccel(markup @ [[#T|T]], length @ [[..:..:Std:String#T|Std.String.T]], accel_marker @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], accel_char @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetSingleParagraphMode ====
-'':SetSingleParagraphMode( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+'':SetSingleParagraphMode(setting @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetSpacing ====
-'':SetSpacing( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':SetSpacing(spacing @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetTabs ====
-'':SetTabs( @ [[#T|T]],  @ [[..:..:Gtk:Pango:TabArray#T|Gtk.Pango.TabArray.T]])''
+'':SetTabs(tabs @ [[#T|T]],  @ [[..:..:Gtk:Pango:TabArray#T|Gtk.Pango.TabArray.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetText ====
-'':SetText( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':SetText(text @ [[#T|T]], length @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetWidth ====
-'':SetWidth( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':SetWidth(width @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====
-''New()''
+''New(context : [[..:..:Gtk:Pango:Context#T|Gtk.Pango.Context.T]]) : [[# T| T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 

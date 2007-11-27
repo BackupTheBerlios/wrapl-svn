@@ -3,43 +3,43 @@
 
 
 ==== :Selectable ====
-'':Selectable( @ [[#T|T]])''
+'':Selectable( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :BgSet ====
-'':BgSet( @ [[#T|T]])''
+'':BgSet( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :FgSet ====
-'':FgSet( @ [[#T|T]])''
+'':FgSet( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Cell ====
-'':Cell( @ [[#T|T]])''
+'':Cell( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :State ====
-'':State( @ [[#T|T]])''
+'':State( @ [[#T|T]]) : [[..:..:Gtk:Gtk:StateType#T|Gtk.Gtk.StateType.T]]''
 
 
 ==== :Foreground ====
-'':Foreground( @ [[#T|T]])''
+'':Foreground( @ [[#T|T]]) : [[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]]''
 
 
 ==== :Background ====
-'':Background( @ [[#T|T]])''
+'':Background( @ [[#T|T]]) : [[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]]''
 
 
 ==== :Style ====
-'':Style( @ [[#T|T]])''
+'':Style( @ [[#T|T]]) : [[..:..:Gtk:Gtk:Style#T|Gtk.Gtk.Style.T]]''
 
 
 ==== :Data ====
-'':Data( @ [[#T|T]])''
+'':Data( @ [[#T|T]]) : [[..:..:Std:Address#T|Std.Address.T]]''
 
 
 ==== :Destroy ====
-'':Destroy( @ [[#T|T]])''
+'':Destroy( @ [[#T|T]]) : [[..:..:Std:Function#T|Std.Function.T]]''
 
 
 ==== New ====
@@ -47,10 +47,10 @@
 
 
 ==== Move ====
-''Move()''
+''Move(clist, source_row, dest_row) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== IsVisible ====
-''IsVisible()''
+''IsVisible(clist, row) : [[..:..:Gtk:Gtk:Visibility#T|Gtk.Gtk.Visibility.T]]''
 
 

@@ -3,130 +3,130 @@
 
 
 ==== :UnsetFields ====
-'':UnsetFields( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':UnsetFields(to_unset @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :ToString ====
-'':ToString( @ [[#T|T]])''
+'':ToString( @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== :ToFilename ====
-'':ToFilename( @ [[#T|T]])''
+'':ToFilename( @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== :BetterMatch ====
-'':BetterMatch( @ [[#T|T]],  @ [[..:..:Gtk:Pango:FontDescription#T|Gtk.Pango.FontDescription.T]],  @ [[..:..:Gtk:Pango:FontDescription#T|Gtk.Pango.FontDescription.T]])''
+'':BetterMatch(self @ [[#T|T]], old_match @ [[..:..:Gtk:Pango:FontDescription#T|Gtk.Pango.FontDescription.T]], new_match @ [[..:..:Gtk:Pango:FontDescription#T|Gtk.Pango.FontDescription.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :Copy ====
-'':Copy( @ [[#T|T]])''
+'':Copy(self @ [[#T|T]]) : [[..:..:Gtk:Pango:FontDescription#T|Gtk.Pango.FontDescription.T]]''
 
 
 ==== :CopyStatic ====
-'':CopyStatic( @ [[#T|T]])''
+'':CopyStatic(self @ [[#T|T]]) : [[..:..:Gtk:Pango:FontDescription#T|Gtk.Pango.FontDescription.T]]''
 
 
 ==== :Equal ====
-'':Equal( @ [[#T|T]],  @ [[..:..:Gtk:Pango:FontDescription#T|Gtk.Pango.FontDescription.T]])''
+'':Equal(self @ [[#T|T]], desc2 @ [[..:..:Gtk:Pango:FontDescription#T|Gtk.Pango.FontDescription.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :Free ====
-'':Free( @ [[#T|T]])''
+'':Free(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetFamily ====
-'':GetFamily( @ [[#T|T]])''
+'':GetFamily(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== :GetGravity ====
-'':GetGravity( @ [[#T|T]])''
+'':GetGravity( @ [[#T|T]]) : [[..:..:Gtk:Pango:Gravity#T|Gtk.Pango.Gravity.T]]''
 
 
 ==== :GetSetFields ====
-'':GetSetFields( @ [[#T|T]])''
+'':GetSetFields( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :GetSize ====
-'':GetSize( @ [[#T|T]])''
+'':GetSize( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :GetSizeIsAbsolute ====
-'':GetSizeIsAbsolute( @ [[#T|T]])''
+'':GetSizeIsAbsolute( @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :GetStretch ====
-'':GetStretch( @ [[#T|T]])''
+'':GetStretch( @ [[#T|T]]) : [[..:..:Gtk:Pango:Stretch#T|Gtk.Pango.Stretch.T]]''
 
 
 ==== :GetStyle ====
-'':GetStyle( @ [[#T|T]])''
+'':GetStyle( @ [[#T|T]]) : [[..:..:Gtk:Pango:Style#T|Gtk.Pango.Style.T]]''
 
 
 ==== :GetVariant ====
-'':GetVariant( @ [[#T|T]])''
+'':GetVariant( @ [[#T|T]]) : [[..:..:Gtk:Pango:Variant#T|Gtk.Pango.Variant.T]]''
 
 
 ==== :GetWeight ====
-'':GetWeight( @ [[#T|T]])''
+'':GetWeight( @ [[#T|T]]) : [[..:..:Gtk:Pango:Weight#T|Gtk.Pango.Weight.T]]''
 
 
 ==== :Hash ====
-'':Hash( @ [[#T|T]])''
+'':Hash( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Merge ====
-'':Merge( @ [[#T|T]],  @ [[..:..:Gtk:Pango:FontDescription#T|Gtk.Pango.FontDescription.T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+'':Merge(desc_to_merge @ [[#T|T]], replace_existing @ [[..:..:Gtk:Pango:FontDescription#T|Gtk.Pango.FontDescription.T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :MergeStatic ====
-'':MergeStatic( @ [[#T|T]],  @ [[..:..:Gtk:Pango:FontDescription#T|Gtk.Pango.FontDescription.T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+'':MergeStatic(desc_to_merge @ [[#T|T]], replace_existing @ [[..:..:Gtk:Pango:FontDescription#T|Gtk.Pango.FontDescription.T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetAbsoluteSize ====
-'':SetAbsoluteSize( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+'':SetAbsoluteSize(size @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetFamily ====
-'':SetFamily( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+'':SetFamily(family @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetFamilyStatic ====
-'':SetFamilyStatic( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+'':SetFamilyStatic(family @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetGravity ====
-'':SetGravity( @ [[#T|T]],  @ [[..:..:Gtk:Pango:Gravity#T|Gtk.Pango.Gravity.T]])''
+'':SetGravity(gravity @ [[#T|T]],  @ [[..:..:Gtk:Pango:Gravity#T|Gtk.Pango.Gravity.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetSize ====
-'':SetSize( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':SetSize(size @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetStretch ====
-'':SetStretch( @ [[#T|T]],  @ [[..:..:Gtk:Pango:Stretch#T|Gtk.Pango.Stretch.T]])''
+'':SetStretch(stretch @ [[#T|T]],  @ [[..:..:Gtk:Pango:Stretch#T|Gtk.Pango.Stretch.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetStyle ====
-'':SetStyle( @ [[#T|T]],  @ [[..:..:Gtk:Pango:Style#T|Gtk.Pango.Style.T]])''
+'':SetStyle(style @ [[#T|T]],  @ [[..:..:Gtk:Pango:Style#T|Gtk.Pango.Style.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetVariant ====
-'':SetVariant( @ [[#T|T]],  @ [[..:..:Gtk:Pango:Variant#T|Gtk.Pango.Variant.T]])''
+'':SetVariant(variant @ [[#T|T]],  @ [[..:..:Gtk:Pango:Variant#T|Gtk.Pango.Variant.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetWeight ====
-'':SetWeight( @ [[#T|T]],  @ [[..:..:Gtk:Pango:Weight#T|Gtk.Pango.Weight.T]])''
+'':SetWeight(weight @ [[#T|T]],  @ [[..:..:Gtk:Pango:Weight#T|Gtk.Pango.Weight.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====
-''New()''
+''New() : [[# T| T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 
 ==== FromString ====
-''FromString()''
+''FromString(str) : [[..:..:Gtk:Pango:FontDescription#T|Gtk.Pango.FontDescription.T]]''
 
 

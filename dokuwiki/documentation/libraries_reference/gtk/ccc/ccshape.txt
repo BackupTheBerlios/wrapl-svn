@@ -6,46 +6,46 @@
 
 
 ==== :SetWidthUnits ====
-'':SetWidthUnits( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+'':SetWidthUnits(self @ [[#T|T]], width @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :BrushBorder ====
-'':BrushBorder( @ [[#T|T]])''
+'':BrushBorder( @ [[#T|T]]) : [[..:..:Gtk:CCC:CcBrush#T|Gtk.CCC.CcBrush.T]]''
 
 
 ==== :BrushContent ====
-'':BrushContent( @ [[#T|T]])''
+'':BrushContent( @ [[#T|T]]) : [[..:..:Gtk:CCC:CcBrush#T|Gtk.CCC.CcBrush.T]]''
 
 
 ==== :GetBrushBorder ====
-'':GetBrushBorder( @ [[#T|T]])''
+'':GetBrushBorder(self @ [[#T|T]]) : [[..:..:Gtk:CCC:CcBrush#T|Gtk.CCC.CcBrush.T]]''
 
 
 ==== :GetBrushContent ====
-'':GetBrushContent( @ [[#T|T]])''
+'':GetBrushContent(self @ [[#T|T]]) : [[..:..:Gtk:CCC:CcBrush#T|Gtk.CCC.CcBrush.T]]''
 
 
 ==== :GetWidth ====
-'':GetWidth( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':GetWidth(self @ [[#T|T]], view @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :SetBrushBorder ====
-'':SetBrushBorder( @ [[#T|T]],  @ [[..:..:Gtk:CCC:CcBrush#T|Gtk.CCC.CcBrush.T]])''
+'':SetBrushBorder(self @ [[#T|T]], brush @ [[..:..:Gtk:CCC:CcBrush#T|Gtk.CCC.CcBrush.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetBrushContent ====
-'':SetBrushContent( @ [[#T|T]],  @ [[..:..:Gtk:CCC:CcBrush#T|Gtk.CCC.CcBrush.T]])''
+'':SetBrushContent(self @ [[#T|T]], brush @ [[..:..:Gtk:CCC:CcBrush#T|Gtk.CCC.CcBrush.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetLineWidth ====
-'':SetLineWidth( @ [[#T|T]],  @ [[..:..:Gtk:CCC:CcDistance#T|Gtk.CCC.CcDistance.T]])''
+'':SetLineWidth(self @ [[#T|T]], width @ [[..:..:Gtk:CCC:CcDistance#T|Gtk.CCC.CcDistance.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetWidthPixels ====
-'':SetWidthPixels( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+'':SetWidthPixels(self @ [[#T|T]], width @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 

@@ -7,38 +7,38 @@
 
 
 ==== :SetBuffer ====
-'':SetBuffer( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TextBuffer#T|Gtk.Gtk.TextBuffer.T]])''
+'':SetBuffer(self @ [[#T|T]], buffer @ [[..:..:Gtk:Gtk:TextBuffer#T|Gtk.Gtk.TextBuffer.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Priv ====
-'':Priv( @ [[#T|T]])''
+'':Priv( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :CopyClipboard ====
-'':CopyClipboard( @ [[#T|T]])''
+'':CopyClipboard(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :CutClipboard ====
-'':CutClipboard( @ [[#T|T]])''
+'':CutClipboard(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetBuffer ====
-'':GetBuffer( @ [[#T|T]])''
+'':GetBuffer(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:TextBuffer#T|Gtk.Gtk.TextBuffer.T]]''
 
 
 ==== :GetIterAtLocation ====
-'':GetIterAtLocation( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':GetIterAtLocation(self @ [[#T|T]], iter @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]], x @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetIterLocation ====
-'':GetIterLocation( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]],  @ [[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]])''
+'':GetIterLocation(self @ [[#T|T]], iter @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]], location @ [[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :PasteClipboard ====
-'':PasteClipboard( @ [[#T|T]])''
+'':PasteClipboard(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 

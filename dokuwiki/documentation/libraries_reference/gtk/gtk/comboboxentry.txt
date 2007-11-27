@@ -10,30 +10,30 @@
 
 
 ==== :SetTextColumn ====
-'':SetTextColumn( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':SetTextColumn(self @ [[#T|T]], text_column @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetTextColumn ====
-'':GetTextColumn( @ [[#T|T]])''
+'':GetTextColumn(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Priv ====
-'':Priv( @ [[#T|T]])''
+'':Priv( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====
-''New()''
+''New() : [[# T| T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 
 ==== NewWithModel ====
-''NewWithModel()''
+''NewWithModel(model : [[..:..:Gtk:Gtk:TreeModel#T|Gtk.Gtk.TreeModel.T]], text_column : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[# T| T]]''
 
 
 ==== NewText ====
-''NewText()''
+''NewText() : [[# T| T]]''
 
 

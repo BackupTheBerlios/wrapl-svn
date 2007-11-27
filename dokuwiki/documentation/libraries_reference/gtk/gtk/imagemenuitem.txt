@@ -11,34 +11,34 @@
 
 
 ==== :SetImage ====
-'':SetImage( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]])''
+'':SetImage(self @ [[#T|T]], image @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetImage ====
-'':GetImage( @ [[#T|T]])''
+'':GetImage(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
 
 ==== :Image ====
-'':Image( @ [[#T|T]])''
+'':Image( @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
 
 ==== New ====
-''New()''
+''New() : [[# T| T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 
 ==== NewWithMnemonic ====
-''NewWithMnemonic()''
+''NewWithMnemonic(label : [[..:..:Std:String#T|Std.String.T]]) : [[# T| T]]''
 
 
 ==== NewWithLabel ====
-''NewWithLabel()''
+''NewWithLabel(label : [[..:..:Std:String#T|Std.String.T]]) : [[# T| T]]''
 
 
 ==== NewFromStock ====
-''NewFromStock()''
+''NewFromStock(stock_id : [[..:..:Std:String#T|Std.String.T]], accel_group : [[..:..:Gtk:Gtk:AccelGroup#T|Gtk.Gtk.AccelGroup.T]]) : [[# T| T]]''
 
 

@@ -8,86 +8,86 @@
 
 
 ==== :SetVector ====
-'':SetVector( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':SetVector(self @ [[#T|T]], veclen @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], vector @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetRange ====
-'':SetRange( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+'':SetRange(self @ [[#T|T]], min_x @ [[..:..:Std:Real#T|Std.Real.T]], max_x @ [[..:..:Std:Real#T|Std.Real.T]], min_y @ [[..:..:Std:Real#T|Std.Real.T]], max_y @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :CursorType ====
-'':CursorType( @ [[#T|T]])''
+'':CursorType( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :MinX ====
-'':MinX( @ [[#T|T]])''
+'':MinX( @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :MaxX ====
-'':MaxX( @ [[#T|T]])''
+'':MaxX( @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :MinY ====
-'':MinY( @ [[#T|T]])''
+'':MinY( @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :MaxY ====
-'':MaxY( @ [[#T|T]])''
+'':MaxY( @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :Pixmap ====
-'':Pixmap( @ [[#T|T]])''
+'':Pixmap( @ [[#T|T]]) : [[..:..:Gtk:Gdk:Pixmap#T|Gtk.Gdk.Pixmap.T]]''
 
 
 ==== :CurveType ====
-'':CurveType( @ [[#T|T]])''
+'':CurveType( @ [[#T|T]]) : [[..:..:Gtk:Gtk:CurveType#T|Gtk.Gtk.CurveType.T]]''
 
 
 ==== :Height ====
-'':Height( @ [[#T|T]])''
+'':Height( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :GrabPoint ====
-'':GrabPoint( @ [[#T|T]])''
+'':GrabPoint( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Last ====
-'':Last( @ [[#T|T]])''
+'':Last( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :NumPoints ====
-'':NumPoints( @ [[#T|T]])''
+'':NumPoints( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Point ====
-'':Point( @ [[#T|T]])''
+'':Point( @ [[#T|T]]) : [[..:..:Gtk:Gdk:Point#T|Gtk.Gdk.Point.T]]''
 
 
 ==== :NumCtlpoints ====
-'':NumCtlpoints( @ [[#T|T]])''
+'':NumCtlpoints( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :GetVector ====
-'':GetVector( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':GetVector(self @ [[#T|T]], veclen @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], vector @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Reset ====
-'':Reset( @ [[#T|T]])''
+'':Reset(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetCurveType ====
-'':SetCurveType( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:CurveType#T|Gtk.Gtk.CurveType.T]])''
+'':SetCurveType(self @ [[#T|T]], type @ [[..:..:Gtk:Gtk:CurveType#T|Gtk.Gtk.CurveType.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetGamma ====
-'':SetGamma( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+'':SetGamma(self @ [[#T|T]], gamma_ @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====
-''New()''
+''New() : [[# T| T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 

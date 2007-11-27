@@ -5,62 +5,62 @@
 
 
 ==== :ValueFromStringType ====
-'':ValueFromStringType( @ [[#T|T]],  @ [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Gtk:GObject:Value#T|Gtk.GObject.Value.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':ValueFromStringType(type @ [[#T|T]], string @ [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]], value @ [[..:..:Std:String#T|Std.String.T]], error @ [[..:..:Gtk:GObject:Value#T|Gtk.GObject.Value.T]],  @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :ValueFromString ====
-'':ValueFromString( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Gtk:GObject:Value#T|Gtk.GObject.Value.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':ValueFromString(pspec @ [[#T|T]], string @ [[..:..:Std:Object#T|Std.Object.T]], value @ [[..:..:Std:String#T|Std.String.T]], error @ [[..:..:Gtk:GObject:Value#T|Gtk.GObject.Value.T]],  @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :SetTranslationDomain ====
-'':SetTranslationDomain( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+'':SetTranslationDomain(domain @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Priv ====
-'':Priv( @ [[#T|T]])''
+'':Priv( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :AddFromFile ====
-'':AddFromFile( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':AddFromFile(self @ [[#T|T]], filename @ [[..:..:Std:String#T|Std.String.T]], error @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :AddFromString ====
-'':AddFromString( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':AddFromString(self @ [[#T|T]], buffer @ [[..:..:Std:String#T|Std.String.T]], length @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], error @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :ConnectSignals ====
-'':ConnectSignals( @ [[#T|T]],  @ [[..:..:Std:Address#T|Std.Address.T]])''
+'':ConnectSignals(self @ [[#T|T]], user_data @ [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :ConnectSignalsFull ====
-'':ConnectSignalsFull( @ [[#T|T]],  @ [[..:..:Std:Function#T|Std.Function.T]],  @ [[..:..:Std:Address#T|Std.Address.T]])''
+'':ConnectSignalsFull(self @ [[#T|T]], func @ [[..:..:Std:Function#T|Std.Function.T]], user_data @ [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetObject ====
-'':GetObject( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+'':GetObject(self @ [[#T|T]], name @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]''
 
 
 ==== :GetObjects ====
-'':GetObjects( @ [[#T|T]])''
+'':GetObjects(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetTranslationDomain ====
-'':GetTranslationDomain( @ [[#T|T]])''
+'':GetTranslationDomain(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== :GetTypeFromName ====
-'':GetTypeFromName( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+'':GetTypeFromName(type_name @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 
 ==== New ====
-''New()''
+''New() : [[# T| T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 
 ==== ErrorQuark ====
-''ErrorQuark()''
+''ErrorQuark() : [[..:..:Std:Object#T|Std.Object.T]]''
 
 

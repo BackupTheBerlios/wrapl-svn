@@ -3,78 +3,78 @@
 
 
 ==== :NextRun ====
-'':NextRun( @ [[#T|T]])''
+'':NextRun(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :AtLastLine ====
-'':AtLastLine( @ [[#T|T]])''
+'':AtLastLine(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :Free ====
-'':Free( @ [[#T|T]])''
+'':Free(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetBaseline ====
-'':GetBaseline( @ [[#T|T]])''
+'':GetBaseline(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :GetCharExtents ====
-'':GetCharExtents( @ [[#T|T]],  @ [[..:..:Gtk:Pango:Rectangle#T|Gtk.Pango.Rectangle.T]])''
+'':GetCharExtents(self @ [[#T|T]], logical_rect @ [[..:..:Gtk:Pango:Rectangle#T|Gtk.Pango.Rectangle.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetClusterExtents ====
-'':GetClusterExtents( @ [[#T|T]],  @ [[..:..:Gtk:Pango:Rectangle#T|Gtk.Pango.Rectangle.T]],  @ [[..:..:Gtk:Pango:Rectangle#T|Gtk.Pango.Rectangle.T]])''
+'':GetClusterExtents(self @ [[#T|T]], ink_rect @ [[..:..:Gtk:Pango:Rectangle#T|Gtk.Pango.Rectangle.T]], logical_rect @ [[..:..:Gtk:Pango:Rectangle#T|Gtk.Pango.Rectangle.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetIndex ====
-'':GetIndex( @ [[#T|T]])''
+'':GetIndex(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :GetLayoutExtents ====
-'':GetLayoutExtents( @ [[#T|T]],  @ [[..:..:Gtk:Pango:Rectangle#T|Gtk.Pango.Rectangle.T]],  @ [[..:..:Gtk:Pango:Rectangle#T|Gtk.Pango.Rectangle.T]])''
+'':GetLayoutExtents(self @ [[#T|T]], ink_rect @ [[..:..:Gtk:Pango:Rectangle#T|Gtk.Pango.Rectangle.T]], logical_rect @ [[..:..:Gtk:Pango:Rectangle#T|Gtk.Pango.Rectangle.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetLine ====
-'':GetLine( @ [[#T|T]])''
+'':GetLine(self @ [[#T|T]]) : [[..:..:Gtk:Pango:LayoutLine#T|Gtk.Pango.LayoutLine.T]]''
 
 
 ==== :GetLineExtents ====
-'':GetLineExtents( @ [[#T|T]],  @ [[..:..:Gtk:Pango:Rectangle#T|Gtk.Pango.Rectangle.T]],  @ [[..:..:Gtk:Pango:Rectangle#T|Gtk.Pango.Rectangle.T]])''
+'':GetLineExtents(self @ [[#T|T]], ink_rect @ [[..:..:Gtk:Pango:Rectangle#T|Gtk.Pango.Rectangle.T]], logical_rect @ [[..:..:Gtk:Pango:Rectangle#T|Gtk.Pango.Rectangle.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetLineReadonly ====
-'':GetLineReadonly( @ [[#T|T]])''
+'':GetLineReadonly(self @ [[#T|T]]) : [[..:..:Gtk:Pango:LayoutLine#T|Gtk.Pango.LayoutLine.T]]''
 
 
 ==== :GetLineYrange ====
-'':GetLineYrange( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':GetLineYrange(self @ [[#T|T]], y0_ @ [[..:..:Std:Object#T|Std.Object.T]], y1_ @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetRun ====
-'':GetRun( @ [[#T|T]])''
+'':GetRun(self @ [[#T|T]]) : [[..:..:Gtk:Pango:LayoutRun#T|Gtk.Pango.LayoutRun.T]]''
 
 
 ==== :GetRunExtents ====
-'':GetRunExtents( @ [[#T|T]],  @ [[..:..:Gtk:Pango:Rectangle#T|Gtk.Pango.Rectangle.T]],  @ [[..:..:Gtk:Pango:Rectangle#T|Gtk.Pango.Rectangle.T]])''
+'':GetRunExtents(self @ [[#T|T]], ink_rect @ [[..:..:Gtk:Pango:Rectangle#T|Gtk.Pango.Rectangle.T]], logical_rect @ [[..:..:Gtk:Pango:Rectangle#T|Gtk.Pango.Rectangle.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetRunReadonly ====
-'':GetRunReadonly( @ [[#T|T]])''
+'':GetRunReadonly(self @ [[#T|T]]) : [[..:..:Gtk:Pango:LayoutRun#T|Gtk.Pango.LayoutRun.T]]''
 
 
 ==== :NextChar ====
-'':NextChar( @ [[#T|T]])''
+'':NextChar(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :NextCluster ====
-'':NextCluster( @ [[#T|T]])''
+'':NextCluster(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :NextLine ====
-'':NextLine( @ [[#T|T]])''
+'':NextLine(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 

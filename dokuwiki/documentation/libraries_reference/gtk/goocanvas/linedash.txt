@@ -3,38 +3,38 @@
 
 
 ==== :Unref ====
-'':Unref( @ [[#T|T]])''
+'':Unref(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Ref ====
-'':Ref( @ [[#T|T]])''
+'':Ref(self @ [[#T|T]]) : [[..:..:Gtk:GooCanvas:LineDash#T|Gtk.GooCanvas.LineDash.T]]''
 
 
 ==== :DashOffset ====
-'':DashOffset( @ [[#T|T]])''
+'':DashOffset( @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :RefCount ====
-'':RefCount( @ [[#T|T]])''
+'':RefCount( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :NumDashes ====
-'':NumDashes( @ [[#T|T]])''
+'':NumDashes( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Dashes ====
-'':Dashes( @ [[#T|T]])''
+'':Dashes( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====
-''New()''
+''New(num_dashes : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], ___ : [[..:..:Std:Object#T|Std.Object.T]]) : [[# T| T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 
 ==== Newv ====
-''Newv()''
+''Newv(num_dashes : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], dashes : [[..:..:Std:Object#T|Std.Object.T]]) : [[# T| T]]''
 
 

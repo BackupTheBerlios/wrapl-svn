@@ -10,30 +10,30 @@
 
 
 ==== :SetUri ====
-'':SetUri( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+'':SetUri(uri @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetUri ====
-'':GetUri( @ [[#T|T]])''
+'':GetUri(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== :Priv ====
-'':Priv( @ [[#T|T]])''
+'':Priv( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====
-''New()''
+''New(uri : [[..:..:Std:String#T|Std.String.T]]) : [[# T| T]]''
 
 
 ==== SetUriHook ====
-''SetUriHook()''
+''SetUriHook(func, data, destroy) : [[..:..:Std:Function#T|Std.Function.T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 
 ==== NewWithLabel ====
-''NewWithLabel()''
+''NewWithLabel(uri : [[..:..:Std:String#T|Std.String.T]], label : [[..:..:Std:String#T|Std.String.T]]) : [[# T| T]]''
 
 

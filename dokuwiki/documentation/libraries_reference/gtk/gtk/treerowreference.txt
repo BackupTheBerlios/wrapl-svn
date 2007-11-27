@@ -3,46 +3,46 @@
 
 
 ==== :Valid ====
-'':Valid( @ [[#T|T]])''
+'':Valid(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :GetPath ====
-'':GetPath( @ [[#T|T]])''
+'':GetPath(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]]''
 
 
 ==== :GetModel ====
-'':GetModel( @ [[#T|T]])''
+'':GetModel(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:TreeModel#T|Gtk.Gtk.TreeModel.T]]''
 
 
 ==== :Free ====
-'':Free( @ [[#T|T]])''
+'':Free(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Copy ====
-'':Copy( @ [[#T|T]])''
+'':Copy(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:TreeRowReference#T|Gtk.Gtk.TreeRowReference.T]]''
 
 
 ==== New ====
-''New()''
+''New(model : [[..:..:Gtk:Gtk:TreeModel#T|Gtk.Gtk.TreeModel.T]], path : [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]]) : [[# T| T]]''
 
 
 ==== Reordered ====
-''Reordered()''
+''Reordered(proxy, path, iter, new_order) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== Inserted ====
-''Inserted()''
+''Inserted(proxy, path) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 
 ==== Deleted ====
-''Deleted()''
+''Deleted(proxy, path) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== NewProxy ====
-''NewProxy()''
+''NewProxy(proxy : [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]], model : [[..:..:Gtk:Gtk:TreeModel#T|Gtk.Gtk.TreeModel.T]], path : [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]]) : [[# T| T]]''
 
 

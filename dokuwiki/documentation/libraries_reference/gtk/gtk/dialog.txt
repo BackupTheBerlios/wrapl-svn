@@ -10,74 +10,74 @@
 
 
 ==== :SetResponseSensitive ====
-'':SetResponseSensitive( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+'':SetResponseSensitive(self @ [[#T|T]], response_id @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], setting @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetHasSeparator ====
-'':SetHasSeparator( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+'':SetHasSeparator(self @ [[#T|T]], setting @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetDefaultResponse ====
-'':SetDefaultResponse( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':SetDefaultResponse(self @ [[#T|T]], response_id @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Vbox ====
-'':Vbox( @ [[#T|T]])''
+'':Vbox( @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
 
 ==== :ActionArea ====
-'':ActionArea( @ [[#T|T]])''
+'':ActionArea( @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
 
 ==== :Separator ====
-'':Separator( @ [[#T|T]])''
+'':Separator( @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
 
 ==== :AddActionWidget ====
-'':AddActionWidget( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':AddActionWidget(self @ [[#T|T]], child @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], response_id @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :AddButton ====
-'':AddButton( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':AddButton(self @ [[#T|T]], button_text @ [[..:..:Std:String#T|Std.String.T]], response_id @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
 
 ==== :AddButtons ====
-'':AddButtons( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':AddButtons(self @ [[#T|T]], first_button_text @ [[..:..:Std:String#T|Std.String.T]], ___ @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetHasSeparator ====
-'':GetHasSeparator( @ [[#T|T]])''
+'':GetHasSeparator(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :GetResponseForWidget ====
-'':GetResponseForWidget( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]])''
+'':GetResponseForWidget(self @ [[#T|T]], widget @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Response ====
-'':Response( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':Response(self @ [[#T|T]], response_id @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Run ====
-'':Run( @ [[#T|T]])''
+'':Run(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :SetAlternativeButtonOrder ====
-'':SetAlternativeButtonOrder( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':SetAlternativeButtonOrder(self @ [[#T|T]], first_response_id @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], ___ @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetAlternativeButtonOrderFromArray ====
-'':SetAlternativeButtonOrderFromArray( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':SetAlternativeButtonOrderFromArray(self @ [[#T|T]], n_params @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], new_order @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====
-''New()''
+''New() : [[# T| T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 
 ==== NewWithButtons ====
-''NewWithButtons()''
+''NewWithButtons(title : [[..:..:Std:String#T|Std.String.T]], parent : [[..:..:Gtk:Gtk:Window#T|Gtk.Gtk.Window.T]], flags : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], first_button_text : [[..:..:Std:String#T|Std.String.T]], ___ : [[..:..:Std:Object#T|Std.Object.T]]) : [[# T| T]]''
 
 

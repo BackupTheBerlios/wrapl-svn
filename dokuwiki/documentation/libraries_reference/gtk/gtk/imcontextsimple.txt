@@ -6,38 +6,38 @@
 
 
 ==== :AddTable ====
-'':AddTable( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':AddTable(self @ [[#T|T]], data @ [[..:..:Std:Object#T|Std.Object.T]], max_seq_len @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], n_seqs @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :ComposeBuffer ====
-'':ComposeBuffer( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':ComposeBuffer( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Tables ====
-'':Tables( @ [[#T|T]])''
+'':Tables( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :TentativeMatch ====
-'':TentativeMatch( @ [[#T|T]])''
+'':TentativeMatch( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :TentativeMatchLen ====
-'':TentativeMatchLen( @ [[#T|T]])''
+'':TentativeMatchLen( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :InHexSequence ====
-'':InHexSequence( @ [[#T|T]])''
+'':InHexSequence( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :ModifiersDropped ====
-'':ModifiersDropped( @ [[#T|T]])''
+'':ModifiersDropped( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== New ====
-''New()''
+''New() : [[# T| T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 

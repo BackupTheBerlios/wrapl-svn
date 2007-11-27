@@ -9,134 +9,134 @@
 
 
 ==== :SetWrapWidth ====
-'':SetWrapWidth( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':SetWrapWidth(width @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetTitle ====
-'':SetTitle( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+'':SetTitle(title @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetRowSpanColumn ====
-'':SetRowSpanColumn( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':SetRowSpanColumn(row_span @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetRowSeparatorFunc ====
-'':SetRowSeparatorFunc( @ [[#T|T]],  @ [[..:..:Std:Function#T|Std.Function.T]],  @ [[..:..:Std:Address#T|Std.Address.T]],  @ [[..:..:Std:Function#T|Std.Function.T]])''
+'':SetRowSeparatorFunc(func @ [[#T|T]], data @ [[..:..:Std:Function#T|Std.Function.T]], destroy @ [[..:..:Std:Address#T|Std.Address.T]],  @ [[..:..:Std:Function#T|Std.Function.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Priv ====
-'':Priv( @ [[#T|T]])''
+'':Priv( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :AppendText ====
-'':AppendText( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+'':AppendText(self @ [[#T|T]], text @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetActive ====
-'':GetActive( @ [[#T|T]])''
+'':GetActive(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :GetActiveIter ====
-'':GetActiveIter( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]])''
+'':GetActiveIter(self @ [[#T|T]], iter @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :GetActiveText ====
-'':GetActiveText( @ [[#T|T]])''
+'':GetActiveText(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== :GetAddTearoffs ====
-'':GetAddTearoffs( @ [[#T|T]])''
+'':GetAddTearoffs(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :GetColumnSpanColumn ====
-'':GetColumnSpanColumn( @ [[#T|T]])''
+'':GetColumnSpanColumn(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :GetFocusOnClick ====
-'':GetFocusOnClick( @ [[#T|T]])''
+'':GetFocusOnClick(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :GetModel ====
-'':GetModel( @ [[#T|T]])''
+'':GetModel(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:TreeModel#T|Gtk.Gtk.TreeModel.T]]''
 
 
 ==== :GetPopupAccessible ====
-'':GetPopupAccessible( @ [[#T|T]])''
+'':GetPopupAccessible(self @ [[#T|T]]) : [[..:..:Gtk:Atk:Object#T|Gtk.Atk.Object.T]]''
 
 
 ==== :GetRowSeparatorFunc ====
-'':GetRowSeparatorFunc( @ [[#T|T]])''
+'':GetRowSeparatorFunc(self @ [[#T|T]]) : [[..:..:Std:Function#T|Std.Function.T]]''
 
 
 ==== :GetRowSpanColumn ====
-'':GetRowSpanColumn( @ [[#T|T]])''
+'':GetRowSpanColumn(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :GetTitle ====
-'':GetTitle( @ [[#T|T]])''
+'':GetTitle(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== :GetWrapWidth ====
-'':GetWrapWidth( @ [[#T|T]])''
+'':GetWrapWidth( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :InsertText ====
-'':InsertText( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:String#T|Std.String.T]])''
+'':InsertText(position @ [[#T|T]], text @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Popdown ====
-'':Popdown( @ [[#T|T]])''
+'':Popdown( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Popup ====
-'':Popup( @ [[#T|T]])''
+'':Popup( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :PrependText ====
-'':PrependText( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+'':PrependText(text @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :RemoveText ====
-'':RemoveText( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':RemoveText(position @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetActive ====
-'':SetActive( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':SetActive(index_ @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetActiveIter ====
-'':SetActiveIter( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]])''
+'':SetActiveIter(iter @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetAddTearoffs ====
-'':SetAddTearoffs( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+'':SetAddTearoffs(add_tearoffs @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetColumnSpanColumn ====
-'':SetColumnSpanColumn( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':SetColumnSpanColumn(column_span @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetFocusOnClick ====
-'':SetFocusOnClick( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+'':SetFocusOnClick(focus_on_click @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetModel ====
-'':SetModel( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TreeModel#T|Gtk.Gtk.TreeModel.T]])''
+'':SetModel(model @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TreeModel#T|Gtk.Gtk.TreeModel.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====
-''New()''
+''New() : [[# T| T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 
 ==== NewWithModel ====
-''NewWithModel()''
+''NewWithModel(model : [[..:..:Gtk:Gtk:TreeModel#T|Gtk.Gtk.TreeModel.T]]) : [[# T| T]]''
 
 
 ==== NewText ====
-''NewText()''
+''NewText() : [[# T| T]]''
 
 

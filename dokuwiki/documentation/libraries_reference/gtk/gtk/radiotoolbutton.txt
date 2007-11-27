@@ -12,30 +12,30 @@
 
 
 ==== :SetGroup ====
-'':SetGroup( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':SetGroup(self @ [[#T|T]], group @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetGroup ====
-'':GetGroup( @ [[#T|T]])''
+'':GetGroup(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====
-''New()''
+''New(group : [[..:..:Std:Object#T|Std.Object.T]]) : [[# T| T]]''
 
 
 ==== NewWithStockFromWidget ====
-''NewWithStockFromWidget()''
+''NewWithStockFromWidget(group : [[..:..:Gtk:Gtk:RadioToolButton#T|Gtk.Gtk.RadioToolButton.T]], stock_id : [[..:..:Std:String#T|Std.String.T]]) : [[# T| T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 
 ==== NewFromWidget ====
-''NewFromWidget()''
+''NewFromWidget(group : [[..:..:Gtk:Gtk:RadioToolButton#T|Gtk.Gtk.RadioToolButton.T]]) : [[# T| T]]''
 
 
 ==== NewFromStock ====
-''NewFromStock()''
+''NewFromStock(group : [[..:..:Std:Object#T|Std.Object.T]], stock_id : [[..:..:Std:String#T|Std.String.T]]) : [[# T| T]]''
 
 

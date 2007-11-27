@@ -10,66 +10,66 @@
 
 
 ==== :SetHasResizeGrip ====
-'':SetHasResizeGrip( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+'':SetHasResizeGrip(self @ [[#T|T]], setting @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Remove ====
-'':Remove( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':Remove(self @ [[#T|T]], context_id @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], message_id @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Frame ====
-'':Frame( @ [[#T|T]])''
+'':Frame( @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
 
 ==== :Label ====
-'':Label( @ [[#T|T]])''
+'':Label( @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
 
 ==== :Messages ====
-'':Messages( @ [[#T|T]])''
+'':Messages( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Keys ====
-'':Keys( @ [[#T|T]])''
+'':Keys( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SeqContextId ====
-'':SeqContextId( @ [[#T|T]])''
+'':SeqContextId( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :SeqMessageId ====
-'':SeqMessageId( @ [[#T|T]])''
+'':SeqMessageId( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :GripWindow ====
-'':GripWindow( @ [[#T|T]])''
+'':GripWindow( @ [[#T|T]]) : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]]''
 
 
 ==== :HasResizeGrip ====
-'':HasResizeGrip( @ [[#T|T]])''
+'':HasResizeGrip( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :GetContextId ====
-'':GetContextId( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+'':GetContextId(self @ [[#T|T]], context_description @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :GetHasResizeGrip ====
-'':GetHasResizeGrip( @ [[#T|T]])''
+'':GetHasResizeGrip(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :Pop ====
-'':Pop( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':Pop(self @ [[#T|T]], context_id @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Push ====
-'':Push( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:String#T|Std.String.T]])''
+'':Push(self @ [[#T|T]], context_id @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], text @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== New ====
-''New()''
+''New() : [[# T| T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 

@@ -5,22 +5,22 @@
 
 
 ==== :ListSizes ====
-'':ListSizes( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':ListSizes(sizes @ [[#T|T]], n_sizes @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Describe ====
-'':Describe( @ [[#T|T]])''
+'':Describe(self @ [[#T|T]]) : [[..:..:Gtk:Pango:FontDescription#T|Gtk.Pango.FontDescription.T]]''
 
 
 ==== :GetFaceName ====
-'':GetFaceName( @ [[#T|T]])''
+'':GetFaceName(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== :IsSynthesized ====
-'':IsSynthesized( @ [[#T|T]])''
+'':IsSynthesized( @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 

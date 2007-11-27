@@ -8,82 +8,82 @@
 
 
 ==== :Steal ====
-'':Steal( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':Steal(self @ [[#T|T]], wid @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetId ====
-'':GetId( @ [[#T|T]])''
+'':GetId(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :RequestWidth ====
-'':RequestWidth( @ [[#T|T]])''
+'':RequestWidth( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :RequestHeight ====
-'':RequestHeight( @ [[#T|T]])''
+'':RequestHeight( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :CurrentWidth ====
-'':CurrentWidth( @ [[#T|T]])''
+'':CurrentWidth( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :CurrentHeight ====
-'':CurrentHeight( @ [[#T|T]])''
+'':CurrentHeight( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :PlugWindow ====
-'':PlugWindow( @ [[#T|T]])''
+'':PlugWindow( @ [[#T|T]]) : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]]''
 
 
 ==== :PlugWidget ====
-'':PlugWidget( @ [[#T|T]])''
+'':PlugWidget( @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
 
 ==== :XembedVersion ====
-'':XembedVersion( @ [[#T|T]])''
+'':XembedVersion( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :SameApp ====
-'':SameApp( @ [[#T|T]])''
+'':SameApp( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :FocusIn ====
-'':FocusIn( @ [[#T|T]])''
+'':FocusIn( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :HaveSize ====
-'':HaveSize( @ [[#T|T]])''
+'':HaveSize( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :NeedMap ====
-'':NeedMap( @ [[#T|T]])''
+'':NeedMap( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :IsMapped ====
-'':IsMapped( @ [[#T|T]])''
+'':IsMapped( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Active ====
-'':Active( @ [[#T|T]])''
+'':Active( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :AccelGroup ====
-'':AccelGroup( @ [[#T|T]])''
+'':AccelGroup( @ [[#T|T]]) : [[..:..:Gtk:Gtk:AccelGroup#T|Gtk.Gtk.AccelGroup.T]]''
 
 
 ==== :Toplevel ====
-'':Toplevel( @ [[#T|T]])''
+'':Toplevel( @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
 
 ==== :AddId ====
-'':AddId( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':AddId(self @ [[#T|T]], window_id @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====
-''New()''
+''New() : [[# T| T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 

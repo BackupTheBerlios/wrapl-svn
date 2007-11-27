@@ -3,19 +3,19 @@
 
 
 ==== :Value ====
-'':Value( @ [[#T|T]])''
+'':Value( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Origin ====
-'':Origin( @ [[#T|T]])''
+'':Origin( @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== :PropertyName ====
-'':PropertyName( @ [[#T|T]])''
+'':PropertyName( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :TypeName ====
-'':TypeName( @ [[#T|T]])''
+'':TypeName( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====
@@ -23,22 +23,22 @@
 
 
 ==== ParseRequisition ====
-''ParseRequisition()''
+''ParseRequisition(pspec, gstring, property_value) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== ParseFlags ====
-''ParseFlags()''
+''ParseFlags(pspec, gstring, property_value) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== ParseEnum ====
-''ParseEnum()''
+''ParseEnum(pspec, gstring, property_value) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== ParseColor ====
-''ParseColor()''
+''ParseColor(pspec, gstring, property_value) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== ParseBorder ====
-''ParseBorder()''
+''ParseBorder(pspec, gstring, property_value) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 

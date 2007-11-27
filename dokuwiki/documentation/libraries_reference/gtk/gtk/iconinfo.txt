@@ -3,46 +3,46 @@
 
 
 ==== :SetRawCoordinates ====
-'':SetRawCoordinates( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+'':SetRawCoordinates( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Copy ====
-'':Copy( @ [[#T|T]])''
+'':Copy(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:IconInfo#T|Gtk.Gtk.IconInfo.T]]''
 
 
 ==== :Free ====
-'':Free( @ [[#T|T]])''
+'':Free(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetAttachPoints ====
-'':GetAttachPoints( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':GetAttachPoints(self @ [[#T|T]], points @ [[..:..:Std:Object#T|Std.Object.T]], n_points @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :GetBaseSize ====
-'':GetBaseSize( @ [[#T|T]])''
+'':GetBaseSize(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :GetBuiltinPixbuf ====
-'':GetBuiltinPixbuf( @ [[#T|T]])''
+'':GetBuiltinPixbuf(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Pixbuf#T|Gtk.Gdk.Pixbuf.T]]''
 
 
 ==== :GetDisplayName ====
-'':GetDisplayName( @ [[#T|T]])''
+'':GetDisplayName(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== :GetEmbeddedRect ====
-'':GetEmbeddedRect( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]])''
+'':GetEmbeddedRect(rectangle @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :GetFilename ====
-'':GetFilename( @ [[#T|T]])''
+'':GetFilename( @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== :LoadIcon ====
-'':LoadIcon( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':LoadIcon( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Gtk:Gdk:Pixbuf#T|Gtk.Gdk.Pixbuf.T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 

@@ -3,62 +3,62 @@
 
 
 ==== :XToIndex ====
-'':XToIndex( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Gtk:Pango:Analysis#T|Gtk.Pango.Analysis.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':XToIndex(self @ [[#T|T]], text @ [[..:..:Std:String#T|Std.String.T]], length @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], analysis @ [[..:..:Gtk:Pango:Analysis#T|Gtk.Pango.Analysis.T]], x_pos @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], index_ @ [[..:..:Std:Object#T|Std.Object.T]], trailing @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetSize ====
-'':SetSize( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':SetSize(self @ [[#T|T]], new_len @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :NumGlyphs ====
-'':NumGlyphs( @ [[#T|T]])''
+'':NumGlyphs( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Glyphs ====
-'':Glyphs( @ [[#T|T]])''
+'':Glyphs( @ [[#T|T]]) : [[..:..:Gtk:Pango:GlyphInfo#T|Gtk.Pango.GlyphInfo.T]]''
 
 
 ==== :LogClusters ====
-'':LogClusters( @ [[#T|T]])''
+'':LogClusters( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Space ====
-'':Space( @ [[#T|T]])''
+'':Space( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Copy ====
-'':Copy( @ [[#T|T]])''
+'':Copy(self @ [[#T|T]]) : [[..:..:Gtk:Pango:GlyphString#T|Gtk.Pango.GlyphString.T]]''
 
 
 ==== :Extents ====
-'':Extents( @ [[#T|T]],  @ [[..:..:Gtk:Pango:Font#T|Gtk.Pango.Font.T]],  @ [[..:..:Gtk:Pango:Rectangle#T|Gtk.Pango.Rectangle.T]],  @ [[..:..:Gtk:Pango:Rectangle#T|Gtk.Pango.Rectangle.T]])''
+'':Extents(self @ [[#T|T]], font @ [[..:..:Gtk:Pango:Font#T|Gtk.Pango.Font.T]], ink_rect @ [[..:..:Gtk:Pango:Rectangle#T|Gtk.Pango.Rectangle.T]], logical_rect @ [[..:..:Gtk:Pango:Rectangle#T|Gtk.Pango.Rectangle.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :ExtentsRange ====
-'':ExtentsRange( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Gtk:Pango:Font#T|Gtk.Pango.Font.T]],  @ [[..:..:Gtk:Pango:Rectangle#T|Gtk.Pango.Rectangle.T]],  @ [[..:..:Gtk:Pango:Rectangle#T|Gtk.Pango.Rectangle.T]])''
+'':ExtentsRange(self @ [[#T|T]], start @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], end @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], font @ [[..:..:Gtk:Pango:Font#T|Gtk.Pango.Font.T]], ink_rect @ [[..:..:Gtk:Pango:Rectangle#T|Gtk.Pango.Rectangle.T]], logical_rect @ [[..:..:Gtk:Pango:Rectangle#T|Gtk.Pango.Rectangle.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Free ====
-'':Free( @ [[#T|T]])''
+'':Free(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetLogicalWidths ====
-'':GetLogicalWidths( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':GetLogicalWidths(self @ [[#T|T]], text @ [[..:..:Std:String#T|Std.String.T]], length @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], embedding_level @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], logical_widths @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetWidth ====
-'':GetWidth( @ [[#T|T]])''
+'':GetWidth(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :IndexToX ====
-'':IndexToX( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Gtk:Pango:Analysis#T|Gtk.Pango.Analysis.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':IndexToX(self @ [[#T|T]], text @ [[..:..:Std:String#T|Std.String.T]], length @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], analysis @ [[..:..:Gtk:Pango:Analysis#T|Gtk.Pango.Analysis.T]], index_ @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], trailing @ [[..:..:Std:Symbol#T|Std.Symbol.T]], x_pos @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====
-''New()''
+''New() : [[# T| T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 

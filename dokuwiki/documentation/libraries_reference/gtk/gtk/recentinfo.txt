@@ -7,39 +7,39 @@
 
 
 ==== :Exists ====
-'':Exists( @ [[#T|T]])''
+'':Exists(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :GetAdded ====
-'':GetAdded( @ [[#T|T]])''
+'':GetAdded(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetAge ====
-'':GetAge( @ [[#T|T]])''
+'':GetAge(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :GetApplicationInfo ====
-'':GetApplicationInfo( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:List#T|Std.List.T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':GetApplicationInfo(self @ [[#T|T]], app_name @ [[..:..:Std:String#T|Std.String.T]], app_exec @ [[..:..:Std:List#T|Std.List.T]], count @ [[..:..:Std:Object#T|Std.Object.T]], time_ @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :GetApplications ====
-'':GetApplications( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':GetApplications(self @ [[#T|T]], length @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:List#T|Std.List.T]]''
 
 
 ==== :GetDescription ====
-'':GetDescription( @ [[#T|T]])''
+'':GetDescription(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== :GetDisplayName ====
-'':GetDisplayName( @ [[#T|T]])''
+'':GetDisplayName( @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== :GetGroups ====
-'':GetGroups( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':GetGroups( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:List#T|Std.List.T]]''
 
 
 ==== :GetIcon ====
-'':GetIcon( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':GetIcon( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Gtk:Gdk:Pixbuf#T|Gtk.Gdk.Pixbuf.T]]''
 
 
 ==== :GetMimeType ====
@@ -95,6 +95,6 @@
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 

@@ -3,146 +3,146 @@
 
 
 ==== :Svp ====
-'':Svp( @ [[#T|T]],  @ [[..:..:Gtk:Art:SVP#T|Gtk.Art.SVP.T]])''
+'':Svp(self @ [[#T|T]], svp @ [[..:..:Gtk:Art:SVP#T|Gtk.Art.SVP.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :X0 ====
-'':X0( @ [[#T|T]])''
+'':X0( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Y0 ====
-'':Y0( @ [[#T|T]])''
+'':Y0( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :X1 ====
-'':X1( @ [[#T|T]])''
+'':X1( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Y1 ====
-'':Y1( @ [[#T|T]])''
+'':Y1( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Pixels ====
-'':Pixels( @ [[#T|T]])''
+'':Pixels( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Rowstride ====
-'':Rowstride( @ [[#T|T]])''
+'':Rowstride( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :NChan ====
-'':NChan( @ [[#T|T]])''
+'':NChan( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Depth ====
-'':Depth( @ [[#T|T]])''
+'':Depth( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :AlphaType ====
-'':AlphaType( @ [[#T|T]])''
+'':AlphaType( @ [[#T|T]]) : [[..:..:Gtk:Art:AlphaType#T|Gtk.Art.AlphaType.T]]''
 
 
 ==== :Clear ====
-'':Clear( @ [[#T|T]])''
+'':Clear( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Opacity ====
-'':Opacity( @ [[#T|T]])''
+'':Opacity( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :CompositingMode ====
-'':CompositingMode( @ [[#T|T]])''
+'':CompositingMode( @ [[#T|T]]) : [[..:..:Gtk:Art:CompositingMode#T|Gtk.Art.CompositingMode.T]]''
 
 
 ==== :Alphagamma ====
-'':Alphagamma( @ [[#T|T]])''
+'':Alphagamma( @ [[#T|T]]) : [[..:..:Gtk:Art:AlphaGamma#T|Gtk.Art.AlphaGamma.T]]''
 
 
 ==== :AlphaBuf ====
-'':AlphaBuf( @ [[#T|T]])''
+'':AlphaBuf( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :BufDepth ====
-'':BufDepth( @ [[#T|T]])''
+'':BufDepth( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :BufAlpha ====
-'':BufAlpha( @ [[#T|T]])''
+'':BufAlpha( @ [[#T|T]]) : [[..:..:Gtk:Art:AlphaType#T|Gtk.Art.AlphaType.T]]''
 
 
 ==== :ImageBuf ====
-'':ImageBuf( @ [[#T|T]])''
+'':ImageBuf( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :NRun ====
-'':NRun( @ [[#T|T]])''
+'':NRun( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Run ====
-'':Run( @ [[#T|T]])''
+'':Run( @ [[#T|T]]) : [[..:..:Gtk:Art:RenderMaskRun#T|Gtk.Art.RenderMaskRun.T]]''
 
 
 ==== :NSpan ====
-'':NSpan( @ [[#T|T]])''
+'':NSpan( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :SpanX ====
-'':SpanX( @ [[#T|T]])''
+'':SpanX( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :NeedSpan ====
-'':NeedSpan( @ [[#T|T]])''
+'':NeedSpan( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :ClearColor ====
-'':ClearColor( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':ClearColor( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :AddImageSource ====
-'':AddImageSource( @ [[#T|T]],  @ [[..:..:Gtk:Art:ImageSource#T|Gtk.Art.ImageSource.T]])''
+'':AddImageSource(self @ [[#T|T]], image_source @ [[..:..:Gtk:Art:ImageSource#T|Gtk.Art.ImageSource.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :AddMaskSource ====
-'':AddMaskSource( @ [[#T|T]],  @ [[..:..:Gtk:Art:MaskSource#T|Gtk.Art.MaskSource.T]])''
+'':AddMaskSource(self @ [[#T|T]], mask_source @ [[..:..:Gtk:Art:MaskSource#T|Gtk.Art.MaskSource.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Clear ====
-'':Clear( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':Clear(self @ [[#T|T]], clear_color @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :ClearRgb ====
-'':ClearRgb( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':ClearRgb(self @ [[#T|T]], clear_rgb @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GradientLinear ====
-'':GradientLinear( @ [[#T|T]],  @ [[..:..:Gtk:Art:GradientLinear#T|Gtk.Art.GradientLinear.T]],  @ [[..:..:Gtk:Art:FilterLevel#T|Gtk.Art.FilterLevel.T]])''
+'':GradientLinear(self @ [[#T|T]], gradient @ [[..:..:Gtk:Art:GradientLinear#T|Gtk.Art.GradientLinear.T]], level @ [[..:..:Gtk:Art:FilterLevel#T|Gtk.Art.FilterLevel.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GradientRadial ====
-'':GradientRadial( @ [[#T|T]],  @ [[..:..:Gtk:Art:GradientRadial#T|Gtk.Art.GradientRadial.T]],  @ [[..:..:Gtk:Art:FilterLevel#T|Gtk.Art.FilterLevel.T]])''
+'':GradientRadial(self @ [[#T|T]], gradient @ [[..:..:Gtk:Art:GradientRadial#T|Gtk.Art.GradientRadial.T]], level @ [[..:..:Gtk:Art:FilterLevel#T|Gtk.Art.FilterLevel.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :ImageSolid ====
-'':ImageSolid( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':ImageSolid(self @ [[#T|T]], color @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Invoke ====
-'':Invoke( @ [[#T|T]])''
+'':Invoke(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :InvokeCallbacks ====
-'':InvokeCallbacks( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':InvokeCallbacks(self @ [[#T|T]], dest @ [[..:..:Std:Object#T|Std.Object.T]], y @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Mask ====
-'':Mask( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':Mask(self @ [[#T|T]], x0 @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y0 @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], x1 @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y1 @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], mask_buf @ [[..:..:Std:Object#T|Std.Object.T]], rowstride @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :MaskSolid ====
-'':MaskSolid( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':MaskSolid(self @ [[#T|T]], opacity @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====
-''New()''
+''New(x0 : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y0 : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], x1 : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y1 : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], pixels : [[..:..:Std:Object#T|Std.Object.T]], rowstride : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], n_chan : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], depth : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], alpha_type : [[..:..:Gtk:Art:AlphaType#T|Gtk.Art.AlphaType.T]], alphagamma : [[..:..:Gtk:Art:AlphaGamma#T|Gtk.Art.AlphaGamma.T]]) : [[# T| T]]''
 
 

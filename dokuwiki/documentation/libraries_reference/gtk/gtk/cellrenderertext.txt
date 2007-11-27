@@ -7,90 +7,90 @@
 
 
 ==== :SetFixedHeightFromFont ====
-'':SetFixedHeightFromFont( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':SetFixedHeightFromFont(self @ [[#T|T]], number_of_rows @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :CalcFixedHeight ====
-'':CalcFixedHeight( @ [[#T|T]])''
+'':CalcFixedHeight( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Text ====
-'':Text( @ [[#T|T]])''
+'':Text( @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== :Font ====
-'':Font( @ [[#T|T]])''
+'':Font( @ [[#T|T]]) : [[..:..:Gtk:Pango:FontDescription#T|Gtk.Pango.FontDescription.T]]''
 
 
 ==== :FontScale ====
-'':FontScale( @ [[#T|T]])''
+'':FontScale( @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :Foreground ====
-'':Foreground( @ [[#T|T]])''
+'':Foreground( @ [[#T|T]]) : [[..:..:Gtk:Pango:Color#T|Gtk.Pango.Color.T]]''
 
 
 ==== :Background ====
-'':Background( @ [[#T|T]])''
+'':Background( @ [[#T|T]]) : [[..:..:Gtk:Pango:Color#T|Gtk.Pango.Color.T]]''
 
 
 ==== :ExtraAttrs ====
-'':ExtraAttrs( @ [[#T|T]])''
+'':ExtraAttrs( @ [[#T|T]]) : [[..:..:Gtk:Pango:AttrList#T|Gtk.Pango.AttrList.T]]''
 
 
 ==== :UnderlineStyle ====
-'':UnderlineStyle( @ [[#T|T]])''
+'':UnderlineStyle( @ [[#T|T]]) : [[..:..:Gtk:Pango:Underline#T|Gtk.Pango.Underline.T]]''
 
 
 ==== :Rise ====
-'':Rise( @ [[#T|T]])''
+'':Rise( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :FixedHeightRows ====
-'':FixedHeightRows( @ [[#T|T]])''
+'':FixedHeightRows( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Strikethrough ====
-'':Strikethrough( @ [[#T|T]])''
+'':Strikethrough( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Editable ====
-'':Editable( @ [[#T|T]])''
+'':Editable( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :ScaleSet ====
-'':ScaleSet( @ [[#T|T]])''
+'':ScaleSet( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :ForegroundSet ====
-'':ForegroundSet( @ [[#T|T]])''
+'':ForegroundSet( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :BackgroundSet ====
-'':BackgroundSet( @ [[#T|T]])''
+'':BackgroundSet( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :UnderlineSet ====
-'':UnderlineSet( @ [[#T|T]])''
+'':UnderlineSet( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :RiseSet ====
-'':RiseSet( @ [[#T|T]])''
+'':RiseSet( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :StrikethroughSet ====
-'':StrikethroughSet( @ [[#T|T]])''
+'':StrikethroughSet( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :EditableSet ====
-'':EditableSet( @ [[#T|T]])''
+'':EditableSet( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== New ====
-''New()''
+''New() : [[# T| T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 

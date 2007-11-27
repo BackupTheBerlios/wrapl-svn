@@ -9,58 +9,58 @@
 
 
 ==== :SetAccelWidget ====
-'':SetAccelWidget( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]])''
+'':SetAccelWidget(self @ [[#T|T]], accel_widget @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetAccelClosure ====
-'':SetAccelClosure( @ [[#T|T]],  @ [[..:..:Gtk:GObject:Closure#T|Gtk.GObject.Closure.T]])''
+'':SetAccelClosure(self @ [[#T|T]], accel_closure @ [[..:..:Gtk:GObject:Closure#T|Gtk.GObject.Closure.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GtkReserved ====
-'':GtkReserved( @ [[#T|T]])''
+'':GtkReserved( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :AccelPadding ====
-'':AccelPadding( @ [[#T|T]])''
+'':AccelPadding( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :AccelWidget ====
-'':AccelWidget( @ [[#T|T]])''
+'':AccelWidget( @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
 
 ==== :AccelClosure ====
-'':AccelClosure( @ [[#T|T]])''
+'':AccelClosure( @ [[#T|T]]) : [[..:..:Gtk:GObject:Closure#T|Gtk.GObject.Closure.T]]''
 
 
 ==== :AccelGroup ====
-'':AccelGroup( @ [[#T|T]])''
+'':AccelGroup( @ [[#T|T]]) : [[..:..:Gtk:Gtk:AccelGroup#T|Gtk.Gtk.AccelGroup.T]]''
 
 
 ==== :AccelString ====
-'':AccelString( @ [[#T|T]])''
+'':AccelString( @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== :AccelStringWidth ====
-'':AccelStringWidth( @ [[#T|T]])''
+'':AccelStringWidth( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :GetAccelWidget ====
-'':GetAccelWidget( @ [[#T|T]])''
+'':GetAccelWidget(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
 
 ==== :GetAccelWidth ====
-'':GetAccelWidth( @ [[#T|T]])''
+'':GetAccelWidth(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Refetch ====
-'':Refetch( @ [[#T|T]])''
+'':Refetch(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== New ====
-''New()''
+''New(string : [[..:..:Std:String#T|Std.String.T]]) : [[# T| T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 

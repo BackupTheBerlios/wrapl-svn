@@ -5,62 +5,62 @@
 
 
 ==== AddEntry ====
-''AddEntry()''
+''AddEntry(accel_path, accel_key, accel_mods) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== AddFilter ====
-''AddFilter()''
+''AddFilter(filter_pattern) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== ChangeEntry ====
-''ChangeEntry()''
+''ChangeEntry(accel_path, accel_key, accel_mods, replace) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== Foreach ====
-''Foreach()''
+''Foreach(data, foreach_func) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== ForeachUnfiltered ====
-''ForeachUnfiltered()''
+''ForeachUnfiltered(data, foreach_func) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== Get ====
-''Get()''
+''Get() : [[..:..:Gtk:Gtk:AccelMap#T|Gtk.Gtk.AccelMap.T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 
 ==== Load ====
-''Load()''
+''Load(file_name) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== LoadFd ====
-''LoadFd()''
+''LoadFd(fd) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== LoadScanner ====
-''LoadScanner()''
+''LoadScanner(scanner) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== LockPath ====
-''LockPath()''
+''LockPath(accel_path) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== LookupEntry ====
-''LookupEntry()''
+''LookupEntry(accel_path, key) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== Save ====
-''Save()''
+''Save(file_name) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== SaveFd ====
-''SaveFd()''
+''SaveFd(fd) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== UnlockPath ====
-''UnlockPath()''
+''UnlockPath(accel_path) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 

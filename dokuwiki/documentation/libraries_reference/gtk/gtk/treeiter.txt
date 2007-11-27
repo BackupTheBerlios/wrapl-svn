@@ -3,27 +3,27 @@
 
 
 ==== :Free ====
-'':Free( @ [[#T|T]])''
+'':Free(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Copy ====
-'':Copy( @ [[#T|T]])''
+'':Copy(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]]''
 
 
 ==== :Stamp ====
-'':Stamp( @ [[#T|T]])''
+'':Stamp( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :UserData ====
-'':UserData( @ [[#T|T]])''
+'':UserData( @ [[#T|T]]) : [[..:..:Std:Address#T|Std.Address.T]]''
 
 
 ==== :UserData2 ====
-'':UserData2( @ [[#T|T]])''
+'':UserData2( @ [[#T|T]]) : [[..:..:Std:Address#T|Std.Address.T]]''
 
 
 ==== :UserData3 ====
-'':UserData3( @ [[#T|T]])''
+'':UserData3( @ [[#T|T]]) : [[..:..:Std:Address#T|Std.Address.T]]''
 
 
 ==== New ====
@@ -31,6 +31,6 @@
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 

@@ -10,94 +10,94 @@
 
 
 ==== :SetValueInList ====
-'':SetValueInList( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+'':SetValueInList(self @ [[#T|T]], val @ [[..:..:Std:Symbol#T|Std.Symbol.T]], ok_if_empty @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetUseArrowsAlways ====
-'':SetUseArrowsAlways( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+'':SetUseArrowsAlways(self @ [[#T|T]], val @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Entry ====
-'':Entry( @ [[#T|T]])''
+'':Entry( @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
 
 ==== :Button ====
-'':Button( @ [[#T|T]])''
+'':Button( @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
 
 ==== :Popup ====
-'':Popup( @ [[#T|T]])''
+'':Popup( @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
 
 ==== :Popwin ====
-'':Popwin( @ [[#T|T]])''
+'':Popwin( @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
 
 ==== :List ====
-'':List( @ [[#T|T]])''
+'':List( @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
 
 ==== :EntryChangeId ====
-'':EntryChangeId( @ [[#T|T]])''
+'':EntryChangeId( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :ListChangeId ====
-'':ListChangeId( @ [[#T|T]])''
+'':ListChangeId( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :ValueInList ====
-'':ValueInList( @ [[#T|T]])''
+'':ValueInList( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :OkIfEmpty ====
-'':OkIfEmpty( @ [[#T|T]])''
+'':OkIfEmpty( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :CaseSensitive ====
-'':CaseSensitive( @ [[#T|T]])''
+'':CaseSensitive( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :UseArrows ====
-'':UseArrows( @ [[#T|T]])''
+'':UseArrows( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :UseArrowsAlways ====
-'':UseArrowsAlways( @ [[#T|T]])''
+'':UseArrowsAlways( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :CurrentButton ====
-'':CurrentButton( @ [[#T|T]])''
+'':CurrentButton( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :ActivateId ====
-'':ActivateId( @ [[#T|T]])''
+'':ActivateId( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :DisableActivate ====
-'':DisableActivate( @ [[#T|T]])''
+'':DisableActivate(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetCaseSensitive ====
-'':SetCaseSensitive( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+'':SetCaseSensitive(self @ [[#T|T]], val @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetItemString ====
-'':SetItemString( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Item#T|Gtk.Gtk.Item.T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+'':SetItemString(self @ [[#T|T]], item @ [[..:..:Gtk:Gtk:Item#T|Gtk.Gtk.Item.T]], item_value @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetPopdownStrings ====
-'':SetPopdownStrings( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':SetPopdownStrings(self @ [[#T|T]], strings @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetUseArrows ====
-'':SetUseArrows( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+'':SetUseArrows(self @ [[#T|T]], val @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====
-''New()''
+''New() : [[# T| T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 

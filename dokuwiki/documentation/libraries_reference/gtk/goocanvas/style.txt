@@ -5,46 +5,46 @@
 
 
 ==== :SetStrokeOptions ====
-'':SetStrokeOptions( @ [[#T|T]],  @ [[..:..:Gtk:Cairo:CairoT#T|Gtk.Cairo.CairoT.T]])''
+'':SetStrokeOptions(self @ [[#T|T]], cr @ [[..:..:Gtk:Cairo:CairoT#T|Gtk.Cairo.CairoT.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :SetProperty ====
-'':SetProperty( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Gtk:GObject:Value#T|Gtk.GObject.Value.T]])''
+'':SetProperty(self @ [[#T|T]], property_id @ [[..:..:Std:Object#T|Std.Object.T]], value @ [[..:..:Gtk:GObject:Value#T|Gtk.GObject.Value.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Parent ====
-'':Parent( @ [[#T|T]])''
+'':Parent( @ [[#T|T]]) : [[..:..:Gtk:GooCanvas:Style#T|Gtk.GooCanvas.Style.T]]''
 
 
 ==== :Properties ====
-'':Properties( @ [[#T|T]])''
+'':Properties( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Copy ====
-'':Copy( @ [[#T|T]])''
+'':Copy(self @ [[#T|T]]) : [[..:..:Gtk:GooCanvas:Style#T|Gtk.GooCanvas.Style.T]]''
 
 
 ==== :GetParent ====
-'':GetParent( @ [[#T|T]])''
+'':GetParent(self @ [[#T|T]]) : [[..:..:Gtk:GooCanvas:Style#T|Gtk.GooCanvas.Style.T]]''
 
 
 ==== :GetProperty ====
-'':GetProperty( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':GetProperty(self @ [[#T|T]], property_id @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Gtk:GObject:Value#T|Gtk.GObject.Value.T]]''
 
 
 ==== :SetFillOptions ====
-'':SetFillOptions( @ [[#T|T]],  @ [[..:..:Gtk:Cairo:CairoT#T|Gtk.Cairo.CairoT.T]])''
+'':SetFillOptions(self @ [[#T|T]], cr @ [[..:..:Gtk:Cairo:CairoT#T|Gtk.Cairo.CairoT.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :SetParent ====
-'':SetParent( @ [[#T|T]],  @ [[..:..:Gtk:GooCanvas:Style#T|Gtk.GooCanvas.Style.T]])''
+'':SetParent(self @ [[#T|T]], parent @ [[..:..:Gtk:GooCanvas:Style#T|Gtk.GooCanvas.Style.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====
-''New()''
+''New() : [[# T| T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 

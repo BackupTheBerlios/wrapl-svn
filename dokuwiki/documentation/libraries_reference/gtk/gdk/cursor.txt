@@ -3,50 +3,50 @@
 
 
 ==== :Unref ====
-'':Unref( @ [[#T|T]])''
+'':Unref(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Ref ====
-'':Ref( @ [[#T|T]])''
+'':Ref(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Cursor#T|Gtk.Gdk.Cursor.T]]''
 
 
 ==== :GetImage ====
-'':GetImage( @ [[#T|T]])''
+'':GetImage(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Pixbuf#T|Gtk.Gdk.Pixbuf.T]]''
 
 
 ==== :GetDisplay ====
-'':GetDisplay( @ [[#T|T]])''
+'':GetDisplay(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Display#T|Gtk.Gdk.Display.T]]''
 
 
 ==== :RefCount ====
-'':RefCount( @ [[#T|T]])''
+'':RefCount( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Type ====
-'':Type( @ [[#T|T]])''
+'':Type( @ [[#T|T]]) : [[..:..:Gtk:Gdk:CursorType#T|Gtk.Gdk.CursorType.T]]''
 
 
 ==== New ====
-''New()''
+''New(cursor_type : [[..:..:Gtk:Gdk:CursorType#T|Gtk.Gdk.CursorType.T]]) : [[# T| T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 
 ==== NewFromPixmap ====
-''NewFromPixmap()''
+''NewFromPixmap(source : [[..:..:Gtk:Gdk:Pixmap#T|Gtk.Gdk.Pixmap.T]], mask : [[..:..:Gtk:Gdk:Pixmap#T|Gtk.Gdk.Pixmap.T]], fg : [[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]], bg : [[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]], x : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[# T| T]]''
 
 
 ==== NewFromPixbuf ====
-''NewFromPixbuf()''
+''NewFromPixbuf(display : [[..:..:Gtk:Gdk:Display#T|Gtk.Gdk.Display.T]], pixbuf : [[..:..:Gtk:Gdk:Pixbuf#T|Gtk.Gdk.Pixbuf.T]], x : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[# T| T]]''
 
 
 ==== NewFromName ====
-''NewFromName()''
+''NewFromName(display : [[..:..:Gtk:Gdk:Display#T|Gtk.Gdk.Display.T]], name : [[..:..:Std:String#T|Std.String.T]]) : [[# T| T]]''
 
 
 ==== NewForDisplay ====
-''NewForDisplay()''
+''NewForDisplay(display : [[..:..:Gtk:Gdk:Display#T|Gtk.Gdk.Display.T]], cursor_type : [[..:..:Gtk:Gdk:CursorType#T|Gtk.Gdk.CursorType.T]]) : [[# T| T]]''
 
 

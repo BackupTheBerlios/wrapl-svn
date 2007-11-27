@@ -9,102 +9,102 @@
 
 
 ==== :UnsetPlacement ====
-'':UnsetPlacement( @ [[#T|T]])''
+'':UnsetPlacement(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetVadjustment ====
-'':SetVadjustment( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]])''
+'':SetVadjustment(self @ [[#T|T]], vadjustment @ [[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Hscrollbar ====
-'':Hscrollbar( @ [[#T|T]])''
+'':Hscrollbar( @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
 
 ==== :Vscrollbar ====
-'':Vscrollbar( @ [[#T|T]])''
+'':Vscrollbar( @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
 
 ==== :HscrollbarPolicy ====
-'':HscrollbarPolicy( @ [[#T|T]])''
+'':HscrollbarPolicy( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :VscrollbarPolicy ====
-'':VscrollbarPolicy( @ [[#T|T]])''
+'':VscrollbarPolicy( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :HscrollbarVisible ====
-'':HscrollbarVisible( @ [[#T|T]])''
+'':HscrollbarVisible( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :VscrollbarVisible ====
-'':VscrollbarVisible( @ [[#T|T]])''
+'':VscrollbarVisible( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :WindowPlacement ====
-'':WindowPlacement( @ [[#T|T]])''
+'':WindowPlacement( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :FocusOut ====
-'':FocusOut( @ [[#T|T]])''
+'':FocusOut( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :ShadowType ====
-'':ShadowType( @ [[#T|T]])''
+'':ShadowType( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :AddWithViewport ====
-'':AddWithViewport( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]])''
+'':AddWithViewport(self @ [[#T|T]], child @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetHadjustment ====
-'':GetHadjustment( @ [[#T|T]])''
+'':GetHadjustment(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]]''
 
 
 ==== :GetHscrollbar ====
-'':GetHscrollbar( @ [[#T|T]])''
+'':GetHscrollbar(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
 
 ==== :GetPlacement ====
-'':GetPlacement( @ [[#T|T]])''
+'':GetPlacement(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:CornerType#T|Gtk.Gtk.CornerType.T]]''
 
 
 ==== :GetPolicy ====
-'':GetPolicy( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':GetPolicy(self @ [[#T|T]], hscrollbar_policy @ [[..:..:Std:Object#T|Std.Object.T]], vscrollbar_policy @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetShadowType ====
-'':GetShadowType( @ [[#T|T]])''
+'':GetShadowType(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:ShadowType#T|Gtk.Gtk.ShadowType.T]]''
 
 
 ==== :GetVadjustment ====
-'':GetVadjustment( @ [[#T|T]])''
+'':GetVadjustment(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]]''
 
 
 ==== :GetVscrollbar ====
-'':GetVscrollbar( @ [[#T|T]])''
+'':GetVscrollbar(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
 
 ==== :SetHadjustment ====
-'':SetHadjustment( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]])''
+'':SetHadjustment(self @ [[#T|T]], hadjustment @ [[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetPlacement ====
-'':SetPlacement( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:CornerType#T|Gtk.Gtk.CornerType.T]])''
+'':SetPlacement(self @ [[#T|T]], window_placement @ [[..:..:Gtk:Gtk:CornerType#T|Gtk.Gtk.CornerType.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetPolicy ====
-'':SetPolicy( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:PolicyType#T|Gtk.Gtk.PolicyType.T]],  @ [[..:..:Gtk:Gtk:PolicyType#T|Gtk.Gtk.PolicyType.T]])''
+'':SetPolicy(self @ [[#T|T]], hscrollbar_policy @ [[..:..:Gtk:Gtk:PolicyType#T|Gtk.Gtk.PolicyType.T]], vscrollbar_policy @ [[..:..:Gtk:Gtk:PolicyType#T|Gtk.Gtk.PolicyType.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetShadowType ====
-'':SetShadowType( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:ShadowType#T|Gtk.Gtk.ShadowType.T]])''
+'':SetShadowType(self @ [[#T|T]], type @ [[..:..:Gtk:Gtk:ShadowType#T|Gtk.Gtk.ShadowType.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====
-''New()''
+''New(hadjustment : [[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]], vadjustment : [[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]]) : [[# T| T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 

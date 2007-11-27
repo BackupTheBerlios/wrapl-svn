@@ -7,182 +7,182 @@
 
 
 ==== :SetValue ====
-'':SetValue( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+'':SetValue(self @ [[#T|T]], value @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Adjustment ====
-'':Adjustment( @ [[#T|T]])''
+'':Adjustment( @ [[#T|T]]) : [[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]]''
 
 
 ==== :UpdatePolicy ====
-'':UpdatePolicy( @ [[#T|T]])''
+'':UpdatePolicy( @ [[#T|T]]) : [[..:..:Gtk:Gtk:UpdateType#T|Gtk.Gtk.UpdateType.T]]''
 
 
 ==== :Inverted ====
-'':Inverted( @ [[#T|T]])''
+'':Inverted( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Flippable ====
-'':Flippable( @ [[#T|T]])''
+'':Flippable( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :HasStepperA ====
-'':HasStepperA( @ [[#T|T]])''
+'':HasStepperA( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :HasStepperB ====
-'':HasStepperB( @ [[#T|T]])''
+'':HasStepperB( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :HasStepperC ====
-'':HasStepperC( @ [[#T|T]])''
+'':HasStepperC( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :HasStepperD ====
-'':HasStepperD( @ [[#T|T]])''
+'':HasStepperD( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :NeedRecalc ====
-'':NeedRecalc( @ [[#T|T]])''
+'':NeedRecalc( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :SliderSizeFixed ====
-'':SliderSizeFixed( @ [[#T|T]])''
+'':SliderSizeFixed( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :MinSliderSize ====
-'':MinSliderSize( @ [[#T|T]])''
+'':MinSliderSize( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Orientation ====
-'':Orientation( @ [[#T|T]])''
+'':Orientation( @ [[#T|T]]) : [[..:..:Gtk:Gtk:Orientation#T|Gtk.Gtk.Orientation.T]]''
 
 
 ==== :RangeRect ====
-'':RangeRect( @ [[#T|T]])''
+'':RangeRect( @ [[#T|T]]) : [[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]]''
 
 
 ==== :SliderStart ====
-'':SliderStart( @ [[#T|T]])''
+'':SliderStart( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :SliderEnd ====
-'':SliderEnd( @ [[#T|T]])''
+'':SliderEnd( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :RoundDigits ====
-'':RoundDigits( @ [[#T|T]])''
+'':RoundDigits( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :TroughClickForward ====
-'':TroughClickForward( @ [[#T|T]])''
+'':TroughClickForward( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :UpdatePending ====
-'':UpdatePending( @ [[#T|T]])''
+'':UpdatePending( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Layout ====
-'':Layout( @ [[#T|T]])''
+'':Layout( @ [[#T|T]]) : [[..:..:Gtk:Gtk:RangeLayout#T|Gtk.Gtk.RangeLayout.T]]''
 
 
 ==== :Timer ====
-'':Timer( @ [[#T|T]])''
+'':Timer( @ [[#T|T]]) : [[..:..:Gtk:Gtk:RangeStepTimer#T|Gtk.Gtk.RangeStepTimer.T]]''
 
 
 ==== :SlideInitialSliderPosition ====
-'':SlideInitialSliderPosition( @ [[#T|T]])''
+'':SlideInitialSliderPosition( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :SlideInitialCoordinate ====
-'':SlideInitialCoordinate( @ [[#T|T]])''
+'':SlideInitialCoordinate( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :UpdateTimeoutId ====
-'':UpdateTimeoutId( @ [[#T|T]])''
+'':UpdateTimeoutId( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :EventWindow ====
-'':EventWindow( @ [[#T|T]])''
+'':EventWindow( @ [[#T|T]]) : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]]''
 
 
 ==== :GetAdjustment ====
-'':GetAdjustment( @ [[#T|T]])''
+'':GetAdjustment(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]]''
 
 
 ==== :GetFillLevel ====
-'':GetFillLevel( @ [[#T|T]])''
+'':GetFillLevel(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :GetInverted ====
-'':GetInverted( @ [[#T|T]])''
+'':GetInverted(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :GetLowerStepperSensitivity ====
-'':GetLowerStepperSensitivity( @ [[#T|T]])''
+'':GetLowerStepperSensitivity(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:SensitivityType#T|Gtk.Gtk.SensitivityType.T]]''
 
 
 ==== :GetRestrictToFillLevel ====
-'':GetRestrictToFillLevel( @ [[#T|T]])''
+'':GetRestrictToFillLevel(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :GetShowFillLevel ====
-'':GetShowFillLevel( @ [[#T|T]])''
+'':GetShowFillLevel(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :GetUpdatePolicy ====
-'':GetUpdatePolicy( @ [[#T|T]])''
+'':GetUpdatePolicy(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:UpdateType#T|Gtk.Gtk.UpdateType.T]]''
 
 
 ==== :GetUpperStepperSensitivity ====
-'':GetUpperStepperSensitivity( @ [[#T|T]])''
+'':GetUpperStepperSensitivity(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:SensitivityType#T|Gtk.Gtk.SensitivityType.T]]''
 
 
 ==== :GetValue ====
-'':GetValue( @ [[#T|T]])''
+'':GetValue(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :SetAdjustment ====
-'':SetAdjustment( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]])''
+'':SetAdjustment(self @ [[#T|T]], adjustment @ [[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetFillLevel ====
-'':SetFillLevel( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+'':SetFillLevel(self @ [[#T|T]], fill_level @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetIncrements ====
-'':SetIncrements( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+'':SetIncrements(self @ [[#T|T]], step @ [[..:..:Std:Real#T|Std.Real.T]], page @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetInverted ====
-'':SetInverted( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+'':SetInverted(self @ [[#T|T]], setting @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetLowerStepperSensitivity ====
-'':SetLowerStepperSensitivity( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:SensitivityType#T|Gtk.Gtk.SensitivityType.T]])''
+'':SetLowerStepperSensitivity(self @ [[#T|T]], sensitivity @ [[..:..:Gtk:Gtk:SensitivityType#T|Gtk.Gtk.SensitivityType.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetRange ====
-'':SetRange( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+'':SetRange(self @ [[#T|T]], min @ [[..:..:Std:Real#T|Std.Real.T]], max @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetRestrictToFillLevel ====
-'':SetRestrictToFillLevel( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+'':SetRestrictToFillLevel(self @ [[#T|T]], restrict_to_fill_level @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetShowFillLevel ====
-'':SetShowFillLevel( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+'':SetShowFillLevel(self @ [[#T|T]], show_fill_level @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetUpdatePolicy ====
-'':SetUpdatePolicy( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:UpdateType#T|Gtk.Gtk.UpdateType.T]])''
+'':SetUpdatePolicy(self @ [[#T|T]], policy @ [[..:..:Gtk:Gtk:UpdateType#T|Gtk.Gtk.UpdateType.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetUpperStepperSensitivity ====
-'':SetUpperStepperSensitivity( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:SensitivityType#T|Gtk.Gtk.SensitivityType.T]])''
+'':SetUpperStepperSensitivity(self @ [[#T|T]], sensitivity @ [[..:..:Gtk:Gtk:SensitivityType#T|Gtk.Gtk.SensitivityType.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 

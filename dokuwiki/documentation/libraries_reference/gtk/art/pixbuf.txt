@@ -3,78 +3,78 @@
 
 
 ==== :FreeShallow ====
-'':FreeShallow( @ [[#T|T]])''
+'':FreeShallow(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Free ====
-'':Free( @ [[#T|T]])''
+'':Free(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Duplicate ====
-'':Duplicate( @ [[#T|T]])''
+'':Duplicate(self @ [[#T|T]]) : [[..:..:Gtk:Art:PixBuf#T|Gtk.Art.PixBuf.T]]''
 
 
 ==== :Destroy ====
-'':Destroy( @ [[#T|T]])''
+'':Destroy( @ [[#T|T]]) : [[..:..:Std:Function#T|Std.Function.T]]''
 
 
 ==== :DestroyData ====
-'':DestroyData( @ [[#T|T]])''
+'':DestroyData( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Rowstride ====
-'':Rowstride( @ [[#T|T]])''
+'':Rowstride( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Format ====
-'':Format( @ [[#T|T]])''
+'':Format( @ [[#T|T]]) : [[..:..:Gtk:Art:PixFormat#T|Gtk.Art.PixFormat.T]]''
 
 
 ==== :NChannels ====
-'':NChannels( @ [[#T|T]])''
+'':NChannels( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :HasAlpha ====
-'':HasAlpha( @ [[#T|T]])''
+'':HasAlpha( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :BitsPerSample ====
-'':BitsPerSample( @ [[#T|T]])''
+'':BitsPerSample( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Pixels ====
-'':Pixels( @ [[#T|T]])''
+'':Pixels( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Width ====
-'':Width( @ [[#T|T]])''
+'':Width( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Height ====
-'':Height( @ [[#T|T]])''
+'':Height( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== NewConstRgb ====
-''NewConstRgb()''
+''NewConstRgb(pixels : [[..:..:Std:Object#T|Std.Object.T]], width : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], height : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], rowstride : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[# T| T]]''
 
 
 ==== NewRgbaDnotify ====
-''NewRgbaDnotify()''
+''NewRgbaDnotify(pixels : [[..:..:Std:Object#T|Std.Object.T]], width : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], height : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], rowstride : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], dfunc_data : [[..:..:Std:Object#T|Std.Object.T]], dfunc : [[..:..:Std:Function#T|Std.Function.T]]) : [[# T| T]]''
 
 
 ==== NewRgba ====
-''NewRgba()''
+''NewRgba(pixels : [[..:..:Std:Object#T|Std.Object.T]], width : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], height : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], rowstride : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[# T| T]]''
 
 
 ==== NewRgbDnotify ====
-''NewRgbDnotify()''
+''NewRgbDnotify(pixels : [[..:..:Std:Object#T|Std.Object.T]], width : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], height : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], rowstride : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], dfunc_data : [[..:..:Std:Object#T|Std.Object.T]], dfunc : [[..:..:Std:Function#T|Std.Function.T]]) : [[# T| T]]''
 
 
 ==== NewRgb ====
-''NewRgb()''
+''NewRgb(pixels : [[..:..:Std:Object#T|Std.Object.T]], width : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], height : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], rowstride : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[# T| T]]''
 
 
 ==== NewConstRgba ====
-''NewConstRgba()''
+''NewConstRgba(pixels : [[..:..:Std:Object#T|Std.Object.T]], width : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], height : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], rowstride : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[# T| T]]''
 
 

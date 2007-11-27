@@ -11,130 +11,130 @@
 
 
 ==== :ShowFileopButtons ====
-'':ShowFileopButtons( @ [[#T|T]])''
+'':ShowFileopButtons( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetSelectMultiple ====
-'':SetSelectMultiple( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+'':SetSelectMultiple(select_multiple @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :DirList ====
-'':DirList( @ [[#T|T]])''
+'':DirList( @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
 
 ==== :FileList ====
-'':FileList( @ [[#T|T]])''
+'':FileList( @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
 
 ==== :SelectionEntry ====
-'':SelectionEntry( @ [[#T|T]])''
+'':SelectionEntry( @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
 
 ==== :SelectionText ====
-'':SelectionText( @ [[#T|T]])''
+'':SelectionText( @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
 
 ==== :MainVbox ====
-'':MainVbox( @ [[#T|T]])''
+'':MainVbox( @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
 
 ==== :OkButton ====
-'':OkButton( @ [[#T|T]])''
+'':OkButton( @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
 
 ==== :CancelButton ====
-'':CancelButton( @ [[#T|T]])''
+'':CancelButton( @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
 
 ==== :HelpButton ====
-'':HelpButton( @ [[#T|T]])''
+'':HelpButton( @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
 
 ==== :HistoryPulldown ====
-'':HistoryPulldown( @ [[#T|T]])''
+'':HistoryPulldown( @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
 
 ==== :HistoryMenu ====
-'':HistoryMenu( @ [[#T|T]])''
+'':HistoryMenu( @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
 
 ==== :HistoryList ====
-'':HistoryList( @ [[#T|T]])''
+'':HistoryList( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :FileopDialog ====
-'':FileopDialog( @ [[#T|T]])''
+'':FileopDialog( @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
 
 ==== :FileopEntry ====
-'':FileopEntry( @ [[#T|T]])''
+'':FileopEntry( @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
 
 ==== :FileopFile ====
-'':FileopFile( @ [[#T|T]])''
+'':FileopFile( @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== :CmplState ====
-'':CmplState( @ [[#T|T]])''
+'':CmplState( @ [[#T|T]]) : [[..:..:Std:Address#T|Std.Address.T]]''
 
 
 ==== :FileopCDir ====
-'':FileopCDir( @ [[#T|T]])''
+'':FileopCDir( @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
 
 ==== :FileopDelFile ====
-'':FileopDelFile( @ [[#T|T]])''
+'':FileopDelFile( @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
 
 ==== :FileopRenFile ====
-'':FileopRenFile( @ [[#T|T]])''
+'':FileopRenFile( @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
 
 ==== :ButtonArea ====
-'':ButtonArea( @ [[#T|T]])''
+'':ButtonArea( @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
 
 ==== :ActionArea ====
-'':ActionArea( @ [[#T|T]])''
+'':ActionArea( @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
 
 ==== :SelectedNames ====
-'':SelectedNames( @ [[#T|T]])''
+'':SelectedNames( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :LastSelected ====
-'':LastSelected( @ [[#T|T]])''
+'':LastSelected( @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== :Complete ====
-'':Complete( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+'':Complete(self @ [[#T|T]], pattern @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetFilename ====
-'':GetFilename( @ [[#T|T]])''
+'':GetFilename(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== :GetSelectMultiple ====
-'':GetSelectMultiple( @ [[#T|T]])''
+'':GetSelectMultiple( @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :GetSelections ====
-'':GetSelections( @ [[#T|T]])''
+'':GetSelections( @ [[#T|T]]) : [[..:..:Std:List#T|Std.List.T]]''
 
 
 ==== :HideFileopButtons ====
-'':HideFileopButtons( @ [[#T|T]])''
+'':HideFileopButtons( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetFilename ====
-'':SetFilename( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+'':SetFilename(filename @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====
-''New()''
+''New(title : [[..:..:Std:String#T|Std.String.T]]) : [[# T| T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 

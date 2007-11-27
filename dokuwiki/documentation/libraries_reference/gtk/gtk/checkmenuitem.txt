@@ -11,66 +11,66 @@
 
 
 ==== :Toggled ====
-'':Toggled( @ [[#T|T]])''
+'':Toggled(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetShowToggle ====
-'':SetShowToggle( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+'':SetShowToggle(self @ [[#T|T]], always @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetInconsistent ====
-'':SetInconsistent( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+'':SetInconsistent(self @ [[#T|T]], setting @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetDrawAsRadio ====
-'':SetDrawAsRadio( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+'':SetDrawAsRadio(self @ [[#T|T]], draw_as_radio @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Active ====
-'':Active( @ [[#T|T]])''
+'':Active( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :AlwaysShowToggle ====
-'':AlwaysShowToggle( @ [[#T|T]])''
+'':AlwaysShowToggle( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Inconsistent ====
-'':Inconsistent( @ [[#T|T]])''
+'':Inconsistent( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :DrawAsRadio ====
-'':DrawAsRadio( @ [[#T|T]])''
+'':DrawAsRadio( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :GetActive ====
-'':GetActive( @ [[#T|T]])''
+'':GetActive(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :GetDrawAsRadio ====
-'':GetDrawAsRadio( @ [[#T|T]])''
+'':GetDrawAsRadio(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :GetInconsistent ====
-'':GetInconsistent( @ [[#T|T]])''
+'':GetInconsistent(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :SetActive ====
-'':SetActive( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+'':SetActive(self @ [[#T|T]], is_active @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====
-''New()''
+''New() : [[# T| T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 
 ==== NewWithMnemonic ====
-''NewWithMnemonic()''
+''NewWithMnemonic(label : [[..:..:Std:String#T|Std.String.T]]) : [[# T| T]]''
 
 
 ==== NewWithLabel ====
-''NewWithLabel()''
+''NewWithLabel(label : [[..:..:Std:String#T|Std.String.T]]) : [[# T| T]]''
 
 

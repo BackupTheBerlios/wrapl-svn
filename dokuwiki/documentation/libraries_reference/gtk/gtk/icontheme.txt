@@ -5,90 +5,90 @@
 
 
 ==== :SetSearchPath ====
-'':SetSearchPath( @ [[#T|T]],  @ [[..:..:Std:List#T|Std.List.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':SetSearchPath(self @ [[#T|T]], path @ [[..:..:Std:List#T|Std.List.T]], n_elements @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetScreen ====
-'':SetScreen( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Screen#T|Gtk.Gdk.Screen.T]])''
+'':SetScreen(self @ [[#T|T]], screen @ [[..:..:Gtk:Gdk:Screen#T|Gtk.Gdk.Screen.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetCustomTheme ====
-'':SetCustomTheme( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+'':SetCustomTheme(self @ [[#T|T]], theme_name @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :RescanIfNeeded ====
-'':RescanIfNeeded( @ [[#T|T]])''
+'':RescanIfNeeded(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :PrependSearchPath ====
-'':PrependSearchPath( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+'':PrependSearchPath(self @ [[#T|T]], path @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :LookupIcon ====
-'':LookupIcon( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':LookupIcon(self @ [[#T|T]], icon_name @ [[..:..:Std:String#T|Std.String.T]], size @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], flags @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Gtk:Gtk:IconInfo#T|Gtk.Gtk.IconInfo.T]]''
 
 
 ==== :Priv ====
-'':Priv( @ [[#T|T]])''
+'':Priv( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :AppendSearchPath ====
-'':AppendSearchPath( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+'':AppendSearchPath(self @ [[#T|T]], path @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :ChooseIcon ====
-'':ChooseIcon( @ [[#T|T]],  @ [[..:..:Std:List#T|Std.List.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':ChooseIcon(self @ [[#T|T]], icon_names @ [[..:..:Std:List#T|Std.List.T]], size @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], flags @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Gtk:Gtk:IconInfo#T|Gtk.Gtk.IconInfo.T]]''
 
 
 ==== :GetExampleIconName ====
-'':GetExampleIconName( @ [[#T|T]])''
+'':GetExampleIconName(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== :GetIconSizes ====
-'':GetIconSizes( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+'':GetIconSizes(self @ [[#T|T]], icon_name @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetSearchPath ====
-'':GetSearchPath( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':GetSearchPath(self @ [[#T|T]], path @ [[..:..:Std:Object#T|Std.Object.T]], n_elements @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :HasIcon ====
-'':HasIcon( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+'':HasIcon(self @ [[#T|T]], icon_name @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :ListContexts ====
-'':ListContexts( @ [[#T|T]])''
+'':ListContexts(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :ListIcons ====
-'':ListIcons( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+'':ListIcons(self @ [[#T|T]], context @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :LoadIcon ====
-'':LoadIcon( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':LoadIcon(self @ [[#T|T]], icon_name @ [[..:..:Std:String#T|Std.String.T]], size @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], flags @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], error @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Gtk:Gdk:Pixbuf#T|Gtk.Gdk.Pixbuf.T]]''
 
 
 ==== New ====
-''New()''
+''New() : [[# T| T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 
 ==== GetForScreen ====
-''GetForScreen()''
+''GetForScreen(screen) : [[..:..:Gtk:Gtk:IconTheme#T|Gtk.Gtk.IconTheme.T]]''
 
 
 ==== GetDefault ====
-''GetDefault()''
+''GetDefault() : [[..:..:Gtk:Gtk:IconTheme#T|Gtk.Gtk.IconTheme.T]]''
 
 
 ==== ErrorQuark ====
-''ErrorQuark()''
+''ErrorQuark() : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== AddBuiltinIcon ====
-''AddBuiltinIcon()''
+''AddBuiltinIcon(icon_name, size, pixbuf) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 

@@ -3,46 +3,46 @@
 
 
 ==== :SetTab ====
-'':SetTab( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Gtk:Pango:TabAlign#T|Gtk.Pango.TabAlign.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':SetTab(self @ [[#T|T]], tab_index @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], alignment @ [[..:..:Gtk:Pango:TabAlign#T|Gtk.Pango.TabAlign.T]], location @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Resize ====
-'':Resize( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':Resize(self @ [[#T|T]], new_size @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetTabs ====
-'':GetTabs( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':GetTabs(self @ [[#T|T]], alignments @ [[..:..:Std:Object#T|Std.Object.T]], locations @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Copy ====
-'':Copy( @ [[#T|T]])''
+'':Copy(self @ [[#T|T]]) : [[..:..:Gtk:Pango:TabArray#T|Gtk.Pango.TabArray.T]]''
 
 
 ==== :Free ====
-'':Free( @ [[#T|T]])''
+'':Free(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetPositionsInPixels ====
-'':GetPositionsInPixels( @ [[#T|T]])''
+'':GetPositionsInPixels(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :GetSize ====
-'':GetSize( @ [[#T|T]])''
+'':GetSize(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :GetTab ====
-'':GetTab( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':GetTab(self @ [[#T|T]], tab_index @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], alignment @ [[..:..:Std:Object#T|Std.Object.T]], location @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====
-''New()''
+''New(initial_size : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], positions_in_pixels : [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[# T| T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 
 ==== NewWithPositions ====
-''NewWithPositions()''
+''NewWithPositions(size : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], positions_in_pixels : [[..:..:Std:Symbol#T|Std.Symbol.T]], first_alignment : [[..:..:Gtk:Pango:TabAlign#T|Gtk.Pango.TabAlign.T]], first_position : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], ___ : [[..:..:Std:Object#T|Std.Object.T]]) : [[# T| T]]''
 
 

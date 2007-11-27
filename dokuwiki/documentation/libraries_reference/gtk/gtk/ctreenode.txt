@@ -3,7 +3,7 @@
 
 
 ==== :List ====
-'':List( @ [[#T|T]])''
+'':List( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====
@@ -11,94 +11,94 @@
 
 
 ==== GetCellType ====
-''GetCellType()''
+''GetCellType(ctree, node, column) : [[..:..:Gtk:Gtk:CellType#T|Gtk.Gtk.CellType.T]]''
 
 
 ==== GetPixmap ====
-''GetPixmap()''
+''GetPixmap(ctree, node, column, pixmap, mask) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== GetPixtext ====
-''GetPixtext()''
+''GetPixtext(ctree, node, column, text, spacing, pixmap, mask) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== GetRowData ====
-''GetRowData()''
+''GetRowData(ctree, node) : [[..:..:Std:Address#T|Std.Address.T]]''
 
 
 ==== GetRowStyle ====
-''GetRowStyle()''
+''GetRowStyle(ctree, node) : [[..:..:Gtk:Gtk:Style#T|Gtk.Gtk.Style.T]]''
 
 
 ==== GetSelectable ====
-''GetSelectable()''
+''GetSelectable(ctree, node) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== GetText ====
-''GetText()''
+''GetText(ctree, node, column, text) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 
 ==== IsVisible ====
-''IsVisible()''
+''IsVisible(ctree, node) : [[..:..:Gtk:Gtk:Visibility#T|Gtk.Gtk.Visibility.T]]''
 
 
 ==== Moveto ====
-''Moveto()''
+''Moveto(ctree, node, column, row_align, col_align) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== Nth ====
-''Nth()''
+''Nth(ctree, row) : [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]]''
 
 
 ==== SetBackground ====
-''SetBackground()''
+''SetBackground(ctree, node, color) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== SetCellStyle ====
-''SetCellStyle()''
+''SetCellStyle(ctree, node, column, style) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== SetForeground ====
-''SetForeground()''
+''SetForeground(ctree, node, color) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== SetPixmap ====
-''SetPixmap()''
+''SetPixmap(ctree, node, column, pixmap, mask) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== SetPixtext ====
-''SetPixtext()''
+''SetPixtext(ctree, node, column, text, spacing, pixmap, mask) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== SetRowData ====
-''SetRowData()''
+''SetRowData(ctree, node, data) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== SetRowDataFull ====
-''SetRowDataFull()''
+''SetRowDataFull(ctree, node, data, destroy) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== SetRowStyle ====
-''SetRowStyle()''
+''SetRowStyle(ctree, node, style) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== SetSelectable ====
-''SetSelectable()''
+''SetSelectable(ctree, node, selectable) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== SetShift ====
-''SetShift()''
+''SetShift(ctree, node, column, vertical, horizontal) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== SetText ====
-''SetText()''
+''SetText(ctree, node, column, text) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== GetCellStyle ====
-''GetCellStyle()''
+''GetCellStyle(ctree, node, column) : [[..:..:Gtk:Gtk:Style#T|Gtk.Gtk.Style.T]]''
 
 

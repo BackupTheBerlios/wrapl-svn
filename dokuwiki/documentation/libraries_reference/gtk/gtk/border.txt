@@ -3,27 +3,27 @@
 
 
 ==== :Free ====
-'':Free( @ [[#T|T]])''
+'':Free(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Copy ====
-'':Copy( @ [[#T|T]])''
+'':Copy(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Border#T|Gtk.Gtk.Border.T]]''
 
 
 ==== :Bottom ====
-'':Bottom( @ [[#T|T]])''
+'':Bottom( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Left ====
-'':Left( @ [[#T|T]])''
+'':Left( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Right ====
-'':Right( @ [[#T|T]])''
+'':Right( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Top ====
-'':Top( @ [[#T|T]])''
+'':Top( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== New ====
@@ -31,10 +31,10 @@
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 
 ==== NewSet ====
-''NewSet()''
+''NewSet(left : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], right : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], top : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], bottom : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[# T| T]]''
 
 

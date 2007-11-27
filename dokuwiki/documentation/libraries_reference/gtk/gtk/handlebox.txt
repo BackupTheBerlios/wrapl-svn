@@ -9,86 +9,86 @@
 
 
 ==== :SetSnapEdge ====
-'':SetSnapEdge( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:PositionType#T|Gtk.Gtk.PositionType.T]])''
+'':SetSnapEdge(self @ [[#T|T]], edge @ [[..:..:Gtk:Gtk:PositionType#T|Gtk.Gtk.PositionType.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetShadowType ====
-'':SetShadowType( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:ShadowType#T|Gtk.Gtk.ShadowType.T]])''
+'':SetShadowType(self @ [[#T|T]], type @ [[..:..:Gtk:Gtk:ShadowType#T|Gtk.Gtk.ShadowType.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :BinWindow ====
-'':BinWindow( @ [[#T|T]])''
+'':BinWindow( @ [[#T|T]]) : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]]''
 
 
 ==== :FloatWindow ====
-'':FloatWindow( @ [[#T|T]])''
+'':FloatWindow( @ [[#T|T]]) : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]]''
 
 
 ==== :ShadowType ====
-'':ShadowType( @ [[#T|T]])''
+'':ShadowType( @ [[#T|T]]) : [[..:..:Gtk:Gtk:ShadowType#T|Gtk.Gtk.ShadowType.T]]''
 
 
 ==== :HandlePosition ====
-'':HandlePosition( @ [[#T|T]])''
+'':HandlePosition( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :FloatWindowMapped ====
-'':FloatWindowMapped( @ [[#T|T]])''
+'':FloatWindowMapped( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :ChildDetached ====
-'':ChildDetached( @ [[#T|T]])''
+'':ChildDetached( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :InDrag ====
-'':InDrag( @ [[#T|T]])''
+'':InDrag( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :ShrinkOnDetach ====
-'':ShrinkOnDetach( @ [[#T|T]])''
+'':ShrinkOnDetach( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :SnapEdge ====
-'':SnapEdge( @ [[#T|T]])''
+'':SnapEdge( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :DeskoffX ====
-'':DeskoffX( @ [[#T|T]])''
+'':DeskoffX( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :DeskoffY ====
-'':DeskoffY( @ [[#T|T]])''
+'':DeskoffY( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :AttachAllocation ====
-'':AttachAllocation( @ [[#T|T]])''
+'':AttachAllocation( @ [[#T|T]]) : [[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]]''
 
 
 ==== :FloatAllocation ====
-'':FloatAllocation( @ [[#T|T]])''
+'':FloatAllocation( @ [[#T|T]]) : [[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]]''
 
 
 ==== :GetHandlePosition ====
-'':GetHandlePosition( @ [[#T|T]])''
+'':GetHandlePosition(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:PositionType#T|Gtk.Gtk.PositionType.T]]''
 
 
 ==== :GetShadowType ====
-'':GetShadowType( @ [[#T|T]])''
+'':GetShadowType(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:ShadowType#T|Gtk.Gtk.ShadowType.T]]''
 
 
 ==== :GetSnapEdge ====
-'':GetSnapEdge( @ [[#T|T]])''
+'':GetSnapEdge(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:PositionType#T|Gtk.Gtk.PositionType.T]]''
 
 
 ==== :SetHandlePosition ====
-'':SetHandlePosition( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:PositionType#T|Gtk.Gtk.PositionType.T]])''
+'':SetHandlePosition(self @ [[#T|T]], position @ [[..:..:Gtk:Gtk:PositionType#T|Gtk.Gtk.PositionType.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====
-''New()''
+''New() : [[# T| T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 

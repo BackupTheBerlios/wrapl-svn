@@ -11,18 +11,18 @@
 
 
 ==== :Priv ====
-'':Priv( @ [[#T|T]])''
+'':Priv( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====
-''New()''
+''New(title : [[..:..:Std:String#T|Std.String.T]], parent : [[..:..:Gtk:Gtk:Window#T|Gtk.Gtk.Window.T]], first_button_text : [[..:..:Std:String#T|Std.String.T]], ___ : [[..:..:Std:Object#T|Std.Object.T]]) : [[# T| T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 
 ==== NewForManager ====
-''NewForManager()''
+''NewForManager(title : [[..:..:Std:String#T|Std.String.T]], parent : [[..:..:Gtk:Gtk:Window#T|Gtk.Gtk.Window.T]], manager : [[..:..:Gtk:Gtk:RecentManager#T|Gtk.Gtk.RecentManager.T]], first_button_text : [[..:..:Std:String#T|Std.String.T]], ___ : [[..:..:Std:Object#T|Std.Object.T]]) : [[# T| T]]''
 
 

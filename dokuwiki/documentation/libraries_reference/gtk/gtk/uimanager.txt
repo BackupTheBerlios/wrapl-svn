@@ -5,78 +5,78 @@
 
 
 ==== :SetAddTearoffs ====
-'':SetAddTearoffs( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+'':SetAddTearoffs(self @ [[#T|T]], add_tearoffs @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :RemoveUi ====
-'':RemoveUi( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':RemoveUi(self @ [[#T|T]], merge_id @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :RemoveActionGroup ====
-'':RemoveActionGroup( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:ActionGroup#T|Gtk.Gtk.ActionGroup.T]])''
+'':RemoveActionGroup(self @ [[#T|T]], action_group @ [[..:..:Gtk:Gtk:ActionGroup#T|Gtk.Gtk.ActionGroup.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :PrivateData ====
-'':PrivateData( @ [[#T|T]])''
+'':PrivateData( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :AddUi ====
-'':AddUi( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+'':AddUi(self @ [[#T|T]], merge_id @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], path @ [[..:..:Std:String#T|Std.String.T]], name @ [[..:..:Std:String#T|Std.String.T]], action @ [[..:..:Std:String#T|Std.String.T]], type @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], top @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :AddUiFromFile ====
-'':AddUiFromFile( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':AddUiFromFile(self @ [[#T|T]], filename @ [[..:..:Std:String#T|Std.String.T]], error @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :AddUiFromString ====
-'':AddUiFromString( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':AddUiFromString(self @ [[#T|T]], buffer @ [[..:..:Std:String#T|Std.String.T]], length @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], error @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :EnsureUpdate ====
-'':EnsureUpdate( @ [[#T|T]])''
+'':EnsureUpdate(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetAccelGroup ====
-'':GetAccelGroup( @ [[#T|T]])''
+'':GetAccelGroup(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:AccelGroup#T|Gtk.Gtk.AccelGroup.T]]''
 
 
 ==== :GetAction ====
-'':GetAction( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+'':GetAction(self @ [[#T|T]], path @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Gtk:Gtk:Action#T|Gtk.Gtk.Action.T]]''
 
 
 ==== :GetActionGroups ====
-'':GetActionGroups( @ [[#T|T]])''
+'':GetActionGroups(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetAddTearoffs ====
-'':GetAddTearoffs( @ [[#T|T]])''
+'':GetAddTearoffs(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :GetToplevels ====
-'':GetToplevels( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':GetToplevels(self @ [[#T|T]], types @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetUi ====
-'':GetUi( @ [[#T|T]])''
+'':GetUi(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== :GetWidget ====
-'':GetWidget( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+'':GetWidget(self @ [[#T|T]], path @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
 
 ==== :InsertActionGroup ====
-'':InsertActionGroup( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:ActionGroup#T|Gtk.Gtk.ActionGroup.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':InsertActionGroup(self @ [[#T|T]], action_group @ [[..:..:Gtk:Gtk:ActionGroup#T|Gtk.Gtk.ActionGroup.T]], pos @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====
-''New()''
+''New() : [[# T| T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 
 ==== NewMergeId ====
-''NewMergeId()''
+''NewMergeId(self : [[..:..:Gtk:Gtk:UIManager#T|Gtk.Gtk.UIManager.T]]) : [[# T| T]]''
 
 

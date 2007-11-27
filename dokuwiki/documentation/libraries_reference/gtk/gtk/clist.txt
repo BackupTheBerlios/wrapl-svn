@@ -8,454 +8,454 @@
 
 
 ==== :UnselectRow ====
-'':UnselectRow( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':UnselectRow(self @ [[#T|T]], row @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], column @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :UnselectAll ====
-'':UnselectAll( @ [[#T|T]])''
+'':UnselectAll(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :UndoSelection ====
-'':UndoSelection( @ [[#T|T]])''
+'':UndoSelection(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Flags ====
-'':Flags( @ [[#T|T]])''
+'':Flags( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Reserved1 ====
-'':Reserved1( @ [[#T|T]])''
+'':Reserved1( @ [[#T|T]]) : [[..:..:Std:Address#T|Std.Address.T]]''
 
 
 ==== :Reserved2 ====
-'':Reserved2( @ [[#T|T]])''
+'':Reserved2( @ [[#T|T]]) : [[..:..:Std:Address#T|Std.Address.T]]''
 
 
 ==== :FreezeCount ====
-'':FreezeCount( @ [[#T|T]])''
+'':FreezeCount( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :InternalAllocation ====
-'':InternalAllocation( @ [[#T|T]])''
+'':InternalAllocation( @ [[#T|T]]) : [[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]]''
 
 
 ==== :Rows ====
-'':Rows( @ [[#T|T]])''
+'':Rows( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :RowHeight ====
-'':RowHeight( @ [[#T|T]])''
+'':RowHeight( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :RowList ====
-'':RowList( @ [[#T|T]])''
+'':RowList( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :RowListEnd ====
-'':RowListEnd( @ [[#T|T]])''
+'':RowListEnd( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Columns ====
-'':Columns( @ [[#T|T]])''
+'':Columns( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :ColumnTitleArea ====
-'':ColumnTitleArea( @ [[#T|T]])''
+'':ColumnTitleArea( @ [[#T|T]]) : [[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]]''
 
 
 ==== :TitleWindow ====
-'':TitleWindow( @ [[#T|T]])''
+'':TitleWindow( @ [[#T|T]]) : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]]''
 
 
 ==== :Column ====
-'':Column( @ [[#T|T]])''
+'':Column( @ [[#T|T]]) : [[..:..:Gtk:Gtk:CListColumn#T|Gtk.Gtk.CListColumn.T]]''
 
 
 ==== :ClistWindow ====
-'':ClistWindow( @ [[#T|T]])''
+'':ClistWindow( @ [[#T|T]]) : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]]''
 
 
 ==== :ClistWindowWidth ====
-'':ClistWindowWidth( @ [[#T|T]])''
+'':ClistWindowWidth( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :ClistWindowHeight ====
-'':ClistWindowHeight( @ [[#T|T]])''
+'':ClistWindowHeight( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Hoffset ====
-'':Hoffset( @ [[#T|T]])''
+'':Hoffset( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Voffset ====
-'':Voffset( @ [[#T|T]])''
+'':Voffset( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :ShadowType ====
-'':ShadowType( @ [[#T|T]])''
+'':ShadowType( @ [[#T|T]]) : [[..:..:Gtk:Gtk:ShadowType#T|Gtk.Gtk.ShadowType.T]]''
 
 
 ==== :SelectionMode ====
-'':SelectionMode( @ [[#T|T]])''
+'':SelectionMode( @ [[#T|T]]) : [[..:..:Gtk:Gtk:SelectionMode#T|Gtk.Gtk.SelectionMode.T]]''
 
 
 ==== :Selection ====
-'':Selection( @ [[#T|T]])''
+'':Selection( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SelectionEnd ====
-'':SelectionEnd( @ [[#T|T]])''
+'':SelectionEnd( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :UndoSelection ====
-'':UndoSelection( @ [[#T|T]])''
+'':UndoSelection( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :UndoUnselection ====
-'':UndoUnselection( @ [[#T|T]])''
+'':UndoUnselection( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :UndoAnchor ====
-'':UndoAnchor( @ [[#T|T]])''
+'':UndoAnchor( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :DragButton ====
-'':DragButton( @ [[#T|T]])''
+'':DragButton( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :ClickCell ====
-'':ClickCell( @ [[#T|T]])''
+'':ClickCell( @ [[#T|T]]) : [[..:..:Gtk:Gtk:CListCellInfo#T|Gtk.Gtk.CListCellInfo.T]]''
 
 
 ==== :Hadjustment ====
-'':Hadjustment( @ [[#T|T]])''
+'':Hadjustment( @ [[#T|T]]) : [[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]]''
 
 
 ==== :Vadjustment ====
-'':Vadjustment( @ [[#T|T]])''
+'':Vadjustment( @ [[#T|T]]) : [[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]]''
 
 
 ==== :XorGc ====
-'':XorGc( @ [[#T|T]])''
+'':XorGc( @ [[#T|T]]) : [[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]]''
 
 
 ==== :FgGc ====
-'':FgGc( @ [[#T|T]])''
+'':FgGc( @ [[#T|T]]) : [[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]]''
 
 
 ==== :BgGc ====
-'':BgGc( @ [[#T|T]])''
+'':BgGc( @ [[#T|T]]) : [[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]]''
 
 
 ==== :CursorDrag ====
-'':CursorDrag( @ [[#T|T]])''
+'':CursorDrag( @ [[#T|T]]) : [[..:..:Gtk:Gdk:Cursor#T|Gtk.Gdk.Cursor.T]]''
 
 
 ==== :XDrag ====
-'':XDrag( @ [[#T|T]])''
+'':XDrag( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :FocusRow ====
-'':FocusRow( @ [[#T|T]])''
+'':FocusRow( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :FocusHeaderColumn ====
-'':FocusHeaderColumn( @ [[#T|T]])''
+'':FocusHeaderColumn( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Anchor ====
-'':Anchor( @ [[#T|T]])''
+'':Anchor( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :AnchorState ====
-'':AnchorState( @ [[#T|T]])''
+'':AnchorState( @ [[#T|T]]) : [[..:..:Gtk:Gtk:StateType#T|Gtk.Gtk.StateType.T]]''
 
 
 ==== :DragPos ====
-'':DragPos( @ [[#T|T]])''
+'':DragPos( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Htimer ====
-'':Htimer( @ [[#T|T]])''
+'':Htimer( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Vtimer ====
-'':Vtimer( @ [[#T|T]])''
+'':Vtimer( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :SortType ====
-'':SortType( @ [[#T|T]])''
+'':SortType( @ [[#T|T]]) : [[..:..:Gtk:Gtk:SortType#T|Gtk.Gtk.SortType.T]]''
 
 
 ==== :Compare ====
-'':Compare( @ [[#T|T]])''
+'':Compare( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SortColumn ====
-'':SortColumn( @ [[#T|T]])''
+'':SortColumn( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :DragHighlightRow ====
-'':DragHighlightRow( @ [[#T|T]])''
+'':DragHighlightRow( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :DragHighlightPos ====
-'':DragHighlightPos( @ [[#T|T]])''
+'':DragHighlightPos( @ [[#T|T]]) : [[..:..:Gtk:Gtk:CListDragPos#T|Gtk.Gtk.CListDragPos.T]]''
 
 
 ==== :ButtonActions ====
-'':ButtonActions( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':ButtonActions( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Append ====
-'':Append( @ [[#T|T]],  @ [[..:..:Std:List#T|Std.List.T]])''
+'':Append(self @ [[#T|T]], text @ [[..:..:Std:List#T|Std.List.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Clear ====
-'':Clear( @ [[#T|T]])''
+'':Clear(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :ColumnsAutosize ====
-'':ColumnsAutosize( @ [[#T|T]])''
+'':ColumnsAutosize(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :FindRowFromData ====
-'':FindRowFromData( @ [[#T|T]],  @ [[..:..:Std:Address#T|Std.Address.T]])''
+'':FindRowFromData(self @ [[#T|T]], data @ [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Freeze ====
-'':Freeze( @ [[#T|T]])''
+'':Freeze(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetCellStyle ====
-'':GetCellStyle( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':GetCellStyle(self @ [[#T|T]], row @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], column @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Gtk:Gtk:Style#T|Gtk.Gtk.Style.T]]''
 
 
 ==== :GetCellType ====
-'':GetCellType( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':GetCellType(self @ [[#T|T]], row @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], column @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Gtk:Gtk:CellType#T|Gtk.Gtk.CellType.T]]''
 
 
 ==== :GetColumnTitle ====
-'':GetColumnTitle( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':GetColumnTitle(self @ [[#T|T]], column @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== :GetColumnWidget ====
-'':GetColumnWidget( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':GetColumnWidget(self @ [[#T|T]], column @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
 
 ==== :GetHadjustment ====
-'':GetHadjustment( @ [[#T|T]])''
+'':GetHadjustment(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]]''
 
 
 ==== :GetPixmap ====
-'':GetPixmap( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':GetPixmap(self @ [[#T|T]], row @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], column @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], pixmap @ [[..:..:Std:Object#T|Std.Object.T]], mask @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :GetPixtext ====
-'':GetPixtext( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:List#T|Std.List.T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':GetPixtext(self @ [[#T|T]], row @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], column @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], text @ [[..:..:Std:List#T|Std.List.T]], spacing @ [[..:..:Std:Object#T|Std.Object.T]], pixmap @ [[..:..:Std:Object#T|Std.Object.T]], mask @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :GetRowData ====
-'':GetRowData( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':GetRowData(self @ [[#T|T]], row @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Address#T|Std.Address.T]]''
 
 
 ==== :GetRowStyle ====
-'':GetRowStyle( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':GetRowStyle(self @ [[#T|T]], row @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Gtk:Gtk:Style#T|Gtk.Gtk.Style.T]]''
 
 
 ==== :GetSelectable ====
-'':GetSelectable( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':GetSelectable(self @ [[#T|T]], row @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :GetSelectionInfo ====
-'':GetSelectionInfo( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':GetSelectionInfo(self @ [[#T|T]], x @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], row @ [[..:..:Std:Object#T|Std.Object.T]], column @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :GetText ====
-'':GetText( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:List#T|Std.List.T]])''
+'':GetText(self @ [[#T|T]], row @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], column @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], text @ [[..:..:Std:List#T|Std.List.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :GetVadjustment ====
-'':GetVadjustment( @ [[#T|T]])''
+'':GetVadjustment(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]]''
 
 
 ==== :Insert ====
-'':Insert( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:List#T|Std.List.T]])''
+'':Insert(self @ [[#T|T]], row @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], text @ [[..:..:Std:List#T|Std.List.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Moveto ====
-'':Moveto( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+'':Moveto(self @ [[#T|T]], row @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], column @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], row_align @ [[..:..:Std:Real#T|Std.Real.T]], col_align @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :OptimalColumnWidth ====
-'':OptimalColumnWidth( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':OptimalColumnWidth(self @ [[#T|T]], column @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Prepend ====
-'':Prepend( @ [[#T|T]],  @ [[..:..:Std:List#T|Std.List.T]])''
+'':Prepend(self @ [[#T|T]], text @ [[..:..:Std:List#T|Std.List.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Remove ====
-'':Remove( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':Remove(self @ [[#T|T]], row @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SelectAll ====
-'':SelectAll( @ [[#T|T]])''
+'':SelectAll(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SelectRow ====
-'':SelectRow( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':SelectRow(self @ [[#T|T]], row @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], column @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetAutoSort ====
-'':SetAutoSort( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+'':SetAutoSort(self @ [[#T|T]], auto_sort @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetBackground ====
-'':SetBackground( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]])''
+'':SetBackground(self @ [[#T|T]], row @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], color @ [[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetButtonActions ====
-'':SetButtonActions( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':SetButtonActions(self @ [[#T|T]], button @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], button_actions @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetCellStyle ====
-'':SetCellStyle( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Gtk:Gtk:Style#T|Gtk.Gtk.Style.T]])''
+'':SetCellStyle(self @ [[#T|T]], row @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], column @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], style @ [[..:..:Gtk:Gtk:Style#T|Gtk.Gtk.Style.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetColumnAutoResize ====
-'':SetColumnAutoResize( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+'':SetColumnAutoResize(self @ [[#T|T]], column @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], auto_resize @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetColumnJustification ====
-'':SetColumnJustification( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Gtk:Gtk:Justification#T|Gtk.Gtk.Justification.T]])''
+'':SetColumnJustification(self @ [[#T|T]], column @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], justification @ [[..:..:Gtk:Gtk:Justification#T|Gtk.Gtk.Justification.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetColumnMaxWidth ====
-'':SetColumnMaxWidth( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':SetColumnMaxWidth(self @ [[#T|T]], column @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], max_width @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetColumnMinWidth ====
-'':SetColumnMinWidth( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':SetColumnMinWidth(self @ [[#T|T]], column @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], min_width @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetColumnResizeable ====
-'':SetColumnResizeable( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+'':SetColumnResizeable(self @ [[#T|T]], column @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], resizeable @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetColumnTitle ====
-'':SetColumnTitle( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:String#T|Std.String.T]])''
+'':SetColumnTitle(self @ [[#T|T]], column @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], title @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetColumnVisibility ====
-'':SetColumnVisibility( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+'':SetColumnVisibility(self @ [[#T|T]], column @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], visible @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetColumnWidget ====
-'':SetColumnWidget( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]])''
+'':SetColumnWidget(self @ [[#T|T]], column @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], widget @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetColumnWidth ====
-'':SetColumnWidth( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':SetColumnWidth(self @ [[#T|T]], column @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], width @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetCompareFunc ====
-'':SetCompareFunc( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':SetCompareFunc(self @ [[#T|T]], cmp_func @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetForeground ====
-'':SetForeground( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]])''
+'':SetForeground(self @ [[#T|T]], row @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], color @ [[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetHadjustment ====
-'':SetHadjustment( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]])''
+'':SetHadjustment(self @ [[#T|T]], adjustment @ [[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetPixmap ====
-'':SetPixmap( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Gtk:Gdk:Pixmap#T|Gtk.Gdk.Pixmap.T]],  @ [[..:..:Gtk:Gdk:Bitmap#T|Gtk.Gdk.Bitmap.T]])''
+'':SetPixmap(self @ [[#T|T]], row @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], column @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], pixmap @ [[..:..:Gtk:Gdk:Pixmap#T|Gtk.Gdk.Pixmap.T]], mask @ [[..:..:Gtk:Gdk:Bitmap#T|Gtk.Gdk.Bitmap.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetPixtext ====
-'':SetPixtext( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Gtk:Gdk:Pixmap#T|Gtk.Gdk.Pixmap.T]],  @ [[..:..:Gtk:Gdk:Bitmap#T|Gtk.Gdk.Bitmap.T]])''
+'':SetPixtext(self @ [[#T|T]], row @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], column @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], text @ [[..:..:Std:String#T|Std.String.T]], spacing @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], pixmap @ [[..:..:Gtk:Gdk:Pixmap#T|Gtk.Gdk.Pixmap.T]], mask @ [[..:..:Gtk:Gdk:Bitmap#T|Gtk.Gdk.Bitmap.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetReorderable ====
-'':SetReorderable( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+'':SetReorderable(self @ [[#T|T]], reorderable @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetRowData ====
-'':SetRowData( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Address#T|Std.Address.T]])''
+'':SetRowData(self @ [[#T|T]], row @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], data @ [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetRowDataFull ====
-'':SetRowDataFull( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Address#T|Std.Address.T]],  @ [[..:..:Std:Function#T|Std.Function.T]])''
+'':SetRowDataFull(self @ [[#T|T]], row @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], data @ [[..:..:Std:Address#T|Std.Address.T]], destroy @ [[..:..:Std:Function#T|Std.Function.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetRowHeight ====
-'':SetRowHeight( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':SetRowHeight(self @ [[#T|T]], height @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetRowStyle ====
-'':SetRowStyle( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Gtk:Gtk:Style#T|Gtk.Gtk.Style.T]])''
+'':SetRowStyle(self @ [[#T|T]], row @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], style @ [[..:..:Gtk:Gtk:Style#T|Gtk.Gtk.Style.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetSelectable ====
-'':SetSelectable( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+'':SetSelectable(self @ [[#T|T]], row @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], selectable @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetSelectionMode ====
-'':SetSelectionMode( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:SelectionMode#T|Gtk.Gtk.SelectionMode.T]])''
+'':SetSelectionMode(self @ [[#T|T]], mode @ [[..:..:Gtk:Gtk:SelectionMode#T|Gtk.Gtk.SelectionMode.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetShadowType ====
-'':SetShadowType( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:ShadowType#T|Gtk.Gtk.ShadowType.T]])''
+'':SetShadowType(self @ [[#T|T]], type @ [[..:..:Gtk:Gtk:ShadowType#T|Gtk.Gtk.ShadowType.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetShift ====
-'':SetShift( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':SetShift(self @ [[#T|T]], row @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], column @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], vertical @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], horizontal @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetSortColumn ====
-'':SetSortColumn( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':SetSortColumn(self @ [[#T|T]], column @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetSortType ====
-'':SetSortType( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:SortType#T|Gtk.Gtk.SortType.T]])''
+'':SetSortType(self @ [[#T|T]], sort_type @ [[..:..:Gtk:Gtk:SortType#T|Gtk.Gtk.SortType.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetText ====
-'':SetText( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:String#T|Std.String.T]])''
+'':SetText(self @ [[#T|T]], row @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], column @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], text @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetUseDragIcons ====
-'':SetUseDragIcons( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+'':SetUseDragIcons(self @ [[#T|T]], use_icons @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetVadjustment ====
-'':SetVadjustment( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]])''
+'':SetVadjustment(self @ [[#T|T]], adjustment @ [[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Sort ====
-'':Sort( @ [[#T|T]])''
+'':Sort(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SwapRows ====
-'':SwapRows( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':SwapRows(self @ [[#T|T]], row1 @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], row2 @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Thaw ====
-'':Thaw( @ [[#T|T]])''
+'':Thaw(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====
-''New()''
+''New(columns : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[# T| T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 
 ==== NewWithTitles ====
-''NewWithTitles()''
+''NewWithTitles(columns : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], titles : [[..:..:Std:List#T|Std.List.T]]) : [[# T| T]]''
 
 

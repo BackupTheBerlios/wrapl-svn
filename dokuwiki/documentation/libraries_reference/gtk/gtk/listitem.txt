@@ -10,22 +10,22 @@
 
 
 ==== :Select ====
-'':Select( @ [[#T|T]])''
+'':Select(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Deselect ====
-'':Deselect( @ [[#T|T]])''
+'':Deselect(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====
-''New()''
+''New() : [[# T| T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 
 ==== NewWithLabel ====
-''NewWithLabel()''
+''NewWithLabel(label : [[..:..:Std:String#T|Std.String.T]]) : [[# T| T]]''
 
 

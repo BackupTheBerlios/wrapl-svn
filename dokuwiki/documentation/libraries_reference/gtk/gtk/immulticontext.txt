@@ -6,26 +6,26 @@
 
 
 ==== :AppendMenuitems ====
-'':AppendMenuitems( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:MenuShell#T|Gtk.Gtk.MenuShell.T]])''
+'':AppendMenuitems(menushell @ [[#T|T]],  @ [[..:..:Gtk:Gtk:MenuShell#T|Gtk.Gtk.MenuShell.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :ContextId ====
-'':ContextId( @ [[#T|T]])''
+'':ContextId( @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== :Slave ====
-'':Slave( @ [[#T|T]])''
+'':Slave( @ [[#T|T]]) : [[..:..:Gtk:Gtk:IMContext#T|Gtk.Gtk.IMContext.T]]''
 
 
 ==== :Priv ====
-'':Priv( @ [[#T|T]])''
+'':Priv( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====
-''New()''
+''New() : [[# T| T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 

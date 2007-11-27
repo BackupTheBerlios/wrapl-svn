@@ -3,35 +3,35 @@
 
 
 ==== :SetStateWildcarded ====
-'':SetStateWildcarded( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+'':SetStateWildcarded( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetState ====
-'':SetState( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:StateType#T|Gtk.Gtk.StateType.T]])''
+'':SetState( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:StateType#T|Gtk.Gtk.StateType.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Copy ====
-'':Copy( @ [[#T|T]])''
+'':Copy(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:IconSource#T|Gtk.Gtk.IconSource.T]]''
 
 
 ==== :Free ====
-'':Free( @ [[#T|T]])''
+'':Free(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetDirection ====
-'':GetDirection( @ [[#T|T]])''
+'':GetDirection(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:TextDirection#T|Gtk.Gtk.TextDirection.T]]''
 
 
 ==== :GetDirectionWildcarded ====
-'':GetDirectionWildcarded( @ [[#T|T]])''
+'':GetDirectionWildcarded(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :GetFilename ====
-'':GetFilename( @ [[#T|T]])''
+'':GetFilename(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== :GetIconName ====
-'':GetIconName( @ [[#T|T]])''
+'':GetIconName( @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== :GetPixbuf ====
@@ -55,38 +55,38 @@
 
 
 ==== :SetDirection ====
-'':SetDirection( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TextDirection#T|Gtk.Gtk.TextDirection.T]])''
+'':SetDirection( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TextDirection#T|Gtk.Gtk.TextDirection.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetDirectionWildcarded ====
-'':SetDirectionWildcarded( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+'':SetDirectionWildcarded( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetFilename ====
-'':SetFilename( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+'':SetFilename( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetIconName ====
-'':SetIconName( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+'':SetIconName( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetPixbuf ====
-'':SetPixbuf( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Pixbuf#T|Gtk.Gdk.Pixbuf.T]])''
+'':SetPixbuf( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Pixbuf#T|Gtk.Gdk.Pixbuf.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetSize ====
-'':SetSize( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:IconSize#T|Gtk.Gtk.IconSize.T]])''
+'':SetSize( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:IconSize#T|Gtk.Gtk.IconSize.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetSizeWildcarded ====
-'':SetSizeWildcarded( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+'':SetSizeWildcarded( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====
-''New()''
+''New() : [[# T| T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 

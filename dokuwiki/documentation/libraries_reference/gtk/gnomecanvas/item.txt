@@ -6,142 +6,142 @@
 
 
 ==== :W2i ====
-'':W2i( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':W2i(self @ [[#T|T]], x @ [[..:..:Std:Object#T|Std.Object.T]], y @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :UpdateSvpClip ====
-'':UpdateSvpClip( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Gtk:Art:SVP#T|Gtk.Art.SVP.T]],  @ [[..:..:Gtk:Art:SVP#T|Gtk.Art.SVP.T]])''
+'':UpdateSvpClip(self @ [[#T|T]], p_svp @ [[..:..:Std:Object#T|Std.Object.T]], new_svp @ [[..:..:Gtk:Art:SVP#T|Gtk.Art.SVP.T]], clip_svp @ [[..:..:Gtk:Art:SVP#T|Gtk.Art.SVP.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Canvas ====
-'':Canvas( @ [[#T|T]])''
+'':Canvas( @ [[#T|T]]) : [[..:..:Gtk:GnomeCanvas:GnomeCanvas#T|Gtk.GnomeCanvas.GnomeCanvas.T]]''
 
 
 ==== :Parent ====
-'':Parent( @ [[#T|T]])''
+'':Parent( @ [[#T|T]]) : [[..:..:Gtk:GnomeCanvas:Item#T|Gtk.GnomeCanvas.Item.T]]''
 
 
 ==== :Xform ====
-'':Xform( @ [[#T|T]])''
+'':Xform( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :X1 ====
-'':X1( @ [[#T|T]])''
+'':X1( @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :Y1 ====
-'':Y1( @ [[#T|T]])''
+'':Y1( @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :X2 ====
-'':X2( @ [[#T|T]])''
+'':X2( @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :Y2 ====
-'':Y2( @ [[#T|T]])''
+'':Y2( @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :AffineAbsolute ====
-'':AffineAbsolute( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':AffineAbsolute(self @ [[#T|T]], affine @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :AffineRelative ====
-'':AffineRelative( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':AffineRelative(self @ [[#T|T]], affine @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Construct ====
-'':Construct( @ [[#T|T]],  @ [[..:..:Gtk:GnomeCanvas:Group#T|Gtk.GnomeCanvas.Group.T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':Construct(self @ [[#T|T]], parent @ [[..:..:Gtk:GnomeCanvas:Group#T|Gtk.GnomeCanvas.Group.T]], first_arg_name @ [[..:..:Std:String#T|Std.String.T]], args @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetBounds ====
-'':GetBounds( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':GetBounds(self @ [[#T|T]], x1 @ [[..:..:Std:Object#T|Std.Object.T]], y1 @ [[..:..:Std:Object#T|Std.Object.T]], x2 @ [[..:..:Std:Object#T|Std.Object.T]], y2 @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Grab ====
-'':Grab( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Gtk:Gdk:Cursor#T|Gtk.Gdk.Cursor.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':Grab(self @ [[#T|T]], event_mask @ [[..:..:Std:Object#T|Std.Object.T]], cursor @ [[..:..:Gtk:Gdk:Cursor#T|Gtk.Gdk.Cursor.T]], etime @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :GrabFocus ====
-'':GrabFocus( @ [[#T|T]])''
+'':GrabFocus(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Hide ====
-'':Hide( @ [[#T|T]])''
+'':Hide(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :I2cAffine ====
-'':I2cAffine( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':I2cAffine(self @ [[#T|T]], affine @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :I2w ====
-'':I2w( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':I2w(self @ [[#T|T]], x @ [[..:..:Std:Object#T|Std.Object.T]], y @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :I2wAffine ====
-'':I2wAffine( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':I2wAffine(self @ [[#T|T]], affine @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Lower ====
-'':Lower( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':Lower(self @ [[#T|T]], positions @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :LowerToBottom ====
-'':LowerToBottom( @ [[#T|T]])''
+'':LowerToBottom(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Move ====
-'':Move( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+'':Move(self @ [[#T|T]], dx @ [[..:..:Std:Real#T|Std.Real.T]], dy @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Raise ====
-'':Raise( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':Raise(self @ [[#T|T]], positions @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :RaiseToTop ====
-'':RaiseToTop( @ [[#T|T]])''
+'':RaiseToTop(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Reparent ====
-'':Reparent( @ [[#T|T]],  @ [[..:..:Gtk:GnomeCanvas:Group#T|Gtk.GnomeCanvas.Group.T]])''
+'':Reparent(self @ [[#T|T]], new_group @ [[..:..:Gtk:GnomeCanvas:Group#T|Gtk.GnomeCanvas.Group.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :RequestRedrawSvp ====
-'':RequestRedrawSvp( @ [[#T|T]],  @ [[..:..:Gtk:Art:SVP#T|Gtk.Art.SVP.T]])''
+'':RequestRedrawSvp(self @ [[#T|T]], svp @ [[..:..:Gtk:Art:SVP#T|Gtk.Art.SVP.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :RequestUpdate ====
-'':RequestUpdate( @ [[#T|T]])''
+'':RequestUpdate(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :ResetBounds ====
-'':ResetBounds( @ [[#T|T]])''
+'':ResetBounds(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Set ====
-'':Set( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':Set(self @ [[#T|T]], first_arg_name @ [[..:..:Std:String#T|Std.String.T]], ___ @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetValist ====
-'':SetValist( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':SetValist(self @ [[#T|T]], first_arg_name @ [[..:..:Std:String#T|Std.String.T]], args @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Show ====
-'':Show( @ [[#T|T]])''
+'':Show(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Ungrab ====
-'':Ungrab( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':Ungrab(self @ [[#T|T]], etime @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :UpdateSvp ====
-'':UpdateSvp( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Gtk:Art:SVP#T|Gtk.Art.SVP.T]])''
+'':UpdateSvp(self @ [[#T|T]], p_svp @ [[..:..:Std:Object#T|Std.Object.T]], new_svp @ [[..:..:Gtk:Art:SVP#T|Gtk.Art.SVP.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====
-''New()''
+''New(parent : [[..:..:Gtk:GnomeCanvas:Group#T|Gtk.GnomeCanvas.Group.T]], type : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]], first_arg_name : [[..:..:Std:String#T|Std.String.T]], ___ : [[..:..:Std:Object#T|Std.Object.T]]) : [[# T| T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 

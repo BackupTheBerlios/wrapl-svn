@@ -5,22 +5,22 @@
 
 
 ==== :SetDefaultDisplay ====
-'':SetDefaultDisplay( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Display#T|Gtk.Gdk.Display.T]])''
+'':SetDefaultDisplay(self @ [[#T|T]], display @ [[..:..:Gtk:Gdk:Display#T|Gtk.Gdk.Display.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :ListDisplays ====
-'':ListDisplays( @ [[#T|T]])''
+'':ListDisplays(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetDefaultDisplay ====
-'':GetDefaultDisplay( @ [[#T|T]])''
+'':GetDefaultDisplay(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Display#T|Gtk.Gdk.Display.T]]''
 
 
 ==== Get ====
-''Get()''
+''Get() : [[..:..:Gtk:Gdk:DisplayManager#T|Gtk.Gdk.DisplayManager.T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 

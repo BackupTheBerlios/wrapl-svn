@@ -5,34 +5,34 @@
 
 
 ==== :RemoveDefault ====
-'':RemoveDefault( @ [[#T|T]])''
+'':RemoveDefault(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Lookup ====
-'':Lookup( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+'':Lookup(self @ [[#T|T]], stock_id @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Gtk:Gtk:IconSet#T|Gtk.Gtk.IconSet.T]]''
 
 
 ==== :AddDefault ====
-'':AddDefault( @ [[#T|T]])''
+'':AddDefault(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Icons ====
-'':Icons( @ [[#T|T]])''
+'':Icons( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Add ====
-'':Add( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Gtk:Gtk:IconSet#T|Gtk.Gtk.IconSet.T]])''
+'':Add(self @ [[#T|T]], stock_id @ [[..:..:Std:String#T|Std.String.T]], icon_set @ [[..:..:Gtk:Gtk:IconSet#T|Gtk.Gtk.IconSet.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====
-''New()''
+''New() : [[# T| T]]''
 
 
 ==== LookupDefault ====
-''LookupDefault()''
+''LookupDefault(stock_id) : [[..:..:Gtk:Gtk:IconSet#T|Gtk.Gtk.IconSet.T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 

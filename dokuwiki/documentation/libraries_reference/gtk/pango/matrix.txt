@@ -3,71 +3,71 @@
 
 
 ==== :Translate ====
-'':Translate( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+'':Translate(self @ [[#T|T]], tx @ [[..:..:Std:Real#T|Std.Real.T]], ty @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :TransformRectangle ====
-'':TransformRectangle( @ [[#T|T]],  @ [[..:..:Gtk:Pango:Rectangle#T|Gtk.Pango.Rectangle.T]])''
+'':TransformRectangle(self @ [[#T|T]], rect @ [[..:..:Gtk:Pango:Rectangle#T|Gtk.Pango.Rectangle.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Xx ====
-'':Xx( @ [[#T|T]])''
+'':Xx( @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :Xy ====
-'':Xy( @ [[#T|T]])''
+'':Xy( @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :Yx ====
-'':Yx( @ [[#T|T]])''
+'':Yx( @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :Yy ====
-'':Yy( @ [[#T|T]])''
+'':Yy( @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :X0 ====
-'':X0( @ [[#T|T]])''
+'':X0( @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :Y0 ====
-'':Y0( @ [[#T|T]])''
+'':Y0( @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :Concat ====
-'':Concat( @ [[#T|T]],  @ [[..:..:Gtk:Pango:Matrix#T|Gtk.Pango.Matrix.T]])''
+'':Concat(self @ [[#T|T]], new_matrix @ [[..:..:Gtk:Pango:Matrix#T|Gtk.Pango.Matrix.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Copy ====
-'':Copy( @ [[#T|T]])''
+'':Copy(self @ [[#T|T]]) : [[..:..:Gtk:Pango:Matrix#T|Gtk.Pango.Matrix.T]]''
 
 
 ==== :Free ====
-'':Free( @ [[#T|T]])''
+'':Free(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetFontScaleFactor ====
-'':GetFontScaleFactor( @ [[#T|T]])''
+'':GetFontScaleFactor(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :Rotate ====
-'':Rotate( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+'':Rotate(self @ [[#T|T]], degrees @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Scale ====
-'':Scale( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+'':Scale(self @ [[#T|T]], scale_x @ [[..:..:Std:Real#T|Std.Real.T]], scale_y @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :TransformDistance ====
-'':TransformDistance( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':TransformDistance(self @ [[#T|T]], dx @ [[..:..:Std:Object#T|Std.Object.T]], dy @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :TransformPixelRectangle ====
-'':TransformPixelRectangle( @ [[#T|T]],  @ [[..:..:Gtk:Pango:Rectangle#T|Gtk.Pango.Rectangle.T]])''
+'':TransformPixelRectangle(self @ [[#T|T]], rect @ [[..:..:Gtk:Pango:Rectangle#T|Gtk.Pango.Rectangle.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :TransformPoint ====
-'':TransformPoint( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':TransformPoint(self @ [[#T|T]], x @ [[..:..:Std:Object#T|Std.Object.T]], y @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====
@@ -75,6 +75,6 @@
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 

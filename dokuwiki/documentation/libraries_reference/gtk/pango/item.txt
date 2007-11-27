@@ -3,38 +3,38 @@
 
 
 ==== :Split ====
-'':Split( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':Split(self @ [[#T|T]], split_index @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], split_offset @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Gtk:Pango:Item#T|Gtk.Pango.Item.T]]''
 
 
 ==== :Free ====
-'':Free( @ [[#T|T]])''
+'':Free(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Offset ====
-'':Offset( @ [[#T|T]])''
+'':Offset( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Length ====
-'':Length( @ [[#T|T]])''
+'':Length( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :NumChars ====
-'':NumChars( @ [[#T|T]])''
+'':NumChars( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Analysis ====
-'':Analysis( @ [[#T|T]])''
+'':Analysis( @ [[#T|T]]) : [[..:..:Gtk:Pango:Analysis#T|Gtk.Pango.Analysis.T]]''
 
 
 ==== :Copy ====
-'':Copy( @ [[#T|T]])''
+'':Copy(self @ [[#T|T]]) : [[..:..:Gtk:Pango:Item#T|Gtk.Pango.Item.T]]''
 
 
 ==== New ====
-''New()''
+''New() : [[# T| T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 

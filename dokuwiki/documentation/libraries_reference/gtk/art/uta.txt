@@ -3,54 +3,54 @@
 
 
 ==== :Union ====
-'':Union( @ [[#T|T]],  @ [[..:..:Gtk:Art:Uta#T|Gtk.Art.Uta.T]])''
+'':Union(self @ [[#T|T]], uta2 @ [[..:..:Gtk:Art:Uta#T|Gtk.Art.Uta.T]]) : [[..:..:Gtk:Art:Uta#T|Gtk.Art.Uta.T]]''
 
 
 ==== :Free ====
-'':Free( @ [[#T|T]])''
+'':Free(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :AddLine ====
-'':AddLine( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':AddLine(self @ [[#T|T]], x0 @ [[..:..:Std:Real#T|Std.Real.T]], y0 @ [[..:..:Std:Real#T|Std.Real.T]], x1 @ [[..:..:Std:Real#T|Std.Real.T]], y1 @ [[..:..:Std:Real#T|Std.Real.T]], rbuf @ [[..:..:Std:Object#T|Std.Object.T]], rbuf_rowstride @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Utiles ====
-'':Utiles( @ [[#T|T]])''
+'':Utiles( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Height ====
-'':Height( @ [[#T|T]])''
+'':Height( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :X0 ====
-'':X0( @ [[#T|T]])''
+'':X0( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Y0 ====
-'':Y0( @ [[#T|T]])''
+'':Y0( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Width ====
-'':Width( @ [[#T|T]])''
+'':Width( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== New ====
-''New()''
+''New(x0 : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y0 : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], x1 : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y1 : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[# T| T]]''
 
 
 ==== FromVpath ====
-''FromVpath()''
+''FromVpath(vec) : [[..:..:Gtk:Art:Uta#T|Gtk.Art.Uta.T]]''
 
 
 ==== FromSvp ====
-''FromSvp()''
+''FromSvp(svp) : [[..:..:Gtk:Art:Uta#T|Gtk.Art.Uta.T]]''
 
 
 ==== FromIrect ====
-''FromIrect()''
+''FromIrect(bbox) : [[..:..:Gtk:Art:Uta#T|Gtk.Art.Uta.T]]''
 
 
 ==== NewCoords ====
-''NewCoords()''
+''NewCoords(x0 : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y0 : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], x1 : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y1 : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[# T| T]]''
 
 

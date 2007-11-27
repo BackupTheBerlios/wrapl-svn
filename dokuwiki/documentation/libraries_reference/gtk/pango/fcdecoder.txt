@@ -5,14 +5,14 @@
 
 
 ==== :GetGlyph ====
-'':GetGlyph( @ [[#T|T]],  @ [[..:..:Gtk:Pango:FcFont#T|Gtk.Pango.FcFont.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':GetGlyph(self @ [[#T|T]], fcfont @ [[..:..:Gtk:Pango:FcFont#T|Gtk.Pango.FcFont.T]], wc @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :GetCharset ====
-'':GetCharset( @ [[#T|T]],  @ [[..:..:Gtk:Pango:FcFont#T|Gtk.Pango.FcFont.T]])''
+'':GetCharset(self @ [[#T|T]], fcfont @ [[..:..:Gtk:Pango:FcFont#T|Gtk.Pango.FcFont.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 

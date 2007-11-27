@@ -7,50 +7,50 @@
 
 
 ==== :SetModel ====
-'':SetModel( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TreeModel#T|Gtk.Gtk.TreeModel.T]])''
+'':SetModel(self @ [[#T|T]], model @ [[..:..:Gtk:Gtk:TreeModel#T|Gtk.Gtk.TreeModel.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetDisplayedRow ====
-'':SetDisplayedRow( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]])''
+'':SetDisplayedRow(self @ [[#T|T]], path @ [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetBackgroundColor ====
-'':SetBackgroundColor( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]])''
+'':SetBackgroundColor(self @ [[#T|T]], color @ [[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetSizeOfRow ====
-'':GetSizeOfRow( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]],  @ [[..:..:Gtk:Gtk:Requisition#T|Gtk.Gtk.Requisition.T]])''
+'':GetSizeOfRow(self @ [[#T|T]], path @ [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]], requisition @ [[..:..:Gtk:Gtk:Requisition#T|Gtk.Gtk.Requisition.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :GetDisplayedRow ====
-'':GetDisplayedRow( @ [[#T|T]])''
+'':GetDisplayedRow(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]]''
 
 
 ==== :Priv ====
-'':Priv( @ [[#T|T]])''
+'':Priv( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetCellRenderers ====
-'':GetCellRenderers( @ [[#T|T]])''
+'':GetCellRenderers(self @ [[#T|T]]) : [[..:..:Std:List#T|Std.List.T]]''
 
 
 ==== New ====
-''New()''
+''New() : [[# T| T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 
 ==== NewWithText ====
-''NewWithText()''
+''NewWithText(text : [[..:..:Std:String#T|Std.String.T]]) : [[# T| T]]''
 
 
 ==== NewWithPixbuf ====
-''NewWithPixbuf()''
+''NewWithPixbuf(pixbuf : [[..:..:Gtk:Gdk:Pixbuf#T|Gtk.Gdk.Pixbuf.T]]) : [[# T| T]]''
 
 
 ==== NewWithMarkup ====
-''NewWithMarkup()''
+''NewWithMarkup(markup : [[..:..:Std:String#T|Std.String.T]]) : [[# T| T]]''
 
 

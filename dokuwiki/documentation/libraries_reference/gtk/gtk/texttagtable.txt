@@ -5,46 +5,46 @@
 
 
 ==== :Remove ====
-'':Remove( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TextTag#T|Gtk.Gtk.TextTag.T]])''
+'':Remove(self @ [[#T|T]], tag @ [[..:..:Gtk:Gtk:TextTag#T|Gtk.Gtk.TextTag.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Lookup ====
-'':Lookup( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+'':Lookup(self @ [[#T|T]], name @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Gtk:Gtk:TextTag#T|Gtk.Gtk.TextTag.T]]''
 
 
 ==== :Hash ====
-'':Hash( @ [[#T|T]])''
+'':Hash( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Anonymous ====
-'':Anonymous( @ [[#T|T]])''
+'':Anonymous( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :AnonCount ====
-'':AnonCount( @ [[#T|T]])''
+'':AnonCount( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Buffers ====
-'':Buffers( @ [[#T|T]])''
+'':Buffers( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Add ====
-'':Add( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TextTag#T|Gtk.Gtk.TextTag.T]])''
+'':Add(self @ [[#T|T]], tag @ [[..:..:Gtk:Gtk:TextTag#T|Gtk.Gtk.TextTag.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Foreach ====
-'':Foreach( @ [[#T|T]],  @ [[..:..:Std:Function#T|Std.Function.T]],  @ [[..:..:Std:Address#T|Std.Address.T]])''
+'':Foreach(self @ [[#T|T]], func @ [[..:..:Std:Function#T|Std.Function.T]], data @ [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetSize ====
-'':GetSize( @ [[#T|T]])''
+'':GetSize(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== New ====
-''New()''
+''New() : [[# T| T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 

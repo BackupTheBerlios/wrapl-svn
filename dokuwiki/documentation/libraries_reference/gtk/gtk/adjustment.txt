@@ -6,54 +6,54 @@
 
 
 ==== :ValueChanged ====
-'':ValueChanged( @ [[#T|T]])''
+'':ValueChanged(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetValue ====
-'':SetValue( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+'':SetValue(self @ [[#T|T]], value @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Lower ====
-'':Lower( @ [[#T|T]])''
+'':Lower( @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :Upper ====
-'':Upper( @ [[#T|T]])''
+'':Upper( @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :Value ====
-'':Value( @ [[#T|T]])''
+'':Value( @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :StepIncrement ====
-'':StepIncrement( @ [[#T|T]])''
+'':StepIncrement( @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :PageIncrement ====
-'':PageIncrement( @ [[#T|T]])''
+'':PageIncrement( @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :PageSize ====
-'':PageSize( @ [[#T|T]])''
+'':PageSize( @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :Changed ====
-'':Changed( @ [[#T|T]])''
+'':Changed(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :ClampPage ====
-'':ClampPage( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+'':ClampPage(self @ [[#T|T]], lower @ [[..:..:Std:Real#T|Std.Real.T]], upper @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetValue ====
-'':GetValue( @ [[#T|T]])''
+'':GetValue(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== New ====
-''New()''
+''New(value : [[..:..:Std:Real#T|Std.Real.T]], lower : [[..:..:Std:Real#T|Std.Real.T]], upper : [[..:..:Std:Real#T|Std.Real.T]], step_increment : [[..:..:Std:Real#T|Std.Real.T]], page_increment : [[..:..:Std:Real#T|Std.Real.T]], page_size : [[..:..:Std:Real#T|Std.Real.T]]) : [[# T| T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 

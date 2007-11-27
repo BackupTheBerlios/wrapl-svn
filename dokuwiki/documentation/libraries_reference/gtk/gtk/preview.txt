@@ -7,98 +7,98 @@
 
 
 ==== :Size ====
-'':Size( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':Size(self @ [[#T|T]], width @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], height @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetExpand ====
-'':SetExpand( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+'':SetExpand(self @ [[#T|T]], expand @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetDither ====
-'':SetDither( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:RgbDither#T|Gtk.Gdk.RgbDither.T]])''
+'':SetDither(self @ [[#T|T]], dither @ [[..:..:Gtk:Gdk:RgbDither#T|Gtk.Gdk.RgbDither.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Put ====
-'':Put( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]],  @ [[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':Put(self @ [[#T|T]], window @ [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]], gc @ [[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]], srcx @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], srcy @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], destx @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], desty @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], width @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], height @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :DrawRow ====
-'':DrawRow( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':DrawRow(self @ [[#T|T]], data @ [[..:..:Std:String#T|Std.String.T]], x @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], w @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Expand ====
-'':Expand( @ [[#T|T]])''
+'':Expand( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Type ====
-'':Type( @ [[#T|T]])''
+'':Type( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Dither ====
-'':Dither( @ [[#T|T]])''
+'':Dither( @ [[#T|T]]) : [[..:..:Gtk:Gdk:RgbDither#T|Gtk.Gdk.RgbDither.T]]''
 
 
 ==== :Rowstride ====
-'':Rowstride( @ [[#T|T]])''
+'':Rowstride( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Bpp ====
-'':Bpp( @ [[#T|T]])''
+'':Bpp( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :BufferHeight ====
-'':BufferHeight( @ [[#T|T]])''
+'':BufferHeight( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Buffer ====
-'':Buffer( @ [[#T|T]])''
+'':Buffer( @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== :BufferWidth ====
-'':BufferWidth( @ [[#T|T]])''
+'':BufferWidth( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== New ====
-''New()''
+''New(type : [[..:..:Gtk:Gtk:PreviewType#T|Gtk.Gtk.PreviewType.T]]) : [[# T| T]]''
 
 
 ==== Uninit ====
-''Uninit()''
+''Uninit() : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== SetReserved ====
-''SetReserved()''
+''SetReserved(nreserved) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== SetInstallCmap ====
-''SetInstallCmap()''
+''SetInstallCmap(install_cmap) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== SetGamma ====
-''SetGamma()''
+''SetGamma(gamma_) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== SetColorCube ====
-''SetColorCube()''
+''SetColorCube(nred_shades, ngreen_shades, nblue_shades, ngray_shades) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== Reset ====
-''Reset()''
+''Reset() : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== GetVisual ====
-''GetVisual()''
+''GetVisual() : [[..:..:Gtk:Gdk:Visual#T|Gtk.Gdk.Visual.T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 
 ==== GetInfo ====
-''GetInfo()''
+''GetInfo() : [[..:..:Gtk:Gtk:PreviewInfo#T|Gtk.Gtk.PreviewInfo.T]]''
 
 
 ==== GetCmap ====
-''GetCmap()''
+''GetCmap() : [[..:..:Gtk:Gdk:Colormap#T|Gtk.Gdk.Colormap.T]]''
 
 

@@ -10,42 +10,42 @@
 
 
 ==== :SetValue ====
-'':SetValue( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+'':SetValue(self @ [[#T|T]], value @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetIcons ====
-'':SetIcons( @ [[#T|T]],  @ [[..:..:Std:List#T|Std.List.T]])''
+'':SetIcons(self @ [[#T|T]], icons @ [[..:..:Std:List#T|Std.List.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :PlusButton ====
-'':PlusButton( @ [[#T|T]])''
+'':PlusButton( @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
 
 ==== :MinusButton ====
-'':MinusButton( @ [[#T|T]])''
+'':MinusButton( @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
 
 ==== :Priv ====
-'':Priv( @ [[#T|T]])''
+'':Priv( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetAdjustment ====
-'':GetAdjustment( @ [[#T|T]])''
+'':GetAdjustment(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]]''
 
 
 ==== :GetValue ====
-'':GetValue( @ [[#T|T]])''
+'':GetValue(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :SetAdjustment ====
-'':SetAdjustment( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]])''
+'':SetAdjustment(self @ [[#T|T]], adjustment @ [[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====
-''New()''
+''New(size : [[..:..:Gtk:Gtk:IconSize#T|Gtk.Gtk.IconSize.T]], min : [[..:..:Std:Real#T|Std.Real.T]], max : [[..:..:Std:Real#T|Std.Real.T]], step : [[..:..:Std:Real#T|Std.Real.T]], icons : [[..:..:Std:List#T|Std.List.T]]) : [[# T| T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 

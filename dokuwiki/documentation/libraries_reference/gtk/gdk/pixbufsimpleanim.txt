@@ -5,18 +5,18 @@
 
 
 ==== :AddFrame ====
-'':AddFrame( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Pixbuf#T|Gtk.Gdk.Pixbuf.T]])''
+'':AddFrame(self @ [[#T|T]], pixbuf @ [[..:..:Gtk:Gdk:Pixbuf#T|Gtk.Gdk.Pixbuf.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====
-''New()''
+''New(width : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], height : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], rate : [[..:..:Std:Real#T|Std.Real.T]]) : [[# T| T]]''
 
 
 ==== IterGetType ====
-''IterGetType()''
+''IterGetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 

@@ -8,22 +8,22 @@
 
 
 ==== :Set ====
-'':Set( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:ArrowType#T|Gtk.Gtk.ArrowType.T]],  @ [[..:..:Gtk:Gtk:ShadowType#T|Gtk.Gtk.ShadowType.T]])''
+'':Set(self @ [[#T|T]], arrow_type @ [[..:..:Gtk:Gtk:ArrowType#T|Gtk.Gtk.ArrowType.T]], shadow_type @ [[..:..:Gtk:Gtk:ShadowType#T|Gtk.Gtk.ShadowType.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :ShadowType ====
-'':ShadowType( @ [[#T|T]])''
+'':ShadowType( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :ArrowType ====
-'':ArrowType( @ [[#T|T]])''
+'':ArrowType( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== New ====
-''New()''
+''New(arrow_type : [[..:..:Gtk:Gtk:ArrowType#T|Gtk.Gtk.ArrowType.T]], shadow_type : [[..:..:Gtk:Gtk:ShadowType#T|Gtk.Gtk.ShadowType.T]]) : [[# T| T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 

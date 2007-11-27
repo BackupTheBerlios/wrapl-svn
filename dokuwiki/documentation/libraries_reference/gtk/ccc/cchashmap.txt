@@ -5,38 +5,38 @@
 
 
 ==== :Remove ====
-'':Remove( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':Remove(self @ [[#T|T]], key @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Lookup ====
-'':Lookup( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':Lookup(self @ [[#T|T]], key @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Address#T|Std.Address.T]]''
 
 
 ==== :Fundamental ====
-'':Fundamental( @ [[#T|T]])''
+'':Fundamental( @ [[#T|T]]) : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 
 ==== :Content ====
-'':Content( @ [[#T|T]])''
+'':Content( @ [[#T|T]]) : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 
 ==== :HashTable ====
-'':HashTable( @ [[#T|T]])''
+'':HashTable( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Foreach ====
-'':Foreach( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Address#T|Std.Address.T]])''
+'':Foreach(self @ [[#T|T]], func @ [[..:..:Std:Object#T|Std.Object.T]], user_data @ [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Insert ====
-'':Insert( @ [[#T|T]],  @ [[..:..:Std:Address#T|Std.Address.T]],  @ [[..:..:Std:Address#T|Std.Address.T]])''
+'':Insert(self @ [[#T|T]], key @ [[..:..:Std:Address#T|Std.Address.T]], data @ [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====
-''New()''
+''New(content_type : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]) : [[# T| T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 

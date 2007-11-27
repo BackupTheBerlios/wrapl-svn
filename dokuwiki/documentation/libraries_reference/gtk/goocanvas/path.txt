@@ -6,14 +6,14 @@
 
 
 ==== :PathData ====
-'':PathData( @ [[#T|T]])''
+'':PathData( @ [[#T|T]]) : [[..:..:Gtk:GooCanvas:PathData#T|Gtk.GooCanvas.PathData.T]]''
 
 
 ==== New ====
-''New()''
+''New(parent : [[..:..:Gtk:GooCanvas:Item#T|Gtk.GooCanvas.Item.T]], path_data : [[..:..:Std:String#T|Std.String.T]], ___ : [[..:..:Std:Object#T|Std.Object.T]]) : [[# T| T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 

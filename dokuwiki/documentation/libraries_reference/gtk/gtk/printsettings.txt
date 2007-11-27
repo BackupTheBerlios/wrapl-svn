@@ -21,27 +21,27 @@
 
 
 ==== :Copy ====
-'':Copy( @ [[#T|T]])''
+'':Copy(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:PrintSettings#T|Gtk.Gtk.PrintSettings.T]]''
 
 
 ==== :Foreach ====
-'':Foreach( @ [[#T|T]],  @ [[..:..:Std:Function#T|Std.Function.T]],  @ [[..:..:Std:Address#T|Std.Address.T]])''
+'':Foreach(self @ [[#T|T]], func @ [[..:..:Std:Function#T|Std.Function.T]], user_data @ [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Get ====
-'':Get( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+'':Get(self @ [[#T|T]], key @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== :GetBool ====
-'':GetBool( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+'':GetBool(key @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :GetCollate ====
-'':GetCollate( @ [[#T|T]])''
+'':GetCollate( @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :GetDefaultSource ====
-'':GetDefaultSource( @ [[#T|T]])''
+'':GetDefaultSource( @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== :GetDither ====
@@ -53,7 +53,7 @@
 
 
 ==== :GetDoubleWithDefault ====
-'':GetDoubleWithDefault( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+'':GetDoubleWithDefault( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :GetDuplex ====
@@ -253,18 +253,18 @@
 
 
 ==== New ====
-''New()''
+''New() : [[# T| T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 
 ==== NewFromKeyFile ====
-''NewFromKeyFile()''
+''NewFromKeyFile(key_file : [[..:..:Std:Object#T|Std.Object.T]], group_name : [[..:..:Std:String#T|Std.String.T]], error : [[..:..:Std:Object#T|Std.Object.T]]) : [[# T| T]]''
 
 
 ==== NewFromFile ====
-''NewFromFile()''
+''NewFromFile(file_name : [[..:..:Std:String#T|Std.String.T]], error : [[..:..:Std:Object#T|Std.Object.T]]) : [[# T| T]]''
 
 

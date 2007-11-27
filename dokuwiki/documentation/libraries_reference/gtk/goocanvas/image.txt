@@ -6,14 +6,14 @@
 
 
 ==== :ImageData ====
-'':ImageData( @ [[#T|T]])''
+'':ImageData( @ [[#T|T]]) : [[..:..:Gtk:GooCanvas:ImageData#T|Gtk.GooCanvas.ImageData.T]]''
 
 
 ==== New ====
-''New()''
+''New(parent : [[..:..:Gtk:GooCanvas:Item#T|Gtk.GooCanvas.Item.T]], pixbuf : [[..:..:Gtk:Gdk:Pixbuf#T|Gtk.Gdk.Pixbuf.T]], x : [[..:..:Std:Real#T|Std.Real.T]], y : [[..:..:Std:Real#T|Std.Real.T]], ___ : [[..:..:Std:Object#T|Std.Object.T]]) : [[# T| T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 

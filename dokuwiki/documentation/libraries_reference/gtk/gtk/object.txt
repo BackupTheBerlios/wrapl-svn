@@ -5,90 +5,90 @@
 
 
 ==== :Weakunref ====
-'':Weakunref( @ [[#T|T]],  @ [[..:..:Std:Function#T|Std.Function.T]],  @ [[..:..:Std:Address#T|Std.Address.T]])''
+'':Weakunref(self @ [[#T|T]], notify @ [[..:..:Std:Function#T|Std.Function.T]], data @ [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Weakref ====
-'':Weakref( @ [[#T|T]],  @ [[..:..:Std:Function#T|Std.Function.T]],  @ [[..:..:Std:Address#T|Std.Address.T]])''
+'':Weakref(self @ [[#T|T]], notify @ [[..:..:Std:Function#T|Std.Function.T]], data @ [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Unref ====
-'':Unref( @ [[#T|T]])''
+'':Unref(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Flags ====
-'':Flags( @ [[#T|T]])''
+'':Flags( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Destroy ====
-'':Destroy( @ [[#T|T]])''
+'':Destroy(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Get ====
-'':Get( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':Get(self @ [[#T|T]], first_property_name @ [[..:..:Std:String#T|Std.String.T]], ___ @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetDataById ====
-'':GetDataById( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':GetDataById(self @ [[#T|T]], data_id @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Address#T|Std.Address.T]]''
 
 
 ==== :GetUserData ====
-'':GetUserData( @ [[#T|T]])''
+'':GetUserData(self @ [[#T|T]]) : [[..:..:Std:Address#T|Std.Address.T]]''
 
 
 ==== :Ref ====
-'':Ref( @ [[#T|T]])''
+'':Ref(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]''
 
 
 ==== :RemoveData ====
-'':RemoveData( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+'':RemoveData(self @ [[#T|T]], key @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :RemoveDataById ====
-'':RemoveDataById( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':RemoveDataById(self @ [[#T|T]], data_id @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :RemoveNoNotify ====
-'':RemoveNoNotify( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+'':RemoveNoNotify(self @ [[#T|T]], key @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :RemoveNoNotifyById ====
-'':RemoveNoNotifyById( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':RemoveNoNotifyById(self @ [[#T|T]], key_id @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Set ====
-'':Set( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':Set(self @ [[#T|T]], first_property_name @ [[..:..:Std:String#T|Std.String.T]], ___ @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetDataById ====
-'':SetDataById( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Address#T|Std.Address.T]])''
+'':SetDataById(self @ [[#T|T]], data_id @ [[..:..:Std:Object#T|Std.Object.T]], data @ [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetDataByIdFull ====
-'':SetDataByIdFull( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Address#T|Std.Address.T]],  @ [[..:..:Std:Function#T|Std.Function.T]])''
+'':SetDataByIdFull(self @ [[#T|T]], data_id @ [[..:..:Std:Object#T|Std.Object.T]], data @ [[..:..:Std:Address#T|Std.Address.T]], destroy @ [[..:..:Std:Function#T|Std.Function.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetDataFull ====
-'':SetDataFull( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Address#T|Std.Address.T]],  @ [[..:..:Std:Function#T|Std.Function.T]])''
+'':SetDataFull(self @ [[#T|T]], key @ [[..:..:Std:String#T|Std.String.T]], data @ [[..:..:Std:Address#T|Std.Address.T]], destroy @ [[..:..:Std:Function#T|Std.Function.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetUserData ====
-'':SetUserData( @ [[#T|T]],  @ [[..:..:Std:Address#T|Std.Address.T]])''
+'':SetUserData(self @ [[#T|T]], data @ [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Sink ====
-'':Sink( @ [[#T|T]])''
+'':Sink(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====
-''New()''
+''New(type : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]], first_property_name : [[..:..:Std:String#T|Std.String.T]], ___ : [[..:..:Std:Object#T|Std.Object.T]]) : [[# T| T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 
 ==== AddArgType ====
-''AddArgType()''
+''AddArgType(arg_name, arg_type, arg_flags, arg_id) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 

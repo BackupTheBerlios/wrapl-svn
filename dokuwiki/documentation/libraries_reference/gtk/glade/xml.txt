@@ -5,94 +5,94 @@
 
 
 ==== :SignalConnectFull ====
-'':SignalConnectFull( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Function#T|Std.Function.T]],  @ [[..:..:Std:Address#T|Std.Address.T]])''
+'':SignalConnectFull(self @ [[#T|T]], handler_name @ [[..:..:Std:String#T|Std.String.T]], func @ [[..:..:Std:Function#T|Std.Function.T]], user_data @ [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SignalConnectData ====
-'':SignalConnectData( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Address#T|Std.Address.T]])''
+'':SignalConnectData(self @ [[#T|T]], handlername @ [[..:..:Std:String#T|Std.String.T]], func @ [[..:..:Std:Object#T|Std.Object.T]], user_data @ [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SignalConnect ====
-'':SignalConnect( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':SignalConnect(self @ [[#T|T]], handlername @ [[..:..:Std:String#T|Std.String.T]], func @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Filename ====
-'':Filename( @ [[#T|T]])''
+'':Filename( @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== :Priv ====
-'':Priv( @ [[#T|T]])''
+'':Priv( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :BuildWidget ====
-'':BuildWidget( @ [[#T|T]],  @ [[..:..:Gtk:Glade:WidgetInfo#T|Gtk.Glade.WidgetInfo.T]])''
+'':BuildWidget(self @ [[#T|T]], info @ [[..:..:Gtk:Glade:WidgetInfo#T|Gtk.Glade.WidgetInfo.T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
 
 ==== :Construct ====
-'':Construct( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+'':Construct(self @ [[#T|T]], fname @ [[..:..:Std:String#T|Std.String.T]], root @ [[..:..:Std:String#T|Std.String.T]], domain @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :ConstructFromBuffer ====
-'':ConstructFromBuffer( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+'':ConstructFromBuffer(self @ [[#T|T]], buffer @ [[..:..:Std:String#T|Std.String.T]], size @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], root @ [[..:..:Std:String#T|Std.String.T]], domain @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :EnsureAccel ====
-'':EnsureAccel( @ [[#T|T]])''
+'':EnsureAccel(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:AccelGroup#T|Gtk.Gtk.AccelGroup.T]]''
 
 
 ==== :GetWidget ====
-'':GetWidget( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+'':GetWidget(self @ [[#T|T]], name @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
 
 ==== :GetWidgetPrefix ====
-'':GetWidgetPrefix( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+'':GetWidgetPrefix(self @ [[#T|T]], name @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :HandleInternalChild ====
-'':HandleInternalChild( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]],  @ [[..:..:Gtk:Glade:ChildInfo#T|Gtk.Glade.ChildInfo.T]])''
+'':HandleInternalChild(self @ [[#T|T]], parent @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], child_info @ [[..:..:Gtk:Glade:ChildInfo#T|Gtk.Glade.ChildInfo.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :HandleWidgetProp ====
-'':HandleWidgetProp( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+'':HandleWidgetProp(self @ [[#T|T]], widget @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], prop_name @ [[..:..:Std:String#T|Std.String.T]], value_name @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :RelativeFile ====
-'':RelativeFile( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+'':RelativeFile(self @ [[#T|T]], filename @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== :SetCommonParams ====
-'':SetCommonParams( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]],  @ [[..:..:Gtk:Glade:WidgetInfo#T|Gtk.Glade.WidgetInfo.T]])''
+'':SetCommonParams(self @ [[#T|T]], widget @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], info @ [[..:..:Gtk:Glade:WidgetInfo#T|Gtk.Glade.WidgetInfo.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetPackingProperty ====
-'':SetPackingProperty( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+'':SetPackingProperty(self @ [[#T|T]], parent @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], child @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], name @ [[..:..:Std:String#T|Std.String.T]], value @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetToplevel ====
-'':SetToplevel( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Window#T|Gtk.Gtk.Window.T]])''
+'':SetToplevel(self @ [[#T|T]], window @ [[..:..:Gtk:Gtk:Window#T|Gtk.Gtk.Window.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetValueFromString ====
-'':SetValueFromString( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Gtk:GObject:Value#T|Gtk.GObject.Value.T]])''
+'':SetValueFromString(self @ [[#T|T]], pspec @ [[..:..:Std:Object#T|Std.Object.T]], string @ [[..:..:Std:String#T|Std.String.T]], value @ [[..:..:Gtk:GObject:Value#T|Gtk.GObject.Value.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :SignalAutoconnect ====
-'':SignalAutoconnect( @ [[#T|T]])''
+'':SignalAutoconnect(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SignalAutoconnectFull ====
-'':SignalAutoconnectFull( @ [[#T|T]],  @ [[..:..:Std:Function#T|Std.Function.T]],  @ [[..:..:Std:Address#T|Std.Address.T]])''
+'':SignalAutoconnectFull(self @ [[#T|T]], func @ [[..:..:Std:Function#T|Std.Function.T]], user_data @ [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====
-''New()''
+''New(fname : [[..:..:Std:String#T|Std.String.T]], root : [[..:..:Std:String#T|Std.String.T]], domain : [[..:..:Std:String#T|Std.String.T]]) : [[# T| T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 
 ==== NewFromBuffer ====
-''NewFromBuffer()''
+''NewFromBuffer(buffer : [[..:..:Std:String#T|Std.String.T]], size : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], root : [[..:..:Std:String#T|Std.String.T]], domain : [[..:..:Std:String#T|Std.String.T]]) : [[# T| T]]''
 
 

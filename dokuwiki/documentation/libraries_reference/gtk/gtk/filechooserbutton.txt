@@ -11,46 +11,46 @@
 
 
 ==== :SetWidthChars ====
-'':SetWidthChars( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':SetWidthChars(n_chars @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetTitle ====
-'':SetTitle( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+'':SetTitle(title @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetFocusOnClick ====
-'':SetFocusOnClick( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+'':SetFocusOnClick(focus_on_click @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetWidthChars ====
-'':GetWidthChars( @ [[#T|T]])''
+'':GetWidthChars( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Priv ====
-'':Priv( @ [[#T|T]])''
+'':Priv( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetFocusOnClick ====
-'':GetFocusOnClick( @ [[#T|T]])''
+'':GetFocusOnClick(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :GetTitle ====
-'':GetTitle( @ [[#T|T]])''
+'':GetTitle(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== New ====
-''New()''
+''New(title : [[..:..:Std:String#T|Std.String.T]], action : [[..:..:Gtk:Gtk:FileChooserAction#T|Gtk.Gtk.FileChooserAction.T]]) : [[# T| T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 
 ==== NewWithDialog ====
-''NewWithDialog()''
+''NewWithDialog(dialog : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[# T| T]]''
 
 
 ==== NewWithBackend ====
-''NewWithBackend()''
+''NewWithBackend(title : [[..:..:Std:String#T|Std.String.T]], action : [[..:..:Gtk:Gtk:FileChooserAction#T|Gtk.Gtk.FileChooserAction.T]], backend : [[..:..:Std:String#T|Std.String.T]]) : [[# T| T]]''
 
 

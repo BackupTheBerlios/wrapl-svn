@@ -5,63 +5,63 @@
 
 
 ==== :SetVisible ====
-'':SetVisible( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+'':SetVisible( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetTooltip ====
-'':SetTooltip( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+'':SetTooltip( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetScreen ====
-'':SetScreen( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Screen#T|Gtk.Gdk.Screen.T]])''
+'':SetScreen( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Screen#T|Gtk.Gdk.Screen.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetFromStock ====
-'':SetFromStock( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+'':SetFromStock( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetFromPixbuf ====
-'':SetFromPixbuf( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Pixbuf#T|Gtk.Gdk.Pixbuf.T]])''
+'':SetFromPixbuf( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Pixbuf#T|Gtk.Gdk.Pixbuf.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetFromIconName ====
-'':SetFromIconName( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+'':SetFromIconName( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetFromFile ====
-'':SetFromFile( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+'':SetFromFile( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Priv ====
-'':Priv( @ [[#T|T]])''
+'':Priv( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetBlinking ====
-'':GetBlinking( @ [[#T|T]])''
+'':GetBlinking(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :GetGeometry ====
-'':GetGeometry( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':GetGeometry(self @ [[#T|T]], screen @ [[..:..:Std:Object#T|Std.Object.T]], area @ [[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]], orientation @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :GetIconName ====
-'':GetIconName( @ [[#T|T]])''
+'':GetIconName(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== :GetPixbuf ====
-'':GetPixbuf( @ [[#T|T]])''
+'':GetPixbuf( @ [[#T|T]]) : [[..:..:Gtk:Gdk:Pixbuf#T|Gtk.Gdk.Pixbuf.T]]''
 
 
 ==== :GetScreen ====
-'':GetScreen( @ [[#T|T]])''
+'':GetScreen( @ [[#T|T]]) : [[..:..:Gtk:Gdk:Screen#T|Gtk.Gdk.Screen.T]]''
 
 
 ==== :GetSize ====
-'':GetSize( @ [[#T|T]])''
+'':GetSize( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :GetStock ====
-'':GetStock( @ [[#T|T]])''
+'':GetStock( @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== :GetStorageType ====
@@ -77,34 +77,34 @@
 
 
 ==== :SetBlinking ====
-'':SetBlinking( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+'':SetBlinking( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====
-''New()''
+''New() : [[# T| T]]''
 
 
 ==== PositionMenu ====
-''PositionMenu()''
+''PositionMenu(menu, x, y, push_in, user_data) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 
 ==== NewFromStock ====
-''NewFromStock()''
+''NewFromStock(stock_id : [[..:..:Std:String#T|Std.String.T]]) : [[# T| T]]''
 
 
 ==== NewFromPixbuf ====
-''NewFromPixbuf()''
+''NewFromPixbuf(pixbuf : [[..:..:Gtk:Gdk:Pixbuf#T|Gtk.Gdk.Pixbuf.T]]) : [[# T| T]]''
 
 
 ==== NewFromIconName ====
-''NewFromIconName()''
+''NewFromIconName(icon_name : [[..:..:Std:String#T|Std.String.T]]) : [[# T| T]]''
 
 
 ==== NewFromFile ====
-''NewFromFile()''
+''NewFromFile(filename : [[..:..:Std:String#T|Std.String.T]]) : [[# T| T]]''
 
 

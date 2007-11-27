@@ -3,55 +3,55 @@
 
 
 ==== :ButtonPassive ====
-'':ButtonPassive( @ [[#T|T]])''
+'':ButtonPassive( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :AutoResize ====
-'':AutoResize( @ [[#T|T]])''
+'':AutoResize( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Resizeable ====
-'':Resizeable( @ [[#T|T]])''
+'':Resizeable( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :WidthSet ====
-'':WidthSet( @ [[#T|T]])''
+'':WidthSet( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Visible ====
-'':Visible( @ [[#T|T]])''
+'':Visible( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Justification ====
-'':Justification( @ [[#T|T]])''
+'':Justification( @ [[#T|T]]) : [[..:..:Gtk:Gtk:Justification#T|Gtk.Gtk.Justification.T]]''
 
 
 ==== :MaxWidth ====
-'':MaxWidth( @ [[#T|T]])''
+'':MaxWidth( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Title ====
-'':Title( @ [[#T|T]])''
+'':Title( @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== :Area ====
-'':Area( @ [[#T|T]])''
+'':Area( @ [[#T|T]]) : [[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]]''
 
 
 ==== :Button ====
-'':Button( @ [[#T|T]])''
+'':Button( @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
 
 ==== :Window ====
-'':Window( @ [[#T|T]])''
+'':Window( @ [[#T|T]]) : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]]''
 
 
 ==== :Width ====
-'':Width( @ [[#T|T]])''
+'':Width( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :MinWidth ====
-'':MinWidth( @ [[#T|T]])''
+'':MinWidth( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== New ====
@@ -59,26 +59,26 @@
 
 
 ==== TitlesShow ====
-''TitlesShow()''
+''TitlesShow(clist) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== TitlesPassive ====
-''TitlesPassive()''
+''TitlesPassive(clist) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== TitlesHide ====
-''TitlesHide()''
+''TitlesHide(clist) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== TitlesActive ====
-''TitlesActive()''
+''TitlesActive(clist) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== TitlePassive ====
-''TitlePassive()''
+''TitlePassive(clist, column) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== TitleActive ====
-''TitleActive()''
+''TitleActive(clist, column) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 

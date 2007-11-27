@@ -6,22 +6,22 @@
 
 
 ==== :SetColor ====
-'':SetColor( @ [[#T|T]],  @ [[..:..:Gtk:CCC:CcColor#T|Gtk.CCC.CcColor.T]])''
+'':SetColor(self @ [[#T|T]], color @ [[..:..:Gtk:CCC:CcColor#T|Gtk.CCC.CcColor.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetColor ====
-'':GetColor( @ [[#T|T]])''
+'':GetColor(self @ [[#T|T]]) : [[..:..:Gtk:CCC:CcColor#T|Gtk.CCC.CcColor.T]]''
 
 
 ==== :Color ====
-'':Color( @ [[#T|T]])''
+'':Color( @ [[#T|T]]) : [[..:..:Gtk:CCC:CcColor#T|Gtk.CCC.CcColor.T]]''
 
 
 ==== New ====
-''New()''
+''New(color : [[..:..:Gtk:CCC:CcColor#T|Gtk.CCC.CcColor.T]]) : [[# T| T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 

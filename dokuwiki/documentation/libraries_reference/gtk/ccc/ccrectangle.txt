@@ -7,46 +7,46 @@
 
 
 ==== :SetY ====
-'':SetY( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+'':SetY(self @ [[#T|T]], y @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetX ====
-'':SetX( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+'':SetX(self @ [[#T|T]], x @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :X ====
-'':X( @ [[#T|T]])''
+'':X( @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :Y ====
-'':Y( @ [[#T|T]])''
+'':Y( @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :W ====
-'':W( @ [[#T|T]])''
+'':W( @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :H ====
-'':H( @ [[#T|T]])''
+'':H( @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :SetHeight ====
-'':SetHeight( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+'':SetHeight(self @ [[#T|T]], height @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetPosition ====
-'':SetPosition( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+'':SetPosition(self @ [[#T|T]], x @ [[..:..:Std:Real#T|Std.Real.T]], y @ [[..:..:Std:Real#T|Std.Real.T]], w @ [[..:..:Std:Real#T|Std.Real.T]], h @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetWidth ====
-'':SetWidth( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+'':SetWidth(self @ [[#T|T]], width @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====
-''New()''
+''New() : [[# T| T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 

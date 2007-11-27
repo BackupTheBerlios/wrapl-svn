@@ -5,134 +5,134 @@
 
 
 ==== :SetPriority ====
-'':SetPriority( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':SetPriority(self @ [[#T|T]], priority @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetPriority ====
-'':GetPriority( @ [[#T|T]])''
+'':GetPriority(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Table ====
-'':Table( @ [[#T|T]])''
+'':Table( @ [[#T|T]]) : [[..:..:Gtk:Gtk:TextTagTable#T|Gtk.Gtk.TextTagTable.T]]''
 
 
 ==== :Name ====
-'':Name( @ [[#T|T]])''
+'':Name( @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== :Priority ====
-'':Priority( @ [[#T|T]])''
+'':Priority( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Values ====
-'':Values( @ [[#T|T]])''
+'':Values( @ [[#T|T]]) : [[..:..:Gtk:Gtk:TextAttributes#T|Gtk.Gtk.TextAttributes.T]]''
 
 
 ==== :BgColorSet ====
-'':BgColorSet( @ [[#T|T]])''
+'':BgColorSet( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :BgStippleSet ====
-'':BgStippleSet( @ [[#T|T]])''
+'':BgStippleSet( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :FgColorSet ====
-'':FgColorSet( @ [[#T|T]])''
+'':FgColorSet( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :ScaleSet ====
-'':ScaleSet( @ [[#T|T]])''
+'':ScaleSet( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :FgStippleSet ====
-'':FgStippleSet( @ [[#T|T]])''
+'':FgStippleSet( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :JustificationSet ====
-'':JustificationSet( @ [[#T|T]])''
+'':JustificationSet( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :LeftMarginSet ====
-'':LeftMarginSet( @ [[#T|T]])''
+'':LeftMarginSet( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :IndentSet ====
-'':IndentSet( @ [[#T|T]])''
+'':IndentSet( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :RiseSet ====
-'':RiseSet( @ [[#T|T]])''
+'':RiseSet( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :StrikethroughSet ====
-'':StrikethroughSet( @ [[#T|T]])''
+'':StrikethroughSet( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :RightMarginSet ====
-'':RightMarginSet( @ [[#T|T]])''
+'':RightMarginSet( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :PixelsAboveLinesSet ====
-'':PixelsAboveLinesSet( @ [[#T|T]])''
+'':PixelsAboveLinesSet( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :PixelsBelowLinesSet ====
-'':PixelsBelowLinesSet( @ [[#T|T]])''
+'':PixelsBelowLinesSet( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :PixelsInsideWrapSet ====
-'':PixelsInsideWrapSet( @ [[#T|T]])''
+'':PixelsInsideWrapSet( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :TabsSet ====
-'':TabsSet( @ [[#T|T]])''
+'':TabsSet( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :UnderlineSet ====
-'':UnderlineSet( @ [[#T|T]])''
+'':UnderlineSet( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :WrapModeSet ====
-'':WrapModeSet( @ [[#T|T]])''
+'':WrapModeSet( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :BgFullHeightSet ====
-'':BgFullHeightSet( @ [[#T|T]])''
+'':BgFullHeightSet( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :InvisibleSet ====
-'':InvisibleSet( @ [[#T|T]])''
+'':InvisibleSet( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :EditableSet ====
-'':EditableSet( @ [[#T|T]])''
+'':EditableSet( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :LanguageSet ====
-'':LanguageSet( @ [[#T|T]])''
+'':LanguageSet( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :PgBgColorSet ====
-'':PgBgColorSet( @ [[#T|T]])''
+'':PgBgColorSet( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :AccumulativeMargin ====
-'':AccumulativeMargin( @ [[#T|T]])''
+'':AccumulativeMargin( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Pad1 ====
-'':Pad1( @ [[#T|T]])''
+'':Pad1( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Event ====
-'':Event( @ [[#T|T]],  @ [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]])''
+'':Event(self @ [[#T|T]], event_object @ [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]], event @ [[..:..:Std:Object#T|Std.Object.T]], iter @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== New ====
-''New()''
+''New(name : [[..:..:Std:String#T|Std.String.T]]) : [[# T| T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 

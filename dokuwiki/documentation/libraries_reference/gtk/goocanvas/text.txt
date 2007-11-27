@@ -6,18 +6,18 @@
 
 
 ==== :LayoutWidth ====
-'':LayoutWidth( @ [[#T|T]])''
+'':LayoutWidth( @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :TextData ====
-'':TextData( @ [[#T|T]])''
+'':TextData( @ [[#T|T]]) : [[..:..:Gtk:GooCanvas:TextData#T|Gtk.GooCanvas.TextData.T]]''
 
 
 ==== New ====
-''New()''
+''New(parent : [[..:..:Gtk:GooCanvas:Item#T|Gtk.GooCanvas.Item.T]], string : [[..:..:Std:String#T|Std.String.T]], x : [[..:..:Std:Real#T|Std.Real.T]], y : [[..:..:Std:Real#T|Std.Real.T]], width : [[..:..:Std:Real#T|Std.Real.T]], anchor : [[..:..:Gtk:Gtk:AnchorType#T|Gtk.Gtk.AnchorType.T]], ___ : [[..:..:Std:Object#T|Std.Object.T]]) : [[# T| T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 

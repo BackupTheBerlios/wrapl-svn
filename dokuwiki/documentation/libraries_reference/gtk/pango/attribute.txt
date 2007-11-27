@@ -3,26 +3,26 @@
 
 
 ==== :Klass ====
-'':Klass( @ [[#T|T]])''
+'':Klass( @ [[#T|T]]) : [[..:..:Gtk:Pango:AttrClass#T|Gtk.Pango.AttrClass.T]]''
 
 
 ==== :StartIndex ====
-'':StartIndex( @ [[#T|T]])''
+'':StartIndex( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :EndIndex ====
-'':EndIndex( @ [[#T|T]])''
+'':EndIndex( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Copy ====
-'':Copy( @ [[#T|T]])''
+'':Copy(self @ [[#T|T]]) : [[..:..:Gtk:Pango:Attribute#T|Gtk.Pango.Attribute.T]]''
 
 
 ==== :Destroy ====
-'':Destroy( @ [[#T|T]])''
+'':Destroy(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Equal ====
-'':Equal( @ [[#T|T]],  @ [[..:..:Gtk:Pango:Attribute#T|Gtk.Pango.Attribute.T]])''
+'':Equal(self @ [[#T|T]], attr2 @ [[..:..:Gtk:Pango:Attribute#T|Gtk.Pango.Attribute.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 

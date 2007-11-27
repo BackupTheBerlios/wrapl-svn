@@ -3,18 +3,18 @@
 
 
 ==== :Next ====
-'':Next( @ [[#T|T]])''
+'':Next(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :Free ====
-'':Free( @ [[#T|T]])''
+'':Free(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetRange ====
-'':GetRange( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':GetRange(self @ [[#T|T]], start @ [[..:..:Std:Object#T|Std.Object.T]], end @ [[..:..:Std:Object#T|Std.Object.T]], script @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====
-''New()''
+''New(text : [[..:..:Std:String#T|Std.String.T]], length : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[# T| T]]''
 
 

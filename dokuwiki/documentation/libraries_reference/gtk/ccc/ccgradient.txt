@@ -5,18 +5,18 @@
 
 
 ==== :CreatePattern ====
-'':CreatePattern( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Gtk:CCC:CcItem#T|Gtk.CCC.CcItem.T]])''
+'':CreatePattern(self @ [[#T|T]], view @ [[..:..:Std:Object#T|Std.Object.T]], item @ [[..:..:Gtk:CCC:CcItem#T|Gtk.CCC.CcItem.T]]) : [[..:..:Gtk:Cairo:CairoPatternT#T|Gtk.Cairo.CairoPatternT.T]]''
 
 
 ==== :Private ====
-'':Private( @ [[#T|T]])''
+'':Private( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :AddStop ====
-'':AddStop( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Gtk:CCC:CcColor#T|Gtk.CCC.CcColor.T]])''
+'':AddStop(self @ [[#T|T]], offset @ [[..:..:Std:Real#T|Std.Real.T]], color @ [[..:..:Gtk:CCC:CcColor#T|Gtk.CCC.CcColor.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 

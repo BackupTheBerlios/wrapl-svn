@@ -3,46 +3,46 @@
 
 
 ==== :Unref ====
-'':Unref( @ [[#T|T]])''
+'':Unref(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetApproximateCharWidth ====
-'':GetApproximateCharWidth( @ [[#T|T]])''
+'':GetApproximateCharWidth(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :GetApproximateDigitWidth ====
-'':GetApproximateDigitWidth( @ [[#T|T]])''
+'':GetApproximateDigitWidth(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :GetAscent ====
-'':GetAscent( @ [[#T|T]])''
+'':GetAscent(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :GetDescent ====
-'':GetDescent( @ [[#T|T]])''
+'':GetDescent(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :GetStrikethroughPosition ====
-'':GetStrikethroughPosition( @ [[#T|T]])''
+'':GetStrikethroughPosition(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :GetStrikethroughThickness ====
-'':GetStrikethroughThickness( @ [[#T|T]])''
+'':GetStrikethroughThickness(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :GetUnderlinePosition ====
-'':GetUnderlinePosition( @ [[#T|T]])''
+'':GetUnderlinePosition(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :GetUnderlineThickness ====
-'':GetUnderlineThickness( @ [[#T|T]])''
+'':GetUnderlineThickness(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Ref ====
-'':Ref( @ [[#T|T]])''
+'':Ref(self @ [[#T|T]]) : [[..:..:Gtk:Pango:FontMetrics#T|Gtk.Pango.FontMetrics.T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 

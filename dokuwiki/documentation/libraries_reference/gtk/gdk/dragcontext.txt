@@ -5,58 +5,58 @@
 
 
 ==== :Unref ====
-'':Unref( @ [[#T|T]])''
+'':Unref(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Ref ====
-'':Ref( @ [[#T|T]])''
+'':Ref(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Protocol ====
-'':Protocol( @ [[#T|T]])''
+'':Protocol( @ [[#T|T]]) : [[..:..:Gtk:Gdk:DragProtocol#T|Gtk.Gdk.DragProtocol.T]]''
 
 
 ==== :IsSource ====
-'':IsSource( @ [[#T|T]])''
+'':IsSource( @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :SourceWindow ====
-'':SourceWindow( @ [[#T|T]])''
+'':SourceWindow( @ [[#T|T]]) : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]]''
 
 
 ==== :DestWindow ====
-'':DestWindow( @ [[#T|T]])''
+'':DestWindow( @ [[#T|T]]) : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]]''
 
 
 ==== :Targets ====
-'':Targets( @ [[#T|T]])''
+'':Targets( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Actions ====
-'':Actions( @ [[#T|T]])''
+'':Actions( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :SuggestedAction ====
-'':SuggestedAction( @ [[#T|T]])''
+'':SuggestedAction( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Action ====
-'':Action( @ [[#T|T]])''
+'':Action( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :StartTime ====
-'':StartTime( @ [[#T|T]])''
+'':StartTime( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :WindowingData ====
-'':WindowingData( @ [[#T|T]])''
+'':WindowingData( @ [[#T|T]]) : [[..:..:Std:Address#T|Std.Address.T]]''
 
 
 ==== New ====
-''New()''
+''New() : [[# T| T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 

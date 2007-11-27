@@ -5,38 +5,38 @@
 
 
 ==== :SetVisible ====
-'':SetVisible( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+'':SetVisible(setting @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetVisible ====
-'':GetVisible( @ [[#T|T]])''
+'':GetVisible( @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :Segment ====
-'':Segment( @ [[#T|T]])''
+'':Segment( @ [[#T|T]]) : [[..:..:Std:Address#T|Std.Address.T]]''
 
 
 ==== :GetBuffer ====
-'':GetBuffer( @ [[#T|T]])''
+'':GetBuffer(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:TextBuffer#T|Gtk.Gtk.TextBuffer.T]]''
 
 
 ==== :GetDeleted ====
-'':GetDeleted( @ [[#T|T]])''
+'':GetDeleted(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :GetLeftGravity ====
-'':GetLeftGravity( @ [[#T|T]])''
+'':GetLeftGravity(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :GetName ====
-'':GetName( @ [[#T|T]])''
+'':GetName(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== New ====
-''New()''
+''New(name : [[..:..:Std:String#T|Std.String.T]], left_gravity : [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[# T| T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 

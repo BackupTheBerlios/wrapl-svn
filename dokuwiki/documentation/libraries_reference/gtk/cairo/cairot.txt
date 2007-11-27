@@ -3,362 +3,362 @@
 
 
 ==== :Status ====
-'':Status( @ [[#T|T]])''
+'':Status(self @ [[#T|T]]) : [[..:..:Gtk:Cairo:CairoStatusT#T|Gtk.Cairo.CairoStatusT.T]]''
 
 
 ==== :SetOperator ====
-'':SetOperator( @ [[#T|T]],  @ [[..:..:Gtk:Cairo:CairoOperatorT#T|Gtk.Cairo.CairoOperatorT.T]])''
+'':SetOperator(self @ [[#T|T]], op @ [[..:..:Gtk:Cairo:CairoOperatorT#T|Gtk.Cairo.CairoOperatorT.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetSource ====
-'':SetSource( @ [[#T|T]],  @ [[..:..:Gtk:Cairo:CairoPatternT#T|Gtk.Cairo.CairoPatternT.T]])''
+'':SetSource(self @ [[#T|T]], source @ [[..:..:Gtk:Cairo:CairoPatternT#T|Gtk.Cairo.CairoPatternT.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetSourceRgb ====
-'':SetSourceRgb( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+'':SetSourceRgb(self @ [[#T|T]], red @ [[..:..:Std:Real#T|Std.Real.T]], green @ [[..:..:Std:Real#T|Std.Real.T]], blue @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetSourceRgba ====
-'':SetSourceRgba( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+'':SetSourceRgba(self @ [[#T|T]], red @ [[..:..:Std:Real#T|Std.Real.T]], green @ [[..:..:Std:Real#T|Std.Real.T]], blue @ [[..:..:Std:Real#T|Std.Real.T]], alpha @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetSourceSurface ====
-'':SetSourceSurface( @ [[#T|T]],  @ [[..:..:Gtk:Cairo:CairoSurfaceT#T|Gtk.Cairo.CairoSurfaceT.T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+'':SetSourceSurface(self @ [[#T|T]], surface @ [[..:..:Gtk:Cairo:CairoSurfaceT#T|Gtk.Cairo.CairoSurfaceT.T]], x @ [[..:..:Std:Real#T|Std.Real.T]], y @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetTolerance ====
-'':SetTolerance( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+'':SetTolerance(self @ [[#T|T]], tolerance @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetAntialias ====
-'':SetAntialias( @ [[#T|T]],  @ [[..:..:Gtk:Cairo:CairoAntialiasT#T|Gtk.Cairo.CairoAntialiasT.T]])''
+'':SetAntialias(self @ [[#T|T]], antialias @ [[..:..:Gtk:Cairo:CairoAntialiasT#T|Gtk.Cairo.CairoAntialiasT.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetFillRule ====
-'':SetFillRule( @ [[#T|T]],  @ [[..:..:Gtk:Cairo:CairoFillRuleT#T|Gtk.Cairo.CairoFillRuleT.T]])''
+'':SetFillRule(self @ [[#T|T]], fill_rule @ [[..:..:Gtk:Cairo:CairoFillRuleT#T|Gtk.Cairo.CairoFillRuleT.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetLineWidth ====
-'':SetLineWidth( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+'':SetLineWidth(self @ [[#T|T]], width @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetLineCap ====
-'':SetLineCap( @ [[#T|T]],  @ [[..:..:Gtk:Cairo:CairoLineCapT#T|Gtk.Cairo.CairoLineCapT.T]])''
+'':SetLineCap(self @ [[#T|T]], line_cap @ [[..:..:Gtk:Cairo:CairoLineCapT#T|Gtk.Cairo.CairoLineCapT.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetLineJoin ====
-'':SetLineJoin( @ [[#T|T]],  @ [[..:..:Gtk:Cairo:CairoLineJoinT#T|Gtk.Cairo.CairoLineJoinT.T]])''
+'':SetLineJoin(self @ [[#T|T]], line_join @ [[..:..:Gtk:Cairo:CairoLineJoinT#T|Gtk.Cairo.CairoLineJoinT.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetDash ====
-'':SetDash( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+'':SetDash(self @ [[#T|T]], dashes @ [[..:..:Std:Object#T|Std.Object.T]], num_dashes @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], offset @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetMiterLimit ====
-'':SetMiterLimit( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+'':SetMiterLimit(self @ [[#T|T]], limit @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Translate ====
-'':Translate( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+'':Translate(self @ [[#T|T]], tx @ [[..:..:Std:Real#T|Std.Real.T]], ty @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Scale ====
-'':Scale( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+'':Scale(self @ [[#T|T]], sx @ [[..:..:Std:Real#T|Std.Real.T]], sy @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Rotate ====
-'':Rotate( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+'':Rotate(self @ [[#T|T]], angle @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Transform ====
-'':Transform( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':Transform(self @ [[#T|T]], matrix @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetMatrix ====
-'':SetMatrix( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':SetMatrix(self @ [[#T|T]], matrix @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :IdentityMatrix ====
-'':IdentityMatrix( @ [[#T|T]])''
+'':IdentityMatrix(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :UserToDevice ====
-'':UserToDevice( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':UserToDevice(self @ [[#T|T]], x @ [[..:..:Std:Object#T|Std.Object.T]], y @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :UserToDeviceDistance ====
-'':UserToDeviceDistance( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':UserToDeviceDistance(self @ [[#T|T]], dx @ [[..:..:Std:Object#T|Std.Object.T]], dy @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :DeviceToUser ====
-'':DeviceToUser( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':DeviceToUser(self @ [[#T|T]], x @ [[..:..:Std:Object#T|Std.Object.T]], y @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :DeviceToUserDistance ====
-'':DeviceToUserDistance( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':DeviceToUserDistance(self @ [[#T|T]], dx @ [[..:..:Std:Object#T|Std.Object.T]], dy @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :NewPath ====
-'':NewPath( @ [[#T|T]])''
+'':NewPath(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :MoveTo ====
-'':MoveTo( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+'':MoveTo(self @ [[#T|T]], x @ [[..:..:Std:Real#T|Std.Real.T]], y @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :NewSubPath ====
-'':NewSubPath( @ [[#T|T]])''
+'':NewSubPath(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :LineTo ====
-'':LineTo( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+'':LineTo(self @ [[#T|T]], x @ [[..:..:Std:Real#T|Std.Real.T]], y @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :CurveTo ====
-'':CurveTo( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+'':CurveTo(self @ [[#T|T]], x1 @ [[..:..:Std:Real#T|Std.Real.T]], y1 @ [[..:..:Std:Real#T|Std.Real.T]], x2 @ [[..:..:Std:Real#T|Std.Real.T]], y2 @ [[..:..:Std:Real#T|Std.Real.T]], x3 @ [[..:..:Std:Real#T|Std.Real.T]], y3 @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Arc ====
-'':Arc( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+'':Arc(self @ [[#T|T]], xc @ [[..:..:Std:Real#T|Std.Real.T]], yc @ [[..:..:Std:Real#T|Std.Real.T]], radius @ [[..:..:Std:Real#T|Std.Real.T]], angle1 @ [[..:..:Std:Real#T|Std.Real.T]], angle2 @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :ArcNegative ====
-'':ArcNegative( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+'':ArcNegative(self @ [[#T|T]], xc @ [[..:..:Std:Real#T|Std.Real.T]], yc @ [[..:..:Std:Real#T|Std.Real.T]], radius @ [[..:..:Std:Real#T|Std.Real.T]], angle1 @ [[..:..:Std:Real#T|Std.Real.T]], angle2 @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :RelMoveTo ====
-'':RelMoveTo( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+'':RelMoveTo(self @ [[#T|T]], x @ [[..:..:Std:Real#T|Std.Real.T]], y @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :RelLineTo ====
-'':RelLineTo( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+'':RelLineTo(self @ [[#T|T]], x @ [[..:..:Std:Real#T|Std.Real.T]], y @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :RelCurveTo ====
-'':RelCurveTo( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+'':RelCurveTo(self @ [[#T|T]], x1 @ [[..:..:Std:Real#T|Std.Real.T]], y1 @ [[..:..:Std:Real#T|Std.Real.T]], x2 @ [[..:..:Std:Real#T|Std.Real.T]], y2 @ [[..:..:Std:Real#T|Std.Real.T]], x3 @ [[..:..:Std:Real#T|Std.Real.T]], y3 @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Rectangle ====
-'':Rectangle( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+'':Rectangle(self @ [[#T|T]], x @ [[..:..:Std:Real#T|Std.Real.T]], y @ [[..:..:Std:Real#T|Std.Real.T]], width @ [[..:..:Std:Real#T|Std.Real.T]], height @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :ClosePath ====
-'':ClosePath( @ [[#T|T]])''
+'':ClosePath(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Paint ====
-'':Paint( @ [[#T|T]])''
+'':Paint(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :PaintWithAlpha ====
-'':PaintWithAlpha( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+'':PaintWithAlpha(self @ [[#T|T]], alpha @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Mask ====
-'':Mask( @ [[#T|T]],  @ [[..:..:Gtk:Cairo:CairoPatternT#T|Gtk.Cairo.CairoPatternT.T]])''
+'':Mask(self @ [[#T|T]], pattern @ [[..:..:Gtk:Cairo:CairoPatternT#T|Gtk.Cairo.CairoPatternT.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :MaskSurface ====
-'':MaskSurface( @ [[#T|T]],  @ [[..:..:Gtk:Cairo:CairoSurfaceT#T|Gtk.Cairo.CairoSurfaceT.T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+'':MaskSurface(self @ [[#T|T]], surface @ [[..:..:Gtk:Cairo:CairoSurfaceT#T|Gtk.Cairo.CairoSurfaceT.T]], surface_x @ [[..:..:Std:Real#T|Std.Real.T]], surface_y @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Stroke ====
-'':Stroke( @ [[#T|T]])''
+'':Stroke(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :StrokePreserve ====
-'':StrokePreserve( @ [[#T|T]])''
+'':StrokePreserve(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Fill ====
-'':Fill( @ [[#T|T]])''
+'':Fill(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :FillPreserve ====
-'':FillPreserve( @ [[#T|T]])''
+'':FillPreserve(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :CopyPage ====
-'':CopyPage( @ [[#T|T]])''
+'':CopyPage(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :ShowPage ====
-'':ShowPage( @ [[#T|T]])''
+'':ShowPage(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :InStroke ====
-'':InStroke( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+'':InStroke(self @ [[#T|T]], x @ [[..:..:Std:Real#T|Std.Real.T]], y @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :InFill ====
-'':InFill( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+'':InFill(self @ [[#T|T]], x @ [[..:..:Std:Real#T|Std.Real.T]], y @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :StrokeExtents ====
-'':StrokeExtents( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':StrokeExtents(self @ [[#T|T]], x1 @ [[..:..:Std:Object#T|Std.Object.T]], y1 @ [[..:..:Std:Object#T|Std.Object.T]], x2 @ [[..:..:Std:Object#T|Std.Object.T]], y2 @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :FillExtents ====
-'':FillExtents( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':FillExtents(self @ [[#T|T]], x1 @ [[..:..:Std:Object#T|Std.Object.T]], y1 @ [[..:..:Std:Object#T|Std.Object.T]], x2 @ [[..:..:Std:Object#T|Std.Object.T]], y2 @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :ResetClip ====
-'':ResetClip( @ [[#T|T]])''
+'':ResetClip(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Clip ====
-'':Clip( @ [[#T|T]])''
+'':Clip(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :ClipExtents ====
-'':ClipExtents( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':ClipExtents(self @ [[#T|T]], x1 @ [[..:..:Std:Object#T|Std.Object.T]], y1 @ [[..:..:Std:Object#T|Std.Object.T]], x2 @ [[..:..:Std:Object#T|Std.Object.T]], y2 @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :CopyClipRectangleList ====
-'':CopyClipRectangleList( @ [[#T|T]])''
+'':CopyClipRectangleList(self @ [[#T|T]]) : [[..:..:Gtk:Cairo:CairoRectangleListT#T|Gtk.Cairo.CairoRectangleListT.T]]''
 
 
 ==== :SelectFontFace ====
-'':SelectFontFace( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Gtk:Cairo:CairoFontSlantT#T|Gtk.Cairo.CairoFontSlantT.T]],  @ [[..:..:Gtk:Cairo:CairoFontWeightT#T|Gtk.Cairo.CairoFontWeightT.T]])''
+'':SelectFontFace(self @ [[#T|T]], family @ [[..:..:Std:Object#T|Std.Object.T]], slant @ [[..:..:Gtk:Cairo:CairoFontSlantT#T|Gtk.Cairo.CairoFontSlantT.T]], weight @ [[..:..:Gtk:Cairo:CairoFontWeightT#T|Gtk.Cairo.CairoFontWeightT.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetFontSize ====
-'':SetFontSize( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+'':SetFontSize(self @ [[#T|T]], size @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetFontMatrix ====
-'':SetFontMatrix( @ [[#T|T]],  @ [[..:..:Gtk:Cairo:CairoMatrixT#T|Gtk.Cairo.CairoMatrixT.T]])''
+'':SetFontMatrix(self @ [[#T|T]], matrix @ [[..:..:Gtk:Cairo:CairoMatrixT#T|Gtk.Cairo.CairoMatrixT.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetFontMatrix ====
-'':GetFontMatrix( @ [[#T|T]],  @ [[..:..:Gtk:Cairo:CairoMatrixT#T|Gtk.Cairo.CairoMatrixT.T]])''
+'':GetFontMatrix(self @ [[#T|T]], matrix @ [[..:..:Gtk:Cairo:CairoMatrixT#T|Gtk.Cairo.CairoMatrixT.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetFontOptions ====
-'':SetFontOptions( @ [[#T|T]],  @ [[..:..:Gtk:Cairo:CairoFontOptionsT#T|Gtk.Cairo.CairoFontOptionsT.T]])''
+'':SetFontOptions(self @ [[#T|T]], options @ [[..:..:Gtk:Cairo:CairoFontOptionsT#T|Gtk.Cairo.CairoFontOptionsT.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetFontOptions ====
-'':GetFontOptions( @ [[#T|T]],  @ [[..:..:Gtk:Cairo:CairoFontOptionsT#T|Gtk.Cairo.CairoFontOptionsT.T]])''
+'':GetFontOptions(self @ [[#T|T]], options @ [[..:..:Gtk:Cairo:CairoFontOptionsT#T|Gtk.Cairo.CairoFontOptionsT.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetFontFace ====
-'':SetFontFace( @ [[#T|T]],  @ [[..:..:Gtk:Cairo:CairoFontFaceT#T|Gtk.Cairo.CairoFontFaceT.T]])''
+'':SetFontFace(self @ [[#T|T]], font_face @ [[..:..:Gtk:Cairo:CairoFontFaceT#T|Gtk.Cairo.CairoFontFaceT.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetFontFace ====
-'':GetFontFace( @ [[#T|T]])''
+'':GetFontFace(self @ [[#T|T]]) : [[..:..:Gtk:Cairo:CairoFontFaceT#T|Gtk.Cairo.CairoFontFaceT.T]]''
 
 
 ==== :SetScaledFont ====
-'':SetScaledFont( @ [[#T|T]],  @ [[..:..:Gtk:Cairo:CairoScaledFontT#T|Gtk.Cairo.CairoScaledFontT.T]])''
+'':SetScaledFont(self @ [[#T|T]], font_face @ [[..:..:Gtk:Cairo:CairoScaledFontT#T|Gtk.Cairo.CairoScaledFontT.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetScaledFont ====
-'':GetScaledFont( @ [[#T|T]])''
+'':GetScaledFont(self @ [[#T|T]]) : [[..:..:Gtk:Cairo:CairoScaledFontT#T|Gtk.Cairo.CairoScaledFontT.T]]''
 
 
 ==== :ShowText ====
-'':ShowText( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':ShowText(self @ [[#T|T]], utf8 @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :ShowGlyphs ====
-'':ShowGlyphs( @ [[#T|T]],  @ [[..:..:Gtk:Cairo:CairoGlyphT#T|Gtk.Cairo.CairoGlyphT.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':ShowGlyphs(self @ [[#T|T]], glyphs @ [[..:..:Gtk:Cairo:CairoGlyphT#T|Gtk.Cairo.CairoGlyphT.T]], num_glyphs @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :TextPath ====
-'':TextPath( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':TextPath(self @ [[#T|T]], utf8 @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GlyphPath ====
-'':GlyphPath( @ [[#T|T]],  @ [[..:..:Gtk:Cairo:CairoGlyphT#T|Gtk.Cairo.CairoGlyphT.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':GlyphPath(self @ [[#T|T]], glyphs @ [[..:..:Gtk:Cairo:CairoGlyphT#T|Gtk.Cairo.CairoGlyphT.T]], num_glyphs @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :TextExtents ====
-'':TextExtents( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Gtk:Cairo:CairoTextExtentsT#T|Gtk.Cairo.CairoTextExtentsT.T]])''
+'':TextExtents(self @ [[#T|T]], utf8 @ [[..:..:Std:Object#T|Std.Object.T]], extents @ [[..:..:Gtk:Cairo:CairoTextExtentsT#T|Gtk.Cairo.CairoTextExtentsT.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GlyphExtents ====
-'':GlyphExtents( @ [[#T|T]],  @ [[..:..:Gtk:Cairo:CairoGlyphT#T|Gtk.Cairo.CairoGlyphT.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Gtk:Cairo:CairoTextExtentsT#T|Gtk.Cairo.CairoTextExtentsT.T]])''
+'':GlyphExtents(self @ [[#T|T]], glyphs @ [[..:..:Gtk:Cairo:CairoGlyphT#T|Gtk.Cairo.CairoGlyphT.T]], num_glyphs @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], extents @ [[..:..:Gtk:Cairo:CairoTextExtentsT#T|Gtk.Cairo.CairoTextExtentsT.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :FontExtents ====
-'':FontExtents( @ [[#T|T]],  @ [[..:..:Gtk:Cairo:CairoFontExtentsT#T|Gtk.Cairo.CairoFontExtentsT.T]])''
+'':FontExtents(self @ [[#T|T]], extents @ [[..:..:Gtk:Cairo:CairoFontExtentsT#T|Gtk.Cairo.CairoFontExtentsT.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetOperator ====
-'':GetOperator( @ [[#T|T]])''
+'':GetOperator(self @ [[#T|T]]) : [[..:..:Gtk:Cairo:CairoOperatorT#T|Gtk.Cairo.CairoOperatorT.T]]''
 
 
 ==== :GetSource ====
-'':GetSource( @ [[#T|T]])''
+'':GetSource(self @ [[#T|T]]) : [[..:..:Gtk:Cairo:CairoPatternT#T|Gtk.Cairo.CairoPatternT.T]]''
 
 
 ==== :GetTolerance ====
-'':GetTolerance( @ [[#T|T]])''
+'':GetTolerance(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :GetAntialias ====
-'':GetAntialias( @ [[#T|T]])''
+'':GetAntialias(self @ [[#T|T]]) : [[..:..:Gtk:Cairo:CairoAntialiasT#T|Gtk.Cairo.CairoAntialiasT.T]]''
 
 
 ==== :GetCurrentPoint ====
-'':GetCurrentPoint( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':GetCurrentPoint(self @ [[#T|T]], x @ [[..:..:Std:Object#T|Std.Object.T]], y @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetFillRule ====
-'':GetFillRule( @ [[#T|T]])''
+'':GetFillRule(self @ [[#T|T]]) : [[..:..:Gtk:Cairo:CairoFillRuleT#T|Gtk.Cairo.CairoFillRuleT.T]]''
 
 
 ==== :GetLineWidth ====
-'':GetLineWidth( @ [[#T|T]])''
+'':GetLineWidth(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :GetLineCap ====
-'':GetLineCap( @ [[#T|T]])''
+'':GetLineCap(self @ [[#T|T]]) : [[..:..:Gtk:Cairo:CairoLineCapT#T|Gtk.Cairo.CairoLineCapT.T]]''
 
 
 ==== :GetMiterLimit ====
-'':GetMiterLimit( @ [[#T|T]])''
+'':GetMiterLimit(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :GetLineJoin ====
-'':GetLineJoin( @ [[#T|T]])''
+'':GetLineJoin(self @ [[#T|T]]) : [[..:..:Gtk:Cairo:CairoLineJoinT#T|Gtk.Cairo.CairoLineJoinT.T]]''
 
 
 ==== :GetDashCount ====
-'':GetDashCount( @ [[#T|T]])''
+'':GetDashCount(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :GetDash ====
-'':GetDash( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':GetDash(self @ [[#T|T]], dashes @ [[..:..:Std:Object#T|Std.Object.T]], offset @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetMatrix ====
-'':GetMatrix( @ [[#T|T]],  @ [[..:..:Gtk:Cairo:CairoMatrixT#T|Gtk.Cairo.CairoMatrixT.T]])''
+'':GetMatrix(self @ [[#T|T]], matrix @ [[..:..:Gtk:Cairo:CairoMatrixT#T|Gtk.Cairo.CairoMatrixT.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetTarget ====
-'':GetTarget( @ [[#T|T]])''
+'':GetTarget(self @ [[#T|T]]) : [[..:..:Gtk:Cairo:CairoSurfaceT#T|Gtk.Cairo.CairoSurfaceT.T]]''
 
 
 ==== :GetGroupTarget ====
-'':GetGroupTarget( @ [[#T|T]])''
+'':GetGroupTarget(self @ [[#T|T]]) : [[..:..:Gtk:Cairo:CairoSurfaceT#T|Gtk.Cairo.CairoSurfaceT.T]]''
 
 
 ==== :CopyPath ====
-'':CopyPath( @ [[#T|T]])''
+'':CopyPath(self @ [[#T|T]]) : [[..:..:Gtk:Cairo:CairoPathT#T|Gtk.Cairo.CairoPathT.T]]''
 
 
 ==== :CopyPathFlat ====
-'':CopyPathFlat( @ [[#T|T]])''
+'':CopyPathFlat(self @ [[#T|T]]) : [[..:..:Gtk:Cairo:CairoPathT#T|Gtk.Cairo.CairoPathT.T]]''
 
 
 ==== :AppendPath ====
-'':AppendPath( @ [[#T|T]],  @ [[..:..:Gtk:Cairo:CairoPathT#T|Gtk.Cairo.CairoPathT.T]])''
+'':AppendPath(self @ [[#T|T]], path @ [[..:..:Gtk:Cairo:CairoPathT#T|Gtk.Cairo.CairoPathT.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== Create ====
-''Create()''
+''Create(target) : [[..:..:Gtk:Cairo:CairoT#T|Gtk.Cairo.CairoT.T]]''
 
 

@@ -7,70 +7,70 @@
 
 
 ==== :SetRange ====
-'':SetRange( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+'':SetRange(self @ [[#T|T]], lower @ [[..:..:Std:Real#T|Std.Real.T]], upper @ [[..:..:Std:Real#T|Std.Real.T]], position @ [[..:..:Std:Real#T|Std.Real.T]], max_size @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :BackingStore ====
-'':BackingStore( @ [[#T|T]])''
+'':BackingStore( @ [[#T|T]]) : [[..:..:Gtk:Gdk:Pixmap#T|Gtk.Gdk.Pixmap.T]]''
 
 
 ==== :NonGrExpGc ====
-'':NonGrExpGc( @ [[#T|T]])''
+'':NonGrExpGc( @ [[#T|T]]) : [[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]]''
 
 
 ==== :Metric ====
-'':Metric( @ [[#T|T]])''
+'':Metric( @ [[#T|T]]) : [[..:..:Gtk:Gtk:RulerMetric#T|Gtk.Gtk.RulerMetric.T]]''
 
 
 ==== :Xsrc ====
-'':Xsrc( @ [[#T|T]])''
+'':Xsrc( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Ysrc ====
-'':Ysrc( @ [[#T|T]])''
+'':Ysrc( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :SliderSize ====
-'':SliderSize( @ [[#T|T]])''
+'':SliderSize( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Lower ====
-'':Lower( @ [[#T|T]])''
+'':Lower( @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :Upper ====
-'':Upper( @ [[#T|T]])''
+'':Upper( @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :Position ====
-'':Position( @ [[#T|T]])''
+'':Position( @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :MaxSize ====
-'':MaxSize( @ [[#T|T]])''
+'':MaxSize( @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :DrawPos ====
-'':DrawPos( @ [[#T|T]])''
+'':DrawPos(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :DrawTicks ====
-'':DrawTicks( @ [[#T|T]])''
+'':DrawTicks(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetMetric ====
-'':GetMetric( @ [[#T|T]])''
+'':GetMetric(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:MetricType#T|Gtk.Gtk.MetricType.T]]''
 
 
 ==== :GetRange ====
-'':GetRange( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':GetRange(self @ [[#T|T]], lower @ [[..:..:Std:Object#T|Std.Object.T]], upper @ [[..:..:Std:Object#T|Std.Object.T]], position @ [[..:..:Std:Object#T|Std.Object.T]], max_size @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetMetric ====
-'':SetMetric( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:MetricType#T|Gtk.Gtk.MetricType.T]])''
+'':SetMetric(self @ [[#T|T]], metric @ [[..:..:Gtk:Gtk:MetricType#T|Gtk.Gtk.MetricType.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 

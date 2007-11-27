@@ -5,94 +5,94 @@
 
 
 ==== :SetUseFullPage ====
-'':SetUseFullPage( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+'':SetUseFullPage(full_page @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetUnit ====
-'':SetUnit( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Unit#T|Gtk.Gtk.Unit.T]])''
+'':SetUnit(unit @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Unit#T|Gtk.Gtk.Unit.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Priv ====
-'':Priv( @ [[#T|T]])''
+'':Priv( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Cancel ====
-'':Cancel( @ [[#T|T]])''
+'':Cancel(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetDefaultPageSetup ====
-'':GetDefaultPageSetup( @ [[#T|T]])''
+'':GetDefaultPageSetup(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:PageSetup#T|Gtk.Gtk.PageSetup.T]]''
 
 
 ==== :GetError ====
-'':GetError( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':GetError(self @ [[#T|T]], error @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetPrintSettings ====
-'':GetPrintSettings( @ [[#T|T]])''
+'':GetPrintSettings(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:PrintSettings#T|Gtk.Gtk.PrintSettings.T]]''
 
 
 ==== :GetStatus ====
-'':GetStatus( @ [[#T|T]])''
+'':GetStatus(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:PrintStatus#T|Gtk.Gtk.PrintStatus.T]]''
 
 
 ==== :GetStatusString ====
-'':GetStatusString( @ [[#T|T]])''
+'':GetStatusString(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== :IsFinished ====
-'':IsFinished( @ [[#T|T]])''
+'':IsFinished( @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :Run ====
-'':Run( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:PrintOperationAction#T|Gtk.Gtk.PrintOperationAction.T]],  @ [[..:..:Gtk:Gtk:Window#T|Gtk.Gtk.Window.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':Run(action @ [[#T|T]], parent @ [[..:..:Gtk:Gtk:PrintOperationAction#T|Gtk.Gtk.PrintOperationAction.T]], error @ [[..:..:Gtk:Gtk:Window#T|Gtk.Gtk.Window.T]],  @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Gtk:Gtk:PrintOperationResult#T|Gtk.Gtk.PrintOperationResult.T]]''
 
 
 ==== :SetAllowAsync ====
-'':SetAllowAsync( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+'':SetAllowAsync(allow_async @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetCurrentPage ====
-'':SetCurrentPage( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':SetCurrentPage(current_page @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetCustomTabLabel ====
-'':SetCustomTabLabel( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+'':SetCustomTabLabel(label @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetDefaultPageSetup ====
-'':SetDefaultPageSetup( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:PageSetup#T|Gtk.Gtk.PageSetup.T]])''
+'':SetDefaultPageSetup(default_page_setup @ [[#T|T]],  @ [[..:..:Gtk:Gtk:PageSetup#T|Gtk.Gtk.PageSetup.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetExportFilename ====
-'':SetExportFilename( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+'':SetExportFilename(filename @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetJobName ====
-'':SetJobName( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+'':SetJobName(job_name @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetNPages ====
-'':SetNPages( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':SetNPages(n_pages @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetPrintSettings ====
-'':SetPrintSettings( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:PrintSettings#T|Gtk.Gtk.PrintSettings.T]])''
+'':SetPrintSettings(print_settings @ [[#T|T]],  @ [[..:..:Gtk:Gtk:PrintSettings#T|Gtk.Gtk.PrintSettings.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetShowProgress ====
-'':SetShowProgress( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+'':SetShowProgress(show_progress @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetTrackPrintStatus ====
-'':SetTrackPrintStatus( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+'':SetTrackPrintStatus(track_status @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====
-''New()''
+''New() : [[# T| T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 

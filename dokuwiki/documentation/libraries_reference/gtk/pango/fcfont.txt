@@ -6,18 +6,18 @@
 
 
 ==== :UnlockFace ====
-'':UnlockFace( @ [[#T|T]])''
+'':UnlockFace(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :LockFace ====
-'':LockFace( @ [[#T|T]])''
+'':LockFace(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== DescriptionFromPattern ====
-''DescriptionFromPattern()''
+''DescriptionFromPattern(pattern, include_size) : [[..:..:Gtk:Pango:FontDescription#T|Gtk.Pango.FontDescription.T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 

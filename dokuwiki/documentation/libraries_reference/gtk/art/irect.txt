@@ -3,35 +3,35 @@
 
 
 ==== :Union ====
-'':Union( @ [[#T|T]],  @ [[..:..:Gtk:Art:IRect#T|Gtk.Art.IRect.T]],  @ [[..:..:Gtk:Art:IRect#T|Gtk.Art.IRect.T]])''
+'':Union(self @ [[#T|T]], src1 @ [[..:..:Gtk:Art:IRect#T|Gtk.Art.IRect.T]], src2 @ [[..:..:Gtk:Art:IRect#T|Gtk.Art.IRect.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :X0 ====
-'':X0( @ [[#T|T]])''
+'':X0( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Y0 ====
-'':Y0( @ [[#T|T]])''
+'':Y0( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :X1 ====
-'':X1( @ [[#T|T]])''
+'':X1( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Y1 ====
-'':Y1( @ [[#T|T]])''
+'':Y1( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Copy ====
-'':Copy( @ [[#T|T]],  @ [[..:..:Gtk:Art:IRect#T|Gtk.Art.IRect.T]])''
+'':Copy(self @ [[#T|T]], src @ [[..:..:Gtk:Art:IRect#T|Gtk.Art.IRect.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Empty ====
-'':Empty( @ [[#T|T]])''
+'':Empty(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Intersect ====
-'':Intersect( @ [[#T|T]],  @ [[..:..:Gtk:Art:IRect#T|Gtk.Art.IRect.T]],  @ [[..:..:Gtk:Art:IRect#T|Gtk.Art.IRect.T]])''
+'':Intersect(self @ [[#T|T]], src1 @ [[..:..:Gtk:Art:IRect#T|Gtk.Art.IRect.T]], src2 @ [[..:..:Gtk:Art:IRect#T|Gtk.Art.IRect.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====

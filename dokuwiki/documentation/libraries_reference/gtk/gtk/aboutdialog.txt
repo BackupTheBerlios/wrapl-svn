@@ -15,35 +15,35 @@
 
 
 ==== :SetWebsiteLabel ====
-'':SetWebsiteLabel( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+'':SetWebsiteLabel(self @ [[#T|T]], wrap_license @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetWebsite ====
-'':SetWebsite( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+'':SetWebsite(self @ [[#T|T]], website_label @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetVersion ====
-'':SetVersion( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+'':SetVersion(self @ [[#T|T]], website @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :PrivateData ====
-'':PrivateData( @ [[#T|T]])''
+'':PrivateData( @ [[#T|T]]) : [[..:..:Std:Address#T|Std.Address.T]]''
 
 
 ==== :GetArtists ====
-'':GetArtists( @ [[#T|T]])''
+'':GetArtists(self @ [[#T|T]]) : [[..:..:Std:List#T|Std.List.T]]''
 
 
 ==== :GetAuthors ====
-'':GetAuthors( @ [[#T|T]])''
+'':GetAuthors(self @ [[#T|T]]) : [[..:..:Std:List#T|Std.List.T]]''
 
 
 ==== :GetComments ====
-'':GetComments( @ [[#T|T]])''
+'':GetComments(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== :GetCopyright ====
-'':GetCopyright( @ [[#T|T]])''
+'':GetCopyright( @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== :GetDocumenters ====
@@ -87,7 +87,7 @@
 
 
 ==== :GetWrapLicense ====
-'':GetWrapLicense( @ [[#T|T]])''
+'':GetWrapLicense(artists @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetArtists ====
@@ -99,11 +99,11 @@
 
 
 ==== :SetComments ====
-'':SetComments( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+'':SetComments(self @ [[#T|T]], copyright @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetCopyright ====
-'':SetCopyright( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+'':SetCopyright(self @ [[#T|T]], documenters @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetDocumenters ====
@@ -111,42 +111,42 @@
 
 
 ==== :SetLicense ====
-'':SetLicense( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+'':SetLicense(self @ [[#T|T]], logo @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetLogo ====
-'':SetLogo( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Pixbuf#T|Gtk.Gdk.Pixbuf.T]])''
+'':SetLogo(self @ [[#T|T]], icon_name @ [[..:..:Gtk:Gdk:Pixbuf#T|Gtk.Gdk.Pixbuf.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetLogoIconName ====
-'':SetLogoIconName( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+'':SetLogoIconName(self @ [[#T|T]], name @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetName ====
-'':SetName( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+'':SetName(self @ [[#T|T]], name @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetProgramName ====
-'':SetProgramName( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+'':SetProgramName(self @ [[#T|T]], translator_credits @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetTranslatorCredits ====
-'':SetTranslatorCredits( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+'':SetTranslatorCredits(self @ [[#T|T]], version @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====
-''New()''
+''New() : [[# T| T]]''
 
 
 ==== SetUrlHook ====
-''SetUrlHook()''
+''SetUrlHook(func, data, destroy) : [[..:..:Std:Function#T|Std.Function.T]]''
 
 
 ==== SetEmailHook ====
-''SetEmailHook()''
+''SetEmailHook(func, data, destroy) : [[..:..:Std:Function#T|Std.Function.T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 

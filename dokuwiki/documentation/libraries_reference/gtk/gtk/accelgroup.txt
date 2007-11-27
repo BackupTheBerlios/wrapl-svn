@@ -5,70 +5,70 @@
 
 
 ==== :Unlock ====
-'':Unlock( @ [[#T|T]])''
+'':Unlock(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Query ====
-'':Query( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':Query(self @ [[#T|T]], accel_key @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], accel_mods @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], n_entries @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Gtk:Gtk:AccelGroupEntry#T|Gtk.Gtk.AccelGroupEntry.T]]''
 
 
 ==== :Lock ====
-'':Lock( @ [[#T|T]])''
+'':Lock(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :LockCount ====
-'':LockCount( @ [[#T|T]])''
+'':LockCount( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :ModifierMask ====
-'':ModifierMask( @ [[#T|T]])''
+'':ModifierMask( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Acceleratables ====
-'':Acceleratables( @ [[#T|T]])''
+'':Acceleratables( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :NAccels ====
-'':NAccels( @ [[#T|T]])''
+'':NAccels( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :PrivAccels ====
-'':PrivAccels( @ [[#T|T]])''
+'':PrivAccels( @ [[#T|T]]) : [[..:..:Gtk:Gtk:AccelGroupEntry#T|Gtk.Gtk.AccelGroupEntry.T]]''
 
 
 ==== :Activate ====
-'':Activate( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':Activate(self @ [[#T|T]], accel_quark @ [[..:..:Std:Object#T|Std.Object.T]], acceleratable @ [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]], accel_key @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], accel_mods @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :Connect ====
-'':Connect( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Gtk:GObject:Closure#T|Gtk.GObject.Closure.T]])''
+'':Connect(self @ [[#T|T]], accel_key @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], accel_mods @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], accel_flags @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], closure @ [[..:..:Gtk:GObject:Closure#T|Gtk.GObject.Closure.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :ConnectByPath ====
-'':ConnectByPath( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Gtk:GObject:Closure#T|Gtk.GObject.Closure.T]])''
+'':ConnectByPath(self @ [[#T|T]], accel_path @ [[..:..:Std:String#T|Std.String.T]], closure @ [[..:..:Gtk:GObject:Closure#T|Gtk.GObject.Closure.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Disconnect ====
-'':Disconnect( @ [[#T|T]],  @ [[..:..:Gtk:GObject:Closure#T|Gtk.GObject.Closure.T]])''
+'':Disconnect(self @ [[#T|T]], closure @ [[..:..:Gtk:GObject:Closure#T|Gtk.GObject.Closure.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :DisconnectKey ====
-'':DisconnectKey( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':DisconnectKey(self @ [[#T|T]], accel_key @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], accel_mods @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :Find ====
-'':Find( @ [[#T|T]],  @ [[..:..:Std:Function#T|Std.Function.T]],  @ [[..:..:Std:Address#T|Std.Address.T]])''
+'':Find(self @ [[#T|T]], find_func @ [[..:..:Std:Function#T|Std.Function.T]], data @ [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Gtk:Gtk:AccelKey#T|Gtk.Gtk.AccelKey.T]]''
 
 
 ==== New ====
-''New()''
+''New() : [[# T| T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 
 ==== FromAccelClosure ====
-''FromAccelClosure()''
+''FromAccelClosure(closure) : [[..:..:Gtk:Gtk:AccelGroup#T|Gtk.Gtk.AccelGroup.T]]''
 
 

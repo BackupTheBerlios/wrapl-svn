@@ -5,170 +5,170 @@
 
 
 ==== :SetResolution ====
-'':SetResolution( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+'':SetResolution(self @ [[#T|T]], dpi @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetFontOptions ====
-'':SetFontOptions( @ [[#T|T]],  @ [[..:..:Gtk:Cairo:CairoFontOptionsT#T|Gtk.Cairo.CairoFontOptionsT.T]])''
+'':SetFontOptions(self @ [[#T|T]], options @ [[..:..:Gtk:Cairo:CairoFontOptionsT#T|Gtk.Cairo.CairoFontOptionsT.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetDefaultColormap ====
-'':SetDefaultColormap( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Colormap#T|Gtk.Gdk.Colormap.T]])''
+'':SetDefaultColormap(self @ [[#T|T]], colormap @ [[..:..:Gtk:Gdk:Colormap#T|Gtk.Gdk.Colormap.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :MakeDisplayName ====
-'':MakeDisplayName( @ [[#T|T]])''
+'':MakeDisplayName(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== :ListVisuals ====
-'':ListVisuals( @ [[#T|T]])''
+'':ListVisuals(self @ [[#T|T]]) : [[..:..:Std:List#T|Std.List.T]]''
 
 
 ==== :IsComposited ====
-'':IsComposited( @ [[#T|T]])''
+'':IsComposited(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :Closed ====
-'':Closed( @ [[#T|T]])''
+'':Closed( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :FontOptions ====
-'':FontOptions( @ [[#T|T]])''
+'':FontOptions( @ [[#T|T]]) : [[..:..:Gtk:Cairo:CairoFontOptionsT#T|Gtk.Cairo.CairoFontOptionsT.T]]''
 
 
 ==== :Resolution ====
-'':Resolution( @ [[#T|T]])''
+'':Resolution( @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :NormalGcs ====
-'':NormalGcs( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':NormalGcs( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]]''
 
 
 ==== :ExposureGcs ====
-'':ExposureGcs( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':ExposureGcs( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]]''
 
 
 ==== :BroadcastClientMessage ====
-'':BroadcastClientMessage( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':BroadcastClientMessage(self @ [[#T|T]], event @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetActiveWindow ====
-'':GetActiveWindow( @ [[#T|T]])''
+'':GetActiveWindow(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]]''
 
 
 ==== :GetDefaultColormap ====
-'':GetDefaultColormap( @ [[#T|T]])''
+'':GetDefaultColormap(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Colormap#T|Gtk.Gdk.Colormap.T]]''
 
 
 ==== :GetDisplay ====
-'':GetDisplay( @ [[#T|T]])''
+'':GetDisplay(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Display#T|Gtk.Gdk.Display.T]]''
 
 
 ==== :GetFontOptions ====
-'':GetFontOptions( @ [[#T|T]])''
+'':GetFontOptions(self @ [[#T|T]]) : [[..:..:Gtk:Cairo:CairoFontOptionsT#T|Gtk.Cairo.CairoFontOptionsT.T]]''
 
 
 ==== :GetHeight ====
-'':GetHeight( @ [[#T|T]])''
+'':GetHeight(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :GetHeightMm ====
-'':GetHeightMm( @ [[#T|T]])''
+'':GetHeightMm(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :GetMonitorAtPoint ====
-'':GetMonitorAtPoint( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':GetMonitorAtPoint(self @ [[#T|T]], x @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :GetMonitorAtWindow ====
-'':GetMonitorAtWindow( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]])''
+'':GetMonitorAtWindow(self @ [[#T|T]], window @ [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :GetMonitorGeometry ====
-'':GetMonitorGeometry( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]])''
+'':GetMonitorGeometry(self @ [[#T|T]], monitor_num @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], dest @ [[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetNMonitors ====
-'':GetNMonitors( @ [[#T|T]])''
+'':GetNMonitors(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :GetNumber ====
-'':GetNumber( @ [[#T|T]])''
+'':GetNumber(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :GetResolution ====
-'':GetResolution( @ [[#T|T]])''
+'':GetResolution(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :GetRgbColormap ====
-'':GetRgbColormap( @ [[#T|T]])''
+'':GetRgbColormap(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Colormap#T|Gtk.Gdk.Colormap.T]]''
 
 
 ==== :GetRgbVisual ====
-'':GetRgbVisual( @ [[#T|T]])''
+'':GetRgbVisual(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Visual#T|Gtk.Gdk.Visual.T]]''
 
 
 ==== :GetRgbaColormap ====
-'':GetRgbaColormap( @ [[#T|T]])''
+'':GetRgbaColormap(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Colormap#T|Gtk.Gdk.Colormap.T]]''
 
 
 ==== :GetRgbaVisual ====
-'':GetRgbaVisual( @ [[#T|T]])''
+'':GetRgbaVisual(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Visual#T|Gtk.Gdk.Visual.T]]''
 
 
 ==== :GetRootWindow ====
-'':GetRootWindow( @ [[#T|T]])''
+'':GetRootWindow(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]]''
 
 
 ==== :GetSetting ====
-'':GetSetting( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Gtk:GObject:Value#T|Gtk.GObject.Value.T]])''
+'':GetSetting(self @ [[#T|T]], name @ [[..:..:Std:String#T|Std.String.T]], value @ [[..:..:Gtk:GObject:Value#T|Gtk.GObject.Value.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :GetSystemColormap ====
-'':GetSystemColormap( @ [[#T|T]])''
+'':GetSystemColormap(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Colormap#T|Gtk.Gdk.Colormap.T]]''
 
 
 ==== :GetSystemVisual ====
-'':GetSystemVisual( @ [[#T|T]])''
+'':GetSystemVisual(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Visual#T|Gtk.Gdk.Visual.T]]''
 
 
 ==== :GetToplevelWindows ====
-'':GetToplevelWindows( @ [[#T|T]])''
+'':GetToplevelWindows(self @ [[#T|T]]) : [[..:..:Std:List#T|Std.List.T]]''
 
 
 ==== :GetWidth ====
-'':GetWidth( @ [[#T|T]])''
+'':GetWidth(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :GetWidthMm ====
-'':GetWidthMm( @ [[#T|T]])''
+'':GetWidthMm(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :GetWindowStack ====
-'':GetWindowStack( @ [[#T|T]])''
+'':GetWindowStack(self @ [[#T|T]]) : [[..:..:Std:List#T|Std.List.T]]''
 
 
 ==== GetDefault ====
-''GetDefault()''
+''GetDefault() : [[..:..:Gtk:Gdk:Screen#T|Gtk.Gdk.Screen.T]]''
 
 
 ==== WidthMm ====
-''WidthMm()''
+''WidthMm() : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== Width ====
-''Width()''
+''Width() : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== HeightMm ====
-''HeightMm()''
+''HeightMm() : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== Height ====
-''Height()''
+''Height() : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 

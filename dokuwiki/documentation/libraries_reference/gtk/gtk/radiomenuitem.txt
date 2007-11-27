@@ -12,42 +12,42 @@
 
 
 ==== :SetGroup ====
-'':SetGroup( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':SetGroup(self @ [[#T|T]], group @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetGroup ====
-'':GetGroup( @ [[#T|T]])''
+'':GetGroup(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Group ====
-'':Group( @ [[#T|T]])''
+'':Group( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====
-''New()''
+''New(group : [[..:..:Std:Object#T|Std.Object.T]]) : [[# T| T]]''
 
 
 ==== NewWithMnemonic ====
-''NewWithMnemonic()''
+''NewWithMnemonic(group : [[..:..:Std:Object#T|Std.Object.T]], label : [[..:..:Std:String#T|Std.String.T]]) : [[# T| T]]''
 
 
 ==== NewWithMnemonicFromWidget ====
-''NewWithMnemonicFromWidget()''
+''NewWithMnemonicFromWidget(group : [[..:..:Gtk:Gtk:RadioMenuItem#T|Gtk.Gtk.RadioMenuItem.T]], label : [[..:..:Std:String#T|Std.String.T]]) : [[# T| T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 
 ==== NewWithLabelFromWidget ====
-''NewWithLabelFromWidget()''
+''NewWithLabelFromWidget(group : [[..:..:Gtk:Gtk:RadioMenuItem#T|Gtk.Gtk.RadioMenuItem.T]], label : [[..:..:Std:String#T|Std.String.T]]) : [[# T| T]]''
 
 
 ==== NewWithLabel ====
-''NewWithLabel()''
+''NewWithLabel(group : [[..:..:Std:Object#T|Std.Object.T]], label : [[..:..:Std:String#T|Std.String.T]]) : [[# T| T]]''
 
 
 ==== NewFromWidget ====
-''NewFromWidget()''
+''NewFromWidget(group : [[..:..:Gtk:Gtk:RadioMenuItem#T|Gtk.Gtk.RadioMenuItem.T]]) : [[# T| T]]''
 
 

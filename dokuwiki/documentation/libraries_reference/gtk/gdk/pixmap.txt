@@ -6,50 +6,50 @@
 
 
 ==== New ====
-''New()''
+''New(drawable : [[..:..:Gtk:Gdk:Drawable#T|Gtk.Gdk.Drawable.T]], width : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], height : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], depth : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[# T| T]]''
 
 
 ==== ColormapCreateFromXpm ====
-''ColormapCreateFromXpm()''
+''ColormapCreateFromXpm(drawable, colormap, mask, transparent_color, filename) : [[..:..:Gtk:Gdk:Pixmap#T|Gtk.Gdk.Pixmap.T]]''
 
 
 ==== ColormapCreateFromXpmD ====
-''ColormapCreateFromXpmD()''
+''ColormapCreateFromXpmD(drawable, colormap, mask, transparent_color, data) : [[..:..:Gtk:Gdk:Pixmap#T|Gtk.Gdk.Pixmap.T]]''
 
 
 ==== CreateFromData ====
-''CreateFromData()''
+''CreateFromData(drawable, data, width, height, depth, fg, bg) : [[..:..:Gtk:Gdk:Pixmap#T|Gtk.Gdk.Pixmap.T]]''
 
 
 ==== CreateFromXpm ====
-''CreateFromXpm()''
+''CreateFromXpm(drawable, mask, transparent_color, filename) : [[..:..:Gtk:Gdk:Pixmap#T|Gtk.Gdk.Pixmap.T]]''
 
 
 ==== CreateFromXpmD ====
-''CreateFromXpmD()''
+''CreateFromXpmD(drawable, mask, transparent_color, data) : [[..:..:Gtk:Gdk:Pixmap#T|Gtk.Gdk.Pixmap.T]]''
 
 
 ==== ForeignNew ====
-''ForeignNew()''
+''ForeignNew(anid) : [[..:..:Gtk:Gdk:Pixmap#T|Gtk.Gdk.Pixmap.T]]''
 
 
 ==== ForeignNewForDisplay ====
-''ForeignNewForDisplay()''
+''ForeignNewForDisplay(display, anid) : [[..:..:Gtk:Gdk:Pixmap#T|Gtk.Gdk.Pixmap.T]]''
 
 
 ==== ForeignNewForScreen ====
-''ForeignNewForScreen()''
+''ForeignNewForScreen(screen, anid, width, height, depth) : [[..:..:Gtk:Gdk:Pixmap#T|Gtk.Gdk.Pixmap.T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 
 ==== Lookup ====
-''Lookup()''
+''Lookup(anid) : [[..:..:Gtk:Gdk:Pixmap#T|Gtk.Gdk.Pixmap.T]]''
 
 
 ==== LookupForDisplay ====
-''LookupForDisplay()''
+''LookupForDisplay(display, anid) : [[..:..:Gtk:Gdk:Pixmap#T|Gtk.Gdk.Pixmap.T]]''
 
 

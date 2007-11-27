@@ -7,162 +7,162 @@
 
 
 ==== :UnsetFocusChain ====
-'':UnsetFocusChain( @ [[#T|T]])''
+'':UnsetFocusChain(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetResizeMode ====
-'':SetResizeMode( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:ResizeMode#T|Gtk.Gtk.ResizeMode.T]])''
+'':SetResizeMode(self @ [[#T|T]], resize_mode @ [[..:..:Gtk:Gtk:ResizeMode#T|Gtk.Gtk.ResizeMode.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetReallocateRedraws ====
-'':SetReallocateRedraws( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+'':SetReallocateRedraws(self @ [[#T|T]], needs_redraws @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetFocusVadjustment ====
-'':SetFocusVadjustment( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]])''
+'':SetFocusVadjustment(self @ [[#T|T]], adjustment @ [[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :FocusChild ====
-'':FocusChild( @ [[#T|T]])''
+'':FocusChild( @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
 
 ==== :BorderWidth ====
-'':BorderWidth( @ [[#T|T]])''
+'':BorderWidth( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :NeedResize ====
-'':NeedResize( @ [[#T|T]])''
+'':NeedResize( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :ResizeMode ====
-'':ResizeMode( @ [[#T|T]])''
+'':ResizeMode( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :ReallocateRedraws ====
-'':ReallocateRedraws( @ [[#T|T]])''
+'':ReallocateRedraws( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :HasFocusChain ====
-'':HasFocusChain( @ [[#T|T]])''
+'':HasFocusChain( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Add ====
-'':Add( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]])''
+'':Add(self @ [[#T|T]], widget @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :AddWithProperties ====
-'':AddWithProperties( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':AddWithProperties(self @ [[#T|T]], widget @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], first_prop_name @ [[..:..:Std:String#T|Std.String.T]], ___ @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :CheckResize ====
-'':CheckResize( @ [[#T|T]])''
+'':CheckResize(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :ChildGet ====
-'':ChildGet( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':ChildGet(self @ [[#T|T]], child @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], first_prop_name @ [[..:..:Std:String#T|Std.String.T]], ___ @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :ChildGetProperty ====
-'':ChildGetProperty( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Gtk:GObject:Value#T|Gtk.GObject.Value.T]])''
+'':ChildGetProperty(self @ [[#T|T]], child @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], property_name @ [[..:..:Std:String#T|Std.String.T]], value @ [[..:..:Gtk:GObject:Value#T|Gtk.GObject.Value.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :ChildGetValist ====
-'':ChildGetValist( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':ChildGetValist(self @ [[#T|T]], child @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], first_property_name @ [[..:..:Std:String#T|Std.String.T]], var_args @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :ChildSet ====
-'':ChildSet( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':ChildSet(self @ [[#T|T]], child @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], first_prop_name @ [[..:..:Std:String#T|Std.String.T]], ___ @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :ChildSetProperty ====
-'':ChildSetProperty( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Gtk:GObject:Value#T|Gtk.GObject.Value.T]])''
+'':ChildSetProperty(self @ [[#T|T]], child @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], property_name @ [[..:..:Std:String#T|Std.String.T]], value @ [[..:..:Gtk:GObject:Value#T|Gtk.GObject.Value.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :ChildSetValist ====
-'':ChildSetValist( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':ChildSetValist(self @ [[#T|T]], child @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], first_property_name @ [[..:..:Std:String#T|Std.String.T]], var_args @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :ChildType ====
-'':ChildType( @ [[#T|T]])''
+'':ChildType(self @ [[#T|T]]) : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 
 ==== :Forall ====
-'':Forall( @ [[#T|T]],  @ [[..:..:Std:Function#T|Std.Function.T]],  @ [[..:..:Std:Address#T|Std.Address.T]])''
+'':Forall(self @ [[#T|T]], callback @ [[..:..:Std:Function#T|Std.Function.T]], callback_data @ [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Foreach ====
-'':Foreach( @ [[#T|T]],  @ [[..:..:Std:Function#T|Std.Function.T]],  @ [[..:..:Std:Address#T|Std.Address.T]])''
+'':Foreach(self @ [[#T|T]], callback @ [[..:..:Std:Function#T|Std.Function.T]], callback_data @ [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :ForeachFull ====
-'':ForeachFull( @ [[#T|T]],  @ [[..:..:Std:Function#T|Std.Function.T]],  @ [[..:..:Std:Function#T|Std.Function.T]],  @ [[..:..:Std:Address#T|Std.Address.T]],  @ [[..:..:Std:Function#T|Std.Function.T]])''
+'':ForeachFull(self @ [[#T|T]], callback @ [[..:..:Std:Function#T|Std.Function.T]], marshal @ [[..:..:Std:Function#T|Std.Function.T]], callback_data @ [[..:..:Std:Address#T|Std.Address.T]], notify @ [[..:..:Std:Function#T|Std.Function.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetBorderWidth ====
-'':GetBorderWidth( @ [[#T|T]])''
+'':GetBorderWidth(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :GetChildren ====
-'':GetChildren( @ [[#T|T]])''
+'':GetChildren(self @ [[#T|T]]) : [[..:..:Std:List#T|Std.List.T]]''
 
 
 ==== :GetFocusChain ====
-'':GetFocusChain( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':GetFocusChain(self @ [[#T|T]], focusable_widgets @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :GetFocusHadjustment ====
-'':GetFocusHadjustment( @ [[#T|T]])''
+'':GetFocusHadjustment(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]]''
 
 
 ==== :GetFocusVadjustment ====
-'':GetFocusVadjustment( @ [[#T|T]])''
+'':GetFocusVadjustment(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]]''
 
 
 ==== :GetResizeMode ====
-'':GetResizeMode( @ [[#T|T]])''
+'':GetResizeMode(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:ResizeMode#T|Gtk.Gtk.ResizeMode.T]]''
 
 
 ==== :PropagateExpose ====
-'':PropagateExpose( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]],  @ [[..:..:Gtk:Gdk:EventExpose#T|Gtk.Gdk.EventExpose.T]])''
+'':PropagateExpose(self @ [[#T|T]], child @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], event @ [[..:..:Gtk:Gdk:EventExpose#T|Gtk.Gdk.EventExpose.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Remove ====
-'':Remove( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]])''
+'':Remove(self @ [[#T|T]], widget @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :ResizeChildren ====
-'':ResizeChildren( @ [[#T|T]])''
+'':ResizeChildren(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetBorderWidth ====
-'':SetBorderWidth( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':SetBorderWidth(self @ [[#T|T]], border_width @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetFocusChain ====
-'':SetFocusChain( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':SetFocusChain(self @ [[#T|T]], focusable_widgets @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetFocusChild ====
-'':SetFocusChild( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]])''
+'':SetFocusChild(self @ [[#T|T]], child @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetFocusHadjustment ====
-'':SetFocusHadjustment( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]])''
+'':SetFocusHadjustment(self @ [[#T|T]], adjustment @ [[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== ClassFindChildProperty ====
-''ClassFindChildProperty()''
+''ClassFindChildProperty(cclass, property_name) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 
 ==== ClassListChildProperties ====
-''ClassListChildProperties()''
+''ClassListChildProperties(cclass, n_properties) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== ClassInstallChildProperty ====
-''ClassInstallChildProperty()''
+''ClassInstallChildProperty(cclass, property_id, pspec) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 

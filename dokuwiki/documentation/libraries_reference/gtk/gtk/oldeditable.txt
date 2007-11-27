@@ -7,42 +7,42 @@
 
 
 ==== :ClaimSelection ====
-'':ClaimSelection( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':ClaimSelection(self @ [[#T|T]], claim @ [[..:..:Std:Symbol#T|Std.Symbol.T]], time_ @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :CurrentPos ====
-'':CurrentPos( @ [[#T|T]])''
+'':CurrentPos( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :SelectionStartPos ====
-'':SelectionStartPos( @ [[#T|T]])''
+'':SelectionStartPos( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :SelectionEndPos ====
-'':SelectionEndPos( @ [[#T|T]])''
+'':SelectionEndPos( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :HasSelection ====
-'':HasSelection( @ [[#T|T]])''
+'':HasSelection( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Editable ====
-'':Editable( @ [[#T|T]])''
+'':Editable( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Visible ====
-'':Visible( @ [[#T|T]])''
+'':Visible( @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :ClipboardText ====
-'':ClipboardText( @ [[#T|T]])''
+'':ClipboardText( @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== :Changed ====
-'':Changed( @ [[#T|T]])''
+'':Changed(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 

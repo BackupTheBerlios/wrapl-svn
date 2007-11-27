@@ -5,30 +5,30 @@
 
 
 ==== :Remove ====
-'':Remove( @ [[#T|T]],  @ [[..:..:Gtk:CCC:CcHeapNode#T|Gtk.CCC.CcHeapNode.T]])''
+'':Remove(self @ [[#T|T]], node @ [[..:..:Gtk:CCC:CcHeapNode#T|Gtk.CCC.CcHeapNode.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Push ====
-'':Push( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Address#T|Std.Address.T]])''
+'':Push(self @ [[#T|T]], priority @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], data @ [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Gtk:CCC:CcHeapNode#T|Gtk.CCC.CcHeapNode.T]]''
 
 
 ==== :Private ====
-'':Private( @ [[#T|T]])''
+'':Private( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetSize ====
-'':GetSize( @ [[#T|T]])''
+'':GetSize(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Pop ====
-'':Pop( @ [[#T|T]])''
+'':Pop(self @ [[#T|T]]) : [[..:..:Std:Address#T|Std.Address.T]]''
 
 
 ==== New ====
-''New()''
+''New() : [[# T| T]]''
 
 
 ==== GetType ====
-''GetType()''
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 
