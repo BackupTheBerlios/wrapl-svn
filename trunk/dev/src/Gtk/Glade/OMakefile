@@ -9,10 +9,7 @@ if $(file-exists $(GTK_AUTOGEN))
 		clean:
 			$(rm $(FILE).c)
 			$(rm $(FILE).rdef)
-		RivaProgram($(BASENAME)$(FILE), $(FILE))
-		GtkGlade: $(BASENAME)$(FILE).riva
+		GtkGlade: $(RivaModule Gtk/Glade/$(FILE), $(FILE))
 		export
 
-RivaProgram($(BASENAME)Loader, Loader)
-
-GtkGlade: $(BASENAME)Loader.riva
+GtkGlade: $(RivaModule Gtk/Glade/Loader, Loader)

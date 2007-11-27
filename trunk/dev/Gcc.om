@@ -488,17 +488,17 @@ public.RivaModule(module, files) =
     private.NAME = $(LIB_DIR)$(module).riva
     private.RDEF = $(file $(basename $(module)).rdef)
     private.LIST = $(file $(basename $(module)).lst)
-    private.HTML = $(DOC_DIR)$(module).html
+    private.TXT = $(DOC_DIR)$(lowercase $(module).txt)
     private.SOURCEDIR = $(dirname $(RDEF))$(DIRSEP)
     private.SOURCES =
         foreach(name, $(files))
             value $(SOURCEDIR)$(name)$(if $(file-exists $(SOURCEDIR)$(name).c), .c, .asm)
     
-    $(NAME): $(OFILES) $(RLINK) $(RDEF) $(HTML)
+    $(NAME): $(OFILES) $(RLINK) $(RDEF) $(TXT)
         $(RLINK) -o$@ $(OFILES) $(LDFLAGS) $(RDEF) -?$(LIST)
     
-    $(HTML): $(OFILES)
-        $(GENDOC) -I$(DEV_INC)$(DIRSEP) -o$(HTML) $(module) $(SOURCES)
+    $(TXT): $(OFILES) $(GENDOC)
+        $(GENDOC) -I$(DEV_INC)$(DIRSEP) -o$@ $(module) $(SOURCES)
 
     return $(NAME)
 

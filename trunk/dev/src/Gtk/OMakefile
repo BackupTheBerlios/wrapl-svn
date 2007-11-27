@@ -33,7 +33,7 @@ clean:
 
 .SUBDIRS: GObject Gtk Gdk Pango Glade
 
-if $(equal $(OSTYPE), Linux)
+if $(equal $(OSTYPE), Unix)
 	.SUBDIRS: Gnome GnomeCanvas Art Cairo CCC GooCanvas
 
 Gtk: GtkGObject $(GTK_AUTOGEN) GtkGtk GtkGdk GtkPango GtkGlade $(GTK_LIB_DIR)TypeMap.riva

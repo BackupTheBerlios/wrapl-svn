@@ -3,12 +3,9 @@ BASENAME = $(LIB_DIR)Math$(DIRSEP)
 CFLAGS += -std=gnu99
 LDFLAGS += Std.rlib Riva.rlib
 
-RivaProgram($(BASENAME)Matrix, Matrix)
-RivaProgram($(BASENAME)Methods, Methods)
-
 Math:\
-	$(BASENAME)Matrix.riva\
-	$(BASENAME)Methods.riva
+    $(RivaModule Math/Matrix, Matrix)\
+    $(RivaModule Math/Methods, Methods)
 
 .SUBDIRS:\
 	Polynomial

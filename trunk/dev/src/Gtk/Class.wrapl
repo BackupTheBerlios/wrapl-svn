@@ -129,6 +129,8 @@ TO :process(t@T, srcdir, incdir, libdir) (
 		cfile:writes("TYPE(T);\n\n");
 		VAR Convert(type, field) (
 			cfile:writes("METHOD(\"", type[6, 0], "\", TYP, T) {\n");
+                        cfile:writes("//@self\n");
+                        cfile:writes("//:Gtk$Gdk$", type, "$T\n");
 			cfile:writes("\tGtk$", t:ns, "$", t:name, "_t *self = Args[0].Val;\n");
 			cfile:writes("\tGtk$Gdk$", type, "_t *result = new(Gtk$Gdk$", type, "_t);\n");
 			cfile:writes("\tresult->Type = Gtk$Gdk$", type, "$T;\n");
@@ -246,6 +248,10 @@ EOF);
 		types <- params:map(<p> Type.Lookup(p:type));
 		names <- params:map(:name);
 		cfile:writes("GLOBAL_FUNCTION(", ctor:name, ", ", n, ") {\n");
+                EVERY i <- 1:to(n) DO (
+                    cfile:writes("//@", names[i], " : ", types[i]:rtype, "\n");
+                );
+                cfile:writes("//: T\n");
 		EVERY i <- 1:to(n) DO (
 			EVERY cfile:writes("\t", types[i]:precall(names[i], "Args[" + (i - 1)@String.T + "]"):values, "\n");
 		);
@@ -264,10 +270,14 @@ EOF);
 		types <- params:map(<p> Type.Lookup(p:type));
 		names <- params:map(:name);
 		cfile:writes("GLOBAL_FUNCTION(", method:name, ", ", n, ") {\n");
+                EVERY i <- 1:to(n) DO (
+                    cfile:writes("//@", names[i], "\n");
+                );
+                returntype <- Type.Lookup(method:type);
+                cfile:writes("//:", returntype:rtype, "\n");
 		EVERY i <- 1:to(n) DO (
 			EVERY cfile:writes("\t", types[i]:precall(names[i], "Args[" + (i - 1)@String.T + "]"):values, "\n");
 		);
-		returntype <- Type.Lookup(method:type);
 		cfile:write("\t");
 		returntype:ctype ~= "void" => cfile:writes(returntype:ctype, " result = ");
 		cfile:writes(method:cname, "(");
@@ -287,11 +297,15 @@ EOF);
 		cfile:writes("METHOD(\"", method:name, "\", TYP, T");
 		EVERY cfile:writes(", ", types[2:to(n)]:sigtype);
 		cfile:write(") {\n");
+                EVERY i <- 1:to(n) DO (
+                    cfile:writes("//@", names[i], "\n");
+                );
+                returntype <- Type.Lookup(method:type);
+                cfile:writes("//:", returntype:rtype, "\n");
 		EVERY i <- 1:to(n) DO (
 			EVERY cfile:writes("\t", types[i]:precall(names[i], "Args[" + (i - 1)@String.T + "]"):values, "\n");
 		);
 		cfile:write("\t");
-		returntype <- Type.Lookup(method:type);
 		returntype:ctype ~= "void" => cfile:writes(returntype:ctype, " result = ");
 		cfile:writes(method:cname, "(self");
 		EVERY i <- 2:to(n) DO cfile:writes(", ", names[i]);
