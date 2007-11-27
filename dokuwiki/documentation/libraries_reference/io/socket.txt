@@ -1,11 +1,46 @@
 ====== IO.Socket ======
-==== T <: [[..:IO:Posix#TextReaderT|IO.Posix.TextReaderT]], [[..:IO:Posix#TextWriterT|IO.Posix.TextWriterT]], [[..:IO:Posix#ReaderT|IO.Posix.ReaderT]], [[..:IO:Posix#WriterT|IO.Posix.WriterT]], [[..:IO:Posix#SeekerT|IO.Posix.SeekerT]], [[..:IO:Posix#T|IO.Posix.T]], [[..:IO:Stream#TextReaderT|IO.Stream.TextReaderT]], [[..:IO:Stream#TextWriterT|IO.Stream.TextWriterT]], [[..:IO:Stream#WriterT|IO.Stream.WriterT]], [[..:IO:Stream#SeekerT|IO.Stream.SeekerT]], [[..:IO:Stream#T|IO.Stream.T]] ====
+==== T ====
+  * [[..:IO:Posix#TextReaderT|IO.Posix.TextReaderT]]
+  * [[..:IO:Posix#TextWriterT|IO.Posix.TextWriterT]]
+  * [[..:IO:Posix#ReaderT|IO.Posix.ReaderT]]
+  * [[..:IO:Posix#WriterT|IO.Posix.WriterT]]
+  * [[..:IO:Posix#SeekerT|IO.Posix.SeekerT]]
+  * [[..:IO:Posix#T|IO.Posix.T]]
+  * [[..:IO:Stream#TextReaderT|IO.Stream.TextReaderT]]
+  * [[..:IO:Stream#TextWriterT|IO.Stream.TextWriterT]]
+  * [[..:IO:Stream#WriterT|IO.Stream.WriterT]]
+  * [[..:IO:Stream#SeekerT|IO.Stream.SeekerT]]
+  * [[..:IO:Stream#T|IO.Stream.T]]
 
 
-==== LocalT <: [[#T|T]], [[..:IO:Posix#TextReaderT|IO.Posix.TextReaderT]], [[..:IO:Posix#TextWriterT|IO.Posix.TextWriterT]], [[..:IO:Posix#ReaderT|IO.Posix.ReaderT]], [[..:IO:Posix#WriterT|IO.Posix.WriterT]], [[..:IO:Posix#SeekerT|IO.Posix.SeekerT]], [[..:IO:Posix#T|IO.Posix.T]], [[..:IO:Stream#TextReaderT|IO.Stream.TextReaderT]], [[..:IO:Stream#TextWriterT|IO.Stream.TextWriterT]], [[..:IO:Stream#WriterT|IO.Stream.WriterT]], [[..:IO:Stream#SeekerT|IO.Stream.SeekerT]], [[..:IO:Stream#T|IO.Stream.T]] ====
+==== LocalT ====
+  * [[#T|T]]
+  * [[..:IO:Posix#TextReaderT|IO.Posix.TextReaderT]]
+  * [[..:IO:Posix#TextWriterT|IO.Posix.TextWriterT]]
+  * [[..:IO:Posix#ReaderT|IO.Posix.ReaderT]]
+  * [[..:IO:Posix#WriterT|IO.Posix.WriterT]]
+  * [[..:IO:Posix#SeekerT|IO.Posix.SeekerT]]
+  * [[..:IO:Posix#T|IO.Posix.T]]
+  * [[..:IO:Stream#TextReaderT|IO.Stream.TextReaderT]]
+  * [[..:IO:Stream#TextWriterT|IO.Stream.TextWriterT]]
+  * [[..:IO:Stream#WriterT|IO.Stream.WriterT]]
+  * [[..:IO:Stream#SeekerT|IO.Stream.SeekerT]]
+  * [[..:IO:Stream#T|IO.Stream.T]]
 
 
-==== InetT <: [[#T|T]], [[..:IO:Posix#TextReaderT|IO.Posix.TextReaderT]], [[..:IO:Posix#TextWriterT|IO.Posix.TextWriterT]], [[..:IO:Posix#ReaderT|IO.Posix.ReaderT]], [[..:IO:Posix#WriterT|IO.Posix.WriterT]], [[..:IO:Posix#SeekerT|IO.Posix.SeekerT]], [[..:IO:Posix#T|IO.Posix.T]], [[..:IO:Stream#TextReaderT|IO.Stream.TextReaderT]], [[..:IO:Stream#TextWriterT|IO.Stream.TextWriterT]], [[..:IO:Stream#WriterT|IO.Stream.WriterT]], [[..:IO:Stream#SeekerT|IO.Stream.SeekerT]], [[..:IO:Stream#T|IO.Stream.T]] ====
+==== InetT ====
+  * [[#T|T]]
+  * [[..:IO:Posix#TextReaderT|IO.Posix.TextReaderT]]
+  * [[..:IO:Posix#TextWriterT|IO.Posix.TextWriterT]]
+  * [[..:IO:Posix#ReaderT|IO.Posix.ReaderT]]
+  * [[..:IO:Posix#WriterT|IO.Posix.WriterT]]
+  * [[..:IO:Posix#SeekerT|IO.Posix.SeekerT]]
+  * [[..:IO:Posix#T|IO.Posix.T]]
+  * [[..:IO:Stream#TextReaderT|IO.Stream.TextReaderT]]
+  * [[..:IO:Stream#TextWriterT|IO.Stream.TextWriterT]]
+  * [[..:IO:Stream#WriterT|IO.Stream.WriterT]]
+  * [[..:IO:Stream#SeekerT|IO.Stream.SeekerT]]
+  * [[..:IO:Stream#T|IO.Stream.T]]
 
 
 ==== New() ====

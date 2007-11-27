@@ -1,20 +1,40 @@
 ====== IO.Posix ======
-==== T <: [[..:IO:Stream#T|IO.Stream.T]] ====
+==== T ====
+  * [[..:IO:Stream#T|IO.Stream.T]]
 
 
-==== ReaderT <: [[#T|T]], [[..:IO:Stream#ReaderT|IO.Stream.ReaderT]], [[..:IO:Stream#T|IO.Stream.T]] ====
+==== ReaderT ====
+  * [[#T|T]]
+  * [[..:IO:Stream#ReaderT|IO.Stream.ReaderT]]
+  * [[..:IO:Stream#T|IO.Stream.T]]
 
 
-==== WriterT <: [[#T|T]], [[..:IO:Stream#WriterT|IO.Stream.WriterT]], [[..:IO:Stream#T|IO.Stream.T]] ====
+==== WriterT ====
+  * [[#T|T]]
+  * [[..:IO:Stream#WriterT|IO.Stream.WriterT]]
+  * [[..:IO:Stream#T|IO.Stream.T]]
 
 
-==== SeekerT <: [[#T|T]], [[..:IO:Stream#SeekerT|IO.Stream.SeekerT]], [[..:IO:Stream#T|IO.Stream.T]] ====
+==== SeekerT ====
+  * [[#T|T]]
+  * [[..:IO:Stream#SeekerT|IO.Stream.SeekerT]]
+  * [[..:IO:Stream#T|IO.Stream.T]]
 
 
-==== TextReaderT <: [[#T|T]], [[#ReaderT|ReaderT]], [[..:IO:Stream#TextReaderT|IO.Stream.TextReaderT]], [[..:IO:Stream#ReaderT|IO.Stream.ReaderT]], [[..:IO:Stream#T|IO.Stream.T]] ====
+==== TextReaderT ====
+  * [[#T|T]]
+  * [[#ReaderT|ReaderT]]
+  * [[..:IO:Stream#TextReaderT|IO.Stream.TextReaderT]]
+  * [[..:IO:Stream#ReaderT|IO.Stream.ReaderT]]
+  * [[..:IO:Stream#T|IO.Stream.T]]
 
 
-==== TextWriterT <: [[#T|T]], [[#WriterT|WriterT]], [[..:IO:Stream#TextWriterT|IO.Stream.TextWriterT]], [[..:IO:Stream#WriterT|IO.Stream.WriterT]], [[..:IO:Stream#T|IO.Stream.T]] ====
+==== TextWriterT ====
+  * [[#T|T]]
+  * [[#WriterT|WriterT]]
+  * [[..:IO:Stream#TextWriterT|IO.Stream.TextWriterT]]
+  * [[..:IO:Stream#WriterT|IO.Stream.WriterT]]
+  * [[..:IO:Stream#T|IO.Stream.T]]
 
 
 ==== :flush( @ [[#T|T]]) ====

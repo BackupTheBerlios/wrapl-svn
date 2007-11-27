@@ -1,10 +1,26 @@
 ====== IO.Terminal ======
-==== T <: [[..:IO:Posix#T|IO.Posix.T]], [[..:IO:Stream#T|IO.Stream.T]] ====
+==== T ====
+  * [[..:IO:Posix#T|IO.Posix.T]]
+  * [[..:IO:Stream#T|IO.Stream.T]]
 
 
-==== ReaderT <: [[#T|T]], [[..:IO:Posix#TextReaderT|IO.Posix.TextReaderT]], [[..:IO:Posix#ReaderT|IO.Posix.ReaderT]], [[..:IO:Posix#T|IO.Posix.T]], [[..:IO:Stream#TextReaderT|IO.Stream.TextReaderT]], [[..:IO:Stream#ReaderT|IO.Stream.ReaderT]], [[..:IO:Stream#T|IO.Stream.T]] ====
+==== ReaderT ====
+  * [[#T|T]]
+  * [[..:IO:Posix#TextReaderT|IO.Posix.TextReaderT]]
+  * [[..:IO:Posix#ReaderT|IO.Posix.ReaderT]]
+  * [[..:IO:Posix#T|IO.Posix.T]]
+  * [[..:IO:Stream#TextReaderT|IO.Stream.TextReaderT]]
+  * [[..:IO:Stream#ReaderT|IO.Stream.ReaderT]]
+  * [[..:IO:Stream#T|IO.Stream.T]]
 
 
-==== WriterT <: [[#T|T]], [[..:IO:Posix#TextWriterT|IO.Posix.TextWriterT]], [[..:IO:Posix#WriterT|IO.Posix.WriterT]], [[..:IO:Posix#T|IO.Posix.T]], [[..:IO:Stream#TextWriterT|IO.Stream.TextWriterT]], [[..:IO:Stream#WriterT|IO.Stream.WriterT]], [[..:IO:Stream#T|IO.Stream.T]] ====
+==== WriterT ====
+  * [[#T|T]]
+  * [[..:IO:Posix#TextWriterT|IO.Posix.TextWriterT]]
+  * [[..:IO:Posix#WriterT|IO.Posix.WriterT]]
+  * [[..:IO:Posix#T|IO.Posix.T]]
+  * [[..:IO:Stream#TextWriterT|IO.Stream.TextWriterT]]
+  * [[..:IO:Stream#WriterT|IO.Stream.WriterT]]
+  * [[..:IO:Stream#T|IO.Stream.T]]
 
 

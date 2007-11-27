@@ -1,5 +1,9 @@
 ====== IO.Buffer ======
-==== T <: [[..:IO:Stream#ReaderT|IO.Stream.ReaderT]], [[..:IO:Stream#WriterT|IO.Stream.WriterT]], [[..:IO:Stream#SeekerT|IO.Stream.SeekerT]], [[..:IO:Stream#T|IO.Stream.T]] ====
+==== T ====
+  * [[..:IO:Stream#ReaderT|IO.Stream.ReaderT]]
+  * [[..:IO:Stream#WriterT|IO.Stream.WriterT]]
+  * [[..:IO:Stream#SeekerT|IO.Stream.SeekerT]]
+  * [[..:IO:Stream#T|IO.Stream.T]]
 
 
 ==== :tell( @ [[#T|T]]) ====

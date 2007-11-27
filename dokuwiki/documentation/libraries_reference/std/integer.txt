@@ -3,11 +3,13 @@
 
 base type of all integer types
 
-==== SmallT <: [[#T|T]] ====
+==== SmallT ====
+  * [[#T|T]]
 
 integers that fit into a signed machine word.
 
-==== BigT <: [[#T|T]] ====
+==== BigT ====
+  * [[#T|T]]
 
 arbritrary precision integers.<br/>
 note: instances of type <em>BigT</em> should never contain values which can fit into a signed machine word.
