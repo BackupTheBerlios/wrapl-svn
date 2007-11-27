@@ -1,0 +1,44 @@
+====== RichText ======
+==== T ====
+=== inherits from ===
+  * [[..:..:Gtk:GnomeCanvas:Item#T|Gtk.GnomeCanvas.Item.T]]
+  * [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]
+  * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
+
+
+==== :SetBuffer ====
+'':SetBuffer( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TextBuffer#T|Gtk.Gtk.TextBuffer.T]])''
+
+
+==== :Priv ====
+'':Priv( @ [[#T|T]])''
+
+
+==== :CopyClipboard ====
+'':CopyClipboard( @ [[#T|T]])''
+
+
+==== :CutClipboard ====
+'':CutClipboard( @ [[#T|T]])''
+
+
+==== :GetBuffer ====
+'':GetBuffer( @ [[#T|T]])''
+
+
+==== :GetIterAtLocation ====
+'':GetIterAtLocation( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :GetIterLocation ====
+'':GetIterLocation( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]],  @ [[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]])''
+
+
+==== :PasteClipboard ====
+'':PasteClipboard( @ [[#T|T]])''
+
+
+==== GetType ====
+''GetType()''
+
+

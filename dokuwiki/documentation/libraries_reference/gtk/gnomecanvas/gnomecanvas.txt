@@ -1,0 +1,282 @@
+====== GnomeCanvas ======
+==== T ====
+=== inherits from ===
+  * [[..:..:Gtk:Gtk:Layout#T|Gtk.Gtk.Layout.T]]
+  * [[..:..:Gtk:Gtk:Container#T|Gtk.Gtk.Container.T]]
+  * [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]
+  * [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]
+  * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
+
+
+==== :WorldToWindow ====
+'':WorldToWindow( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :WindowToWorld ====
+'':WindowToWorld( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :W2cD ====
+'':W2cD( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :W2cAffine ====
+'':W2cAffine( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :W2c ====
+'':W2c( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :UpdateSvpClip ====
+'':UpdateSvpClip( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Gtk:Art:SVP#T|Gtk.Art.SVP.T]],  @ [[..:..:Gtk:Art:SVP#T|Gtk.Art.SVP.T]])''
+
+
+==== :UpdateSvp ====
+'':UpdateSvp( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Gtk:Art:SVP#T|Gtk.Art.SVP.T]])''
+
+
+==== :UpdateNow ====
+'':UpdateNow( @ [[#T|T]])''
+
+
+==== :SetStippleOrigin ====
+'':SetStippleOrigin( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]])''
+
+
+==== :Root ====
+'':Root( @ [[#T|T]])''
+
+
+==== :RedrawArea ====
+'':RedrawArea( @ [[#T|T]])''
+
+
+==== :CurrentItem ====
+'':CurrentItem( @ [[#T|T]])''
+
+
+==== :NewCurrentItem ====
+'':NewCurrentItem( @ [[#T|T]])''
+
+
+==== :GrabbedItem ====
+'':GrabbedItem( @ [[#T|T]])''
+
+
+==== :FocusedItem ====
+'':FocusedItem( @ [[#T|T]])''
+
+
+==== :PixmapGc ====
+'':PixmapGc( @ [[#T|T]])''
+
+
+==== :PickEvent ====
+'':PickEvent( @ [[#T|T]])''
+
+
+==== :ScrollX1 ====
+'':ScrollX1( @ [[#T|T]])''
+
+
+==== :ScrollY1 ====
+'':ScrollY1( @ [[#T|T]])''
+
+
+==== :ScrollX2 ====
+'':ScrollX2( @ [[#T|T]])''
+
+
+==== :ScrollY2 ====
+'':ScrollY2( @ [[#T|T]])''
+
+
+==== :PixelsPerUnit ====
+'':PixelsPerUnit( @ [[#T|T]])''
+
+
+==== :IdleId ====
+'':IdleId( @ [[#T|T]])''
+
+
+==== :RootDestroyId ====
+'':RootDestroyId( @ [[#T|T]])''
+
+
+==== :RedrawX1 ====
+'':RedrawX1( @ [[#T|T]])''
+
+
+==== :RedrawY1 ====
+'':RedrawY1( @ [[#T|T]])''
+
+
+==== :RedrawX2 ====
+'':RedrawX2( @ [[#T|T]])''
+
+
+==== :RedrawY2 ====
+'':RedrawY2( @ [[#T|T]])''
+
+
+==== :DrawXofs ====
+'':DrawXofs( @ [[#T|T]])''
+
+
+==== :DrawYofs ====
+'':DrawYofs( @ [[#T|T]])''
+
+
+==== :ZoomXofs ====
+'':ZoomXofs( @ [[#T|T]])''
+
+
+==== :ZoomYofs ====
+'':ZoomYofs( @ [[#T|T]])''
+
+
+==== :State ====
+'':State( @ [[#T|T]])''
+
+
+==== :GrabbedEventMask ====
+'':GrabbedEventMask( @ [[#T|T]])''
+
+
+==== :CloseEnough ====
+'':CloseEnough( @ [[#T|T]])''
+
+
+==== :CenterScrollRegion ====
+'':CenterScrollRegion( @ [[#T|T]])''
+
+
+==== :NeedUpdate ====
+'':NeedUpdate( @ [[#T|T]])''
+
+
+==== :NeedRedraw ====
+'':NeedRedraw( @ [[#T|T]])''
+
+
+==== :NeedRepick ====
+'':NeedRepick( @ [[#T|T]])''
+
+
+==== :LeftGrabbedItem ====
+'':LeftGrabbedItem( @ [[#T|T]])''
+
+
+==== :InRepick ====
+'':InRepick( @ [[#T|T]])''
+
+
+==== :Aa ====
+'':Aa( @ [[#T|T]])''
+
+
+==== :Dither ====
+'':Dither( @ [[#T|T]])''
+
+
+==== :C2w ====
+'':C2w( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :GetCenterScrollRegion ====
+'':GetCenterScrollRegion( @ [[#T|T]])''
+
+
+==== :GetColor ====
+'':GetColor( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]])''
+
+
+==== :GetColorPixel ====
+'':GetColorPixel( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :GetDither ====
+'':GetDither( @ [[#T|T]])''
+
+
+==== :GetItemAt ====
+'':GetItemAt( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+
+
+==== :GetScrollOffsets ====
+'':GetScrollOffsets( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :GetScrollRegion ====
+'':GetScrollRegion( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :RequestRedraw ====
+'':RequestRedraw( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :RequestRedrawUta ====
+'':RequestRedrawUta( @ [[#T|T]],  @ [[..:..:Gtk:Art:Uta#T|Gtk.Art.Uta.T]])''
+
+
+==== :Root ====
+'':Root( @ [[#T|T]])''
+
+
+==== :ScrollTo ====
+'':ScrollTo( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :SetCenterScrollRegion ====
+'':SetCenterScrollRegion( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+
+
+==== :SetDither ====
+'':SetDither( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:RgbDither#T|Gtk.Gdk.RgbDither.T]])''
+
+
+==== :SetPixelsPerUnit ====
+'':SetPixelsPerUnit( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+
+
+==== :SetScrollRegion ====
+'':SetScrollRegion( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+
+
+==== New ====
+''New()''
+
+
+==== UpdateBbox ====
+''UpdateBbox()''
+
+
+==== RenderSvp ====
+''RenderSvp()''
+
+
+==== JoinGdkToArt ====
+''JoinGdkToArt()''
+
+
+==== GetType ====
+''GetType()''
+
+
+==== GetMiterPoints ====
+''GetMiterPoints()''
+
+
+==== GetButtPoints ====
+''GetButtPoints()''
+
+
+==== CapGdkToArt ====
+''CapGdkToArt()''
+
+
+==== NewAa ====
+''NewAa()''
+
+

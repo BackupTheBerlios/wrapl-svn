@@ -1,0 +1,132 @@
+====== ItemModel ======
+==== T ====
+
+
+==== :Translate ====
+'':Translate( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+
+
+==== :StopAnimation ====
+'':StopAnimation( @ [[#T|T]])''
+
+
+==== :SkewY ====
+'':SkewY( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+
+
+==== :SkewX ====
+'':SkewX( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+
+
+==== :AddChild ====
+'':AddChild( @ [[#T|T]],  @ [[..:..:Gtk:GooCanvas:ItemModel#T|Gtk.GooCanvas.ItemModel.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :Animate ====
+'':Animate( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Gtk:GooCanvas:AnimateType#T|Gtk.GooCanvas.AnimateType.T]])''
+
+
+==== :FindChild ====
+'':FindChild( @ [[#T|T]],  @ [[..:..:Gtk:GooCanvas:ItemModel#T|Gtk.GooCanvas.ItemModel.T]])''
+
+
+==== :GetChild ====
+'':GetChild( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :GetChildProperties ====
+'':GetChildProperties( @ [[#T|T]],  @ [[..:..:Gtk:GooCanvas:ItemModel#T|Gtk.GooCanvas.ItemModel.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :GetChildPropertiesValist ====
+'':GetChildPropertiesValist( @ [[#T|T]],  @ [[..:..:Gtk:GooCanvas:ItemModel#T|Gtk.GooCanvas.ItemModel.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :GetNChildren ====
+'':GetNChildren( @ [[#T|T]])''
+
+
+==== :GetParent ====
+'':GetParent( @ [[#T|T]])''
+
+
+==== :GetStyle ====
+'':GetStyle( @ [[#T|T]])''
+
+
+==== :GetTransform ====
+'':GetTransform( @ [[#T|T]],  @ [[..:..:Gtk:Cairo:CairoMatrixT#T|Gtk.Cairo.CairoMatrixT.T]])''
+
+
+==== :IsContainer ====
+'':IsContainer( @ [[#T|T]])''
+
+
+==== :Lower ====
+'':Lower( @ [[#T|T]],  @ [[..:..:Gtk:GooCanvas:ItemModel#T|Gtk.GooCanvas.ItemModel.T]])''
+
+
+==== :MoveChild ====
+'':MoveChild( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :Raise ====
+'':Raise( @ [[#T|T]],  @ [[..:..:Gtk:GooCanvas:ItemModel#T|Gtk.GooCanvas.ItemModel.T]])''
+
+
+==== :Remove ====
+'':Remove( @ [[#T|T]])''
+
+
+==== :RemoveChild ====
+'':RemoveChild( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :Rotate ====
+'':Rotate( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+
+
+==== :Scale ====
+'':Scale( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+
+
+==== :SetChildProperties ====
+'':SetChildProperties( @ [[#T|T]],  @ [[..:..:Gtk:GooCanvas:ItemModel#T|Gtk.GooCanvas.ItemModel.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :SetChildPropertiesValist ====
+'':SetChildPropertiesValist( @ [[#T|T]],  @ [[..:..:Gtk:GooCanvas:ItemModel#T|Gtk.GooCanvas.ItemModel.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :SetParent ====
+'':SetParent( @ [[#T|T]],  @ [[..:..:Gtk:GooCanvas:ItemModel#T|Gtk.GooCanvas.ItemModel.T]])''
+
+
+==== :SetSimpleTransform ====
+'':SetSimpleTransform( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+
+
+==== :SetStyle ====
+'':SetStyle( @ [[#T|T]],  @ [[..:..:Gtk:GooCanvas:Style#T|Gtk.GooCanvas.Style.T]])''
+
+
+==== :SetTransform ====
+'':SetTransform( @ [[#T|T]],  @ [[..:..:Gtk:Cairo:CairoMatrixT#T|Gtk.Cairo.CairoMatrixT.T]])''
+
+
+==== ClassFindChildProperty ====
+''ClassFindChildProperty()''
+
+
+==== GetType ====
+''GetType()''
+
+
+==== ClassListChildProperties ====
+''ClassListChildProperties()''
+
+
+==== ClassInstallChildProperty ====
+''ClassInstallChildProperty()''
+
+

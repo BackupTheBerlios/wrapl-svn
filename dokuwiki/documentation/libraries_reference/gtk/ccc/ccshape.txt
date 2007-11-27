@@ -1,0 +1,51 @@
+====== CcShape ======
+==== T ====
+=== inherits from ===
+  * [[..:..:Gtk:CCC:CcItem#T|Gtk.CCC.CcItem.T]]
+  * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
+
+
+==== :SetWidthUnits ====
+'':SetWidthUnits( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+
+
+==== :BrushBorder ====
+'':BrushBorder( @ [[#T|T]])''
+
+
+==== :BrushContent ====
+'':BrushContent( @ [[#T|T]])''
+
+
+==== :GetBrushBorder ====
+'':GetBrushBorder( @ [[#T|T]])''
+
+
+==== :GetBrushContent ====
+'':GetBrushContent( @ [[#T|T]])''
+
+
+==== :GetWidth ====
+'':GetWidth( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :SetBrushBorder ====
+'':SetBrushBorder( @ [[#T|T]],  @ [[..:..:Gtk:CCC:CcBrush#T|Gtk.CCC.CcBrush.T]])''
+
+
+==== :SetBrushContent ====
+'':SetBrushContent( @ [[#T|T]],  @ [[..:..:Gtk:CCC:CcBrush#T|Gtk.CCC.CcBrush.T]])''
+
+
+==== :SetLineWidth ====
+'':SetLineWidth( @ [[#T|T]],  @ [[..:..:Gtk:CCC:CcDistance#T|Gtk.CCC.CcDistance.T]])''
+
+
+==== :SetWidthPixels ====
+'':SetWidthPixels( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+
+
+==== GetType ====
+''GetType()''
+
+

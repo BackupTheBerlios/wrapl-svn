@@ -1,0 +1,95 @@
+====== CcViewWidget ======
+==== T ====
+=== inherits from ===
+  * [[..:..:Gtk:Gtk:DrawingArea#T|Gtk.Gtk.DrawingArea.T]]
+  * [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]
+  * [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]
+  * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
+  * [[..:..:Gtk:CCC:CcView#T|Gtk.CCC.CcView.T]]
+  * [[..:..:Gtk:CCC:CcItemView#T|Gtk.CCC.CcItemView.T]]
+
+
+==== :SetZoomMode ====
+'':SetZoomMode( @ [[#T|T]],  @ [[..:..:Gtk:CCC:CcZoomMode#T|Gtk.CCC.CcZoomMode.T]])''
+
+
+==== :SetCenterView ====
+'':SetCenterView( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+
+
+==== :GetZoomMode ====
+'':GetZoomMode( @ [[#T|T]])''
+
+
+==== :ScrolledRegion ====
+'':ScrolledRegion( @ [[#T|T]])''
+
+
+==== :Zoom ====
+'':Zoom( @ [[#T|T]])''
+
+
+==== :ZoomMode ====
+'':ZoomMode( @ [[#T|T]])''
+
+
+==== :DisplayMatrix ====
+'':DisplayMatrix( @ [[#T|T]])''
+
+
+==== :Root ====
+'':Root( @ [[#T|T]])''
+
+
+==== :CenterView ====
+'':CenterView( @ [[#T|T]])''
+
+
+==== :HAdjustment ====
+'':HAdjustment( @ [[#T|T]])''
+
+
+==== :VAdjustment ====
+'':VAdjustment( @ [[#T|T]])''
+
+
+==== :Current ====
+'':Current( @ [[#T|T]])''
+
+
+==== :Focus ====
+'':Focus( @ [[#T|T]])''
+
+
+==== :Grabbed ====
+'':Grabbed( @ [[#T|T]])''
+
+
+==== :OverGrabbed ====
+'':OverGrabbed( @ [[#T|T]])''
+
+
+==== :GrabMask ====
+'':GrabMask( @ [[#T|T]])''
+
+
+==== :Priv ====
+'':Priv( @ [[#T|T]])''
+
+
+==== :GetCenterView ====
+'':GetCenterView( @ [[#T|T]])''
+
+
+==== New ====
+''New()''
+
+
+==== GetType ====
+''GetType()''
+
+
+==== NewRoot ====
+''NewRoot()''
+
+

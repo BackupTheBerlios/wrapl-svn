@@ -1,0 +1,192 @@
+====== Item ======
+==== T ====
+
+
+==== :Update ====
+'':Update( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]],  @ [[..:..:Gtk:Cairo:CairoT#T|Gtk.Cairo.CairoT.T]],  @ [[..:..:Gtk:GooCanvas:Bounds#T|Gtk.GooCanvas.Bounds.T]])''
+
+
+==== :Translate ====
+'':Translate( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+
+
+==== :StopAnimation ====
+'':StopAnimation( @ [[#T|T]])''
+
+
+==== :SkewY ====
+'':SkewY( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+
+
+==== :AddChild ====
+'':AddChild( @ [[#T|T]],  @ [[..:..:Gtk:GooCanvas:Item#T|Gtk.GooCanvas.Item.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :AllocateArea ====
+'':AllocateArea( @ [[#T|T]],  @ [[..:..:Gtk:Cairo:CairoT#T|Gtk.Cairo.CairoT.T]],  @ [[..:..:Gtk:GooCanvas:Bounds#T|Gtk.GooCanvas.Bounds.T]],  @ [[..:..:Gtk:GooCanvas:Bounds#T|Gtk.GooCanvas.Bounds.T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+
+
+==== :Animate ====
+'':Animate( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Gtk:GooCanvas:AnimateType#T|Gtk.GooCanvas.AnimateType.T]])''
+
+
+==== :EnsureUpdated ====
+'':EnsureUpdated( @ [[#T|T]])''
+
+
+==== :FindChild ====
+'':FindChild( @ [[#T|T]],  @ [[..:..:Gtk:GooCanvas:Item#T|Gtk.GooCanvas.Item.T]])''
+
+
+==== :GetBounds ====
+'':GetBounds( @ [[#T|T]],  @ [[..:..:Gtk:GooCanvas:Bounds#T|Gtk.GooCanvas.Bounds.T]])''
+
+
+==== :GetCanvas ====
+'':GetCanvas( @ [[#T|T]])''
+
+
+==== :GetChild ====
+'':GetChild( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :GetChildProperties ====
+'':GetChildProperties( @ [[#T|T]],  @ [[..:..:Gtk:GooCanvas:Item#T|Gtk.GooCanvas.Item.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :GetChildPropertiesValist ====
+'':GetChildPropertiesValist( @ [[#T|T]],  @ [[..:..:Gtk:GooCanvas:Item#T|Gtk.GooCanvas.Item.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :GetItemsAt ====
+'':GetItemsAt( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Gtk:Cairo:CairoT#T|Gtk.Cairo.CairoT.T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :GetModel ====
+'':GetModel( @ [[#T|T]])''
+
+
+==== :GetNChildren ====
+'':GetNChildren( @ [[#T|T]])''
+
+
+==== :GetParent ====
+'':GetParent( @ [[#T|T]])''
+
+
+==== :GetRequestedArea ====
+'':GetRequestedArea( @ [[#T|T]],  @ [[..:..:Gtk:Cairo:CairoT#T|Gtk.Cairo.CairoT.T]],  @ [[..:..:Gtk:GooCanvas:Bounds#T|Gtk.GooCanvas.Bounds.T]])''
+
+
+==== :GetRequestedHeight ====
+'':GetRequestedHeight( @ [[#T|T]],  @ [[..:..:Gtk:Cairo:CairoT#T|Gtk.Cairo.CairoT.T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+
+
+==== :GetStyle ====
+'':GetStyle( @ [[#T|T]])''
+
+
+==== :GetTransform ====
+'':GetTransform( @ [[#T|T]],  @ [[..:..:Gtk:Cairo:CairoMatrixT#T|Gtk.Cairo.CairoMatrixT.T]])''
+
+
+==== :GetTransformForChild ====
+'':GetTransformForChild( @ [[#T|T]],  @ [[..:..:Gtk:GooCanvas:Item#T|Gtk.GooCanvas.Item.T]],  @ [[..:..:Gtk:Cairo:CairoMatrixT#T|Gtk.Cairo.CairoMatrixT.T]])''
+
+
+==== :IsContainer ====
+'':IsContainer( @ [[#T|T]])''
+
+
+==== :IsVisible ====
+'':IsVisible( @ [[#T|T]])''
+
+
+==== :Lower ====
+'':Lower( @ [[#T|T]],  @ [[..:..:Gtk:GooCanvas:Item#T|Gtk.GooCanvas.Item.T]])''
+
+
+==== :MoveChild ====
+'':MoveChild( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :Paint ====
+'':Paint( @ [[#T|T]],  @ [[..:..:Gtk:Cairo:CairoT#T|Gtk.Cairo.CairoT.T]],  @ [[..:..:Gtk:GooCanvas:Bounds#T|Gtk.GooCanvas.Bounds.T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+
+
+==== :Raise ====
+'':Raise( @ [[#T|T]],  @ [[..:..:Gtk:GooCanvas:Item#T|Gtk.GooCanvas.Item.T]])''
+
+
+==== :Remove ====
+'':Remove( @ [[#T|T]])''
+
+
+==== :RemoveChild ====
+'':RemoveChild( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :RequestUpdate ====
+'':RequestUpdate( @ [[#T|T]])''
+
+
+==== :Rotate ====
+'':Rotate( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+
+
+==== :Scale ====
+'':Scale( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+
+
+==== :SetCanvas ====
+'':SetCanvas( @ [[#T|T]],  @ [[..:..:Gtk:GooCanvas:GooCanvas#T|Gtk.GooCanvas.GooCanvas.T]])''
+
+
+==== :SetChildProperties ====
+'':SetChildProperties( @ [[#T|T]],  @ [[..:..:Gtk:GooCanvas:Item#T|Gtk.GooCanvas.Item.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :SetChildPropertiesValist ====
+'':SetChildPropertiesValist( @ [[#T|T]],  @ [[..:..:Gtk:GooCanvas:Item#T|Gtk.GooCanvas.Item.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :SetModel ====
+'':SetModel( @ [[#T|T]],  @ [[..:..:Gtk:GooCanvas:ItemModel#T|Gtk.GooCanvas.ItemModel.T]])''
+
+
+==== :SetParent ====
+'':SetParent( @ [[#T|T]],  @ [[..:..:Gtk:GooCanvas:Item#T|Gtk.GooCanvas.Item.T]])''
+
+
+==== :SetSimpleTransform ====
+'':SetSimpleTransform( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+
+
+==== :SetStyle ====
+'':SetStyle( @ [[#T|T]],  @ [[..:..:Gtk:GooCanvas:Style#T|Gtk.GooCanvas.Style.T]])''
+
+
+==== :SetTransform ====
+'':SetTransform( @ [[#T|T]],  @ [[..:..:Gtk:Cairo:CairoMatrixT#T|Gtk.Cairo.CairoMatrixT.T]])''
+
+
+==== :SkewX ====
+'':SkewX( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+
+
+==== ClassFindChildProperty ====
+''ClassFindChildProperty()''
+
+
+==== GetType ====
+''GetType()''
+
+
+==== ClassListChildProperties ====
+''ClassListChildProperties()''
+
+
+==== ClassInstallChildProperty ====
+''ClassInstallChildProperty()''
+
+

@@ -1,0 +1,92 @@
+====== CcText ======
+==== T ====
+=== inherits from ===
+  * [[..:..:Gtk:CCC:CcShape#T|Gtk.CCC.CcShape.T]]
+  * [[..:..:Gtk:CCC:CcItem#T|Gtk.CCC.CcItem.T]]
+  * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
+
+
+==== :SetText ====
+'':SetText( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== :SetSizePixels ====
+'':SetSizePixels( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+
+
+==== :Anchor ====
+'':Anchor( @ [[#T|T]])''
+
+
+==== :X ====
+'':X( @ [[#T|T]])''
+
+
+==== :Y ====
+'':Y( @ [[#T|T]])''
+
+
+==== :SizePixels ====
+'':SizePixels( @ [[#T|T]])''
+
+
+==== :Layout ====
+'':Layout( @ [[#T|T]])''
+
+
+==== :FontDescription ====
+'':FontDescription( @ [[#T|T]])''
+
+
+==== :Editable ====
+'':Editable( @ [[#T|T]])''
+
+
+==== :Cursor ====
+'':Cursor( @ [[#T|T]])''
+
+
+==== :CursorTrail ====
+'':CursorTrail( @ [[#T|T]])''
+
+
+==== :GetText ====
+'':GetText( @ [[#T|T]])''
+
+
+==== :IsEditable ====
+'':IsEditable( @ [[#T|T]])''
+
+
+==== :SetAnchor ====
+'':SetAnchor( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+
+
+==== :SetAnchorType ====
+'':SetAnchorType( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:AnchorType#T|Gtk.Gtk.AnchorType.T]])''
+
+
+==== :SetAttributes ====
+'':SetAttributes( @ [[#T|T]],  @ [[..:..:Gtk:Pango:AttrList#T|Gtk.Pango.AttrList.T]])''
+
+
+==== :SetEditable ====
+'':SetEditable( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+
+
+==== :SetFontDescription ====
+'':SetFontDescription( @ [[#T|T]],  @ [[..:..:Gtk:Pango:FontDescription#T|Gtk.Pango.FontDescription.T]])''
+
+
+==== :SetMarkup ====
+'':SetMarkup( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== New ====
+''New()''
+
+
+==== GetType ====
+''GetType()''
+
+

@@ -1,0 +1,144 @@
+====== PathDef ======
+==== T ====
+
+
+==== :Unref ====
+'':Unref( @ [[#T|T]])''
+
+
+==== :Split ====
+'':Split( @ [[#T|T]])''
+
+
+==== :Reset ====
+'':Reset( @ [[#T|T]])''
+
+
+==== :Ref ====
+'':Ref( @ [[#T|T]])''
+
+
+==== :OpenParts ====
+'':OpenParts( @ [[#T|T]])''
+
+
+==== :Moveto ====
+'':Moveto( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+
+
+==== :LinetoMoving ====
+'':LinetoMoving( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+
+
+==== :AllClosed ====
+'':AllClosed( @ [[#T|T]])''
+
+
+==== :AllOpen ====
+'':AllOpen( @ [[#T|T]])''
+
+
+==== :AnyClosed ====
+'':AnyClosed( @ [[#T|T]])''
+
+
+==== :AnyOpen ====
+'':AnyOpen( @ [[#T|T]])''
+
+
+==== :Bpath ====
+'':Bpath( @ [[#T|T]])''
+
+
+==== :CloseAll ====
+'':CloseAll( @ [[#T|T]])''
+
+
+==== :ClosedParts ====
+'':ClosedParts( @ [[#T|T]])''
+
+
+==== :Closepath ====
+'':Closepath( @ [[#T|T]])''
+
+
+==== :ClosepathCurrent ====
+'':ClosepathCurrent( @ [[#T|T]])''
+
+
+==== :Copy ====
+'':Copy( @ [[#T|T]],  @ [[..:..:Gtk:GnomeCanvas:PathDef#T|Gtk.GnomeCanvas.PathDef.T]])''
+
+
+==== :Currentpoint ====
+'':Currentpoint( @ [[#T|T]],  @ [[..:..:Gtk:Art:Point#T|Gtk.Art.Point.T]])''
+
+
+==== :Curveto ====
+'':Curveto( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+
+
+==== :Duplicate ====
+'':Duplicate( @ [[#T|T]])''
+
+
+==== :EnsureSpace ====
+'':EnsureSpace( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :Finish ====
+'':Finish( @ [[#T|T]])''
+
+
+==== :FirstBpath ====
+'':FirstBpath( @ [[#T|T]])''
+
+
+==== :HasCurrentpoint ====
+'':HasCurrentpoint( @ [[#T|T]])''
+
+
+==== :IsEmpty ====
+'':IsEmpty( @ [[#T|T]])''
+
+
+==== :LastBpath ====
+'':LastBpath( @ [[#T|T]])''
+
+
+==== :Length ====
+'':Length( @ [[#T|T]])''
+
+
+==== :Lineto ====
+'':Lineto( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+
+
+==== New ====
+''New()''
+
+
+==== GetType ====
+''GetType()''
+
+
+==== Concat ====
+''Concat()''
+
+
+==== NewSized ====
+''NewSized()''
+
+
+==== NewFromStaticBpath ====
+''NewFromStaticBpath()''
+
+
+==== NewFromForeignBpath ====
+''NewFromForeignBpath()''
+
+
+==== NewFromBpath ====
+''NewFromBpath()''
+
+

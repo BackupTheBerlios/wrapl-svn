@@ -1,0 +1,34 @@
+====== CcHeap ======
+==== T ====
+=== inherits from ===
+  * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
+
+
+==== :Remove ====
+'':Remove( @ [[#T|T]],  @ [[..:..:Gtk:CCC:CcHeapNode#T|Gtk.CCC.CcHeapNode.T]])''
+
+
+==== :Push ====
+'':Push( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Address#T|Std.Address.T]])''
+
+
+==== :Private ====
+'':Private( @ [[#T|T]])''
+
+
+==== :GetSize ====
+'':GetSize( @ [[#T|T]])''
+
+
+==== :Pop ====
+'':Pop( @ [[#T|T]])''
+
+
+==== New ====
+''New()''
+
+
+==== GetType ====
+''GetType()''
+
+

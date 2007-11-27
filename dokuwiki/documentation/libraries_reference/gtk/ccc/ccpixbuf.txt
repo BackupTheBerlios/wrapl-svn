@@ -1,0 +1,40 @@
+====== CcPixbuf ======
+==== T ====
+=== inherits from ===
+  * [[..:..:Gtk:CCC:CcItem#T|Gtk.CCC.CcItem.T]]
+  * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
+  * [[..:..:Gtk:CCC:CcItemView#T|Gtk.CCC.CcItemView.T]]
+
+
+==== :SetRotation ====
+'':SetRotation( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+
+
+==== :SetPositionY ====
+'':SetPositionY( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+
+
+==== :GetRotation ====
+'':GetRotation( @ [[#T|T]])''
+
+
+==== :SetPixbuf ====
+'':SetPixbuf( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Pixbuf#T|Gtk.Gdk.Pixbuf.T]])''
+
+
+==== :SetPosition ====
+'':SetPosition( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+
+
+==== :SetPositionX ====
+'':SetPositionX( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+
+
+==== New ====
+''New()''
+
+
+==== GetType ====
+''GetType()''
+
+

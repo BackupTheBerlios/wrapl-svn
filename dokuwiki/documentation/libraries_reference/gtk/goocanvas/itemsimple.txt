@@ -1,0 +1,78 @@
+====== ItemSimple ======
+==== T ====
+=== inherits from ===
+  * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
+
+
+==== :UserBoundsToParent ====
+'':UserBoundsToParent( @ [[#T|T]],  @ [[..:..:Gtk:Cairo:CairoT#T|Gtk.Cairo.CairoT.T]],  @ [[..:..:Gtk:GooCanvas:Bounds#T|Gtk.GooCanvas.Bounds.T]])''
+
+
+==== :Canvas ====
+'':Canvas( @ [[#T|T]])''
+
+
+==== :Parent ====
+'':Parent( @ [[#T|T]])''
+
+
+==== :Model ====
+'':Model( @ [[#T|T]])''
+
+
+==== :SimpleData ====
+'':SimpleData( @ [[#T|T]])''
+
+
+==== :Bounds ====
+'':Bounds( @ [[#T|T]])''
+
+
+==== :NeedUpdate ====
+'':NeedUpdate( @ [[#T|T]])''
+
+
+==== :NeedEntireSubtreeUpdate ====
+'':NeedEntireSubtreeUpdate( @ [[#T|T]])''
+
+
+==== :Priv ====
+'':Priv( @ [[#T|T]])''
+
+
+==== :Changed ====
+'':Changed( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+
+
+==== :CheckInPath ====
+'':CheckInPath( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Gtk:Cairo:CairoT#T|Gtk.Cairo.CairoT.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :CheckStyle ====
+'':CheckStyle( @ [[#T|T]])''
+
+
+==== :GetLineWidth ====
+'':GetLineWidth( @ [[#T|T]])''
+
+
+==== :GetPathBounds ====
+'':GetPathBounds( @ [[#T|T]],  @ [[..:..:Gtk:Cairo:CairoT#T|Gtk.Cairo.CairoT.T]],  @ [[..:..:Gtk:GooCanvas:Bounds#T|Gtk.GooCanvas.Bounds.T]])''
+
+
+==== :PaintPath ====
+'':PaintPath( @ [[#T|T]],  @ [[..:..:Gtk:Cairo:CairoT#T|Gtk.Cairo.CairoT.T]])''
+
+
+==== :SetModel ====
+'':SetModel( @ [[#T|T]],  @ [[..:..:Gtk:GooCanvas:ItemModel#T|Gtk.GooCanvas.ItemModel.T]])''
+
+
+==== :UserBoundsToDevice ====
+'':UserBoundsToDevice( @ [[#T|T]],  @ [[..:..:Gtk:Cairo:CairoT#T|Gtk.Cairo.CairoT.T]],  @ [[..:..:Gtk:GooCanvas:Bounds#T|Gtk.GooCanvas.Bounds.T]])''
+
+
+==== GetType ====
+''GetType()''
+
+
