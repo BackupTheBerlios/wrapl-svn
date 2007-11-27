@@ -1,5 +1,6 @@
 ====== IO.File ======
 ==== T ====
+=== inherits from ===
   * [[..:IO:Posix#SeekerT|IO.Posix.SeekerT]]
   * [[..:IO:Posix#T|IO.Posix.T]]
   * [[..:IO:Stream#SeekerT|IO.Stream.SeekerT]]
@@ -7,6 +8,7 @@
 
 
 ==== ReaderT ====
+=== inherits from ===
   * [[#T|T]]
   * [[..:IO:Posix#ReaderT|IO.Posix.ReaderT]]
   * [[..:IO:Posix#SeekerT|IO.Posix.SeekerT]]
@@ -17,6 +19,7 @@
 
 
 ==== WriterT ====
+=== inherits from ===
   * [[#T|T]]
   * [[..:IO:Posix#WriterT|IO.Posix.WriterT]]
   * [[..:IO:Posix#SeekerT|IO.Posix.SeekerT]]
@@ -27,6 +30,7 @@
 
 
 ==== ReaderWriterT ====
+=== inherits from ===
   * [[#ReaderT|ReaderT]]
   * [[#WriterT|WriterT]]
   * [[#T|T]]
@@ -40,6 +44,7 @@
 
 
 ==== TextReaderT ====
+=== inherits from ===
   * [[#ReaderT|ReaderT]]
   * [[#T|T]]
   * [[..:IO:Posix#TextReaderT|IO.Posix.TextReaderT]]
@@ -53,6 +58,7 @@
 
 
 ==== TextWriterT ====
+=== inherits from ===
   * [[#WriterT|WriterT]]
   * [[#T|T]]
   * [[..:IO:Posix#TextWriterT|IO.Posix.TextWriterT]]
@@ -66,6 +72,7 @@
 
 
 ==== TextReaderWriterT ====
+=== inherits from ===
   * [[#ReaderT|ReaderT]]
   * [[#WriterT|WriterT]]
   * [[#T|T]]
@@ -82,10 +89,12 @@
   * [[..:IO:Stream#T|IO.Stream.T]]
 
 
-==== Open(filename : [[..:Std:String#T|Std.String.T]], mode : [[..:Std:Integer#T|Std.Integer.T]]) : [[#T|T]] ====
+==== Open ====
+Open(filename : [[..:Std:String#T|Std.String.T]], mode : [[..:Std:Integer#T|Std.Integer.T]]) : [[#T|T]] ====
 
 Opens filename with the correct mode and returns a file object
 
-==== Temp() ====
+==== Temp ====
+Temp() ====
 
 

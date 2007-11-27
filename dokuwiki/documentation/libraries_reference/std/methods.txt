@@ -1,830 +1,830 @@
 ====== Std.Methods ======
-==== :put( @ [[..:Std:Address#T|Std.Address.T]],  @ [[..:Std:Address#T|Std.Address.T]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) ====
+==== :put ====
+:put( @ [[..:Std:Address#T|Std.Address.T]],  @ [[..:Std:Address#T|Std.Address.T]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])
 
+==== :put ====
+:put( @ [[..:Std:Address#T|Std.Address.T]],  @ [[..:Std:Address#T|Std.Address.T]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])
 
-==== :put( @ [[..:Std:Address#T|Std.Address.T]],  @ [[..:Std:Address#T|Std.Address.T]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) ====
+==== :put8 ====
+:put8( @ [[..:Std:Address#T|Std.Address.T]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])
 
+==== :put ====
+:put( @ [[..:Std:Address#T|Std.Address.T]],  @ [[..:Std:Object#T|Std.Object.T]])
 
-==== :put8( @ [[..:Std:Address#T|Std.Address.T]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) ====
+==== :put ====
+:put( @ [[..:Std:Address#T|Std.Address.T]],  @ [[..:Std:Object#T|Std.Object.T]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])
 
+==== :put32 ====
+:put32( @ [[..:Std:Address#T|Std.Address.T]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])
 
-==== :put( @ [[..:Std:Address#T|Std.Address.T]],  @ [[..:Std:Object#T|Std.Object.T]]) ====
+==== :puta ====
+:puta( @ [[..:Std:Address#T|Std.Address.T]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])
 
+==== :put8 ====
+:put8( @ [[..:Std:Address#T|Std.Address.T]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])
 
-==== :put( @ [[..:Std:Address#T|Std.Address.T]],  @ [[..:Std:Object#T|Std.Object.T]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) ====
+==== :put32 ====
+:put32( @ [[..:Std:Address#T|Std.Address.T]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])
 
+==== :puta ====
+:puta( @ [[..:Std:Address#T|Std.Address.T]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])
 
-==== :put32( @ [[..:Std:Address#T|Std.Address.T]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) ====
+==== :put ====
+:put( @ [[..:Std:Address#T|Std.Address.T]],  @ [[..:Std:String#T|Std.String.T]])
 
+==== :put ====
+:put( @ [[..:Std:Address#T|Std.Address.T]],  @ [[..:Std:String#T|Std.String.T]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])
 
-==== :puta( @ [[..:Std:Address#T|Std.Address.T]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) ====
+==== :get ====
+:get( @ [[..:Std:Address#T|Std.Address.T]])
 
+==== :get ====
+:get( @ [[..:Std:Address#T|Std.Address.T]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])
 
-==== :put8( @ [[..:Std:Address#T|Std.Address.T]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) ====
+==== :get8 ====
+:get8( @ [[..:Std:Address#T|Std.Address.T]])
 
+==== :get24 ====
+:get24( @ [[..:Std:Address#T|Std.Address.T]])
 
-==== :put32( @ [[..:Std:Address#T|Std.Address.T]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) ====
+==== :get32 ====
+:get32( @ [[..:Std:Address#T|Std.Address.T]])
 
+==== :geta ====
+:geta( @ [[..:Std:Address#T|Std.Address.T]])
 
-==== :puta( @ [[..:Std:Address#T|Std.Address.T]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) ====
+==== :get8 ====
+:get8( @ [[..:Std:Address#T|Std.Address.T]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])
 
+==== :get24 ====
+:get24( @ [[..:Std:Address#T|Std.Address.T]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])
 
-==== :put( @ [[..:Std:Address#T|Std.Address.T]],  @ [[..:Std:String#T|Std.String.T]]) ====
+==== :get32 ====
+:get32( @ [[..:Std:Address#T|Std.Address.T]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])
 
+==== :geta ====
+:geta( @ [[..:Std:Address#T|Std.Address.T]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])
 
-==== :put( @ [[..:Std:Address#T|Std.Address.T]],  @ [[..:Std:String#T|Std.String.T]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) ====
+==== :gets ====
+:gets( @ [[..:Std:Address#T|Std.Address.T]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])
 
+==== :gets ====
+:gets( @ [[..:Std:Address#T|Std.Address.T]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])
 
-==== :get( @ [[..:Std:Address#T|Std.Address.T]]) ====
+==== :+ ====
+:+( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Address#T|Std.Address.T]])
 
+==== :+ ====
+:+( @ [[..:Std:Address#T|Std.Address.T]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])
 
-==== :get( @ [[..:Std:Address#T|Std.Address.T]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) ====
+==== :- ====
+:-( @ [[..:Std:Address#T|Std.Address.T]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])
 
+==== :- ====
+:-( @ [[..:Std:Address#T|Std.Address.T]],  @ [[..:Std:Address#T|Std.Address.T]])
 
-==== :get8( @ [[..:Std:Address#T|Std.Address.T]]) ====
+==== :@ ====
+:@( @ [[..:Std:Address#T|Std.Address.T]],  = [[..:Std:String#T|Std.String.T]])
 
+==== :@ ====
+:@( @ ANY,  @ [[..:Std:Type#T|Std.Type.T]])
 
-==== :get24( @ [[..:Std:Address#T|Std.Address.T]]) ====
+==== :? ====
+:?( @ ANY,  @ ANY)
 
+==== :@ ====
+:@( = [[..:Std:Object#Nil|Std.Object.Nil]],  = [[..:Std:String#T|Std.String.T]])
 
-==== :get32( @ [[..:Std:Address#T|Std.Address.T]]) ====
+==== :@ ====
+:@( @ [[..:Std:Symbol#T|Std.Symbol.T]],  = [[..:Std:String#T|Std.String.T]])
 
+==== :@ ====
+:@( @ [[..:Std:Symbol#NoMethodMessageT|Std.Symbol.NoMethodMessageT]],  = [[..:Std:String#T|Std.String.T]])
 
-==== :geta( @ [[..:Std:Address#T|Std.Address.T]]) ====
+==== :@ ====
+:@( @ [[..:Std:Function#FewArgsMessageT|Std.Function.FewArgsMessageT]],  = [[..:Std:String#T|Std.String.T]])
 
+==== :@ ====
+:@( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  = [[..:Std:String#T|Std.String.T]])
 
-==== :get8( @ [[..:Std:Address#T|Std.Address.T]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) ====
+==== :hex ====
+:hex( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])
 
+==== :@ ====
+:@( @ [[..:Std:Integer#BigT|Std.Integer.BigT]],  = [[..:Std:String#T|Std.String.T]])
 
-==== :get24( @ [[..:Std:Address#T|Std.Address.T]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) ====
+==== :@ ====
+:@( @ [[..:Std:String#T|Std.String.T]],  = [[..:Std:Integer#T|Std.Integer.T]])
 
+==== :@ ====
+:@( @ [[..:Std:String#T|Std.String.T]],  = [[..:Std:Real#T|Std.Real.T]])
 
-==== :get32( @ [[..:Std:Address#T|Std.Address.T]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) ====
+==== :length ====
+:length( @ [[..:Std:Array#T|Std.Array.T]])
 
+==== :[] ====
+:[]( @ [[..:Std:Array#T|Std.Array.T]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])
 
-==== :geta( @ [[..:Std:Address#T|Std.Address.T]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) ====
+==== :apply ====
+:apply( @ [[..:Std:Array#T|Std.Array.T]],  @ [[..:Std:Function#T|Std.Function.T]])
 
+==== :apply ====
+:apply( @ [[..:Std:Function#T|Std.Function.T]],  @ [[..:Std:Array#T|Std.Array.T]])
 
-==== :gets( @ [[..:Std:Address#T|Std.Address.T]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) ====
+==== :- ====
+:-( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])
 
+==== :abs ====
+:abs( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])
 
-==== :gets( @ [[..:Std:Address#T|Std.Address.T]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) ====
+==== :+ ====
+:+( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])
 
+==== :- ====
+:-( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])
 
-==== :+( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Address#T|Std.Address.T]]) ====
+==== :* ====
+:*( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])
 
+==== :div ====
+:div( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])
 
-==== :+( @ [[..:Std:Address#T|Std.Address.T]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) ====
+==== :/ ====
+:/( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])
 
+==== :% ====
+:%( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])
 
-==== :-( @ [[..:Std:Address#T|Std.Address.T]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) ====
+==== :~ ====
+:~( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])
 
+==== :and ====
+:and( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])
 
-==== :-( @ [[..:Std:Address#T|Std.Address.T]],  @ [[..:Std:Address#T|Std.Address.T]]) ====
+==== :or ====
+:or( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])
 
+==== :xor ====
+:xor( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])
 
-==== :@( @ [[..:Std:Address#T|Std.Address.T]],  = [[..:Std:String#T|Std.String.T]]) ====
+==== :sar ====
+:sar( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])
 
+==== :sal ====
+:sal( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])
 
-==== :@( @ ANY,  @ [[..:Std:Type#T|Std.Type.T]]) ====
+==== :shl ====
+:shl( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])
 
+==== :shr ====
+:shr( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])
 
-==== :?( @ ANY,  @ ANY) ====
+==== :rol ====
+:rol( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])
 
+==== :ror ====
+:ror( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])
 
-==== :@( = [[..:Std:Object#Nil|Std.Object.Nil]],  = [[..:Std:String#T|Std.String.T]]) ====
+==== :^ ====
+:^( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])
 
+==== :< ====
+:<( @ [[..:Std:Address#T|Std.Address.T]],  @ [[..:Std:Address#T|Std.Address.T]])
 
-==== :@( @ [[..:Std:Symbol#T|Std.Symbol.T]],  = [[..:Std:String#T|Std.String.T]]) ====
+==== :< ====
+:<( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])
 
+==== :> ====
+:>( @ [[..:Std:Address#T|Std.Address.T]],  @ [[..:Std:Address#T|Std.Address.T]])
 
-==== :@( @ [[..:Std:Symbol#NoMethodMessageT|Std.Symbol.NoMethodMessageT]],  = [[..:Std:String#T|Std.String.T]]) ====
+==== :> ====
+:>( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])
 
+==== :is0 ====
+:is0( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])
 
-==== :@( @ [[..:Std:Function#FewArgsMessageT|Std.Function.FewArgsMessageT]],  = [[..:Std:String#T|Std.String.T]]) ====
+==== := ====
+:=( @ [[..:Std:Address#T|Std.Address.T]],  @ [[..:Std:Address#T|Std.Address.T]])
 
+==== := ====
+:=( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])
 
-==== :@( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  = [[..:Std:String#T|Std.String.T]]) ====
+==== :~= ====
+:~=( @ [[..:Std:Address#T|Std.Address.T]],  @ [[..:Std:Address#T|Std.Address.T]])
 
+==== :~= ====
+:~=( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])
 
-==== :hex( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) ====
+==== :<= ====
+:<=( @ [[..:Std:Address#T|Std.Address.T]],  @ [[..:Std:Address#T|Std.Address.T]])
 
+==== :<= ====
+:<=( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])
 
-==== :@( @ [[..:Std:Integer#BigT|Std.Integer.BigT]],  = [[..:Std:String#T|Std.String.T]]) ====
+==== :>= ====
+:>=( @ [[..:Std:Address#T|Std.Address.T]],  @ [[..:Std:Address#T|Std.Address.T]])
 
+==== :>= ====
+:>=( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])
 
-==== :@( @ [[..:Std:String#T|Std.String.T]],  = [[..:Std:Integer#T|Std.Integer.T]]) ====
+==== :? ====
+:?( @ [[..:Std:Address#T|Std.Address.T]],  @ [[..:Std:Address#T|Std.Address.T]])
 
+==== :? ====
+:?( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])
 
-==== :@( @ [[..:Std:String#T|Std.String.T]],  = [[..:Std:Real#T|Std.Real.T]]) ====
+==== :in ====
+:in( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])
 
+==== :- ====
+:-( @ [[..:Std:Integer#BigT|Std.Integer.BigT]])
 
-==== :length( @ [[..:Std:Array#T|Std.Array.T]]) ====
+==== :abs ====
+:abs( @ [[..:Std:Integer#BigT|Std.Integer.BigT]])
 
+==== :~ ====
+:~( @ [[..:Std:Integer#BigT|Std.Integer.BigT]])
 
-==== :[]( @ [[..:Std:Array#T|Std.Array.T]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) ====
+==== :+ ====
+:+( @ [[..:Std:Integer#BigT|Std.Integer.BigT]],  @ [[..:Std:Integer#BigT|Std.Integer.BigT]])
 
+==== :- ====
+:-( @ [[..:Std:Integer#BigT|Std.Integer.BigT]],  @ [[..:Std:Integer#BigT|Std.Integer.BigT]])
 
-==== :apply( @ [[..:Std:Array#T|Std.Array.T]],  @ [[..:Std:Function#T|Std.Function.T]]) ====
+==== :* ====
+:*( @ [[..:Std:Integer#BigT|Std.Integer.BigT]],  @ [[..:Std:Integer#BigT|Std.Integer.BigT]])
 
+==== :div ====
+:div( @ [[..:Std:Integer#BigT|Std.Integer.BigT]],  @ [[..:Std:Integer#BigT|Std.Integer.BigT]])
 
-==== :apply( @ [[..:Std:Function#T|Std.Function.T]],  @ [[..:Std:Array#T|Std.Array.T]]) ====
+==== :% ====
+:%( @ [[..:Std:Integer#BigT|Std.Integer.BigT]],  @ [[..:Std:Integer#BigT|Std.Integer.BigT]])
 
+==== :< ====
+:<( @ [[..:Std:Integer#BigT|Std.Integer.BigT]],  @ [[..:Std:Integer#BigT|Std.Integer.BigT]])
 
-==== :-( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) ====
+==== :> ====
+:>( @ [[..:Std:Integer#BigT|Std.Integer.BigT]],  @ [[..:Std:Integer#BigT|Std.Integer.BigT]])
 
+==== :>= ====
+:>=( @ [[..:Std:Integer#BigT|Std.Integer.BigT]],  @ [[..:Std:Integer#BigT|Std.Integer.BigT]])
 
-==== :abs( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) ====
+==== :<= ====
+:<=( @ [[..:Std:Integer#BigT|Std.Integer.BigT]],  @ [[..:Std:Integer#BigT|Std.Integer.BigT]])
 
+==== := ====
+:=( @ [[..:Std:Integer#BigT|Std.Integer.BigT]],  @ [[..:Std:Integer#BigT|Std.Integer.BigT]])
 
-==== :+( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) ====
+==== :~= ====
+:~=( @ [[..:Std:Integer#BigT|Std.Integer.BigT]],  @ [[..:Std:Integer#BigT|Std.Integer.BigT]])
 
+==== :? ====
+:?( @ [[..:Std:Integer#BigT|Std.Integer.BigT]],  @ [[..:Std:Integer#BigT|Std.Integer.BigT]])
 
-==== :-( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) ====
+==== :+ ====
+:+( @ [[..:Std:Integer#BigT|Std.Integer.BigT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])
 
+==== :- ====
+:-( @ [[..:Std:Integer#BigT|Std.Integer.BigT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])
 
-==== :*( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) ====
+==== :* ====
+:*( @ [[..:Std:Integer#BigT|Std.Integer.BigT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])
 
+==== :div ====
+:div( @ [[..:Std:Integer#BigT|Std.Integer.BigT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])
 
-==== :div( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) ====
+==== :% ====
+:%( @ [[..:Std:Integer#BigT|Std.Integer.BigT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])
 
+==== :sal ====
+:sal( @ [[..:Std:Integer#BigT|Std.Integer.BigT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])
 
-==== :/( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) ====
+==== :sar ====
+:sar( @ [[..:Std:Integer#BigT|Std.Integer.BigT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])
 
+==== :shl ====
+:shl( @ [[..:Std:Integer#BigT|Std.Integer.BigT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])
 
-==== :%( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) ====
+==== :shr ====
+:shr( @ [[..:Std:Integer#BigT|Std.Integer.BigT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])
 
+==== :^ ====
+:^( @ [[..:Std:Integer#BigT|Std.Integer.BigT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])
 
-==== :~( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) ====
+==== :< ====
+:<( @ [[..:Std:Integer#BigT|Std.Integer.BigT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])
 
+==== :> ====
+:>( @ [[..:Std:Integer#BigT|Std.Integer.BigT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])
 
-==== :and( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) ====
+==== :>= ====
+:>=( @ [[..:Std:Integer#BigT|Std.Integer.BigT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])
 
+==== :<= ====
+:<=( @ [[..:Std:Integer#BigT|Std.Integer.BigT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])
 
-==== :or( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) ====
+==== := ====
+:=( @ [[..:Std:Integer#BigT|Std.Integer.BigT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])
 
+==== :~= ====
+:~=( @ [[..:Std:Integer#BigT|Std.Integer.BigT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])
 
-==== :xor( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) ====
+==== :? ====
+:?( @ [[..:Std:Integer#BigT|Std.Integer.BigT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])
 
+==== :+ ====
+:+( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Integer#BigT|Std.Integer.BigT]])
 
-==== :sar( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) ====
+==== :- ====
+:-( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Integer#BigT|Std.Integer.BigT]])
 
+==== :* ====
+:*( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Integer#BigT|Std.Integer.BigT]])
 
-==== :sal( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) ====
+==== :div ====
+:div( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Integer#BigT|Std.Integer.BigT]])
 
+==== :% ====
+:%( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Integer#BigT|Std.Integer.BigT]])
 
-==== :shl( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) ====
+==== :< ====
+:<( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Integer#BigT|Std.Integer.BigT]])
 
+==== :> ====
+:>( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Integer#BigT|Std.Integer.BigT]])
 
-==== :shr( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) ====
+==== :>= ====
+:>=( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Integer#BigT|Std.Integer.BigT]])
 
+==== :<= ====
+:<=( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Integer#BigT|Std.Integer.BigT]])
 
-==== :rol( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) ====
+==== := ====
+:=( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Integer#BigT|Std.Integer.BigT]])
 
+==== :~= ====
+:~=( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Integer#BigT|Std.Integer.BigT]])
 
-==== :ror( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) ====
+==== :? ====
+:?( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Integer#BigT|Std.Integer.BigT]])
 
+==== :in ====
+:in( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Integer#BigT|Std.Integer.BigT]])
 
-==== :^( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) ====
+==== :to ====
+:to( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])
 
+==== :up ====
+:up( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])
 
-==== :<( @ [[..:Std:Address#T|Std.Address.T]],  @ [[..:Std:Address#T|Std.Address.T]]) ====
+==== :down ====
+:down( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])
 
+==== :@ ====
+:@( @ [[..:Std:Real#T|Std.Real.T]],  = [[..:Std:String#T|Std.String.T]])
 
-==== :<( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) ====
+==== :@ ====
+:@( @ [[..:Std:Real#T|Std.Real.T]],  = [[..:Std:Integer#T|Std.Integer.T]])
 
+==== :@ ====
+:@( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  = [[..:Std:Real#T|Std.Real.T]])
 
-==== :>( @ [[..:Std:Address#T|Std.Address.T]],  @ [[..:Std:Address#T|Std.Address.T]]) ====
+==== :@ ====
+:@( @ [[..:Std:Integer#BigT|Std.Integer.BigT]],  = [[..:Std:Real#T|Std.Real.T]])
 
+==== :+ ====
+:+( @ [[..:Std:Real#T|Std.Real.T]],  @ [[..:Std:Real#T|Std.Real.T]])
 
-==== :>( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) ====
+==== :- ====
+:-( @ [[..:Std:Real#T|Std.Real.T]],  @ [[..:Std:Real#T|Std.Real.T]])
 
+==== :* ====
+:*( @ [[..:Std:Real#T|Std.Real.T]],  @ [[..:Std:Real#T|Std.Real.T]])
 
-==== :is0( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) ====
+==== :/ ====
+:/( @ [[..:Std:Real#T|Std.Real.T]],  @ [[..:Std:Real#T|Std.Real.T]])
 
+==== :abs ====
+:abs( @ [[..:Std:Real#T|Std.Real.T]])
 
-==== :=( @ [[..:Std:Address#T|Std.Address.T]],  @ [[..:Std:Address#T|Std.Address.T]]) ====
+==== :- ====
+:-( @ [[..:Std:Real#T|Std.Real.T]])
 
+==== :floor ====
+:floor( @ [[..:Std:Real#T|Std.Real.T]])
 
-==== :=( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) ====
+==== :ceil ====
+:ceil( @ [[..:Std:Real#T|Std.Real.T]])
 
+==== :round ====
+:round( @ [[..:Std:Real#T|Std.Real.T]])
 
-==== :~=( @ [[..:Std:Address#T|Std.Address.T]],  @ [[..:Std:Address#T|Std.Address.T]]) ====
+==== :sin ====
+:sin( @ [[..:Std:Real#T|Std.Real.T]])
 
+==== :cos ====
+:cos( @ [[..:Std:Real#T|Std.Real.T]])
 
-==== :~=( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) ====
+==== :tan ====
+:tan( @ [[..:Std:Real#T|Std.Real.T]])
 
+==== :asin ====
+:asin( @ [[..:Std:Real#T|Std.Real.T]])
 
-==== :<=( @ [[..:Std:Address#T|Std.Address.T]],  @ [[..:Std:Address#T|Std.Address.T]]) ====
+==== :acos ====
+:acos( @ [[..:Std:Real#T|Std.Real.T]])
 
+==== :atan ====
+:atan( @ [[..:Std:Real#T|Std.Real.T]])
 
-==== :<=( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) ====
+==== :atan ====
+:atan( @ [[..:Std:Real#T|Std.Real.T]],  @ [[..:Std:Real#T|Std.Real.T]])
 
+==== :sqrt ====
+:sqrt( @ [[..:Std:Real#T|Std.Real.T]])
 
-==== :>=( @ [[..:Std:Address#T|Std.Address.T]],  @ [[..:Std:Address#T|Std.Address.T]]) ====
+==== :exp ====
+:exp( @ [[..:Std:Real#T|Std.Real.T]])
 
+==== :ln ====
+:ln( @ [[..:Std:Real#T|Std.Real.T]])
 
-==== :>=( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) ====
+==== :^ ====
+:^( @ [[..:Std:Real#T|Std.Real.T]],  @ [[..:Std:Real#T|Std.Real.T]])
 
+==== :< ====
+:<( @ [[..:Std:Real#T|Std.Real.T]],  @ [[..:Std:Real#T|Std.Real.T]])
 
-==== :?( @ [[..:Std:Address#T|Std.Address.T]],  @ [[..:Std:Address#T|Std.Address.T]]) ====
+==== :<= ====
+:<=( @ [[..:Std:Real#T|Std.Real.T]],  @ [[..:Std:Real#T|Std.Real.T]])
 
+==== :> ====
+:>( @ [[..:Std:Real#T|Std.Real.T]],  @ [[..:Std:Real#T|Std.Real.T]])
 
-==== :?( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) ====
+==== :>= ====
+:>=( @ [[..:Std:Real#T|Std.Real.T]],  @ [[..:Std:Real#T|Std.Real.T]])
 
+==== := ====
+:=( @ [[..:Std:Real#T|Std.Real.T]],  @ [[..:Std:Real#T|Std.Real.T]])
 
-==== :in( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) ====
+==== :~= ====
+:~=( @ [[..:Std:Real#T|Std.Real.T]],  @ [[..:Std:Real#T|Std.Real.T]])
 
+==== :? ====
+:?( @ [[..:Std:Real#T|Std.Real.T]],  @ [[..:Std:Real#T|Std.Real.T]])
 
-==== :-( @ [[..:Std:Integer#BigT|Std.Integer.BigT]]) ====
+==== :# ====
+:#( @ [[..:Std:Real#T|Std.Real.T]])
 
+==== :+ ====
+:+( @ [[..:Std:Real#T|Std.Real.T]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])
 
-==== :abs( @ [[..:Std:Integer#BigT|Std.Integer.BigT]]) ====
+==== :- ====
+:-( @ [[..:Std:Real#T|Std.Real.T]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])
 
+==== :* ====
+:*( @ [[..:Std:Real#T|Std.Real.T]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])
 
-==== :~( @ [[..:Std:Integer#BigT|Std.Integer.BigT]]) ====
+==== :/ ====
+:/( @ [[..:Std:Real#T|Std.Real.T]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])
 
+==== :+ ====
+:+( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Real#T|Std.Real.T]])
 
-==== :+( @ [[..:Std:Integer#BigT|Std.Integer.BigT]],  @ [[..:Std:Integer#BigT|Std.Integer.BigT]]) ====
+==== :- ====
+:-( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Real#T|Std.Real.T]])
 
+==== :* ====
+:*( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Real#T|Std.Real.T]])
 
-==== :-( @ [[..:Std:Integer#BigT|Std.Integer.BigT]],  @ [[..:Std:Integer#BigT|Std.Integer.BigT]]) ====
+==== :/ ====
+:/( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Real#T|Std.Real.T]])
 
+==== :left ====
+:left( @ [[..:Std:String#T|Std.String.T]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])
 
-==== :*( @ [[..:Std:Integer#BigT|Std.Integer.BigT]],  @ [[..:Std:Integer#BigT|Std.Integer.BigT]]) ====
+==== :right ====
+:right( @ [[..:Std:String#T|Std.String.T]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])
 
+==== :left ====
+:left( @ [[..:Std:String#T|Std.String.T]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:String#T|Std.String.T]])
 
-==== :div( @ [[..:Std:Integer#BigT|Std.Integer.BigT]],  @ [[..:Std:Integer#BigT|Std.Integer.BigT]]) ====
+==== :right ====
+:right( @ [[..:Std:String#T|Std.String.T]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:String#T|Std.String.T]])
 
+==== :ord ====
+:ord( @ [[..:Std:String#T|Std.String.T]])
 
-==== :%( @ [[..:Std:Integer#BigT|Std.Integer.BigT]],  @ [[..:Std:Integer#BigT|Std.Integer.BigT]]) ====
+==== :chr ====
+:chr( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])
 
+==== :[] ====
+:[]( @ [[..:Std:String#T|Std.String.T]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])
 
-==== :<( @ [[..:Std:Integer#BigT|Std.Integer.BigT]],  @ [[..:Std:Integer#BigT|Std.Integer.BigT]]) ====
+==== :[] ====
+:[]( @ [[..:Std:String#T|Std.String.T]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])
 
+==== :fields ====
+:fields( @ [[..:Std:Type#T|Std.Type.T]])
 
-==== :>( @ [[..:Std:Integer#BigT|Std.Integer.BigT]],  @ [[..:Std:Integer#BigT|Std.Integer.BigT]]) ====
+==== :new ====
+:new( @ [[..:Std:Type#T|Std.Type.T]])
 
+==== :< ====
+:<( @ [[..:Std:String#T|Std.String.T]],  @ [[..:Std:String#T|Std.String.T]])
 
-==== :>=( @ [[..:Std:Integer#BigT|Std.Integer.BigT]],  @ [[..:Std:Integer#BigT|Std.Integer.BigT]]) ====
+==== :<= ====
+:<=( @ [[..:Std:String#T|Std.String.T]],  @ [[..:Std:String#T|Std.String.T]])
 
+==== :> ====
+:>( @ [[..:Std:String#T|Std.String.T]],  @ [[..:Std:String#T|Std.String.T]])
 
-==== :<=( @ [[..:Std:Integer#BigT|Std.Integer.BigT]],  @ [[..:Std:Integer#BigT|Std.Integer.BigT]]) ====
+==== :>= ====
+:>=( @ [[..:Std:String#T|Std.String.T]],  @ [[..:Std:String#T|Std.String.T]])
 
+==== := ====
+:=( @ [[..:Std:String#T|Std.String.T]],  @ [[..:Std:String#T|Std.String.T]])
 
-==== :=( @ [[..:Std:Integer#BigT|Std.Integer.BigT]],  @ [[..:Std:Integer#BigT|Std.Integer.BigT]]) ====
+==== :~= ====
+:~=( @ [[..:Std:String#T|Std.String.T]],  @ [[..:Std:String#T|Std.String.T]])
 
+==== :? ====
+:?( @ [[..:Std:String#T|Std.String.T]],  @ [[..:Std:String#T|Std.String.T]])
 
-==== :~=( @ [[..:Std:Integer#BigT|Std.Integer.BigT]],  @ [[..:Std:Integer#BigT|Std.Integer.BigT]]) ====
+==== :# ====
+:#( @ ANY)
 
+==== :# ====
+:#( @ [[..:Std:Address#T|Std.Address.T]])
 
-==== :?( @ [[..:Std:Integer#BigT|Std.Integer.BigT]],  @ [[..:Std:Integer#BigT|Std.Integer.BigT]]) ====
+==== :# ====
+:#( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])
 
+==== :# ====
+:#( @ [[..:Std:Integer#BigT|Std.Integer.BigT]])
 
-==== :+( @ [[..:Std:Integer#BigT|Std.Integer.BigT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) ====
+==== :bits ====
+:bits( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])
 
+==== :scan0 ====
+:scan0( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])
 
-==== :-( @ [[..:Std:Integer#BigT|Std.Integer.BigT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) ====
+==== :scan1 ====
+:scan1( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])
 
+==== :ones ====
+:ones( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])
 
-==== :*( @ [[..:Std:Integer#BigT|Std.Integer.BigT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) ====
+==== :ones ====
+:ones( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])
 
+==== :ones ====
+:ones( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])
 
-==== :div( @ [[..:Std:Integer#BigT|Std.Integer.BigT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) ====
+==== :zeros ====
+:zeros( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])
 
+==== :zeros ====
+:zeros( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])
 
-==== :%( @ [[..:Std:Integer#BigT|Std.Integer.BigT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) ====
+==== :zeros ====
+:zeros( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])
 
+==== :bit ====
+:bit( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])
 
-==== :sal( @ [[..:Std:Integer#BigT|Std.Integer.BigT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) ====
+==== :bits ====
+:bits( @ [[..:Std:Integer#BigT|Std.Integer.BigT]])
 
+==== :scan0 ====
+:scan0( @ [[..:Std:Integer#BigT|Std.Integer.BigT]])
 
-==== :sar( @ [[..:Std:Integer#BigT|Std.Integer.BigT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) ====
+==== :scan1 ====
+:scan1( @ [[..:Std:Integer#BigT|Std.Integer.BigT]])
 
+==== :ones ====
+:ones( @ [[..:Std:Integer#BigT|Std.Integer.BigT]])
 
-==== :shl( @ [[..:Std:Integer#BigT|Std.Integer.BigT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) ====
+==== :ones ====
+:ones( @ [[..:Std:Integer#BigT|Std.Integer.BigT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])
 
+==== :ones ====
+:ones( @ [[..:Std:Integer#BigT|Std.Integer.BigT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])
 
-==== :shr( @ [[..:Std:Integer#BigT|Std.Integer.BigT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) ====
+==== :zeros ====
+:zeros( @ [[..:Std:Integer#BigT|Std.Integer.BigT]])
 
+==== :zeros ====
+:zeros( @ [[..:Std:Integer#BigT|Std.Integer.BigT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])
 
-==== :^( @ [[..:Std:Integer#BigT|Std.Integer.BigT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) ====
+==== :zeros ====
+:zeros( @ [[..:Std:Integer#BigT|Std.Integer.BigT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])
 
+==== :bit ====
+:bit( @ [[..:Std:Integer#BigT|Std.Integer.BigT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])
 
-==== :<( @ [[..:Std:Integer#BigT|Std.Integer.BigT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) ====
+==== :# ====
+:#( @ [[..:Std:String#T|Std.String.T]])
 
+==== :in ====
+:in( @ ANY,  @ [[..:Std:Type#T|Std.Type.T]])
 
-==== :>( @ [[..:Std:Integer#BigT|Std.Integer.BigT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) ====
+==== :< ====
+:<( @ [[..:Std:Type#T|Std.Type.T]],  @ [[..:Std:Type#T|Std.Type.T]])
 
+==== :> ====
+:>( @ [[..:Std:Type#T|Std.Type.T]],  @ [[..:Std:Type#T|Std.Type.T]])
 
-==== :>=( @ [[..:Std:Integer#BigT|Std.Integer.BigT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) ====
+==== :<= ====
+:<=( @ [[..:Std:Type#T|Std.Type.T]],  @ [[..:Std:Type#T|Std.Type.T]])
 
+==== :>= ====
+:>=( @ [[..:Std:Type#T|Std.Type.T]],  @ [[..:Std:Type#T|Std.Type.T]])
 
-==== :<=( @ [[..:Std:Integer#BigT|Std.Integer.BigT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) ====
+==== := ====
+:=( @ ANY,  @ ANY)
 
+==== :~= ====
+:~=( @ ANY,  @ ANY)
 
-==== :=( @ [[..:Std:Integer#BigT|Std.Integer.BigT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) ====
-
-
-==== :~=( @ [[..:Std:Integer#BigT|Std.Integer.BigT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) ====
-
-
-==== :?( @ [[..:Std:Integer#BigT|Std.Integer.BigT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) ====
-
-
-==== :+( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Integer#BigT|Std.Integer.BigT]]) ====
-
-
-==== :-( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Integer#BigT|Std.Integer.BigT]]) ====
-
-
-==== :*( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Integer#BigT|Std.Integer.BigT]]) ====
-
-
-==== :div( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Integer#BigT|Std.Integer.BigT]]) ====
-
-
-==== :%( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Integer#BigT|Std.Integer.BigT]]) ====
-
-
-==== :<( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Integer#BigT|Std.Integer.BigT]]) ====
-
-
-==== :>( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Integer#BigT|Std.Integer.BigT]]) ====
-
-
-==== :>=( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Integer#BigT|Std.Integer.BigT]]) ====
-
-
-==== :<=( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Integer#BigT|Std.Integer.BigT]]) ====
-
-
-==== :=( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Integer#BigT|Std.Integer.BigT]]) ====
-
-
-==== :~=( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Integer#BigT|Std.Integer.BigT]]) ====
-
-
-==== :?( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Integer#BigT|Std.Integer.BigT]]) ====
-
-
-==== :in( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Integer#BigT|Std.Integer.BigT]]) ====
-
-
-==== :to( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) ====
-
-
-==== :up( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) ====
-
-
-==== :down( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) ====
-
-
-==== :@( @ [[..:Std:Real#T|Std.Real.T]],  = [[..:Std:String#T|Std.String.T]]) ====
-
-
-==== :@( @ [[..:Std:Real#T|Std.Real.T]],  = [[..:Std:Integer#T|Std.Integer.T]]) ====
-
-
-==== :@( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  = [[..:Std:Real#T|Std.Real.T]]) ====
-
-
-==== :@( @ [[..:Std:Integer#BigT|Std.Integer.BigT]],  = [[..:Std:Real#T|Std.Real.T]]) ====
-
-
-==== :+( @ [[..:Std:Real#T|Std.Real.T]],  @ [[..:Std:Real#T|Std.Real.T]]) ====
-
-
-==== :-( @ [[..:Std:Real#T|Std.Real.T]],  @ [[..:Std:Real#T|Std.Real.T]]) ====
-
-
-==== :*( @ [[..:Std:Real#T|Std.Real.T]],  @ [[..:Std:Real#T|Std.Real.T]]) ====
-
-
-==== :/( @ [[..:Std:Real#T|Std.Real.T]],  @ [[..:Std:Real#T|Std.Real.T]]) ====
-
-
-==== :abs( @ [[..:Std:Real#T|Std.Real.T]]) ====
-
-
-==== :-( @ [[..:Std:Real#T|Std.Real.T]]) ====
-
-
-==== :floor( @ [[..:Std:Real#T|Std.Real.T]]) ====
-
-
-==== :ceil( @ [[..:Std:Real#T|Std.Real.T]]) ====
-
-
-==== :round( @ [[..:Std:Real#T|Std.Real.T]]) ====
-
-
-==== :sin( @ [[..:Std:Real#T|Std.Real.T]]) ====
-
-
-==== :cos( @ [[..:Std:Real#T|Std.Real.T]]) ====
-
-
-==== :tan( @ [[..:Std:Real#T|Std.Real.T]]) ====
-
-
-==== :asin( @ [[..:Std:Real#T|Std.Real.T]]) ====
-
-
-==== :acos( @ [[..:Std:Real#T|Std.Real.T]]) ====
-
-
-==== :atan( @ [[..:Std:Real#T|Std.Real.T]]) ====
-
-
-==== :atan( @ [[..:Std:Real#T|Std.Real.T]],  @ [[..:Std:Real#T|Std.Real.T]]) ====
-
-
-==== :sqrt( @ [[..:Std:Real#T|Std.Real.T]]) ====
-
-
-==== :exp( @ [[..:Std:Real#T|Std.Real.T]]) ====
-
-
-==== :ln( @ [[..:Std:Real#T|Std.Real.T]]) ====
-
-
-==== :^( @ [[..:Std:Real#T|Std.Real.T]],  @ [[..:Std:Real#T|Std.Real.T]]) ====
-
-
-==== :<( @ [[..:Std:Real#T|Std.Real.T]],  @ [[..:Std:Real#T|Std.Real.T]]) ====
-
-
-==== :<=( @ [[..:Std:Real#T|Std.Real.T]],  @ [[..:Std:Real#T|Std.Real.T]]) ====
-
-
-==== :>( @ [[..:Std:Real#T|Std.Real.T]],  @ [[..:Std:Real#T|Std.Real.T]]) ====
-
-
-==== :>=( @ [[..:Std:Real#T|Std.Real.T]],  @ [[..:Std:Real#T|Std.Real.T]]) ====
-
-
-==== :=( @ [[..:Std:Real#T|Std.Real.T]],  @ [[..:Std:Real#T|Std.Real.T]]) ====
-
-
-==== :~=( @ [[..:Std:Real#T|Std.Real.T]],  @ [[..:Std:Real#T|Std.Real.T]]) ====
-
-
-==== :?( @ [[..:Std:Real#T|Std.Real.T]],  @ [[..:Std:Real#T|Std.Real.T]]) ====
-
-
-==== :#( @ [[..:Std:Real#T|Std.Real.T]]) ====
-
-
-==== :+( @ [[..:Std:Real#T|Std.Real.T]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) ====
-
-
-==== :-( @ [[..:Std:Real#T|Std.Real.T]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) ====
-
-
-==== :*( @ [[..:Std:Real#T|Std.Real.T]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) ====
-
-
-==== :/( @ [[..:Std:Real#T|Std.Real.T]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) ====
-
-
-==== :+( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Real#T|Std.Real.T]]) ====
-
-
-==== :-( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Real#T|Std.Real.T]]) ====
-
-
-==== :*( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Real#T|Std.Real.T]]) ====
-
-
-==== :/( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Real#T|Std.Real.T]]) ====
-
-
-==== :left( @ [[..:Std:String#T|Std.String.T]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) ====
-
-
-==== :right( @ [[..:Std:String#T|Std.String.T]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) ====
-
-
-==== :left( @ [[..:Std:String#T|Std.String.T]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:String#T|Std.String.T]]) ====
-
-
-==== :right( @ [[..:Std:String#T|Std.String.T]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:String#T|Std.String.T]]) ====
-
-
-==== :ord( @ [[..:Std:String#T|Std.String.T]]) ====
-
-
-==== :chr( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) ====
-
-
-==== :[]( @ [[..:Std:String#T|Std.String.T]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) ====
-
-
-==== :[]( @ [[..:Std:String#T|Std.String.T]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) ====
-
-
-==== :fields( @ [[..:Std:Type#T|Std.Type.T]]) ====
-
-
-==== :new( @ [[..:Std:Type#T|Std.Type.T]]) ====
-
-
-==== :<( @ [[..:Std:String#T|Std.String.T]],  @ [[..:Std:String#T|Std.String.T]]) ====
-
-
-==== :<=( @ [[..:Std:String#T|Std.String.T]],  @ [[..:Std:String#T|Std.String.T]]) ====
-
-
-==== :>( @ [[..:Std:String#T|Std.String.T]],  @ [[..:Std:String#T|Std.String.T]]) ====
-
-
-==== :>=( @ [[..:Std:String#T|Std.String.T]],  @ [[..:Std:String#T|Std.String.T]]) ====
-
-
-==== :=( @ [[..:Std:String#T|Std.String.T]],  @ [[..:Std:String#T|Std.String.T]]) ====
-
-
-==== :~=( @ [[..:Std:String#T|Std.String.T]],  @ [[..:Std:String#T|Std.String.T]]) ====
-
-
-==== :?( @ [[..:Std:String#T|Std.String.T]],  @ [[..:Std:String#T|Std.String.T]]) ====
-
-
-==== :#( @ ANY) ====
-
-
-==== :#( @ [[..:Std:Address#T|Std.Address.T]]) ====
-
-
-==== :#( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) ====
-
-
-==== :#( @ [[..:Std:Integer#BigT|Std.Integer.BigT]]) ====
-
-
-==== :bits( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) ====
-
-
-==== :scan0( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) ====
-
-
-==== :scan1( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) ====
-
-
-==== :ones( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) ====
-
-
-==== :ones( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) ====
-
-
-==== :ones( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) ====
-
-
-==== :zeros( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) ====
-
-
-==== :zeros( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) ====
-
-
-==== :zeros( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) ====
-
-
-==== :bit( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) ====
-
-
-==== :bits( @ [[..:Std:Integer#BigT|Std.Integer.BigT]]) ====
-
-
-==== :scan0( @ [[..:Std:Integer#BigT|Std.Integer.BigT]]) ====
-
-
-==== :scan1( @ [[..:Std:Integer#BigT|Std.Integer.BigT]]) ====
-
-
-==== :ones( @ [[..:Std:Integer#BigT|Std.Integer.BigT]]) ====
-
-
-==== :ones( @ [[..:Std:Integer#BigT|Std.Integer.BigT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) ====
-
-
-==== :ones( @ [[..:Std:Integer#BigT|Std.Integer.BigT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) ====
-
-
-==== :zeros( @ [[..:Std:Integer#BigT|Std.Integer.BigT]]) ====
-
-
-==== :zeros( @ [[..:Std:Integer#BigT|Std.Integer.BigT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) ====
-
-
-==== :zeros( @ [[..:Std:Integer#BigT|Std.Integer.BigT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) ====
-
-
-==== :bit( @ [[..:Std:Integer#BigT|Std.Integer.BigT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) ====
-
-
-==== :#( @ [[..:Std:String#T|Std.String.T]]) ====
-
-
-==== :in( @ ANY,  @ [[..:Std:Type#T|Std.Type.T]]) ====
-
-
-==== :<( @ [[..:Std:Type#T|Std.Type.T]],  @ [[..:Std:Type#T|Std.Type.T]]) ====
-
-
-==== :>( @ [[..:Std:Type#T|Std.Type.T]],  @ [[..:Std:Type#T|Std.Type.T]]) ====
-
-
-==== :<=( @ [[..:Std:Type#T|Std.Type.T]],  @ [[..:Std:Type#T|Std.Type.T]]) ====
-
-
-==== :>=( @ [[..:Std:Type#T|Std.Type.T]],  @ [[..:Std:Type#T|Std.Type.T]]) ====
-
-
-==== :=( @ ANY,  @ ANY) ====
-
-
-==== :~=( @ ANY,  @ ANY) ====
-
-
-==== :length(string @ [[..:Std:String#T|Std.String.T]]) ====
-
+==== :length ====
+:length(string @ [[..:Std:String#T|Std.String.T]])
 Returns the length of string
 
-==== :chars( @ [[..:Std:String#T|Std.String.T]]) ====
+==== :chars ====
+:chars( @ [[..:Std:String#T|Std.String.T]])
 
+==== :in ====
+:in( @ [[..:Std:String#T|Std.String.T]],  @ [[..:Std:String#T|Std.String.T]])
 
-==== :in( @ [[..:Std:String#T|Std.String.T]],  @ [[..:Std:String#T|Std.String.T]]) ====
+==== :in ====
+:in( @ [[..:Std:String#T|Std.String.T]],  @ [[..:Std:String#T|Std.String.T]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])
 
+==== :in ====
+:in( @ [[..:Std:String#T|Std.String.T]],  @ [[..:Std:String#T|Std.String.T]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])
 
-==== :in( @ [[..:Std:String#T|Std.String.T]],  @ [[..:Std:String#T|Std.String.T]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) ====
+==== :find ====
+:find( @ [[..:Std:String#T|Std.String.T]],  @ [[..:Std:String#T|Std.String.T]])
 
+==== :find ====
+:find( @ [[..:Std:String#T|Std.String.T]],  @ [[..:Std:String#T|Std.String.T]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])
 
-==== :in( @ [[..:Std:String#T|Std.String.T]],  @ [[..:Std:String#T|Std.String.T]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) ====
+==== :find ====
+:find( @ [[..:Std:String#T|Std.String.T]],  @ [[..:Std:String#T|Std.String.T]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])
 
+==== :to ====
+:to( @ [[..:Std:Real#T|Std.Real.T]],  @ [[..:Std:Real#T|Std.Real.T]])
 
-==== :find( @ [[..:Std:String#T|Std.String.T]],  @ [[..:Std:String#T|Std.String.T]]) ====
+==== :to ====
+:to( @ [[..:Std:Real#T|Std.Real.T]],  @ [[..:Std:Real#T|Std.Real.T]],  @ [[..:Std:Real#T|Std.Real.T]])
 
+==== :map ====
+:map( @ [[..:Std:String#T|Std.String.T]],  @ [[..:Std:String#T|Std.String.T]],  @ [[..:Std:String#T|Std.String.T]])
 
-==== :find( @ [[..:Std:String#T|Std.String.T]],  @ [[..:Std:String#T|Std.String.T]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) ====
+==== :any ====
+:any( @ [[..:Std:String#T|Std.String.T]],  @ [[..:Std:String#T|Std.String.T]])
 
+==== :any ====
+:any( @ [[..:Std:String#T|Std.String.T]],  @ [[..:Std:String#T|Std.String.T]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])
 
-==== :find( @ [[..:Std:String#T|Std.String.T]],  @ [[..:Std:String#T|Std.String.T]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) ====
+==== :split ====
+:split( @ [[..:Std:String#T|Std.String.T]],  @ [[..:Std:String#T|Std.String.T]])
 
+==== :skip ====
+:skip( @ [[..:Std:String#T|Std.String.T]],  @ [[..:Std:String#T|Std.String.T]])
 
-==== :to( @ [[..:Std:Real#T|Std.Real.T]],  @ [[..:Std:Real#T|Std.Real.T]]) ====
+==== :skip ====
+:skip( @ [[..:Std:String#T|Std.String.T]],  @ [[..:Std:String#T|Std.String.T]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])
 
+==== :/ ====
+:/( @ [[..:Std:Integer#BigT|Std.Integer.BigT]],  @ [[..:Std:Integer#BigT|Std.Integer.BigT]])
 
-==== :to( @ [[..:Std:Real#T|Std.Real.T]],  @ [[..:Std:Real#T|Std.Real.T]],  @ [[..:Std:Real#T|Std.Real.T]]) ====
+==== :/ ====
+:/( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Integer#BigT|Std.Integer.BigT]])
 
+==== :/ ====
+:/( @ [[..:Std:Integer#BigT|Std.Integer.BigT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])
 
-==== :map( @ [[..:Std:String#T|Std.String.T]],  @ [[..:Std:String#T|Std.String.T]],  @ [[..:Std:String#T|Std.String.T]]) ====
+==== :@ ====
+:@( @ [[..:Std:Rational#T|Std.Rational.T]],  = [[..:Std:String#T|Std.String.T]])
 
+==== :- ====
+:-( @ [[..:Std:Rational#T|Std.Rational.T]])
 
-==== :any( @ [[..:Std:String#T|Std.String.T]],  @ [[..:Std:String#T|Std.String.T]]) ====
+==== :+ ====
+:+( @ [[..:Std:Rational#T|Std.Rational.T]],  @ [[..:Std:Rational#T|Std.Rational.T]])
 
+==== :- ====
+:-( @ [[..:Std:Rational#T|Std.Rational.T]],  @ [[..:Std:Rational#T|Std.Rational.T]])
 
-==== :any( @ [[..:Std:String#T|Std.String.T]],  @ [[..:Std:String#T|Std.String.T]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) ====
+==== :* ====
+:*( @ [[..:Std:Rational#T|Std.Rational.T]],  @ [[..:Std:Rational#T|Std.Rational.T]])
 
+==== :/ ====
+:/( @ [[..:Std:Rational#T|Std.Rational.T]],  @ [[..:Std:Rational#T|Std.Rational.T]])
 
-==== :split( @ [[..:Std:String#T|Std.String.T]],  @ [[..:Std:String#T|Std.String.T]]) ====
+==== :+ ====
+:+( @ [[..:Std:Rational#T|Std.Rational.T]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])
 
+==== :- ====
+:-( @ [[..:Std:Rational#T|Std.Rational.T]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])
 
-==== :skip( @ [[..:Std:String#T|Std.String.T]],  @ [[..:Std:String#T|Std.String.T]]) ====
+==== :* ====
+:*( @ [[..:Std:Rational#T|Std.Rational.T]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])
 
+==== :/ ====
+:/( @ [[..:Std:Rational#T|Std.Rational.T]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])
 
-==== :skip( @ [[..:Std:String#T|Std.String.T]],  @ [[..:Std:String#T|Std.String.T]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) ====
+==== :+ ====
+:+( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Rational#T|Std.Rational.T]])
 
+==== :- ====
+:-( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Rational#T|Std.Rational.T]])
 
-==== :/( @ [[..:Std:Integer#BigT|Std.Integer.BigT]],  @ [[..:Std:Integer#BigT|Std.Integer.BigT]]) ====
+==== :* ====
+:*( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Rational#T|Std.Rational.T]])
 
+==== :/ ====
+:/( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Rational#T|Std.Rational.T]])
 
-==== :/( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Integer#BigT|Std.Integer.BigT]]) ====
+==== :+ ====
+:+( @ [[..:Std:Rational#T|Std.Rational.T]],  @ [[..:Std:Integer#BigT|Std.Integer.BigT]])
 
+==== :- ====
+:-( @ [[..:Std:Rational#T|Std.Rational.T]],  @ [[..:Std:Integer#BigT|Std.Integer.BigT]])
 
-==== :/( @ [[..:Std:Integer#BigT|Std.Integer.BigT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) ====
+==== :* ====
+:*( @ [[..:Std:Rational#T|Std.Rational.T]],  @ [[..:Std:Integer#BigT|Std.Integer.BigT]])
 
+==== :/ ====
+:/( @ [[..:Std:Rational#T|Std.Rational.T]],  @ [[..:Std:Integer#BigT|Std.Integer.BigT]])
 
-==== :@( @ [[..:Std:Rational#T|Std.Rational.T]],  = [[..:Std:String#T|Std.String.T]]) ====
+==== :+ ====
+:+( @ [[..:Std:Integer#BigT|Std.Integer.BigT]],  @ [[..:Std:Rational#T|Std.Rational.T]])
 
+==== :- ====
+:-( @ [[..:Std:Integer#BigT|Std.Integer.BigT]],  @ [[..:Std:Rational#T|Std.Rational.T]])
 
-==== :-( @ [[..:Std:Rational#T|Std.Rational.T]]) ====
+==== :* ====
+:*( @ [[..:Std:Integer#BigT|Std.Integer.BigT]],  @ [[..:Std:Rational#T|Std.Rational.T]])
 
+==== :/ ====
+:/( @ [[..:Std:Integer#BigT|Std.Integer.BigT]],  @ [[..:Std:Rational#T|Std.Rational.T]])
 
-==== :+( @ [[..:Std:Rational#T|Std.Rational.T]],  @ [[..:Std:Rational#T|Std.Rational.T]]) ====
+==== :< ====
+:<( @ [[..:Std:Rational#T|Std.Rational.T]],  @ [[..:Std:Rational#T|Std.Rational.T]])
 
+==== :> ====
+:>( @ [[..:Std:Rational#T|Std.Rational.T]],  @ [[..:Std:Rational#T|Std.Rational.T]])
 
-==== :-( @ [[..:Std:Rational#T|Std.Rational.T]],  @ [[..:Std:Rational#T|Std.Rational.T]]) ====
+==== :<= ====
+:<=( @ [[..:Std:Rational#T|Std.Rational.T]],  @ [[..:Std:Rational#T|Std.Rational.T]])
 
+==== :>= ====
+:>=( @ [[..:Std:Rational#T|Std.Rational.T]],  @ [[..:Std:Rational#T|Std.Rational.T]])
 
-==== :*( @ [[..:Std:Rational#T|Std.Rational.T]],  @ [[..:Std:Rational#T|Std.Rational.T]]) ====
+==== := ====
+:=( @ [[..:Std:Rational#T|Std.Rational.T]],  @ [[..:Std:Rational#T|Std.Rational.T]])
 
+==== :~= ====
+:~=( @ [[..:Std:Rational#T|Std.Rational.T]],  @ [[..:Std:Rational#T|Std.Rational.T]])
 
-==== :/( @ [[..:Std:Rational#T|Std.Rational.T]],  @ [[..:Std:Rational#T|Std.Rational.T]]) ====
+==== :< ====
+:<( @ [[..:Std:Rational#T|Std.Rational.T]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])
 
+==== :> ====
+:>( @ [[..:Std:Rational#T|Std.Rational.T]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])
 
-==== :+( @ [[..:Std:Rational#T|Std.Rational.T]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) ====
+==== :<= ====
+:<=( @ [[..:Std:Rational#T|Std.Rational.T]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])
 
+==== :>= ====
+:>=( @ [[..:Std:Rational#T|Std.Rational.T]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])
 
-==== :-( @ [[..:Std:Rational#T|Std.Rational.T]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) ====
+==== := ====
+:=( @ [[..:Std:Rational#T|Std.Rational.T]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])
 
+==== :~= ====
+:~=( @ [[..:Std:Rational#T|Std.Rational.T]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])
 
-==== :*( @ [[..:Std:Rational#T|Std.Rational.T]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) ====
+==== :< ====
+:<( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Rational#T|Std.Rational.T]])
 
+==== :> ====
+:>( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Rational#T|Std.Rational.T]])
 
-==== :/( @ [[..:Std:Rational#T|Std.Rational.T]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) ====
+==== :<= ====
+:<=( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Rational#T|Std.Rational.T]])
 
+==== :>= ====
+:>=( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Rational#T|Std.Rational.T]])
 
-==== :+( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Rational#T|Std.Rational.T]]) ====
+==== := ====
+:=( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Rational#T|Std.Rational.T]])
 
+==== :~= ====
+:~=( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Rational#T|Std.Rational.T]])
 
-==== :-( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Rational#T|Std.Rational.T]]) ====
-
-
-==== :*( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Rational#T|Std.Rational.T]]) ====
-
-
-==== :/( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Rational#T|Std.Rational.T]]) ====
-
-
-==== :+( @ [[..:Std:Rational#T|Std.Rational.T]],  @ [[..:Std:Integer#BigT|Std.Integer.BigT]]) ====
-
-
-==== :-( @ [[..:Std:Rational#T|Std.Rational.T]],  @ [[..:Std:Integer#BigT|Std.Integer.BigT]]) ====
-
-
-==== :*( @ [[..:Std:Rational#T|Std.Rational.T]],  @ [[..:Std:Integer#BigT|Std.Integer.BigT]]) ====
-
-
-==== :/( @ [[..:Std:Rational#T|Std.Rational.T]],  @ [[..:Std:Integer#BigT|Std.Integer.BigT]]) ====
-
-
-==== :+( @ [[..:Std:Integer#BigT|Std.Integer.BigT]],  @ [[..:Std:Rational#T|Std.Rational.T]]) ====
-
-
-==== :-( @ [[..:Std:Integer#BigT|Std.Integer.BigT]],  @ [[..:Std:Rational#T|Std.Rational.T]]) ====
-
-
-==== :*( @ [[..:Std:Integer#BigT|Std.Integer.BigT]],  @ [[..:Std:Rational#T|Std.Rational.T]]) ====
-
-
-==== :/( @ [[..:Std:Integer#BigT|Std.Integer.BigT]],  @ [[..:Std:Rational#T|Std.Rational.T]]) ====
-
-
-==== :<( @ [[..:Std:Rational#T|Std.Rational.T]],  @ [[..:Std:Rational#T|Std.Rational.T]]) ====
-
-
-==== :>( @ [[..:Std:Rational#T|Std.Rational.T]],  @ [[..:Std:Rational#T|Std.Rational.T]]) ====
-
-
-==== :<=( @ [[..:Std:Rational#T|Std.Rational.T]],  @ [[..:Std:Rational#T|Std.Rational.T]]) ====
-
-
-==== :>=( @ [[..:Std:Rational#T|Std.Rational.T]],  @ [[..:Std:Rational#T|Std.Rational.T]]) ====
-
-
-==== :=( @ [[..:Std:Rational#T|Std.Rational.T]],  @ [[..:Std:Rational#T|Std.Rational.T]]) ====
-
-
-==== :~=( @ [[..:Std:Rational#T|Std.Rational.T]],  @ [[..:Std:Rational#T|Std.Rational.T]]) ====
-
-
-==== :<( @ [[..:Std:Rational#T|Std.Rational.T]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) ====
-
-
-==== :>( @ [[..:Std:Rational#T|Std.Rational.T]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) ====
-
-
-==== :<=( @ [[..:Std:Rational#T|Std.Rational.T]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) ====
-
-
-==== :>=( @ [[..:Std:Rational#T|Std.Rational.T]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) ====
-
-
-==== :=( @ [[..:Std:Rational#T|Std.Rational.T]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) ====
-
-
-==== :~=( @ [[..:Std:Rational#T|Std.Rational.T]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) ====
-
-
-==== :<( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Rational#T|Std.Rational.T]]) ====
-
-
-==== :>( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Rational#T|Std.Rational.T]]) ====
-
-
-==== :<=( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Rational#T|Std.Rational.T]]) ====
-
-
-==== :>=( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Rational#T|Std.Rational.T]]) ====
-
-
-==== :=( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Rational#T|Std.Rational.T]]) ====
-
-
-==== :~=( @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Rational#T|Std.Rational.T]]) ====
-
-
-==== :is0( @ [[..:Std:Rational#T|Std.Rational.T]]) ====
-
+==== :is0 ====
+:is0( @ [[..:Std:Rational#T|Std.Rational.T]])
 

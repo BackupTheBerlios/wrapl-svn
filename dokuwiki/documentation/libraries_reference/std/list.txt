@@ -3,136 +3,140 @@
 
 A general purpose extensible list type
 
-==== :collect( @ [[..:Std:Function#T|Std.Function.T]]) ====
+==== :collect ====
+:collect( @ [[..:Std:Function#T|Std.Function.T]])
 
+==== :sort ====
+:sort( @ [[#T|T]],  @ [[..:Std:Function#T|Std.Function.T]])
 
-==== :sort( @ [[#T|T]],  @ [[..:Std:Function#T|Std.Function.T]]) ====
-
-
-==== :_check( @ [[#T|T]]) ====
-
+==== :_check ====
+:_check( @ [[#T|T]])
 internal function
 
-==== :empty(list @ [[#T|T]]) : [[#T|T]] ====
-
+==== :empty ====
+:empty(list @ [[#T|T]]) : [[#T|T]]
 empties <em>list</em> and returns it
 
-==== :copy(list @ [[#T|T]]) : [[#T|T]] ====
-
+==== :copy ====
+:copy(list @ [[#T|T]]) : [[#T|T]]
 returns a shallow copy of <em>list</em>
 
-==== :+(a @ [[#T|T]], b @ [[#T|T]]) : [[#T|T]] ====
-
+==== :+ ====
+:+(a @ [[#T|T]], b @ [[#T|T]]) : [[#T|T]]
 returns the concatenation of <em>a</em> and <em>b</em>
 
-==== :push(list @ [[#T|T]], value @ ANY) : [[#T|T]] ====
-
+==== :push ====
+:push(list @ [[#T|T]], value @ ANY) : [[#T|T]]
 inserts <em>value</em> onto the start <em>list</em> and returns <em>list</em>
 
-==== :put(list @ [[#T|T]], value @ ANY) : [[#T|T]] ====
-
+==== :put ====
+:put(list @ [[#T|T]], value @ ANY) : [[#T|T]]
 inserts <em>value</em> onto the end <em>list</em> and returns <em>list</em>
 
-==== :pop(list @ [[#T|T]]) : ANY ====
-
+==== :pop ====
+:pop(list @ [[#T|T]]) : ANY
 removes and returns the first element of <em>list</em>
 
-==== :pull(list @ [[#T|T]]) : ANY ====
-
+==== :pull ====
+:pull(list @ [[#T|T]]) : ANY
 removes and returns the last element of <em>list</em>
 
-==== :[](list @ [[#T|T]], n @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) : ANY ====
-
+==== :[] ====
+:[](list @ [[#T|T]], n @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) : ANY
 returns an assignable reference to the <em>n</em><sup>th</sup> element of <em>list</em>
 negative indices are taken from the end of the list
 fails if <em>n</em> is outside the <em>-list:length .. list:length</em>
 
-==== :[](list @ [[#T|T]], m @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]], n @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[#T|T]] ====
-
+==== :[] ====
+:[](list @ [[#T|T]], m @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]], n @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[#T|T]]
 returns the sublist of <em>list</em> from the <em>m</em><sup>th</sup> to the <em>n - 1</em><sup>th</sup> element inclusively
 fails if either <em>m</em> or <em>n</em> is outside the range of the list
 returns an empty list if <em>m > n</em>
 
-==== :shift(list @ [[#T|T]], n @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]], r @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[#T|T]] ====
-
+==== :shift ====
+:shift(list @ [[#T|T]], n @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]], r @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[#T|T]]
 shifts the <em>n</em><sup>th</sup> element by <em>n</em> positions within <em>list</em>
 
-==== :delete(list @ [[#T|T]], n @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[#T|T]] ====
-
+==== :delete ====
+:delete(list @ [[#T|T]], n @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[#T|T]]
 removes the <em>n</em><sup>th</sup> element from <em>list</em>
 
-==== :insert(list @ [[#T|T]], n @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]], value @ ANY) : [[#T|T]] ====
-
+==== :insert ====
+:insert(list @ [[#T|T]], n @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]], value @ ANY) : [[#T|T]]
 inserts <em>value</em> into the <em>n</em><sup>th</sup> position in <em>list</em>
 
-==== :length(list @ [[#T|T]]) : [[..:Std:Integer#SmallT|Std.Integer.SmallT]] ====
-
+==== :length ====
+:length(list @ [[#T|T]]) : [[..:Std:Integer#SmallT|Std.Integer.SmallT]]
 returns the length of <em>list</em>
 
-==== :size(list @ [[#T|T]]) : [[..:Std:Integer#SmallT|Std.Integer.SmallT]] ====
-
+==== :size ====
+:size(list @ [[#T|T]]) : [[..:Std:Integer#SmallT|Std.Integer.SmallT]]
 returns the length of <em>list</em>
 
-==== :@( @ [[#T|T]],  = [[..:Std:String#T|Std.String.T]]) ====
+==== :@ ====
+:@( @ [[#T|T]],  = [[..:Std:String#T|Std.String.T]])
 
-
-==== :in(value @ ANY, list @ [[#T|T]]) : ANY ====
-
+==== :in ====
+:in(value @ ANY, list @ [[#T|T]]) : ANY
 returns <em>value</em> if it is in <em>list</em>, fails otherwise
 
-==== :find( @ [[#T|T]],  @ ANY) ====
+==== :find ====
+:find( @ [[#T|T]],  @ ANY)
 
+==== :remove ====
+:remove( @ [[#T|T]],  @ ANY)
 
-==== :remove( @ [[#T|T]],  @ ANY) ====
+==== :keys ====
+:keys( @ [[#T|T]])
 
+==== :values ====
+:values( @ [[#T|T]])
 
-==== :keys( @ [[#T|T]]) ====
+==== :loop ====
+:loop( @ [[#T|T]])
 
+==== :apply ====
+:apply( @ [[#T|T]],  @ [[..:Std:Function#T|Std.Function.T]])
 
-==== :values( @ [[#T|T]]) ====
+==== :apply ====
+:apply( @ [[..:Std:Function#T|Std.Function.T]],  @ [[#T|T]])
 
+==== :map ====
+:map( @ [[#T|T]],  @ [[..:Std:Function#T|Std.Function.T]])
 
-==== :loop( @ [[#T|T]]) ====
+==== :map ====
+:map( @ [[..:Std:Function#T|Std.Function.T]],  @ [[#T|T]])
 
+==== :foldl ====
+:foldl( @ [[..:Std:Function#T|Std.Function.T]],  @ [[#T|T]])
 
-==== :apply( @ [[#T|T]],  @ [[..:Std:Function#T|Std.Function.T]]) ====
+==== :foldr ====
+:foldr( @ [[..:Std:Function#T|Std.Function.T]],  @ [[#T|T]])
 
+==== :foldl ====
+:foldl( @ [[#T|T]],  @ [[..:Std:Function#T|Std.Function.T]])
 
-==== :apply( @ [[..:Std:Function#T|Std.Function.T]],  @ [[#T|T]]) ====
+==== :foldr ====
+:foldr( @ [[#T|T]],  @ [[..:Std:Function#T|Std.Function.T]])
 
+==== :sort ====
+:sort( @ [[#T|T]])
 
-==== :map( @ [[#T|T]],  @ [[..:Std:Function#T|Std.Function.T]]) ====
-
-
-==== :map( @ [[..:Std:Function#T|Std.Function.T]],  @ [[#T|T]]) ====
-
-
-==== :foldl( @ [[..:Std:Function#T|Std.Function.T]],  @ [[#T|T]]) ====
-
-
-==== :foldr( @ [[..:Std:Function#T|Std.Function.T]],  @ [[#T|T]]) ====
-
-
-==== :foldl( @ [[#T|T]],  @ [[..:Std:Function#T|Std.Function.T]]) ====
-
-
-==== :foldr( @ [[#T|T]],  @ [[..:Std:Function#T|Std.Function.T]]) ====
-
-
-==== :sort( @ [[#T|T]]) ====
-
-
-==== New(length : [[..:Std:Integer#T|Std.Integer.T]] := 0) : [[#T|T]] ====
+==== New ====
+New(length : [[..:Std:Integer#T|Std.Integer.T]] := 0) : [[#T|T]] ====
 
 Returns a new list with Length elements
 
-==== Make(values...) : [[#T|T]] ====
+==== Make ====
+Make(values...) : [[#T|T]] ====
 
 returns a list with <em>values</em> as its elements
 
-==== Collect() ====
+==== Collect ====
+Collect() ====
 
 
-==== CollectN() ====
+==== CollectN ====
+CollectN() ====
 
 

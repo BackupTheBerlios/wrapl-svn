@@ -3,23 +3,28 @@
 
 
 ==== ReaderT ====
+=== inherits from ===
   * [[#T|T]]
 
 
 ==== WriterT ====
+=== inherits from ===
   * [[#T|T]]
 
 
 ==== SeekerT ====
+=== inherits from ===
   * [[#T|T]]
 
 
 ==== TextReaderT ====
+=== inherits from ===
   * [[#ReaderT|ReaderT]]
   * [[#T|T]]
 
 
 ==== TextWriterT ====
+=== inherits from ===
   * [[#WriterT|WriterT]]
   * [[#T|T]]
 
@@ -27,18 +32,18 @@
 ==== MessageT ====
 
 
-==== :@(msg @ [[#MessageT|MessageT]],  = [[..:Std:String#T|Std.String.T]]) ====
+==== :@ ====
+:@(msg @ [[#MessageT|MessageT]],  = [[..:Std:String#T|Std.String.T]])
 
+==== :write ====
+:write( @ [[#TextWriterT|TextWriterT]],  @ ANY)
 
-==== :write( @ [[#TextWriterT|TextWriterT]],  @ ANY) ====
+==== :writes ====
+:writes( @ [[#TextWriterT|TextWriterT]])
 
+==== :write ====
+:write( @ [[#WriterT|WriterT]],  @ [[..:Std:String#T|Std.String.T]])
 
-==== :writes( @ [[#TextWriterT|TextWriterT]]) ====
-
-
-==== :write( @ [[#WriterT|WriterT]],  @ [[..:Std:String#T|Std.String.T]]) ====
-
-
-==== :copy( @ [[#ReaderT|ReaderT]],  @ [[#WriterT|WriterT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) ====
-
+==== :copy ====
+:copy( @ [[#ReaderT|ReaderT]],  @ [[#WriterT|WriterT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])
 

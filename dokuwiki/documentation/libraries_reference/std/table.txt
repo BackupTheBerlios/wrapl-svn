@@ -5,66 +5,69 @@
 ==== NodeType ====
 
 
-==== :compare( @ [[#T|T]]) ====
+==== :compare ====
+:compare( @ [[#T|T]])
+
+==== :empty ====
+:empty( @ [[#T|T]])
+
+==== :hash ====
+:hash( @ [[#T|T]])
+
+==== :size ====
+:size( @ [[#T|T]])
+
+==== :copy ====
+:copy( @ [[#T|T]])
+
+==== :+ ====
+:+( @ [[#T|T]],  @ [[#T|T]])
+
+==== :- ====
+:-( @ [[#T|T]],  @ [[#T|T]])
+
+==== :* ====
+:*( @ [[#T|T]],  @ [[#T|T]])
+
+==== :insert ====
+:insert( @ [[#T|T]],  @ ANY)
+
+==== :delete ====
+:delete( @ [[#T|T]],  @ ANY)
+
+==== :[] ====
+:[]( @ [[#T|T]],  @ ANY)
+
+==== :@ ====
+:@( @ [[#T|T]],  = [[..:Std:String#T|Std.String.T]])
+
+==== :key ====
+:key( @ [[#NodeType|NodeType]])
+
+==== :value ====
+:value( @ [[#NodeType|NodeType]])
+
+==== :items ====
+:items( @ [[#T|T]])
+
+==== :loop ====
+:loop( @ [[#T|T]])
+
+==== :keys ====
+:keys( @ [[#T|T]])
+
+==== :values ====
+:values( @ [[#T|T]])
+
+==== New ====
+New() ====
 
 
-==== :empty( @ [[#T|T]]) ====
+==== Collect ====
+Collect() ====
 
 
-==== :hash( @ [[#T|T]]) ====
-
-
-==== :size( @ [[#T|T]]) ====
-
-
-==== :copy( @ [[#T|T]]) ====
-
-
-==== :+( @ [[#T|T]],  @ [[#T|T]]) ====
-
-
-==== :-( @ [[#T|T]],  @ [[#T|T]]) ====
-
-
-==== :*( @ [[#T|T]],  @ [[#T|T]]) ====
-
-
-==== :insert( @ [[#T|T]],  @ ANY) ====
-
-
-==== :delete( @ [[#T|T]],  @ ANY) ====
-
-
-==== :[]( @ [[#T|T]],  @ ANY) ====
-
-
-==== :@( @ [[#T|T]],  = [[..:Std:String#T|Std.String.T]]) ====
-
-
-==== :key( @ [[#NodeType|NodeType]]) ====
-
-
-==== :value( @ [[#NodeType|NodeType]]) ====
-
-
-==== :items( @ [[#T|T]]) ====
-
-
-==== :loop( @ [[#T|T]]) ====
-
-
-==== :keys( @ [[#T|T]]) ====
-
-
-==== :values( @ [[#T|T]]) ====
-
-
-==== New() ====
-
-
-==== Collect() ====
-
-
-==== Make() ====
+==== Make ====
+Make() ====
 
 

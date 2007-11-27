@@ -1,5 +1,6 @@
 ====== IO.Socket ======
 ==== T ====
+=== inherits from ===
   * [[..:IO:Posix#TextReaderT|IO.Posix.TextReaderT]]
   * [[..:IO:Posix#TextWriterT|IO.Posix.TextWriterT]]
   * [[..:IO:Posix#ReaderT|IO.Posix.ReaderT]]
@@ -14,6 +15,7 @@
 
 
 ==== LocalT ====
+=== inherits from ===
   * [[#T|T]]
   * [[..:IO:Posix#TextReaderT|IO.Posix.TextReaderT]]
   * [[..:IO:Posix#TextWriterT|IO.Posix.TextWriterT]]
@@ -29,6 +31,7 @@
 
 
 ==== InetT ====
+=== inherits from ===
   * [[#T|T]]
   * [[..:IO:Posix#TextReaderT|IO.Posix.TextReaderT]]
   * [[..:IO:Posix#TextWriterT|IO.Posix.TextWriterT]]
@@ -43,6 +46,7 @@
   * [[..:IO:Stream#T|IO.Stream.T]]
 
 
-==== New() ====
+==== New ====
+New() ====
 
 

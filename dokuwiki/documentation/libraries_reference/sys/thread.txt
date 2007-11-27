@@ -8,33 +8,38 @@
 ==== MutexT ====
 
 
-==== :set( @ [[#KeyT|KeyT]],  @ ANY) ====
+==== :set ====
+:set( @ [[#KeyT|KeyT]],  @ ANY)
+
+==== :get ====
+:get( @ [[#KeyT|KeyT]])
+
+==== :lock ====
+:lock( @ [[#MutexT|MutexT]])
+
+==== :lock ====
+:lock( @ [[#MutexT|MutexT]])
+
+==== :trylock ====
+:trylock( @ [[#MutexT|MutexT]])
+
+==== New ====
+New() ====
 
 
-==== :get( @ [[#KeyT|KeyT]]) ====
+==== KeyNew ====
+KeyNew() ====
 
 
-==== :lock( @ [[#MutexT|MutexT]]) ====
+==== MutexNew ====
+MutexNew() ====
 
 
-==== :lock( @ [[#MutexT|MutexT]]) ====
+==== Self ====
+Self() ====
 
 
-==== :trylock( @ [[#MutexT|MutexT]]) ====
-
-
-==== New() ====
-
-
-==== KeyNew() ====
-
-
-==== MutexNew() ====
-
-
-==== Self() ====
-
-
-==== Sleep() ====
+==== Sleep ====
+Sleep() ====
 
 

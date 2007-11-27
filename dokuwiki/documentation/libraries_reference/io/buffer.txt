@@ -1,38 +1,40 @@
 ====== IO.Buffer ======
 ==== T ====
+=== inherits from ===
   * [[..:IO:Stream#ReaderT|IO.Stream.ReaderT]]
   * [[..:IO:Stream#WriterT|IO.Stream.WriterT]]
   * [[..:IO:Stream#SeekerT|IO.Stream.SeekerT]]
   * [[..:IO:Stream#T|IO.Stream.T]]
 
 
-==== :tell( @ [[#T|T]]) ====
+==== :tell ====
+:tell( @ [[#T|T]])
 
+==== :read ====
+:read( @ [[#T|T]],  @ [[..:Std:Address#T|Std.Address.T]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])
 
-==== :read( @ [[#T|T]],  @ [[..:Std:Address#T|Std.Address.T]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) ====
+==== :rest ====
+:rest( @ [[#T|T]])
 
+==== :read ====
+:read( @ [[#T|T]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])
 
-==== :rest( @ [[#T|T]]) ====
+==== :read ====
+:read( @ [[#T|T]])
 
+==== :write ====
+:write( @ [[#T|T]],  @ [[..:Std:Address#T|Std.Address.T]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])
 
-==== :read( @ [[#T|T]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) ====
+==== :write ====
+:write( @ [[#T|T]],  @ [[..:Std:String#T|Std.String.T]])
 
+==== :write ====
+:write( @ [[#T|T]],  @ ANY)
 
-==== :read( @ [[#T|T]]) ====
+==== :seek ====
+:seek( @ [[#T|T]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])
 
-
-==== :write( @ [[#T|T]],  @ [[..:Std:Address#T|Std.Address.T]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) ====
-
-
-==== :write( @ [[#T|T]],  @ [[..:Std:String#T|Std.String.T]]) ====
-
-
-==== :write( @ [[#T|T]],  @ ANY) ====
-
-
-==== :seek( @ [[#T|T]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) ====
-
-
-==== New() ====
+==== New ====
+New() ====
 
 

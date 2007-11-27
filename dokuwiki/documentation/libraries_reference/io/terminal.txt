@@ -1,10 +1,12 @@
 ====== IO.Terminal ======
 ==== T ====
+=== inherits from ===
   * [[..:IO:Posix#T|IO.Posix.T]]
   * [[..:IO:Stream#T|IO.Stream.T]]
 
 
 ==== ReaderT ====
+=== inherits from ===
   * [[#T|T]]
   * [[..:IO:Posix#TextReaderT|IO.Posix.TextReaderT]]
   * [[..:IO:Posix#ReaderT|IO.Posix.ReaderT]]
@@ -15,6 +17,7 @@
 
 
 ==== WriterT ====
+=== inherits from ===
   * [[#T|T]]
   * [[..:IO:Posix#TextWriterT|IO.Posix.TextWriterT]]
   * [[..:IO:Posix#WriterT|IO.Posix.WriterT]]
