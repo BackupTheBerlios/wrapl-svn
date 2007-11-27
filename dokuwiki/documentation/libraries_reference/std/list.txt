@@ -4,139 +4,135 @@
 A general purpose extensible list type
 
 ==== :collect ====
-:collect( @ [[..:Std:Function#T|Std.Function.T]])
+'':collect( @ [[..:Std:Function#T|Std.Function.T]])''n
 
 ==== :sort ====
-:sort( @ [[#T|T]],  @ [[..:Std:Function#T|Std.Function.T]])
+'':sort( @ [[#T|T]],  @ [[..:Std:Function#T|Std.Function.T]])''n
 
 ==== :_check ====
-:_check( @ [[#T|T]])
+'':_check( @ [[#T|T]])''n
 internal function
 
 ==== :empty ====
-:empty(list @ [[#T|T]]) : [[#T|T]]
+'':empty(list @ [[#T|T]]) : [[#T|T]]''n
 empties <em>list</em> and returns it
 
 ==== :copy ====
-:copy(list @ [[#T|T]]) : [[#T|T]]
+'':copy(list @ [[#T|T]]) : [[#T|T]]''n
 returns a shallow copy of <em>list</em>
 
 ==== :+ ====
-:+(a @ [[#T|T]], b @ [[#T|T]]) : [[#T|T]]
+'':+(a @ [[#T|T]], b @ [[#T|T]]) : [[#T|T]]''n
 returns the concatenation of <em>a</em> and <em>b</em>
 
 ==== :push ====
-:push(list @ [[#T|T]], value @ ANY) : [[#T|T]]
+'':push(list @ [[#T|T]], value @ ANY) : [[#T|T]]''n
 inserts <em>value</em> onto the start <em>list</em> and returns <em>list</em>
 
 ==== :put ====
-:put(list @ [[#T|T]], value @ ANY) : [[#T|T]]
+'':put(list @ [[#T|T]], value @ ANY) : [[#T|T]]''n
 inserts <em>value</em> onto the end <em>list</em> and returns <em>list</em>
 
 ==== :pop ====
-:pop(list @ [[#T|T]]) : ANY
+'':pop(list @ [[#T|T]]) : ANY''n
 removes and returns the first element of <em>list</em>
 
 ==== :pull ====
-:pull(list @ [[#T|T]]) : ANY
+'':pull(list @ [[#T|T]]) : ANY''n
 removes and returns the last element of <em>list</em>
 
 ==== :[] ====
-:[](list @ [[#T|T]], n @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) : ANY
+'':[](list @ [[#T|T]], n @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) : ANY''n
 returns an assignable reference to the <em>n</em><sup>th</sup> element of <em>list</em>
 negative indices are taken from the end of the list
 fails if <em>n</em> is outside the <em>-list:length .. list:length</em>
 
 ==== :[] ====
-:[](list @ [[#T|T]], m @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]], n @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[#T|T]]
+'':[](list @ [[#T|T]], m @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]], n @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[#T|T]]''n
 returns the sublist of <em>list</em> from the <em>m</em><sup>th</sup> to the <em>n - 1</em><sup>th</sup> element inclusively
 fails if either <em>m</em> or <em>n</em> is outside the range of the list
 returns an empty list if <em>m > n</em>
 
 ==== :shift ====
-:shift(list @ [[#T|T]], n @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]], r @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[#T|T]]
+'':shift(list @ [[#T|T]], n @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]], r @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[#T|T]]''n
 shifts the <em>n</em><sup>th</sup> element by <em>n</em> positions within <em>list</em>
 
 ==== :delete ====
-:delete(list @ [[#T|T]], n @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[#T|T]]
+'':delete(list @ [[#T|T]], n @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[#T|T]]''n
 removes the <em>n</em><sup>th</sup> element from <em>list</em>
 
 ==== :insert ====
-:insert(list @ [[#T|T]], n @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]], value @ ANY) : [[#T|T]]
+'':insert(list @ [[#T|T]], n @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]], value @ ANY) : [[#T|T]]''n
 inserts <em>value</em> into the <em>n</em><sup>th</sup> position in <em>list</em>
 
 ==== :length ====
-:length(list @ [[#T|T]]) : [[..:Std:Integer#SmallT|Std.Integer.SmallT]]
+'':length(list @ [[#T|T]]) : [[..:Std:Integer#SmallT|Std.Integer.SmallT]]''n
 returns the length of <em>list</em>
 
 ==== :size ====
-:size(list @ [[#T|T]]) : [[..:Std:Integer#SmallT|Std.Integer.SmallT]]
+'':size(list @ [[#T|T]]) : [[..:Std:Integer#SmallT|Std.Integer.SmallT]]''n
 returns the length of <em>list</em>
 
 ==== :@ ====
-:@( @ [[#T|T]],  = [[..:Std:String#T|Std.String.T]])
+'':@( @ [[#T|T]],  = [[..:Std:String#T|Std.String.T]])''n
 
 ==== :in ====
-:in(value @ ANY, list @ [[#T|T]]) : ANY
+'':in(value @ ANY, list @ [[#T|T]]) : ANY''n
 returns <em>value</em> if it is in <em>list</em>, fails otherwise
 
 ==== :find ====
-:find( @ [[#T|T]],  @ ANY)
+'':find( @ [[#T|T]],  @ ANY)''n
 
 ==== :remove ====
-:remove( @ [[#T|T]],  @ ANY)
+'':remove( @ [[#T|T]],  @ ANY)''n
 
 ==== :keys ====
-:keys( @ [[#T|T]])
+'':keys( @ [[#T|T]])''n
 
 ==== :values ====
-:values( @ [[#T|T]])
+'':values( @ [[#T|T]])''n
 
 ==== :loop ====
-:loop( @ [[#T|T]])
+'':loop( @ [[#T|T]])''n
 
 ==== :apply ====
-:apply( @ [[#T|T]],  @ [[..:Std:Function#T|Std.Function.T]])
+'':apply( @ [[#T|T]],  @ [[..:Std:Function#T|Std.Function.T]])''n
 
 ==== :apply ====
-:apply( @ [[..:Std:Function#T|Std.Function.T]],  @ [[#T|T]])
+'':apply( @ [[..:Std:Function#T|Std.Function.T]],  @ [[#T|T]])''n
 
 ==== :map ====
-:map( @ [[#T|T]],  @ [[..:Std:Function#T|Std.Function.T]])
+'':map( @ [[#T|T]],  @ [[..:Std:Function#T|Std.Function.T]])''n
 
 ==== :map ====
-:map( @ [[..:Std:Function#T|Std.Function.T]],  @ [[#T|T]])
+'':map( @ [[..:Std:Function#T|Std.Function.T]],  @ [[#T|T]])''n
 
 ==== :foldl ====
-:foldl( @ [[..:Std:Function#T|Std.Function.T]],  @ [[#T|T]])
+'':foldl( @ [[..:Std:Function#T|Std.Function.T]],  @ [[#T|T]])''n
 
 ==== :foldr ====
-:foldr( @ [[..:Std:Function#T|Std.Function.T]],  @ [[#T|T]])
+'':foldr( @ [[..:Std:Function#T|Std.Function.T]],  @ [[#T|T]])''n
 
 ==== :foldl ====
-:foldl( @ [[#T|T]],  @ [[..:Std:Function#T|Std.Function.T]])
+'':foldl( @ [[#T|T]],  @ [[..:Std:Function#T|Std.Function.T]])''n
 
 ==== :foldr ====
-:foldr( @ [[#T|T]],  @ [[..:Std:Function#T|Std.Function.T]])
+'':foldr( @ [[#T|T]],  @ [[..:Std:Function#T|Std.Function.T]])''n
 
 ==== :sort ====
-:sort( @ [[#T|T]])
+'':sort( @ [[#T|T]])''n
 
 ==== New ====
-New(length : [[..:Std:Integer#T|Std.Integer.T]] := 0) : [[#T|T]] ====
-
+''New(length : [[..:Std:Integer#T|Std.Integer.T]] := 0) : [[#T|T]]''n
 Returns a new list with Length elements
 
 ==== Make ====
-Make(values...) : [[#T|T]] ====
-
+''Make(values...) : [[#T|T]]''n
 returns a list with <em>values</em> as its elements
 
 ==== Collect ====
-Collect() ====
-
+''Collect()''n
 
 ==== CollectN ====
-CollectN() ====
-
+''CollectN()''n
 
