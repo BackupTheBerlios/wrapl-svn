@@ -4,10 +4,12 @@
 the type of all types
 
 ==== Of ====
-''Of(value) : [[#T|T]]''n
+''Of(value) : [[#T|T]]''
+
 returns the type of value
 
 ==== New ====
-''New(fields : [[..:Std:Array#T|Std.Array.T]], parents... : [[#T|T]]) : [[#T|T]]''n
+''New(fields : [[..:Std:Array#T|Std.Array.T]], parents... : [[#T|T]]) : [[#T|T]]''
+
 creates a new type derived from parents and adding fields
 

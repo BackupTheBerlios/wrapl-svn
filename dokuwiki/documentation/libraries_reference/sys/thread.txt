@@ -9,32 +9,42 @@
 
 
 ==== :set ====
-'':set( @ [[#KeyT|KeyT]],  @ ANY)''n
+'':set( @ [[#KeyT|KeyT]],  @ ANY)''
+
 
 ==== :get ====
-'':get( @ [[#KeyT|KeyT]])''n
+'':get( @ [[#KeyT|KeyT]])''
+
 
 ==== :lock ====
-'':lock( @ [[#MutexT|MutexT]])''n
+'':lock( @ [[#MutexT|MutexT]])''
+
 
 ==== :lock ====
-'':lock( @ [[#MutexT|MutexT]])''n
+'':lock( @ [[#MutexT|MutexT]])''
+
 
 ==== :trylock ====
-'':trylock( @ [[#MutexT|MutexT]])''n
+'':trylock( @ [[#MutexT|MutexT]])''
+
 
 ==== New ====
-''New()''n
+''New()''
+
 
 ==== KeyNew ====
-''KeyNew()''n
+''KeyNew()''
+
 
 ==== MutexNew ====
-''MutexNew()''n
+''MutexNew()''
+
 
 ==== Self ====
-''Self()''n
+''Self()''
+
 
 ==== Sleep ====
-''Sleep()''n
+''Sleep()''
+
 

@@ -8,32 +8,42 @@
 
 
 ==== :tell ====
-'':tell( @ [[#T|T]])''n
+'':tell( @ [[#T|T]])''
+
 
 ==== :read ====
-'':read( @ [[#T|T]],  @ [[..:Std:Address#T|Std.Address.T]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])''n
+'':read( @ [[#T|T]],  @ [[..:Std:Address#T|Std.Address.T]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
 
 ==== :rest ====
-'':rest( @ [[#T|T]])''n
+'':rest( @ [[#T|T]])''
+
 
 ==== :read ====
-'':read( @ [[#T|T]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])''n
+'':read( @ [[#T|T]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
 
 ==== :read ====
-'':read( @ [[#T|T]])''n
+'':read( @ [[#T|T]])''
+
 
 ==== :write ====
-'':write( @ [[#T|T]],  @ [[..:Std:Address#T|Std.Address.T]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])''n
+'':write( @ [[#T|T]],  @ [[..:Std:Address#T|Std.Address.T]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
 
 ==== :write ====
-'':write( @ [[#T|T]],  @ [[..:Std:String#T|Std.String.T]])''n
+'':write( @ [[#T|T]],  @ [[..:Std:String#T|Std.String.T]])''
+
 
 ==== :write ====
-'':write( @ [[#T|T]],  @ ANY)''n
+'':write( @ [[#T|T]],  @ ANY)''
+
 
 ==== :seek ====
-'':seek( @ [[#T|T]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])''n
+'':seek( @ [[#T|T]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
 
 ==== New ====
-''New()''n
+''New()''
+
 

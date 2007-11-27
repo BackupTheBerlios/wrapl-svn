@@ -33,17 +33,22 @@
 
 
 ==== :@ ====
-'':@(msg @ [[#MessageT|MessageT]],  = [[..:Std:String#T|Std.String.T]])''n
+'':@(msg @ [[#MessageT|MessageT]],  = [[..:Std:String#T|Std.String.T]])''
+
 
 ==== :write ====
-'':write( @ [[#TextWriterT|TextWriterT]],  @ ANY)''n
+'':write( @ [[#TextWriterT|TextWriterT]],  @ ANY)''
+
 
 ==== :writes ====
-'':writes( @ [[#TextWriterT|TextWriterT]])''n
+'':writes( @ [[#TextWriterT|TextWriterT]])''
+
 
 ==== :write ====
-'':write( @ [[#WriterT|WriterT]],  @ [[..:Std:String#T|Std.String.T]])''n
+'':write( @ [[#WriterT|WriterT]],  @ [[..:Std:String#T|Std.String.T]])''
+
 
 ==== :copy ====
-'':copy( @ [[#ReaderT|ReaderT]],  @ [[#WriterT|WriterT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])''n
+'':copy( @ [[#ReaderT|ReaderT]],  @ [[#WriterT|WriterT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
 

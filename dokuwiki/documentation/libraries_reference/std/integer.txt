@@ -17,6 +17,7 @@ arbritrary precision integers.<br/>
 note: instances of type <em>BigT</em> should never contain values which can fit into a signed machine word.
 
 ==== ToSmallSmall ====
-''ToSmallSmall(from : [[#SmallT|SmallT]], to : [[#SmallT|SmallT]]) : [[#SmallT|SmallT]]''n
+''ToSmallSmall(from : [[#SmallT|SmallT]], to : [[#SmallT|SmallT]]) : [[#SmallT|SmallT]]''
+
 generates the values from <em>from</em> to <em>to</em> inclusive
 

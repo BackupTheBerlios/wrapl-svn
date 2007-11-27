@@ -44,41 +44,54 @@
 
 
 ==== :flush ====
-'':flush( @ [[#T|T]])''n
+'':flush( @ [[#T|T]])''
+
 
 ==== :close ====
-'':close( @ [[#T|T]])''n
+'':close( @ [[#T|T]])''
+
 
 ==== :closed ====
-'':closed( @ [[#T|T]])''n
+'':closed( @ [[#T|T]])''
+
 
 ==== :read ====
-'':read( @ [[#ReaderT|ReaderT]],  @ [[..:Std:Address#T|Std.Address.T]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])''n
+'':read( @ [[#ReaderT|ReaderT]],  @ [[..:Std:Address#T|Std.Address.T]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
 
 ==== :rest ====
-'':rest( @ [[#ReaderT|ReaderT]])''n
+'':rest( @ [[#ReaderT|ReaderT]])''
+
 
 ==== :read ====
-'':read( @ [[#ReaderT|ReaderT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])''n
+'':read( @ [[#ReaderT|ReaderT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
 
 ==== :read ====
-'':read( @ [[#TextReaderT|TextReaderT]])''n
+'':read( @ [[#TextReaderT|TextReaderT]])''
+
 
 ==== :write ====
-'':write( @ [[#WriterT|WriterT]],  @ [[..:Std:Address#T|Std.Address.T]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])''n
+'':write( @ [[#WriterT|WriterT]],  @ [[..:Std:Address#T|Std.Address.T]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
 
 ==== :write ====
-'':write( @ [[#WriterT|WriterT]],  @ [[..:Std:String#T|Std.String.T]])''n
+'':write( @ [[#WriterT|WriterT]],  @ [[..:Std:String#T|Std.String.T]])''
+
 
 ==== :write ====
-'':write( @ [[#TextWriterT|TextWriterT]],  @ ANY)''n
+'':write( @ [[#TextWriterT|TextWriterT]],  @ ANY)''
+
 
 ==== :seek ====
-'':seek( @ [[#SeekerT|SeekerT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])''n
+'':seek( @ [[#SeekerT|SeekerT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
 
 ==== :tell ====
-'':tell( @ [[#T|T]])''n
+'':tell( @ [[#T|T]])''
+
 
 ==== :poll ====
-'':poll( @ [[#T|T]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])''n
+'':poll( @ [[#T|T]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
 

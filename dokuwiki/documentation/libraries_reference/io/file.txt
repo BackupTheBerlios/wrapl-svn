@@ -90,9 +90,11 @@
 
 
 ==== Open ====
-''Open(filename : [[..:Std:String#T|Std.String.T]], mode : [[..:Std:Integer#T|Std.Integer.T]]) : [[#T|T]]''n
+''Open(filename : [[..:Std:String#T|Std.String.T]], mode : [[..:Std:Integer#T|Std.Integer.T]]) : [[#T|T]]''
+
 Opens filename with the correct mode and returns a file object
 
 ==== Temp ====
-''Temp()''n
+''Temp()''
+
 
