@@ -271,7 +271,7 @@ EOF);
 		names <- params:map(:name);
 		cfile:writes("GLOBAL_FUNCTION(", method:name, ", ", n, ") {\n");
                 EVERY i <- 1:to(n) DO (
-                    cfile:writes("//@", names[i], "\n");
+                    cfile:writes("//@", names[i], " : ", types[i]:rtype, "\n");
                 );
                 returntype <- Type.Lookup(method:type);
                 cfile:writes("//:", returntype:rtype, "\n");
