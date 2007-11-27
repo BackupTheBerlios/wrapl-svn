@@ -1,0 +1,74 @@
+====== Program ======
+==== T ====
+=== inherits from ===
+  * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
+
+
+==== :Preinit ====
+'':Preinit( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:List#T|Std.List.T]])''
+
+
+==== :Postinit ====
+'':Postinit( @ [[#T|T]])''
+
+
+==== :ParseArgs ====
+'':ParseArgs( @ [[#T|T]])''
+
+
+==== :LocateFile ====
+'':LocateFile( @ [[#T|T]],  @ [[..:..:Gtk:Gnome:FileDomain#T|Gtk.Gnome.FileDomain.T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :GetHumanReadableName ====
+'':GetHumanReadableName( @ [[#T|T]])''
+
+
+==== :GetAppVersion ====
+'':GetAppVersion( @ [[#T|T]])''
+
+
+==== :GetAppId ====
+'':GetAppId( @ [[#T|T]])''
+
+
+==== :Priv ====
+'':Priv( @ [[#T|T]])''
+
+
+==== Get ====
+''Get()''
+
+
+==== ModuleRegistered ====
+''ModuleRegistered()''
+
+
+==== ModuleRegister ====
+''ModuleRegister()''
+
+
+==== ModuleLoad ====
+''ModuleLoad()''
+
+
+==== InstallProperty ====
+''InstallProperty()''
+
+
+==== Initv ====
+''Initv()''
+
+
+==== InitParamv ====
+''InitParamv()''
+
+
+==== Init ====
+''Init()''
+
+
+==== GetType ====
+''GetType()''
+
+
