@@ -1,0 +1,178 @@
+====== Drawable ======
+==== T ====
+=== inherits from ===
+  * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
+
+
+==== :Unref ====
+'':Unref( @ [[#T|T]])''
+
+
+==== :DrawArc ====
+'':DrawArc( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :DrawDrawable ====
+'':DrawDrawable( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]],  @ [[..:..:Gtk:Gdk:Drawable#T|Gtk.Gdk.Drawable.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :DrawGlyphs ====
+'':DrawGlyphs( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]],  @ [[..:..:Gtk:Pango:Font#T|Gtk.Pango.Font.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Gtk:Pango:GlyphString#T|Gtk.Pango.GlyphString.T]])''
+
+
+==== :DrawGlyphsTransformed ====
+'':DrawGlyphsTransformed( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]],  @ [[..:..:Gtk:Pango:Matrix#T|Gtk.Pango.Matrix.T]],  @ [[..:..:Gtk:Pango:Font#T|Gtk.Pango.Font.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Gtk:Pango:GlyphString#T|Gtk.Pango.GlyphString.T]])''
+
+
+==== :DrawGrayImage ====
+'':DrawGrayImage( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Gtk:Gdk:RgbDither#T|Gtk.Gdk.RgbDither.T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :DrawImage ====
+'':DrawImage( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]],  @ [[..:..:Gtk:Gdk:Image#T|Gtk.Gdk.Image.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :DrawIndexedImage ====
+'':DrawIndexedImage( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Gtk:Gdk:RgbDither#T|Gtk.Gdk.RgbDither.T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Gtk:Gdk:RgbCmap#T|Gtk.Gdk.RgbCmap.T]])''
+
+
+==== :DrawLayout ====
+'':DrawLayout( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Gtk:Pango:Layout#T|Gtk.Pango.Layout.T]])''
+
+
+==== :DrawLayoutLine ====
+'':DrawLayoutLine( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Gtk:Pango:LayoutLine#T|Gtk.Pango.LayoutLine.T]])''
+
+
+==== :DrawLayoutLineWithColors ====
+'':DrawLayoutLineWithColors( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Gtk:Pango:LayoutLine#T|Gtk.Pango.LayoutLine.T]],  @ [[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]],  @ [[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]])''
+
+
+==== :DrawLayoutWithColors ====
+'':DrawLayoutWithColors( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Gtk:Pango:Layout#T|Gtk.Pango.Layout.T]],  @ [[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]],  @ [[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]])''
+
+
+==== :DrawLine ====
+'':DrawLine( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :DrawLines ====
+'':DrawLines( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]],  @ [[..:..:Gtk:Gdk:Point#T|Gtk.Gdk.Point.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :DrawPixbuf ====
+'':DrawPixbuf( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]],  @ [[..:..:Gtk:Gdk:Pixbuf#T|Gtk.Gdk.Pixbuf.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Gtk:Gdk:RgbDither#T|Gtk.Gdk.RgbDither.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :DrawPoint ====
+'':DrawPoint( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :DrawPoints ====
+'':DrawPoints( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]],  @ [[..:..:Gtk:Gdk:Point#T|Gtk.Gdk.Point.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :DrawPolygon ====
+'':DrawPolygon( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]],  @ [[..:..:Gtk:Gdk:Point#T|Gtk.Gdk.Point.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :DrawRectangle ====
+'':DrawRectangle( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :DrawRgb32Image ====
+'':DrawRgb32Image( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Gtk:Gdk:RgbDither#T|Gtk.Gdk.RgbDither.T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :DrawRgb32ImageDithalign ====
+'':DrawRgb32ImageDithalign( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Gtk:Gdk:RgbDither#T|Gtk.Gdk.RgbDither.T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :DrawRgbImage ====
+'':DrawRgbImage( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Gtk:Gdk:RgbDither#T|Gtk.Gdk.RgbDither.T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :DrawRgbImageDithalign ====
+'':DrawRgbImageDithalign( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Gtk:Gdk:RgbDither#T|Gtk.Gdk.RgbDither.T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :DrawSegments ====
+'':DrawSegments( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]],  @ [[..:..:Gtk:Gdk:Segment#T|Gtk.Gdk.Segment.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :DrawString ====
+'':DrawString( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Font#T|Gtk.Gdk.Font.T]],  @ [[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== :DrawText ====
+'':DrawText( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Font#T|Gtk.Gdk.Font.T]],  @ [[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :DrawTextWc ====
+'':DrawTextWc( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Font#T|Gtk.Gdk.Font.T]],  @ [[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :DrawTrapezoids ====
+'':DrawTrapezoids( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]],  @ [[..:..:Gtk:Gdk:Trapezoid#T|Gtk.Gdk.Trapezoid.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :CopyToImage ====
+'':CopyToImage( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Image#T|Gtk.Gdk.Image.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :GetClipRegion ====
+'':GetClipRegion( @ [[#T|T]])''
+
+
+==== :GetColormap ====
+'':GetColormap( @ [[#T|T]])''
+
+
+==== :GetData ====
+'':GetData( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== :GetDepth ====
+'':GetDepth( @ [[#T|T]])''
+
+
+==== :GetDisplay ====
+'':GetDisplay( @ [[#T|T]])''
+
+
+==== :GetImage ====
+'':GetImage( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :GetScreen ====
+'':GetScreen( @ [[#T|T]])''
+
+
+==== :GetSize ====
+'':GetSize( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :GetVisibleRegion ====
+'':GetVisibleRegion( @ [[#T|T]])''
+
+
+==== :GetVisual ====
+'':GetVisual( @ [[#T|T]])''
+
+
+==== :Ref ====
+'':Ref( @ [[#T|T]])''
+
+
+==== :SetColormap ====
+'':SetColormap( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Colormap#T|Gtk.Gdk.Colormap.T]])''
+
+
+==== :SetData ====
+'':SetData( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Address#T|Std.Address.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== GetType ====
+''GetType()''
+
+

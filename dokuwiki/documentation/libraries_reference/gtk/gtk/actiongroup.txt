@@ -1,0 +1,94 @@
+====== ActionGroup ======
+==== T ====
+=== inherits from ===
+  * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
+
+
+==== :TranslateString ====
+'':TranslateString( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== :SetVisible ====
+'':SetVisible( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+
+
+==== :PrivateData ====
+'':PrivateData( @ [[#T|T]])''
+
+
+==== :AddAction ====
+'':AddAction( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Action#T|Gtk.Gtk.Action.T]])''
+
+
+==== :AddActionWithAccel ====
+'':AddActionWithAccel( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Action#T|Gtk.Gtk.Action.T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== :AddActions ====
+'':AddActions( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:ActionEntry#T|Gtk.Gtk.ActionEntry.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Address#T|Std.Address.T]])''
+
+
+==== :AddActionsFull ====
+'':AddActionsFull( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:ActionEntry#T|Gtk.Gtk.ActionEntry.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Address#T|Std.Address.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :AddRadioActions ====
+'':AddRadioActions( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:RadioActionEntry#T|Gtk.Gtk.RadioActionEntry.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Address#T|Std.Address.T]])''
+
+
+==== :AddRadioActionsFull ====
+'':AddRadioActionsFull( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:RadioActionEntry#T|Gtk.Gtk.RadioActionEntry.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Address#T|Std.Address.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :AddToggleActions ====
+'':AddToggleActions( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:ToggleActionEntry#T|Gtk.Gtk.ToggleActionEntry.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Address#T|Std.Address.T]])''
+
+
+==== :AddToggleActionsFull ====
+'':AddToggleActionsFull( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:ToggleActionEntry#T|Gtk.Gtk.ToggleActionEntry.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Address#T|Std.Address.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :GetAction ====
+'':GetAction( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== :GetName ====
+'':GetName( @ [[#T|T]])''
+
+
+==== :GetSensitive ====
+'':GetSensitive( @ [[#T|T]])''
+
+
+==== :GetVisible ====
+'':GetVisible( @ [[#T|T]])''
+
+
+==== :ListActions ====
+'':ListActions( @ [[#T|T]])''
+
+
+==== :RemoveAction ====
+'':RemoveAction( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Action#T|Gtk.Gtk.Action.T]])''
+
+
+==== :SetSensitive ====
+'':SetSensitive( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+
+
+==== :SetTranslateFunc ====
+'':SetTranslateFunc( @ [[#T|T]],  @ [[..:..:Std:Function#T|Std.Function.T]],  @ [[..:..:Std:Address#T|Std.Address.T]],  @ [[..:..:Std:Function#T|Std.Function.T]])''
+
+
+==== :SetTranslationDomain ====
+'':SetTranslationDomain( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== New ====
+''New()''
+
+
+==== GetType ====
+''GetType()''
+
+

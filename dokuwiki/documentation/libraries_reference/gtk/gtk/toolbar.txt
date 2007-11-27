@@ -1,0 +1,193 @@
+====== Toolbar ======
+==== T ====
+=== inherits from ===
+  * [[..:..:Gtk:Gtk:Container#T|Gtk.Gtk.Container.T]]
+  * [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]
+  * [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]
+  * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
+
+
+==== :UnsetStyle ====
+'':UnsetStyle( @ [[#T|T]])''
+
+
+==== :UnsetIconSize ====
+'':UnsetIconSize( @ [[#T|T]])''
+
+
+==== :NumChildren ====
+'':NumChildren( @ [[#T|T]])''
+
+
+==== :Children ====
+'':Children( @ [[#T|T]])''
+
+
+==== :Orientation ====
+'':Orientation( @ [[#T|T]])''
+
+
+==== :Style ====
+'':Style( @ [[#T|T]])''
+
+
+==== :IconSize ====
+'':IconSize( @ [[#T|T]])''
+
+
+==== :ButtonMaxw ====
+'':ButtonMaxw( @ [[#T|T]])''
+
+
+==== :ButtonMaxh ====
+'':ButtonMaxh( @ [[#T|T]])''
+
+
+==== :GtkReserved1 ====
+'':GtkReserved1( @ [[#T|T]])''
+
+
+==== :GtkReserved2 ====
+'':GtkReserved2( @ [[#T|T]])''
+
+
+==== :StyleSet ====
+'':StyleSet( @ [[#T|T]])''
+
+
+==== :IconSizeSet ====
+'':IconSizeSet( @ [[#T|T]])''
+
+
+==== :AppendElement ====
+'':AppendElement( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:ToolbarChildType#T|Gtk.Gtk.ToolbarChildType.T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]],  @ [[..:..:Std:Function#T|Std.Function.T]],  @ [[..:..:Std:Address#T|Std.Address.T]])''
+
+
+==== :AppendItem ====
+'':AppendItem( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]],  @ [[..:..:Std:Function#T|Std.Function.T]],  @ [[..:..:Std:Address#T|Std.Address.T]])''
+
+
+==== :AppendSpace ====
+'':AppendSpace( @ [[#T|T]])''
+
+
+==== :AppendWidget ====
+'':AppendWidget( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== :GetDropIndex ====
+'':GetDropIndex( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :GetIconSize ====
+'':GetIconSize( @ [[#T|T]])''
+
+
+==== :GetItemIndex ====
+'':GetItemIndex( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:ToolItem#T|Gtk.Gtk.ToolItem.T]])''
+
+
+==== :GetNItems ====
+'':GetNItems( @ [[#T|T]])''
+
+
+==== :GetNthItem ====
+'':GetNthItem( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :GetOrientation ====
+'':GetOrientation( @ [[#T|T]])''
+
+
+==== :GetReliefStyle ====
+'':GetReliefStyle( @ [[#T|T]])''
+
+
+==== :GetShowArrow ====
+'':GetShowArrow( @ [[#T|T]])''
+
+
+==== :GetStyle ====
+'':GetStyle( @ [[#T|T]])''
+
+
+==== :GetTooltips ====
+'':GetTooltips( @ [[#T|T]])''
+
+
+==== :Insert ====
+'':Insert( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:ToolItem#T|Gtk.Gtk.ToolItem.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :InsertElement ====
+'':InsertElement( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:ToolbarChildType#T|Gtk.Gtk.ToolbarChildType.T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]],  @ [[..:..:Std:Function#T|Std.Function.T]],  @ [[..:..:Std:Address#T|Std.Address.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :InsertItem ====
+'':InsertItem( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]],  @ [[..:..:Std:Function#T|Std.Function.T]],  @ [[..:..:Std:Address#T|Std.Address.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :InsertSpace ====
+'':InsertSpace( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :InsertStock ====
+'':InsertStock( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Function#T|Std.Function.T]],  @ [[..:..:Std:Address#T|Std.Address.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :InsertWidget ====
+'':InsertWidget( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :PrependElement ====
+'':PrependElement( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:ToolbarChildType#T|Gtk.Gtk.ToolbarChildType.T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]],  @ [[..:..:Std:Function#T|Std.Function.T]],  @ [[..:..:Std:Address#T|Std.Address.T]])''
+
+
+==== :PrependItem ====
+'':PrependItem( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]],  @ [[..:..:Std:Function#T|Std.Function.T]],  @ [[..:..:Std:Address#T|Std.Address.T]])''
+
+
+==== :PrependSpace ====
+'':PrependSpace( @ [[#T|T]])''
+
+
+==== :PrependWidget ====
+'':PrependWidget( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== :RemoveSpace ====
+'':RemoveSpace( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :SetDropHighlightItem ====
+'':SetDropHighlightItem( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:ToolItem#T|Gtk.Gtk.ToolItem.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :SetIconSize ====
+'':SetIconSize( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:IconSize#T|Gtk.Gtk.IconSize.T]])''
+
+
+==== :SetOrientation ====
+'':SetOrientation( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Orientation#T|Gtk.Gtk.Orientation.T]])''
+
+
+==== :SetShowArrow ====
+'':SetShowArrow( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+
+
+==== :SetStyle ====
+'':SetStyle( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:ToolbarStyle#T|Gtk.Gtk.ToolbarStyle.T]])''
+
+
+==== :SetTooltips ====
+'':SetTooltips( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+
+
+==== New ====
+''New()''
+
+
+==== GetType ====
+''GetType()''
+
+

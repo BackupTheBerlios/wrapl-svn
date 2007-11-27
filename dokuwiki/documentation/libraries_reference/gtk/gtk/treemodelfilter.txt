@@ -1,0 +1,58 @@
+====== TreeModelFilter ======
+==== T ====
+=== inherits from ===
+  * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
+
+
+==== :SetVisibleFunc ====
+'':SetVisibleFunc( @ [[#T|T]],  @ [[..:..:Std:Function#T|Std.Function.T]],  @ [[..:..:Std:Address#T|Std.Address.T]],  @ [[..:..:Std:Function#T|Std.Function.T]])''
+
+
+==== :SetVisibleColumn ====
+'':SetVisibleColumn( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :Priv ====
+'':Priv( @ [[#T|T]])''
+
+
+==== :ClearCache ====
+'':ClearCache( @ [[#T|T]])''
+
+
+==== :ConvertChildIterToIter ====
+'':ConvertChildIterToIter( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]],  @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]])''
+
+
+==== :ConvertChildPathToPath ====
+'':ConvertChildPathToPath( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]])''
+
+
+==== :ConvertIterToChildIter ====
+'':ConvertIterToChildIter( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]],  @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]])''
+
+
+==== :ConvertPathToChildPath ====
+'':ConvertPathToChildPath( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]])''
+
+
+==== :GetModel ====
+'':GetModel( @ [[#T|T]])''
+
+
+==== :Refilter ====
+'':Refilter( @ [[#T|T]])''
+
+
+==== :SetModifyFunc ====
+'':SetModifyFunc( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:List#T|Std.List.T]],  @ [[..:..:Std:Function#T|Std.Function.T]],  @ [[..:..:Std:Address#T|Std.Address.T]],  @ [[..:..:Std:Function#T|Std.Function.T]])''
+
+
+==== New ====
+''New()''
+
+
+==== GetType ====
+''GetType()''
+
+

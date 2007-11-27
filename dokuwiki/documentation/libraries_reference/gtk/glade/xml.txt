@@ -1,0 +1,98 @@
+====== XML ======
+==== T ====
+=== inherits from ===
+  * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
+
+
+==== :SignalConnectFull ====
+'':SignalConnectFull( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Function#T|Std.Function.T]],  @ [[..:..:Std:Address#T|Std.Address.T]])''
+
+
+==== :SignalConnectData ====
+'':SignalConnectData( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Address#T|Std.Address.T]])''
+
+
+==== :SignalConnect ====
+'':SignalConnect( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :Filename ====
+'':Filename( @ [[#T|T]])''
+
+
+==== :Priv ====
+'':Priv( @ [[#T|T]])''
+
+
+==== :BuildWidget ====
+'':BuildWidget( @ [[#T|T]],  @ [[..:..:Gtk:Glade:WidgetInfo#T|Gtk.Glade.WidgetInfo.T]])''
+
+
+==== :Construct ====
+'':Construct( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== :ConstructFromBuffer ====
+'':ConstructFromBuffer( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== :EnsureAccel ====
+'':EnsureAccel( @ [[#T|T]])''
+
+
+==== :GetWidget ====
+'':GetWidget( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== :GetWidgetPrefix ====
+'':GetWidgetPrefix( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== :HandleInternalChild ====
+'':HandleInternalChild( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]],  @ [[..:..:Gtk:Glade:ChildInfo#T|Gtk.Glade.ChildInfo.T]])''
+
+
+==== :HandleWidgetProp ====
+'':HandleWidgetProp( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== :RelativeFile ====
+'':RelativeFile( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== :SetCommonParams ====
+'':SetCommonParams( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]],  @ [[..:..:Gtk:Glade:WidgetInfo#T|Gtk.Glade.WidgetInfo.T]])''
+
+
+==== :SetPackingProperty ====
+'':SetPackingProperty( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== :SetToplevel ====
+'':SetToplevel( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Window#T|Gtk.Gtk.Window.T]])''
+
+
+==== :SetValueFromString ====
+'':SetValueFromString( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Gtk:GObject:Value#T|Gtk.GObject.Value.T]])''
+
+
+==== :SignalAutoconnect ====
+'':SignalAutoconnect( @ [[#T|T]])''
+
+
+==== :SignalAutoconnectFull ====
+'':SignalAutoconnectFull( @ [[#T|T]],  @ [[..:..:Std:Function#T|Std.Function.T]],  @ [[..:..:Std:Address#T|Std.Address.T]])''
+
+
+==== New ====
+''New()''
+
+
+==== GetType ====
+''GetType()''
+
+
+==== NewFromBuffer ====
+''NewFromBuffer()''
+
+

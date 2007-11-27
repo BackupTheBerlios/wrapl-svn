@@ -1,0 +1,78 @@
+====== Device ======
+==== T ====
+=== inherits from ===
+  * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
+
+
+==== :SetSource ====
+'':SetSource( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:InputSource#T|Gtk.Gdk.InputSource.T]])''
+
+
+==== :SetMode ====
+'':SetMode( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:InputMode#T|Gtk.Gdk.InputMode.T]])''
+
+
+==== :SetKey ====
+'':SetKey( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :Name ====
+'':Name( @ [[#T|T]])''
+
+
+==== :Source ====
+'':Source( @ [[#T|T]])''
+
+
+==== :Mode ====
+'':Mode( @ [[#T|T]])''
+
+
+==== :HasCursor ====
+'':HasCursor( @ [[#T|T]])''
+
+
+==== :NumAxes ====
+'':NumAxes( @ [[#T|T]])''
+
+
+==== :Axes ====
+'':Axes( @ [[#T|T]])''
+
+
+==== :NumKeys ====
+'':NumKeys( @ [[#T|T]])''
+
+
+==== :Keys ====
+'':Keys( @ [[#T|T]])''
+
+
+==== :GetAxis ====
+'':GetAxis( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Gtk:Gdk:AxisUse#T|Gtk.Gdk.AxisUse.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :GetHistory ====
+'':GetHistory( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :GetState ====
+'':GetState( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :SetAxisUse ====
+'':SetAxisUse( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Gtk:Gdk:AxisUse#T|Gtk.Gdk.AxisUse.T]])''
+
+
+==== FreeHistory ====
+''FreeHistory()''
+
+
+==== GetType ====
+''GetType()''
+
+
+==== GetCorePointer ====
+''GetCorePointer()''
+
+

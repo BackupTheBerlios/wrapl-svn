@@ -1,0 +1,70 @@
+====== Frame ======
+==== T ====
+=== inherits from ===
+  * [[..:..:Gtk:Gtk:Bin#T|Gtk.Gtk.Bin.T]]
+  * [[..:..:Gtk:Gtk:Container#T|Gtk.Gtk.Container.T]]
+  * [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]
+  * [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]
+  * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
+
+
+==== :SetShadowType ====
+'':SetShadowType( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:ShadowType#T|Gtk.Gtk.ShadowType.T]])''
+
+
+==== :SetLabelWidget ====
+'':SetLabelWidget( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]])''
+
+
+==== :LabelWidget ====
+'':LabelWidget( @ [[#T|T]])''
+
+
+==== :ShadowType ====
+'':ShadowType( @ [[#T|T]])''
+
+
+==== :LabelXalign ====
+'':LabelXalign( @ [[#T|T]])''
+
+
+==== :LabelYalign ====
+'':LabelYalign( @ [[#T|T]])''
+
+
+==== :ChildAllocation ====
+'':ChildAllocation( @ [[#T|T]])''
+
+
+==== :GetLabel ====
+'':GetLabel( @ [[#T|T]])''
+
+
+==== :GetLabelAlign ====
+'':GetLabelAlign( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :GetLabelWidget ====
+'':GetLabelWidget( @ [[#T|T]])''
+
+
+==== :GetShadowType ====
+'':GetShadowType( @ [[#T|T]])''
+
+
+==== :SetLabel ====
+'':SetLabel( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== :SetLabelAlign ====
+'':SetLabelAlign( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+
+
+==== New ====
+''New()''
+
+
+==== GetType ====
+''GetType()''
+
+

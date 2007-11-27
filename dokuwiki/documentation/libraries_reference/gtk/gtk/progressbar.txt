@@ -1,0 +1,129 @@
+====== ProgressBar ======
+==== T ====
+=== inherits from ===
+  * [[..:..:Gtk:Gtk:Progress#T|Gtk.Gtk.Progress.T]]
+  * [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]
+  * [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]
+  * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
+
+
+==== :Update ====
+'':Update( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+
+
+==== :SetText ====
+'':SetText( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== :SetPulseStep ====
+'':SetPulseStep( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+
+
+==== :BarStyle ====
+'':BarStyle( @ [[#T|T]])''
+
+
+==== :Orientation ====
+'':Orientation( @ [[#T|T]])''
+
+
+==== :Blocks ====
+'':Blocks( @ [[#T|T]])''
+
+
+==== :InBlock ====
+'':InBlock( @ [[#T|T]])''
+
+
+==== :ActivityPos ====
+'':ActivityPos( @ [[#T|T]])''
+
+
+==== :ActivityStep ====
+'':ActivityStep( @ [[#T|T]])''
+
+
+==== :ActivityBlocks ====
+'':ActivityBlocks( @ [[#T|T]])''
+
+
+==== :PulseFraction ====
+'':PulseFraction( @ [[#T|T]])''
+
+
+==== :ActivityDir ====
+'':ActivityDir( @ [[#T|T]])''
+
+
+==== :Ellipsize ====
+'':Ellipsize( @ [[#T|T]])''
+
+
+==== :Dirty ====
+'':Dirty( @ [[#T|T]])''
+
+
+==== :GetEllipsize ====
+'':GetEllipsize( @ [[#T|T]])''
+
+
+==== :GetFraction ====
+'':GetFraction( @ [[#T|T]])''
+
+
+==== :GetOrientation ====
+'':GetOrientation( @ [[#T|T]])''
+
+
+==== :GetPulseStep ====
+'':GetPulseStep( @ [[#T|T]])''
+
+
+==== :GetText ====
+'':GetText( @ [[#T|T]])''
+
+
+==== :Pulse ====
+'':Pulse( @ [[#T|T]])''
+
+
+==== :SetActivityBlocks ====
+'':SetActivityBlocks( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :SetActivityStep ====
+'':SetActivityStep( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :SetBarStyle ====
+'':SetBarStyle( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:ProgressBarStyle#T|Gtk.Gtk.ProgressBarStyle.T]])''
+
+
+==== :SetDiscreteBlocks ====
+'':SetDiscreteBlocks( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :SetEllipsize ====
+'':SetEllipsize( @ [[#T|T]],  @ [[..:..:Gtk:Pango:EllipsizeMode#T|Gtk.Pango.EllipsizeMode.T]])''
+
+
+==== :SetFraction ====
+'':SetFraction( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+
+
+==== :SetOrientation ====
+'':SetOrientation( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:ProgressBarOrientation#T|Gtk.Gtk.ProgressBarOrientation.T]])''
+
+
+==== New ====
+''New()''
+
+
+==== GetType ====
+''GetType()''
+
+
+==== NewWithAdjustment ====
+''NewWithAdjustment()''
+
+

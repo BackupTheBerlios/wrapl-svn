@@ -1,0 +1,114 @@
+====== EntryCompletion ======
+==== T ====
+=== inherits from ===
+  * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
+
+
+==== :SetTextColumn ====
+'':SetTextColumn( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :SetPopupSingleMatch ====
+'':SetPopupSingleMatch( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+
+
+==== :Priv ====
+'':Priv( @ [[#T|T]])''
+
+
+==== :Complete ====
+'':Complete( @ [[#T|T]])''
+
+
+==== :DeleteAction ====
+'':DeleteAction( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :GetCompletionPrefix ====
+'':GetCompletionPrefix( @ [[#T|T]])''
+
+
+==== :GetEntry ====
+'':GetEntry( @ [[#T|T]])''
+
+
+==== :GetInlineCompletion ====
+'':GetInlineCompletion( @ [[#T|T]])''
+
+
+==== :GetInlineSelection ====
+'':GetInlineSelection( @ [[#T|T]])''
+
+
+==== :GetMinimumKeyLength ====
+'':GetMinimumKeyLength( @ [[#T|T]])''
+
+
+==== :GetModel ====
+'':GetModel( @ [[#T|T]])''
+
+
+==== :GetPopupCompletion ====
+'':GetPopupCompletion( @ [[#T|T]])''
+
+
+==== :GetPopupSetWidth ====
+'':GetPopupSetWidth( @ [[#T|T]])''
+
+
+==== :GetPopupSingleMatch ====
+'':GetPopupSingleMatch( @ [[#T|T]])''
+
+
+==== :GetTextColumn ====
+'':GetTextColumn( @ [[#T|T]])''
+
+
+==== :InsertActionMarkup ====
+'':InsertActionMarkup( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== :InsertActionText ====
+'':InsertActionText( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== :InsertPrefix ====
+'':InsertPrefix( @ [[#T|T]])''
+
+
+==== :SetInlineCompletion ====
+'':SetInlineCompletion( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+
+
+==== :SetInlineSelection ====
+'':SetInlineSelection( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+
+
+==== :SetMatchFunc ====
+'':SetMatchFunc( @ [[#T|T]],  @ [[..:..:Std:Function#T|Std.Function.T]],  @ [[..:..:Std:Address#T|Std.Address.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :SetMinimumKeyLength ====
+'':SetMinimumKeyLength( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :SetModel ====
+'':SetModel( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TreeModel#T|Gtk.Gtk.TreeModel.T]])''
+
+
+==== :SetPopupCompletion ====
+'':SetPopupCompletion( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+
+
+==== :SetPopupSetWidth ====
+'':SetPopupSetWidth( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+
+
+==== New ====
+''New()''
+
+
+==== GetType ====
+''GetType()''
+
+

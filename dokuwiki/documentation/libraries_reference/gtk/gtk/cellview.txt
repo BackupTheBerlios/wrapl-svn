@@ -1,0 +1,56 @@
+====== CellView ======
+==== T ====
+=== inherits from ===
+  * [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]
+  * [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]
+  * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
+
+
+==== :SetModel ====
+'':SetModel( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TreeModel#T|Gtk.Gtk.TreeModel.T]])''
+
+
+==== :SetDisplayedRow ====
+'':SetDisplayedRow( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]])''
+
+
+==== :SetBackgroundColor ====
+'':SetBackgroundColor( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]])''
+
+
+==== :GetSizeOfRow ====
+'':GetSizeOfRow( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]],  @ [[..:..:Gtk:Gtk:Requisition#T|Gtk.Gtk.Requisition.T]])''
+
+
+==== :GetDisplayedRow ====
+'':GetDisplayedRow( @ [[#T|T]])''
+
+
+==== :Priv ====
+'':Priv( @ [[#T|T]])''
+
+
+==== :GetCellRenderers ====
+'':GetCellRenderers( @ [[#T|T]])''
+
+
+==== New ====
+''New()''
+
+
+==== GetType ====
+''GetType()''
+
+
+==== NewWithText ====
+''NewWithText()''
+
+
+==== NewWithPixbuf ====
+''NewWithPixbuf()''
+
+
+==== NewWithMarkup ====
+''NewWithMarkup()''
+
+

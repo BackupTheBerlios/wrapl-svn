@@ -1,0 +1,82 @@
+====== UIManager ======
+==== T ====
+=== inherits from ===
+  * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
+
+
+==== :SetAddTearoffs ====
+'':SetAddTearoffs( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+
+
+==== :RemoveUi ====
+'':RemoveUi( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :RemoveActionGroup ====
+'':RemoveActionGroup( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:ActionGroup#T|Gtk.Gtk.ActionGroup.T]])''
+
+
+==== :PrivateData ====
+'':PrivateData( @ [[#T|T]])''
+
+
+==== :AddUi ====
+'':AddUi( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+
+
+==== :AddUiFromFile ====
+'':AddUiFromFile( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :AddUiFromString ====
+'':AddUiFromString( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :EnsureUpdate ====
+'':EnsureUpdate( @ [[#T|T]])''
+
+
+==== :GetAccelGroup ====
+'':GetAccelGroup( @ [[#T|T]])''
+
+
+==== :GetAction ====
+'':GetAction( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== :GetActionGroups ====
+'':GetActionGroups( @ [[#T|T]])''
+
+
+==== :GetAddTearoffs ====
+'':GetAddTearoffs( @ [[#T|T]])''
+
+
+==== :GetToplevels ====
+'':GetToplevels( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :GetUi ====
+'':GetUi( @ [[#T|T]])''
+
+
+==== :GetWidget ====
+'':GetWidget( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== :InsertActionGroup ====
+'':InsertActionGroup( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:ActionGroup#T|Gtk.Gtk.ActionGroup.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== New ====
+''New()''
+
+
+==== GetType ====
+''GetType()''
+
+
+==== NewMergeId ====
+''NewMergeId()''
+
+

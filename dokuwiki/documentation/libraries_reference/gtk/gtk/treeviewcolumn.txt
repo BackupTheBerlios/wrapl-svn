@@ -1,0 +1,355 @@
+====== TreeViewColumn ======
+==== T ====
+=== inherits from ===
+  * [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]
+  * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
+
+
+==== :SetWidget ====
+'':SetWidget( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]])''
+
+
+==== :SetVisible ====
+'':SetVisible( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+
+
+==== :SetTitle ====
+'':SetTitle( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== :TreeView ====
+'':TreeView( @ [[#T|T]])''
+
+
+==== :Button ====
+'':Button( @ [[#T|T]])''
+
+
+==== :Child ====
+'':Child( @ [[#T|T]])''
+
+
+==== :Arrow ====
+'':Arrow( @ [[#T|T]])''
+
+
+==== :Alignment ====
+'':Alignment( @ [[#T|T]])''
+
+
+==== :Window ====
+'':Window( @ [[#T|T]])''
+
+
+==== :EditableWidget ====
+'':EditableWidget( @ [[#T|T]])''
+
+
+==== :Xalign ====
+'':Xalign( @ [[#T|T]])''
+
+
+==== :PropertyChangedSignal ====
+'':PropertyChangedSignal( @ [[#T|T]])''
+
+
+==== :Spacing ====
+'':Spacing( @ [[#T|T]])''
+
+
+==== :ColumnType ====
+'':ColumnType( @ [[#T|T]])''
+
+
+==== :RequestedWidth ====
+'':RequestedWidth( @ [[#T|T]])''
+
+
+==== :ButtonRequest ====
+'':ButtonRequest( @ [[#T|T]])''
+
+
+==== :ResizedWidth ====
+'':ResizedWidth( @ [[#T|T]])''
+
+
+==== :Width ====
+'':Width( @ [[#T|T]])''
+
+
+==== :FixedWidth ====
+'':FixedWidth( @ [[#T|T]])''
+
+
+==== :MinWidth ====
+'':MinWidth( @ [[#T|T]])''
+
+
+==== :MaxWidth ====
+'':MaxWidth( @ [[#T|T]])''
+
+
+==== :DragX ====
+'':DragX( @ [[#T|T]])''
+
+
+==== :DragY ====
+'':DragY( @ [[#T|T]])''
+
+
+==== :Title ====
+'':Title( @ [[#T|T]])''
+
+
+==== :CellList ====
+'':CellList( @ [[#T|T]])''
+
+
+==== :SortClickedSignal ====
+'':SortClickedSignal( @ [[#T|T]])''
+
+
+==== :SortColumnChangedSignal ====
+'':SortColumnChangedSignal( @ [[#T|T]])''
+
+
+==== :SortColumnId ====
+'':SortColumnId( @ [[#T|T]])''
+
+
+==== :SortOrder ====
+'':SortOrder( @ [[#T|T]])''
+
+
+==== :Visible ====
+'':Visible( @ [[#T|T]])''
+
+
+==== :Resizable ====
+'':Resizable( @ [[#T|T]])''
+
+
+==== :Clickable ====
+'':Clickable( @ [[#T|T]])''
+
+
+==== :Dirty ====
+'':Dirty( @ [[#T|T]])''
+
+
+==== :ShowSortIndicator ====
+'':ShowSortIndicator( @ [[#T|T]])''
+
+
+==== :MaybeReordered ====
+'':MaybeReordered( @ [[#T|T]])''
+
+
+==== :Reorderable ====
+'':Reorderable( @ [[#T|T]])''
+
+
+==== :UseResizedWidth ====
+'':UseResizedWidth( @ [[#T|T]])''
+
+
+==== :Expand ====
+'':Expand( @ [[#T|T]])''
+
+
+==== :AddAttribute ====
+'':AddAttribute( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:CellRenderer#T|Gtk.Gtk.CellRenderer.T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :CellGetPosition ====
+'':CellGetPosition( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:CellRenderer#T|Gtk.Gtk.CellRenderer.T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :CellGetSize ====
+'':CellGetSize( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :CellIsVisible ====
+'':CellIsVisible( @ [[#T|T]])''
+
+
+==== :CellSetCellData ====
+'':CellSetCellData( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TreeModel#T|Gtk.Gtk.TreeModel.T]],  @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+
+
+==== :Clear ====
+'':Clear( @ [[#T|T]])''
+
+
+==== :ClearAttributes ====
+'':ClearAttributes( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:CellRenderer#T|Gtk.Gtk.CellRenderer.T]])''
+
+
+==== :Clicked ====
+'':Clicked( @ [[#T|T]])''
+
+
+==== :FocusCell ====
+'':FocusCell( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:CellRenderer#T|Gtk.Gtk.CellRenderer.T]])''
+
+
+==== :GetAlignment ====
+'':GetAlignment( @ [[#T|T]])''
+
+
+==== :GetCellRenderers ====
+'':GetCellRenderers( @ [[#T|T]])''
+
+
+==== :GetClickable ====
+'':GetClickable( @ [[#T|T]])''
+
+
+==== :GetExpand ====
+'':GetExpand( @ [[#T|T]])''
+
+
+==== :GetFixedWidth ====
+'':GetFixedWidth( @ [[#T|T]])''
+
+
+==== :GetMaxWidth ====
+'':GetMaxWidth( @ [[#T|T]])''
+
+
+==== :GetMinWidth ====
+'':GetMinWidth( @ [[#T|T]])''
+
+
+==== :GetReorderable ====
+'':GetReorderable( @ [[#T|T]])''
+
+
+==== :GetResizable ====
+'':GetResizable( @ [[#T|T]])''
+
+
+==== :GetSizing ====
+'':GetSizing( @ [[#T|T]])''
+
+
+==== :GetSortColumnId ====
+'':GetSortColumnId( @ [[#T|T]])''
+
+
+==== :GetSortIndicator ====
+'':GetSortIndicator( @ [[#T|T]])''
+
+
+==== :GetSortOrder ====
+'':GetSortOrder( @ [[#T|T]])''
+
+
+==== :GetSpacing ====
+'':GetSpacing( @ [[#T|T]])''
+
+
+==== :GetTitle ====
+'':GetTitle( @ [[#T|T]])''
+
+
+==== :GetTreeView ====
+'':GetTreeView( @ [[#T|T]])''
+
+
+==== :GetVisible ====
+'':GetVisible( @ [[#T|T]])''
+
+
+==== :GetWidget ====
+'':GetWidget( @ [[#T|T]])''
+
+
+==== :GetWidth ====
+'':GetWidth( @ [[#T|T]])''
+
+
+==== :PackEnd ====
+'':PackEnd( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:CellRenderer#T|Gtk.Gtk.CellRenderer.T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+
+
+==== :PackStart ====
+'':PackStart( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:CellRenderer#T|Gtk.Gtk.CellRenderer.T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+
+
+==== :QueueResize ====
+'':QueueResize( @ [[#T|T]])''
+
+
+==== :SetAlignment ====
+'':SetAlignment( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+
+
+==== :SetAttributes ====
+'':SetAttributes( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:CellRenderer#T|Gtk.Gtk.CellRenderer.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :SetCellDataFunc ====
+'':SetCellDataFunc( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:CellRenderer#T|Gtk.Gtk.CellRenderer.T]],  @ [[..:..:Std:Function#T|Std.Function.T]],  @ [[..:..:Std:Address#T|Std.Address.T]],  @ [[..:..:Std:Function#T|Std.Function.T]])''
+
+
+==== :SetClickable ====
+'':SetClickable( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+
+
+==== :SetExpand ====
+'':SetExpand( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+
+
+==== :SetFixedWidth ====
+'':SetFixedWidth( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :SetMaxWidth ====
+'':SetMaxWidth( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :SetMinWidth ====
+'':SetMinWidth( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :SetReorderable ====
+'':SetReorderable( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+
+
+==== :SetResizable ====
+'':SetResizable( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+
+
+==== :SetSizing ====
+'':SetSizing( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TreeViewColumnSizing#T|Gtk.Gtk.TreeViewColumnSizing.T]])''
+
+
+==== :SetSortColumnId ====
+'':SetSortColumnId( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :SetSortIndicator ====
+'':SetSortIndicator( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+
+
+==== :SetSortOrder ====
+'':SetSortOrder( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:SortType#T|Gtk.Gtk.SortType.T]])''
+
+
+==== :SetSpacing ====
+'':SetSpacing( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== New ====
+''New()''
+
+
+==== GetType ====
+''GetType()''
+
+
+==== NewWithAttributes ====
+''NewWithAttributes()''
+
+

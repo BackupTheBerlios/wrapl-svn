@@ -1,0 +1,39 @@
+====== PangoRenderer ======
+==== T ====
+=== inherits from ===
+  * [[..:..:Gtk:Pango:Renderer#T|Gtk.Pango.Renderer.T]]
+  * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
+
+
+==== :SetStipple ====
+'':SetStipple( @ [[#T|T]],  @ [[..:..:Gtk:Pango:RenderPart#T|Gtk.Pango.RenderPart.T]],  @ [[..:..:Gtk:Gdk:Bitmap#T|Gtk.Gdk.Bitmap.T]])''
+
+
+==== :SetOverrideColor ====
+'':SetOverrideColor( @ [[#T|T]],  @ [[..:..:Gtk:Pango:RenderPart#T|Gtk.Pango.RenderPart.T]],  @ [[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]])''
+
+
+==== :SetGc ====
+'':SetGc( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]])''
+
+
+==== :Priv ====
+'':Priv( @ [[#T|T]])''
+
+
+==== :SetDrawable ====
+'':SetDrawable( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Drawable#T|Gtk.Gdk.Drawable.T]])''
+
+
+==== New ====
+''New()''
+
+
+==== GetType ====
+''GetType()''
+
+
+==== GetDefault ====
+''GetDefault()''
+
+

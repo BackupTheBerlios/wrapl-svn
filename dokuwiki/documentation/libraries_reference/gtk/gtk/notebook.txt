@@ -1,0 +1,305 @@
+====== Notebook ======
+==== T ====
+=== inherits from ===
+  * [[..:..:Gtk:Gtk:Container#T|Gtk.Gtk.Container.T]]
+  * [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]
+  * [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]
+  * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
+
+
+==== :SetTabVborder ====
+'':SetTabVborder( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :SetTabReorderable ====
+'':SetTabReorderable( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+
+
+==== :SetTabPos ====
+'':SetTabPos( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:PositionType#T|Gtk.Gtk.PositionType.T]])''
+
+
+==== :CurPage ====
+'':CurPage( @ [[#T|T]])''
+
+
+==== :Children ====
+'':Children( @ [[#T|T]])''
+
+
+==== :FirstTab ====
+'':FirstTab( @ [[#T|T]])''
+
+
+==== :FocusTab ====
+'':FocusTab( @ [[#T|T]])''
+
+
+==== :Menu ====
+'':Menu( @ [[#T|T]])''
+
+
+==== :EventWindow ====
+'':EventWindow( @ [[#T|T]])''
+
+
+==== :Timer ====
+'':Timer( @ [[#T|T]])''
+
+
+==== :TabHborder ====
+'':TabHborder( @ [[#T|T]])''
+
+
+==== :TabVborder ====
+'':TabVborder( @ [[#T|T]])''
+
+
+==== :ShowTabs ====
+'':ShowTabs( @ [[#T|T]])''
+
+
+==== :Homogeneous ====
+'':Homogeneous( @ [[#T|T]])''
+
+
+==== :ShowBorder ====
+'':ShowBorder( @ [[#T|T]])''
+
+
+==== :TabPos ====
+'':TabPos( @ [[#T|T]])''
+
+
+==== :Scrollable ====
+'':Scrollable( @ [[#T|T]])''
+
+
+==== :InChild ====
+'':InChild( @ [[#T|T]])''
+
+
+==== :ClickChild ====
+'':ClickChild( @ [[#T|T]])''
+
+
+==== :Button ====
+'':Button( @ [[#T|T]])''
+
+
+==== :NeedTimer ====
+'':NeedTimer( @ [[#T|T]])''
+
+
+==== :ChildHasFocus ====
+'':ChildHasFocus( @ [[#T|T]])''
+
+
+==== :HaveVisibleChild ====
+'':HaveVisibleChild( @ [[#T|T]])''
+
+
+==== :FocusOut ====
+'':FocusOut( @ [[#T|T]])''
+
+
+==== :HasBeforePrevious ====
+'':HasBeforePrevious( @ [[#T|T]])''
+
+
+==== :HasBeforeNext ====
+'':HasBeforeNext( @ [[#T|T]])''
+
+
+==== :HasAfterPrevious ====
+'':HasAfterPrevious( @ [[#T|T]])''
+
+
+==== :HasAfterNext ====
+'':HasAfterNext( @ [[#T|T]])''
+
+
+==== :AppendPage ====
+'':AppendPage( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]])''
+
+
+==== :AppendPageMenu ====
+'':AppendPageMenu( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]])''
+
+
+==== :GetCurrentPage ====
+'':GetCurrentPage( @ [[#T|T]])''
+
+
+==== :GetGroup ====
+'':GetGroup( @ [[#T|T]])''
+
+
+==== :GetGroupId ====
+'':GetGroupId( @ [[#T|T]])''
+
+
+==== :GetMenuLabel ====
+'':GetMenuLabel( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]])''
+
+
+==== :GetMenuLabelText ====
+'':GetMenuLabelText( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]])''
+
+
+==== :GetNPages ====
+'':GetNPages( @ [[#T|T]])''
+
+
+==== :GetNthPage ====
+'':GetNthPage( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :GetScrollable ====
+'':GetScrollable( @ [[#T|T]])''
+
+
+==== :GetShowBorder ====
+'':GetShowBorder( @ [[#T|T]])''
+
+
+==== :GetShowTabs ====
+'':GetShowTabs( @ [[#T|T]])''
+
+
+==== :GetTabDetachable ====
+'':GetTabDetachable( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]])''
+
+
+==== :GetTabLabel ====
+'':GetTabLabel( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]])''
+
+
+==== :GetTabLabelText ====
+'':GetTabLabelText( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]])''
+
+
+==== :GetTabPos ====
+'':GetTabPos( @ [[#T|T]])''
+
+
+==== :GetTabReorderable ====
+'':GetTabReorderable( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]])''
+
+
+==== :InsertPage ====
+'':InsertPage( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :InsertPageMenu ====
+'':InsertPageMenu( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :NextPage ====
+'':NextPage( @ [[#T|T]])''
+
+
+==== :PopupDisable ====
+'':PopupDisable( @ [[#T|T]])''
+
+
+==== :PopupEnable ====
+'':PopupEnable( @ [[#T|T]])''
+
+
+==== :PrependPage ====
+'':PrependPage( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]])''
+
+
+==== :PrependPageMenu ====
+'':PrependPageMenu( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]])''
+
+
+==== :PrevPage ====
+'':PrevPage( @ [[#T|T]])''
+
+
+==== :QueryTabLabelPacking ====
+'':QueryTabLabelPacking( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :RemovePage ====
+'':RemovePage( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :ReorderChild ====
+'':ReorderChild( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :SetCurrentPage ====
+'':SetCurrentPage( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :SetGroup ====
+'':SetGroup( @ [[#T|T]],  @ [[..:..:Std:Address#T|Std.Address.T]])''
+
+
+==== :SetGroupId ====
+'':SetGroupId( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :SetHomogeneousTabs ====
+'':SetHomogeneousTabs( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+
+
+==== :SetMenuLabel ====
+'':SetMenuLabel( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]])''
+
+
+==== :SetMenuLabelText ====
+'':SetMenuLabelText( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== :SetScrollable ====
+'':SetScrollable( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+
+
+==== :SetShowBorder ====
+'':SetShowBorder( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+
+
+==== :SetShowTabs ====
+'':SetShowTabs( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+
+
+==== :SetTabBorder ====
+'':SetTabBorder( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :SetTabDetachable ====
+'':SetTabDetachable( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+
+
+==== :SetTabHborder ====
+'':SetTabHborder( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :SetTabLabel ====
+'':SetTabLabel( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]])''
+
+
+==== :SetTabLabelPacking ====
+'':SetTabLabelPacking( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]],  @ [[..:..:Gtk:Gtk:PackType#T|Gtk.Gtk.PackType.T]])''
+
+
+==== :SetTabLabelText ====
+'':SetTabLabelText( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== New ====
+''New()''
+
+
+==== SetWindowCreationHook ====
+''SetWindowCreationHook()''
+
+
+==== GetType ====
+''GetType()''
+
+

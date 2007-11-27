@@ -1,0 +1,98 @@
+====== PrintOperation ======
+==== T ====
+=== inherits from ===
+  * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
+
+
+==== :SetUseFullPage ====
+'':SetUseFullPage( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+
+
+==== :SetUnit ====
+'':SetUnit( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Unit#T|Gtk.Gtk.Unit.T]])''
+
+
+==== :Priv ====
+'':Priv( @ [[#T|T]])''
+
+
+==== :Cancel ====
+'':Cancel( @ [[#T|T]])''
+
+
+==== :GetDefaultPageSetup ====
+'':GetDefaultPageSetup( @ [[#T|T]])''
+
+
+==== :GetError ====
+'':GetError( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :GetPrintSettings ====
+'':GetPrintSettings( @ [[#T|T]])''
+
+
+==== :GetStatus ====
+'':GetStatus( @ [[#T|T]])''
+
+
+==== :GetStatusString ====
+'':GetStatusString( @ [[#T|T]])''
+
+
+==== :IsFinished ====
+'':IsFinished( @ [[#T|T]])''
+
+
+==== :Run ====
+'':Run( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:PrintOperationAction#T|Gtk.Gtk.PrintOperationAction.T]],  @ [[..:..:Gtk:Gtk:Window#T|Gtk.Gtk.Window.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :SetAllowAsync ====
+'':SetAllowAsync( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+
+
+==== :SetCurrentPage ====
+'':SetCurrentPage( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :SetCustomTabLabel ====
+'':SetCustomTabLabel( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== :SetDefaultPageSetup ====
+'':SetDefaultPageSetup( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:PageSetup#T|Gtk.Gtk.PageSetup.T]])''
+
+
+==== :SetExportFilename ====
+'':SetExportFilename( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== :SetJobName ====
+'':SetJobName( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== :SetNPages ====
+'':SetNPages( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :SetPrintSettings ====
+'':SetPrintSettings( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:PrintSettings#T|Gtk.Gtk.PrintSettings.T]])''
+
+
+==== :SetShowProgress ====
+'':SetShowProgress( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+
+
+==== :SetTrackPrintStatus ====
+'':SetTrackPrintStatus( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+
+
+==== New ====
+''New()''
+
+
+==== GetType ====
+''GetType()''
+
+

@@ -1,0 +1,103 @@
+====== ColorSelection ======
+==== T ====
+=== inherits from ===
+  * [[..:..:Gtk:Gtk:VBox#T|Gtk.Gtk.VBox.T]]
+  * [[..:..:Gtk:Gtk:Box#T|Gtk.Gtk.Box.T]]
+  * [[..:..:Gtk:Gtk:Container#T|Gtk.Gtk.Container.T]]
+  * [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]
+  * [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]
+  * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
+
+
+==== :SetUpdatePolicy ====
+'':SetUpdatePolicy( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:UpdateType#T|Gtk.Gtk.UpdateType.T]])''
+
+
+==== :SetPreviousColor ====
+'':SetPreviousColor( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]])''
+
+
+==== :SetPreviousAlpha ====
+'':SetPreviousAlpha( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :SetHasPalette ====
+'':SetHasPalette( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+
+
+==== :SetHasOpacityControl ====
+'':SetHasOpacityControl( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+
+
+==== :SetCurrentColor ====
+'':SetCurrentColor( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]])''
+
+
+==== :PrivateData ====
+'':PrivateData( @ [[#T|T]])''
+
+
+==== :GetColor ====
+'':GetColor( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :GetCurrentAlpha ====
+'':GetCurrentAlpha( @ [[#T|T]])''
+
+
+==== :GetCurrentColor ====
+'':GetCurrentColor( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]])''
+
+
+==== :GetHasOpacityControl ====
+'':GetHasOpacityControl( @ [[#T|T]])''
+
+
+==== :GetHasPalette ====
+'':GetHasPalette( @ [[#T|T]])''
+
+
+==== :GetPreviousAlpha ====
+'':GetPreviousAlpha( @ [[#T|T]])''
+
+
+==== :GetPreviousColor ====
+'':GetPreviousColor( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]])''
+
+
+==== :IsAdjusting ====
+'':IsAdjusting( @ [[#T|T]])''
+
+
+==== :SetColor ====
+'':SetColor( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :SetCurrentAlpha ====
+'':SetCurrentAlpha( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== New ====
+''New()''
+
+
+==== SetChangePaletteWithScreenHook ====
+''SetChangePaletteWithScreenHook()''
+
+
+==== SetChangePaletteHook ====
+''SetChangePaletteHook()''
+
+
+==== PaletteToString ====
+''PaletteToString()''
+
+
+==== PaletteFromString ====
+''PaletteFromString()''
+
+
+==== GetType ====
+''GetType()''
+
+

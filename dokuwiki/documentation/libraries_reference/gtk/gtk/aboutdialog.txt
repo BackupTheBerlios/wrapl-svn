@@ -1,0 +1,152 @@
+====== AboutDialog ======
+==== T ====
+=== inherits from ===
+  * [[..:..:Gtk:Gtk:Dialog#T|Gtk.Gtk.Dialog.T]]
+  * [[..:..:Gtk:Gtk:Window#T|Gtk.Gtk.Window.T]]
+  * [[..:..:Gtk:Gtk:Bin#T|Gtk.Gtk.Bin.T]]
+  * [[..:..:Gtk:Gtk:Container#T|Gtk.Gtk.Container.T]]
+  * [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]
+  * [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]
+  * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
+
+
+==== :SetWrapLicense ====
+'':SetWrapLicense( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+
+
+==== :SetWebsiteLabel ====
+'':SetWebsiteLabel( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== :SetWebsite ====
+'':SetWebsite( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== :SetVersion ====
+'':SetVersion( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== :PrivateData ====
+'':PrivateData( @ [[#T|T]])''
+
+
+==== :GetArtists ====
+'':GetArtists( @ [[#T|T]])''
+
+
+==== :GetAuthors ====
+'':GetAuthors( @ [[#T|T]])''
+
+
+==== :GetComments ====
+'':GetComments( @ [[#T|T]])''
+
+
+==== :GetCopyright ====
+'':GetCopyright( @ [[#T|T]])''
+
+
+==== :GetDocumenters ====
+'':GetDocumenters( @ [[#T|T]])''
+
+
+==== :GetLicense ====
+'':GetLicense( @ [[#T|T]])''
+
+
+==== :GetLogo ====
+'':GetLogo( @ [[#T|T]])''
+
+
+==== :GetLogoIconName ====
+'':GetLogoIconName( @ [[#T|T]])''
+
+
+==== :GetName ====
+'':GetName( @ [[#T|T]])''
+
+
+==== :GetProgramName ====
+'':GetProgramName( @ [[#T|T]])''
+
+
+==== :GetTranslatorCredits ====
+'':GetTranslatorCredits( @ [[#T|T]])''
+
+
+==== :GetVersion ====
+'':GetVersion( @ [[#T|T]])''
+
+
+==== :GetWebsite ====
+'':GetWebsite( @ [[#T|T]])''
+
+
+==== :GetWebsiteLabel ====
+'':GetWebsiteLabel( @ [[#T|T]])''
+
+
+==== :GetWrapLicense ====
+'':GetWrapLicense( @ [[#T|T]])''
+
+
+==== :SetArtists ====
+'':SetArtists( @ [[#T|T]],  @ [[..:..:Std:List#T|Std.List.T]])''
+
+
+==== :SetAuthors ====
+'':SetAuthors( @ [[#T|T]],  @ [[..:..:Std:List#T|Std.List.T]])''
+
+
+==== :SetComments ====
+'':SetComments( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== :SetCopyright ====
+'':SetCopyright( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== :SetDocumenters ====
+'':SetDocumenters( @ [[#T|T]],  @ [[..:..:Std:List#T|Std.List.T]])''
+
+
+==== :SetLicense ====
+'':SetLicense( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== :SetLogo ====
+'':SetLogo( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Pixbuf#T|Gtk.Gdk.Pixbuf.T]])''
+
+
+==== :SetLogoIconName ====
+'':SetLogoIconName( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== :SetName ====
+'':SetName( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== :SetProgramName ====
+'':SetProgramName( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== :SetTranslatorCredits ====
+'':SetTranslatorCredits( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== New ====
+''New()''
+
+
+==== SetUrlHook ====
+''SetUrlHook()''
+
+
+==== SetEmailHook ====
+''SetEmailHook()''
+
+
+==== GetType ====
+''GetType()''
+
+

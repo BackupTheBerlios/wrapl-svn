@@ -1,0 +1,75 @@
+====== ToolButton ======
+==== T ====
+=== inherits from ===
+  * [[..:..:Gtk:Gtk:ToolItem#T|Gtk.Gtk.ToolItem.T]]
+  * [[..:..:Gtk:Gtk:Bin#T|Gtk.Gtk.Bin.T]]
+  * [[..:..:Gtk:Gtk:Container#T|Gtk.Gtk.Container.T]]
+  * [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]
+  * [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]
+  * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
+
+
+==== :SetUseUnderline ====
+'':SetUseUnderline( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+
+
+==== :SetStockId ====
+'':SetStockId( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== :SetLabelWidget ====
+'':SetLabelWidget( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]])''
+
+
+==== :Priv ====
+'':Priv( @ [[#T|T]])''
+
+
+==== :GetIconName ====
+'':GetIconName( @ [[#T|T]])''
+
+
+==== :GetIconWidget ====
+'':GetIconWidget( @ [[#T|T]])''
+
+
+==== :GetLabel ====
+'':GetLabel( @ [[#T|T]])''
+
+
+==== :GetLabelWidget ====
+'':GetLabelWidget( @ [[#T|T]])''
+
+
+==== :GetStockId ====
+'':GetStockId( @ [[#T|T]])''
+
+
+==== :GetUseUnderline ====
+'':GetUseUnderline( @ [[#T|T]])''
+
+
+==== :SetIconName ====
+'':SetIconName( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== :SetIconWidget ====
+'':SetIconWidget( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]])''
+
+
+==== :SetLabel ====
+'':SetLabel( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== New ====
+''New()''
+
+
+==== GetType ====
+''GetType()''
+
+
+==== NewFromStock ====
+''NewFromStock()''
+
+

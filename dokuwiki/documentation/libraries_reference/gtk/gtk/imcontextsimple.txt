@@ -1,0 +1,43 @@
+====== IMContextSimple ======
+==== T ====
+=== inherits from ===
+  * [[..:..:Gtk:Gtk:IMContext#T|Gtk.Gtk.IMContext.T]]
+  * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
+
+
+==== :AddTable ====
+'':AddTable( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :ComposeBuffer ====
+'':ComposeBuffer( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :Tables ====
+'':Tables( @ [[#T|T]])''
+
+
+==== :TentativeMatch ====
+'':TentativeMatch( @ [[#T|T]])''
+
+
+==== :TentativeMatchLen ====
+'':TentativeMatchLen( @ [[#T|T]])''
+
+
+==== :InHexSequence ====
+'':InHexSequence( @ [[#T|T]])''
+
+
+==== :ModifiersDropped ====
+'':ModifiersDropped( @ [[#T|T]])''
+
+
+==== New ====
+''New()''
+
+
+==== GetType ====
+''GetType()''
+
+

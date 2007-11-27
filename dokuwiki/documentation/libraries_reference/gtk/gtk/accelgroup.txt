@@ -1,0 +1,74 @@
+====== AccelGroup ======
+==== T ====
+=== inherits from ===
+  * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
+
+
+==== :Unlock ====
+'':Unlock( @ [[#T|T]])''
+
+
+==== :Query ====
+'':Query( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :Lock ====
+'':Lock( @ [[#T|T]])''
+
+
+==== :LockCount ====
+'':LockCount( @ [[#T|T]])''
+
+
+==== :ModifierMask ====
+'':ModifierMask( @ [[#T|T]])''
+
+
+==== :Acceleratables ====
+'':Acceleratables( @ [[#T|T]])''
+
+
+==== :NAccels ====
+'':NAccels( @ [[#T|T]])''
+
+
+==== :PrivAccels ====
+'':PrivAccels( @ [[#T|T]])''
+
+
+==== :Activate ====
+'':Activate( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :Connect ====
+'':Connect( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Gtk:GObject:Closure#T|Gtk.GObject.Closure.T]])''
+
+
+==== :ConnectByPath ====
+'':ConnectByPath( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Gtk:GObject:Closure#T|Gtk.GObject.Closure.T]])''
+
+
+==== :Disconnect ====
+'':Disconnect( @ [[#T|T]],  @ [[..:..:Gtk:GObject:Closure#T|Gtk.GObject.Closure.T]])''
+
+
+==== :DisconnectKey ====
+'':DisconnectKey( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :Find ====
+'':Find( @ [[#T|T]],  @ [[..:..:Std:Function#T|Std.Function.T]],  @ [[..:..:Std:Address#T|Std.Address.T]])''
+
+
+==== New ====
+''New()''
+
+
+==== GetType ====
+''GetType()''
+
+
+==== FromAccelClosure ====
+''FromAccelClosure()''
+
+

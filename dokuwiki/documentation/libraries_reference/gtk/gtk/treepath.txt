@@ -1,0 +1,80 @@
+====== TreePath ======
+==== T ====
+
+
+==== :Up ====
+'':Up( @ [[#T|T]])''
+
+
+==== :ToString ====
+'':ToString( @ [[#T|T]])''
+
+
+==== :Prev ====
+'':Prev( @ [[#T|T]])''
+
+
+==== :PrependIndex ====
+'':PrependIndex( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :Next ====
+'':Next( @ [[#T|T]])''
+
+
+==== :AppendIndex ====
+'':AppendIndex( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :Compare ====
+'':Compare( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]])''
+
+
+==== :Copy ====
+'':Copy( @ [[#T|T]])''
+
+
+==== :Down ====
+'':Down( @ [[#T|T]])''
+
+
+==== :Free ====
+'':Free( @ [[#T|T]])''
+
+
+==== :GetDepth ====
+'':GetDepth( @ [[#T|T]])''
+
+
+==== :GetIndices ====
+'':GetIndices( @ [[#T|T]])''
+
+
+==== :IsAncestor ====
+'':IsAncestor( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]])''
+
+
+==== :IsDescendant ====
+'':IsDescendant( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]])''
+
+
+==== New ====
+''New()''
+
+
+==== GetType ====
+''GetType()''
+
+
+==== NewFromString ====
+''NewFromString()''
+
+
+==== NewFromIndices ====
+''NewFromIndices()''
+
+
+==== NewFirst ====
+''NewFirst()''
+
+

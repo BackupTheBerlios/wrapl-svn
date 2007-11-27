@@ -1,0 +1,83 @@
+====== Dialog ======
+==== T ====
+=== inherits from ===
+  * [[..:..:Gtk:Gtk:Window#T|Gtk.Gtk.Window.T]]
+  * [[..:..:Gtk:Gtk:Bin#T|Gtk.Gtk.Bin.T]]
+  * [[..:..:Gtk:Gtk:Container#T|Gtk.Gtk.Container.T]]
+  * [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]
+  * [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]
+  * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
+
+
+==== :SetResponseSensitive ====
+'':SetResponseSensitive( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+
+
+==== :SetHasSeparator ====
+'':SetHasSeparator( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+
+
+==== :SetDefaultResponse ====
+'':SetDefaultResponse( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :Vbox ====
+'':Vbox( @ [[#T|T]])''
+
+
+==== :ActionArea ====
+'':ActionArea( @ [[#T|T]])''
+
+
+==== :Separator ====
+'':Separator( @ [[#T|T]])''
+
+
+==== :AddActionWidget ====
+'':AddActionWidget( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :AddButton ====
+'':AddButton( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :AddButtons ====
+'':AddButtons( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :GetHasSeparator ====
+'':GetHasSeparator( @ [[#T|T]])''
+
+
+==== :GetResponseForWidget ====
+'':GetResponseForWidget( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]])''
+
+
+==== :Response ====
+'':Response( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :Run ====
+'':Run( @ [[#T|T]])''
+
+
+==== :SetAlternativeButtonOrder ====
+'':SetAlternativeButtonOrder( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :SetAlternativeButtonOrderFromArray ====
+'':SetAlternativeButtonOrderFromArray( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== New ====
+''New()''
+
+
+==== GetType ====
+''GetType()''
+
+
+==== NewWithButtons ====
+''NewWithButtons()''
+
+

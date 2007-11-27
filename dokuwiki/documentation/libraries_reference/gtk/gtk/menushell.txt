@@ -1,0 +1,101 @@
+====== MenuShell ======
+==== T ====
+=== inherits from ===
+  * [[..:..:Gtk:Gtk:Container#T|Gtk.Gtk.Container.T]]
+  * [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]
+  * [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]
+  * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
+
+
+==== :SetTakeFocus ====
+'':SetTakeFocus( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+
+
+==== :Children ====
+'':Children( @ [[#T|T]])''
+
+
+==== :ActiveMenuItem ====
+'':ActiveMenuItem( @ [[#T|T]])''
+
+
+==== :ParentMenuShell ====
+'':ParentMenuShell( @ [[#T|T]])''
+
+
+==== :Button ====
+'':Button( @ [[#T|T]])''
+
+
+==== :ActivateTime ====
+'':ActivateTime( @ [[#T|T]])''
+
+
+==== :Active ====
+'':Active( @ [[#T|T]])''
+
+
+==== :HaveGrab ====
+'':HaveGrab( @ [[#T|T]])''
+
+
+==== :HaveXgrab ====
+'':HaveXgrab( @ [[#T|T]])''
+
+
+==== :IgnoreLeave ====
+'':IgnoreLeave( @ [[#T|T]])''
+
+
+==== :MenuFlag ====
+'':MenuFlag( @ [[#T|T]])''
+
+
+==== :IgnoreEnter ====
+'':IgnoreEnter( @ [[#T|T]])''
+
+
+==== :ActivateItem ====
+'':ActivateItem( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+
+
+==== :Append ====
+'':Append( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]])''
+
+
+==== :Cancel ====
+'':Cancel( @ [[#T|T]])''
+
+
+==== :Deactivate ====
+'':Deactivate( @ [[#T|T]])''
+
+
+==== :Deselect ====
+'':Deselect( @ [[#T|T]])''
+
+
+==== :GetTakeFocus ====
+'':GetTakeFocus( @ [[#T|T]])''
+
+
+==== :Insert ====
+'':Insert( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :Prepend ====
+'':Prepend( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]])''
+
+
+==== :SelectFirst ====
+'':SelectFirst( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+
+
+==== :SelectItem ====
+'':SelectItem( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]])''
+
+
+==== GetType ====
+''GetType()''
+
+

@@ -1,0 +1,66 @@
+====== SizeGroup ======
+==== T ====
+=== inherits from ===
+  * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
+
+
+==== :SetMode ====
+'':SetMode( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:SizeGroupMode#T|Gtk.Gtk.SizeGroupMode.T]])''
+
+
+==== :SetIgnoreHidden ====
+'':SetIgnoreHidden( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+
+
+==== :Widgets ====
+'':Widgets( @ [[#T|T]])''
+
+
+==== :Mode ====
+'':Mode( @ [[#T|T]])''
+
+
+==== :HaveWidth ====
+'':HaveWidth( @ [[#T|T]])''
+
+
+==== :HaveHeight ====
+'':HaveHeight( @ [[#T|T]])''
+
+
+==== :IgnoreHidden ====
+'':IgnoreHidden( @ [[#T|T]])''
+
+
+==== :Requisition ====
+'':Requisition( @ [[#T|T]])''
+
+
+==== :AddWidget ====
+'':AddWidget( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]])''
+
+
+==== :GetIgnoreHidden ====
+'':GetIgnoreHidden( @ [[#T|T]])''
+
+
+==== :GetMode ====
+'':GetMode( @ [[#T|T]])''
+
+
+==== :GetWidgets ====
+'':GetWidgets( @ [[#T|T]])''
+
+
+==== :RemoveWidget ====
+'':RemoveWidget( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]])''
+
+
+==== New ====
+''New()''
+
+
+==== GetType ====
+''GetType()''
+
+

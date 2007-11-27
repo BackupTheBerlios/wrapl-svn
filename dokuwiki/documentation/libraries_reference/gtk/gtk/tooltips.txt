@@ -1,0 +1,79 @@
+====== Tooltips ======
+==== T ====
+=== inherits from ===
+  * [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]
+  * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
+
+
+==== :SetTip ====
+'':SetTip( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== :SetDelay ====
+'':SetDelay( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :ForceWindow ====
+'':ForceWindow( @ [[#T|T]])''
+
+
+==== :TipWindow ====
+'':TipWindow( @ [[#T|T]])''
+
+
+==== :TipLabel ====
+'':TipLabel( @ [[#T|T]])''
+
+
+==== :ActiveTipsData ====
+'':ActiveTipsData( @ [[#T|T]])''
+
+
+==== :TipsDataList ====
+'':TipsDataList( @ [[#T|T]])''
+
+
+==== :Delay ====
+'':Delay( @ [[#T|T]])''
+
+
+==== :Enabled ====
+'':Enabled( @ [[#T|T]])''
+
+
+==== :HaveGrab ====
+'':HaveGrab( @ [[#T|T]])''
+
+
+==== :UseStickyDelay ====
+'':UseStickyDelay( @ [[#T|T]])''
+
+
+==== :TimerTag ====
+'':TimerTag( @ [[#T|T]])''
+
+
+==== :LastPopdown ====
+'':LastPopdown( @ [[#T|T]])''
+
+
+==== :Disable ====
+'':Disable( @ [[#T|T]])''
+
+
+==== :Enable ====
+'':Enable( @ [[#T|T]])''
+
+
+==== New ====
+''New()''
+
+
+==== GetType ====
+''GetType()''
+
+
+==== GetInfoFromTipWindow ====
+''GetInfoFromTipWindow()''
+
+

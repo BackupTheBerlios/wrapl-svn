@@ -1,0 +1,42 @@
+====== Font ======
+==== T ====
+=== inherits from ===
+  * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
+
+
+==== :GetMetrics ====
+'':GetMetrics( @ [[#T|T]],  @ [[..:..:Gtk:Pango:Language#T|Gtk.Pango.Language.T]])''
+
+
+==== :GetGlyphExtents ====
+'':GetGlyphExtents( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Gtk:Pango:Rectangle#T|Gtk.Pango.Rectangle.T]],  @ [[..:..:Gtk:Pango:Rectangle#T|Gtk.Pango.Rectangle.T]])''
+
+
+==== :Describe ====
+'':Describe( @ [[#T|T]])''
+
+
+==== :DescribeWithAbsoluteSize ====
+'':DescribeWithAbsoluteSize( @ [[#T|T]])''
+
+
+==== :FindShaper ====
+'':FindShaper( @ [[#T|T]],  @ [[..:..:Gtk:Pango:Language#T|Gtk.Pango.Language.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :GetCoverage ====
+'':GetCoverage( @ [[#T|T]],  @ [[..:..:Gtk:Pango:Language#T|Gtk.Pango.Language.T]])''
+
+
+==== :GetFontMap ====
+'':GetFontMap( @ [[#T|T]])''
+
+
+==== DescriptionsFree ====
+''DescriptionsFree()''
+
+
+==== GetType ====
+''GetType()''
+
+

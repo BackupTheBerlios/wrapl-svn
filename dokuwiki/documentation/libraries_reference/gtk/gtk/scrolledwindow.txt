@@ -1,0 +1,110 @@
+====== ScrolledWindow ======
+==== T ====
+=== inherits from ===
+  * [[..:..:Gtk:Gtk:Bin#T|Gtk.Gtk.Bin.T]]
+  * [[..:..:Gtk:Gtk:Container#T|Gtk.Gtk.Container.T]]
+  * [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]
+  * [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]
+  * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
+
+
+==== :UnsetPlacement ====
+'':UnsetPlacement( @ [[#T|T]])''
+
+
+==== :SetVadjustment ====
+'':SetVadjustment( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]])''
+
+
+==== :Hscrollbar ====
+'':Hscrollbar( @ [[#T|T]])''
+
+
+==== :Vscrollbar ====
+'':Vscrollbar( @ [[#T|T]])''
+
+
+==== :HscrollbarPolicy ====
+'':HscrollbarPolicy( @ [[#T|T]])''
+
+
+==== :VscrollbarPolicy ====
+'':VscrollbarPolicy( @ [[#T|T]])''
+
+
+==== :HscrollbarVisible ====
+'':HscrollbarVisible( @ [[#T|T]])''
+
+
+==== :VscrollbarVisible ====
+'':VscrollbarVisible( @ [[#T|T]])''
+
+
+==== :WindowPlacement ====
+'':WindowPlacement( @ [[#T|T]])''
+
+
+==== :FocusOut ====
+'':FocusOut( @ [[#T|T]])''
+
+
+==== :ShadowType ====
+'':ShadowType( @ [[#T|T]])''
+
+
+==== :AddWithViewport ====
+'':AddWithViewport( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]])''
+
+
+==== :GetHadjustment ====
+'':GetHadjustment( @ [[#T|T]])''
+
+
+==== :GetHscrollbar ====
+'':GetHscrollbar( @ [[#T|T]])''
+
+
+==== :GetPlacement ====
+'':GetPlacement( @ [[#T|T]])''
+
+
+==== :GetPolicy ====
+'':GetPolicy( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :GetShadowType ====
+'':GetShadowType( @ [[#T|T]])''
+
+
+==== :GetVadjustment ====
+'':GetVadjustment( @ [[#T|T]])''
+
+
+==== :GetVscrollbar ====
+'':GetVscrollbar( @ [[#T|T]])''
+
+
+==== :SetHadjustment ====
+'':SetHadjustment( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]])''
+
+
+==== :SetPlacement ====
+'':SetPlacement( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:CornerType#T|Gtk.Gtk.CornerType.T]])''
+
+
+==== :SetPolicy ====
+'':SetPolicy( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:PolicyType#T|Gtk.Gtk.PolicyType.T]],  @ [[..:..:Gtk:Gtk:PolicyType#T|Gtk.Gtk.PolicyType.T]])''
+
+
+==== :SetShadowType ====
+'':SetShadowType( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:ShadowType#T|Gtk.Gtk.ShadowType.T]])''
+
+
+==== New ====
+''New()''
+
+
+==== GetType ====
+''GetType()''
+
+

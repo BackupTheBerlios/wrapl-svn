@@ -1,0 +1,67 @@
+====== ToggleButton ======
+==== T ====
+=== inherits from ===
+  * [[..:..:Gtk:Gtk:Button#T|Gtk.Gtk.Button.T]]
+  * [[..:..:Gtk:Gtk:Bin#T|Gtk.Gtk.Bin.T]]
+  * [[..:..:Gtk:Gtk:Container#T|Gtk.Gtk.Container.T]]
+  * [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]
+  * [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]
+  * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
+
+
+==== :Toggled ====
+'':Toggled( @ [[#T|T]])''
+
+
+==== :SetMode ====
+'':SetMode( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+
+
+==== :SetInconsistent ====
+'':SetInconsistent( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+
+
+==== :SetActive ====
+'':SetActive( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+
+
+==== :Active ====
+'':Active( @ [[#T|T]])''
+
+
+==== :DrawIndicator ====
+'':DrawIndicator( @ [[#T|T]])''
+
+
+==== :Inconsistent ====
+'':Inconsistent( @ [[#T|T]])''
+
+
+==== :GetActive ====
+'':GetActive( @ [[#T|T]])''
+
+
+==== :GetInconsistent ====
+'':GetInconsistent( @ [[#T|T]])''
+
+
+==== :GetMode ====
+'':GetMode( @ [[#T|T]])''
+
+
+==== New ====
+''New()''
+
+
+==== GetType ====
+''GetType()''
+
+
+==== NewWithMnemonic ====
+''NewWithMnemonic()''
+
+
+==== NewWithLabel ====
+''NewWithLabel()''
+
+

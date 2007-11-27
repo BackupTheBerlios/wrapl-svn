@@ -1,0 +1,623 @@
+====== Widget ======
+==== T ====
+=== inherits from ===
+  * [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]
+  * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
+
+
+==== :Unref ====
+'':Unref( @ [[#T|T]])''
+
+
+==== :Unrealize ====
+'':Unrealize( @ [[#T|T]])''
+
+
+==== :Unparent ====
+'':Unparent( @ [[#T|T]])''
+
+
+==== :Unmap ====
+'':Unmap( @ [[#T|T]])''
+
+
+==== :TriggerTooltipQuery ====
+'':TriggerTooltipQuery( @ [[#T|T]])''
+
+
+==== :TranslateCoordinates ====
+'':TranslateCoordinates( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :ThawChildNotify ====
+'':ThawChildNotify( @ [[#T|T]])''
+
+
+==== :StyleGetValist ====
+'':StyleGetValist( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :StyleGetProperty ====
+'':StyleGetProperty( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Gtk:GObject:Value#T|Gtk.GObject.Value.T]])''
+
+
+==== :StyleGet ====
+'':StyleGet( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :SizeRequest ====
+'':SizeRequest( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Requisition#T|Gtk.Gtk.Requisition.T]])''
+
+
+==== :SizeAllocate ====
+'':SizeAllocate( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :ShowNow ====
+'':ShowNow( @ [[#T|T]])''
+
+
+==== :ShowAll ====
+'':ShowAll( @ [[#T|T]])''
+
+
+==== :Show ====
+'':Show( @ [[#T|T]])''
+
+
+==== :ShapeCombineMask ====
+'':ShapeCombineMask( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Bitmap#T|Gtk.Gdk.Bitmap.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :PrivateFlags ====
+'':PrivateFlags( @ [[#T|T]])''
+
+
+==== :State ====
+'':State( @ [[#T|T]])''
+
+
+==== :SavedState ====
+'':SavedState( @ [[#T|T]])''
+
+
+==== :Name ====
+'':Name( @ [[#T|T]])''
+
+
+==== :Style ====
+'':Style( @ [[#T|T]])''
+
+
+==== :Requisition ====
+'':Requisition( @ [[#T|T]])''
+
+
+==== :Allocation ====
+'':Allocation( @ [[#T|T]])''
+
+
+==== :Window ====
+'':Window( @ [[#T|T]])''
+
+
+==== :Parent ====
+'':Parent( @ [[#T|T]])''
+
+
+==== :Activate ====
+'':Activate( @ [[#T|T]])''
+
+
+==== :AddAccelerator ====
+'':AddAccelerator( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Gtk:Gtk:AccelGroup#T|Gtk.Gtk.AccelGroup.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :AddEvents ====
+'':AddEvents( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :AddMnemonicLabel ====
+'':AddMnemonicLabel( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]])''
+
+
+==== :CanActivateAccel ====
+'':CanActivateAccel( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :ChildFocus ====
+'':ChildFocus( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:DirectionType#T|Gtk.Gtk.DirectionType.T]])''
+
+
+==== :ChildNotify ====
+'':ChildNotify( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== :ClassPath ====
+'':ClassPath( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:List#T|Std.List.T]],  @ [[..:..:Std:List#T|Std.List.T]])''
+
+
+==== :CreatePangoContext ====
+'':CreatePangoContext( @ [[#T|T]])''
+
+
+==== :CreatePangoLayout ====
+'':CreatePangoLayout( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== :Destroy ====
+'':Destroy( @ [[#T|T]])''
+
+
+==== :Destroyed ====
+'':Destroyed( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :Draw ====
+'':Draw( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]])''
+
+
+==== :EnsureStyle ====
+'':EnsureStyle( @ [[#T|T]])''
+
+
+==== :ErrorBell ====
+'':ErrorBell( @ [[#T|T]])''
+
+
+==== :Event ====
+'':Event( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :FreezeChildNotify ====
+'':FreezeChildNotify( @ [[#T|T]])''
+
+
+==== :GetAccessible ====
+'':GetAccessible( @ [[#T|T]])''
+
+
+==== :GetAction ====
+'':GetAction( @ [[#T|T]])''
+
+
+==== :GetAncestor ====
+'':GetAncestor( @ [[#T|T]],  @ [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]])''
+
+
+==== :GetChildRequisition ====
+'':GetChildRequisition( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Requisition#T|Gtk.Gtk.Requisition.T]])''
+
+
+==== :GetChildVisible ====
+'':GetChildVisible( @ [[#T|T]])''
+
+
+==== :GetClipboard ====
+'':GetClipboard( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :GetColormap ====
+'':GetColormap( @ [[#T|T]])''
+
+
+==== :GetCompositeName ====
+'':GetCompositeName( @ [[#T|T]])''
+
+
+==== :GetDirection ====
+'':GetDirection( @ [[#T|T]])''
+
+
+==== :GetDisplay ====
+'':GetDisplay( @ [[#T|T]])''
+
+
+==== :GetEvents ====
+'':GetEvents( @ [[#T|T]])''
+
+
+==== :GetExtensionEvents ====
+'':GetExtensionEvents( @ [[#T|T]])''
+
+
+==== :GetHasTooltip ====
+'':GetHasTooltip( @ [[#T|T]])''
+
+
+==== :GetModifierStyle ====
+'':GetModifierStyle( @ [[#T|T]])''
+
+
+==== :GetName ====
+'':GetName( @ [[#T|T]])''
+
+
+==== :GetNoShowAll ====
+'':GetNoShowAll( @ [[#T|T]])''
+
+
+==== :GetPangoContext ====
+'':GetPangoContext( @ [[#T|T]])''
+
+
+==== :GetParent ====
+'':GetParent( @ [[#T|T]])''
+
+
+==== :GetParentWindow ====
+'':GetParentWindow( @ [[#T|T]])''
+
+
+==== :GetPointer ====
+'':GetPointer( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :GetRootWindow ====
+'':GetRootWindow( @ [[#T|T]])''
+
+
+==== :GetScreen ====
+'':GetScreen( @ [[#T|T]])''
+
+
+==== :GetSettings ====
+'':GetSettings( @ [[#T|T]])''
+
+
+==== :GetSizeRequest ====
+'':GetSizeRequest( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :GetStyle ====
+'':GetStyle( @ [[#T|T]])''
+
+
+==== :GetTooltipMarkup ====
+'':GetTooltipMarkup( @ [[#T|T]])''
+
+
+==== :GetTooltipText ====
+'':GetTooltipText( @ [[#T|T]])''
+
+
+==== :GetTooltipWindow ====
+'':GetTooltipWindow( @ [[#T|T]])''
+
+
+==== :GetToplevel ====
+'':GetToplevel( @ [[#T|T]])''
+
+
+==== :GetVisual ====
+'':GetVisual( @ [[#T|T]])''
+
+
+==== :GrabDefault ====
+'':GrabDefault( @ [[#T|T]])''
+
+
+==== :GrabFocus ====
+'':GrabFocus( @ [[#T|T]])''
+
+
+==== :HasScreen ====
+'':HasScreen( @ [[#T|T]])''
+
+
+==== :Hide ====
+'':Hide( @ [[#T|T]])''
+
+
+==== :HideAll ====
+'':HideAll( @ [[#T|T]])''
+
+
+==== :HideOnDelete ====
+'':HideOnDelete( @ [[#T|T]])''
+
+
+==== :InputShapeCombineMask ====
+'':InputShapeCombineMask( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Bitmap#T|Gtk.Gdk.Bitmap.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :Intersect ====
+'':Intersect( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]],  @ [[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]])''
+
+
+==== :IsAncestor ====
+'':IsAncestor( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]])''
+
+
+==== :IsComposited ====
+'':IsComposited( @ [[#T|T]])''
+
+
+==== :IsFocus ====
+'':IsFocus( @ [[#T|T]])''
+
+
+==== :KeynavFailed ====
+'':KeynavFailed( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:DirectionType#T|Gtk.Gtk.DirectionType.T]])''
+
+
+==== :ListAccelClosures ====
+'':ListAccelClosures( @ [[#T|T]])''
+
+
+==== :ListMnemonicLabels ====
+'':ListMnemonicLabels( @ [[#T|T]])''
+
+
+==== :Map ====
+'':Map( @ [[#T|T]])''
+
+
+==== :MnemonicActivate ====
+'':MnemonicActivate( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+
+
+==== :ModifyBase ====
+'':ModifyBase( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:StateType#T|Gtk.Gtk.StateType.T]],  @ [[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]])''
+
+
+==== :ModifyBg ====
+'':ModifyBg( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:StateType#T|Gtk.Gtk.StateType.T]],  @ [[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]])''
+
+
+==== :ModifyCursor ====
+'':ModifyCursor( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]],  @ [[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]])''
+
+
+==== :ModifyFg ====
+'':ModifyFg( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:StateType#T|Gtk.Gtk.StateType.T]],  @ [[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]])''
+
+
+==== :ModifyFont ====
+'':ModifyFont( @ [[#T|T]],  @ [[..:..:Gtk:Pango:FontDescription#T|Gtk.Pango.FontDescription.T]])''
+
+
+==== :ModifyStyle ====
+'':ModifyStyle( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:RcStyle#T|Gtk.Gtk.RcStyle.T]])''
+
+
+==== :ModifyText ====
+'':ModifyText( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:StateType#T|Gtk.Gtk.StateType.T]],  @ [[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]])''
+
+
+==== :Path ====
+'':Path( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:List#T|Std.List.T]],  @ [[..:..:Std:List#T|Std.List.T]])''
+
+
+==== :QueueClear ====
+'':QueueClear( @ [[#T|T]])''
+
+
+==== :QueueClearArea ====
+'':QueueClearArea( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :QueueDraw ====
+'':QueueDraw( @ [[#T|T]])''
+
+
+==== :QueueDrawArea ====
+'':QueueDrawArea( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :QueueResize ====
+'':QueueResize( @ [[#T|T]])''
+
+
+==== :QueueResizeNoRedraw ====
+'':QueueResizeNoRedraw( @ [[#T|T]])''
+
+
+==== :Realize ====
+'':Realize( @ [[#T|T]])''
+
+
+==== :Ref ====
+'':Ref( @ [[#T|T]])''
+
+
+==== :RegionIntersect ====
+'':RegionIntersect( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Region#T|Gtk.Gdk.Region.T]])''
+
+
+==== :RemoveAccelerator ====
+'':RemoveAccelerator( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:AccelGroup#T|Gtk.Gtk.AccelGroup.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :RemoveMnemonicLabel ====
+'':RemoveMnemonicLabel( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]])''
+
+
+==== :RenderIcon ====
+'':RenderIcon( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Gtk:Gtk:IconSize#T|Gtk.Gtk.IconSize.T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== :Reparent ====
+'':Reparent( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]])''
+
+
+==== :ResetRcStyles ====
+'':ResetRcStyles( @ [[#T|T]])''
+
+
+==== :ResetShapes ====
+'':ResetShapes( @ [[#T|T]])''
+
+
+==== :SendExpose ====
+'':SendExpose( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :Set ====
+'':Set( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :SetAccelPath ====
+'':SetAccelPath( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Gtk:Gtk:AccelGroup#T|Gtk.Gtk.AccelGroup.T]])''
+
+
+==== :SetAppPaintable ====
+'':SetAppPaintable( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+
+
+==== :SetChildVisible ====
+'':SetChildVisible( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+
+
+==== :SetColormap ====
+'':SetColormap( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Colormap#T|Gtk.Gdk.Colormap.T]])''
+
+
+==== :SetCompositeName ====
+'':SetCompositeName( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== :SetDirection ====
+'':SetDirection( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TextDirection#T|Gtk.Gtk.TextDirection.T]])''
+
+
+==== :SetDoubleBuffered ====
+'':SetDoubleBuffered( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+
+
+==== :SetEvents ====
+'':SetEvents( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :SetExtensionEvents ====
+'':SetExtensionEvents( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:ExtensionMode#T|Gtk.Gdk.ExtensionMode.T]])''
+
+
+==== :SetHasTooltip ====
+'':SetHasTooltip( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+
+
+==== :SetName ====
+'':SetName( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== :SetNoShowAll ====
+'':SetNoShowAll( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+
+
+==== :SetParent ====
+'':SetParent( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]])''
+
+
+==== :SetParentWindow ====
+'':SetParentWindow( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]])''
+
+
+==== :SetRedrawOnAllocate ====
+'':SetRedrawOnAllocate( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+
+
+==== :SetScrollAdjustments ====
+'':SetScrollAdjustments( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]],  @ [[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]])''
+
+
+==== :SetSensitive ====
+'':SetSensitive( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+
+
+==== :SetSizeRequest ====
+'':SetSizeRequest( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :SetState ====
+'':SetState( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:StateType#T|Gtk.Gtk.StateType.T]])''
+
+
+==== :SetStyle ====
+'':SetStyle( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Style#T|Gtk.Gtk.Style.T]])''
+
+
+==== :SetTooltipMarkup ====
+'':SetTooltipMarkup( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== :SetTooltipText ====
+'':SetTooltipText( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== :SetTooltipWindow ====
+'':SetTooltipWindow( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Window#T|Gtk.Gtk.Window.T]])''
+
+
+==== :SetUposition ====
+'':SetUposition( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :SetUsize ====
+'':SetUsize( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== New ====
+''New()''
+
+
+==== SetDefaultDirection ====
+''SetDefaultDirection()''
+
+
+==== SetDefaultColormap ====
+''SetDefaultColormap()''
+
+
+==== PushCompositeChild ====
+''PushCompositeChild()''
+
+
+==== PushColormap ====
+''PushColormap()''
+
+
+==== PopCompositeChild ====
+''PopCompositeChild()''
+
+
+==== PopColormap ====
+''PopColormap()''
+
+
+==== GetType ====
+''GetType()''
+
+
+==== GetDefaultVisual ====
+''GetDefaultVisual()''
+
+
+==== GetDefaultStyle ====
+''GetDefaultStyle()''
+
+
+==== GetDefaultDirection ====
+''GetDefaultDirection()''
+
+
+==== GetDefaultColormap ====
+''GetDefaultColormap()''
+
+
+==== ClassListStyleProperties ====
+''ClassListStyleProperties()''
+
+
+==== ClassInstallStylePropertyParser ====
+''ClassInstallStylePropertyParser()''
+
+
+==== ClassInstallStyleProperty ====
+''ClassInstallStyleProperty()''
+
+
+==== ClassFindStyleProperty ====
+''ClassFindStyleProperty()''
+
+

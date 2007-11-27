@@ -1,0 +1,173 @@
+====== Image ======
+==== T ====
+=== inherits from ===
+  * [[..:..:Gtk:Gtk:Misc#T|Gtk.Gtk.Misc.T]]
+  * [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]
+  * [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]
+  * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
+
+
+==== :SetPixelSize ====
+'':SetPixelSize( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :SetFromStock ====
+'':SetFromStock( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Gtk:Gtk:IconSize#T|Gtk.Gtk.IconSize.T]])''
+
+
+==== :SetFromPixmap ====
+'':SetFromPixmap( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Pixmap#T|Gtk.Gdk.Pixmap.T]],  @ [[..:..:Gtk:Gdk:Bitmap#T|Gtk.Gdk.Bitmap.T]])''
+
+
+==== :SetFromPixbuf ====
+'':SetFromPixbuf( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Pixbuf#T|Gtk.Gdk.Pixbuf.T]])''
+
+
+==== :SetFromImage ====
+'':SetFromImage( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Image#T|Gtk.Gdk.Image.T]],  @ [[..:..:Gtk:Gdk:Bitmap#T|Gtk.Gdk.Bitmap.T]])''
+
+
+==== :SetFromIconSet ====
+'':SetFromIconSet( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:IconSet#T|Gtk.Gtk.IconSet.T]],  @ [[..:..:Gtk:Gtk:IconSize#T|Gtk.Gtk.IconSize.T]])''
+
+
+==== :SetFromIconName ====
+'':SetFromIconName( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Gtk:Gtk:IconSize#T|Gtk.Gtk.IconSize.T]])''
+
+
+==== :SetFromFile ====
+'':SetFromFile( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== :SetFromAnimation ====
+'':SetFromAnimation( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:PixbufAnimation#T|Gtk.Gdk.PixbufAnimation.T]])''
+
+
+==== :Set ====
+'':Set( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Image#T|Gtk.Gdk.Image.T]],  @ [[..:..:Gtk:Gdk:Bitmap#T|Gtk.Gdk.Bitmap.T]])''
+
+
+==== :StorageType ====
+'':StorageType( @ [[#T|T]])''
+
+
+==== :Pixmap ====
+'':Pixmap( @ [[#T|T]])''
+
+
+==== :Image ====
+'':Image( @ [[#T|T]])''
+
+
+==== :Pixbuf ====
+'':Pixbuf( @ [[#T|T]])''
+
+
+==== :Stock ====
+'':Stock( @ [[#T|T]])''
+
+
+==== :IconSet ====
+'':IconSet( @ [[#T|T]])''
+
+
+==== :Anim ====
+'':Anim( @ [[#T|T]])''
+
+
+==== :Name ====
+'':Name( @ [[#T|T]])''
+
+
+==== :Mask ====
+'':Mask( @ [[#T|T]])''
+
+
+==== :IconSize ====
+'':IconSize( @ [[#T|T]])''
+
+
+==== :Clear ====
+'':Clear( @ [[#T|T]])''
+
+
+==== :Get ====
+'':Get( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :GetAnimation ====
+'':GetAnimation( @ [[#T|T]])''
+
+
+==== :GetIconName ====
+'':GetIconName( @ [[#T|T]],  @ [[..:..:Std:List#T|Std.List.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :GetIconSet ====
+'':GetIconSet( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :GetImage ====
+'':GetImage( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :GetPixbuf ====
+'':GetPixbuf( @ [[#T|T]])''
+
+
+==== :GetPixelSize ====
+'':GetPixelSize( @ [[#T|T]])''
+
+
+==== :GetPixmap ====
+'':GetPixmap( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :GetStock ====
+'':GetStock( @ [[#T|T]],  @ [[..:..:Std:List#T|Std.List.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :GetStorageType ====
+'':GetStorageType( @ [[#T|T]])''
+
+
+==== New ====
+''New()''
+
+
+==== GetType ====
+''GetType()''
+
+
+==== NewFromStock ====
+''NewFromStock()''
+
+
+==== NewFromPixmap ====
+''NewFromPixmap()''
+
+
+==== NewFromPixbuf ====
+''NewFromPixbuf()''
+
+
+==== NewFromImage ====
+''NewFromImage()''
+
+
+==== NewFromIconSet ====
+''NewFromIconSet()''
+
+
+==== NewFromIconName ====
+''NewFromIconName()''
+
+
+==== NewFromFile ====
+''NewFromFile()''
+
+
+==== NewFromAnimation ====
+''NewFromAnimation()''
+
+

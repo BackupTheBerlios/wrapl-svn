@@ -1,0 +1,74 @@
+====== Colormap ======
+==== T ====
+=== inherits from ===
+  * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
+
+
+==== :Unref ====
+'':Unref( @ [[#T|T]])''
+
+
+==== :Ref ====
+'':Ref( @ [[#T|T]])''
+
+
+==== :QueryColor ====
+'':QueryColor( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]])''
+
+
+==== :GetVisual ====
+'':GetVisual( @ [[#T|T]])''
+
+
+==== :Size ====
+'':Size( @ [[#T|T]])''
+
+
+==== :Colors ====
+'':Colors( @ [[#T|T]])''
+
+
+==== :Visual ====
+'':Visual( @ [[#T|T]])''
+
+
+==== :WindowingData ====
+'':WindowingData( @ [[#T|T]])''
+
+
+==== :AllocColor ====
+'':AllocColor( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+
+
+==== :AllocColors ====
+'':AllocColors( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :Change ====
+'':Change( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :FreeColors ====
+'':FreeColors( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :GetScreen ====
+'':GetScreen( @ [[#T|T]])''
+
+
+==== New ====
+''New()''
+
+
+==== GetType ====
+''GetType()''
+
+
+==== GetSystemSize ====
+''GetSystemSize()''
+
+
+==== GetSystem ====
+''GetSystem()''
+
+

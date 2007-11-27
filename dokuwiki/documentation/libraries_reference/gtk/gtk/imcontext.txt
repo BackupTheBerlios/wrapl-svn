@@ -1,0 +1,54 @@
+====== IMContext ======
+==== T ====
+=== inherits from ===
+  * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
+
+
+==== :SetUsePreedit ====
+'':SetUsePreedit( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+
+
+==== :DeleteSurrounding ====
+'':DeleteSurrounding( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :FilterKeypress ====
+'':FilterKeypress( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:EventKey#T|Gtk.Gdk.EventKey.T]])''
+
+
+==== :FocusIn ====
+'':FocusIn( @ [[#T|T]])''
+
+
+==== :FocusOut ====
+'':FocusOut( @ [[#T|T]])''
+
+
+==== :GetPreeditString ====
+'':GetPreeditString( @ [[#T|T]],  @ [[..:..:Std:List#T|Std.List.T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :GetSurrounding ====
+'':GetSurrounding( @ [[#T|T]],  @ [[..:..:Std:List#T|Std.List.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :Reset ====
+'':Reset( @ [[#T|T]])''
+
+
+==== :SetClientWindow ====
+'':SetClientWindow( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]])''
+
+
+==== :SetCursorLocation ====
+'':SetCursorLocation( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]])''
+
+
+==== :SetSurrounding ====
+'':SetSurrounding( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== GetType ====
+''GetType()''
+
+

@@ -1,0 +1,86 @@
+====== Renderer ======
+==== T ====
+=== inherits from ===
+  * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
+
+
+==== :SetMatrix ====
+'':SetMatrix( @ [[#T|T]],  @ [[..:..:Gtk:Pango:Matrix#T|Gtk.Pango.Matrix.T]])''
+
+
+==== :Underline ====
+'':Underline( @ [[#T|T]])''
+
+
+==== :Strikethrough ====
+'':Strikethrough( @ [[#T|T]])''
+
+
+==== :ActiveCount ====
+'':ActiveCount( @ [[#T|T]])''
+
+
+==== :Matrix ====
+'':Matrix( @ [[#T|T]])''
+
+
+==== :Priv ====
+'':Priv( @ [[#T|T]])''
+
+
+==== :Activate ====
+'':Activate( @ [[#T|T]])''
+
+
+==== :Deactivate ====
+'':Deactivate( @ [[#T|T]])''
+
+
+==== :DrawErrorUnderline ====
+'':DrawErrorUnderline( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :DrawGlyph ====
+'':DrawGlyph( @ [[#T|T]],  @ [[..:..:Gtk:Pango:Font#T|Gtk.Pango.Font.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+
+
+==== :DrawGlyphs ====
+'':DrawGlyphs( @ [[#T|T]],  @ [[..:..:Gtk:Pango:Font#T|Gtk.Pango.Font.T]],  @ [[..:..:Gtk:Pango:GlyphString#T|Gtk.Pango.GlyphString.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :DrawLayout ====
+'':DrawLayout( @ [[#T|T]],  @ [[..:..:Gtk:Pango:Layout#T|Gtk.Pango.Layout.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :DrawLayoutLine ====
+'':DrawLayoutLine( @ [[#T|T]],  @ [[..:..:Gtk:Pango:LayoutLine#T|Gtk.Pango.LayoutLine.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :DrawRectangle ====
+'':DrawRectangle( @ [[#T|T]],  @ [[..:..:Gtk:Pango:RenderPart#T|Gtk.Pango.RenderPart.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :DrawTrapezoid ====
+'':DrawTrapezoid( @ [[#T|T]],  @ [[..:..:Gtk:Pango:RenderPart#T|Gtk.Pango.RenderPart.T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+
+
+==== :GetColor ====
+'':GetColor( @ [[#T|T]],  @ [[..:..:Gtk:Pango:RenderPart#T|Gtk.Pango.RenderPart.T]])''
+
+
+==== :GetMatrix ====
+'':GetMatrix( @ [[#T|T]])''
+
+
+==== :PartChanged ====
+'':PartChanged( @ [[#T|T]],  @ [[..:..:Gtk:Pango:RenderPart#T|Gtk.Pango.RenderPart.T]])''
+
+
+==== :SetColor ====
+'':SetColor( @ [[#T|T]],  @ [[..:..:Gtk:Pango:RenderPart#T|Gtk.Pango.RenderPart.T]],  @ [[..:..:Gtk:Pango:Color#T|Gtk.Pango.Color.T]])''
+
+
+==== GetType ====
+''GetType()''
+
+

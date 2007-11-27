@@ -1,0 +1,39 @@
+====== ComboBoxEntry ======
+==== T ====
+=== inherits from ===
+  * [[..:..:Gtk:Gtk:ComboBox#T|Gtk.Gtk.ComboBox.T]]
+  * [[..:..:Gtk:Gtk:Bin#T|Gtk.Gtk.Bin.T]]
+  * [[..:..:Gtk:Gtk:Container#T|Gtk.Gtk.Container.T]]
+  * [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]
+  * [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]
+  * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
+
+
+==== :SetTextColumn ====
+'':SetTextColumn( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :GetTextColumn ====
+'':GetTextColumn( @ [[#T|T]])''
+
+
+==== :Priv ====
+'':Priv( @ [[#T|T]])''
+
+
+==== New ====
+''New()''
+
+
+==== GetType ====
+''GetType()''
+
+
+==== NewWithModel ====
+''NewWithModel()''
+
+
+==== NewText ====
+''NewText()''
+
+

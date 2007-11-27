@@ -1,0 +1,80 @@
+====== Region ======
+==== T ====
+
+
+==== :Xor ====
+'':Xor( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Region#T|Gtk.Gdk.Region.T]])''
+
+
+==== :UnionWithRect ====
+'':UnionWithRect( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]])''
+
+
+==== :Union ====
+'':Union( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Region#T|Gtk.Gdk.Region.T]])''
+
+
+==== :Copy ====
+'':Copy( @ [[#T|T]])''
+
+
+==== :Destroy ====
+'':Destroy( @ [[#T|T]])''
+
+
+==== :Empty ====
+'':Empty( @ [[#T|T]])''
+
+
+==== :Equal ====
+'':Equal( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Region#T|Gtk.Gdk.Region.T]])''
+
+
+==== :GetClipbox ====
+'':GetClipbox( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]])''
+
+
+==== :GetRectangles ====
+'':GetRectangles( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :Intersect ====
+'':Intersect( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Region#T|Gtk.Gdk.Region.T]])''
+
+
+==== :Offset ====
+'':Offset( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :PointIn ====
+'':PointIn( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :RectIn ====
+'':RectIn( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]])''
+
+
+==== :Shrink ====
+'':Shrink( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :SpansIntersectForeach ====
+'':SpansIntersectForeach( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Span#T|Gtk.Gdk.Span.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]],  @ [[..:..:Std:Function#T|Std.Function.T]],  @ [[..:..:Std:Address#T|Std.Address.T]])''
+
+
+==== :Subtract ====
+'':Subtract( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Region#T|Gtk.Gdk.Region.T]])''
+
+
+==== New ====
+''New()''
+
+
+==== Rectangle ====
+''Rectangle()''
+
+
+==== Polygon ====
+''Polygon()''
+
+

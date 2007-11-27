@@ -1,0 +1,50 @@
+====== PrintContext ======
+==== T ====
+=== inherits from ===
+  * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
+
+
+==== :SetCairoContext ====
+'':SetCairoContext( @ [[#T|T]],  @ [[..:..:Gtk:Cairo:CairoT#T|Gtk.Cairo.CairoT.T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+
+
+==== :CreatePangoContext ====
+'':CreatePangoContext( @ [[#T|T]])''
+
+
+==== :CreatePangoLayout ====
+'':CreatePangoLayout( @ [[#T|T]])''
+
+
+==== :GetCairoContext ====
+'':GetCairoContext( @ [[#T|T]])''
+
+
+==== :GetDpiX ====
+'':GetDpiX( @ [[#T|T]])''
+
+
+==== :GetDpiY ====
+'':GetDpiY( @ [[#T|T]])''
+
+
+==== :GetHeight ====
+'':GetHeight( @ [[#T|T]])''
+
+
+==== :GetPageSetup ====
+'':GetPageSetup( @ [[#T|T]])''
+
+
+==== :GetPangoFontmap ====
+'':GetPangoFontmap( @ [[#T|T]])''
+
+
+==== :GetWidth ====
+'':GetWidth( @ [[#T|T]])''
+
+
+==== GetType ====
+''GetType()''
+
+

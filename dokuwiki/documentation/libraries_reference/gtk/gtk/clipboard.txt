@@ -1,0 +1,110 @@
+====== Clipboard ======
+==== T ====
+=== inherits from ===
+  * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
+
+
+==== :WaitIsTextAvailable ====
+'':WaitIsTextAvailable( @ [[#T|T]])''
+
+
+==== :WaitIsTargetAvailable ====
+'':WaitIsTargetAvailable( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :WaitIsRichTextAvailable ====
+'':WaitIsRichTextAvailable( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TextBuffer#T|Gtk.Gtk.TextBuffer.T]])''
+
+
+==== :Clear ====
+'':Clear( @ [[#T|T]])''
+
+
+==== :GetDisplay ====
+'':GetDisplay( @ [[#T|T]])''
+
+
+==== :GetOwner ====
+'':GetOwner( @ [[#T|T]])''
+
+
+==== :RequestContents ====
+'':RequestContents( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Function#T|Std.Function.T]],  @ [[..:..:Std:Address#T|Std.Address.T]])''
+
+
+==== :RequestImage ====
+'':RequestImage( @ [[#T|T]],  @ [[..:..:Std:Function#T|Std.Function.T]],  @ [[..:..:Std:Address#T|Std.Address.T]])''
+
+
+==== :RequestRichText ====
+'':RequestRichText( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TextBuffer#T|Gtk.Gtk.TextBuffer.T]],  @ [[..:..:Std:Function#T|Std.Function.T]],  @ [[..:..:Std:Address#T|Std.Address.T]])''
+
+
+==== :RequestTargets ====
+'':RequestTargets( @ [[#T|T]],  @ [[..:..:Std:Function#T|Std.Function.T]],  @ [[..:..:Std:Address#T|Std.Address.T]])''
+
+
+==== :RequestText ====
+'':RequestText( @ [[#T|T]],  @ [[..:..:Std:Function#T|Std.Function.T]],  @ [[..:..:Std:Address#T|Std.Address.T]])''
+
+
+==== :SetCanStore ====
+'':SetCanStore( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TargetEntry#T|Gtk.Gtk.TargetEntry.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :SetImage ====
+'':SetImage( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Pixbuf#T|Gtk.Gdk.Pixbuf.T]])''
+
+
+==== :SetText ====
+'':SetText( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :SetWithData ====
+'':SetWithData( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TargetEntry#T|Gtk.Gtk.TargetEntry.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Function#T|Std.Function.T]],  @ [[..:..:Std:Function#T|Std.Function.T]],  @ [[..:..:Std:Address#T|Std.Address.T]])''
+
+
+==== :SetWithOwner ====
+'':SetWithOwner( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TargetEntry#T|Gtk.Gtk.TargetEntry.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Function#T|Std.Function.T]],  @ [[..:..:Std:Function#T|Std.Function.T]],  @ [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]])''
+
+
+==== :Store ====
+'':Store( @ [[#T|T]])''
+
+
+==== :WaitForContents ====
+'':WaitForContents( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :WaitForImage ====
+'':WaitForImage( @ [[#T|T]])''
+
+
+==== :WaitForRichText ====
+'':WaitForRichText( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TextBuffer#T|Gtk.Gtk.TextBuffer.T]],  @ [[..:..:Gtk:Gdk:Atom#T|Gtk.Gdk.Atom.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :WaitForTargets ====
+'':WaitForTargets( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :WaitForText ====
+'':WaitForText( @ [[#T|T]])''
+
+
+==== :WaitIsImageAvailable ====
+'':WaitIsImageAvailable( @ [[#T|T]])''
+
+
+==== Get ====
+''Get()''
+
+
+==== GetType ====
+''GetType()''
+
+
+==== GetForDisplay ====
+''GetForDisplay()''
+
+

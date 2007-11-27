@@ -1,0 +1,562 @@
+====== Window ======
+==== T ====
+=== inherits from ===
+  * [[..:..:Gtk:Gtk:Bin#T|Gtk.Gtk.Bin.T]]
+  * [[..:..:Gtk:Gtk:Container#T|Gtk.Gtk.Container.T]]
+  * [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]
+  * [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]
+  * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
+
+
+==== :Unstick ====
+'':Unstick( @ [[#T|T]])''
+
+
+==== :Unmaximize ====
+'':Unmaximize( @ [[#T|T]])''
+
+
+==== :Unfullscreen ====
+'':Unfullscreen( @ [[#T|T]])''
+
+
+==== :Stick ====
+'':Stick( @ [[#T|T]])''
+
+
+==== :SetWmclass ====
+'':SetWmclass( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== :SetUrgencyHint ====
+'':SetUrgencyHint( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+
+
+==== :SetTypeHint ====
+'':SetTypeHint( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:WindowTypeHint#T|Gtk.Gdk.WindowTypeHint.T]])''
+
+
+==== :SetTransientFor ====
+'':SetTransientFor( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Window#T|Gtk.Gtk.Window.T]])''
+
+
+==== :SetTitle ====
+'':SetTitle( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== :Title ====
+'':Title( @ [[#T|T]])''
+
+
+==== :WmclassName ====
+'':WmclassName( @ [[#T|T]])''
+
+
+==== :WmclassClass ====
+'':WmclassClass( @ [[#T|T]])''
+
+
+==== :WmRole ====
+'':WmRole( @ [[#T|T]])''
+
+
+==== :FocusWidget ====
+'':FocusWidget( @ [[#T|T]])''
+
+
+==== :DefaultWidget ====
+'':DefaultWidget( @ [[#T|T]])''
+
+
+==== :TransientParent ====
+'':TransientParent( @ [[#T|T]])''
+
+
+==== :GeometryInfo ====
+'':GeometryInfo( @ [[#T|T]])''
+
+
+==== :Frame ====
+'':Frame( @ [[#T|T]])''
+
+
+==== :Group ====
+'':Group( @ [[#T|T]])''
+
+
+==== :ConfigureRequestCount ====
+'':ConfigureRequestCount( @ [[#T|T]])''
+
+
+==== :AllowShrink ====
+'':AllowShrink( @ [[#T|T]])''
+
+
+==== :AllowGrow ====
+'':AllowGrow( @ [[#T|T]])''
+
+
+==== :ConfigureNotifyReceived ====
+'':ConfigureNotifyReceived( @ [[#T|T]])''
+
+
+==== :NeedDefaultPosition ====
+'':NeedDefaultPosition( @ [[#T|T]])''
+
+
+==== :NeedDefaultSize ====
+'':NeedDefaultSize( @ [[#T|T]])''
+
+
+==== :Position ====
+'':Position( @ [[#T|T]])''
+
+
+==== :Type ====
+'':Type( @ [[#T|T]])''
+
+
+==== :HasUserRefCount ====
+'':HasUserRefCount( @ [[#T|T]])''
+
+
+==== :HasFocus ====
+'':HasFocus( @ [[#T|T]])''
+
+
+==== :Modal ====
+'':Modal( @ [[#T|T]])''
+
+
+==== :DestroyWithParent ====
+'':DestroyWithParent( @ [[#T|T]])''
+
+
+==== :HasFrame ====
+'':HasFrame( @ [[#T|T]])''
+
+
+==== :IconifyInitially ====
+'':IconifyInitially( @ [[#T|T]])''
+
+
+==== :StickInitially ====
+'':StickInitially( @ [[#T|T]])''
+
+
+==== :MaximizeInitially ====
+'':MaximizeInitially( @ [[#T|T]])''
+
+
+==== :Decorated ====
+'':Decorated( @ [[#T|T]])''
+
+
+==== :TypeHint ====
+'':TypeHint( @ [[#T|T]])''
+
+
+==== :Gravity ====
+'':Gravity( @ [[#T|T]])''
+
+
+==== :IsActive ====
+'':IsActive( @ [[#T|T]])''
+
+
+==== :HasToplevelFocus ====
+'':HasToplevelFocus( @ [[#T|T]])''
+
+
+==== :FrameLeft ====
+'':FrameLeft( @ [[#T|T]])''
+
+
+==== :FrameTop ====
+'':FrameTop( @ [[#T|T]])''
+
+
+==== :FrameRight ====
+'':FrameRight( @ [[#T|T]])''
+
+
+==== :FrameBottom ====
+'':FrameBottom( @ [[#T|T]])''
+
+
+==== :KeysChangedHandler ====
+'':KeysChangedHandler( @ [[#T|T]])''
+
+
+==== :MnemonicModifier ====
+'':MnemonicModifier( @ [[#T|T]])''
+
+
+==== :Screen ====
+'':Screen( @ [[#T|T]])''
+
+
+==== :ActivateDefault ====
+'':ActivateDefault( @ [[#T|T]])''
+
+
+==== :ActivateFocus ====
+'':ActivateFocus( @ [[#T|T]])''
+
+
+==== :ActivateKey ====
+'':ActivateKey( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:EventKey#T|Gtk.Gdk.EventKey.T]])''
+
+
+==== :AddAccelGroup ====
+'':AddAccelGroup( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:AccelGroup#T|Gtk.Gtk.AccelGroup.T]])''
+
+
+==== :AddEmbeddedXid ====
+'':AddEmbeddedXid( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :AddMnemonic ====
+'':AddMnemonic( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]])''
+
+
+==== :BeginMoveDrag ====
+'':BeginMoveDrag( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :BeginResizeDrag ====
+'':BeginResizeDrag( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:WindowEdge#T|Gtk.Gdk.WindowEdge.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :Deiconify ====
+'':Deiconify( @ [[#T|T]])''
+
+
+==== :Fullscreen ====
+'':Fullscreen( @ [[#T|T]])''
+
+
+==== :GetAcceptFocus ====
+'':GetAcceptFocus( @ [[#T|T]])''
+
+
+==== :GetDecorated ====
+'':GetDecorated( @ [[#T|T]])''
+
+
+==== :GetDefaultSize ====
+'':GetDefaultSize( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :GetDeletable ====
+'':GetDeletable( @ [[#T|T]])''
+
+
+==== :GetDestroyWithParent ====
+'':GetDestroyWithParent( @ [[#T|T]])''
+
+
+==== :GetFocus ====
+'':GetFocus( @ [[#T|T]])''
+
+
+==== :GetFocusOnMap ====
+'':GetFocusOnMap( @ [[#T|T]])''
+
+
+==== :GetFrameDimensions ====
+'':GetFrameDimensions( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :GetGravity ====
+'':GetGravity( @ [[#T|T]])''
+
+
+==== :GetGroup ====
+'':GetGroup( @ [[#T|T]])''
+
+
+==== :GetHasFrame ====
+'':GetHasFrame( @ [[#T|T]])''
+
+
+==== :GetIcon ====
+'':GetIcon( @ [[#T|T]])''
+
+
+==== :GetIconList ====
+'':GetIconList( @ [[#T|T]])''
+
+
+==== :GetIconName ====
+'':GetIconName( @ [[#T|T]])''
+
+
+==== :GetMnemonicModifier ====
+'':GetMnemonicModifier( @ [[#T|T]])''
+
+
+==== :GetModal ====
+'':GetModal( @ [[#T|T]])''
+
+
+==== :GetOpacity ====
+'':GetOpacity( @ [[#T|T]])''
+
+
+==== :GetPosition ====
+'':GetPosition( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :GetResizable ====
+'':GetResizable( @ [[#T|T]])''
+
+
+==== :GetRole ====
+'':GetRole( @ [[#T|T]])''
+
+
+==== :GetScreen ====
+'':GetScreen( @ [[#T|T]])''
+
+
+==== :GetSize ====
+'':GetSize( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :GetSkipPagerHint ====
+'':GetSkipPagerHint( @ [[#T|T]])''
+
+
+==== :GetSkipTaskbarHint ====
+'':GetSkipTaskbarHint( @ [[#T|T]])''
+
+
+==== :GetTitle ====
+'':GetTitle( @ [[#T|T]])''
+
+
+==== :GetTransientFor ====
+'':GetTransientFor( @ [[#T|T]])''
+
+
+==== :GetTypeHint ====
+'':GetTypeHint( @ [[#T|T]])''
+
+
+==== :GetUrgencyHint ====
+'':GetUrgencyHint( @ [[#T|T]])''
+
+
+==== :HasToplevelFocus ====
+'':HasToplevelFocus( @ [[#T|T]])''
+
+
+==== :Iconify ====
+'':Iconify( @ [[#T|T]])''
+
+
+==== :IsActive ====
+'':IsActive( @ [[#T|T]])''
+
+
+==== :Maximize ====
+'':Maximize( @ [[#T|T]])''
+
+
+==== :MnemonicActivate ====
+'':MnemonicActivate( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :Move ====
+'':Move( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :ParseGeometry ====
+'':ParseGeometry( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== :Present ====
+'':Present( @ [[#T|T]])''
+
+
+==== :PresentWithTime ====
+'':PresentWithTime( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :PropagateKeyEvent ====
+'':PropagateKeyEvent( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:EventKey#T|Gtk.Gdk.EventKey.T]])''
+
+
+==== :RemoveAccelGroup ====
+'':RemoveAccelGroup( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:AccelGroup#T|Gtk.Gtk.AccelGroup.T]])''
+
+
+==== :RemoveEmbeddedXid ====
+'':RemoveEmbeddedXid( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :RemoveMnemonic ====
+'':RemoveMnemonic( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]])''
+
+
+==== :ReshowWithInitialSize ====
+'':ReshowWithInitialSize( @ [[#T|T]])''
+
+
+==== :Resize ====
+'':Resize( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :SetAcceptFocus ====
+'':SetAcceptFocus( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+
+
+==== :SetDecorated ====
+'':SetDecorated( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+
+
+==== :SetDefault ====
+'':SetDefault( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]])''
+
+
+==== :SetDefaultSize ====
+'':SetDefaultSize( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :SetDeletable ====
+'':SetDeletable( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+
+
+==== :SetDestroyWithParent ====
+'':SetDestroyWithParent( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+
+
+==== :SetFocus ====
+'':SetFocus( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]])''
+
+
+==== :SetFocusOnMap ====
+'':SetFocusOnMap( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+
+
+==== :SetFrameDimensions ====
+'':SetFrameDimensions( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :SetGeometryHints ====
+'':SetGeometryHints( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]],  @ [[..:..:Gtk:Gdk:Geometry#T|Gtk.Gdk.Geometry.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :SetGravity ====
+'':SetGravity( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Gravity#T|Gtk.Gdk.Gravity.T]])''
+
+
+==== :SetHasFrame ====
+'':SetHasFrame( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+
+
+==== :SetIcon ====
+'':SetIcon( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Pixbuf#T|Gtk.Gdk.Pixbuf.T]])''
+
+
+==== :SetIconFromFile ====
+'':SetIconFromFile( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :SetIconList ====
+'':SetIconList( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :SetIconName ====
+'':SetIconName( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== :SetKeepAbove ====
+'':SetKeepAbove( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+
+
+==== :SetKeepBelow ====
+'':SetKeepBelow( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+
+
+==== :SetMnemonicModifier ====
+'':SetMnemonicModifier( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :SetModal ====
+'':SetModal( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+
+
+==== :SetOpacity ====
+'':SetOpacity( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+
+
+==== :SetPolicy ====
+'':SetPolicy( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :SetPosition ====
+'':SetPosition( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:WindowPosition#T|Gtk.Gtk.WindowPosition.T]])''
+
+
+==== :SetResizable ====
+'':SetResizable( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+
+
+==== :SetRole ====
+'':SetRole( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== :SetScreen ====
+'':SetScreen( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Screen#T|Gtk.Gdk.Screen.T]])''
+
+
+==== :SetSkipPagerHint ====
+'':SetSkipPagerHint( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+
+
+==== :SetSkipTaskbarHint ====
+'':SetSkipTaskbarHint( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+
+
+==== :SetStartupId ====
+'':SetStartupId( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== New ====
+''New()''
+
+
+==== SetDefaultIconName ====
+''SetDefaultIconName()''
+
+
+==== SetDefaultIconList ====
+''SetDefaultIconList()''
+
+
+==== SetDefaultIconFromFile ====
+''SetDefaultIconFromFile()''
+
+
+==== SetDefaultIcon ====
+''SetDefaultIcon()''
+
+
+==== SetAutoStartupNotification ====
+''SetAutoStartupNotification()''
+
+
+==== ListToplevels ====
+''ListToplevels()''
+
+
+==== GetType ====
+''GetType()''
+
+
+==== GetDefaultIconList ====
+''GetDefaultIconList()''
+
+

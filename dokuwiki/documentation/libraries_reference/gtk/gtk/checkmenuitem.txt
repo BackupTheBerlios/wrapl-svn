@@ -1,0 +1,76 @@
+====== CheckMenuItem ======
+==== T ====
+=== inherits from ===
+  * [[..:..:Gtk:Gtk:MenuItem#T|Gtk.Gtk.MenuItem.T]]
+  * [[..:..:Gtk:Gtk:Item#T|Gtk.Gtk.Item.T]]
+  * [[..:..:Gtk:Gtk:Bin#T|Gtk.Gtk.Bin.T]]
+  * [[..:..:Gtk:Gtk:Container#T|Gtk.Gtk.Container.T]]
+  * [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]
+  * [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]
+  * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
+
+
+==== :Toggled ====
+'':Toggled( @ [[#T|T]])''
+
+
+==== :SetShowToggle ====
+'':SetShowToggle( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+
+
+==== :SetInconsistent ====
+'':SetInconsistent( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+
+
+==== :SetDrawAsRadio ====
+'':SetDrawAsRadio( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+
+
+==== :Active ====
+'':Active( @ [[#T|T]])''
+
+
+==== :AlwaysShowToggle ====
+'':AlwaysShowToggle( @ [[#T|T]])''
+
+
+==== :Inconsistent ====
+'':Inconsistent( @ [[#T|T]])''
+
+
+==== :DrawAsRadio ====
+'':DrawAsRadio( @ [[#T|T]])''
+
+
+==== :GetActive ====
+'':GetActive( @ [[#T|T]])''
+
+
+==== :GetDrawAsRadio ====
+'':GetDrawAsRadio( @ [[#T|T]])''
+
+
+==== :GetInconsistent ====
+'':GetInconsistent( @ [[#T|T]])''
+
+
+==== :SetActive ====
+'':SetActive( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+
+
+==== New ====
+''New()''
+
+
+==== GetType ====
+''GetType()''
+
+
+==== NewWithMnemonic ====
+''NewWithMnemonic()''
+
+
+==== NewWithLabel ====
+''NewWithLabel()''
+
+

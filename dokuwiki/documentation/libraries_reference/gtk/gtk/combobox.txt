@@ -1,0 +1,142 @@
+====== ComboBox ======
+==== T ====
+=== inherits from ===
+  * [[..:..:Gtk:Gtk:Bin#T|Gtk.Gtk.Bin.T]]
+  * [[..:..:Gtk:Gtk:Container#T|Gtk.Gtk.Container.T]]
+  * [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]
+  * [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]
+  * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
+
+
+==== :SetWrapWidth ====
+'':SetWrapWidth( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :SetTitle ====
+'':SetTitle( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== :SetRowSpanColumn ====
+'':SetRowSpanColumn( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :SetRowSeparatorFunc ====
+'':SetRowSeparatorFunc( @ [[#T|T]],  @ [[..:..:Std:Function#T|Std.Function.T]],  @ [[..:..:Std:Address#T|Std.Address.T]],  @ [[..:..:Std:Function#T|Std.Function.T]])''
+
+
+==== :Priv ====
+'':Priv( @ [[#T|T]])''
+
+
+==== :AppendText ====
+'':AppendText( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== :GetActive ====
+'':GetActive( @ [[#T|T]])''
+
+
+==== :GetActiveIter ====
+'':GetActiveIter( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]])''
+
+
+==== :GetActiveText ====
+'':GetActiveText( @ [[#T|T]])''
+
+
+==== :GetAddTearoffs ====
+'':GetAddTearoffs( @ [[#T|T]])''
+
+
+==== :GetColumnSpanColumn ====
+'':GetColumnSpanColumn( @ [[#T|T]])''
+
+
+==== :GetFocusOnClick ====
+'':GetFocusOnClick( @ [[#T|T]])''
+
+
+==== :GetModel ====
+'':GetModel( @ [[#T|T]])''
+
+
+==== :GetPopupAccessible ====
+'':GetPopupAccessible( @ [[#T|T]])''
+
+
+==== :GetRowSeparatorFunc ====
+'':GetRowSeparatorFunc( @ [[#T|T]])''
+
+
+==== :GetRowSpanColumn ====
+'':GetRowSpanColumn( @ [[#T|T]])''
+
+
+==== :GetTitle ====
+'':GetTitle( @ [[#T|T]])''
+
+
+==== :GetWrapWidth ====
+'':GetWrapWidth( @ [[#T|T]])''
+
+
+==== :InsertText ====
+'':InsertText( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== :Popdown ====
+'':Popdown( @ [[#T|T]])''
+
+
+==== :Popup ====
+'':Popup( @ [[#T|T]])''
+
+
+==== :PrependText ====
+'':PrependText( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== :RemoveText ====
+'':RemoveText( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :SetActive ====
+'':SetActive( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :SetActiveIter ====
+'':SetActiveIter( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]])''
+
+
+==== :SetAddTearoffs ====
+'':SetAddTearoffs( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+
+
+==== :SetColumnSpanColumn ====
+'':SetColumnSpanColumn( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :SetFocusOnClick ====
+'':SetFocusOnClick( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+
+
+==== :SetModel ====
+'':SetModel( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TreeModel#T|Gtk.Gtk.TreeModel.T]])''
+
+
+==== New ====
+''New()''
+
+
+==== GetType ====
+''GetType()''
+
+
+==== NewWithModel ====
+''NewWithModel()''
+
+
+==== NewText ====
+''NewText()''
+
+

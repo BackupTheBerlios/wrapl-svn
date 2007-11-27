@@ -1,0 +1,44 @@
+====== ImageMenuItem ======
+==== T ====
+=== inherits from ===
+  * [[..:..:Gtk:Gtk:MenuItem#T|Gtk.Gtk.MenuItem.T]]
+  * [[..:..:Gtk:Gtk:Item#T|Gtk.Gtk.Item.T]]
+  * [[..:..:Gtk:Gtk:Bin#T|Gtk.Gtk.Bin.T]]
+  * [[..:..:Gtk:Gtk:Container#T|Gtk.Gtk.Container.T]]
+  * [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]
+  * [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]
+  * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
+
+
+==== :SetImage ====
+'':SetImage( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]])''
+
+
+==== :GetImage ====
+'':GetImage( @ [[#T|T]])''
+
+
+==== :Image ====
+'':Image( @ [[#T|T]])''
+
+
+==== New ====
+''New()''
+
+
+==== GetType ====
+''GetType()''
+
+
+==== NewWithMnemonic ====
+''NewWithMnemonic()''
+
+
+==== NewWithLabel ====
+''NewWithLabel()''
+
+
+==== NewFromStock ====
+''NewFromStock()''
+
+

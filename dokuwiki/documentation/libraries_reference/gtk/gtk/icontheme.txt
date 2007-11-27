@@ -1,0 +1,94 @@
+====== IconTheme ======
+==== T ====
+=== inherits from ===
+  * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
+
+
+==== :SetSearchPath ====
+'':SetSearchPath( @ [[#T|T]],  @ [[..:..:Std:List#T|Std.List.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :SetScreen ====
+'':SetScreen( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Screen#T|Gtk.Gdk.Screen.T]])''
+
+
+==== :SetCustomTheme ====
+'':SetCustomTheme( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== :RescanIfNeeded ====
+'':RescanIfNeeded( @ [[#T|T]])''
+
+
+==== :PrependSearchPath ====
+'':PrependSearchPath( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== :LookupIcon ====
+'':LookupIcon( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :Priv ====
+'':Priv( @ [[#T|T]])''
+
+
+==== :AppendSearchPath ====
+'':AppendSearchPath( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== :ChooseIcon ====
+'':ChooseIcon( @ [[#T|T]],  @ [[..:..:Std:List#T|Std.List.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :GetExampleIconName ====
+'':GetExampleIconName( @ [[#T|T]])''
+
+
+==== :GetIconSizes ====
+'':GetIconSizes( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== :GetSearchPath ====
+'':GetSearchPath( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :HasIcon ====
+'':HasIcon( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== :ListContexts ====
+'':ListContexts( @ [[#T|T]])''
+
+
+==== :ListIcons ====
+'':ListIcons( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== :LoadIcon ====
+'':LoadIcon( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== New ====
+''New()''
+
+
+==== GetType ====
+''GetType()''
+
+
+==== GetForScreen ====
+''GetForScreen()''
+
+
+==== GetDefault ====
+''GetDefault()''
+
+
+==== ErrorQuark ====
+''ErrorQuark()''
+
+
+==== AddBuiltinIcon ====
+''AddBuiltinIcon()''
+
+

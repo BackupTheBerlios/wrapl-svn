@@ -1,0 +1,194 @@
+====== Style ======
+==== T ====
+=== inherits from ===
+  * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
+
+
+==== :Unref ====
+'':Unref( @ [[#T|T]])''
+
+
+==== :SetFont ====
+'':SetFont( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Font#T|Gtk.Gdk.Font.T]])''
+
+
+==== :Black ====
+'':Black( @ [[#T|T]])''
+
+
+==== :White ====
+'':White( @ [[#T|T]])''
+
+
+==== :FontDesc ====
+'':FontDesc( @ [[#T|T]])''
+
+
+==== :Xthickness ====
+'':Xthickness( @ [[#T|T]])''
+
+
+==== :Ythickness ====
+'':Ythickness( @ [[#T|T]])''
+
+
+==== :BlackGc ====
+'':BlackGc( @ [[#T|T]])''
+
+
+==== :WhiteGc ====
+'':WhiteGc( @ [[#T|T]])''
+
+
+==== :AttachCount ====
+'':AttachCount( @ [[#T|T]])''
+
+
+==== :Depth ====
+'':Depth( @ [[#T|T]])''
+
+
+==== :Colormap ====
+'':Colormap( @ [[#T|T]])''
+
+
+==== :PrivateFont ====
+'':PrivateFont( @ [[#T|T]])''
+
+
+==== :PrivateFontDesc ====
+'':PrivateFontDesc( @ [[#T|T]])''
+
+
+==== :RcStyle ====
+'':RcStyle( @ [[#T|T]])''
+
+
+==== :Styles ====
+'':Styles( @ [[#T|T]])''
+
+
+==== :PropertyCache ====
+'':PropertyCache( @ [[#T|T]])''
+
+
+==== :IconFactories ====
+'':IconFactories( @ [[#T|T]])''
+
+
+==== :Fg ====
+'':Fg( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :Bg ====
+'':Bg( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :Light ====
+'':Light( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :Dark ====
+'':Dark( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :Mid ====
+'':Mid( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :Text ====
+'':Text( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :Base ====
+'':Base( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :TextAa ====
+'':TextAa( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :FgGc ====
+'':FgGc( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :BgGc ====
+'':BgGc( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :LightGc ====
+'':LightGc( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :DarkGc ====
+'':DarkGc( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :MidGc ====
+'':MidGc( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :TextGc ====
+'':TextGc( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :BaseGc ====
+'':BaseGc( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :TextAaGc ====
+'':TextAaGc( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :BgPixmap ====
+'':BgPixmap( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :ApplyDefaultBackground ====
+'':ApplyDefaultBackground( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]],  @ [[..:..:Gtk:Gtk:StateType#T|Gtk.Gtk.StateType.T]],  @ [[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :Attach ====
+'':Attach( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]])''
+
+
+==== :Copy ====
+'':Copy( @ [[#T|T]])''
+
+
+==== :Detach ====
+'':Detach( @ [[#T|T]])''
+
+
+==== :GetFont ====
+'':GetFont( @ [[#T|T]])''
+
+
+==== :LookupColor ====
+'':LookupColor( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]])''
+
+
+==== :LookupIconSet ====
+'':LookupIconSet( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== :Ref ====
+'':Ref( @ [[#T|T]])''
+
+
+==== :RenderIcon ====
+'':RenderIcon( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:IconSource#T|Gtk.Gtk.IconSource.T]],  @ [[..:..:Gtk:Gtk:TextDirection#T|Gtk.Gtk.TextDirection.T]],  @ [[..:..:Gtk:Gtk:StateType#T|Gtk.Gtk.StateType.T]],  @ [[..:..:Gtk:Gtk:IconSize#T|Gtk.Gtk.IconSize.T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== :SetBackground ====
+'':SetBackground( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]],  @ [[..:..:Gtk:Gtk:StateType#T|Gtk.Gtk.StateType.T]])''
+
+
+==== New ====
+''New()''
+
+
+==== GetType ====
+''GetType()''
+
+

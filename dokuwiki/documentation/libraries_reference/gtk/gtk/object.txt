@@ -1,0 +1,94 @@
+====== Object ======
+==== T ====
+=== inherits from ===
+  * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
+
+
+==== :Weakunref ====
+'':Weakunref( @ [[#T|T]],  @ [[..:..:Std:Function#T|Std.Function.T]],  @ [[..:..:Std:Address#T|Std.Address.T]])''
+
+
+==== :Weakref ====
+'':Weakref( @ [[#T|T]],  @ [[..:..:Std:Function#T|Std.Function.T]],  @ [[..:..:Std:Address#T|Std.Address.T]])''
+
+
+==== :Unref ====
+'':Unref( @ [[#T|T]])''
+
+
+==== :Flags ====
+'':Flags( @ [[#T|T]])''
+
+
+==== :Destroy ====
+'':Destroy( @ [[#T|T]])''
+
+
+==== :Get ====
+'':Get( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :GetDataById ====
+'':GetDataById( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :GetUserData ====
+'':GetUserData( @ [[#T|T]])''
+
+
+==== :Ref ====
+'':Ref( @ [[#T|T]])''
+
+
+==== :RemoveData ====
+'':RemoveData( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== :RemoveDataById ====
+'':RemoveDataById( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :RemoveNoNotify ====
+'':RemoveNoNotify( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== :RemoveNoNotifyById ====
+'':RemoveNoNotifyById( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :Set ====
+'':Set( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :SetDataById ====
+'':SetDataById( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Address#T|Std.Address.T]])''
+
+
+==== :SetDataByIdFull ====
+'':SetDataByIdFull( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Address#T|Std.Address.T]],  @ [[..:..:Std:Function#T|Std.Function.T]])''
+
+
+==== :SetDataFull ====
+'':SetDataFull( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Address#T|Std.Address.T]],  @ [[..:..:Std:Function#T|Std.Function.T]])''
+
+
+==== :SetUserData ====
+'':SetUserData( @ [[#T|T]],  @ [[..:..:Std:Address#T|Std.Address.T]])''
+
+
+==== :Sink ====
+'':Sink( @ [[#T|T]])''
+
+
+==== New ====
+''New()''
+
+
+==== GetType ====
+''GetType()''
+
+
+==== AddArgType ====
+''AddArgType()''
+
+

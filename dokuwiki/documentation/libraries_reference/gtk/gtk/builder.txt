@@ -1,0 +1,66 @@
+====== Builder ======
+==== T ====
+=== inherits from ===
+  * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
+
+
+==== :ValueFromStringType ====
+'':ValueFromStringType( @ [[#T|T]],  @ [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Gtk:GObject:Value#T|Gtk.GObject.Value.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :ValueFromString ====
+'':ValueFromString( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Gtk:GObject:Value#T|Gtk.GObject.Value.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :SetTranslationDomain ====
+'':SetTranslationDomain( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== :Priv ====
+'':Priv( @ [[#T|T]])''
+
+
+==== :AddFromFile ====
+'':AddFromFile( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :AddFromString ====
+'':AddFromString( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :ConnectSignals ====
+'':ConnectSignals( @ [[#T|T]],  @ [[..:..:Std:Address#T|Std.Address.T]])''
+
+
+==== :ConnectSignalsFull ====
+'':ConnectSignalsFull( @ [[#T|T]],  @ [[..:..:Std:Function#T|Std.Function.T]],  @ [[..:..:Std:Address#T|Std.Address.T]])''
+
+
+==== :GetObject ====
+'':GetObject( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== :GetObjects ====
+'':GetObjects( @ [[#T|T]])''
+
+
+==== :GetTranslationDomain ====
+'':GetTranslationDomain( @ [[#T|T]])''
+
+
+==== :GetTypeFromName ====
+'':GetTypeFromName( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== New ====
+''New()''
+
+
+==== GetType ====
+''GetType()''
+
+
+==== ErrorQuark ====
+''ErrorQuark()''
+
+

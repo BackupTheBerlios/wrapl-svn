@@ -1,0 +1,174 @@
+====== Screen ======
+==== T ====
+=== inherits from ===
+  * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
+
+
+==== :SetResolution ====
+'':SetResolution( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+
+
+==== :SetFontOptions ====
+'':SetFontOptions( @ [[#T|T]],  @ [[..:..:Gtk:Cairo:CairoFontOptionsT#T|Gtk.Cairo.CairoFontOptionsT.T]])''
+
+
+==== :SetDefaultColormap ====
+'':SetDefaultColormap( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Colormap#T|Gtk.Gdk.Colormap.T]])''
+
+
+==== :MakeDisplayName ====
+'':MakeDisplayName( @ [[#T|T]])''
+
+
+==== :ListVisuals ====
+'':ListVisuals( @ [[#T|T]])''
+
+
+==== :IsComposited ====
+'':IsComposited( @ [[#T|T]])''
+
+
+==== :Closed ====
+'':Closed( @ [[#T|T]])''
+
+
+==== :FontOptions ====
+'':FontOptions( @ [[#T|T]])''
+
+
+==== :Resolution ====
+'':Resolution( @ [[#T|T]])''
+
+
+==== :NormalGcs ====
+'':NormalGcs( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :ExposureGcs ====
+'':ExposureGcs( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :BroadcastClientMessage ====
+'':BroadcastClientMessage( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :GetActiveWindow ====
+'':GetActiveWindow( @ [[#T|T]])''
+
+
+==== :GetDefaultColormap ====
+'':GetDefaultColormap( @ [[#T|T]])''
+
+
+==== :GetDisplay ====
+'':GetDisplay( @ [[#T|T]])''
+
+
+==== :GetFontOptions ====
+'':GetFontOptions( @ [[#T|T]])''
+
+
+==== :GetHeight ====
+'':GetHeight( @ [[#T|T]])''
+
+
+==== :GetHeightMm ====
+'':GetHeightMm( @ [[#T|T]])''
+
+
+==== :GetMonitorAtPoint ====
+'':GetMonitorAtPoint( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :GetMonitorAtWindow ====
+'':GetMonitorAtWindow( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]])''
+
+
+==== :GetMonitorGeometry ====
+'':GetMonitorGeometry( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]])''
+
+
+==== :GetNMonitors ====
+'':GetNMonitors( @ [[#T|T]])''
+
+
+==== :GetNumber ====
+'':GetNumber( @ [[#T|T]])''
+
+
+==== :GetResolution ====
+'':GetResolution( @ [[#T|T]])''
+
+
+==== :GetRgbColormap ====
+'':GetRgbColormap( @ [[#T|T]])''
+
+
+==== :GetRgbVisual ====
+'':GetRgbVisual( @ [[#T|T]])''
+
+
+==== :GetRgbaColormap ====
+'':GetRgbaColormap( @ [[#T|T]])''
+
+
+==== :GetRgbaVisual ====
+'':GetRgbaVisual( @ [[#T|T]])''
+
+
+==== :GetRootWindow ====
+'':GetRootWindow( @ [[#T|T]])''
+
+
+==== :GetSetting ====
+'':GetSetting( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Gtk:GObject:Value#T|Gtk.GObject.Value.T]])''
+
+
+==== :GetSystemColormap ====
+'':GetSystemColormap( @ [[#T|T]])''
+
+
+==== :GetSystemVisual ====
+'':GetSystemVisual( @ [[#T|T]])''
+
+
+==== :GetToplevelWindows ====
+'':GetToplevelWindows( @ [[#T|T]])''
+
+
+==== :GetWidth ====
+'':GetWidth( @ [[#T|T]])''
+
+
+==== :GetWidthMm ====
+'':GetWidthMm( @ [[#T|T]])''
+
+
+==== :GetWindowStack ====
+'':GetWindowStack( @ [[#T|T]])''
+
+
+==== GetDefault ====
+''GetDefault()''
+
+
+==== WidthMm ====
+''WidthMm()''
+
+
+==== Width ====
+''Width()''
+
+
+==== HeightMm ====
+''HeightMm()''
+
+
+==== Height ====
+''Height()''
+
+
+==== GetType ====
+''GetType()''
+
+

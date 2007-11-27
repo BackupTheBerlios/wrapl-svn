@@ -1,0 +1,104 @@
+====== Preview ======
+==== T ====
+=== inherits from ===
+  * [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]
+  * [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]
+  * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
+
+
+==== :Size ====
+'':Size( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :SetExpand ====
+'':SetExpand( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+
+
+==== :SetDither ====
+'':SetDither( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:RgbDither#T|Gtk.Gdk.RgbDither.T]])''
+
+
+==== :Put ====
+'':Put( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]],  @ [[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :DrawRow ====
+'':DrawRow( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :Expand ====
+'':Expand( @ [[#T|T]])''
+
+
+==== :Type ====
+'':Type( @ [[#T|T]])''
+
+
+==== :Dither ====
+'':Dither( @ [[#T|T]])''
+
+
+==== :Rowstride ====
+'':Rowstride( @ [[#T|T]])''
+
+
+==== :Bpp ====
+'':Bpp( @ [[#T|T]])''
+
+
+==== :BufferHeight ====
+'':BufferHeight( @ [[#T|T]])''
+
+
+==== :Buffer ====
+'':Buffer( @ [[#T|T]])''
+
+
+==== :BufferWidth ====
+'':BufferWidth( @ [[#T|T]])''
+
+
+==== New ====
+''New()''
+
+
+==== Uninit ====
+''Uninit()''
+
+
+==== SetReserved ====
+''SetReserved()''
+
+
+==== SetInstallCmap ====
+''SetInstallCmap()''
+
+
+==== SetGamma ====
+''SetGamma()''
+
+
+==== SetColorCube ====
+''SetColorCube()''
+
+
+==== Reset ====
+''Reset()''
+
+
+==== GetVisual ====
+''GetVisual()''
+
+
+==== GetType ====
+''GetType()''
+
+
+==== GetInfo ====
+''GetInfo()''
+
+
+==== GetCmap ====
+''GetCmap()''
+
+

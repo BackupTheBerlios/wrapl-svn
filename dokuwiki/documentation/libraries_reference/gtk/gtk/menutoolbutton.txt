@@ -1,0 +1,48 @@
+====== MenuToolButton ======
+==== T ====
+=== inherits from ===
+  * [[..:..:Gtk:Gtk:ToolButton#T|Gtk.Gtk.ToolButton.T]]
+  * [[..:..:Gtk:Gtk:ToolItem#T|Gtk.Gtk.ToolItem.T]]
+  * [[..:..:Gtk:Gtk:Bin#T|Gtk.Gtk.Bin.T]]
+  * [[..:..:Gtk:Gtk:Container#T|Gtk.Gtk.Container.T]]
+  * [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]
+  * [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]
+  * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
+
+
+==== :SetMenu ====
+'':SetMenu( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]])''
+
+
+==== :SetArrowTooltipText ====
+'':SetArrowTooltipText( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== :SetArrowTooltipMarkup ====
+'':SetArrowTooltipMarkup( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== :Priv ====
+'':Priv( @ [[#T|T]])''
+
+
+==== :GetMenu ====
+'':GetMenu( @ [[#T|T]])''
+
+
+==== :SetArrowTooltip ====
+'':SetArrowTooltip( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Tooltips#T|Gtk.Gtk.Tooltips.T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== New ====
+''New()''
+
+
+==== GetType ====
+''GetType()''
+
+
+==== NewFromStock ====
+''NewFromStock()''
+
+

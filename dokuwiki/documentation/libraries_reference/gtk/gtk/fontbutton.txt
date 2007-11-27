@@ -1,0 +1,75 @@
+====== FontButton ======
+==== T ====
+=== inherits from ===
+  * [[..:..:Gtk:Gtk:Button#T|Gtk.Gtk.Button.T]]
+  * [[..:..:Gtk:Gtk:Bin#T|Gtk.Gtk.Bin.T]]
+  * [[..:..:Gtk:Gtk:Container#T|Gtk.Gtk.Container.T]]
+  * [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]
+  * [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]
+  * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
+
+
+==== :SetUseSize ====
+'':SetUseSize( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+
+
+==== :SetUseFont ====
+'':SetUseFont( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+
+
+==== :SetTitle ====
+'':SetTitle( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== :Priv ====
+'':Priv( @ [[#T|T]])''
+
+
+==== :GetFontName ====
+'':GetFontName( @ [[#T|T]])''
+
+
+==== :GetShowSize ====
+'':GetShowSize( @ [[#T|T]])''
+
+
+==== :GetShowStyle ====
+'':GetShowStyle( @ [[#T|T]])''
+
+
+==== :GetTitle ====
+'':GetTitle( @ [[#T|T]])''
+
+
+==== :GetUseFont ====
+'':GetUseFont( @ [[#T|T]])''
+
+
+==== :GetUseSize ====
+'':GetUseSize( @ [[#T|T]])''
+
+
+==== :SetFontName ====
+'':SetFontName( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== :SetShowSize ====
+'':SetShowSize( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+
+
+==== :SetShowStyle ====
+'':SetShowStyle( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+
+
+==== New ====
+''New()''
+
+
+==== GetType ====
+''GetType()''
+
+
+==== NewWithFont ====
+''NewWithFont()''
+
+

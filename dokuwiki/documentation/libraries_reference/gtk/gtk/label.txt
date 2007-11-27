@@ -1,0 +1,261 @@
+====== Label ======
+==== T ====
+=== inherits from ===
+  * [[..:..:Gtk:Gtk:Misc#T|Gtk.Gtk.Misc.T]]
+  * [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]
+  * [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]
+  * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
+
+
+==== :SetWidthChars ====
+'':SetWidthChars( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :SetUseUnderline ====
+'':SetUseUnderline( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+
+
+==== :SetUseMarkup ====
+'':SetUseMarkup( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+
+
+==== :Label ====
+'':Label( @ [[#T|T]])''
+
+
+==== :Jtype ====
+'':Jtype( @ [[#T|T]])''
+
+
+==== :Wrap ====
+'':Wrap( @ [[#T|T]])''
+
+
+==== :UseUnderline ====
+'':UseUnderline( @ [[#T|T]])''
+
+
+==== :UseMarkup ====
+'':UseMarkup( @ [[#T|T]])''
+
+
+==== :Ellipsize ====
+'':Ellipsize( @ [[#T|T]])''
+
+
+==== :SingleLineMode ====
+'':SingleLineMode( @ [[#T|T]])''
+
+
+==== :HaveTransform ====
+'':HaveTransform( @ [[#T|T]])''
+
+
+==== :InClick ====
+'':InClick( @ [[#T|T]])''
+
+
+==== :WrapMode ====
+'':WrapMode( @ [[#T|T]])''
+
+
+==== :PatternSet ====
+'':PatternSet( @ [[#T|T]])''
+
+
+==== :MnemonicKeyval ====
+'':MnemonicKeyval( @ [[#T|T]])''
+
+
+==== :Text ====
+'':Text( @ [[#T|T]])''
+
+
+==== :Attrs ====
+'':Attrs( @ [[#T|T]])''
+
+
+==== :EffectiveAttrs ====
+'':EffectiveAttrs( @ [[#T|T]])''
+
+
+==== :Layout ====
+'':Layout( @ [[#T|T]])''
+
+
+==== :MnemonicWidget ====
+'':MnemonicWidget( @ [[#T|T]])''
+
+
+==== :MnemonicWindow ====
+'':MnemonicWindow( @ [[#T|T]])''
+
+
+==== :SelectInfo ====
+'':SelectInfo( @ [[#T|T]])''
+
+
+==== :Get ====
+'':Get( @ [[#T|T]],  @ [[..:..:Std:List#T|Std.List.T]])''
+
+
+==== :GetAngle ====
+'':GetAngle( @ [[#T|T]])''
+
+
+==== :GetAttributes ====
+'':GetAttributes( @ [[#T|T]])''
+
+
+==== :GetEllipsize ====
+'':GetEllipsize( @ [[#T|T]])''
+
+
+==== :GetJustify ====
+'':GetJustify( @ [[#T|T]])''
+
+
+==== :GetLabel ====
+'':GetLabel( @ [[#T|T]])''
+
+
+==== :GetLayout ====
+'':GetLayout( @ [[#T|T]])''
+
+
+==== :GetLayoutOffsets ====
+'':GetLayoutOffsets( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :GetLineWrap ====
+'':GetLineWrap( @ [[#T|T]])''
+
+
+==== :GetLineWrapMode ====
+'':GetLineWrapMode( @ [[#T|T]])''
+
+
+==== :GetMaxWidthChars ====
+'':GetMaxWidthChars( @ [[#T|T]])''
+
+
+==== :GetMnemonicKeyval ====
+'':GetMnemonicKeyval( @ [[#T|T]])''
+
+
+==== :GetMnemonicWidget ====
+'':GetMnemonicWidget( @ [[#T|T]])''
+
+
+==== :GetSelectable ====
+'':GetSelectable( @ [[#T|T]])''
+
+
+==== :GetSelectionBounds ====
+'':GetSelectionBounds( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :GetSingleLineMode ====
+'':GetSingleLineMode( @ [[#T|T]])''
+
+
+==== :GetText ====
+'':GetText( @ [[#T|T]])''
+
+
+==== :GetUseMarkup ====
+'':GetUseMarkup( @ [[#T|T]])''
+
+
+==== :GetUseUnderline ====
+'':GetUseUnderline( @ [[#T|T]])''
+
+
+==== :GetWidthChars ====
+'':GetWidthChars( @ [[#T|T]])''
+
+
+==== :ParseUline ====
+'':ParseUline( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== :SelectRegion ====
+'':SelectRegion( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :SetAngle ====
+'':SetAngle( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+
+
+==== :SetAttributes ====
+'':SetAttributes( @ [[#T|T]],  @ [[..:..:Gtk:Pango:AttrList#T|Gtk.Pango.AttrList.T]])''
+
+
+==== :SetEllipsize ====
+'':SetEllipsize( @ [[#T|T]],  @ [[..:..:Gtk:Pango:EllipsizeMode#T|Gtk.Pango.EllipsizeMode.T]])''
+
+
+==== :SetJustify ====
+'':SetJustify( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Justification#T|Gtk.Gtk.Justification.T]])''
+
+
+==== :SetLabel ====
+'':SetLabel( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== :SetLineWrap ====
+'':SetLineWrap( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+
+
+==== :SetLineWrapMode ====
+'':SetLineWrapMode( @ [[#T|T]],  @ [[..:..:Gtk:Pango:WrapMode#T|Gtk.Pango.WrapMode.T]])''
+
+
+==== :SetMarkup ====
+'':SetMarkup( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== :SetMarkupWithMnemonic ====
+'':SetMarkupWithMnemonic( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== :SetMaxWidthChars ====
+'':SetMaxWidthChars( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :SetMnemonicWidget ====
+'':SetMnemonicWidget( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]])''
+
+
+==== :SetPattern ====
+'':SetPattern( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== :SetSelectable ====
+'':SetSelectable( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+
+
+==== :SetSingleLineMode ====
+'':SetSingleLineMode( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+
+
+==== :SetText ====
+'':SetText( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== :SetTextWithMnemonic ====
+'':SetTextWithMnemonic( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== New ====
+''New()''
+
+
+==== GetType ====
+''GetType()''
+
+
+==== NewWithMnemonic ====
+''NewWithMnemonic()''
+
+

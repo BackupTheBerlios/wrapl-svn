@@ -1,0 +1,214 @@
+====== Layout ======
+==== T ====
+=== inherits from ===
+  * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
+
+
+==== :XyToIndex ====
+'':XyToIndex( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :SetWrap ====
+'':SetWrap( @ [[#T|T]],  @ [[..:..:Gtk:Pango:WrapMode#T|Gtk.Pango.WrapMode.T]])''
+
+
+==== :ContextChanged ====
+'':ContextChanged( @ [[#T|T]])''
+
+
+==== :Copy ====
+'':Copy( @ [[#T|T]])''
+
+
+==== :GetAlignment ====
+'':GetAlignment( @ [[#T|T]])''
+
+
+==== :GetAttributes ====
+'':GetAttributes( @ [[#T|T]])''
+
+
+==== :GetAutoDir ====
+'':GetAutoDir( @ [[#T|T]])''
+
+
+==== :GetContext ====
+'':GetContext( @ [[#T|T]])''
+
+
+==== :GetCursorPos ====
+'':GetCursorPos( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Gtk:Pango:Rectangle#T|Gtk.Pango.Rectangle.T]],  @ [[..:..:Gtk:Pango:Rectangle#T|Gtk.Pango.Rectangle.T]])''
+
+
+==== :GetEllipsize ====
+'':GetEllipsize( @ [[#T|T]])''
+
+
+==== :GetExtents ====
+'':GetExtents( @ [[#T|T]],  @ [[..:..:Gtk:Pango:Rectangle#T|Gtk.Pango.Rectangle.T]],  @ [[..:..:Gtk:Pango:Rectangle#T|Gtk.Pango.Rectangle.T]])''
+
+
+==== :GetFontDescription ====
+'':GetFontDescription( @ [[#T|T]])''
+
+
+==== :GetIndent ====
+'':GetIndent( @ [[#T|T]])''
+
+
+==== :GetIter ====
+'':GetIter( @ [[#T|T]])''
+
+
+==== :GetJustify ====
+'':GetJustify( @ [[#T|T]])''
+
+
+==== :GetLine ====
+'':GetLine( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :GetLineCount ====
+'':GetLineCount( @ [[#T|T]])''
+
+
+==== :GetLineReadonly ====
+'':GetLineReadonly( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :GetLines ====
+'':GetLines( @ [[#T|T]])''
+
+
+==== :GetLinesReadonly ====
+'':GetLinesReadonly( @ [[#T|T]])''
+
+
+==== :GetLogAttrs ====
+'':GetLogAttrs( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :GetPixelExtents ====
+'':GetPixelExtents( @ [[#T|T]],  @ [[..:..:Gtk:Pango:Rectangle#T|Gtk.Pango.Rectangle.T]],  @ [[..:..:Gtk:Pango:Rectangle#T|Gtk.Pango.Rectangle.T]])''
+
+
+==== :GetPixelSize ====
+'':GetPixelSize( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :GetSingleParagraphMode ====
+'':GetSingleParagraphMode( @ [[#T|T]])''
+
+
+==== :GetSize ====
+'':GetSize( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :GetSpacing ====
+'':GetSpacing( @ [[#T|T]])''
+
+
+==== :GetTabs ====
+'':GetTabs( @ [[#T|T]])''
+
+
+==== :GetText ====
+'':GetText( @ [[#T|T]])''
+
+
+==== :GetUnknownGlyphsCount ====
+'':GetUnknownGlyphsCount( @ [[#T|T]])''
+
+
+==== :GetWidth ====
+'':GetWidth( @ [[#T|T]])''
+
+
+==== :GetWrap ====
+'':GetWrap( @ [[#T|T]])''
+
+
+==== :IndexToLineX ====
+'':IndexToLineX( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :IndexToPos ====
+'':IndexToPos( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Gtk:Pango:Rectangle#T|Gtk.Pango.Rectangle.T]])''
+
+
+==== :IsEllipsized ====
+'':IsEllipsized( @ [[#T|T]])''
+
+
+==== :IsWrapped ====
+'':IsWrapped( @ [[#T|T]])''
+
+
+==== :MoveCursorVisually ====
+'':MoveCursorVisually( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :SetAlignment ====
+'':SetAlignment( @ [[#T|T]],  @ [[..:..:Gtk:Pango:Alignment#T|Gtk.Pango.Alignment.T]])''
+
+
+==== :SetAttributes ====
+'':SetAttributes( @ [[#T|T]],  @ [[..:..:Gtk:Pango:AttrList#T|Gtk.Pango.AttrList.T]])''
+
+
+==== :SetAutoDir ====
+'':SetAutoDir( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+
+
+==== :SetEllipsize ====
+'':SetEllipsize( @ [[#T|T]],  @ [[..:..:Gtk:Pango:EllipsizeMode#T|Gtk.Pango.EllipsizeMode.T]])''
+
+
+==== :SetFontDescription ====
+'':SetFontDescription( @ [[#T|T]],  @ [[..:..:Gtk:Pango:FontDescription#T|Gtk.Pango.FontDescription.T]])''
+
+
+==== :SetIndent ====
+'':SetIndent( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :SetJustify ====
+'':SetJustify( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+
+
+==== :SetMarkup ====
+'':SetMarkup( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :SetMarkupWithAccel ====
+'':SetMarkupWithAccel( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :SetSingleParagraphMode ====
+'':SetSingleParagraphMode( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+
+
+==== :SetSpacing ====
+'':SetSpacing( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :SetTabs ====
+'':SetTabs( @ [[#T|T]],  @ [[..:..:Gtk:Pango:TabArray#T|Gtk.Pango.TabArray.T]])''
+
+
+==== :SetText ====
+'':SetText( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :SetWidth ====
+'':SetWidth( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== New ====
+''New()''
+
+
+==== GetType ====
+''GetType()''
+
+

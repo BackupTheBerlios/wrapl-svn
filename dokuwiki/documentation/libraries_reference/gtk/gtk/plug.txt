@@ -1,0 +1,55 @@
+====== Plug ======
+==== T ====
+=== inherits from ===
+  * [[..:..:Gtk:Gtk:Window#T|Gtk.Gtk.Window.T]]
+  * [[..:..:Gtk:Gtk:Bin#T|Gtk.Gtk.Bin.T]]
+  * [[..:..:Gtk:Gtk:Container#T|Gtk.Gtk.Container.T]]
+  * [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]
+  * [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]
+  * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
+
+
+==== :GetId ====
+'':GetId( @ [[#T|T]])''
+
+
+==== :ConstructForDisplay ====
+'':ConstructForDisplay( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Display#T|Gtk.Gdk.Display.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :Construct ====
+'':Construct( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :SocketWindow ====
+'':SocketWindow( @ [[#T|T]])''
+
+
+==== :ModalityWindow ====
+'':ModalityWindow( @ [[#T|T]])''
+
+
+==== :ModalityGroup ====
+'':ModalityGroup( @ [[#T|T]])''
+
+
+==== :GrabbedKeys ====
+'':GrabbedKeys( @ [[#T|T]])''
+
+
+==== :SameApp ====
+'':SameApp( @ [[#T|T]])''
+
+
+==== New ====
+''New()''
+
+
+==== GetType ====
+''GetType()''
+
+
+==== NewForDisplay ====
+''NewForDisplay()''
+
+

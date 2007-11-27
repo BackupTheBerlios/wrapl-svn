@@ -1,0 +1,59 @@
+====== ColorButton ======
+==== T ====
+=== inherits from ===
+  * [[..:..:Gtk:Gtk:Button#T|Gtk.Gtk.Button.T]]
+  * [[..:..:Gtk:Gtk:Bin#T|Gtk.Gtk.Bin.T]]
+  * [[..:..:Gtk:Gtk:Container#T|Gtk.Gtk.Container.T]]
+  * [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]
+  * [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]
+  * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
+
+
+==== :SetUseAlpha ====
+'':SetUseAlpha( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+
+
+==== :SetTitle ====
+'':SetTitle( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== :SetColor ====
+'':SetColor( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]])''
+
+
+==== :Priv ====
+'':Priv( @ [[#T|T]])''
+
+
+==== :GetAlpha ====
+'':GetAlpha( @ [[#T|T]])''
+
+
+==== :GetColor ====
+'':GetColor( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]])''
+
+
+==== :GetTitle ====
+'':GetTitle( @ [[#T|T]])''
+
+
+==== :GetUseAlpha ====
+'':GetUseAlpha( @ [[#T|T]])''
+
+
+==== :SetAlpha ====
+'':SetAlpha( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== New ====
+''New()''
+
+
+==== GetType ====
+''GetType()''
+
+
+==== NewWithColor ====
+''NewWithColor()''
+
+

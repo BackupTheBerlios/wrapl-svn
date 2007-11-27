@@ -1,0 +1,210 @@
+====== Menu ======
+==== T ====
+=== inherits from ===
+  * [[..:..:Gtk:Gtk:MenuShell#T|Gtk.Gtk.MenuShell.T]]
+  * [[..:..:Gtk:Gtk:Container#T|Gtk.Gtk.Container.T]]
+  * [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]
+  * [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]
+  * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
+
+
+==== :SetTitle ====
+'':SetTitle( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== :SetTearoffState ====
+'':SetTearoffState( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+
+
+==== :SetScreen ====
+'':SetScreen( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Screen#T|Gtk.Gdk.Screen.T]])''
+
+
+==== :ParentMenuItem ====
+'':ParentMenuItem( @ [[#T|T]])''
+
+
+==== :OldActiveMenuItem ====
+'':OldActiveMenuItem( @ [[#T|T]])''
+
+
+==== :AccelGroup ====
+'':AccelGroup( @ [[#T|T]])''
+
+
+==== :AccelPath ====
+'':AccelPath( @ [[#T|T]])''
+
+
+==== :PositionFunc ====
+'':PositionFunc( @ [[#T|T]])''
+
+
+==== :PositionFuncData ====
+'':PositionFuncData( @ [[#T|T]])''
+
+
+==== :ToggleSize ====
+'':ToggleSize( @ [[#T|T]])''
+
+
+==== :Toplevel ====
+'':Toplevel( @ [[#T|T]])''
+
+
+==== :TearoffWindow ====
+'':TearoffWindow( @ [[#T|T]])''
+
+
+==== :TearoffHbox ====
+'':TearoffHbox( @ [[#T|T]])''
+
+
+==== :TearoffScrollbar ====
+'':TearoffScrollbar( @ [[#T|T]])''
+
+
+==== :TearoffAdjustment ====
+'':TearoffAdjustment( @ [[#T|T]])''
+
+
+==== :ViewWindow ====
+'':ViewWindow( @ [[#T|T]])''
+
+
+==== :BinWindow ====
+'':BinWindow( @ [[#T|T]])''
+
+
+==== :ScrollOffset ====
+'':ScrollOffset( @ [[#T|T]])''
+
+
+==== :SavedScrollOffset ====
+'':SavedScrollOffset( @ [[#T|T]])''
+
+
+==== :ScrollStep ====
+'':ScrollStep( @ [[#T|T]])''
+
+
+==== :TimeoutId ====
+'':TimeoutId( @ [[#T|T]])''
+
+
+==== :NavigationRegion ====
+'':NavigationRegion( @ [[#T|T]])''
+
+
+==== :NavigationTimeout ====
+'':NavigationTimeout( @ [[#T|T]])''
+
+
+==== :NeedsDestructionRefCount ====
+'':NeedsDestructionRefCount( @ [[#T|T]])''
+
+
+==== :TornOff ====
+'':TornOff( @ [[#T|T]])''
+
+
+==== :TearoffActive ====
+'':TearoffActive( @ [[#T|T]])''
+
+
+==== :ScrollFast ====
+'':ScrollFast( @ [[#T|T]])''
+
+
+==== :UpperArrowVisible ====
+'':UpperArrowVisible( @ [[#T|T]])''
+
+
+==== :LowerArrowVisible ====
+'':LowerArrowVisible( @ [[#T|T]])''
+
+
+==== :UpperArrowPrelight ====
+'':UpperArrowPrelight( @ [[#T|T]])''
+
+
+==== :LowerArrowPrelight ====
+'':LowerArrowPrelight( @ [[#T|T]])''
+
+
+==== :Attach ====
+'':Attach( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :AttachToWidget ====
+'':AttachToWidget( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]],  @ [[..:..:Std:Function#T|Std.Function.T]])''
+
+
+==== :Detach ====
+'':Detach( @ [[#T|T]])''
+
+
+==== :GetAccelGroup ====
+'':GetAccelGroup( @ [[#T|T]])''
+
+
+==== :GetActive ====
+'':GetActive( @ [[#T|T]])''
+
+
+==== :GetAttachWidget ====
+'':GetAttachWidget( @ [[#T|T]])''
+
+
+==== :GetTearoffState ====
+'':GetTearoffState( @ [[#T|T]])''
+
+
+==== :GetTitle ====
+'':GetTitle( @ [[#T|T]])''
+
+
+==== :Popdown ====
+'':Popdown( @ [[#T|T]])''
+
+
+==== :Popup ====
+'':Popup( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]],  @ [[..:..:Std:Function#T|Std.Function.T]],  @ [[..:..:Std:Address#T|Std.Address.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :ReorderChild ====
+'':ReorderChild( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :Reposition ====
+'':Reposition( @ [[#T|T]])''
+
+
+==== :SetAccelGroup ====
+'':SetAccelGroup( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:AccelGroup#T|Gtk.Gtk.AccelGroup.T]])''
+
+
+==== :SetAccelPath ====
+'':SetAccelPath( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== :SetActive ====
+'':SetActive( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :SetMonitor ====
+'':SetMonitor( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== New ====
+''New()''
+
+
+==== GetType ====
+''GetType()''
+
+
+==== GetForAttachWidget ====
+''GetForAttachWidget()''
+
+

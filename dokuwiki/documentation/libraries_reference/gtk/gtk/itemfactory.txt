@@ -1,0 +1,127 @@
+====== ItemFactory ======
+==== T ====
+=== inherits from ===
+  * [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]
+  * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
+
+
+==== :SetTranslateFunc ====
+'':SetTranslateFunc( @ [[#T|T]],  @ [[..:..:Std:Function#T|Std.Function.T]],  @ [[..:..:Std:Address#T|Std.Address.T]],  @ [[..:..:Std:Function#T|Std.Function.T]])''
+
+
+==== :PopupWithData ====
+'':PopupWithData( @ [[#T|T]],  @ [[..:..:Std:Address#T|Std.Address.T]],  @ [[..:..:Std:Function#T|Std.Function.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :PopupData ====
+'':PopupData( @ [[#T|T]])''
+
+
+==== :Popup ====
+'':Popup( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :GetWidgetByAction ====
+'':GetWidgetByAction( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :GetWidget ====
+'':GetWidget( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== :GetItemByAction ====
+'':GetItemByAction( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :GetItem ====
+'':GetItem( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== :Path ====
+'':Path( @ [[#T|T]])''
+
+
+==== :AccelGroup ====
+'':AccelGroup( @ [[#T|T]])''
+
+
+==== :Widget ====
+'':Widget( @ [[#T|T]])''
+
+
+==== :Items ====
+'':Items( @ [[#T|T]])''
+
+
+==== :TranslateFunc ====
+'':TranslateFunc( @ [[#T|T]])''
+
+
+==== :TranslateData ====
+'':TranslateData( @ [[#T|T]])''
+
+
+==== :TranslateNotify ====
+'':TranslateNotify( @ [[#T|T]])''
+
+
+==== :Construct ====
+'':Construct( @ [[#T|T]],  @ [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Gtk:Gtk:AccelGroup#T|Gtk.Gtk.AccelGroup.T]])''
+
+
+==== :CreateItem ====
+'':CreateItem( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:ItemFactoryEntry#T|Gtk.Gtk.ItemFactoryEntry.T]],  @ [[..:..:Std:Address#T|Std.Address.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :CreateItems ====
+'':CreateItems( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Gtk:Gtk:ItemFactoryEntry#T|Gtk.Gtk.ItemFactoryEntry.T]],  @ [[..:..:Std:Address#T|Std.Address.T]])''
+
+
+==== :CreateItemsAc ====
+'':CreateItemsAc( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Gtk:Gtk:ItemFactoryEntry#T|Gtk.Gtk.ItemFactoryEntry.T]],  @ [[..:..:Std:Address#T|Std.Address.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :DeleteEntries ====
+'':DeleteEntries( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Gtk:Gtk:ItemFactoryEntry#T|Gtk.Gtk.ItemFactoryEntry.T]])''
+
+
+==== :DeleteEntry ====
+'':DeleteEntry( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:ItemFactoryEntry#T|Gtk.Gtk.ItemFactoryEntry.T]])''
+
+
+==== :DeleteItem ====
+'':DeleteItem( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== New ====
+''New()''
+
+
+==== PopupDataFromWidget ====
+''PopupDataFromWidget()''
+
+
+==== PathFromWidget ====
+''PathFromWidget()''
+
+
+==== GetType ====
+''GetType()''
+
+
+==== FromWidget ====
+''FromWidget()''
+
+
+==== FromPath ====
+''FromPath()''
+
+
+==== CreateMenuEntries ====
+''CreateMenuEntries()''
+
+
+==== AddForeign ====
+''AddForeign()''
+
+

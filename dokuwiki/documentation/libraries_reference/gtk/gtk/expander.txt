@@ -1,0 +1,74 @@
+====== Expander ======
+==== T ====
+=== inherits from ===
+  * [[..:..:Gtk:Gtk:Bin#T|Gtk.Gtk.Bin.T]]
+  * [[..:..:Gtk:Gtk:Container#T|Gtk.Gtk.Container.T]]
+  * [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]
+  * [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]
+  * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
+
+
+==== :SetUseUnderline ====
+'':SetUseUnderline( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+
+
+==== :SetUseMarkup ====
+'':SetUseMarkup( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+
+
+==== :SetSpacing ====
+'':SetSpacing( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :Priv ====
+'':Priv( @ [[#T|T]])''
+
+
+==== :GetExpanded ====
+'':GetExpanded( @ [[#T|T]])''
+
+
+==== :GetLabel ====
+'':GetLabel( @ [[#T|T]])''
+
+
+==== :GetLabelWidget ====
+'':GetLabelWidget( @ [[#T|T]])''
+
+
+==== :GetSpacing ====
+'':GetSpacing( @ [[#T|T]])''
+
+
+==== :GetUseMarkup ====
+'':GetUseMarkup( @ [[#T|T]])''
+
+
+==== :GetUseUnderline ====
+'':GetUseUnderline( @ [[#T|T]])''
+
+
+==== :SetExpanded ====
+'':SetExpanded( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+
+
+==== :SetLabel ====
+'':SetLabel( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== :SetLabelWidget ====
+'':SetLabelWidget( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]])''
+
+
+==== New ====
+''New()''
+
+
+==== GetType ====
+''GetType()''
+
+
+==== NewWithMnemonic ====
+''NewWithMnemonic()''
+
+

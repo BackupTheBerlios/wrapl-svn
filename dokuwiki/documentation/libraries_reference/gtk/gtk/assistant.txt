@@ -1,0 +1,131 @@
+====== Assistant ======
+==== T ====
+=== inherits from ===
+  * [[..:..:Gtk:Gtk:Window#T|Gtk.Gtk.Window.T]]
+  * [[..:..:Gtk:Gtk:Bin#T|Gtk.Gtk.Bin.T]]
+  * [[..:..:Gtk:Gtk:Container#T|Gtk.Gtk.Container.T]]
+  * [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]
+  * [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]
+  * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
+
+
+==== :UpdateButtonsState ====
+'':UpdateButtonsState( @ [[#T|T]])''
+
+
+==== :SetPageType ====
+'':SetPageType( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]],  @ [[..:..:Gtk:Gtk:AssistantPageType#T|Gtk.Gtk.AssistantPageType.T]])''
+
+
+==== :Cancel ====
+'':Cancel( @ [[#T|T]])''
+
+
+==== :Forward ====
+'':Forward( @ [[#T|T]])''
+
+
+==== :Back ====
+'':Back( @ [[#T|T]])''
+
+
+==== :Apply ====
+'':Apply( @ [[#T|T]])''
+
+
+==== :Close ====
+'':Close( @ [[#T|T]])''
+
+
+==== :Last ====
+'':Last( @ [[#T|T]])''
+
+
+==== :Priv ====
+'':Priv( @ [[#T|T]])''
+
+
+==== :AddActionWidget ====
+'':AddActionWidget( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]])''
+
+
+==== :AppendPage ====
+'':AppendPage( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]])''
+
+
+==== :GetCurrentPage ====
+'':GetCurrentPage( @ [[#T|T]])''
+
+
+==== :GetNPages ====
+'':GetNPages( @ [[#T|T]])''
+
+
+==== :GetNthPage ====
+'':GetNthPage( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :GetPageComplete ====
+'':GetPageComplete( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]])''
+
+
+==== :GetPageHeaderImage ====
+'':GetPageHeaderImage( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]])''
+
+
+==== :GetPageSideImage ====
+'':GetPageSideImage( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]])''
+
+
+==== :GetPageTitle ====
+'':GetPageTitle( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]])''
+
+
+==== :GetPageType ====
+'':GetPageType( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]])''
+
+
+==== :InsertPage ====
+'':InsertPage( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :PrependPage ====
+'':PrependPage( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]])''
+
+
+==== :RemoveActionWidget ====
+'':RemoveActionWidget( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]])''
+
+
+==== :SetCurrentPage ====
+'':SetCurrentPage( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :SetForwardPageFunc ====
+'':SetForwardPageFunc( @ [[#T|T]],  @ [[..:..:Std:Function#T|Std.Function.T]],  @ [[..:..:Std:Address#T|Std.Address.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :SetPageComplete ====
+'':SetPageComplete( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+
+
+==== :SetPageHeaderImage ====
+'':SetPageHeaderImage( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]],  @ [[..:..:Gtk:Gdk:Pixbuf#T|Gtk.Gdk.Pixbuf.T]])''
+
+
+==== :SetPageSideImage ====
+'':SetPageSideImage( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]],  @ [[..:..:Gtk:Gdk:Pixbuf#T|Gtk.Gdk.Pixbuf.T]])''
+
+
+==== :SetPageTitle ====
+'':SetPageTitle( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== New ====
+''New()''
+
+
+==== GetType ====
+''GetType()''
+
+

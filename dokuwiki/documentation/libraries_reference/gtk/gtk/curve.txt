@@ -1,0 +1,93 @@
+====== Curve ======
+==== T ====
+=== inherits from ===
+  * [[..:..:Gtk:Gtk:DrawingArea#T|Gtk.Gtk.DrawingArea.T]]
+  * [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]
+  * [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]
+  * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
+
+
+==== :SetVector ====
+'':SetVector( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :SetRange ====
+'':SetRange( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+
+
+==== :CursorType ====
+'':CursorType( @ [[#T|T]])''
+
+
+==== :MinX ====
+'':MinX( @ [[#T|T]])''
+
+
+==== :MaxX ====
+'':MaxX( @ [[#T|T]])''
+
+
+==== :MinY ====
+'':MinY( @ [[#T|T]])''
+
+
+==== :MaxY ====
+'':MaxY( @ [[#T|T]])''
+
+
+==== :Pixmap ====
+'':Pixmap( @ [[#T|T]])''
+
+
+==== :CurveType ====
+'':CurveType( @ [[#T|T]])''
+
+
+==== :Height ====
+'':Height( @ [[#T|T]])''
+
+
+==== :GrabPoint ====
+'':GrabPoint( @ [[#T|T]])''
+
+
+==== :Last ====
+'':Last( @ [[#T|T]])''
+
+
+==== :NumPoints ====
+'':NumPoints( @ [[#T|T]])''
+
+
+==== :Point ====
+'':Point( @ [[#T|T]])''
+
+
+==== :NumCtlpoints ====
+'':NumCtlpoints( @ [[#T|T]])''
+
+
+==== :GetVector ====
+'':GetVector( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :Reset ====
+'':Reset( @ [[#T|T]])''
+
+
+==== :SetCurveType ====
+'':SetCurveType( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:CurveType#T|Gtk.Gtk.CurveType.T]])''
+
+
+==== :SetGamma ====
+'':SetGamma( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+
+
+==== New ====
+''New()''
+
+
+==== GetType ====
+''GetType()''
+
+

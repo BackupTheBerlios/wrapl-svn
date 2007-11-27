@@ -1,0 +1,51 @@
+====== ScaleButton ======
+==== T ====
+=== inherits from ===
+  * [[..:..:Gtk:Gtk:Button#T|Gtk.Gtk.Button.T]]
+  * [[..:..:Gtk:Gtk:Bin#T|Gtk.Gtk.Bin.T]]
+  * [[..:..:Gtk:Gtk:Container#T|Gtk.Gtk.Container.T]]
+  * [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]
+  * [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]
+  * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
+
+
+==== :SetValue ====
+'':SetValue( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+
+
+==== :SetIcons ====
+'':SetIcons( @ [[#T|T]],  @ [[..:..:Std:List#T|Std.List.T]])''
+
+
+==== :PlusButton ====
+'':PlusButton( @ [[#T|T]])''
+
+
+==== :MinusButton ====
+'':MinusButton( @ [[#T|T]])''
+
+
+==== :Priv ====
+'':Priv( @ [[#T|T]])''
+
+
+==== :GetAdjustment ====
+'':GetAdjustment( @ [[#T|T]])''
+
+
+==== :GetValue ====
+'':GetValue( @ [[#T|T]])''
+
+
+==== :SetAdjustment ====
+'':SetAdjustment( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]])''
+
+
+==== New ====
+''New()''
+
+
+==== GetType ====
+''GetType()''
+
+

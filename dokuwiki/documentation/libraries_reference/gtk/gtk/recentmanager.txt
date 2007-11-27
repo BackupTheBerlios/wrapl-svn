@@ -1,0 +1,74 @@
+====== RecentManager ======
+==== T ====
+=== inherits from ===
+  * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
+
+
+==== :SetScreen ====
+'':SetScreen( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Screen#T|Gtk.Gdk.Screen.T]])''
+
+
+==== :SetLimit ====
+'':SetLimit( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :RemoveItem ====
+'':RemoveItem( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :PurgeItems ====
+'':PurgeItems( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :MoveItem ====
+'':MoveItem( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :Priv ====
+'':Priv( @ [[#T|T]])''
+
+
+==== :AddFull ====
+'':AddFull( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Gtk:Gtk:RecentData#T|Gtk.Gtk.RecentData.T]])''
+
+
+==== :AddItem ====
+'':AddItem( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== :GetItems ====
+'':GetItems( @ [[#T|T]])''
+
+
+==== :GetLimit ====
+'':GetLimit( @ [[#T|T]])''
+
+
+==== :HasItem ====
+'':HasItem( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== :LookupItem ====
+'':LookupItem( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== New ====
+''New()''
+
+
+==== GetType ====
+''GetType()''
+
+
+==== GetForScreen ====
+''GetForScreen()''
+
+
+==== GetDefault ====
+''GetDefault()''
+
+
+==== ErrorQuark ====
+''ErrorQuark()''
+
+

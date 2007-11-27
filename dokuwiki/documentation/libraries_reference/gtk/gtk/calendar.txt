@@ -1,0 +1,136 @@
+====== Calendar ======
+==== T ====
+=== inherits from ===
+  * [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]
+  * [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]
+  * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
+
+
+==== :UnmarkDay ====
+'':UnmarkDay( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :Thaw ====
+'':Thaw( @ [[#T|T]])''
+
+
+==== :HeaderStyle ====
+'':HeaderStyle( @ [[#T|T]])''
+
+
+==== :LabelStyle ====
+'':LabelStyle( @ [[#T|T]])''
+
+
+==== :Month ====
+'':Month( @ [[#T|T]])''
+
+
+==== :Year ====
+'':Year( @ [[#T|T]])''
+
+
+==== :SelectedDay ====
+'':SelectedDay( @ [[#T|T]])''
+
+
+==== :NumMarkedDates ====
+'':NumMarkedDates( @ [[#T|T]])''
+
+
+==== :DisplayFlags ====
+'':DisplayFlags( @ [[#T|T]])''
+
+
+==== :Gc ====
+'':Gc( @ [[#T|T]])''
+
+
+==== :XorGc ====
+'':XorGc( @ [[#T|T]])''
+
+
+==== :FocusRow ====
+'':FocusRow( @ [[#T|T]])''
+
+
+==== :FocusCol ====
+'':FocusCol( @ [[#T|T]])''
+
+
+==== :HighlightRow ====
+'':HighlightRow( @ [[#T|T]])''
+
+
+==== :HighlightCol ====
+'':HighlightCol( @ [[#T|T]])''
+
+
+==== :Priv ====
+'':Priv( @ [[#T|T]])''
+
+
+==== :DayMonth ====
+'':DayMonth( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :Day ====
+'':Day( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :MarkedDate ====
+'':MarkedDate( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :MarkedDateColor ====
+'':MarkedDateColor( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :GrowSpace ====
+'':GrowSpace( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :ClearMarks ====
+'':ClearMarks( @ [[#T|T]])''
+
+
+==== :DisplayOptions ====
+'':DisplayOptions( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :Freeze ====
+'':Freeze( @ [[#T|T]])''
+
+
+==== :GetDate ====
+'':GetDate( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :GetDisplayOptions ====
+'':GetDisplayOptions( @ [[#T|T]])''
+
+
+==== :MarkDay ====
+'':MarkDay( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :SelectDay ====
+'':SelectDay( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :SelectMonth ====
+'':SelectMonth( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :SetDisplayOptions ====
+'':SetDisplayOptions( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== New ====
+''New()''
+
+
+==== GetType ====
+''GetType()''
+
+

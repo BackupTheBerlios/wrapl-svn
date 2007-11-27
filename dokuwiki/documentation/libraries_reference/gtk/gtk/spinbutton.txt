@@ -1,0 +1,169 @@
+====== SpinButton ======
+==== T ====
+=== inherits from ===
+  * [[..:..:Gtk:Gtk:Entry#T|Gtk.Gtk.Entry.T]]
+  * [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]
+  * [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]
+  * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
+
+
+==== :Update ====
+'':Update( @ [[#T|T]])''
+
+
+==== :Spin ====
+'':Spin( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:SpinType#T|Gtk.Gtk.SpinType.T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+
+
+==== :SetWrap ====
+'':SetWrap( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+
+
+==== :Adjustment ====
+'':Adjustment( @ [[#T|T]])''
+
+
+==== :Panel ====
+'':Panel( @ [[#T|T]])''
+
+
+==== :Timer ====
+'':Timer( @ [[#T|T]])''
+
+
+==== :ClimbRate ====
+'':ClimbRate( @ [[#T|T]])''
+
+
+==== :TimerStep ====
+'':TimerStep( @ [[#T|T]])''
+
+
+==== :UpdatePolicy ====
+'':UpdatePolicy( @ [[#T|T]])''
+
+
+==== :InChild ====
+'':InChild( @ [[#T|T]])''
+
+
+==== :ClickChild ====
+'':ClickChild( @ [[#T|T]])''
+
+
+==== :Button ====
+'':Button( @ [[#T|T]])''
+
+
+==== :NeedTimer ====
+'':NeedTimer( @ [[#T|T]])''
+
+
+==== :TimerCalls ====
+'':TimerCalls( @ [[#T|T]])''
+
+
+==== :Digits ====
+'':Digits( @ [[#T|T]])''
+
+
+==== :Numeric ====
+'':Numeric( @ [[#T|T]])''
+
+
+==== :Wrap ====
+'':Wrap( @ [[#T|T]])''
+
+
+==== :SnapToTicks ====
+'':SnapToTicks( @ [[#T|T]])''
+
+
+==== :Configure ====
+'':Configure( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :GetAdjustment ====
+'':GetAdjustment( @ [[#T|T]])''
+
+
+==== :GetDigits ====
+'':GetDigits( @ [[#T|T]])''
+
+
+==== :GetIncrements ====
+'':GetIncrements( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :GetNumeric ====
+'':GetNumeric( @ [[#T|T]])''
+
+
+==== :GetRange ====
+'':GetRange( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :GetSnapToTicks ====
+'':GetSnapToTicks( @ [[#T|T]])''
+
+
+==== :GetUpdatePolicy ====
+'':GetUpdatePolicy( @ [[#T|T]])''
+
+
+==== :GetValue ====
+'':GetValue( @ [[#T|T]])''
+
+
+==== :GetValueAsInt ====
+'':GetValueAsInt( @ [[#T|T]])''
+
+
+==== :GetWrap ====
+'':GetWrap( @ [[#T|T]])''
+
+
+==== :SetAdjustment ====
+'':SetAdjustment( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]])''
+
+
+==== :SetDigits ====
+'':SetDigits( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :SetIncrements ====
+'':SetIncrements( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+
+
+==== :SetNumeric ====
+'':SetNumeric( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+
+
+==== :SetRange ====
+'':SetRange( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+
+
+==== :SetSnapToTicks ====
+'':SetSnapToTicks( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+
+
+==== :SetUpdatePolicy ====
+'':SetUpdatePolicy( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:SpinButtonUpdatePolicy#T|Gtk.Gtk.SpinButtonUpdatePolicy.T]])''
+
+
+==== :SetValue ====
+'':SetValue( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+
+
+==== New ====
+''New()''
+
+
+==== GetType ====
+''GetType()''
+
+
+==== NewWithRange ====
+''NewWithRange()''
+
+

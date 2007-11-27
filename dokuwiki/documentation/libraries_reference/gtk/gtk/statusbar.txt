@@ -1,0 +1,75 @@
+====== Statusbar ======
+==== T ====
+=== inherits from ===
+  * [[..:..:Gtk:Gtk:HBox#T|Gtk.Gtk.HBox.T]]
+  * [[..:..:Gtk:Gtk:Box#T|Gtk.Gtk.Box.T]]
+  * [[..:..:Gtk:Gtk:Container#T|Gtk.Gtk.Container.T]]
+  * [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]
+  * [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]
+  * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
+
+
+==== :SetHasResizeGrip ====
+'':SetHasResizeGrip( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+
+
+==== :Remove ====
+'':Remove( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :Frame ====
+'':Frame( @ [[#T|T]])''
+
+
+==== :Label ====
+'':Label( @ [[#T|T]])''
+
+
+==== :Messages ====
+'':Messages( @ [[#T|T]])''
+
+
+==== :Keys ====
+'':Keys( @ [[#T|T]])''
+
+
+==== :SeqContextId ====
+'':SeqContextId( @ [[#T|T]])''
+
+
+==== :SeqMessageId ====
+'':SeqMessageId( @ [[#T|T]])''
+
+
+==== :GripWindow ====
+'':GripWindow( @ [[#T|T]])''
+
+
+==== :HasResizeGrip ====
+'':HasResizeGrip( @ [[#T|T]])''
+
+
+==== :GetContextId ====
+'':GetContextId( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== :GetHasResizeGrip ====
+'':GetHasResizeGrip( @ [[#T|T]])''
+
+
+==== :Pop ====
+'':Pop( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :Push ====
+'':Push( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== New ====
+''New()''
+
+
+==== GetType ====
+''GetType()''
+
+

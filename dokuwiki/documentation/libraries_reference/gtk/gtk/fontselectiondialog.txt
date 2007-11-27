@@ -1,0 +1,72 @@
+====== FontSelectionDialog ======
+==== T ====
+=== inherits from ===
+  * [[..:..:Gtk:Gtk:Dialog#T|Gtk.Gtk.Dialog.T]]
+  * [[..:..:Gtk:Gtk:Window#T|Gtk.Gtk.Window.T]]
+  * [[..:..:Gtk:Gtk:Bin#T|Gtk.Gtk.Bin.T]]
+  * [[..:..:Gtk:Gtk:Container#T|Gtk.Gtk.Container.T]]
+  * [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]
+  * [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]
+  * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
+
+
+==== :SetPreviewText ====
+'':SetPreviewText( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== :SetFontName ====
+'':SetFontName( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== :Fontsel ====
+'':Fontsel( @ [[#T|T]])''
+
+
+==== :MainVbox ====
+'':MainVbox( @ [[#T|T]])''
+
+
+==== :ActionArea ====
+'':ActionArea( @ [[#T|T]])''
+
+
+==== :OkButton ====
+'':OkButton( @ [[#T|T]])''
+
+
+==== :ApplyButton ====
+'':ApplyButton( @ [[#T|T]])''
+
+
+==== :CancelButton ====
+'':CancelButton( @ [[#T|T]])''
+
+
+==== :DialogWidth ====
+'':DialogWidth( @ [[#T|T]])''
+
+
+==== :AutoResize ====
+'':AutoResize( @ [[#T|T]])''
+
+
+==== :GetFont ====
+'':GetFont( @ [[#T|T]])''
+
+
+==== :GetFontName ====
+'':GetFontName( @ [[#T|T]])''
+
+
+==== :GetPreviewText ====
+'':GetPreviewText( @ [[#T|T]])''
+
+
+==== New ====
+''New()''
+
+
+==== GetType ====
+''GetType()''
+
+

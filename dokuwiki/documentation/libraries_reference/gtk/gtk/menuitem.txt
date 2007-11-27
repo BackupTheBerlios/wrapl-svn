@@ -1,0 +1,119 @@
+====== MenuItem ======
+==== T ====
+=== inherits from ===
+  * [[..:..:Gtk:Gtk:Item#T|Gtk.Gtk.Item.T]]
+  * [[..:..:Gtk:Gtk:Bin#T|Gtk.Gtk.Bin.T]]
+  * [[..:..:Gtk:Gtk:Container#T|Gtk.Gtk.Container.T]]
+  * [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]
+  * [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]
+  * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
+
+
+==== :ToggleSizeRequest ====
+'':ToggleSizeRequest( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :ToggleSizeAllocate ====
+'':ToggleSizeAllocate( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :SetSubmenu ====
+'':SetSubmenu( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]])''
+
+
+==== :SetRightJustified ====
+'':SetRightJustified( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+
+
+==== :Submenu ====
+'':Submenu( @ [[#T|T]])''
+
+
+==== :EventWindow ====
+'':EventWindow( @ [[#T|T]])''
+
+
+==== :ToggleSize ====
+'':ToggleSize( @ [[#T|T]])''
+
+
+==== :AcceleratorWidth ====
+'':AcceleratorWidth( @ [[#T|T]])''
+
+
+==== :AccelPath ====
+'':AccelPath( @ [[#T|T]])''
+
+
+==== :ShowSubmenuIndicator ====
+'':ShowSubmenuIndicator( @ [[#T|T]])''
+
+
+==== :SubmenuPlacement ====
+'':SubmenuPlacement( @ [[#T|T]])''
+
+
+==== :SubmenuDirection ====
+'':SubmenuDirection( @ [[#T|T]])''
+
+
+==== :RightJustify ====
+'':RightJustify( @ [[#T|T]])''
+
+
+==== :TimerFromKeypress ====
+'':TimerFromKeypress( @ [[#T|T]])''
+
+
+==== :FromMenubar ====
+'':FromMenubar( @ [[#T|T]])''
+
+
+==== :Timer ====
+'':Timer( @ [[#T|T]])''
+
+
+==== :Activate ====
+'':Activate( @ [[#T|T]])''
+
+
+==== :Deselect ====
+'':Deselect( @ [[#T|T]])''
+
+
+==== :GetRightJustified ====
+'':GetRightJustified( @ [[#T|T]])''
+
+
+==== :GetSubmenu ====
+'':GetSubmenu( @ [[#T|T]])''
+
+
+==== :RemoveSubmenu ====
+'':RemoveSubmenu( @ [[#T|T]])''
+
+
+==== :Select ====
+'':Select( @ [[#T|T]])''
+
+
+==== :SetAccelPath ====
+'':SetAccelPath( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== New ====
+''New()''
+
+
+==== GetType ====
+''GetType()''
+
+
+==== NewWithMnemonic ====
+''NewWithMnemonic()''
+
+
+==== NewWithLabel ====
+''NewWithLabel()''
+
+

@@ -1,0 +1,146 @@
+====== GC ======
+==== T ====
+=== inherits from ===
+  * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
+
+
+==== :Unref ====
+'':Unref( @ [[#T|T]])''
+
+
+==== :SetValues ====
+'':SetValues( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:GCValues#T|Gtk.Gdk.GCValues.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :SetTsOrigin ====
+'':SetTsOrigin( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :ClipXOrigin ====
+'':ClipXOrigin( @ [[#T|T]])''
+
+
+==== :ClipYOrigin ====
+'':ClipYOrigin( @ [[#T|T]])''
+
+
+==== :TsXOrigin ====
+'':TsXOrigin( @ [[#T|T]])''
+
+
+==== :TsYOrigin ====
+'':TsYOrigin( @ [[#T|T]])''
+
+
+==== :Colormap ====
+'':Colormap( @ [[#T|T]])''
+
+
+==== :Copy ====
+'':Copy( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]])''
+
+
+==== :GetColormap ====
+'':GetColormap( @ [[#T|T]])''
+
+
+==== :GetScreen ====
+'':GetScreen( @ [[#T|T]])''
+
+
+==== :GetValues ====
+'':GetValues( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:GCValues#T|Gtk.Gdk.GCValues.T]])''
+
+
+==== :Offset ====
+'':Offset( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :Ref ====
+'':Ref( @ [[#T|T]])''
+
+
+==== :SetBackground ====
+'':SetBackground( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]])''
+
+
+==== :SetClipMask ====
+'':SetClipMask( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Bitmap#T|Gtk.Gdk.Bitmap.T]])''
+
+
+==== :SetClipOrigin ====
+'':SetClipOrigin( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :SetClipRectangle ====
+'':SetClipRectangle( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]])''
+
+
+==== :SetClipRegion ====
+'':SetClipRegion( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Region#T|Gtk.Gdk.Region.T]])''
+
+
+==== :SetColormap ====
+'':SetColormap( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Colormap#T|Gtk.Gdk.Colormap.T]])''
+
+
+==== :SetDashes ====
+'':SetDashes( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :SetExposures ====
+'':SetExposures( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+
+
+==== :SetFill ====
+'':SetFill( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Fill#T|Gtk.Gdk.Fill.T]])''
+
+
+==== :SetFont ====
+'':SetFont( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Font#T|Gtk.Gdk.Font.T]])''
+
+
+==== :SetForeground ====
+'':SetForeground( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]])''
+
+
+==== :SetFunction ====
+'':SetFunction( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Function#T|Gtk.Gdk.Function.T]])''
+
+
+==== :SetLineAttributes ====
+'':SetLineAttributes( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Gtk:Gdk:LineStyle#T|Gtk.Gdk.LineStyle.T]],  @ [[..:..:Gtk:Gdk:CapStyle#T|Gtk.Gdk.CapStyle.T]],  @ [[..:..:Gtk:Gdk:JoinStyle#T|Gtk.Gdk.JoinStyle.T]])''
+
+
+==== :SetRgbBgColor ====
+'':SetRgbBgColor( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]])''
+
+
+==== :SetRgbFgColor ====
+'':SetRgbFgColor( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]])''
+
+
+==== :SetStipple ====
+'':SetStipple( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Pixmap#T|Gtk.Gdk.Pixmap.T]])''
+
+
+==== :SetSubwindow ====
+'':SetSubwindow( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:SubwindowMode#T|Gtk.Gdk.SubwindowMode.T]])''
+
+
+==== :SetTile ====
+'':SetTile( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:Pixmap#T|Gtk.Gdk.Pixmap.T]])''
+
+
+==== New ====
+''New()''
+
+
+==== GetType ====
+''GetType()''
+
+
+==== NewWithValues ====
+''NewWithValues()''
+
+

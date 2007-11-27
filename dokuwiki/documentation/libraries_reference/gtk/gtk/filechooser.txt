@@ -1,0 +1,206 @@
+====== FileChooser ======
+==== T ====
+=== inherits from ===
+  * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
+
+
+==== :UnselectUri ====
+'':UnselectUri( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== :UnselectFilename ====
+'':UnselectFilename( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== :AddFilter ====
+'':AddFilter( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:FileFilter#T|Gtk.Gtk.FileFilter.T]])''
+
+
+==== :AddShortcutFolder ====
+'':AddShortcutFolder( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :AddShortcutFolderUri ====
+'':AddShortcutFolderUri( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :GetAction ====
+'':GetAction( @ [[#T|T]])''
+
+
+==== :GetCurrentFolder ====
+'':GetCurrentFolder( @ [[#T|T]])''
+
+
+==== :GetCurrentFolderUri ====
+'':GetCurrentFolderUri( @ [[#T|T]])''
+
+
+==== :GetDoOverwriteConfirmation ====
+'':GetDoOverwriteConfirmation( @ [[#T|T]])''
+
+
+==== :GetExtraWidget ====
+'':GetExtraWidget( @ [[#T|T]])''
+
+
+==== :GetFilename ====
+'':GetFilename( @ [[#T|T]])''
+
+
+==== :GetFilenames ====
+'':GetFilenames( @ [[#T|T]])''
+
+
+==== :GetFilter ====
+'':GetFilter( @ [[#T|T]])''
+
+
+==== :GetLocalOnly ====
+'':GetLocalOnly( @ [[#T|T]])''
+
+
+==== :GetPreviewFilename ====
+'':GetPreviewFilename( @ [[#T|T]])''
+
+
+==== :GetPreviewUri ====
+'':GetPreviewUri( @ [[#T|T]])''
+
+
+==== :GetPreviewWidget ====
+'':GetPreviewWidget( @ [[#T|T]])''
+
+
+==== :GetPreviewWidgetActive ====
+'':GetPreviewWidgetActive( @ [[#T|T]])''
+
+
+==== :GetSelectMultiple ====
+'':GetSelectMultiple( @ [[#T|T]])''
+
+
+==== :GetShowHidden ====
+'':GetShowHidden( @ [[#T|T]])''
+
+
+==== :GetUri ====
+'':GetUri( @ [[#T|T]])''
+
+
+==== :GetUris ====
+'':GetUris( @ [[#T|T]])''
+
+
+==== :GetUsePreviewLabel ====
+'':GetUsePreviewLabel( @ [[#T|T]])''
+
+
+==== :ListFilters ====
+'':ListFilters( @ [[#T|T]])''
+
+
+==== :ListShortcutFolderUris ====
+'':ListShortcutFolderUris( @ [[#T|T]])''
+
+
+==== :ListShortcutFolders ====
+'':ListShortcutFolders( @ [[#T|T]])''
+
+
+==== :RemoveFilter ====
+'':RemoveFilter( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:FileFilter#T|Gtk.Gtk.FileFilter.T]])''
+
+
+==== :RemoveShortcutFolder ====
+'':RemoveShortcutFolder( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :RemoveShortcutFolderUri ====
+'':RemoveShortcutFolderUri( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :SelectAll ====
+'':SelectAll( @ [[#T|T]])''
+
+
+==== :SelectFilename ====
+'':SelectFilename( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== :SelectUri ====
+'':SelectUri( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== :SetAction ====
+'':SetAction( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:FileChooserAction#T|Gtk.Gtk.FileChooserAction.T]])''
+
+
+==== :SetCurrentFolder ====
+'':SetCurrentFolder( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== :SetCurrentFolderUri ====
+'':SetCurrentFolderUri( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== :SetCurrentName ====
+'':SetCurrentName( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== :SetDoOverwriteConfirmation ====
+'':SetDoOverwriteConfirmation( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+
+
+==== :SetExtraWidget ====
+'':SetExtraWidget( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]])''
+
+
+==== :SetFilename ====
+'':SetFilename( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== :SetFilter ====
+'':SetFilter( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:FileFilter#T|Gtk.Gtk.FileFilter.T]])''
+
+
+==== :SetLocalOnly ====
+'':SetLocalOnly( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+
+
+==== :SetPreviewWidget ====
+'':SetPreviewWidget( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]])''
+
+
+==== :SetPreviewWidgetActive ====
+'':SetPreviewWidgetActive( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+
+
+==== :SetSelectMultiple ====
+'':SetSelectMultiple( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+
+
+==== :SetShowHidden ====
+'':SetShowHidden( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+
+
+==== :SetUri ====
+'':SetUri( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== :SetUsePreviewLabel ====
+'':SetUsePreviewLabel( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+
+
+==== :UnselectAll ====
+'':UnselectAll( @ [[#T|T]])''
+
+
+==== ErrorQuark ====
+''ErrorQuark()''
+
+
+==== GetType ====
+''GetType()''
+
+

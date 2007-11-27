@@ -1,0 +1,92 @@
+====== PaperSize ======
+==== T ====
+
+
+==== :ToKeyFile ====
+'':ToKeyFile( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== :SetSize ====
+'':SetSize( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Gtk:Gtk:Unit#T|Gtk.Gtk.Unit.T]])''
+
+
+==== :IsEqual ====
+'':IsEqual( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:PaperSize#T|Gtk.Gtk.PaperSize.T]])''
+
+
+==== :IsCustom ====
+'':IsCustom( @ [[#T|T]])''
+
+
+==== :GetWidth ====
+'':GetWidth( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Unit#T|Gtk.Gtk.Unit.T]])''
+
+
+==== :GetPpdName ====
+'':GetPpdName( @ [[#T|T]])''
+
+
+==== :GetName ====
+'':GetName( @ [[#T|T]])''
+
+
+==== :Copy ====
+'':Copy( @ [[#T|T]])''
+
+
+==== :Free ====
+'':Free( @ [[#T|T]])''
+
+
+==== :GetDefaultBottomMargin ====
+'':GetDefaultBottomMargin( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Unit#T|Gtk.Gtk.Unit.T]])''
+
+
+==== :GetDefaultLeftMargin ====
+'':GetDefaultLeftMargin( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Unit#T|Gtk.Gtk.Unit.T]])''
+
+
+==== :GetDefaultRightMargin ====
+'':GetDefaultRightMargin( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Unit#T|Gtk.Gtk.Unit.T]])''
+
+
+==== :GetDefaultTopMargin ====
+'':GetDefaultTopMargin( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Unit#T|Gtk.Gtk.Unit.T]])''
+
+
+==== :GetDisplayName ====
+'':GetDisplayName( @ [[#T|T]])''
+
+
+==== :GetHeight ====
+'':GetHeight( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Unit#T|Gtk.Gtk.Unit.T]])''
+
+
+==== New ====
+''New()''
+
+
+==== GetType ====
+''GetType()''
+
+
+==== GetPaperSizes ====
+''GetPaperSizes()''
+
+
+==== GetDefault ====
+''GetDefault()''
+
+
+==== NewFromPpd ====
+''NewFromPpd()''
+
+
+==== NewFromKeyFile ====
+''NewFromKeyFile()''
+
+
+==== NewCustom ====
+''NewCustom()''
+
+

@@ -1,0 +1,58 @@
+====== Settings ======
+==== T ====
+=== inherits from ===
+  * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
+
+
+==== :SetStringProperty ====
+'':SetStringProperty( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== :SetPropertyValue ====
+'':SetPropertyValue( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Gtk:Gtk:SettingsValue#T|Gtk.Gtk.SettingsValue.T]])''
+
+
+==== :SetLongProperty ====
+'':SetLongProperty( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== :SetDoubleProperty ====
+'':SetDoubleProperty( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== :Screen ====
+'':Screen( @ [[#T|T]])''
+
+
+==== :QueuedSettings ====
+'':QueuedSettings( @ [[#T|T]])''
+
+
+==== :PropertyValues ====
+'':PropertyValues( @ [[#T|T]])''
+
+
+==== :RcContext ====
+'':RcContext( @ [[#T|T]])''
+
+
+==== GetDefault ====
+''GetDefault()''
+
+
+==== InstallPropertyParser ====
+''InstallPropertyParser()''
+
+
+==== InstallProperty ====
+''InstallProperty()''
+
+
+==== GetType ====
+''GetType()''
+
+
+==== GetForScreen ====
+''GetForScreen()''
+
+

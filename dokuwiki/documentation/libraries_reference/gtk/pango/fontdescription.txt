@@ -1,0 +1,132 @@
+====== FontDescription ======
+==== T ====
+
+
+==== :UnsetFields ====
+'':UnsetFields( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :ToString ====
+'':ToString( @ [[#T|T]])''
+
+
+==== :ToFilename ====
+'':ToFilename( @ [[#T|T]])''
+
+
+==== :BetterMatch ====
+'':BetterMatch( @ [[#T|T]],  @ [[..:..:Gtk:Pango:FontDescription#T|Gtk.Pango.FontDescription.T]],  @ [[..:..:Gtk:Pango:FontDescription#T|Gtk.Pango.FontDescription.T]])''
+
+
+==== :Copy ====
+'':Copy( @ [[#T|T]])''
+
+
+==== :CopyStatic ====
+'':CopyStatic( @ [[#T|T]])''
+
+
+==== :Equal ====
+'':Equal( @ [[#T|T]],  @ [[..:..:Gtk:Pango:FontDescription#T|Gtk.Pango.FontDescription.T]])''
+
+
+==== :Free ====
+'':Free( @ [[#T|T]])''
+
+
+==== :GetFamily ====
+'':GetFamily( @ [[#T|T]])''
+
+
+==== :GetGravity ====
+'':GetGravity( @ [[#T|T]])''
+
+
+==== :GetSetFields ====
+'':GetSetFields( @ [[#T|T]])''
+
+
+==== :GetSize ====
+'':GetSize( @ [[#T|T]])''
+
+
+==== :GetSizeIsAbsolute ====
+'':GetSizeIsAbsolute( @ [[#T|T]])''
+
+
+==== :GetStretch ====
+'':GetStretch( @ [[#T|T]])''
+
+
+==== :GetStyle ====
+'':GetStyle( @ [[#T|T]])''
+
+
+==== :GetVariant ====
+'':GetVariant( @ [[#T|T]])''
+
+
+==== :GetWeight ====
+'':GetWeight( @ [[#T|T]])''
+
+
+==== :Hash ====
+'':Hash( @ [[#T|T]])''
+
+
+==== :Merge ====
+'':Merge( @ [[#T|T]],  @ [[..:..:Gtk:Pango:FontDescription#T|Gtk.Pango.FontDescription.T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+
+
+==== :MergeStatic ====
+'':MergeStatic( @ [[#T|T]],  @ [[..:..:Gtk:Pango:FontDescription#T|Gtk.Pango.FontDescription.T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+
+
+==== :SetAbsoluteSize ====
+'':SetAbsoluteSize( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+
+
+==== :SetFamily ====
+'':SetFamily( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== :SetFamilyStatic ====
+'':SetFamilyStatic( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== :SetGravity ====
+'':SetGravity( @ [[#T|T]],  @ [[..:..:Gtk:Pango:Gravity#T|Gtk.Pango.Gravity.T]])''
+
+
+==== :SetSize ====
+'':SetSize( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :SetStretch ====
+'':SetStretch( @ [[#T|T]],  @ [[..:..:Gtk:Pango:Stretch#T|Gtk.Pango.Stretch.T]])''
+
+
+==== :SetStyle ====
+'':SetStyle( @ [[#T|T]],  @ [[..:..:Gtk:Pango:Style#T|Gtk.Pango.Style.T]])''
+
+
+==== :SetVariant ====
+'':SetVariant( @ [[#T|T]],  @ [[..:..:Gtk:Pango:Variant#T|Gtk.Pango.Variant.T]])''
+
+
+==== :SetWeight ====
+'':SetWeight( @ [[#T|T]],  @ [[..:..:Gtk:Pango:Weight#T|Gtk.Pango.Weight.T]])''
+
+
+==== New ====
+''New()''
+
+
+==== GetType ====
+''GetType()''
+
+
+==== FromString ====
+''FromString()''
+
+

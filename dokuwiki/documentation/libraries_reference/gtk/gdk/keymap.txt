@@ -1,0 +1,46 @@
+====== Keymap ======
+==== T ====
+=== inherits from ===
+  * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
+
+
+==== :TranslateKeyboardState ====
+'':TranslateKeyboardState( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :LookupKey ====
+'':LookupKey( @ [[#T|T]],  @ [[..:..:Gtk:Gdk:KeymapKey#T|Gtk.Gdk.KeymapKey.T]])''
+
+
+==== :HaveBidiLayouts ====
+'':HaveBidiLayouts( @ [[#T|T]])''
+
+
+==== :Display ====
+'':Display( @ [[#T|T]])''
+
+
+==== :GetDirection ====
+'':GetDirection( @ [[#T|T]])''
+
+
+==== :GetEntriesForKeycode ====
+'':GetEntriesForKeycode( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :GetEntriesForKeyval ====
+'':GetEntriesForKeyval( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== GetDefault ====
+''GetDefault()''
+
+
+==== GetType ====
+''GetType()''
+
+
+==== GetForDisplay ====
+''GetForDisplay()''
+
+

@@ -1,0 +1,53 @@
+====== RadioMenuItem ======
+==== T ====
+=== inherits from ===
+  * [[..:..:Gtk:Gtk:CheckMenuItem#T|Gtk.Gtk.CheckMenuItem.T]]
+  * [[..:..:Gtk:Gtk:MenuItem#T|Gtk.Gtk.MenuItem.T]]
+  * [[..:..:Gtk:Gtk:Item#T|Gtk.Gtk.Item.T]]
+  * [[..:..:Gtk:Gtk:Bin#T|Gtk.Gtk.Bin.T]]
+  * [[..:..:Gtk:Gtk:Container#T|Gtk.Gtk.Container.T]]
+  * [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]
+  * [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]
+  * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
+
+
+==== :SetGroup ====
+'':SetGroup( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :GetGroup ====
+'':GetGroup( @ [[#T|T]])''
+
+
+==== :Group ====
+'':Group( @ [[#T|T]])''
+
+
+==== New ====
+''New()''
+
+
+==== NewWithMnemonic ====
+''NewWithMnemonic()''
+
+
+==== NewWithMnemonicFromWidget ====
+''NewWithMnemonicFromWidget()''
+
+
+==== GetType ====
+''GetType()''
+
+
+==== NewWithLabelFromWidget ====
+''NewWithLabelFromWidget()''
+
+
+==== NewWithLabel ====
+''NewWithLabel()''
+
+
+==== NewFromWidget ====
+''NewFromWidget()''
+
+

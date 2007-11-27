@@ -1,0 +1,144 @@
+====== RecentChooser ======
+==== T ====
+
+
+==== :UnselectUri ====
+'':UnselectUri( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== :UnselectAll ====
+'':UnselectAll( @ [[#T|T]])''
+
+
+==== :AddFilter ====
+'':AddFilter( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:RecentFilter#T|Gtk.Gtk.RecentFilter.T]])''
+
+
+==== :GetCurrentItem ====
+'':GetCurrentItem( @ [[#T|T]])''
+
+
+==== :GetCurrentUri ====
+'':GetCurrentUri( @ [[#T|T]])''
+
+
+==== :GetFilter ====
+'':GetFilter( @ [[#T|T]])''
+
+
+==== :GetItems ====
+'':GetItems( @ [[#T|T]])''
+
+
+==== :GetLimit ====
+'':GetLimit( @ [[#T|T]])''
+
+
+==== :GetLocalOnly ====
+'':GetLocalOnly( @ [[#T|T]])''
+
+
+==== :GetSelectMultiple ====
+'':GetSelectMultiple( @ [[#T|T]])''
+
+
+==== :GetShowIcons ====
+'':GetShowIcons( @ [[#T|T]])''
+
+
+==== :GetShowNotFound ====
+'':GetShowNotFound( @ [[#T|T]])''
+
+
+==== :GetShowNumbers ====
+'':GetShowNumbers( @ [[#T|T]])''
+
+
+==== :GetShowPrivate ====
+'':GetShowPrivate( @ [[#T|T]])''
+
+
+==== :GetShowTips ====
+'':GetShowTips( @ [[#T|T]])''
+
+
+==== :GetSortType ====
+'':GetSortType( @ [[#T|T]])''
+
+
+==== :GetUris ====
+'':GetUris( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :ListFilters ====
+'':ListFilters( @ [[#T|T]])''
+
+
+==== :RemoveFilter ====
+'':RemoveFilter( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:RecentFilter#T|Gtk.Gtk.RecentFilter.T]])''
+
+
+==== :SelectAll ====
+'':SelectAll( @ [[#T|T]])''
+
+
+==== :SelectUri ====
+'':SelectUri( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :SetCurrentUri ====
+'':SetCurrentUri( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :SetFilter ====
+'':SetFilter( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:RecentFilter#T|Gtk.Gtk.RecentFilter.T]])''
+
+
+==== :SetLimit ====
+'':SetLimit( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :SetLocalOnly ====
+'':SetLocalOnly( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+
+
+==== :SetSelectMultiple ====
+'':SetSelectMultiple( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+
+
+==== :SetShowIcons ====
+'':SetShowIcons( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+
+
+==== :SetShowNotFound ====
+'':SetShowNotFound( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+
+
+==== :SetShowNumbers ====
+'':SetShowNumbers( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+
+
+==== :SetShowPrivate ====
+'':SetShowPrivate( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+
+
+==== :SetShowTips ====
+'':SetShowTips( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+
+
+==== :SetSortFunc ====
+'':SetSortFunc( @ [[#T|T]],  @ [[..:..:Std:Function#T|Std.Function.T]],  @ [[..:..:Std:Address#T|Std.Address.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :SetSortType ====
+'':SetSortType( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:RecentSortType#T|Gtk.Gtk.RecentSortType.T]])''
+
+
+==== ErrorQuark ====
+''ErrorQuark()''
+
+
+==== GetType ====
+''GetType()''
+
+

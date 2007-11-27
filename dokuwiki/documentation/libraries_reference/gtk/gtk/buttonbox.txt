@@ -1,0 +1,66 @@
+====== ButtonBox ======
+==== T ====
+=== inherits from ===
+  * [[..:..:Gtk:Gtk:Box#T|Gtk.Gtk.Box.T]]
+  * [[..:..:Gtk:Gtk:Container#T|Gtk.Gtk.Container.T]]
+  * [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]
+  * [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]
+  * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
+
+
+==== :SetLayout ====
+'':SetLayout( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:ButtonBoxStyle#T|Gtk.Gtk.ButtonBoxStyle.T]])''
+
+
+==== :ChildMinWidth ====
+'':ChildMinWidth( @ [[#T|T]])''
+
+
+==== :ChildMinHeight ====
+'':ChildMinHeight( @ [[#T|T]])''
+
+
+==== :ChildIpadX ====
+'':ChildIpadX( @ [[#T|T]])''
+
+
+==== :ChildIpadY ====
+'':ChildIpadY( @ [[#T|T]])''
+
+
+==== :LayoutStyle ====
+'':LayoutStyle( @ [[#T|T]])''
+
+
+==== :GetChildIpadding ====
+'':GetChildIpadding( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :GetChildSecondary ====
+'':GetChildSecondary( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]])''
+
+
+==== :GetChildSize ====
+'':GetChildSize( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :GetLayout ====
+'':GetLayout( @ [[#T|T]])''
+
+
+==== :SetChildIpadding ====
+'':SetChildIpadding( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :SetChildSecondary ====
+'':SetChildSecondary( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+
+
+==== :SetChildSize ====
+'':SetChildSize( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== GetType ====
+''GetType()''
+
+

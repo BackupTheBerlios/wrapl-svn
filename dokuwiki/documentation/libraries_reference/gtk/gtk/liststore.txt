@@ -1,0 +1,147 @@
+====== ListStore ======
+==== T ====
+=== inherits from ===
+  * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
+  * [[..:..:Gtk:Gtk:TreeModel#T|Gtk.Gtk.TreeModel.T]]
+
+
+==== :Swap ====
+'':Swap( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]],  @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]])''
+
+
+==== :SetValuesv ====
+'':SetValuesv( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Gtk:GObject:Value#T|Gtk.GObject.Value.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :SetValue ====
+'':SetValue( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Gtk:GObject:Value#T|Gtk.GObject.Value.T]])''
+
+
+==== :Stamp ====
+'':Stamp( @ [[#T|T]])''
+
+
+==== :Seq ====
+'':Seq( @ [[#T|T]])''
+
+
+==== :GtkReserved1 ====
+'':GtkReserved1( @ [[#T|T]])''
+
+
+==== :SortList ====
+'':SortList( @ [[#T|T]])''
+
+
+==== :NColumns ====
+'':NColumns( @ [[#T|T]])''
+
+
+==== :SortColumnId ====
+'':SortColumnId( @ [[#T|T]])''
+
+
+==== :Order ====
+'':Order( @ [[#T|T]])''
+
+
+==== :ColumnHeaders ====
+'':ColumnHeaders( @ [[#T|T]])''
+
+
+==== :Length ====
+'':Length( @ [[#T|T]])''
+
+
+==== :DefaultSortFunc ====
+'':DefaultSortFunc( @ [[#T|T]])''
+
+
+==== :DefaultSortData ====
+'':DefaultSortData( @ [[#T|T]])''
+
+
+==== :DefaultSortDestroy ====
+'':DefaultSortDestroy( @ [[#T|T]])''
+
+
+==== :ColumnsDirty ====
+'':ColumnsDirty( @ [[#T|T]])''
+
+
+==== :Append ====
+'':Append( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]])''
+
+
+==== :Clear ====
+'':Clear( @ [[#T|T]])''
+
+
+==== :Insert ====
+'':Insert( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :InsertAfter ====
+'':InsertAfter( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]],  @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]])''
+
+
+==== :InsertBefore ====
+'':InsertBefore( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]],  @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]])''
+
+
+==== :InsertWithValues ====
+'':InsertWithValues( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :InsertWithValuesv ====
+'':InsertWithValuesv( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Gtk:GObject:Value#T|Gtk.GObject.Value.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :IterIsValid ====
+'':IterIsValid( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]])''
+
+
+==== :MoveAfter ====
+'':MoveAfter( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]],  @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]])''
+
+
+==== :MoveBefore ====
+'':MoveBefore( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]],  @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]])''
+
+
+==== :Prepend ====
+'':Prepend( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]])''
+
+
+==== :Remove ====
+'':Remove( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]])''
+
+
+==== :Reorder ====
+'':Reorder( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :Set ====
+'':Set( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :SetColumnTypes ====
+'':SetColumnTypes( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:List#T|Std.List.T]])''
+
+
+==== :SetValist ====
+'':SetValist( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== New ====
+''New()''
+
+
+==== GetType ====
+''GetType()''
+
+
+==== Newv ====
+''Newv()''
+
+

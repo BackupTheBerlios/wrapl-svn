@@ -1,0 +1,56 @@
+====== FileChooserButton ======
+==== T ====
+=== inherits from ===
+  * [[..:..:Gtk:Gtk:HBox#T|Gtk.Gtk.HBox.T]]
+  * [[..:..:Gtk:Gtk:Box#T|Gtk.Gtk.Box.T]]
+  * [[..:..:Gtk:Gtk:Container#T|Gtk.Gtk.Container.T]]
+  * [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]
+  * [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]
+  * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
+  * [[..:..:Gtk:Gtk:FileChooser#T|Gtk.Gtk.FileChooser.T]]
+
+
+==== :SetWidthChars ====
+'':SetWidthChars( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :SetTitle ====
+'':SetTitle( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== :SetFocusOnClick ====
+'':SetFocusOnClick( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+
+
+==== :GetWidthChars ====
+'':GetWidthChars( @ [[#T|T]])''
+
+
+==== :Priv ====
+'':Priv( @ [[#T|T]])''
+
+
+==== :GetFocusOnClick ====
+'':GetFocusOnClick( @ [[#T|T]])''
+
+
+==== :GetTitle ====
+'':GetTitle( @ [[#T|T]])''
+
+
+==== New ====
+''New()''
+
+
+==== GetType ====
+''GetType()''
+
+
+==== NewWithDialog ====
+''NewWithDialog()''
+
+
+==== NewWithBackend ====
+''NewWithBackend()''
+
+

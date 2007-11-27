@@ -1,0 +1,58 @@
+====== RecentFilter ======
+==== T ====
+=== inherits from ===
+  * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
+
+
+==== :SetName ====
+'':SetName( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== :GetNeeded ====
+'':GetNeeded( @ [[#T|T]])''
+
+
+==== :AddAge ====
+'':AddAge( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :AddApplication ====
+'':AddApplication( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== :AddCustom ====
+'':AddCustom( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:Function#T|Std.Function.T]],  @ [[..:..:Std:Address#T|Std.Address.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :AddGroup ====
+'':AddGroup( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== :AddMimeType ====
+'':AddMimeType( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== :AddPattern ====
+'':AddPattern( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== :AddPixbufFormats ====
+'':AddPixbufFormats( @ [[#T|T]])''
+
+
+==== :Filter ====
+'':Filter( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:RecentFilterInfo#T|Gtk.Gtk.RecentFilterInfo.T]])''
+
+
+==== :GetName ====
+'':GetName( @ [[#T|T]])''
+
+
+==== New ====
+''New()''
+
+
+==== GetType ====
+''GetType()''
+
+

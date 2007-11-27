@@ -1,0 +1,110 @@
+====== TreeModelSort ======
+==== T ====
+=== inherits from ===
+  * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
+
+
+==== :ResetDefaultSortFunc ====
+'':ResetDefaultSortFunc( @ [[#T|T]])''
+
+
+==== :IterIsValid ====
+'':IterIsValid( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]])''
+
+
+==== :Root ====
+'':Root( @ [[#T|T]])''
+
+
+==== :Stamp ====
+'':Stamp( @ [[#T|T]])''
+
+
+==== :ChildFlags ====
+'':ChildFlags( @ [[#T|T]])''
+
+
+==== :ChildModel ====
+'':ChildModel( @ [[#T|T]])''
+
+
+==== :ZeroRefCount ====
+'':ZeroRefCount( @ [[#T|T]])''
+
+
+==== :SortList ====
+'':SortList( @ [[#T|T]])''
+
+
+==== :SortColumnId ====
+'':SortColumnId( @ [[#T|T]])''
+
+
+==== :Order ====
+'':Order( @ [[#T|T]])''
+
+
+==== :DefaultSortFunc ====
+'':DefaultSortFunc( @ [[#T|T]])''
+
+
+==== :DefaultSortData ====
+'':DefaultSortData( @ [[#T|T]])''
+
+
+==== :DefaultSortDestroy ====
+'':DefaultSortDestroy( @ [[#T|T]])''
+
+
+==== :ChangedId ====
+'':ChangedId( @ [[#T|T]])''
+
+
+==== :InsertedId ====
+'':InsertedId( @ [[#T|T]])''
+
+
+==== :HasChildToggledId ====
+'':HasChildToggledId( @ [[#T|T]])''
+
+
+==== :DeletedId ====
+'':DeletedId( @ [[#T|T]])''
+
+
+==== :ReorderedId ====
+'':ReorderedId( @ [[#T|T]])''
+
+
+==== :ClearCache ====
+'':ClearCache( @ [[#T|T]])''
+
+
+==== :ConvertChildIterToIter ====
+'':ConvertChildIterToIter( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]],  @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]])''
+
+
+==== :ConvertChildPathToPath ====
+'':ConvertChildPathToPath( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]])''
+
+
+==== :ConvertIterToChildIter ====
+'':ConvertIterToChildIter( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]],  @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]])''
+
+
+==== :ConvertPathToChildPath ====
+'':ConvertPathToChildPath( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]])''
+
+
+==== :GetModel ====
+'':GetModel( @ [[#T|T]])''
+
+
+==== NewWithModel ====
+''NewWithModel()''
+
+
+==== GetType ====
+''GetType()''
+
+

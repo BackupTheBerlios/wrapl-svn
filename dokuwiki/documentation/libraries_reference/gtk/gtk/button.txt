@@ -1,0 +1,162 @@
+====== Button ======
+==== T ====
+=== inherits from ===
+  * [[..:..:Gtk:Gtk:Bin#T|Gtk.Gtk.Bin.T]]
+  * [[..:..:Gtk:Gtk:Container#T|Gtk.Gtk.Container.T]]
+  * [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]
+  * [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]
+  * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
+
+
+==== :SetUseUnderline ====
+'':SetUseUnderline( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+
+
+==== :SetUseStock ====
+'':SetUseStock( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+
+
+==== :SetRelief ====
+'':SetRelief( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:ReliefStyle#T|Gtk.Gtk.ReliefStyle.T]])''
+
+
+==== :SetLabel ====
+'':SetLabel( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== :SetImagePosition ====
+'':SetImagePosition( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:PositionType#T|Gtk.Gtk.PositionType.T]])''
+
+
+==== :EventWindow ====
+'':EventWindow( @ [[#T|T]])''
+
+
+==== :LabelText ====
+'':LabelText( @ [[#T|T]])''
+
+
+==== :ActivateTimeout ====
+'':ActivateTimeout( @ [[#T|T]])''
+
+
+==== :Constructed ====
+'':Constructed( @ [[#T|T]])''
+
+
+==== :InButton ====
+'':InButton( @ [[#T|T]])''
+
+
+==== :ButtonDown ====
+'':ButtonDown( @ [[#T|T]])''
+
+
+==== :Relief ====
+'':Relief( @ [[#T|T]])''
+
+
+==== :UseUnderline ====
+'':UseUnderline( @ [[#T|T]])''
+
+
+==== :UseStock ====
+'':UseStock( @ [[#T|T]])''
+
+
+==== :Depressed ====
+'':Depressed( @ [[#T|T]])''
+
+
+==== :DepressOnActivate ====
+'':DepressOnActivate( @ [[#T|T]])''
+
+
+==== :FocusOnClick ====
+'':FocusOnClick( @ [[#T|T]])''
+
+
+==== :Clicked ====
+'':Clicked( @ [[#T|T]])''
+
+
+==== :Enter ====
+'':Enter( @ [[#T|T]])''
+
+
+==== :GetAlignment ====
+'':GetAlignment( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :GetFocusOnClick ====
+'':GetFocusOnClick( @ [[#T|T]])''
+
+
+==== :GetImage ====
+'':GetImage( @ [[#T|T]])''
+
+
+==== :GetImagePosition ====
+'':GetImagePosition( @ [[#T|T]])''
+
+
+==== :GetLabel ====
+'':GetLabel( @ [[#T|T]])''
+
+
+==== :GetRelief ====
+'':GetRelief( @ [[#T|T]])''
+
+
+==== :GetUseStock ====
+'':GetUseStock( @ [[#T|T]])''
+
+
+==== :GetUseUnderline ====
+'':GetUseUnderline( @ [[#T|T]])''
+
+
+==== :Leave ====
+'':Leave( @ [[#T|T]])''
+
+
+==== :Pressed ====
+'':Pressed( @ [[#T|T]])''
+
+
+==== :Released ====
+'':Released( @ [[#T|T]])''
+
+
+==== :SetAlignment ====
+'':SetAlignment( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+
+
+==== :SetFocusOnClick ====
+'':SetFocusOnClick( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+
+
+==== :SetImage ====
+'':SetImage( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]])''
+
+
+==== New ====
+''New()''
+
+
+==== GetType ====
+''GetType()''
+
+
+==== NewWithMnemonic ====
+''NewWithMnemonic()''
+
+
+==== NewWithLabel ====
+''NewWithLabel()''
+
+
+==== NewFromStock ====
+''NewFromStock()''
+
+
