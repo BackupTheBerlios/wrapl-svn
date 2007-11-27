@@ -1,6 +1,6 @@
 ====== Rgb ======
 ==== ColormapDitherable ====
-''ColormapDitherable(cmap) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+''ColormapDitherable(cmap : [[..:..:Gtk:Gdk:Colormap#T|Gtk.Gdk.Colormap.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== Ditherable ====
@@ -8,15 +8,15 @@
 
 
 ==== FindColor ====
-''FindColor(colormap, color) : [[..:..:Std:Object#T|Std.Object.T]]''
+''FindColor(colormap : [[..:..:Gtk:Gdk:Colormap#T|Gtk.Gdk.Colormap.T]], color : [[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== GcSetBackground ====
-''GcSetBackground(gc, rgb) : [[..:..:Std:Object#T|Std.Object.T]]''
+''GcSetBackground(gc : [[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]], rgb : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== GcSetForeground ====
-''GcSetForeground(gc, rgb) : [[..:..:Std:Object#T|Std.Object.T]]''
+''GcSetForeground(gc : [[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]], rgb : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== GetColormap ====
@@ -32,18 +32,18 @@
 
 
 ==== SetInstall ====
-''SetInstall(install) : [[..:..:Std:Object#T|Std.Object.T]]''
+''SetInstall(install : [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== SetMinColors ====
-''SetMinColors(min_colors) : [[..:..:Std:Object#T|Std.Object.T]]''
+''SetMinColors(min_colors : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== SetVerbose ====
-''SetVerbose(verbose) : [[..:..:Std:Object#T|Std.Object.T]]''
+''SetVerbose(verbose : [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== XpixelFromRgb ====
-''XpixelFromRgb(rgb) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+''XpixelFromRgb(rgb : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 

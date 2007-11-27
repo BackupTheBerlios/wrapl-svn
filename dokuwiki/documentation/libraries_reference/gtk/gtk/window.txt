@@ -529,23 +529,23 @@
 
 
 ==== SetDefaultIconName ====
-''SetDefaultIconName(name) : [[..:..:Std:Object#T|Std.Object.T]]''
+''SetDefaultIconName(name : [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== SetDefaultIconList ====
-''SetDefaultIconList(list) : [[..:..:Std:Object#T|Std.Object.T]]''
+''SetDefaultIconList(list : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== SetDefaultIconFromFile ====
-''SetDefaultIconFromFile(filename, err) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+''SetDefaultIconFromFile(filename : [[..:..:Std:String#T|Std.String.T]], err : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== SetDefaultIcon ====
-''SetDefaultIcon(icon) : [[..:..:Std:Object#T|Std.Object.T]]''
+''SetDefaultIcon(icon : [[..:..:Gtk:Gdk:Pixbuf#T|Gtk.Gdk.Pixbuf.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== SetAutoStartupNotification ====
-''SetAutoStartupNotification(setting) : [[..:..:Std:Object#T|Std.Object.T]]''
+''SetAutoStartupNotification(setting : [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== ListToplevels ====

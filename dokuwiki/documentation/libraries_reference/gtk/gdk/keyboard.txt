@@ -1,13 +1,13 @@
 ====== Keyboard ======
 ==== Grab ====
-''Grab(window, owner_events, time_) : [[..:..:Gtk:Gdk:GrabStatus#T|Gtk.Gdk.GrabStatus.T]]''
+''Grab(window : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]], owner_events : [[..:..:Std:Symbol#T|Std.Symbol.T]], time_ : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Gtk:Gdk:GrabStatus#T|Gtk.Gdk.GrabStatus.T]]''
 
 
 ==== GrabInfoLibgtkOnly ====
-''GrabInfoLibgtkOnly(display, grab_window, owner_events) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+''GrabInfoLibgtkOnly(display : [[..:..:Gtk:Gdk:Display#T|Gtk.Gdk.Display.T]], grab_window : [[..:..:Std:Object#T|Std.Object.T]], owner_events : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== Ungrab ====
-''Ungrab(time_) : [[..:..:Std:Object#T|Std.Object.T]]''
+''Ungrab(time_ : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 

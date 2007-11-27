@@ -8,7 +8,7 @@
 
 
 ==== :PathDef ====
-'':PathDef( @ [[#T|T]]) : [[..:..:Gtk:GnomeCanvas:PathDef#T|Gtk.GnomeCanvas.PathDef.T]]''
+'':PathDef(self @ [[#T|T]]) : [[..:..:Gtk:GnomeCanvas:PathDef#T|Gtk.GnomeCanvas.PathDef.T]]''
 
 
 ==== GetType ====
@@ -16,6 +16,6 @@
 
 
 ==== ToPoint ====
-''ToPoint(poly, num_points, x, y) : [[..:..:Std:Real#T|Std.Real.T]]''
+''ToPoint(poly : [[..:..:Std:Object#T|Std.Object.T]], num_points : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], x : [[..:..:Std:Real#T|Std.Real.T]], y : [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 

@@ -1,26 +1,26 @@
 ====== Rc ======
 ==== AddClassStyle ====
-''AddClassStyle(rc_style, pattern) : [[..:..:Std:Object#T|Std.Object.T]]''
+''AddClassStyle(rc_style : [[..:..:Gtk:Gtk:RcStyle#T|Gtk.Gtk.RcStyle.T]], pattern : [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== AddDefaultFile ====
-''AddDefaultFile(filename) : [[..:..:Std:Object#T|Std.Object.T]]''
+''AddDefaultFile(filename : [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== AddWidgetClassStyle ====
-''AddWidgetClassStyle(rc_style, pattern) : [[..:..:Std:Object#T|Std.Object.T]]''
+''AddWidgetClassStyle(rc_style : [[..:..:Gtk:Gtk:RcStyle#T|Gtk.Gtk.RcStyle.T]], pattern : [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== AddWidgetNameStyle ====
-''AddWidgetNameStyle(rc_style, pattern) : [[..:..:Std:Object#T|Std.Object.T]]''
+''AddWidgetNameStyle(rc_style : [[..:..:Gtk:Gtk:RcStyle#T|Gtk.Gtk.RcStyle.T]], pattern : [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== FindModuleInPath ====
-''FindModuleInPath(module_file) : [[..:..:Std:String#T|Std.String.T]]''
+''FindModuleInPath(module_file : [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== FindPixmapInPath ====
-''FindPixmapInPath(settings, scanner, pixmap_file) : [[..:..:Std:String#T|Std.String.T]]''
+''FindPixmapInPath(settings : [[..:..:Gtk:Gtk:Settings#T|Gtk.Gtk.Settings.T]], scanner : [[..:..:Std:Object#T|Std.Object.T]], pixmap_file : [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== GetDefaultFiles ====
@@ -40,11 +40,11 @@
 
 
 ==== GetStyle ====
-''GetStyle(widget) : [[..:..:Gtk:Gtk:Style#T|Gtk.Gtk.Style.T]]''
+''GetStyle(widget : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Gtk:Gtk:Style#T|Gtk.Gtk.Style.T]]''
 
 
 ==== GetStyleByPaths ====
-''GetStyleByPaths(settings, widget_path, class_path, type) : [[..:..:Gtk:Gtk:Style#T|Gtk.Gtk.Style.T]]''
+''GetStyleByPaths(settings : [[..:..:Gtk:Gtk:Settings#T|Gtk.Gtk.Settings.T]], widget_path : [[..:..:Std:String#T|Std.String.T]], class_path : [[..:..:Std:String#T|Std.String.T]], type : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]) : [[..:..:Gtk:Gtk:Style#T|Gtk.Gtk.Style.T]]''
 
 
 ==== GetThemeDir ====
@@ -52,27 +52,27 @@
 
 
 ==== Parse ====
-''Parse(filename) : [[..:..:Std:Object#T|Std.Object.T]]''
+''Parse(filename : [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== ParseColor ====
-''ParseColor(scanner, color) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+''ParseColor(scanner : [[..:..:Std:Object#T|Std.Object.T]], color : [[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== ParseColorFull ====
-''ParseColorFull(scanner, style, color) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+''ParseColorFull(scanner : [[..:..:Std:Object#T|Std.Object.T]], style : [[..:..:Gtk:Gtk:RcStyle#T|Gtk.Gtk.RcStyle.T]], color : [[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== ParsePriority ====
-''ParsePriority(scanner, priority) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+''ParsePriority(scanner : [[..:..:Std:Object#T|Std.Object.T]], priority : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== ParseState ====
-''ParseState(scanner, state) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+''ParseState(scanner : [[..:..:Std:Object#T|Std.Object.T]], state : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== ParseString ====
-''ParseString(rc_string) : [[..:..:Std:Object#T|Std.Object.T]]''
+''ParseString(rc_string : [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== ReparseAll ====
@@ -80,11 +80,11 @@
 
 
 ==== ReparseAllForSettings ====
-''ReparseAllForSettings(settings, force_load) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+''ReparseAllForSettings(settings : [[..:..:Gtk:Gtk:Settings#T|Gtk.Gtk.Settings.T]], force_load : [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== ResetStyles ====
-''ResetStyles(settings) : [[..:..:Std:Object#T|Std.Object.T]]''
+''ResetStyles(settings : [[..:..:Gtk:Gtk:Settings#T|Gtk.Gtk.Settings.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== ScannerNew ====
@@ -92,6 +92,6 @@
 
 
 ==== SetDefaultFiles ====
-''SetDefaultFiles(filenames) : [[..:..:Std:Object#T|Std.Object.T]]''
+''SetDefaultFiles(filenames : [[..:..:Std:List#T|Std.List.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 

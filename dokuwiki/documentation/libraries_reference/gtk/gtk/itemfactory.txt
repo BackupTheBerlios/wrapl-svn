@@ -102,7 +102,7 @@
 
 
 ==== PathFromWidget ====
-''PathFromWidget(widget) : [[..:..:Std:String#T|Std.String.T]]''
+''PathFromWidget(widget : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== GetType ====
@@ -110,18 +110,18 @@
 
 
 ==== FromWidget ====
-''FromWidget(widget) : [[..:..:Gtk:Gtk:ItemFactory#T|Gtk.Gtk.ItemFactory.T]]''
+''FromWidget(widget : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Gtk:Gtk:ItemFactory#T|Gtk.Gtk.ItemFactory.T]]''
 
 
 ==== FromPath ====
-''FromPath(path) : [[..:..:Gtk:Gtk:ItemFactory#T|Gtk.Gtk.ItemFactory.T]]''
+''FromPath(path : [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Gtk:Gtk:ItemFactory#T|Gtk.Gtk.ItemFactory.T]]''
 
 
 ==== CreateMenuEntries ====
-''CreateMenuEntries(n_entries, entries) : [[..:..:Std:Object#T|Std.Object.T]]''
+''CreateMenuEntries(n_entries : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], entries : [[..:..:Gtk:Gtk:MenuEntry#T|Gtk.Gtk.MenuEntry.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== AddForeign ====
-''AddForeign(accel_widget, full_path, accel_group, keyval, modifiers) : [[..:..:Std:Object#T|Std.Object.T]]''
+''AddForeign(accel_widget : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], full_path : [[..:..:Std:String#T|Std.String.T]], accel_group : [[..:..:Gtk:Gtk:AccelGroup#T|Gtk.Gtk.AccelGroup.T]], keyval : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], modifiers : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 

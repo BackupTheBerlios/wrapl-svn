@@ -1,69 +1,69 @@
 ====== Cairo ======
 ==== ContextGetFontOptions ====
-''ContextGetFontOptions(context) : [[..:..:Gtk:Cairo:CairoFontOptionsT#T|Gtk.Cairo.CairoFontOptionsT.T]]''
+''ContextGetFontOptions(context : [[..:..:Gtk:Pango:Context#T|Gtk.Pango.Context.T]]) : [[..:..:Gtk:Cairo:CairoFontOptionsT#T|Gtk.Cairo.CairoFontOptionsT.T]]''
 
 
 ==== ContextGetResolution ====
-''ContextGetResolution(context) : [[..:..:Std:Real#T|Std.Real.T]]''
+''ContextGetResolution(context : [[..:..:Gtk:Pango:Context#T|Gtk.Pango.Context.T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== ContextGetShapeRenderer ====
-''ContextGetShapeRenderer(context, data) : [[..:..:Std:Function#T|Std.Function.T]]''
+''ContextGetShapeRenderer(context : [[..:..:Gtk:Pango:Context#T|Gtk.Pango.Context.T]], data : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Function#T|Std.Function.T]]''
 
 
 ==== ContextSetFontOptions ====
-''ContextSetFontOptions(context, options) : [[..:..:Std:Object#T|Std.Object.T]]''
+''ContextSetFontOptions(context : [[..:..:Gtk:Pango:Context#T|Gtk.Pango.Context.T]], options : [[..:..:Gtk:Cairo:CairoFontOptionsT#T|Gtk.Cairo.CairoFontOptionsT.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== ContextSetResolution ====
-''ContextSetResolution(context, dpi) : [[..:..:Std:Object#T|Std.Object.T]]''
+''ContextSetResolution(context : [[..:..:Gtk:Pango:Context#T|Gtk.Pango.Context.T]], dpi : [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== ContextSetShapeRenderer ====
-''ContextSetShapeRenderer(context, func, data, dnotify) : [[..:..:Std:Object#T|Std.Object.T]]''
+''ContextSetShapeRenderer(context : [[..:..:Gtk:Pango:Context#T|Gtk.Pango.Context.T]], func : [[..:..:Std:Function#T|Std.Function.T]], data : [[..:..:Std:Address#T|Std.Address.T]], dnotify : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== CreateLayout ====
-''CreateLayout(cr) : [[..:..:Gtk:Pango:Layout#T|Gtk.Pango.Layout.T]]''
+''CreateLayout(cr : [[..:..:Gtk:Cairo:CairoT#T|Gtk.Cairo.CairoT.T]]) : [[..:..:Gtk:Pango:Layout#T|Gtk.Pango.Layout.T]]''
 
 
 ==== ErrorUnderlinePath ====
-''ErrorUnderlinePath(cr, x, y, width, height) : [[..:..:Std:Object#T|Std.Object.T]]''
+''ErrorUnderlinePath(cr : [[..:..:Gtk:Cairo:CairoT#T|Gtk.Cairo.CairoT.T]], x : [[..:..:Std:Real#T|Std.Real.T]], y : [[..:..:Std:Real#T|Std.Real.T]], width : [[..:..:Std:Real#T|Std.Real.T]], height : [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== GlyphStringPath ====
-''GlyphStringPath(cr, font, glyphs) : [[..:..:Std:Object#T|Std.Object.T]]''
+''GlyphStringPath(cr : [[..:..:Gtk:Cairo:CairoT#T|Gtk.Cairo.CairoT.T]], font : [[..:..:Gtk:Pango:Font#T|Gtk.Pango.Font.T]], glyphs : [[..:..:Gtk:Pango:GlyphString#T|Gtk.Pango.GlyphString.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== LayoutLinePath ====
-''LayoutLinePath(cr, line) : [[..:..:Std:Object#T|Std.Object.T]]''
+''LayoutLinePath(cr : [[..:..:Gtk:Cairo:CairoT#T|Gtk.Cairo.CairoT.T]], line : [[..:..:Gtk:Pango:LayoutLine#T|Gtk.Pango.LayoutLine.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== LayoutPath ====
-''LayoutPath(cr, layout) : [[..:..:Std:Object#T|Std.Object.T]]''
+''LayoutPath(cr : [[..:..:Gtk:Cairo:CairoT#T|Gtk.Cairo.CairoT.T]], layout : [[..:..:Gtk:Pango:Layout#T|Gtk.Pango.Layout.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== ShowErrorUnderline ====
-''ShowErrorUnderline(cr, x, y, width, height) : [[..:..:Std:Object#T|Std.Object.T]]''
+''ShowErrorUnderline(cr : [[..:..:Gtk:Cairo:CairoT#T|Gtk.Cairo.CairoT.T]], x : [[..:..:Std:Real#T|Std.Real.T]], y : [[..:..:Std:Real#T|Std.Real.T]], width : [[..:..:Std:Real#T|Std.Real.T]], height : [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== ShowGlyphString ====
-''ShowGlyphString(cr, font, glyphs) : [[..:..:Std:Object#T|Std.Object.T]]''
+''ShowGlyphString(cr : [[..:..:Gtk:Cairo:CairoT#T|Gtk.Cairo.CairoT.T]], font : [[..:..:Gtk:Pango:Font#T|Gtk.Pango.Font.T]], glyphs : [[..:..:Gtk:Pango:GlyphString#T|Gtk.Pango.GlyphString.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== ShowLayout ====
-''ShowLayout(cr, layout) : [[..:..:Std:Object#T|Std.Object.T]]''
+''ShowLayout(cr : [[..:..:Gtk:Cairo:CairoT#T|Gtk.Cairo.CairoT.T]], layout : [[..:..:Gtk:Pango:Layout#T|Gtk.Pango.Layout.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== ShowLayoutLine ====
-''ShowLayoutLine(cr, line) : [[..:..:Std:Object#T|Std.Object.T]]''
+''ShowLayoutLine(cr : [[..:..:Gtk:Cairo:CairoT#T|Gtk.Cairo.CairoT.T]], line : [[..:..:Gtk:Pango:LayoutLine#T|Gtk.Pango.LayoutLine.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== UpdateContext ====
-''UpdateContext(cr, context) : [[..:..:Std:Object#T|Std.Object.T]]''
+''UpdateContext(cr : [[..:..:Gtk:Cairo:CairoT#T|Gtk.Cairo.CairoT.T]], context : [[..:..:Gtk:Pango:Context#T|Gtk.Pango.Context.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== UpdateLayout ====
-''UpdateLayout(cr, layout) : [[..:..:Std:Object#T|Std.Object.T]]''
+''UpdateLayout(cr : [[..:..:Gtk:Cairo:CairoT#T|Gtk.Cairo.CairoT.T]], layout : [[..:..:Gtk:Pango:Layout#T|Gtk.Pango.Layout.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 

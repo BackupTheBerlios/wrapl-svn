@@ -249,15 +249,15 @@
 
 
 ==== UpdateBbox ====
-''UpdateBbox(item, x1, y1, x2, y2) : [[..:..:Std:Object#T|Std.Object.T]]''
+''UpdateBbox(item : [[..:..:Gtk:GnomeCanvas:Item#T|Gtk.GnomeCanvas.Item.T]], x1 : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y1 : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], x2 : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y2 : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== RenderSvp ====
-''RenderSvp(buf, svp, rgba) : [[..:..:Std:Object#T|Std.Object.T]]''
+''RenderSvp(buf : [[..:..:Gtk:GnomeCanvas:Buf#T|Gtk.GnomeCanvas.Buf.T]], svp : [[..:..:Gtk:Art:SVP#T|Gtk.Art.SVP.T]], rgba : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== JoinGdkToArt ====
-''JoinGdkToArt(gdk_join) : [[..:..:Gtk:Art:PathStrokeJoinType#T|Gtk.Art.PathStrokeJoinType.T]]''
+''JoinGdkToArt(gdk_join : [[..:..:Gtk:Gdk:JoinStyle#T|Gtk.Gdk.JoinStyle.T]]) : [[..:..:Gtk:Art:PathStrokeJoinType#T|Gtk.Art.PathStrokeJoinType.T]]''
 
 
 ==== GetType ====
@@ -265,15 +265,15 @@
 
 
 ==== GetMiterPoints ====
-''GetMiterPoints(x1, y1, x2, y2, x3, y3, width, mx1, my1, mx2, my2) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+''GetMiterPoints(x1 : [[..:..:Std:Real#T|Std.Real.T]], y1 : [[..:..:Std:Real#T|Std.Real.T]], x2 : [[..:..:Std:Real#T|Std.Real.T]], y2 : [[..:..:Std:Real#T|Std.Real.T]], x3 : [[..:..:Std:Real#T|Std.Real.T]], y3 : [[..:..:Std:Real#T|Std.Real.T]], width : [[..:..:Std:Real#T|Std.Real.T]], mx1 : [[..:..:Std:Object#T|Std.Object.T]], my1 : [[..:..:Std:Object#T|Std.Object.T]], mx2 : [[..:..:Std:Object#T|Std.Object.T]], my2 : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== GetButtPoints ====
-''GetButtPoints(x1, y1, x2, y2, width, project, bx1, by1, bx2, by2) : [[..:..:Std:Object#T|Std.Object.T]]''
+''GetButtPoints(x1 : [[..:..:Std:Real#T|Std.Real.T]], y1 : [[..:..:Std:Real#T|Std.Real.T]], x2 : [[..:..:Std:Real#T|Std.Real.T]], y2 : [[..:..:Std:Real#T|Std.Real.T]], width : [[..:..:Std:Real#T|Std.Real.T]], project : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], bx1 : [[..:..:Std:Object#T|Std.Object.T]], by1 : [[..:..:Std:Object#T|Std.Object.T]], bx2 : [[..:..:Std:Object#T|Std.Object.T]], by2 : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== CapGdkToArt ====
-''CapGdkToArt(gdk_cap) : [[..:..:Gtk:Art:PathStrokeCapType#T|Gtk.Art.PathStrokeCapType.T]]''
+''CapGdkToArt(gdk_cap : [[..:..:Gtk:Gdk:CapStyle#T|Gtk.Gdk.CapStyle.T]]) : [[..:..:Gtk:Art:PathStrokeCapType#T|Gtk.Art.PathStrokeCapType.T]]''
 
 
 ==== NewAa ====

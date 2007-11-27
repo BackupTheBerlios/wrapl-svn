@@ -77,15 +77,15 @@
 
 
 ==== GetBestWithType ====
-''GetBestWithType(visual_type) : [[..:..:Gtk:Gdk:Visual#T|Gtk.Gdk.Visual.T]]''
+''GetBestWithType(visual_type : [[..:..:Gtk:Gdk:VisualType#T|Gtk.Gdk.VisualType.T]]) : [[..:..:Gtk:Gdk:Visual#T|Gtk.Gdk.Visual.T]]''
 
 
 ==== GetBestWithDepth ====
-''GetBestWithDepth(depth) : [[..:..:Gtk:Gdk:Visual#T|Gtk.Gdk.Visual.T]]''
+''GetBestWithDepth(depth : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Gtk:Gdk:Visual#T|Gtk.Gdk.Visual.T]]''
 
 
 ==== GetBestWithBoth ====
-''GetBestWithBoth(depth, visual_type) : [[..:..:Gtk:Gdk:Visual#T|Gtk.Gdk.Visual.T]]''
+''GetBestWithBoth(depth : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], visual_type : [[..:..:Gtk:Gdk:VisualType#T|Gtk.Gdk.VisualType.T]]) : [[..:..:Gtk:Gdk:Visual#T|Gtk.Gdk.Visual.T]]''
 
 
 ==== GetBestType ====

@@ -4,39 +4,39 @@
 
 
 ==== ExecuteAsync ====
-''ExecuteAsync(dir, argc, argv) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+''ExecuteAsync(dir : [[..:..:Std:String#T|Std.String.T]], argc : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], argv : [[..:..:Std:List#T|Std.List.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== ExecuteAsyncFds ====
-''ExecuteAsyncFds(dir, argc, argv, close_fds) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+''ExecuteAsyncFds(dir : [[..:..:Std:String#T|Std.String.T]], argc : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], argv : [[..:..:Std:List#T|Std.List.T]], close_fds : [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== ExecuteAsyncWithEnv ====
-''ExecuteAsyncWithEnv(dir, argc, argv, envc, envv) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+''ExecuteAsyncWithEnv(dir : [[..:..:Std:String#T|Std.String.T]], argc : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], argv : [[..:..:Std:List#T|Std.List.T]], envc : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], envv : [[..:..:Std:List#T|Std.List.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== ExecuteAsyncWithEnvFds ====
-''ExecuteAsyncWithEnvFds(dir, argc, argv, envc, envv, close_fds) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+''ExecuteAsyncWithEnvFds(dir : [[..:..:Std:String#T|Std.String.T]], argc : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], argv : [[..:..:Std:List#T|Std.List.T]], envc : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], envv : [[..:..:Std:List#T|Std.List.T]], close_fds : [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== ExecuteShell ====
-''ExecuteShell(dir, commandline) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+''ExecuteShell(dir : [[..:..:Std:String#T|Std.String.T]], commandline : [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== ExecuteShellFds ====
-''ExecuteShellFds(dir, commandline, close_fds) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+''ExecuteShellFds(dir : [[..:..:Std:String#T|Std.String.T]], commandline : [[..:..:Std:String#T|Std.String.T]], close_fds : [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== ExecuteTerminalShell ====
-''ExecuteTerminalShell(dir, commandline) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+''ExecuteTerminalShell(dir : [[..:..:Std:String#T|Std.String.T]], commandline : [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== ExecuteTerminalShellFds ====
-''ExecuteTerminalShellFds(dir, commandline, close_fds) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+''ExecuteTerminalShellFds(dir : [[..:..:Std:String#T|Std.String.T]], commandline : [[..:..:Std:String#T|Std.String.T]], close_fds : [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== PrependTerminalToVector ====
-''PrependTerminalToVector(argc, argv) : [[..:..:Std:Object#T|Std.Object.T]]''
+''PrependTerminalToVector(argc : [[..:..:Std:Object#T|Std.Object.T]], argv : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== UtilUserShell ====

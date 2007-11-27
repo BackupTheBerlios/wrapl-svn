@@ -1,9 +1,9 @@
 ====== Gc ======
 ==== Get ====
-''Get(depth, colormap, values, values_mask) : [[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]]''
+''Get(depth : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], colormap : [[..:..:Gtk:Gdk:Colormap#T|Gtk.Gdk.Colormap.T]], values : [[..:..:Gtk:Gdk:GCValues#T|Gtk.Gdk.GCValues.T]], values_mask : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]]''
 
 
 ==== Release ====
-''Release(gc) : [[..:..:Std:Object#T|Std.Object.T]]''
+''Release(gc : [[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 

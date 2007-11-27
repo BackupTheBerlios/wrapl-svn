@@ -1,13 +1,13 @@
 ====== Colors ======
 ==== Alloc ====
-''Alloc(colormap, contiguous, planes, nplanes, pixels, npixels) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+''Alloc(colormap : [[..:..:Gtk:Gdk:Colormap#T|Gtk.Gdk.Colormap.T]], contiguous : [[..:..:Std:Symbol#T|Std.Symbol.T]], planes : [[..:..:Std:Object#T|Std.Object.T]], nplanes : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], pixels : [[..:..:Std:Object#T|Std.Object.T]], npixels : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== Free ====
-''Free(colormap, pixels, npixels, planes) : [[..:..:Std:Object#T|Std.Object.T]]''
+''Free(colormap : [[..:..:Gtk:Gdk:Colormap#T|Gtk.Gdk.Colormap.T]], pixels : [[..:..:Std:Object#T|Std.Object.T]], npixels : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], planes : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== Store ====
-''Store(colormap, colors, ncolors) : [[..:..:Std:Object#T|Std.Object.T]]''
+''Store(colormap : [[..:..:Gtk:Gdk:Colormap#T|Gtk.Gdk.Colormap.T]], colors : [[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]], ncolors : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 

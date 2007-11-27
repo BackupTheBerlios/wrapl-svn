@@ -1,9 +1,9 @@
 ====== Key ======
 ==== SnooperInstall ====
-''SnooperInstall(snooper, func_data) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+''SnooperInstall(snooper : [[..:..:Std:Function#T|Std.Function.T]], func_data : [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== SnooperRemove ====
-''SnooperRemove(snooper_handler_id) : [[..:..:Std:Object#T|Std.Object.T]]''
+''SnooperRemove(snooper_handler_id : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 

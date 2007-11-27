@@ -1,41 +1,41 @@
 ====== Text ======
 ==== Extents ====
-''Extents(font, text, text_length, lbearing, rbearing, width, ascent, descent) : [[..:..:Std:Object#T|Std.Object.T]]''
+''Extents(font : [[..:..:Gtk:Gdk:Font#T|Gtk.Gdk.Font.T]], text : [[..:..:Std:String#T|Std.String.T]], text_length : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], lbearing : [[..:..:Std:Object#T|Std.Object.T]], rbearing : [[..:..:Std:Object#T|Std.Object.T]], width : [[..:..:Std:Object#T|Std.Object.T]], ascent : [[..:..:Std:Object#T|Std.Object.T]], descent : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== ExtentsWc ====
-''ExtentsWc(font, text, text_length, lbearing, rbearing, width, ascent, descent) : [[..:..:Std:Object#T|Std.Object.T]]''
+''ExtentsWc(font : [[..:..:Gtk:Gdk:Font#T|Gtk.Gdk.Font.T]], text : [[..:..:Std:Object#T|Std.Object.T]], text_length : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], lbearing : [[..:..:Std:Object#T|Std.Object.T]], rbearing : [[..:..:Std:Object#T|Std.Object.T]], width : [[..:..:Std:Object#T|Std.Object.T]], ascent : [[..:..:Std:Object#T|Std.Object.T]], descent : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== Height ====
-''Height(font, text, text_length) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+''Height(font : [[..:..:Gtk:Gdk:Font#T|Gtk.Gdk.Font.T]], text : [[..:..:Std:String#T|Std.String.T]], text_length : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== Measure ====
-''Measure(font, text, text_length) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+''Measure(font : [[..:..:Gtk:Gdk:Font#T|Gtk.Gdk.Font.T]], text : [[..:..:Std:String#T|Std.String.T]], text_length : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== PropertyToTextList ====
-''PropertyToTextList(encoding, format, text, length, list) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+''PropertyToTextList(encoding : [[..:..:Std:Object#T|Std.Object.T]], format : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], text : [[..:..:Std:String#T|Std.String.T]], length : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], list : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== PropertyToTextListForDisplay ====
-''PropertyToTextListForDisplay(display, encoding, format, text, length, list) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+''PropertyToTextListForDisplay(display : [[..:..:Gtk:Gdk:Display#T|Gtk.Gdk.Display.T]], encoding : [[..:..:Std:Object#T|Std.Object.T]], format : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], text : [[..:..:Std:String#T|Std.String.T]], length : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], list : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== PropertyToUtf8List ====
-''PropertyToUtf8List(encoding, format, text, length, list) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+''PropertyToUtf8List(encoding : [[..:..:Std:Object#T|Std.Object.T]], format : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], text : [[..:..:Std:String#T|Std.String.T]], length : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], list : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== PropertyToUtf8ListForDisplay ====
-''PropertyToUtf8ListForDisplay(display, encoding, format, text, length, list) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+''PropertyToUtf8ListForDisplay(display : [[..:..:Gtk:Gdk:Display#T|Gtk.Gdk.Display.T]], encoding : [[..:..:Std:Object#T|Std.Object.T]], format : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], text : [[..:..:Std:String#T|Std.String.T]], length : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], list : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== Width ====
-''Width(font, text, text_length) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+''Width(font : [[..:..:Gtk:Gdk:Font#T|Gtk.Gdk.Font.T]], text : [[..:..:Std:String#T|Std.String.T]], text_length : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== WidthWc ====
-''WidthWc(font, text, text_length) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+''WidthWc(font : [[..:..:Gtk:Gdk:Font#T|Gtk.Gdk.Font.T]], text : [[..:..:Std:Object#T|Std.Object.T]], text_length : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 

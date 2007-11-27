@@ -1,9 +1,9 @@
 ====== Fontset ======
 ==== Load ====
-''Load(fontset_name) : [[..:..:Gtk:Gdk:Font#T|Gtk.Gdk.Font.T]]''
+''Load(fontset_name : [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Gtk:Gdk:Font#T|Gtk.Gdk.Font.T]]''
 
 
 ==== LoadForDisplay ====
-''LoadForDisplay(display, fontset_name) : [[..:..:Gtk:Gdk:Font#T|Gtk.Gdk.Font.T]]''
+''LoadForDisplay(display : [[..:..:Gtk:Gdk:Display#T|Gtk.Gdk.Display.T]], fontset_name : [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Gtk:Gdk:Font#T|Gtk.Gdk.Font.T]]''
 
 

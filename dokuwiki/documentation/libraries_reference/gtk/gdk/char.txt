@@ -1,17 +1,17 @@
 ====== Char ======
 ==== Height ====
-''Height(font, character) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+''Height(font : [[..:..:Gtk:Gdk:Font#T|Gtk.Gdk.Font.T]], character : [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== Measure ====
-''Measure(font, character) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+''Measure(font : [[..:..:Gtk:Gdk:Font#T|Gtk.Gdk.Font.T]], character : [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== Width ====
-''Width(font, character) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+''Width(font : [[..:..:Gtk:Gdk:Font#T|Gtk.Gdk.Font.T]], character : [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== WidthWc ====
-''WidthWc(font, character) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+''WidthWc(font : [[..:..:Gtk:Gdk:Font#T|Gtk.Gdk.Font.T]], character : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 

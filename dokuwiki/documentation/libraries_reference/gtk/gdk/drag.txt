@@ -1,45 +1,45 @@
 ====== Drag ======
 ==== Abort ====
-''Abort(context, time_) : [[..:..:Std:Object#T|Std.Object.T]]''
+''Abort(context : [[..:..:Gtk:Gdk:DragContext#T|Gtk.Gdk.DragContext.T]], time_ : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== Begin ====
-''Begin(window, targets) : [[..:..:Gtk:Gdk:DragContext#T|Gtk.Gdk.DragContext.T]]''
+''Begin(window : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]], targets : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Gtk:Gdk:DragContext#T|Gtk.Gdk.DragContext.T]]''
 
 
 ==== Drop ====
-''Drop(context, time_) : [[..:..:Std:Object#T|Std.Object.T]]''
+''Drop(context : [[..:..:Gtk:Gdk:DragContext#T|Gtk.Gdk.DragContext.T]], time_ : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== DropSucceeded ====
-''DropSucceeded(context) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+''DropSucceeded(context : [[..:..:Gtk:Gdk:DragContext#T|Gtk.Gdk.DragContext.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== FindWindow ====
-''FindWindow(context, drag_window, x_root, y_root, dest_window, protocol) : [[..:..:Std:Object#T|Std.Object.T]]''
+''FindWindow(context : [[..:..:Gtk:Gdk:DragContext#T|Gtk.Gdk.DragContext.T]], drag_window : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]], x_root : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y_root : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], dest_window : [[..:..:Std:Object#T|Std.Object.T]], protocol : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== FindWindowForScreen ====
-''FindWindowForScreen(context, drag_window, screen, x_root, y_root, dest_window, protocol) : [[..:..:Std:Object#T|Std.Object.T]]''
+''FindWindowForScreen(context : [[..:..:Gtk:Gdk:DragContext#T|Gtk.Gdk.DragContext.T]], drag_window : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]], screen : [[..:..:Gtk:Gdk:Screen#T|Gtk.Gdk.Screen.T]], x_root : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y_root : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], dest_window : [[..:..:Std:Object#T|Std.Object.T]], protocol : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== GetProtocol ====
-''GetProtocol(xid, protocol) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+''GetProtocol(xid : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], protocol : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== GetProtocolForDisplay ====
-''GetProtocolForDisplay(display, xid, protocol) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+''GetProtocolForDisplay(display : [[..:..:Gtk:Gdk:Display#T|Gtk.Gdk.Display.T]], xid : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], protocol : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== GetSelection ====
-''GetSelection(context) : [[..:..:Std:Object#T|Std.Object.T]]''
+''GetSelection(context : [[..:..:Gtk:Gdk:DragContext#T|Gtk.Gdk.DragContext.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== Motion ====
-''Motion(context, dest_window, protocol, x_root, y_root, suggested_action, possible_actions, time_) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+''Motion(context : [[..:..:Gtk:Gdk:DragContext#T|Gtk.Gdk.DragContext.T]], dest_window : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]], protocol : [[..:..:Gtk:Gdk:DragProtocol#T|Gtk.Gdk.DragProtocol.T]], x_root : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y_root : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], suggested_action : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], possible_actions : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], time_ : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== Status ====
-''Status(context, action, time_) : [[..:..:Std:Object#T|Std.Object.T]]''
+''Status(context : [[..:..:Gtk:Gdk:DragContext#T|Gtk.Gdk.DragContext.T]], action : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], time_ : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 

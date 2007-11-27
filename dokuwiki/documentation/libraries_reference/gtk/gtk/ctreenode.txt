@@ -11,31 +11,31 @@
 
 
 ==== GetCellType ====
-''GetCellType(ctree, node, column) : [[..:..:Gtk:Gtk:CellType#T|Gtk.Gtk.CellType.T]]''
+''GetCellType(ctree : [[..:..:Gtk:Gtk:CTree#T|Gtk.Gtk.CTree.T]], node : [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]], column : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Gtk:Gtk:CellType#T|Gtk.Gtk.CellType.T]]''
 
 
 ==== GetPixmap ====
-''GetPixmap(ctree, node, column, pixmap, mask) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+''GetPixmap(ctree : [[..:..:Gtk:Gtk:CTree#T|Gtk.Gtk.CTree.T]], node : [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]], column : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], pixmap : [[..:..:Std:Object#T|Std.Object.T]], mask : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== GetPixtext ====
-''GetPixtext(ctree, node, column, text, spacing, pixmap, mask) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+''GetPixtext(ctree : [[..:..:Gtk:Gtk:CTree#T|Gtk.Gtk.CTree.T]], node : [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]], column : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], text : [[..:..:Std:List#T|Std.List.T]], spacing : [[..:..:Std:Object#T|Std.Object.T]], pixmap : [[..:..:Std:Object#T|Std.Object.T]], mask : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== GetRowData ====
-''GetRowData(ctree, node) : [[..:..:Std:Address#T|Std.Address.T]]''
+''GetRowData(ctree : [[..:..:Gtk:Gtk:CTree#T|Gtk.Gtk.CTree.T]], node : [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]]) : [[..:..:Std:Address#T|Std.Address.T]]''
 
 
 ==== GetRowStyle ====
-''GetRowStyle(ctree, node) : [[..:..:Gtk:Gtk:Style#T|Gtk.Gtk.Style.T]]''
+''GetRowStyle(ctree : [[..:..:Gtk:Gtk:CTree#T|Gtk.Gtk.CTree.T]], node : [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]]) : [[..:..:Gtk:Gtk:Style#T|Gtk.Gtk.Style.T]]''
 
 
 ==== GetSelectable ====
-''GetSelectable(ctree, node) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+''GetSelectable(ctree : [[..:..:Gtk:Gtk:CTree#T|Gtk.Gtk.CTree.T]], node : [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== GetText ====
-''GetText(ctree, node, column, text) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+''GetText(ctree : [[..:..:Gtk:Gtk:CTree#T|Gtk.Gtk.CTree.T]], node : [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]], column : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], text : [[..:..:Std:List#T|Std.List.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== GetType ====
@@ -43,62 +43,62 @@
 
 
 ==== IsVisible ====
-''IsVisible(ctree, node) : [[..:..:Gtk:Gtk:Visibility#T|Gtk.Gtk.Visibility.T]]''
+''IsVisible(ctree : [[..:..:Gtk:Gtk:CTree#T|Gtk.Gtk.CTree.T]], node : [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]]) : [[..:..:Gtk:Gtk:Visibility#T|Gtk.Gtk.Visibility.T]]''
 
 
 ==== Moveto ====
-''Moveto(ctree, node, column, row_align, col_align) : [[..:..:Std:Object#T|Std.Object.T]]''
+''Moveto(ctree : [[..:..:Gtk:Gtk:CTree#T|Gtk.Gtk.CTree.T]], node : [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]], column : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], row_align : [[..:..:Std:Real#T|Std.Real.T]], col_align : [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== Nth ====
-''Nth(ctree, row) : [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]]''
+''Nth(ctree : [[..:..:Gtk:Gtk:CTree#T|Gtk.Gtk.CTree.T]], row : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]]''
 
 
 ==== SetBackground ====
-''SetBackground(ctree, node, color) : [[..:..:Std:Object#T|Std.Object.T]]''
+''SetBackground(ctree : [[..:..:Gtk:Gtk:CTree#T|Gtk.Gtk.CTree.T]], node : [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]], color : [[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== SetCellStyle ====
-''SetCellStyle(ctree, node, column, style) : [[..:..:Std:Object#T|Std.Object.T]]''
+''SetCellStyle(ctree : [[..:..:Gtk:Gtk:CTree#T|Gtk.Gtk.CTree.T]], node : [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]], column : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], style : [[..:..:Gtk:Gtk:Style#T|Gtk.Gtk.Style.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== SetForeground ====
-''SetForeground(ctree, node, color) : [[..:..:Std:Object#T|Std.Object.T]]''
+''SetForeground(ctree : [[..:..:Gtk:Gtk:CTree#T|Gtk.Gtk.CTree.T]], node : [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]], color : [[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== SetPixmap ====
-''SetPixmap(ctree, node, column, pixmap, mask) : [[..:..:Std:Object#T|Std.Object.T]]''
+''SetPixmap(ctree : [[..:..:Gtk:Gtk:CTree#T|Gtk.Gtk.CTree.T]], node : [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]], column : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], pixmap : [[..:..:Gtk:Gdk:Pixmap#T|Gtk.Gdk.Pixmap.T]], mask : [[..:..:Gtk:Gdk:Bitmap#T|Gtk.Gdk.Bitmap.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== SetPixtext ====
-''SetPixtext(ctree, node, column, text, spacing, pixmap, mask) : [[..:..:Std:Object#T|Std.Object.T]]''
+''SetPixtext(ctree : [[..:..:Gtk:Gtk:CTree#T|Gtk.Gtk.CTree.T]], node : [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]], column : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], text : [[..:..:Std:String#T|Std.String.T]], spacing : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], pixmap : [[..:..:Gtk:Gdk:Pixmap#T|Gtk.Gdk.Pixmap.T]], mask : [[..:..:Gtk:Gdk:Bitmap#T|Gtk.Gdk.Bitmap.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== SetRowData ====
-''SetRowData(ctree, node, data) : [[..:..:Std:Object#T|Std.Object.T]]''
+''SetRowData(ctree : [[..:..:Gtk:Gtk:CTree#T|Gtk.Gtk.CTree.T]], node : [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]], data : [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== SetRowDataFull ====
-''SetRowDataFull(ctree, node, data, destroy) : [[..:..:Std:Object#T|Std.Object.T]]''
+''SetRowDataFull(ctree : [[..:..:Gtk:Gtk:CTree#T|Gtk.Gtk.CTree.T]], node : [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]], data : [[..:..:Std:Address#T|Std.Address.T]], destroy : [[..:..:Std:Function#T|Std.Function.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== SetRowStyle ====
-''SetRowStyle(ctree, node, style) : [[..:..:Std:Object#T|Std.Object.T]]''
+''SetRowStyle(ctree : [[..:..:Gtk:Gtk:CTree#T|Gtk.Gtk.CTree.T]], node : [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]], style : [[..:..:Gtk:Gtk:Style#T|Gtk.Gtk.Style.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== SetSelectable ====
-''SetSelectable(ctree, node, selectable) : [[..:..:Std:Object#T|Std.Object.T]]''
+''SetSelectable(ctree : [[..:..:Gtk:Gtk:CTree#T|Gtk.Gtk.CTree.T]], node : [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]], selectable : [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== SetShift ====
-''SetShift(ctree, node, column, vertical, horizontal) : [[..:..:Std:Object#T|Std.Object.T]]''
+''SetShift(ctree : [[..:..:Gtk:Gtk:CTree#T|Gtk.Gtk.CTree.T]], node : [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]], column : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], vertical : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], horizontal : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== SetText ====
-''SetText(ctree, node, column, text) : [[..:..:Std:Object#T|Std.Object.T]]''
+''SetText(ctree : [[..:..:Gtk:Gtk:CTree#T|Gtk.Gtk.CTree.T]], node : [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]], column : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], text : [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== GetCellStyle ====
-''GetCellStyle(ctree, node, column) : [[..:..:Gtk:Gtk:Style#T|Gtk.Gtk.Style.T]]''
+''GetCellStyle(ctree : [[..:..:Gtk:Gtk:CTree#T|Gtk.Gtk.CTree.T]], node : [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]], column : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Gtk:Gtk:Style#T|Gtk.Gtk.Style.T]]''
 
 

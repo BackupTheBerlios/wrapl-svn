@@ -43,22 +43,22 @@
 
 
 ==== Skip ====
-''Skip(binding_set, keyval, modifiers) : [[..:..:Std:Object#T|Std.Object.T]]''
+''Skip(binding_set : [[..:..:Gtk:Gtk:BindingSet#T|Gtk.Gtk.BindingSet.T]], keyval : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], modifiers : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== Remove ====
-''Remove(binding_set, keyval, modifiers) : [[..:..:Std:Object#T|Std.Object.T]]''
+''Remove(binding_set : [[..:..:Gtk:Gtk:BindingSet#T|Gtk.Gtk.BindingSet.T]], keyval : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], modifiers : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== Clear ====
-''Clear(binding_set, keyval, modifiers) : [[..:..:Std:Object#T|Std.Object.T]]''
+''Clear(binding_set : [[..:..:Gtk:Gtk:BindingSet#T|Gtk.Gtk.BindingSet.T]], keyval : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], modifiers : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== AddSignall ====
-''AddSignall(binding_set, keyval, modifiers, signal_name, binding_args) : [[..:..:Std:Object#T|Std.Object.T]]''
+''AddSignall(binding_set : [[..:..:Gtk:Gtk:BindingSet#T|Gtk.Gtk.BindingSet.T]], keyval : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], modifiers : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], signal_name : [[..:..:Std:String#T|Std.String.T]], binding_args : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== AddSignal ====
-''AddSignal(binding_set, keyval, modifiers, signal_name, n_args, ___) : [[..:..:Std:Object#T|Std.Object.T]]''
+''AddSignal(binding_set : [[..:..:Gtk:Gtk:BindingSet#T|Gtk.Gtk.BindingSet.T]], keyval : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], modifiers : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], signal_name : [[..:..:Std:String#T|Std.String.T]], n_args : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], ___ : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 

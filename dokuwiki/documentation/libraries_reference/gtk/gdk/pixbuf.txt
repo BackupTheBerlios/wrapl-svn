@@ -165,11 +165,11 @@
 
 
 ==== GetFileInfo ====
-''GetFileInfo(filename, width, height) : [[..:..:Gtk:Gdk:PixbufFormat#T|Gtk.Gdk.PixbufFormat.T]]''
+''GetFileInfo(filename : [[..:..:Std:String#T|Std.String.T]], width : [[..:..:Std:Object#T|Std.Object.T]], height : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Gtk:Gdk:PixbufFormat#T|Gtk.Gdk.PixbufFormat.T]]''
 
 
 ==== FromPixdata ====
-''FromPixdata(pixdata, copy_pixels, error) : [[..:..:Gtk:Gdk:Pixbuf#T|Gtk.Gdk.Pixbuf.T]]''
+''FromPixdata(pixdata : [[..:..:Gtk:Gdk:Pixdata#T|Gtk.Gdk.Pixdata.T]], copy_pixels : [[..:..:Std:Symbol#T|Std.Symbol.T]], error : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Gtk:Gdk:Pixbuf#T|Gtk.Gdk.Pixbuf.T]]''
 
 
 ==== ErrorQuark ====

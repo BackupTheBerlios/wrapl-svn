@@ -1,9 +1,9 @@
 ====== Standard ======
 ==== BuildChildren ====
-''BuildChildren(self, parent, info) : [[..:..:Std:Object#T|Std.Object.T]]''
+''BuildChildren(self : [[..:..:Gtk:Glade:XML#T|Gtk.Glade.XML.T]], parent : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], info : [[..:..:Gtk:Glade:WidgetInfo#T|Gtk.Glade.WidgetInfo.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== BuildWidget ====
-''BuildWidget(xml, widget_type, info) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
+''BuildWidget(xml : [[..:..:Gtk:Glade:XML#T|Gtk.Glade.XML.T]], widget_type : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]], info : [[..:..:Gtk:Glade:WidgetInfo#T|Gtk.Glade.WidgetInfo.T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
 

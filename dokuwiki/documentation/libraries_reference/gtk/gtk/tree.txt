@@ -1,9 +1,9 @@
 ====== Tree ======
 ==== GetRowDragData ====
-''GetRowDragData(selection_data, tree_model, path) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+''GetRowDragData(selection_data : [[..:..:Gtk:Gtk:SelectionData#T|Gtk.Gtk.SelectionData.T]], tree_model : [[..:..:Std:Object#T|Std.Object.T]], path : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== SetRowDragData ====
-''SetRowDragData(selection_data, tree_model, path) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+''SetRowDragData(selection_data : [[..:..:Gtk:Gtk:SelectionData#T|Gtk.Gtk.SelectionData.T]], tree_model : [[..:..:Gtk:Gtk:TreeModel#T|Gtk.Gtk.TreeModel.T]], path : [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 

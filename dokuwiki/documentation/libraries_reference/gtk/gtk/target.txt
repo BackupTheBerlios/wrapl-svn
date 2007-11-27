@@ -1,9 +1,9 @@
 ====== Target ======
 ==== TableFree ====
-''TableFree(targets, n_targets) : [[..:..:Std:Object#T|Std.Object.T]]''
+''TableFree(targets : [[..:..:Gtk:Gtk:TargetEntry#T|Gtk.Gtk.TargetEntry.T]], n_targets : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== TableNewFromList ====
-''TableNewFromList(list, n_targets) : [[..:..:Gtk:Gtk:TargetEntry#T|Gtk.Gtk.TargetEntry.T]]''
+''TableNewFromList(list : [[..:..:Gtk:Gtk:TargetList#T|Gtk.Gtk.TargetList.T]], n_targets : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Gtk:Gtk:TargetEntry#T|Gtk.Gtk.TargetEntry.T]]''
 
 

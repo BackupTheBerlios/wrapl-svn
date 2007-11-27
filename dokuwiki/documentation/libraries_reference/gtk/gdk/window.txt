@@ -422,7 +422,7 @@
 
 
 ==== SetDebugUpdates ====
-''SetDebugUpdates(setting) : [[..:..:Std:Object#T|Std.Object.T]]''
+''SetDebugUpdates(setting : [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== ProcessAllUpdates ====
@@ -430,11 +430,11 @@
 
 
 ==== LookupForDisplay ====
-''LookupForDisplay(display, anid) : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]]''
+''LookupForDisplay(display : [[..:..:Gtk:Gdk:Display#T|Gtk.Gdk.Display.T]], anid : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]]''
 
 
 ==== Lookup ====
-''Lookup(anid) : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]]''
+''Lookup(anid : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]]''
 
 
 ==== GetToplevels ====
@@ -442,18 +442,18 @@
 
 
 ==== ForeignNewForDisplay ====
-''ForeignNewForDisplay(display, anid) : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]]''
+''ForeignNewForDisplay(display : [[..:..:Gtk:Gdk:Display#T|Gtk.Gdk.Display.T]], anid : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]]''
 
 
 ==== ForeignNew ====
-''ForeignNew(anid) : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]]''
+''ForeignNew(anid : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]]''
 
 
 ==== ConstrainSize ====
-''ConstrainSize(geometry, flags, width, height, new_width, new_height) : [[..:..:Std:Object#T|Std.Object.T]]''
+''ConstrainSize(geometry : [[..:..:Gtk:Gdk:Geometry#T|Gtk.Gdk.Geometry.T]], flags : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], width : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], height : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], new_width : [[..:..:Std:Object#T|Std.Object.T]], new_height : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== AtPointer ====
-''AtPointer(win_x, win_y) : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]]''
+''AtPointer(win_x : [[..:..:Std:Object#T|Std.Object.T]], win_y : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]]''
 
 

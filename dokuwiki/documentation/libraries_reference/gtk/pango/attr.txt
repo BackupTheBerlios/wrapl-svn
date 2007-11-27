@@ -1,73 +1,73 @@
 ====== Attr ======
 ==== BackgroundNew ====
-''BackgroundNew(red, green, blue) : [[..:..:Gtk:Pango:Attribute#T|Gtk.Pango.Attribute.T]]''
+''BackgroundNew(red : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], green : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], blue : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Gtk:Pango:Attribute#T|Gtk.Pango.Attribute.T]]''
 
 
 ==== FallbackNew ====
-''FallbackNew(enable_fallback) : [[..:..:Gtk:Pango:Attribute#T|Gtk.Pango.Attribute.T]]''
+''FallbackNew(enable_fallback : [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Gtk:Pango:Attribute#T|Gtk.Pango.Attribute.T]]''
 
 
 ==== FamilyNew ====
-''FamilyNew(family) : [[..:..:Gtk:Pango:Attribute#T|Gtk.Pango.Attribute.T]]''
+''FamilyNew(family : [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Gtk:Pango:Attribute#T|Gtk.Pango.Attribute.T]]''
 
 
 ==== ForegroundNew ====
-''ForegroundNew(red, green, blue) : [[..:..:Gtk:Pango:Attribute#T|Gtk.Pango.Attribute.T]]''
+''ForegroundNew(red : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], green : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], blue : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Gtk:Pango:Attribute#T|Gtk.Pango.Attribute.T]]''
 
 
 ==== GravityHintNew ====
-''GravityHintNew(hint) : [[..:..:Gtk:Pango:Attribute#T|Gtk.Pango.Attribute.T]]''
+''GravityHintNew(hint : [[..:..:Gtk:Pango:GravityHint#T|Gtk.Pango.GravityHint.T]]) : [[..:..:Gtk:Pango:Attribute#T|Gtk.Pango.Attribute.T]]''
 
 
 ==== GravityNew ====
-''GravityNew(gravity) : [[..:..:Gtk:Pango:Attribute#T|Gtk.Pango.Attribute.T]]''
+''GravityNew(gravity : [[..:..:Gtk:Pango:Gravity#T|Gtk.Pango.Gravity.T]]) : [[..:..:Gtk:Pango:Attribute#T|Gtk.Pango.Attribute.T]]''
 
 
 ==== LetterSpacingNew ====
-''LetterSpacingNew(letter_spacing) : [[..:..:Gtk:Pango:Attribute#T|Gtk.Pango.Attribute.T]]''
+''LetterSpacingNew(letter_spacing : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Gtk:Pango:Attribute#T|Gtk.Pango.Attribute.T]]''
 
 
 ==== RiseNew ====
-''RiseNew(rise) : [[..:..:Gtk:Pango:Attribute#T|Gtk.Pango.Attribute.T]]''
+''RiseNew(rise : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Gtk:Pango:Attribute#T|Gtk.Pango.Attribute.T]]''
 
 
 ==== ScaleNew ====
-''ScaleNew(scale_factor) : [[..:..:Gtk:Pango:Attribute#T|Gtk.Pango.Attribute.T]]''
+''ScaleNew(scale_factor : [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Gtk:Pango:Attribute#T|Gtk.Pango.Attribute.T]]''
 
 
 ==== StretchNew ====
-''StretchNew(stretch) : [[..:..:Gtk:Pango:Attribute#T|Gtk.Pango.Attribute.T]]''
+''StretchNew(stretch : [[..:..:Gtk:Pango:Stretch#T|Gtk.Pango.Stretch.T]]) : [[..:..:Gtk:Pango:Attribute#T|Gtk.Pango.Attribute.T]]''
 
 
 ==== StrikethroughColorNew ====
-''StrikethroughColorNew(red, green, blue) : [[..:..:Gtk:Pango:Attribute#T|Gtk.Pango.Attribute.T]]''
+''StrikethroughColorNew(red : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], green : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], blue : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Gtk:Pango:Attribute#T|Gtk.Pango.Attribute.T]]''
 
 
 ==== StrikethroughNew ====
-''StrikethroughNew(strikethrough) : [[..:..:Gtk:Pango:Attribute#T|Gtk.Pango.Attribute.T]]''
+''StrikethroughNew(strikethrough : [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Gtk:Pango:Attribute#T|Gtk.Pango.Attribute.T]]''
 
 
 ==== StyleNew ====
-''StyleNew(style) : [[..:..:Gtk:Pango:Attribute#T|Gtk.Pango.Attribute.T]]''
+''StyleNew(style : [[..:..:Gtk:Pango:Style#T|Gtk.Pango.Style.T]]) : [[..:..:Gtk:Pango:Attribute#T|Gtk.Pango.Attribute.T]]''
 
 
 ==== TypeRegister ====
-''TypeRegister(name) : [[..:..:Gtk:Pango:AttrType#T|Gtk.Pango.AttrType.T]]''
+''TypeRegister(name : [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Gtk:Pango:AttrType#T|Gtk.Pango.AttrType.T]]''
 
 
 ==== UnderlineColorNew ====
-''UnderlineColorNew(red, green, blue) : [[..:..:Gtk:Pango:Attribute#T|Gtk.Pango.Attribute.T]]''
+''UnderlineColorNew(red : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], green : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], blue : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Gtk:Pango:Attribute#T|Gtk.Pango.Attribute.T]]''
 
 
 ==== UnderlineNew ====
-''UnderlineNew(underline) : [[..:..:Gtk:Pango:Attribute#T|Gtk.Pango.Attribute.T]]''
+''UnderlineNew(underline : [[..:..:Gtk:Pango:Underline#T|Gtk.Pango.Underline.T]]) : [[..:..:Gtk:Pango:Attribute#T|Gtk.Pango.Attribute.T]]''
 
 
 ==== VariantNew ====
-''VariantNew(variant) : [[..:..:Gtk:Pango:Attribute#T|Gtk.Pango.Attribute.T]]''
+''VariantNew(variant : [[..:..:Gtk:Pango:Variant#T|Gtk.Pango.Variant.T]]) : [[..:..:Gtk:Pango:Attribute#T|Gtk.Pango.Attribute.T]]''
 
 
 ==== WeightNew ====
-''WeightNew(weight) : [[..:..:Gtk:Pango:Attribute#T|Gtk.Pango.Attribute.T]]''
+''WeightNew(weight : [[..:..:Gtk:Pango:Weight#T|Gtk.Pango.Weight.T]]) : [[..:..:Gtk:Pango:Attribute#T|Gtk.Pango.Attribute.T]]''
 
 

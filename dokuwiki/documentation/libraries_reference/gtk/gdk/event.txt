@@ -83,11 +83,11 @@
 
 
 ==== Copy ====
-''Copy(event) : [[..:..:Std:Object#T|Std.Object.T]]''
+''Copy(event : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== Free ====
-''Free(event) : [[..:..:Std:Object#T|Std.Object.T]]''
+''Free(event : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== Get ====
@@ -95,31 +95,31 @@
 
 
 ==== GetAxis ====
-''GetAxis(event, axis_use, value) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+''GetAxis(event : [[..:..:Std:Object#T|Std.Object.T]], axis_use : [[..:..:Gtk:Gdk:AxisUse#T|Gtk.Gdk.AxisUse.T]], value : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== GetCoords ====
-''GetCoords(event, x_win, y_win) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+''GetCoords(event : [[..:..:Std:Object#T|Std.Object.T]], x_win : [[..:..:Std:Object#T|Std.Object.T]], y_win : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== GetGraphicsExpose ====
-''GetGraphicsExpose(window) : [[..:..:Std:Object#T|Std.Object.T]]''
+''GetGraphicsExpose(window : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== GetRootCoords ====
-''GetRootCoords(event, x_root, y_root) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+''GetRootCoords(event : [[..:..:Std:Object#T|Std.Object.T]], x_root : [[..:..:Std:Object#T|Std.Object.T]], y_root : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== GetScreen ====
-''GetScreen(event) : [[..:..:Gtk:Gdk:Screen#T|Gtk.Gdk.Screen.T]]''
+''GetScreen(event : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Gtk:Gdk:Screen#T|Gtk.Gdk.Screen.T]]''
 
 
 ==== GetState ====
-''GetState(event, state) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+''GetState(event : [[..:..:Std:Object#T|Std.Object.T]], state : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== GetTime ====
-''GetTime(event) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+''GetTime(event : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== GetType ====
@@ -127,11 +127,11 @@
 
 
 ==== HandlerSet ====
-''HandlerSet(func, data, notify) : [[..:..:Std:Object#T|Std.Object.T]]''
+''HandlerSet(func : [[..:..:Std:Function#T|Std.Function.T]], data : [[..:..:Std:Address#T|Std.Address.T]], notify : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====
-''New(type) : [[..:..:Std:Object#T|Std.Object.T]]''
+''New(type : [[..:..:Gtk:Gdk:EventType#T|Gtk.Gdk.EventType.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== Peek ====
@@ -139,26 +139,26 @@
 
 
 ==== Put ====
-''Put(event) : [[..:..:Std:Object#T|Std.Object.T]]''
+''Put(event : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== RequestMotions ====
-''RequestMotions(event) : [[..:..:Std:Object#T|Std.Object.T]]''
+''RequestMotions(event : [[..:..:Gtk:Gdk:EventMotion#T|Gtk.Gdk.EventMotion.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== SendClientMessage ====
-''SendClientMessage(event, winid) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+''SendClientMessage(event : [[..:..:Std:Object#T|Std.Object.T]], winid : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== SendClientMessageForDisplay ====
-''SendClientMessageForDisplay(display, event, winid) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+''SendClientMessageForDisplay(display : [[..:..:Gtk:Gdk:Display#T|Gtk.Gdk.Display.T]], event : [[..:..:Std:Object#T|Std.Object.T]], winid : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== SendClientmessageToall ====
-''SendClientmessageToall(event) : [[..:..:Std:Object#T|Std.Object.T]]''
+''SendClientmessageToall(event : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== SetScreen ====
-''SetScreen(event, screen) : [[..:..:Std:Object#T|Std.Object.T]]''
+''SetScreen(event : [[..:..:Std:Object#T|Std.Object.T]], screen : [[..:..:Gtk:Gdk:Screen#T|Gtk.Gdk.Screen.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 

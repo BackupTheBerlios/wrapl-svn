@@ -1,9 +1,9 @@
 ====== Bindings ======
 ==== Activate ====
-''Activate(object, keyval, modifiers) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+''Activate(object : [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]], keyval : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], modifiers : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== ActivateEvent ====
-''ActivateEvent(object, event) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+''ActivateEvent(object : [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]], event : [[..:..:Gtk:Gdk:EventKey#T|Gtk.Gdk.EventKey.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 

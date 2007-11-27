@@ -1,37 +1,37 @@
 ====== Rgb ======
 ==== AAffine ====
-''AAffine(dst, x0, y0, x1, y1, dst_rowstride, src, src_width, src_height, src_rowstride, rgb, affine, level, alphagamma) : [[..:..:Std:Object#T|Std.Object.T]]''
+''AAffine(dst : [[..:..:Std:Object#T|Std.Object.T]], x0 : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y0 : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], x1 : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y1 : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], dst_rowstride : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], src : [[..:..:Std:Object#T|Std.Object.T]], src_width : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], src_height : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], src_rowstride : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], rgb : [[..:..:Std:Object#T|Std.Object.T]], affine : [[..:..:Std:Object#T|Std.Object.T]], level : [[..:..:Gtk:Art:FilterLevel#T|Gtk.Art.FilterLevel.T]], alphagamma : [[..:..:Gtk:Art:AlphaGamma#T|Gtk.Art.AlphaGamma.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== Affine ====
-''Affine(dst, x0, y0, x1, y1, dst_rowstride, src, src_width, src_height, src_rowstride, affine, level, alphagamma) : [[..:..:Std:Object#T|Std.Object.T]]''
+''Affine(dst : [[..:..:Std:Object#T|Std.Object.T]], x0 : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y0 : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], x1 : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y1 : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], dst_rowstride : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], src : [[..:..:Std:Object#T|Std.Object.T]], src_width : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], src_height : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], src_rowstride : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], affine : [[..:..:Std:Object#T|Std.Object.T]], level : [[..:..:Gtk:Art:FilterLevel#T|Gtk.Art.FilterLevel.T]], alphagamma : [[..:..:Gtk:Art:AlphaGamma#T|Gtk.Art.AlphaGamma.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== BitmapAffine ====
-''BitmapAffine(dst, x0, y0, x1, y1, dst_rowstride, src, src_width, src_height, src_rowstride, rgba, affine, level, alphagamma) : [[..:..:Std:Object#T|Std.Object.T]]''
+''BitmapAffine(dst : [[..:..:Std:Object#T|Std.Object.T]], x0 : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y0 : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], x1 : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y1 : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], dst_rowstride : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], src : [[..:..:Std:Object#T|Std.Object.T]], src_width : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], src_height : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], src_rowstride : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], rgba : [[..:..:Std:Object#T|Std.Object.T]], affine : [[..:..:Std:Object#T|Std.Object.T]], level : [[..:..:Gtk:Art:FilterLevel#T|Gtk.Art.FilterLevel.T]], alphagamma : [[..:..:Gtk:Art:AlphaGamma#T|Gtk.Art.AlphaGamma.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== FillRun ====
-''FillRun(buf, r, g, b, n) : [[..:..:Std:Object#T|Std.Object.T]]''
+''FillRun(buf : [[..:..:Std:Object#T|Std.Object.T]], r : [[..:..:Std:Object#T|Std.Object.T]], g : [[..:..:Std:Object#T|Std.Object.T]], b : [[..:..:Std:Object#T|Std.Object.T]], n : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== PixbufAffine ====
-''PixbufAffine(dst, x0, y0, x1, y1, dst_rowstride, pixbuf, affine, level, alphagamma) : [[..:..:Std:Object#T|Std.Object.T]]''
+''PixbufAffine(dst : [[..:..:Std:Object#T|Std.Object.T]], x0 : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y0 : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], x1 : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y1 : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], dst_rowstride : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], pixbuf : [[..:..:Gtk:Art:PixBuf#T|Gtk.Art.PixBuf.T]], affine : [[..:..:Std:Object#T|Std.Object.T]], level : [[..:..:Gtk:Art:FilterLevel#T|Gtk.Art.FilterLevel.T]], alphagamma : [[..:..:Gtk:Art:AlphaGamma#T|Gtk.Art.AlphaGamma.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== RgbaAffine ====
-''RgbaAffine(dst, x0, y0, x1, y1, dst_rowstride, src, src_width, src_height, src_rowstride, affine, level, alphagamma) : [[..:..:Std:Object#T|Std.Object.T]]''
+''RgbaAffine(dst : [[..:..:Std:Object#T|Std.Object.T]], x0 : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y0 : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], x1 : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y1 : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], dst_rowstride : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], src : [[..:..:Std:Object#T|Std.Object.T]], src_width : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], src_height : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], src_rowstride : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], affine : [[..:..:Std:Object#T|Std.Object.T]], level : [[..:..:Gtk:Art:FilterLevel#T|Gtk.Art.FilterLevel.T]], alphagamma : [[..:..:Gtk:Art:AlphaGamma#T|Gtk.Art.AlphaGamma.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== RunAlpha ====
-''RunAlpha(buf, r, g, b, alpha, n) : [[..:..:Std:Object#T|Std.Object.T]]''
+''RunAlpha(buf : [[..:..:Std:Object#T|Std.Object.T]], r : [[..:..:Std:Object#T|Std.Object.T]], g : [[..:..:Std:Object#T|Std.Object.T]], b : [[..:..:Std:Object#T|Std.Object.T]], alpha : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], n : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== SvpAa ====
-''SvpAa(svp, x0, y0, x1, y1, fg_color, bg_color, buf, rowstride, alphagamma) : [[..:..:Std:Object#T|Std.Object.T]]''
+''SvpAa(svp : [[..:..:Gtk:Art:SVP#T|Gtk.Art.SVP.T]], x0 : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y0 : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], x1 : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y1 : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], fg_color : [[..:..:Std:Object#T|Std.Object.T]], bg_color : [[..:..:Std:Object#T|Std.Object.T]], buf : [[..:..:Std:Object#T|Std.Object.T]], rowstride : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], alphagamma : [[..:..:Gtk:Art:AlphaGamma#T|Gtk.Art.AlphaGamma.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== SvpAlpha ====
-''SvpAlpha(svp, x0, y0, x1, y1, rgba, buf, rowstride, alphagamma) : [[..:..:Std:Object#T|Std.Object.T]]''
+''SvpAlpha(svp : [[..:..:Gtk:Art:SVP#T|Gtk.Art.SVP.T]], x0 : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y0 : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], x1 : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y1 : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], rgba : [[..:..:Std:Object#T|Std.Object.T]], buf : [[..:..:Std:Object#T|Std.Object.T]], rowstride : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], alphagamma : [[..:..:Gtk:Art:AlphaGamma#T|Gtk.Art.AlphaGamma.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 

@@ -67,19 +67,19 @@
 
 
 ==== SetReserved ====
-''SetReserved(nreserved) : [[..:..:Std:Object#T|Std.Object.T]]''
+''SetReserved(nreserved : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== SetInstallCmap ====
-''SetInstallCmap(install_cmap) : [[..:..:Std:Object#T|Std.Object.T]]''
+''SetInstallCmap(install_cmap : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== SetGamma ====
-''SetGamma(gamma_) : [[..:..:Std:Object#T|Std.Object.T]]''
+''SetGamma(gamma_ : [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== SetColorCube ====
-''SetColorCube(nred_shades, ngreen_shades, nblue_shades, ngray_shades) : [[..:..:Std:Object#T|Std.Object.T]]''
+''SetColorCube(nred_shades : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], ngreen_shades : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], nblue_shades : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], ngray_shades : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== Reset ====

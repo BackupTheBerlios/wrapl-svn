@@ -151,7 +151,7 @@
 
 
 ==== ClassFindChildProperty ====
-''ClassFindChildProperty(cclass, property_name) : [[..:..:Std:Object#T|Std.Object.T]]''
+''ClassFindChildProperty(cclass : [[..:..:Std:Object#T|Std.Object.T]], property_name : [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== GetType ====
@@ -159,10 +159,10 @@
 
 
 ==== ClassListChildProperties ====
-''ClassListChildProperties(cclass, n_properties) : [[..:..:Std:Object#T|Std.Object.T]]''
+''ClassListChildProperties(cclass : [[..:..:Std:Object#T|Std.Object.T]], n_properties : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== ClassInstallChildProperty ====
-''ClassInstallChildProperty(cclass, property_id, pspec) : [[..:..:Std:Object#T|Std.Object.T]]''
+''ClassInstallChildProperty(cclass : [[..:..:Std:Object#T|Std.Object.T]], property_id : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], pspec : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 

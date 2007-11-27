@@ -27,11 +27,11 @@
 
 
 ==== Reordered ====
-''Reordered(proxy, path, iter, new_order) : [[..:..:Std:Object#T|Std.Object.T]]''
+''Reordered(proxy : [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]], path : [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]], iter : [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]], new_order : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== Inserted ====
-''Inserted(proxy, path) : [[..:..:Std:Object#T|Std.Object.T]]''
+''Inserted(proxy : [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]], path : [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== GetType ====
@@ -39,7 +39,7 @@
 
 
 ==== Deleted ====
-''Deleted(proxy, path) : [[..:..:Std:Object#T|Std.Object.T]]''
+''Deleted(proxy : [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]], path : [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== NewProxy ====

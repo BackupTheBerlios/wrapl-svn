@@ -35,15 +35,15 @@
 
 
 ==== FromDescription ====
-''FromDescription(font_desc) : [[..:..:Gtk:Gdk:Font#T|Gtk.Gdk.Font.T]]''
+''FromDescription(font_desc : [[..:..:Gtk:Pango:FontDescription#T|Gtk.Pango.FontDescription.T]]) : [[..:..:Gtk:Gdk:Font#T|Gtk.Gdk.Font.T]]''
 
 
 ==== LoadForDisplay ====
-''LoadForDisplay(display, font_name) : [[..:..:Gtk:Gdk:Font#T|Gtk.Gdk.Font.T]]''
+''LoadForDisplay(display : [[..:..:Gtk:Gdk:Display#T|Gtk.Gdk.Display.T]], font_name : [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Gtk:Gdk:Font#T|Gtk.Gdk.Font.T]]''
 
 
 ==== Load ====
-''Load(font_name) : [[..:..:Gtk:Gdk:Font#T|Gtk.Gdk.Font.T]]''
+''Load(font_name : [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Gtk:Gdk:Font#T|Gtk.Gdk.Font.T]]''
 
 
 ==== GetType ====
@@ -51,6 +51,6 @@
 
 
 ==== FromDescriptionForDisplay ====
-''FromDescriptionForDisplay(display, font_desc) : [[..:..:Gtk:Gdk:Font#T|Gtk.Gdk.Font.T]]''
+''FromDescriptionForDisplay(display : [[..:..:Gtk:Gdk:Display#T|Gtk.Gdk.Display.T]], font_desc : [[..:..:Gtk:Pango:FontDescription#T|Gtk.Pango.FontDescription.T]]) : [[..:..:Gtk:Gdk:Font#T|Gtk.Gdk.Font.T]]''
 
 

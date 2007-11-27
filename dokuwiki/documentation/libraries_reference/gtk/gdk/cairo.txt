@@ -1,25 +1,25 @@
 ====== Cairo ======
 ==== Create ====
-''Create(drawable) : [[..:..:Gtk:Cairo:CairoT#T|Gtk.Cairo.CairoT.T]]''
+''Create(drawable : [[..:..:Gtk:Gdk:Drawable#T|Gtk.Gdk.Drawable.T]]) : [[..:..:Gtk:Cairo:CairoT#T|Gtk.Cairo.CairoT.T]]''
 
 
 ==== Rectangle ====
-''Rectangle(cr, rectangle) : [[..:..:Std:Object#T|Std.Object.T]]''
+''Rectangle(cr : [[..:..:Gtk:Cairo:CairoT#T|Gtk.Cairo.CairoT.T]], rectangle : [[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== Region ====
-''Region(cr, region) : [[..:..:Std:Object#T|Std.Object.T]]''
+''Region(cr : [[..:..:Gtk:Cairo:CairoT#T|Gtk.Cairo.CairoT.T]], region : [[..:..:Gtk:Gdk:Region#T|Gtk.Gdk.Region.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== SetSourceColor ====
-''SetSourceColor(cr, color) : [[..:..:Std:Object#T|Std.Object.T]]''
+''SetSourceColor(cr : [[..:..:Gtk:Cairo:CairoT#T|Gtk.Cairo.CairoT.T]], color : [[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== SetSourcePixbuf ====
-''SetSourcePixbuf(cr, pixbuf, pixbuf_x, pixbuf_y) : [[..:..:Std:Object#T|Std.Object.T]]''
+''SetSourcePixbuf(cr : [[..:..:Gtk:Cairo:CairoT#T|Gtk.Cairo.CairoT.T]], pixbuf : [[..:..:Gtk:Gdk:Pixbuf#T|Gtk.Gdk.Pixbuf.T]], pixbuf_x : [[..:..:Std:Real#T|Std.Real.T]], pixbuf_y : [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== SetSourcePixmap ====
-''SetSourcePixmap(cr, pixmap, pixmap_x, pixmap_y) : [[..:..:Std:Object#T|Std.Object.T]]''
+''SetSourcePixmap(cr : [[..:..:Gtk:Cairo:CairoT#T|Gtk.Cairo.CairoT.T]], pixmap : [[..:..:Gtk:Gdk:Pixmap#T|Gtk.Gdk.Pixmap.T]], pixmap_x : [[..:..:Std:Real#T|Std.Real.T]], pixmap_y : [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 

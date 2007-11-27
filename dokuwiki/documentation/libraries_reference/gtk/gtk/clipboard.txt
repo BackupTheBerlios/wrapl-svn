@@ -97,7 +97,7 @@
 
 
 ==== Get ====
-''Get(selection) : [[..:..:Gtk:Gtk:Clipboard#T|Gtk.Gtk.Clipboard.T]]''
+''Get(selection : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Gtk:Gtk:Clipboard#T|Gtk.Gtk.Clipboard.T]]''
 
 
 ==== GetType ====
@@ -105,6 +105,6 @@
 
 
 ==== GetForDisplay ====
-''GetForDisplay(display, selection) : [[..:..:Gtk:Gtk:Clipboard#T|Gtk.Gtk.Clipboard.T]]''
+''GetForDisplay(display : [[..:..:Gtk:Gdk:Display#T|Gtk.Gdk.Display.T]], selection : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Gtk:Gtk:Clipboard#T|Gtk.Gtk.Clipboard.T]]''
 
 

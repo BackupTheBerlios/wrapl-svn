@@ -39,15 +39,15 @@
 
 
 ==== FromVpath ====
-''FromVpath(vec) : [[..:..:Gtk:Art:Uta#T|Gtk.Art.Uta.T]]''
+''FromVpath(vec : [[..:..:Gtk:Art:Vpath#T|Gtk.Art.Vpath.T]]) : [[..:..:Gtk:Art:Uta#T|Gtk.Art.Uta.T]]''
 
 
 ==== FromSvp ====
-''FromSvp(svp) : [[..:..:Gtk:Art:Uta#T|Gtk.Art.Uta.T]]''
+''FromSvp(svp : [[..:..:Gtk:Art:SVP#T|Gtk.Art.SVP.T]]) : [[..:..:Gtk:Art:Uta#T|Gtk.Art.Uta.T]]''
 
 
 ==== FromIrect ====
-''FromIrect(bbox) : [[..:..:Gtk:Art:Uta#T|Gtk.Art.Uta.T]]''
+''FromIrect(bbox : [[..:..:Gtk:Art:IRect#T|Gtk.Art.IRect.T]]) : [[..:..:Gtk:Art:Uta#T|Gtk.Art.Uta.T]]''
 
 
 ==== NewCoords ====

@@ -4,18 +4,18 @@
 
 
 ==== ContextGetForScreen ====
-''ContextGetForScreen(screen) : [[..:..:Gtk:Pango:Context#T|Gtk.Pango.Context.T]]''
+''ContextGetForScreen(screen : [[..:..:Gtk:Gdk:Screen#T|Gtk.Gdk.Screen.T]]) : [[..:..:Gtk:Pango:Context#T|Gtk.Pango.Context.T]]''
 
 
 ==== ContextSetColormap ====
-''ContextSetColormap(context, colormap) : [[..:..:Std:Object#T|Std.Object.T]]''
+''ContextSetColormap(context : [[..:..:Gtk:Pango:Context#T|Gtk.Pango.Context.T]], colormap : [[..:..:Gtk:Gdk:Colormap#T|Gtk.Gdk.Colormap.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== LayoutGetClipRegion ====
-''LayoutGetClipRegion(layout, x_origin, y_origin, index_ranges, n_ranges) : [[..:..:Gtk:Gdk:Region#T|Gtk.Gdk.Region.T]]''
+''LayoutGetClipRegion(layout : [[..:..:Gtk:Pango:Layout#T|Gtk.Pango.Layout.T]], x_origin : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y_origin : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], index_ranges : [[..:..:Std:Object#T|Std.Object.T]], n_ranges : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Gtk:Gdk:Region#T|Gtk.Gdk.Region.T]]''
 
 
 ==== LayoutLineGetClipRegion ====
-''LayoutLineGetClipRegion(line, x_origin, y_origin, index_ranges, n_ranges) : [[..:..:Gtk:Gdk:Region#T|Gtk.Gdk.Region.T]]''
+''LayoutLineGetClipRegion(line : [[..:..:Gtk:Pango:LayoutLine#T|Gtk.Pango.LayoutLine.T]], x_origin : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y_origin : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], index_ranges : [[..:..:Std:Object#T|Std.Object.T]], n_ranges : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Gtk:Gdk:Region#T|Gtk.Gdk.Region.T]]''
 
 

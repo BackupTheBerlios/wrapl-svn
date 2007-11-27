@@ -43,11 +43,11 @@
 
 
 ==== White ====
-''White(colormap, color) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+''White(colormap : [[..:..:Gtk:Gdk:Colormap#T|Gtk.Gdk.Colormap.T]], color : [[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== Parse ====
-''Parse(spec, color) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+''Parse(spec : [[..:..:Std:String#T|Std.String.T]], color : [[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== GetType ====
@@ -55,15 +55,15 @@
 
 
 ==== Change ====
-''Change(colormap, color) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+''Change(colormap : [[..:..:Gtk:Gdk:Colormap#T|Gtk.Gdk.Colormap.T]], color : [[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== Black ====
-''Black(colormap, color) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+''Black(colormap : [[..:..:Gtk:Gdk:Colormap#T|Gtk.Gdk.Colormap.T]], color : [[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== Alloc ====
-''Alloc(colormap, color) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+''Alloc(colormap : [[..:..:Gtk:Gdk:Colormap#T|Gtk.Gdk.Colormap.T]], color : [[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== NewRgb ====

@@ -1,9 +1,9 @@
 ====== Parser ======
 ==== ParseBuffer ====
-''ParseBuffer(buffer, len, domain) : [[..:..:Gtk:Glade:Interface#T|Gtk.Glade.Interface.T]]''
+''ParseBuffer(buffer : [[..:..:Std:String#T|Std.String.T]], len : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], domain : [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Gtk:Glade:Interface#T|Gtk.Glade.Interface.T]]''
 
 
 ==== ParseFile ====
-''ParseFile(file, domain) : [[..:..:Gtk:Glade:Interface#T|Gtk.Glade.Interface.T]]''
+''ParseFile(file : [[..:..:Std:String#T|Std.String.T]], domain : [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Gtk:Glade:Interface#T|Gtk.Glade.Interface.T]]''
 
 

@@ -1,89 +1,89 @@
 ====== Draw ======
 ==== Arrow ====
-''Arrow(style, window, state_type, shadow_type, arrow_type, fill, x, y, width, height) : [[..:..:Std:Object#T|Std.Object.T]]''
+''Arrow(style : [[..:..:Gtk:Gtk:Style#T|Gtk.Gtk.Style.T]], window : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]], state_type : [[..:..:Gtk:Gtk:StateType#T|Gtk.Gtk.StateType.T]], shadow_type : [[..:..:Gtk:Gtk:ShadowType#T|Gtk.Gtk.ShadowType.T]], arrow_type : [[..:..:Gtk:Gtk:ArrowType#T|Gtk.Gtk.ArrowType.T]], fill : [[..:..:Std:Symbol#T|Std.Symbol.T]], x : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], width : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], height : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== Box ====
-''Box(style, window, state_type, shadow_type, x, y, width, height) : [[..:..:Std:Object#T|Std.Object.T]]''
+''Box(style : [[..:..:Gtk:Gtk:Style#T|Gtk.Gtk.Style.T]], window : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]], state_type : [[..:..:Gtk:Gtk:StateType#T|Gtk.Gtk.StateType.T]], shadow_type : [[..:..:Gtk:Gtk:ShadowType#T|Gtk.Gtk.ShadowType.T]], x : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], width : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], height : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== BoxGap ====
-''BoxGap(style, window, state_type, shadow_type, x, y, width, height, gap_side, gap_x, gap_width) : [[..:..:Std:Object#T|Std.Object.T]]''
+''BoxGap(style : [[..:..:Gtk:Gtk:Style#T|Gtk.Gtk.Style.T]], window : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]], state_type : [[..:..:Gtk:Gtk:StateType#T|Gtk.Gtk.StateType.T]], shadow_type : [[..:..:Gtk:Gtk:ShadowType#T|Gtk.Gtk.ShadowType.T]], x : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], width : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], height : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], gap_side : [[..:..:Gtk:Gtk:PositionType#T|Gtk.Gtk.PositionType.T]], gap_x : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], gap_width : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== Check ====
-''Check(style, window, state_type, shadow_type, x, y, width, height) : [[..:..:Std:Object#T|Std.Object.T]]''
+''Check(style : [[..:..:Gtk:Gtk:Style#T|Gtk.Gtk.Style.T]], window : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]], state_type : [[..:..:Gtk:Gtk:StateType#T|Gtk.Gtk.StateType.T]], shadow_type : [[..:..:Gtk:Gtk:ShadowType#T|Gtk.Gtk.ShadowType.T]], x : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], width : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], height : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== Diamond ====
-''Diamond(style, window, state_type, shadow_type, x, y, width, height) : [[..:..:Std:Object#T|Std.Object.T]]''
+''Diamond(style : [[..:..:Gtk:Gtk:Style#T|Gtk.Gtk.Style.T]], window : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]], state_type : [[..:..:Gtk:Gtk:StateType#T|Gtk.Gtk.StateType.T]], shadow_type : [[..:..:Gtk:Gtk:ShadowType#T|Gtk.Gtk.ShadowType.T]], x : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], width : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], height : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== Expander ====
-''Expander(style, window, state_type, x, y, expander_style) : [[..:..:Std:Object#T|Std.Object.T]]''
+''Expander(style : [[..:..:Gtk:Gtk:Style#T|Gtk.Gtk.Style.T]], window : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]], state_type : [[..:..:Gtk:Gtk:StateType#T|Gtk.Gtk.StateType.T]], x : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], expander_style : [[..:..:Gtk:Gtk:ExpanderStyle#T|Gtk.Gtk.ExpanderStyle.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== Extension ====
-''Extension(style, window, state_type, shadow_type, x, y, width, height, gap_side) : [[..:..:Std:Object#T|Std.Object.T]]''
+''Extension(style : [[..:..:Gtk:Gtk:Style#T|Gtk.Gtk.Style.T]], window : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]], state_type : [[..:..:Gtk:Gtk:StateType#T|Gtk.Gtk.StateType.T]], shadow_type : [[..:..:Gtk:Gtk:ShadowType#T|Gtk.Gtk.ShadowType.T]], x : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], width : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], height : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], gap_side : [[..:..:Gtk:Gtk:PositionType#T|Gtk.Gtk.PositionType.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== FlatBox ====
-''FlatBox(style, window, state_type, shadow_type, x, y, width, height) : [[..:..:Std:Object#T|Std.Object.T]]''
+''FlatBox(style : [[..:..:Gtk:Gtk:Style#T|Gtk.Gtk.Style.T]], window : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]], state_type : [[..:..:Gtk:Gtk:StateType#T|Gtk.Gtk.StateType.T]], shadow_type : [[..:..:Gtk:Gtk:ShadowType#T|Gtk.Gtk.ShadowType.T]], x : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], width : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], height : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== Focus ====
-''Focus(style, window, x, y, width, height) : [[..:..:Std:Object#T|Std.Object.T]]''
+''Focus(style : [[..:..:Gtk:Gtk:Style#T|Gtk.Gtk.Style.T]], window : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]], x : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], width : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], height : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== Handle ====
-''Handle(style, window, state_type, shadow_type, x, y, width, height, orientation) : [[..:..:Std:Object#T|Std.Object.T]]''
+''Handle(style : [[..:..:Gtk:Gtk:Style#T|Gtk.Gtk.Style.T]], window : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]], state_type : [[..:..:Gtk:Gtk:StateType#T|Gtk.Gtk.StateType.T]], shadow_type : [[..:..:Gtk:Gtk:ShadowType#T|Gtk.Gtk.ShadowType.T]], x : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], width : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], height : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], orientation : [[..:..:Gtk:Gtk:Orientation#T|Gtk.Gtk.Orientation.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== Hline ====
-''Hline(style, window, state_type, x1, x2, y) : [[..:..:Std:Object#T|Std.Object.T]]''
+''Hline(style : [[..:..:Gtk:Gtk:Style#T|Gtk.Gtk.Style.T]], window : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]], state_type : [[..:..:Gtk:Gtk:StateType#T|Gtk.Gtk.StateType.T]], x1 : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], x2 : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== InsertionCursor ====
-''InsertionCursor(widget, drawable, area, location, is_primary, direction, draw_arrow) : [[..:..:Std:Object#T|Std.Object.T]]''
+''InsertionCursor(widget : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], drawable : [[..:..:Gtk:Gdk:Drawable#T|Gtk.Gdk.Drawable.T]], area : [[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]], location : [[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]], is_primary : [[..:..:Std:Symbol#T|Std.Symbol.T]], direction : [[..:..:Gtk:Gtk:TextDirection#T|Gtk.Gtk.TextDirection.T]], draw_arrow : [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== Layout ====
-''Layout(style, window, state_type, use_text, x, y, layout) : [[..:..:Std:Object#T|Std.Object.T]]''
+''Layout(style : [[..:..:Gtk:Gtk:Style#T|Gtk.Gtk.Style.T]], window : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]], state_type : [[..:..:Gtk:Gtk:StateType#T|Gtk.Gtk.StateType.T]], use_text : [[..:..:Std:Symbol#T|Std.Symbol.T]], x : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], layout : [[..:..:Gtk:Pango:Layout#T|Gtk.Pango.Layout.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== Option ====
-''Option(style, window, state_type, shadow_type, x, y, width, height) : [[..:..:Std:Object#T|Std.Object.T]]''
+''Option(style : [[..:..:Gtk:Gtk:Style#T|Gtk.Gtk.Style.T]], window : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]], state_type : [[..:..:Gtk:Gtk:StateType#T|Gtk.Gtk.StateType.T]], shadow_type : [[..:..:Gtk:Gtk:ShadowType#T|Gtk.Gtk.ShadowType.T]], x : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], width : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], height : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== Polygon ====
-''Polygon(style, window, state_type, shadow_type, points, npoints, fill) : [[..:..:Std:Object#T|Std.Object.T]]''
+''Polygon(style : [[..:..:Gtk:Gtk:Style#T|Gtk.Gtk.Style.T]], window : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]], state_type : [[..:..:Gtk:Gtk:StateType#T|Gtk.Gtk.StateType.T]], shadow_type : [[..:..:Gtk:Gtk:ShadowType#T|Gtk.Gtk.ShadowType.T]], points : [[..:..:Gtk:Gdk:Point#T|Gtk.Gdk.Point.T]], npoints : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], fill : [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== ResizeGrip ====
-''ResizeGrip(style, window, state_type, edge, x, y, width, height) : [[..:..:Std:Object#T|Std.Object.T]]''
+''ResizeGrip(style : [[..:..:Gtk:Gtk:Style#T|Gtk.Gtk.Style.T]], window : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]], state_type : [[..:..:Gtk:Gtk:StateType#T|Gtk.Gtk.StateType.T]], edge : [[..:..:Gtk:Gdk:WindowEdge#T|Gtk.Gdk.WindowEdge.T]], x : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], width : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], height : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== Shadow ====
-''Shadow(style, window, state_type, shadow_type, x, y, width, height) : [[..:..:Std:Object#T|Std.Object.T]]''
+''Shadow(style : [[..:..:Gtk:Gtk:Style#T|Gtk.Gtk.Style.T]], window : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]], state_type : [[..:..:Gtk:Gtk:StateType#T|Gtk.Gtk.StateType.T]], shadow_type : [[..:..:Gtk:Gtk:ShadowType#T|Gtk.Gtk.ShadowType.T]], x : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], width : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], height : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== ShadowGap ====
-''ShadowGap(style, window, state_type, shadow_type, x, y, width, height, gap_side, gap_x, gap_width) : [[..:..:Std:Object#T|Std.Object.T]]''
+''ShadowGap(style : [[..:..:Gtk:Gtk:Style#T|Gtk.Gtk.Style.T]], window : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]], state_type : [[..:..:Gtk:Gtk:StateType#T|Gtk.Gtk.StateType.T]], shadow_type : [[..:..:Gtk:Gtk:ShadowType#T|Gtk.Gtk.ShadowType.T]], x : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], width : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], height : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], gap_side : [[..:..:Gtk:Gtk:PositionType#T|Gtk.Gtk.PositionType.T]], gap_x : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], gap_width : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== Slider ====
-''Slider(style, window, state_type, shadow_type, x, y, width, height, orientation) : [[..:..:Std:Object#T|Std.Object.T]]''
+''Slider(style : [[..:..:Gtk:Gtk:Style#T|Gtk.Gtk.Style.T]], window : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]], state_type : [[..:..:Gtk:Gtk:StateType#T|Gtk.Gtk.StateType.T]], shadow_type : [[..:..:Gtk:Gtk:ShadowType#T|Gtk.Gtk.ShadowType.T]], x : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], width : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], height : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], orientation : [[..:..:Gtk:Gtk:Orientation#T|Gtk.Gtk.Orientation.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== String ====
-''String(style, window, state_type, x, y, string) : [[..:..:Std:Object#T|Std.Object.T]]''
+''String(style : [[..:..:Gtk:Gtk:Style#T|Gtk.Gtk.Style.T]], window : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]], state_type : [[..:..:Gtk:Gtk:StateType#T|Gtk.Gtk.StateType.T]], x : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], string : [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== Tab ====
-''Tab(style, window, state_type, shadow_type, x, y, width, height) : [[..:..:Std:Object#T|Std.Object.T]]''
+''Tab(style : [[..:..:Gtk:Gtk:Style#T|Gtk.Gtk.Style.T]], window : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]], state_type : [[..:..:Gtk:Gtk:StateType#T|Gtk.Gtk.StateType.T]], shadow_type : [[..:..:Gtk:Gtk:ShadowType#T|Gtk.Gtk.ShadowType.T]], x : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], width : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], height : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== Vline ====
-''Vline(style, window, state_type, y1_, y2_, x) : [[..:..:Std:Object#T|Std.Object.T]]''
+''Vline(style : [[..:..:Gtk:Gtk:Style#T|Gtk.Gtk.Style.T]], window : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]], state_type : [[..:..:Gtk:Gtk:StateType#T|Gtk.Gtk.StateType.T]], y1_ : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y2_ : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], x : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 

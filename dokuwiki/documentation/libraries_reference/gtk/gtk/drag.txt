@@ -1,145 +1,145 @@
 ====== Drag ======
 ==== Begin ====
-''Begin(widget, targets, actions, button, event) : [[..:..:Gtk:Gdk:DragContext#T|Gtk.Gdk.DragContext.T]]''
+''Begin(widget : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], targets : [[..:..:Gtk:Gtk:TargetList#T|Gtk.Gtk.TargetList.T]], actions : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], button : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], event : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Gtk:Gdk:DragContext#T|Gtk.Gdk.DragContext.T]]''
 
 
 ==== CheckThreshold ====
-''CheckThreshold(widget, start_x, start_y, current_x, current_y) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+''CheckThreshold(widget : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], start_x : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], start_y : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], current_x : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], current_y : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== DestAddImageTargets ====
-''DestAddImageTargets(widget) : [[..:..:Std:Object#T|Std.Object.T]]''
+''DestAddImageTargets(widget : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== DestAddTextTargets ====
-''DestAddTextTargets(widget) : [[..:..:Std:Object#T|Std.Object.T]]''
+''DestAddTextTargets(widget : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== DestAddUriTargets ====
-''DestAddUriTargets(widget) : [[..:..:Std:Object#T|Std.Object.T]]''
+''DestAddUriTargets(widget : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== DestFindTarget ====
-''DestFindTarget(widget, context, target_list) : [[..:..:Std:Object#T|Std.Object.T]]''
+''DestFindTarget(widget : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], context : [[..:..:Gtk:Gdk:DragContext#T|Gtk.Gdk.DragContext.T]], target_list : [[..:..:Gtk:Gtk:TargetList#T|Gtk.Gtk.TargetList.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== DestGetTargetList ====
-''DestGetTargetList(widget) : [[..:..:Gtk:Gtk:TargetList#T|Gtk.Gtk.TargetList.T]]''
+''DestGetTargetList(widget : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Gtk:Gtk:TargetList#T|Gtk.Gtk.TargetList.T]]''
 
 
 ==== DestGetTrackMotion ====
-''DestGetTrackMotion(widget) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+''DestGetTrackMotion(widget : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== DestSet ====
-''DestSet(widget, flags, targets, n_targets, actions) : [[..:..:Std:Object#T|Std.Object.T]]''
+''DestSet(widget : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], flags : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], targets : [[..:..:Gtk:Gtk:TargetEntry#T|Gtk.Gtk.TargetEntry.T]], n_targets : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], actions : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== DestSetProxy ====
-''DestSetProxy(widget, proxy_window, protocol, use_coordinates) : [[..:..:Std:Object#T|Std.Object.T]]''
+''DestSetProxy(widget : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], proxy_window : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]], protocol : [[..:..:Gtk:Gdk:DragProtocol#T|Gtk.Gdk.DragProtocol.T]], use_coordinates : [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== DestSetTargetList ====
-''DestSetTargetList(widget, target_list) : [[..:..:Std:Object#T|Std.Object.T]]''
+''DestSetTargetList(widget : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], target_list : [[..:..:Gtk:Gtk:TargetList#T|Gtk.Gtk.TargetList.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== DestSetTrackMotion ====
-''DestSetTrackMotion(widget, track_motion) : [[..:..:Std:Object#T|Std.Object.T]]''
+''DestSetTrackMotion(widget : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], track_motion : [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== DestUnset ====
-''DestUnset(widget) : [[..:..:Std:Object#T|Std.Object.T]]''
+''DestUnset(widget : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== Finish ====
-''Finish(context, success, del, time_) : [[..:..:Std:Object#T|Std.Object.T]]''
+''Finish(context : [[..:..:Gtk:Gdk:DragContext#T|Gtk.Gdk.DragContext.T]], success : [[..:..:Std:Symbol#T|Std.Symbol.T]], del : [[..:..:Std:Symbol#T|Std.Symbol.T]], time_ : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== GetData ====
-''GetData(widget, context, target, time_) : [[..:..:Std:Object#T|Std.Object.T]]''
+''GetData(widget : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], context : [[..:..:Gtk:Gdk:DragContext#T|Gtk.Gdk.DragContext.T]], target : [[..:..:Std:Object#T|Std.Object.T]], time_ : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== GetSourceWidget ====
-''GetSourceWidget(context) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
+''GetSourceWidget(context : [[..:..:Gtk:Gdk:DragContext#T|Gtk.Gdk.DragContext.T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
 
 ==== Highlight ====
-''Highlight(widget) : [[..:..:Std:Object#T|Std.Object.T]]''
+''Highlight(widget : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== SetDefaultIcon ====
-''SetDefaultIcon(colormap, pixmap, mask, hot_x, hot_y) : [[..:..:Std:Object#T|Std.Object.T]]''
+''SetDefaultIcon(colormap : [[..:..:Gtk:Gdk:Colormap#T|Gtk.Gdk.Colormap.T]], pixmap : [[..:..:Gtk:Gdk:Pixmap#T|Gtk.Gdk.Pixmap.T]], mask : [[..:..:Gtk:Gdk:Bitmap#T|Gtk.Gdk.Bitmap.T]], hot_x : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], hot_y : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== SetIconDefault ====
-''SetIconDefault(context) : [[..:..:Std:Object#T|Std.Object.T]]''
+''SetIconDefault(context : [[..:..:Gtk:Gdk:DragContext#T|Gtk.Gdk.DragContext.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== SetIconName ====
-''SetIconName(context, icon_name, hot_x, hot_y) : [[..:..:Std:Object#T|Std.Object.T]]''
+''SetIconName(context : [[..:..:Gtk:Gdk:DragContext#T|Gtk.Gdk.DragContext.T]], icon_name : [[..:..:Std:String#T|Std.String.T]], hot_x : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], hot_y : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== SetIconPixbuf ====
-''SetIconPixbuf(context, pixbuf, hot_x, hot_y) : [[..:..:Std:Object#T|Std.Object.T]]''
+''SetIconPixbuf(context : [[..:..:Gtk:Gdk:DragContext#T|Gtk.Gdk.DragContext.T]], pixbuf : [[..:..:Gtk:Gdk:Pixbuf#T|Gtk.Gdk.Pixbuf.T]], hot_x : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], hot_y : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== SetIconPixmap ====
-''SetIconPixmap(context, colormap, pixmap, mask, hot_x, hot_y) : [[..:..:Std:Object#T|Std.Object.T]]''
+''SetIconPixmap(context : [[..:..:Gtk:Gdk:DragContext#T|Gtk.Gdk.DragContext.T]], colormap : [[..:..:Gtk:Gdk:Colormap#T|Gtk.Gdk.Colormap.T]], pixmap : [[..:..:Gtk:Gdk:Pixmap#T|Gtk.Gdk.Pixmap.T]], mask : [[..:..:Gtk:Gdk:Bitmap#T|Gtk.Gdk.Bitmap.T]], hot_x : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], hot_y : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== SetIconStock ====
-''SetIconStock(context, stock_id, hot_x, hot_y) : [[..:..:Std:Object#T|Std.Object.T]]''
+''SetIconStock(context : [[..:..:Gtk:Gdk:DragContext#T|Gtk.Gdk.DragContext.T]], stock_id : [[..:..:Std:String#T|Std.String.T]], hot_x : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], hot_y : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== SetIconWidget ====
-''SetIconWidget(context, widget, hot_x, hot_y) : [[..:..:Std:Object#T|Std.Object.T]]''
+''SetIconWidget(context : [[..:..:Gtk:Gdk:DragContext#T|Gtk.Gdk.DragContext.T]], widget : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], hot_x : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], hot_y : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== SourceAddImageTargets ====
-''SourceAddImageTargets(widget) : [[..:..:Std:Object#T|Std.Object.T]]''
+''SourceAddImageTargets(widget : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== SourceAddTextTargets ====
-''SourceAddTextTargets(widget) : [[..:..:Std:Object#T|Std.Object.T]]''
+''SourceAddTextTargets(widget : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== SourceAddUriTargets ====
-''SourceAddUriTargets(widget) : [[..:..:Std:Object#T|Std.Object.T]]''
+''SourceAddUriTargets(widget : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== SourceGetTargetList ====
-''SourceGetTargetList(widget) : [[..:..:Gtk:Gtk:TargetList#T|Gtk.Gtk.TargetList.T]]''
+''SourceGetTargetList(widget : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Gtk:Gtk:TargetList#T|Gtk.Gtk.TargetList.T]]''
 
 
 ==== SourceSet ====
-''SourceSet(widget, start_button_mask, targets, n_targets, actions) : [[..:..:Std:Object#T|Std.Object.T]]''
+''SourceSet(widget : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], start_button_mask : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], targets : [[..:..:Gtk:Gtk:TargetEntry#T|Gtk.Gtk.TargetEntry.T]], n_targets : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], actions : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== SourceSetIcon ====
-''SourceSetIcon(widget, colormap, pixmap, mask) : [[..:..:Std:Object#T|Std.Object.T]]''
+''SourceSetIcon(widget : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], colormap : [[..:..:Gtk:Gdk:Colormap#T|Gtk.Gdk.Colormap.T]], pixmap : [[..:..:Gtk:Gdk:Pixmap#T|Gtk.Gdk.Pixmap.T]], mask : [[..:..:Gtk:Gdk:Bitmap#T|Gtk.Gdk.Bitmap.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== SourceSetIconName ====
-''SourceSetIconName(widget, icon_name) : [[..:..:Std:Object#T|Std.Object.T]]''
+''SourceSetIconName(widget : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], icon_name : [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== SourceSetIconPixbuf ====
-''SourceSetIconPixbuf(widget, pixbuf) : [[..:..:Std:Object#T|Std.Object.T]]''
+''SourceSetIconPixbuf(widget : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], pixbuf : [[..:..:Gtk:Gdk:Pixbuf#T|Gtk.Gdk.Pixbuf.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== SourceSetIconStock ====
-''SourceSetIconStock(widget, stock_id) : [[..:..:Std:Object#T|Std.Object.T]]''
+''SourceSetIconStock(widget : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], stock_id : [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== SourceSetTargetList ====
-''SourceSetTargetList(widget, target_list) : [[..:..:Std:Object#T|Std.Object.T]]''
+''SourceSetTargetList(widget : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], target_list : [[..:..:Gtk:Gtk:TargetList#T|Gtk.Gtk.TargetList.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== SourceUnset ====
-''SourceUnset(widget) : [[..:..:Std:Object#T|Std.Object.T]]''
+''SourceUnset(widget : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== Unhighlight ====
-''Unhighlight(widget) : [[..:..:Std:Object#T|Std.Object.T]]''
+''Unhighlight(widget : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 

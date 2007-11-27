@@ -1,18 +1,18 @@
 ====== Threads ======
 ==== AddIdle ====
-''AddIdle(function, data) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+''AddIdle(function : [[..:..:Std:Object#T|Std.Object.T]], data : [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== AddIdleFull ====
-''AddIdleFull(priority, function, data, notify) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+''AddIdleFull(priority : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], function : [[..:..:Std:Object#T|Std.Object.T]], data : [[..:..:Std:Address#T|Std.Address.T]], notify : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== AddTimeout ====
-''AddTimeout(interval, function, data) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+''AddTimeout(interval : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], function : [[..:..:Std:Object#T|Std.Object.T]], data : [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== AddTimeoutFull ====
-''AddTimeoutFull(priority, interval, function, data, notify) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+''AddTimeoutFull(priority : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], interval : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], function : [[..:..:Std:Object#T|Std.Object.T]], data : [[..:..:Std:Address#T|Std.Address.T]], notify : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== Enter ====
@@ -28,6 +28,6 @@
 
 
 ==== SetLockFunctions ====
-''SetLockFunctions(enter_fn, leave_fn) : [[..:..:Std:Object#T|Std.Object.T]]''
+''SetLockFunctions(enter_fn : [[..:..:Std:Object#T|Std.Object.T]], leave_fn : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 

@@ -1,21 +1,21 @@
 ====== Quit ======
 ==== Add ====
-''Add(main_level, function, data) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+''Add(main_level : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], function : [[..:..:Std:Function#T|Std.Function.T]], data : [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== AddDestroy ====
-''AddDestroy(main_level, object) : [[..:..:Std:Object#T|Std.Object.T]]''
+''AddDestroy(main_level : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], object : [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== AddFull ====
-''AddFull(main_level, function, marshal, data, destroy) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+''AddFull(main_level : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], function : [[..:..:Std:Function#T|Std.Function.T]], marshal : [[..:..:Std:Function#T|Std.Function.T]], data : [[..:..:Std:Address#T|Std.Address.T]], destroy : [[..:..:Std:Function#T|Std.Function.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== Remove ====
-''Remove(quit_handler_id) : [[..:..:Std:Object#T|Std.Object.T]]''
+''Remove(quit_handler_id : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== RemoveByData ====
-''RemoveByData(data) : [[..:..:Std:Object#T|Std.Object.T]]''
+''RemoveByData(data : [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 

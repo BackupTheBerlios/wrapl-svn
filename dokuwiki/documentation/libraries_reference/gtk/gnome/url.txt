@@ -4,10 +4,10 @@
 
 
 ==== Show ====
-''Show(url, error) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+''Show(url : [[..:..:Std:String#T|Std.String.T]], error : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== ShowWithEnv ====
-''ShowWithEnv(url, envp, error) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+''ShowWithEnv(url : [[..:..:Std:String#T|Std.String.T]], envp : [[..:..:Std:List#T|Std.List.T]], error : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 

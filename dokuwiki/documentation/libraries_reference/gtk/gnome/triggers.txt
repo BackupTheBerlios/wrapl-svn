@@ -1,17 +1,17 @@
 ====== Triggers ======
 ==== AddTrigger ====
-''AddTrigger(nt, ___) : [[..:..:Std:Object#T|Std.Object.T]]''
+''AddTrigger(nt : [[..:..:Gtk:Gnome:Trigger#T|Gtk.Gnome.Trigger.T]], ___ : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== Do ====
-''Do(msg, level, ___) : [[..:..:Std:Object#T|Std.Object.T]]''
+''Do(msg : [[..:..:Std:String#T|Std.String.T]], level : [[..:..:Std:String#T|Std.String.T]], ___ : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== VaddTrigger ====
-''VaddTrigger(nt, supinfo) : [[..:..:Std:Object#T|Std.Object.T]]''
+''VaddTrigger(nt : [[..:..:Gtk:Gnome:Trigger#T|Gtk.Gnome.Trigger.T]], supinfo : [[..:..:Std:List#T|Std.List.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== Vdo ====
-''Vdo(msg, level, supinfo) : [[..:..:Std:Object#T|Std.Object.T]]''
+''Vdo(msg : [[..:..:Std:String#T|Std.String.T]], level : [[..:..:Std:String#T|Std.String.T]], supinfo : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 

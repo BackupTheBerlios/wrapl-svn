@@ -1,14 +1,14 @@
 ====== Global ======
 ==== EnumFromString ====
-''EnumFromString(type, string) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+''EnumFromString(type : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]], string : [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== FlagsFromString ====
-''FlagsFromString(type, string) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+''FlagsFromString(type : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]], string : [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== GetWidgetName ====
-''GetWidgetName(widget) : [[..:..:Std:String#T|Std.String.T]]''
+''GetWidgetName(widget : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== GetWidgetTree ====
@@ -20,14 +20,14 @@
 
 
 ==== RegisterCustomProp ====
-''RegisterCustomProp(prop_name, apply_prop) : [[..:..:Std:Object#T|Std.Object.T]]''
+''RegisterCustomProp(prop_name : [[..:..:Std:String#T|Std.String.T]], apply_prop : [[..:..:Std:Function#T|Std.Function.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== RegisterWidget ====
-''RegisterWidget(new_func, build_children, find_internal_child) : [[..:..:Std:Object#T|Std.Object.T]]''
+''RegisterWidget(new_func : [[..:..:Std:Function#T|Std.Function.T]], build_children : [[..:..:Std:Function#T|Std.Function.T]], find_internal_child : [[..:..:Std:Function#T|Std.Function.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== SetCustomHandler ====
-''SetCustomHandler(user_data) : [[..:..:Std:Object#T|Std.Object.T]]''
+''SetCustomHandler(user_data : [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 

@@ -1,33 +1,33 @@
 ====== Selection ======
 ==== Convert ====
-''Convert(requestor, selection, target, time_) : [[..:..:Std:Object#T|Std.Object.T]]''
+''Convert(requestor : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]], selection : [[..:..:Std:Object#T|Std.Object.T]], target : [[..:..:Std:Object#T|Std.Object.T]], time_ : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== OwnerGet ====
-''OwnerGet(selection) : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]]''
+''OwnerGet(selection : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]]''
 
 
 ==== OwnerGetForDisplay ====
-''OwnerGetForDisplay(display, selection) : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]]''
+''OwnerGetForDisplay(display : [[..:..:Gtk:Gdk:Display#T|Gtk.Gdk.Display.T]], selection : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]]''
 
 
 ==== OwnerSet ====
-''OwnerSet(owner, selection, time_, send_event) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+''OwnerSet(owner : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]], selection : [[..:..:Std:Object#T|Std.Object.T]], time_ : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], send_event : [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== OwnerSetForDisplay ====
-''OwnerSetForDisplay(display, owner, selection, time_, send_event) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+''OwnerSetForDisplay(display : [[..:..:Gtk:Gdk:Display#T|Gtk.Gdk.Display.T]], owner : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]], selection : [[..:..:Std:Object#T|Std.Object.T]], time_ : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], send_event : [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== PropertyGet ====
-''PropertyGet(requestor, data, prop_type, prop_format) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+''PropertyGet(requestor : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]], data : [[..:..:Std:Object#T|Std.Object.T]], prop_type : [[..:..:Gtk:Gdk:Atom#T|Gtk.Gdk.Atom.T]], prop_format : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== SendNotify ====
-''SendNotify(requestor, selection, target, property, time_) : [[..:..:Std:Object#T|Std.Object.T]]''
+''SendNotify(requestor : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], selection : [[..:..:Std:Object#T|Std.Object.T]], target : [[..:..:Std:Object#T|Std.Object.T]], property : [[..:..:Std:Object#T|Std.Object.T]], time_ : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== SendNotifyForDisplay ====
-''SendNotifyForDisplay(display, requestor, selection, target, property, time_) : [[..:..:Std:Object#T|Std.Object.T]]''
+''SendNotifyForDisplay(display : [[..:..:Gtk:Gdk:Display#T|Gtk.Gdk.Display.T]], requestor : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], selection : [[..:..:Std:Object#T|Std.Object.T]], target : [[..:..:Std:Object#T|Std.Object.T]], property : [[..:..:Std:Object#T|Std.Object.T]], time_ : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 

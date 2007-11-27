@@ -1,21 +1,21 @@
 ====== Idle ======
 ==== Add ====
-''Add(function, data) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+''Add(function : [[..:..:Std:Function#T|Std.Function.T]], data : [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== AddFull ====
-''AddFull(priority, function, marshal, data, destroy) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+''AddFull(priority : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], function : [[..:..:Std:Function#T|Std.Function.T]], marshal : [[..:..:Std:Function#T|Std.Function.T]], data : [[..:..:Std:Address#T|Std.Address.T]], destroy : [[..:..:Std:Function#T|Std.Function.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== AddPriority ====
-''AddPriority(priority, function, data) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+''AddPriority(priority : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], function : [[..:..:Std:Function#T|Std.Function.T]], data : [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== Remove ====
-''Remove(idle_handler_id) : [[..:..:Std:Object#T|Std.Object.T]]''
+''Remove(idle_handler_id : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== RemoveByData ====
-''RemoveByData(data) : [[..:..:Std:Object#T|Std.Object.T]]''
+''RemoveByData(data : [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 

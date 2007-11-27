@@ -1,17 +1,17 @@
 ====== Global ======
 ==== BezPathToVec ====
-''BezPathToVec(bez, flatness) : [[..:..:Gtk:Art:Vpath#T|Gtk.Art.Vpath.T]]''
+''BezPathToVec(bez : [[..:..:Gtk:Art:Bpath#T|Gtk.Art.Bpath.T]], flatness : [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Gtk:Art:Vpath#T|Gtk.Art.Vpath.T]]''
 
 
 ==== BezierToVec ====
-''BezierToVec(x0, y0, x1, y1, x2, y2, x3, y3, p, level) : [[..:..:Gtk:Art:Point#T|Gtk.Art.Point.T]]''
+''BezierToVec(x0 : [[..:..:Std:Real#T|Std.Real.T]], y0 : [[..:..:Std:Real#T|Std.Real.T]], x1 : [[..:..:Std:Real#T|Std.Real.T]], y1 : [[..:..:Std:Real#T|Std.Real.T]], x2 : [[..:..:Std:Real#T|Std.Real.T]], y2 : [[..:..:Std:Real#T|Std.Real.T]], x3 : [[..:..:Std:Real#T|Std.Real.T]], y3 : [[..:..:Std:Real#T|Std.Real.T]], p : [[..:..:Gtk:Art:Point#T|Gtk.Art.Point.T]], level : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Gtk:Art:Point#T|Gtk.Art.Point.T]]''
 
 
 ==== GraySvpAa ====
-''GraySvpAa(svp, x0, y0, x1, y1, buf, rowstride) : [[..:..:Std:Object#T|Std.Object.T]]''
+''GraySvpAa(svp : [[..:..:Gtk:Art:SVP#T|Gtk.Art.SVP.T]], x0 : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y0 : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], x1 : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y1 : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], buf : [[..:..:Std:Object#T|Std.Object.T]], rowstride : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== RectListFromUta ====
-''RectListFromUta(uta, max_width, max_height, p_nrects) : [[..:..:Gtk:Art:IRect#T|Gtk.Art.IRect.T]]''
+''RectListFromUta(uta : [[..:..:Gtk:Art:Uta#T|Gtk.Art.Uta.T]], max_width : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], max_height : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], p_nrects : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Gtk:Art:IRect#T|Gtk.Art.IRect.T]]''
 
 

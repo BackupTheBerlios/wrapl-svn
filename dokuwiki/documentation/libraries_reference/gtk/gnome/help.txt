@@ -1,30 +1,30 @@
 ====== Help ======
 ==== Display ====
-''Display(file_name, link_id, error) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+''Display(file_name : [[..:..:Std:String#T|Std.String.T]], link_id : [[..:..:Std:String#T|Std.String.T]], error : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== DisplayDesktop ====
-''DisplayDesktop(program, doc_id, file_name, link_id, error) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+''DisplayDesktop(program : [[..:..:Gtk:Gnome:Program#T|Gtk.Gnome.Program.T]], doc_id : [[..:..:Std:String#T|Std.String.T]], file_name : [[..:..:Std:String#T|Std.String.T]], link_id : [[..:..:Std:String#T|Std.String.T]], error : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== DisplayDesktopWithEnv ====
-''DisplayDesktopWithEnv(program, doc_id, file_name, link_id, envp, error) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+''DisplayDesktopWithEnv(program : [[..:..:Gtk:Gnome:Program#T|Gtk.Gnome.Program.T]], doc_id : [[..:..:Std:String#T|Std.String.T]], file_name : [[..:..:Std:String#T|Std.String.T]], link_id : [[..:..:Std:String#T|Std.String.T]], envp : [[..:..:Std:List#T|Std.List.T]], error : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== DisplayUri ====
-''DisplayUri(help_uri, error) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+''DisplayUri(help_uri : [[..:..:Std:String#T|Std.String.T]], error : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== DisplayUriWithEnv ====
-''DisplayUriWithEnv(help_uri, envp, error) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+''DisplayUriWithEnv(help_uri : [[..:..:Std:String#T|Std.String.T]], envp : [[..:..:Std:List#T|Std.List.T]], error : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== DisplayWithDocId ====
-''DisplayWithDocId(program, doc_id, file_name, link_id, error) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+''DisplayWithDocId(program : [[..:..:Gtk:Gnome:Program#T|Gtk.Gnome.Program.T]], doc_id : [[..:..:Std:String#T|Std.String.T]], file_name : [[..:..:Std:String#T|Std.String.T]], link_id : [[..:..:Std:String#T|Std.String.T]], error : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== DisplayWithDocIdAndEnv ====
-''DisplayWithDocIdAndEnv(program, doc_id, file_name, link_id, envp, error) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+''DisplayWithDocIdAndEnv(program : [[..:..:Gtk:Gnome:Program#T|Gtk.Gnome.Program.T]], doc_id : [[..:..:Std:String#T|Std.String.T]], file_name : [[..:..:Std:String#T|Std.String.T]], link_id : [[..:..:Std:String#T|Std.String.T]], envp : [[..:..:Std:List#T|Std.List.T]], error : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== ErrorQuark ====

@@ -1,9 +1,9 @@
 ====== Input ======
 ==== AddFull ====
-''AddFull(source, condition, function, marshal, data, destroy) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+''AddFull(source : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], condition : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], function : [[..:..:Std:Function#T|Std.Function.T]], marshal : [[..:..:Std:Function#T|Std.Function.T]], data : [[..:..:Std:Address#T|Std.Address.T]], destroy : [[..:..:Std:Function#T|Std.Function.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== Remove ====
-''Remove(input_handler_id) : [[..:..:Std:Object#T|Std.Object.T]]''
+''Remove(input_handler_id : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 

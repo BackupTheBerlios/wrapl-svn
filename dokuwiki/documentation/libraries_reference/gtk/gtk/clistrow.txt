@@ -47,10 +47,10 @@
 
 
 ==== Move ====
-''Move(clist, source_row, dest_row) : [[..:..:Std:Object#T|Std.Object.T]]''
+''Move(clist : [[..:..:Gtk:Gtk:CList#T|Gtk.Gtk.CList.T]], source_row : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], dest_row : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== IsVisible ====
-''IsVisible(clist, row) : [[..:..:Gtk:Gtk:Visibility#T|Gtk.Gtk.Visibility.T]]''
+''IsVisible(clist : [[..:..:Gtk:Gtk:CList#T|Gtk.Gtk.CList.T]], row : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Gtk:Gtk:Visibility#T|Gtk.Gtk.Visibility.T]]''
 
 

@@ -1,33 +1,33 @@
 ====== Type ======
 ==== Class ====
-''Class(type) : [[..:..:Std:Address#T|Std.Address.T]]''
+''Class(type : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]) : [[..:..:Std:Address#T|Std.Address.T]]''
 
 
 ==== EnumFindValue ====
-''EnumFindValue(enum_type, value_name) : [[..:..:Std:Object#T|Std.Object.T]]''
+''EnumFindValue(enum_type : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]], value_name : [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== EnumGetValues ====
-''EnumGetValues(enum_type) : [[..:..:Std:Object#T|Std.Object.T]]''
+''EnumGetValues(enum_type : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== FlagsFindValue ====
-''FlagsFindValue(flags_type, value_name) : [[..:..:Std:Object#T|Std.Object.T]]''
+''FlagsFindValue(flags_type : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]], value_name : [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== FlagsGetValues ====
-''FlagsGetValues(flags_type) : [[..:..:Std:Object#T|Std.Object.T]]''
+''FlagsGetValues(flags_type : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== Init ====
-''Init(debug_flags) : [[..:..:Std:Object#T|Std.Object.T]]''
+''Init(debug_flags : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====
-''New(type) : [[..:..:Std:Address#T|Std.Address.T]]''
+''New(type : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]) : [[..:..:Std:Address#T|Std.Address.T]]''
 
 
 ==== Unique ====
-''Unique(parent_type, gtkinfo) : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
+''Unique(parent_type : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]], gtkinfo : [[..:..:Gtk:Gtk:TypeInfo#T|Gtk.Gtk.TypeInfo.T]]) : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 

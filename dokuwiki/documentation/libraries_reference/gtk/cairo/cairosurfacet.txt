@@ -3,10 +3,10 @@
 
 
 ==== ImageSurfaceCreate ====
-''ImageSurfaceCreate(format, width, height) : [[..:..:Gtk:Cairo:CairoSurfaceT#T|Gtk.Cairo.CairoSurfaceT.T]]''
+''ImageSurfaceCreate(format : [[..:..:Gtk:Cairo:CairoFormatT#T|Gtk.Cairo.CairoFormatT.T]], width : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], height : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Gtk:Cairo:CairoSurfaceT#T|Gtk.Cairo.CairoSurfaceT.T]]''
 
 
 ==== ImageSurfaceCreateForData ====
-''ImageSurfaceCreateForData(data, format, width, height, stride) : [[..:..:Gtk:Cairo:CairoSurfaceT#T|Gtk.Cairo.CairoSurfaceT.T]]''
+''ImageSurfaceCreateForData(data : [[..:..:Std:Address#T|Std.Address.T]], format : [[..:..:Gtk:Cairo:CairoFormatT#T|Gtk.Cairo.CairoFormatT.T]], width : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], height : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], stride : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Gtk:Cairo:CairoSurfaceT#T|Gtk.Cairo.CairoSurfaceT.T]]''
 
 

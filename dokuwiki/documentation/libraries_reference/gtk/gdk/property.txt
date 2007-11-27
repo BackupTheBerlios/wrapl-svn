@@ -1,13 +1,13 @@
 ====== Property ======
 ==== Change ====
-''Change(window, property, type, format, mode, data, nelements) : [[..:..:Std:Object#T|Std.Object.T]]''
+''Change(window : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]], property : [[..:..:Std:Object#T|Std.Object.T]], type : [[..:..:Std:Object#T|Std.Object.T]], format : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], mode : [[..:..:Gtk:Gdk:PropMode#T|Gtk.Gdk.PropMode.T]], data : [[..:..:Std:String#T|Std.String.T]], nelements : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== Delete ====
-''Delete(window, property) : [[..:..:Std:Object#T|Std.Object.T]]''
+''Delete(window : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]], property : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== Get ====
-''Get(window, property, type, offset, length, pdelete, actual_property_type, actual_format, actual_length, data) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+''Get(window : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]], property : [[..:..:Std:Object#T|Std.Object.T]], type : [[..:..:Std:Object#T|Std.Object.T]], offset : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], length : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], pdelete : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], actual_property_type : [[..:..:Gtk:Gdk:Atom#T|Gtk.Gdk.Atom.T]], actual_format : [[..:..:Std:Object#T|Std.Object.T]], actual_length : [[..:..:Std:Object#T|Std.Object.T]], data : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 

@@ -1,53 +1,53 @@
 ====== Affine ======
 ==== Equal ====
-''Equal(matrix1, matrix2) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+''Equal(matrix1 : [[..:..:Std:Object#T|Std.Object.T]], matrix2 : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== Expansion ====
-''Expansion(src) : [[..:..:Std:Real#T|Std.Real.T]]''
+''Expansion(src : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== Flip ====
-''Flip(dst_affine, src_affine, horz, vert) : [[..:..:Std:Object#T|Std.Object.T]]''
+''Flip(dst_affine : [[..:..:Std:Object#T|Std.Object.T]], src_affine : [[..:..:Std:Object#T|Std.Object.T]], horz : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], vert : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== Identity ====
-''Identity(dst) : [[..:..:Std:Object#T|Std.Object.T]]''
+''Identity(dst : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== Invert ====
-''Invert(dst_affine, src_affine) : [[..:..:Std:Object#T|Std.Object.T]]''
+''Invert(dst_affine : [[..:..:Std:Object#T|Std.Object.T]], src_affine : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== Multiply ====
-''Multiply(dst, src1, src2) : [[..:..:Std:Object#T|Std.Object.T]]''
+''Multiply(dst : [[..:..:Std:Object#T|Std.Object.T]], src1 : [[..:..:Std:Object#T|Std.Object.T]], src2 : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== Point ====
-''Point(dst, src, affine) : [[..:..:Std:Object#T|Std.Object.T]]''
+''Point(dst : [[..:..:Gtk:Art:Point#T|Gtk.Art.Point.T]], src : [[..:..:Gtk:Art:Point#T|Gtk.Art.Point.T]], affine : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== Rectilinear ====
-''Rectilinear(src) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+''Rectilinear(src : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== Rotate ====
-''Rotate(dst, theta) : [[..:..:Std:Object#T|Std.Object.T]]''
+''Rotate(dst : [[..:..:Std:Object#T|Std.Object.T]], theta : [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== Scale ====
-''Scale(dst, sx, sy) : [[..:..:Std:Object#T|Std.Object.T]]''
+''Scale(dst : [[..:..:Std:Object#T|Std.Object.T]], sx : [[..:..:Std:Real#T|Std.Real.T]], sy : [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== Shear ====
-''Shear(dst, theta) : [[..:..:Std:Object#T|Std.Object.T]]''
+''Shear(dst : [[..:..:Std:Object#T|Std.Object.T]], theta : [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== ToString ====
-''ToString(str, src) : [[..:..:Std:Object#T|Std.Object.T]]''
+''ToString(str : [[..:..:Std:String#T|Std.String.T]], src : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== Translate ====
-''Translate(dst, tx, ty) : [[..:..:Std:Object#T|Std.Object.T]]''
+''Translate(dst : [[..:..:Std:Object#T|Std.Object.T]], tx : [[..:..:Std:Real#T|Std.Real.T]], ty : [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 

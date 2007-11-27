@@ -4,10 +4,10 @@
 
 
 ==== RunPageSetupDialog ====
-''RunPageSetupDialog(parent, page_setup, settings) : [[..:..:Gtk:Gtk:PageSetup#T|Gtk.Gtk.PageSetup.T]]''
+''RunPageSetupDialog(parent : [[..:..:Gtk:Gtk:Window#T|Gtk.Gtk.Window.T]], page_setup : [[..:..:Gtk:Gtk:PageSetup#T|Gtk.Gtk.PageSetup.T]], settings : [[..:..:Gtk:Gtk:PrintSettings#T|Gtk.Gtk.PrintSettings.T]]) : [[..:..:Gtk:Gtk:PageSetup#T|Gtk.Gtk.PageSetup.T]]''
 
 
 ==== RunPageSetupDialogAsync ====
-''RunPageSetupDialogAsync(parent, page_setup, settings, done_cb, data) : [[..:..:Std:Object#T|Std.Object.T]]''
+''RunPageSetupDialogAsync(parent : [[..:..:Gtk:Gtk:Window#T|Gtk.Gtk.Window.T]], page_setup : [[..:..:Gtk:Gtk:PageSetup#T|Gtk.Gtk.PageSetup.T]], settings : [[..:..:Gtk:Gtk:PrintSettings#T|Gtk.Gtk.PrintSettings.T]], done_cb : [[..:..:Std:Function#T|Std.Function.T]], data : [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 

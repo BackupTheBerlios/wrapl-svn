@@ -63,14 +63,14 @@
 
 
 ==== VpathStrokeRaw ====
-''VpathStrokeRaw(vpath, join, cap, line_width, miter_limit, flatness) : [[..:..:Gtk:Art:Vpath#T|Gtk.Art.Vpath.T]]''
+''VpathStrokeRaw(vpath : [[..:..:Gtk:Art:Vpath#T|Gtk.Art.Vpath.T]], join : [[..:..:Gtk:Art:PathStrokeJoinType#T|Gtk.Art.PathStrokeJoinType.T]], cap : [[..:..:Gtk:Art:PathStrokeCapType#T|Gtk.Art.PathStrokeCapType.T]], line_width : [[..:..:Std:Real#T|Std.Real.T]], miter_limit : [[..:..:Std:Real#T|Std.Real.T]], flatness : [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Gtk:Art:Vpath#T|Gtk.Art.Vpath.T]]''
 
 
 ==== VpathStroke ====
-''VpathStroke(vpath, join, cap, line_width, miter_limit, flatness) : [[..:..:Gtk:Art:SVP#T|Gtk.Art.SVP.T]]''
+''VpathStroke(vpath : [[..:..:Gtk:Art:Vpath#T|Gtk.Art.Vpath.T]], join : [[..:..:Gtk:Art:PathStrokeJoinType#T|Gtk.Art.PathStrokeJoinType.T]], cap : [[..:..:Gtk:Art:PathStrokeCapType#T|Gtk.Art.PathStrokeCapType.T]], line_width : [[..:..:Std:Real#T|Std.Real.T]], miter_limit : [[..:..:Std:Real#T|Std.Real.T]], flatness : [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Gtk:Art:SVP#T|Gtk.Art.SVP.T]]''
 
 
 ==== FromVpath ====
-''FromVpath(vpath) : [[..:..:Gtk:Art:SVP#T|Gtk.Art.SVP.T]]''
+''FromVpath(vpath : [[..:..:Gtk:Art:Vpath#T|Gtk.Art.Vpath.T]]) : [[..:..:Gtk:Art:SVP#T|Gtk.Art.SVP.T]]''
 
 

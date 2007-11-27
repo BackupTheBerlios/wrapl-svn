@@ -1,33 +1,33 @@
 ====== Keyval ======
 ==== ConvertCase ====
-''ConvertCase(symbol, lower, upper) : [[..:..:Std:Object#T|Std.Object.T]]''
+''ConvertCase(symbol : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], lower : [[..:..:Std:Object#T|Std.Object.T]], upper : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== FromName ====
-''FromName(keyval_name) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+''FromName(keyval_name : [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== IsLower ====
-''IsLower(keyval) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+''IsLower(keyval : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== IsUpper ====
-''IsUpper(keyval) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+''IsUpper(keyval : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== Name ====
-''Name(keyval) : [[..:..:Std:String#T|Std.String.T]]''
+''Name(keyval : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== ToLower ====
-''ToLower(keyval) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+''ToLower(keyval : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== ToUnicode ====
-''ToUnicode(keyval) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+''ToUnicode(keyval : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== ToUpper ====
-''ToUpper(keyval) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+''ToUpper(keyval : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 

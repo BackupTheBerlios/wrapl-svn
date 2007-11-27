@@ -1,9 +1,9 @@
 ====== Gconf ======
 ==== GetAppSettingsRelative ====
-''GetAppSettingsRelative(program, subkey) : [[..:..:Std:String#T|Std.String.T]]''
+''GetAppSettingsRelative(program : [[..:..:Gtk:Gnome:Program#T|Gtk.Gnome.Program.T]], subkey : [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== GetGnomeLibsSettingsRelative ====
-''GetGnomeLibsSettingsRelative(subkey) : [[..:..:Std:String#T|Std.String.T]]''
+''GetGnomeLibsSettingsRelative(subkey : [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 

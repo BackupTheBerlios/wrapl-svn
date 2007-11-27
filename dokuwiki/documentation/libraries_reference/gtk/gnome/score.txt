@@ -1,9 +1,9 @@
 ====== Score ======
 ==== GetNotable ====
-''GetNotable(gamename, level, names, scores, scoretimes) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+''GetNotable(gamename : [[..:..:Std:String#T|Std.String.T]], level : [[..:..:Std:String#T|Std.String.T]], names : [[..:..:Std:Object#T|Std.Object.T]], scores : [[..:..:Std:Object#T|Std.Object.T]], scoretimes : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== Init ====
-''Init(gamename) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+''Init(gamename : [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 

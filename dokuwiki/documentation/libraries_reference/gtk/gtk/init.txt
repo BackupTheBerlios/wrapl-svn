@@ -1,13 +1,13 @@
 ====== Init ======
 ==== Add ====
-''Add(function, data) : [[..:..:Std:Object#T|Std.Object.T]]''
+''Add(function : [[..:..:Std:Function#T|Std.Function.T]], data : [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== Check ====
-''Check(argc, argv) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+''Check(argc : [[..:..:Std:Object#T|Std.Object.T]], argv : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== WithArgs ====
-''WithArgs(argc, argv, parameter_string, entries, translation_domain, error) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+''WithArgs(argc : [[..:..:Std:Object#T|Std.Object.T]], argv : [[..:..:Std:Object#T|Std.Object.T]], parameter_string : [[..:..:Std:String#T|Std.String.T]], entries : [[..:..:Std:Object#T|Std.Object.T]], translation_domain : [[..:..:Std:String#T|Std.String.T]], error : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 

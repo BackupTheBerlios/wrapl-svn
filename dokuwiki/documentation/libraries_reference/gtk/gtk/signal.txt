@@ -1,45 +1,45 @@
 ====== Signal ======
 ==== CompatMatched ====
-''CompatMatched(object, func, data, match, action) : [[..:..:Std:Object#T|Std.Object.T]]''
+''CompatMatched(object : [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]], func : [[..:..:Std:Function#T|Std.Function.T]], data : [[..:..:Std:Address#T|Std.Address.T]], match : [[..:..:Std:Object#T|Std.Object.T]], action : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== ConnectFull ====
-''ConnectFull(object, name, func, unsupported, data, destroy_func, object_signal, after) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+''ConnectFull(object : [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]], name : [[..:..:Std:String#T|Std.String.T]], func : [[..:..:Std:Function#T|Std.Function.T]], unsupported : [[..:..:Std:Function#T|Std.Function.T]], data : [[..:..:Std:Address#T|Std.Address.T]], destroy_func : [[..:..:Std:Function#T|Std.Function.T]], object_signal : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], after : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== ConnectObjectWhileAlive ====
-''ConnectObjectWhileAlive(object, name, func, alive_object) : [[..:..:Std:Object#T|Std.Object.T]]''
+''ConnectObjectWhileAlive(object : [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]], name : [[..:..:Std:String#T|Std.String.T]], func : [[..:..:Std:Function#T|Std.Function.T]], alive_object : [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== ConnectWhileAlive ====
-''ConnectWhileAlive(object, name, func, func_data, alive_object) : [[..:..:Std:Object#T|Std.Object.T]]''
+''ConnectWhileAlive(object : [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]], name : [[..:..:Std:String#T|Std.String.T]], func : [[..:..:Std:Function#T|Std.Function.T]], func_data : [[..:..:Std:Address#T|Std.Address.T]], alive_object : [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== Emit ====
-''Emit(object, signal_id, ___) : [[..:..:Std:Object#T|Std.Object.T]]''
+''Emit(object : [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]], signal_id : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], ___ : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== EmitByName ====
-''EmitByName(object, name, ___) : [[..:..:Std:Object#T|Std.Object.T]]''
+''EmitByName(object : [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]], name : [[..:..:Std:String#T|Std.String.T]], ___ : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== EmitStopByName ====
-''EmitStopByName(object, name) : [[..:..:Std:Object#T|Std.Object.T]]''
+''EmitStopByName(object : [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]], name : [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== Emitv ====
-''Emitv(object, signal_id, args) : [[..:..:Std:Object#T|Std.Object.T]]''
+''Emitv(object : [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]], signal_id : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], args : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== EmitvByName ====
-''EmitvByName(object, name, args) : [[..:..:Std:Object#T|Std.Object.T]]''
+''EmitvByName(object : [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]], name : [[..:..:Std:String#T|Std.String.T]], args : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====
-''New(name, signal_flags, object_type, function_offset, marshaller, return_val, n_args, ___) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+''New(name : [[..:..:Std:String#T|Std.String.T]], signal_flags : [[..:..:Gtk:Gtk:SignalRunType#T|Gtk.Gtk.SignalRunType.T]], object_type : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]], function_offset : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], marshaller : [[..:..:Std:Object#T|Std.Object.T]], return_val : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]], n_args : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], ___ : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== Newv ====
-''Newv(name, signal_flags, object_type, function_offset, marshaller, return_val, n_args, args) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+''Newv(name : [[..:..:Std:String#T|Std.String.T]], signal_flags : [[..:..:Gtk:Gtk:SignalRunType#T|Gtk.Gtk.SignalRunType.T]], object_type : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]], function_offset : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], marshaller : [[..:..:Std:Object#T|Std.Object.T]], return_val : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]], n_args : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], args : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 

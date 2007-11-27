@@ -77,7 +77,7 @@
 
 
 ==== GetForScreen ====
-''GetForScreen(screen) : [[..:..:Gtk:Gtk:IconTheme#T|Gtk.Gtk.IconTheme.T]]''
+''GetForScreen(screen : [[..:..:Gtk:Gdk:Screen#T|Gtk.Gdk.Screen.T]]) : [[..:..:Gtk:Gtk:IconTheme#T|Gtk.Gtk.IconTheme.T]]''
 
 
 ==== GetDefault ====
@@ -89,6 +89,6 @@
 
 
 ==== AddBuiltinIcon ====
-''AddBuiltinIcon(icon_name, size, pixbuf) : [[..:..:Std:Object#T|Std.Object.T]]''
+''AddBuiltinIcon(icon_name : [[..:..:Std:String#T|Std.String.T]], size : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], pixbuf : [[..:..:Gtk:Gdk:Pixbuf#T|Gtk.Gdk.Pixbuf.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 

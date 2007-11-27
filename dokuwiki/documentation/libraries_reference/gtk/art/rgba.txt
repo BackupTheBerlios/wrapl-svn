@@ -1,13 +1,13 @@
 ====== Rgba ======
 ==== FillRun ====
-''FillRun(buf, r, g, b, n) : [[..:..:Std:Object#T|Std.Object.T]]''
+''FillRun(buf : [[..:..:Std:Object#T|Std.Object.T]], r : [[..:..:Std:Object#T|Std.Object.T]], g : [[..:..:Std:Object#T|Std.Object.T]], b : [[..:..:Std:Object#T|Std.Object.T]], n : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== RgbaComposite ====
-''RgbaComposite(dst, src, n) : [[..:..:Std:Object#T|Std.Object.T]]''
+''RgbaComposite(dst : [[..:..:Std:Object#T|Std.Object.T]], src : [[..:..:Std:Object#T|Std.Object.T]], n : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== RunAlpha ====
-''RunAlpha(buf, r, g, b, alpha, n) : [[..:..:Std:Object#T|Std.Object.T]]''
+''RunAlpha(buf : [[..:..:Std:Object#T|Std.Object.T]], r : [[..:..:Std:Object#T|Std.Object.T]], g : [[..:..:Std:Object#T|Std.Object.T]], b : [[..:..:Std:Object#T|Std.Object.T]], alpha : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], n : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 

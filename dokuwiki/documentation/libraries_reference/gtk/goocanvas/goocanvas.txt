@@ -280,7 +280,7 @@
 
 
 ==== ParsePathData ====
-''ParsePathData(path_data) : [[..:..:Std:Object#T|Std.Object.T]]''
+''ParsePathData(path_data : [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== GetType ====
@@ -288,6 +288,6 @@
 
 
 ==== CreatePath ====
-''CreatePath(commands, cr) : [[..:..:Std:Object#T|Std.Object.T]]''
+''CreatePath(commands : [[..:..:Std:Object#T|Std.Object.T]], cr : [[..:..:Gtk:Cairo:CairoT#T|Gtk.Cairo.CairoT.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 

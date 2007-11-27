@@ -82,19 +82,19 @@
 
 
 ==== SetChangePaletteWithScreenHook ====
-''SetChangePaletteWithScreenHook(func) : [[..:..:Std:Function#T|Std.Function.T]]''
+''SetChangePaletteWithScreenHook(func : [[..:..:Std:Function#T|Std.Function.T]]) : [[..:..:Std:Function#T|Std.Function.T]]''
 
 
 ==== SetChangePaletteHook ====
-''SetChangePaletteHook(func) : [[..:..:Std:Function#T|Std.Function.T]]''
+''SetChangePaletteHook(func : [[..:..:Std:Function#T|Std.Function.T]]) : [[..:..:Std:Function#T|Std.Function.T]]''
 
 
 ==== PaletteToString ====
-''PaletteToString(colors, n_colors) : [[..:..:Std:String#T|Std.String.T]]''
+''PaletteToString(colors : [[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]], n_colors : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== PaletteFromString ====
-''PaletteFromString(str, colors, n_colors) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+''PaletteFromString(str : [[..:..:Std:String#T|Std.String.T]], colors : [[..:..:Std:Object#T|Std.Object.T]], n_colors : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== GetType ====

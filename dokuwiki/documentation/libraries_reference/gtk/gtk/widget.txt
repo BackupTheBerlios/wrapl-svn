@@ -562,11 +562,11 @@
 
 
 ==== SetDefaultDirection ====
-''SetDefaultDirection(dir) : [[..:..:Std:Object#T|Std.Object.T]]''
+''SetDefaultDirection(dir : [[..:..:Gtk:Gtk:TextDirection#T|Gtk.Gtk.TextDirection.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== SetDefaultColormap ====
-''SetDefaultColormap(colormap) : [[..:..:Std:Object#T|Std.Object.T]]''
+''SetDefaultColormap(colormap : [[..:..:Gtk:Gdk:Colormap#T|Gtk.Gdk.Colormap.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== PushCompositeChild ====
@@ -574,7 +574,7 @@
 
 
 ==== PushColormap ====
-''PushColormap(cmap) : [[..:..:Std:Object#T|Std.Object.T]]''
+''PushColormap(cmap : [[..:..:Gtk:Gdk:Colormap#T|Gtk.Gdk.Colormap.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== PopCompositeChild ====
@@ -606,18 +606,18 @@
 
 
 ==== ClassListStyleProperties ====
-''ClassListStyleProperties(klass, n_properties) : [[..:..:Std:Object#T|Std.Object.T]]''
+''ClassListStyleProperties(klass : [[..:..:Std:Object#T|Std.Object.T]], n_properties : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== ClassInstallStylePropertyParser ====
-''ClassInstallStylePropertyParser(klass, pspec, parser) : [[..:..:Std:Object#T|Std.Object.T]]''
+''ClassInstallStylePropertyParser(klass : [[..:..:Std:Object#T|Std.Object.T]], pspec : [[..:..:Std:Object#T|Std.Object.T]], parser : [[..:..:Std:Function#T|Std.Function.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== ClassInstallStyleProperty ====
-''ClassInstallStyleProperty(klass, pspec) : [[..:..:Std:Object#T|Std.Object.T]]''
+''ClassInstallStyleProperty(klass : [[..:..:Std:Object#T|Std.Object.T]], pspec : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== ClassFindStyleProperty ====
-''ClassFindStyleProperty(klass, property_name) : [[..:..:Std:Object#T|Std.Object.T]]''
+''ClassFindStyleProperty(klass : [[..:..:Std:Object#T|Std.Object.T]], property_name : [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 

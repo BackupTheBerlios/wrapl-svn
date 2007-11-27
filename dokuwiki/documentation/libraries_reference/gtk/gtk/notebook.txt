@@ -296,7 +296,7 @@
 
 
 ==== SetWindowCreationHook ====
-''SetWindowCreationHook(func, data, destroy) : [[..:..:Std:Object#T|Std.Object.T]]''
+''SetWindowCreationHook(func : [[..:..:Std:Function#T|Std.Function.T]], data : [[..:..:Std:Address#T|Std.Address.T]], destroy : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== GetType ====

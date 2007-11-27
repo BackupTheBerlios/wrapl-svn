@@ -41,11 +41,11 @@
 
 
 ==== InstallPropertyParser ====
-''InstallPropertyParser(pspec, parser) : [[..:..:Std:Object#T|Std.Object.T]]''
+''InstallPropertyParser(pspec : [[..:..:Std:Object#T|Std.Object.T]], parser : [[..:..:Std:Function#T|Std.Function.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== InstallProperty ====
-''InstallProperty(pspec) : [[..:..:Std:Object#T|Std.Object.T]]''
+''InstallProperty(pspec : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== GetType ====
@@ -53,6 +53,6 @@
 
 
 ==== GetForScreen ====
-''GetForScreen(screen) : [[..:..:Gtk:Gtk:Settings#T|Gtk.Gtk.Settings.T]]''
+''GetForScreen(screen : [[..:..:Gtk:Gdk:Screen#T|Gtk.Gdk.Screen.T]]) : [[..:..:Gtk:Gtk:Settings#T|Gtk.Gtk.Settings.T]]''
 
 

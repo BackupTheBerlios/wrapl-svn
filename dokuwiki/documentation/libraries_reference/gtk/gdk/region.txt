@@ -71,10 +71,10 @@
 
 
 ==== Rectangle ====
-''Rectangle(rectangle) : [[..:..:Gtk:Gdk:Region#T|Gtk.Gdk.Region.T]]''
+''Rectangle(rectangle : [[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]]) : [[..:..:Gtk:Gdk:Region#T|Gtk.Gdk.Region.T]]''
 
 
 ==== Polygon ====
-''Polygon(points, npoints, fill_rule) : [[..:..:Gtk:Gdk:Region#T|Gtk.Gdk.Region.T]]''
+''Polygon(points : [[..:..:Gtk:Gdk:Point#T|Gtk.Gdk.Point.T]], npoints : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], fill_rule : [[..:..:Gtk:Gdk:FillRule#T|Gtk.Gdk.FillRule.T]]) : [[..:..:Gtk:Gdk:Region#T|Gtk.Gdk.Region.T]]''
 
 

@@ -1,17 +1,17 @@
 ====== Targets ======
 ==== IncludeImage ====
-''IncludeImage(targets, n_targets, writable) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+''IncludeImage(targets : [[..:..:Gtk:Gdk:Atom#T|Gtk.Gdk.Atom.T]], n_targets : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], writable : [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== IncludeRichText ====
-''IncludeRichText(targets, n_targets, buffer) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+''IncludeRichText(targets : [[..:..:Gtk:Gdk:Atom#T|Gtk.Gdk.Atom.T]], n_targets : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], buffer : [[..:..:Gtk:Gtk:TextBuffer#T|Gtk.Gtk.TextBuffer.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== IncludeText ====
-''IncludeText(targets, n_targets) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+''IncludeText(targets : [[..:..:Gtk:Gdk:Atom#T|Gtk.Gdk.Atom.T]], n_targets : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== IncludeUri ====
-''IncludeUri(targets, n_targets) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+''IncludeUri(targets : [[..:..:Gtk:Gdk:Atom#T|Gtk.Gdk.Atom.T]], n_targets : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 

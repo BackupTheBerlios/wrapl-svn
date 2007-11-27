@@ -1,17 +1,17 @@
 ====== Input ======
 ==== Add ====
-''Add(source, condition, function, data) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+''Add(source : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], condition : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], function : [[..:..:Std:Function#T|Std.Function.T]], data : [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== AddFull ====
-''AddFull(source, condition, function, data, destroy) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+''AddFull(source : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], condition : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], function : [[..:..:Std:Function#T|Std.Function.T]], data : [[..:..:Std:Address#T|Std.Address.T]], destroy : [[..:..:Std:Function#T|Std.Function.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== Remove ====
-''Remove(tag) : [[..:..:Std:Object#T|Std.Object.T]]''
+''Remove(tag : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== SetExtensionEvents ====
-''SetExtensionEvents(window, mask, mode) : [[..:..:Std:Object#T|Std.Object.T]]''
+''SetExtensionEvents(window : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]], mask : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], mode : [[..:..:Gtk:Gdk:ExtensionMode#T|Gtk.Gdk.ExtensionMode.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 

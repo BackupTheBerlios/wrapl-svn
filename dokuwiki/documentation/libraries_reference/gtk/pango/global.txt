@@ -1,113 +1,113 @@
 ====== Global ======
 ==== ExtentsToPixels ====
-''ExtentsToPixels(ink_rect, logical_rect) : [[..:..:Std:Object#T|Std.Object.T]]''
+''ExtentsToPixels(ink_rect : [[..:..:Gtk:Pango:Rectangle#T|Gtk.Pango.Rectangle.T]], logical_rect : [[..:..:Gtk:Pango:Rectangle#T|Gtk.Pango.Rectangle.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== FindBaseDir ====
-''FindBaseDir(text, length) : [[..:..:Gtk:Pango:Direction#T|Gtk.Pango.Direction.T]]''
+''FindBaseDir(text : [[..:..:Std:String#T|Std.String.T]], length : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Gtk:Pango:Direction#T|Gtk.Pango.Direction.T]]''
 
 
 ==== FindParagraphBoundary ====
-''FindParagraphBoundary(text, length, paragraph_delimiter_index, next_paragraph_start) : [[..:..:Std:Object#T|Std.Object.T]]''
+''FindParagraphBoundary(text : [[..:..:Std:String#T|Std.String.T]], length : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], paragraph_delimiter_index : [[..:..:Std:Object#T|Std.Object.T]], next_paragraph_start : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== GetLogAttrs ====
-''GetLogAttrs(text, length, level, language, log_attrs, attrs_len) : [[..:..:Std:Object#T|Std.Object.T]]''
+''GetLogAttrs(text : [[..:..:Std:String#T|Std.String.T]], length : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], level : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], language : [[..:..:Gtk:Pango:Language#T|Gtk.Pango.Language.T]], log_attrs : [[..:..:Gtk:Pango:LogAttr#T|Gtk.Pango.LogAttr.T]], attrs_len : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== GetMirrorChar ====
-''GetMirrorChar(ch, mirrored_ch) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+''GetMirrorChar(ch : [[..:..:Std:Object#T|Std.Object.T]], mirrored_ch : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== GravityGetForMatrix ====
-''GravityGetForMatrix(matrix) : [[..:..:Gtk:Pango:Gravity#T|Gtk.Pango.Gravity.T]]''
+''GravityGetForMatrix(matrix : [[..:..:Gtk:Pango:Matrix#T|Gtk.Pango.Matrix.T]]) : [[..:..:Gtk:Pango:Gravity#T|Gtk.Pango.Gravity.T]]''
 
 
 ==== GravityGetForScript ====
-''GravityGetForScript(script, base_gravity, hint) : [[..:..:Gtk:Pango:Gravity#T|Gtk.Pango.Gravity.T]]''
+''GravityGetForScript(script : [[..:..:Gtk:Pango:Script#T|Gtk.Pango.Script.T]], base_gravity : [[..:..:Gtk:Pango:Gravity#T|Gtk.Pango.Gravity.T]], hint : [[..:..:Gtk:Pango:GravityHint#T|Gtk.Pango.GravityHint.T]]) : [[..:..:Gtk:Pango:Gravity#T|Gtk.Pango.Gravity.T]]''
 
 
 ==== GravityToRotation ====
-''GravityToRotation(gravity) : [[..:..:Std:Real#T|Std.Real.T]]''
+''GravityToRotation(gravity : [[..:..:Gtk:Pango:Gravity#T|Gtk.Pango.Gravity.T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== IsZeroWidth ====
-''IsZeroWidth(ch) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+''IsZeroWidth(ch : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== ItemizeWithBaseDir ====
-''ItemizeWithBaseDir(context, base_dir, text, start_index, length, attrs, cached_iter) : [[..:..:Std:Object#T|Std.Object.T]]''
+''ItemizeWithBaseDir(context : [[..:..:Gtk:Pango:Context#T|Gtk.Pango.Context.T]], base_dir : [[..:..:Gtk:Pango:Direction#T|Gtk.Pango.Direction.T]], text : [[..:..:Std:String#T|Std.String.T]], start_index : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], length : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], attrs : [[..:..:Gtk:Pango:AttrList#T|Gtk.Pango.AttrList.T]], cached_iter : [[..:..:Gtk:Pango:AttrIterator#T|Gtk.Pango.AttrIterator.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== ParseEnum ====
-''ParseEnum(type, str, value, warn, possible_values) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+''ParseEnum(type : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]], str : [[..:..:Std:String#T|Std.String.T]], value : [[..:..:Std:Object#T|Std.Object.T]], warn : [[..:..:Std:Symbol#T|Std.Symbol.T]], possible_values : [[..:..:Std:List#T|Std.List.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== ParseMarkup ====
-''ParseMarkup(markup_text, length, accel_marker, attr_list, text, accel_char, error) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+''ParseMarkup(markup_text : [[..:..:Std:String#T|Std.String.T]], length : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], accel_marker : [[..:..:Std:Object#T|Std.Object.T]], attr_list : [[..:..:Std:Object#T|Std.Object.T]], text : [[..:..:Std:List#T|Std.List.T]], accel_char : [[..:..:Std:Object#T|Std.Object.T]], error : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== ParseStretch ====
-''ParseStretch(str, stretch, warn) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+''ParseStretch(str : [[..:..:Std:String#T|Std.String.T]], stretch : [[..:..:Std:Object#T|Std.Object.T]], warn : [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== ParseStyle ====
-''ParseStyle(str, style, warn) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+''ParseStyle(str : [[..:..:Std:String#T|Std.String.T]], style : [[..:..:Std:Object#T|Std.Object.T]], warn : [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== ParseVariant ====
-''ParseVariant(str, variant, warn) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+''ParseVariant(str : [[..:..:Std:String#T|Std.String.T]], variant : [[..:..:Std:Object#T|Std.Object.T]], warn : [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== ParseWeight ====
-''ParseWeight(str, weight, warn) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+''ParseWeight(str : [[..:..:Std:String#T|Std.String.T]], weight : [[..:..:Std:Object#T|Std.Object.T]], warn : [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== QuantizeLineGeometry ====
-''QuantizeLineGeometry(thickness, position) : [[..:..:Std:Object#T|Std.Object.T]]''
+''QuantizeLineGeometry(thickness : [[..:..:Std:Object#T|Std.Object.T]], position : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== ReadLine ====
-''ReadLine(stream, str) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+''ReadLine(stream : [[..:..:Std:Object#T|Std.Object.T]], str : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== ReorderItems ====
-''ReorderItems(logical_items) : [[..:..:Std:Object#T|Std.Object.T]]''
+''ReorderItems(logical_items : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== ScanInt ====
-''ScanInt(pos, out) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+''ScanInt(pos : [[..:..:Std:Object#T|Std.Object.T]], out : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== ScanString ====
-''ScanString(pos, out) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+''ScanString(pos : [[..:..:Std:Object#T|Std.Object.T]], out : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== ScanWord ====
-''ScanWord(pos, out) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+''ScanWord(pos : [[..:..:Std:Object#T|Std.Object.T]], out : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== ScriptForUnichar ====
-''ScriptForUnichar(ch) : [[..:..:Gtk:Pango:Script#T|Gtk.Pango.Script.T]]''
+''ScriptForUnichar(ch : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Gtk:Pango:Script#T|Gtk.Pango.Script.T]]''
 
 
 ==== ScriptGetSampleLanguage ====
-''ScriptGetSampleLanguage(script) : [[..:..:Gtk:Pango:Language#T|Gtk.Pango.Language.T]]''
+''ScriptGetSampleLanguage(script : [[..:..:Gtk:Pango:Script#T|Gtk.Pango.Script.T]]) : [[..:..:Gtk:Pango:Language#T|Gtk.Pango.Language.T]]''
 
 
 ==== SkipSpace ====
-''SkipSpace(pos) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+''SkipSpace(pos : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== SplitFileList ====
-''SplitFileList(str) : [[..:..:Std:List#T|Std.List.T]]''
+''SplitFileList(str : [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:List#T|Std.List.T]]''
 
 
 ==== TrimString ====
-''TrimString(str) : [[..:..:Std:String#T|Std.String.T]]''
+''TrimString(str : [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== UnicharDirection ====
-''UnicharDirection(ch) : [[..:..:Gtk:Pango:Direction#T|Gtk.Pango.Direction.T]]''
+''UnicharDirection(ch : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Gtk:Pango:Direction#T|Gtk.Pango.Direction.T]]''
 
 

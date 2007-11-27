@@ -1,13 +1,13 @@
 ====== Spawn ======
 ==== CommandLineOnScreen ====
-''CommandLineOnScreen(screen, command_line, error) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+''CommandLineOnScreen(screen : [[..:..:Gtk:Gdk:Screen#T|Gtk.Gdk.Screen.T]], command_line : [[..:..:Std:String#T|Std.String.T]], error : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== OnScreen ====
-''OnScreen(screen, working_directory, argv, envp, flags, child_setup, user_data, child_pid, error) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+''OnScreen(screen : [[..:..:Gtk:Gdk:Screen#T|Gtk.Gdk.Screen.T]], working_directory : [[..:..:Std:String#T|Std.String.T]], argv : [[..:..:Std:List#T|Std.List.T]], envp : [[..:..:Std:List#T|Std.List.T]], flags : [[..:..:Std:Object#T|Std.Object.T]], child_setup : [[..:..:Std:Object#T|Std.Object.T]], user_data : [[..:..:Std:Address#T|Std.Address.T]], child_pid : [[..:..:Std:Object#T|Std.Object.T]], error : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== OnScreenWithPipes ====
-''OnScreenWithPipes(screen, working_directory, argv, envp, flags, child_setup, user_data, child_pid, standard_input, standard_output, standard_error, error) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+''OnScreenWithPipes(screen : [[..:..:Gtk:Gdk:Screen#T|Gtk.Gdk.Screen.T]], working_directory : [[..:..:Std:String#T|Std.String.T]], argv : [[..:..:Std:List#T|Std.List.T]], envp : [[..:..:Std:List#T|Std.List.T]], flags : [[..:..:Std:Object#T|Std.Object.T]], child_setup : [[..:..:Std:Object#T|Std.Object.T]], user_data : [[..:..:Std:Address#T|Std.Address.T]], child_pid : [[..:..:Std:Object#T|Std.Object.T]], standard_input : [[..:..:Std:Object#T|Std.Object.T]], standard_output : [[..:..:Std:Object#T|Std.Object.T]], standard_error : [[..:..:Std:Object#T|Std.Object.T]], error : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 

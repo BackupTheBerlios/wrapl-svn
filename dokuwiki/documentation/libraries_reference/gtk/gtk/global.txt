@@ -1,14 +1,14 @@
 ====== Global ======
 ==== AlternativeDialogButtonOrder ====
-''AlternativeDialogButtonOrder(screen) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+''AlternativeDialogButtonOrder(screen : [[..:..:Gtk:Gdk:Screen#T|Gtk.Gdk.Screen.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== BindingParseBinding ====
-''BindingParseBinding(scanner) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+''BindingParseBinding(scanner : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== CheckVersion ====
-''CheckVersion(required_major, required_minor, required_micro) : [[..:..:Std:String#T|Std.String.T]]''
+''CheckVersion(required_major : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], required_minor : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], required_micro : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== DisableSetlocale ====
@@ -24,7 +24,7 @@
 
 
 ==== GetCurrentEventState ====
-''GetCurrentEventState(state) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+''GetCurrentEventState(state : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== GetCurrentEventTime ====
@@ -36,11 +36,11 @@
 
 
 ==== GetEventWidget ====
-''GetEventWidget(event) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
+''GetEventWidget(event : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
 
 ==== GetOptionGroup ====
-''GetOptionGroup(open_default_display) : [[..:..:Std:Object#T|Std.Object.T]]''
+''GetOptionGroup(open_default_display : [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== IdentifierGetType ====
@@ -48,91 +48,91 @@
 
 
 ==== PaintArrow ====
-''PaintArrow(style, window, state_type, shadow_type, area, widget, detail, arrow_type, fill, x, y, width, height) : [[..:..:Std:Object#T|Std.Object.T]]''
+''PaintArrow(style : [[..:..:Gtk:Gtk:Style#T|Gtk.Gtk.Style.T]], window : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]], state_type : [[..:..:Gtk:Gtk:StateType#T|Gtk.Gtk.StateType.T]], shadow_type : [[..:..:Gtk:Gtk:ShadowType#T|Gtk.Gtk.ShadowType.T]], area : [[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]], widget : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], detail : [[..:..:Std:String#T|Std.String.T]], arrow_type : [[..:..:Gtk:Gtk:ArrowType#T|Gtk.Gtk.ArrowType.T]], fill : [[..:..:Std:Symbol#T|Std.Symbol.T]], x : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], width : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], height : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== PaintBox ====
-''PaintBox(style, window, state_type, shadow_type, area, widget, detail, x, y, width, height) : [[..:..:Std:Object#T|Std.Object.T]]''
+''PaintBox(style : [[..:..:Gtk:Gtk:Style#T|Gtk.Gtk.Style.T]], window : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]], state_type : [[..:..:Gtk:Gtk:StateType#T|Gtk.Gtk.StateType.T]], shadow_type : [[..:..:Gtk:Gtk:ShadowType#T|Gtk.Gtk.ShadowType.T]], area : [[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]], widget : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], detail : [[..:..:Std:String#T|Std.String.T]], x : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], width : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], height : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== PaintBoxGap ====
-''PaintBoxGap(style, window, state_type, shadow_type, area, widget, detail, x, y, width, height, gap_side, gap_x, gap_width) : [[..:..:Std:Object#T|Std.Object.T]]''
+''PaintBoxGap(style : [[..:..:Gtk:Gtk:Style#T|Gtk.Gtk.Style.T]], window : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]], state_type : [[..:..:Gtk:Gtk:StateType#T|Gtk.Gtk.StateType.T]], shadow_type : [[..:..:Gtk:Gtk:ShadowType#T|Gtk.Gtk.ShadowType.T]], area : [[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]], widget : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], detail : [[..:..:Std:String#T|Std.String.T]], x : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], width : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], height : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], gap_side : [[..:..:Gtk:Gtk:PositionType#T|Gtk.Gtk.PositionType.T]], gap_x : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], gap_width : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== PaintCheck ====
-''PaintCheck(style, window, state_type, shadow_type, area, widget, detail, x, y, width, height) : [[..:..:Std:Object#T|Std.Object.T]]''
+''PaintCheck(style : [[..:..:Gtk:Gtk:Style#T|Gtk.Gtk.Style.T]], window : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]], state_type : [[..:..:Gtk:Gtk:StateType#T|Gtk.Gtk.StateType.T]], shadow_type : [[..:..:Gtk:Gtk:ShadowType#T|Gtk.Gtk.ShadowType.T]], area : [[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]], widget : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], detail : [[..:..:Std:String#T|Std.String.T]], x : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], width : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], height : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== PaintDiamond ====
-''PaintDiamond(style, window, state_type, shadow_type, area, widget, detail, x, y, width, height) : [[..:..:Std:Object#T|Std.Object.T]]''
+''PaintDiamond(style : [[..:..:Gtk:Gtk:Style#T|Gtk.Gtk.Style.T]], window : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]], state_type : [[..:..:Gtk:Gtk:StateType#T|Gtk.Gtk.StateType.T]], shadow_type : [[..:..:Gtk:Gtk:ShadowType#T|Gtk.Gtk.ShadowType.T]], area : [[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]], widget : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], detail : [[..:..:Std:String#T|Std.String.T]], x : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], width : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], height : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== PaintExpander ====
-''PaintExpander(style, window, state_type, area, widget, detail, x, y, expander_style) : [[..:..:Std:Object#T|Std.Object.T]]''
+''PaintExpander(style : [[..:..:Gtk:Gtk:Style#T|Gtk.Gtk.Style.T]], window : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]], state_type : [[..:..:Gtk:Gtk:StateType#T|Gtk.Gtk.StateType.T]], area : [[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]], widget : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], detail : [[..:..:Std:String#T|Std.String.T]], x : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], expander_style : [[..:..:Gtk:Gtk:ExpanderStyle#T|Gtk.Gtk.ExpanderStyle.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== PaintExtension ====
-''PaintExtension(style, window, state_type, shadow_type, area, widget, detail, x, y, width, height, gap_side) : [[..:..:Std:Object#T|Std.Object.T]]''
+''PaintExtension(style : [[..:..:Gtk:Gtk:Style#T|Gtk.Gtk.Style.T]], window : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]], state_type : [[..:..:Gtk:Gtk:StateType#T|Gtk.Gtk.StateType.T]], shadow_type : [[..:..:Gtk:Gtk:ShadowType#T|Gtk.Gtk.ShadowType.T]], area : [[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]], widget : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], detail : [[..:..:Std:String#T|Std.String.T]], x : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], width : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], height : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], gap_side : [[..:..:Gtk:Gtk:PositionType#T|Gtk.Gtk.PositionType.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== PaintFlatBox ====
-''PaintFlatBox(style, window, state_type, shadow_type, area, widget, detail, x, y, width, height) : [[..:..:Std:Object#T|Std.Object.T]]''
+''PaintFlatBox(style : [[..:..:Gtk:Gtk:Style#T|Gtk.Gtk.Style.T]], window : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]], state_type : [[..:..:Gtk:Gtk:StateType#T|Gtk.Gtk.StateType.T]], shadow_type : [[..:..:Gtk:Gtk:ShadowType#T|Gtk.Gtk.ShadowType.T]], area : [[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]], widget : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], detail : [[..:..:Std:String#T|Std.String.T]], x : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], width : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], height : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== PaintFocus ====
-''PaintFocus(style, window, state_type, area, widget, detail, x, y, width, height) : [[..:..:Std:Object#T|Std.Object.T]]''
+''PaintFocus(style : [[..:..:Gtk:Gtk:Style#T|Gtk.Gtk.Style.T]], window : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]], state_type : [[..:..:Gtk:Gtk:StateType#T|Gtk.Gtk.StateType.T]], area : [[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]], widget : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], detail : [[..:..:Std:String#T|Std.String.T]], x : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], width : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], height : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== PaintHandle ====
-''PaintHandle(style, window, state_type, shadow_type, area, widget, detail, x, y, width, height, orientation) : [[..:..:Std:Object#T|Std.Object.T]]''
+''PaintHandle(style : [[..:..:Gtk:Gtk:Style#T|Gtk.Gtk.Style.T]], window : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]], state_type : [[..:..:Gtk:Gtk:StateType#T|Gtk.Gtk.StateType.T]], shadow_type : [[..:..:Gtk:Gtk:ShadowType#T|Gtk.Gtk.ShadowType.T]], area : [[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]], widget : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], detail : [[..:..:Std:String#T|Std.String.T]], x : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], width : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], height : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], orientation : [[..:..:Gtk:Gtk:Orientation#T|Gtk.Gtk.Orientation.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== PaintHline ====
-''PaintHline(style, window, state_type, area, widget, detail, x1, x2, y) : [[..:..:Std:Object#T|Std.Object.T]]''
+''PaintHline(style : [[..:..:Gtk:Gtk:Style#T|Gtk.Gtk.Style.T]], window : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]], state_type : [[..:..:Gtk:Gtk:StateType#T|Gtk.Gtk.StateType.T]], area : [[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]], widget : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], detail : [[..:..:Std:String#T|Std.String.T]], x1 : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], x2 : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== PaintLayout ====
-''PaintLayout(style, window, state_type, use_text, area, widget, detail, x, y, layout) : [[..:..:Std:Object#T|Std.Object.T]]''
+''PaintLayout(style : [[..:..:Gtk:Gtk:Style#T|Gtk.Gtk.Style.T]], window : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]], state_type : [[..:..:Gtk:Gtk:StateType#T|Gtk.Gtk.StateType.T]], use_text : [[..:..:Std:Symbol#T|Std.Symbol.T]], area : [[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]], widget : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], detail : [[..:..:Std:String#T|Std.String.T]], x : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], layout : [[..:..:Gtk:Pango:Layout#T|Gtk.Pango.Layout.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== PaintOption ====
-''PaintOption(style, window, state_type, shadow_type, area, widget, detail, x, y, width, height) : [[..:..:Std:Object#T|Std.Object.T]]''
+''PaintOption(style : [[..:..:Gtk:Gtk:Style#T|Gtk.Gtk.Style.T]], window : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]], state_type : [[..:..:Gtk:Gtk:StateType#T|Gtk.Gtk.StateType.T]], shadow_type : [[..:..:Gtk:Gtk:ShadowType#T|Gtk.Gtk.ShadowType.T]], area : [[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]], widget : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], detail : [[..:..:Std:String#T|Std.String.T]], x : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], width : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], height : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== PaintPolygon ====
-''PaintPolygon(style, window, state_type, shadow_type, area, widget, detail, points, npoints, fill) : [[..:..:Std:Object#T|Std.Object.T]]''
+''PaintPolygon(style : [[..:..:Gtk:Gtk:Style#T|Gtk.Gtk.Style.T]], window : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]], state_type : [[..:..:Gtk:Gtk:StateType#T|Gtk.Gtk.StateType.T]], shadow_type : [[..:..:Gtk:Gtk:ShadowType#T|Gtk.Gtk.ShadowType.T]], area : [[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]], widget : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], detail : [[..:..:Std:String#T|Std.String.T]], points : [[..:..:Gtk:Gdk:Point#T|Gtk.Gdk.Point.T]], npoints : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], fill : [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== PaintResizeGrip ====
-''PaintResizeGrip(style, window, state_type, area, widget, detail, edge, x, y, width, height) : [[..:..:Std:Object#T|Std.Object.T]]''
+''PaintResizeGrip(style : [[..:..:Gtk:Gtk:Style#T|Gtk.Gtk.Style.T]], window : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]], state_type : [[..:..:Gtk:Gtk:StateType#T|Gtk.Gtk.StateType.T]], area : [[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]], widget : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], detail : [[..:..:Std:String#T|Std.String.T]], edge : [[..:..:Gtk:Gdk:WindowEdge#T|Gtk.Gdk.WindowEdge.T]], x : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], width : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], height : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== PaintShadow ====
-''PaintShadow(style, window, state_type, shadow_type, area, widget, detail, x, y, width, height) : [[..:..:Std:Object#T|Std.Object.T]]''
+''PaintShadow(style : [[..:..:Gtk:Gtk:Style#T|Gtk.Gtk.Style.T]], window : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]], state_type : [[..:..:Gtk:Gtk:StateType#T|Gtk.Gtk.StateType.T]], shadow_type : [[..:..:Gtk:Gtk:ShadowType#T|Gtk.Gtk.ShadowType.T]], area : [[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]], widget : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], detail : [[..:..:Std:String#T|Std.String.T]], x : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], width : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], height : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== PaintShadowGap ====
-''PaintShadowGap(style, window, state_type, shadow_type, area, widget, detail, x, y, width, height, gap_side, gap_x, gap_width) : [[..:..:Std:Object#T|Std.Object.T]]''
+''PaintShadowGap(style : [[..:..:Gtk:Gtk:Style#T|Gtk.Gtk.Style.T]], window : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]], state_type : [[..:..:Gtk:Gtk:StateType#T|Gtk.Gtk.StateType.T]], shadow_type : [[..:..:Gtk:Gtk:ShadowType#T|Gtk.Gtk.ShadowType.T]], area : [[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]], widget : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], detail : [[..:..:Std:String#T|Std.String.T]], x : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], width : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], height : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], gap_side : [[..:..:Gtk:Gtk:PositionType#T|Gtk.Gtk.PositionType.T]], gap_x : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], gap_width : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== PaintSlider ====
-''PaintSlider(style, window, state_type, shadow_type, area, widget, detail, x, y, width, height, orientation) : [[..:..:Std:Object#T|Std.Object.T]]''
+''PaintSlider(style : [[..:..:Gtk:Gtk:Style#T|Gtk.Gtk.Style.T]], window : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]], state_type : [[..:..:Gtk:Gtk:StateType#T|Gtk.Gtk.StateType.T]], shadow_type : [[..:..:Gtk:Gtk:ShadowType#T|Gtk.Gtk.ShadowType.T]], area : [[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]], widget : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], detail : [[..:..:Std:String#T|Std.String.T]], x : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], width : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], height : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], orientation : [[..:..:Gtk:Gtk:Orientation#T|Gtk.Gtk.Orientation.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== PaintString ====
-''PaintString(style, window, state_type, area, widget, detail, x, y, string) : [[..:..:Std:Object#T|Std.Object.T]]''
+''PaintString(style : [[..:..:Gtk:Gtk:Style#T|Gtk.Gtk.Style.T]], window : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]], state_type : [[..:..:Gtk:Gtk:StateType#T|Gtk.Gtk.StateType.T]], area : [[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]], widget : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], detail : [[..:..:Std:String#T|Std.String.T]], x : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], string : [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== PaintTab ====
-''PaintTab(style, window, state_type, shadow_type, area, widget, detail, x, y, width, height) : [[..:..:Std:Object#T|Std.Object.T]]''
+''PaintTab(style : [[..:..:Gtk:Gtk:Style#T|Gtk.Gtk.Style.T]], window : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]], state_type : [[..:..:Gtk:Gtk:StateType#T|Gtk.Gtk.StateType.T]], shadow_type : [[..:..:Gtk:Gtk:ShadowType#T|Gtk.Gtk.ShadowType.T]], area : [[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]], widget : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], detail : [[..:..:Std:String#T|Std.String.T]], x : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], width : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], height : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== PaintVline ====
-''PaintVline(style, window, state_type, area, widget, detail, y1_, y2_, x) : [[..:..:Std:Object#T|Std.Object.T]]''
+''PaintVline(style : [[..:..:Gtk:Gtk:Style#T|Gtk.Gtk.Style.T]], window : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]], state_type : [[..:..:Gtk:Gtk:StateType#T|Gtk.Gtk.StateType.T]], area : [[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]], widget : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], detail : [[..:..:Std:String#T|Std.String.T]], y1_ : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y2_ : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], x : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== ParseArgs ====
-''ParseArgs(argc, argv) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+''ParseArgs(argc : [[..:..:Std:Object#T|Std.Object.T]], argv : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== PrivateFlagsGetType ====
@@ -140,7 +140,7 @@
 
 
 ==== PropagateEvent ====
-''PropagateEvent(widget, event) : [[..:..:Std:Object#T|Std.Object.T]]''
+''PropagateEvent(widget : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], event : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== SetLocale ====
@@ -148,6 +148,6 @@
 
 
 ==== ShowAboutDialog ====
-''ShowAboutDialog(parent, first_property_name, ___) : [[..:..:Std:Object#T|Std.Object.T]]''
+''ShowAboutDialog(parent : [[..:..:Gtk:Gtk:Window#T|Gtk.Gtk.Window.T]], first_property_name : [[..:..:Std:String#T|Std.String.T]], ___ : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 

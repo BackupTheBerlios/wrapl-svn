@@ -1,10 +1,10 @@
 ====== Global ======
 ==== AddClientMessageFilter ====
-''AddClientMessageFilter(message_type, func, data) : [[..:..:Std:Object#T|Std.Object.T]]''
+''AddClientMessageFilter(message_type : [[..:..:Std:Object#T|Std.Object.T]], func : [[..:..:Std:Function#T|Std.Function.T]], data : [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== AddOptionEntriesLibgtkOnly ====
-''AddOptionEntriesLibgtkOnly(group) : [[..:..:Std:Object#T|Std.Object.T]]''
+''AddOptionEntriesLibgtkOnly(group : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== DevicesList ====
@@ -16,11 +16,11 @@
 
 
 ==== FreeCompoundText ====
-''FreeCompoundText(ctext) : [[..:..:Std:Object#T|Std.Object.T]]''
+''FreeCompoundText(ctext : [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== FreeTextList ====
-''FreeTextList(list) : [[..:..:Std:Object#T|Std.Object.T]]''
+''FreeTextList(list : [[..:..:Std:List#T|Std.List.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== GetDefaultRootWindow ====
@@ -100,7 +100,7 @@
 
 
 ==== StringExtents ====
-''StringExtents(lbearing, rbearing, width, ascent, descent) : [[..:..:Std:Object#T|Std.Object.T]]''
+''StringExtents(lbearing : [[..:..:Std:Object#T|Std.Object.T]], rbearing : [[..:..:Std:Object#T|Std.Object.T]], width : [[..:..:Std:Object#T|Std.Object.T]], ascent : [[..:..:Std:Object#T|Std.Object.T]], descent : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== StringHeight ====
@@ -112,11 +112,11 @@
 
 
 ==== StringToCompoundText ====
-''StringToCompoundText(format, ctext, length) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+''StringToCompoundText(format : [[..:..:Std:Object#T|Std.Object.T]], ctext : [[..:..:Std:Object#T|Std.Object.T]], length : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== StringToCompoundTextForDisplay ====
-''StringToCompoundTextForDisplay(encoding, format, ctext, length) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+''StringToCompoundTextForDisplay(encoding : [[..:..:Gtk:Gdk:Atom#T|Gtk.Gdk.Atom.T]], format : [[..:..:Std:Object#T|Std.Object.T]], ctext : [[..:..:Std:Object#T|Std.Object.T]], length : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== StringWidth ====
