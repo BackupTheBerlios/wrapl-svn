@@ -1,17 +1,18 @@
-====== Integer ======
-===== Overview =====
-''Std.Integer'' provides the basic integer type, actual integers are instances of one of two different integer types, depending on whether they fit into a single machine word or not. However, all arithmetic functions will work on both types and produce a result of the correct type automatically.
-
-===== Exports =====
+====== Std.Integer ======
 ==== T ====
-''Std.Integer.T'' is an abstract type representing the base type of all integers.
 
-==== SmallT ====
-Instances of ''Std.Integer.SmallT'' are integers small enough to fit into a single signed machine word.
+base type of all integer types
 
-==== BigT ====
-Instances of ''Std.Integer.BigT'' are integers of arbitrary precision which are too large to fit into a single signed machine word. Note that it is not allowed to have an instance of ''Std.Integer.BigT'' with a value which can fit in a single signed machine word.
+==== SmallT <: [[#T|T]] ====
 
+integers that fit into a signed machine word.
 
+==== BigT <: [[#T|T]] ====
 
+arbritrary precision integers.<br/>
+note: instances of type <em>BigT</em> should never contain values which can fit into a signed machine word.
+
+==== ToSmallSmall(from : [[#SmallT|SmallT]], to : [[#SmallT|SmallT]]) : [[#SmallT|SmallT]] ====
+
+generates the values from <em>from</em> to <em>to</em> inclusive
 

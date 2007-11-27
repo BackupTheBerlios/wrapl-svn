@@ -1,0 +1,58 @@
+====== IO.Posix ======
+==== T <: [[..:IO:Stream#T|IO.Stream.T]] ====
+
+
+==== ReaderT <: [[#T|T]], [[..:IO:Stream#ReaderT|IO.Stream.ReaderT]], [[..:IO:Stream#T|IO.Stream.T]] ====
+
+
+==== WriterT <: [[#T|T]], [[..:IO:Stream#WriterT|IO.Stream.WriterT]], [[..:IO:Stream#T|IO.Stream.T]] ====
+
+
+==== SeekerT <: [[#T|T]], [[..:IO:Stream#SeekerT|IO.Stream.SeekerT]], [[..:IO:Stream#T|IO.Stream.T]] ====
+
+
+==== TextReaderT <: [[#T|T]], [[#ReaderT|ReaderT]], [[..:IO:Stream#TextReaderT|IO.Stream.TextReaderT]], [[..:IO:Stream#ReaderT|IO.Stream.ReaderT]], [[..:IO:Stream#T|IO.Stream.T]] ====
+
+
+==== TextWriterT <: [[#T|T]], [[#WriterT|WriterT]], [[..:IO:Stream#TextWriterT|IO.Stream.TextWriterT]], [[..:IO:Stream#WriterT|IO.Stream.WriterT]], [[..:IO:Stream#T|IO.Stream.T]] ====
+
+
+==== :flush( @ [[#T|T]]) ====
+
+
+==== :close( @ [[#T|T]]) ====
+
+
+==== :closed( @ [[#T|T]]) ====
+
+
+==== :read( @ [[#ReaderT|ReaderT]],  @ [[..:Std:Address#T|Std.Address.T]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) ====
+
+
+==== :rest( @ [[#ReaderT|ReaderT]]) ====
+
+
+==== :read( @ [[#ReaderT|ReaderT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) ====
+
+
+==== :read( @ [[#TextReaderT|TextReaderT]]) ====
+
+
+==== :write( @ [[#WriterT|WriterT]],  @ [[..:Std:Address#T|Std.Address.T]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) ====
+
+
+==== :write( @ [[#WriterT|WriterT]],  @ [[..:Std:String#T|Std.String.T]]) ====
+
+
+==== :write( @ [[#TextWriterT|TextWriterT]],  @ ANY) ====
+
+
+==== :seek( @ [[#SeekerT|SeekerT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) ====
+
+
+==== :tell( @ [[#T|T]]) ====
+
+
+==== :poll( @ [[#T|T]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) ====
+
+

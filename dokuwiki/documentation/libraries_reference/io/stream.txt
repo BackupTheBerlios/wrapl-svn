@@ -1,1 +1,37 @@
-====== Stream ======
+====== IO.Stream ======
+==== T ====
+
+
+==== ReaderT <: [[#T|T]] ====
+
+
+==== WriterT <: [[#T|T]] ====
+
+
+==== SeekerT <: [[#T|T]] ====
+
+
+==== TextReaderT <: [[#ReaderT|ReaderT]], [[#T|T]] ====
+
+
+==== TextWriterT <: [[#WriterT|WriterT]], [[#T|T]] ====
+
+
+==== MessageT ====
+
+
+==== :@(msg @ [[#MessageT|MessageT]],  = [[..:Std:String#T|Std.String.T]]) ====
+
+
+==== :write( @ [[#TextWriterT|TextWriterT]],  @ ANY) ====
+
+
+==== :writes( @ [[#TextWriterT|TextWriterT]]) ====
+
+
+==== :write( @ [[#WriterT|WriterT]],  @ [[..:Std:String#T|Std.String.T]]) ====
+
+
+==== :copy( @ [[#ReaderT|ReaderT]],  @ [[#WriterT|WriterT]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]]) ====
+
+
