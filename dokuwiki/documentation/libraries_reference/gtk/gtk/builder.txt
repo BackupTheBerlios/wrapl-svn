@@ -5,15 +5,15 @@
 
 
 ==== :ValueFromStringType ====
-'':ValueFromStringType(type @ [[#T|T]], string @ [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]], value @ [[..:..:Std:String#T|Std.String.T]], error @ [[..:..:Gtk:GObject:Value#T|Gtk.GObject.Value.T]],  @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':ValueFromStringType(self @ [[#T|T]], type @ [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]], string @ [[..:..:Std:String#T|Std.String.T]], value @ [[..:..:Gtk:GObject:Value#T|Gtk.GObject.Value.T]], error @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :ValueFromString ====
-'':ValueFromString(pspec @ [[#T|T]], string @ [[..:..:Std:Object#T|Std.Object.T]], value @ [[..:..:Std:String#T|Std.String.T]], error @ [[..:..:Gtk:GObject:Value#T|Gtk.GObject.Value.T]],  @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':ValueFromString(self @ [[#T|T]], pspec @ [[..:..:Std:Object#T|Std.Object.T]], string @ [[..:..:Std:String#T|Std.String.T]], value @ [[..:..:Gtk:GObject:Value#T|Gtk.GObject.Value.T]], error @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :SetTranslationDomain ====
-'':SetTranslationDomain(domain @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetTranslationDomain(self @ [[#T|T]], domain @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Priv ====
@@ -49,7 +49,7 @@
 
 
 ==== :GetTypeFromName ====
-'':GetTypeFromName(type_name @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
+'':GetTypeFromName(self @ [[#T|T]], type_name @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 
 ==== New ====

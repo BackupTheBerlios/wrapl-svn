@@ -11,11 +11,11 @@
 
 
 ==== :ShowFileopButtons ====
-'':ShowFileopButtons( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':ShowFileopButtons(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetSelectMultiple ====
-'':SetSelectMultiple(select_multiple @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetSelectMultiple(self @ [[#T|T]], select_multiple @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :DirList ====
@@ -115,19 +115,19 @@
 
 
 ==== :GetSelectMultiple ====
-'':GetSelectMultiple( @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':GetSelectMultiple(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :GetSelections ====
-'':GetSelections( @ [[#T|T]]) : [[..:..:Std:List#T|Std.List.T]]''
+'':GetSelections(self @ [[#T|T]]) : [[..:..:Std:List#T|Std.List.T]]''
 
 
 ==== :HideFileopButtons ====
-'':HideFileopButtons( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':HideFileopButtons(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetFilename ====
-'':SetFilename(filename @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetFilename(self @ [[#T|T]], filename @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====

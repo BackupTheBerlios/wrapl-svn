@@ -5,19 +5,19 @@
 
 
 ==== :Unset ====
-'':Unset( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+'':Unset(self @ [[#T|T]], key @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :ToKeyFile ====
-'':ToKeyFile( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+'':ToKeyFile(self @ [[#T|T]], key_file @ [[..:..:Std:Object#T|Std.Object.T]], group_name @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :ToFile ====
-'':ToFile( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':ToFile(self @ [[#T|T]], file_name @ [[..:..:Std:String#T|Std.String.T]], error @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :SetUseColor ====
-'':SetUseColor( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+'':SetUseColor(self @ [[#T|T]], use_color @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Copy ====
@@ -33,223 +33,223 @@
 
 
 ==== :GetBool ====
-'':GetBool(key @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':GetBool(self @ [[#T|T]], key @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :GetCollate ====
-'':GetCollate( @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':GetCollate(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :GetDefaultSource ====
-'':GetDefaultSource( @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
+'':GetDefaultSource(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== :GetDither ====
-'':GetDither( @ [[#T|T]])''
+'':GetDither(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== :GetDouble ====
-'':GetDouble( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+'':GetDouble(self @ [[#T|T]], key @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :GetDoubleWithDefault ====
-'':GetDoubleWithDefault( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
+'':GetDoubleWithDefault(self @ [[#T|T]], key @ [[..:..:Std:String#T|Std.String.T]], def @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :GetDuplex ====
-'':GetDuplex( @ [[#T|T]])''
+'':GetDuplex(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:PrintDuplex#T|Gtk.Gtk.PrintDuplex.T]]''
 
 
 ==== :GetFinishings ====
-'':GetFinishings( @ [[#T|T]])''
+'':GetFinishings(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== :GetInt ====
-'':GetInt( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+'':GetInt(self @ [[#T|T]], key @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :GetIntWithDefault ====
-'':GetIntWithDefault( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':GetIntWithDefault(self @ [[#T|T]], key @ [[..:..:Std:String#T|Std.String.T]], def @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :GetLength ====
-'':GetLength( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Gtk:Gtk:Unit#T|Gtk.Gtk.Unit.T]])''
+'':GetLength(self @ [[#T|T]], key @ [[..:..:Std:String#T|Std.String.T]], unit @ [[..:..:Gtk:Gtk:Unit#T|Gtk.Gtk.Unit.T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :GetMediaType ====
-'':GetMediaType( @ [[#T|T]])''
+'':GetMediaType(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== :GetNCopies ====
-'':GetNCopies( @ [[#T|T]])''
+'':GetNCopies(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :GetNumberUp ====
-'':GetNumberUp( @ [[#T|T]])''
+'':GetNumberUp(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :GetOrientation ====
-'':GetOrientation( @ [[#T|T]])''
+'':GetOrientation(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:PageOrientation#T|Gtk.Gtk.PageOrientation.T]]''
 
 
 ==== :GetOutputBin ====
-'':GetOutputBin( @ [[#T|T]])''
+'':GetOutputBin(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== :GetPageRanges ====
-'':GetPageRanges( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':GetPageRanges(self @ [[#T|T]], num_ranges @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Gtk:Gtk:PageRange#T|Gtk.Gtk.PageRange.T]]''
 
 
 ==== :GetPageSet ====
-'':GetPageSet( @ [[#T|T]])''
+'':GetPageSet(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:PageSet#T|Gtk.Gtk.PageSet.T]]''
 
 
 ==== :GetPaperHeight ====
-'':GetPaperHeight( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Unit#T|Gtk.Gtk.Unit.T]])''
+'':GetPaperHeight(self @ [[#T|T]], unit @ [[..:..:Gtk:Gtk:Unit#T|Gtk.Gtk.Unit.T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :GetPaperSize ====
-'':GetPaperSize( @ [[#T|T]])''
+'':GetPaperSize(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:PaperSize#T|Gtk.Gtk.PaperSize.T]]''
 
 
 ==== :GetPaperWidth ====
-'':GetPaperWidth( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Unit#T|Gtk.Gtk.Unit.T]])''
+'':GetPaperWidth(self @ [[#T|T]], unit @ [[..:..:Gtk:Gtk:Unit#T|Gtk.Gtk.Unit.T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :GetPrintPages ====
-'':GetPrintPages( @ [[#T|T]])''
+'':GetPrintPages(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:PrintPages#T|Gtk.Gtk.PrintPages.T]]''
 
 
 ==== :GetPrinter ====
-'':GetPrinter( @ [[#T|T]])''
+'':GetPrinter(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== :GetQuality ====
-'':GetQuality( @ [[#T|T]])''
+'':GetQuality(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:PrintQuality#T|Gtk.Gtk.PrintQuality.T]]''
 
 
 ==== :GetResolution ====
-'':GetResolution( @ [[#T|T]])''
+'':GetResolution(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :GetReverse ====
-'':GetReverse( @ [[#T|T]])''
+'':GetReverse(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :GetScale ====
-'':GetScale( @ [[#T|T]])''
+'':GetScale(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :GetUseColor ====
-'':GetUseColor( @ [[#T|T]])''
+'':GetUseColor(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :HasKey ====
-'':HasKey( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+'':HasKey(self @ [[#T|T]], key @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :Set ====
-'':Set( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+'':Set(self @ [[#T|T]], key @ [[..:..:Std:String#T|Std.String.T]], value @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetBool ====
-'':SetBool( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+'':SetBool(self @ [[#T|T]], key @ [[..:..:Std:String#T|Std.String.T]], value @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetCollate ====
-'':SetCollate( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+'':SetCollate(self @ [[#T|T]], collate @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetDefaultSource ====
-'':SetDefaultSource( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+'':SetDefaultSource(self @ [[#T|T]], default_source @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetDither ====
-'':SetDither( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+'':SetDither(self @ [[#T|T]], dither @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetDouble ====
-'':SetDouble( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+'':SetDouble(self @ [[#T|T]], key @ [[..:..:Std:String#T|Std.String.T]], value @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetDuplex ====
-'':SetDuplex( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:PrintDuplex#T|Gtk.Gtk.PrintDuplex.T]])''
+'':SetDuplex(self @ [[#T|T]], duplex @ [[..:..:Gtk:Gtk:PrintDuplex#T|Gtk.Gtk.PrintDuplex.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetFinishings ====
-'':SetFinishings( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+'':SetFinishings(self @ [[#T|T]], finishings @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetInt ====
-'':SetInt( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':SetInt(self @ [[#T|T]], key @ [[..:..:Std:String#T|Std.String.T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetLength ====
-'':SetLength( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Gtk:Gtk:Unit#T|Gtk.Gtk.Unit.T]])''
+'':SetLength(self @ [[#T|T]], key @ [[..:..:Std:String#T|Std.String.T]], value @ [[..:..:Std:Real#T|Std.Real.T]], unit @ [[..:..:Gtk:Gtk:Unit#T|Gtk.Gtk.Unit.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetMediaType ====
-'':SetMediaType( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+'':SetMediaType(self @ [[#T|T]], media_type @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetNCopies ====
-'':SetNCopies( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':SetNCopies(self @ [[#T|T]], num_copies @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetNumberUp ====
-'':SetNumberUp( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':SetNumberUp(self @ [[#T|T]], number_up @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetOrientation ====
-'':SetOrientation( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:PageOrientation#T|Gtk.Gtk.PageOrientation.T]])''
+'':SetOrientation(self @ [[#T|T]], orientation @ [[..:..:Gtk:Gtk:PageOrientation#T|Gtk.Gtk.PageOrientation.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetOutputBin ====
-'':SetOutputBin( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+'':SetOutputBin(self @ [[#T|T]], output_bin @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetPageRanges ====
-'':SetPageRanges( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:PageRange#T|Gtk.Gtk.PageRange.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':SetPageRanges(self @ [[#T|T]], page_ranges @ [[..:..:Gtk:Gtk:PageRange#T|Gtk.Gtk.PageRange.T]], num_ranges @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetPageSet ====
-'':SetPageSet( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:PageSet#T|Gtk.Gtk.PageSet.T]])''
+'':SetPageSet(self @ [[#T|T]], page_set @ [[..:..:Gtk:Gtk:PageSet#T|Gtk.Gtk.PageSet.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetPaperHeight ====
-'':SetPaperHeight( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Gtk:Gtk:Unit#T|Gtk.Gtk.Unit.T]])''
+'':SetPaperHeight(self @ [[#T|T]], height @ [[..:..:Std:Real#T|Std.Real.T]], unit @ [[..:..:Gtk:Gtk:Unit#T|Gtk.Gtk.Unit.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetPaperSize ====
-'':SetPaperSize( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:PaperSize#T|Gtk.Gtk.PaperSize.T]])''
+'':SetPaperSize(self @ [[#T|T]], paper_size @ [[..:..:Gtk:Gtk:PaperSize#T|Gtk.Gtk.PaperSize.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetPaperWidth ====
-'':SetPaperWidth( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]],  @ [[..:..:Gtk:Gtk:Unit#T|Gtk.Gtk.Unit.T]])''
+'':SetPaperWidth(self @ [[#T|T]], width @ [[..:..:Std:Real#T|Std.Real.T]], unit @ [[..:..:Gtk:Gtk:Unit#T|Gtk.Gtk.Unit.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetPrintPages ====
-'':SetPrintPages( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:PrintPages#T|Gtk.Gtk.PrintPages.T]])''
+'':SetPrintPages(self @ [[#T|T]], pages @ [[..:..:Gtk:Gtk:PrintPages#T|Gtk.Gtk.PrintPages.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetPrinter ====
-'':SetPrinter( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+'':SetPrinter(self @ [[#T|T]], printer @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetQuality ====
-'':SetQuality( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:PrintQuality#T|Gtk.Gtk.PrintQuality.T]])''
+'':SetQuality(self @ [[#T|T]], quality @ [[..:..:Gtk:Gtk:PrintQuality#T|Gtk.Gtk.PrintQuality.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetResolution ====
-'':SetResolution( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':SetResolution(self @ [[#T|T]], resolution @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetReverse ====
-'':SetReverse( @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+'':SetReverse(self @ [[#T|T]], reverse @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetScale ====
-'':SetScale( @ [[#T|T]],  @ [[..:..:Std:Real#T|Std.Real.T]])''
+'':SetScale(self @ [[#T|T]], scale @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====

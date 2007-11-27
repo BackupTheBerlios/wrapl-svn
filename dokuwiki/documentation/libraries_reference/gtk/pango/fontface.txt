@@ -5,7 +5,7 @@
 
 
 ==== :ListSizes ====
-'':ListSizes(sizes @ [[#T|T]], n_sizes @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':ListSizes(self @ [[#T|T]], sizes @ [[..:..:Std:Object#T|Std.Object.T]], n_sizes @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Describe ====
@@ -17,7 +17,7 @@
 
 
 ==== :IsSynthesized ====
-'':IsSynthesized( @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':IsSynthesized(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== GetType ====

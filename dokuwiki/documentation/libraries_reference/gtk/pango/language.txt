@@ -3,11 +3,11 @@
 
 
 ==== :Matches ====
-'':Matches(range_list @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':Matches(self @ [[#T|T]], range_list @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :IncludesScript ====
-'':IncludesScript(script @ [[#T|T]],  @ [[..:..:Gtk:Pango:Script#T|Gtk.Pango.Script.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':IncludesScript(self @ [[#T|T]], script @ [[..:..:Gtk:Pango:Script#T|Gtk.Pango.Script.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :GetSampleString ====

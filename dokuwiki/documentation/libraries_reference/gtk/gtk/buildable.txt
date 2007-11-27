@@ -3,7 +3,7 @@
 
 
 ==== :SetName ====
-'':SetName(name @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetName(self @ [[#T|T]], name @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :AddChild ====
@@ -35,11 +35,11 @@
 
 
 ==== :ParserFinished ====
-'':ParserFinished(builder @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Builder#T|Gtk.Gtk.Builder.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':ParserFinished(self @ [[#T|T]], builder @ [[..:..:Gtk:Gtk:Builder#T|Gtk.Gtk.Builder.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetBuildableProperty ====
-'':SetBuildableProperty(builder @ [[#T|T]], name @ [[..:..:Gtk:Gtk:Builder#T|Gtk.Gtk.Builder.T]], value @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Gtk:GObject:Value#T|Gtk.GObject.Value.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetBuildableProperty(self @ [[#T|T]], builder @ [[..:..:Gtk:Gtk:Builder#T|Gtk.Gtk.Builder.T]], name @ [[..:..:Std:String#T|Std.String.T]], value @ [[..:..:Gtk:GObject:Value#T|Gtk.GObject.Value.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== GetType ====

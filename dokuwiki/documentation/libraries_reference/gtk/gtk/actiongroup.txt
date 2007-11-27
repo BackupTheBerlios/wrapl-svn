@@ -5,11 +5,11 @@
 
 
 ==== :TranslateString ====
-'':TranslateString(string @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:String#T|Std.String.T]]''
+'':TranslateString(self @ [[#T|T]], string @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== :SetVisible ====
-'':SetVisible(visible @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetVisible(self @ [[#T|T]], visible @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :PrivateData ====
@@ -57,31 +57,31 @@
 
 
 ==== :GetSensitive ====
-'':GetSensitive( @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':GetSensitive(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :GetVisible ====
-'':GetVisible( @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':GetVisible(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :ListActions ====
-'':ListActions( @ [[#T|T]]) : [[..:..:Std:List#T|Std.List.T]]''
+'':ListActions(self @ [[#T|T]]) : [[..:..:Std:List#T|Std.List.T]]''
 
 
 ==== :RemoveAction ====
-'':RemoveAction(action @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Action#T|Gtk.Gtk.Action.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':RemoveAction(self @ [[#T|T]], action @ [[..:..:Gtk:Gtk:Action#T|Gtk.Gtk.Action.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetSensitive ====
-'':SetSensitive(sensitive @ [[#T|T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetSensitive(self @ [[#T|T]], sensitive @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetTranslateFunc ====
-'':SetTranslateFunc(func @ [[#T|T]], data @ [[..:..:Std:Function#T|Std.Function.T]], notify @ [[..:..:Std:Address#T|Std.Address.T]],  @ [[..:..:Std:Function#T|Std.Function.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetTranslateFunc(self @ [[#T|T]], func @ [[..:..:Std:Function#T|Std.Function.T]], data @ [[..:..:Std:Address#T|Std.Address.T]], notify @ [[..:..:Std:Function#T|Std.Function.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetTranslationDomain ====
-'':SetTranslationDomain(domain @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetTranslationDomain(self @ [[#T|T]], domain @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====

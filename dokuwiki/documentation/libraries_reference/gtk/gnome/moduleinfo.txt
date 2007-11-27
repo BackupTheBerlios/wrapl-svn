@@ -3,11 +3,11 @@
 
 
 ==== :GetGoptionGroupFunc ====
-'':GetGoptionGroupFunc( @ [[#T|T]])''
+'':GetGoptionGroupFunc(self @ [[#T|T]]) : [[..:..:Std:Function#T|Std.Function.T]]''
 
 
 ==== :OptPrefix ====
-'':OptPrefix( @ [[#T|T]])''
+'':OptPrefix(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== :Name ====
@@ -15,39 +15,39 @@
 
 
 ==== :Version ====
-'':Version( @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
+'':Version(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== :Description ====
-'':Description( @ [[#T|T]])''
+'':Description(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== :Requirements ====
-'':Requirements( @ [[#T|T]])''
+'':Requirements(self @ [[#T|T]]) : [[..:..:Gtk:Gnome:ModuleRequirement#T|Gtk.Gnome.ModuleRequirement.T]]''
 
 
 ==== :InstanceInit ====
-'':InstanceInit( @ [[#T|T]])''
+'':InstanceInit(self @ [[#T|T]]) : [[..:..:Std:Function#T|Std.Function.T]]''
 
 
 ==== :PreArgsParse ====
-'':PreArgsParse( @ [[#T|T]])''
+'':PreArgsParse(self @ [[#T|T]]) : [[..:..:Std:Function#T|Std.Function.T]]''
 
 
 ==== :PostArgsParse ====
-'':PostArgsParse( @ [[#T|T]])''
+'':PostArgsParse(self @ [[#T|T]]) : [[..:..:Std:Function#T|Std.Function.T]]''
 
 
 ==== :Options ====
-'':Options( @ [[#T|T]])''
+'':Options(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :InitPass ====
-'':InitPass( @ [[#T|T]])''
+'':InitPass(self @ [[#T|T]]) : [[..:..:Std:Function#T|Std.Function.T]]''
 
 
 ==== :ClassInit ====
-'':ClassInit( @ [[#T|T]])''
+'':ClassInit(self @ [[#T|T]]) : [[..:..:Std:Function#T|Std.Function.T]]''
 
 
 ==== New ====

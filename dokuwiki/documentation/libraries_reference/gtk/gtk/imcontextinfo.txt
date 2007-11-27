@@ -3,7 +3,7 @@
 
 
 ==== :DefaultLocales ====
-'':DefaultLocales( @ [[#T|T]])''
+'':DefaultLocales(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== :ContextId ====
@@ -11,15 +11,15 @@
 
 
 ==== :ContextName ====
-'':ContextName( @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
+'':ContextName(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== :Domain ====
-'':Domain( @ [[#T|T]])''
+'':Domain(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== :DomainDirname ====
-'':DomainDirname( @ [[#T|T]])''
+'':DomainDirname(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== New ====

@@ -36,94 +36,94 @@
 
 
 ==== GetProgramClass ====
-''GetProgramClass()''
+''GetProgramClass() : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== GetShowEvents ====
-''GetShowEvents()''
+''GetShowEvents() : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== GetUseXshm ====
-''GetUseXshm()''
+''GetUseXshm() : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== InitCheck ====
-''InitCheck() : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+''InitCheck(argc : [[..:..:Std:Object#T|Std.Object.T]], argv : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== ListVisuals ====
-''ListVisuals()''
+''ListVisuals() : [[..:..:Std:List#T|Std.List.T]]''
 
 
 ==== NetWmSupports ====
-''NetWmSupports()''
+''NetWmSupports(property : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== ParseArgs ====
-''ParseArgs() : [[..:..:Std:Object#T|Std.Object.T]]''
+''ParseArgs(argc : [[..:..:Std:Object#T|Std.Object.T]], argv : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== PreParseLibgtkOnly ====
-''PreParseLibgtkOnly()''
+''PreParseLibgtkOnly() : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== SetDoubleClickTime ====
-''SetDoubleClickTime()''
+''SetDoubleClickTime(msec : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== SetLocale ====
-''SetLocale()''
+''SetLocale() : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== SetPointerHooks ====
-''SetPointerHooks()''
+''SetPointerHooks(new_hooks : [[..:..:Gtk:Gdk:PointerHooks#T|Gtk.Gdk.PointerHooks.T]]) : [[..:..:Gtk:Gdk:PointerHooks#T|Gtk.Gdk.PointerHooks.T]]''
 
 
 ==== SetProgramClass ====
-''SetProgramClass()''
+''SetProgramClass(program_class : [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== SetShowEvents ====
-''SetShowEvents()''
+''SetShowEvents(show_events : [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== SetSmClientId ====
-''SetSmClientId()''
+''SetSmClientId(sm_client_id : [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== SetUseXshm ====
-''SetUseXshm()''
+''SetUseXshm(use_xshm : [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== SettingGet ====
-''SettingGet() : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+''SettingGet(name : [[..:..:Std:String#T|Std.String.T]], value : [[..:..:Gtk:GObject:Value#T|Gtk.GObject.Value.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== StringExtents ====
-''StringExtents(lbearing : [[..:..:Std:Object#T|Std.Object.T]], rbearing : [[..:..:Std:Object#T|Std.Object.T]], width : [[..:..:Std:Object#T|Std.Object.T]], ascent : [[..:..:Std:Object#T|Std.Object.T]], descent : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+''StringExtents(font : [[..:..:Gtk:Gdk:Font#T|Gtk.Gdk.Font.T]], string : [[..:..:Std:String#T|Std.String.T]], lbearing : [[..:..:Std:Object#T|Std.Object.T]], rbearing : [[..:..:Std:Object#T|Std.Object.T]], width : [[..:..:Std:Object#T|Std.Object.T]], ascent : [[..:..:Std:Object#T|Std.Object.T]], descent : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== StringHeight ====
-''StringHeight() : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+''StringHeight(font : [[..:..:Gtk:Gdk:Font#T|Gtk.Gdk.Font.T]], string : [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== StringMeasure ====
-''StringMeasure() : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+''StringMeasure(font : [[..:..:Gtk:Gdk:Font#T|Gtk.Gdk.Font.T]], string : [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== StringToCompoundText ====
-''StringToCompoundText(format : [[..:..:Std:Object#T|Std.Object.T]], ctext : [[..:..:Std:Object#T|Std.Object.T]], length : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+''StringToCompoundText(str : [[..:..:Std:String#T|Std.String.T]], encoding : [[..:..:Gtk:Gdk:Atom#T|Gtk.Gdk.Atom.T]], format : [[..:..:Std:Object#T|Std.Object.T]], ctext : [[..:..:Std:Object#T|Std.Object.T]], length : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== StringToCompoundTextForDisplay ====
-''StringToCompoundTextForDisplay(encoding : [[..:..:Gtk:Gdk:Atom#T|Gtk.Gdk.Atom.T]], format : [[..:..:Std:Object#T|Std.Object.T]], ctext : [[..:..:Std:Object#T|Std.Object.T]], length : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+''StringToCompoundTextForDisplay(display : [[..:..:Gtk:Gdk:Display#T|Gtk.Gdk.Display.T]], str : [[..:..:Std:String#T|Std.String.T]], encoding : [[..:..:Gtk:Gdk:Atom#T|Gtk.Gdk.Atom.T]], format : [[..:..:Std:Object#T|Std.Object.T]], ctext : [[..:..:Std:Object#T|Std.Object.T]], length : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== StringWidth ====
-''StringWidth() : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+''StringWidth(font : [[..:..:Gtk:Gdk:Font#T|Gtk.Gdk.Font.T]], string : [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== UnicodeToKeyval ====
-''UnicodeToKeyval()''
+''UnicodeToKeyval(wc : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 

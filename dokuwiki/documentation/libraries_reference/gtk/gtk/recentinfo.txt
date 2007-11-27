@@ -3,7 +3,7 @@
 
 
 ==== :Unref ====
-'':Unref( @ [[#T|T]])''
+'':Unref(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Exists ====
@@ -31,67 +31,67 @@
 
 
 ==== :GetDisplayName ====
-'':GetDisplayName( @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
+'':GetDisplayName(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== :GetGroups ====
-'':GetGroups( @ [[#T|T]],  @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:List#T|Std.List.T]]''
+'':GetGroups(self @ [[#T|T]], length @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:List#T|Std.List.T]]''
 
 
 ==== :GetIcon ====
-'':GetIcon( @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Gtk:Gdk:Pixbuf#T|Gtk.Gdk.Pixbuf.T]]''
+'':GetIcon(self @ [[#T|T]], size @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Gtk:Gdk:Pixbuf#T|Gtk.Gdk.Pixbuf.T]]''
 
 
 ==== :GetMimeType ====
-'':GetMimeType( @ [[#T|T]])''
+'':GetMimeType(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== :GetModified ====
-'':GetModified( @ [[#T|T]])''
+'':GetModified(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetPrivateHint ====
-'':GetPrivateHint( @ [[#T|T]])''
+'':GetPrivateHint(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :GetShortName ====
-'':GetShortName( @ [[#T|T]])''
+'':GetShortName(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== :GetUri ====
-'':GetUri( @ [[#T|T]])''
+'':GetUri(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== :GetUriDisplay ====
-'':GetUriDisplay( @ [[#T|T]])''
+'':GetUriDisplay(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== :GetVisited ====
-'':GetVisited( @ [[#T|T]])''
+'':GetVisited(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :HasApplication ====
-'':HasApplication( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+'':HasApplication(self @ [[#T|T]], app_name @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :HasGroup ====
-'':HasGroup( @ [[#T|T]],  @ [[..:..:Std:String#T|Std.String.T]])''
+'':HasGroup(self @ [[#T|T]], group_name @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :IsLocal ====
-'':IsLocal( @ [[#T|T]])''
+'':IsLocal(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :LastApplication ====
-'':LastApplication( @ [[#T|T]])''
+'':LastApplication(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== :Match ====
-'':Match( @ [[#T|T]],  @ [[..:..:Gtk:Gtk:RecentInfo#T|Gtk.Gtk.RecentInfo.T]])''
+'':Match(self @ [[#T|T]], info_b @ [[..:..:Gtk:Gtk:RecentInfo#T|Gtk.Gtk.RecentInfo.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :Ref ====
-'':Ref( @ [[#T|T]])''
+'':Ref(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:RecentInfo#T|Gtk.Gtk.RecentInfo.T]]''
 
 
 ==== GetType ====

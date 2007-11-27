@@ -3,7 +3,7 @@
 
 
 ==== :Age ====
-'':Age( @ [[#T|T]])''
+'':Age(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Contains ====
@@ -15,19 +15,19 @@
 
 
 ==== :DisplayName ====
-'':DisplayName( @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
+'':DisplayName(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== :MimeType ====
-'':MimeType( @ [[#T|T]])''
+'':MimeType(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== :Applications ====
-'':Applications( @ [[#T|T]])''
+'':Applications(self @ [[#T|T]]) : [[..:..:Std:List#T|Std.List.T]]''
 
 
 ==== :Groups ====
-'':Groups( @ [[#T|T]])''
+'':Groups(self @ [[#T|T]]) : [[..:..:Std:List#T|Std.List.T]]''
 
 
 ==== New ====

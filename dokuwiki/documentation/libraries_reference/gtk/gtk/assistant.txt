@@ -10,11 +10,11 @@
 
 
 ==== :UpdateButtonsState ====
-'':UpdateButtonsState( @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':UpdateButtonsState(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetPageType ====
-'':SetPageType(page @ [[#T|T]], type @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]],  @ [[..:..:Gtk:Gtk:AssistantPageType#T|Gtk.Gtk.AssistantPageType.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetPageType(self @ [[#T|T]], page @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], type @ [[..:..:Gtk:Gtk:AssistantPageType#T|Gtk.Gtk.AssistantPageType.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Cancel ====
@@ -82,43 +82,43 @@
 
 
 ==== :GetPageType ====
-'':GetPageType(page @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Gtk:Gtk:AssistantPageType#T|Gtk.Gtk.AssistantPageType.T]]''
+'':GetPageType(self @ [[#T|T]], page @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Gtk:Gtk:AssistantPageType#T|Gtk.Gtk.AssistantPageType.T]]''
 
 
 ==== :InsertPage ====
-'':InsertPage(page @ [[#T|T]], position @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':InsertPage(self @ [[#T|T]], page @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], position @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :PrependPage ====
-'':PrependPage(page @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':PrependPage(self @ [[#T|T]], page @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :RemoveActionWidget ====
-'':RemoveActionWidget(child @ [[#T|T]],  @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':RemoveActionWidget(self @ [[#T|T]], child @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetCurrentPage ====
-'':SetCurrentPage(page_num @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetCurrentPage(self @ [[#T|T]], page_num @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetForwardPageFunc ====
-'':SetForwardPageFunc(page_func @ [[#T|T]], data @ [[..:..:Std:Function#T|Std.Function.T]], destroy @ [[..:..:Std:Address#T|Std.Address.T]],  @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetForwardPageFunc(self @ [[#T|T]], page_func @ [[..:..:Std:Function#T|Std.Function.T]], data @ [[..:..:Std:Address#T|Std.Address.T]], destroy @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetPageComplete ====
-'':SetPageComplete(page @ [[#T|T]], complete @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetPageComplete(self @ [[#T|T]], page @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], complete @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetPageHeaderImage ====
-'':SetPageHeaderImage(page @ [[#T|T]], pixbuf @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]],  @ [[..:..:Gtk:Gdk:Pixbuf#T|Gtk.Gdk.Pixbuf.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetPageHeaderImage(self @ [[#T|T]], page @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], pixbuf @ [[..:..:Gtk:Gdk:Pixbuf#T|Gtk.Gdk.Pixbuf.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetPageSideImage ====
-'':SetPageSideImage(page @ [[#T|T]], pixbuf @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]],  @ [[..:..:Gtk:Gdk:Pixbuf#T|Gtk.Gdk.Pixbuf.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetPageSideImage(self @ [[#T|T]], page @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], pixbuf @ [[..:..:Gtk:Gdk:Pixbuf#T|Gtk.Gdk.Pixbuf.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetPageTitle ====
-'':SetPageTitle(page @ [[#T|T]], title @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]],  @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetPageTitle(self @ [[#T|T]], page @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], title @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====

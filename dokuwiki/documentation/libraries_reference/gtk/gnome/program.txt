@@ -5,27 +5,27 @@
 
 
 ==== :Preinit ====
-'':Preinit(argc @ [[#T|T]], argv @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]],  @ [[..:..:Std:List#T|Std.List.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Preinit(self @ [[#T|T]], app_id @ [[..:..:Std:String#T|Std.String.T]], app_version @ [[..:..:Std:String#T|Std.String.T]], argc @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], argv @ [[..:..:Std:List#T|Std.List.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Postinit ====
-'':Postinit( @ [[#T|T]])''
+'':Postinit(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :ParseArgs ====
-'':ParseArgs( @ [[#T|T]])''
+'':ParseArgs(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :LocateFile ====
-'':LocateFile(only_if_exists @ [[#T|T]], ret_locations @ [[..:..:Gtk:Gnome:FileDomain#T|Gtk.Gnome.FileDomain.T]],  @ [[..:..:Std:String#T|Std.String.T]],  @ [[..:..:Std:Symbol#T|Std.Symbol.T]],  @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:String#T|Std.String.T]]''
+'':LocateFile(self @ [[#T|T]], domain @ [[..:..:Gtk:Gnome:FileDomain#T|Gtk.Gnome.FileDomain.T]], file_name @ [[..:..:Std:String#T|Std.String.T]], only_if_exists @ [[..:..:Std:Symbol#T|Std.Symbol.T]], ret_locations @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== :GetHumanReadableName ====
-'':GetHumanReadableName( @ [[#T|T]])''
+'':GetHumanReadableName(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== :GetAppVersion ====
-'':GetAppVersion( @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
+'':GetAppVersion(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== :GetAppId ====

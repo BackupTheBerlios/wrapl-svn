@@ -8,18 +8,18 @@
 
 
 ==== SizeLookup ====
-''SizeLookup(width : [[..:..:Std:Object#T|Std.Object.T]], height : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+''SizeLookup(size : [[..:..:Gtk:Gtk:IconSize#T|Gtk.Gtk.IconSize.T]], width : [[..:..:Std:Object#T|Std.Object.T]], height : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== SizeLookupForSettings ====
-''SizeLookupForSettings(size : [[..:..:Gtk:Gtk:IconSize#T|Gtk.Gtk.IconSize.T]], width : [[..:..:Std:Object#T|Std.Object.T]], height : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+''SizeLookupForSettings(settings : [[..:..:Gtk:Gtk:Settings#T|Gtk.Gtk.Settings.T]], size : [[..:..:Gtk:Gtk:IconSize#T|Gtk.Gtk.IconSize.T]], width : [[..:..:Std:Object#T|Std.Object.T]], height : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== SizeRegister ====
-''SizeRegister(width : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], height : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Gtk:Gtk:IconSize#T|Gtk.Gtk.IconSize.T]]''
+''SizeRegister(name : [[..:..:Std:String#T|Std.String.T]], width : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], height : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Gtk:Gtk:IconSize#T|Gtk.Gtk.IconSize.T]]''
 
 
 ==== SizeRegisterAlias ====
-''SizeRegisterAlias(target : [[..:..:Gtk:Gtk:IconSize#T|Gtk.Gtk.IconSize.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+''SizeRegisterAlias(alias : [[..:..:Std:String#T|Std.String.T]], target : [[..:..:Gtk:Gtk:IconSize#T|Gtk.Gtk.IconSize.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 

@@ -12,22 +12,22 @@
 
 
 ==== GetWidgetTree ====
-''GetWidgetTree() : [[..:..:Gtk:Glade:XML#T|Gtk.Glade.XML.T]]''
+''GetWidgetTree(widget : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Gtk:Glade:XML#T|Gtk.Glade.XML.T]]''
 
 
 ==== ModuleCheckVersion ====
-''ModuleCheckVersion() : [[..:..:Std:String#T|Std.String.T]]''
+''ModuleCheckVersion(version : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== RegisterCustomProp ====
-''RegisterCustomProp(prop_name : [[..:..:Std:String#T|Std.String.T]], apply_prop : [[..:..:Std:Function#T|Std.Function.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+''RegisterCustomProp(type : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]], prop_name : [[..:..:Std:String#T|Std.String.T]], apply_prop : [[..:..:Std:Function#T|Std.Function.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== RegisterWidget ====
-''RegisterWidget(new_func : [[..:..:Std:Function#T|Std.Function.T]], build_children : [[..:..:Std:Function#T|Std.Function.T]], find_internal_child : [[..:..:Std:Function#T|Std.Function.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+''RegisterWidget(type : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]], new_func : [[..:..:Std:Function#T|Std.Function.T]], build_children : [[..:..:Std:Function#T|Std.Function.T]], find_internal_child : [[..:..:Std:Function#T|Std.Function.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== SetCustomHandler ====
-''SetCustomHandler(user_data : [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+''SetCustomHandler(handler : [[..:..:Std:Function#T|Std.Function.T]], user_data : [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 

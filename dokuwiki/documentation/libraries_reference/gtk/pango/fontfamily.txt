@@ -5,7 +5,7 @@
 
 
 ==== :ListFaces ====
-'':ListFaces(faces @ [[#T|T]], n_faces @ [[..:..:Std:Object#T|Std.Object.T]],  @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':ListFaces(self @ [[#T|T]], faces @ [[..:..:Std:Object#T|Std.Object.T]], n_faces @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetName ====
@@ -13,7 +13,7 @@
 
 
 ==== :IsMonospace ====
-'':IsMonospace( @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':IsMonospace(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== GetType ====
