@@ -177,7 +177,7 @@
   Returns :     the button widget that was added
 
 ==== :AddButtons ====
-'':AddButtons(self @ [[#T|T]], first_button_text @ [[..:..:Std:String#T|Std.String.T]], ___ @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':AddButtons(self @ [[#T|T]], first_button_text @ [[..:..:Std:String#T|Std.String.T]], @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
   Adds more buttons, same as calling gtk_dialog_add_button() repeatedly. The
   variable argument list should be NULL-terminated as with
@@ -246,7 +246,7 @@
     gtk_widget_destroy (dialog);
 
 ==== :SetAlternativeButtonOrder ====
-'':SetAlternativeButtonOrder(self @ [[#T|T]], first_response_id @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], ___ @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetAlternativeButtonOrder(self @ [[#T|T]], first_response_id @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
   Sets an alternative button order. If the "gtk-alternative-button-order" setting
   is set to TRUE, the dialog buttons are reordered according to the order of the
@@ -302,7 +302,7 @@
 
 
 ==== NewWithButtons ====
-''NewWithButtons(title : [[..:..:Std:String#T|Std.String.T]], parent : [[..:..:Gtk:Gtk:Window#T|Gtk.Gtk.Window.T]], flags : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], first_button_text : [[..:..:Std:String#T|Std.String.T]], ___ : [[..:..:Std:Object#T|Std.Object.T]]) : [[# T| T]]''
+''NewWithButtons(title : [[..:..:Std:String#T|Std.String.T]], parent : [[..:..:Gtk:Gtk:Window#T|Gtk.Gtk.Window.T]], flags : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], first_button_text : [[..:..:Std:String#T|Std.String.T]], ... : [[..:..:Std:Object#T|Std.Object.T]]) : [[# T| T]]''
 
   Creates a new GtkDialog with title title (or NULL for the default title; see
   gtk_window_set_title()) and transient parent parent (or NULL for none; see

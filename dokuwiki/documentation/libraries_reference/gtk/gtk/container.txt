@@ -195,7 +195,7 @@
   widget :    a widget to be placed inside container
 
 ==== :AddWithProperties ====
-'':AddWithProperties(self @ [[#T|T]], widget @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], first_prop_name @ [[..:..:Std:String#T|Std.String.T]], ___ @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':AddWithProperties(self @ [[#T|T]], widget @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], first_prop_name @ [[..:..:Std:String#T|Std.String.T]], @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
   Adds widget to container, setting child properties at the same time. See
   gtk_container_add() and gtk_container_child_set() for more details.
@@ -211,7 +211,7 @@
   container :
 
 ==== :ChildGet ====
-'':ChildGet(self @ [[#T|T]], child @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], first_prop_name @ [[..:..:Std:String#T|Std.String.T]], ___ @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':ChildGet(self @ [[#T|T]], child @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], first_prop_name @ [[..:..:Std:String#T|Std.String.T]], @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
   Gets the values of one or more child properties for child and container.
   container :       a GtkContainer
@@ -240,7 +240,7 @@
                         starting with first_prop_name.
 
 ==== :ChildSet ====
-'':ChildSet(self @ [[#T|T]], child @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], first_prop_name @ [[..:..:Std:String#T|Std.String.T]], ___ @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':ChildSet(self @ [[#T|T]], child @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], first_prop_name @ [[..:..:Std:String#T|Std.String.T]], @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
   Sets one or more child properties for child and container.
   container :       a GtkContainer

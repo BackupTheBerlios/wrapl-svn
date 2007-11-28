@@ -46,7 +46,7 @@
 
 
 ==== New ====
-''New(title : [[..:..:Std:String#T|Std.String.T]], parent : [[..:..:Gtk:Gtk:Window#T|Gtk.Gtk.Window.T]], first_button_text : [[..:..:Std:String#T|Std.String.T]], ___ : [[..:..:Std:Object#T|Std.Object.T]]) : [[# T| T]]''
+''New(title : [[..:..:Std:String#T|Std.String.T]], parent : [[..:..:Gtk:Gtk:Window#T|Gtk.Gtk.Window.T]], first_button_text : [[..:..:Std:String#T|Std.String.T]], ... : [[..:..:Std:Object#T|Std.Object.T]]) : [[# T| T]]''
 
   Creates a new GtkRecentChooserDialog. This function is analogous to
   gtk_dialog_new_with_buttons().
@@ -62,7 +62,7 @@
 
 
 ==== NewForManager ====
-''NewForManager(title : [[..:..:Std:String#T|Std.String.T]], parent : [[..:..:Gtk:Gtk:Window#T|Gtk.Gtk.Window.T]], manager : [[..:..:Gtk:Gtk:RecentManager#T|Gtk.Gtk.RecentManager.T]], first_button_text : [[..:..:Std:String#T|Std.String.T]], ___ : [[..:..:Std:Object#T|Std.Object.T]]) : [[# T| T]]''
+''NewForManager(title : [[..:..:Std:String#T|Std.String.T]], parent : [[..:..:Gtk:Gtk:Window#T|Gtk.Gtk.Window.T]], manager : [[..:..:Gtk:Gtk:RecentManager#T|Gtk.Gtk.RecentManager.T]], first_button_text : [[..:..:Std:String#T|Std.String.T]], ... : [[..:..:Std:Object#T|Std.Object.T]]) : [[# T| T]]''
 
   Creates a new GtkRecentChooserDialog with a specified recent manager.
   This is useful if you have implemented your own recent manager, or if you have

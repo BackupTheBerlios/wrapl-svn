@@ -23,7 +23,7 @@
 
 
 ==== New ====
-''New(parent : [[..:..:Gtk:GooCanvas:ItemModel#T|Gtk.GooCanvas.ItemModel.T]], pixbuf : [[..:..:Gtk:Gdk:Pixbuf#T|Gtk.Gdk.Pixbuf.T]], x : [[..:..:Std:Real#T|Std.Real.T]], y : [[..:..:Std:Real#T|Std.Real.T]], ___ : [[..:..:Std:Object#T|Std.Object.T]]) : [[# T| T]]''
+''New(parent : [[..:..:Gtk:GooCanvas:ItemModel#T|Gtk.GooCanvas.ItemModel.T]], pixbuf : [[..:..:Gtk:Gdk:Pixbuf#T|Gtk.Gdk.Pixbuf.T]], x : [[..:..:Std:Real#T|Std.Real.T]], y : [[..:..:Std:Real#T|Std.Real.T]], ... : [[..:..:Std:Object#T|Std.Object.T]]) : [[# T| T]]''
 
   Creates a new image model.
             the parent model, or NULL. If a parent is specified, it will assume

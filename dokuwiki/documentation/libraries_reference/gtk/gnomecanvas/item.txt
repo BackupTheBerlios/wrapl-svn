@@ -118,7 +118,7 @@
 
 
 ==== :Set ====
-'':Set(self @ [[#T|T]], first_arg_name @ [[..:..:Std:String#T|Std.String.T]], ___ @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Set(self @ [[#T|T]], first_arg_name @ [[..:..:Std:String#T|Std.String.T]], @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetValist ====
@@ -138,7 +138,7 @@
 
 
 ==== New ====
-''New(parent : [[..:..:Gtk:GnomeCanvas:Group#T|Gtk.GnomeCanvas.Group.T]], type : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]], first_arg_name : [[..:..:Std:String#T|Std.String.T]], ___ : [[..:..:Std:Object#T|Std.Object.T]]) : [[# T| T]]''
+''New(parent : [[..:..:Gtk:GnomeCanvas:Group#T|Gtk.GnomeCanvas.Group.T]], type : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]], first_arg_name : [[..:..:Std:String#T|Std.String.T]], ... : [[..:..:Std:Object#T|Std.Object.T]]) : [[# T| T]]''
 
 
 ==== GetType ====

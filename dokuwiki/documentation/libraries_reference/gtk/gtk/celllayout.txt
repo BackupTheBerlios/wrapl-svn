@@ -115,7 +115,7 @@
   position :    New position to insert cell at.
 
 ==== :SetAttributes ====
-'':SetAttributes(self @ [[#T|T]], cell @ [[..:..:Gtk:Gtk:CellRenderer#T|Gtk.Gtk.CellRenderer.T]], ___ @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetAttributes(self @ [[#T|T]], cell @ [[..:..:Gtk:Gtk:CellRenderer#T|Gtk.Gtk.CellRenderer.T]], @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
   Sets the attributes in list as the attributes of cell_layout. The attributes
   should be in attribute/column order, as in gtk_cell_layout_add_attribute(). All

@@ -20,7 +20,7 @@
 
 
 ==== New ====
-''New(parent : [[..:..:Gtk:GooCanvas:Item#T|Gtk.GooCanvas.Item.T]], center_x : [[..:..:Std:Real#T|Std.Real.T]], center_y : [[..:..:Std:Real#T|Std.Real.T]], radius_x : [[..:..:Std:Real#T|Std.Real.T]], radius_y : [[..:..:Std:Real#T|Std.Real.T]], ___ : [[..:..:Std:Object#T|Std.Object.T]]) : [[# T| T]]''
+''New(parent : [[..:..:Gtk:GooCanvas:Item#T|Gtk.GooCanvas.Item.T]], center_x : [[..:..:Std:Real#T|Std.Real.T]], center_y : [[..:..:Std:Real#T|Std.Real.T]], radius_x : [[..:..:Std:Real#T|Std.Real.T]], radius_y : [[..:..:Std:Real#T|Std.Real.T]], ... : [[..:..:Std:Object#T|Std.Object.T]]) : [[# T| T]]''
 
   Creates a new ellipse item.
              the parent item, or NULL. If a parent is specified, it will assume

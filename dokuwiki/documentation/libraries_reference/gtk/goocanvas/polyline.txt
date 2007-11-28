@@ -22,7 +22,7 @@
 
 
 ==== New ====
-''New(parent : [[..:..:Gtk:GooCanvas:Item#T|Gtk.GooCanvas.Item.T]], close_path : [[..:..:Std:Symbol#T|Std.Symbol.T]], num_points : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], ___ : [[..:..:Std:Object#T|Std.Object.T]]) : [[# T| T]]''
+''New(parent : [[..:..:Gtk:GooCanvas:Item#T|Gtk.GooCanvas.Item.T]], close_path : [[..:..:Std:Symbol#T|Std.Symbol.T]], num_points : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], ... : [[..:..:Std:Object#T|Std.Object.T]]) : [[# T| T]]''
 
   Creates a new polyline item.
                the parent item, or NULL. If a parent is specified, it will assume
@@ -41,7 +41,7 @@
 
 
 ==== NewLine ====
-''NewLine(parent : [[..:..:Gtk:GooCanvas:Item#T|Gtk.GooCanvas.Item.T]], x1 : [[..:..:Std:Real#T|Std.Real.T]], y1 : [[..:..:Std:Real#T|Std.Real.T]], x2 : [[..:..:Std:Real#T|Std.Real.T]], y2 : [[..:..:Std:Real#T|Std.Real.T]], ___ : [[..:..:Std:Object#T|Std.Object.T]]) : [[# T| T]]''
+''NewLine(parent : [[..:..:Gtk:GooCanvas:Item#T|Gtk.GooCanvas.Item.T]], x1 : [[..:..:Std:Real#T|Std.Real.T]], y1 : [[..:..:Std:Real#T|Std.Real.T]], x2 : [[..:..:Std:Real#T|Std.Real.T]], y2 : [[..:..:Std:Real#T|Std.Real.T]], ... : [[..:..:Std:Object#T|Std.Object.T]]) : [[# T| T]]''
 
   Creates a new polyline item with a single line.
   parent :  the parent item, or NULL.

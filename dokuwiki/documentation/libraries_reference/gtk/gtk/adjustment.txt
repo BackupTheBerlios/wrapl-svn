@@ -24,12 +24,6 @@
   by the owner of the GtkAdjustment after it has changed the GtkAdjustment value
   field.
   adjustment : a GtkAdjustment
-  ***** Property Details *****
-  The "lower" property
-    "lower"                    gdouble               : Read / Write
-  The minimum value of the adjustment.
-  Default value: 0
-  Since 2.4
 
 ==== :SetValue ====
 '':SetValue(self @ [[#T|T]], value @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''

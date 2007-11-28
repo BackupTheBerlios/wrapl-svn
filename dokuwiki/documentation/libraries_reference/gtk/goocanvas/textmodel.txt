@@ -23,7 +23,7 @@
 
 
 ==== New ====
-''New(parent : [[..:..:Gtk:GooCanvas:ItemModel#T|Gtk.GooCanvas.ItemModel.T]], string : [[..:..:Std:String#T|Std.String.T]], x : [[..:..:Std:Real#T|Std.Real.T]], y : [[..:..:Std:Real#T|Std.Real.T]], width : [[..:..:Std:Real#T|Std.Real.T]], anchor : [[..:..:Gtk:Gtk:AnchorType#T|Gtk.Gtk.AnchorType.T]], ___ : [[..:..:Std:Object#T|Std.Object.T]]) : [[# T| T]]''
+''New(parent : [[..:..:Gtk:GooCanvas:ItemModel#T|Gtk.GooCanvas.ItemModel.T]], string : [[..:..:Std:String#T|Std.String.T]], x : [[..:..:Std:Real#T|Std.Real.T]], y : [[..:..:Std:Real#T|Std.Real.T]], width : [[..:..:Std:Real#T|Std.Real.T]], anchor : [[..:..:Gtk:Gtk:AnchorType#T|Gtk.Gtk.AnchorType.T]], ... : [[..:..:Std:Object#T|Std.Object.T]]) : [[# T| T]]''
 
   Creates a new text model.
             the parent model, or NULL. If a parent is specified, it will assume

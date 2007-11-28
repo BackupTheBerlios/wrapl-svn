@@ -25,7 +25,7 @@
 
 
 ==== New ====
-''New(parent : [[..:..:Gtk:GooCanvas:ItemModel#T|Gtk.GooCanvas.ItemModel.T]], close_path : [[..:..:Std:Symbol#T|Std.Symbol.T]], num_points : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], ___ : [[..:..:Std:Object#T|Std.Object.T]]) : [[# T| T]]''
+''New(parent : [[..:..:Gtk:GooCanvas:ItemModel#T|Gtk.GooCanvas.ItemModel.T]], close_path : [[..:..:Std:Symbol#T|Std.Symbol.T]], num_points : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], ... : [[..:..:Std:Object#T|Std.Object.T]]) : [[# T| T]]''
 
   Creates a new polyline model.
                the parent model, or NULL. If a parent is specified, it will
@@ -44,7 +44,7 @@
 
 
 ==== NewLine ====
-''NewLine(parent : [[..:..:Gtk:GooCanvas:ItemModel#T|Gtk.GooCanvas.ItemModel.T]], x1 : [[..:..:Std:Real#T|Std.Real.T]], y1 : [[..:..:Std:Real#T|Std.Real.T]], x2 : [[..:..:Std:Real#T|Std.Real.T]], y2 : [[..:..:Std:Real#T|Std.Real.T]], ___ : [[..:..:Std:Object#T|Std.Object.T]]) : [[# T| T]]''
+''NewLine(parent : [[..:..:Gtk:GooCanvas:ItemModel#T|Gtk.GooCanvas.ItemModel.T]], x1 : [[..:..:Std:Real#T|Std.Real.T]], y1 : [[..:..:Std:Real#T|Std.Real.T]], x2 : [[..:..:Std:Real#T|Std.Real.T]], y2 : [[..:..:Std:Real#T|Std.Real.T]], ... : [[..:..:Std:Object#T|Std.Object.T]]) : [[# T| T]]''
 
   Creates a new polyline model with a single line.
   parent :  the parent model, or NULL.

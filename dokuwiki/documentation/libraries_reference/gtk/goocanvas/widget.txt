@@ -41,7 +41,7 @@
 
 
 ==== New ====
-''New(parent : [[..:..:Gtk:GooCanvas:Item#T|Gtk.GooCanvas.Item.T]], widget : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], x : [[..:..:Std:Real#T|Std.Real.T]], y : [[..:..:Std:Real#T|Std.Real.T]], width : [[..:..:Std:Real#T|Std.Real.T]], height : [[..:..:Std:Real#T|Std.Real.T]], ___ : [[..:..:Std:Object#T|Std.Object.T]]) : [[# T| T]]''
+''New(parent : [[..:..:Gtk:GooCanvas:Item#T|Gtk.GooCanvas.Item.T]], widget : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], x : [[..:..:Std:Real#T|Std.Real.T]], y : [[..:..:Std:Real#T|Std.Real.T]], width : [[..:..:Std:Real#T|Std.Real.T]], height : [[..:..:Std:Real#T|Std.Real.T]], ... : [[..:..:Std:Object#T|Std.Object.T]]) : [[# T| T]]''
 
   Creates a new widget item.
             the parent item, or NULL. If a parent is specified, it will assume

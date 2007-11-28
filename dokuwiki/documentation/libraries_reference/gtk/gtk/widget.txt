@@ -106,7 +106,7 @@
   value :         location to return the property value
 
 ==== :StyleGet ====
-'':StyleGet(self @ [[#T|T]], first_property_name @ [[..:..:Std:String#T|Std.String.T]], ___ @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':StyleGet(self @ [[#T|T]], first_property_name @ [[..:..:Std:String#T|Std.String.T]], @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
   Gets the values of a multiple style properties of widget.
   widget :              a GtkWidget
@@ -1345,7 +1345,7 @@
   Returns : return from the event signal emission (TRUE if the event was handled)
 
 ==== :Set ====
-'':Set(self @ [[#T|T]], first_property_name @ [[..:..:Std:String#T|Std.String.T]], ___ @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Set(self @ [[#T|T]], first_property_name @ [[..:..:Std:String#T|Std.String.T]], @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
   **** Warning ****
   gtk_widget_set is deprecated and should not be used in newly-written code. Use
@@ -1661,7 +1661,7 @@
   code. Use gtk_widget_set_size_request() instead.
 
 ==== New ====
-''New(type : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]], first_property_name : [[..:..:Std:String#T|Std.String.T]], ___ : [[..:..:Std:Object#T|Std.Object.T]]) : [[# T| T]]''
+''New(type : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]], first_property_name : [[..:..:Std:String#T|Std.String.T]], ... : [[..:..:Std:Object#T|Std.Object.T]]) : [[# T| T]]''
 
   This is a convenience function for creating a widget and setting its properties
   in one go. For example you might write: gtk_widget_new (GTK_TYPE_LABEL,

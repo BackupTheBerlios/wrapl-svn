@@ -16,14 +16,6 @@
 
   Emits the "toggle" signal on the given item.
   item : a GtkItem.
-  ***** Signal Details *****
-  The "deselect" signal
-  void                user_function                      (GtkItem *item,
-                                                          gpointer user_data)
-  : Run First
-  Emitted when the item is deselected.
-  item :      the object which received the signal.
-  user_data : user data set when the signal handler was connected.
 
 ==== :Select ====
 '':Select(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''

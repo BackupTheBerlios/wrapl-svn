@@ -59,7 +59,7 @@
   image :  the image
 
 ==== :FormatSecondaryText ====
-'':FormatSecondaryText(self @ [[#T|T]], message_format @ [[..:..:Std:String#T|Std.String.T]], ___ @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':FormatSecondaryText(self @ [[#T|T]], message_format @ [[..:..:Std:String#T|Std.String.T]], @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
   Sets the secondary text of the message dialog to be message_format (with printf
   ()-style).
@@ -81,7 +81,7 @@
 
 
 ==== :FormatSecondaryMarkup ====
-'':FormatSecondaryMarkup(self @ [[#T|T]], message_format @ [[..:..:Std:String#T|Std.String.T]], ___ @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':FormatSecondaryMarkup(self @ [[#T|T]], message_format @ [[..:..:Std:String#T|Std.String.T]], @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
   Sets the secondary text of the message dialog to be message_format (with printf
   ()-style), which is marked up with the Pango text markup language.
@@ -97,7 +97,7 @@
   g_free (msg);
 
 ==== New ====
-''New(parent : [[..:..:Gtk:Gtk:Window#T|Gtk.Gtk.Window.T]], flags : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], type : [[..:..:Gtk:Gtk:MessageType#T|Gtk.Gtk.MessageType.T]], buttons : [[..:..:Gtk:Gtk:ButtonsType#T|Gtk.Gtk.ButtonsType.T]], message_format : [[..:..:Std:String#T|Std.String.T]], ___ : [[..:..:Std:Object#T|Std.Object.T]]) : [[# T| T]]''
+''New(parent : [[..:..:Gtk:Gtk:Window#T|Gtk.Gtk.Window.T]], flags : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], type : [[..:..:Gtk:Gtk:MessageType#T|Gtk.Gtk.MessageType.T]], buttons : [[..:..:Gtk:Gtk:ButtonsType#T|Gtk.Gtk.ButtonsType.T]], message_format : [[..:..:Std:String#T|Std.String.T]], ... : [[..:..:Std:Object#T|Std.Object.T]]) : [[# T| T]]''
 
   Creates a new message dialog, which is a simple dialog with an icon indicating
   the dialog type (error, warning, etc.) and some text the user may want to see.
@@ -116,7 +116,7 @@
 
 
 ==== NewWithMarkup ====
-''NewWithMarkup(parent : [[..:..:Gtk:Gtk:Window#T|Gtk.Gtk.Window.T]], flags : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], type : [[..:..:Gtk:Gtk:MessageType#T|Gtk.Gtk.MessageType.T]], buttons : [[..:..:Gtk:Gtk:ButtonsType#T|Gtk.Gtk.ButtonsType.T]], message_format : [[..:..:Std:String#T|Std.String.T]], ___ : [[..:..:Std:Object#T|Std.Object.T]]) : [[# T| T]]''
+''NewWithMarkup(parent : [[..:..:Gtk:Gtk:Window#T|Gtk.Gtk.Window.T]], flags : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], type : [[..:..:Gtk:Gtk:MessageType#T|Gtk.Gtk.MessageType.T]], buttons : [[..:..:Gtk:Gtk:ButtonsType#T|Gtk.Gtk.ButtonsType.T]], message_format : [[..:..:Std:String#T|Std.String.T]], ... : [[..:..:Std:Object#T|Std.Object.T]]) : [[# T| T]]''
 
   Creates a new message dialog, which is a simple dialog with an icon indicating
   the dialog type (error, warning, etc.) and some text which is marked up with

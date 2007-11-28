@@ -608,7 +608,7 @@
   xalign :      The alignment, which is between [0.0 and 1.0] inclusive.
 
 ==== :SetAttributes ====
-'':SetAttributes(self @ [[#T|T]], cell_renderer @ [[..:..:Gtk:Gtk:CellRenderer#T|Gtk.Gtk.CellRenderer.T]], ___ @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetAttributes(self @ [[#T|T]], cell_renderer @ [[..:..:Gtk:Gtk:CellRenderer#T|Gtk.Gtk.CellRenderer.T]], @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
   Sets the attributes in the list as the attributes of tree_column. The
   attributes should be in attribute/column order, as in
@@ -755,7 +755,7 @@
 
 
 ==== NewWithAttributes ====
-''NewWithAttributes(title : [[..:..:Std:String#T|Std.String.T]], cell : [[..:..:Gtk:Gtk:CellRenderer#T|Gtk.Gtk.CellRenderer.T]], ___ : [[..:..:Std:Object#T|Std.Object.T]]) : [[# T| T]]''
+''NewWithAttributes(title : [[..:..:Std:String#T|Std.String.T]], cell : [[..:..:Gtk:Gtk:CellRenderer#T|Gtk.Gtk.CellRenderer.T]], ... : [[..:..:Std:Object#T|Std.Object.T]]) : [[# T| T]]''
 
   Creates a new GtkTreeViewColumn with a number of default values. This is
   equivalent to calling gtk_tree_view_column_set_title(),

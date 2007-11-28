@@ -44,11 +44,6 @@
   applications which may expect GtkFixed to have a separate window.
   fixed :      a GtkFixed
   has_window : TRUE if a separate window should be created
-  ***** Child Property Details *****
-  The "x" child property
-    "x"                        gint                  : Read / Write
-  X position of child widget.
-  Default value: 0
 
 ==== :Put ====
 '':Put(self @ [[#T|T]], widget @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], x @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''

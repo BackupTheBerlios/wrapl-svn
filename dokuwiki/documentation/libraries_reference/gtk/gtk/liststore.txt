@@ -264,7 +264,7 @@
   sibling :    A valid GtkTreeIter, or NULL
 
 ==== :InsertWithValues ====
-'':InsertWithValues(self @ [[#T|T]], iter @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]], position @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], ___ @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':InsertWithValues(self @ [[#T|T]], iter @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]], position @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
   Creates a new row at position. iter will be changed to point to this new row.
   If position is larger than the number of rows on the list, then the new row
@@ -353,7 +353,7 @@
               oldpos.
 
 ==== :Set ====
-'':Set(self @ [[#T|T]], iter @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]], ___ @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Set(self @ [[#T|T]], iter @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]], @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
   Sets the value of one or more cells in the row referenced by iter. The variable
   argument list should contain integer column numbers, each column number
@@ -385,7 +385,7 @@
   var_args :   va_list of column/value pairs
 
 ==== New ====
-''New(n_columns : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], ___ : [[..:..:Std:Object#T|Std.Object.T]]) : [[# T| T]]''
+''New(n_columns : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], ... : [[..:..:Std:Object#T|Std.Object.T]]) : [[# T| T]]''
 
   Creates a new list store as with n_columns columns each of the types passed in.
   Note that only types derived from standard GObject fundamental types are

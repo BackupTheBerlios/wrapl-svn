@@ -24,7 +24,6 @@
   user_data : User data.
   dnotify :   A GDestroyNotify callback that will be called when the fontmap is
               finalized and the decoder is released.
-  Since 1.6.
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''

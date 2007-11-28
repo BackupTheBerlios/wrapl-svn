@@ -193,7 +193,7 @@
   Returns :      the new GtkTextMark object
 
 ==== :CreateTag ====
-'':CreateTag(self @ [[#T|T]], tag_name @ [[..:..:Std:String#T|Std.String.T]], first_property_name @ [[..:..:Std:String#T|Std.String.T]], ___ @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Gtk:Gtk:TextTag#T|Gtk.Gtk.TextTag.T]]''
+'':CreateTag(self @ [[#T|T]], tag_name @ [[..:..:Std:String#T|Std.String.T]], first_property_name @ [[..:..:Std:String#T|Std.String.T]], @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Gtk:Gtk:TextTag#T|Gtk.Gtk.TextTag.T]]''
 
   Creates a tag and adds it to the tag table for buffer. Equivalent to calling
   gtk_text_tag_new() and then adding the tag to the buffer's tag table. The
@@ -686,7 +686,7 @@
   Returns :          whether an insertion was possible at iter
 
 ==== :InsertWithTags ====
-'':InsertWithTags(self @ [[#T|T]], iter @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]], text @ [[..:..:Std:String#T|Std.String.T]], len @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], first_tag @ [[..:..:Gtk:Gtk:TextTag#T|Gtk.Gtk.TextTag.T]], ___ @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':InsertWithTags(self @ [[#T|T]], iter @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]], text @ [[..:..:Std:String#T|Std.String.T]], len @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], first_tag @ [[..:..:Gtk:Gtk:TextTag#T|Gtk.Gtk.TextTag.T]], @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
   Inserts text into buffer at iter, applying the list of tags to the newly-
   inserted text. The last tag specified must be NULL to terminate the list.
@@ -701,7 +701,7 @@
   ... :       NULL-terminated list of tags to apply
 
 ==== :InsertWithTagsByName ====
-'':InsertWithTagsByName(self @ [[#T|T]], iter @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]], text @ [[..:..:Std:String#T|Std.String.T]], len @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], first_tag_name @ [[..:..:Std:String#T|Std.String.T]], ___ @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':InsertWithTagsByName(self @ [[#T|T]], iter @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]], text @ [[..:..:Std:String#T|Std.String.T]], len @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], first_tag_name @ [[..:..:Std:String#T|Std.String.T]], @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
   Same as gtk_text_buffer_insert_with_tags(), but allows you to pass in tag names
   instead of tag objects.

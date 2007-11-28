@@ -29,11 +29,6 @@
   ratio :        The desired aspect ratio.
   obey_child :   If TRUE, ratio is ignored, and the aspect ratio is taken from
                  the requistion of the child.
-  ***** Property Details *****
-  The "obey-child" property
-    "obey-child"               gboolean              : Read / Write
-  Force aspect ratio to match that of the frame's child.
-  Default value: TRUE
 
 ==== :CenterAllocation ====
 '':CenterAllocation(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]]''
