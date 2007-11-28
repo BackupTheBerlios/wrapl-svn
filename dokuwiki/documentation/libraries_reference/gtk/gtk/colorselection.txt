@@ -8,7 +8,9 @@
   * [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]
   * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
 
-  The GtkColorSelection is a widget that is used to select a color. It consists of a color wheel and number of sliders and entry boxes for color parameters such as hue, saturation, value, red, green, blue, and opacity. It is found on the standard color selection dialog box GtkColorSelectionDialog.
+  The GtkColorSelection is a widget that is used to select a color. It consists of a color wheel and
+  number of sliders and entry boxes for color parameters such as hue, saturation, value, red, green,
+  blue, and opacity. It is found on the standard color selection dialog box GtkColorSelectionDialog.
   
 
 ==== :SetUpdatePolicy ====
@@ -20,7 +22,9 @@
 ==== :SetPreviousColor ====
 '':SetPreviousColor(self @ [[#T|T]], color @ [[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Sets the 'previous' color to be color. This function should be called with some hesitations, as it might seem confusing to have that color change. Calling gtk_color_selection_set_current_color() will also set this color the first time it is called.
+  Sets the 'previous' color to be color. This function should be called with some hesitations, as it might seem confusing
+  to have that color change. Calling gtk_color_selection_set_current_color() will also set this color the first time it is
+  called.
   
   colorsel : a GtkColorSelection.
   color :    a GdkColor to set the previous color with.
@@ -29,7 +33,8 @@
 ==== :SetPreviousAlpha ====
 '':SetPreviousAlpha(self @ [[#T|T]], alpha @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Sets the 'previous' alpha to be alpha. This function should be called with some hesitations, as it might seem confusing to have that alpha change.
+  Sets the 'previous' alpha to be alpha. This function should be called with some hesitations, as it might seem confusing
+  to have that alpha change.
   
   colorsel : a GtkColorSelection.
   alpha :    an integer between 0 and 65535.
@@ -139,12 +144,14 @@
 '':SetColor(self @ [[#T|T]], color @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
   === Warning ===
-  gtk_color_selection_set_color is deprecated and should not be used in newly-written code. Use gtk_color_selection_set_current_color() instead.
+  gtk_color_selection_set_color is deprecated and should not be used in newly-written code. Use
+  gtk_color_selection_set_current_color() instead.
 
 ==== :SetCurrentAlpha ====
 '':SetCurrentAlpha(self @ [[#T|T]], alpha @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Sets the current opacity to be alpha. The first time this is called, it will also set the original opacity to be alpha too.
+  Sets the current opacity to be alpha. The first time this is called, it will also set the original opacity to be alpha
+  too.
   
   colorsel : a GtkColorSelection.
   alpha :    an integer between 0 and 65535.
@@ -161,7 +168,9 @@
 ==== SetChangePaletteWithScreenHook ====
 ''SetChangePaletteWithScreenHook(func : [[..:..:Std:Function#T|Std.Function.T]]) : [[..:..:Std:Function#T|Std.Function.T]]''
 
-  Installs a global function to be called whenever the user tries to modify the palette in a color selection. This function should save the new palette contents, and update the GtkSettings property "gtk-color-palette" so all GtkColorSelection widgets will be modified.
+  Installs a global function to be called whenever the user tries to modify the palette in a color selection. This
+  function should save the new palette contents, and update the GtkSettings property "gtk-color-palette" so all
+  GtkColorSelection widgets will be modified.
   
   func :    a function to call when the custom palette needs saving.
   Returns : the previous change palette hook (that was replaced).
@@ -171,7 +180,9 @@
 ''SetChangePaletteHook(func : [[..:..:Std:Function#T|Std.Function.T]]) : [[..:..:Std:Function#T|Std.Function.T]]''
 
   === Warning ===
-  gtk_color_selection_set_change_palette_hook is deprecated and should not be used in newly-written code. This function is deprecated in favor of gtk_color_selection_set_change_palette_with_screen_hook(), and does not work in multihead environments.
+  gtk_color_selection_set_change_palette_hook is deprecated and should not be used in newly-written code. This function is
+  deprecated in favor of gtk_color_selection_set_change_palette_with_screen_hook(), and does not work in multihead
+  environments.
 
 ==== PaletteToString ====
 ''PaletteToString(colors : [[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]], n_colors : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:String#T|Std.String.T]]''

@@ -1,8 +1,12 @@
 ====== Editable ======
 ==== T ====
 
-  The GtkEditable interface is an interface which should be implemented by text editing widgets, such as GtkEntry and GtkText. It contains functions for generically manipulating an editable widget, a large number of action signals used for key bindings, and several signals that an application can connect to to modify the behavior of a widget.
-  As an example of the latter usage, by connecting the following handler to "insert_text", an application can convert all entry into a widget into uppercase.
+  The GtkEditable interface is an interface which should be implemented by text editing widgets, such
+  as GtkEntry and GtkText. It contains functions for generically manipulating an editable widget, a
+  large number of action signals used for key bindings, and several signals that an application can
+  connect to to modify the behavior of a widget.
+  As an example of the latter usage, by connecting the following handler to "insert_text", an
+  application can convert all entry into a widget into uppercase.
   Example 14.&#160;Forcing entry to uppercase.
   #include <ctype.h>
   
@@ -35,7 +39,10 @@
   Sets the cursor position.
   
   editable : a GtkEditable widget.
-  position : the position of the cursor. The cursor is displayed before the character with the given (base 0) index in the widget. The value must be less than or equal to the number of characters in the widget. A value of -1 indicates that the position should be set after the last character in the entry. Note that this position is in characters, not in bytes.
+             the position of the cursor. The cursor is displayed before the character with the given (base 0) index in the
+  position : widget. The value must be less than or equal to the number of characters in the widget. A value of -
+             1 indicates that the position should be set after the last character in the entry. Note that this position is
+             in characters, not in bytes.
   
 
 ==== :CopyClipboard ====
@@ -65,7 +72,9 @@
 ==== :DeleteText ====
 '':DeleteText(self @ [[#T|T]], start_pos @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], end_pos @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Deletes a sequence of characters. The characters that are deleted are those characters at positions from start_pos up to, but not including end_pos. If end_pos is negative, then the the characters deleted will be those characters from start_pos to the end of the text.
+  Deletes a sequence of characters. The characters that are deleted are those characters at positions from start_pos up
+  to, but not including end_pos. If end_pos is negative, then the the characters deleted will be those characters from
+  start_pos to the end of the text.
   
   editable :  a GtkEditable widget.
   start_pos : the starting position.
@@ -75,12 +84,15 @@
 ==== :GetChars ====
 '':GetChars(self @ [[#T|T]], start_pos @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], end_pos @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:String#T|Std.String.T]]''
 
-  Retrieves a sequence of characters. The characters that are retrieved are those characters at positions from start_pos up to, but not including end_pos. If end_pos is negative, then the the characters retrieved will be those characters from start_pos to the end of the text.
+  Retrieves a sequence of characters. The characters that are retrieved are those characters at positions from start_pos
+  up to, but not including end_pos. If end_pos is negative, then the the characters retrieved will be those characters
+  from start_pos to the end of the text.
   
   editable :  a GtkEditable widget.
   start_pos : the starting position.
   end_pos :   the end position.
-  Returns :   the characters in the indicated region. The result must be freed with g_free() when the application is finished with it.
+  Returns :   the characters in the indicated region. The result must be freed with g_free() when the application is
+              finished with it.
   
 
 ==== :GetEditable ====
@@ -98,7 +110,9 @@
   Retrieves the current cursor position.
   
   editable : a GtkEditable widget.
-  Returns :  the position of the cursor. The cursor is displayed before the character with the given (base 0) index in the widget. The value will be less than or equal to the number of characters in the widget. Note that this position is in characters, not in bytes.
+             the position of the cursor. The cursor is displayed before the character with the given (base 0) index in the
+  Returns :  widget. The value will be less than or equal to the number of characters in the widget. Note that this
+             position is in characters, not in bytes.
   
 
 ==== :GetSelectionBounds ====
@@ -120,7 +134,8 @@
   editable :        a GtkEditable widget.
   new_text :        the text to insert.
   new_text_length : the length of the text to insert, in bytes
-  position :        an inout parameter. The caller initializes it to the position at which to insert the text. After the call it points at the position after the newly inserted text.
+  position :        an inout parameter. The caller initializes it to the position at which to insert the text. After the
+                    call it points at the position after the newly inserted text.
   
 
 ==== :PasteClipboard ====
@@ -134,7 +149,9 @@
 ==== :SelectRegion ====
 '':SelectRegion(self @ [[#T|T]], start @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], end @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Selects a region of text. The characters that are selected are those characters at positions from start_pos up to, but not including end_pos. If end_pos is negative, then the the characters selected will be those characters from start_pos to the end of the text.
+  Selects a region of text. The characters that are selected are those characters at positions from start_pos up to, but
+  not including end_pos. If end_pos is negative, then the the characters selected will be those characters from start_pos
+  to the end of the text.
   
   editable : a GtkEditable widget.
   start :    the starting position.

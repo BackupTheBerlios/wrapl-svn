@@ -4,22 +4,44 @@
   * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
 
   === Description ===
-  GtkObject is the base class for all widgets, and for a few non-widget objects such as GtkAdjustment. GtkObject predates GObject; non-widgets that derive from GtkObject rather than GObject do so for backward compatibility reasons.
-  GtkObjects are created with a "floating" reference count. This means that the initial reference is not owned by anyone. Calling g_object_unref() on a newly-created GtkObject is incorrect, the floating reference has to be removed first. This can be done by anyone at any time, by calling g_object_ref_sink() to convert the floating reference into a regular reference. g_object_ref_sink() returns a new reference if an object is already sunk (has no floating reference).
+  GtkObject is the base class for all widgets, and for a few non-widget objects such as GtkAdjustment.
+  GtkObject predates GObject; non-widgets that derive from GtkObject rather than GObject do so for
+  backward compatibility reasons.
+  GtkObjects are created with a "floating" reference count. This means that the initial reference is
+  not owned by anyone. Calling g_object_unref() on a newly-created GtkObject is incorrect, the
+  floating reference has to be removed first. This can be done by anyone at any time, by calling
+  g_object_ref_sink() to convert the floating reference into a regular reference. g_object_ref_sink()
+  returns a new reference if an object is already sunk (has no floating reference).
   When you add a widget to its parent container, the parent container will do this:
     g_object_ref_sink (G_OBJECT (child_widget));
-  This means that the container now owns a reference to the child widget and the child widget has no floating reference.
-  The purpose of the floating reference is to keep the child widget alive until you add it to a parent container:
+  This means that the container now owns a reference to the child widget and the child widget has no
+  floating reference.
+  The purpose of the floating reference is to keep the child widget alive until you add it to a parent
+  container:
      button = gtk_button_new ();
      /* button has one floating reference to keep it alive */
      gtk_container_add (GTK_CONTAINER (container), button);
      /* button has one non-floating reference owned by the container */
-  GtkWindow is a special case, because GTK+ itself will ref/sink it on creation. That is, after calling gtk_window_new(), the GtkWindow will have one reference which is owned by GTK+, and no floating references.
-  One more factor comes into play: the "destroy" signal, emitted by the gtk_object_destroy() method. The "destroy" signal asks all code owning a reference to an object to release said reference. So, for example, if you call gtk_object_destroy() on a GtkWindow, GTK+ will release the reference count that it owns; if you call gtk_object_destroy() on a GtkButton, then the button will be removed from its parent container and the parent container will release its reference to the button. Because these references are released, calling gtk_object_destroy() should result in freeing all memory associated with an object, unless some buggy code fails to release its references in response to the "destroy" signal. Freeing memory (referred to as finalization only happens if the reference count reaches zero.
+  GtkWindow is a special case, because GTK+ itself will ref/sink it on creation. That is, after
+  calling gtk_window_new(), the GtkWindow will have one reference which is owned by GTK+, and no
+  floating references.
+  One more factor comes into play: the "destroy" signal, emitted by the gtk_object_destroy() method.
+  The "destroy" signal asks all code owning a reference to an object to release said reference. So,
+  for example, if you call gtk_object_destroy() on a GtkWindow, GTK+ will release the reference count
+  that it owns; if you call gtk_object_destroy() on a GtkButton, then the button will be removed from
+  its parent container and the parent container will release its reference to the button. Because
+  these references are released, calling gtk_object_destroy() should result in freeing all memory
+  associated with an object, unless some buggy code fails to release its references in response to the
+  "destroy" signal. Freeing memory (referred to as finalization only happens if the reference count
+  reaches zero.
   Some simple rules for handling ""
-   * Never call g_object_unref() unless you have previously called g_object_ref(), even if you created the GtkObject. (Note: this is not true for GObject; for GObject, the creator of the object owns a reference.)
-   * Call gtk_object_destroy() to get rid of most objects in most cases. In particular, widgets are almost always destroyed in this way.
-   * Because of the floating reference count, you don't need to worry about reference counting for widgets and toplevel windows, unless you explicitly call g_object_ref() yourself.
+   * Never call g_object_unref() unless you have previously called g_object_ref(), even if you created
+     the GtkObject. (Note: this is not true for GObject; for GObject, the creator of the object owns a
+     reference.)
+   * Call gtk_object_destroy() to get rid of most objects in most cases. In particular, widgets are
+     almost always destroyed in this way.
+   * Because of the floating reference count, you don't need to worry about reference counting for
+     widgets and toplevel windows, unless you explicitly call g_object_ref() yourself.
   
 
 ==== :Weakunref ====
@@ -47,8 +69,10 @@
 ==== :Destroy ====
 '':Destroy(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Emits the "destroy" signal notifying all reference holders that they should release the GtkObject. See the overview documentation at the top of the page for more details.
-  The memory for the object itself won't be deleted until its reference count actually drops to 0; gtk_object_destroy() merely asks reference holders to release their references, it does not free the object.
+  Emits the "destroy" signal notifying all reference holders that they should release the GtkObject. See the overview
+  documentation at the top of the page for more details.
+  The memory for the object itself won't be deleted until its reference count actually drops to 0; gtk_object_destroy()
+  merely asks reference holders to release their references, it does not free the object.
   
   object : the object to destroy.
   
@@ -81,25 +105,29 @@
 '':RemoveData(self @ [[#T|T]], key @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
   === Warning ===
-  gtk_object_remove_data is deprecated and should not be used in newly-written code. Use g_object_set_data() to set the object data to NULL instead.
+  gtk_object_remove_data is deprecated and should not be used in newly-written code. Use g_object_set_data() to set the
+  object data to NULL instead.
 
 ==== :RemoveDataById ====
 '':RemoveDataById(self @ [[#T|T]], data_id @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
   === Warning ===
-  gtk_object_remove_data_by_id is deprecated and should not be used in newly-written code. Use g_object_set_qdata() with data of NULL instead.
+  gtk_object_remove_data_by_id is deprecated and should not be used in newly-written code. Use g_object_set_qdata() with
+  data of NULL instead.
 
 ==== :RemoveNoNotify ====
 '':RemoveNoNotify(self @ [[#T|T]], key @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
   === Warning ===
-  gtk_object_remove_no_notify is deprecated and should not be used in newly-written code. Use g_object_steal_data() instead.
+  gtk_object_remove_no_notify is deprecated and should not be used in newly-written code. Use g_object_steal_data()
+  instead.
 
 ==== :RemoveNoNotifyById ====
 '':RemoveNoNotifyById(self @ [[#T|T]], key_id @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
   === Warning ===
-  gtk_object_remove_no_notify_by_id is deprecated and should not be used in newly-written code. Use g_object_steal_qdata() instead.
+  gtk_object_remove_no_notify_by_id is deprecated and should not be used in newly-written code. Use g_object_steal_qdata()
+  instead.
 
 ==== :Set ====
 '':Set(self @ [[#T|T]], first_property_name @ [[..:..:Std:String#T|Std.String.T]], __etc__ @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -117,13 +145,15 @@
 '':SetDataByIdFull(self @ [[#T|T]], data_id @ [[..:..:Std:Object#T|Std.Object.T]], data @ [[..:..:Std:Address#T|Std.Address.T]], destroy @ [[..:..:Std:Function#T|Std.Function.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
   === Warning ===
-  gtk_object_set_data_by_id_full is deprecated and should not be used in newly-written code. Use g_object_set_qdata_full() instead.
+  gtk_object_set_data_by_id_full is deprecated and should not be used in newly-written code. Use g_object_set_qdata_full()
+  instead.
 
 ==== :SetDataFull ====
 '':SetDataFull(self @ [[#T|T]], key @ [[..:..:Std:String#T|Std.String.T]], data @ [[..:..:Std:Address#T|Std.Address.T]], destroy @ [[..:..:Std:Function#T|Std.Function.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
   === Warning ===
-  gtk_object_set_data_full is deprecated and should not be used in newly-written code. Use g_object_set_data_full() instead.
+  gtk_object_set_data_full is deprecated and should not be used in newly-written code. Use g_object_set_data_full()
+  instead.
 
 ==== :SetUserData ====
 '':SetUserData(self @ [[#T|T]], data @ [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -135,7 +165,8 @@
 '':Sink(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
   === Warning ===
-  gtk_object_sink has been deprecated since version 2.10 and should not be used in newly-written code. Use g_object_ref_sink() instead
+  gtk_object_sink has been deprecated since version 2.10 and should not be used in newly-written code. Use
+  g_object_ref_sink() instead
 
 ==== New ====
 ''New(type : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]], first_property_name : [[..:..:Std:String#T|Std.String.T]], __etc__ : [[..:..:Std:Object#T|Std.Object.T]]) : [[# T| T]]''

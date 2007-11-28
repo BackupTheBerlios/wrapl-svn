@@ -8,7 +8,8 @@
   * [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]
   * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
 
-  The GtkMenuItem widget and the derived widgets are the only valid childs for menus. Their function is to correctly handle highlighting, alignment, events and submenus.
+  The GtkMenuItem widget and the derived widgets are the only valid childs for menus. Their function
+  is to correctly handle highlighting, alignment, events and submenus.
   As it derives from GtkBin it can hold any valid child widget, altough only a few are really useful.
   
 
@@ -42,7 +43,9 @@
 ==== :SetRightJustified ====
 '':SetRightJustified(self @ [[#T|T]], right_justified @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Sets whether the menu item appears justified at the right side of a menu bar. This was traditionally done for "Help" menu items, but is now considered a bad idea. (If the widget layout is reversed for a right-to-left language like Hebrew or Arabic, right-justified-menu-items appear at the left.)
+  Sets whether the menu item appears justified at the right side of a menu bar. This was traditionally done for "Help"
+  menu items, but is now considered a bad idea. (If the widget layout is reversed for a right-to-left language like Hebrew
+  or Arabic, right-justified-menu-items appear at the left.)
   
   menu_item :       a GtkMenuItem.
   right_justified : if TRUE the menu item will appear at the far right if added to a menu bar.
@@ -57,7 +60,9 @@
   submenu :   the submenu, or NULL
   
   === Warning ===
-  gtk_menu_item_remove_submenu has been deprecated since version 2.12 and should not be used in newly-written code. gtk_menu_item_remove_submenu() is deprecated and should not be used in newly written code. Use gtk_menu_item_set_submenu() instead.
+  gtk_menu_item_remove_submenu has been deprecated since version 2.12 and should not be used in newly-written code.
+  gtk_menu_item_remove_submenu() is deprecated and should not be used in newly written code. Use gtk_menu_item_set_submenu
+  () instead.
   Gets the submenu underneath this menu item, if any. See gtk_menu_item_set_submenu().
   
   menu_item : a GtkMenuItem
@@ -79,8 +84,12 @@
 ==== :AccelPath ====
 '':AccelPath(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
-  Set the accelerator path on menu_item, through which runtime changes of the menu item's accelerator caused by the user can be identified and saved to persistant storage (see gtk_accel_map_save() on this). To setup a default accelerator for this menu item, call gtk_accel_map_add_entry() with the same accel_path. See also gtk_accel_map_add_entry() on the specifics of accelerator paths, and gtk_menu_set_accel_path() for a more convenient variant of this function.
-  This function is basically a convenience wrapper that handles calling gtk_widget_set_accel_path() with the appropriate accelerator group for the menu item.
+  Set the accelerator path on menu_item, through which runtime changes of the menu item's accelerator caused by the user
+  can be identified and saved to persistant storage (see gtk_accel_map_save() on this). To setup a default accelerator for
+  this menu item, call gtk_accel_map_add_entry() with the same accel_path. See also gtk_accel_map_add_entry() on the
+  specifics of accelerator paths, and gtk_menu_set_accel_path() for a more convenient variant of this function.
+  This function is basically a convenience wrapper that handles calling gtk_widget_set_accel_path() with the appropriate
+  accelerator group for the menu item.
   Note that you do need to set an accelerator on the parent menu with gtk_menu_set_accel_group() for this to work.
   
   menu_item :  a valid GtkMenuItem
@@ -153,7 +162,9 @@
 '':RemoveSubmenu(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
   === Warning ===
-  gtk_menu_item_remove_submenu has been deprecated since version 2.12 and should not be used in newly-written code. gtk_menu_item_remove_submenu() is deprecated and should not be used in newly written code. Use gtk_menu_item_set_submenu() instead.
+  gtk_menu_item_remove_submenu has been deprecated since version 2.12 and should not be used in newly-written code.
+  gtk_menu_item_remove_submenu() is deprecated and should not be used in newly written code. Use gtk_menu_item_set_submenu
+  () instead.
 
 ==== :Select ====
 '':Select(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -166,8 +177,12 @@
 ==== :SetAccelPath ====
 '':SetAccelPath(self @ [[#T|T]], accel_path @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Set the accelerator path on menu_item, through which runtime changes of the menu item's accelerator caused by the user can be identified and saved to persistant storage (see gtk_accel_map_save() on this). To setup a default accelerator for this menu item, call gtk_accel_map_add_entry() with the same accel_path. See also gtk_accel_map_add_entry() on the specifics of accelerator paths, and gtk_menu_set_accel_path() for a more convenient variant of this function.
-  This function is basically a convenience wrapper that handles calling gtk_widget_set_accel_path() with the appropriate accelerator group for the menu item.
+  Set the accelerator path on menu_item, through which runtime changes of the menu item's accelerator caused by the user
+  can be identified and saved to persistant storage (see gtk_accel_map_save() on this). To setup a default accelerator for
+  this menu item, call gtk_accel_map_add_entry() with the same accel_path. See also gtk_accel_map_add_entry() on the
+  specifics of accelerator paths, and gtk_menu_set_accel_path() for a more convenient variant of this function.
+  This function is basically a convenience wrapper that handles calling gtk_widget_set_accel_path() with the appropriate
+  accelerator group for the menu item.
   Note that you do need to set an accelerator on the parent menu with gtk_menu_set_accel_group() for this to work.
   
   menu_item :  a valid GtkMenuItem
@@ -189,7 +204,8 @@
 ==== NewWithMnemonic ====
 ''NewWithMnemonic(label : [[..:..:Std:String#T|Std.String.T]]) : [[# T| T]]''
 
-  Creates a new GtkMenuItem containing a label. The label will be created using gtk_label_new_with_mnemonic(), so underscores in label indicate the mnemonic for the menu item.
+  Creates a new GtkMenuItem containing a label. The label will be created using gtk_label_new_with_mnemonic(), so
+  underscores in label indicate the mnemonic for the menu item.
   
   label :   The text of the button, with an underscore in front of the mnemonic character
   Returns : a new GtkMenuItem

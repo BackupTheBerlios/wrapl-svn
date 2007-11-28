@@ -4,7 +4,8 @@
   * [[..:..:Gtk:Gtk:Action#T|Gtk.Gtk.Action.T]]
   * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
 
-  A GtkToggleAction corresponds roughly to a GtkCheckMenuItem. It has an "active" state specifying whether the action has been checked or not.
+  A GtkToggleAction corresponds roughly to a GtkCheckMenuItem. It has an "active" state specifying
+  whether the action has been checked or not.
   
 
 ==== :Toggled ====
@@ -58,7 +59,8 @@
 ==== New ====
 ''New(name : [[..:..:Std:String#T|Std.String.T]], label : [[..:..:Std:String#T|Std.String.T]], tooltip : [[..:..:Std:String#T|Std.String.T]], stock_id : [[..:..:Std:String#T|Std.String.T]]) : [[# T| T]]''
 
-  Creates a new GtkToggleAction object. To add the action to a GtkActionGroup and set the accelerator for the action, call gtk_action_group_add_action_with_accel().
+  Creates a new GtkToggleAction object. To add the action to a GtkActionGroup and set the accelerator for the action, call
+  gtk_action_group_add_action_with_accel().
   
   name :     A unique name for the action
   label :    The label displayed in menu items and on buttons, or NULL

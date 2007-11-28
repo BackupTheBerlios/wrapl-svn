@@ -1,13 +1,15 @@
 ====== CellEditable ======
 ==== T ====
 
-  The GtkCellEditable interface must be implemented for widgets to be usable when editing the contents of a GtkTreeView cell.
+  The GtkCellEditable interface must be implemented for widgets to be usable when editing the contents
+  of a GtkTreeView cell.
   
 
 ==== :StartEditing ====
 '':StartEditing(self @ [[#T|T]], event @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Begins editing on a cell_editable. event is the GdkEvent that began the editing process. It may be NULL, in the instance that editing was initiated through programatic means.
+  Begins editing on a cell_editable. event is the GdkEvent that began the editing process. It may be NULL, in the instance
+  that editing was initiated through programatic means.
   
   cell_editable : A GtkCellEditable
   event :         A GdkEvent, or NULL

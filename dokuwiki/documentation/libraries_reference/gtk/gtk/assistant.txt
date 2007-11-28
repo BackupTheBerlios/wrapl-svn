@@ -8,15 +8,19 @@
   * [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]
   * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
 
-  A GtkAssistant is a widget used to represent a generally complex operation splitted in several steps, guiding the user through its pages and controlling the page flow to collect the necessary data.
+  A GtkAssistant is a widget used to represent a generally complex operation splitted in several
+  steps, guiding the user through its pages and controlling the page flow to collect the necessary
+  data.
   
 
 ==== :UpdateButtonsState ====
 '':UpdateButtonsState(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
   Forces assistant to recompute the buttons state.
-  GTK+ automatically takes care of this in most situations, e.g. when the user goes to a different page, or when the visibility or completeness of a page changes.
-  One situation where it can be necessary to call this function is when changing a value on the current page affects the future page flow of the assistant.
+  GTK+ automatically takes care of this in most situations, e.g. when the user goes to a different page, or when the
+  visibility or completeness of a page changes.
+  One situation where it can be necessary to call this function is when changing a value on the current page affects the
+  future page flow of the assistant.
   
   assistant : a GtkAssistant
   
@@ -84,7 +88,8 @@
   Returns the page number of the current page
   
   assistant : a GtkAssistant
-  Returns :   The index (starting from 0) of the current page in the assistant, if the assistant has no pages, -1 will be returned
+  Returns :   The index (starting from 0) of the current page in the assistant, if the assistant has no pages, -1 will be
+              returned
   
 
 ==== :GetNPages ====
@@ -189,16 +194,20 @@
 ==== :SetCurrentPage ====
 '':SetCurrentPage(self @ [[#T|T]], page_num @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Switches the page to page_num. Note that this will only be necessary in custom buttons, as the assistant flow can be set with gtk_assistant_set_forward_page_func().
+  Switches the page to page_num. Note that this will only be necessary in custom buttons, as the assistant flow can be set
+  with gtk_assistant_set_forward_page_func().
   
   assistant : a GtkAssistant
-  page_num :  index of the page to switch to, starting from 0. If negative, the last page will be used. If greater than the number of pages in the assistant, nothing will be done.
+  page_num :  index of the page to switch to, starting from 0. If negative, the last page will be used. If greater than
+              the number of pages in the assistant, nothing will be done.
   
 
 ==== :SetForwardPageFunc ====
 '':SetForwardPageFunc(self @ [[#T|T]], page_func @ [[..:..:Std:Function#T|Std.Function.T]], data @ [[..:..:Std:Address#T|Std.Address.T]], destroy @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Sets the page forwarding function to be page_func, this function will be used to determine what will be the next page when the user presses the forward button. Setting page_func to NULL will make the assistant to use the default forward function, which just goes to the next visible page.
+  Sets the page forwarding function to be page_func, this function will be used to determine what will be the next page
+  when the user presses the forward button. Setting page_func to NULL will make the assistant to use the default forward
+  function, which just goes to the next visible page.
   
   assistant : a GtkAssistant
   page_func : the GtkAssistantPageFunc, or NULL to use the default one
@@ -209,7 +218,8 @@
 ==== :SetPageComplete ====
 '':SetPageComplete(self @ [[#T|T]], page @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], complete @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Sets whether page contents are complete. This will make assistant update the buttons state to be able to continue the task.
+  Sets whether page contents are complete. This will make assistant update the buttons state to be able to continue the
+  task.
   
   assistant : a GtkAssistant
   page :      a page of assistant

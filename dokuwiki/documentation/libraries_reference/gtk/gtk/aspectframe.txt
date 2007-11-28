@@ -8,7 +8,10 @@
   * [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]
   * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
 
-  The GtkAspectFrame is useful when you want pack a widget so that it can resize but always retains the same aspect ratio. For instance, one might be drawing a small preview of a larger image. GtkAspectFrame derives from GtkFrame, so it can draw a label and a frame around the child. The frame will be "shrink-wrapped" to the size of the child.
+  The GtkAspectFrame is useful when you want pack a widget so that it can resize but always retains
+  the same aspect ratio. For instance, one might be drawing a small preview of a larger image.
+  GtkAspectFrame derives from GtkFrame, so it can draw a label and a frame around the child. The frame
+  will be "shrink-wrapped" to the size of the child.
   
 
 ==== :Set ====
@@ -17,8 +20,10 @@
   Set parameters for an existing GtkAspectFrame.
   
   aspect_frame : a GtkAspectFrame
-  xalign :       Horizontal alignment of the child within the allocation of the GtkAspectFrame. This ranges from 0.0 (left aligned) to 1.0 (right aligned)
-  yalign :       Vertical alignment of the child within the allocation of the GtkAspectFrame. This ranges from 0.0 (left aligned) to 1.0 (right aligned)
+  xalign :       Horizontal alignment of the child within the allocation of the GtkAspectFrame. This ranges from 0.0 (left
+                 aligned) to 1.0 (right aligned)
+  yalign :       Vertical alignment of the child within the allocation of the GtkAspectFrame. This ranges from 0.0 (left
+                 aligned) to 1.0 (right aligned)
   ratio :        The desired aspect ratio.
   obey_child :   If TRUE, ratio is ignored, and the aspect ratio is taken from the requistion of the child.
   
@@ -49,8 +54,10 @@
   Create a new GtkAspectFrame.
   
   label :      Label text.
-  xalign :     Horizontal alignment of the child within the allocation of the GtkAspectFrame. This ranges from 0.0 (left aligned) to 1.0 (right aligned)
-  yalign :     Vertical alignment of the child within the allocation of the GtkAspectFrame. This ranges from 0.0 (left aligned) to 1.0 (right aligned)
+  xalign :     Horizontal alignment of the child within the allocation of the GtkAspectFrame. This ranges from 0.0 (left
+               aligned) to 1.0 (right aligned)
+  yalign :     Vertical alignment of the child within the allocation of the GtkAspectFrame. This ranges from 0.0 (left
+               aligned) to 1.0 (right aligned)
   ratio :      The desired aspect ratio.
   obey_child : If TRUE, ratio is ignored, and the aspect ratio is taken from the requistion of the child.
   Returns :    the new GtkAspectFrame.

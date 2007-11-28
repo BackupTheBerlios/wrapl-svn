@@ -6,9 +6,14 @@
   * [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]
   * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
 
-  The GtkPixmap widget displays a graphical image or icon. The icon is typically created using gdk_pixmap_colormap_create_from_xpm() or gdk_pixmap_colormap_create_from_xpm_d().
-  The pixels in a GtkPixmap cannot be manipulated by the application after creation, since under the X Window system the pixel data is stored on the X server and so is not available to the client application. If you want to create graphical images which can be manipulated by the application, look at GtkImage and GdkRGB.
-  GtkPixmap has been deprecated since GTK+ 2.0 and should not be used in newly written code. Use GtkImage instead.
+  The GtkPixmap widget displays a graphical image or icon. The icon is typically created using
+  gdk_pixmap_colormap_create_from_xpm() or gdk_pixmap_colormap_create_from_xpm_d().
+  The pixels in a GtkPixmap cannot be manipulated by the application after creation, since under the X
+  Window system the pixel data is stored on the X server and so is not available to the client
+  application. If you want to create graphical images which can be manipulated by the application,
+  look at GtkImage and GdkRGB.
+  GtkPixmap has been deprecated since GTK+ 2.0 and should not be used in newly written code. Use
+  GtkImage instead.
   
 
 ==== :SetBuildInsensitive ====

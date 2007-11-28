@@ -6,8 +6,12 @@
   * [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]
   * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
 
-  A GtkSpinButton is an ideal way to allow the user to set the value of some attribute. Rather than having to directly type a number into a GtkEntry, GtkSpinButton allows the user to click on one of two arrows to increment or decrement the displayed value. A value can still be typed in, with the bonus that it can be checked to ensure it is in a given range.
-  The main properties of a GtkSpinButton are through a GtkAdjustment. See the GtkAdjustment section for more details about an adjustment's properties.
+  A GtkSpinButton is an ideal way to allow the user to set the value of some attribute. Rather than
+  having to directly type a number into a GtkEntry, GtkSpinButton allows the user to click on one of
+  two arrows to increment or decrement the displayed value. A value can still be typed in, with the
+  bonus that it can be checked to ensure it is in a given range.
+  The main properties of a GtkSpinButton are through a GtkAdjustment. See the GtkAdjustment section
+  for more details about an adjustment's properties.
   Example 12.&#160;Using a GtkSpinButton to get an integer.
   
   /* Provides a function to retrieve an integer value from a GtkSpinButton
@@ -87,7 +91,8 @@
 ==== :SetWrap ====
 '':SetWrap(self @ [[#T|T]], wrap @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Sets the flag that determines if a spin button value wraps around to the opposite limit when the upper or lower limit of the range is exceeded.
+  Sets the flag that determines if a spin button value wraps around to the opposite limit when the upper or lower limit of
+  the range is exceeded.
   
   spin_button : a GtkSpinButton
   wrap :        a flag indicating if wrapping behavior is performed.
@@ -126,7 +131,8 @@
 ==== :UpdatePolicy ====
 '':UpdatePolicy(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:SpinButtonUpdatePolicy#T|Gtk.Gtk.SpinButtonUpdatePolicy.T]]''
 
-  Sets the update behavior of a spin button. This determines whether the spin button is always updated or only when a valid value is set.
+  Sets the update behavior of a spin button. This determines whether the spin button is always updated or only when a
+  valid value is set.
   
   spin_button : a GtkSpinButton
   policy :      a GtkSpinButtonUpdatePolicy value
@@ -188,12 +194,14 @@
 ==== :Wrap ====
 '':Wrap(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-  Sets the flag that determines if a spin button value wraps around to the opposite limit when the upper or lower limit of the range is exceeded.
+  Sets the flag that determines if a spin button value wraps around to the opposite limit when the upper or lower limit of
+  the range is exceeded.
   
   spin_button : a GtkSpinButton
   wrap :        a flag indicating if wrapping behavior is performed.
   
-  Returns whether the spin button's value wraps around to the opposite limit when the upper or lower limit of the range is exceeded. See gtk_spin_button_set_wrap().
+  Returns whether the spin button's value wraps around to the opposite limit when the upper or lower limit of the range is
+  exceeded. See gtk_spin_button_set_wrap().
   
   spin_button : a GtkSpinButton
   Returns :     TRUE if the spin button wraps around
@@ -202,7 +210,8 @@
 ==== :SnapToTicks ====
 '':SnapToTicks(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-  Sets the policy as to whether values are corrected to the nearest step increment when a spin button is activated after providing an invalid value.
+  Sets the policy as to whether values are corrected to the nearest step increment when a spin button is activated after
+  providing an invalid value.
   
   spin_button :   a GtkSpinButton
   snap_to_ticks : a flag indicating if invalid values should be corrected.
@@ -216,7 +225,8 @@
 ==== :Configure ====
 '':Configure(self @ [[#T|T]], adjustment @ [[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]], climb_rate @ [[..:..:Std:Real#T|Std.Real.T]], digits @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Changes the properties of an existing spin button. The adjustment, climb rate, and number of decimal places are all changed accordingly, after this function call.
+  Changes the properties of an existing spin button. The adjustment, climb rate, and number of decimal places are all
+  changed accordingly, after this function call.
   
   spin_button : a GtkSpinButton.
   adjustment :  a GtkAdjustment.
@@ -310,7 +320,8 @@
 ==== :GetWrap ====
 '':GetWrap(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
-  Returns whether the spin button's value wraps around to the opposite limit when the upper or lower limit of the range is exceeded. See gtk_spin_button_set_wrap().
+  Returns whether the spin button's value wraps around to the opposite limit when the upper or lower limit of the range is
+  exceeded. See gtk_spin_button_set_wrap().
   
   spin_button : a GtkSpinButton
   Returns :     TRUE if the spin button wraps around
@@ -337,7 +348,8 @@
 ==== :SetIncrements ====
 '':SetIncrements(self @ [[#T|T]], step @ [[..:..:Std:Real#T|Std.Real.T]], page @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Sets the step and page increments for spin_button. This affects how quickly the value changes when the spin button's arrows are activated.
+  Sets the step and page increments for spin_button. This affects how quickly the value changes when the spin button's
+  arrows are activated.
   
   spin_button : a GtkSpinButton
   step :        increment applied for a button 1 press.
@@ -366,7 +378,8 @@
 ==== :SetSnapToTicks ====
 '':SetSnapToTicks(self @ [[#T|T]], snap_to_ticks @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Sets the policy as to whether values are corrected to the nearest step increment when a spin button is activated after providing an invalid value.
+  Sets the policy as to whether values are corrected to the nearest step increment when a spin button is activated after
+  providing an invalid value.
   
   spin_button :   a GtkSpinButton
   snap_to_ticks : a flag indicating if invalid values should be corrected.
@@ -375,7 +388,8 @@
 ==== :SetUpdatePolicy ====
 '':SetUpdatePolicy(self @ [[#T|T]], policy @ [[..:..:Gtk:Gtk:SpinButtonUpdatePolicy#T|Gtk.Gtk.SpinButtonUpdatePolicy.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Sets the update behavior of a spin button. This determines whether the spin button is always updated or only when a valid value is set.
+  Sets the update behavior of a spin button. This determines whether the spin button is always updated or only when a
+  valid value is set.
   
   spin_button : a GtkSpinButton
   policy :      a GtkSpinButtonUpdatePolicy value
@@ -408,8 +422,11 @@
 ==== NewWithRange ====
 ''NewWithRange(min : [[..:..:Std:Real#T|Std.Real.T]], max : [[..:..:Std:Real#T|Std.Real.T]], step : [[..:..:Std:Real#T|Std.Real.T]]) : [[# T| T]]''
 
-  This is a convenience constructor that allows creation of a numeric GtkSpinButton without manually creating an adjustment. The value is initially set to the minimum value and a page increment of 10 * step is the default. The precision of the spin button is equivalent to the precision of step.
-  Note that the way in which the precision is derived works best if step is a power of ten. If the resulting precision is not suitable for your needs, use gtk_spin_button_set_digits() to correct it.
+  This is a convenience constructor that allows creation of a numeric GtkSpinButton without manually creating an
+  adjustment. The value is initially set to the minimum value and a page increment of 10 * step is the default. The
+  precision of the spin button is equivalent to the precision of step.
+  Note that the way in which the precision is derived works best if step is a power of ten. If the resulting precision is
+  not suitable for your needs, use gtk_spin_button_set_digits() to correct it.
   
   min :     Minimum allowable value
   max :     Maximum allowable value

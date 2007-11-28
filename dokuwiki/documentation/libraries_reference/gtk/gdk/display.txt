@@ -6,14 +6,20 @@
   GdkDisplay objects purpose are two fold:
    * To grab/ungrab keyboard focus and mouse pointer
    * To manage and provide information about the GdkScreen(s) available for this GdkDisplay
-  GdkDisplay objects are the GDK representation of the X Display which can be described as a workstation consisting of a keyboard a pointing device (such as a mouse) and one or more screens. It is used to open and keep track of various GdkScreen objects currently instanciated by the application. It is also used to grab and release the keyboard and the mouse pointer.
+  GdkDisplay objects are the GDK representation of the X Display which can be described as a
+  workstation consisting of a keyboard a pointing device (such as a mouse) and one or more screens. It
+  is used to open and keep track of various GdkScreen objects currently instanciated by the
+  application. It is also used to grab and release the keyboard and the mouse pointer.
   
 
 ==== :WarpPointer ====
 '':WarpPointer(self @ [[#T|T]], screen @ [[..:..:Gtk:Gdk:Screen#T|Gtk.Gdk.Screen.T]], x @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Warps the pointer of display to the point x,y on the screen screen, unless the pointer is confined to a window by a grab, in which case it will be moved as far as allowed by the grab. Warping the pointer creates events as if the user had moved the mouse instantaneously to the destination.
-  Note that the pointer should normally be under the control of the user. This function was added to cover some rare use cases like keyboard navigation support for the color picker in the GtkColorSelectionDialog.
+  Warps the pointer of display to the point x,y on the screen screen, unless the pointer is confined to a window by a
+  grab, in which case it will be moved as far as allowed by the grab. Warping the pointer creates events as if the user
+  had moved the mouse instantaneously to the destination.
+  Note that the pointer should normally be under the control of the user. This function was added to cover some rare use
+  cases like keyboard navigation support for the color picker in the GtkColorSelectionDialog.
   
   display : a GdkDisplay
   screen :  the screen of display to warp the pointer to
@@ -24,8 +30,12 @@
 ==== :Sync ====
 '':Sync(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Flushes any requests queued for the windowing system and waits until all requests have been handled. This is often used for making sure that the display is synchronized with the current state of the program. Calling gdk_display_sync() before gdk_error_trap_pop() makes sure that any errors generated from earlier requests are handled before the error trap is removed.
-  This is most useful for X11. On windowing systems where requests are handled synchronously, this function will do nothing.
+  Flushes any requests queued for the windowing system and waits until all requests have been handled. This is often used
+  for making sure that the display is synchronized with the current state of the program. Calling gdk_display_sync()
+  before gdk_error_trap_pop() makes sure that any errors generated from earlier requests are handled before the error trap
+  is removed.
+  This is most useful for X11. On windowing systems where requests are handled synchronously, this function will do
+  nothing.
   
   display : a GdkDisplay
   
@@ -59,7 +69,8 @@
 ==== :DoubleClickTime ====
 '':DoubleClickTime(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-  Sets the double click time (two clicks within this time interval count as a double click and result in a GDK_2BUTTON_PRESS event). Applications should not set this, it is a global user-configured setting.
+  Sets the double click time (two clicks within this time interval count as a double click and result in a
+  GDK_2BUTTON_PRESS event). Applications should not set this, it is a global user-configured setting.
   
   display : a GdkDisplay
   msec :    double click time in milliseconds (thousandths of a second)
@@ -72,10 +83,13 @@
 ==== :PointerHooks ====
 '':PointerHooks(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:DisplayPointerHooks#T|Gtk.Gdk.DisplayPointerHooks.T]]''
 
-  This function allows for hooking into the operation of getting the current location of the pointer on a particular display. This is only useful for such low-level tools as an event recorder. Applications should never have any reason to use this facility.
+  This function allows for hooking into the operation of getting the current location of the pointer on a particular
+  display. This is only useful for such low-level tools as an event recorder. Applications should never have any reason to
+  use this facility.
   
   display :   a GdkDisplay
-  new_hooks : a table of pointers to functions for getting quantities related to the current pointer position, or NULL to restore the default table.
+  new_hooks : a table of pointers to functions for getting quantities related to the current pointer position, or NULL to
+              restore the default table.
   Returns :   the previous pointer hook table
   
 
@@ -86,7 +100,9 @@
 ==== :DoubleClickDistance ====
 '':DoubleClickDistance(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-  Sets the double click distance (two clicks within this distance count as a double click and result in a GDK_2BUTTON_PRESS event). See also gdk_display_set_double_click_time(). Applications should not set this, it is a global user-configured setting.
+  Sets the double click distance (two clicks within this distance count as a double click and result in a
+  GDK_2BUTTON_PRESS event). See also gdk_display_set_double_click_time(). Applications should not set this, it is a global
+  user-configured setting.
   
   display :  a GdkDisplay
   distance : distance in pixels
@@ -115,10 +131,12 @@
 ==== :AddClientMessageFilter ====
 '':AddClientMessageFilter(self @ [[#T|T]], message_type @ [[..:..:Std:Object#T|Std.Object.T]], func @ [[..:..:Std:Function#T|Std.Function.T]], data @ [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Adds a filter to be called when X ClientMessage events are received. See gdk_window_add_filter() if you are interested in filtering other types of events.
+  Adds a filter to be called when X ClientMessage events are received. See gdk_window_add_filter() if you are interested
+  in filtering other types of events.
   
   display :      a GdkDisplay for which this message filter applies
-  message_type : the type of ClientMessage events to receive. This will be checked against the message_type field of the XClientMessage event struct.
+  message_type : the type of ClientMessage events to receive. This will be checked against the message_type field of the
+                 XClientMessage event struct.
   func :         the function to call to process the event.
   data :         user data to pass to func.
   
@@ -142,8 +160,12 @@
 ==== :Flush ====
 '':Flush(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Flushes any requests queued for the windowing system; this happens automatically when the main loop blocks waiting for new events, but if your application is drawing without returning control to the main loop, you may need to call this function explicitely. A common case where this function needs to be called is when an application is executing drawing commands from a thread other than the thread where the main loop is running.
-  This is most useful for X11. On windowing systems where requests are handled synchronously, this function will do nothing.
+  Flushes any requests queued for the windowing system; this happens automatically when the main loop blocks waiting for
+  new events, but if your application is drawing without returning control to the main loop, you may need to call this
+  function explicitely. A common case where this function needs to be called is when an application is executing drawing
+  commands from a thread other than the thread where the main loop is running.
+  This is most useful for X11. On windowing systems where requests are handled synchronously, this function will do
+  nothing.
   
   display : a GdkDisplay
   
@@ -164,7 +186,8 @@
 ==== :GetDefaultGroup ====
 '':GetDefaultGroup(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]]''
 
-  Returns the default group leader window for all toplevel windows on display. This window is implicitly created by GDK. See gdk_window_set_group().
+  Returns the default group leader window for all toplevel windows on display. This window is implicitly created by GDK.
+  See gdk_window_set_group().
   
   display : a GdkDisplay
   Returns : The default group leader window for display
@@ -185,7 +208,8 @@
   Gets the next GdkEvent to be processed for display, fetching events from the windowing system if necessary.
   
   display : a GdkDisplay
-  Returns : the next GdkEvent to be processed, or NULL if no events are pending. The returned GdkEvent should be freed with gdk_event_free().
+  Returns : the next GdkEvent to be processed, or NULL if no events are pending. The returned GdkEvent should be freed
+            with gdk_event_free().
   
 
 ==== :GetMaximalCursorSize ====
@@ -241,7 +265,8 @@
 ==== :GetWindowAtPointer ====
 '':GetWindowAtPointer(self @ [[#T|T]], win_x @ [[..:..:Std:Object#T|Std.Object.T]], win_y @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]]''
 
-  Obtains the window underneath the mouse pointer, returning the location of that window in win_x, win_y for screen. Returns NULL if the window under the mouse pointer is not known to GDK (for example, belongs to another application).
+  Obtains the window underneath the mouse pointer, returning the location of that window in win_x, win_y for screen.
+  Returns NULL if the window under the mouse pointer is not known to GDK (for example, belongs to another application).
   
   display : a GdkDisplay
   win_x :   return location for origin of the window under the pointer
@@ -261,7 +286,8 @@
 ==== :ListDevices ====
 '':ListDevices(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Returns the list of available input devices attached to display. The list is statically allocated and should not be freed.
+  Returns the list of available input devices attached to display. The list is statically allocated and should not be
+  freed.
   
   display : a GdkDisplay
   Returns : a list of GdkDevice
@@ -270,10 +296,13 @@
 ==== :PeekEvent ====
 '':PeekEvent(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Gets a copy of the first GdkEvent in the display's event queue, without removing the event from the queue. (Note that this function will not get more events from the windowing system. It only checks the events that have already been moved to the GDK event queue.)
+  Gets a copy of the first GdkEvent in the display's event queue, without removing the event from the queue. (Note that
+  this function will not get more events from the windowing system. It only checks the events that have already been moved
+  to the GDK event queue.)
   
   display : a GdkDisplay
-  Returns : a copy of the first GdkEvent on the event queue, or NULL if no events are in the queue. The returned GdkEvent should be freed with gdk_event_free().
+  Returns : a copy of the first GdkEvent on the event queue, or NULL if no events are in the queue. The returned GdkEvent
+            should be freed with gdk_event_free().
   
 
 ==== :PointerIsGrabbed ====
@@ -316,7 +345,9 @@
 ==== :SetDoubleClickDistance ====
 '':SetDoubleClickDistance(self @ [[#T|T]], distance @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Sets the double click distance (two clicks within this distance count as a double click and result in a GDK_2BUTTON_PRESS event). See also gdk_display_set_double_click_time(). Applications should not set this, it is a global user-configured setting.
+  Sets the double click distance (two clicks within this distance count as a double click and result in a
+  GDK_2BUTTON_PRESS event). See also gdk_display_set_double_click_time(). Applications should not set this, it is a global
+  user-configured setting.
   
   display :  a GdkDisplay
   distance : distance in pixels
@@ -325,7 +356,8 @@
 ==== :SetDoubleClickTime ====
 '':SetDoubleClickTime(self @ [[#T|T]], msec @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Sets the double click time (two clicks within this time interval count as a double click and result in a GDK_2BUTTON_PRESS event). Applications should not set this, it is a global user-configured setting.
+  Sets the double click time (two clicks within this time interval count as a double click and result in a
+  GDK_2BUTTON_PRESS event). Applications should not set this, it is a global user-configured setting.
   
   display : a GdkDisplay
   msec :    double click time in milliseconds (thousandths of a second)
@@ -334,17 +366,22 @@
 ==== :SetPointerHooks ====
 '':SetPointerHooks(self @ [[#T|T]], new_hooks @ [[..:..:Gtk:Gdk:DisplayPointerHooks#T|Gtk.Gdk.DisplayPointerHooks.T]]) : [[..:..:Gtk:Gdk:DisplayPointerHooks#T|Gtk.Gdk.DisplayPointerHooks.T]]''
 
-  This function allows for hooking into the operation of getting the current location of the pointer on a particular display. This is only useful for such low-level tools as an event recorder. Applications should never have any reason to use this facility.
+  This function allows for hooking into the operation of getting the current location of the pointer on a particular
+  display. This is only useful for such low-level tools as an event recorder. Applications should never have any reason to
+  use this facility.
   
   display :   a GdkDisplay
-  new_hooks : a table of pointers to functions for getting quantities related to the current pointer position, or NULL to restore the default table.
+  new_hooks : a table of pointers to functions for getting quantities related to the current pointer position, or NULL to
+              restore the default table.
   Returns :   the previous pointer hook table
   
 
 ==== :StoreClipboard ====
 '':StoreClipboard(self @ [[#T|T]], clipboard_window @ [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]], time_ @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], targets @ [[..:..:Gtk:Gdk:Atom#T|Gtk.Gdk.Atom.T]], n_targets @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Issues a request to the clipboard manager to store the clipboard data. On X11, this is a special program that works according to the freedesktop clipboard specification, available at http://www.freedesktop.org/Standards/clipboard-manager-spec.
+  Issues a request to the clipboard manager to store the clipboard data. On X11, this is a special program that works
+  according to the freedesktop clipboard specification, available at http://www.freedesktop.org/Standards/clipboard-
+  manager-spec.
   
   display :          a GdkDisplay
   clipboard_window : a GdkWindow belonging to the clipboard owner
@@ -356,7 +393,8 @@
 ==== :SupportsClipboardPersistence ====
 '':SupportsClipboardPersistence(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
-  Returns whether the speicifed display supports clipboard persistance; i.e. if it's possible to store the clipboard data after an application has quit. On X11 this checks if a clipboard daemon is running.
+  Returns whether the speicifed display supports clipboard persistance; i.e. if it's possible to store the clipboard data
+  after an application has quit. On X11 this checks if a clipboard daemon is running.
   
   display : a GdkDisplay
   Returns : TRUE if the display supports clipboard persistance.
@@ -375,7 +413,8 @@
 ==== :SupportsCursorAlpha ====
 '':SupportsCursorAlpha(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
-  Returns TRUE if cursors can use an 8bit alpha channel on display. Otherwise, cursors are restricted to bilevel alpha (i.e. a mask).
+  Returns TRUE if cursors can use an 8bit alpha channel on display. Otherwise, cursors are restricted to bilevel alpha
+  (i.e. a mask).
   
   display : a GdkDisplay
   Returns : whether cursors can have alpha channels.
@@ -384,7 +423,8 @@
 ==== :SupportsCursorColor ====
 '':SupportsCursorColor(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
-  Returns TRUE if multicolored cursors are supported on display. Otherwise, cursors have only a forground and a background color.
+  Returns TRUE if multicolored cursors are supported on display. Otherwise, cursors have only a forground and a background
+  color.
   
   display : a GdkDisplay
   Returns : whether cursors can have multiple colors.

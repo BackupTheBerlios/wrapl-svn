@@ -1,7 +1,9 @@
 ====== RecentChooser ======
 ==== T ====
 
-  GtkRecentChooser is an interface that can be implemented by widgets displaying the list of recently used files. In GTK+, the main objects that implement this interface are GtkRecentChooserWidget, GtkRecentChooserDialog and GtkRecentChooserMenu.
+  GtkRecentChooser is an interface that can be implemented by widgets displaying the list of recently
+  used files. In GTK+, the main objects that implement this interface are GtkRecentChooserWidget,
+  GtkRecentChooserDialog and GtkRecentChooserMenu.
   Recently used files are supported since GTK+ 2.10.
   
 
@@ -66,7 +68,8 @@
   The return value of this function is affected by the "sort-type" and "limit" properties of chooser.
   
   chooser : a GtkRecentChooser
-  Returns : A newly allocated list of GtkRecentInfo objects. You should use gtk_recent_info_unref() on every item of the list, and then free the list itself using g_list_free().
+  Returns : A newly allocated list of GtkRecentInfo objects. You should use gtk_recent_info_unref() on every item of the
+            list, and then free the list itself using g_list_free().
   
 
 ==== :GetLimit ====
@@ -81,7 +84,8 @@
 ==== :GetLocalOnly ====
 '':GetLocalOnly(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
-  Gets whether only local resources should be shown in the recently used resources selector. See gtk_recent_chooser_set_local_only()
+  Gets whether only local resources should be shown in the recently used resources selector. See
+  gtk_recent_chooser_set_local_only()
   
   chooser : a GtkRecentChooser
   Returns : TRUE if only local resources should be shown.
@@ -118,7 +122,8 @@
 '':GetShowNumbers(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
   === Warning ===
-  gtk_recent_chooser_get_show_numbers has been deprecated since version 2.12 and should not be used in newly-written code. use gtk_recent_chooser_menu_get_show_numbers() instead.
+  gtk_recent_chooser_get_show_numbers has been deprecated since version 2.12 and should not be used in newly-written code.
+  use gtk_recent_chooser_menu_get_show_numbers() instead.
 
 ==== :GetShowPrivate ====
 '':GetShowPrivate(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
@@ -228,7 +233,9 @@
 ==== :SetLocalOnly ====
 '':SetLocalOnly(self @ [[#T|T]], local_only @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Sets whether only local resources, that is resources using the file:// URI scheme, should be shown in the recently used resources selector. If local_only is TRUE (the default) then the shown resources are guaranteed to be accessible through the operating system native file system.
+  Sets whether only local resources, that is resources using the file:// URI scheme, should be shown in the recently used
+  resources selector. If local_only is TRUE (the default) then the shown resources are guaranteed to be accessible through
+  the operating system native file system.
   
   chooser :    a GtkRecentChooser
   local_only : TRUE if only local files can be shown
@@ -255,7 +262,8 @@
 ==== :SetShowNotFound ====
 '':SetShowNotFound(self @ [[#T|T]], show_not_found @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Sets whether chooser should display the recently used resources that it didn't find. This only applies to local resources.
+  Sets whether chooser should display the recently used resources that it didn't find. This only applies to local
+  resources.
   
   chooser :        a GtkRecentChooser
   show_not_found : whether to show the local items we didn't find
@@ -265,7 +273,8 @@
 '':SetShowNumbers(self @ [[#T|T]], show_numbers @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
   === Warning ===
-  gtk_recent_chooser_set_show_numbers has been deprecated since version 2.12 and should not be used in newly-written code. Use gtk_recent_chooser_menu_set_show_numbers() instead.
+  gtk_recent_chooser_set_show_numbers has been deprecated since version 2.12 and should not be used in newly-written code.
+  Use gtk_recent_chooser_menu_set_show_numbers() instead.
 
 ==== :SetShowPrivate ====
 '':SetShowPrivate(self @ [[#T|T]], show_private @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -288,8 +297,11 @@
 ==== :SetSortFunc ====
 '':SetSortFunc(self @ [[#T|T]], sort_func @ [[..:..:Std:Function#T|Std.Function.T]], sort_data @ [[..:..:Std:Address#T|Std.Address.T]], data_destroy @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Sets the comparison function used when sorting to be sort_func. If the chooser has the sort type set to GTK_RECENT_SORT_CUSTOM then the chooser will sort using this function.
-  To the comparison function will be passed two GtkRecentInfo structs and sort_data; sort_func should return a positive integer if the first item comes before the second, zero if the two items are equal and a negative integer if the first item comes after the second.
+  Sets the comparison function used when sorting to be sort_func. If the chooser has the sort type set to
+  GTK_RECENT_SORT_CUSTOM then the chooser will sort using this function.
+  To the comparison function will be passed two GtkRecentInfo structs and sort_data; sort_func should return a positive
+  integer if the first item comes before the second, zero if the two items are equal and a negative integer if the first
+  item comes after the second.
   
   chooser :      a GtkRecentChooser
   sort_func :    the comparison function

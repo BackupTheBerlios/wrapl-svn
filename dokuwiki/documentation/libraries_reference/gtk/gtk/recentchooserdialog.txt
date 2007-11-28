@@ -9,10 +9,15 @@
   * [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]
   * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
 
-  GtkRecentChooserDialog is a dialog box suitable for displaying the recently used documents. This widgets works by putting a GtkRecentChooserWidget inside a GtkDialog. It exposes the GtkRecentChooserIface interface, so you can use all the GtkRecentChooser functions on the recent chooser dialog as well as those for GtkDialog.
-  Note that GtkRecentChooserDialog does not have any methods of its own. Instead, you should use the functions that work on a GtkRecentChooser.
+  GtkRecentChooserDialog is a dialog box suitable for displaying the recently used documents. This
+  widgets works by putting a GtkRecentChooserWidget inside a GtkDialog. It exposes the
+  GtkRecentChooserIface interface, so you can use all the GtkRecentChooser functions on the recent
+  chooser dialog as well as those for GtkDialog.
+  Note that GtkRecentChooserDialog does not have any methods of its own. Instead, you should use the
+  functions that work on a GtkRecentChooser.
   Example 50.&#160;Typical usage
-  In the simplest of cases, you can use the following code to use a GtkRecentChooserDialog to select a recently used file:
+  In the simplest of cases, you can use the following code to use a GtkRecentChooserDialog to select a
+  recently used file:
   GtkWidget *dialog;
   
   dialog = gtk_recent_chooser_dialog_new ("Recent Documents",
@@ -59,7 +64,8 @@
 ''NewForManager(title : [[..:..:Std:String#T|Std.String.T]], parent : [[..:..:Gtk:Gtk:Window#T|Gtk.Gtk.Window.T]], manager : [[..:..:Gtk:Gtk:RecentManager#T|Gtk.Gtk.RecentManager.T]], first_button_text : [[..:..:Std:String#T|Std.String.T]], __etc__ : [[..:..:Std:Object#T|Std.Object.T]]) : [[# T| T]]''
 
   Creates a new GtkRecentChooserDialog with a specified recent manager.
-  This is useful if you have implemented your own recent manager, or if you have a customized instance of a GtkRecentManager object.
+  This is useful if you have implemented your own recent manager, or if you have a customized instance of a
+  GtkRecentManager object.
   
   title :             Title of the dialog, or NULL
   parent :            Transient parent of the dialog, or NULL,

@@ -8,7 +8,9 @@
   * [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]
   * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
 
-  The GtkFontButton is a button which displays the currently selected font an allows to open a font selection dialog to change the font. It is suitable widget for selecting a font in a preference dialog.
+  The GtkFontButton is a button which displays the currently selected font an allows to open a font
+  selection dialog to change the font. It is suitable widget for selecting a font in a preference
+  dialog.
   
 
 ==== :SetUseSize ====
@@ -103,7 +105,8 @@
   
   font_button : a GtkFontButton
   fontname :    Name of font to display in font selection dialog
-  Returns :     Return value of gtk_font_selection_dialog_set_font_name() if the font selection dialog exists, otherwise FALSE.
+  Returns :     Return value of gtk_font_selection_dialog_set_font_name() if the font selection dialog exists, otherwise
+                FALSE.
   
 
 ==== :SetShowSize ====

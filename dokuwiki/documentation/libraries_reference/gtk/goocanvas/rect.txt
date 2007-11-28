@@ -5,8 +5,10 @@
   * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
 
   GooCanvasRect represents a rectangle item.
-  It is a subclass of GooCanvasItemSimple and so inherits all of the style properties such as "stroke-color", "fill-color" and "line-width".
-  It also implements the GooCanvasItem interface, so you can use the GooCanvasItem functions such as goo_canvas_item_raise() and goo_canvas_item_rotate().
+  It is a subclass of GooCanvasItemSimple and so inherits all of the style properties such as "stroke-
+  color", "fill-color" and "line-width".
+  It also implements the GooCanvasItem interface, so you can use the GooCanvasItem functions such as
+  goo_canvas_item_raise() and goo_canvas_item_rotate().
   To create a GooCanvasRect use goo_canvas_rect_new().
   To get or set the properties of an existing GooCanvasRect, use g_object_get() and g_object_set().
   
@@ -20,7 +22,8 @@
 
   Creates a new rectangle item.
   
-  parent :  the parent item, or NULL. If a parent is specified, it will assume ownership of the item, and the item will automatically be freed when it is removed from the parent. Otherwise call g_object_unref() to free it.
+  parent :  the parent item, or NULL. If a parent is specified, it will assume ownership of the item, and the item will
+            automatically be freed when it is removed from the parent. Otherwise call g_object_unref() to free it.
   x :       the x coordinate of the left of the rectangle.
   y :       the y coordinate of the top of the rectangle.
   width :   the width of the rectangle.

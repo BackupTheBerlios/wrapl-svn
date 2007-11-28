@@ -9,8 +9,10 @@
   * [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]
   * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
 
-  A GtkCheckMenuItem is a menu item that maintains the state of a boolean value in addition to a GtkMenuItem's usual role in activating application code.
-  A check box indicating the state of the boolean value is displayed at the left side of the GtkMenuItem. Activating the GtkMenuItem toggles the value.
+  A GtkCheckMenuItem is a menu item that maintains the state of a boolean value in addition to a
+  GtkMenuItem's usual role in activating application code.
+  A check box indicating the state of the boolean value is displayed at the left side of the
+  GtkMenuItem. Activating the GtkMenuItem toggles the value.
   
 
 ==== :Toggled ====
@@ -30,7 +32,11 @@
 ==== :SetInconsistent ====
 '':SetInconsistent(self @ [[#T|T]], setting @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  If the user has selected a range of elements (such as some text or spreadsheet cells) that are affected by a boolean setting, and the current values in that range are inconsistent, you may want to display the check in an "in between" state. This function turns on "in between" display. Normally you would turn off the inconsistent state again if the user explicitly selects a setting. This has to be done manually, gtk_check_menu_item_set_inconsistent() only affects visual appearance, it doesn't affect the semantics of the widget.
+  If the user has selected a range of elements (such as some text or spreadsheet cells) that are affected by a boolean
+  setting, and the current values in that range are inconsistent, you may want to display the check in an "in between"
+  state. This function turns on "in between" display. Normally you would turn off the inconsistent state again if the user
+  explicitly selects a setting. This has to be done manually, gtk_check_menu_item_set_inconsistent() only affects visual
+  appearance, it doesn't affect the semantics of the widget.
   
   check_menu_item : a GtkCheckMenuItem
   setting :         TRUE to display an "inconsistent" third state check
@@ -71,7 +77,11 @@
   check_menu_item : a GtkCheckMenuItem
   Returns :         TRUE if inconsistent
   
-  If the user has selected a range of elements (such as some text or spreadsheet cells) that are affected by a boolean setting, and the current values in that range are inconsistent, you may want to display the check in an "in between" state. This function turns on "in between" display. Normally you would turn off the inconsistent state again if the user explicitly selects a setting. This has to be done manually, gtk_check_menu_item_set_inconsistent() only affects visual appearance, it doesn't affect the semantics of the widget.
+  If the user has selected a range of elements (such as some text or spreadsheet cells) that are affected by a boolean
+  setting, and the current values in that range are inconsistent, you may want to display the check in an "in between"
+  state. This function turns on "in between" display. Normally you would turn off the inconsistent state again if the user
+  explicitly selects a setting. This has to be done manually, gtk_check_menu_item_set_inconsistent() only affects visual
+  appearance, it doesn't affect the semantics of the widget.
   
   check_menu_item : a GtkCheckMenuItem
   setting :         TRUE to display an "inconsistent" third state check
@@ -142,7 +152,8 @@
 ==== NewWithMnemonic ====
 ''NewWithMnemonic(label : [[..:..:Std:String#T|Std.String.T]]) : [[# T| T]]''
 
-  Creates a new GtkCheckMenuItem containing a label. The label will be created using gtk_label_new_with_mnemonic(), so underscores in label indicate the mnemonic for the menu item.
+  Creates a new GtkCheckMenuItem containing a label. The label will be created using gtk_label_new_with_mnemonic(), so
+  underscores in label indicate the mnemonic for the menu item.
   
   label :   The text of the button, with an underscore in front of the mnemonic character
   Returns : a new GtkCheckMenuItem

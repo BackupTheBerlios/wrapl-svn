@@ -5,10 +5,14 @@
   * [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]
   * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
 
-  GtkCalendar is a widget that displays a calendar, one month at a time. It can be created with gtk_calendar_new().
-  The month and year currently displayed can be altered with gtk_calendar_select_month(). The exact day can be selected from the displayed month using gtk_calendar_select_day().
-  To place a visual marker on a particular day, use gtk_calendar_mark_day() and to remove the marker, gtk_calendar_unmark_day(). Alternative, all marks can be cleared with gtk_calendar_clear_marks().
-  The way in which the calendar itself is displayed can be altered using gtk_calendar_set_display_options().
+  GtkCalendar is a widget that displays a calendar, one month at a time. It can be created with
+  gtk_calendar_new().
+  The month and year currently displayed can be altered with gtk_calendar_select_month(). The exact
+  day can be selected from the displayed month using gtk_calendar_select_day().
+  To place a visual marker on a particular day, use gtk_calendar_mark_day() and to remove the marker,
+  gtk_calendar_unmark_day(). Alternative, all marks can be cleared with gtk_calendar_clear_marks().
+  The way in which the calendar itself is displayed can be altered using
+  gtk_calendar_set_display_options().
   The selected date can be retrieved from a GtkCalendar using gtk_calendar_get_date().
   
 

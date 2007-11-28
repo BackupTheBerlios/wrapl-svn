@@ -8,9 +8,14 @@
   * [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]
   * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
 
-  A GtkToggleButton is a GtkButton which will remain 'pressed-in' when clicked. Clicking again will cause the toggle button to return to its normal state.
-  A toggle button is created by calling either gtk_toggle_button_new() or gtk_toggle_button_new_with_label(). If using the former, it is advisable to pack a widget, (such as a GtkLabel and/or a GtkPixmap), into the toggle button's container. (See GtkButton for more information).
-  The state of a GtkToggleButton can be set specifically using gtk_toggle_button_set_active(), and retrieved using gtk_toggle_button_get_active().
+  A GtkToggleButton is a GtkButton which will remain 'pressed-in' when clicked. Clicking again will
+  cause the toggle button to return to its normal state.
+  A toggle button is created by calling either gtk_toggle_button_new() or
+  gtk_toggle_button_new_with_label(). If using the former, it is advisable to pack a widget, (such as
+  a GtkLabel and/or a GtkPixmap), into the toggle button's container. (See GtkButton for more
+  information).
+  The state of a GtkToggleButton can be set specifically using gtk_toggle_button_set_active(), and
+  retrieved using gtk_toggle_button_get_active().
   To simply switch the state of a toggle button, use gtk_toggle_button_toggled.
   Example 11.&#160;Creating two GtkToggleButton widgets.
   
@@ -51,17 +56,24 @@
 ==== :SetMode ====
 '':SetMode(self @ [[#T|T]], draw_indicator @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Sets whether the button is displayed as a separate indicator and label. You can call this function on a checkbutton or a radiobutton with draw_indicator = FALSE to make the button look like a normal button
-  This function only affects instances of classes like GtkCheckButton and GtkRadioButton that derive from GtkToggleButton, not instances of GtkToggleButton itself.
+  Sets whether the button is displayed as a separate indicator and label. You can call this function on a checkbutton or a
+  radiobutton with draw_indicator = FALSE to make the button look like a normal button
+  This function only affects instances of classes like GtkCheckButton and GtkRadioButton that derive from GtkToggleButton,
+  not instances of GtkToggleButton itself.
   
   toggle_button :  a GtkToggleButton
-  draw_indicator : if TRUE, draw the button as a separate indicator and label; if FALSE, draw the button like a normal button
+  draw_indicator : if TRUE, draw the button as a separate indicator and label; if FALSE, draw the button like a normal
+                   button
   
 
 ==== :SetInconsistent ====
 '':SetInconsistent(self @ [[#T|T]], setting @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  If the user has selected a range of elements (such as some text or spreadsheet cells) that are affected by a toggle button, and the current values in that range are inconsistent, you may want to display the toggle in an "in between" state. This function turns on "in between" display. Normally you would turn off the inconsistent state again if the user toggles the toggle button. This has to be done manually, gtk_toggle_button_set_inconsistent() only affects visual appearance, it doesn't affect the semantics of the button.
+  If the user has selected a range of elements (such as some text or spreadsheet cells) that are affected by a toggle
+  button, and the current values in that range are inconsistent, you may want to display the toggle in an "in between"
+  state. This function turns on "in between" display. Normally you would turn off the inconsistent state again if the user
+  toggles the toggle button. This has to be done manually, gtk_toggle_button_set_inconsistent() only affects visual
+  appearance, it doesn't affect the semantics of the button.
   
   toggle_button : a GtkToggleButton
   setting :       TRUE if state is inconsistent
@@ -70,7 +82,8 @@
 ==== :SetActive ====
 '':SetActive(self @ [[#T|T]], is_active @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Sets the status of the toggle button. Set to TRUE if you want the GtkToggleButton to be 'pressed in', and FALSE to raise it. This action causes the toggled signal to be emitted.
+  Sets the status of the toggle button. Set to TRUE if you want the GtkToggleButton to be 'pressed in', and FALSE to raise
+  it. This action causes the toggled signal to be emitted.
   
   toggle_button : a GtkToggleButton.
   is_active :     TRUE or FALSE.
@@ -79,12 +92,14 @@
 ==== :Active ====
 '':Active(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-  Queries a GtkToggleButton and returns its current state. Returns TRUE if the toggle button is pressed in and FALSE if it is raised.
+  Queries a GtkToggleButton and returns its current state. Returns TRUE if the toggle button is pressed in and FALSE if it
+  is raised.
   
   toggle_button : a GtkToggleButton.
   Returns :       a gboolean value.
   
-  Sets the status of the toggle button. Set to TRUE if you want the GtkToggleButton to be 'pressed in', and FALSE to raise it. This action causes the toggled signal to be emitted.
+  Sets the status of the toggle button. Set to TRUE if you want the GtkToggleButton to be 'pressed in', and FALSE to raise
+  it. This action causes the toggled signal to be emitted.
   
   toggle_button : a GtkToggleButton.
   is_active :     TRUE or FALSE.
@@ -102,7 +117,11 @@
   toggle_button : a GtkToggleButton
   Returns :       TRUE if the button is displayed as inconsistent, FALSE otherwise
   
-  If the user has selected a range of elements (such as some text or spreadsheet cells) that are affected by a toggle button, and the current values in that range are inconsistent, you may want to display the toggle in an "in between" state. This function turns on "in between" display. Normally you would turn off the inconsistent state again if the user toggles the toggle button. This has to be done manually, gtk_toggle_button_set_inconsistent() only affects visual appearance, it doesn't affect the semantics of the button.
+  If the user has selected a range of elements (such as some text or spreadsheet cells) that are affected by a toggle
+  button, and the current values in that range are inconsistent, you may want to display the toggle in an "in between"
+  state. This function turns on "in between" display. Normally you would turn off the inconsistent state again if the user
+  toggles the toggle button. This has to be done manually, gtk_toggle_button_set_inconsistent() only affects visual
+  appearance, it doesn't affect the semantics of the button.
   
   toggle_button : a GtkToggleButton
   setting :       TRUE if state is inconsistent
@@ -111,7 +130,8 @@
 ==== :GetActive ====
 '':GetActive(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
-  Queries a GtkToggleButton and returns its current state. Returns TRUE if the toggle button is pressed in and FALSE if it is raised.
+  Queries a GtkToggleButton and returns its current state. Returns TRUE if the toggle button is pressed in and FALSE if it
+  is raised.
   
   toggle_button : a GtkToggleButton.
   Returns :       a gboolean value.
@@ -150,7 +170,8 @@
 ==== NewWithMnemonic ====
 ''NewWithMnemonic(label : [[..:..:Std:String#T|Std.String.T]]) : [[# T| T]]''
 
-  Creates a new GtkToggleButton containing a label. The label will be created using gtk_label_new_with_mnemonic(), so underscores in label indicate the mnemonic for the button.
+  Creates a new GtkToggleButton containing a label. The label will be created using gtk_label_new_with_mnemonic(), so
+  underscores in label indicate the mnemonic for the button.
   
   label :   the text of the button, with an underscore in front of the mnemonic character
   Returns : a new GtkToggleButton

@@ -3,10 +3,13 @@
 === inherits from ===
   * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
 
-  A GtkUIManager constructs a user interface (menus and toolbars) from one or more UI definitions, which reference actions from one or more action groups.
+  A GtkUIManager constructs a user interface (menus and toolbars) from one or more UI definitions,
+  which reference actions from one or more action groups.
   === UI Definitions ===
-  The UI definitions are specified in an XML format which can be roughly described by the following DTD.
-  Do not confuse the GtkUIManager UI Definitions described here with the similarly named GtkBuilder UI Definitions.
+  The UI definitions are specified in an XML format which can be roughly described by the following
+  DTD.
+  Do not confuse the GtkUIManager UI Definitions described here with the similarly named GtkBuilder UI
+  Definitions.
   <!ELEMENT ui          (menubar|toolbar|popup|accelerator)* >
   <!ELEMENT menubar     (menuitem|separator|placeholder|menu)* >
   <!ELEMENT menu        (menuitem|separator|placeholder|menu)* >
@@ -39,8 +42,14 @@
                          position (top|bot)    &num;IMPLIED >
   <!ATTLIST accelerator  name                  &num;IMPLIED
                          action                &num;REQUIRED >
-  There are some additional restrictions beyond those specified in the DTD, e.g. every toolitem must have a toolbar in its anchestry and every menuitem must have a menubar or popup in its anchestry. Since a GMarkup parser is used to parse the UI description, it must not only be valid XML, but valid GMarkup.
-  If a name is not specified, it defaults to the action. If an action is not specified either, the element name is used. The name and action attributes must not contain '/' characters after parsing (since that would mess up path lookup) and must be usable as XML attributes when enclosed in doublequotes, thus they must not '"' characters or references to the &quot; entity.
+  There are some additional restrictions beyond those specified in the DTD, e.g. every toolitem must
+  have a toolbar in its anchestry and every menuitem must have a menubar or popup in its anchestry.
+  Since a GMarkup parser is used to parse the UI description, it must not only be valid XML, but valid
+  GMarkup.
+  If a name is not specified, it defaults to the action. If an action is not specified either, the
+  element name is used. The name and action attributes must not contain '/' characters after parsing
+  (since that would mess up path lookup) and must be usable as XML attributes when enclosed in
+  doublequotes, thus they must not '"' characters or references to the &quot; entity.
   Example 27.&#160;A UI definition
   <ui>
     <menubar>
@@ -67,50 +76,73 @@
     </toolbar>
   </ui>
   
-  The constructed widget hierarchy is very similar to the element tree of the XML, with the exception that placeholders are merged into their parents. The correspondence of XML elements to widgets should be almost obvious:
+  The constructed widget hierarchy is very similar to the element tree of the XML, with the exception
+  that placeholders are merged into their parents. The correspondence of XML elements to widgets
+  should be almost obvious:
   
   menubar     a GtkMenuBar
   toolbar     a GtkToolbar
   popup       a toplevel GtkMenu
   menu        a GtkMenu attached to a menuitem
   menuitem    a GtkMenuItem subclass, the exact type depends on the action
-  toolitem    a GtkToolItem subclass, the exact type depends on the action. Note that toolitem elements may contain a menu element, but only if their associated action specifies a GtkMenuToolButton as proxy.
+              a GtkToolItem subclass, the exact type depends on the action. Note that toolitem
+  toolitem    elements may contain a menu element, but only if their associated action specifies a
+              GtkMenuToolButton as proxy.
   separator   a GtkSeparatorMenuItem or GtkSeparatorToolItem
   accelerator a keyboard accelerator
   
-  The "position" attribute determines where a constructed widget is positioned wrt. to its siblings in the partially constructed tree. If it is "top", the widget is prepended, otherwise it is appended.
+  The "position" attribute determines where a constructed widget is positioned wrt. to its siblings in
+  the partially constructed tree. If it is "top", the widget is prepended, otherwise it is appended.
   
-  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  ----------------------------------------------------------------------------------------------------
   
   === UI Merging ===
-  The most remarkable feature of GtkUIManager is that it can overlay a set of menuitems and toolitems over another one, and demerge them later.
-  Merging is done based on the names of the XML elements. Each element is identified by a path which consists of the names of its anchestors, separated by slashes. For example, the menuitem named "Left" in the example above has the path /ui/menubar/JustifyMenu/Left and the toolitem with the same name has path /ui/toolbar1/JustifyToolItems/Left.
+  The most remarkable feature of GtkUIManager is that it can overlay a set of menuitems and toolitems
+  over another one, and demerge them later.
+  Merging is done based on the names of the XML elements. Each element is identified by a path which
+  consists of the names of its anchestors, separated by slashes. For example, the menuitem named
+  "Left" in the example above has the path /ui/menubar/JustifyMenu/Left and the toolitem with the same
+  name has path /ui/toolbar1/JustifyToolItems/Left.
   
-  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  ----------------------------------------------------------------------------------------------------
   
   === Accelerators ===
-  Every action has an accelerator path. Accelerators are installed together with menuitem proxies, but they can also be explicitly added with <accelerator> elements in the UI definition. This makes it possible to have accelerators for actions even if they have no visible proxies.
+  Every action has an accelerator path. Accelerators are installed together with menuitem proxies, but
+  they can also be explicitly added with <accelerator> elements in the UI definition. This makes it
+  possible to have accelerators for actions even if they have no visible proxies.
   
-  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  ----------------------------------------------------------------------------------------------------
   
   === Smart Separators ===
-  The separators created by GtkUIManager are "smart", i.e. they do not show up in the UI unless they end up between two visible menu or tool items. Separators which are located at the very beginning or end of the menu or toolbar containing them, or multiple separators next to each other, are hidden. This is a useful feature, since the merging of UI elements from multiple sources can make it hard or impossible to determine in advance whether a separator will end up in such an unfortunate position.
-  For separators in toolbars, you can set expand="true" to turn them from a small, visible separator to an expanding, invisible one. Toolitems following an expanding separator are effectively right-aligned.
+  The separators created by GtkUIManager are "smart", i.e. they do not show up in the UI unless they
+  end up between two visible menu or tool items. Separators which are located at the very beginning or
+  end of the menu or toolbar containing them, or multiple separators next to each other, are hidden.
+  This is a useful feature, since the merging of UI elements from multiple sources can make it hard or
+  impossible to determine in advance whether a separator will end up in such an unfortunate position.
+  For separators in toolbars, you can set expand="true" to turn them from a small, visible separator
+  to an expanding, invisible one. Toolitems following an expanding separator are effectively right-
+  aligned.
   
-  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  ----------------------------------------------------------------------------------------------------
   
   === Empty Menus ===
-  Submenus pose similar problems to separators inconnection with merging. It is impossible to know in advance whether they will end up empty after merging. GtkUIManager offers two ways to treat empty submenus:
+  Submenus pose similar problems to separators inconnection with merging. It is impossible to know in
+  advance whether they will end up empty after merging. GtkUIManager offers two ways to treat empty
+  submenus:
    * make them disappear by hiding the menu item they're attached to
    * add an insensitive "Empty" item
-  The behaviour is chosen based on the "hide_if_empty" property of the action to which the submenu is associated.
+  The behaviour is chosen based on the "hide_if_empty" property of the action to which the submenu is
+  associated.
   
-  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  ----------------------------------------------------------------------------------------------------
   
   === GtkUIManager as GtkBuildable ===
-  The GtkUIManager implementation of the GtkBuildable interface accepts GtkActionGroup objects as <child> elements in UI definitions.
-  A GtkUIManager UI definition as described above can be embedded in an GtkUIManager <object> element in a GtkBuilder UI definition.
-  The widgets that are constructed by a GtkUIManager can be embedded in other parts of the constructed user interface with the help of the "constructor" attribute. See the example below.
+  The GtkUIManager implementation of the GtkBuildable interface accepts GtkActionGroup objects as
+  <child> elements in UI definitions.
+  A GtkUIManager UI definition as described above can be embedded in an GtkUIManager <object> element
+  in a GtkBuilder UI definition.
+  The widgets that are constructed by a GtkUIManager can be embedded in other parts of the constructed
+  user interface with the help of the "constructor" attribute. See the example below.
   Example 28.&#160;An embedded GtkUIManager UI definition
   <object class="GtkUIManager" id="uiman">
     <child>
@@ -140,7 +172,8 @@
 ==== :SetAddTearoffs ====
 '':SetAddTearoffs(self @ [[#T|T]], add_tearoffs @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Sets the "add_tearoffs" property, which controls whether menus generated by this GtkUIManager will have tearoff menu items.
+  Sets the "add_tearoffs" property, which controls whether menus generated by this GtkUIManager will have tearoff menu
+  items.
   Note that this only affects regular menus. Generated popup menus never have tearoff menu items.
   
   self :         a GtkUIManager
@@ -173,7 +206,8 @@
 '':AddUi(self @ [[#T|T]], merge_id @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], path @ [[..:..:Std:String#T|Std.String.T]], name @ [[..:..:Std:String#T|Std.String.T]], action @ [[..:..:Std:String#T|Std.String.T]], type @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], top @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
   Adds a UI element to the current contents of self.
-  If type is GTK_UI_MANAGER_AUTO, GTK+ inserts a menuitem, toolitem or separator if such an element can be inserted at the place determined by path. Otherwise type must indicate an element that can be inserted at the place determined by path.
+  If type is GTK_UI_MANAGER_AUTO, GTK+ inserts a menuitem, toolitem or separator if such an element can be inserted at the
+  place determined by path. Otherwise type must indicate an element that can be inserted at the place determined by path.
   If path points to a menuitem or toolitem, the new element will be inserted before or after this item, depending on top.
   
   self :     a GtkUIManager
@@ -193,26 +227,30 @@
   self :     a GtkUIManager object
   filename : the name of the file to parse
   error :    return location for an error
-  Returns :  The merge id for the merged UI. The merge id can be used to unmerge the UI with gtk_ui_manager_remove_ui(). If an error occurred, the return value is 0.
+  Returns :  The merge id for the merged UI. The merge id can be used to unmerge the UI with gtk_ui_manager_remove_ui().
+             If an error occurred, the return value is 0.
   
 
 ==== :AddUiFromString ====
 '':AddUiFromString(self @ [[#T|T]], buffer @ [[..:..:Std:String#T|Std.String.T]], length @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], error @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-  Parses a string containing a UI definition and merges it with the current contents of self. An enclosing <ui> element is added if it is missing.
+  Parses a string containing a UI definition and merges it with the current contents of self. An enclosing <ui> element is
+  added if it is missing.
   
   self :    a GtkUIManager object
   buffer :  the string to parse
   length :  the length of buffer (may be -1 if buffer is nul-terminated)
   error :   return location for an error
-  Returns : The merge id for the merged UI. The merge id can be used to unmerge the UI with gtk_ui_manager_remove_ui(). If an error occurred, the return value is 0.
+  Returns : The merge id for the merged UI. The merge id can be used to unmerge the UI with gtk_ui_manager_remove_ui(). If
+            an error occurred, the return value is 0.
   
 
 ==== :EnsureUpdate ====
 '':EnsureUpdate(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
   Makes sure that all pending updates to the UI have been completed.
-  This may occasionally be necessary, since GtkUIManager updates the UI in an idle function. A typical example where this function is useful is to enforce that the menubar and toolbar have been added to the main window before showing it:
+  This may occasionally be necessary, since GtkUIManager updates the UI in an idle function. A typical example where this
+  function is useful is to enforce that the menubar and toolbar have been added to the main window before showing it:
   gtk_container_add (GTK_CONTAINER (window), vbox);
   g_signal_connect (merge, "add_widget",
                     G_CALLBACK (add_widget), vbox);
@@ -267,7 +305,8 @@
   Obtains a list of all toplevel widgets of the requested types.
   
   self :    a GtkUIManager
-  types :   specifies the types of toplevel widgets to include. Allowed types are GTK_UI_MANAGER_MENUBAR, GTK_UI_MANAGER_TOOLBAR and GTK_UI_MANAGER_POPUP.
+  types :   specifies the types of toplevel widgets to include. Allowed types are GTK_UI_MANAGER_MENUBAR,
+            GTK_UI_MANAGER_TOOLBAR and GTK_UI_MANAGER_POPUP.
   Returns : a newly-allocated of all toplevel widgets of the requested types.
   
 
@@ -283,9 +322,14 @@
 ==== :GetWidget ====
 '':GetWidget(self @ [[#T|T]], path @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
-  Looks up a widget by following a path. The path consists of the names specified in the XML description of the UI. separated by '/'. Elements which don't have a name or action attribute in the XML (e.g. <popup>) can be addressed by their XML element name (e.g. "popup"). The root element ("/ui") can be omitted in the path.
-  Note that the widget found by following a path that ends in a <menu> element is the menuitem to which the menu is attached, not the menu itself.
-  Also note that the widgets constructed by a ui manager are not tied to the lifecycle of the ui manager. If you add the widgets returned by this function to some container or explicitly ref them, they will survive the destruction of the ui manager.
+  Looks up a widget by following a path. The path consists of the names specified in the XML description of the UI.
+  separated by '/'. Elements which don't have a name or action attribute in the XML (e.g. <popup>) can be addressed by
+  their XML element name (e.g. "popup"). The root element ("/ui") can be omitted in the path.
+  Note that the widget found by following a path that ends in a <menu> element is the menuitem to which the menu is
+  attached, not the menu itself.
+  Also note that the widgets constructed by a ui manager are not tied to the lifecycle of the ui manager. If you add the
+  widgets returned by this function to some container or explicitly ref them, they will survive the destruction of the ui
+  manager.
   
   self :    a GtkUIManager
   path :    a path
@@ -295,7 +339,8 @@
 ==== :InsertActionGroup ====
 '':InsertActionGroup(self @ [[#T|T]], action_group @ [[..:..:Gtk:Gtk:ActionGroup#T|Gtk.Gtk.ActionGroup.T]], pos @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Inserts an action group into the list of action groups associated with self. Actions in earlier groups hide actions with the same name in later groups.
+  Inserts an action group into the list of action groups associated with self. Actions in earlier groups hide actions with
+  the same name in later groups.
   
   self :         a GtkUIManager object
   action_group : the action group to be inserted

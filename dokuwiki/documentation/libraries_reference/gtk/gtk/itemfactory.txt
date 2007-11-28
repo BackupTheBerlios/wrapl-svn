@@ -35,7 +35,8 @@
 '':GetWidgetByAction(self @ [[#T|T]], action @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
   === Warning ===
-  gtk_item_factory_get_widget_by_action has been deprecated since version 2.4 and should not be used in newly-written code.
+  gtk_item_factory_get_widget_by_action has been deprecated since version 2.4 and should not be used in newly-written
+  code.
 
 ==== :GetWidget ====
 '':GetWidget(self @ [[#T|T]], path @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
@@ -75,7 +76,8 @@
   === Warning ===
   gtk_item_factory_get_widget has been deprecated since version 2.4 and should not be used in newly-written code.
   === Warning ===
-  gtk_item_factory_popup_data_from_widget has been deprecated since version 2.4 and should not be used in newly-written code.
+  gtk_item_factory_popup_data_from_widget has been deprecated since version 2.4 and should not be used in newly-written
+  code.
 
 ==== :Items ====
 '':Items(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -149,7 +151,8 @@
 ''PopupDataFromWidget(widget : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Address#T|Std.Address.T]]''
 
   === Warning ===
-  gtk_item_factory_popup_data_from_widget has been deprecated since version 2.4 and should not be used in newly-written code.
+  gtk_item_factory_popup_data_from_widget has been deprecated since version 2.4 and should not be used in newly-written
+  code.
 
 ==== PathFromWidget ====
 ''PathFromWidget(widget : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:String#T|Std.String.T]]''
@@ -183,5 +186,7 @@
 ''AddForeign(accel_widget : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], full_path : [[..:..:Std:String#T|Std.String.T]], accel_group : [[..:..:Gtk:Gtk:AccelGroup#T|Gtk.Gtk.AccelGroup.T]], keyval : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], modifiers : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
   === Warning ===
-  gtk_item_factory_add_foreign has been deprecated since version 2.4 and should not be used in newly-written code. The recommended API for this purpose are the functions gtk_menu_item_set_accel_path() and gtk_widget_set_accel_path(); don't use gtk_item_factory_add_foreign() in new code, since it is likely to be removed in the future.
+  gtk_item_factory_add_foreign has been deprecated since version 2.4 and should not be used in newly-written code. The
+  recommended API for this purpose are the functions gtk_menu_item_set_accel_path() and gtk_widget_set_accel_path(); don't
+  use gtk_item_factory_add_foreign() in new code, since it is likely to be removed in the future.
 

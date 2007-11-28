@@ -7,7 +7,10 @@
   * [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]
   * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
 
-  The GtkHScrollbar widget is a widget arranged horizontally creating a scrollbar. See GtkScrollbar for details on scrollbars. GtkAdjustment pointers may be added to handle the adjustment of the scrollbar or it may be left NULL in which case one will be created for you. See GtkAdjustment for details.
+  The GtkHScrollbar widget is a widget arranged horizontally creating a scrollbar. See GtkScrollbar
+  for details on scrollbars. GtkAdjustment pointers may be added to handle the adjustment of the
+  scrollbar or it may be left NULL in which case one will be created for you. See GtkAdjustment for
+  details.
   
 
 ==== New ====

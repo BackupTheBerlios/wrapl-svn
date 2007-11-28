@@ -3,9 +3,12 @@
 === inherits from ===
   * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
 
-  GooCanvasStyle provides support for cascading style properties for canvas items. It is intended to be used when implementing new canvas items.
+  GooCanvasStyle provides support for cascading style properties for canvas items. It is intended to
+  be used when implementing new canvas items.
   Style properties are identified by a unique GQuark, and contain arbitrary data stored in a GValue.
-  GooCanvasStyle also provides a few convenience functions such as goo_canvas_style_set_stroke_options() and goo_canvas_style_set_fill_options() which efficiently apply an item's standard style properties to the given cairo_t.
+  GooCanvasStyle also provides a few convenience functions such as goo_canvas_style_set_stroke_options
+  () and goo_canvas_style_set_fill_options() which efficiently apply an item's standard style
+  properties to the given cairo_t.
   
 
 ==== :SetStrokeOptions ====
@@ -69,7 +72,8 @@
 '':GetProperty(self @ [[#T|T]], property_id @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Gtk:GObject:Value#T|Gtk.GObject.Value.T]]''
 
   Gets the value of a property.
-  This searches though all the GooCanvasStyle's own list of property settings and also all ancestor GooCanvasStyle objects.
+  This searches though all the GooCanvasStyle's own list of property settings and also all ancestor GooCanvasStyle
+  objects.
   Note that it returns a pointer to the internal GValue setting, which should not be changed.
   
   style :       a style.

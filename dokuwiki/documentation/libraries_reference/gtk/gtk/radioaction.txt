@@ -5,7 +5,8 @@
   * [[..:..:Gtk:Gtk:Action#T|Gtk.Gtk.Action.T]]
   * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
 
-  A GtkRadioAction is similar to GtkRadioMenuItem. A number of radio actions can be linked together so that only one may be active at any one time.
+  A GtkRadioAction is similar to GtkRadioMenuItem. A number of radio actions can be linked together so
+  that only one may be active at any one time.
   
 
 ==== :SetGroup ====
@@ -42,7 +43,8 @@
 ==== :GetGroup ====
 '':GetGroup(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Returns the list representing the radio group for this object. Note that the returned list is only valid until the next change to the group.
+  Returns the list representing the radio group for this object. Note that the returned list is only valid until the next
+  change to the group.
   A common way to set up a group of radio group is the following:
     GSList *group = NULL;
     GtkRadioAction *action;
@@ -58,7 +60,8 @@
 ==== New ====
 ''New(name : [[..:..:Std:String#T|Std.String.T]], label : [[..:..:Std:String#T|Std.String.T]], tooltip : [[..:..:Std:String#T|Std.String.T]], stock_id : [[..:..:Std:String#T|Std.String.T]], value : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[# T| T]]''
 
-  Creates a new GtkRadioAction object. To add the action to a GtkActionGroup and set the accelerator for the action, call gtk_action_group_add_action_with_accel().
+  Creates a new GtkRadioAction object. To add the action to a GtkActionGroup and set the accelerator for the action, call
+  gtk_action_group_add_action_with_accel().
   
   name :     A unique name for the action
   label :    The label displayed in menu items and on buttons, or NULL

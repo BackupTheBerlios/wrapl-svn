@@ -3,7 +3,8 @@
 === inherits from ===
   * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
 
-  The purpose of the GdkDisplayManager singleton object is to offer notification when displays appear or disappear or the default display changes.
+  The purpose of the GdkDisplayManager singleton object is to offer notification when displays appear
+  or disappear or the default display changes.
   
 
 ==== :SetDefaultDisplay ====
@@ -21,7 +22,8 @@
   List all currently open displays.
   
   display_manager : a GdkDisplayManager
-  Returns :         a newly allocated GSList of GdkDisplay objects. Free this list with g_slist_free() when you are done with it.
+  Returns :         a newly allocated GSList of GdkDisplay objects. Free this list with g_slist_free() when you are done
+                    with it.
   
 
 ==== :GetDefaultDisplay ====
@@ -36,7 +38,8 @@
 ==== Get ====
 ''Get() : [[..:..:Gtk:Gdk:DisplayManager#T|Gtk.Gdk.DisplayManager.T]]''
 
-  Returns the global GdkDisplayManager singleton; gdk_parse_pargs(), gdk_init(), or gdk_init_check() must have been called first.
+  Returns the global GdkDisplayManager singleton; gdk_parse_pargs(), gdk_init(), or gdk_init_check() must have been called
+  first.
   
   Returns : the singleton GdkDisplayManager object.
   

@@ -7,14 +7,17 @@
   * [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]
   * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
 
-  The GtkButton widget is generally used to attach a function to that is called when the button is pressed. The various signals and how to use them are outlined below.
-  The GtkButton widget can hold any valid child widget. That is it can hold most any other standard GtkWidget. The most commonly used child is the GtkLabel.
+  The GtkButton widget is generally used to attach a function to that is called when the button is
+  pressed. The various signals and how to use them are outlined below.
+  The GtkButton widget can hold any valid child widget. That is it can hold most any other standard
+  GtkWidget. The most commonly used child is the GtkLabel.
   
 
 ==== :SetUseUnderline ====
 '':SetUseUnderline(self @ [[#T|T]], use_underline @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  If true, an underline in the text of the button label indicates the next character should be used for the mnemonic accelerator key.
+  If true, an underline in the text of the button label indicates the next character should be used for the mnemonic
+  accelerator key.
   
   button :        a GtkButton
   use_underline : TRUE if underlines in the text indicate mnemonics
@@ -32,7 +35,8 @@
 ==== :SetRelief ====
 '':SetRelief(self @ [[#T|T]], newstyle @ [[..:..:Gtk:Gtk:ReliefStyle#T|Gtk.Gtk.ReliefStyle.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Sets the relief style of the edges of the given GtkButton widget. Three styles exist, GTK_RELIEF_NORMAL, GTK_RELIEF_HALF, GTK_RELIEF_NONE. The default style is, as one can guess, GTK_RELIEF_NORMAL.
+  Sets the relief style of the edges of the given GtkButton widget. Three styles exist, GTK_RELIEF_NORMAL,
+  GTK_RELIEF_HALF, GTK_RELIEF_NONE. The default style is, as one can guess, GTK_RELIEF_NORMAL.
   
   button :   The GtkButton you want to set relief styles of.
   newstyle : The GtkReliefStyle as described above.
@@ -41,7 +45,8 @@
 ==== :SetLabel ====
 '':SetLabel(self @ [[#T|T]], label @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Sets the text of the label of the button to str. This text is also used to select the stock item if gtk_button_set_use_stock() is used.
+  Sets the text of the label of the button to str. This text is also used to select the stock item if
+  gtk_button_set_use_stock() is used.
   This will also clear any previously set labels.
   
   button : a GtkButton
@@ -84,7 +89,8 @@
 ==== :Relief ====
 '':Relief(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-  Sets the relief style of the edges of the given GtkButton widget. Three styles exist, GTK_RELIEF_NORMAL, GTK_RELIEF_HALF, GTK_RELIEF_NONE. The default style is, as one can guess, GTK_RELIEF_NORMAL.
+  Sets the relief style of the edges of the given GtkButton widget. Three styles exist, GTK_RELIEF_NORMAL,
+  GTK_RELIEF_HALF, GTK_RELIEF_NONE. The default style is, as one can guess, GTK_RELIEF_NORMAL.
   
   button :   The GtkButton you want to set relief styles of.
   newstyle : The GtkReliefStyle as described above.
@@ -103,7 +109,8 @@
   button :  a GtkButton
   Returns : TRUE if an embedded underline in the button label indicates the mnemonic accelerator keys.
   
-  If true, an underline in the text of the button label indicates the next character should be used for the mnemonic accelerator key.
+  If true, an underline in the text of the button label indicates the next character should be used for the mnemonic
+  accelerator key.
   
   button :        a GtkButton
   use_underline : TRUE if underlines in the text indicate mnemonics
@@ -134,7 +141,8 @@
 ==== :FocusOnClick ====
 '':FocusOnClick(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-  Sets whether the button will grab focus when it is clicked with the mouse. Making mouse clicks not grab focus is useful in places like toolbars where you don't want the keyboard focus removed from the main area of the application.
+  Sets whether the button will grab focus when it is clicked with the mouse. Making mouse clicks not grab focus is useful
+  in places like toolbars where you don't want the keyboard focus removed from the main area of the application.
   
   button :         a GtkButton
   focus_on_click : whether the button grabs focus when clicked with the mouse
@@ -183,7 +191,8 @@
 ==== :GetImage ====
 '':GetImage(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
-  Gets the widget that is currenty set as the image of button. This may have been explicitly set by gtk_button_set_image() or constructed by gtk_button_new_from_stock().
+  Gets the widget that is currenty set as the image of button. This may have been explicitly set by gtk_button_set_image()
+  or constructed by gtk_button_new_from_stock().
   
   button :  a GtkButton
   Returns : a GtkWidget or NULL in case there is no image
@@ -201,7 +210,9 @@
 ==== :GetLabel ====
 '':GetLabel(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
-  Fetches the text from the label of the button, as set by gtk_button_set_label(). If the label text has not been set the return value will be NULL. This will be the case if you create an empty button with gtk_button_new() to use as a container.
+  Fetches the text from the label of the button, as set by gtk_button_set_label(). If the label text has not been set the
+  return value will be NULL. This will be the case if you create an empty button with gtk_button_new() to use as a
+  container.
   
   button :  a GtkButton
   Returns : The text of the label widget. This string is owned by the widget and must not be modified or freed.
@@ -245,10 +256,6 @@
 ==== :Pressed ====
 '':Pressed(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Emits a "pressed" signal to the given GtkButton.
-  
-  button : The GtkButton you want to send the signal to.
-  
 
 ==== :Released ====
 '':Released(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -271,7 +278,8 @@
 ==== :SetFocusOnClick ====
 '':SetFocusOnClick(self @ [[#T|T]], focus_on_click @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Sets whether the button will grab focus when it is clicked with the mouse. Making mouse clicks not grab focus is useful in places like toolbars where you don't want the keyboard focus removed from the main area of the application.
+  Sets whether the button will grab focus when it is clicked with the mouse. Making mouse clicks not grab focus is useful
+  in places like toolbars where you don't want the keyboard focus removed from the main area of the application.
   
   button :         a GtkButton
   focus_on_click : whether the button grabs focus when clicked with the mouse
@@ -280,7 +288,8 @@
 ==== :SetImage ====
 '':SetImage(self @ [[#T|T]], image @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Set the image of button to the given widget. Note that it depends on the "gtk-button-images" setting whether the image will be displayed or not, you don't have to call gtk_widget_show() on image yourself.
+  Set the image of button to the given widget. Note that it depends on the "gtk-button-images" setting whether the image
+  will be displayed or not, you don't have to call gtk_widget_show() on image yourself.
   
   button : a GtkButton
   image :  a widget to set as the image for the button
@@ -301,7 +310,9 @@
 ==== NewWithMnemonic ====
 ''NewWithMnemonic(label : [[..:..:Std:String#T|Std.String.T]]) : [[# T| T]]''
 
-  Creates a new GtkButton containing a label. If characters in label are preceded by an underscore, they are underlined. If you need a literal underscore character in a label, use '__' (two underscores). The first underlined character represents a keyboard accelerator called a mnemonic. Pressing Alt and that key activates the button.
+  Creates a new GtkButton containing a label. If characters in label are preceded by an underscore, they are underlined.
+  If you need a literal underscore character in a label, use '__' (two underscores). The first underlined character
+  represents a keyboard accelerator called a mnemonic. Pressing Alt and that key activates the button.
   
   label :   The text of the button, with an underscore in front of the mnemonic character
   Returns : a new GtkButton
@@ -319,7 +330,8 @@
 ==== NewFromStock ====
 ''NewFromStock(stock_id : [[..:..:Std:String#T|Std.String.T]]) : [[# T| T]]''
 
-  Creates a new GtkButton containing the image and text from a stock item. Some stock ids have preprocessor macros like GTK_STOCK_OK and GTK_STOCK_APPLY.
+  Creates a new GtkButton containing the image and text from a stock item. Some stock ids have preprocessor macros like
+  GTK_STOCK_OK and GTK_STOCK_APPLY.
   If stock_id is unknown, then it will be treated as a mnemonic label (as for gtk_button_new_with_mnemonic()).
   
   stock_id : the name of the stock item

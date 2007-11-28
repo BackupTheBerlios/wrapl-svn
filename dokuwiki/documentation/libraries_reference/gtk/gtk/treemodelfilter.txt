@@ -3,17 +3,26 @@
 === inherits from ===
   * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
 
-  A GtkTreeModelFilter is a tree model which wraps another tree model, and can do the following things:
-   * Filter specific rows, based on data from a "visible column", a column storing booleans indicating whether the row should be filtered or not, or based on the return value of a "visible function", which gets a model, iter and user_data and returns a boolean indicating whether the row should be filtered or not.
-   * Modify the "appearance" of the model, using a modify function. This is extremely powerful and allows for just changing some values and also for creating a completely different model based on the given child model.
-   * Set a different root node, also known as a "virtual root". You can pass in a GtkTreePath indicating the root node for the filter at construction time.
+  A GtkTreeModelFilter is a tree model which wraps another tree model, and can do the following
+  things:
+   * Filter specific rows, based on data from a "visible column", a column storing booleans indicating
+     whether the row should be filtered or not, or based on the return value of a "visible function",
+     which gets a model, iter and user_data and returns a boolean indicating whether the row should be
+     filtered or not.
+   * Modify the "appearance" of the model, using a modify function. This is extremely powerful and
+     allows for just changing some values and also for creating a completely different model based on
+     the given child model.
+   * Set a different root node, also known as a "virtual root". You can pass in a GtkTreePath
+     indicating the root node for the filter at construction time.
   
 
 ==== :SetVisibleFunc ====
 '':SetVisibleFunc(self @ [[#T|T]], func @ [[..:..:Std:Function#T|Std.Function.T]], data @ [[..:..:Std:Address#T|Std.Address.T]], destroy @ [[..:..:Std:Function#T|Std.Function.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Sets the visible function used when filtering the filter to be func. The function should return TRUE if the given row should be visible and FALSE otherwise.
-  If the condition calculated by the function changes over time (e.g. because it depends on some global parameters), you must call gtk_tree_model_filter_refilter() to keep the visibility information of the model uptodate.
+  Sets the visible function used when filtering the filter to be func. The function should return TRUE if the given row
+  should be visible and FALSE otherwise.
+  If the condition calculated by the function changes over time (e.g. because it depends on some global parameters), you
+  must call gtk_tree_model_filter_refilter() to keep the visibility information of the model uptodate.
   
   filter :  A GtkTreeModelFilter.
   func :    A GtkTreeModelFilterVisibleFunc, the visible function.
@@ -24,7 +33,8 @@
 ==== :SetVisibleColumn ====
 '':SetVisibleColumn(self @ [[#T|T]], column @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Sets column of the child_model to be the column where filter should look for visibility information. columns should be a column of type G_TYPE_BOOLEAN, where TRUE means that a row is visible, and FALSE if not.
+  Sets column of the child_model to be the column where filter should look for visibility information. columns should be a
+  column of type G_TYPE_BOOLEAN, where TRUE means that a row is visible, and FALSE if not.
   
   filter : A GtkTreeModelFilter.
   column : A gint which is the column containing the visible information.
@@ -37,7 +47,10 @@
 ==== :ClearCache ====
 '':ClearCache(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  This function should almost never be called. It clears the filter of any cached iterators that haven't been reffed with gtk_tree_model_ref_node(). This might be useful if the child model being filtered is static (and doesn't change often) and there has been a lot of unreffed access to nodes. As a side effect of this function, all unreffed iters will be invalid.
+  This function should almost never be called. It clears the filter of any cached iterators that haven't been reffed with
+  gtk_tree_model_ref_node(). This might be useful if the child model being filtered is static (and doesn't change often)
+  and there has been a lot of unreffed access to nodes. As a side effect of this function, all unreffed iters will be
+  invalid.
   
   filter : A GtkTreeModelFilter.
   
@@ -45,18 +58,22 @@
 ==== :ConvertChildIterToIter ====
 '':ConvertChildIterToIter(self @ [[#T|T]], filter_iter @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]], child_iter @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
-  Sets filter_iter to point to the row in filter that corresponds to the row pointed at by child_iter. If filter_iter was not set, FALSE is returned.
+  Sets filter_iter to point to the row in filter that corresponds to the row pointed at by child_iter. If filter_iter was
+  not set, FALSE is returned.
   
   filter :      A GtkTreeModelFilter.
   filter_iter : An uninitialized GtkTreeIter.
   child_iter :  A valid GtkTreeIter pointing to a row on the child model.
-  Returns :     TRUE, if filter_iter was set, i.e. if child_iter is a valid iterator pointing to a visible row in child model.
+  Returns :     TRUE, if filter_iter was set, i.e. if child_iter is a valid iterator pointing to a visible row in child
+                model.
   
 
 ==== :ConvertChildPathToPath ====
 '':ConvertChildPathToPath(self @ [[#T|T]], child_path @ [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]]) : [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]]''
 
-  Converts child_path to a path relative to filter. That is, child_path points to a path in the child model. The rerturned path will point to the same row in the filtered model. If child_path isn't a valid path on the child model or points to a row which is not visible in filter, then NULL is returned.
+  Converts child_path to a path relative to filter. That is, child_path points to a path in the child model. The rerturned
+  path will point to the same row in the filtered model. If child_path isn't a valid path on the child model or points to
+  a row which is not visible in filter, then NULL is returned.
   
   filter :     A GtkTreeModelFilter.
   child_path : A GtkTreePath to convert.
@@ -76,7 +93,9 @@
 ==== :ConvertPathToChildPath ====
 '':ConvertPathToChildPath(self @ [[#T|T]], filter_path @ [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]]) : [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]]''
 
-  Converts filter_path to a path on the child model of filter. That is, filter_path points to a location in filter. The returned path will point to the same location in the model not being filtered. If filter_path does not point to a location in the child model, NULL is returned.
+  Converts filter_path to a path on the child model of filter. That is, filter_path points to a location in filter. The
+  returned path will point to the same location in the model not being filtered. If filter_path does not point to a
+  location in the child model, NULL is returned.
   
   filter :      A GtkTreeModelFilter.
   filter_path : A GtkTreePath to convert.
@@ -95,7 +114,8 @@
 ==== :Refilter ====
 '':Refilter(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Emits ::row_changed for each row in the child model, which causes the filter to re-evaluate whether a row is visible or not.
+  Emits ::row_changed for each row in the child model, which causes the filter to re-evaluate whether a row is visible or
+  not.
   
   filter : A GtkTreeModelFilter.
   
@@ -103,7 +123,10 @@
 ==== :SetModifyFunc ====
 '':SetModifyFunc(self @ [[#T|T]], n_columns @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], types @ [[..:..:Std:List#T|Std.List.T]], func @ [[..:..:Std:Function#T|Std.Function.T]], data @ [[..:..:Std:Address#T|Std.Address.T]], destroy @ [[..:..:Std:Function#T|Std.Function.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  With the n_columns and types parameters, you give an array of column types for this model (which will be exposed to the parent model/view). The func, data and destroy parameters are for specifying the modify function. The modify function will get called for each data access, the goal of the modify function is to return the data which should be displayed at the location specified using the parameters of the modify function.
+  With the n_columns and types parameters, you give an array of column types for this model (which will be exposed to the
+  parent model/view). The func, data and destroy parameters are for specifying the modify function. The modify function
+  will get called for each data access, the goal of the modify function is to return the data which should be displayed at
+  the location specified using the parameters of the modify function.
   
   filter :    A GtkTreeModelFilter.
   n_columns : The number of columns in the filter model.

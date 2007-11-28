@@ -4,15 +4,22 @@
   * [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]
   * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
 
-  The GtkAdjustment object represents a value which has an associated lower and upper bound, together with step and page increments, and a page size. It is used within several GTK+ widgets, including GtkSpinButton, GtkViewport, and GtkRange (which is a base class for GtkHScrollbar, GtkVScrollbar, GtkHScale, and GtkVScale).
-  The GtkAdjustment object does not update the value itself. Instead it is left up to the owner of the GtkAdjustment to control the value.
-  The owner of the GtkAdjustment typically calls the gtk_adjustment_value_changed() and gtk_adjustment_changed() functions after changing the value and its bounds. This results in the emission of the "value_changed" or "changed" signal respectively.
+  The GtkAdjustment object represents a value which has an associated lower and upper bound, together
+  with step and page increments, and a page size. It is used within several GTK+ widgets, including
+  GtkSpinButton, GtkViewport, and GtkRange (which is a base class for GtkHScrollbar, GtkVScrollbar,
+  GtkHScale, and GtkVScale).
+  The GtkAdjustment object does not update the value itself. Instead it is left up to the owner of the
+  GtkAdjustment to control the value.
+  The owner of the GtkAdjustment typically calls the gtk_adjustment_value_changed() and
+  gtk_adjustment_changed() functions after changing the value and its bounds. This results in the
+  emission of the "value_changed" or "changed" signal respectively.
   
 
 ==== :ValueChanged ====
 '':ValueChanged(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Emits a "value_changed" signal from the GtkAdjustment. This is typically called by the owner of the GtkAdjustment after it has changed the GtkAdjustment value field.
+  Emits a "value_changed" signal from the GtkAdjustment. This is typically called by the owner of the GtkAdjustment after
+  it has changed the GtkAdjustment value field.
   
   adjustment : a GtkAdjustment
   
@@ -21,7 +28,8 @@
 '':SetValue(self @ [[#T|T]], value @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
   Sets the GtkAdjustment value. The value is clamped to lie between adjustment->lower and adjustment->upper.
-  Note that for adjustments which are used in a GtkScrollbar, the effective range of allowed values goes from adjustment->lower to adjustment->upper - adjustment->page_size.
+  Note that for adjustments which are used in a GtkScrollbar, the effective range of allowed values goes from adjustment-
+  >lower to adjustment->upper - adjustment->page_size.
   
   adjustment : a GtkAdjustment.
   value :      the new value.
@@ -44,7 +52,8 @@
   Returns :    The current value of the adjustment.
   
   Sets the GtkAdjustment value. The value is clamped to lie between adjustment->lower and adjustment->upper.
-  Note that for adjustments which are used in a GtkScrollbar, the effective range of allowed values goes from adjustment->lower to adjustment->upper - adjustment->page_size.
+  Note that for adjustments which are used in a GtkScrollbar, the effective range of allowed values goes from adjustment-
+  >lower to adjustment->upper - adjustment->page_size.
   
   adjustment : a GtkAdjustment.
   value :      the new value.
@@ -65,7 +74,8 @@
 ==== :Changed ====
 '':Changed(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Emits a "changed" signal from the GtkAdjustment. This is typically called by the owner of the GtkAdjustment after it has changed any of the GtkAdjustment fields other than the value.
+  Emits a "changed" signal from the GtkAdjustment. This is typically called by the owner of the GtkAdjustment after it has
+  changed any of the GtkAdjustment fields other than the value.
   
   adjustment : a GtkAdjustment
   
@@ -73,7 +83,9 @@
 ==== :ClampPage ====
 '':ClampPage(self @ [[#T|T]], lower @ [[..:..:Std:Real#T|Std.Real.T]], upper @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Updates the GtkAdjustment value to ensure that the range between lower and upper is in the current page (i.e. between value and value + page_size). If the range is larger than the page size, then only the start of it will be in the current page. A "changed" signal will be emitted if the value is changed.
+  Updates the GtkAdjustment value to ensure that the range between lower and upper is in the current page (i.e. between
+  value and value + page_size). If the range is larger than the page size, then only the start of it will be in the
+  current page. A "changed" signal will be emitted if the value is changed.
   
   adjustment : a GtkAdjustment.
   lower :      the lower value.

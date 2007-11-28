@@ -9,10 +9,22 @@
   * [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]
   * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
 
-  The GtkAboutDialog offers a simple way to display information about a program like its logo, name, copyright, website and license. It is also possible to give credits to the authors, documenters, translators and artists who have worked on the program. An about dialog is typically opened when the user selects the About option from the Help menu. All parts of the dialog are optional.
-  About dialog often contain links and email addresses. GtkAboutDialog supports this by offering global hooks, which are called when the user clicks on a link or email address, see gtk_about_dialog_set_email_hook() and gtk_about_dialog_set_url_hook(). Email addresses in the authors, documenters and artists properties are recognized by looking for <user@host>, URLs are recognized by looking for http://url, with url extending to the next space, tab or line break.
-  To make constructing a GtkAboutDialog as convenient as possible, you can use the function gtk_show_about_dialog() which constructs and shows a dialog and keeps it around so that it can be shown again.
-  Note that GTK+ sets a default title of _("About %s") on the dialog window (where %s is replaced by the name of the application, but in order to ensure proper translation of the title, applications should set the title property explicitly when constructing a GtkAboutDialog, as shown in the following example:
+  The GtkAboutDialog offers a simple way to display information about a program like its logo, name,
+  copyright, website and license. It is also possible to give credits to the authors, documenters,
+  translators and artists who have worked on the program. An about dialog is typically opened when the
+  user selects the About option from the Help menu. All parts of the dialog are optional.
+  About dialog often contain links and email addresses. GtkAboutDialog supports this by offering
+  global hooks, which are called when the user clicks on a link or email address, see
+  gtk_about_dialog_set_email_hook() and gtk_about_dialog_set_url_hook(). Email addresses in the
+  authors, documenters and artists properties are recognized by looking for <user@host>, URLs are
+  recognized by looking for http://url, with url extending to the next space, tab or line break.
+  To make constructing a GtkAboutDialog as convenient as possible, you can use the function
+  gtk_show_about_dialog() which constructs and shows a dialog and keeps it around so that it can be
+  shown again.
+  Note that GTK+ sets a default title of _("About %s") on the dialog window (where %s is replaced by
+  the name of the application, but in order to ensure proper translation of the title, applications
+  should set the title property explicitly when constructing a GtkAboutDialog, as shown in the
+  following example:
   gtk_show_about_dialog (NULL,
                          "name", "ExampleCode",
                          "logo", example_logo,
@@ -66,7 +78,8 @@
   Returns the string which are displayed in the artists tab of the secondary credits dialog.
   
   about :   a GtkAboutDialog
-  Returns : A NULL-terminated string array containing the artists. The array is owned by the about dialog and must not be modified.
+  Returns : A NULL-terminated string array containing the artists. The array is owned by the about dialog and must not be
+            modified.
   
 
 ==== :GetAuthors ====
@@ -75,7 +88,8 @@
   Returns the string which are displayed in the authors tab of the secondary credits dialog.
   
   about :   a GtkAboutDialog
-  Returns : A NULL-terminated string array containing the authors. The array is owned by the about dialog and must not be modified.
+  Returns : A NULL-terminated string array containing the authors. The array is owned by the about dialog and must not be
+            modified.
   
 
 ==== :GetComments ====
@@ -102,7 +116,8 @@
   Returns the string which are displayed in the documenters tab of the secondary credits dialog.
   
   about :   a GtkAboutDialog
-  Returns : A NULL-terminated string array containing the documenters. The array is owned by the about dialog and must not be modified.
+  Returns : A NULL-terminated string array containing the documenters. The array is owned by the about dialog and must not
+            be modified.
   
 
 ==== :GetLicense ====
@@ -120,7 +135,8 @@
   Returns the pixbuf displayed as logo in the about dialog.
   
   about :   a GtkAboutDialog
-  Returns : the pixbuf displayed as logo. The pixbuf is owned by the about dialog. If you want to keep a reference to it, you have to call g_object_ref() on it.
+  Returns : the pixbuf displayed as logo. The pixbuf is owned by the about dialog. If you want to keep a reference to it,
+            you have to call g_object_ref() on it.
   
 
 ==== :GetLogoIconName ====
@@ -129,7 +145,8 @@
   Returns the icon name displayed as logo in the about dialog.
   
   about :   a GtkAboutDialog
-  Returns : the icon name displayed as logo. The string is owned by the dialog. If you want to keep a reference to it, you have to call g_strdup() on it.
+  Returns : the icon name displayed as logo. The string is owned by the dialog. If you want to keep a reference to it, you
+            have to call g_strdup() on it.
   
 
 ==== :GetName ====
@@ -240,7 +257,8 @@
 ==== :SetLicense ====
 '':SetLicense(self @ [[#T|T]], license @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Sets the license information to be displayed in the secondary license dialog. If license is NULL, the license button is hidden.
+  Sets the license information to be displayed in the secondary license dialog. If license is NULL, the license button is
+  hidden.
   
   about :   a GtkAboutDialog
   license : the license information or NULL
@@ -249,7 +267,8 @@
 ==== :SetLogo ====
 '':SetLogo(self @ [[#T|T]], logo @ [[..:..:Gtk:Gdk:Pixbuf#T|Gtk.Gdk.Pixbuf.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Sets the pixbuf to be displayed as logo in the about dialog. If it is NULL, the default window icon set with gtk_window_set_default_icon() will be used.
+  Sets the pixbuf to be displayed as logo in the about dialog. If it is NULL, the default window icon set with
+  gtk_window_set_default_icon() will be used.
   
   about : a GtkAboutDialog
   logo :  a GdkPixbuf, or NULL
@@ -258,7 +277,8 @@
 ==== :SetLogoIconName ====
 '':SetLogoIconName(self @ [[#T|T]], icon_name @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Sets the pixbuf to be displayed as logo in the about dialog. If it is NULL, the default window icon set with gtk_window_set_default_icon() will be used.
+  Sets the pixbuf to be displayed as logo in the about dialog. If it is NULL, the default window icon set with
+  gtk_window_set_default_icon() will be used.
   
   about :     a GtkAboutDialog
   icon_name : an icon name, or NULL
@@ -283,7 +303,8 @@
 '':SetTranslatorCredits(self @ [[#T|T]], translator_credits @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
   Sets the translator credits string which is displayed in the translators tab of the secondary credits dialog.
-  The intended use for this string is to display the translator of the language which is currently used in the user interface. Using gettext(), a simple way to achieve that is to mark the string for translation:
+  The intended use for this string is to display the translator of the language which is currently used in the user
+  interface. Using gettext(), a simple way to achieve that is to mark the string for translation:
    gtk_about_dialog_set_translator_credits (about, _("translator-credits"));
 
 ==== New ====

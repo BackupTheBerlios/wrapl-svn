@@ -3,16 +3,25 @@
 === inherits from ===
   * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
 
-  A GtkRecentFilter can be used to restrict the files being shown in a GtkRecentChooser. Files can be filtered based on their name (with gtk_recent_filter_add_pattern()), on their mime type (with gtk_file_filter_add_mime_type()), on the application that has registered them (with gtk_recent_filter_add_application()), or by a custom filter function (with gtk_recent_filter_add_custom()).
-  Filtering by mime type handles aliasing and subclassing of mime types; e.g. a filter for text/plain also matches a file with mime type application/rtf, since application/rtf is a subclass of text/plain. Note that GtkRecentFilter allows wildcards for the subtype of a mime type, so you can e.g. filter for image/*.
-  Normally, filters are used by adding them to a GtkRecentChooser, see gtk_recent_chooser_add_filter(), but it is also possible to manually use a filter on a file with gtk_recent_filter_filter().
+  A GtkRecentFilter can be used to restrict the files being shown in a GtkRecentChooser. Files can be
+  filtered based on their name (with gtk_recent_filter_add_pattern()), on their mime type (with
+  gtk_file_filter_add_mime_type()), on the application that has registered them (with
+  gtk_recent_filter_add_application()), or by a custom filter function (with
+  gtk_recent_filter_add_custom()).
+  Filtering by mime type handles aliasing and subclassing of mime types; e.g. a filter for text/plain
+  also matches a file with mime type application/rtf, since application/rtf is a subclass of text/
+  plain. Note that GtkRecentFilter allows wildcards for the subtype of a mime type, so you can e.g.
+  filter for image/*.
+  Normally, filters are used by adding them to a GtkRecentChooser, see gtk_recent_chooser_add_filter
+  (), but it is also possible to manually use a filter on a file with gtk_recent_filter_filter().
   Recently used files are supported since GTK+ 2.10.
   
 
 ==== :SetName ====
 '':SetName(self @ [[#T|T]], name @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Sets the human-readable name of the filter; this is the string that will be displayed in the recently used resources selector user interface if there is a selectable list of filters.
+  Sets the human-readable name of the filter; this is the string that will be displayed in the recently used resources
+  selector user interface if there is a selectable list of filters.
   
   filter : a GtkRecentFilter
   name :   then human readable name of filter
@@ -22,7 +31,8 @@
 '':GetNeeded(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
   Gets the fields that need to be filled in for the structure passed to gtk_recent_filter_filter()
-  This function will not typically be used by applications; it is intended principally for use in the implementation of GtkRecentChooser.
+  This function will not typically be used by applications; it is intended principally for use in the implementation of
+  GtkRecentChooser.
   
   filter :  a GtkRecentFilter
   Returns : bitfield of flags indicating needed fields when calling gtk_recent_filter_filter()
@@ -31,7 +41,8 @@
 ==== :AddAge ====
 '':AddAge(self @ [[#T|T]], days @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Adds a rule that allows resources based on their age - that is, the number of days elapsed since they were last modified.
+  Adds a rule that allows resources based on their age - that is, the number of days elapsed since they were last
+  modified.
   
   filter : a GtkRecentFilter
   days :   number of days
@@ -49,7 +60,9 @@
 ==== :AddCustom ====
 '':AddCustom(self @ [[#T|T]], needed @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], func @ [[..:..:Std:Function#T|Std.Function.T]], data @ [[..:..:Std:Address#T|Std.Address.T]], data_destroy @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Adds a rule to a filter that allows resources based on a custom callback function. The bitfield needed which is passed in provides information about what sorts of information that the filter function needs; this allows GTK+ to avoid retrieving expensive information when it isn't needed by the filter.
+  Adds a rule to a filter that allows resources based on a custom callback function. The bitfield needed which is passed
+  in provides information about what sorts of information that the filter function needs; this allows GTK+ to avoid
+  retrieving expensive information when it isn't needed by the filter.
   
   filter :       a GtkRecentFilter
   needed :       bitfield of flags indicating the information that the custom filter function needs.
@@ -96,8 +109,10 @@
 ==== :Filter ====
 '':Filter(self @ [[#T|T]], filter_info @ [[..:..:Gtk:Gtk:RecentFilterInfo#T|Gtk.Gtk.RecentFilterInfo.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
-  Tests whether a file should be displayed according to filter. The GtkRecentFilterInfo structure filter_info should include the fields returned from gtk_recent_filter_get_needed().
-  This function will not typically be used by applications; it is intended principally for use in the implementation of GtkRecentChooser.
+  Tests whether a file should be displayed according to filter. The GtkRecentFilterInfo structure filter_info should
+  include the fields returned from gtk_recent_filter_get_needed().
+  This function will not typically be used by applications; it is intended principally for use in the implementation of
+  GtkRecentChooser.
   
   filter :      a GtkRecentFilter
   filter_info : a GtkRecentFilterInfo structure containing information about a recently used resource
@@ -116,7 +131,10 @@
 ==== New ====
 ''New() : [[# T| T]]''
 
-  Creates a new GtkRecentFilter with no rules added to it. Such filter does not accept any recently used resources, so is not particularly useful until you add rules with gtk_recent_filter_add_pattern(), gtk_recent_filter_add_mime_type(), gtk_recent_filter_add_application(), gtk_recent_filter_add_age(). To create a filter that accepts any recently used resource, use:
+  Creates a new GtkRecentFilter with no rules added to it. Such filter does not accept any recently used resources, so is
+  not particularly useful until you add rules with gtk_recent_filter_add_pattern(), gtk_recent_filter_add_mime_type(),
+  gtk_recent_filter_add_application(), gtk_recent_filter_add_age(). To create a filter that accepts any recently used
+  resource, use:
   GtkRecentFilter *filter = gtk_recent_filter_new ();
   gtk_recent_filter_add_pattern (filter, "*");
 

@@ -3,8 +3,16 @@
 === inherits from ===
   * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
 
-  The GtkTreeModelSort is a model which implements the GtkTreeSortable interface. It does not hold any data itself, but rather is created with a child model and proxies its data. It has identical column types to this child model, and the changes in the child are propagated. The primary purpose of this model is to provide a way to sort a different model without modifying it. Note that the sort function used by GtkTreeModelSort is not guaranteed to be stable.
-  The use of this is best demonstrated through an example. In the following sample code we create two GtkTreeView widgets each with a view of the same data. As the model is wrapped here by a GtkTreeModelSort, the two GtkTreeViews can each sort their view of the data without affecting the other. By contrast, if we simply put the same model in each widget, then sorting the first would sort the second.
+  The GtkTreeModelSort is a model which implements the GtkTreeSortable interface. It does not hold any
+  data itself, but rather is created with a child model and proxies its data. It has identical column
+  types to this child model, and the changes in the child are propagated. The primary purpose of this
+  model is to provide a way to sort a different model without modifying it. Note that the sort
+  function used by GtkTreeModelSort is not guaranteed to be stable.
+  The use of this is best demonstrated through an example. In the following sample code we create two
+  GtkTreeView widgets each with a view of the same data. As the model is wrapped here by a
+  GtkTreeModelSort, the two GtkTreeViews can each sort their view of the data without affecting the
+  other. By contrast, if we simply put the same model in each widget, then sorting the first would
+  sort the second.
   Example 18.&#160;Using a GtkTreeModelSort
   {
     GtkTreeView *tree_view1;
@@ -31,7 +39,10 @@
                                           COLUMN_1, GTK_SORT_DESCENDING);
   }
   
-  To demonstrate how to access the underlying child model from the sort model, the next example will be a callback for the GtkTreeSelection "changed" signal. In this callback, we get a string from COLUMN_1 of the model. We then modify the string, find the same selected row on the child model, and change the row there.
+  To demonstrate how to access the underlying child model from the sort model, the next example will
+  be a callback for the GtkTreeSelection "changed" signal. In this callback, we get a string from
+  COLUMN_1 of the model. We then modify the string, find the same selected row on the child model, and
+  change the row there.
   Example 19.&#160;Accessing the child model of in a selection changed callback
   void
   selection_changed (GtkTreeSelection *selection, gpointer data)
@@ -81,7 +92,9 @@
 ==== :ResetDefaultSortFunc ====
 '':ResetDefaultSortFunc(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  This resets the default sort function to be in the 'unsorted' state. That is, it is in the same order as the child model. It will re-sort the model to be in the same order as the child model only if the GtkTreeModelSort is in 'unsorted' state.
+  This resets the default sort function to be in the 'unsorted' state. That is, it is in the same order as the child
+  model. It will re-sort the model to be in the same order as the child model only if the GtkTreeModelSort is in
+  'unsorted' state.
   
   tree_model_sort : A GtkTreeModelSort
   
@@ -127,7 +140,9 @@
 ==== :DefaultSortFunc ====
 '':DefaultSortFunc(self @ [[#T|T]]) : [[..:..:Std:Function#T|Std.Function.T]]''
 
-  This resets the default sort function to be in the 'unsorted' state. That is, it is in the same order as the child model. It will re-sort the model to be in the same order as the child model only if the GtkTreeModelSort is in 'unsorted' state.
+  This resets the default sort function to be in the 'unsorted' state. That is, it is in the same order as the child
+  model. It will re-sort the model to be in the same order as the child model only if the GtkTreeModelSort is in
+  'unsorted' state.
   
   tree_model_sort : A GtkTreeModelSort
   
@@ -163,7 +178,10 @@
 ==== :ClearCache ====
 '':ClearCache(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  This function should almost never be called. It clears the tree_model_sort of any cached iterators that haven't been reffed with gtk_tree_model_ref_node(). This might be useful if the child model being sorted is static (and doesn't change often) and there has been a lot of unreffed access to nodes. As a side effect of this function, all unreffed iters will be invalid.
+  This function should almost never be called. It clears the tree_model_sort of any cached iterators that haven't been
+  reffed with gtk_tree_model_ref_node(). This might be useful if the child model being sorted is static (and doesn't
+  change often) and there has been a lot of unreffed access to nodes. As a side effect of this function, all unreffed
+  iters will be invalid.
   
   tree_model_sort : A GtkTreeModelSort
   
@@ -181,7 +199,9 @@
 ==== :ConvertChildPathToPath ====
 '':ConvertChildPathToPath(self @ [[#T|T]], child_path @ [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]]) : [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]]''
 
-  Converts child_path to a path relative to tree_model_sort. That is, child_path points to a path in the child model. The returned path will point to the same row in the sorted model. If child_path isn't a valid path on the child model, then NULL is returned.
+  Converts child_path to a path relative to tree_model_sort. That is, child_path points to a path in the child model. The
+  returned path will point to the same row in the sorted model. If child_path isn't a valid path on the child model, then
+  NULL is returned.
   
   tree_model_sort : A GtkTreeModelSort
   child_path :      A GtkTreePath to convert
@@ -201,7 +221,9 @@
 ==== :ConvertPathToChildPath ====
 '':ConvertPathToChildPath(self @ [[#T|T]], sorted_path @ [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]]) : [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]]''
 
-  Converts sorted_path to a path on the child model of tree_model_sort. That is, sorted_path points to a location in tree_model_sort. The returned path will point to the same location in the model not being sorted. If sorted_path does not point to a location in the child model, NULL is returned.
+  Converts sorted_path to a path on the child model of tree_model_sort. That is, sorted_path points to a location in
+  tree_model_sort. The returned path will point to the same location in the model not being sorted. If sorted_path does
+  not point to a location in the child model, NULL is returned.
   
   tree_model_sort : A GtkTreeModelSort
   sorted_path :     A GtkTreePath to convert

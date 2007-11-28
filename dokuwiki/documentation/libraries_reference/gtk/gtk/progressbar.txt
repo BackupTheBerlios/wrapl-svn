@@ -6,12 +6,29 @@
   * [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]
   * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
 
-  The GtkProgressBar is typically used to display the progress of a long running operation. It provides a visual clue that processing is underway. The GtkProgressBar can be used in two different modes: percentage mode and activity mode.
-  When an application can determine how much work needs to take place (e.g. read a fixed number of bytes from a file) and can monitor its progress, it can use the GtkProgressBar in percentage mode and the user sees a growing bar indicating the percentage of the work that has been completed. In this mode, the application is required to call gtk_progress_bar_set_fraction() periodically to update the progress bar.
-  When an application has no accurate way of knowing the amount of work to do, it can use the GtkProgressBar in activity mode, which shows activity by a block moving back and forth within the progress area. In this mode, the application is required to call gtk_progress_bar_pulse() perodically to update the progress bar.
-  There is quite a bit of flexibility provided to control the appearance of the GtkProgressBar. Functions are provided to control the orientation of the bar, optional text can be displayed along with the bar, and the step size used in activity mode can be set.
+  The GtkProgressBar is typically used to display the progress of a long running operation. It
+  provides a visual clue that processing is underway. The GtkProgressBar can be used in two different
+  modes: percentage mode and activity mode.
+  When an application can determine how much work needs to take place (e.g. read a fixed number of
+  bytes from a file) and can monitor its progress, it can use the GtkProgressBar in percentage mode
+  and the user sees a growing bar indicating the percentage of the work that has been completed. In
+  this mode, the application is required to call gtk_progress_bar_set_fraction() periodically to
+  update the progress bar.
+  When an application has no accurate way of knowing the amount of work to do, it can use the
+  GtkProgressBar in activity mode, which shows activity by a block moving back and forth within the
+  progress area. In this mode, the application is required to call gtk_progress_bar_pulse()
+  perodically to update the progress bar.
+  There is quite a bit of flexibility provided to control the appearance of the GtkProgressBar.
+  Functions are provided to control the orientation of the bar, optional text can be displayed along
+  with the bar, and the step size used in activity mode can be set.
   === Note ===
-  The GtkProgressBar/GtkProgress API in GTK 1.2 was bloated, needlessly complex and hard to use properly. Therefore GtkProgress has been deprecated completely and the GtkProgressBar API has been reduced to the following 10 functions: gtk_progress_bar_new(), gtk_progress_bar_pulse(), gtk_progress_bar_set_text(), gtk_progress_bar_set_fraction(), gtk_progress_bar_set_pulse_step(), gtk_progress_bar_set_orientation(), gtk_progress_bar_get_text(), gtk_progress_bar_get_fraction(), gtk_progress_bar_get_pulse_step(), gtk_progress_bar_get_orientation(). These have been grouped at the beginning of this section, followed by a large chunk of deprecated 1.2 compatibility functions.
+  The GtkProgressBar/GtkProgress API in GTK 1.2 was bloated, needlessly complex and hard to use
+  properly. Therefore GtkProgress has been deprecated completely and the GtkProgressBar API has been
+  reduced to the following 10 functions: gtk_progress_bar_new(), gtk_progress_bar_pulse(),
+  gtk_progress_bar_set_text(), gtk_progress_bar_set_fraction(), gtk_progress_bar_set_pulse_step(),
+  gtk_progress_bar_set_orientation(), gtk_progress_bar_get_text(), gtk_progress_bar_get_fraction(),
+  gtk_progress_bar_get_pulse_step(), gtk_progress_bar_get_orientation(). These have been grouped at
+  the beginning of this section, followed by a large chunk of deprecated 1.2 compatibility functions.
   
 
 ==== :Update ====
@@ -47,7 +64,8 @@
 ==== :Orientation ====
 '':Orientation(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:ProgressBarOrientation#T|Gtk.Gtk.ProgressBarOrientation.T]]''
 
-  Causes the progress bar to switch to a different orientation (left-to-right, right-to-left, top-to-bottom, or bottom-to-top).
+  Causes the progress bar to switch to a different orientation (left-to-right, right-to-left, top-to-bottom, or bottom-to-
+  top).
   
   pbar :        a GtkProgressBar
   orientation : orientation of the progress bar
@@ -97,7 +115,8 @@
 ==== :Ellipsize ====
 '':Ellipsize(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-  Sets the mode used to ellipsize (add an ellipsis: "...") the text if there is not enough space to render the entire string.
+  Sets the mode used to ellipsize (add an ellipsis: "...") the text if there is not enough space to render the entire
+  string.
   
   pbar : a GtkProgressBar
   mode : a PangoEllipsizeMode
@@ -151,7 +170,8 @@
 ==== :GetText ====
 '':GetText(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
-  Retrieves the text displayed superimposed on the progress bar, if any, otherwise NULL. The return value is a reference to the text, not a copy of it, so will become invalid if you change the text in the progress bar.
+  Retrieves the text displayed superimposed on the progress bar, if any, otherwise NULL. The return value is a reference
+  to the text, not a copy of it, so will become invalid if you change the text in the progress bar.
   
   pbar :    a GtkProgressBar
   Returns : text, or NULL; this string is owned by the widget and should not be modified or freed.
@@ -160,7 +180,9 @@
 ==== :Pulse ====
 '':Pulse(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Indicates that some progress is made, but you don't know how much. Causes the progress bar to enter "activity mode," where a block bounces back and forth. Each call to gtk_progress_bar_pulse() causes the block to move by a little bit (the amount of movement per pulse is determined by gtk_progress_bar_set_pulse_step()).
+  Indicates that some progress is made, but you don't know how much. Causes the progress bar to enter "activity mode,"
+  where a block bounces back and forth. Each call to gtk_progress_bar_pulse() causes the block to move by a little bit
+  (the amount of movement per pulse is determined by gtk_progress_bar_set_pulse_step()).
   
   pbar : a GtkProgressBar
   
@@ -192,7 +214,8 @@
 ==== :SetEllipsize ====
 '':SetEllipsize(self @ [[#T|T]], mode @ [[..:..:Gtk:Pango:EllipsizeMode#T|Gtk.Pango.EllipsizeMode.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Sets the mode used to ellipsize (add an ellipsis: "...") the text if there is not enough space to render the entire string.
+  Sets the mode used to ellipsize (add an ellipsis: "...") the text if there is not enough space to render the entire
+  string.
   
   pbar : a GtkProgressBar
   mode : a PangoEllipsizeMode
@@ -201,7 +224,8 @@
 ==== :SetFraction ====
 '':SetFraction(self @ [[#T|T]], fraction @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Causes the progress bar to "fill in" the given fraction of the bar. The fraction should be between 0.0 and 1.0, inclusive.
+  Causes the progress bar to "fill in" the given fraction of the bar. The fraction should be between 0.0 and 1.0,
+  inclusive.
   
   pbar :     a GtkProgressBar
   fraction : fraction of the task that's been completed
@@ -210,7 +234,8 @@
 ==== :SetOrientation ====
 '':SetOrientation(self @ [[#T|T]], orientation @ [[..:..:Gtk:Gtk:ProgressBarOrientation#T|Gtk.Gtk.ProgressBarOrientation.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Causes the progress bar to switch to a different orientation (left-to-right, right-to-left, top-to-bottom, or bottom-to-top).
+  Causes the progress bar to switch to a different orientation (left-to-right, right-to-left, top-to-bottom, or bottom-to-
+  top).
   
   pbar :        a GtkProgressBar
   orientation : orientation of the progress bar

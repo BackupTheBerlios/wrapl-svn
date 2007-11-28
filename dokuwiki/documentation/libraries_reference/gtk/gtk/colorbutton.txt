@@ -8,7 +8,9 @@
   * [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]
   * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
 
-  The GtkColorButton is a button which displays the currently selected color an allows to open a color selection dialog to change the color. It is suitable widget for selecting a color in a preference dialog.
+  The GtkColorButton is a button which displays the currently selected color an allows to open a color
+  selection dialog to change the color. It is suitable widget for selecting a color in a preference
+  dialog.
   
 
 ==== :SetUseAlpha ====
@@ -90,7 +92,9 @@
 ==== New ====
 ''New() : [[# T| T]]''
 
-  Creates a new color button. This returns a widget in the form of a small button containing a swatch representing the current selected color. When the button is clicked, a color-selection dialog will open, allowing the user to select a color. The swatch will be updated to reflect the new color when the user finishes.
+  Creates a new color button. This returns a widget in the form of a small button containing a swatch representing the
+  current selected color. When the button is clicked, a color-selection dialog will open, allowing the user to select a
+  color. The swatch will be updated to reflect the new color when the user finishes.
   
   Returns : a new color button.
   

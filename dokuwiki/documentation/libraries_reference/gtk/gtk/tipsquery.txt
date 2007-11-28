@@ -7,10 +7,19 @@
   * [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]
   * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
 
-  The GtkTipsQuery widget is a subclass of GtkLabel which is used to display help about widgets in a user interface.
-  A query is started with a call to gtk_tips_query_start_query(), usually when some kind of 'Help' button is pressed. The GtkTipsQuery then grabs all events, stopping the user interface from functioning normally. Then as the user moves the mouse over the widgets, the GtkTipsQuery displays each widget's tooltip text.
-  By connecting to the "widget-entered" or "widget-selected" signals, it is possible to customize the GtkTipsQuery to perform other actions when widgets are entered or selected. For example, a help browser could be opened with documentation on the widget selected.
-  At some point a call to gtk_tips_query_stop_query() must be made in order to stop the query and return the interface to its normal state. The gtk_tips_query_set_caller() function can be used to specify a widget which the user can select to stop the query (often the same button used to start the query).
+  The GtkTipsQuery widget is a subclass of GtkLabel which is used to display help about widgets in a
+  user interface.
+  A query is started with a call to gtk_tips_query_start_query(), usually when some kind of 'Help'
+  button is pressed. The GtkTipsQuery then grabs all events, stopping the user interface from
+  functioning normally. Then as the user moves the mouse over the widgets, the GtkTipsQuery displays
+  each widget's tooltip text.
+  By connecting to the "widget-entered" or "widget-selected" signals, it is possible to customize the
+  GtkTipsQuery to perform other actions when widgets are entered or selected. For example, a help
+  browser could be opened with documentation on the widget selected.
+  At some point a call to gtk_tips_query_stop_query() must be made in order to stop the query and
+  return the interface to its normal state. The gtk_tips_query_set_caller() function can be used to
+  specify a widget which the user can select to stop the query (often the same button used to start
+  the query).
   
 
 ==== :StopQuery ====

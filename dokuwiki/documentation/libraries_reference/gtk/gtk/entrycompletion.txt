@@ -3,18 +3,33 @@
 === inherits from ===
   * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
 
-  GtkEntryCompletion is an auxiliary object to be used in conjunction with GtkEntry to provide the completion functionality. It implements the GtkCellLayout interface, to allow the user to add extra cells to the GtkTreeView with completion matches.
-  "Completion functionality" means that when the user modifies the text in the entry, GtkEntryCompletion checks which rows in the model match the current content of the entry, and displays a list of matches. By default, the matching is done by comparing the entry text case-insensitively against the text column of the model (see gtk_entry_completion_set_text_column()), but this can be overridden with a custom match function (see gtk_entry_completion_set_match_func()).
-  When the user selects a completion, the content of the entry is updated. By default, the content of the entry is replaced by the text column of the model, but this can be overridden by connecting to the ::match-selected signal and updating the entry in the signal handler. Note that you should return TRUE from the signal handler to suppress the default behaviour.
+  GtkEntryCompletion is an auxiliary object to be used in conjunction with GtkEntry to provide the
+  completion functionality. It implements the GtkCellLayout interface, to allow the user to add extra
+  cells to the GtkTreeView with completion matches.
+  "Completion functionality" means that when the user modifies the text in the entry,
+  GtkEntryCompletion checks which rows in the model match the current content of the entry, and
+  displays a list of matches. By default, the matching is done by comparing the entry text case-
+  insensitively against the text column of the model (see gtk_entry_completion_set_text_column()), but
+  this can be overridden with a custom match function (see gtk_entry_completion_set_match_func()).
+  When the user selects a completion, the content of the entry is updated. By default, the content of
+  the entry is replaced by the text column of the model, but this can be overridden by connecting to
+  the ::match-selected signal and updating the entry in the signal handler. Note that you should
+  return TRUE from the signal handler to suppress the default behaviour.
   To add completion functionality to an entry, use gtk_entry_set_completion().
-  In addition to regular completion matches, which will be inserted into the entry when they are selected, GtkEntryCompletion also allows to display "actions" in the popup window. Their appearance is similar to menuitems, to differentiate them clearly from completion strings. When an action is selected, the ::action-activated signal is emitted.
+  In addition to regular completion matches, which will be inserted into the entry when they are
+  selected, GtkEntryCompletion also allows to display "actions" in the popup window. Their appearance
+  is similar to menuitems, to differentiate them clearly from completion strings. When an action is
+  selected, the ::action-activated signal is emitted.
   
 
 ==== :SetTextColumn ====
 '':SetTextColumn(self @ [[#T|T]], column @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Convenience function for setting up the most used case of this code: a completion list with just strings. This function will set up completion to have a list displaying all (and just) strings in the completion list, and to get those strings from column in the model of completion.
-  This functions creates and adds a GtkCellRendererText for the selected column. If you need to set the text column, but don't want the cell renderer, use g_object_set() to set the ::text_column property directly.
+  Convenience function for setting up the most used case of this code: a completion list with just strings. This function
+  will set up completion to have a list displaying all (and just) strings in the completion list, and to get those strings
+  from column in the model of completion.
+  This functions creates and adds a GtkCellRendererText for the selected column. If you need to set the text column, but
+  don't want the cell renderer, use g_object_set() to set the ::text_column property directly.
   
   completion : A GtkEntryCompletion.
   column :     The column in the model of completion to get strings from.
@@ -23,7 +38,8 @@
 ==== :SetPopupSingleMatch ====
 '':SetPopupSingleMatch(self @ [[#T|T]], popup_single_match @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Sets whether the completion popup window will appear even if there is only a single match. You may want to set this to FALSE if you are using inline completion.
+  Sets whether the completion popup window will appear even if there is only a single match. You may want to set this to
+  FALSE if you are using inline completion.
   
   completion :         a GtkEntryCompletion
   popup_single_match : TRUE if the popup should appear even for a single match
@@ -36,7 +52,8 @@
 ==== :Complete ====
 '':Complete(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Requests a completion operation, or in other words a refiltering of the current list with completions, using the current key. The completion list view will be updated accordingly.
+  Requests a completion operation, or in other words a refiltering of the current list with completions, using the current
+  key. The completion list view will be updated accordingly.
   
   completion : A GtkEntryCompletion.
   
@@ -153,7 +170,8 @@
 ==== :InsertActionText ====
 '':InsertActionText(self @ [[#T|T]], index_ @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], text @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Inserts an action in completion's action item list at position index_ with text text. If you want the action item to have markup, use gtk_entry_completion_insert_action_markup().
+  Inserts an action in completion's action item list at position index_ with text text. If you want the action item to
+  have markup, use gtk_entry_completion_insert_action_markup().
   
   completion : A GtkEntryCompletion.
   index_ :     The index of the item to insert.
@@ -189,7 +207,8 @@
 ==== :SetMatchFunc ====
 '':SetMatchFunc(self @ [[#T|T]], func @ [[..:..:Std:Function#T|Std.Function.T]], func_data @ [[..:..:Std:Address#T|Std.Address.T]], func_notify @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Sets the match function for completion to be func. The match function is used to determine if a row should or should not be in the completion list.
+  Sets the match function for completion to be func. The match function is used to determine if a row should or should not
+  be in the completion list.
   
   completion :  A GtkEntryCompletion.
   func :        The GtkEntryCompletionMatchFunc to use.
@@ -200,7 +219,9 @@
 ==== :SetMinimumKeyLength ====
 '':SetMinimumKeyLength(self @ [[#T|T]], length @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Requires the length of the search key for completion to be at least length. This is useful for long lists, where completing using a small key takes a lot of time and will come up with meaningless results anyway (ie, a too large dataset).
+  Requires the length of the search key for completion to be at least length. This is useful for long lists, where
+  completing using a small key takes a lot of time and will come up with meaningless results anyway (ie, a too large
+  dataset).
   
   completion : A GtkEntryCompletion.
   length :     The minimum length of the key in order to start completing.
@@ -209,7 +230,8 @@
 ==== :SetModel ====
 '':SetModel(self @ [[#T|T]], model @ [[..:..:Gtk:Gtk:TreeModel#T|Gtk.Gtk.TreeModel.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Sets the model for a GtkEntryCompletion. If completion already has a model set, it will remove it before setting the new model. If model is NULL, then it will unset the model.
+  Sets the model for a GtkEntryCompletion. If completion already has a model set, it will remove it before setting the new
+  model. If model is NULL, then it will unset the model.
   
   completion : A GtkEntryCompletion.
   model :      The GtkTreeModel.

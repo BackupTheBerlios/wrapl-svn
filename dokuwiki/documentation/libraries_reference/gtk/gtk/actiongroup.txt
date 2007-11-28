@@ -3,13 +3,27 @@
 === inherits from ===
   * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
 
-  Actions are organised into groups. An action group is essentially a map from names to GtkAction objects.
-  All actions that would make sense to use in a particular context should be in a single group. Multiple action groups may be used for a particular user interface. In fact, it is expected that most nontrivial applications will make use of multiple groups. For example, in an application that can edit multiple documents, one group holding global actions (e.g. quit, about, new), and one group per document holding actions that act on that document (eg. save, cut/copy/paste, etc). Each window's menus would be constructed from a combination of two action groups.
-   Accelerators are handled by the GTK+ accelerator map. All actions are assigned an accelerator path (which normally has the form <Actions>/group-name/action-name) and a shortcut is associated with this accelerator path. All menuitems and toolitems take on this accelerator path. The GTK+ accelerator map code makes sure that the correct shortcut is displayed next to the menu item.
+  Actions are organised into groups. An action group is essentially a map from names to GtkAction
+  objects.
+  All actions that would make sense to use in a particular context should be in a single group.
+  Multiple action groups may be used for a particular user interface. In fact, it is expected that
+  most nontrivial applications will make use of multiple groups. For example, in an application that
+  can edit multiple documents, one group holding global actions (e.g. quit, about, new), and one group
+  per document holding actions that act on that document (eg. save, cut/copy/paste, etc). Each
+  window's menus would be constructed from a combination of two action groups.
+   Accelerators are handled by the GTK+ accelerator map. All actions are assigned an accelerator path
+  (which normally has the form <Actions>/group-name/action-name) and a shortcut is associated with
+  this accelerator path. All menuitems and toolitems take on this accelerator path. The GTK+
+  accelerator map code makes sure that the correct shortcut is displayed next to the menu item.
   === GtkActionGroup as GtkBuildable ===
-  The GtkActionGroup implementation of the GtkBuildable interface accepts GtkAction objects as <child> elements in UI definitions.
-  Note that it is probably more common to define actions and action groups in the code, since they are directly related to what the code can do.
-  The GtkActionGroup implementation of the GtkBuildable interface supports a custom <accelerator> element, which has attributes named key and modifiers and allows to specify accelerators. This is similar to the <accelerator> element of GtkWidget, the main difference is that it doesn't allow you to specify a signal.
+  The GtkActionGroup implementation of the GtkBuildable interface accepts GtkAction objects as <child>
+  elements in UI definitions.
+  Note that it is probably more common to define actions and action groups in the code, since they are
+  directly related to what the code can do.
+  The GtkActionGroup implementation of the GtkBuildable interface supports a custom <accelerator>
+  element, which has attributes named key and modifiers and allows to specify accelerators. This is
+  similar to the <accelerator> element of GtkWidget, the main difference is that it doesn't allow you
+  to specify a signal.
   Example 29.&#160;A GtkDialog UI definition fragment.
   <object class="GtkActionGroup" id="actiongroup">
     <child>
@@ -50,7 +64,10 @@
 ==== :AddAction ====
 '':AddAction(self @ [[#T|T]], action @ [[..:..:Gtk:Gtk:Action#T|Gtk.Gtk.Action.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Adds an action object to the action group. Note that this function does not set up the accel path of the action, which can lead to problems if a user tries to modify the accelerator of a menuitem associated with the action. Therefore you must either set the accel path yourself with gtk_action_set_accel_path(), or use gtk_action_group_add_action_with_accel (..., NULL).
+  Adds an action object to the action group. Note that this function does not set up the accel path of the action, which
+  can lead to problems if a user tries to modify the accelerator of a menuitem associated with the action. Therefore you
+  must either set the accel path yourself with gtk_action_set_accel_path(), or use gtk_action_group_add_action_with_accel
+  (..., NULL).
   
   action_group : the action group
   action :       an action
@@ -65,14 +82,16 @@
   
   action_group : the action group
   action :       the action to add
-  accelerator :  the accelerator for the action, in the format understood by gtk_accelerator_parse(), or "" for no accelerator, or NULL to use the stock accelerator
+  accelerator :  the accelerator for the action, in the format understood by gtk_accelerator_parse(), or "" for no
+                 accelerator, or NULL to use the stock accelerator
   
 
 ==== :AddActions ====
 '':AddActions(self @ [[#T|T]], entries @ [[..:..:Gtk:Gtk:ActionEntry#T|Gtk.Gtk.ActionEntry.T]], n_entries @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], user_data @ [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
   This is a convenience function to create a number of actions and add them to the action group.
-  The "activate" signals of the actions are connected to the callbacks and their accel paths are set to <Actions>/group-name/action-name.
+  The "activate" signals of the actions are connected to the callbacks and their accel paths are set to <Actions>/group-
+  name/action-name.
   
   action_group : the action group
   entries :      an array of action descriptions
@@ -96,7 +115,8 @@
 '':AddRadioActions(self @ [[#T|T]], entries @ [[..:..:Gtk:Gtk:RadioActionEntry#T|Gtk.Gtk.RadioActionEntry.T]], n_entries @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], on_change @ [[..:..:Std:Object#T|Std.Object.T]], user_data @ [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
   This is a convenience routine to create a group of radio actions and add them to the action group.
-  The "changed" signal of the first radio action is connected to the on_change callback and the accel paths of the actions are set to <Actions>/group-name/action-name.
+  The "changed" signal of the first radio action is connected to the on_change callback and the accel paths of the actions
+  are set to <Actions>/group-name/action-name.
   
   action_group : the action group
   entries :      an array of radio action descriptions
@@ -124,7 +144,8 @@
 '':AddToggleActions(self @ [[#T|T]], entries @ [[..:..:Gtk:Gtk:ToggleActionEntry#T|Gtk.Gtk.ToggleActionEntry.T]], n_entries @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], user_data @ [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
   This is a convenience function to create a number of toggle actions and add them to the action group.
-  The "activate" signals of the actions are connected to the callbacks and their accel paths are set to <Actions>/group-name/action-name.
+  The "activate" signals of the actions are connected to the callbacks and their accel paths are set to <Actions>/group-
+  name/action-name.
   
   action_group : the action group
   entries :      an array of toggle action descriptions
@@ -166,7 +187,8 @@
 ==== :GetSensitive ====
 '':GetSensitive(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
-  Returns TRUE if the group is sensitive. The constituent actions can only be logically sensitive (see gtk_action_is_sensitive()) if they are sensitive (see gtk_action_get_sensitive()) and their group is sensitive.
+  Returns TRUE if the group is sensitive. The constituent actions can only be logically sensitive (see
+  gtk_action_is_sensitive()) if they are sensitive (see gtk_action_get_sensitive()) and their group is sensitive.
   
   action_group : the action group
   Returns :      TRUE if the group is sensitive.
@@ -175,7 +197,8 @@
 ==== :GetVisible ====
 '':GetVisible(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
-  Returns TRUE if the group is visible. The constituent actions can only be logically visible (see gtk_action_is_visible()) if they are visible (see gtk_action_get_visible()) and their group is visible.
+  Returns TRUE if the group is visible. The constituent actions can only be logically visible (see gtk_action_is_visible
+  ()) if they are visible (see gtk_action_get_visible()) and their group is visible.
   
   action_group : the action group
   Returns :      TRUE if the group is visible.
@@ -211,19 +234,22 @@
 ==== :SetTranslateFunc ====
 '':SetTranslateFunc(self @ [[#T|T]], func @ [[..:..:Std:Function#T|Std.Function.T]], data @ [[..:..:Std:Address#T|Std.Address.T]], notify @ [[..:..:Std:Function#T|Std.Function.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Sets a function to be used for translating the label and tooltip of GtkActionGroupEntrys added by gtk_action_group_add_actions().
+  Sets a function to be used for translating the label and tooltip of GtkActionGroupEntrys added by
+  gtk_action_group_add_actions().
   If you're using gettext(), it is enough to set the translation domain with gtk_action_group_set_translation_domain().
   
   action_group : a GtkActionGroup
   func :         a GtkTranslateFunc
   data :         data to be passed to func and notify
-  notify :       a GtkDestroyNotify function to be called when action_group is destroyed and when the translation function is changed again
+  notify :       a GtkDestroyNotify function to be called when action_group is destroyed and when the translation function
+                 is changed again
   
 
 ==== :SetTranslationDomain ====
 '':SetTranslationDomain(self @ [[#T|T]], domain @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Sets the translation domain and uses dgettext() for translating the label and tooltip of GtkActionEntrys added by gtk_action_group_add_actions().
+  Sets the translation domain and uses dgettext() for translating the label and tooltip of GtkActionEntrys added by
+  gtk_action_group_add_actions().
   If you're not using gettext() for localization, see gtk_action_group_set_translate_func().
   
   action_group : a GtkActionGroup

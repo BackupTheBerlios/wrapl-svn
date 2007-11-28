@@ -6,10 +6,13 @@
 
   GooCanvasWidget provides support for placing any GtkWidget in the canvas.
   Note that there are a number of limitations in the use of ""
-   * It doesn't support any transformation besides simple translation. This means you can't scale a canvas with a GooCanvasWidget in it.
+   * It doesn't support any transformation besides simple translation. This means you can't scale a
+     canvas with a GooCanvasWidget in it.
    * It doesn't support layering, so you can't place other items beneath or above the GooCanvasWidget.
-   * It doesn't support rendering of widgets to a given cairo_t, which means you can't output the widget to a pdf or postscript file.
-   * It doesn't have a model/view variant like the other standard items, so it can only be used in a simple canvas without a model.
+   * It doesn't support rendering of widgets to a given cairo_t, which means you can't output the
+     widget to a pdf or postscript file.
+   * It doesn't have a model/view variant like the other standard items, so it can only be used in a
+     simple canvas without a model.
   
 
 ==== :Anchor ====
@@ -41,7 +44,8 @@
 
   Creates a new widget item.
   
-  parent :  the parent item, or NULL. If a parent is specified, it will assume ownership of the item, and the item will automatically be freed when it is removed from the parent. Otherwise call g_object_unref() to free it.
+  parent :  the parent item, or NULL. If a parent is specified, it will assume ownership of the item, and the item will
+            automatically be freed when it is removed from the parent. Otherwise call g_object_unref() to free it.
   widget :  the widget.
   x :       the x coordinate of the item.
   y :       the y coordinate of the item.

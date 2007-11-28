@@ -3,13 +3,16 @@
 === inherits from ===
   * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
 
-  PangoFcDecoder represents a decoder that an application provides for handling a font that is encoded in a custom way.
+  PangoFcDecoder represents a decoder that an application provides for handling a font that is encoded
+  in a custom way.
   
 
 ==== :GetGlyph ====
 '':GetGlyph(self @ [[#T|T]], fcfont @ [[..:..:Gtk:Pango:FcFont#T|Gtk.Pango.FcFont.T]], wc @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-  Generates a PangoGlyph for the given Unicode point using the custom decoder. For complex scripts where there can be multiple glyphs for a single character, the decoder will return whatever glyph is most convenient for it. (Usually whatever glyph is directly in the fonts character map table.)
+  Generates a PangoGlyph for the given Unicode point using the custom decoder. For complex scripts where there can be
+  multiple glyphs for a single character, the decoder will return whatever glyph is most convenient for it. (Usually
+  whatever glyph is directly in the fonts character map table.)
   
   decoder : a PangoFcDecoder
   fcfont :  a PangoFcFont to query.
@@ -20,7 +23,8 @@
 ==== :GetCharset ====
 '':GetCharset(self @ [[#T|T]], fcfont @ [[..:..:Gtk:Pango:FcFont#T|Gtk.Pango.FcFont.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Generates an FcCharSet of supported characters for the fcfont given. The returned FcCharSet will be a reference to an internal value stored by the PangoFcDecoder and must not be modified or freed.
+  Generates an FcCharSet of supported characters for the fcfont given. The returned FcCharSet will be a reference to an
+  internal value stored by the PangoFcDecoder and must not be modified or freed.
   
   decoder : a PangoFcDecoder
   fcfont :  the PangoFcFont to query.

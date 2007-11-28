@@ -4,13 +4,18 @@
   * [[..:..:Gtk:Pango:FontMap#T|Gtk.Pango.FontMap.T]]
   * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
 
-  PangoFcFontMap is a base class for font map implementations using the Fontconfig and FreeType libraries. It is used in the Xft and FreeType backends shipped with Pango, but can also be used when creating new backends. Any backend deriving from this base class will take advantage of the wide range of shapers implemented using FreeType that come with Pango.
+  PangoFcFontMap is a base class for font map implementations using the Fontconfig and FreeType
+  libraries. It is used in the Xft and FreeType backends shipped with Pango, but can also be used when
+  creating new backends. Any backend deriving from this base class will take advantage of the wide
+  range of shapers implemented using FreeType that come with Pango.
   
 
 ==== :AddDecoderFindFunc ====
 '':AddDecoderFindFunc(self @ [[#T|T]], findfunc @ [[..:..:Std:Function#T|Std.Function.T]], user_data @ [[..:..:Std:Address#T|Std.Address.T]], dnotify @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  This function saves a callback method in the PangoFcFontMap that will be called whenever new fonts are created. If the function returns a PangoFcDecoder, that decoder will be used to determine both coverage via a FcCharSet and a one-to-one mapping of characters to glyphs. This will allow applications to have application-specific encodings for various fonts.
+  This function saves a callback method in the PangoFcFontMap that will be called whenever new fonts are created. If the
+  function returns a PangoFcDecoder, that decoder will be used to determine both coverage via a FcCharSet and a one-to-one
+  mapping of characters to glyphs. This will allow applications to have application-specific encodings for various fonts.
   
   fcfontmap : The PangoFcFontMap to add this method to.
   findfunc :  The PangoFcDecoderFindFunc callback function

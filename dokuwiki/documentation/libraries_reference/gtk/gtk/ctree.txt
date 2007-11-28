@@ -7,11 +7,17 @@
   * [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]
   * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
 
-  The GtkCTree widget is used for showing a hierarchical tree to the user, for example a directory tree.
+  The GtkCTree widget is used for showing a hierarchical tree to the user, for example a directory
+  tree.
   The tree is internally represented as a set of GtkCTreeNode structures.
-  The interface has much in common with the GtkCList widget: rows (nodes) can be selected by the user etc.
-  Positions in the tree are often indicated by two arguments, a parent and a sibling, both GtkCTreeNode pointers. If the parent is NULL, the position is at the root of the tree and if the sibling is NULL, it will be the last child of parent, otherwise it will be inserted just before the sibling.
-  GtkCTree has been deprecated since GTK+ 2.0 and should not be used in newly written code. Use GtkTreeView instead.
+  The interface has much in common with the GtkCList widget: rows (nodes) can be selected by the user
+  etc.
+  Positions in the tree are often indicated by two arguments, a parent and a sibling, both
+  GtkCTreeNode pointers. If the parent is NULL, the position is at the root of the tree and if the
+  sibling is NULL, it will be the last child of parent, otherwise it will be inserted just before the
+  sibling.
+  GtkCTree has been deprecated since GTK+ 2.0 and should not be used in newly written code. Use
+  GtkTreeView instead.
   
 
 ==== :UnselectRecursive ====

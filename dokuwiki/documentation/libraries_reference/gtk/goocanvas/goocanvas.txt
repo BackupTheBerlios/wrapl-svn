@@ -110,7 +110,8 @@
 '':UnregisterItem(self @ [[#T|T]], model @ [[..:..:Gtk:GooCanvas:ItemModel#T|Gtk.GooCanvas.ItemModel.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
   This function is only intended to be used when implementing new canvas items.
-  It should be called in the finalize method of GooCanvasItem objects, to remove the canvas item from the GooCanvas's hash table.
+  It should be called in the finalize method of GooCanvasItem objects, to remove the canvas item from the GooCanvas's hash
+  table.
   
   canvas : a GooCanvas.
   model :  the item model whose canvas item is being finalized.
@@ -120,7 +121,8 @@
 '':SetScale(self @ [[#T|T]], scale @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
   Sets the scale of the canvas.
-  The scale specifies the magnification factor of the canvas, e.g. if an item has a width of 2 pixels and the scale is set to 3, it will be displayed with a width of 2 x 3 = 6 pixels.
+  The scale specifies the magnification factor of the canvas, e.g. if an item has a width of 2 pixels and the scale is set
+  to 3, it will be displayed with a width of 2 x 3 = 6 pixels.
   
   canvas : a GooCanvas.
   scale :  the new scale setting.
@@ -135,7 +137,8 @@
   Returns : the root item model, or NULL if there is no root item model.
   
   Sets the root item model of the canvas.
-  A hierarchy of canvas items will be created, corresponding to the hierarchy of items in the model. Any current canvas items will be removed.
+  A hierarchy of canvas items will be created, corresponding to the hierarchy of items in the model. Any current canvas
+  items will be removed.
   
   canvas : a GooCanvas.
   model :  a GooCanvasItemModel.
@@ -159,7 +162,8 @@
 '':Bounds(self @ [[#T|T]]) : [[..:..:Gtk:GooCanvas:Bounds#T|Gtk.GooCanvas.Bounds.T]]''
 
   Gets the bounds of the canvas, in canvas units.
-  By default, canvas units are pixels, though the "units" property can be used to change the units to points, inches or millimeters.
+  By default, canvas units are pixels, though the "units" property can be used to change the units to points, inches or
+  millimeters.
   
   canvas : a GooCanvas.
   left :   a pointer to a gdouble to return the left edge, or NULL.
@@ -168,7 +172,8 @@
   bottom : a pointer to a gdouble to return the bottom edge, or NULL.
   
   Sets the bounds of the GooCanvas, in canvas units.
-  By default, canvas units are pixels, though the "units" property can be used to change the units to points, inches or millimeters.
+  By default, canvas units are pixels, though the "units" property can be used to change the units to points, inches or
+  millimeters.
   
   canvas : a GooCanvas.
   left :   the left edge.
@@ -189,13 +194,15 @@
 '':Scale(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
   Gets the current scale of the canvas.
-  The scale specifies the magnification factor of the canvas, e.g. if an item has a width of 2 pixels and the scale is set to 3, it will be displayed with a width of 2 x 3 = 6 pixels.
+  The scale specifies the magnification factor of the canvas, e.g. if an item has a width of 2 pixels and the scale is set
+  to 3, it will be displayed with a width of 2 x 3 = 6 pixels.
   
   canvas :  a GooCanvas.
   Returns : the current scale setting.
   
   Sets the scale of the canvas.
-  The scale specifies the magnification factor of the canvas, e.g. if an item has a width of 2 pixels and the scale is set to 3, it will be displayed with a width of 2 x 3 = 6 pixels.
+  The scale specifies the magnification factor of the canvas, e.g. if an item has a width of 2 pixels and the scale is set
+  to 3, it will be displayed with a width of 2 x 3 = 6 pixels.
   
   canvas : a GooCanvas.
   scale :  the new scale setting.
@@ -320,7 +327,8 @@
 ==== :ConvertFromItemSpace ====
 '':ConvertFromItemSpace(self @ [[#T|T]], item @ [[..:..:Gtk:GooCanvas:Item#T|Gtk.GooCanvas.Item.T]], x @ [[..:..:Std:Object#T|Std.Object.T]], y @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Converts a coordinate from the given item's coordinate space to the canvas coordinate space, applying all transformation matrices including the item's own transformation matrix, if it has one.
+  Converts a coordinate from the given item's coordinate space to the canvas coordinate space, applying all transformation
+  matrices including the item's own transformation matrix, if it has one.
   
   canvas : a GooCanvas.
   item :   a GooCanvasItem.
@@ -332,7 +340,8 @@
 '':ConvertFromPixels(self @ [[#T|T]], x @ [[..:..:Std:Object#T|Std.Object.T]], y @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
   Converts a coordinate from pixels to the canvas coordinate space.
-  The pixel coordinate space specifies pixels from the top-left of the entire canvas window, according to the current scale setting. See goo_canvas_set_scale().
+  The pixel coordinate space specifies pixels from the top-left of the entire canvas window, according to the current
+  scale setting. See goo_canvas_set_scale().
   The canvas coordinate space is specified in the call to goo_canvas_set_bounds().
   
   canvas : a GooCanvas.
@@ -343,7 +352,8 @@
 ==== :ConvertToItemSpace ====
 '':ConvertToItemSpace(self @ [[#T|T]], item @ [[..:..:Gtk:GooCanvas:Item#T|Gtk.GooCanvas.Item.T]], x @ [[..:..:Std:Object#T|Std.Object.T]], y @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Converts a coordinate from the canvas coordinate space to the given item's coordinate space, applying all transformation matrices including the item's own transformation matrix, if it has one.
+  Converts a coordinate from the canvas coordinate space to the given item's coordinate space, applying all transformation
+  matrices including the item's own transformation matrix, if it has one.
   
   canvas : a GooCanvas.
   item :   a GooCanvasItem.
@@ -356,7 +366,8 @@
 
   Converts a coordinate from the canvas coordinate space to pixels.
   The canvas coordinate space is specified in the call to goo_canvas_set_bounds().
-  The pixel coordinate space specifies pixels from the top-left of the entire canvas window, according to the current scale setting. See goo_canvas_set_scale().
+  The pixel coordinate space specifies pixels from the top-left of the entire canvas window, according to the current
+  scale setting. See goo_canvas_set_scale().
   
   canvas : a GooCanvas.
   x :      a pointer to the x coordinate to convert.
@@ -375,10 +386,13 @@
 ==== :CreateItem ====
 '':CreateItem(self @ [[#T|T]], model @ [[..:..:Gtk:GooCanvas:ItemModel#T|Gtk.GooCanvas.ItemModel.T]]) : [[..:..:Gtk:GooCanvas:Item#T|Gtk.GooCanvas.Item.T]]''
 
-  This function is only intended to be used when implementing new canvas items, typically container items such as GooCanvasGroup.
+  This function is only intended to be used when implementing new canvas items, typically container items such as
+  GooCanvasGroup.
   It creates a new canvas item for the given item model, and recursively creates items for any children.
-  It uses the create_item() virtual method if it has been set. Subclasses of GooCanvas can define this method if they want to use custom views for items.
-  It emits the "item-created" signal after creating the view, so application code can connect signal handlers to the new view if desired.
+  It uses the create_item() virtual method if it has been set. Subclasses of GooCanvas can define this method if they want
+  to use custom views for items.
+  It emits the "item-created" signal after creating the view, so application code can connect signal handlers to the new
+  view if desired.
   
   canvas :  a GooCanvas.
   model :   the item model to create a canvas item for.
@@ -389,7 +403,8 @@
 '':GetBounds(self @ [[#T|T]], left @ [[..:..:Std:Object#T|Std.Object.T]], top @ [[..:..:Std:Object#T|Std.Object.T]], right @ [[..:..:Std:Object#T|Std.Object.T]], bottom @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
   Gets the bounds of the canvas, in canvas units.
-  By default, canvas units are pixels, though the "units" property can be used to change the units to points, inches or millimeters.
+  By default, canvas units are pixels, though the "units" property can be used to change the units to points, inches or
+  millimeters.
   
   canvas : a GooCanvas.
   left :   a pointer to a gdouble to return the left edge, or NULL.
@@ -410,7 +425,8 @@
 ==== :GetItem ====
 '':GetItem(self @ [[#T|T]], model @ [[..:..:Gtk:GooCanvas:ItemModel#T|Gtk.GooCanvas.ItemModel.T]]) : [[..:..:Gtk:GooCanvas:Item#T|Gtk.GooCanvas.Item.T]]''
 
-  Gets the canvas item associated with the given GooCanvasItemModel. This is only useful when goo_canvas_set_root_item_model() has been used to set a model for the canvas.
+  Gets the canvas item associated with the given GooCanvasItemModel. This is only useful when
+  goo_canvas_set_root_item_model() has been used to set a model for the canvas.
   For simple applications you can use goo_canvas_get_item() to set up signal handlers for your items, e.g.
      item = goo_canvas_get_item (GOO_CANVAS (canvas), my_item);
      g_signal_connect (item, "button_press_event",
@@ -424,7 +440,8 @@
   canvas :           a GooCanvas.
   x :                the x coordinate of the point.
   y :                the y coordinate of the point
-  is_pointer_event : TRUE if the "pointer-events" property of items should be used to determine which parts of the item are tested.
+  is_pointer_event : TRUE if the "pointer-events" property of items should be used to determine which parts of the item
+                     are tested.
   Returns :          the item found at the given point, or NULL if no item was found.
   
 
@@ -436,8 +453,10 @@
   canvas :           a GooCanvas.
   x :                the x coordinate of the point.
   y :                the y coordinate of the point
-  is_pointer_event : TRUE if the "pointer-events" property of items should be used to determine which parts of the item are tested.
-  Returns :          a list of items found at the given point, with the top item at the start of the list, or NULL if no items were found. The list must be freed with g_list_free().
+  is_pointer_event : TRUE if the "pointer-events" property of items should be used to determine which parts of the item
+                     are tested.
+  Returns :          a list of items found at the given point, with the top item at the start of the list, or NULL if no
+                     items were found. The list must be freed with g_list_free().
   
 
 ==== :GetItemsInArea ====
@@ -450,7 +469,8 @@
   inside_area :        TRUE if items inside area should be returned, or FALSE if items outside area should be returned.
   allow_overlaps :     TRUE if items which are partly inside and partly outside should be returned.
   include_containers : TRUE if containers should be checked as well as normal items.
-  Returns :            a list of items in the given area, or NULL if no items are found. The list should be freed with g_list_free().
+  Returns :            a list of items in the given area, or NULL if no items are found. The list should be freed with
+                       g_list_free().
   
 
 ==== :GetRootItem ====
@@ -475,7 +495,8 @@
 '':GetScale(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
   Gets the current scale of the canvas.
-  The scale specifies the magnification factor of the canvas, e.g. if an item has a width of 2 pixels and the scale is set to 3, it will be displayed with a width of 2 x 3 = 6 pixels.
+  The scale specifies the magnification factor of the canvas, e.g. if an item has a width of 2 pixels and the scale is set
+  to 3, it will be displayed with a width of 2 x 3 = 6 pixels.
   
   canvas :  a GooCanvas.
   Returns : the current scale setting.
@@ -497,7 +518,8 @@
   
   canvas :       a GooCanvas.
   item :         the item to grab the keyboard for.
-  owner_events : TRUE if keyboard events for this application will be reported normally, or FALSE if all keyboard events will be reported with respect to the grab item.
+  owner_events : TRUE if keyboard events for this application will be reported normally, or FALSE if all keyboard events
+                 will be reported with respect to the grab item.
   time :         the time of the event that lead to the keyboard grab. This should come from the relevant GdkEvent.
   Returns :      GDK_GRAB_SUCCESS if the grab succeeded.
   
@@ -539,7 +561,8 @@
 '':RegisterWidgetItem(self @ [[#T|T]], witem @ [[..:..:Gtk:GooCanvas:Widget#T|Gtk.GooCanvas.Widget.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
   This function should only be used by GooCanvasWidget and subclass implementations.
-  It registers a widget item with the canvas, so that the canvas can do the necessary actions to move and resize the widget as needed.
+  It registers a widget item with the canvas, so that the canvas can do the necessary actions to move and resize the
+  widget as needed.
   
   canvas : a GooCanvas.
   witem :  a GooCanvasWidget item.
@@ -553,7 +576,8 @@
   canvas : a GooCanvas.
   cr :     a cairo context.
   bounds : the area to render, or NULL to render the entire canvas.
-  scale :  the scale to compare with each item's visibility threshold to see if they should be rendered. This only affects items that have their visibility set to GOO_CANVAS_ITEM_VISIBLE_ABOVE_THRESHOLD.
+  scale :  the scale to compare with each item's visibility threshold to see if they should be rendered. This only affects
+           items that have their visibility set to GOO_CANVAS_ITEM_VISIBLE_ABOVE_THRESHOLD.
   
 
 ==== :RequestRedraw ====
@@ -570,7 +594,8 @@
 '':RequestUpdate(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
   This function is only intended to be used by subclasses of GooCanvas or GooCanvasItem implementations.
-  It schedules an update of the GooCanvas. This will be performed in the idle loop, after all pending events have been handled, but before the canvas has been repainted.
+  It schedules an update of the GooCanvas. This will be performed in the idle loop, after all pending events have been
+  handled, but before the canvas has been repainted.
   
   canvas : a GooCanvas.
   
@@ -589,7 +614,8 @@
 '':SetBounds(self @ [[#T|T]], left @ [[..:..:Std:Real#T|Std.Real.T]], top @ [[..:..:Std:Real#T|Std.Real.T]], right @ [[..:..:Std:Real#T|Std.Real.T]], bottom @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
   Sets the bounds of the GooCanvas, in canvas units.
-  By default, canvas units are pixels, though the "units" property can be used to change the units to points, inches or millimeters.
+  By default, canvas units are pixels, though the "units" property can be used to change the units to points, inches or
+  millimeters.
   
   canvas : a GooCanvas.
   left :   the left edge.
@@ -611,7 +637,8 @@
 '':SetRootItemModel(self @ [[#T|T]], model @ [[..:..:Gtk:GooCanvas:ItemModel#T|Gtk.GooCanvas.ItemModel.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
   Sets the root item model of the canvas.
-  A hierarchy of canvas items will be created, corresponding to the hierarchy of items in the model. Any current canvas items will be removed.
+  A hierarchy of canvas items will be created, corresponding to the hierarchy of items in the model. Any current canvas
+  items will be removed.
   
   canvas : a GooCanvas.
   model :  a GooCanvasItemModel.
@@ -621,7 +648,8 @@
 ''New() : [[# T| T]]''
 
   Creates a new GooCanvas widget.
-  A GooCanvasGroup is created automatically as the root item of the canvas, though this can be overriden with goo_canvas_set_root_item() or goo_canvas_set_root_item_model().
+  A GooCanvasGroup is created automatically as the root item of the canvas, though this can be overriden with
+  goo_canvas_set_root_item() or goo_canvas_set_root_item_model().
   
   Returns : a new GooCanvas widget.
   

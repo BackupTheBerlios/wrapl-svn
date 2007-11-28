@@ -7,15 +7,21 @@
   * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
 
   A toolbar is created with a call to gtk_toolbar_new().
-  A toolbar can contain instances of a subclass of GtkToolItem. To add a GtkToolItem to the a toolbar, use gtk_toolbar_insert(). To remove an item from the toolbar use gtk_container_remove(). To add a button to the toolbar, add an instance of GtkToolButton.
-  Toolbar items can be visually grouped by adding instances of GtkSeparatorToolItem to the toolbar. If a GtkSeparatorToolItem has the "expand" property set to TRUE and the "draw" property set to FALSE the effect is to force all following items to the end of the toolbar.
-  Creating a context menu for the toolbar can be done by connecting to the "popup-context-menu" signal.
+  A toolbar can contain instances of a subclass of GtkToolItem. To add a GtkToolItem to the a toolbar,
+  use gtk_toolbar_insert(). To remove an item from the toolbar use gtk_container_remove(). To add a
+  button to the toolbar, add an instance of GtkToolButton.
+  Toolbar items can be visually grouped by adding instances of GtkSeparatorToolItem to the toolbar. If
+  a GtkSeparatorToolItem has the "expand" property set to TRUE and the "draw" property set to FALSE
+  the effect is to force all following items to the end of the toolbar.
+  Creating a context menu for the toolbar can be done by connecting to the "popup-context-menu"
+  signal.
   
 
 ==== :UnsetStyle ====
 '':UnsetStyle(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Unsets a toolbar style set with gtk_toolbar_set_style(), so that user preferences will be used to determine the toolbar style.
+  Unsets a toolbar style set with gtk_toolbar_set_style(), so that user preferences will be used to determine the toolbar
+  style.
   
   toolbar : a GtkToolbar
   
@@ -23,7 +29,8 @@
 ==== :UnsetIconSize ====
 '':UnsetIconSize(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Unsets toolbar icon size set with gtk_toolbar_set_icon_size(), so that user preferences will be used to determine the icon size.
+  Unsets toolbar icon size set with gtk_toolbar_set_icon_size(), so that user preferences will be used to determine the
+  icon size.
   
   toolbar : a GtkToolbar
   
@@ -68,7 +75,8 @@
   toolbar : a GtkToolbar.
   style :   the new style for toolbar.
   
-  Unsets a toolbar style set with gtk_toolbar_set_style(), so that user preferences will be used to determine the toolbar style.
+  Unsets a toolbar style set with gtk_toolbar_set_style(), so that user preferences will be used to determine the toolbar
+  style.
   
   toolbar : a GtkToolbar
   
@@ -76,7 +84,8 @@
 ==== :IconSize ====
 '':IconSize(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:IconSize#T|Gtk.Gtk.IconSize.T]]''
 
-  Unsets toolbar icon size set with gtk_toolbar_set_icon_size(), so that user preferences will be used to determine the icon size.
+  Unsets toolbar icon size set with gtk_toolbar_set_icon_size(), so that user preferences will be used to determine the
+  icon size.
   
   toolbar : a GtkToolbar
   
@@ -85,8 +94,10 @@
   toolbar : a GtkToolbar
   Returns : the current icon size for the icons on the toolbar.
   
-  This function sets the size of stock icons in the toolbar. You can call it both before you add the icons and after they've been added. The size you set will override user preferences for the default icon size.
-  This should only be used for special-purpose toolbars, normal application toolbars should respect the user preferences for the size of icons.
+  This function sets the size of stock icons in the toolbar. You can call it both before you add the icons and after
+  they've been added. The size you set will override user preferences for the default icon size.
+  This should only be used for special-purpose toolbars, normal application toolbars should respect the user preferences
+  for the size of icons.
   
   toolbar :   A GtkToolbar
   icon_size : The GtkIconSize that stock icons in the toolbar shall have.
@@ -143,7 +154,8 @@
 ==== :GetDropIndex ====
 '':GetDropIndex(self @ [[#T|T]], x @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-  Returns the position corresponding to the indicated point on toolbar. This is useful when dragging items to the toolbar: this function returns the position a new item should be inserted.
+  Returns the position corresponding to the indicated point on toolbar. This is useful when dragging items to the toolbar:
+  this function returns the position a new item should be inserted.
   x and y are in toolbar coordinates.
   
   toolbar : a GtkToolbar
@@ -238,7 +250,8 @@
 ==== :Insert ====
 '':Insert(self @ [[#T|T]], item @ [[..:..:Gtk:Gtk:ToolItem#T|Gtk.Gtk.ToolItem.T]], pos @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Insert a GtkToolItem into the toolbar at position pos. If pos is 0 the item is prepended to the start of the toolbar. If pos is negative, the item is appended to the end of the toolbar.
+  Insert a GtkToolItem into the toolbar at position pos. If pos is 0 the item is prepended to the start of the toolbar. If
+  pos is negative, the item is appended to the end of the toolbar.
   
   toolbar : a GtkToolbar
   item :    a GtkToolItem
@@ -308,8 +321,10 @@
 ==== :SetDropHighlightItem ====
 '':SetDropHighlightItem(self @ [[#T|T]], tool_item @ [[..:..:Gtk:Gtk:ToolItem#T|Gtk.Gtk.ToolItem.T]], index_ @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Highlights toolbar to give an idea of what it would look like if item was added to toolbar at the position indicated by index_. If item is NULL, highlighting is turned off. In that case index_ is ignored.
-  The tool_item passed to this function must not be part of any widget hierarchy. When an item is set as drop highlight item it can not added to any widget hierarchy or used as highlight item for another toolbar.
+  Highlights toolbar to give an idea of what it would look like if item was added to toolbar at the position indicated by
+  index_. If item is NULL, highlighting is turned off. In that case index_ is ignored.
+  The tool_item passed to this function must not be part of any widget hierarchy. When an item is set as drop highlight
+  item it can not added to any widget hierarchy or used as highlight item for another toolbar.
   
   toolbar :   a GtkToolbar
   tool_item : a GtkToolItem, or NULL to turn of highlighting
@@ -319,8 +334,10 @@
 ==== :SetIconSize ====
 '':SetIconSize(self @ [[#T|T]], icon_size @ [[..:..:Gtk:Gtk:IconSize#T|Gtk.Gtk.IconSize.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  This function sets the size of stock icons in the toolbar. You can call it both before you add the icons and after they've been added. The size you set will override user preferences for the default icon size.
-  This should only be used for special-purpose toolbars, normal application toolbars should respect the user preferences for the size of icons.
+  This function sets the size of stock icons in the toolbar. You can call it both before you add the icons and after
+  they've been added. The size you set will override user preferences for the default icon size.
+  This should only be used for special-purpose toolbars, normal application toolbars should respect the user preferences
+  for the size of icons.
   
   toolbar :   A GtkToolbar
   icon_size : The GtkIconSize that stock icons in the toolbar shall have.
@@ -338,7 +355,8 @@
 ==== :SetShowArrow ====
 '':SetShowArrow(self @ [[#T|T]], show_arrow @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Sets whether to show an overflow menu when toolbar doesn't have room for all items on it. If TRUE, items that there are not room are available through an overflow menu.
+  Sets whether to show an overflow menu when toolbar doesn't have room for all items on it. If TRUE, items that there are
+  not room are available through an overflow menu.
   
   toolbar :    a GtkToolbar
   show_arrow : Whether to show an overflow menu

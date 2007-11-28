@@ -8,10 +8,14 @@
   * [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]
   * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
 
-  A GtkLinkButton is a GtkButton with a hyperlink, similar to the one used by web browsers, which triggers an action when clicked. It is useful to show quick links to resources.
-  A link button is created by calling either gtk_link_button_new() or gtk_link_button_new_with_label(). If using the former, the URI you pass to the constructor is used as a label for the widget.
-  The URI bound to a GtkLinkButton can be set specifically using gtk_link_button_set_uri(), and retrieved using gtk_link_button_get_uri().
-  GtkLinkButton offers a global hook, which is called when the used clicks on it: see gtk_link_button_set_uri_hook().
+  A GtkLinkButton is a GtkButton with a hyperlink, similar to the one used by web browsers, which
+  triggers an action when clicked. It is useful to show quick links to resources.
+  A link button is created by calling either gtk_link_button_new() or gtk_link_button_new_with_label
+  (). If using the former, the URI you pass to the constructor is used as a label for the widget.
+  The URI bound to a GtkLinkButton can be set specifically using gtk_link_button_set_uri(), and
+  retrieved using gtk_link_button_get_uri().
+  GtkLinkButton offers a global hook, which is called when the used clicks on it: see
+  gtk_link_button_set_uri_hook().
   GtkLinkButton was added in GTK+ 2.10.
   
 
@@ -49,7 +53,8 @@
 ==== SetUriHook ====
 ''SetUriHook(func : [[..:..:Std:Function#T|Std.Function.T]], data : [[..:..:Std:Address#T|Std.Address.T]], destroy : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Function#T|Std.Function.T]]''
 
-  Sets func as the function that should be invoked every time a user clicks a GtkLinkButton. This function is called before every callback registered for the "clicked" signal.
+  Sets func as the function that should be invoked every time a user clicks a GtkLinkButton. This function is called
+  before every callback registered for the "clicked" signal.
   
   func :    a function called each time a GtkLinkButton is clicked, or NULL
   data :    user data to be passed to func, or NULL

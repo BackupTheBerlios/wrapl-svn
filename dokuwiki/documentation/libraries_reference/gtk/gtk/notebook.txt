@@ -6,10 +6,18 @@
   * [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]
   * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
 
-  The GtkNotebook widget is a GtkContainer whose children are pages that can be switched between using tab labels along one edge.
-  There are many configuration options for GtkNotebook. Among other things, you can choose on which edge the tabs appear (see gtk_notebook_set_tab_pos()), whether, if there are too many tabs to fit the noteobook should be made bigger or scrolling arrows added (see gtk_notebook_set_scrollable), and whether there will be a popup menu allowing the users to switch pages. (see gtk_notebook_enable_popup(), gtk_noteobook_disable_popup())
+  The GtkNotebook widget is a GtkContainer whose children are pages that can be switched between using
+  tab labels along one edge.
+  There are many configuration options for GtkNotebook. Among other things, you can choose on which
+  edge the tabs appear (see gtk_notebook_set_tab_pos()), whether, if there are too many tabs to fit
+  the noteobook should be made bigger or scrolling arrows added (see gtk_notebook_set_scrollable), and
+  whether there will be a popup menu allowing the users to switch pages. (see
+  gtk_notebook_enable_popup(), gtk_noteobook_disable_popup())
   === GtkNotebook as GtkBuildable ===
-  The GtkNoteboopk implementation of the GtkBuildable interface supports placing children into tabs by specifying "tab" as the "type" attribute of a <child> element. Note that the content of the tab must be created before the tab can be filled. A tab child can be specified without specifying a <child> type attribute.
+  The GtkNoteboopk implementation of the GtkBuildable interface supports placing children into tabs by
+  specifying "tab" as the "type" attribute of a <child> element. Note that the content of the tab must
+  be created before the tab can be filled. A tab child can be specified without specifying a <child>
+  type attribute.
   Example 37.&#160;A UI definition fragment with GtkNotebook
   <object class="GtkNotebook">
     <child>
@@ -75,7 +83,9 @@
   notebook :   a GtkNotebook
   child :      the GtkWidget to use as the contents of the page.
   tab_label :  the GtkWidget to be used as the label for the page, or NULL to use the default label, 'page N'.
-  menu_label : the widget to use as a label for the page-switch menu, if that is enabled. If NULL, and tab_label is a GtkLabel or NULL, then the menu label will be a newly created label with the same text as tab_label; If tab_label is not a GtkLabel, menu_label must be specified if the page-switch menu is to be used.
+               the widget to use as a label for the page-switch menu, if that is enabled. If NULL, and tab_label is a
+  menu_label : GtkLabel or NULL, then the menu label will be a newly created label with the same text as tab_label; If
+               tab_label is not a GtkLabel, menu_label must be specified if the page-switch menu is to be used.
   Returns :    the index (starting from 0) of the appended page in the notebook, or -1 if function fails
   
   Prepends a page to notebook, specifying the widget to use as the label in the popup menu.
@@ -83,7 +93,9 @@
   notebook :   a GtkNotebook
   child :      the GtkWidget to use as the contents of the page.
   tab_label :  the GtkWidget to be used as the label for the page, or NULL to use the default label, 'page N'.
-  menu_label : the widget to use as a label for the page-switch menu, if that is enabled. If NULL, and tab_label is a GtkLabel or NULL, then the menu label will be a newly created label with the same text as tab_label; If tab_label is not a GtkLabel, menu_label must be specified if the page-switch menu is to be used.
+               the widget to use as a label for the page-switch menu, if that is enabled. If NULL, and tab_label is a
+  menu_label : GtkLabel or NULL, then the menu label will be a newly created label with the same text as tab_label; If
+               tab_label is not a GtkLabel, menu_label must be specified if the page-switch menu is to be used.
   Returns :    the index (starting from 0) of the prepended page in the notebook, or -1 if function fails
   
   Insert a page into notebook at the given position, specifying the widget to use as the label in the popup menu.
@@ -91,7 +103,9 @@
   notebook :   a GtkNotebook
   child :      the GtkWidget to use as the contents of the page.
   tab_label :  the GtkWidget to be used as the label for the page, or NULL to use the default label, 'page N'.
-  menu_label : the widget to use as a label for the page-switch menu, if that is enabled. If NULL, and tab_label is a GtkLabel or NULL, then the menu label will be a newly created label with the same text as tab_label; If tab_label is not a GtkLabel, menu_label must be specified if the page-switch menu is to be used.
+               the widget to use as a label for the page-switch menu, if that is enabled. If NULL, and tab_label is a
+  menu_label : GtkLabel or NULL, then the menu label will be a newly created label with the same text as tab_label; If
+               tab_label is not a GtkLabel, menu_label must be specified if the page-switch menu is to be used.
   position :   the index (starting at 0) at which to insert the page, or -1 to append the page after all other pages.
   Returns :    the index (starting from 0) of the inserted page in the notebook
   
@@ -137,7 +151,8 @@
 ==== :ShowBorder ====
 '':ShowBorder(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-  Sets whether a bevel will be drawn around the notebook pages. This only has a visual effect when the tabs are not shown. See gtk_notebook_set_show_tabs().
+  Sets whether a bevel will be drawn around the notebook pages. This only has a visual effect when the tabs are not shown.
+  See gtk_notebook_set_show_tabs().
   
   notebook :    a GtkNotebook
   show_border : TRUE if a bevel should be drawn around the notebook.
@@ -239,7 +254,9 @@
   notebook :   a GtkNotebook
   child :      the GtkWidget to use as the contents of the page.
   tab_label :  the GtkWidget to be used as the label for the page, or NULL to use the default label, 'page N'.
-  menu_label : the widget to use as a label for the page-switch menu, if that is enabled. If NULL, and tab_label is a GtkLabel or NULL, then the menu label will be a newly created label with the same text as tab_label; If tab_label is not a GtkLabel, menu_label must be specified if the page-switch menu is to be used.
+               the widget to use as a label for the page-switch menu, if that is enabled. If NULL, and tab_label is a
+  menu_label : GtkLabel or NULL, then the menu label will be a newly created label with the same text as tab_label; If
+               tab_label is not a GtkLabel, menu_label must be specified if the page-switch menu is to be used.
   Returns :    the index (starting from 0) of the appended page in the notebook, or -1 if function fails
   
 
@@ -249,7 +266,8 @@
   Returns the page number of the current page.
   
   notebook : a GtkNotebook
-  Returns :  the index (starting from 0) of the current page in the notebook. If the notebook has no pages, then -1 will be returned.
+  Returns :  the index (starting from 0) of the current page in the notebook. If the notebook has no pages, then -1 will
+             be returned.
   
 
 ==== :GetGroup ====
@@ -265,7 +283,8 @@
 '':GetGroupId(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
   === Warning ===
-  gtk_notebook_get_group_id has been deprecated since version 2.12 and should not be used in newly-written code. use gtk_notebook_get_group() instead.
+  gtk_notebook_get_group_id has been deprecated since version 2.12 and should not be used in newly-written code. use
+  gtk_notebook_get_group() instead.
 
 ==== :GetMenuLabel ====
 '':GetMenuLabel(self @ [[#T|T]], child @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
@@ -274,7 +293,8 @@
   
   notebook : a GtkNotebook
   child :    a widget contained in a page of notebook
-  Returns :  the menu label, or NULL if the notebook page does not have a menu label other than the default (the tab label).
+  Returns :  the menu label, or NULL if the notebook page does not have a menu label other than the default (the tab
+             label).
   
 
 ==== :GetMenuLabelText ====
@@ -284,7 +304,9 @@
   
   notebook : a GtkNotebook
   child :    the child widget of a page of the notebook.
-  Returns :  value: the text of the tab label, or NULL if the widget does not have a menu label other than the default menu label, or the menu label widget is not a GtkLabel. The string is owned by the widget and must not be freed.
+             value: the text of the tab label, or NULL if the widget does not have a menu label other than the default
+  Returns :  menu label, or the menu label widget is not a GtkLabel. The string is owned by the widget and must not be
+             freed.
   
 
 ==== :GetNPages ====
@@ -346,7 +368,8 @@
 ==== :GetTabLabel ====
 '':GetTabLabel(self @ [[#T|T]], child @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
-  Returns the tab label widget for the page child. NULL is returned if child is not in notebook or if no tab label has specifically been set for child.
+  Returns the tab label widget for the page child. NULL is returned if child is not in notebook or if no tab label has
+  specifically been set for child.
   
   notebook : a GtkNotebook
   child :    the page
@@ -360,7 +383,8 @@
   
   notebook : a GtkNotebook
   child :    a widget contained in a page of notebook
-  Returns :  value: the text of the tab label, or NULL if the tab label widget is not a GtkLabel. The string is owned by the widget and must not be freed.
+  Returns :  value: the text of the tab label, or NULL if the tab label widget is not a GtkLabel. The string is owned by
+             the widget and must not be freed.
   
 
 ==== :GetTabPos ====
@@ -402,7 +426,9 @@
   notebook :   a GtkNotebook
   child :      the GtkWidget to use as the contents of the page.
   tab_label :  the GtkWidget to be used as the label for the page, or NULL to use the default label, 'page N'.
-  menu_label : the widget to use as a label for the page-switch menu, if that is enabled. If NULL, and tab_label is a GtkLabel or NULL, then the menu label will be a newly created label with the same text as tab_label; If tab_label is not a GtkLabel, menu_label must be specified if the page-switch menu is to be used.
+               the widget to use as a label for the page-switch menu, if that is enabled. If NULL, and tab_label is a
+  menu_label : GtkLabel or NULL, then the menu label will be a newly created label with the same text as tab_label; If
+               tab_label is not a GtkLabel, menu_label must be specified if the page-switch menu is to be used.
   position :   the index (starting at 0) at which to insert the page, or -1 to append the page after all other pages.
   Returns :    the index (starting from 0) of the inserted page in the notebook
   
@@ -426,7 +452,8 @@
 ==== :PopupEnable ====
 '':PopupEnable(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Enables the popup menu: if the user clicks with the right mouse button on the bookmarks, a menu with all the pages will be popped up.
+  Enables the popup menu: if the user clicks with the right mouse button on the bookmarks, a menu with all the pages will
+  be popped up.
   
   notebook : a GtkNotebook
   
@@ -450,7 +477,9 @@
   notebook :   a GtkNotebook
   child :      the GtkWidget to use as the contents of the page.
   tab_label :  the GtkWidget to be used as the label for the page, or NULL to use the default label, 'page N'.
-  menu_label : the widget to use as a label for the page-switch menu, if that is enabled. If NULL, and tab_label is a GtkLabel or NULL, then the menu label will be a newly created label with the same text as tab_label; If tab_label is not a GtkLabel, menu_label must be specified if the page-switch menu is to be used.
+               the widget to use as a label for the page-switch menu, if that is enabled. If NULL, and tab_label is a
+  menu_label : GtkLabel or NULL, then the menu label will be a newly created label with the same text as tab_label; If
+               tab_label is not a GtkLabel, menu_label must be specified if the page-switch menu is to be used.
   Returns :    the index (starting from 0) of the prepended page in the notebook, or -1 if function fails
   
 
@@ -486,7 +515,8 @@
 ==== :ReorderChild ====
 '':ReorderChild(self @ [[#T|T]], child @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], position @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Reorders the page containing child, so that it appears in position position. If position is greater than or equal to the number of children in the list or negative, child will be moved to the end of the list.
+  Reorders the page containing child, so that it appears in position position. If position is greater than or equal to the
+  number of children in the list or negative, child will be moved to the end of the list.
   
   notebook : a GtkNotebook
   child :    the child to move
@@ -497,16 +527,20 @@
 '':SetCurrentPage(self @ [[#T|T]], page_num @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
   Switches to the page number page_num.
-  Note that due to historical reasons, GtkNotebook refuses to switch to a page unless the child widget is visible. Therefore, it is recommended to show child widgets before adding them to a notebook.
+  Note that due to historical reasons, GtkNotebook refuses to switch to a page unless the child widget is visible.
+  Therefore, it is recommended to show child widgets before adding them to a notebook.
   
   notebook : a GtkNotebook
-  page_num : index of the page to switch to, starting from 0. If negative, the last page will be used. If greater than the number of pages in the notebook, nothing will be done.
+  page_num : index of the page to switch to, starting from 0. If negative, the last page will be used. If greater than the
+             number of pages in the notebook, nothing will be done.
   
 
 ==== :SetGroup ====
 '':SetGroup(self @ [[#T|T]], group @ [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Sets a group identificator pointer for notebook, notebooks sharing the same group identificator pointer will be able to exchange tabs via drag and drop. A notebook with a NULL group identificator will not be able to exchange tabs with any other notebook.
+  Sets a group identificator pointer for notebook, notebooks sharing the same group identificator pointer will be able to
+  exchange tabs via drag and drop. A notebook with a NULL group identificator will not be able to exchange tabs with any
+  other notebook.
   
   notebook : a GtkNotebook
   group :    a pointer to identify the notebook group, or NULL to unset it
@@ -516,7 +550,8 @@
 '':SetGroupId(self @ [[#T|T]], group_id @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
   === Warning ===
-  gtk_notebook_set_group_id has been deprecated since version 2.12 and should not be used in newly-written code. use gtk_notebook_set_group() instead.
+  gtk_notebook_set_group_id has been deprecated since version 2.12 and should not be used in newly-written code. use
+  gtk_notebook_set_group() instead.
 
 ==== :SetHomogeneousTabs ====
 '':SetHomogeneousTabs(self @ [[#T|T]], homogeneous @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -556,7 +591,8 @@
 ==== :SetShowBorder ====
 '':SetShowBorder(self @ [[#T|T]], show_border @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Sets whether a bevel will be drawn around the notebook pages. This only has a visual effect when the tabs are not shown. See gtk_notebook_set_show_tabs().
+  Sets whether a bevel will be drawn around the notebook pages. This only has a visual effect when the tabs are not shown.
+  See gtk_notebook_set_show_tabs().
   
   notebook :    a GtkNotebook
   show_border : TRUE if a bevel should be drawn around the notebook.
@@ -581,8 +617,11 @@
 '':SetTabDetachable(self @ [[#T|T]], child @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], detachable @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
   Sets whether the tab can be detached from notebook to another notebook or widget.
-  Note that 2 notebooks must share a common group identificator (see gtk_notebook_set_group_id()) to allow automatic tabs interchange between them.
-  If you want a widget to interact with a notebook through DnD (i.e.: accept dragged tabs from it) it must be set as a drop destination and accept the target "GTK_NOTEBOOK_TAB". The notebook will fill the selection with a GtkWidget** pointing to the child widget that corresponds to the dropped tab.
+  Note that 2 notebooks must share a common group identificator (see gtk_notebook_set_group_id()) to allow automatic tabs
+  interchange between them.
+  If you want a widget to interact with a notebook through DnD (i.e.: accept dragged tabs from it) it must be set as a
+  drop destination and accept the target "GTK_NOTEBOOK_TAB". The notebook will fill the selection with a GtkWidget**
+  pointing to the child widget that corresponds to the dropped tab.
    static void
    on_drop_zone_drag_data_received (GtkWidget        *widget,
                                     GdkDragContext   *context,
@@ -622,7 +661,8 @@
 ==== :SetTabLabelPacking ====
 '':SetTabLabelPacking(self @ [[#T|T]], child @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], expand @ [[..:..:Std:Symbol#T|Std.Symbol.T]], fill @ [[..:..:Std:Symbol#T|Std.Symbol.T]], pack_type @ [[..:..:Gtk:Gtk:PackType#T|Gtk.Gtk.PackType.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Sets the packing parameters for the tab label of the page containing child. See gtk_box_pack_start() for the exact meaning of the parameters.
+  Sets the packing parameters for the tab label of the page containing child. See gtk_box_pack_start() for the exact
+  meaning of the parameters.
   
   notebook :  a GtkNotebook
   child :     the child widget

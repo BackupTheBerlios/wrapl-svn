@@ -3,9 +3,11 @@
 === inherits from ===
   * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
 
-  GooCanvasItemModelSimple is used as a base class for the standard canvas item models. It can also be used as the base class for new custom canvas item models.
+  GooCanvasItemModelSimple is used as a base class for the standard canvas item models. It can also be
+  used as the base class for new custom canvas item models.
   It provides default implementations for many of the GooCanvasItemModel methods.
-  Subclasses of GooCanvasItemModelSimple only need to implement the create_item() method of the GooCanvasItemModel interface, to create the default canvas item to view the item model.
+  Subclasses of GooCanvasItemModelSimple only need to implement the create_item() method of the
+  GooCanvasItemModel interface, to create the default canvas item to view the item model.
   
 
 ==== :Description ====

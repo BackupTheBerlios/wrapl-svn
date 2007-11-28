@@ -5,10 +5,17 @@
   * [[..:..:Gtk:GooCanvas:ItemSimple#T|Gtk.GooCanvas.ItemSimple.T]]
   * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
 
-  GooCanvasTable is a table container used to lay out other canvas items. It is used in a similar way to how the GtkTable widget is used to lay out GTK+ widgets.
-  Items are added to the table using the normal methods, then goo_canvas_item_set_child_properties() is used to specify how each child item is to be positioned within the table (i.e. which row and column it is in, how much padding it should have and whether it should expand or shrink).
-  GooCanvasTable is a subclass of GooCanvasItemSimple and so inherits all of the style properties such as "stroke-color", "fill-color" and "line-width". Setting a style property on a GooCanvasTable will affect all children of the GooCanvasTable (unless the children override the property setting).
-  GooCanvasTable implements the GooCanvasItem interface, so you can use the GooCanvasItem functions such as goo_canvas_item_raise() and goo_canvas_item_rotate(), and the properties such as "visibility" and "pointer-events".
+  GooCanvasTable is a table container used to lay out other canvas items. It is used in a similar way
+  to how the GtkTable widget is used to lay out GTK+ widgets.
+  Items are added to the table using the normal methods, then goo_canvas_item_set_child_properties()
+  is used to specify how each child item is to be positioned within the table (i.e. which row and
+  column it is in, how much padding it should have and whether it should expand or shrink).
+  GooCanvasTable is a subclass of GooCanvasItemSimple and so inherits all of the style properties such
+  as "stroke-color", "fill-color" and "line-width". Setting a style property on a GooCanvasTable will
+  affect all children of the GooCanvasTable (unless the children override the property setting).
+  GooCanvasTable implements the GooCanvasItem interface, so you can use the GooCanvasItem functions
+  such as goo_canvas_item_raise() and goo_canvas_item_rotate(), and the properties such as
+  "visibility" and "pointer-events".
   To create a GooCanvasTable use goo_canvas_table_new().
   To get or set the properties of an existing GooCanvasTable, use g_object_get() and g_object_set().
   
@@ -22,7 +29,8 @@
 
   Creates a new table item.
   
-  parent :  the parent item, or NULL. If a parent is specified, it will assume ownership of the item, and the item will automatically be freed when it is removed from the parent. Otherwise call g_object_unref() to free it.
+  parent :  the parent item, or NULL. If a parent is specified, it will assume ownership of the item, and the item will
+            automatically be freed when it is removed from the parent. Otherwise call g_object_unref() to free it.
   ... :     optional pairs of property names and values, and a terminating NULL.
   Returns : a new table item.
   
