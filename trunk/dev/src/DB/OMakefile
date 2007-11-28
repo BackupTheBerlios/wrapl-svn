@@ -5,11 +5,8 @@ BASENAME = $(LIB_DIR)DB$(DIRSEP)
 CFLAGS += -std=gnu99
 LDFLAGS += Std.rlib Riva.rlib 
 
-RivaProgram($(BASENAME)Sqlite, Sqlite3 SqliteRiva)
-RivaProgram($(BASENAME)Mysql, Mysql)
-
 DB:\
-	$(BASENAME)Sqlite.riva\
-	$(BASENAME)Mysql.riva
+	$(RivaModule DB/Sqlite, Sqlite3 SqliteRiva)\
+	$(RivaModule DB/Mysql, Mysql)
 
 .DEFAULT:
