@@ -1,0 +1,46 @@
+====== Mysql ======
+==== T ====
+
+
+==== StatementT ====
+
+
+==== ResultT ====
+
+
+==== :free ====
+'':free( @ [[#ResultT|ResultT]])''
+
+
+==== :close ====
+'':close( @ [[#T|T]])''
+
+
+==== :commit ====
+'':commit( @ [[#T|T]])''
+
+
+==== :query ====
+'':query( @ [[#T|T]], @ [[..:Std:String#T|Std.String.T]])''
+
+
+==== :use_result ====
+'':use_result( @ [[#T|T]])''
+
+
+==== :store_result ====
+'':store_result( @ [[#T|T]])''
+
+
+==== :fields ====
+'':fields( @ [[#ResultT|ResultT]])''
+
+
+==== :row ====
+'':row( @ [[#ResultT|ResultT]])''
+
+
+==== Open ====
+''Open()''
+
+

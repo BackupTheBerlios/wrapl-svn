@@ -1,0 +1,103 @@
+====== Sqlite ======
+==== T ====
+
+
+==== StatementT ====
+
+
+==== :errmsg ====
+'':errmsg( @ [[#T|T]])''
+
+
+==== :close ====
+'':close( @ [[#T|T]])''
+
+
+==== :last_insert_rowid ====
+'':last_insert_rowid( @ [[#T|T]])''
+
+
+==== :interrupt ====
+'':interrupt( @ [[#T|T]])''
+
+
+==== :execv ====
+'':execv( @ [[#T|T]], @ [[..:Std:String#T|Std.String.T]], @ [[..:Std:Function#T|Std.Function.T]])''
+
+
+==== :prepare ====
+'':prepare( @ [[#T|T]], @ [[..:Std:String#T|Std.String.T]])''
+
+
+==== :finalize ====
+'':finalize( @ [[#StatementT|StatementT]])''
+
+
+==== :reset ====
+'':reset( @ [[#StatementT|StatementT]])''
+
+
+==== :bind ====
+'':bind( @ [[#StatementT|StatementT]], @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]], @ [[..:Std:Address#T|Std.Address.T]], @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :bind ====
+'':bind( @ [[#StatementT|StatementT]], @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]], @ [[..:Std:Real#T|Std.Real.T]])''
+
+
+==== :bind ====
+'':bind( @ [[#StatementT|StatementT]], @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]], @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :bind ====
+'':bind( @ [[#StatementT|StatementT]], @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]], = [[..:Std:Object#Nil|Std.Object.Nil]])''
+
+
+==== :bind ====
+'':bind( @ [[#StatementT|StatementT]], @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]], @ [[..:Std:String#T|Std.String.T]])''
+
+
+==== :step ====
+'':step( @ [[#StatementT|StatementT]])''
+
+
+==== :column_blob ====
+'':column_blob( @ [[#StatementT|StatementT]], @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :column_bytes ====
+'':column_bytes( @ [[#StatementT|StatementT]], @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :column_count ====
+'':column_count( @ [[#StatementT|StatementT]])''
+
+
+==== :column_double ====
+'':column_double( @ [[#StatementT|StatementT]], @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :column_int ====
+'':column_int( @ [[#StatementT|StatementT]], @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :column_name ====
+'':column_name( @ [[#StatementT|StatementT]], @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :column_text ====
+'':column_text( @ [[#StatementT|StatementT]], @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :column_type ====
+'':column_type( @ [[#StatementT|StatementT]], @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :exec ====
+'':exec( @ [[#T|T]], @ [[..:Std:String#T|Std.String.T]], @ [[..:Std:Function#T|Std.Function.T]])''
+
+
+==== Open ====
+''Open()''
+
+
