@@ -2,13 +2,17 @@ MOD GetAPI;
 
 IMP IO.Terminal USE Out;
 IMP IO USE Process;
+IMP Sys.FileSys;
 IMP Std.String USE Upper, Lower;
 
 DEF Get!(ns, name, function) (
+    VAR dir <- "/usr/share/gtk-doc/html/" + ns:map(Upper, Lower);
+    FileSys.Exists(dir) // dir <- "/usr/share/gtk-doc/html/lib" + ns:map(Upper, Lower);
+    FileSys.Exists(dir) // FAIL;
     VAR sgrep <- Process.Open("sgrep", [
         "sgrep",
         ${(("<h3>" .. "</pre>") containing "</a>$function; ()" __ "</div>")},
-        ${/usr/share/gtk-doc/html/$ns:map(Upper, Lower);/$name;.html}
+        dir + "/" + name + ".html"
     ]);
     VAR html2text <- Process.Open("html2text", ["html2text", "-rcfile", "../../src/Gtk/html2textrc", "-ascii", "-nobs", "-width", "120", "-"]);
     REP (WHILE html2text:writes(sgrep:read, "\n"));
@@ -22,10 +26,13 @@ DEF Get!(ns, name, function) (
 );
 
 DEF GetDesc!(ns, name) (
+    VAR dir <- "/usr/share/gtk-doc/html/" + ns:map(Upper, Lower);
+    FileSys.Exists(dir) // dir <- "/usr/share/gtk-doc/html/lib" + ns:map(Upper, Lower);
+    FileSys.Exists(dir) // FAIL;
     VAR sgrep <- Process.Open("sgrep", [
         "sgrep",
         ${"<h2>Description</h2>" __ "<h2>Details</h2>"},
-        ${/usr/share/gtk-doc/html/$ns:map(Upper, Lower);/$name;.html}
+        dir + "/" + name + ".html"
     ]);
     VAR html2text <- Process.Open("html2text", ["html2text", "-rcfile", "../../src/Gtk/html2textrc", "-ascii", "-nobs", "-width", "100", "-"]);
     REP (WHILE html2text:writes(sgrep:read, "\n"));
