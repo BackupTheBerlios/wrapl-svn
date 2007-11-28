@@ -166,7 +166,7 @@ TO :write(item@Method) (
     outfile:writes("\'\':", item:symbol, "(");
     VAR params <- item:params;
     VAR signature <- item:signature;
-    outfile:write("___" ~= params:pop:name);
+    outfile:write(params:pop:name);
     WHEN signature:pop IS "VAL" DO (
         outfile:write(" = ");
         WriteID(signature:pop);
@@ -178,7 +178,7 @@ TO :write(item@Method) (
     );
     REP (WHILE signature:length > 0;
         outfile:write(", ");
-        outfile:writes("___" ~= params:pop:name, " ");
+        outfile:writes(params:pop:name, " ");
         WHEN signature:pop IS "VAL" DO (
             outfile:write("= ");
             WriteID(signature:pop);
@@ -207,14 +207,14 @@ TO :write(item@Function) (
     VAR params <- item:params;
     params:length > 0 => (
         VAR param <- params:pop;
-        outfile:writes(param:name = "___" => "..." // param:name);
+        outfile:writes(param:name);
         param:type ~== NIL => (
             outfile:writes(" : ");
             WriteID(param:type);
         );
         outfile:writes(" := ", NIL ~== param:default);
         REP (WHILE param <- params:pop;
-            outfile:writes(", ", param:name = "___" => "..." // param:name);
+            outfile:writes(", ", param:name);
             param:type ~== NIL => (
                 outfile:writes(" : ");
                 WriteID(param:type);

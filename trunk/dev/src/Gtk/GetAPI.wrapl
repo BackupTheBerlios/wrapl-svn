@@ -10,7 +10,7 @@ DEF Get!(ns, name, function) (
         ${(("<h3>" .. "</pre>") containing "$function; ()" __ "</div>")},
         ${/usr/share/gtk-doc/html/$ns:map(Upper, Lower);/$name;.html}
     ]);
-    VAR html2text <- Process.Open("html2text", ["html2text", "-ascii", "-nobs", "-"]);
+    VAR html2text <- Process.Open("html2text", ["html2text", "-rcfile", "../../src/Gtk/html2textrc", "-ascii", "-nobs", "-width", "1000", "-"]);
     REP (WHILE html2text:writes(sgrep:read, "\n"));
     html2text:shutdown(:write);
     sgrep:close;
@@ -27,7 +27,7 @@ DEF GetDesc!(ns, name) (
         ${"<h2>Description</h2>" __ "<h2>Details</h2>"},
         ${/usr/share/gtk-doc/html/$ns:map(Upper, Lower);/$name;.html}
     ]);
-    VAR html2text <- Process.Open("html2text", ["html2text", "-ascii", "-nobs", "-"]);
+    VAR html2text <- Process.Open("html2text", ["html2text", "-rcfile", "../../src/Gtk/html2textrc", "-ascii", "-nobs", "-width", "1000", "-"]);
     REP (WHILE html2text:writes(sgrep:read, "\n"));
     html2text:shutdown(:write);
     sgrep:close;
