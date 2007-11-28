@@ -195,7 +195,7 @@ TO :return(=conststringtype, result) [
 	"if (" + result + " == 0) {",
         "\tResult->Val = Std$String$Nil;",
         "} else {",
-	"\rResult->Val = Std$String$copy(" + result + ");",
+	"\tResult->Val = Std$String$copy(" + result + ");",
         "}"
 ];
 TO :toriva(=conststringtype, arg, name) [
