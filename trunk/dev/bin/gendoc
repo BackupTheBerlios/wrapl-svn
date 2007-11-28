@@ -180,13 +180,13 @@ TO :write(item@Method) (
         outfile:write(", ");
         outfile:writes(params:pop:name, " ");
         WHEN signature:pop IS "VAL" DO (
-            outfile:write("=");
+            outfile:write("= ");
             WriteID(signature:pop);
         ) IS "TYP" DO (
-            outfile:write("@");
+            outfile:write("@ ");
             WriteID(signature:pop);
         ) IS "ANY", "SKP" DO (
-            outfile:write("@ANY");
+            outfile:write("@ ANY");
         );
     );
     item:return ~== NIL => (
