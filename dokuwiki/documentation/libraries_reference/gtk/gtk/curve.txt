@@ -68,12 +68,6 @@
 ==== :CurveType ====
 '':CurveType(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:CurveType#T|Gtk.Gtk.CurveType.T]]''
 
-  Sets the type of the curve. The curve will remain unchanged except when changing from a free curve to a linear or spline
-  curve, in which case the curve will be changed as little as possible.
-  
-  curve : a GtkCurve.
-  type :  the type of the curve.
-  
 
 ==== :Height ====
 '':Height(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''

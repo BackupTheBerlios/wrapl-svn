@@ -51,20 +51,10 @@
 ==== :Child1 ====
 '':Child1(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
-  Obtains the first child of the paned widget.
-  
-  paned :   a GtkPaned widget
-  Returns : first child, or NULL if it is not set.
-  
 
 ==== :Child2 ====
 '':Child2(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
-  Obtains the second child of the paned widget.
-  
-  paned :   a GtkPaned widget
-  Returns : second child, or NULL if it is not set.
-  
 
 ==== :Handle ====
 '':Handle(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]]''

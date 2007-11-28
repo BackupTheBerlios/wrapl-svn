@@ -52,30 +52,10 @@
 ==== :Spacing ====
 '':Spacing(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-  Gets the value set by gtk_box_set_spacing().
-  
-  box :     a GtkBox
-  Returns : spacing between children
-  
-  Sets the "spacing" property of box, which is the number of pixels to place between children of box.
-  
-  box :     a GtkBox
-  spacing : the number of pixels to put between children
-  
 
 ==== :Homogeneous ====
 '':Homogeneous(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-  Returns whether the box is homogeneous (all children are the same size). See gtk_box_set_homogeneous().
-  
-  box :     a GtkBox
-  Returns : TRUE if the box is homogeneous.
-  
-  Sets the "homogeneous" property of box, controlling whether or not all children of box are given equal space in the box.
-  
-  box :         a GtkBox
-  homogeneous : a boolean value, TRUE to create equal allotments, FALSE for variable allotments
-  
 
 ==== :GetHomogeneous ====
 '':GetHomogeneous(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''

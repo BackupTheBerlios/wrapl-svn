@@ -36,15 +36,6 @@
 ==== :Menu ====
 '':Menu(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
-  === Warning ===
-  gtk_option_menu_get_menu has been deprecated since version 2.4 and should not be used in newly-written code. Use
-  GtkComboBox instead.
-  === Warning ===
-  gtk_option_menu_set_menu has been deprecated since version 2.4 and should not be used in newly-written code. Use
-  GtkComboBox instead.
-  === Warning ===
-  gtk_option_menu_remove_menu has been deprecated since version 2.4 and should not be used in newly-written code. Use
-  GtkComboBox instead.
 
 ==== :MenuItem ====
 '':MenuItem(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''

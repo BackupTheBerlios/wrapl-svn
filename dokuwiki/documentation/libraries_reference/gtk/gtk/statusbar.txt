@@ -79,16 +79,6 @@
 ==== :HasResizeGrip ====
 '':HasResizeGrip(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-  Sets whether the statusbar has a resize grip. TRUE by default.
-  
-  statusbar : a GtkStatusBar
-  setting :   TRUE to have a resize grip
-  
-  Returns whether the statusbar has a resize grip.
-  
-  statusbar : a GtkStatusBar
-  Returns :   TRUE if the statusbar has a resize grip.
-  
 
 ==== :GetContextId ====
 '':GetContextId(self @ [[#T|T]], context_description @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''

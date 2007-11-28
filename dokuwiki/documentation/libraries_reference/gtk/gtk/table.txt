@@ -66,39 +66,10 @@
 ==== :RowSpacing ====
 '':RowSpacing(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-  Changes the space between a given table row and the subsequent row.
-  
-  table :   a GtkTable containing the row whose properties you wish to change.
-  row :     row number whose spacing will be changed.
-  spacing : number of pixels that the spacing should take up.
-  
-  Gets the default row spacing for the table. This is the spacing that will be used for newly added rows. (See
-  gtk_table_set_row_spacings())
-  
-  table :   a GtkTable
-  Returns : value: the default row spacing
-  
-  Gets the amount of space between row row, and row row + 1. See gtk_table_set_row_spacing().
-  
-  table :   a GtkTable
-  row :     a row in the table, 0 indicates the first row
-  Returns : the row spacing
-  
 
 ==== :Homogeneous ====
 '':Homogeneous(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-  Changes the homogenous property of table cells, ie. whether all cells are an equal size or not.
-  
-  table :       The GtkTable you wish to set the homogeneous properties of.
-  homogeneous : Set to TRUE to ensure all table cells are the same size. Set to FALSE if this is not your desired
-                behaviour.
-  
-  Returns whether the table cells are all constrained to the same width and height. (See gtk_table_set_homogenous())
-  
-  table :   a GtkTable
-  Returns : TRUE if the cells are all constrained to the same size
-  
 
 ==== :Attach ====
 '':Attach(self @ [[#T|T]], child @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], left_attach @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], right_attach @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], top_attach @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], bottom_attach @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], xoptions @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], yoptions @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], xpadding @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], ypadding @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''

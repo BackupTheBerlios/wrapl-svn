@@ -35,17 +35,6 @@
 ==== :Image ====
 '':Image(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
-  Sets the image of image_menu_item to the given widget. Note that it depends on the show-menu-images setting whether the
-  image will be displayed or not.
-  
-  image_menu_item : a GtkImageMenuItem.
-  image :           a widget to set as the image for the menu item.
-  
-  Gets the widget that is currently set as the image of image_menu_item. See gtk_image_menu_item_set_image().
-  
-  image_menu_item : a GtkImageMenuItem.
-  Returns :         the widget set as image of image_menu_item.
-  
 
 ==== New ====
 ''New() : [[# T| T]]''

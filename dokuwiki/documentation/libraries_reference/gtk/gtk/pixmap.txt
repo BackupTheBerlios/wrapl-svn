@@ -43,8 +43,6 @@
 ==== :BuildInsensitive ====
 '':BuildInsensitive(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-  === Warning ===
-  gtk_pixmap_set_build_insensitive is deprecated and should not be used in newly-written code.
 
 ==== :Get ====
 '':Get(self @ [[#T|T]], val @ [[..:..:Std:Object#T|Std.Object.T]], mask @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''

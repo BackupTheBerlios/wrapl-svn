@@ -94,9 +94,6 @@
 ==== :List ====
 '':List(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
-  === Warning ===
-  gtk_combo_set_value_in_list has been deprecated since version 2.4 and should not be used in newly-written code. Use
-  GtkComboBox instead.
 
 ==== :EntryChangeId ====
 '':EntryChangeId(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
@@ -109,9 +106,6 @@
 ==== :ValueInList ====
 '':ValueInList(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-  === Warning ===
-  gtk_combo_set_value_in_list has been deprecated since version 2.4 and should not be used in newly-written code. Use
-  GtkComboBox instead.
 
 ==== :OkIfEmpty ====
 '':OkIfEmpty(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
@@ -120,23 +114,14 @@
 ==== :CaseSensitive ====
 '':CaseSensitive(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-  === Warning ===
-  gtk_combo_set_case_sensitive has been deprecated since version 2.4 and should not be used in newly-written code. Use
-  GtkComboBox instead.
 
 ==== :UseArrows ====
 '':UseArrows(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-  === Warning ===
-  gtk_combo_set_use_arrows has been deprecated since version 2.4 and should not be used in newly-written code. Use
-  GtkComboBox instead.
 
 ==== :UseArrowsAlways ====
 '':UseArrowsAlways(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-  === Warning ===
-  gtk_combo_set_use_arrows_always has been deprecated since version 2.4 and should not be used in newly-written code. Use
-  GtkComboBox instead.
 
 ==== :CurrentButton ====
 '':CurrentButton(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''

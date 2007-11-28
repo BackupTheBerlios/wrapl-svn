@@ -46,30 +46,10 @@
 ==== :Text ====
 '':Text(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
-  Sets the text in the widget to the given value, replacing the current contents.
-  
-  entry : a GtkEntry
-  text :  the new text
-  
-  === Warning ===
-  gtk_entry_append_text is deprecated and should not be used in newly-written code. gtk_entry_append_text() is deprecated
-  and should not be used in newly-written code. Use gtk_editable_insert_text() instead.
-  === Warning ===
-  gtk_entry_prepend_text is deprecated and should not be used in newly-written code. gtk_entry_prepend_text() is
-  deprecated and should not be used in newly-written code. Use gtk_editable_insert_text() instead.
-  Retrieves the contents of the entry widget. See also gtk_editable_get_chars().
-  
-  entry :   a GtkEntry
-  Returns : a pointer to the contents of the widget as a string. This string points to internally allocated storage in the
-            widget and must not be freed, modified or stored.
-  
 
 ==== :Editable ====
 '':Editable(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-  === Warning ===
-  gtk_entry_set_editable is deprecated and should not be used in newly-written code. Use gtk_editable_set_editable()
-  instead.
 
 ==== :Visible ====
 '':Visible(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
@@ -126,34 +106,10 @@
 ==== :HasFrame ====
 '':HasFrame(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-  Gets the value set by gtk_entry_set_has_frame().
-  
-  entry :   a GtkEntry
-  Returns : whether the entry has a beveled frame
-  
-  Sets whether the entry has a beveled frame around it.
-  
-  entry :   a GtkEntry
-  setting : new value
-  
 
 ==== :ActivatesDefault ====
 '':ActivatesDefault(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-  Retrieves the value set by gtk_entry_set_activates_default().
-  
-  entry :   a GtkEntry
-  Returns : TRUE if the entry will activate the default widget
-  
-  If setting is TRUE, pressing Enter in the entry will activate the default widget for the window containing the entry.
-  This usually means that the dialog box containing the entry will be closed, since the default widget is usually one of
-  the dialog buttons.
-  (For experts: if setting is TRUE, the entry calls gtk_window_activate_default() on the window containing the entry, in
-  the default handler for the "activate" signal.)
-  
-  entry :   a GtkEntry
-  setting : TRUE to activate window's default widget on Enter keypress
-  
 
 ==== :CursorVisible ====
 '':CursorVisible(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
@@ -246,36 +202,10 @@
 ==== :InvisibleChar ====
 '':InvisibleChar(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Sets the character to use in place of the actual text when gtk_entry_set_visibility() has been called to set text
-  visibility to FALSE. i.e. this is the character used in "password mode" to show the user how many characters have been
-  typed. The default invisible char is an asterisk ('*'). If you set the invisible char to 0, then the user will get no
-  feedback at all; there will be no text on the screen as they type.
-  
-  entry : a GtkEntry
-  ch :    a Unicode character
-  
-  Retrieves the character displayed in place of the real characters for entries with visibility set to false. See
-  gtk_entry_set_invisible_char().
-  
-  entry :   a GtkEntry
-  Returns : the current invisible char, or 0, if the entry does not show invisible text at all.
-  
 
 ==== :WidthChars ====
 '':WidthChars(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-  Gets the value set by gtk_entry_set_width_chars().
-  
-  entry :   a GtkEntry
-  Returns : number of chars to request space for, or negative if unset
-  
-  Changes the size request of the entry to be about the right size for n_chars characters. Note that it changes the size
-  request, the size can still be affected by how you pack the widget into containers. If n_chars is -1, the size reverts
-  to the default entry size.
-  
-  entry :   a GtkEntry
-  n_chars : width in chars
-  
 
 ==== :AppendText ====
 '':AppendText(self @ [[#T|T]], text @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''

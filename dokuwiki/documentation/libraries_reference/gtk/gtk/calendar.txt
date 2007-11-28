@@ -43,13 +43,6 @@
 ==== :Month ====
 '':Month(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-  Shifts the calendar to a different month.
-  
-  calendar : a GtkCalendar
-  month :    a month number between 0 and 11.
-  year :     the year the month is in.
-  Returns :  TRUE, always
-  
 
 ==== :Year ====
 '':Year(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
@@ -102,23 +95,6 @@
 ==== :Day ====
 '':Day(self @ [[#T|T]], @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-  Selects a day from the current month.
-  
-  calendar : a GtkCalendar.
-  day :      the day number between 1 and 31, or 0 to unselect the currently selected day.
-  
-  Places a visual marker on a particular day.
-  
-  calendar : a GtkCalendar
-  day :      the day number to mark between 1 and 31.
-  Returns :  TRUE, always
-  
-  Removes the visual marker from a particular day.
-  
-  calendar : a GtkCalendar.
-  day :      the day number to unmark between 1 and 31.
-  Returns :  TRUE, always
-  
 
 ==== :MarkedDate ====
 '':MarkedDate(self @ [[#T|T]], @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''

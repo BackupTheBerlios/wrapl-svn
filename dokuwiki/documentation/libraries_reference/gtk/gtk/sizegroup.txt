@@ -63,27 +63,10 @@
 ==== :Widgets ====
 '':Widgets(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Returns the list of widgets associated with size_group.
-  
-  size_group : a GtkSizeGrup
-  Returns :    a GSList of widgets. The list is owned by GTK+ and should not be modified.
-  
 
 ==== :Mode ====
 '':Mode(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-  Sets the GtkSizeGroupMode of the size group. The mode of the size group determines whether the widgets in the size group
-  should all have the same horizontal requisition (GTK_SIZE_GROUP_MODE_HORIZONTAL) all have the same vertical requisition
-  (GTK_SIZE_GROUP_MODE_VERTICAL), or should all have the same requisition in both directions (GTK_SIZE_GROUP_MODE_BOTH).
-  
-  size_group : a GtkSizeGroup
-  mode :       the mode to set for the size group.
-  
-  Gets the current mode of the size group. See gtk_size_group_set_mode().
-  
-  size_group : a GtkSizeGroup
-  Returns :    the current mode of the size group.
-  
 
 ==== :HaveWidth ====
 '':HaveWidth(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
@@ -96,16 +79,6 @@
 ==== :IgnoreHidden ====
 '':IgnoreHidden(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-  Sets whether unmapped widgets should be ignored when calculating the size.
-  
-  size_group :    a GtkSizeGroup
-  ignore_hidden : whether unmapped widgets should be ignored when calculating the size
-  
-  Returns if invisible widgets are ignored when calculating the size.
-  
-  size_group : a GtkSizeGroup
-  Returns :    TRUE if invisible widgets are ignored.
-  
 
 ==== :Requisition ====
 '':Requisition(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Requisition#T|Gtk.Gtk.Requisition.T]]''

@@ -54,20 +54,10 @@
 ==== :Hscrollbar ====
 '':Hscrollbar(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
-  Returns the horizontal scrollbar of scrolled_window.
-  
-  scrolled_window : a GtkScrolledWindow
-  Returns :         the horizontal scrollbar of the scrolled window, or NULL if it does not have one.
-  
 
 ==== :Vscrollbar ====
 '':Vscrollbar(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
-  Returns the vertical scrollbar of scrolled_window.
-  
-  scrolled_window : a GtkScrolledWindow
-  Returns :         the vertical scrollbar of the scrolled window, or NULL if it does not have one.
-  
 
 ==== :HscrollbarPolicy ====
 '':HscrollbarPolicy(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
@@ -96,16 +86,6 @@
 ==== :ShadowType ====
 '':ShadowType(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-  Changes the type of shadow drawn around the contents of scrolled_window.
-  
-  scrolled_window : a GtkScrolledWindow
-  type :            kind of shadow to draw around scrolled window contents
-  
-  Gets the shadow type of the scrolled window. See gtk_scrolled_window_set_shadow_type().
-  
-  scrolled_window : a GtkScrolledWindow
-  Returns :         the current shadow type
-  
 
 ==== :AddWithViewport ====
 '':AddWithViewport(self @ [[#T|T]], child @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''

@@ -31,21 +31,6 @@
 ==== :Screen ====
 '':Screen(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Screen#T|Gtk.Gdk.Screen.T]]''
 
-  Creates a new GtkInvisible object for a specified screen
-  
-  screen :  a GdkScreen which identifies on which the new GtkInvisible will be created.
-  Returns : a newly created GtkInvisible object
-  
-  Sets the GdkScreen where the GtkInvisible object will be displayed.
-  
-  invisible : a GtkInvisible.
-  screen :    a GdkScreen.
-  
-  Returns the GdkScreen object associated with invisible
-  
-  invisible : a GtkInvisible.
-  Returns :   the associated GdkScreen.
-  
 
 ==== :HasUserRefCount ====
 '':HasUserRefCount(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''

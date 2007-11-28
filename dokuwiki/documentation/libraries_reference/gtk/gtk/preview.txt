@@ -43,8 +43,6 @@
 ==== :Expand ====
 '':Expand(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-  === Warning ===
-  gtk_preview_set_expand is deprecated and should not be used in newly-written code.
 
 ==== :Type ====
 '':Type(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
@@ -53,8 +51,6 @@
 ==== :Dither ====
 '':Dither(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:RgbDither#T|Gtk.Gdk.RgbDither.T]]''
 
-  === Warning ===
-  gtk_preview_set_dither is deprecated and should not be used in newly-written code.
 
 ==== :Rowstride ====
 '':Rowstride(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''

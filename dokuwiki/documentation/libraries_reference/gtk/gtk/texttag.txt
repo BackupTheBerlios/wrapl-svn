@@ -45,30 +45,10 @@
 ==== :Priority ====
 '':Priority(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-  Get the tag priority.
-  
-  tag :     a GtkTextTag
-  Returns : The tag's priority.
-  
-  Sets the priority of a GtkTextTag. Valid priorities are start at 0 and go to one less than gtk_text_tag_table_get_size
-  (). Each tag in a table has a unique priority; setting the priority of one tag shifts the priorities of all the other
-  tags in the table to maintain a unique priority for each tag. Higher priority tags "win" if two tags both set the same
-  text attribute. When adding a tag to a tag table, it will be assigned the highest priority in the table by default; so
-  normally the precedence of a set of tags is the order in which they were added to the table, or created with
-  gtk_text_buffer_create_tag(), which adds the tag to the buffer's table automatically.
-  
-  tag :      a GtkTextTag
-  priority : the new priority
-  
 
 ==== :Values ====
 '':Values(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:TextAttributes#T|Gtk.Gtk.TextAttributes.T]]''
 
-  Copies the values from src to dest so that dest has the same values as src. Frees existing values in dest.
-  
-  src :  a GtkTextAttributes
-  dest : another GtkTextAttributes
-  
 
 ==== :BgColorSet ====
 '':BgColorSet(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''

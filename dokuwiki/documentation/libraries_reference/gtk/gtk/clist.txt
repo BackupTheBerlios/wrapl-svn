@@ -53,14 +53,10 @@
 ==== :Rows ====
 '':Rows(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-  === Warning ===
-  gtk_clist_swap_rows is deprecated and should not be used in newly-written code.
 
 ==== :RowHeight ====
 '':RowHeight(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-  === Warning ===
-  gtk_clist_set_row_height is deprecated and should not be used in newly-written code.
 
 ==== :RowList ====
 '':RowList(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -85,8 +81,6 @@
 ==== :Column ====
 '':Column(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:CListColumn#T|Gtk.Gtk.CListColumn.T]]''
 
-  === Warning ===
-  gtk_clist_set_sort_column is deprecated and should not be used in newly-written code.
 
 ==== :ClistWindow ====
 '':ClistWindow(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]]''
@@ -111,20 +105,14 @@
 ==== :ShadowType ====
 '':ShadowType(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:ShadowType#T|Gtk.Gtk.ShadowType.T]]''
 
-  === Warning ===
-  gtk_clist_set_shadow_type is deprecated and should not be used in newly-written code.
 
 ==== :SelectionMode ====
 '':SelectionMode(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:SelectionMode#T|Gtk.Gtk.SelectionMode.T]]''
 
-  === Warning ===
-  gtk_clist_set_selection_mode is deprecated and should not be used in newly-written code.
 
 ==== :Selection ====
 '':Selection(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  === Warning ===
-  gtk_clist_undo_selection is deprecated and should not be used in newly-written code.
 
 ==== :SelectionEnd ====
 '':SelectionEnd(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -133,8 +121,6 @@
 ==== :UndoSelection ====
 '':UndoSelection(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  === Warning ===
-  gtk_clist_undo_selection is deprecated and should not be used in newly-written code.
 
 ==== :UndoUnselection ====
 '':UndoUnselection(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -155,18 +141,10 @@
 ==== :Hadjustment ====
 '':Hadjustment(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]]''
 
-  === Warning ===
-  gtk_clist_get_hadjustment is deprecated and should not be used in newly-written code.
-  === Warning ===
-  gtk_clist_set_hadjustment is deprecated and should not be used in newly-written code.
 
 ==== :Vadjustment ====
 '':Vadjustment(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]]''
 
-  === Warning ===
-  gtk_clist_get_vadjustment is deprecated and should not be used in newly-written code.
-  === Warning ===
-  gtk_clist_set_vadjustment is deprecated and should not be used in newly-written code.
 
 ==== :XorGc ====
 '':XorGc(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]]''
@@ -219,8 +197,6 @@
 ==== :SortType ====
 '':SortType(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:SortType#T|Gtk.Gtk.SortType.T]]''
 
-  === Warning ===
-  gtk_clist_set_sort_type is deprecated and should not be used in newly-written code.
 
 ==== :Compare ====
 '':Compare(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -229,8 +205,6 @@
 ==== :SortColumn ====
 '':SortColumn(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-  === Warning ===
-  gtk_clist_set_sort_column is deprecated and should not be used in newly-written code.
 
 ==== :DragHighlightRow ====
 '':DragHighlightRow(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
@@ -243,8 +217,6 @@
 ==== :ButtonActions ====
 '':ButtonActions(self @ [[#T|T]], @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-  === Warning ===
-  gtk_clist_set_button_actions is deprecated and should not be used in newly-written code.
 
 ==== :Append ====
 '':Append(self @ [[#T|T]], text @ [[..:..:Std:List#T|Std.List.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''

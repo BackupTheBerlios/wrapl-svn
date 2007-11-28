@@ -75,26 +75,10 @@
 ==== :AccelWidget ====
 '':AccelWidget(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
-  Fetches the widget monitored by this accelerator label. See gtk_accel_label_set_accel_widget().
-  
-  accel_label : a GtkAccelLabel
-  Returns :     the object monitored by the accelerator label, or NULL.
-  
-  Sets the widget to be monitored by this accelerator label.
-  
-  accel_label :  a GtkAccelLabel
-  accel_widget : the widget to be monitored.
-  
 
 ==== :AccelClosure ====
 '':AccelClosure(self @ [[#T|T]]) : [[..:..:Gtk:GObject:Closure#T|Gtk.GObject.Closure.T]]''
 
-  Sets the closure to be monitored by this accelerator label. The closure must be connected to an accelerator group; see
-  gtk_accel_group_connect().
-  
-  accel_label :   a GtkAccelLabel
-  accel_closure : the closure to monitor for accelerator changes.
-  
 
 ==== :AccelGroup ====
 '':AccelGroup(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:AccelGroup#T|Gtk.Gtk.AccelGroup.T]]''

@@ -58,31 +58,14 @@
 ==== :BarStyle ====
 '':BarStyle(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:ProgressBarStyle#T|Gtk.Gtk.ProgressBarStyle.T]]''
 
-  === Warning ===
-  gtk_progress_bar_set_bar_style is deprecated and should not be used in newly-written code.
 
 ==== :Orientation ====
 '':Orientation(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:ProgressBarOrientation#T|Gtk.Gtk.ProgressBarOrientation.T]]''
 
-  Causes the progress bar to switch to a different orientation (left-to-right, right-to-left, top-to-bottom, or bottom-to-
-  top).
-  
-  pbar :        a GtkProgressBar
-  orientation : orientation of the progress bar
-  
-  Retrieves the current progress bar orientation.
-  
-  pbar :    a GtkProgressBar
-  Returns : orientation of the progress bar
-  
 
 ==== :Blocks ====
 '':Blocks(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-  === Warning ===
-  gtk_progress_bar_set_discrete_blocks is deprecated and should not be used in newly-written code.
-  === Warning ===
-  gtk_progress_bar_set_activity_blocks is deprecated and should not be used in newly-written code.
 
 ==== :InBlock ====
 '':InBlock(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
@@ -95,14 +78,10 @@
 ==== :ActivityStep ====
 '':ActivityStep(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-  === Warning ===
-  gtk_progress_bar_set_activity_step is deprecated and should not be used in newly-written code.
 
 ==== :ActivityBlocks ====
 '':ActivityBlocks(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-  === Warning ===
-  gtk_progress_bar_set_activity_blocks is deprecated and should not be used in newly-written code.
 
 ==== :PulseFraction ====
 '':PulseFraction(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
@@ -115,17 +94,6 @@
 ==== :Ellipsize ====
 '':Ellipsize(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-  Sets the mode used to ellipsize (add an ellipsis: "...") the text if there is not enough space to render the entire
-  string.
-  
-  pbar : a GtkProgressBar
-  mode : a PangoEllipsizeMode
-  
-  Returns the ellipsizing position of the progressbar. See gtk_progress_bar_set_ellipsize().
-  
-  pbar :    a GtkProgressBar
-  Returns : PangoEllipsizeMode
-  
 
 ==== :Dirty ====
 '':Dirty(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''

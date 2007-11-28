@@ -55,30 +55,10 @@
 ==== :ShadowType ====
 '':ShadowType(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:ShadowType#T|Gtk.Gtk.ShadowType.T]]''
 
-  Sets the type of shadow to be drawn around the border of the handle box.
-  
-  handle_box : a GtkHandleBox
-  type :       the shadow type.
-  
-  Gets the type of shadow drawn around the handle box. See gtk_handle_box_set_shadow_type().
-  
-  handle_box : a GtkHandleBox
-  Returns :    the type of shadow currently drawn around the handle box.
-  
 
 ==== :HandlePosition ====
 '':HandlePosition(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-  Sets the side of the handlebox where the handle is drawn.
-  
-  handle_box : a GtkHandleBox
-  position :   the side of the handlebox where the handle should be drawn.
-  
-  Gets the handle position of the handle box. See gtk_handle_box_set_handle_position().
-  
-  handle_box : a GtkHandleBox
-  Returns :    the current handle position.
-  
 
 ==== :FloatWindowMapped ====
 '':FloatWindowMapped(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
@@ -99,22 +79,6 @@
 ==== :SnapEdge ====
 '':SnapEdge(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Sets the snap edge of a handlebox. The snap edge is the edge of the detached child that must be aligned with the
-  corresponding edge of the "ghost" left behind when the child was detached to reattach the torn-off window. Usually, the
-  snap edge should be chosen so that it stays in the same place on the screen when the handlebox is torn off.
-  If the snap edge is not set, then an appropriate value will be guessed from the handle position. If the handle position
-  is GTK_POS_RIGHT or GTK_POS_LEFT, then the snap edge will be GTK_POS_TOP, otherwise it will be GTK_POS_LEFT.
-  
-  handle_box : a GtkHandleBox
-  edge :       the snap edge, or -1 to unset the value; in which case GTK+ will try to guess an appropriate value in the
-               future.
-  
-  Gets the edge used for determining reattachment of the handle box. See gtk_handle_box_set_snap_edge().
-  
-  handle_box : a GtkHandleBox
-  Returns :    the edge used for determining reattachment, or (GtkPositionType)-1 if this is determined (as per default)
-               from the handle position.
-  
 
 ==== :DeskoffX ====
 '':DeskoffX(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''

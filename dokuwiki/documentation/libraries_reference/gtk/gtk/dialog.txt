@@ -140,16 +140,6 @@
 ==== :Separator ====
 '':Separator(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
-  Accessor for whether the dialog has a separator.
-  
-  dialog :  a GtkDialog
-  Returns : TRUE if the dialog has a separator
-  
-  Sets whether the dialog has a separator above the buttons. TRUE by default.
-  
-  dialog :  a GtkDialog
-  setting : TRUE to have a separator
-  
 
 ==== :AddActionWidget ====
 '':AddActionWidget(self @ [[#T|T]], child @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], response_id @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''

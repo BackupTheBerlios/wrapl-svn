@@ -30,11 +30,6 @@
 ==== :TagTable ====
 '':TagTable(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:TextTagTable#T|Gtk.Gtk.TextTagTable.T]]''
 
-  Get the GtkTextTagTable associated with this buffer.
-  
-  buffer :  a GtkTextBuffer
-  Returns : the buffer's tag table
-  
 
 ==== :Btree ====
 '':Btree(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:TextBTree#T|Gtk.Gtk.TextBTree.T]]''
@@ -59,28 +54,10 @@
 ==== :Modified ====
 '':Modified(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-  Indicates whether the buffer has been modified since the last call to gtk_text_buffer_set_modified() set the
-  modification flag to FALSE. Used for example to enable a "save" function in a text editor.
-  
-  buffer :  a GtkTextBuffer
-  Returns : TRUE if the buffer has been modified
-  
-  Used to keep track of whether the buffer has been modified since the last time it was saved. Whenever the buffer is
-  saved to disk, call gtk_text_buffer_set_modified (buffer, FALSE). When the buffer is modified, it will automatically
-  toggled on the modified bit again. When the modified bit flips, the buffer emits a "modified_changed" signal.
-  
-  buffer :  a GtkTextBuffer
-  setting : modification flag setting
-  
 
 ==== :HasSelection ====
 '':HasSelection(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-  Indicates whether the buffer has some text currently selected.
-  
-  buffer :  a GtkTextBuffer
-  Returns : TRUE if the there is text selected
-  
 
 ==== :AddMark ====
 '':AddMark(self @ [[#T|T]], mark @ [[..:..:Gtk:Gtk:TextMark#T|Gtk.Gtk.TextMark.T]], where @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''

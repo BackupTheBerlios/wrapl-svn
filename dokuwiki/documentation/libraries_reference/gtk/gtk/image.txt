@@ -165,12 +165,6 @@
 ==== :StorageType ====
 '':StorageType(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:ImageType#T|Gtk.Gtk.ImageType.T]]''
 
-  Gets the type of representation being used by the GtkImage to store image data. If the GtkImage has no image data, the
-  return value will be GTK_IMAGE_EMPTY.
-  
-  image :   a GtkImage
-  Returns : image representation being used
-  
 
 ==== :Pixmap ====
 '':Pixmap(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:ImagePixmapData#T|Gtk.Gtk.ImagePixmapData.T]]''

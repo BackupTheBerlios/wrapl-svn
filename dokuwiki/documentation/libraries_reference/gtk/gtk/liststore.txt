@@ -179,12 +179,6 @@
 ==== :Order ====
 '':Order(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:SortType#T|Gtk.Gtk.SortType.T]]''
 
-  Reorders store to follow the order indicated by new_order. Note that this function only works with unsorted stores.
-  
-  store :     A GtkListStore.
-  new_order : an array of integers mapping the new position of each child to its old position before the re-ordering, i.e.
-              new_order[newpos] = oldpos.
-  
 
 ==== :ColumnHeaders ====
 '':ColumnHeaders(self @ [[#T|T]]) : [[..:..:Std:List#T|Std.List.T]]''

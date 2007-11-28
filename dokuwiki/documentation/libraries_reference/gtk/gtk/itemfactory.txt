@@ -59,8 +59,6 @@
 ==== :Path ====
 '':Path(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
-  === Warning ===
-  gtk_item_factory_from_path has been deprecated since version 2.4 and should not be used in newly-written code.
 
 ==== :AccelGroup ====
 '':AccelGroup(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:AccelGroup#T|Gtk.Gtk.AccelGroup.T]]''
@@ -69,27 +67,14 @@
 ==== :Widget ====
 '':Widget(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
-  === Warning ===
-  gtk_item_factory_from_widget is deprecated and should not be used in newly-written code. 2.4
-  === Warning ===
-  gtk_item_factory_path_from_widget has been deprecated since version 2.4 and should not be used in newly-written code.
-  === Warning ===
-  gtk_item_factory_get_widget has been deprecated since version 2.4 and should not be used in newly-written code.
-  === Warning ===
-  gtk_item_factory_popup_data_from_widget has been deprecated since version 2.4 and should not be used in newly-written
-  code.
 
 ==== :Items ====
 '':Items(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  === Warning ===
-  gtk_item_factory_create_items has been deprecated since version 2.4 and should not be used in newly-written code.
 
 ==== :TranslateFunc ====
 '':TranslateFunc(self @ [[#T|T]]) : [[..:..:Std:Function#T|Std.Function.T]]''
 
-  === Warning ===
-  gtk_item_factory_set_translate_func has been deprecated since version 2.4 and should not be used in newly-written code.
 
 ==== :TranslateData ====
 '':TranslateData(self @ [[#T|T]]) : [[..:..:Std:Address#T|Std.Address.T]]''

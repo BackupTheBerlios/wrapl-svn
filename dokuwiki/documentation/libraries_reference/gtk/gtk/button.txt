@@ -89,46 +89,14 @@
 ==== :Relief ====
 '':Relief(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-  Sets the relief style of the edges of the given GtkButton widget. Three styles exist, GTK_RELIEF_NORMAL,
-  GTK_RELIEF_HALF, GTK_RELIEF_NONE. The default style is, as one can guess, GTK_RELIEF_NORMAL.
-  
-  button :   The GtkButton you want to set relief styles of.
-  newstyle : The GtkReliefStyle as described above.
-  
-  Returns the current relief style of the given GtkButton.
-  
-  button :  The GtkButton you want the GtkReliefStyle from.
-  Returns : The current GtkReliefStyle
-  
 
 ==== :UseUnderline ====
 '':UseUnderline(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-  Returns whether an embedded underline in the button label indicates a mnemonic. See gtk_button_set_use_underline().
-  
-  button :  a GtkButton
-  Returns : TRUE if an embedded underline in the button label indicates the mnemonic accelerator keys.
-  
-  If true, an underline in the text of the button label indicates the next character should be used for the mnemonic
-  accelerator key.
-  
-  button :        a GtkButton
-  use_underline : TRUE if underlines in the text indicate mnemonics
-  
 
 ==== :UseStock ====
 '':UseStock(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-  Returns whether the button label is a stock item.
-  
-  button :  a GtkButton
-  Returns : TRUE if the button label is used to select a stock item instead of being used directly as the label text.
-  
-  If TRUE, the label set on the button is used as a stock id to select the stock item for the button.
-  
-  button :    a GtkButton
-  use_stock : TRUE if the button should use a stock item
-  
 
 ==== :Depressed ====
 '':Depressed(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
@@ -141,17 +109,6 @@
 ==== :FocusOnClick ====
 '':FocusOnClick(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-  Sets whether the button will grab focus when it is clicked with the mouse. Making mouse clicks not grab focus is useful
-  in places like toolbars where you don't want the keyboard focus removed from the main area of the application.
-  
-  button :         a GtkButton
-  focus_on_click : whether the button grabs focus when clicked with the mouse
-  
-  Returns whether the button grabs focus when it is clicked with the mouse. See gtk_button_set_focus_on_click().
-  
-  button :  a GtkButton
-  Returns : TRUE if the button grabs focus when it is clicked with the mouse.
-  
 
 ==== :Clicked ====
 '':Clicked(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -256,6 +213,10 @@
 ==== :Pressed ====
 '':Pressed(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+  Emits a "pressed" signal to the given GtkButton.
+  
+  button : The GtkButton you want to send the signal to.
+  
 
 ==== :Released ====
 '':Released(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''

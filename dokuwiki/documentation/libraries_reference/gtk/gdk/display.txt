@@ -69,12 +69,6 @@
 ==== :DoubleClickTime ====
 '':DoubleClickTime(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-  Sets the double click time (two clicks within this time interval count as a double click and result in a
-  GDK_2BUTTON_PRESS event). Applications should not set this, it is a global user-configured setting.
-  
-  display : a GdkDisplay
-  msec :    double click time in milliseconds (thousandths of a second)
-  
 
 ==== :CorePointer ====
 '':CorePointer(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Device#T|Gtk.Gdk.Device.T]]''
@@ -83,15 +77,6 @@
 ==== :PointerHooks ====
 '':PointerHooks(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:DisplayPointerHooks#T|Gtk.Gdk.DisplayPointerHooks.T]]''
 
-  This function allows for hooking into the operation of getting the current location of the pointer on a particular
-  display. This is only useful for such low-level tools as an event recorder. Applications should never have any reason to
-  use this facility.
-  
-  display :   a GdkDisplay
-  new_hooks : a table of pointers to functions for getting quantities related to the current pointer position, or NULL to
-              restore the default table.
-  Returns :   the previous pointer hook table
-  
 
 ==== :Closed ====
 '':Closed(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
@@ -100,13 +85,6 @@
 ==== :DoubleClickDistance ====
 '':DoubleClickDistance(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-  Sets the double click distance (two clicks within this distance count as a double click and result in a
-  GDK_2BUTTON_PRESS event). See also gdk_display_set_double_click_time(). Applications should not set this, it is a global
-  user-configured setting.
-  
-  display :  a GdkDisplay
-  distance : distance in pixels
-  
 
 ==== :ButtonClickTime ====
 '':ButtonClickTime(self @ [[#T|T]], @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''

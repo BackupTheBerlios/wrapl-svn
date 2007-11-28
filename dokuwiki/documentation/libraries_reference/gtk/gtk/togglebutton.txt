@@ -92,18 +92,6 @@
 ==== :Active ====
 '':Active(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-  Queries a GtkToggleButton and returns its current state. Returns TRUE if the toggle button is pressed in and FALSE if it
-  is raised.
-  
-  toggle_button : a GtkToggleButton.
-  Returns :       a gboolean value.
-  
-  Sets the status of the toggle button. Set to TRUE if you want the GtkToggleButton to be 'pressed in', and FALSE to raise
-  it. This action causes the toggled signal to be emitted.
-  
-  toggle_button : a GtkToggleButton.
-  is_active :     TRUE or FALSE.
-  
 
 ==== :DrawIndicator ====
 '':DrawIndicator(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
@@ -112,20 +100,6 @@
 ==== :Inconsistent ====
 '':Inconsistent(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-  Gets the value set by gtk_toggle_button_set_inconsistent().
-  
-  toggle_button : a GtkToggleButton
-  Returns :       TRUE if the button is displayed as inconsistent, FALSE otherwise
-  
-  If the user has selected a range of elements (such as some text or spreadsheet cells) that are affected by a toggle
-  button, and the current values in that range are inconsistent, you may want to display the toggle in an "in between"
-  state. This function turns on "in between" display. Normally you would turn off the inconsistent state again if the user
-  toggles the toggle button. This has to be done manually, gtk_toggle_button_set_inconsistent() only affects visual
-  appearance, it doesn't affect the semantics of the button.
-  
-  toggle_button : a GtkToggleButton
-  setting :       TRUE if state is inconsistent
-  
 
 ==== :GetActive ====
 '':GetActive(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''

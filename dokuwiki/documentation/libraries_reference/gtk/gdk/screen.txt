@@ -80,34 +80,10 @@
 ==== :FontOptions ====
 '':FontOptions(self @ [[#T|T]]) : [[..:..:Gtk:Cairo:CairoFontOptionsT#T|Gtk.Cairo.CairoFontOptionsT.T]]''
 
-  Gets any options previously set with gdk_screen_set_font_options().
-  
-  screen :  a GdkScreen
-  Returns : the current font options, or NULL if no default font options have been set.
-  
-  Sets the default font options for the screen. These options will be set on any PangoContext's newly created with
-  gdk_pango_context_get_for_screen(). Changing the default set of font options does not affect contexts that have already
-  been created.
-  
-  screen :  a GdkScreen
-  options : a cairo_font_options_t, or NULL to unset any previously set default font options.
-  
 
 ==== :Resolution ====
 '':Resolution(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
-  Gets the resolution for font handling on the screen; see gdk_screen_set_resolution() for full details.
-  
-  screen :  a GdkScreen
-  Returns : the current resolution, or -1 if no resolution has been set.
-  
-  Sets the resolution for font handling on the screen. This is a scale factor between points specified in a
-  PangoFontDescription and cairo units. The default value is 96, meaning that a 10 point font will be 13 units high. (10 *
-  96. / 72. = 13.3).
-  
-  screen : a GdkScreen
-  dpi :    the resolution in "dots per inch". (Physical inches aren't actually involved; the terminology is conventional.)
-  
 
 ==== :NormalGcs ====
 '':NormalGcs(self @ [[#T|T]], @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]]''

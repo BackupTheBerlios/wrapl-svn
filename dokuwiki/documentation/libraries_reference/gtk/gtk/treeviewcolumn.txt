@@ -42,12 +42,6 @@
 ==== :TreeView ====
 '':TreeView(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
-  Returns the GtkTreeView wherein tree_column has been inserted. If column is currently not inserted in any tree view,
-  NULL is returned.
-  
-  tree_column : A GtkTreeViewColumn
-  Returns :     The tree view wherein column has been inserted if any, NULL otherwise.
-  
 
 ==== :Button ====
 '':Button(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
@@ -64,17 +58,6 @@
 ==== :Alignment ====
 '':Alignment(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
-  Sets the alignment of the title or custom widget inside the column header. The alignment determines its location inside
-  the button -- 0.0 for left, 0.5 for center, 1.0 for right.
-  
-  tree_column : A GtkTreeViewColumn.
-  xalign :      The alignment, which is between [0.0 and 1.0] inclusive.
-  
-  Returns the current x alignment of tree_column. This value can range between 0.0 and 1.0.
-  
-  tree_column : A GtkTreeViewColumn.
-  Returns :     The current alignent of tree_column.
-  
 
 ==== :Window ====
 '':Window(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]]''
@@ -95,16 +78,6 @@
 ==== :Spacing ====
 '':Spacing(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-  Sets the spacing field of tree_column, which is the number of pixels to place between cell renderers packed into it.
-  
-  tree_column : A GtkTreeViewColumn.
-  spacing :     distance between cell renderers in pixels.
-  
-  Returns the spacing of tree_column.
-  
-  tree_column : A GtkTreeViewColumn.
-  Returns :     the spacing of tree_column.
-  
 
 ==== :ColumnType ====
 '':ColumnType(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:TreeViewColumnSizing#T|Gtk.Gtk.TreeViewColumnSizing.T]]''
@@ -125,93 +98,18 @@
 ==== :Width ====
 '':Width(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-  Returns the current size of tree_column in pixels.
-  
-  tree_column : A GtkTreeViewColumn.
-  Returns :     The current width of tree_column.
-  
-  Gets the fixed width of the column. This value is only meaning may not be the actual width of the column on the screen,
-  just what is requested.
-  
-  tree_column : a GtkTreeViewColumn
-  Returns :     the fixed width of the column
-  
-  Sets the size of the column in pixels. This is meaningful only if the sizing type is GTK_TREE_VIEW_COLUMN_FIXED. The
-  size of the column is clamped to the min/max width for the column. Please note that the min/max width of the column
-  doesn't actually affect the "fixed_width" property of the widget, just the actual size when displayed.
-  
-  tree_column : A GtkTreeViewColumn.
-  fixed_width : The size to set tree_column to. Must be greater than 0.
-  
-  Sets the minimum width of the tree_column. If min_width is -1, then the minimum width is unset.
-  
-  tree_column : A GtkTreeViewColumn.
-  min_width :   The minimum width of the column in pixels, or -1.
-  
-  Returns the minimum width in pixels of the tree_column, or -1 if no minimum width is set.
-  
-  tree_column : A GtkTreeViewColumn.
-  Returns :     The minimum width of the tree_column.
-  
-  Sets the maximum width of the tree_column. If max_width is -1, then the maximum width is unset. Note, the column can
-  actually be wider than max width if it's the last column in a view. In this case, the column expands to fill any extra
-  space.
-  
-  tree_column : A GtkTreeViewColumn.
-  max_width :   The maximum width of the column in pixels, or -1.
-  
-  Returns the maximum width in pixels of the tree_column, or -1 if no maximum width is set.
-  
-  tree_column : A GtkTreeViewColumn.
-  Returns :     The maximum width of the tree_column.
-  
 
 ==== :FixedWidth ====
 '':FixedWidth(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-  Gets the fixed width of the column. This value is only meaning may not be the actual width of the column on the screen,
-  just what is requested.
-  
-  tree_column : a GtkTreeViewColumn
-  Returns :     the fixed width of the column
-  
-  Sets the size of the column in pixels. This is meaningful only if the sizing type is GTK_TREE_VIEW_COLUMN_FIXED. The
-  size of the column is clamped to the min/max width for the column. Please note that the min/max width of the column
-  doesn't actually affect the "fixed_width" property of the widget, just the actual size when displayed.
-  
-  tree_column : A GtkTreeViewColumn.
-  fixed_width : The size to set tree_column to. Must be greater than 0.
-  
 
 ==== :MinWidth ====
 '':MinWidth(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-  Sets the minimum width of the tree_column. If min_width is -1, then the minimum width is unset.
-  
-  tree_column : A GtkTreeViewColumn.
-  min_width :   The minimum width of the column in pixels, or -1.
-  
-  Returns the minimum width in pixels of the tree_column, or -1 if no minimum width is set.
-  
-  tree_column : A GtkTreeViewColumn.
-  Returns :     The minimum width of the tree_column.
-  
 
 ==== :MaxWidth ====
 '':MaxWidth(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-  Sets the maximum width of the tree_column. If max_width is -1, then the maximum width is unset. Note, the column can
-  actually be wider than max width if it's the last column in a view. In this case, the column expands to fill any extra
-  space.
-  
-  tree_column : A GtkTreeViewColumn.
-  max_width :   The maximum width of the column in pixels, or -1.
-  
-  Returns the maximum width in pixels of the tree_column, or -1 if no maximum width is set.
-  
-  tree_column : A GtkTreeViewColumn.
-  Returns :     The maximum width of the tree_column.
-  
 
 ==== :DragX ====
 '':DragX(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
@@ -224,16 +122,6 @@
 ==== :Title ====
 '':Title(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
-  Sets the title of the tree_column. If a custom widget has been set, then this value is ignored.
-  
-  tree_column : A GtkTreeViewColumn.
-  title :       The title of the tree_column.
-  
-  Returns the title of the widget.
-  
-  tree_column : A GtkTreeViewColumn.
-  Returns :     the title of the column. This string should not be modified or freed.
-  
 
 ==== :CellList ====
 '':CellList(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -250,88 +138,22 @@
 ==== :SortColumnId ====
 '':SortColumnId(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-  Sets the logical sort_column_id that this column sorts on when this column is selected for sorting. Doing so makes the
-  column header clickable.
-  
-  tree_column :    a GtkTreeViewColumn
-  sort_column_id : The sort_column_id of the model to sort on.
-  
-  Gets the logical sort_column_id that the model sorts on when this column is selected for sorting. See
-  gtk_tree_view_column_set_sort_column_id().
-  
-  tree_column : a GtkTreeViewColumn
-  Returns :     the current sort_column_id for this column, or -1 if this column can't be used for sorting.
-  
 
 ==== :SortOrder ====
 '':SortOrder(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:SortType#T|Gtk.Gtk.SortType.T]]''
 
-  Changes the appearance of the sort indicator.
-  This does not actually sort the model. Use gtk_tree_view_column_set_sort_column_id() if you want automatic sorting
-  support. This function is primarily for custom sorting behavior, and should be used in conjunction with
-  gtk_tree_sortable_set_sort_column() to do that. For custom models, the mechanism will vary.
-  The sort indicator changes direction to indicate normal sort or reverse sort. Note that you must have the sort indicator
-  enabled to see anything when calling this function; see gtk_tree_view_column_set_sort_indicator().
-  
-  tree_column : a GtkTreeViewColumn
-  order :       sort order that the sort indicator should indicate
-  
-  Gets the value set by gtk_tree_view_column_set_sort_order().
-  
-  tree_column : a GtkTreeViewColumn
-  Returns :     the sort order the sort indicator is indicating
-  
 
 ==== :Visible ====
 '':Visible(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-  Sets the visibility of tree_column.
-  
-  tree_column : A GtkTreeViewColumn.
-  visible :     TRUE if the tree_column is visible.
-  
-  Returns TRUE if tree_column is visible.
-  
-  tree_column : A GtkTreeViewColumn.
-  Returns :     whether the column is visible or not. If it is visible, then the tree will show the column.
-  
-  Returns TRUE if any of the cells packed into the tree_column are visible. For this to be meaningful, you must first
-  initialize the cells with gtk_tree_view_column_cell_set_cell_data()
-  
-  tree_column : A GtkTreeViewColumn
-  Returns :     TRUE, if any of the cells packed into the tree_column are currently visible
-  
 
 ==== :Resizable ====
 '':Resizable(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-  If resizable is TRUE, then the user can explicitly resize the column by grabbing the outer edge of the column button. If
-  resizable is TRUE and sizing mode of the column is GTK_TREE_VIEW_COLUMN_AUTOSIZE, then the sizing mode is changed to
-  GTK_TREE_VIEW_COLUMN_GROW_ONLY.
-  
-  tree_column : A GtkTreeViewColumn
-  resizable :   TRUE, if the column can be resized
-  
-  Returns TRUE if the tree_column can be resized by the end user.
-  
-  tree_column : A GtkTreeViewColumn
-  Returns :     TRUE, if the tree_column can be resized.
-  
 
 ==== :Clickable ====
 '':Clickable(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-  Sets the header to be active if active is TRUE. When the header is active, then it can take keyboard focus, and can be
-  clicked.
-  
-  tree_column : A GtkTreeViewColumn.
-  clickable :   TRUE if the header is active.
-  
-  Returns TRUE if the user can click on the header for the column.
-  
-  tree_column : a GtkTreeViewColumn
-  Returns :     TRUE if user can click the column header.
-  
 
 ==== :Dirty ====
 '':Dirty(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
@@ -348,16 +170,6 @@
 ==== :Reorderable ====
 '':Reorderable(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-  If reorderable is TRUE, then the column can be reordered by the end user dragging the header.
-  
-  tree_column : A GtkTreeViewColumn
-  reorderable : TRUE, if the column can be reordered.
-  
-  Returns TRUE if the tree_column can be reordered by the user.
-  
-  tree_column : A GtkTreeViewColumn
-  Returns :     TRUE if the tree_column can be reordered by the user.
-  
 
 ==== :UseResizedWidth ====
 '':UseResizedWidth(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
@@ -366,18 +178,6 @@
 ==== :Expand ====
 '':Expand(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-  Sets the column to take available extra space. This space is shared equally amongst all columns that have the expand set
-  to TRUE. If no column has this option set, then the last column gets all extra space. By default, every column is
-  created with this FALSE.
-  
-  tree_column : A GtkTreeViewColumn
-  expand :      TRUE if the column should take available extra space, FALSE if not
-  
-  Return TRUE if the column expands to take any available space.
-  
-  tree_column : a GtkTreeViewColumn
-  Returns :     TRUE, if the column expands
-  
 
 ==== :AddAttribute ====
 '':AddAttribute(self @ [[#T|T]], cell_renderer @ [[..:..:Gtk:Gtk:CellRenderer#T|Gtk.Gtk.CellRenderer.T]], attribute @ [[..:..:Std:String#T|Std.String.T]], column @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''

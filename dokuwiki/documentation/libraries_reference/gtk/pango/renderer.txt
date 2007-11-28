@@ -21,17 +21,6 @@
 ==== :Underline ====
 '':Underline(self @ [[#T|T]]) : [[..:..:Gtk:Pango:Underline#T|Gtk.Pango.Underline.T]]''
 
-  Draw a squiggly line that approximately covers the given rectangle in the style of an underline used to indicate a
-  spelling error. (The width of the underline is rounded to an integer number of up/down segments and the resulting
-  rectangle is centered in the original rectangle)
-  This should be called while renderer is already active. Use pango_renderer_activate() to activate a renderer.
-  
-  renderer : a PangoRenderer
-  x :        X coordinate of underline, in Pango units in user coordinate system
-  y :        Y coordinate of underline, in Pango units in user coordinate system
-  width :    width of underline, in Pango units in user coordinate system
-  height :   height of underline, in Pango units in user coordinate system
-  
 
 ==== :Strikethrough ====
 '':Strikethrough(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
@@ -44,18 +33,6 @@
 ==== :Matrix ====
 '':Matrix(self @ [[#T|T]]) : [[..:..:Gtk:Pango:Matrix#T|Gtk.Pango.Matrix.T]]''
 
-  Sets the transformation matrix that will be applied when rendering.
-  
-  renderer : a PangoRenderer
-  matrix :   a PangoMatrix, or NULL to unset any existing matrix. (No matrix set is the same as setting the identity
-             matrix.)
-  
-  Gets the transformation matrix that will be applied when rendering. See pango_renderer_set_matrix().
-  
-  renderer : a PangoRenderer
-  Returns :  the matrix, or NULL if no matrix has been set (which is the same as the identity matrix). The returned matrix
-             is owned by Pango and must not be modified or freed.
-  
 
 ==== :Priv ====
 '':Priv(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''

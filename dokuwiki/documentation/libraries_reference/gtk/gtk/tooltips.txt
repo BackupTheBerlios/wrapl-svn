@@ -77,9 +77,6 @@
 ==== :TipWindow ====
 '':TipWindow(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
-  === Warning ===
-  gtk_tooltips_get_info_from_tip_window has been deprecated since version 2.12 and should not be used in newly-written
-  code.
 
 ==== :TipLabel ====
 '':TipLabel(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
@@ -96,8 +93,6 @@
 ==== :Delay ====
 '':Delay(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-  === Warning ===
-  gtk_tooltips_set_delay has been deprecated since version 2.12 and should not be used in newly-written code.
 
 ==== :Enabled ====
 '':Enabled(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''

@@ -81,17 +81,6 @@
 ==== :Group ====
 '':Group(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Sets a GtkRadioButton's group. It should be noted that this does not change the layout of your interface in any way, so
-  if you are changing the group, it is likely you will need to re-arrange the user interface to reflect these changes.
-  
-  radio_button : a GtkRadioButton.
-  group :        an existing radio button group, such as one returned from gtk_radio_button_get_group().
-  
-  Retrieves the group assigned to a radio button.
-  
-  radio_button : a GtkRadioButton.
-  Returns :      a linked list containing all the radio buttons in the same group as radio_button.
-  
 
 ==== New ====
 ''New(group : [[..:..:Std:Object#T|Std.Object.T]]) : [[# T| T]]''

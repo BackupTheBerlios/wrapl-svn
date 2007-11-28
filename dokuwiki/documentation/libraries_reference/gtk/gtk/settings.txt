@@ -47,11 +47,6 @@
 ==== :Screen ====
 '':Screen(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Screen#T|Gtk.Gdk.Screen.T]]''
 
-  Gets the GtkSettings object for screen, creating it if necessary.
-  
-  screen :  a GdkScreen.
-  Returns : a GtkSettings object.
-  
 
 ==== :QueuedSettings ====
 '':QueuedSettings(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''

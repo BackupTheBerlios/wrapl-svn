@@ -54,20 +54,6 @@
 ==== :Submenu ====
 '':Submenu(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
-  Sets or replaces the menu item's submenu, or removes it when a NULL submenu is passed.
-  
-  menu_item : a GtkMenuItem
-  submenu :   the submenu, or NULL
-  
-  === Warning ===
-  gtk_menu_item_remove_submenu has been deprecated since version 2.12 and should not be used in newly-written code.
-  gtk_menu_item_remove_submenu() is deprecated and should not be used in newly written code. Use gtk_menu_item_set_submenu
-  () instead.
-  Gets the submenu underneath this menu item, if any. See gtk_menu_item_set_submenu().
-  
-  menu_item : a GtkMenuItem
-  Returns :   submenu for this menu item, or NULL if none.
-  
 
 ==== :EventWindow ====
 '':EventWindow(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]]''
@@ -84,17 +70,6 @@
 ==== :AccelPath ====
 '':AccelPath(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
-  Set the accelerator path on menu_item, through which runtime changes of the menu item's accelerator caused by the user
-  can be identified and saved to persistant storage (see gtk_accel_map_save() on this). To setup a default accelerator for
-  this menu item, call gtk_accel_map_add_entry() with the same accel_path. See also gtk_accel_map_add_entry() on the
-  specifics of accelerator paths, and gtk_menu_set_accel_path() for a more convenient variant of this function.
-  This function is basically a convenience wrapper that handles calling gtk_widget_set_accel_path() with the appropriate
-  accelerator group for the menu item.
-  Note that you do need to set an accelerator on the parent menu with gtk_menu_set_accel_group() for this to work.
-  
-  menu_item :  a valid GtkMenuItem
-  accel_path : accelerator path, corresponding to this menu item's functionality, or NULL to unset the current path.
-  
 
 ==== :ShowSubmenuIndicator ====
 '':ShowSubmenuIndicator(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''

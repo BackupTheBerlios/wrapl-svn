@@ -131,56 +131,14 @@
 ==== :RootItemModel ====
 '':RootItemModel(self @ [[#T|T]]) : [[..:..:Gtk:GooCanvas:ItemModel#T|Gtk.GooCanvas.ItemModel.T]]''
 
-  Gets the root item model of the canvas.
-  
-  canvas :  a GooCanvas.
-  Returns : the root item model, or NULL if there is no root item model.
-  
-  Sets the root item model of the canvas.
-  A hierarchy of canvas items will be created, corresponding to the hierarchy of items in the model. Any current canvas
-  items will be removed.
-  
-  canvas : a GooCanvas.
-  model :  a GooCanvasItemModel.
-  
 
 ==== :RootItem ====
 '':RootItem(self @ [[#T|T]]) : [[..:..:Gtk:GooCanvas:Item#T|Gtk.GooCanvas.Item.T]]''
 
-  Gets the root item of the canvas, usually a GooCanvasGroup.
-  
-  canvas :  a GooCanvas.
-  Returns : the root item, or NULL if there is no root item.
-  
-  Sets the root item of the canvas. Any existing canvas items are removed.
-  
-  canvas : a GooCanvas.
-  item :   the root canvas item.
-  
 
 ==== :Bounds ====
 '':Bounds(self @ [[#T|T]]) : [[..:..:Gtk:GooCanvas:Bounds#T|Gtk.GooCanvas.Bounds.T]]''
 
-  Gets the bounds of the canvas, in canvas units.
-  By default, canvas units are pixels, though the "units" property can be used to change the units to points, inches or
-  millimeters.
-  
-  canvas : a GooCanvas.
-  left :   a pointer to a gdouble to return the left edge, or NULL.
-  top :    a pointer to a gdouble to return the top edge, or NULL.
-  right :  a pointer to a gdouble to return the right edge, or NULL.
-  bottom : a pointer to a gdouble to return the bottom edge, or NULL.
-  
-  Sets the bounds of the GooCanvas, in canvas units.
-  By default, canvas units are pixels, though the "units" property can be used to change the units to points, inches or
-  millimeters.
-  
-  canvas : a GooCanvas.
-  left :   the left edge.
-  top :    the top edge.
-  right :  the right edge.
-  bottom : the bottom edge.
-  
 
 ==== :ScaleX ====
 '':ScaleX(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
@@ -193,20 +151,6 @@
 ==== :Scale ====
 '':Scale(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
-  Gets the current scale of the canvas.
-  The scale specifies the magnification factor of the canvas, e.g. if an item has a width of 2 pixels and the scale is set
-  to 3, it will be displayed with a width of 2 x 3 = 6 pixels.
-  
-  canvas :  a GooCanvas.
-  Returns : the current scale setting.
-  
-  Sets the scale of the canvas.
-  The scale specifies the magnification factor of the canvas, e.g. if an item has a width of 2 pixels and the scale is set
-  to 3, it will be displayed with a width of 2 x 3 = 6 pixels.
-  
-  canvas : a GooCanvas.
-  scale :  the new scale setting.
-  
 
 ==== :Anchor ====
 '':Anchor(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:AnchorType#T|Gtk.Gtk.AnchorType.T]]''

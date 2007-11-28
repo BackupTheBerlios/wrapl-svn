@@ -32,22 +32,10 @@
 ==== :Selection ====
 '':Selection(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  === Warning ===
-  gtk_list_extend_selection is deprecated and should not be used in newly-written code.
-  === Warning ===
-  gtk_list_start_selection is deprecated and should not be used in newly-written code.
-  === Warning ===
-  gtk_list_end_selection is deprecated and should not be used in newly-written code.
-  === Warning ===
-  gtk_list_undo_selection is deprecated and should not be used in newly-written code.
-  === Warning ===
-  gtk_list_end_drag_selection is deprecated and should not be used in newly-written code.
 
 ==== :UndoSelection ====
 '':UndoSelection(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  === Warning ===
-  gtk_list_undo_selection is deprecated and should not be used in newly-written code.
 
 ==== :UndoUnselection ====
 '':UndoUnselection(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -84,20 +72,14 @@
 ==== :SelectionMode ====
 '':SelectionMode(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-  === Warning ===
-  gtk_list_set_selection_mode is deprecated and should not be used in newly-written code.
 
 ==== :DragSelection ====
 '':DragSelection(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-  === Warning ===
-  gtk_list_end_drag_selection is deprecated and should not be used in newly-written code.
 
 ==== :AddMode ====
 '':AddMode(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-  === Warning ===
-  gtk_list_toggle_add_mode is deprecated and should not be used in newly-written code.
 
 ==== :AppendItems ====
 '':AppendItems(self @ [[#T|T]], items @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''

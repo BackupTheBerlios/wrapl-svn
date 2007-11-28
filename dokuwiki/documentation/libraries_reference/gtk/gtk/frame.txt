@@ -48,31 +48,10 @@
 ==== :LabelWidget ====
 '':LabelWidget(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
-  Sets the label widget for the frame. This is the widget that will appear embedded in the top edge of the frame as a
-  title.
-  
-  frame :        a GtkFrame
-  label_widget : the new label widget
-  
-  Retrieves the label widget for the frame. See gtk_frame_set_label_widget().
-  
-  frame :   a GtkFrame
-  Returns : the label widget, or NULL if there is none.
-  
 
 ==== :ShadowType ====
 '':ShadowType(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-  Sets the shadow type for frame.
-  
-  frame : a GtkFrame
-  type :  the new GtkShadowType
-  
-  Retrieves the shadow type of the frame. See gtk_frame_set_shadow_type().
-  
-  frame :   a GtkFrame
-  Returns : the current shadow type of the frame.
-  
 
 ==== :LabelXalign ====
 '':LabelXalign(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''

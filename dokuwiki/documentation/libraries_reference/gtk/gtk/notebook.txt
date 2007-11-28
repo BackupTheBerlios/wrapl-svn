@@ -78,37 +78,6 @@
 ==== :Menu ====
 '':Menu(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
-  Appends a page to notebook, specifying the widget to use as the label in the popup menu.
-  
-  notebook :   a GtkNotebook
-  child :      the GtkWidget to use as the contents of the page.
-  tab_label :  the GtkWidget to be used as the label for the page, or NULL to use the default label, 'page N'.
-               the widget to use as a label for the page-switch menu, if that is enabled. If NULL, and tab_label is a
-  menu_label : GtkLabel or NULL, then the menu label will be a newly created label with the same text as tab_label; If
-               tab_label is not a GtkLabel, menu_label must be specified if the page-switch menu is to be used.
-  Returns :    the index (starting from 0) of the appended page in the notebook, or -1 if function fails
-  
-  Prepends a page to notebook, specifying the widget to use as the label in the popup menu.
-  
-  notebook :   a GtkNotebook
-  child :      the GtkWidget to use as the contents of the page.
-  tab_label :  the GtkWidget to be used as the label for the page, or NULL to use the default label, 'page N'.
-               the widget to use as a label for the page-switch menu, if that is enabled. If NULL, and tab_label is a
-  menu_label : GtkLabel or NULL, then the menu label will be a newly created label with the same text as tab_label; If
-               tab_label is not a GtkLabel, menu_label must be specified if the page-switch menu is to be used.
-  Returns :    the index (starting from 0) of the prepended page in the notebook, or -1 if function fails
-  
-  Insert a page into notebook at the given position, specifying the widget to use as the label in the popup menu.
-  
-  notebook :   a GtkNotebook
-  child :      the GtkWidget to use as the contents of the page.
-  tab_label :  the GtkWidget to be used as the label for the page, or NULL to use the default label, 'page N'.
-               the widget to use as a label for the page-switch menu, if that is enabled. If NULL, and tab_label is a
-  menu_label : GtkLabel or NULL, then the menu label will be a newly created label with the same text as tab_label; If
-               tab_label is not a GtkLabel, menu_label must be specified if the page-switch menu is to be used.
-  position :   the index (starting at 0) at which to insert the page, or -1 to append the page after all other pages.
-  Returns :    the index (starting from 0) of the inserted page in the notebook
-  
 
 ==== :EventWindow ====
 '':EventWindow(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]]''
@@ -121,28 +90,14 @@
 ==== :TabHborder ====
 '':TabHborder(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-  === Warning ===
-  gtk_notebook_set_tab_hborder is deprecated and should not be used in newly-written code.
 
 ==== :TabVborder ====
 '':TabVborder(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-  === Warning ===
-  gtk_notebook_set_tab_vborder is deprecated and should not be used in newly-written code.
 
 ==== :ShowTabs ====
 '':ShowTabs(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-  Sets whether to show the tabs for the notebook or not.
-  
-  notebook :  a GtkNotebook
-  show_tabs : TRUE if the tabs should be shown.
-  
-  Returns whether the tabs of the notebook are shown. See gtk_notebook_set_show_tabs().
-  
-  notebook : a GtkNotebook
-  Returns :  TRUE if the tabs are shown
-  
 
 ==== :Homogeneous ====
 '':Homogeneous(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
@@ -151,45 +106,14 @@
 ==== :ShowBorder ====
 '':ShowBorder(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-  Sets whether a bevel will be drawn around the notebook pages. This only has a visual effect when the tabs are not shown.
-  See gtk_notebook_set_show_tabs().
-  
-  notebook :    a GtkNotebook
-  show_border : TRUE if a bevel should be drawn around the notebook.
-  
-  Returns whether a bevel will be drawn around the notebook pages. See gtk_notebook_set_show_border().
-  
-  notebook : a GtkNotebook
-  Returns :  TRUE if the bevel is drawn
-  
 
 ==== :TabPos ====
 '':TabPos(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-  Sets the edge at which the tabs for switching pages in the notebook are drawn.
-  
-  notebook : a GtkNotebook.
-  pos :      the edge to draw the tabs at.
-  
-  Gets the edge at which the tabs for switching pages in the notebook are drawn.
-  
-  notebook : a GtkNotebook
-  Returns :  the edge at which the tabs are drawn
-  
 
 ==== :Scrollable ====
 '':Scrollable(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-  Sets whether the tab label area will have arrows for scrolling if there are too many tabs to fit in the area.
-  
-  notebook :   a GtkNotebook
-  scrollable : TRUE if scroll arrows should be added
-  
-  Returns whether the tab label area has arrows for scrolling. See gtk_notebook_set_scrollable().
-  
-  notebook : a GtkNotebook
-  Returns :  TRUE if arrows for scrolling are present
-  
 
 ==== :InChild ====
 '':InChild(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''

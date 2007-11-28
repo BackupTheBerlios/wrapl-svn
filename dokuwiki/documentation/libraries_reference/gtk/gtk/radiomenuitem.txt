@@ -52,17 +52,6 @@
 ==== :Group ====
 '':Group(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Sets the group of a radio menu item, or changes it.
-  
-  radio_menu_item : a GtkRadioMenuItem.
-  group :           the new group.
-  
-  Returns the group to which the radio menu item belongs, as a GList of GtkRadioMenuItem. The list belongs to GTK+ and
-  should not be freed.
-  
-  radio_menu_item : a GtkRadioMenuItem.
-  Returns :         the group of radio_menu_item.
-  
 
 ==== New ====
 ''New(group : [[..:..:Std:Object#T|Std.Object.T]]) : [[# T| T]]''

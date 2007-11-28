@@ -87,26 +87,6 @@
 ==== :Editing ====
 '':Editing(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-  Passes an activate event to the cell renderer for possible processing.
-  
-  cell :            a GtkCellRenderer
-  event :           a GdkEvent
-  widget :          widget that received the event
-  path :            widget-dependent string representation of the event location; e.g. for GtkTreeView, a string
-                    representation of GtkTreePath
-  background_area : background area as passed to gtk_cell_renderer_render()
-  cell_area :       cell area as passed to gtk_cell_renderer_render()
-  flags :           render flags
-  Returns :         A new GtkCellEditable, or NULL
-  
-  Informs the cell renderer that the editing is stopped. If canceled is TRUE, the cell renderer will emit the "editing-
-  canceled" signal.
-  This function should be called by cell renderer implementations in response to the "editing-done" signal of
-  GtkCellEditable.
-  
-  cell :     A GtkCellRenderer
-  canceled : TRUE if the editing has been canceled
-  
 
 ==== :Activate ====
 '':Activate(self @ [[#T|T]], event @ [[..:..:Std:Object#T|Std.Object.T]], widget @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], path @ [[..:..:Std:String#T|Std.String.T]], background_area @ [[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]], cell_area @ [[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]], flags @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''

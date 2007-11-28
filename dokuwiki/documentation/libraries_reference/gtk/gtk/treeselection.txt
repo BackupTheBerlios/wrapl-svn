@@ -32,11 +32,6 @@
 ==== :TreeView ====
 '':TreeView(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:TreeView#T|Gtk.Gtk.TreeView.T]]''
 
-  Returns the tree view associated with selection.
-  
-  selection : A GtkTreeSelection
-  Returns :   A GtkTreeView
-  
 
 ==== :Type ====
 '':Type(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:SelectionMode#T|Gtk.Gtk.SelectionMode.T]]''
@@ -49,11 +44,6 @@
 ==== :UserData ====
 '':UserData(self @ [[#T|T]]) : [[..:..:Std:Address#T|Std.Address.T]]''
 
-  Returns the user data for the selection function.
-  
-  selection : A GtkTreeSelection.
-  Returns :   The user data.
-  
 
 ==== :Destroy ====
 '':Destroy(self @ [[#T|T]]) : [[..:..:Std:Function#T|Std.Function.T]]''

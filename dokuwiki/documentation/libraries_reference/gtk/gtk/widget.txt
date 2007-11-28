@@ -198,12 +198,6 @@
 ==== :State ====
 '':State(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-  This function is for use in widget implementations. Sets the state of a widget (insensitive, prelighted, etc.) Usually
-  you should set the state using wrapper functions such as gtk_widget_set_sensitive().
-  
-  widget : a GtkWidget
-  state :  new state for widget
-  
 
 ==== :SavedState ====
 '':SavedState(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
@@ -212,97 +206,14 @@
 ==== :Name ====
 '':Name(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
-  Widgets can be named, which allows you to refer to them from a gtkrc file. You can apply a style to widgets with a
-  particular name in the gtkrc file. See the documentation for gtkrc files (on the same page as the docs for GtkRcStyle).
-  Note that widget names are separated by periods in paths (see gtk_widget_path()), so names with embedded periods may
-  cause confusion.
-  
-  widget : a GtkWidget
-  name :   name for the widget
-  
-  Retrieves the name of a widget. See gtk_widget_set_name() for the significance of widget names.
-  
-  widget :  a GtkWidget
-  Returns : name of the widget. This string is owned by GTK+ and should not be modified or freed
-  
-  Obtains the composite name of a widget.
-  
-  widget :  a GtkWidget
-  Returns : the composite name of widget, or NULL if widget is not a composite child. The string should not be freed when
-            it is no longer needed.
-  
-  Sets a widgets composite name. The widget must be a composite child of its parent; see gtk_widget_push_composite_child
-  ().
-  
-  widget : a GtkWidget.
-  name :   the name to set
-  
 
 ==== :Style ====
 '':Style(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Style#T|Gtk.Gtk.Style.T]]''
 
-  Sets the GtkStyle for a widget (widget->style). You probably don't want to use this function; it interacts badly with
-  themes, because themes work by replacing the GtkStyle. Instead, use gtk_widget_modify_style().
-  
-  widget : a GtkWidget
-  style :  a GtkStyle, or NULL to remove the effect of a previous gtk_widget_set_style() and go back to the default style
-  
-  Ensures that widget has a style (widget->style). Not a very useful function; most of the time, if you want the style,
-  the widget is realized, and realized widgets are guaranteed to have a style already.
-  
-  widget : a GtkWidget
-  
-  Simply an accessor function that returns widget->style.
-  
-  widget :  a GtkWidget
-  Returns : the widget's GtkStyle
-  
-  Returns the default style used by all widgets initially.
-  
-  Returns : the default style. This GtkStyle object is owned by GTK+ and should not be modified or freed.
-  
-  Modifies style values on the widget. Modifications made using this technique take precedence over style values set via
-  an RC file, however, they will be overriden if a style is explicitely set on the widget using gtk_widget_set_style().
-  The GtkRcStyle structure is designed so each field can either be set or unset, so it is possible, using this function,
-  to modify some style values and leave the others unchanged.
-  Note that modifications made with this function are not cumulative with previous calls to gtk_widget_modify_style() or
-  with such functions as gtk_widget_modify_fg(). If you wish to retain previous values, you must first call
-  gtk_widget_get_modifier_style(), make your modifications to the returned style, then call gtk_widget_modify_style() with
-  that style. On the other hand, if you first call gtk_widget_modify_style(), subsequent calls to such functions
-  gtk_widget_modify_fg() will have a cumulative effect with the initial modifications.
-  
-  widget : a GtkWidget
-  style :  the GtkRcStyle holding the style modifications
-  
-  Returns the current modifier style for the widget. (As set by gtk_widget_modify_style().) If no style has previously
-  set, a new GtkRcStyle will be created with all values unset, and set as the modifier style for the widget. If you make
-  changes to this rc style, you must call gtk_widget_modify_style(), passing in the returned rc style, to make sure that
-  your changes take effect.
-  Caution: passing the style back to gtk_widget_modify_style() will normally end up destroying it, because
-  gtk_widget_modify_style() copies the passed-in style and sets the copy as the new modifier style, thus dropping any
-  reference to the old modifier style. Add a reference to the modifier style if you want to keep it alive.
-  
-  widget :  a GtkWidget
-  Returns : the modifier style for the widget. This rc style is owned by the widget. If you want to keep a pointer to
-            value this around, you must add a refcount using g_object_ref().
-  
 
 ==== :Requisition ====
 '':Requisition(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Requisition#T|Gtk.Gtk.Requisition.T]]''
 
-  This function is only for use in widget implementations. Obtains widget->requisition, unless someone has forced a
-  particular geometry on the widget (e.g. with gtk_widget_set_size_request()), in which case it returns that geometry
-  instead of the widget's requisition.
-  This function differs from gtk_widget_size_request() in that it retrieves the last size request value from widget-
-  >requisition, while gtk_widget_size_request() actually calls the "size_request" method on widget to compute the size
-  request and fill in widget->requisition, and only then returns widget->requisition.
-  Because this function does not call the "size_request" method, it can only be used when you know that widget-
-  >requisition is up-to-date, that is, gtk_widget_size_request() has been called since the last time a resize was queued.
-  In general, only container implementations have this information; applications should use gtk_widget_size_request().
-  
-  widget :      a GtkWidget
-  requisition : a GtkRequisition to be filled in
-  
 
 ==== :Allocation ====
 '':Allocation(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]]''
@@ -311,64 +222,10 @@
 ==== :Window ====
 '':Window(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]]''
 
-  Sets a non default parent window for widget.
-  
-  widget :        a GtkWidget.
-  parent_window : the new parent window.
-  
-  Gets widget's parent window.
-  
-  widget :  a GtkWidget.
-  Returns : the parent window of widget.
-  
-  Get the root window where this widget is located. This function can only be called after the widget has been added to a
-  widget heirarchy with GtkWindow at the top.
-  The root window is useful for such purposes as creating a popup GdkWindow associated with the window. In general, you
-  should only create display specific resources when a widget has been realized, and you should free those resources when
-  the widget is unrealized.
-  
-  widget :  a GtkWidget
-  Returns : the GdkWindow root window for the toplevel for this widget.
-  
-  Returns the GtkWindow of the current tooltip. This can be the GtkWindow created by default, or the custom tooltip window
-  set using gtk_widget_set_tooltip_window().
-  
-  widget :  a GtkWidget
-  Returns : The GtkWindow of the current tooltip.
-  
-  Replaces the default, usually yellow, window used for displaying tooltips with custom_window. GTK+ will take care of
-  showing and hiding custom_window at the right moment, to behave likewise as the default tooltip window. If custom_window
-  is NULL, the default tooltip window will be used.
-  
-  widget :        a GtkWidget
-  custom_window : a GtkWindow, or NULL
-  
 
 ==== :Parent ====
 '':Parent(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
-  This function is only for use in widget implementations. Should be called by implementations of the remove method on
-  GtkContainer, to dissociate a child from the container.
-  
-  widget : a GtkWidget
-  
-  Moves a widget from one GtkContainer to another, handling reference count issues to avoid destroying the widget.
-  
-  widget :     a GtkWidget
-  new_parent : a GtkContainer to move the widget into
-  
-  This function is useful only when implementing subclasses of GtkContainer. Sets the container as the parent of widget,
-  and takes care of some details such as updating the state and style of the child to reflect its new location. The
-  opposite function is gtk_widget_unparent().
-  
-  widget : a GtkWidget
-  parent : parent container
-  
-  Returns the parent container of widget.
-  
-  widget :  a GtkWidget
-  Returns : the parent container of widget, or NULL
-  
 
 ==== :Activate ====
 '':Activate(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''

@@ -46,18 +46,6 @@
 ==== :Value ====
 '':Value(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
-  Gets the current value of the adjustment. See gtk_adjustment_set_value().
-  
-  adjustment : a GtkAdjustment
-  Returns :    The current value of the adjustment.
-  
-  Sets the GtkAdjustment value. The value is clamped to lie between adjustment->lower and adjustment->upper.
-  Note that for adjustments which are used in a GtkScrollbar, the effective range of allowed values goes from adjustment-
-  >lower to adjustment->upper - adjustment->page_size.
-  
-  adjustment : a GtkAdjustment.
-  value :      the new value.
-  
 
 ==== :StepIncrement ====
 '':StepIncrement(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''

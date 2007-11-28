@@ -140,12 +140,6 @@
 ==== :DefaultSortFunc ====
 '':DefaultSortFunc(self @ [[#T|T]]) : [[..:..:Std:Function#T|Std.Function.T]]''
 
-  This resets the default sort function to be in the 'unsorted' state. That is, it is in the same order as the child
-  model. It will re-sort the model to be in the same order as the child model only if the GtkTreeModelSort is in
-  'unsorted' state.
-  
-  tree_model_sort : A GtkTreeModelSort
-  
 
 ==== :DefaultSortData ====
 '':DefaultSortData(self @ [[#T|T]]) : [[..:..:Std:Address#T|Std.Address.T]]''
