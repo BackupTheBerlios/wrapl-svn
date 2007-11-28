@@ -5,7 +5,7 @@
 
 
 ==== :SetName ====
-'':SetName(self @ [[#T|T]], name @[[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetName(self @ [[#T|T]], name @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetNeeded ====
@@ -13,15 +13,15 @@
 
 
 ==== :AddCustom ====
-'':AddCustom(self @ [[#T|T]], needed @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], func @[[..:..:Std:Function#T|Std.Function.T]], data @[[..:..:Std:Address#T|Std.Address.T]], notify @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':AddCustom(self @ [[#T|T]], needed @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], func @ [[..:..:Std:Function#T|Std.Function.T]], data @ [[..:..:Std:Address#T|Std.Address.T]], notify @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :AddMimeType ====
-'':AddMimeType(self @ [[#T|T]], mime_type @[[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':AddMimeType(self @ [[#T|T]], mime_type @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :AddPattern ====
-'':AddPattern(self @ [[#T|T]], pattern @[[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':AddPattern(self @ [[#T|T]], pattern @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :AddPixbufFormats ====
@@ -29,7 +29,7 @@
 
 
 ==== :Filter ====
-'':Filter(self @ [[#T|T]], filter_info @[[..:..:Gtk:Gtk:FileFilterInfo#T|Gtk.Gtk.FileFilterInfo.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':Filter(self @ [[#T|T]], filter_info @ [[..:..:Gtk:Gtk:FileFilterInfo#T|Gtk.Gtk.FileFilterInfo.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :GetName ====

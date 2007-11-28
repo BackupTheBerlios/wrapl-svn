@@ -9,11 +9,11 @@
 
 
 ==== :Foreach ====
-'':Foreach(self @ [[#T|T]], func @[[..:..:Std:Function#T|Std.Function.T]], data @[[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Foreach(self @ [[#T|T]], func @ [[..:..:Std:Function#T|Std.Function.T]], data @ [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetFont ====
-'':GetFont(self @ [[#T|T]], wc @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Gtk:Pango:Font#T|Gtk.Pango.Font.T]]''
+'':GetFont(self @ [[#T|T]], wc @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Gtk:Pango:Font#T|Gtk.Pango.Font.T]]''
 
 
 ==== GetType ====

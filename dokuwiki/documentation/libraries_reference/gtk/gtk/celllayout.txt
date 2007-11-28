@@ -3,11 +3,11 @@
 
 
 ==== :SetCellDataFunc ====
-'':SetCellDataFunc(self @ [[#T|T]], cell @[[..:..:Gtk:Gtk:CellRenderer#T|Gtk.Gtk.CellRenderer.T]], func @[[..:..:Std:Function#T|Std.Function.T]], func_data @[[..:..:Std:Address#T|Std.Address.T]], destroy @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetCellDataFunc(self @ [[#T|T]], cell @ [[..:..:Gtk:Gtk:CellRenderer#T|Gtk.Gtk.CellRenderer.T]], func @ [[..:..:Std:Function#T|Std.Function.T]], func_data @ [[..:..:Std:Address#T|Std.Address.T]], destroy @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :AddAttribute ====
-'':AddAttribute(self @ [[#T|T]], cell @[[..:..:Gtk:Gtk:CellRenderer#T|Gtk.Gtk.CellRenderer.T]], attribute @[[..:..:Std:String#T|Std.String.T]], column @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':AddAttribute(self @ [[#T|T]], cell @ [[..:..:Gtk:Gtk:CellRenderer#T|Gtk.Gtk.CellRenderer.T]], attribute @ [[..:..:Std:String#T|Std.String.T]], column @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Clear ====
@@ -15,7 +15,7 @@
 
 
 ==== :ClearAttributes ====
-'':ClearAttributes(self @ [[#T|T]], cell @[[..:..:Gtk:Gtk:CellRenderer#T|Gtk.Gtk.CellRenderer.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':ClearAttributes(self @ [[#T|T]], cell @ [[..:..:Gtk:Gtk:CellRenderer#T|Gtk.Gtk.CellRenderer.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetCells ====
@@ -23,19 +23,19 @@
 
 
 ==== :PackEnd ====
-'':PackEnd(self @ [[#T|T]], cell @[[..:..:Gtk:Gtk:CellRenderer#T|Gtk.Gtk.CellRenderer.T]], expand @[[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':PackEnd(self @ [[#T|T]], cell @ [[..:..:Gtk:Gtk:CellRenderer#T|Gtk.Gtk.CellRenderer.T]], expand @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :PackStart ====
-'':PackStart(self @ [[#T|T]], cell @[[..:..:Gtk:Gtk:CellRenderer#T|Gtk.Gtk.CellRenderer.T]], expand @[[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':PackStart(self @ [[#T|T]], cell @ [[..:..:Gtk:Gtk:CellRenderer#T|Gtk.Gtk.CellRenderer.T]], expand @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Reorder ====
-'':Reorder(self @ [[#T|T]], cell @[[..:..:Gtk:Gtk:CellRenderer#T|Gtk.Gtk.CellRenderer.T]], position @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Reorder(self @ [[#T|T]], cell @ [[..:..:Gtk:Gtk:CellRenderer#T|Gtk.Gtk.CellRenderer.T]], position @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetAttributes ====
-'':SetAttributes(self @ [[#T|T]], cell @[[..:..:Gtk:Gtk:CellRenderer#T|Gtk.Gtk.CellRenderer.T]], ___ @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetAttributes(self @ [[#T|T]], cell @ [[..:..:Gtk:Gtk:CellRenderer#T|Gtk.Gtk.CellRenderer.T]], ___ @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== GetType ====

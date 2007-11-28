@@ -7,11 +7,11 @@
 
 
 ==== :Splice ====
-'':Splice(self @ [[#T|T]], other @[[..:..:Gtk:Pango:AttrList#T|Gtk.Pango.AttrList.T]], pos @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], len @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Splice(self @ [[#T|T]], other @ [[..:..:Gtk:Pango:AttrList#T|Gtk.Pango.AttrList.T]], pos @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], len @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Change ====
-'':Change(self @ [[#T|T]], attr @[[..:..:Gtk:Pango:Attribute#T|Gtk.Pango.Attribute.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Change(self @ [[#T|T]], attr @ [[..:..:Gtk:Pango:Attribute#T|Gtk.Pango.Attribute.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Copy ====
@@ -19,7 +19,7 @@
 
 
 ==== :Filter ====
-'':Filter(self @ [[#T|T]], func @[[..:..:Std:Function#T|Std.Function.T]], data @[[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Gtk:Pango:AttrList#T|Gtk.Pango.AttrList.T]]''
+'':Filter(self @ [[#T|T]], func @ [[..:..:Std:Function#T|Std.Function.T]], data @ [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Gtk:Pango:AttrList#T|Gtk.Pango.AttrList.T]]''
 
 
 ==== :GetIterator ====
@@ -27,11 +27,11 @@
 
 
 ==== :Insert ====
-'':Insert(self @ [[#T|T]], attr @[[..:..:Gtk:Pango:Attribute#T|Gtk.Pango.Attribute.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Insert(self @ [[#T|T]], attr @ [[..:..:Gtk:Pango:Attribute#T|Gtk.Pango.Attribute.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :InsertBefore ====
-'':InsertBefore(self @ [[#T|T]], attr @[[..:..:Gtk:Pango:Attribute#T|Gtk.Pango.Attribute.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':InsertBefore(self @ [[#T|T]], attr @ [[..:..:Gtk:Pango:Attribute#T|Gtk.Pango.Attribute.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Ref ====

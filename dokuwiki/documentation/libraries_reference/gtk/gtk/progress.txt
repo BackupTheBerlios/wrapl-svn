@@ -7,7 +7,7 @@
 
 
 ==== :SetValue ====
-'':SetValue(self @ [[#T|T]], value @[[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetValue(self @ [[#T|T]], value @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Adjustment ====
@@ -43,7 +43,7 @@
 
 
 ==== :Configure ====
-'':Configure(self @ [[#T|T]], value @[[..:..:Std:Real#T|Std.Real.T]], hmin @[[..:..:Std:Real#T|Std.Real.T]], max @[[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Configure(self @ [[#T|T]], value @ [[..:..:Std:Real#T|Std.Real.T]], hmin @ [[..:..:Std:Real#T|Std.Real.T]], max @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetCurrentPercentage ====
@@ -55,11 +55,11 @@
 
 
 ==== :GetPercentageFromValue ====
-'':GetPercentageFromValue(self @ [[#T|T]], value @[[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
+'':GetPercentageFromValue(self @ [[#T|T]], value @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :GetTextFromValue ====
-'':GetTextFromValue(self @ [[#T|T]], value @[[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:String#T|Std.String.T]]''
+'':GetTextFromValue(self @ [[#T|T]], value @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== :GetValue ====
@@ -67,27 +67,27 @@
 
 
 ==== :SetActivityMode ====
-'':SetActivityMode(self @ [[#T|T]], activity_mode @[[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetActivityMode(self @ [[#T|T]], activity_mode @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetAdjustment ====
-'':SetAdjustment(self @ [[#T|T]], adjustment @[[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetAdjustment(self @ [[#T|T]], adjustment @ [[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetFormatString ====
-'':SetFormatString(self @ [[#T|T]], format @[[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetFormatString(self @ [[#T|T]], format @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetPercentage ====
-'':SetPercentage(self @ [[#T|T]], percentage @[[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetPercentage(self @ [[#T|T]], percentage @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetShowText ====
-'':SetShowText(self @ [[#T|T]], show_text @[[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetShowText(self @ [[#T|T]], show_text @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetTextAlignment ====
-'':SetTextAlignment(self @ [[#T|T]], x_align @[[..:..:Std:Real#T|Std.Real.T]], y_align @[[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetTextAlignment(self @ [[#T|T]], x_align @ [[..:..:Std:Real#T|Std.Real.T]], y_align @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== GetType ====

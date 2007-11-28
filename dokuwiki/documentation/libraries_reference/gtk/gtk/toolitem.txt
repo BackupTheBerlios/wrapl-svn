@@ -9,11 +9,11 @@
 
 
 ==== :SetVisibleVertical ====
-'':SetVisibleVertical(self @ [[#T|T]], visible_vertical @[[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetVisibleVertical(self @ [[#T|T]], visible_vertical @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetVisibleHorizontal ====
-'':SetVisibleHorizontal(self @ [[#T|T]], visible_horizontal @[[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetVisibleHorizontal(self @ [[#T|T]], visible_horizontal @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Priv ====
@@ -41,7 +41,7 @@
 
 
 ==== :GetProxyMenuItem ====
-'':GetProxyMenuItem(self @ [[#T|T]], menu_item_id @[[..:..:Std:String#T|Std.String.T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
+'':GetProxyMenuItem(self @ [[#T|T]], menu_item_id @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
 
 ==== :GetReliefStyle ====
@@ -73,35 +73,35 @@
 
 
 ==== :SetExpand ====
-'':SetExpand(self @ [[#T|T]], expand @[[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetExpand(self @ [[#T|T]], expand @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetHomogeneous ====
-'':SetHomogeneous(self @ [[#T|T]], homogeneous @[[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetHomogeneous(self @ [[#T|T]], homogeneous @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetIsImportant ====
-'':SetIsImportant(self @ [[#T|T]], is_important @[[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetIsImportant(self @ [[#T|T]], is_important @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetProxyMenuItem ====
-'':SetProxyMenuItem(self @ [[#T|T]], menu_item_id @[[..:..:Std:String#T|Std.String.T]], menu_item @[[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetProxyMenuItem(self @ [[#T|T]], menu_item_id @ [[..:..:Std:String#T|Std.String.T]], menu_item @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetTooltip ====
-'':SetTooltip(self @ [[#T|T]], tooltips @[[..:..:Gtk:Gtk:Tooltips#T|Gtk.Gtk.Tooltips.T]], tip_text @[[..:..:Std:String#T|Std.String.T]], tip_private @[[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetTooltip(self @ [[#T|T]], tooltips @ [[..:..:Gtk:Gtk:Tooltips#T|Gtk.Gtk.Tooltips.T]], tip_text @ [[..:..:Std:String#T|Std.String.T]], tip_private @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetTooltipMarkup ====
-'':SetTooltipMarkup(self @ [[#T|T]], markup @[[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetTooltipMarkup(self @ [[#T|T]], markup @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetTooltipText ====
-'':SetTooltipText(self @ [[#T|T]], text @[[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetTooltipText(self @ [[#T|T]], text @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetUseDragWindow ====
-'':SetUseDragWindow(self @ [[#T|T]], use_drag_window @[[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetUseDragWindow(self @ [[#T|T]], use_drag_window @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====

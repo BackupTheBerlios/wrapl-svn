@@ -7,7 +7,7 @@
 
 
 ==== :Dash ====
-'':Dash(self @ [[#T|T]], dash @[[..:..:Gtk:Art:VpathDash#T|Gtk.Art.VpathDash.T]]) : [[..:..:Gtk:Art:Vpath#T|Gtk.Art.Vpath.T]]''
+'':Dash(self @ [[#T|T]], dash @ [[..:..:Gtk:Art:VpathDash#T|Gtk.Art.VpathDash.T]]) : [[..:..:Gtk:Art:Vpath#T|Gtk.Art.Vpath.T]]''
 
 
 ==== :Code ====
@@ -23,19 +23,19 @@
 
 
 ==== :AddPoint ====
-'':AddPoint(self @ [[#T|T]], pn_points @[[..:..:Std:Object#T|Std.Object.T]], pn_points_max @[[..:..:Std:Object#T|Std.Object.T]], code @[[..:..:Gtk:Art:Pathcode#T|Gtk.Art.Pathcode.T]], x @[[..:..:Std:Real#T|Std.Real.T]], y @[[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':AddPoint(self @ [[#T|T]], pn_points @ [[..:..:Std:Object#T|Std.Object.T]], pn_points_max @ [[..:..:Std:Object#T|Std.Object.T]], code @ [[..:..:Gtk:Art:Pathcode#T|Gtk.Art.Pathcode.T]], x @ [[..:..:Std:Real#T|Std.Real.T]], y @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :AffineTransform ====
-'':AffineTransform(self @ [[#T|T]], matrix @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Gtk:Art:Vpath#T|Gtk.Art.Vpath.T]]''
+'':AffineTransform(self @ [[#T|T]], matrix @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Gtk:Art:Vpath#T|Gtk.Art.Vpath.T]]''
 
 
 ==== :BboxDrect ====
-'':BboxDrect(self @ [[#T|T]], drect @[[..:..:Gtk:Art:DRect#T|Gtk.Art.DRect.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':BboxDrect(self @ [[#T|T]], drect @ [[..:..:Gtk:Art:DRect#T|Gtk.Art.DRect.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :BboxIrect ====
-'':BboxIrect(self @ [[#T|T]], irect @[[..:..:Gtk:Art:IRect#T|Gtk.Art.IRect.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':BboxIrect(self @ [[#T|T]], irect @ [[..:..:Gtk:Art:IRect#T|Gtk.Art.IRect.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== NewCircle ====

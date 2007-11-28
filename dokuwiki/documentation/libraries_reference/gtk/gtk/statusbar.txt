@@ -10,11 +10,11 @@
 
 
 ==== :SetHasResizeGrip ====
-'':SetHasResizeGrip(self @ [[#T|T]], setting @[[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetHasResizeGrip(self @ [[#T|T]], setting @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Remove ====
-'':Remove(self @ [[#T|T]], context_id @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], message_id @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Remove(self @ [[#T|T]], context_id @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], message_id @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Frame ====
@@ -50,7 +50,7 @@
 
 
 ==== :GetContextId ====
-'':GetContextId(self @ [[#T|T]], context_description @[[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':GetContextId(self @ [[#T|T]], context_description @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :GetHasResizeGrip ====
@@ -58,11 +58,11 @@
 
 
 ==== :Pop ====
-'':Pop(self @ [[#T|T]], context_id @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Pop(self @ [[#T|T]], context_id @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Push ====
-'':Push(self @ [[#T|T]], context_id @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], text @[[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':Push(self @ [[#T|T]], context_id @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], text @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== New ====

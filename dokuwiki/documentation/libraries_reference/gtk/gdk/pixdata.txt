@@ -3,7 +3,7 @@
 
 
 ==== :ToCsource ====
-'':ToCsource(self @ [[#T|T]], name @[[..:..:Std:String#T|Std.String.T]], dump_type @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':ToCsource(self @ [[#T|T]], name @ [[..:..:Std:String#T|Std.String.T]], dump_type @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Magic ====
@@ -35,15 +35,15 @@
 
 
 ==== :Deserialize ====
-'':Deserialize(self @ [[#T|T]], stream_length @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], stream @[[..:..:Std:Object#T|Std.Object.T]], error @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':Deserialize(self @ [[#T|T]], stream_length @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], stream @ [[..:..:Std:Object#T|Std.Object.T]], error @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :FromPixbuf ====
-'':FromPixbuf(self @ [[#T|T]], pixbuf @[[..:..:Gtk:Gdk:Pixbuf#T|Gtk.Gdk.Pixbuf.T]], use_rle @[[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Address#T|Std.Address.T]]''
+'':FromPixbuf(self @ [[#T|T]], pixbuf @ [[..:..:Gtk:Gdk:Pixbuf#T|Gtk.Gdk.Pixbuf.T]], use_rle @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Address#T|Std.Address.T]]''
 
 
 ==== :Serialize ====
-'':Serialize(self @ [[#T|T]], stream_length_p @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Serialize(self @ [[#T|T]], stream_length_p @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====

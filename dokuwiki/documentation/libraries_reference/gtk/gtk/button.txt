@@ -9,23 +9,23 @@
 
 
 ==== :SetUseUnderline ====
-'':SetUseUnderline(self @ [[#T|T]], use_underline @[[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetUseUnderline(self @ [[#T|T]], use_underline @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetUseStock ====
-'':SetUseStock(self @ [[#T|T]], use_stock @[[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetUseStock(self @ [[#T|T]], use_stock @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetRelief ====
-'':SetRelief(self @ [[#T|T]], newstyle @[[..:..:Gtk:Gtk:ReliefStyle#T|Gtk.Gtk.ReliefStyle.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetRelief(self @ [[#T|T]], newstyle @ [[..:..:Gtk:Gtk:ReliefStyle#T|Gtk.Gtk.ReliefStyle.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetLabel ====
-'':SetLabel(self @ [[#T|T]], label @[[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetLabel(self @ [[#T|T]], label @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetImagePosition ====
-'':SetImagePosition(self @ [[#T|T]], position @[[..:..:Gtk:Gtk:PositionType#T|Gtk.Gtk.PositionType.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetImagePosition(self @ [[#T|T]], position @ [[..:..:Gtk:Gtk:PositionType#T|Gtk.Gtk.PositionType.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :EventWindow ====
@@ -85,7 +85,7 @@
 
 
 ==== :GetAlignment ====
-'':GetAlignment(self @ [[#T|T]], xalign @[[..:..:Std:Object#T|Std.Object.T]], yalign @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':GetAlignment(self @ [[#T|T]], xalign @ [[..:..:Std:Object#T|Std.Object.T]], yalign @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetFocusOnClick ====
@@ -129,15 +129,15 @@
 
 
 ==== :SetAlignment ====
-'':SetAlignment(self @ [[#T|T]], xalign @[[..:..:Std:Real#T|Std.Real.T]], yalign @[[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetAlignment(self @ [[#T|T]], xalign @ [[..:..:Std:Real#T|Std.Real.T]], yalign @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetFocusOnClick ====
-'':SetFocusOnClick(self @ [[#T|T]], focus_on_click @[[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetFocusOnClick(self @ [[#T|T]], focus_on_click @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetImage ====
-'':SetImage(self @ [[#T|T]], image @[[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetImage(self @ [[#T|T]], image @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====

@@ -5,11 +5,11 @@
 
 
 ==== :Write ====
-'':Write(self @ [[#T|T]], buf @[[..:..:Std:String#T|Std.String.T]], count @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], error @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':Write(self @ [[#T|T]], buf @ [[..:..:Std:String#T|Std.String.T]], count @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], error @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :SetSize ====
-'':SetSize(self @ [[#T|T]], width @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], height @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetSize(self @ [[#T|T]], width @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], height @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetPixbuf ====
@@ -25,7 +25,7 @@
 
 
 ==== :Close ====
-'':Close(self @ [[#T|T]], error @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':Close(self @ [[#T|T]], error @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :GetAnimation ====

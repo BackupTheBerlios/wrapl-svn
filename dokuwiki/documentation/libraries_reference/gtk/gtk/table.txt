@@ -8,11 +8,11 @@
 
 
 ==== :SetRowSpacings ====
-'':SetRowSpacings(self @ [[#T|T]], spacing @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetRowSpacings(self @ [[#T|T]], spacing @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetRowSpacing ====
-'':SetRowSpacing(self @ [[#T|T]], row @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], spacing @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetRowSpacing(self @ [[#T|T]], row @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], spacing @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Children ====
@@ -48,15 +48,15 @@
 
 
 ==== :Attach ====
-'':Attach(self @ [[#T|T]], child @[[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], left_attach @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], right_attach @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], top_attach @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], bottom_attach @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], xoptions @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], yoptions @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], xpadding @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], ypadding @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Attach(self @ [[#T|T]], child @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], left_attach @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], right_attach @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], top_attach @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], bottom_attach @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], xoptions @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], yoptions @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], xpadding @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], ypadding @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :AttachDefaults ====
-'':AttachDefaults(self @ [[#T|T]], widget @[[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], left_attach @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], right_attach @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], top_attach @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], bottom_attach @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':AttachDefaults(self @ [[#T|T]], widget @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], left_attach @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], right_attach @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], top_attach @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], bottom_attach @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetColSpacing ====
-'':GetColSpacing(self @ [[#T|T]], column @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':GetColSpacing(self @ [[#T|T]], column @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :GetDefaultColSpacing ====
@@ -72,23 +72,23 @@
 
 
 ==== :GetRowSpacing ====
-'':GetRowSpacing(self @ [[#T|T]], row @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':GetRowSpacing(self @ [[#T|T]], row @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Resize ====
-'':Resize(self @ [[#T|T]], rows @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], columns @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Resize(self @ [[#T|T]], rows @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], columns @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetColSpacing ====
-'':SetColSpacing(self @ [[#T|T]], column @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], spacing @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetColSpacing(self @ [[#T|T]], column @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], spacing @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetColSpacings ====
-'':SetColSpacings(self @ [[#T|T]], spacing @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetColSpacings(self @ [[#T|T]], spacing @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetHomogeneous ====
-'':SetHomogeneous(self @ [[#T|T]], homogeneous @[[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetHomogeneous(self @ [[#T|T]], homogeneous @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====

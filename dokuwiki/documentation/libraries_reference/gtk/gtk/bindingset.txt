@@ -3,11 +3,11 @@
 
 
 ==== :AddPath ====
-'':AddPath(self @ [[#T|T]], path_type @[[..:..:Gtk:Gtk:PathType#T|Gtk.Gtk.PathType.T]], path_pattern @[[..:..:Std:String#T|Std.String.T]], priority @[[..:..:Gtk:Gtk:PathPriorityType#T|Gtk.Gtk.PathPriorityType.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':AddPath(self @ [[#T|T]], path_type @ [[..:..:Gtk:Gtk:PathType#T|Gtk.Gtk.PathType.T]], path_pattern @ [[..:..:Std:String#T|Std.String.T]], priority @ [[..:..:Gtk:Gtk:PathPriorityType#T|Gtk.Gtk.PathPriorityType.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Activate ====
-'':Activate(self @ [[#T|T]], keyval @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], modifiers @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], object @[[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':Activate(self @ [[#T|T]], keyval @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], modifiers @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], object @ [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :Parsed ====

@@ -12,11 +12,11 @@
 
 
 ==== :Spin ====
-'':Spin(self @ [[#T|T]], direction @[[..:..:Gtk:Gtk:SpinType#T|Gtk.Gtk.SpinType.T]], increment @[[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Spin(self @ [[#T|T]], direction @ [[..:..:Gtk:Gtk:SpinType#T|Gtk.Gtk.SpinType.T]], increment @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetWrap ====
-'':SetWrap(self @ [[#T|T]], wrap @[[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetWrap(self @ [[#T|T]], wrap @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Adjustment ====
@@ -80,7 +80,7 @@
 
 
 ==== :Configure ====
-'':Configure(self @ [[#T|T]], adjustment @[[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]], climb_rate @[[..:..:Std:Real#T|Std.Real.T]], digits @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Configure(self @ [[#T|T]], adjustment @ [[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]], climb_rate @ [[..:..:Std:Real#T|Std.Real.T]], digits @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetAdjustment ====
@@ -92,7 +92,7 @@
 
 
 ==== :GetIncrements ====
-'':GetIncrements(self @ [[#T|T]], step @[[..:..:Std:Object#T|Std.Object.T]], page @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':GetIncrements(self @ [[#T|T]], step @ [[..:..:Std:Object#T|Std.Object.T]], page @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetNumeric ====
@@ -100,7 +100,7 @@
 
 
 ==== :GetRange ====
-'':GetRange(self @ [[#T|T]], min @[[..:..:Std:Object#T|Std.Object.T]], max @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':GetRange(self @ [[#T|T]], min @ [[..:..:Std:Object#T|Std.Object.T]], max @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetSnapToTicks ====
@@ -124,35 +124,35 @@
 
 
 ==== :SetAdjustment ====
-'':SetAdjustment(self @ [[#T|T]], adjustment @[[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetAdjustment(self @ [[#T|T]], adjustment @ [[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetDigits ====
-'':SetDigits(self @ [[#T|T]], digits @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetDigits(self @ [[#T|T]], digits @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetIncrements ====
-'':SetIncrements(self @ [[#T|T]], step @[[..:..:Std:Real#T|Std.Real.T]], page @[[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetIncrements(self @ [[#T|T]], step @ [[..:..:Std:Real#T|Std.Real.T]], page @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetNumeric ====
-'':SetNumeric(self @ [[#T|T]], numeric @[[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetNumeric(self @ [[#T|T]], numeric @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetRange ====
-'':SetRange(self @ [[#T|T]], min @[[..:..:Std:Real#T|Std.Real.T]], max @[[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetRange(self @ [[#T|T]], min @ [[..:..:Std:Real#T|Std.Real.T]], max @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetSnapToTicks ====
-'':SetSnapToTicks(self @ [[#T|T]], snap_to_ticks @[[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetSnapToTicks(self @ [[#T|T]], snap_to_ticks @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetUpdatePolicy ====
-'':SetUpdatePolicy(self @ [[#T|T]], policy @[[..:..:Gtk:Gtk:SpinButtonUpdatePolicy#T|Gtk.Gtk.SpinButtonUpdatePolicy.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetUpdatePolicy(self @ [[#T|T]], policy @ [[..:..:Gtk:Gtk:SpinButtonUpdatePolicy#T|Gtk.Gtk.SpinButtonUpdatePolicy.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetValue ====
-'':SetValue(self @ [[#T|T]], value @[[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetValue(self @ [[#T|T]], value @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====

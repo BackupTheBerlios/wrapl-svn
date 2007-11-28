@@ -5,11 +5,11 @@
 
 
 ==== :SetTextColumn ====
-'':SetTextColumn(self @ [[#T|T]], column @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetTextColumn(self @ [[#T|T]], column @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetPopupSingleMatch ====
-'':SetPopupSingleMatch(self @ [[#T|T]], popup_single_match @[[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetPopupSingleMatch(self @ [[#T|T]], popup_single_match @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Priv ====
@@ -21,7 +21,7 @@
 
 
 ==== :DeleteAction ====
-'':DeleteAction(self @ [[#T|T]], index_ @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':DeleteAction(self @ [[#T|T]], index_ @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetCompletionPrefix ====
@@ -65,11 +65,11 @@
 
 
 ==== :InsertActionMarkup ====
-'':InsertActionMarkup(self @ [[#T|T]], index_ @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], markup @[[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':InsertActionMarkup(self @ [[#T|T]], index_ @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], markup @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :InsertActionText ====
-'':InsertActionText(self @ [[#T|T]], index_ @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], text @[[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':InsertActionText(self @ [[#T|T]], index_ @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], text @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :InsertPrefix ====
@@ -77,31 +77,31 @@
 
 
 ==== :SetInlineCompletion ====
-'':SetInlineCompletion(self @ [[#T|T]], inline_completion @[[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetInlineCompletion(self @ [[#T|T]], inline_completion @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetInlineSelection ====
-'':SetInlineSelection(self @ [[#T|T]], inline_selection @[[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetInlineSelection(self @ [[#T|T]], inline_selection @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetMatchFunc ====
-'':SetMatchFunc(self @ [[#T|T]], func @[[..:..:Std:Function#T|Std.Function.T]], func_data @[[..:..:Std:Address#T|Std.Address.T]], func_notify @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetMatchFunc(self @ [[#T|T]], func @ [[..:..:Std:Function#T|Std.Function.T]], func_data @ [[..:..:Std:Address#T|Std.Address.T]], func_notify @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetMinimumKeyLength ====
-'':SetMinimumKeyLength(self @ [[#T|T]], length @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetMinimumKeyLength(self @ [[#T|T]], length @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetModel ====
-'':SetModel(self @ [[#T|T]], model @[[..:..:Gtk:Gtk:TreeModel#T|Gtk.Gtk.TreeModel.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetModel(self @ [[#T|T]], model @ [[..:..:Gtk:Gtk:TreeModel#T|Gtk.Gtk.TreeModel.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetPopupCompletion ====
-'':SetPopupCompletion(self @ [[#T|T]], popup_completion @[[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetPopupCompletion(self @ [[#T|T]], popup_completion @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetPopupSetWidth ====
-'':SetPopupSetWidth(self @ [[#T|T]], popup_set_width @[[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetPopupSetWidth(self @ [[#T|T]], popup_set_width @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====

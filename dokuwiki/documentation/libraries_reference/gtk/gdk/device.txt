@@ -5,15 +5,15 @@
 
 
 ==== :SetSource ====
-'':SetSource(self @ [[#T|T]], source @[[..:..:Gtk:Gdk:InputSource#T|Gtk.Gdk.InputSource.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetSource(self @ [[#T|T]], source @ [[..:..:Gtk:Gdk:InputSource#T|Gtk.Gdk.InputSource.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetMode ====
-'':SetMode(self @ [[#T|T]], mode @[[..:..:Gtk:Gdk:InputMode#T|Gtk.Gdk.InputMode.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':SetMode(self @ [[#T|T]], mode @ [[..:..:Gtk:Gdk:InputMode#T|Gtk.Gdk.InputMode.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :SetKey ====
-'':SetKey(self @ [[#T|T]], index_ @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], keyval @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], modifiers @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetKey(self @ [[#T|T]], index_ @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], keyval @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], modifiers @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Name ====
@@ -49,19 +49,19 @@
 
 
 ==== :GetAxis ====
-'':GetAxis(self @ [[#T|T]], axes @[[..:..:Std:Object#T|Std.Object.T]], use @[[..:..:Gtk:Gdk:AxisUse#T|Gtk.Gdk.AxisUse.T]], value @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':GetAxis(self @ [[#T|T]], axes @ [[..:..:Std:Object#T|Std.Object.T]], use @ [[..:..:Gtk:Gdk:AxisUse#T|Gtk.Gdk.AxisUse.T]], value @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :GetHistory ====
-'':GetHistory(self @ [[#T|T]], window @[[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]], start @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], stop @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], events @[[..:..:Std:Object#T|Std.Object.T]], n_events @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':GetHistory(self @ [[#T|T]], window @ [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]], start @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], stop @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], events @ [[..:..:Std:Object#T|Std.Object.T]], n_events @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :GetState ====
-'':GetState(self @ [[#T|T]], window @[[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]], axes @[[..:..:Std:Object#T|Std.Object.T]], mask @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':GetState(self @ [[#T|T]], window @ [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]], axes @ [[..:..:Std:Object#T|Std.Object.T]], mask @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetAxisUse ====
-'':SetAxisUse(self @ [[#T|T]], index_ @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], use @[[..:..:Gtk:Gdk:AxisUse#T|Gtk.Gdk.AxisUse.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetAxisUse(self @ [[#T|T]], index_ @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], use @ [[..:..:Gtk:Gdk:AxisUse#T|Gtk.Gdk.AxisUse.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== FreeHistory ====

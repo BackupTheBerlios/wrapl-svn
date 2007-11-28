@@ -10,15 +10,15 @@
 
 
 ==== :SetResponseSensitive ====
-'':SetResponseSensitive(self @ [[#T|T]], response_id @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], setting @[[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetResponseSensitive(self @ [[#T|T]], response_id @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], setting @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetHasSeparator ====
-'':SetHasSeparator(self @ [[#T|T]], setting @[[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetHasSeparator(self @ [[#T|T]], setting @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetDefaultResponse ====
-'':SetDefaultResponse(self @ [[#T|T]], response_id @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetDefaultResponse(self @ [[#T|T]], response_id @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Vbox ====
@@ -34,15 +34,15 @@
 
 
 ==== :AddActionWidget ====
-'':AddActionWidget(self @ [[#T|T]], child @[[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], response_id @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':AddActionWidget(self @ [[#T|T]], child @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], response_id @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :AddButton ====
-'':AddButton(self @ [[#T|T]], button_text @[[..:..:Std:String#T|Std.String.T]], response_id @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
+'':AddButton(self @ [[#T|T]], button_text @ [[..:..:Std:String#T|Std.String.T]], response_id @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
 
 ==== :AddButtons ====
-'':AddButtons(self @ [[#T|T]], first_button_text @[[..:..:Std:String#T|Std.String.T]], ___ @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':AddButtons(self @ [[#T|T]], first_button_text @ [[..:..:Std:String#T|Std.String.T]], ___ @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetHasSeparator ====
@@ -50,11 +50,11 @@
 
 
 ==== :GetResponseForWidget ====
-'':GetResponseForWidget(self @ [[#T|T]], widget @[[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':GetResponseForWidget(self @ [[#T|T]], widget @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Response ====
-'':Response(self @ [[#T|T]], response_id @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Response(self @ [[#T|T]], response_id @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Run ====
@@ -62,11 +62,11 @@
 
 
 ==== :SetAlternativeButtonOrder ====
-'':SetAlternativeButtonOrder(self @ [[#T|T]], first_response_id @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], ___ @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetAlternativeButtonOrder(self @ [[#T|T]], first_response_id @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], ___ @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetAlternativeButtonOrderFromArray ====
-'':SetAlternativeButtonOrderFromArray(self @ [[#T|T]], n_params @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], new_order @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetAlternativeButtonOrderFromArray(self @ [[#T|T]], n_params @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], new_order @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====

@@ -7,7 +7,7 @@
 
 
 ==== :GetSortColumnId ====
-'':GetSortColumnId(self @ [[#T|T]], sort_column_id @[[..:..:Std:Object#T|Std.Object.T]], order @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':GetSortColumnId(self @ [[#T|T]], sort_column_id @ [[..:..:Std:Object#T|Std.Object.T]], order @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :HasDefaultSortFunc ====
@@ -15,15 +15,15 @@
 
 
 ==== :SetDefaultSortFunc ====
-'':SetDefaultSortFunc(self @ [[#T|T]], sort_func @[[..:..:Std:Function#T|Std.Function.T]], user_data @[[..:..:Std:Address#T|Std.Address.T]], destroy @[[..:..:Std:Function#T|Std.Function.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetDefaultSortFunc(self @ [[#T|T]], sort_func @ [[..:..:Std:Function#T|Std.Function.T]], user_data @ [[..:..:Std:Address#T|Std.Address.T]], destroy @ [[..:..:Std:Function#T|Std.Function.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetSortColumnId ====
-'':SetSortColumnId(self @ [[#T|T]], sort_column_id @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], order @[[..:..:Gtk:Gtk:SortType#T|Gtk.Gtk.SortType.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetSortColumnId(self @ [[#T|T]], sort_column_id @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], order @ [[..:..:Gtk:Gtk:SortType#T|Gtk.Gtk.SortType.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetSortFunc ====
-'':SetSortFunc(self @ [[#T|T]], sort_column_id @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], sort_func @[[..:..:Std:Function#T|Std.Function.T]], user_data @[[..:..:Std:Address#T|Std.Address.T]], destroy @[[..:..:Std:Function#T|Std.Function.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetSortFunc(self @ [[#T|T]], sort_column_id @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], sort_func @ [[..:..:Std:Function#T|Std.Function.T]], user_data @ [[..:..:Std:Address#T|Std.Address.T]], destroy @ [[..:..:Std:Function#T|Std.Function.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== GetType ====

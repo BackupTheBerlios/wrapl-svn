@@ -19,11 +19,11 @@
 
 
 ==== :GetApplicationInfo ====
-'':GetApplicationInfo(self @ [[#T|T]], app_name @[[..:..:Std:String#T|Std.String.T]], app_exec @[[..:..:Std:List#T|Std.List.T]], count @[[..:..:Std:Object#T|Std.Object.T]], time_ @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':GetApplicationInfo(self @ [[#T|T]], app_name @ [[..:..:Std:String#T|Std.String.T]], app_exec @ [[..:..:Std:List#T|Std.List.T]], count @ [[..:..:Std:Object#T|Std.Object.T]], time_ @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :GetApplications ====
-'':GetApplications(self @ [[#T|T]], length @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:List#T|Std.List.T]]''
+'':GetApplications(self @ [[#T|T]], length @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:List#T|Std.List.T]]''
 
 
 ==== :GetDescription ====
@@ -35,11 +35,11 @@
 
 
 ==== :GetGroups ====
-'':GetGroups(self @ [[#T|T]], length @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:List#T|Std.List.T]]''
+'':GetGroups(self @ [[#T|T]], length @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:List#T|Std.List.T]]''
 
 
 ==== :GetIcon ====
-'':GetIcon(self @ [[#T|T]], size @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Gtk:Gdk:Pixbuf#T|Gtk.Gdk.Pixbuf.T]]''
+'':GetIcon(self @ [[#T|T]], size @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Gtk:Gdk:Pixbuf#T|Gtk.Gdk.Pixbuf.T]]''
 
 
 ==== :GetMimeType ====
@@ -71,11 +71,11 @@
 
 
 ==== :HasApplication ====
-'':HasApplication(self @ [[#T|T]], app_name @[[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':HasApplication(self @ [[#T|T]], app_name @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :HasGroup ====
-'':HasGroup(self @ [[#T|T]], group_name @[[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':HasGroup(self @ [[#T|T]], group_name @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :IsLocal ====
@@ -87,7 +87,7 @@
 
 
 ==== :Match ====
-'':Match(self @ [[#T|T]], info_b @[[..:..:Gtk:Gtk:RecentInfo#T|Gtk.Gtk.RecentInfo.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':Match(self @ [[#T|T]], info_b @ [[..:..:Gtk:Gtk:RecentInfo#T|Gtk.Gtk.RecentInfo.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :Ref ====

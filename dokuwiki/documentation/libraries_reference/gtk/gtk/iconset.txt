@@ -7,7 +7,7 @@
 
 
 ==== :RenderIcon ====
-'':RenderIcon(self @ [[#T|T]], style @[[..:..:Gtk:Gtk:Style#T|Gtk.Gtk.Style.T]], direction @[[..:..:Gtk:Gtk:TextDirection#T|Gtk.Gtk.TextDirection.T]], state @[[..:..:Gtk:Gtk:StateType#T|Gtk.Gtk.StateType.T]], size @[[..:..:Gtk:Gtk:IconSize#T|Gtk.Gtk.IconSize.T]], widget @[[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], detail @[[..:..:Std:String#T|Std.String.T]]) : [[..:..:Gtk:Gdk:Pixbuf#T|Gtk.Gdk.Pixbuf.T]]''
+'':RenderIcon(self @ [[#T|T]], style @ [[..:..:Gtk:Gtk:Style#T|Gtk.Gtk.Style.T]], direction @ [[..:..:Gtk:Gtk:TextDirection#T|Gtk.Gtk.TextDirection.T]], state @ [[..:..:Gtk:Gtk:StateType#T|Gtk.Gtk.StateType.T]], size @ [[..:..:Gtk:Gtk:IconSize#T|Gtk.Gtk.IconSize.T]], widget @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], detail @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Gtk:Gdk:Pixbuf#T|Gtk.Gdk.Pixbuf.T]]''
 
 
 ==== :Ref ====
@@ -15,7 +15,7 @@
 
 
 ==== :AddSource ====
-'':AddSource(self @ [[#T|T]], source @[[..:..:Gtk:Gtk:IconSource#T|Gtk.Gtk.IconSource.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':AddSource(self @ [[#T|T]], source @ [[..:..:Gtk:Gtk:IconSource#T|Gtk.Gtk.IconSource.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Copy ====
@@ -23,7 +23,7 @@
 
 
 ==== :GetSizes ====
-'':GetSizes(self @ [[#T|T]], sizes @[[..:..:Std:Object#T|Std.Object.T]], n_sizes @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':GetSizes(self @ [[#T|T]], sizes @ [[..:..:Std:Object#T|Std.Object.T]], n_sizes @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====

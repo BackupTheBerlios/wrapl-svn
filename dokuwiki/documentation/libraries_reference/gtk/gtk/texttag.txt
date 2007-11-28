@@ -5,7 +5,7 @@
 
 
 ==== :SetPriority ====
-'':SetPriority(self @ [[#T|T]], priority @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetPriority(self @ [[#T|T]], priority @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetPriority ====
@@ -125,7 +125,7 @@
 
 
 ==== :Event ====
-'':Event(self @ [[#T|T]], event_object @[[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]], event @[[..:..:Std:Object#T|Std.Object.T]], iter @[[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':Event(self @ [[#T|T]], event_object @ [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]], event @ [[..:..:Std:Object#T|Std.Object.T]], iter @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== New ====

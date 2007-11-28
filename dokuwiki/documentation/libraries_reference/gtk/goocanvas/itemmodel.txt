@@ -3,7 +3,7 @@
 
 
 ==== :Translate ====
-'':Translate(self @ [[#T|T]], tx @[[..:..:Std:Real#T|Std.Real.T]], ty @[[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Translate(self @ [[#T|T]], tx @ [[..:..:Std:Real#T|Std.Real.T]], ty @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :StopAnimation ====
@@ -11,35 +11,35 @@
 
 
 ==== :SkewY ====
-'':SkewY(self @ [[#T|T]], degrees @[[..:..:Std:Real#T|Std.Real.T]], cx @[[..:..:Std:Real#T|Std.Real.T]], cy @[[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SkewY(self @ [[#T|T]], degrees @ [[..:..:Std:Real#T|Std.Real.T]], cx @ [[..:..:Std:Real#T|Std.Real.T]], cy @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SkewX ====
-'':SkewX(self @ [[#T|T]], degrees @[[..:..:Std:Real#T|Std.Real.T]], cx @[[..:..:Std:Real#T|Std.Real.T]], cy @[[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SkewX(self @ [[#T|T]], degrees @ [[..:..:Std:Real#T|Std.Real.T]], cx @ [[..:..:Std:Real#T|Std.Real.T]], cy @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :AddChild ====
-'':AddChild(self @ [[#T|T]], child @[[..:..:Gtk:GooCanvas:ItemModel#T|Gtk.GooCanvas.ItemModel.T]], position @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':AddChild(self @ [[#T|T]], child @ [[..:..:Gtk:GooCanvas:ItemModel#T|Gtk.GooCanvas.ItemModel.T]], position @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Animate ====
-'':Animate(self @ [[#T|T]], x @[[..:..:Std:Real#T|Std.Real.T]], y @[[..:..:Std:Real#T|Std.Real.T]], scale @[[..:..:Std:Real#T|Std.Real.T]], degrees @[[..:..:Std:Real#T|Std.Real.T]], absolute @[[..:..:Std:Symbol#T|Std.Symbol.T]], duration @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], step_time @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], type @[[..:..:Gtk:GooCanvas:AnimateType#T|Gtk.GooCanvas.AnimateType.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Animate(self @ [[#T|T]], x @ [[..:..:Std:Real#T|Std.Real.T]], y @ [[..:..:Std:Real#T|Std.Real.T]], scale @ [[..:..:Std:Real#T|Std.Real.T]], degrees @ [[..:..:Std:Real#T|Std.Real.T]], absolute @ [[..:..:Std:Symbol#T|Std.Symbol.T]], duration @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], step_time @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], type @ [[..:..:Gtk:GooCanvas:AnimateType#T|Gtk.GooCanvas.AnimateType.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :FindChild ====
-'':FindChild(self @ [[#T|T]], child @[[..:..:Gtk:GooCanvas:ItemModel#T|Gtk.GooCanvas.ItemModel.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':FindChild(self @ [[#T|T]], child @ [[..:..:Gtk:GooCanvas:ItemModel#T|Gtk.GooCanvas.ItemModel.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :GetChild ====
-'':GetChild(self @ [[#T|T]], child_num @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Gtk:GooCanvas:ItemModel#T|Gtk.GooCanvas.ItemModel.T]]''
+'':GetChild(self @ [[#T|T]], child_num @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Gtk:GooCanvas:ItemModel#T|Gtk.GooCanvas.ItemModel.T]]''
 
 
 ==== :GetChildProperties ====
-'':GetChildProperties(self @ [[#T|T]], child @[[..:..:Gtk:GooCanvas:ItemModel#T|Gtk.GooCanvas.ItemModel.T]], ___ @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':GetChildProperties(self @ [[#T|T]], child @ [[..:..:Gtk:GooCanvas:ItemModel#T|Gtk.GooCanvas.ItemModel.T]], ___ @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetChildPropertiesValist ====
-'':GetChildPropertiesValist(self @ [[#T|T]], child @[[..:..:Gtk:GooCanvas:ItemModel#T|Gtk.GooCanvas.ItemModel.T]], var_args @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':GetChildPropertiesValist(self @ [[#T|T]], child @ [[..:..:Gtk:GooCanvas:ItemModel#T|Gtk.GooCanvas.ItemModel.T]], var_args @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetNChildren ====
@@ -55,7 +55,7 @@
 
 
 ==== :GetTransform ====
-'':GetTransform(self @ [[#T|T]], transform @[[..:..:Gtk:Cairo:CairoMatrixT#T|Gtk.Cairo.CairoMatrixT.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':GetTransform(self @ [[#T|T]], transform @ [[..:..:Gtk:Cairo:CairoMatrixT#T|Gtk.Cairo.CairoMatrixT.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :IsContainer ====
@@ -63,15 +63,15 @@
 
 
 ==== :Lower ====
-'':Lower(self @ [[#T|T]], below @[[..:..:Gtk:GooCanvas:ItemModel#T|Gtk.GooCanvas.ItemModel.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Lower(self @ [[#T|T]], below @ [[..:..:Gtk:GooCanvas:ItemModel#T|Gtk.GooCanvas.ItemModel.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :MoveChild ====
-'':MoveChild(self @ [[#T|T]], old_position @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], new_position @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':MoveChild(self @ [[#T|T]], old_position @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], new_position @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Raise ====
-'':Raise(self @ [[#T|T]], above @[[..:..:Gtk:GooCanvas:ItemModel#T|Gtk.GooCanvas.ItemModel.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Raise(self @ [[#T|T]], above @ [[..:..:Gtk:GooCanvas:ItemModel#T|Gtk.GooCanvas.ItemModel.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Remove ====
@@ -79,39 +79,39 @@
 
 
 ==== :RemoveChild ====
-'':RemoveChild(self @ [[#T|T]], child_num @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':RemoveChild(self @ [[#T|T]], child_num @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Rotate ====
-'':Rotate(self @ [[#T|T]], degrees @[[..:..:Std:Real#T|Std.Real.T]], cx @[[..:..:Std:Real#T|Std.Real.T]], cy @[[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Rotate(self @ [[#T|T]], degrees @ [[..:..:Std:Real#T|Std.Real.T]], cx @ [[..:..:Std:Real#T|Std.Real.T]], cy @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Scale ====
-'':Scale(self @ [[#T|T]], sx @[[..:..:Std:Real#T|Std.Real.T]], sy @[[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Scale(self @ [[#T|T]], sx @ [[..:..:Std:Real#T|Std.Real.T]], sy @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetChildProperties ====
-'':SetChildProperties(self @ [[#T|T]], child @[[..:..:Gtk:GooCanvas:ItemModel#T|Gtk.GooCanvas.ItemModel.T]], ___ @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetChildProperties(self @ [[#T|T]], child @ [[..:..:Gtk:GooCanvas:ItemModel#T|Gtk.GooCanvas.ItemModel.T]], ___ @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetChildPropertiesValist ====
-'':SetChildPropertiesValist(self @ [[#T|T]], child @[[..:..:Gtk:GooCanvas:ItemModel#T|Gtk.GooCanvas.ItemModel.T]], var_args @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetChildPropertiesValist(self @ [[#T|T]], child @ [[..:..:Gtk:GooCanvas:ItemModel#T|Gtk.GooCanvas.ItemModel.T]], var_args @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetParent ====
-'':SetParent(self @ [[#T|T]], parent @[[..:..:Gtk:GooCanvas:ItemModel#T|Gtk.GooCanvas.ItemModel.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetParent(self @ [[#T|T]], parent @ [[..:..:Gtk:GooCanvas:ItemModel#T|Gtk.GooCanvas.ItemModel.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetSimpleTransform ====
-'':SetSimpleTransform(self @ [[#T|T]], x @[[..:..:Std:Real#T|Std.Real.T]], y @[[..:..:Std:Real#T|Std.Real.T]], scale @[[..:..:Std:Real#T|Std.Real.T]], rotation @[[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetSimpleTransform(self @ [[#T|T]], x @ [[..:..:Std:Real#T|Std.Real.T]], y @ [[..:..:Std:Real#T|Std.Real.T]], scale @ [[..:..:Std:Real#T|Std.Real.T]], rotation @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetStyle ====
-'':SetStyle(self @ [[#T|T]], style @[[..:..:Gtk:GooCanvas:Style#T|Gtk.GooCanvas.Style.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetStyle(self @ [[#T|T]], style @ [[..:..:Gtk:GooCanvas:Style#T|Gtk.GooCanvas.Style.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetTransform ====
-'':SetTransform(self @ [[#T|T]], transform @[[..:..:Gtk:Cairo:CairoMatrixT#T|Gtk.Cairo.CairoMatrixT.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetTransform(self @ [[#T|T]], transform @ [[..:..:Gtk:Cairo:CairoMatrixT#T|Gtk.Cairo.CairoMatrixT.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== ClassFindChildProperty ====

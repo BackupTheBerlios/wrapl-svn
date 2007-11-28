@@ -5,15 +5,15 @@
 
 
 ==== :LoadFontset ====
-'':LoadFontset(self @ [[#T|T]], context @[[..:..:Gtk:Pango:Context#T|Gtk.Pango.Context.T]], desc @[[..:..:Gtk:Pango:FontDescription#T|Gtk.Pango.FontDescription.T]], language @[[..:..:Gtk:Pango:Language#T|Gtk.Pango.Language.T]]) : [[..:..:Gtk:Pango:Fontset#T|Gtk.Pango.Fontset.T]]''
+'':LoadFontset(self @ [[#T|T]], context @ [[..:..:Gtk:Pango:Context#T|Gtk.Pango.Context.T]], desc @ [[..:..:Gtk:Pango:FontDescription#T|Gtk.Pango.FontDescription.T]], language @ [[..:..:Gtk:Pango:Language#T|Gtk.Pango.Language.T]]) : [[..:..:Gtk:Pango:Fontset#T|Gtk.Pango.Fontset.T]]''
 
 
 ==== :ListFamilies ====
-'':ListFamilies(self @ [[#T|T]], families @[[..:..:Std:Object#T|Std.Object.T]], n_families @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':ListFamilies(self @ [[#T|T]], families @ [[..:..:Std:Object#T|Std.Object.T]], n_families @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :LoadFont ====
-'':LoadFont(self @ [[#T|T]], context @[[..:..:Gtk:Pango:Context#T|Gtk.Pango.Context.T]], desc @[[..:..:Gtk:Pango:FontDescription#T|Gtk.Pango.FontDescription.T]]) : [[..:..:Gtk:Pango:Font#T|Gtk.Pango.Font.T]]''
+'':LoadFont(self @ [[#T|T]], context @ [[..:..:Gtk:Pango:Context#T|Gtk.Pango.Context.T]], desc @ [[..:..:Gtk:Pango:FontDescription#T|Gtk.Pango.FontDescription.T]]) : [[..:..:Gtk:Pango:Font#T|Gtk.Pango.Font.T]]''
 
 
 ==== GetType ====

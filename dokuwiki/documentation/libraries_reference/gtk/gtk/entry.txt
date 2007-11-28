@@ -7,15 +7,15 @@
 
 
 ==== :TextIndexToLayoutIndex ====
-'':TextIndexToLayoutIndex(self @ [[#T|T]], text_index @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':TextIndexToLayoutIndex(self @ [[#T|T]], text_index @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :SetWidthChars ====
-'':SetWidthChars(self @ [[#T|T]], n_chars @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetWidthChars(self @ [[#T|T]], n_chars @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetVisibility ====
-'':SetVisibility(self @ [[#T|T]], visible @[[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetVisibility(self @ [[#T|T]], visible @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Text ====
@@ -183,7 +183,7 @@
 
 
 ==== :AppendText ====
-'':AppendText(self @ [[#T|T]], text @[[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':AppendText(self @ [[#T|T]], text @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetActivatesDefault ====
@@ -219,7 +219,7 @@
 
 
 ==== :GetLayoutOffsets ====
-'':GetLayoutOffsets(self @ [[#T|T]], x @[[..:..:Std:Object#T|Std.Object.T]], y @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':GetLayoutOffsets(self @ [[#T|T]], x @ [[..:..:Std:Object#T|Std.Object.T]], y @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetMaxLength ====
@@ -239,59 +239,59 @@
 
 
 ==== :LayoutIndexToTextIndex ====
-'':LayoutIndexToTextIndex(self @ [[#T|T]], layout_index @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':LayoutIndexToTextIndex(self @ [[#T|T]], layout_index @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :PrependText ====
-'':PrependText(self @ [[#T|T]], text @[[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':PrependText(self @ [[#T|T]], text @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SelectRegion ====
-'':SelectRegion(self @ [[#T|T]], start @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], end @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SelectRegion(self @ [[#T|T]], start @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], end @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetActivatesDefault ====
-'':SetActivatesDefault(self @ [[#T|T]], setting @[[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetActivatesDefault(self @ [[#T|T]], setting @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetAlignment ====
-'':SetAlignment(self @ [[#T|T]], xalign @[[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetAlignment(self @ [[#T|T]], xalign @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetCompletion ====
-'':SetCompletion(self @ [[#T|T]], completion @[[..:..:Gtk:Gtk:EntryCompletion#T|Gtk.Gtk.EntryCompletion.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetCompletion(self @ [[#T|T]], completion @ [[..:..:Gtk:Gtk:EntryCompletion#T|Gtk.Gtk.EntryCompletion.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetCursorHadjustment ====
-'':SetCursorHadjustment(self @ [[#T|T]], adjustment @[[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetCursorHadjustment(self @ [[#T|T]], adjustment @ [[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetEditable ====
-'':SetEditable(self @ [[#T|T]], editable @[[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetEditable(self @ [[#T|T]], editable @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetHasFrame ====
-'':SetHasFrame(self @ [[#T|T]], setting @[[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetHasFrame(self @ [[#T|T]], setting @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetInnerBorder ====
-'':SetInnerBorder(self @ [[#T|T]], border @[[..:..:Gtk:Gtk:Border#T|Gtk.Gtk.Border.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetInnerBorder(self @ [[#T|T]], border @ [[..:..:Gtk:Gtk:Border#T|Gtk.Gtk.Border.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetInvisibleChar ====
-'':SetInvisibleChar(self @ [[#T|T]], ch @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetInvisibleChar(self @ [[#T|T]], ch @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetMaxLength ====
-'':SetMaxLength(self @ [[#T|T]], max @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetMaxLength(self @ [[#T|T]], max @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetPosition ====
-'':SetPosition(self @ [[#T|T]], position @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetPosition(self @ [[#T|T]], position @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetText ====
-'':SetText(self @ [[#T|T]], text @[[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetText(self @ [[#T|T]], text @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====

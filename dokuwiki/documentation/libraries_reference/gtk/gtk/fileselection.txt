@@ -15,7 +15,7 @@
 
 
 ==== :SetSelectMultiple ====
-'':SetSelectMultiple(self @ [[#T|T]], select_multiple @[[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetSelectMultiple(self @ [[#T|T]], select_multiple @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :DirList ====
@@ -107,7 +107,7 @@
 
 
 ==== :Complete ====
-'':Complete(self @ [[#T|T]], pattern @[[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Complete(self @ [[#T|T]], pattern @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetFilename ====
@@ -127,7 +127,7 @@
 
 
 ==== :SetFilename ====
-'':SetFilename(self @ [[#T|T]], filename @[[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetFilename(self @ [[#T|T]], filename @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====

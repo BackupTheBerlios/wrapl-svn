@@ -3,7 +3,7 @@
 
 
 ==== :SetPosition ====
-'':SetPosition(self @ [[#T|T]], position @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetPosition(self @ [[#T|T]], position @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :CopyClipboard ====
@@ -19,11 +19,11 @@
 
 
 ==== :DeleteText ====
-'':DeleteText(self @ [[#T|T]], start_pos @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], end_pos @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':DeleteText(self @ [[#T|T]], start_pos @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], end_pos @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetChars ====
-'':GetChars(self @ [[#T|T]], start_pos @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], end_pos @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:String#T|Std.String.T]]''
+'':GetChars(self @ [[#T|T]], start_pos @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], end_pos @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== :GetEditable ====
@@ -35,11 +35,11 @@
 
 
 ==== :GetSelectionBounds ====
-'':GetSelectionBounds(self @ [[#T|T]], start @[[..:..:Std:Object#T|Std.Object.T]], end @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':GetSelectionBounds(self @ [[#T|T]], start @ [[..:..:Std:Object#T|Std.Object.T]], end @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :InsertText ====
-'':InsertText(self @ [[#T|T]], new_text @[[..:..:Std:String#T|Std.String.T]], new_text_length @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], position @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':InsertText(self @ [[#T|T]], new_text @ [[..:..:Std:String#T|Std.String.T]], new_text_length @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], position @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :PasteClipboard ====
@@ -47,11 +47,11 @@
 
 
 ==== :SelectRegion ====
-'':SelectRegion(self @ [[#T|T]], start @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], end @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SelectRegion(self @ [[#T|T]], start @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], end @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetEditable ====
-'':SetEditable(self @ [[#T|T]], is_editable @[[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetEditable(self @ [[#T|T]], is_editable @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== GetType ====

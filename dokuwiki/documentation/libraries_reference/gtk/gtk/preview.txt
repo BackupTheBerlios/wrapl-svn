@@ -7,23 +7,23 @@
 
 
 ==== :Size ====
-'':Size(self @ [[#T|T]], width @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], height @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Size(self @ [[#T|T]], width @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], height @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetExpand ====
-'':SetExpand(self @ [[#T|T]], expand @[[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetExpand(self @ [[#T|T]], expand @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetDither ====
-'':SetDither(self @ [[#T|T]], dither @[[..:..:Gtk:Gdk:RgbDither#T|Gtk.Gdk.RgbDither.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetDither(self @ [[#T|T]], dither @ [[..:..:Gtk:Gdk:RgbDither#T|Gtk.Gdk.RgbDither.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Put ====
-'':Put(self @ [[#T|T]], window @[[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]], gc @[[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]], srcx @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], srcy @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], destx @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], desty @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], width @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], height @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Put(self @ [[#T|T]], window @ [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]], gc @ [[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]], srcx @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], srcy @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], destx @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], desty @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], width @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], height @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :DrawRow ====
-'':DrawRow(self @ [[#T|T]], data @[[..:..:Std:String#T|Std.String.T]], x @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], w @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':DrawRow(self @ [[#T|T]], data @ [[..:..:Std:String#T|Std.String.T]], x @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], w @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Expand ====

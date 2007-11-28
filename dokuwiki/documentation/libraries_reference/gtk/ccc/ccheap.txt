@@ -5,11 +5,11 @@
 
 
 ==== :Remove ====
-'':Remove(self @ [[#T|T]], node @[[..:..:Gtk:CCC:CcHeapNode#T|Gtk.CCC.CcHeapNode.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Remove(self @ [[#T|T]], node @ [[..:..:Gtk:CCC:CcHeapNode#T|Gtk.CCC.CcHeapNode.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Push ====
-'':Push(self @ [[#T|T]], priority @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], data @[[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Gtk:CCC:CcHeapNode#T|Gtk.CCC.CcHeapNode.T]]''
+'':Push(self @ [[#T|T]], priority @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], data @ [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Gtk:CCC:CcHeapNode#T|Gtk.CCC.CcHeapNode.T]]''
 
 
 ==== :Private ====

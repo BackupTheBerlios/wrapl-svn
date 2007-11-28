@@ -9,11 +9,11 @@
 
 
 ==== :SetValues ====
-'':SetValues(self @ [[#T|T]], values @[[..:..:Gtk:Gdk:GCValues#T|Gtk.Gdk.GCValues.T]], values_mask @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetValues(self @ [[#T|T]], values @ [[..:..:Gtk:Gdk:GCValues#T|Gtk.Gdk.GCValues.T]], values_mask @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetTsOrigin ====
-'':SetTsOrigin(self @ [[#T|T]], x @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetTsOrigin(self @ [[#T|T]], x @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :ClipXOrigin ====
@@ -37,7 +37,7 @@
 
 
 ==== :Copy ====
-'':Copy(self @ [[#T|T]], src_gc @[[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Copy(self @ [[#T|T]], src_gc @ [[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetColormap ====
@@ -49,11 +49,11 @@
 
 
 ==== :GetValues ====
-'':GetValues(self @ [[#T|T]], values @[[..:..:Gtk:Gdk:GCValues#T|Gtk.Gdk.GCValues.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':GetValues(self @ [[#T|T]], values @ [[..:..:Gtk:Gdk:GCValues#T|Gtk.Gdk.GCValues.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Offset ====
-'':Offset(self @ [[#T|T]], x_offset @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y_offset @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Offset(self @ [[#T|T]], x_offset @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y_offset @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Ref ====
@@ -61,75 +61,75 @@
 
 
 ==== :SetBackground ====
-'':SetBackground(self @ [[#T|T]], color @[[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetBackground(self @ [[#T|T]], color @ [[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetClipMask ====
-'':SetClipMask(self @ [[#T|T]], mask @[[..:..:Gtk:Gdk:Bitmap#T|Gtk.Gdk.Bitmap.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetClipMask(self @ [[#T|T]], mask @ [[..:..:Gtk:Gdk:Bitmap#T|Gtk.Gdk.Bitmap.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetClipOrigin ====
-'':SetClipOrigin(self @ [[#T|T]], x @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetClipOrigin(self @ [[#T|T]], x @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetClipRectangle ====
-'':SetClipRectangle(self @ [[#T|T]], rectangle @[[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetClipRectangle(self @ [[#T|T]], rectangle @ [[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetClipRegion ====
-'':SetClipRegion(self @ [[#T|T]], region @[[..:..:Gtk:Gdk:Region#T|Gtk.Gdk.Region.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetClipRegion(self @ [[#T|T]], region @ [[..:..:Gtk:Gdk:Region#T|Gtk.Gdk.Region.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetColormap ====
-'':SetColormap(self @ [[#T|T]], colormap @[[..:..:Gtk:Gdk:Colormap#T|Gtk.Gdk.Colormap.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetColormap(self @ [[#T|T]], colormap @ [[..:..:Gtk:Gdk:Colormap#T|Gtk.Gdk.Colormap.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetDashes ====
-'':SetDashes(self @ [[#T|T]], dash_offset @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], dash_list @[[..:..:Std:Object#T|Std.Object.T]], n @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetDashes(self @ [[#T|T]], dash_offset @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], dash_list @ [[..:..:Std:Object#T|Std.Object.T]], n @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetExposures ====
-'':SetExposures(self @ [[#T|T]], exposures @[[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetExposures(self @ [[#T|T]], exposures @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetFill ====
-'':SetFill(self @ [[#T|T]], fill @[[..:..:Gtk:Gdk:Fill#T|Gtk.Gdk.Fill.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetFill(self @ [[#T|T]], fill @ [[..:..:Gtk:Gdk:Fill#T|Gtk.Gdk.Fill.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetFont ====
-'':SetFont(self @ [[#T|T]], font @[[..:..:Gtk:Gdk:Font#T|Gtk.Gdk.Font.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetFont(self @ [[#T|T]], font @ [[..:..:Gtk:Gdk:Font#T|Gtk.Gdk.Font.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetForeground ====
-'':SetForeground(self @ [[#T|T]], color @[[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetForeground(self @ [[#T|T]], color @ [[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetFunction ====
-'':SetFunction(self @ [[#T|T]], function @[[..:..:Gtk:Gdk:Function#T|Gtk.Gdk.Function.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetFunction(self @ [[#T|T]], function @ [[..:..:Gtk:Gdk:Function#T|Gtk.Gdk.Function.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetLineAttributes ====
-'':SetLineAttributes(self @ [[#T|T]], line_width @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], line_style @[[..:..:Gtk:Gdk:LineStyle#T|Gtk.Gdk.LineStyle.T]], cap_style @[[..:..:Gtk:Gdk:CapStyle#T|Gtk.Gdk.CapStyle.T]], join_style @[[..:..:Gtk:Gdk:JoinStyle#T|Gtk.Gdk.JoinStyle.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetLineAttributes(self @ [[#T|T]], line_width @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], line_style @ [[..:..:Gtk:Gdk:LineStyle#T|Gtk.Gdk.LineStyle.T]], cap_style @ [[..:..:Gtk:Gdk:CapStyle#T|Gtk.Gdk.CapStyle.T]], join_style @ [[..:..:Gtk:Gdk:JoinStyle#T|Gtk.Gdk.JoinStyle.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetRgbBgColor ====
-'':SetRgbBgColor(self @ [[#T|T]], color @[[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetRgbBgColor(self @ [[#T|T]], color @ [[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetRgbFgColor ====
-'':SetRgbFgColor(self @ [[#T|T]], color @[[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetRgbFgColor(self @ [[#T|T]], color @ [[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetStipple ====
-'':SetStipple(self @ [[#T|T]], stipple @[[..:..:Gtk:Gdk:Pixmap#T|Gtk.Gdk.Pixmap.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetStipple(self @ [[#T|T]], stipple @ [[..:..:Gtk:Gdk:Pixmap#T|Gtk.Gdk.Pixmap.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetSubwindow ====
-'':SetSubwindow(self @ [[#T|T]], mode @[[..:..:Gtk:Gdk:SubwindowMode#T|Gtk.Gdk.SubwindowMode.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetSubwindow(self @ [[#T|T]], mode @ [[..:..:Gtk:Gdk:SubwindowMode#T|Gtk.Gdk.SubwindowMode.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetTile ====
-'':SetTile(self @ [[#T|T]], tile @[[..:..:Gtk:Gdk:Pixmap#T|Gtk.Gdk.Pixmap.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetTile(self @ [[#T|T]], tile @ [[..:..:Gtk:Gdk:Pixmap#T|Gtk.Gdk.Pixmap.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====

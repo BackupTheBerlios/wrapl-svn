@@ -8,11 +8,11 @@
 
 
 ==== :SetVector ====
-'':SetVector(self @ [[#T|T]], veclen @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], vector @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetVector(self @ [[#T|T]], veclen @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], vector @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetRange ====
-'':SetRange(self @ [[#T|T]], min_x @[[..:..:Std:Real#T|Std.Real.T]], max_x @[[..:..:Std:Real#T|Std.Real.T]], min_y @[[..:..:Std:Real#T|Std.Real.T]], max_y @[[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetRange(self @ [[#T|T]], min_x @ [[..:..:Std:Real#T|Std.Real.T]], max_x @ [[..:..:Std:Real#T|Std.Real.T]], min_y @ [[..:..:Std:Real#T|Std.Real.T]], max_y @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :CursorType ====
@@ -68,7 +68,7 @@
 
 
 ==== :GetVector ====
-'':GetVector(self @ [[#T|T]], veclen @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], vector @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':GetVector(self @ [[#T|T]], veclen @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], vector @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Reset ====
@@ -76,11 +76,11 @@
 
 
 ==== :SetCurveType ====
-'':SetCurveType(self @ [[#T|T]], type @[[..:..:Gtk:Gtk:CurveType#T|Gtk.Gtk.CurveType.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetCurveType(self @ [[#T|T]], type @ [[..:..:Gtk:Gtk:CurveType#T|Gtk.Gtk.CurveType.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetGamma ====
-'':SetGamma(self @ [[#T|T]], gamma_ @[[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetGamma(self @ [[#T|T]], gamma_ @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====

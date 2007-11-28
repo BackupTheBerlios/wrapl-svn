@@ -7,7 +7,7 @@
 
 
 ==== :UnmarkDay ====
-'':UnmarkDay(self @ [[#T|T]], day @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':UnmarkDay(self @ [[#T|T]], day @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :Thaw ====
@@ -71,23 +71,23 @@
 
 
 ==== :DayMonth ====
-'':DayMonth(self @ [[#T|T]], @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':DayMonth(self @ [[#T|T]], @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Day ====
-'':Day(self @ [[#T|T]], @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':Day(self @ [[#T|T]], @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :MarkedDate ====
-'':MarkedDate(self @ [[#T|T]], @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':MarkedDate(self @ [[#T|T]], @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :MarkedDateColor ====
-'':MarkedDateColor(self @ [[#T|T]], @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]]''
+'':MarkedDateColor(self @ [[#T|T]], @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]]''
 
 
 ==== :GrowSpace ====
-'':GrowSpace(self @ [[#T|T]], @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:String#T|Std.String.T]]''
+'':GrowSpace(self @ [[#T|T]], @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== :ClearMarks ====
@@ -95,7 +95,7 @@
 
 
 ==== :DisplayOptions ====
-'':DisplayOptions(self @ [[#T|T]], flags @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':DisplayOptions(self @ [[#T|T]], flags @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Freeze ====
@@ -103,7 +103,7 @@
 
 
 ==== :GetDate ====
-'':GetDate(self @ [[#T|T]], year @[[..:..:Std:Object#T|Std.Object.T]], month @[[..:..:Std:Object#T|Std.Object.T]], day @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':GetDate(self @ [[#T|T]], year @ [[..:..:Std:Object#T|Std.Object.T]], month @ [[..:..:Std:Object#T|Std.Object.T]], day @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetDisplayOptions ====
@@ -111,19 +111,19 @@
 
 
 ==== :MarkDay ====
-'':MarkDay(self @ [[#T|T]], day @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':MarkDay(self @ [[#T|T]], day @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :SelectDay ====
-'':SelectDay(self @ [[#T|T]], day @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SelectDay(self @ [[#T|T]], day @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SelectMonth ====
-'':SelectMonth(self @ [[#T|T]], month @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], year @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':SelectMonth(self @ [[#T|T]], month @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], year @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :SetDisplayOptions ====
-'':SetDisplayOptions(self @ [[#T|T]], flags @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetDisplayOptions(self @ [[#T|T]], flags @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====

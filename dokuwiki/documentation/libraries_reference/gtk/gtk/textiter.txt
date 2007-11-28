@@ -3,7 +3,7 @@
 
 
 ==== :TogglesTag ====
-'':TogglesTag(self @ [[#T|T]], tag @[[..:..:Gtk:Gtk:TextTag#T|Gtk.Gtk.TextTag.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':TogglesTag(self @ [[#T|T]], tag @ [[..:..:Gtk:Gtk:TextTag#T|Gtk.Gtk.TextTag.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :StartsWord ====
@@ -71,7 +71,7 @@
 
 
 ==== :BackwardChars ====
-'':BackwardChars(self @ [[#T|T]], count @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':BackwardChars(self @ [[#T|T]], count @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :BackwardCursorPosition ====
@@ -79,11 +79,11 @@
 
 
 ==== :BackwardCursorPositions ====
-'':BackwardCursorPositions(self @ [[#T|T]], count @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':BackwardCursorPositions(self @ [[#T|T]], count @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :BackwardFindChar ====
-'':BackwardFindChar(self @ [[#T|T]], pred @[[..:..:Std:Function#T|Std.Function.T]], user_data @[[..:..:Std:Address#T|Std.Address.T]], limit @[[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':BackwardFindChar(self @ [[#T|T]], pred @ [[..:..:Std:Function#T|Std.Function.T]], user_data @ [[..:..:Std:Address#T|Std.Address.T]], limit @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :BackwardLine ====
@@ -91,11 +91,11 @@
 
 
 ==== :BackwardLines ====
-'':BackwardLines(self @ [[#T|T]], count @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':BackwardLines(self @ [[#T|T]], count @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :BackwardSearch ====
-'':BackwardSearch(self @ [[#T|T]], str @[[..:..:Std:String#T|Std.String.T]], flags @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], match_start @[[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]], match_end @[[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]], limit @[[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':BackwardSearch(self @ [[#T|T]], str @ [[..:..:Std:String#T|Std.String.T]], flags @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], match_start @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]], match_end @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]], limit @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :BackwardSentenceStart ====
@@ -103,11 +103,11 @@
 
 
 ==== :BackwardSentenceStarts ====
-'':BackwardSentenceStarts(self @ [[#T|T]], count @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':BackwardSentenceStarts(self @ [[#T|T]], count @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :BackwardToTagToggle ====
-'':BackwardToTagToggle(self @ [[#T|T]], tag @[[..:..:Gtk:Gtk:TextTag#T|Gtk.Gtk.TextTag.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':BackwardToTagToggle(self @ [[#T|T]], tag @ [[..:..:Gtk:Gtk:TextTag#T|Gtk.Gtk.TextTag.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :BackwardVisibleCursorPosition ====
@@ -115,7 +115,7 @@
 
 
 ==== :BackwardVisibleCursorPositions ====
-'':BackwardVisibleCursorPositions(self @ [[#T|T]], count @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':BackwardVisibleCursorPositions(self @ [[#T|T]], count @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :BackwardVisibleLine ====
@@ -123,7 +123,7 @@
 
 
 ==== :BackwardVisibleLines ====
-'':BackwardVisibleLines(self @ [[#T|T]], count @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':BackwardVisibleLines(self @ [[#T|T]], count @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :BackwardVisibleWordStart ====
@@ -131,7 +131,7 @@
 
 
 ==== :BackwardVisibleWordStarts ====
-'':BackwardVisibleWordStarts(self @ [[#T|T]], count @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':BackwardVisibleWordStarts(self @ [[#T|T]], count @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :BackwardWordStart ====
@@ -139,19 +139,19 @@
 
 
 ==== :BackwardWordStarts ====
-'':BackwardWordStarts(self @ [[#T|T]], count @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':BackwardWordStarts(self @ [[#T|T]], count @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :BeginsTag ====
-'':BeginsTag(self @ [[#T|T]], tag @[[..:..:Gtk:Gtk:TextTag#T|Gtk.Gtk.TextTag.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':BeginsTag(self @ [[#T|T]], tag @ [[..:..:Gtk:Gtk:TextTag#T|Gtk.Gtk.TextTag.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :CanInsert ====
-'':CanInsert(self @ [[#T|T]], default_editability @[[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':CanInsert(self @ [[#T|T]], default_editability @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :Compare ====
-'':Compare(self @ [[#T|T]], rhs @[[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':Compare(self @ [[#T|T]], rhs @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Copy ====
@@ -159,7 +159,7 @@
 
 
 ==== :Editable ====
-'':Editable(self @ [[#T|T]], default_setting @[[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':Editable(self @ [[#T|T]], default_setting @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :EndsLine ====
@@ -171,7 +171,7 @@
 
 
 ==== :EndsTag ====
-'':EndsTag(self @ [[#T|T]], tag @[[..:..:Gtk:Gtk:TextTag#T|Gtk.Gtk.TextTag.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':EndsTag(self @ [[#T|T]], tag @ [[..:..:Gtk:Gtk:TextTag#T|Gtk.Gtk.TextTag.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :EndsWord ====
@@ -179,7 +179,7 @@
 
 
 ==== :Equal ====
-'':Equal(self @ [[#T|T]], rhs @[[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':Equal(self @ [[#T|T]], rhs @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :ForwardChar ====
@@ -187,7 +187,7 @@
 
 
 ==== :ForwardChars ====
-'':ForwardChars(self @ [[#T|T]], count @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':ForwardChars(self @ [[#T|T]], count @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :ForwardCursorPosition ====
@@ -195,11 +195,11 @@
 
 
 ==== :ForwardCursorPositions ====
-'':ForwardCursorPositions(self @ [[#T|T]], count @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':ForwardCursorPositions(self @ [[#T|T]], count @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :ForwardFindChar ====
-'':ForwardFindChar(self @ [[#T|T]], pred @[[..:..:Std:Function#T|Std.Function.T]], user_data @[[..:..:Std:Address#T|Std.Address.T]], limit @[[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':ForwardFindChar(self @ [[#T|T]], pred @ [[..:..:Std:Function#T|Std.Function.T]], user_data @ [[..:..:Std:Address#T|Std.Address.T]], limit @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :ForwardLine ====
@@ -207,11 +207,11 @@
 
 
 ==== :ForwardLines ====
-'':ForwardLines(self @ [[#T|T]], count @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':ForwardLines(self @ [[#T|T]], count @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :ForwardSearch ====
-'':ForwardSearch(self @ [[#T|T]], str @[[..:..:Std:String#T|Std.String.T]], flags @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], match_start @[[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]], match_end @[[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]], limit @[[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':ForwardSearch(self @ [[#T|T]], str @ [[..:..:Std:String#T|Std.String.T]], flags @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], match_start @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]], match_end @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]], limit @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :ForwardSentenceEnd ====
@@ -219,7 +219,7 @@
 
 
 ==== :ForwardSentenceEnds ====
-'':ForwardSentenceEnds(self @ [[#T|T]], count @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':ForwardSentenceEnds(self @ [[#T|T]], count @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :ForwardToEnd ====
@@ -231,7 +231,7 @@
 
 
 ==== :ForwardToTagToggle ====
-'':ForwardToTagToggle(self @ [[#T|T]], tag @[[..:..:Gtk:Gtk:TextTag#T|Gtk.Gtk.TextTag.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':ForwardToTagToggle(self @ [[#T|T]], tag @ [[..:..:Gtk:Gtk:TextTag#T|Gtk.Gtk.TextTag.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :ForwardVisibleCursorPosition ====
@@ -239,7 +239,7 @@
 
 
 ==== :ForwardVisibleCursorPositions ====
-'':ForwardVisibleCursorPositions(self @ [[#T|T]], count @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':ForwardVisibleCursorPositions(self @ [[#T|T]], count @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :ForwardVisibleLine ====
@@ -247,7 +247,7 @@
 
 
 ==== :ForwardVisibleLines ====
-'':ForwardVisibleLines(self @ [[#T|T]], count @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':ForwardVisibleLines(self @ [[#T|T]], count @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :ForwardVisibleWordEnd ====
@@ -255,7 +255,7 @@
 
 
 ==== :ForwardVisibleWordEnds ====
-'':ForwardVisibleWordEnds(self @ [[#T|T]], count @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':ForwardVisibleWordEnds(self @ [[#T|T]], count @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :ForwardWordEnd ====
@@ -263,7 +263,7 @@
 
 
 ==== :ForwardWordEnds ====
-'':ForwardWordEnds(self @ [[#T|T]], count @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':ForwardWordEnds(self @ [[#T|T]], count @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :Free ====
@@ -271,7 +271,7 @@
 
 
 ==== :GetAttributes ====
-'':GetAttributes(self @ [[#T|T]], values @[[..:..:Gtk:Gtk:TextAttributes#T|Gtk.Gtk.TextAttributes.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':GetAttributes(self @ [[#T|T]], values @ [[..:..:Gtk:Gtk:TextAttributes#T|Gtk.Gtk.TextAttributes.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :GetBuffer ====
@@ -323,7 +323,7 @@
 
 
 ==== :GetSlice ====
-'':GetSlice(self @ [[#T|T]], end @[[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]]) : [[..:..:Std:String#T|Std.String.T]]''
+'':GetSlice(self @ [[#T|T]], end @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== :GetTags ====
@@ -331,11 +331,11 @@
 
 
 ==== :GetText ====
-'':GetText(self @ [[#T|T]], end @[[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]]) : [[..:..:Std:String#T|Std.String.T]]''
+'':GetText(self @ [[#T|T]], end @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== :GetToggledTags ====
-'':GetToggledTags(self @ [[#T|T]], toggled_on @[[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':GetToggledTags(self @ [[#T|T]], toggled_on @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetVisibleLineIndex ====
@@ -347,19 +347,19 @@
 
 
 ==== :GetVisibleSlice ====
-'':GetVisibleSlice(self @ [[#T|T]], end @[[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]]) : [[..:..:Std:String#T|Std.String.T]]''
+'':GetVisibleSlice(self @ [[#T|T]], end @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== :GetVisibleText ====
-'':GetVisibleText(self @ [[#T|T]], end @[[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]]) : [[..:..:Std:String#T|Std.String.T]]''
+'':GetVisibleText(self @ [[#T|T]], end @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== :HasTag ====
-'':HasTag(self @ [[#T|T]], tag @[[..:..:Gtk:Gtk:TextTag#T|Gtk.Gtk.TextTag.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':HasTag(self @ [[#T|T]], tag @ [[..:..:Gtk:Gtk:TextTag#T|Gtk.Gtk.TextTag.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :InRange ====
-'':InRange(self @ [[#T|T]], start @[[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]], end @[[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':InRange(self @ [[#T|T]], start @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]], end @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :InsideSentence ====
@@ -383,31 +383,31 @@
 
 
 ==== :Order ====
-'':Order(self @ [[#T|T]], second @[[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Order(self @ [[#T|T]], second @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetLine ====
-'':SetLine(self @ [[#T|T]], line_number @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetLine(self @ [[#T|T]], line_number @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetLineIndex ====
-'':SetLineIndex(self @ [[#T|T]], byte_on_line @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetLineIndex(self @ [[#T|T]], byte_on_line @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetLineOffset ====
-'':SetLineOffset(self @ [[#T|T]], char_on_line @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetLineOffset(self @ [[#T|T]], char_on_line @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetOffset ====
-'':SetOffset(self @ [[#T|T]], char_offset @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetOffset(self @ [[#T|T]], char_offset @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetVisibleLineIndex ====
-'':SetVisibleLineIndex(self @ [[#T|T]], byte_on_line @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetVisibleLineIndex(self @ [[#T|T]], byte_on_line @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetVisibleLineOffset ====
-'':SetVisibleLineOffset(self @ [[#T|T]], char_on_line @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetVisibleLineOffset(self @ [[#T|T]], char_on_line @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :StartsLine ====

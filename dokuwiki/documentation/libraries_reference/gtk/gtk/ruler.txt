@@ -7,7 +7,7 @@
 
 
 ==== :SetRange ====
-'':SetRange(self @ [[#T|T]], lower @[[..:..:Std:Real#T|Std.Real.T]], upper @[[..:..:Std:Real#T|Std.Real.T]], position @[[..:..:Std:Real#T|Std.Real.T]], max_size @[[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetRange(self @ [[#T|T]], lower @ [[..:..:Std:Real#T|Std.Real.T]], upper @ [[..:..:Std:Real#T|Std.Real.T]], position @ [[..:..:Std:Real#T|Std.Real.T]], max_size @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :BackingStore ====
@@ -63,11 +63,11 @@
 
 
 ==== :GetRange ====
-'':GetRange(self @ [[#T|T]], lower @[[..:..:Std:Object#T|Std.Object.T]], upper @[[..:..:Std:Object#T|Std.Object.T]], position @[[..:..:Std:Object#T|Std.Object.T]], max_size @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':GetRange(self @ [[#T|T]], lower @ [[..:..:Std:Object#T|Std.Object.T]], upper @ [[..:..:Std:Object#T|Std.Object.T]], position @ [[..:..:Std:Object#T|Std.Object.T]], max_size @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetMetric ====
-'':SetMetric(self @ [[#T|T]], metric @[[..:..:Gtk:Gtk:MetricType#T|Gtk.Gtk.MetricType.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetMetric(self @ [[#T|T]], metric @ [[..:..:Gtk:Gtk:MetricType#T|Gtk.Gtk.MetricType.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== GetType ====

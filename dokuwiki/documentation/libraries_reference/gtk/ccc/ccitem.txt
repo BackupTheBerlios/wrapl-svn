@@ -5,15 +5,15 @@
 
 
 ==== :UpdateBoundsForView ====
-'':UpdateBoundsForView(self @ [[#T|T]], view @[[..:..:Gtk:CCC:CcView#T|Gtk.CCC.CcView.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':UpdateBoundsForView(self @ [[#T|T]], view @ [[..:..:Gtk:CCC:CcView#T|Gtk.CCC.CcView.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :UpdateBounds ====
-'':UpdateBounds(self @ [[#T|T]], data @[[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':UpdateBounds(self @ [[#T|T]], data @ [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetPosition ====
-'':SetPosition(self @ [[#T|T]], parent @[[..:..:Gtk:CCC:CcItem#T|Gtk.CCC.CcItem.T]], position @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetPosition(self @ [[#T|T]], parent @ [[..:..:Gtk:CCC:CcItem#T|Gtk.CCC.CcItem.T]], position @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Parent ====
@@ -37,79 +37,79 @@
 
 
 ==== :AddView ====
-'':AddView(self @ [[#T|T]], view @[[..:..:Gtk:CCC:CcView#T|Gtk.CCC.CcView.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':AddView(self @ [[#T|T]], view @ [[..:..:Gtk:CCC:CcView#T|Gtk.CCC.CcView.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Append ====
-'':Append(self @ [[#T|T]], child @[[..:..:Gtk:CCC:CcItem#T|Gtk.CCC.CcItem.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Append(self @ [[#T|T]], child @ [[..:..:Gtk:CCC:CcItem#T|Gtk.CCC.CcItem.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :BoundsChanged ====
-'':BoundsChanged(self @ [[#T|T]], view @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':BoundsChanged(self @ [[#T|T]], view @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Dirty ====
-'':Dirty(self @ [[#T|T]], view @[[..:..:Std:Object#T|Std.Object.T]], dirty_region @[[..:..:Gtk:CCC:CcDRect#T|Gtk.CCC.CcDRect.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Dirty(self @ [[#T|T]], view @ [[..:..:Std:Object#T|Std.Object.T]], dirty_region @ [[..:..:Gtk:CCC:CcDRect#T|Gtk.CCC.CcDRect.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Distance ====
-'':Distance(self @ [[#T|T]], view @[[..:..:Std:Object#T|Std.Object.T]], x @[[..:..:Std:Real#T|Std.Real.T]], y @[[..:..:Std:Real#T|Std.Real.T]], found @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
+'':Distance(self @ [[#T|T]], view @ [[..:..:Std:Object#T|Std.Object.T]], x @ [[..:..:Std:Real#T|Std.Real.T]], y @ [[..:..:Std:Real#T|Std.Real.T]], found @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :ForeachChild ====
-'':ForeachChild(self @ [[#T|T]], func @[[..:..:Std:Object#T|Std.Object.T]], user_data @[[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':ForeachChild(self @ [[#T|T]], func @ [[..:..:Std:Object#T|Std.Object.T]], user_data @ [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :ForeachView ====
-'':ForeachView(self @ [[#T|T]], func @[[..:..:Std:Function#T|Std.Function.T]], data @[[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':ForeachView(self @ [[#T|T]], func @ [[..:..:Std:Function#T|Std.Function.T]], data @ [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetAllBounds ====
-'':GetAllBounds(self @ [[#T|T]], view @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Gtk:CCC:CcDRect#T|Gtk.CCC.CcDRect.T]]''
+'':GetAllBounds(self @ [[#T|T]], view @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Gtk:CCC:CcDRect#T|Gtk.CCC.CcDRect.T]]''
 
 
 ==== :GetViewData ====
-'':GetViewData(self @ [[#T|T]], view @[[..:..:Std:Object#T|Std.Object.T]], type @[[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]) : [[..:..:Std:Address#T|Std.Address.T]]''
+'':GetViewData(self @ [[#T|T]], view @ [[..:..:Std:Object#T|Std.Object.T]], type @ [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]) : [[..:..:Std:Address#T|Std.Address.T]]''
 
 
 ==== :GrabFocus ====
-'':GrabFocus(self @ [[#T|T]], view @[[..:..:Gtk:CCC:CcView#T|Gtk.CCC.CcView.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':GrabFocus(self @ [[#T|T]], view @ [[..:..:Gtk:CCC:CcView#T|Gtk.CCC.CcView.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Insert ====
-'':Insert(self @ [[#T|T]], child @[[..:..:Gtk:CCC:CcItem#T|Gtk.CCC.CcItem.T]], position @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Insert(self @ [[#T|T]], child @ [[..:..:Gtk:CCC:CcItem#T|Gtk.CCC.CcItem.T]], position @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :IsChildOf ====
-'':IsChildOf(self @ [[#T|T]], parent @[[..:..:Gtk:CCC:CcItem#T|Gtk.CCC.CcItem.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':IsChildOf(self @ [[#T|T]], parent @ [[..:..:Gtk:CCC:CcItem#T|Gtk.CCC.CcItem.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :Lower ====
-'':Lower(self @ [[#T|T]], parent @[[..:..:Gtk:CCC:CcItem#T|Gtk.CCC.CcItem.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Lower(self @ [[#T|T]], parent @ [[..:..:Gtk:CCC:CcItem#T|Gtk.CCC.CcItem.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :LowerToBottom ====
-'':LowerToBottom(self @ [[#T|T]], parent @[[..:..:Gtk:CCC:CcItem#T|Gtk.CCC.CcItem.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':LowerToBottom(self @ [[#T|T]], parent @ [[..:..:Gtk:CCC:CcItem#T|Gtk.CCC.CcItem.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Raise ====
-'':Raise(self @ [[#T|T]], parent @[[..:..:Gtk:CCC:CcItem#T|Gtk.CCC.CcItem.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Raise(self @ [[#T|T]], parent @ [[..:..:Gtk:CCC:CcItem#T|Gtk.CCC.CcItem.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :RaiseToTop ====
-'':RaiseToTop(self @ [[#T|T]], parent @[[..:..:Gtk:CCC:CcItem#T|Gtk.CCC.CcItem.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':RaiseToTop(self @ [[#T|T]], parent @ [[..:..:Gtk:CCC:CcItem#T|Gtk.CCC.CcItem.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Remove ====
-'':Remove(self @ [[#T|T]], child @[[..:..:Gtk:CCC:CcItem#T|Gtk.CCC.CcItem.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Remove(self @ [[#T|T]], child @ [[..:..:Gtk:CCC:CcItem#T|Gtk.CCC.CcItem.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :RemoveView ====
-'':RemoveView(self @ [[#T|T]], view @[[..:..:Gtk:CCC:CcView#T|Gtk.CCC.CcView.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':RemoveView(self @ [[#T|T]], view @ [[..:..:Gtk:CCC:CcView#T|Gtk.CCC.CcView.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Render ====
-'':Render(self @ [[#T|T]], view @[[..:..:Gtk:CCC:CcView#T|Gtk.CCC.CcView.T]], cr @[[..:..:Gtk:Cairo:CairoT#T|Gtk.Cairo.CairoT.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Render(self @ [[#T|T]], view @ [[..:..:Gtk:CCC:CcView#T|Gtk.CCC.CcView.T]], cr @ [[..:..:Gtk:Cairo:CairoT#T|Gtk.Cairo.CairoT.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Repaint ====
@@ -117,7 +117,7 @@
 
 
 ==== :SetGridAligned ====
-'':SetGridAligned(self @ [[#T|T]], grid_aligned @[[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetGridAligned(self @ [[#T|T]], grid_aligned @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====

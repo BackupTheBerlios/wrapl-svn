@@ -13,7 +13,7 @@
 
 
 ==== :SetVadjustment ====
-'':SetVadjustment(self @ [[#T|T]], vadjustment @[[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetVadjustment(self @ [[#T|T]], vadjustment @ [[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Hscrollbar ====
@@ -53,7 +53,7 @@
 
 
 ==== :AddWithViewport ====
-'':AddWithViewport(self @ [[#T|T]], child @[[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':AddWithViewport(self @ [[#T|T]], child @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetHadjustment ====
@@ -69,7 +69,7 @@
 
 
 ==== :GetPolicy ====
-'':GetPolicy(self @ [[#T|T]], hscrollbar_policy @[[..:..:Std:Object#T|Std.Object.T]], vscrollbar_policy @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':GetPolicy(self @ [[#T|T]], hscrollbar_policy @ [[..:..:Std:Object#T|Std.Object.T]], vscrollbar_policy @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetShadowType ====
@@ -85,19 +85,19 @@
 
 
 ==== :SetHadjustment ====
-'':SetHadjustment(self @ [[#T|T]], hadjustment @[[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetHadjustment(self @ [[#T|T]], hadjustment @ [[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetPlacement ====
-'':SetPlacement(self @ [[#T|T]], window_placement @[[..:..:Gtk:Gtk:CornerType#T|Gtk.Gtk.CornerType.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetPlacement(self @ [[#T|T]], window_placement @ [[..:..:Gtk:Gtk:CornerType#T|Gtk.Gtk.CornerType.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetPolicy ====
-'':SetPolicy(self @ [[#T|T]], hscrollbar_policy @[[..:..:Gtk:Gtk:PolicyType#T|Gtk.Gtk.PolicyType.T]], vscrollbar_policy @[[..:..:Gtk:Gtk:PolicyType#T|Gtk.Gtk.PolicyType.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetPolicy(self @ [[#T|T]], hscrollbar_policy @ [[..:..:Gtk:Gtk:PolicyType#T|Gtk.Gtk.PolicyType.T]], vscrollbar_policy @ [[..:..:Gtk:Gtk:PolicyType#T|Gtk.Gtk.PolicyType.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetShadowType ====
-'':SetShadowType(self @ [[#T|T]], type @[[..:..:Gtk:Gtk:ShadowType#T|Gtk.Gtk.ShadowType.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetShadowType(self @ [[#T|T]], type @ [[..:..:Gtk:Gtk:ShadowType#T|Gtk.Gtk.ShadowType.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====

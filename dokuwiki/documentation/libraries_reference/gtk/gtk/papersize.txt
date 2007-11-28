@@ -3,15 +3,15 @@
 
 
 ==== :ToKeyFile ====
-'':ToKeyFile(self @ [[#T|T]], key_file @[[..:..:Std:Object#T|Std.Object.T]], group_name @[[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':ToKeyFile(self @ [[#T|T]], key_file @ [[..:..:Std:Object#T|Std.Object.T]], group_name @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetSize ====
-'':SetSize(self @ [[#T|T]], width @[[..:..:Std:Real#T|Std.Real.T]], height @[[..:..:Std:Real#T|Std.Real.T]], unit @[[..:..:Gtk:Gtk:Unit#T|Gtk.Gtk.Unit.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetSize(self @ [[#T|T]], width @ [[..:..:Std:Real#T|Std.Real.T]], height @ [[..:..:Std:Real#T|Std.Real.T]], unit @ [[..:..:Gtk:Gtk:Unit#T|Gtk.Gtk.Unit.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :IsEqual ====
-'':IsEqual(self @ [[#T|T]], size2 @[[..:..:Gtk:Gtk:PaperSize#T|Gtk.Gtk.PaperSize.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':IsEqual(self @ [[#T|T]], size2 @ [[..:..:Gtk:Gtk:PaperSize#T|Gtk.Gtk.PaperSize.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :IsCustom ====
@@ -19,7 +19,7 @@
 
 
 ==== :GetWidth ====
-'':GetWidth(self @ [[#T|T]], unit @[[..:..:Gtk:Gtk:Unit#T|Gtk.Gtk.Unit.T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
+'':GetWidth(self @ [[#T|T]], unit @ [[..:..:Gtk:Gtk:Unit#T|Gtk.Gtk.Unit.T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :GetPpdName ====
@@ -39,19 +39,19 @@
 
 
 ==== :GetDefaultBottomMargin ====
-'':GetDefaultBottomMargin(self @ [[#T|T]], unit @[[..:..:Gtk:Gtk:Unit#T|Gtk.Gtk.Unit.T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
+'':GetDefaultBottomMargin(self @ [[#T|T]], unit @ [[..:..:Gtk:Gtk:Unit#T|Gtk.Gtk.Unit.T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :GetDefaultLeftMargin ====
-'':GetDefaultLeftMargin(self @ [[#T|T]], unit @[[..:..:Gtk:Gtk:Unit#T|Gtk.Gtk.Unit.T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
+'':GetDefaultLeftMargin(self @ [[#T|T]], unit @ [[..:..:Gtk:Gtk:Unit#T|Gtk.Gtk.Unit.T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :GetDefaultRightMargin ====
-'':GetDefaultRightMargin(self @ [[#T|T]], unit @[[..:..:Gtk:Gtk:Unit#T|Gtk.Gtk.Unit.T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
+'':GetDefaultRightMargin(self @ [[#T|T]], unit @ [[..:..:Gtk:Gtk:Unit#T|Gtk.Gtk.Unit.T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :GetDefaultTopMargin ====
-'':GetDefaultTopMargin(self @ [[#T|T]], unit @[[..:..:Gtk:Gtk:Unit#T|Gtk.Gtk.Unit.T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
+'':GetDefaultTopMargin(self @ [[#T|T]], unit @ [[..:..:Gtk:Gtk:Unit#T|Gtk.Gtk.Unit.T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :GetDisplayName ====
@@ -59,7 +59,7 @@
 
 
 ==== :GetHeight ====
-'':GetHeight(self @ [[#T|T]], unit @[[..:..:Gtk:Gtk:Unit#T|Gtk.Gtk.Unit.T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
+'':GetHeight(self @ [[#T|T]], unit @ [[..:..:Gtk:Gtk:Unit#T|Gtk.Gtk.Unit.T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== New ====

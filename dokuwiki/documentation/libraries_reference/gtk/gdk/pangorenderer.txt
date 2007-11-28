@@ -6,15 +6,15 @@
 
 
 ==== :SetStipple ====
-'':SetStipple(self @ [[#T|T]], part @[[..:..:Gtk:Pango:RenderPart#T|Gtk.Pango.RenderPart.T]], stipple @[[..:..:Gtk:Gdk:Bitmap#T|Gtk.Gdk.Bitmap.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetStipple(self @ [[#T|T]], part @ [[..:..:Gtk:Pango:RenderPart#T|Gtk.Pango.RenderPart.T]], stipple @ [[..:..:Gtk:Gdk:Bitmap#T|Gtk.Gdk.Bitmap.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetOverrideColor ====
-'':SetOverrideColor(self @ [[#T|T]], part @[[..:..:Gtk:Pango:RenderPart#T|Gtk.Pango.RenderPart.T]], color @[[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetOverrideColor(self @ [[#T|T]], part @ [[..:..:Gtk:Pango:RenderPart#T|Gtk.Pango.RenderPart.T]], color @ [[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetGc ====
-'':SetGc(self @ [[#T|T]], gc @[[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetGc(self @ [[#T|T]], gc @ [[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Priv ====
@@ -22,7 +22,7 @@
 
 
 ==== :SetDrawable ====
-'':SetDrawable(self @ [[#T|T]], drawable @[[..:..:Gtk:Gdk:Drawable#T|Gtk.Gdk.Drawable.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetDrawable(self @ [[#T|T]], drawable @ [[..:..:Gtk:Gdk:Drawable#T|Gtk.Gdk.Drawable.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====

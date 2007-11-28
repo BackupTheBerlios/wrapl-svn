@@ -5,19 +5,19 @@
 
 
 ==== :SetStringProperty ====
-'':SetStringProperty(self @ [[#T|T]], name @[[..:..:Std:String#T|Std.String.T]], v_string @[[..:..:Std:String#T|Std.String.T]], origin @[[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetStringProperty(self @ [[#T|T]], name @ [[..:..:Std:String#T|Std.String.T]], v_string @ [[..:..:Std:String#T|Std.String.T]], origin @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetPropertyValue ====
-'':SetPropertyValue(self @ [[#T|T]], name @[[..:..:Std:String#T|Std.String.T]], svalue @[[..:..:Gtk:Gtk:SettingsValue#T|Gtk.Gtk.SettingsValue.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetPropertyValue(self @ [[#T|T]], name @ [[..:..:Std:String#T|Std.String.T]], svalue @ [[..:..:Gtk:Gtk:SettingsValue#T|Gtk.Gtk.SettingsValue.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetLongProperty ====
-'':SetLongProperty(self @ [[#T|T]], name @[[..:..:Std:String#T|Std.String.T]], v_long @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], origin @[[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetLongProperty(self @ [[#T|T]], name @ [[..:..:Std:String#T|Std.String.T]], v_long @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], origin @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetDoubleProperty ====
-'':SetDoubleProperty(self @ [[#T|T]], name @[[..:..:Std:String#T|Std.String.T]], v_double @[[..:..:Std:Real#T|Std.Real.T]], origin @[[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetDoubleProperty(self @ [[#T|T]], name @ [[..:..:Std:String#T|Std.String.T]], v_double @ [[..:..:Std:Real#T|Std.Real.T]], origin @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Screen ====

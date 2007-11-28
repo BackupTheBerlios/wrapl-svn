@@ -5,15 +5,15 @@
 
 
 ==== :SetUsePreedit ====
-'':SetUsePreedit(self @ [[#T|T]], use_preedit @[[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetUsePreedit(self @ [[#T|T]], use_preedit @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :DeleteSurrounding ====
-'':DeleteSurrounding(self @ [[#T|T]], offset @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], n_chars @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':DeleteSurrounding(self @ [[#T|T]], offset @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], n_chars @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :FilterKeypress ====
-'':FilterKeypress(self @ [[#T|T]], event @[[..:..:Gtk:Gdk:EventKey#T|Gtk.Gdk.EventKey.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':FilterKeypress(self @ [[#T|T]], event @ [[..:..:Gtk:Gdk:EventKey#T|Gtk.Gdk.EventKey.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :FocusIn ====
@@ -25,11 +25,11 @@
 
 
 ==== :GetPreeditString ====
-'':GetPreeditString(self @ [[#T|T]], str @[[..:..:Std:List#T|Std.List.T]], attrs @[[..:..:Std:Object#T|Std.Object.T]], cursor_pos @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':GetPreeditString(self @ [[#T|T]], str @ [[..:..:Std:List#T|Std.List.T]], attrs @ [[..:..:Std:Object#T|Std.Object.T]], cursor_pos @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetSurrounding ====
-'':GetSurrounding(self @ [[#T|T]], text @[[..:..:Std:List#T|Std.List.T]], cursor_index @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':GetSurrounding(self @ [[#T|T]], text @ [[..:..:Std:List#T|Std.List.T]], cursor_index @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :Reset ====
@@ -37,15 +37,15 @@
 
 
 ==== :SetClientWindow ====
-'':SetClientWindow(self @ [[#T|T]], window @[[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetClientWindow(self @ [[#T|T]], window @ [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetCursorLocation ====
-'':SetCursorLocation(self @ [[#T|T]], area @[[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetCursorLocation(self @ [[#T|T]], area @ [[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetSurrounding ====
-'':SetSurrounding(self @ [[#T|T]], text @[[..:..:Std:String#T|Std.String.T]], len @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], cursor_index @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetSurrounding(self @ [[#T|T]], text @ [[..:..:Std:String#T|Std.String.T]], len @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], cursor_index @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== GetType ====

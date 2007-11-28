@@ -56,7 +56,7 @@
 
 
 ==== :read ====
-'':read( @ [[#ReaderT|ReaderT]], @[[..:Std:Address#T|Std.Address.T]], @[[..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':read( @ [[#ReaderT|ReaderT]], @ [[..:Std:Address#T|Std.Address.T]], @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])''
 
 
 ==== :rest ====
@@ -64,7 +64,7 @@
 
 
 ==== :read ====
-'':read( @ [[#ReaderT|ReaderT]], @[[..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':read( @ [[#ReaderT|ReaderT]], @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])''
 
 
 ==== :read ====
@@ -72,19 +72,19 @@
 
 
 ==== :write ====
-'':write( @ [[#WriterT|WriterT]], @[[..:Std:Address#T|Std.Address.T]], @[[..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':write( @ [[#WriterT|WriterT]], @ [[..:Std:Address#T|Std.Address.T]], @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])''
 
 
 ==== :write ====
-'':write( @ [[#WriterT|WriterT]], @[[..:Std:String#T|Std.String.T]])''
+'':write( @ [[#WriterT|WriterT]], @ [[..:Std:String#T|Std.String.T]])''
 
 
 ==== :write ====
-'':write( @ [[#TextWriterT|TextWriterT]], @ANY)''
+'':write( @ [[#TextWriterT|TextWriterT]], @ ANY)''
 
 
 ==== :seek ====
-'':seek( @ [[#SeekerT|SeekerT]], @[[..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':seek( @ [[#SeekerT|SeekerT]], @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])''
 
 
 ==== :tell ====
@@ -92,6 +92,6 @@
 
 
 ==== :poll ====
-'':poll( @ [[#T|T]], @[[..:Std:Integer#SmallT|Std.Integer.SmallT]], @[[..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':poll( @ [[#T|T]], @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]], @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])''
 
 

@@ -3,7 +3,7 @@
 
 
 ==== :Svp ====
-'':Svp(self @ [[#T|T]], svp @[[..:..:Gtk:Art:SVP#T|Gtk.Art.SVP.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Svp(self @ [[#T|T]], svp @ [[..:..:Gtk:Art:SVP#T|Gtk.Art.SVP.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :X0 ====
@@ -95,35 +95,35 @@
 
 
 ==== :ClearColor ====
-'':ClearColor(self @ [[#T|T]], @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':ClearColor(self @ [[#T|T]], @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :AddImageSource ====
-'':AddImageSource(self @ [[#T|T]], image_source @[[..:..:Gtk:Art:ImageSource#T|Gtk.Art.ImageSource.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':AddImageSource(self @ [[#T|T]], image_source @ [[..:..:Gtk:Art:ImageSource#T|Gtk.Art.ImageSource.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :AddMaskSource ====
-'':AddMaskSource(self @ [[#T|T]], mask_source @[[..:..:Gtk:Art:MaskSource#T|Gtk.Art.MaskSource.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':AddMaskSource(self @ [[#T|T]], mask_source @ [[..:..:Gtk:Art:MaskSource#T|Gtk.Art.MaskSource.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Clear ====
-'':Clear(self @ [[#T|T]], clear_color @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Clear(self @ [[#T|T]], clear_color @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :ClearRgb ====
-'':ClearRgb(self @ [[#T|T]], clear_rgb @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':ClearRgb(self @ [[#T|T]], clear_rgb @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GradientLinear ====
-'':GradientLinear(self @ [[#T|T]], gradient @[[..:..:Gtk:Art:GradientLinear#T|Gtk.Art.GradientLinear.T]], level @[[..:..:Gtk:Art:FilterLevel#T|Gtk.Art.FilterLevel.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':GradientLinear(self @ [[#T|T]], gradient @ [[..:..:Gtk:Art:GradientLinear#T|Gtk.Art.GradientLinear.T]], level @ [[..:..:Gtk:Art:FilterLevel#T|Gtk.Art.FilterLevel.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GradientRadial ====
-'':GradientRadial(self @ [[#T|T]], gradient @[[..:..:Gtk:Art:GradientRadial#T|Gtk.Art.GradientRadial.T]], level @[[..:..:Gtk:Art:FilterLevel#T|Gtk.Art.FilterLevel.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':GradientRadial(self @ [[#T|T]], gradient @ [[..:..:Gtk:Art:GradientRadial#T|Gtk.Art.GradientRadial.T]], level @ [[..:..:Gtk:Art:FilterLevel#T|Gtk.Art.FilterLevel.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :ImageSolid ====
-'':ImageSolid(self @ [[#T|T]], color @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':ImageSolid(self @ [[#T|T]], color @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Invoke ====
@@ -131,15 +131,15 @@
 
 
 ==== :InvokeCallbacks ====
-'':InvokeCallbacks(self @ [[#T|T]], dest @[[..:..:Std:Object#T|Std.Object.T]], y @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':InvokeCallbacks(self @ [[#T|T]], dest @ [[..:..:Std:Object#T|Std.Object.T]], y @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Mask ====
-'':Mask(self @ [[#T|T]], x0 @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y0 @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], x1 @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y1 @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], mask_buf @[[..:..:Std:Object#T|Std.Object.T]], rowstride @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Mask(self @ [[#T|T]], x0 @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y0 @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], x1 @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y1 @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], mask_buf @ [[..:..:Std:Object#T|Std.Object.T]], rowstride @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :MaskSolid ====
-'':MaskSolid(self @ [[#T|T]], opacity @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':MaskSolid(self @ [[#T|T]], opacity @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====

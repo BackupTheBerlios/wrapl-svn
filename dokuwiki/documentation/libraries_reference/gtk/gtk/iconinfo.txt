@@ -3,7 +3,7 @@
 
 
 ==== :SetRawCoordinates ====
-'':SetRawCoordinates(self @ [[#T|T]], raw_coordinates @[[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetRawCoordinates(self @ [[#T|T]], raw_coordinates @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Copy ====
@@ -15,7 +15,7 @@
 
 
 ==== :GetAttachPoints ====
-'':GetAttachPoints(self @ [[#T|T]], points @[[..:..:Std:Object#T|Std.Object.T]], n_points @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':GetAttachPoints(self @ [[#T|T]], points @ [[..:..:Std:Object#T|Std.Object.T]], n_points @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :GetBaseSize ====
@@ -31,7 +31,7 @@
 
 
 ==== :GetEmbeddedRect ====
-'':GetEmbeddedRect(self @ [[#T|T]], rectangle @[[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':GetEmbeddedRect(self @ [[#T|T]], rectangle @ [[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :GetFilename ====
@@ -39,7 +39,7 @@
 
 
 ==== :LoadIcon ====
-'':LoadIcon(self @ [[#T|T]], error @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Gtk:Gdk:Pixbuf#T|Gtk.Gdk.Pixbuf.T]]''
+'':LoadIcon(self @ [[#T|T]], error @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Gtk:Gdk:Pixbuf#T|Gtk.Gdk.Pixbuf.T]]''
 
 
 ==== GetType ====

@@ -19,11 +19,11 @@
 
 
 ==== :Merge ====
-'':Merge(self @ [[#T|T]], other @[[..:..:Gtk:Cairo:CairoFontOptionsT#T|Gtk.Cairo.CairoFontOptionsT.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Merge(self @ [[#T|T]], other @ [[..:..:Gtk:Cairo:CairoFontOptionsT#T|Gtk.Cairo.CairoFontOptionsT.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Equal ====
-'':Equal(self @ [[#T|T]], other @[[..:..:Gtk:Cairo:CairoFontOptionsT#T|Gtk.Cairo.CairoFontOptionsT.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':Equal(self @ [[#T|T]], other @ [[..:..:Gtk:Cairo:CairoFontOptionsT#T|Gtk.Cairo.CairoFontOptionsT.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Hash ====
@@ -31,7 +31,7 @@
 
 
 ==== :SetAntialias ====
-'':SetAntialias(self @ [[#T|T]], antialias @[[..:..:Gtk:Cairo:CairoAntialiasT#T|Gtk.Cairo.CairoAntialiasT.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetAntialias(self @ [[#T|T]], antialias @ [[..:..:Gtk:Cairo:CairoAntialiasT#T|Gtk.Cairo.CairoAntialiasT.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetAntialias ====
@@ -39,7 +39,7 @@
 
 
 ==== :SetSubpixelOrder ====
-'':SetSubpixelOrder(self @ [[#T|T]], subpixel_order @[[..:..:Gtk:Cairo:CairoSubpixelOrderT#T|Gtk.Cairo.CairoSubpixelOrderT.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetSubpixelOrder(self @ [[#T|T]], subpixel_order @ [[..:..:Gtk:Cairo:CairoSubpixelOrderT#T|Gtk.Cairo.CairoSubpixelOrderT.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetSubpixelOrder ====
@@ -47,7 +47,7 @@
 
 
 ==== :SetHintStyle ====
-'':SetHintStyle(self @ [[#T|T]], hint_style @[[..:..:Gtk:Cairo:CairoHintStyleT#T|Gtk.Cairo.CairoHintStyleT.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetHintStyle(self @ [[#T|T]], hint_style @ [[..:..:Gtk:Cairo:CairoHintStyleT#T|Gtk.Cairo.CairoHintStyleT.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetHintStyle ====
@@ -55,7 +55,7 @@
 
 
 ==== :SetHintMetrics ====
-'':SetHintMetrics(self @ [[#T|T]], hint_metrics @[[..:..:Gtk:Cairo:CairoHintMetricsT#T|Gtk.Cairo.CairoHintMetricsT.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetHintMetrics(self @ [[#T|T]], hint_metrics @ [[..:..:Gtk:Cairo:CairoHintMetricsT#T|Gtk.Cairo.CairoHintMetricsT.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== Create ====

@@ -3,15 +3,15 @@
 
 
 ==== :SetTab ====
-'':SetTab(self @ [[#T|T]], tab_index @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], alignment @[[..:..:Gtk:Pango:TabAlign#T|Gtk.Pango.TabAlign.T]], location @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetTab(self @ [[#T|T]], tab_index @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], alignment @ [[..:..:Gtk:Pango:TabAlign#T|Gtk.Pango.TabAlign.T]], location @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Resize ====
-'':Resize(self @ [[#T|T]], new_size @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Resize(self @ [[#T|T]], new_size @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetTabs ====
-'':GetTabs(self @ [[#T|T]], alignments @[[..:..:Std:Object#T|Std.Object.T]], locations @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':GetTabs(self @ [[#T|T]], alignments @ [[..:..:Std:Object#T|Std.Object.T]], locations @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Copy ====
@@ -31,7 +31,7 @@
 
 
 ==== :GetTab ====
-'':GetTab(self @ [[#T|T]], tab_index @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], alignment @[[..:..:Std:Object#T|Std.Object.T]], location @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':GetTab(self @ [[#T|T]], tab_index @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], alignment @ [[..:..:Std:Object#T|Std.Object.T]], location @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====
