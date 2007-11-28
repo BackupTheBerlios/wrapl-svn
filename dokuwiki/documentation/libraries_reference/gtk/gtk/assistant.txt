@@ -8,14 +8,39 @@
   * [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]
   * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
 
+A GtkAssistant is a widget used to represent a generally complex operation
+splitted in several steps, guiding the user through its pages and controlling
+the page flow to collect the necessary data.
 
 ==== :UpdateButtonsState ====
 '':UpdateButtonsState(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+Forces assistant to recompute the buttons state.
+GTK+ automatically takes care of this in most situations, e.g. when the user
+goes to a different page, or when the visibility or completeness of a page
+changes.
+One situation where it can be necessary to call this function is when changing
+a value on the current page affects the future page flow of the assistant.
+assistant : a GtkAssistant
+Since 2.10
+***** Child Property Details *****
+The "complete" child property
+  "complete"                 gboolean              : Read / Write
+Setting the "complete" child property to TRUE marks a page as complete (i.e.:
+all the required fields are filled out). GTK+ uses this information to control
+the sensitivity of the navigation buttons.
+Default value: FALSE
+Since 2.10
 
 ==== :SetPageType ====
 '':SetPageType(self @ [[#T|T]], page @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], type @ [[..:..:Gtk:Gtk:AssistantPageType#T|Gtk.Gtk.AssistantPageType.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+Sets the page type for page. The page type determines the page behavior in the
+assistant.
+assistant : a GtkAssistant
+page :      a page of assistant
+type :      the new type for page
+Since 2.10
 
 ==== :Cancel ====
 '':Cancel(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
@@ -48,82 +73,192 @@
 ==== :AddActionWidget ====
 '':AddActionWidget(self @ [[#T|T]], child @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+Adds a widget to the action area of a GtkAssistant.
+assistant : a GtkAssistant
+child :     a GtkWidget
+Since 2.10
 
 ==== :AppendPage ====
 '':AppendPage(self @ [[#T|T]], page @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
+Appends a page to the assistant.
+assistant : a GtkAssistant
+page :      a GtkWidget
+Returns :   the index (starting at 0) of the inserted page
+Since 2.10
 
 ==== :GetCurrentPage ====
 '':GetCurrentPage(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
+Returns the page number of the current page
+assistant : a GtkAssistant
+Returns :   The index (starting from 0) of the current page in the assistant,
+            if the assistant has no pages, -1 will be returned
+Since 2.10
 
 ==== :GetNPages ====
 '':GetNPages(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
+Returns the number of pages in the assistant
+assistant : a GtkAssistant
+Returns :   The number of pages in the assistant.
+Since 2.10
 
 ==== :GetNthPage ====
 '':GetNthPage(self @ [[#T|T]], page_num @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
+Returns the child widget contained in page number page_num.
+assistant : a GtkAssistant
+page_num :  The index of a page in the assistant, or -1 to get the last page;
+Returns :   The child widget, or NULL if page_num is out of bounds.
+Since 2.10
 
 ==== :GetPageComplete ====
 '':GetPageComplete(self @ [[#T|T]], page @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
+Gets whether page is complete..
+assistant : a GtkAssistant
+page :      a page of assistant
+Returns :   TRUE if page is complete.
+Since 2.10
 
 ==== :GetPageHeaderImage ====
 '':GetPageHeaderImage(self @ [[#T|T]], page @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Gtk:Gdk:Pixbuf#T|Gtk.Gdk.Pixbuf.T]]''
 
+Gets the header image for page.
+assistant : a GtkAssistant
+page :      a page of assistant
+Returns :   the header image for page, or NULL if there's no header image for
+            the page.
+Since 2.10
 
 ==== :GetPageSideImage ====
 '':GetPageSideImage(self @ [[#T|T]], page @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Gtk:Gdk:Pixbuf#T|Gtk.Gdk.Pixbuf.T]]''
 
+Gets the header image for page.
+assistant : a GtkAssistant
+page :      a page of assistant
+Returns :   the side image for page, or NULL if there's no side image for the
+            page.
+Since 2.10
 
 ==== :GetPageTitle ====
 '':GetPageTitle(self @ [[#T|T]], page @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
+Gets the title for page.
+assistant : a GtkAssistant
+page :      a page of assistant
+Returns :   the title for page.
+Since 2.10
 
 ==== :GetPageType ====
 '':GetPageType(self @ [[#T|T]], page @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Gtk:Gtk:AssistantPageType#T|Gtk.Gtk.AssistantPageType.T]]''
 
+Gets the page type of page.
+assistant : a GtkAssistant
+page :      a page of assistant
+Returns :   the page type of page.
+Since 2.10
 
 ==== :InsertPage ====
 '':InsertPage(self @ [[#T|T]], page @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], position @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
+Inserts a page in the assistant at a given position.
+assistant : a GtkAssistant
+page :      a GtkWidget
+position :  the index (starting at 0) at which to insert the page, or -1 to
+            append the page to the assistant
+Returns :   the index (starting from 0) of the inserted page
+Since 2.10
 
 ==== :PrependPage ====
 '':PrependPage(self @ [[#T|T]], page @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
+Prepends a page to the assistant.
+assistant : a GtkAssistant
+page :      a GtkWidget
+Returns :   the index (starting at 0) of the inserted page
+Since 2.10
 
 ==== :RemoveActionWidget ====
 '':RemoveActionWidget(self @ [[#T|T]], child @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+Removes a widget from the action area of a GtkAssistant.
+assistant : a GtkAssistant
+child :     a GtkWidget
+Since 2.10
 
 ==== :SetCurrentPage ====
 '':SetCurrentPage(self @ [[#T|T]], page_num @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+Switches the page to page_num. Note that this will only be necessary in custom
+buttons, as the assistant flow can be set with
+gtk_assistant_set_forward_page_func().
+assistant : a GtkAssistant
+            index of the page to switch to, starting from 0. If negative, the
+page_num :  last page will be used. If greater than the number of pages in the
+            assistant, nothing will be done.
+Since 2.10
 
 ==== :SetForwardPageFunc ====
 '':SetForwardPageFunc(self @ [[#T|T]], page_func @ [[..:..:Std:Function#T|Std.Function.T]], data @ [[..:..:Std:Address#T|Std.Address.T]], destroy @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+Sets the page forwarding function to be page_func, this function will be used
+to determine what will be the next page when the user presses the forward
+button. Setting page_func to NULL will make the assistant to use the default
+forward function, which just goes to the next visible page.
+assistant : a GtkAssistant
+page_func : the GtkAssistantPageFunc, or NULL to use the default one
+data :      user data for page_func
+destroy :   destroy notifier for data
+Since 2.10
 
 ==== :SetPageComplete ====
 '':SetPageComplete(self @ [[#T|T]], page @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], complete @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+Sets whether page contents are complete. This will make assistant update the
+buttons state to be able to continue the task.
+assistant : a GtkAssistant
+page :      a page of assistant
+complete :  the completeness status of the page
+Since 2.10
 
 ==== :SetPageHeaderImage ====
 '':SetPageHeaderImage(self @ [[#T|T]], page @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], pixbuf @ [[..:..:Gtk:Gdk:Pixbuf#T|Gtk.Gdk.Pixbuf.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+Sets a header image for page. This image is displayed in the header area of the
+assistant when page is the current page.
+assistant : a GtkAssistant
+page :      a page of assistant
+pixbuf :    the new header image page
+Since 2.10
 
 ==== :SetPageSideImage ====
 '':SetPageSideImage(self @ [[#T|T]], page @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], pixbuf @ [[..:..:Gtk:Gdk:Pixbuf#T|Gtk.Gdk.Pixbuf.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+Sets a header image for page. This image is displayed in the side area of the
+assistant when page is the current page.
+assistant : a GtkAssistant
+page :      a page of assistant
+pixbuf :    the new header image page
+Since 2.10
 
 ==== :SetPageTitle ====
 '':SetPageTitle(self @ [[#T|T]], page @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], title @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+Sets a title for page. The title is displayed in the header area of the
+assistant when page is the current page.
+assistant : a GtkAssistant
+page :      a page of assistant
+title :     the new title for page
+Since 2.10
 
 ==== New ====
 ''New() : [[# T| T]]''
 
+Creates a new GtkAssistant.
+Returns : a newly created GtkAssistant
+Since 2.10
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''

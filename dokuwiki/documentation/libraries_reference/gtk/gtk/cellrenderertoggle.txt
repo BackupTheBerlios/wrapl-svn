@@ -5,18 +5,49 @@
   * [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]
   * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
 
+GtkCellRendererToggle renders a toggle button in a cell. The button is drawn as
+a radio- or checkbutton, depending on the radio property. When activated, it
+emits the toggled signal.
 
 ==== :SetRadio ====
 '':SetRadio(self @ [[#T|T]], radio @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+If radio is TRUE, the cell renderer renders a radio toggle (i.e. a toggle in a
+group of mutually-exclusive toggles). If FALSE, it renders a check toggle (a
+standalone boolean option). This can be set globally for the cell renderer, or
+changed just before rendering each cell in the model (for GtkTreeView, you set
+up a per-row setting using GtkTreeViewColumn to associate model columns with
+cell renderer properties).
+toggle : a GtkCellRendererToggle
+radio :  TRUE to make the toggle look like a radio button
 
 ==== :SetActive ====
 '':SetActive(self @ [[#T|T]], setting @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+Activates or deactivates a cell renderer.
+toggle :  a GtkCellRendererToggle.
+setting : the value to set.
+***** Property Details *****
+The "activatable" property
+  "activatable"              gboolean              : Read / Write
+The toggle button can be activated.
+Default value: TRUE
 
 ==== :Active ====
 '':Active(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
+Returns whether the cell renderer is active. See
+gtk_cell_renderer_toggle_set_active().
+toggle :  a GtkCellRendererToggle
+Returns : TRUE if the cell renderer is active.
+Activates or deactivates a cell renderer.
+toggle :  a GtkCellRendererToggle.
+setting : the value to set.
+***** Property Details *****
+The "activatable" property
+  "activatable"              gboolean              : Read / Write
+The toggle button can be activated.
+Default value: TRUE
 
 ==== :Activatable ====
 '':Activatable(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
@@ -25,18 +56,43 @@
 ==== :Radio ====
 '':Radio(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
+Returns whether we're rendering radio toggles rather than checkboxes.
+toggle :  a GtkCellRendererToggle
+Returns : TRUE if we're rendering radio toggles rather than checkboxes
+If radio is TRUE, the cell renderer renders a radio toggle (i.e. a toggle in a
+group of mutually-exclusive toggles). If FALSE, it renders a check toggle (a
+standalone boolean option). This can be set globally for the cell renderer, or
+changed just before rendering each cell in the model (for GtkTreeView, you set
+up a per-row setting using GtkTreeViewColumn to associate model columns with
+cell renderer properties).
+toggle : a GtkCellRendererToggle
+radio :  TRUE to make the toggle look like a radio button
 
 ==== :GetActive ====
 '':GetActive(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
+Returns whether the cell renderer is active. See
+gtk_cell_renderer_toggle_set_active().
+toggle :  a GtkCellRendererToggle
+Returns : TRUE if the cell renderer is active.
 
 ==== :GetRadio ====
 '':GetRadio(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
+Returns whether we're rendering radio toggles rather than checkboxes.
+toggle :  a GtkCellRendererToggle
+Returns : TRUE if we're rendering radio toggles rather than checkboxes
 
 ==== New ====
 ''New() : [[# T| T]]''
 
+Creates a new GtkCellRendererToggle. Adjust rendering parameters using object
+properties. Object properties can be set globally (with g_object_set()). Also,
+with GtkTreeViewColumn, you can bind a property to a value in a GtkTreeModel.
+For example, you can bind the "active" property on the cell renderer to a
+boolean value in the model, thus causing the check button to reflect the state
+of the model.
+Returns : the new cell renderer
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''

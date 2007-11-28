@@ -7,10 +7,16 @@
 ==== :RemoveWindow ====
 '':RemoveWindow(self @ [[#T|T]], window @ [[..:..:Gtk:Gtk:Window#T|Gtk.Gtk.Window.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+Removes a window from a GtkWindowGroup.
+window_group : a GtkWindowGroup
+window :       the GtkWindow to remove
 
 ==== :AddWindow ====
 '':AddWindow(self @ [[#T|T]], window @ [[..:..:Gtk:Gtk:Window#T|Gtk.Gtk.Window.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+Adds a window to a GtkWindowGroup.
+window_group : a GtkWindowGroup
+window :       the GtkWindow to add
 
 ==== :Grabs ====
 '':Grabs(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -19,6 +25,9 @@
 ==== New ====
 ''New() : [[# T| T]]''
 
+Creates a new GtkWindowGroup object. Grabs added with gtk_grab_add() only
+affect windows within the same GtkWindowGroup.
+Returns : a new GtkWindowGroup.
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''

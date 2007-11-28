@@ -8,18 +8,33 @@
   * [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]
   * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
 
+The GtkColorButton is a button which displays the currently selected color an
+allows to open a color selection dialog to change the color. It is suitable
+widget for selecting a color in a preference dialog.
 
 ==== :SetUseAlpha ====
 '':SetUseAlpha(self @ [[#T|T]], use_alpha @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+Sets whether or not the color button should use the alpha channel.
+color_button : a GtkColorButton.
+use_alpha :    TRUE if color button should use alpha channel, FALSE if not.
+Since 2.4
 
 ==== :SetTitle ====
 '':SetTitle(self @ [[#T|T]], title @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+Sets the title for the color selection dialog.
+color_button : a GtkColorButton
+title :        String containing new window title.
+Since 2.4
 
 ==== :SetColor ====
 '':SetColor(self @ [[#T|T]], color @ [[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+Sets the current color to be color.
+color_button : a GtkColorButton.
+color :        A GdkColor to set the current color with.
+Since 2.4
 
 ==== :Priv ====
 '':Priv(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -28,26 +43,60 @@
 ==== :GetAlpha ====
 '':GetAlpha(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
+Returns the current alpha value.
+color_button : a GtkColorButton.
+Returns :      an integer between 0 and 65535.
+Since 2.4
 
 ==== :GetColor ====
 '':GetColor(self @ [[#T|T]], color @ [[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+Sets color to be the current color in the GtkColorButton widget.
+color_button : a GtkColorButton.
+color :        a GdkColor to fill in with the current color.
+Since 2.4
 
 ==== :GetTitle ====
 '':GetTitle(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
+Gets the title of the color selection dialog.
+color_button : a GtkColorButton
+Returns :      An internal string, do not free the return value
+Since 2.4
+***** Property Details *****
+The "alpha" property
+  "alpha"                    guint                 : Read / Write
+The selected opacity value (0 fully transparent, 65535 fully opaque).
+Allowed values: <= 65535
+Default value: 65535
+Since 2.4
 
 ==== :GetUseAlpha ====
 '':GetUseAlpha(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
+Does the color selection dialog use the alpha channel?
+color_button : a GtkColorButton.
+Returns :      TRUE if the color sample uses alpha channel, FALSE if not.
+Since 2.4
 
 ==== :SetAlpha ====
 '':SetAlpha(self @ [[#T|T]], alpha @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+Sets the current opacity to be alpha.
+color_button : a GtkColorButton.
+alpha :        an integer between 0 and 65535.
+Since 2.4
 
 ==== New ====
 ''New() : [[# T| T]]''
 
+Creates a new color button. This returns a widget in the form of a small button
+containing a swatch representing the current selected color. When the button is
+clicked, a color-selection dialog will open, allowing the user to select a
+color. The swatch will be updated to reflect the new color when the user
+finishes.
+Returns : a new color button.
+Since 2.4
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
@@ -56,4 +105,8 @@
 ==== NewWithColor ====
 ''NewWithColor(color : [[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]]) : [[# T| T]]''
 
+Creates a new color button.
+color :   A GdkColor to set the current color with.
+Returns : a new color button.
+Since 2.4
 

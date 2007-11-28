@@ -7,6 +7,11 @@
 ==== :CreatePattern ====
 '':CreatePattern(self @ [[#T|T]], view @ [[..:..:Std:Object#T|Std.Object.T]], item @ [[..:..:Gtk:CCC:CcItem#T|Gtk.CCC.CcItem.T]]) : [[..:..:Gtk:Cairo:CairoPatternT#T|Gtk.Cairo.CairoPatternT.T]]''
 
+Creates a cairo_pattern_t for rendering a gradient on item in view.
+self :    a CcGradient
+view :    a CcView
+item :    a CcItem
+Returns : a cairo_pattern_t.
 
 ==== :Private ====
 '':Private(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -15,6 +20,11 @@
 ==== :AddStop ====
 '':AddStop(self @ [[#T|T]], offset @ [[..:..:Std:Real#T|Std.Real.T]], color @ [[..:..:Gtk:CCC:CcColor#T|Gtk.CCC.CcColor.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+Adds a color stop to a gradient. Color stops don't need to be inserted in order
+sorting happens automatically.
+self :   a CcGradient
+offset : the offset of the color stop (in [0.0;1.0])
+color :  the CcColor for this stop
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''

@@ -11,14 +11,31 @@
 ==== :SetVadjustment ====
 '':SetVadjustment(self @ [[#T|T]], adjustment @ [[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+Sets the vertical adjustment of the viewport.
+viewport :   a GtkViewport.
+adjustment : a GtkAdjustment.
 
 ==== :SetShadowType ====
 '':SetShadowType(self @ [[#T|T]], type @ [[..:..:Gtk:Gtk:ShadowType#T|Gtk.Gtk.ShadowType.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+Sets the shadow type of the viewport.
+viewport : a GtkViewport.
+type :     the new shadow type.
 
 ==== :ShadowType ====
 '':ShadowType(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:ShadowType#T|Gtk.Gtk.ShadowType.T]]''
 
+Sets the shadow type of the viewport.
+viewport : a GtkViewport.
+type :     the new shadow type.
+Gets the shadow type of the GtkViewport. See gtk_viewport_set_shadow_type().
+viewport : a GtkViewport
+Returns :  the shadow type
+***** Property Details *****
+The "hadjustment" property
+  "hadjustment"              GtkAdjustment         : Read / Write / Construct
+The GtkAdjustment that determines the values of the horizontal position for
+this viewport.
 
 ==== :ViewWindow ====
 '':ViewWindow(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]]''
@@ -31,30 +48,63 @@
 ==== :Hadjustment ====
 '':Hadjustment(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]]''
 
+Returns the horizontal adjustment of the viewport.
+viewport : a GtkViewport.
+Returns :  the horizontal adjustment of viewport.
+Sets the horizontal adjustment of the viewport.
+viewport :   a GtkViewport.
+adjustment : a GtkAdjustment.
 
 ==== :Vadjustment ====
 '':Vadjustment(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]]''
 
+Returns the vertical adjustment of the viewport.
+viewport : a GtkViewport.
+Returns :  the vertical adjustment of viewport.
+Sets the vertical adjustment of the viewport.
+viewport :   a GtkViewport.
+adjustment : a GtkAdjustment.
 
 ==== :GetHadjustment ====
 '':GetHadjustment(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]]''
 
+Returns the horizontal adjustment of the viewport.
+viewport : a GtkViewport.
+Returns :  the horizontal adjustment of viewport.
 
 ==== :GetShadowType ====
 '':GetShadowType(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:ShadowType#T|Gtk.Gtk.ShadowType.T]]''
 
+Gets the shadow type of the GtkViewport. See gtk_viewport_set_shadow_type().
+viewport : a GtkViewport
+Returns :  the shadow type
+***** Property Details *****
+The "hadjustment" property
+  "hadjustment"              GtkAdjustment         : Read / Write / Construct
+The GtkAdjustment that determines the values of the horizontal position for
+this viewport.
 
 ==== :GetVadjustment ====
 '':GetVadjustment(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]]''
 
+Returns the vertical adjustment of the viewport.
+viewport : a GtkViewport.
+Returns :  the vertical adjustment of viewport.
 
 ==== :SetHadjustment ====
 '':SetHadjustment(self @ [[#T|T]], adjustment @ [[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+Sets the horizontal adjustment of the viewport.
+viewport :   a GtkViewport.
+adjustment : a GtkAdjustment.
 
 ==== New ====
 ''New(hadjustment : [[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]], vadjustment : [[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]]) : [[# T| T]]''
 
+Creates a new GtkViewport with the given adjustments.
+hadjustment : horizontal adjustment.
+vadjustment : vertical adjustment.
+Returns :     a new GtkViewport.
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''

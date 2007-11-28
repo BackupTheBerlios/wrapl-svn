@@ -3,84 +3,104 @@
 
 
 ==== :Type ====
-'':Type( @ [[#T|T]])''
+'':Type(event @ [[#T|T]]) : [[..:..:Gtk:Gdk:EventType#T|Gtk.Gdk.EventType.T]]''
 
+Returns : the type of event
 
 ==== :Expose ====
 '':Expose(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:EventExpose#T|Gtk.Gdk.EventExpose.T]]''
 
+Returns : the appropriate type of event
 
 ==== :NoExpose ====
 '':NoExpose(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:EventNoExpose#T|Gtk.Gdk.EventNoExpose.T]]''
 
+Returns : the appropriate type of event
 
 ==== :Visibility ====
 '':Visibility(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:EventVisibility#T|Gtk.Gdk.EventVisibility.T]]''
 
+Returns : the appropriate type of event
 
 ==== :Motion ====
 '':Motion(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:EventMotion#T|Gtk.Gdk.EventMotion.T]]''
 
+Returns : the appropriate type of event
 
 ==== :Button ====
 '':Button(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:EventButton#T|Gtk.Gdk.EventButton.T]]''
 
+Returns : the appropriate type of event
 
 ==== :Scroll ====
 '':Scroll(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:EventScroll#T|Gtk.Gdk.EventScroll.T]]''
 
+Returns : the appropriate type of event
 
 ==== :Key ====
 '':Key(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:EventKey#T|Gtk.Gdk.EventKey.T]]''
 
+Returns : the appropriate type of event
 
 ==== :Crossing ====
 '':Crossing(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:EventCrossing#T|Gtk.Gdk.EventCrossing.T]]''
 
+Returns : the appropriate type of event
 
 ==== :Focus ====
 '':Focus(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:EventFocus#T|Gtk.Gdk.EventFocus.T]]''
 
+Returns : the appropriate type of event
 
 ==== :Configure ====
 '':Configure(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:EventConfigure#T|Gtk.Gdk.EventConfigure.T]]''
 
+Returns : the appropriate type of event
 
 ==== :Property ====
 '':Property(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:EventProperty#T|Gtk.Gdk.EventProperty.T]]''
 
+Returns : the appropriate type of event
 
 ==== :Selection ====
 '':Selection(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:EventSelection#T|Gtk.Gdk.EventSelection.T]]''
 
+Returns : the appropriate type of event
 
 ==== :OwnerChange ====
 '':OwnerChange(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:EventOwnerChange#T|Gtk.Gdk.EventOwnerChange.T]]''
 
+Returns : the appropriate type of event
 
 ==== :Proximity ====
 '':Proximity(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:EventProximity#T|Gtk.Gdk.EventProximity.T]]''
 
+Returns : the appropriate type of event
 
 ==== :Client ====
 '':Client(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:EventClient#T|Gtk.Gdk.EventClient.T]]''
 
+Returns : the appropriate type of event
 
 ==== :DND ====
 '':DND(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:EventDND#T|Gtk.Gdk.EventDND.T]]''
 
+Returns : the appropriate type of event
 
 ==== :WindowState ====
 '':WindowState(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:EventWindowState#T|Gtk.Gdk.EventWindowState.T]]''
 
+Returns : the appropriate type of event
 
 ==== :Setting ====
 '':Setting(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:EventSetting#T|Gtk.Gdk.EventSetting.T]]''
 
+Returns : the appropriate type of event
 
 ==== :GrabBroken ====
 '':GrabBroken(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:EventGrabBroken#T|Gtk.Gdk.EventGrabBroken.T]]''
 
+Returns : the appropriate type of event
 
 ==== Copy ====
 ''Copy(event : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''

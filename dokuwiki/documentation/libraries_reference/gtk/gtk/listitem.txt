@@ -8,18 +8,42 @@
   * [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]
   * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
 
+The GtkListItem widget is used for each item in a GtkList.
+GtkList has has been deprecated since GTK+ 2.0 and should not be used in newly
+written code. Use GtkTreeView instead.
 
 ==== :Select ====
 '':Select(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+**** Warning ****
+gtk_list_item_select is deprecated and should not be used in newly-written
+code.
+Selects the item, by emitting the item's "select" signal. Depending on the
+selection mode of the list, this may cause other items to be deselected.
+list_item : a GtkListItem.
 
 ==== :Deselect ====
-'':Deselect(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Deselect(self @ [[#T|T]]) : [[# Run Last / Action| Run Last / Action]]''
 
+**** Warning ****
+gtk_list_item_deselect is deprecated and should not be used in newly-written
+code.
+Deselects the item, by emitting the item's "deselect" signal.
+list_item : a GtkListItem.
+***** Signal Details *****
+The "end-selection" signal
+void                user_function                      (GtkListItem *listitem,
+                                                        gpointer     user_data)
+listitem :  the object which received the signal.
+user_data : user data set when the signal handler was connected.
 
 ==== New ====
 ''New() : [[# T| T]]''
 
+**** Warning ****
+gtk_list_item_new is deprecated and should not be used in newly-written code.
+Creates a new GtkListitem.
+Returns : a new GtkListItem.
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
@@ -28,4 +52,10 @@
 ==== NewWithLabel ====
 ''NewWithLabel(label : [[..:..:Std:String#T|Std.String.T]]) : [[# T| T]]''
 
+**** Warning ****
+gtk_list_item_new_with_label is deprecated and should not be used in newly-
+written code.
+Creates a new GtkListItem with a child label containing the given string.
+label :   the string to use for the child label.
+Returns : a new GtkListItem with a child GtkLabel with the text set to label.
 

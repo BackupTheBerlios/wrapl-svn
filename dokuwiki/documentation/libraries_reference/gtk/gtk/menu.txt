@@ -7,18 +7,73 @@
   * [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]
   * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
 
+A GtkMenu is a GtkMenuShell that implements a drop down menu consisting of a
+list of GtkMenuItem objects which can be navigated and activated by the user to
+perform application functions.
+A GtkMenu is most commonly dropped down by activating a GtkMenuItem in a
+GtkMenuBar or popped up by activating a GtkMenuItem in another GtkMenu.
+A GtkMenu can also be popped up by activating a GtkOptionMenu. Other composite
+widgets such as the GtkNotebook can pop up a GtkMenu as well.
+Applications can display a GtkMenu as a popup menu by calling the
+gtk_menu_popup() function. The example below shows how an application can pop
+up a menu when the 3rd mouse button is pressed.
+Example 24.&#160;Connecting the popup signal handler.
+    /* connect our handler which will popup the menu */
+    g_signal_connect_swapped (window, "button_press_event",
+	G_CALLBACK (my_popup_handler), menu);
+Example 25.&#160;Signal handler which displays a popup menu.
+static gint
+my_popup_handler (GtkWidget *widget, GdkEvent *event)
+{
+  GtkMenu *menu;
+  GdkEventButton *event_button;
+  g_return_val_if_fail (widget != NULL, FALSE);
+  g_return_val_if_fail (GTK_IS_MENU (widget), FALSE);
+  g_return_val_if_fail (event != NULL, FALSE);
+  /* The "widget" is the menu that was supplied when
+   * g_signal_connect_swapped() was called.
+   */
+  menu = GTK_MENU (widget);
+  if (event->type == GDK_BUTTON_PRESS)
+    {
+      event_button = (GdkEventButton *) event;
+      if (event_button->button == 3)
+	{
+	  gtk_menu_popup (menu, NULL, NULL, NULL, NULL,
+			  event_button->button, event_button->time);
+	  return TRUE;
+	}
+    }
+  return FALSE;
+}
 
 ==== :SetTitle ====
 '':SetTitle(self @ [[#T|T]], title @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+Sets the title string for the menu. The title is displayed when the menu is
+shown as a tearoff menu. If title is NULL, the menu will see if it is attached
+to a parent menu item, and if so it will try to use the same text as that menu
+item's label.
+menu :  a GtkMenu
+title : a string containing the title for the menu.
 
 ==== :SetTearoffState ====
 '':SetTearoffState(self @ [[#T|T]], torn_off @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+Changes the tearoff state of the menu. A menu is normally displayed as drop
+down menu which persists as long as the menu is active. It can also be
+displayed as a tearoff menu which persists until it is closed or reattached.
+menu :     a GtkMenu.
+torn_off : If TRUE, menu is displayed as a tearoff menu.
 
 ==== :SetScreen ====
 '':SetScreen(self @ [[#T|T]], screen @ [[..:..:Gtk:Gdk:Screen#T|Gtk.Gdk.Screen.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+Sets the GdkScreen on which the menu will be displayed.
+menu :   a GtkMenu.
+screen : a GdkScreen, or NULL if the screen should be determined by the widget
+         the menu is attached to.
+Since 2.2
 
 ==== :ParentMenuItem ====
 '':ParentMenuItem(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
@@ -31,10 +86,35 @@
 ==== :AccelGroup ====
 '':AccelGroup(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:AccelGroup#T|Gtk.Gtk.AccelGroup.T]]''
 
+Set the GtkAccelGroup which holds global accelerators for the menu. This
+accelerator group needs to also be added to all windows that this menu is being
+used in with gtk_window_add_accel_group(), in order for those windows to
+support all the accelerators contained in this group.
+menu :        a GtkMenu.
+accel_group : the GtkAccelGroup to be associated with the menu.
+Gets the GtkAccelGroup which holds global accelerators for the menu. See
+gtk_menu_set_accel_group().
+menu :    a GtkMenu.
+Returns : the GtkAccelGroup associated with the menu.
 
 ==== :AccelPath ====
 '':AccelPath(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
+Sets an accelerator path for this menu from which accelerator paths for its
+immediate children, its menu items, can be constructed. The main purpose of
+this function is to spare the programmer the inconvenience of having to call
+gtk_menu_item_set_accel_path() on each menu item that should support runtime
+user changable accelerators. Instead, by just calling gtk_menu_set_accel_path()
+on their parent, each menu item of this menu, that contains a label describing
+its purpose, automatically gets an accel path assigned. For example, a menu
+containing menu items "New" and "Exit", will, after gtk_menu_set_accel_path
+(menu, "<Gnumeric-Sheet>/File"); has been called, assign its items the accel
+paths: "<Gnumeric-Sheet>/File/New" and "<Gnumeric-Sheet>/File/Exit". Assigning
+accel paths to menu items then enables the user to change their accelerators at
+runtime. More details about accelerator paths and their default setups can be
+found at gtk_accel_map_add_entry().
+menu :       a valid GtkMenu
+accel_path : a valid accelerator path
 
 ==== :PositionFunc ====
 '':PositionFunc(self @ [[#T|T]]) : [[..:..:Std:Function#T|Std.Function.T]]''
@@ -135,70 +215,185 @@
 ==== :Attach ====
 '':Attach(self @ [[#T|T]], child @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], left_attach @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], right_attach @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], top_attach @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], bottom_attach @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+Adds a new GtkMenuItem to a (table) menu. The number of 'cells' that an item
+will occupy is specified by left_attach, right_attach, top_attach and
+bottom_attach. These each represent the leftmost, rightmost, uppermost and
+lower column and row numbers of the table. (Columns and rows are indexed from
+zero).
+Note that this function is not related to gtk_menu_detach().
+menu :          a GtkMenu.
+child :         a GtkMenuItem.
+left_attach :   The column number to attach the left side of the item to.
+right_attach :  The column number to attach the right side of the item to.
+top_attach :    The row number to attach the top of the item to.
+bottom_attach : The row number to attach the bottom of the item to.
+Since 2.4
 
 ==== :AttachToWidget ====
 '':AttachToWidget(self @ [[#T|T]], attach_widget @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], detacher @ [[..:..:Std:Function#T|Std.Function.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+Attaches the menu to the widget and provides a callback function that will be
+invoked when the menu calls gtk_menu_detach() during its destruction.
+menu :          a GtkMenu.
+attach_widget : the GtkWidget that the menu will be attached to.
+detacher :      the user supplied callback function that will be called when
+                the menu calls gtk_menu_detach().
 
 ==== :Detach ====
 '':Detach(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+Detaches the menu from the widget to which it had been attached. This function
+will call the callback function, detacher, provided when the
+gtk_menu_attach_to_widget() function was called.
+menu : a GtkMenu.
 
 ==== :GetAccelGroup ====
 '':GetAccelGroup(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:AccelGroup#T|Gtk.Gtk.AccelGroup.T]]''
 
+Gets the GtkAccelGroup which holds global accelerators for the menu. See
+gtk_menu_set_accel_group().
+menu :    a GtkMenu.
+Returns : the GtkAccelGroup associated with the menu.
 
 ==== :GetActive ====
 '':GetActive(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
+Returns the selected menu item from the menu. This is used by the
+GtkOptionMenu.
+menu :    a GtkMenu.
+Returns : the GtkMenuItem that was last selected in the menu. If a selection
+          has not yet been made, the first menu item is selected.
 
 ==== :GetAttachWidget ====
 '':GetAttachWidget(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
+Returns the GtkWidget that the menu is attached to.
+menu :    a GtkMenu.
+Returns : the GtkWidget that the menu is attached to.
 
 ==== :GetTearoffState ====
 '':GetTearoffState(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
+Returns whether the menu is torn off. See gtk_menu_set_tearoff_state().
+menu :    a GtkMenu
+Returns : TRUE if the menu is currently torn off.
 
 ==== :GetTitle ====
 '':GetTitle(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
+Returns the title of the menu. See gtk_menu_set_title().
+menu :    a GtkMenu
+          the title of the menu, or NULL if the menu has no title set on it.
+Returns : This string is owned by the widget and should not be modified or
+          freed.
 
 ==== :Popdown ====
 '':Popdown(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+Removes the menu from the screen.
+menu : a GtkMenu.
 
 ==== :Popup ====
 '':Popup(self @ [[#T|T]], parent_menu_shell @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], parent_menu_item @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], func @ [[..:..:Std:Function#T|Std.Function.T]], data @ [[..:..:Std:Address#T|Std.Address.T]], button @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], activate_time @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+Displays a menu and makes it available for selection. Applications can use this
+function to display context-sensitive menus, and will typically supply NULL for
+the parent_menu_shell, parent_menu_item, func and data parameters. The default
+menu positioning function will position the menu at the current mouse cursor
+position.
+The button parameter should be the mouse button pressed to initiate the menu
+popup. If the menu popup was initiated by something other than a mouse button
+press, such as a mouse button release or a keypress, button should be 0.
+The activate_time parameter is used to conflict-resolve initiation of
+concurrent requests for mouse/keyboard grab requests. To function properly,
+this needs to be the time stamp of the user event (such as a mouse click or key
+press) that caused the initiation of the popup. Only if no such event is
+available, gtk_get_current_event_time() can be used instead.
+menu :              a GtkMenu.
+parent_menu_shell : the menu shell containing the triggering menu item, or NULL
+parent_menu_item :  the menu item whose activation triggered the popup, or NULL
+func :              a user supplied function used to position the menu, or NULL
+data :              user supplied data to be passed to func.
+button :            the mouse button which was pressed to initiate the event.
+activate_time :     the time at which the activation event occurred.
 
 ==== :ReorderChild ====
 '':ReorderChild(self @ [[#T|T]], child @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], position @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+Moves a GtkMenuItem to a new position within the GtkMenu.
+menu :     a GtkMenu.
+child :    the GtkMenuItem to move.
+position : the new position to place child. Positions are numbered from 0 to n-
+           1.
 
 ==== :Reposition ====
 '':Reposition(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+Repositions the menu according to its position function.
+menu : a GtkMenu.
 
 ==== :SetAccelGroup ====
 '':SetAccelGroup(self @ [[#T|T]], accel_group @ [[..:..:Gtk:Gtk:AccelGroup#T|Gtk.Gtk.AccelGroup.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+Set the GtkAccelGroup which holds global accelerators for the menu. This
+accelerator group needs to also be added to all windows that this menu is being
+used in with gtk_window_add_accel_group(), in order for those windows to
+support all the accelerators contained in this group.
+menu :        a GtkMenu.
+accel_group : the GtkAccelGroup to be associated with the menu.
 
 ==== :SetAccelPath ====
 '':SetAccelPath(self @ [[#T|T]], accel_path @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+Sets an accelerator path for this menu from which accelerator paths for its
+immediate children, its menu items, can be constructed. The main purpose of
+this function is to spare the programmer the inconvenience of having to call
+gtk_menu_item_set_accel_path() on each menu item that should support runtime
+user changable accelerators. Instead, by just calling gtk_menu_set_accel_path()
+on their parent, each menu item of this menu, that contains a label describing
+its purpose, automatically gets an accel path assigned. For example, a menu
+containing menu items "New" and "Exit", will, after gtk_menu_set_accel_path
+(menu, "<Gnumeric-Sheet>/File"); has been called, assign its items the accel
+paths: "<Gnumeric-Sheet>/File/New" and "<Gnumeric-Sheet>/File/Exit". Assigning
+accel paths to menu items then enables the user to change their accelerators at
+runtime. More details about accelerator paths and their default setups can be
+found at gtk_accel_map_add_entry().
+menu :       a valid GtkMenu
+accel_path : a valid accelerator path
 
 ==== :SetActive ====
 '':SetActive(self @ [[#T|T]], index_ @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+Selects the specified menu item within the menu. This is used by the
+GtkOptionMenu and should not be used by anyone else.
+menu :   a GtkMenu.
+index_ : the index of the menu item to select. Index values are from 0 to n-1.
 
 ==== :SetMonitor ====
 '':SetMonitor(self @ [[#T|T]], monitor_num @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+Informs GTK+ on which monitor a menu should be popped up. See
+gdk_screen_get_monitor_geometry().
+This function should be called from a GtkMenuPositionFunc if the menu should
+not appear on the same monitor as the pointer. This information can't be
+reliably inferred from the coordinates returned by a GtkMenuPositionFunc,
+since, for very long menus, these coordinates may extend beyond the monitor
+boundaries or even the screen boundaries.
+menu :        a GtkMenu
+monitor_num : the number of the monitor on which the menu should be popped up
+Since 2.4
+***** Property Details *****
+The "tearoff-state" property
+  "tearoff-state"            gboolean              : Read / Write
+A boolean that indicates whether the menu is torn-off.
+Default value: FALSE
+Since 2.6
 
 ==== New ====
 ''New() : [[# T| T]]''
 
+Creates a new GtkMenu.
+Returns : a new GtkMenu.
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
@@ -207,4 +402,9 @@
 ==== GetForAttachWidget ====
 ''GetForAttachWidget(widget : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+Returns a list of the menus which are attached to this widget. This list is
+owned by GTK+ and must not be modified.
+widget :  a GtkWidget
+Returns : the list of menus attached to his widget.
+Since 2.6
 

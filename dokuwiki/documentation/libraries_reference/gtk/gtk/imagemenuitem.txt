@@ -9,22 +9,43 @@
   * [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]
   * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
 
+A GtkImageMenuItem is a menu item which has an icon next to the text label.
+Note that the user can disable display of menu icons, so make sure to still
+fill in the text label.
 
 ==== :SetImage ====
 '':SetImage(self @ [[#T|T]], image @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+Sets the image of image_menu_item to the given widget. Note that it depends on
+the show-menu-images setting whether the image will be displayed or not.
+image_menu_item : a GtkImageMenuItem.
+image :           a widget to set as the image for the menu item.
 
 ==== :GetImage ====
 '':GetImage(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
+Gets the widget that is currently set as the image of image_menu_item. See
+gtk_image_menu_item_set_image().
+image_menu_item : a GtkImageMenuItem.
+Returns :         the widget set as image of image_menu_item.
 
 ==== :Image ====
 '':Image(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
+Sets the image of image_menu_item to the given widget. Note that it depends on
+the show-menu-images setting whether the image will be displayed or not.
+image_menu_item : a GtkImageMenuItem.
+image :           a widget to set as the image for the menu item.
+Gets the widget that is currently set as the image of image_menu_item. See
+gtk_image_menu_item_set_image().
+image_menu_item : a GtkImageMenuItem.
+Returns :         the widget set as image of image_menu_item.
 
 ==== New ====
 ''New() : [[# T| T]]''
 
+Creates a new GtkImageMenuItem with an empty label.
+Returns : a new GtkImageMenuItem.
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
@@ -33,12 +54,35 @@
 ==== NewWithMnemonic ====
 ''NewWithMnemonic(label : [[..:..:Std:String#T|Std.String.T]]) : [[# T| T]]''
 
+Creates a new GtkImageMenuItem containing a label. The label will be created
+using gtk_label_new_with_mnemonic(), so underscores in label indicate the
+mnemonic for the menu item.
+label :   the text of the menu item, with an underscore in front of the
+          mnemonic character
+Returns : a new GtkImageMenuItem
+***** Property Details *****
+The "image" property
+  "image"                    GtkWidget             : Read / Write
+Child widget to appear next to the menu text.
 
 ==== NewWithLabel ====
 ''NewWithLabel(label : [[..:..:Std:String#T|Std.String.T]]) : [[# T| T]]''
 
+Creates a new GtkImageMenuItem containing a label.
+label :   the text of the menu item.
+Returns : a new GtkImageMenuItem.
 
 ==== NewFromStock ====
 ''NewFromStock(stock_id : [[..:..:Std:String#T|Std.String.T]], accel_group : [[..:..:Gtk:Gtk:AccelGroup#T|Gtk.Gtk.AccelGroup.T]]) : [[# T| T]]''
 
+Creates a new GtkImageMenuItem containing the image and text from a stock item.
+Some stock ids have preprocessor macros like GTK_STOCK_OK and GTK_STOCK_APPLY.
+If you want this menu item to have changeable accelerators, then pass in NULL
+for accel_group. Next call gtk_menu_item_set_accel_path() with an appropriate
+path for the menu item, use gtk_stock_lookup() to look up the standard
+accelerator for the stock item, and if one is found, call
+gtk_accel_map_add_entry() to register it.
+stock_id :    the name of the stock item.
+accel_group : the GtkAccelGroup to add the menu items accelerator to, or NULL.
+Returns :     a new GtkImageMenuItem.
 

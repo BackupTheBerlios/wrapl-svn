@@ -9,6 +9,14 @@
   * [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]
   * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
 
+A GtkTearoffMenuItem is a special GtkMenuItem which is used to tear off and
+reattach its menu.
+When its menu is shown normally, the GtkTearoffMenuItem is drawn as a dotted
+line indicating that the menu can be torn off. Activating it causes its menu to
+be torn off and displayed in its own window as a tearoff menu.
+When its menu is shown as a tearoff menu, the GtkTearoffMenuItem is drawn as a
+dotted line which has a left pointing arrow graphic indicating that the tearoff
+menu can be reattached. Activating it will erase the tearoff menu window.
 
 ==== :TornOff ====
 '':TornOff(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
@@ -17,6 +25,10 @@
 ==== New ====
 ''New() : [[# T| T]]''
 
+Creates a new GtkTearoffMenuItem.
+Returns : a new GtkTearoffMenuItem.
+***** See Also *****
+GtkMenu for further discussion of menus in GTK.
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''

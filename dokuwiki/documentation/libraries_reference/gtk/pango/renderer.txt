@@ -3,14 +3,35 @@
 === inherits from ===
   * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
 
+PangoRenderer is a base class that contains the necessary logic for rendering a
+PangoLayout or PangoLayoutLine. By subclassing PangoRenderer and overriding
+operations such as draw_glyphs and draw_rectangle, renderers for particular
+font backends and destinations can be created.
 
 ==== :SetMatrix ====
 '':SetMatrix(self @ [[#T|T]], matrix @ [[..:..:Gtk:Pango:Matrix#T|Gtk.Pango.Matrix.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+Sets the transformation matrix that will be applied when rendering.
+renderer : a PangoRenderer
+matrix :   a PangoMatrix, or NULL to unset any existing matrix. (No matrix set
+           is the same as setting the identity matrix.)
+Since 1.8
 
 ==== :Underline ====
 '':Underline(self @ [[#T|T]]) : [[..:..:Gtk:Pango:Underline#T|Gtk.Pango.Underline.T]]''
 
+Draw a squiggly line that approximately covers the given rectangle in the style
+of an underline used to indicate a spelling error. (The width of the underline
+is rounded to an integer number of up/down segments and the resulting rectangle
+is centered in the original rectangle)
+This should be called while renderer is already active. Use
+pango_renderer_activate() to activate a renderer.
+renderer : a PangoRenderer
+x :        X coordinate of underline, in Pango units in user coordinate system
+y :        Y coordinate of underline, in Pango units in user coordinate system
+width :    width of underline, in Pango units in user coordinate system
+height :   height of underline, in Pango units in user coordinate system
+Since 1.8
 
 ==== :Strikethrough ====
 '':Strikethrough(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
@@ -23,6 +44,11 @@
 ==== :Matrix ====
 '':Matrix(self @ [[#T|T]]) : [[..:..:Gtk:Pango:Matrix#T|Gtk.Pango.Matrix.T]]''
 
+Sets the transformation matrix that will be applied when rendering.
+renderer : a PangoRenderer
+matrix :   a PangoMatrix, or NULL to unset any existing matrix. (No matrix set
+           is the same as setting the identity matrix.)
+Since 1.8
 
 ==== :Priv ====
 '':Priv(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -31,42 +57,127 @@
 ==== :Activate ====
 '':Activate(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+Does initial setup before rendering operations on renderer.
+pango_renderer_deactivate() should be called when done drawing. Calls such as
+pango_renderer_draw_layout() automatically activate the layout before drawing
+on it. Calls to pango_renderer_activate() and pango_renderer_deactivate() can
+be nested and the renderer will only be initialized and deinitialized once.
+renderer : a PangoRenderer
+Since 1.8
 
 ==== :Deactivate ====
 '':Deactivate(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+Cleans up after rendering operations on renderer. See docs for
+pango_renderer_activate().
+renderer : a PangoRenderer
+Since 1.8
 
 ==== :DrawErrorUnderline ====
 '':DrawErrorUnderline(self @ [[#T|T]], x @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], width @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], height @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+Draw a squiggly line that approximately covers the given rectangle in the style
+of an underline used to indicate a spelling error. (The width of the underline
+is rounded to an integer number of up/down segments and the resulting rectangle
+is centered in the original rectangle)
+This should be called while renderer is already active. Use
+pango_renderer_activate() to activate a renderer.
+renderer : a PangoRenderer
+x :        X coordinate of underline, in Pango units in user coordinate system
+y :        Y coordinate of underline, in Pango units in user coordinate system
+width :    width of underline, in Pango units in user coordinate system
+height :   height of underline, in Pango units in user coordinate system
+Since 1.8
 
 ==== :DrawGlyph ====
 '':DrawGlyph(self @ [[#T|T]], font @ [[..:..:Gtk:Pango:Font#T|Gtk.Pango.Font.T]], glyph @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], x @ [[..:..:Std:Real#T|Std.Real.T]], y @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+Draws a single glyph with coordinates in device space.
+renderer : a PangoRenderer
+font :     a PangoFont
+glyph :    the glyph index of a single glyph
+x :        X coordinate of left edge of baseline of glyph
+y :        Y coordinate of left edge of baseline of glyph
+Since 1.8
 
 ==== :DrawGlyphs ====
 '':DrawGlyphs(self @ [[#T|T]], font @ [[..:..:Gtk:Pango:Font#T|Gtk.Pango.Font.T]], glyphs @ [[..:..:Gtk:Pango:GlyphString#T|Gtk.Pango.GlyphString.T]], x @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+Draws the glyphs in glyphs with the specified PangoRenderer.
+renderer : a PangoRenderer
+font :     a PangoFont
+glyphs :   a PangoGlyphString
+x :        X position of left edge of baseline, in user space coordinates in
+           Pango units.
+y :        Y position of left edge of baseline, in user space coordinates in
+           Pango units.
+Since 1.8
 
 ==== :DrawLayout ====
 '':DrawLayout(self @ [[#T|T]], layout @ [[..:..:Gtk:Pango:Layout#T|Gtk.Pango.Layout.T]], x @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+Draws layout with the specified PangoRenderer.
+renderer : a PangoRenderer
+layout :   a PangoLayout
+x :        X position of left edge of baseline, in user space coordinates in
+           Pango units.
+y :        Y position of left edge of baseline, in user space coordinates in
+           Pango units.
+Since 1.8
 
 ==== :DrawLayoutLine ====
 '':DrawLayoutLine(self @ [[#T|T]], line @ [[..:..:Gtk:Pango:LayoutLine#T|Gtk.Pango.LayoutLine.T]], x @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+Draws line with the specified PangoRenderer.
+renderer : a PangoRenderer
+line :     a PangoLayoutLine
+x :        X position of left edge of baseline, in user space coordinates in
+           Pango units.
+y :        Y position of left edge of baseline, in user space coordinates in
+           Pango units.
+Since 1.8
 
 ==== :DrawRectangle ====
 '':DrawRectangle(self @ [[#T|T]], part @ [[..:..:Gtk:Pango:RenderPart#T|Gtk.Pango.RenderPart.T]], x @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], width @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], height @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+Draws an axis-aligned rectangle in user space coordinates with the specified
+PangoRenderer.
+This should be called while renderer is already active. Use
+pango_renderer_activate() to activate a renderer.
+renderer : a PangoRenderer
+part :     type of object this rectangle is part of
+x :        X position at which to draw rectangle, in user space coordinates in
+           Pango units
+y :        Y position at which to draw rectangle, in user space coordinates in
+           Pango units
+width :    width of rectangle in Pango units in user space coordinates
+height :   height of rectangle in Pango units in user space coordinates
+Since 1.8
 
 ==== :DrawTrapezoid ====
 '':DrawTrapezoid(self @ [[#T|T]], part @ [[..:..:Gtk:Pango:RenderPart#T|Gtk.Pango.RenderPart.T]], y1_ @ [[..:..:Std:Real#T|Std.Real.T]], x11 @ [[..:..:Std:Real#T|Std.Real.T]], x21 @ [[..:..:Std:Real#T|Std.Real.T]], y2 @ [[..:..:Std:Real#T|Std.Real.T]], x12 @ [[..:..:Std:Real#T|Std.Real.T]], x22 @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+Draws a trapezoid with the parallel sides aligned with the X axis using the
+given PangoRenderer; coordinates are in device space.
+renderer : a PangoRenderer
+part :     type of object this trapezoid is part of
+y1_ :      Y coordinate of top of trapezoid
+x11 :      X coordinate of left end of top of trapezoid
+x21 :      X coordinate of right end of top of trapezoid
+y2 :       Y coordinate of bottom of trapezoid
+x12 :      X coordinate of left end of bottom of trapezoid
+x22 :      X coordinate of right end of bottom of trapezoid
+Since 1.8
 
 ==== :GetColor ====
 '':GetColor(self @ [[#T|T]], part @ [[..:..:Gtk:Pango:RenderPart#T|Gtk.Pango.RenderPart.T]]) : [[..:..:Gtk:Pango:Color#T|Gtk.Pango.Color.T]]''
 
+Gets the current rendering color for the specified part.
+renderer : a PangoRenderer
+part :     the part to get the color for
+Returns :  the color for the specified part, or NULL if it hasn't been set and
+           should be inherited from the environment.
+Since 1.8
 
 ==== :GetMatrix ====
 '':GetMatrix(self @ [[#T|T]]) : [[..:..:Gtk:Pango:Matrix#T|Gtk.Pango.Matrix.T]]''
@@ -75,10 +186,26 @@
 ==== :PartChanged ====
 '':PartChanged(self @ [[#T|T]], part @ [[..:..:Gtk:Pango:RenderPart#T|Gtk.Pango.RenderPart.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+Informs Pango that the way that the rendering is done for part has changed in a
+way that would prevent multiple pieces being joined together into one drawing
+call. For instance, if a subclass of PangoRenderer was to add a stipple option
+for drawing underlines, it needs to call
+pango_renderer_part_changed (render, PANGO_RENDER_PART_UNDERLINE);
+When the stipple changes or underlines with different stipples might be joined
+together. Pango automatically calls this for changes to colors. (See
+pango_renderer_set_color())
+renderer : a PangoRenderer
+part :     the part for which rendering has changed.
+Since 1.8
 
 ==== :SetColor ====
 '':SetColor(self @ [[#T|T]], part @ [[..:..:Gtk:Pango:RenderPart#T|Gtk.Pango.RenderPart.T]], color @ [[..:..:Gtk:Pango:Color#T|Gtk.Pango.Color.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+Sets the color for part of the rendering.
+renderer : a PangoRenderer
+part :     the part to change the color of
+color :    the new color or NULL to unset the current color
+Since 1.8
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
