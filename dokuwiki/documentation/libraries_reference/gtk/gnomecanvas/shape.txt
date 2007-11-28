@@ -5,10 +5,19 @@
   * [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]
   * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
 
+  Provides a base class for canvas item shapes, including: GnomeCanvasBpath, GnomeCanvasEllipse,
+  GnomeCanvasRect, and GnomeCanvasPolygon.
+  
 
 ==== :SetPathDef ====
 '':SetPathDef(self @ [[#T|T]], def @ [[..:..:Gtk:GnomeCanvas:PathDef#T|Gtk.GnomeCanvas.PathDef.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+  This function sets the the GnomeCanvasPathDef used by the GnomeCanvasShape. Notice, that it does not request updates, as
+  it is meant to be used from item implementations, from inside update queue.
+  
+  shape : a GnomeCanvasShape
+  def :   a GnomeCanvasPathDef
+  
 
 ==== :Priv ====
 '':Priv(self @ [[#T|T]]) : [[..:..:Gtk:GnomeCanvas:ShapePriv#T|Gtk.GnomeCanvas.ShapePriv.T]]''
@@ -17,6 +26,12 @@
 ==== :GetPathDef ====
 '':GetPathDef(self @ [[#T|T]]) : [[..:..:Gtk:GnomeCanvas:PathDef#T|Gtk.GnomeCanvas.PathDef.T]]''
 
+  This function returns the GnomeCanvasPathDef that the shape currently uses. It adds a reference to the
+  GnomeCanvasPathDef and returns it, if there is not a GnomeCanvasPathDef set for the shape it returns NULL.
+  
+  shape :   a GnomeCanvasShape
+  Returns : a GnomeCanvasPathDef or NULL if none is set for the shape.
+  
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''

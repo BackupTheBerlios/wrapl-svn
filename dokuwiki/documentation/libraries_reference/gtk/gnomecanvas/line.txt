@@ -5,6 +5,9 @@
   * [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]
   * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
 
+  A canvas item for drawing lines. This canvas item uses a GnomeCanvasPoints structure so one or
+  multiple joined lined segments can be drawn with a single GnomeCanvasLine item.
+  
 
 ==== :Smooth ====
 '':Smooth(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''

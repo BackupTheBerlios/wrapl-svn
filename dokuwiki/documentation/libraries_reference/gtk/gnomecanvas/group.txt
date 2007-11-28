@@ -5,6 +5,11 @@
   * [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]
   * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
 
+  A canvas item that groups other canvas items. A canvas group is used for organization, determining
+  drawing stacking order, and for applying transforms on all items in the group.
+  The GnomeCanvas widget contains a toplevel "root" group which can be queried with a call to
+  gnome_canvas_root().
+  
 
 ==== :ItemListEnd ====
 '':ItemListEnd(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''

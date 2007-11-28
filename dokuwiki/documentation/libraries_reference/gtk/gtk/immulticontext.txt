@@ -9,7 +9,8 @@
 ==== :AppendMenuitems ====
 '':AppendMenuitems(self @ [[#T|T]], menushell @ [[..:..:Gtk:Gtk:MenuShell#T|Gtk.Gtk.MenuShell.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Add menuitems for various available input methods to a menu; the menuitems, when selected, will switch the input method for the context and the global default input method.
+  Add menuitems for various available input methods to a menu; the menuitems, when selected, will switch the input method
+  for the context and the global default input method.
   
   context :   a GtkIMMultiContext
   menushell : a GtkMenuShell
