@@ -1,0 +1,6 @@
+====== Status ======
+  * The Riva module loader is quite stable with only the command line parsing to be finalized.
+  * The basic modules, ''[[documentation:libraries_reference:std|Std.*]]'' are quite functional, although there is room to add more utility methods, although anything missing can probably be implemented in Wrapl.
+  * The Wrapl compiler itself is also quite complete, the addition of a debugging interface being the current focus.
+  * The specification of Wrapl is almost finished, there are still a few features that need to be incorporated.
+  * The operating system interfaces ''[[documentation:libraries_reference:sys:filesys|Sys.FileSys]]'', ''[[documentation:libraries_reference:sys:process|Sys.Process]]'', etc, still need to be implemented fully on both Linux and Windows, with the Linux version being slightly more functional at the moment.
