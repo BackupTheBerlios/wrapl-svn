@@ -112,11 +112,6 @@
   handle_box : a GtkHandleBox
   Returns :    the edge used for determining reattachment, or (GtkPositionType)-
                1 if this is determined (as per default) from the handle position.
-  ***** Property Details *****
-  The "handle-position" property
-    "handle-position"          GtkPositionType       : Read / Write
-  Position of the handle relative to the child widget.
-  Default value: GTK_POS_LEFT
 
 ==== :DeskoffX ====
 '':DeskoffX(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
@@ -158,11 +153,6 @@
   handle_box : a GtkHandleBox
   Returns :    the edge used for determining reattachment, or (GtkPositionType)-
                1 if this is determined (as per default) from the handle position.
-  ***** Property Details *****
-  The "handle-position" property
-    "handle-position"          GtkPositionType       : Read / Write
-  Position of the handle relative to the child widget.
-  Default value: GTK_POS_LEFT
 
 ==== :SetHandlePosition ====
 '':SetHandlePosition(self @ [[#T|T]], position @ [[..:..:Gtk:Gtk:PositionType#T|Gtk.Gtk.PositionType.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''

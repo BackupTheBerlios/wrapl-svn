@@ -19,14 +19,12 @@
 
   Undoes the effect of gtk_icon_view_enable_model_drag_source().
   icon_view : a GtkIconView
-  Since 2.8
 
 ==== :UnsetModelDragDest ====
 '':UnsetModelDragDest(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
   Undoes the effect of gtk_icon_view_enable_model_drag_dest().
   icon_view : a GtkIconView
-  Since 2.8
 
 ==== :UnselectPath ====
 '':UnselectPath(self @ [[#T|T]], path @ [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -34,7 +32,6 @@
   Unselects the row at path.
   icon_view : A GtkIconView.
   path :      The GtkTreePath to be unselected.
-  Since 2.6
 
 ==== :Priv ====
 '':Priv(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -50,7 +47,6 @@
   wy :        Y coordinate relative to the widget
   bx :        return location for bin_window X coordinate
   by :        return location for bin_window Y coordinate
-  Since 2.12
 
 ==== :CreateDragIcon ====
 '':CreateDragIcon(self @ [[#T|T]], path @ [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]]) : [[..:..:Gtk:Gdk:Pixmap#T|Gtk.Gdk.Pixmap.T]]''
@@ -60,15 +56,6 @@
   icon_view : a GtkIconView
   path :      a GtkTreePath in icon_view
   Returns :   a newly-allocated pixmap of the drag icon.
-  Since 2.8
-  ***** Property Details *****
-  The "column-spacing" property
-    "column-spacing"           gint                  : Read / Write
-  The column-spacing property specifies the space which is inserted between the
-  columns of the icon view.
-  Allowed values: >= 0
-  Default value: 6
-  Since 2.6
 
 ==== :EnableModelDragDest ====
 '':EnableModelDragDest(self @ [[#T|T]], targets @ [[..:..:Gtk:Gtk:TargetEntry#T|Gtk.Gtk.TargetEntry.T]], n_targets @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], actions @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -78,7 +65,6 @@
   targets :   the table of targets that the drag will support
   n_targets : the number of items in targets
   actions :   the bitmask of possible actions for a drag to this widget
-  Since 2.8
 
 ==== :EnableModelDragSource ====
 '':EnableModelDragSource(self @ [[#T|T]], start_button_mask @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], targets @ [[..:..:Gtk:Gtk:TargetEntry#T|Gtk.Gtk.TargetEntry.T]], n_targets @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], actions @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -89,7 +75,6 @@
   targets :           the table of targets that the drag will support
   n_targets :         the number of items in targets
   actions :           the bitmask of possible actions for a drag from this widget
-  Since 2.8
 
 ==== :GetColumnSpacing ====
 '':GetColumnSpacing(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
@@ -97,7 +82,6 @@
   Returns the value of the ::column-spacing property.
   icon_view : a GtkIconView
   Returns :   the space between columns
-  Since 2.6
 
 ==== :GetColumns ====
 '':GetColumns(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
@@ -105,7 +89,6 @@
   Returns the value of the ::columns property.
   icon_view : a GtkIconView
   Returns :   the number of columns, or -1
-  Since 2.6
 
 ==== :GetCursor ====
 '':GetCursor(self @ [[#T|T]], path @ [[..:..:Std:Object#T|Std.Object.T]], cell @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
@@ -118,7 +101,6 @@
   path :      Return location for the current cursor path, or NULL
   cell :      Return location the current focus cell, or NULL
   Returns :   TRUE if the cursor is set.
-  Since 2.8
 
 ==== :GetDestItemAtPos ====
 '':GetDestItemAtPos(self @ [[#T|T]], drag_x @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], drag_y @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], path @ [[..:..:Std:Object#T|Std.Object.T]], pos @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
@@ -130,7 +112,6 @@
   path :      Return location for the path of the item, or NULL.
   pos :       Return location for the drop position, or NULL
   Returns :   whether there is an item at the given position.
-  Since 2.8
 
 ==== :GetDragDestItem ====
 '':GetDragDestItem(self @ [[#T|T]], path @ [[..:..:Std:Object#T|Std.Object.T]], pos @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -139,7 +120,6 @@
   icon_view : a GtkIconView
   path :      Return location for the path of the highlighted item, or NULL.
   pos :       Return location for the drop position, or NULL
-  Since 2.8
 
 ==== :GetItemAtPos ====
 '':GetItemAtPos(self @ [[#T|T]], x @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], path @ [[..:..:Std:Object#T|Std.Object.T]], cell @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
@@ -156,7 +136,6 @@
   cell :      Return location for the renderer responsible for the cell at (x,
               y), or NULL
   Returns :   TRUE if an item exists at the specified position
-  Since 2.8
 
 ==== :GetItemWidth ====
 '':GetItemWidth(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
@@ -164,7 +143,6 @@
   Returns the value of the ::item-width property.
   icon_view : a GtkIconView
   Returns :   the width of a single item, or -1
-  Since 2.6
 
 ==== :GetMargin ====
 '':GetMargin(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
@@ -172,7 +150,6 @@
   Returns the value of the ::margin property.
   icon_view : a GtkIconView
   Returns :   the space at the borders
-  Since 2.6
 
 ==== :GetMarkupColumn ====
 '':GetMarkupColumn(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
@@ -180,7 +157,6 @@
   Returns the column with markup text for icon_view.
   icon_view : A GtkIconView.
   Returns :   the markup column, or -1 if it's unset.
-  Since 2.6
 
 ==== :GetModel ====
 '':GetModel(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:TreeModel#T|Gtk.Gtk.TreeModel.T]]''
@@ -189,7 +165,6 @@
   unset.
   icon_view : a GtkIconView
   Returns :   A GtkTreeModel, or NULL if none is currently being used.
-  Since 2.6
 
 ==== :GetOrientation ====
 '':GetOrientation(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Orientation#T|Gtk.Gtk.Orientation.T]]''
@@ -198,7 +173,6 @@
   labels are drawn beside the icons instead of below.
   icon_view : a GtkIconView
   Returns :   the relative position of texts and icons
-  Since 2.6
 
 ==== :GetPathAtPos ====
 '':GetPathAtPos(self @ [[#T|T]], x @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]]''
@@ -212,7 +186,6 @@
   y :         The y position to be identified
   Returns :   The GtkTreePath corresponding to the icon or NULL if no icon exists
               at that position.
-  Since 2.6
 
 ==== :GetPixbufColumn ====
 '':GetPixbufColumn(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
@@ -220,7 +193,6 @@
   Returns the column with pixbufs for icon_view.
   icon_view : A GtkIconView.
   Returns :   the pixbuf column, or -1 if it's unset.
-  Since 2.6
 
 ==== :GetReorderable ====
 '':GetReorderable(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
@@ -229,7 +201,6 @@
   gtk_icon_view_set_reorderable().
   icon_view : a GtkIconView
   Returns :   TRUE if the list can be reordered.
-  Since 2.8
 
 ==== :GetRowSpacing ====
 '':GetRowSpacing(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
@@ -237,7 +208,6 @@
   Returns the value of the ::row-spacing property.
   icon_view : a GtkIconView
   Returns :   the space between rows
-  Since 2.6
 
 ==== :GetSelectedItems ====
 '':GetSelectedItems(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -249,9 +219,6 @@
   To free the return value, use:
   g_list_foreach (list, gtk_tree_path_free, NULL);
   g_list_free (list);
-  icon_view : A GtkIconView.
-  Returns :   A GList containing a GtkTreePath for each selected row.
-  Since 2.6
 
 ==== :GetSelectionMode ====
 '':GetSelectionMode(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:SelectionMode#T|Gtk.Gtk.SelectionMode.T]]''
@@ -259,7 +226,6 @@
   Gets the selection mode of the icon_view.
   icon_view : A GtkIconView.
   Returns :   the current selection mode
-  Since 2.6
 
 ==== :GetSpacing ====
 '':GetSpacing(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
@@ -267,7 +233,6 @@
   Returns the value of the ::spacing property.
   icon_view : a GtkIconView
   Returns :   the space between cells
-  Since 2.6
 
 ==== :GetTextColumn ====
 '':GetTextColumn(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
@@ -275,7 +240,6 @@
   Returns the column with text for icon_view.
   icon_view : A GtkIconView.
   Returns :   the text column, or -1 if it's unset.
-  Since 2.6
 
 ==== :GetTooltipColumn ====
 '':GetTooltipColumn(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
@@ -285,7 +249,6 @@
   icon_view : a GtkIconView
   Returns :   the index of the tooltip column that is currently being used, or -
               1 if this is disabled.
-  Since 2.12
 
 ==== :GetTooltipContext ====
 '':GetTooltipContext(self @ [[#T|T]], x @ [[..:..:Std:Object#T|Std.Object.T]], y @ [[..:..:Std:Object#T|Std.Object.T]], keyboard_tip @ [[..:..:Std:Symbol#T|Std.Symbol.T]], model @ [[..:..:Std:Object#T|Std.Object.T]], path @ [[..:..:Std:Object#T|Std.Object.T]], iter @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
@@ -307,7 +270,6 @@
   path :         a pointer to receive a GtkTreePath or NULL
   iter :         a pointer to receive a GtkTreeIter or NULL
   Returns :      whether or not the given tooltip context points to a item
-  Since 2.12
 
 ==== :GetVisibleRange ====
 '':GetVisibleRange(self @ [[#T|T]], start_path @ [[..:..:Std:Object#T|Std.Object.T]], end_path @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
@@ -319,7 +281,6 @@
   start_path : Return location for start of region, or NULL
   end_path :   Return location for end of region, or NULL
   Returns :    TRUE, if valid paths were placed in start_path and end_path
-  Since 2.8
 
 ==== :ItemActivated ====
 '':ItemActivated(self @ [[#T|T]], path @ [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -327,7 +288,6 @@
   Activates the item determined by path.
   icon_view : A GtkIconView
   path :      The GtkTreePath to be activated
-  Since 2.6
 
 ==== :PathIsSelected ====
 '':PathIsSelected(self @ [[#T|T]], path @ [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
@@ -337,7 +297,6 @@
   icon_view : A GtkIconView.
   path :      A GtkTreePath to check selection on.
   Returns :   TRUE if path is selected.
-  Since 2.6
 
 ==== :ScrollToPath ====
 '':ScrollToPath(self @ [[#T|T]], path @ [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]], use_align @ [[..:..:Std:Symbol#T|Std.Symbol.T]], row_align @ [[..:..:Std:Real#T|Std.Real.T]], col_align @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -358,7 +317,6 @@
   use_align : whether to use alignment arguments, or FALSE.
   row_align : The vertical alignment of the item specified by path.
   col_align : The horizontal alignment of the item specified by path.
-  Since 2.8
 
 ==== :SelectAll ====
 '':SelectAll(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -366,7 +324,6 @@
   Selects all the icons. icon_view must has its selection mode set to
   GTK_SELECTION_MULTIPLE.
   icon_view : A GtkIconView.
-  Since 2.6
 
 ==== :SelectPath ====
 '':SelectPath(self @ [[#T|T]], path @ [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -374,7 +331,6 @@
   Selects the row at path.
   icon_view : A GtkIconView.
   path :      The GtkTreePath to be selected.
-  Since 2.6
 
 ==== :SelectedForeach ====
 '':SelectedForeach(self @ [[#T|T]], func @ [[..:..:Std:Function#T|Std.Function.T]], data @ [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -384,7 +340,6 @@
   icon_view : A GtkIconView.
   func :      The funcion to call for each selected icon.
   data :      User data to pass to the function.
-  Since 2.6
 
 ==== :SetColumnSpacing ====
 '':SetColumnSpacing(self @ [[#T|T]], column_spacing @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -393,7 +348,6 @@
   between the columns of the icon view.
   icon_view :      a GtkIconView
   column_spacing : the column spacing
-  Since 2.6
 
 ==== :SetColumns ====
 '':SetColumns(self @ [[#T|T]], columns @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -403,7 +357,6 @@
   to fill the available area.
   icon_view : a GtkIconView
   columns :   the number of columns
-  Since 2.6
 
 ==== :SetCursor ====
 '':SetCursor(self @ [[#T|T]], path @ [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]], cell @ [[..:..:Gtk:Gtk:CellRenderer#T|Gtk.Gtk.CellRenderer.T]], start_editing @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -419,7 +372,6 @@
   path :          A GtkTreePath
   cell :          One of the cell renderers of icon_view, or NULL
   start_editing : TRUE if the specified cell should start being edited.
-  Since 2.8
 
 ==== :SetDragDestItem ====
 '':SetDragDestItem(self @ [[#T|T]], path @ [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]], pos @ [[..:..:Gtk:Gtk:IconViewDropPosition#T|Gtk.Gtk.IconViewDropPosition.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -428,7 +380,6 @@
   icon_view : a GtkIconView
   path :      The path of the item to highlight, or NULL.
   pos :       Specifies where to drop, relative to the item
-  Since 2.8
 
 ==== :SetItemWidth ====
 '':SetItemWidth(self @ [[#T|T]], item_width @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -438,7 +389,6 @@
   size.
   icon_view :  a GtkIconView
   item_width : the width for each item
-  Since 2.6
 
 ==== :SetMargin ====
 '':SetMargin(self @ [[#T|T]], margin @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -447,7 +397,6 @@
   top, bottom, left and right of the icon view.
   icon_view : a GtkIconView
   margin :    the margin
-  Since 2.6
 
 ==== :SetMarkupColumn ====
 '':SetMarkupColumn(self @ [[#T|T]], column @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -457,7 +406,6 @@
   it overrides the text column set by gtk_icon_view_set_text_column().
   icon_view : A GtkIconView.
   column :    A column in the currently used model, or -1 to display no text
-  Since 2.6
 
 ==== :SetModel ====
 '':SetModel(self @ [[#T|T]], model @ [[..:..:Gtk:Gtk:TreeModel#T|Gtk.Gtk.TreeModel.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -467,7 +415,6 @@
   unset the old model.
   icon_view : A GtkIconView.
   model :     The model.
-  Since 2.6
 
 ==== :SetOrientation ====
 '':SetOrientation(self @ [[#T|T]], orientation @ [[..:..:Gtk:Gtk:Orientation#T|Gtk.Gtk.Orientation.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -476,7 +423,6 @@
   beside the icons instead of below.
   icon_view :   a GtkIconView
   orientation : the relative position of texts and icons
-  Since 2.6
 
 ==== :SetPixbufColumn ====
 '':SetPixbufColumn(self @ [[#T|T]], column @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -485,7 +431,6 @@
   be of type GDK_TYPE_PIXBUF
   icon_view : A GtkIconView.
   column :    A column in the currently used model, or -1 to disable
-  Since 2.6
 
 ==== :SetReorderable ====
 '':SetReorderable(self @ [[#T|T]], reorderable @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -501,7 +446,6 @@
   drag and drop manually.
   icon_view :   A GtkIconView.
   reorderable : TRUE, if the list of items can be reordered.
-  Since 2.8
 
 ==== :SetRowSpacing ====
 '':SetRowSpacing(self @ [[#T|T]], row_spacing @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -510,7 +454,6 @@
   between the rows of the icon view.
   icon_view :   a GtkIconView
   row_spacing : the row spacing
-  Since 2.6
 
 ==== :SetSelectionMode ====
 '':SetSelectionMode(self @ [[#T|T]], mode @ [[..:..:Gtk:Gtk:SelectionMode#T|Gtk.Gtk.SelectionMode.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -518,7 +461,6 @@
   Sets the selection mode of the icon_view.
   icon_view : A GtkIconView.
   mode :      The selection mode
-  Since 2.6
 
 ==== :SetSpacing ====
 '':SetSpacing(self @ [[#T|T]], spacing @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -527,7 +469,6 @@
   the cells (i.e. the icon and the text) of an item.
   icon_view : a GtkIconView
   spacing :   the spacing
-  Since 2.6
 
 ==== :SetTextColumn ====
 '':SetTextColumn(self @ [[#T|T]], column @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -536,7 +477,6 @@
   of type G_TYPE_STRING.
   icon_view : A GtkIconView.
   column :    A column in the currently used model, or -1 to display no text
-  Since 2.6
 
 ==== :SetTooltipCell ====
 '':SetTooltipCell(self @ [[#T|T]], tooltip @ [[..:..:Gtk:Gtk:Tooltip#T|Gtk.Gtk.Tooltip.T]], path @ [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]], cell @ [[..:..:Gtk:Gtk:CellRenderer#T|Gtk.Gtk.CellRenderer.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -547,7 +487,6 @@
   tooltip :   a GtkTooltip
   path :      a GtkTreePath
   cell :      a GtkCellRenderer or NULL
-  Since 2.12
 
 ==== :SetTooltipColumn ====
 '':SetTooltipColumn(self @ [[#T|T]], column @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -561,7 +500,6 @@
   "query-tooltip" signal handler.
   icon_view : a GtkIconView
   column :
-  Since 2.12
 
 ==== :SetTooltipItem ====
 '':SetTooltipItem(self @ [[#T|T]], tooltip @ [[..:..:Gtk:Gtk:Tooltip#T|Gtk.Gtk.Tooltip.T]], path @ [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -571,21 +509,18 @@
   icon_view : a GtkIconView
   tooltip :   a GtkTooltip
   path :      a GtkTreePath
-  Since 2.12
 
 ==== :UnselectAll ====
 '':UnselectAll(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
   Unselects all the icons.
   icon_view : A GtkIconView.
-  Since 2.6
 
 ==== New ====
 ''New() : [[# T| T]]''
 
   Creates a new GtkIconView widget
   Returns : A newly created GtkIconView widget
-  Since 2.6
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
@@ -597,5 +532,4 @@
   Creates a new GtkIconView widget with the model model.
   model :   The model.
   Returns : A newly created GtkIconView widget.
-  Since 2.6
 

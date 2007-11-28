@@ -26,18 +26,12 @@
   **** Warning ****
   gtk_ctree_unselect_recursive is deprecated and should not be used in newly-
   written code.
-  Unselect the given node and its subnodes and emit the appropriate signal(s).
-  ctree :
-  node :
 
 ==== :Unselect ====
 '':Unselect(self @ [[#T|T]], node @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
   **** Warning ****
   gtk_ctree_unselect is deprecated and should not be used in newly-written code.
-  Unselect the given node and emit the appropriate signal.
-  ctree :
-  node :
 
 ==== :ToggleExpansionRecursive ====
 '':ToggleExpansionRecursive(self @ [[#T|T]], node @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -45,9 +39,6 @@
   **** Warning ****
   gtk_ctree_toggle_expansion_recursive is deprecated and should not be used in
   newly-written code.
-  Toggle the expansion of a node and all its children.
-  ctree :
-  node :
 
 ==== :LinesGc ====
 '':LinesGc(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]]''
@@ -71,8 +62,6 @@
   **** Warning ****
   gtk_ctree_set_line_style is deprecated and should not be used in newly-written
   code.
-  ctree :
-  line_style :
 
 ==== :ExpanderStyle ====
 '':ExpanderStyle(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
@@ -80,8 +69,6 @@
   **** Warning ****
   gtk_ctree_set_expander_style is deprecated and should not be used in newly-
   written code.
-  ctree :
-  expander_style :
 
 ==== :ShowStub ====
 '':ShowStub(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
@@ -89,13 +76,6 @@
   **** Warning ****
   gtk_ctree_set_show_stub is deprecated and should not be used in newly-written
   code.
-  ctree :
-  show_stub :
-  ***** Property Details *****
-  The "expander-style" property
-    "expander-style"           GtkCTreeExpanderStyle  : Read / Write
-  The style of the expander buttons.
-  Default value: GTK_CTREE_EXPANDER_NONE
 
 ==== :DragCompare ====
 '':DragCompare(self @ [[#T|T]]) : [[..:..:Std:Function#T|Std.Function.T]]''
@@ -106,9 +86,6 @@
 
   **** Warning ****
   gtk_ctree_collapse is deprecated and should not be used in newly-written code.
-  Collapse one node.
-  ctree :
-  node :
 
 ==== :CollapseRecursive ====
 '':CollapseRecursive(self @ [[#T|T]], node @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -116,9 +93,6 @@
   **** Warning ****
   gtk_ctree_collapse_recursive is deprecated and should not be used in newly-
   written code.
-  Collapse one node and all its subnodes.
-  ctree :
-  node :
 
 ==== :CollapseToDepth ====
 '':CollapseToDepth(self @ [[#T|T]], node @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]], depth @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -126,19 +100,12 @@
   **** Warning ****
   gtk_ctree_collapse_to_depth is deprecated and should not be used in newly-
   written code.
-  Collapse a node and its children up to the depth given.
-  ctree :
-  node :
-  depth : The (absolute) depth up to which to collapse nodes.
 
 ==== :Expand ====
 '':Expand(self @ [[#T|T]], node @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
   **** Warning ****
   gtk_ctree_expand is deprecated and should not be used in newly-written code.
-  Expand one node.
-  ctree :
-  node :
 
 ==== :ExpandRecursive ====
 '':ExpandRecursive(self @ [[#T|T]], node @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -146,9 +113,6 @@
   **** Warning ****
   gtk_ctree_expand_recursive is deprecated and should not be used in newly-
   written code.
-  Expand one node and all nodes underneath.
-  ctree :
-  node :
 
 ==== :ExpandToDepth ====
 '':ExpandToDepth(self @ [[#T|T]], node @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]], depth @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -156,10 +120,6 @@
   **** Warning ****
   gtk_ctree_expand_to_depth is deprecated and should not be used in newly-written
   code.
-  Expand a node and its children up to the depth given.
-  ctree :
-  node :
-  depth : The (absolute) depth up to which to expand nodes.
 
 ==== :ExportToGnode ====
 '':ExportToGnode(self @ [[#T|T]], parent @ [[..:..:Std:Object#T|Std.Object.T]], sibling @ [[..:..:Std:Object#T|Std.Object.T]], node @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]], func @ [[..:..:Std:Function#T|Std.Function.T]], data @ [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -167,24 +127,12 @@
   **** Warning ****
   gtk_ctree_export_to_gnode is deprecated and should not be used in newly-written
   code.
-  FIXME
-  ctree :
-  parent :
-  sibling :
-  node :
-  func :
-  data :
-  Returns :
 
 ==== :Find ====
 '':Find(self @ [[#T|T]], node @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]], child @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
   **** Warning ****
   gtk_ctree_find is deprecated and should not be used in newly-written code.
-  ctree :
-  node :    The node to start searching from. May be NULL.
-  child :
-  Returns : True if child is on some level a child (grandchild...) of the node.
 
 ==== :FindAllByRowData ====
 '':FindAllByRowData(self @ [[#T|T]], node @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]], data @ [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -192,11 +140,6 @@
   **** Warning ****
   gtk_ctree_find_all_by_row_data is deprecated and should not be used in newly-
   written code.
-  Finds all nodes in the tree under node that have the given user data pointer.
-  ctree :
-  node :
-  data :
-  Returns : A list of nodes that have the given data pointer.
 
 ==== :FindAllByRowDataCustom ====
 '':FindAllByRowDataCustom(self @ [[#T|T]], node @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]], data @ [[..:..:Std:Address#T|Std.Address.T]], func @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -204,12 +147,6 @@
   **** Warning ****
   gtk_ctree_find_all_by_row_data_custom is deprecated and should not be used in
   newly-written code.
-  Find all nodes under node whose row data pointer fulfills a custom criterion.
-  ctree :
-  node :    The node where to start searching.
-  data :    User data for the criterion function.
-  func :    The criterion function.
-  Returns : A list of all nodes found.
 
 ==== :FindByRowData ====
 '':FindByRowData(self @ [[#T|T]], node @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]], data @ [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]]''
@@ -217,11 +154,6 @@
   **** Warning ****
   gtk_ctree_find_by_row_data is deprecated and should not be used in newly-
   written code.
-  Finds a node in the tree under node that has the given user data pointer.
-  ctree :
-  node :
-  data :
-  Returns : The node, or NULL if not found.
 
 ==== :FindByRowDataCustom ====
 '':FindByRowDataCustom(self @ [[#T|T]], node @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]], data @ [[..:..:Std:Address#T|Std.Address.T]], func @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]]''
@@ -229,13 +161,6 @@
   **** Warning ****
   gtk_ctree_find_by_row_data_custom is deprecated and should not be used in
   newly-written code.
-  Find the first node under node whose row data pointer fulfills a custom
-  criterion.
-  ctree :
-  node :    The node where to start searching.
-  data :    User data for the criterion function.
-  func :    The criterion function.
-  Returns : The first node found.
 
 ==== :FindNodePtr ====
 '':FindNodePtr(self @ [[#T|T]], ctree_row @ [[..:..:Gtk:Gtk:CTreeRow#T|Gtk.Gtk.CTreeRow.T]]) : [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]]''
@@ -243,10 +168,6 @@
   **** Warning ****
   gtk_ctree_find_node_ptr is deprecated and should not be used in newly-written
   code.
-  Finds the node pointer given a GtkCTreeRow structure.
-  ctree :
-  ctree_row :
-  Returns :   The node pointer.
 
 ==== :GetNodeInfo ====
 '':GetNodeInfo(self @ [[#T|T]], node @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]], text @ [[..:..:Std:List#T|Std.List.T]], spacing @ [[..:..:Std:Object#T|Std.Object.T]], pixmap_closed @ [[..:..:Std:Object#T|Std.Object.T]], mask_closed @ [[..:..:Std:Object#T|Std.Object.T]], pixmap_opened @ [[..:..:Std:Object#T|Std.Object.T]], mask_opened @ [[..:..:Std:Object#T|Std.Object.T]], is_leaf @ [[..:..:Std:Object#T|Std.Object.T]], expanded @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
@@ -254,19 +175,6 @@
   **** Warning ****
   gtk_ctree_get_node_info is deprecated and should not be used in newly-written
   code.
-  Get information corresponding to a node. Any of the return parameters can be
-  null.
-  ctree :
-  node :
-  text :
-  spacing :
-  pixmap_closed :
-  mask_closed :
-  pixmap_opened :
-  mask_opened :
-  is_leaf :
-  expanded :
-  Returns :
 
 ==== :InsertGnode ====
 '':InsertGnode(self @ [[#T|T]], parent @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]], sibling @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]], gnode @ [[..:..:Std:Object#T|Std.Object.T]], func @ [[..:..:Std:Function#T|Std.Function.T]], data @ [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]]''
@@ -274,14 +182,6 @@
   **** Warning ****
   gtk_ctree_insert_gnode is deprecated and should not be used in newly-written
   code.
-  FIXME
-  ctree :
-  parent :
-  sibling :
-  gnode :
-  func :
-  data :
-  Returns :
 
 ==== :InsertNode ====
 '':InsertNode(self @ [[#T|T]], parent @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]], sibling @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]], text @ [[..:..:Std:List#T|Std.List.T]], spacing @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], pixmap_closed @ [[..:..:Gtk:Gdk:Pixmap#T|Gtk.Gdk.Pixmap.T]], mask_closed @ [[..:..:Gtk:Gdk:Bitmap#T|Gtk.Gdk.Bitmap.T]], pixmap_opened @ [[..:..:Gtk:Gdk:Pixmap#T|Gtk.Gdk.Pixmap.T]], mask_opened @ [[..:..:Gtk:Gdk:Bitmap#T|Gtk.Gdk.Bitmap.T]], is_leaf @ [[..:..:Std:Symbol#T|Std.Symbol.T]], expanded @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]]''
@@ -289,21 +189,6 @@
   **** Warning ****
   gtk_ctree_insert_node is deprecated and should not be used in newly-written
   code.
-  Insert a new node to the tree. The position is specified through the parent-
-  sibling notation, as explained in the introduction above.
-  ctree :         The GtkCTree widget.
-  parent :        The parent node to be.
-  sibling :       The sibling node to be.
-  text :          The texts to be shown in each column.
-  spacing :       The extra space between the pixmap and the text.
-  pixmap_closed : The pixmap to be used when the node is collapsed. Can be NULL.
-  mask_closed :   The mask for the above pixmap. Can be NULL.
-  pixmap_opened : The pixmap to be used when the children are visible. Can be
-                  NULL.
-  mask_opened :   The mask for the above pixmap. Can be NULL.
-  is_leaf :       Whether this node is going to be a leaf.
-  expanded :      Whether this node should start out expanded or not.
-  Returns :
 
 ==== :IsAncestor ====
 '':IsAncestor(self @ [[#T|T]], node @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]], child @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
@@ -311,10 +196,6 @@
   **** Warning ****
   gtk_ctree_is_ancestor is deprecated and should not be used in newly-written
   code.
-  ctree :
-  node :
-  child :
-  Returns : True is node is an ancestor of child.
 
 ==== :IsHotSpot ====
 '':IsHotSpot(self @ [[#T|T]], x @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
@@ -322,10 +203,6 @@
   **** Warning ****
   gtk_ctree_is_hot_spot is deprecated and should not be used in newly-written
   code.
-  ctree :
-  x :
-  y :
-  Returns : True if the given coordinates lie on an expander button.
 
 ==== :IsViewable ====
 '':IsViewable(self @ [[#T|T]], node @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
@@ -333,34 +210,18 @@
   **** Warning ****
   gtk_ctree_is_viewable is deprecated and should not be used in newly-written
   code.
-  This function checks whether the given node is viewable i.e. so that all of its
-  parent nodes are expanded. This is different from being actually visible: the
-  node can be viewable but outside the scrolling area of the window.
-  ctree :
-  node :
-  Returns : Whether the node is viewable.
 
 ==== :Last ====
 '':Last(self @ [[#T|T]], node @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]]) : [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]]''
 
   **** Warning ****
   gtk_ctree_last is deprecated and should not be used in newly-written code.
-  Returns the last child of the last child of the last child... of the given
-  node.
-  ctree :
-  node :
-  Returns :
 
 ==== :Move ====
 '':Move(self @ [[#T|T]], node @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]], new_parent @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]], new_sibling @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
   **** Warning ****
   gtk_ctree_move is deprecated and should not be used in newly-written code.
-  Move a node in the tree to another location.
-  ctree :
-  node :        The node to be moved.
-  new_parent :  The new parent-to-be of the node.
-  new_sibling : The new sibling-to-be of the node.
 
 ==== :PostRecursive ====
 '':PostRecursive(self @ [[#T|T]], node @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]], func @ [[..:..:Std:Function#T|Std.Function.T]], data @ [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -368,13 +229,6 @@
   **** Warning ****
   gtk_ctree_post_recursive is deprecated and should not be used in newly-written
   code.
-  Recursively apply a function to all nodes of the tree at or below a certain
-  node. The function is called for each node after it has been called for that
-  node's children.
-  ctree :
-  node :  The node where to start. NULL means to start at the root.
-  func :  The function to apply to each node.
-  data :  A closure argument given to each invocation of the function.
 
 ==== :PostRecursiveToDepth ====
 '':PostRecursiveToDepth(self @ [[#T|T]], node @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]], depth @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], func @ [[..:..:Std:Function#T|Std.Function.T]], data @ [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -382,14 +236,6 @@
   **** Warning ****
   gtk_ctree_post_recursive_to_depth is deprecated and should not be used in
   newly-written code.
-  Recursively apply a function to nodes up to a certain depth. The function is
-  called for each node after it has been called for that node's children.
-  ctree :
-  node :  The node where to start.
-  depth : The maximum absolute depth for applying the function. If depth is
-          negative, this function just calls gtk_ctree_post_recursive.
-  func :  The function to apply to each node.
-  data :  A closure argument given to each invocation of the function.
 
 ==== :PreRecursive ====
 '':PreRecursive(self @ [[#T|T]], node @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]], func @ [[..:..:Std:Function#T|Std.Function.T]], data @ [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -397,13 +243,6 @@
   **** Warning ****
   gtk_ctree_pre_recursive is deprecated and should not be used in newly-written
   code.
-  Recursively apply a function to all nodes of the tree at or below a certain
-  node. The function is called for each node after it has been called for its
-  parent.
-  ctree :
-  node :  The node where to start. NULL means to start at the root.
-  func :  The function to apply to each node.
-  data :  A closure argument given to each invocation of the function.
 
 ==== :PreRecursiveToDepth ====
 '':PreRecursiveToDepth(self @ [[#T|T]], node @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]], depth @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], func @ [[..:..:Std:Function#T|Std.Function.T]], data @ [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -411,14 +250,6 @@
   **** Warning ****
   gtk_ctree_pre_recursive_to_depth is deprecated and should not be used in newly-
   written code.
-  Recursively apply a function to nodes up to a certain depth. The function is
-  called for each node after it has been called for that node's children.
-  ctree :
-  node :  The node where to start.
-  depth : The maximum absolute depth for applying the function. If depth is
-          negative, this function just calls gtk_ctree_post_recursive.
-  func :  The function to apply to each node.
-  data :  A closure argument given to each invocation of the function.
 
 ==== :RealSelectRecursive ====
 '':RealSelectRecursive(self @ [[#T|T]], node @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]], state @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -426,11 +257,6 @@
   **** Warning ****
   gtk_ctree_real_select_recursive is deprecated and should not be used in newly-
   written code.
-  The function that implements both gtk_ctree_select_recursive and
-  gtk_ctree_unselect_recursive.
-  ctree :
-  node :
-  state : True for selecting, false for unselecting.
 
 ==== :RemoveNode ====
 '':RemoveNode(self @ [[#T|T]], node @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -438,18 +264,12 @@
   **** Warning ****
   gtk_ctree_remove_node is deprecated and should not be used in newly-written
   code.
-  Remove the node and all nodes underneath it from the tree.
-  ctree : The widget.
-  node :  The node to be removed.
 
 ==== :Select ====
 '':Select(self @ [[#T|T]], node @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
   **** Warning ****
   gtk_ctree_select is deprecated and should not be used in newly-written code.
-  Cause the given node to be selected and emit the appropriate signal.
-  ctree :
-  node :
 
 ==== :SelectRecursive ====
 '':SelectRecursive(self @ [[#T|T]], node @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -457,10 +277,6 @@
   **** Warning ****
   gtk_ctree_select_recursive is deprecated and should not be used in newly-
   written code.
-  Cause the given node and its subnodes to be selected and emit the appropriate
-  signal(s).
-  ctree :
-  node :
 
 ==== :SetDragCompareFunc ====
 '':SetDragCompareFunc(self @ [[#T|T]], cmp_func @ [[..:..:Std:Function#T|Std.Function.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -468,9 +284,6 @@
   **** Warning ****
   gtk_ctree_set_drag_compare_func is deprecated and should not be used in newly-
   written code.
-  FIXME
-  ctree :
-  cmp_func :
 
 ==== :SetExpanderStyle ====
 '':SetExpanderStyle(self @ [[#T|T]], expander_style @ [[..:..:Gtk:Gtk:CTreeExpanderStyle#T|Gtk.Gtk.CTreeExpanderStyle.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -478,8 +291,6 @@
   **** Warning ****
   gtk_ctree_set_expander_style is deprecated and should not be used in newly-
   written code.
-  ctree :
-  expander_style :
 
 ==== :SetIndent ====
 '':SetIndent(self @ [[#T|T]], indent @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -487,8 +298,6 @@
   **** Warning ****
   gtk_ctree_set_indent is deprecated and should not be used in newly-written
   code.
-  ctree :
-  indent : The number of pixels to shift the levels of the tree.
 
 ==== :SetLineStyle ====
 '':SetLineStyle(self @ [[#T|T]], line_style @ [[..:..:Gtk:Gtk:CTreeLineStyle#T|Gtk.Gtk.CTreeLineStyle.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -496,8 +305,6 @@
   **** Warning ****
   gtk_ctree_set_line_style is deprecated and should not be used in newly-written
   code.
-  ctree :
-  line_style :
 
 ==== :SetNodeInfo ====
 '':SetNodeInfo(self @ [[#T|T]], node @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]], text @ [[..:..:Std:String#T|Std.String.T]], spacing @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], pixmap_closed @ [[..:..:Gtk:Gdk:Pixmap#T|Gtk.Gdk.Pixmap.T]], mask_closed @ [[..:..:Gtk:Gdk:Bitmap#T|Gtk.Gdk.Bitmap.T]], pixmap_opened @ [[..:..:Gtk:Gdk:Pixmap#T|Gtk.Gdk.Pixmap.T]], mask_opened @ [[..:..:Gtk:Gdk:Bitmap#T|Gtk.Gdk.Bitmap.T]], is_leaf @ [[..:..:Std:Symbol#T|Std.Symbol.T]], expanded @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -505,18 +312,6 @@
   **** Warning ****
   gtk_ctree_set_node_info is deprecated and should not be used in newly-written
   code.
-  Change the information. Most parameters correspond to the parameters of
-  gtk_ctree_insert_node.
-  ctree :
-  node :
-  text :          The text to be in the tree column.
-  spacing :
-  pixmap_closed :
-  mask_closed :
-  pixmap_opened :
-  mask_opened :
-  is_leaf :
-  expanded :
 
 ==== :SetShowStub ====
 '':SetShowStub(self @ [[#T|T]], show_stub @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -524,13 +319,6 @@
   **** Warning ****
   gtk_ctree_set_show_stub is deprecated and should not be used in newly-written
   code.
-  ctree :
-  show_stub :
-  ***** Property Details *****
-  The "expander-style" property
-    "expander-style"           GtkCTreeExpanderStyle  : Read / Write
-  The style of the expander buttons.
-  Default value: GTK_CTREE_EXPANDER_NONE
 
 ==== :SetSpacing ====
 '':SetSpacing(self @ [[#T|T]], spacing @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -538,19 +326,12 @@
   **** Warning ****
   gtk_ctree_set_spacing is deprecated and should not be used in newly-written
   code.
-  The spacing between the tree graphic and the actual node content.
-  ctree :
-  spacing :
 
 ==== :SortNode ====
 '':SortNode(self @ [[#T|T]], node @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
   **** Warning ****
   gtk_ctree_sort_node is deprecated and should not be used in newly-written code.
-  Sort the children of a node. See GtkCList for how to set the sorting criteria
-  etc.
-  ctree :
-  node :
 
 ==== :SortRecursive ====
 '':SortRecursive(self @ [[#T|T]], node @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -558,10 +339,6 @@
   **** Warning ****
   gtk_ctree_sort_recursive is deprecated and should not be used in newly-written
   code.
-  Sort the descendants of a node. See GtkCList for how to set the sorting
-  criteria etc.
-  ctree :
-  node :
 
 ==== :ToggleExpansion ====
 '':ToggleExpansion(self @ [[#T|T]], node @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -569,19 +346,12 @@
   **** Warning ****
   gtk_ctree_toggle_expansion is deprecated and should not be used in newly-
   written code.
-  Toggle a node, i.e. if it is collapsed, expand it and vice versa.
-  ctree :
-  node :
 
 ==== New ====
 ''New(columns : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], tree_column : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[# T| T]]''
 
   **** Warning ****
   gtk_ctree_new is deprecated and should not be used in newly-written code.
-  Create a new GtkCTree widget.
-  columns :     Number of columns.
-  tree_column : Which columns has the tree graphic.
-  Returns :     The new GtkCTree widget.
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
@@ -593,9 +363,4 @@
   **** Warning ****
   gtk_ctree_new_with_titles is deprecated and should not be used in newly-written
   code.
-  Create a new GtkCTree widget with the given titles for the columns.
-  columns :     Number of columns.
-  tree_column : Which column has the tree graphic; 0 = leftmost.
-  titles :      The titles for the columns.
-  Returns :     The GtkCTree widget.
 

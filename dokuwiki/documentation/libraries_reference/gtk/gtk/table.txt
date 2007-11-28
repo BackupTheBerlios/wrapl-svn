@@ -145,11 +145,6 @@
   used for newly added columns. (See gtk_table_set_col_spacings())
   table :   a GtkTable
   Returns : value: the default column spacing
-  ***** Property Details *****
-  The "column-spacing" property
-    "column-spacing"           guint                 : Read / Write
-  The amount of space between two consecutive columns.
-  Default value: 0
 
 ==== :GetDefaultRowSpacing ====
 '':GetDefaultRowSpacing(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''

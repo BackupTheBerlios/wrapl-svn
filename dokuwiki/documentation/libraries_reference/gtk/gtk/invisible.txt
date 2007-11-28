@@ -17,7 +17,6 @@
   Sets the GdkScreen where the GtkInvisible object will be displayed.
   invisible : a GtkInvisible.
   screen :    a GdkScreen.
-  Since 2.2
 
 ==== :GetScreen ====
 '':GetScreen(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Screen#T|Gtk.Gdk.Screen.T]]''
@@ -25,11 +24,6 @@
   Returns the GdkScreen object associated with invisible
   invisible : a GtkInvisible.
   Returns :   the associated GdkScreen.
-  Since 2.2
-  ***** Property Details *****
-  The "screen" property
-    "screen"                   GdkScreen             : Read / Write
-  The screen where this window will be displayed.
 
 ==== :Screen ====
 '':Screen(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Screen#T|Gtk.Gdk.Screen.T]]''
@@ -38,19 +32,12 @@
   screen :  a GdkScreen which identifies on which the new GtkInvisible will be
             created.
   Returns : a newly created GtkInvisible object
-  Since 2.2
   Sets the GdkScreen where the GtkInvisible object will be displayed.
   invisible : a GtkInvisible.
   screen :    a GdkScreen.
-  Since 2.2
   Returns the GdkScreen object associated with invisible
   invisible : a GtkInvisible.
   Returns :   the associated GdkScreen.
-  Since 2.2
-  ***** Property Details *****
-  The "screen" property
-    "screen"                   GdkScreen             : Read / Write
-  The screen where this window will be displayed.
 
 ==== :HasUserRefCount ====
 '':HasUserRefCount(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
@@ -73,5 +60,4 @@
   screen :  a GdkScreen which identifies on which the new GtkInvisible will be
             created.
   Returns : a newly created GtkInvisible object
-  Since 2.2
 

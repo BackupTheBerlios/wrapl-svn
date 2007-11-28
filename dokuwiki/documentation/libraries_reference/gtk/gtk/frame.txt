@@ -63,11 +63,6 @@
   Retrieves the shadow type of the frame. See gtk_frame_set_shadow_type().
   frame :   a GtkFrame
   Returns : the current shadow type of the frame.
-  ***** Property Details *****
-  The "label" property
-    "label"                    gchararray            : Read / Write
-  Text of the frame's label.
-  Default value: NULL
 
 ==== :LabelXalign ====
 '':LabelXalign(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
@@ -114,11 +109,6 @@
   Retrieves the shadow type of the frame. See gtk_frame_set_shadow_type().
   frame :   a GtkFrame
   Returns : the current shadow type of the frame.
-  ***** Property Details *****
-  The "label" property
-    "label"                    gchararray            : Read / Write
-  Text of the frame's label.
-  Default value: NULL
 
 ==== :SetLabel ====
 '':SetLabel(self @ [[#T|T]], label @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''

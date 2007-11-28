@@ -15,7 +15,6 @@
   Sets the radio group for the radio action object.
   action : the action object
   group :  a list representing a radio group
-  Since 2.4
 
 ==== :SetCurrentValue ====
 '':SetCurrentValue(self @ [[#T|T]], current_value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -24,14 +23,6 @@
   current_value.
   action :        a GtkRadioAction
   current_value : the new value
-  Since 2.10
-  ***** Property Details *****
-  The "current-value" property
-    "current-value"            gint                  : Read / Write
-  The value property of the currently active member of the group to which this
-  action belongs.
-  Default value: 0
-  Since 2.10
 
 ==== :PrivateData ====
 '':PrivateData(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -44,7 +35,6 @@
   action belongs.
   action :  a GtkRadioAction
   Returns : The value of the currently active group member
-  Since 2.4
 
 ==== :GetGroup ====
 '':GetGroup(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -62,9 +52,6 @@
          gtk_radio_action_set_group (action, group);
          group = gtk_radio_action_get_group (action);
       }
-  action :  the action object
-  Returns : the list representing the radio group for this object
-  Since 2.4
 
 ==== New ====
 ''New(name : [[..:..:Std:String#T|Std.String.T]], label : [[..:..:Std:String#T|Std.String.T]], tooltip : [[..:..:Std:String#T|Std.String.T]], stock_id : [[..:..:Std:String#T|Std.String.T]], value : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[# T| T]]''
@@ -80,7 +67,6 @@
   value :    The value which gtk_radio_action_get_current_value() should return
              if this action is selected.
   Returns :  a new GtkRadioAction
-  Since 2.4
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''

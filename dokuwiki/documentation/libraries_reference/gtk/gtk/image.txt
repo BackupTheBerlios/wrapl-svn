@@ -82,7 +82,6 @@
   ().
   image :      a GtkImage
   pixel_size : the new pixel size
-  Since 2.6
 
 ==== :SetFromStock ====
 '':SetFromStock(self @ [[#T|T]], stock_id @ [[..:..:Std:String#T|Std.String.T]], size @ [[..:..:Gtk:Gtk:IconSize#T|Gtk.Gtk.IconSize.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -130,7 +129,6 @@
   image :     a GtkImage
   icon_name : an icon name
   size :      an icon size
-  Since 2.6
 
 ==== :SetFromFile ====
 '':SetFromFile(self @ [[#T|T]], filename @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -152,11 +150,6 @@
 
   **** Warning ****
   gtk_image_set is deprecated and should not be used in newly-written code.
-  Sets the GtkImage.
-  image : a GtkImage
-  val :   a GdkImage
-  mask :  a GdkBitmap that indicates which parts of the image should be
-          transparent.
 
 ==== :StorageType ====
 '':StorageType(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:ImageType#T|Gtk.Gtk.ImageType.T]]''
@@ -207,18 +200,12 @@
 
   Resets the image to be empty.
   image : a GtkImage
-  Since 2.8
 
 ==== :Get ====
 '':Get(self @ [[#T|T]], val @ [[..:..:Std:Object#T|Std.Object.T]], mask @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
   **** Warning ****
   gtk_image_get is deprecated and should not be used in newly-written code.
-  Gets the GtkImage.
-  image : a GtkImage
-  val :   return location for a GdkImage
-  mask :  a GdkBitmap that indicates which parts of the image should be
-          transparent.
 
 ==== :GetAnimation ====
 '':GetAnimation(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:PixbufAnimation#T|Gtk.Gdk.PixbufAnimation.T]]''
@@ -240,7 +227,6 @@
   image :     a GtkImage
   icon_name : place to store an icon name
   size :      place to store an icon size
-  Since 2.6
 
 ==== :GetIconSet ====
 '':GetIconSet(self @ [[#T|T]], icon_set @ [[..:..:Std:Object#T|Std.Object.T]], size @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -279,12 +265,6 @@
   Gets the pixel size used for named icons.
   image :   a GtkImage
   Returns : the pixel size used for named icons.
-  Since 2.6
-  ***** Property Details *****
-  The "file" property
-    "file"                     gchararray            : Read / Write
-  Filename to load and display.
-  Default value: NULL
 
 ==== :GetPixmap ====
 '':GetPixmap(self @ [[#T|T]], pixmap @ [[..:..:Std:Object#T|Std.Object.T]], mask @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -319,6 +299,8 @@
 ==== New ====
 ''New() : [[# T| T]]''
 
+  Creates a new empty GtkImage widget.
+  Returns : a newly created GtkImage widget.
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
@@ -397,7 +379,6 @@
   icon_name : an icon name
   size :      a stock icon size
   Returns :   a new GtkImage displaying the themed icon
-  Since 2.6
 
 ==== NewFromFile ====
 ''NewFromFile(filename : [[..:..:Std:String#T|Std.String.T]]) : [[# T| T]]''

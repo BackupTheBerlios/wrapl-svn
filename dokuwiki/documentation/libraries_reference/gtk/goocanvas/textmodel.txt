@@ -41,17 +41,6 @@
             at the x and y coordinates.
   ... :     optional pairs of property names and values, and a terminating NULL.
   Returns : a new text model.
-  Here's an example showing how to create a text item with the bottom right of
-  the text box placed at (500,500):
-   GooCanvasItemModel *text = goo_canvas_text_model_new (mygroup, "Hello World",
-  500.0, 500.0, 200.0, GTK_ANCHOR_SE,
-                                                         "fill-color", "blue",
-                                                         NULL);
-  ***** Property Details *****
-  The "alignment" property
-    "alignment"                PangoAlignment        : Read / Write
-  How to align the text.
-  Default value: PANGO_ALIGN_LEFT
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''

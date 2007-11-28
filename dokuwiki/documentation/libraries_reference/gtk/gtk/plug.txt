@@ -26,23 +26,6 @@
   window inside another window, for instance with gtk_socket_add_id().
   plug :    a GtkPlug.
   Returns : the window ID for the plug
-  ***** Property Details *****
-  The "embedded" property
-    "embedded"                 gboolean              : Read
-  TRUE if the plug is embedded in a socket.
-  Default value: FALSE
-  Since 2.12
-  ***** Signal Details *****
-  The "embedded" signal
-  void                user_function                      (GtkPlug *plug,
-                                                          gpointer user_data)
-  : Run Last
-  Gets emitted when the plug becomes embedded in a socket and when the embedding
-  ends.
-  plug :      the object on which the signal was emitted
-  user_data : user data set when the signal handler was connected.
-  ***** See Also *****
-  GtkSocket the widget that a GtkPlug plugs into.
 
 ==== :ConstructForDisplay ====
 '':ConstructForDisplay(self @ [[#T|T]], display @ [[..:..:Gtk:Gdk:Display#T|Gtk.Gdk.Display.T]], socket_id @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -53,7 +36,6 @@
   plug :      a GtkPlug.
   display :   the GdkDisplay associated with socket_id's GtkSocket.
   socket_id : the XID of the socket's window.
-  Since 2.2
 
 ==== :Construct ====
 '':Construct(self @ [[#T|T]], socket_id @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -104,5 +86,4 @@
   display :   the GdkDisplay on which socket_id is displayed
   socket_id : the XID of the socket's window.
   Returns :   the new GtkPlug widget.
-  Since 2.2
 

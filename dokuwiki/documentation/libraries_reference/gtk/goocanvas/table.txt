@@ -39,46 +39,6 @@
             free it.
   ... :     optional pairs of property names and values, and a terminating NULL.
   Returns : a new table item.
-  Here's an example showing how to create a table with a square, a circle and a
-  triangle in it:
-   GooCanvasItem *table, *square, *circle, *triangle;
-  
-   table = goo_canvas_table_new (root,
-                                 "row-spacing", 4.0,
-                                 "column-spacing", 4.0,
-                                 NULL);
-   goo_canvas_item_translate (table, 400, 200);
-  
-   square = goo_canvas_rect_new (table, 0.0, 0.0, 50.0, 50.0,
-                                 "fill-color", "red",
-                                 NULL);
-   goo_canvas_item_set_child_properties (table, square,
-                                         "row", 0,
-                                         "column", 0,
-                                         NULL);
-  
-   circle = goo_canvas_ellipse_new (table, 0.0, 0.0, 25.0, 25.0,
-                                    "fill-color", "blue",
-                                    NULL);
-   goo_canvas_item_set_child_properties (table, circle,
-                                         "row", 0,
-                                         "column", 1,
-                                         NULL);
-  
-   triangle = goo_canvas_polyline_new (table, TRUE, 3,
-                                       25.0, 0.0, 0.0, 50.0, 50.0, 50.0,
-                                       "fill-color", "yellow",
-                                       NULL);
-   goo_canvas_item_set_child_properties (table, triangle,
-                                         "row", 0,
-                                         "column", 2,
-                                         NULL);
-  ***** Property Details *****
-  The "column-spacing" property
-    "column-spacing"           gdouble               : Read / Write
-  The default space between columns.
-  Allowed values: >= 0
-  Default value: 0
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''

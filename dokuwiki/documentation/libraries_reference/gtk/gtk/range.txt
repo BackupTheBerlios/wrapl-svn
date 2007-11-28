@@ -166,7 +166,6 @@
   Gets the current position of the fill level indicator.
   range :   A GtkRange
   Returns : The current fill level
-  Since 2.12
 
 ==== :GetInverted ====
 '':GetInverted(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
@@ -182,7 +181,6 @@
   the GtkRange's adjustment.
   range :   a GtkRange
   Returns : The lower stepper's sensitivity policy.
-  Since 2.10
 
 ==== :GetRestrictToFillLevel ====
 '':GetRestrictToFillLevel(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
@@ -190,7 +188,6 @@
   Gets whether the range is restricted to the fill level.
   range :   A GtkRange
   Returns : TRUE if range is restricted to the fill level.
-  Since 2.12
 
 ==== :GetShowFillLevel ====
 '':GetShowFillLevel(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
@@ -198,7 +195,6 @@
   Gets whether the range displays the fill level graphically.
   range :   A GtkRange
   Returns : TRUE if range shows the fill level.
-  Since 2.12
 
 ==== :GetUpdatePolicy ====
 '':GetUpdatePolicy(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:UpdateType#T|Gtk.Gtk.UpdateType.T]]''
@@ -214,11 +210,6 @@
   the GtkRange's adjustment.
   range :   a GtkRange
   Returns : The upper stepper's sensitivity policy.
-  Since 2.10
-  ***** Property Details *****
-  The "adjustment" property
-    "adjustment"               GtkAdjustment         : Read / Write / Construct
-  The GtkAdjustment that contains the current value of this range object.
 
 ==== :GetValue ====
 '':GetValue(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
@@ -257,7 +248,6 @@
   gtk_range_set_restrict_to_fill_level() and is by default enabled.
   range :      a GtkRange
   fill_level : the new position of the fill level indicator
-  Since 2.12
 
 ==== :SetIncrements ====
 '':SetIncrements(self @ [[#T|T]], step @ [[..:..:Std:Real#T|Std.Real.T]], page @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -285,7 +275,6 @@
   the GtkRange's adjustment.
   range :       a GtkRange
   sensitivity : the lower stepper's sensitivity policy.
-  Since 2.10
 
 ==== :SetRange ====
 '':SetRange(self @ [[#T|T]], min @ [[..:..:Std:Real#T|Std.Real.T]], max @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -304,7 +293,6 @@
   gtk_range_set_fill_level() for a general description of the fill level concept.
   range :                  A GtkRange
   restrict_to_fill_level : Whether the fill level restricts slider movement.
-  Since 2.12
 
 ==== :SetShowFillLevel ====
 '':SetShowFillLevel(self @ [[#T|T]], show_fill_level @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -313,7 +301,6 @@
   gtk_range_set_fill_level() for a general description of the fill level concept.
   range :           A GtkRange
   show_fill_level : Whether a fill level indicator graphics is shown.
-  Since 2.12
 
 ==== :SetUpdatePolicy ====
 '':SetUpdatePolicy(self @ [[#T|T]], policy @ [[..:..:Gtk:Gtk:UpdateType#T|Gtk.Gtk.UpdateType.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -335,7 +322,6 @@
   the GtkRange's adjustment.
   range :       a GtkRange
   sensitivity : the upper stepper's sensitivity policy.
-  Since 2.10
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''

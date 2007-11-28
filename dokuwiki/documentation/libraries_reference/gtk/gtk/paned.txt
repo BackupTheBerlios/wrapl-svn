@@ -57,7 +57,6 @@
   Obtains the first child of the paned widget.
   paned :   a GtkPaned widget
   Returns : first child, or NULL if it is not set.
-  Since 2.4
 
 ==== :Child2 ====
 '':Child2(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
@@ -65,7 +64,6 @@
   Obtains the second child of the paned widget.
   paned :   a GtkPaned widget
   Returns : second child, or NULL if it is not set.
-  Since 2.4
 
 ==== :Handle ====
 '':Handle(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]]''
@@ -181,7 +179,6 @@
   Obtains the first child of the paned widget.
   paned :   a GtkPaned widget
   Returns : first child, or NULL if it is not set.
-  Since 2.4
 
 ==== :GetChild2 ====
 '':GetChild2(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
@@ -189,7 +186,6 @@
   Obtains the second child of the paned widget.
   paned :   a GtkPaned widget
   Returns : second child, or NULL if it is not set.
-  Since 2.4
 
 ==== :GetPosition ====
 '':GetPosition(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
@@ -197,14 +193,6 @@
   Obtains the position of the divider between the two panes.
   paned :   a GtkPaned widget
   Returns : position of the divider
-  ***** Property Details *****
-  The "max-position" property
-    "max-position"             gint                  : Read
-  The largest possible value for the position property. This property is derived
-  from the size and shrinkability of the widget's children.
-  Allowed values: >= 0
-  Default value: 2147483647
-  Since 2.4
 
 ==== :Pack1 ====
 '':Pack1(self @ [[#T|T]], child @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], resize @ [[..:..:Std:Symbol#T|Std.Symbol.T]], shrink @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''

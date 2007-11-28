@@ -13,13 +13,6 @@
   **** Warning ****
   gtk_item_factory_set_translate_func has been deprecated since version 2.4 and
   should not be used in newly-written code.
-  Sets a function to be used for translating the path elements before they are
-  displayed.
-  ifactory : a GtkItemFactory
-  func :     the GtkTranslateFunc function to be used to translate path elements
-  data :     data to pass to func and notify
-  notify :   a GtkDestroyNotify function to be called when ifactory is destroyed
-             and when the translation function is changed again
 
 ==== :PopupWithData ====
 '':PopupWithData(self @ [[#T|T]], popup_data @ [[..:..:Std:Address#T|Std.Address.T]], destroy @ [[..:..:Std:Function#T|Std.Function.T]], x @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], mouse_button @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], time_ @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -27,27 +20,6 @@
   **** Warning ****
   gtk_item_factory_popup_with_data has been deprecated since version 2.4 and
   should not be used in newly-written code.
-  Pops up the menu constructed from the item factory at (x, y). Callbacks can
-  access the popup_data while the menu is posted via gtk_item_factory_popup_data
-  () and gtk_item_factory_popup_data_from_widget().
-  The mouse_button parameter should be the mouse button pressed to initiate the
-  menu popup. If the menu popup was initiated by something other than a mouse
-  button press, such as a mouse button release or a keypress, mouse_button should
-  be 0.
-  The time_ parameter should be the time stamp of the event that initiated the
-  popup. If such an event is not available, use gtk_get_current_event_time()
-  instead.
-  The operation of the mouse_button and the time_ parameters is the same as the
-  button and activation_time parameters for gtk_menu_popup().
-  ifactory :     a GtkItemFactory of type GTK_TYPE_MENU (see gtk_item_factory_new
-                 ())
-  popup_data :   data available for callbacks while the menu is posted
-  destroy :      a GtkDestroyNotify function to be called on popup_data when the
-                 menu is unposted
-  x :            the x position
-  y :            the y position
-  mouse_button : the mouse button which was pressed to initiate the popup
-  time_ :        the time at which the activation event occurred
 
 ==== :PopupData ====
 '':PopupData(self @ [[#T|T]]) : [[..:..:Std:Address#T|Std.Address.T]]''
@@ -55,10 +27,6 @@
   **** Warning ****
   gtk_item_factory_popup_data has been deprecated since version 2.4 and should
   not be used in newly-written code.
-  Obtains the popup_data which was passed to gtk_item_factory_popup_with_data().
-  This data is available until the menu is popped down again.
-  ifactory : a GtkItemFactory
-  Returns :  popup_data associated with ifactory
 
 ==== :Popup ====
 '':Popup(self @ [[#T|T]], x @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], mouse_button @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], time_ @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -66,22 +34,6 @@
   **** Warning ****
   gtk_item_factory_popup has been deprecated since version 2.4 and should not be
   used in newly-written code.
-  Pops up the menu constructed from the item factory at (x, y).
-  The mouse_button parameter should be the mouse button pressed to initiate the
-  menu popup. If the menu popup was initiated by something other than a mouse
-  button press, such as a mouse button release or a keypress, mouse_button should
-  be 0.
-  The time_ parameter should be the time stamp of the event that initiated the
-  popup. If such an event is not available, use gtk_get_current_event_time()
-  instead.
-  The operation of the mouse_button and the time_ parameter is the same as the
-  button and activation_time parameters for gtk_menu_popup().
-  ifactory :     a GtkItemFactory of type GTK_TYPE_MENU (see gtk_item_factory_new
-                 ())
-  x :            the x position
-  y :            the y position
-  mouse_button : the mouse button which was pressed to initiate the popup
-  time_ :        the time at which the activation event occurred
 
 ==== :GetWidgetByAction ====
 '':GetWidgetByAction(self @ [[#T|T]], action @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
@@ -89,14 +41,6 @@
   **** Warning ****
   gtk_item_factory_get_widget_by_action has been deprecated since version 2.4 and
   should not be used in newly-written code.
-  Obtains the widget which was constructed from the GtkItemFactoryEntry with the
-  given action.
-  If there are multiple items with the same action, the result is undefined.
-  ifactory : a GtkItemFactory
-  action :   an action as specified in the callback_action field of
-             GtkItemFactoryEntry
-  Returns :  the widget which corresponds to the given action, or NULL if no
-             widget was found
 
 ==== :GetWidget ====
 '':GetWidget(self @ [[#T|T]], path @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
@@ -104,14 +48,6 @@
   **** Warning ****
   gtk_item_factory_get_widget has been deprecated since version 2.4 and should
   not be used in newly-written code.
-  Obtains the widget which corresponds to path.
-  If the widget corresponding to path is a menu item which opens a submenu, then
-  the submenu is returned. If you are interested in the menu item, use
-  gtk_item_factory_get_item() instead.
-  ifactory : a GtkItemFactory
-  path :     the path to the widget
-  Returns :  the widget for the given path, or NULL if path doesn't lead to a
-             widget
 
 ==== :GetItemByAction ====
 '':GetItemByAction(self @ [[#T|T]], action @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
@@ -119,13 +55,6 @@
   **** Warning ****
   gtk_item_factory_get_item_by_action has been deprecated since version 2.4 and
   should not be used in newly-written code.
-  Obtains the menu item which was constructed from the first GtkItemFactoryEntry
-  with the given action.
-  ifactory : a GtkItemFactory
-  action :   an action as specified in the callback_action field of
-             GtkItemFactoryEntry
-  Returns :  the menu item which corresponds to the given action, or NULL if no
-             menu item was found
 
 ==== :GetItem ====
 '':GetItem(self @ [[#T|T]], path @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
@@ -133,14 +62,6 @@
   **** Warning ****
   gtk_item_factory_get_item has been deprecated since version 2.4 and should not
   be used in newly-written code.
-  Obtains the menu item which corresponds to path.
-  If the widget corresponding to path is a menu item which opens a submenu, then
-  the item is returned. If you are interested in the submenu, use
-  gtk_item_factory_get_widget() instead.
-  ifactory : a GtkItemFactory
-  path :     the path to the menu item
-  Returns :  the menu item for the given path, or NULL if path doesn't lead to a
-             menu item
 
 ==== :Path ====
 '':Path(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
@@ -148,10 +69,6 @@
   **** Warning ****
   gtk_item_factory_from_path has been deprecated since version 2.4 and should not
   be used in newly-written code.
-  Finds an item factory which has been constructed using the "<name>" prefix of
-  path as the path argument for gtk_item_factory_new().
-  path :    a string starting with a factory path of the form "<name>"
-  Returns : the GtkItemFactory created for the given factory path, or NULL
 
 ==== :AccelGroup ====
 '':AccelGroup(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:AccelGroup#T|Gtk.Gtk.AccelGroup.T]]''
@@ -163,39 +80,15 @@
   **** Warning ****
   gtk_item_factory_from_widget is deprecated and should not be used in newly-
   written code. 2.4
-  Obtains the item factory from which a widget was created.
-  widget :  a widget
-  Returns : the item factory from which widget was created, or NULL
   **** Warning ****
   gtk_item_factory_path_from_widget has been deprecated since version 2.4 and
   should not be used in newly-written code.
-  If widget has been created by an item factory, returns the full path to it.
-  (The full path of a widget is the concatenation of the factory path specified
-  in gtk_item_factory_new() with the path specified in the GtkItemFactoryEntry
-  from which the widget was created.)
-  widget :  a widget
-            the full path to widget if it has been created by an item factory,
-  Returns : NULL otherwise. This value is owned by GTK+ and must not be modified
-            or freed.
   **** Warning ****
   gtk_item_factory_get_widget has been deprecated since version 2.4 and should
   not be used in newly-written code.
-  Obtains the widget which corresponds to path.
-  If the widget corresponding to path is a menu item which opens a submenu, then
-  the submenu is returned. If you are interested in the menu item, use
-  gtk_item_factory_get_item() instead.
-  ifactory : a GtkItemFactory
-  path :     the path to the widget
-  Returns :  the widget for the given path, or NULL if path doesn't lead to a
-             widget
   **** Warning ****
   gtk_item_factory_popup_data_from_widget has been deprecated since version 2.4
   and should not be used in newly-written code.
-  Obtains the popup_data which was passed to gtk_item_factory_popup_with_data().
-  This data is available until the menu is popped down again.
-  widget :  a widget
-  Returns : popup_data associated with the item factory from which widget was
-            created, or NULL if widget wasn't created by an item factory
 
 ==== :Items ====
 '':Items(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -203,12 +96,6 @@
   **** Warning ****
   gtk_item_factory_create_items has been deprecated since version 2.4 and should
   not be used in newly-written code.
-  Creates the menu items from the entries.
-  ifactory :      a GtkItemFactory
-  n_entries :     the length of entries
-  entries :       an array of GtkItemFactoryEntrys whose callback members must by
-                  of type GtkItemFactoryCallback1
-  callback_data : data passed to the callback functions of all entries
 
 ==== :TranslateFunc ====
 '':TranslateFunc(self @ [[#T|T]]) : [[..:..:Std:Function#T|Std.Function.T]]''
@@ -216,13 +103,6 @@
   **** Warning ****
   gtk_item_factory_set_translate_func has been deprecated since version 2.4 and
   should not be used in newly-written code.
-  Sets a function to be used for translating the path elements before they are
-  displayed.
-  ifactory : a GtkItemFactory
-  func :     the GtkTranslateFunc function to be used to translate path elements
-  data :     data to pass to func and notify
-  notify :   a GtkDestroyNotify function to be called when ifactory is destroyed
-             and when the translation function is changed again
 
 ==== :TranslateData ====
 '':TranslateData(self @ [[#T|T]]) : [[..:..:Std:Address#T|Std.Address.T]]''
@@ -238,13 +118,6 @@
   **** Warning ****
   gtk_item_factory_construct has been deprecated since version 2.4 and should not
   be used in newly-written code.
-  Initializes an item factory.
-  ifactory :       a GtkItemFactory
-  container_type : the kind of menu to create; can be GTK_TYPE_MENU_BAR,
-                   GTK_TYPE_MENU or GTK_TYPE_OPTION_MENU
-  path :           the factory path of ifactory, a string of the form "<name>"
-  accel_group :    a GtkAccelGroup to which the accelerators for the menu items
-                   will be added, or NULL to create a new one
 
 ==== :CreateItem ====
 '':CreateItem(self @ [[#T|T]], entry @ [[..:..:Gtk:Gtk:ItemFactoryEntry#T|Gtk.Gtk.ItemFactoryEntry.T]], callback_data @ [[..:..:Std:Address#T|Std.Address.T]], callback_type @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -252,13 +125,6 @@
   **** Warning ****
   gtk_item_factory_create_item has been deprecated since version 2.4 and should
   not be used in newly-written code.
-  Creates an item for entry.
-  ifactory :      a GtkItemFactory
-  entry :         the GtkItemFactoryEntry to create an item for
-  callback_data : data passed to the callback function of entry
-                  1 if the callback function of entry is of type
-  callback_type : GtkItemFactoryCallback1, 2 if it is of type
-                  GtkItemFactoryCallback2
 
 ==== :CreateItems ====
 '':CreateItems(self @ [[#T|T]], n_entries @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], entries @ [[..:..:Gtk:Gtk:ItemFactoryEntry#T|Gtk.Gtk.ItemFactoryEntry.T]], callback_data @ [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -266,12 +132,6 @@
   **** Warning ****
   gtk_item_factory_create_items has been deprecated since version 2.4 and should
   not be used in newly-written code.
-  Creates the menu items from the entries.
-  ifactory :      a GtkItemFactory
-  n_entries :     the length of entries
-  entries :       an array of GtkItemFactoryEntrys whose callback members must by
-                  of type GtkItemFactoryCallback1
-  callback_data : data passed to the callback functions of all entries
 
 ==== :CreateItemsAc ====
 '':CreateItemsAc(self @ [[#T|T]], n_entries @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], entries @ [[..:..:Gtk:Gtk:ItemFactoryEntry#T|Gtk.Gtk.ItemFactoryEntry.T]], callback_data @ [[..:..:Std:Address#T|Std.Address.T]], callback_type @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -279,14 +139,6 @@
   **** Warning ****
   gtk_item_factory_create_items_ac has been deprecated since version 2.4 and
   should not be used in newly-written code.
-  Creates the menu items from the entries.
-  ifactory :      a GtkItemFactory
-  n_entries :     the length of entries
-  entries :       an array of GtkItemFactoryEntrys
-  callback_data : data passed to the callback functions of all entries
-                  1 if the callback functions in entries are of type
-  callback_type : GtkItemFactoryCallback1, 2 if they are of type
-                  GtkItemFactoryCallback2
 
 ==== :DeleteEntries ====
 '':DeleteEntries(self @ [[#T|T]], n_entries @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], entries @ [[..:..:Gtk:Gtk:ItemFactoryEntry#T|Gtk.Gtk.ItemFactoryEntry.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -294,11 +146,6 @@
   **** Warning ****
   gtk_item_factory_delete_entries has been deprecated since version 2.4 and
   should not be used in newly-written code.
-  Deletes the menu items which were created from the entries by the given item
-  factory.
-  ifactory :  a GtkItemFactory
-  n_entries : the length of entries
-  entries :   an array of GtkItemFactoryEntrys
 
 ==== :DeleteEntry ====
 '':DeleteEntry(self @ [[#T|T]], entry @ [[..:..:Gtk:Gtk:ItemFactoryEntry#T|Gtk.Gtk.ItemFactoryEntry.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -306,9 +153,6 @@
   **** Warning ****
   gtk_item_factory_delete_entry has been deprecated since version 2.4 and should
   not be used in newly-written code.
-  Deletes the menu item which was created from entry by the given item factory.
-  ifactory : a GtkItemFactory
-  entry :    a GtkItemFactoryEntry
 
 ==== :DeleteItem ====
 '':DeleteItem(self @ [[#T|T]], path @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -316,9 +160,6 @@
   **** Warning ****
   gtk_item_factory_delete_item has been deprecated since version 2.4 and should
   not be used in newly-written code.
-  Deletes the menu item which was created for path by the given item factory.
-  ifactory : a GtkItemFactory
-  path :     a path
 
 ==== New ====
 ''New(container_type : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]], path : [[..:..:Std:String#T|Std.String.T]], accel_group : [[..:..:Gtk:Gtk:AccelGroup#T|Gtk.Gtk.AccelGroup.T]]) : [[# T| T]]''
@@ -326,15 +167,6 @@
   **** Warning ****
   gtk_item_factory_new has been deprecated since version 2.4 and should not be
   used in newly-written code.
-  Creates a new GtkItemFactory.
-  Beware that the returned object does not have a floating reference.
-  container_type : the kind of menu to create; can be GTK_TYPE_MENU_BAR,
-                   GTK_TYPE_MENU or GTK_TYPE_OPTION_MENU
-  path :           the factory path of the new item factory, a string of the form
-                   "<name>"
-  accel_group :    a GtkAccelGroup to which the accelerators for the menu items
-                   will be added, or NULL to create a new one
-  Returns :        a new GtkItemFactory
 
 ==== PopupDataFromWidget ====
 ''PopupDataFromWidget(widget : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Address#T|Std.Address.T]]''
@@ -342,11 +174,6 @@
   **** Warning ****
   gtk_item_factory_popup_data_from_widget has been deprecated since version 2.4
   and should not be used in newly-written code.
-  Obtains the popup_data which was passed to gtk_item_factory_popup_with_data().
-  This data is available until the menu is popped down again.
-  widget :  a widget
-  Returns : popup_data associated with the item factory from which widget was
-            created, or NULL if widget wasn't created by an item factory
 
 ==== PathFromWidget ====
 ''PathFromWidget(widget : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:String#T|Std.String.T]]''
@@ -354,14 +181,6 @@
   **** Warning ****
   gtk_item_factory_path_from_widget has been deprecated since version 2.4 and
   should not be used in newly-written code.
-  If widget has been created by an item factory, returns the full path to it.
-  (The full path of a widget is the concatenation of the factory path specified
-  in gtk_item_factory_new() with the path specified in the GtkItemFactoryEntry
-  from which the widget was created.)
-  widget :  a widget
-            the full path to widget if it has been created by an item factory,
-  Returns : NULL otherwise. This value is owned by GTK+ and must not be modified
-            or freed.
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
@@ -373,9 +192,6 @@
   **** Warning ****
   gtk_item_factory_from_widget is deprecated and should not be used in newly-
   written code. 2.4
-  Obtains the item factory from which a widget was created.
-  widget :  a widget
-  Returns : the item factory from which widget was created, or NULL
 
 ==== FromPath ====
 ''FromPath(path : [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Gtk:Gtk:ItemFactory#T|Gtk.Gtk.ItemFactory.T]]''
@@ -383,10 +199,6 @@
   **** Warning ****
   gtk_item_factory_from_path has been deprecated since version 2.4 and should not
   be used in newly-written code.
-  Finds an item factory which has been constructed using the "<name>" prefix of
-  path as the path argument for gtk_item_factory_new().
-  path :    a string starting with a factory path of the form "<name>"
-  Returns : the GtkItemFactory created for the given factory path, or NULL
 
 ==== CreateMenuEntries ====
 ''CreateMenuEntries(n_entries : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], entries : [[..:..:Gtk:Gtk:MenuEntry#T|Gtk.Gtk.MenuEntry.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -394,9 +206,6 @@
   **** Warning ****
   gtk_item_factory_create_menu_entries has been deprecated since version 2.4 and
   should not be used in newly-written code.
-  Creates the menu items from the entries.
-  n_entries : the length of entries
-  entries :   an array of GtkMenuEntrys
 
 ==== AddForeign ====
 ''AddForeign(accel_widget : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], full_path : [[..:..:Std:String#T|Std.String.T]], accel_group : [[..:..:Gtk:Gtk:AccelGroup#T|Gtk.Gtk.AccelGroup.T]], keyval : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], modifiers : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -407,14 +216,4 @@
   functions gtk_menu_item_set_accel_path() and gtk_widget_set_accel_path(); don't
   use gtk_item_factory_add_foreign() in new code, since it is likely to be
   removed in the future.
-  Installs an accelerator for accel_widget in accel_group, that causes the ::
-  activate signal to be emitted if the accelerator is activated.
-  This function can be used to make widgets participate in the accel saving/
-  restoring functionality provided by gtk_accel_map_save() and gtk_accel_map_load
-  (), even if they haven't been created by an item factory.
-  accel_widget : widget to install an accelerator on
-  full_path :     the full path for the accel_widget
-  accel_group :  the accelerator group to install the accelerator in
-  keyval :       key value of the accelerator
-  modifiers :    modifier combination of the accelerator
 

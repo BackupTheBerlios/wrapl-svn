@@ -32,11 +32,6 @@
   Gets the shadow type of the GtkViewport. See gtk_viewport_set_shadow_type().
   viewport : a GtkViewport
   Returns :  the shadow type
-  ***** Property Details *****
-  The "hadjustment" property
-    "hadjustment"              GtkAdjustment         : Read / Write / Construct
-  The GtkAdjustment that determines the values of the horizontal position for
-  this viewport.
 
 ==== :ViewWindow ====
 '':ViewWindow(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]]''
@@ -79,11 +74,6 @@
   Gets the shadow type of the GtkViewport. See gtk_viewport_set_shadow_type().
   viewport : a GtkViewport
   Returns :  the shadow type
-  ***** Property Details *****
-  The "hadjustment" property
-    "hadjustment"              GtkAdjustment         : Read / Write / Construct
-  The GtkAdjustment that determines the values of the horizontal position for
-  this viewport.
 
 ==== :GetVadjustment ====
 '':GetVadjustment(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]]''

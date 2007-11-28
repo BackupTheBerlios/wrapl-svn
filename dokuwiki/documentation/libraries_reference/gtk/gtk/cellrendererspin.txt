@@ -23,13 +23,6 @@
 
   Creates a new GtkCellRendererSpin.
   Returns : a new GtkCellRendererSpin
-  Since 2.10
-  ***** Property Details *****
-  The "adjustment" property
-    "adjustment"               GtkAdjustment         : Read / Write
-  The adjustment that holds the value of the spinbutton. This must be non-NULL
-  for the cell renderer to be editable.
-  Since 2.10
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''

@@ -32,8 +32,6 @@
   **** Warning ****
   gtk_widget_unref has been deprecated since version 2.12 and should not be used
   in newly-written code. Use g_object_unref() instead.
-  Inverse of gtk_widget_ref(). Equivalent to g_object_unref().
-  widget : a GtkWidget
 
 ==== :Unrealize ====
 '':Unrealize(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -64,7 +62,6 @@
   Triggers a tooltip query on the display where the toplevel of widget is
   located. See gtk_tooltip_trigger_tooltip_query() for more information.
   widget : a GtkWidget
-  Since 2.12
 
 ==== :TranslateCoordinates ====
 '':TranslateCoordinates(self @ [[#T|T]], dest_widget @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], src_x @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], src_y @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], dest_x @ [[..:..:Std:Object#T|Std.Object.T]], dest_y @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
@@ -317,20 +314,17 @@
   when the widget is unrealized.
   widget :  a GtkWidget
   Returns : the GdkWindow root window for the toplevel for this widget.
-  Since 2.2
   Returns the GtkWindow of the current tooltip. This can be the GtkWindow created
   by default, or the custom tooltip window set using
   gtk_widget_set_tooltip_window().
   widget :  a GtkWidget
   Returns : The GtkWindow of the current tooltip.
-  Since 2.12
   Replaces the default, usually yellow, window used for displaying tooltips with
   custom_window. GTK+ will take care of showing and hiding custom_window at the
   right moment, to behave likewise as the default tooltip window. If
   custom_window is NULL, the default tooltip window will be used.
   widget :        a GtkWidget
   custom_window : a GtkWindow, or NULL
-  Since 2.12
 
 ==== :Parent ====
 '':Parent(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
@@ -397,7 +391,6 @@
   "destroy" signal or a weak notifier.
   widget : a GtkWidget
   label :  a GtkWidget that acts as a mnemonic label for widget
-  Since 2.4
 
 ==== :CanActivateAccel ====
 '':CanActivateAccel(self @ [[#T|T]], signal_id @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
@@ -410,7 +403,6 @@
   widget :    a GtkWidget
   signal_id : the ID of a signal installed on widget
   Returns :   TRUE if the accelerator can be activated.
-  Since 2.4
 
 ==== :ChildFocus ====
 '':ChildFocus(self @ [[#T|T]], direction @ [[..:..:Gtk:Gtk:DirectionType#T|Gtk.Gtk.DirectionType.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
@@ -513,15 +505,6 @@
 
   **** Warning ****
   gtk_widget_draw is deprecated and should not be used in newly-written code.
-  In GTK+ 1.2, this function would immediately render the region area of a
-  widget, by invoking the virtual draw method of a widget. In GTK+ 2.0, the draw
-  method is gone, and instead gtk_widget_draw() simply invalidates the specified
-  region of the widget, then updates the invalid region of the widget
-  immediately. Usually you don't want to update the region immediately for
-  performance reasons, so in general gtk_widget_queue_draw_area() is a better
-  choice if you want to draw a region of a widget.
-  widget : a GtkWidget
-  area :   area to draw
 
 ==== :EnsureStyle ====
 '':EnsureStyle(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -541,7 +524,6 @@
   depending on the windowing backend and the desktop environment or window
   manager that is used.
   widget : a GtkWidget
-  Since 2.12
 
 ==== :Event ====
 '':Event(self @ [[#T|T]], event @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
@@ -588,7 +570,6 @@
   widget :  a GtkWidget
   Returns : the action that a widget is a proxy for, or NULL, if it is not
             attached to an action.
-  Since 2.10
 
 ==== :GetAncestor ====
 '':GetAncestor(self @ [[#T|T]], widget_type @ [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
@@ -648,7 +629,6 @@
               the appropriate clipboard object. If no clipboard already exists, a
   Returns :   new one will be created. Once a clipboard object has been created,
               it is persistent for all time.
-  Since 2.2
 
 ==== :GetColormap ====
 '':GetColormap(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Colormap#T|Gtk.Gdk.Colormap.T]]''
@@ -685,7 +665,6 @@
   unrealized.
   widget :  a GtkWidget
   Returns : the GdkDisplay for the toplevel for this widget.
-  Since 2.2
 
 ==== :GetEvents ====
 '':GetEvents(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
@@ -710,7 +689,6 @@
   tooltip for more information.
   widget :  a GtkWidget
   Returns : current value of has-tooltip on widget.
-  Since 2.12
 
 ==== :GetModifierStyle ====
 '':GetModifierStyle(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:RcStyle#T|Gtk.Gtk.RcStyle.T]]''
@@ -748,7 +726,6 @@
   will affect this widget.
   widget :  a GtkWidget
   Returns : the current value of the "no-show-all" property.
-  Since 2.4
 
 ==== :GetPangoContext ====
 '':GetPangoContext(self @ [[#T|T]]) : [[..:..:Gtk:Pango:Context#T|Gtk.Pango.Context.T]]''
@@ -803,7 +780,6 @@
   when the widget is unrealized.
   widget :  a GtkWidget
   Returns : the GdkWindow root window for the toplevel for this widget.
-  Since 2.2
 
 ==== :GetScreen ====
 '':GetScreen(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Screen#T|Gtk.Gdk.Screen.T]]''
@@ -816,7 +792,6 @@
   unrealized.
   widget :  a GtkWidget
   Returns : the GdkScreen for the toplevel for this widget.
-  Since 2.2
 
 ==== :GetSettings ====
 '':GetSettings(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Settings#T|Gtk.Gtk.Settings.T]]''
@@ -855,7 +830,6 @@
   widget :  a GtkWidget
   Returns : the tooltip text, or NULL. You should free the returned string with
             g_free() when done.
-  Since 2.12
 
 ==== :GetTooltipText ====
 '':GetTooltipText(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
@@ -864,7 +838,6 @@
   widget :  a GtkWidget
   Returns : the tooltip text, or NULL. You should free the returned string with
             g_free() when done.
-  Since 2.12
 
 ==== :GetTooltipWindow ====
 '':GetTooltipWindow(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Window#T|Gtk.Gtk.Window.T]]''
@@ -874,7 +847,6 @@
   gtk_widget_set_tooltip_window().
   widget :  a GtkWidget
   Returns : The GtkWindow of the current tooltip.
-  Since 2.12
 
 ==== :GetToplevel ====
 '':GetToplevel(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
@@ -896,9 +868,6 @@
      {
        [ Perform action on toplevel. ]
      }
-  widget :  a GtkWidget
-  Returns : the topmost ancestor of widget, or widget itself if there's no
-            ancestor.
 
 ==== :GetVisual ====
 '':GetVisual(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Visual#T|Gtk.Gdk.Visual.T]]''
@@ -933,7 +902,6 @@
   heirarchy with a toplevel window at the top.
   widget :  a GtkWidget
   Returns : TRUE if there is a GdkScreen associcated with the widget.
-  Since 2.2
 
 ==== :Hide ====
 '':Hide(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -970,7 +938,6 @@
   shape_mask : shape to be added, or NULL to remove an existing shape
   offset_x :   X position of shape mask with respect to window
   offset_y :   Y position of shape mask with respect to window
-  Since 2.10
 
 ==== :Intersect ====
 '':Intersect(self @ [[#T|T]], area @ [[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]], intersection @ [[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
@@ -1005,7 +972,6 @@
   widget :  a GtkWidget
   Returns : TRUE if the widget can rely on its alpha channel being drawn
             correctly.
-  Since 2.10
 
 ==== :IsFocus ====
 '':IsFocus(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
@@ -1044,7 +1010,6 @@
               TRUE if stopping keyboard navigation is fine, FALSE if the emitting
   Returns :   widget should try to handle the keyboard navigation attempt in its
               parent container(s).
-  Since 2.12
 
 ==== :ListAccelClosures ====
 '':ListAccelClosures(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -1070,7 +1035,6 @@
   widget :  a GtkWidget
   Returns : the list of mnemonic labels; free this list with g_list_free() when
             you are done with it.
-  Since 2.4
 
 ==== :Map ====
 '':Map(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -1082,6 +1046,9 @@
 ==== :MnemonicActivate ====
 '':MnemonicActivate(self @ [[#T|T]], group_cycling @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
+  widget :
+  group_cycling :
+  Returns :
 
 ==== :ModifyBase ====
 '':ModifyBase(self @ [[#T|T]], state @ [[..:..:Gtk:Gtk:StateType#T|Gtk.Gtk.StateType.T]], color @ [[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -1130,7 +1097,6 @@
               the color to use for secondary cursor (does not need to be
   secondary : allocated), or NULL to undo the effect of previous calls to of
               gtk_widget_modify_cursor().
-  Since 2.12
 
 ==== :ModifyFg ====
 '':ModifyFg(self @ [[#T|T]], state @ [[..:..:Gtk:Gtk:StateType#T|Gtk.Gtk.StateType.T]], color @ [[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -1206,8 +1172,6 @@
   **** Warning ****
   gtk_widget_queue_clear is deprecated and should not be used in newly-written
   code. Use gtk_widget_queue_draw() instead.
-  This function does the same as gtk_widget_queue_draw().
-  widget : a GtkWidget
 
 ==== :QueueClearArea ====
 '':QueueClearArea(self @ [[#T|T]], x @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], width @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], height @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -1215,16 +1179,6 @@
   **** Warning ****
   gtk_widget_queue_clear_area is deprecated and should not be used in newly-
   written code. Use gtk_widget_queue_draw_area() instead.
-  This function is no longer different from gtk_widget_queue_draw_area(), though
-  it once was. Now it just calls gtk_widget_queue_draw_area(). Originally
-  gtk_widget_queue_clear_area() would force a redraw of the background for
-  GTK_NO_WINDOW widgets, and gtk_widget_queue_draw_area() would not. Now both
-  functions ensure the background will be redrawn.
-  widget : a GtkWidget
-  x :      x coordinate of upper-left corner of rectangle to redraw
-  y :      y coordinate of upper-left corner of rectangle to redraw
-  width :  width of region to draw
-  height : height of region to draw
 
 ==== :QueueDraw ====
 '':QueueDraw(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -1271,7 +1225,6 @@
   This function works like gtk_widget_queue_resize(), except that the widget is
   not invalidated.
   widget : a GtkWidget
-  Since 2.4
 
 ==== :Realize ====
 '':Realize(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -1297,12 +1250,6 @@
   **** Warning ****
   gtk_widget_ref has been deprecated since version 2.12 and should not be used in
   newly-written code. Use g_object_ref() instead.
-  Adds a reference to a widget. This function is exactly the same as calling
-  g_object_ref(), and exists mostly for historical reasons. It can still be
-  convenient to avoid casting a widget to a GObject, it saves a small amount of
-  typing.
-  widget :  a GtkWidget
-  Returns : the widget that was referenced
 
 ==== :RegionIntersect ====
 '':RegionIntersect(self @ [[#T|T]], region @ [[..:..:Gtk:Gdk:Region#T|Gtk.Gdk.Region.T]]) : [[..:..:Gtk:Gdk:Region#T|Gtk.Gdk.Region.T]]''
@@ -1339,7 +1286,6 @@
   widget : a GtkWidget
   label :  a GtkWidget that was previously set as a mnemnic label for widget with
            gtk_widget_add_mnemonic_label().
-  Since 2.4
 
 ==== :RenderIcon ====
 '':RenderIcon(self @ [[#T|T]], stock_id @ [[..:..:Std:String#T|Std.String.T]], size @ [[..:..:Gtk:Gtk:IconSize#T|Gtk.Gtk.IconSize.T]], detail @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Gtk:Gdk:Pixbuf#T|Gtk.Gdk.Pixbuf.T]]''
@@ -1404,11 +1350,6 @@
   **** Warning ****
   gtk_widget_set is deprecated and should not be used in newly-written code. Use
   g_object_set() instead.
-  Precursor of g_object_set().
-  widget :              a GtkWidget
-  first_property_name : name of first property to set
-  ... :                 value of first property, followed by more properties,
-                        NULL-terminated
 
 ==== :SetAccelPath ====
 '':SetAccelPath(self @ [[#T|T]], accel_path @ [[..:..:Std:String#T|Std.String.T]], accel_group @ [[..:..:Gtk:Gtk:AccelGroup#T|Gtk.Gtk.AccelGroup.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -1447,8 +1388,6 @@
    gtk_widget_realize (window);
    gdk_window_set_back_pixmap (window->window, NULL, FALSE);
    gtk_widget_show (window);
-  widget :        a GtkWidget
-  app_paintable : TRUE if the application will paint on the widget
 
 ==== :SetChildVisible ====
 '':SetChildVisible(self @ [[#T|T]], is_visible @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -1550,7 +1489,6 @@
   tooltip for more information.
   widget :      a GtkWidget
   has_tooltip : whether or not widget has a tooltip.
-  Since 2.12
 
 ==== :SetName ====
 '':SetName(self @ [[#T|T]], name @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -1572,7 +1510,6 @@
   controlled visibility, see GtkUIManager.
   widget :      a GtkWidget
   no_show_all : the new value for the "no-show-all" property
-  Since 2.4
 
 ==== :SetParent ====
 '':SetParent(self @ [[#T|T]], parent @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -1688,7 +1625,6 @@
   See also the GtkWidget:tooltip-markup property and gtk_tooltip_set_markup().
   widget : a GtkWidget
   markup : the contents of the tooltip for widget, or NULL
-  Since 2.12
 
 ==== :SetTooltipText ====
 '':SetTooltipText(self @ [[#T|T]], text @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -1699,7 +1635,6 @@
   See also the GtkWidget:tooltip-text property and gtk_tooltip_set_text().
   widget : a GtkWidget
   text :   the contents of the tooltip for widget
-  Since 2.12
 
 ==== :SetTooltipWindow ====
 '':SetTooltipWindow(self @ [[#T|T]], custom_window @ [[..:..:Gtk:Gtk:Window#T|Gtk.Gtk.Window.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -1710,7 +1645,6 @@
   custom_window is NULL, the default tooltip window will be used.
   widget :        a GtkWidget
   custom_window : a GtkWindow, or NULL
-  Since 2.12
 
 ==== :SetUposition ====
 '':SetUposition(self @ [[#T|T]], x @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -1718,25 +1652,13 @@
   **** Warning ****
   gtk_widget_set_uposition is deprecated and should not be used in newly-written
   code.
-  Sets the position of a widget. The funny "u" in the name comes from the "user
-  position" hint specified by the X Window System, and exists for legacy reasons.
-  This function doesn't work if a widget is inside a container; it's only really
-  useful on GtkWindow.
-  Don't use this function to center dialogs over the main application window;
-  most window managers will do the centering on your behalf if you call
-  gtk_window_set_transient_for(), and it's really not possible to get the
-  centering to work correctly in all cases from application code. But if you
-  insist, use gtk_window_set_position() to set GTK_WIN_POS_CENTER_ON_PARENT,
-  don't do the centering manually.
-  Note that although x and y can be individually unset, the position is not
-  honoured unless both x and y are set.
-  widget : a GtkWidget
-  x :      x position; -1 to unset x; -2 to leave x unchanged
-  y :      y position; -1 to unset y; -2 to leave y unchanged
 
 ==== :SetUsize ====
 '':SetUsize(self @ [[#T|T]], width @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], height @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+  **** Warning ****
+  gtk_widget_set_usize is deprecated and should not be used in newly-written
+  code. Use gtk_widget_set_size_request() instead.
 
 ==== New ====
 ''New(type : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]], first_property_name : [[..:..:Std:String#T|Std.String.T]], ___ : [[..:..:Std:Object#T|Std.Object.T]]) : [[# T| T]]''
@@ -1762,6 +1684,10 @@
 ==== SetDefaultColormap ====
 ''SetDefaultColormap(colormap : [[..:..:Gtk:Gdk:Colormap#T|Gtk.Gdk.Colormap.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+  Sets the default colormap to use when creating widgets.
+  gtk_widget_push_colormap() is a better function to use if you only want to
+  affect a few widgets, rather than all widgets.
+  colormap : a GdkColormap
 
 ==== PushCompositeChild ====
 ''PushCompositeChild() : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -1839,7 +1765,6 @@
   n_properties : location to return the number of style properties found
   Returns :      an newly allocated array of GParamSpec*. The array must be freed
                  with g_free().
-  Since 2.2
 
 ==== ClassInstallStylePropertyParser ====
 ''ClassInstallStylePropertyParser(klass : [[..:..:Std:Object#T|Std.Object.T]], pspec : [[..:..:Std:Object#T|Std.Object.T]], parser : [[..:..:Std:Function#T|Std.Function.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -1865,5 +1790,4 @@
   property_name : the name of the style property to find
   Returns :       the GParamSpec of the style property or NULL if class has no
                   style property with that name.
-  Since 2.2
 

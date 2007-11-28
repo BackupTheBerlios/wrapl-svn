@@ -395,11 +395,6 @@
   Gets the default line width, which depends on the current units setting.
   canvas :  a GooCanvas.
   Returns : the default line width of the canvas.
-  ***** Property Details *****
-  The "anchor" property
-    "anchor"                   GtkAnchorType         : Read / Write
-  Where to place the canvas when it is smaller than the widget's allocated area.
-  Default value: GTK_ANCHOR_NORTH_WEST
 
 ==== :GetItem ====
 '':GetItem(self @ [[#T|T]], model @ [[..:..:Gtk:GooCanvas:ItemModel#T|Gtk.GooCanvas.ItemModel.T]]) : [[..:..:Gtk:GooCanvas:Item#T|Gtk.GooCanvas.Item.T]]''
@@ -412,12 +407,6 @@
      item = goo_canvas_get_item (GOO_CANVAS (canvas), my_item);
      g_signal_connect (item, "button_press_event",
                        (GtkSignalFunc) on_my_item_button_press, NULL);
-  More complex applications may want to use the "item-created" signal to hook up
-  their signal handlers.
-  canvas :  a GooCanvas.
-  model :   a GooCanvasItemModel.
-  Returns : the canvas item corresponding to the given GooCanvasItemModel, or
-            NULL if no canvas item has been created for it yet.
 
 ==== :GetItemAt ====
 '':GetItemAt(self @ [[#T|T]], x @ [[..:..:Std:Real#T|Std.Real.T]], y @ [[..:..:Std:Real#T|Std.Real.T]], is_pointer_event @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Gtk:GooCanvas:Item#T|Gtk.GooCanvas.Item.T]]''

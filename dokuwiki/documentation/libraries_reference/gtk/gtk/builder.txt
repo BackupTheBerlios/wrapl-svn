@@ -165,7 +165,6 @@
   value :   the GValue to store the result in
   error :   return location for an error, or NULL
   Returns : TRUE on success
-  Since 2.12
 
 ==== :ValueFromString ====
 '':ValueFromString(self @ [[#T|T]], pspec @ [[..:..:Std:Object#T|Std.Object.T]], string @ [[..:..:Std:String#T|Std.String.T]], value @ [[..:..:Gtk:GObject:Value#T|Gtk.GObject.Value.T]], error @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
@@ -181,7 +180,6 @@
   value :   the GValue to store the result in
   error :   return location for an error, or NULL
   Returns : TRUE on success
-  Since 2.12
 
 ==== :SetTranslationDomain ====
 '':SetTranslationDomain(self @ [[#T|T]], domain @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -189,7 +187,6 @@
   Sets the translation domain of builder. See "translation-domain".
   builder : a GtkBuilder
   domain :  the translation domain or NULL
-  Since 2.12
 
 ==== :Priv ====
 '':Priv(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -204,7 +201,6 @@
   filename : the name of the file to parse
   error :    return location for an error, or NULL
   Returns :  A positive value on success, 0 if an error occurred
-  Since 2.12
 
 ==== :AddFromString ====
 '':AddFromString(self @ [[#T|T]], buffer @ [[..:..:Std:String#T|Std.String.T]], length @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], error @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
@@ -216,7 +212,6 @@
   length :  the length of buffer (may be -1 if buffer is nul-terminated)
   error :   return location for an error, or NULL
   Returns : A positive value on success, 0 if an error occurred
-  Since 2.12
 
 ==== :ConnectSignals ====
 '':ConnectSignals(self @ [[#T|T]], user_data @ [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -230,7 +225,6 @@
   the platform.
   builder :   a GtkBuilder
   user_data : a pointer to a structure sent in as user data to all signals
-  Since 2.12
 
 ==== :ConnectSignalsFull ====
 '':ConnectSignalsFull(self @ [[#T|T]], func @ [[..:..:Std:Function#T|Std.Function.T]], user_data @ [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -241,7 +235,6 @@
   builder :   a GtkBuilder
   func :      the function used to connect the signals
   user_data : arbitrary data that will be passed to the connection function
-  Since 2.12
 
 ==== :GetObject ====
 '':GetObject(self @ [[#T|T]], name @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]''
@@ -252,7 +245,6 @@
   name :    name of object to get
   Returns : the object named name or NULL if it could not be found in the object
             tree.
-  Since 2.12
 
 ==== :GetObjects ====
 '':GetObjects(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -262,7 +254,6 @@
   builder : a GtkBuilder
   Returns : a newly-allocated GSList containing all the objects constructed by
             the GtkBuilder instance. It should be freed by g_slist_free()
-  Since 2.12
 
 ==== :GetTranslationDomain ====
 '':GetTranslationDomain(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
@@ -271,7 +262,6 @@
   builder : a GtkBuilder
   Returns : the translation domain. This string is owned by the builder object
             and must not be modified or freed.
-  Since 2.12
 
 ==== :GetTypeFromName ====
 '':GetTypeFromName(self @ [[#T|T]], type_name @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
@@ -282,14 +272,12 @@
   type_name : type name to lookup
   Returns :   the GType found for type_name or G_TYPE_INVALID if no type was
               found
-  Since 2.12
 
 ==== New ====
 ''New() : [[# T| T]]''
 
   Creates a new builder object.
   Returns : a new GtkBuilder object
-  Since 2.12
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
@@ -298,12 +286,4 @@
 ==== ErrorQuark ====
 ''ErrorQuark() : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  ***** Property Details *****
-  The "translation-domain" property
-    "translation-domain"       gchararray            : Read / Write
-  The translation domain used when translating property values that have been
-  marked as translatable in interface descriptions. If the translation domain is
-  NULL, GtkBuilder uses gettext(), otherwise dgettext().
-  Default value: NULL
-  Since 2.12
 

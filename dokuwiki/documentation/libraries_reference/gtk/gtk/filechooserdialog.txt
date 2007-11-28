@@ -120,7 +120,6 @@
   ... :               response ID for the first button, then additional (button,
                       id) pairs, ending with NULL
   Returns :           a new GtkFileChooserDialog
-  Since 2.4
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
@@ -140,7 +139,4 @@
   ... :               response ID for the first button, then additional (button,
                       id) pairs, ending with NULL
   Returns :           a new GtkFileChooserDialog
-  Since 2.4
-  ***** See Also *****
-  GtkFileChooser, GtkDialog
 

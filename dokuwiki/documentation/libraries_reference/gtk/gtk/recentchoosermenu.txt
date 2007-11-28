@@ -33,16 +33,6 @@
   item's label. Only the first the items get a number to avoid clashes.
   menu :         a GtkRecentChooserMenu
   show_numbers : whether to show numbers
-  Since 2.10
-  ***** Property Details *****
-  The "show-numbers" property
-    "show-numbers"             gboolean              : Read / Write
-  Whether the first ten items in the menu should be prepended by a number acting
-  as a unique mnemonic.
-  Default value: FALSE
-  Since 2.10
-  ***** See Also *****
-  GtkRecentChooser
 
 ==== :GetShowNumbers ====
 '':GetShowNumbers(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
@@ -50,7 +40,6 @@
   Returns the value set by gtk_recent_chooser_menu_set_show_numbers().
   menu :    a GtkRecentChooserMenu
   Returns : TRUE if numbers should be shown.
-  Since 2.10
 
 ==== :Priv ====
 '':Priv(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -68,7 +57,6 @@
   gtk_recent_chooser_menu_new_for_manager() function to know how to create a
   GtkRecentChooserMenu widget bound to another GtkRecentManager object.
   Returns : a new GtkRecentChooserMenu
-  Since 2.10
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
@@ -84,5 +72,4 @@
   common GtkRecentManager object among multiple GtkRecentChooser widgets.
   manager : a GtkRecentManager
   Returns : a new GtkRecentChooserMenu, bound to manager.
-  Since 2.10
 

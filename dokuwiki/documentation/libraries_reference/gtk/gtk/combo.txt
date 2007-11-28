@@ -70,14 +70,6 @@
   **** Warning ****
   gtk_combo_set_value_in_list has been deprecated since version 2.4 and should
   not be used in newly-written code. Use GtkComboBox instead.
-  Specifies whether the value entered in the text entry field must match one of
-  the values in the list. If this is set then the user will not be able to
-  perform any other action until a valid value has been entered.
-  If an empty field is acceptable, the ok_if_empty parameter should be TRUE.
-  combo :       a GtkCombo.
-  val :         TRUE if the value entered must match one of the values in the
-                list.
-  ok_if_empty : TRUE if an empty value is considered valid.
 
 ==== :SetUseArrowsAlways ====
 '':SetUseArrowsAlways(self @ [[#T|T]], val @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -85,9 +77,6 @@
   **** Warning ****
   gtk_combo_set_use_arrows_always has been deprecated since version 2.4 and
   should not be used in newly-written code. Use GtkComboBox instead.
-  Obsolete function, does nothing.
-  combo : a GtkCombo.
-  val :   unused
 
 ==== :Entry ====
 '':Entry(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
@@ -111,14 +100,6 @@
   **** Warning ****
   gtk_combo_set_value_in_list has been deprecated since version 2.4 and should
   not be used in newly-written code. Use GtkComboBox instead.
-  Specifies whether the value entered in the text entry field must match one of
-  the values in the list. If this is set then the user will not be able to
-  perform any other action until a valid value has been entered.
-  If an empty field is acceptable, the ok_if_empty parameter should be TRUE.
-  combo :       a GtkCombo.
-  val :         TRUE if the value entered must match one of the values in the
-                list.
-  ok_if_empty : TRUE if an empty value is considered valid.
 
 ==== :EntryChangeId ====
 '':EntryChangeId(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
@@ -134,14 +115,6 @@
   **** Warning ****
   gtk_combo_set_value_in_list has been deprecated since version 2.4 and should
   not be used in newly-written code. Use GtkComboBox instead.
-  Specifies whether the value entered in the text entry field must match one of
-  the values in the list. If this is set then the user will not be able to
-  perform any other action until a valid value has been entered.
-  If an empty field is acceptable, the ok_if_empty parameter should be TRUE.
-  combo :       a GtkCombo.
-  val :         TRUE if the value entered must match one of the values in the
-                list.
-  ok_if_empty : TRUE if an empty value is considered valid.
 
 ==== :OkIfEmpty ====
 '':OkIfEmpty(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
@@ -153,13 +126,6 @@
   **** Warning ****
   gtk_combo_set_case_sensitive has been deprecated since version 2.4 and should
   not be used in newly-written code. Use GtkComboBox instead.
-  Specifies whether the text entered into the GtkEntry field and the text in the
-  list items is case sensitive.
-  This may be useful, for example, when you have called
-  gtk_combo_set_value_in_list() to limit the values entered, but you are not
-  worried about differences in case.
-  combo : a GtkCombo.
-  val :   TRUE if the text in the list items is case sensitive.
 
 ==== :UseArrows ====
 '':UseArrows(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
@@ -167,11 +133,6 @@
   **** Warning ****
   gtk_combo_set_use_arrows has been deprecated since version 2.4 and should not
   be used in newly-written code. Use GtkComboBox instead.
-  Specifies if the arrow (cursor) keys can be used to step through the items in
-  the list. This is on by default.
-  combo : a GtkCombo.
-  val :   TRUE if the arrow keys can be used to step through the items in the
-          list.
 
 ==== :UseArrowsAlways ====
 '':UseArrowsAlways(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
@@ -179,9 +140,6 @@
   **** Warning ****
   gtk_combo_set_use_arrows_always has been deprecated since version 2.4 and
   should not be used in newly-written code. Use GtkComboBox instead.
-  Obsolete function, does nothing.
-  combo : a GtkCombo.
-  val :   unused
 
 ==== :CurrentButton ====
 '':CurrentButton(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
@@ -197,15 +155,6 @@
   **** Warning ****
   gtk_combo_disable_activate has been deprecated since version 2.4 and should not
   be used in newly-written code. Use GtkComboBox instead.
-  Stops the GtkCombo widget from showing the popup list when the GtkEntry emits
-  the "activate" signal, i.e. when the Return key is pressed. This may be useful
-  if, for example, you want the Return key to close a dialog instead.
-  combo : a GtkCombo.
-  ***** Property Details *****
-  The "allow-empty" property
-    "allow-empty"              gboolean              : Read / Write
-  Whether an empty value may be entered in this field.
-  Default value: TRUE
 
 ==== :SetCaseSensitive ====
 '':SetCaseSensitive(self @ [[#T|T]], val @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -213,13 +162,6 @@
   **** Warning ****
   gtk_combo_set_case_sensitive has been deprecated since version 2.4 and should
   not be used in newly-written code. Use GtkComboBox instead.
-  Specifies whether the text entered into the GtkEntry field and the text in the
-  list items is case sensitive.
-  This may be useful, for example, when you have called
-  gtk_combo_set_value_in_list() to limit the values entered, but you are not
-  worried about differences in case.
-  combo : a GtkCombo.
-  val :   TRUE if the text in the list items is case sensitive.
 
 ==== :SetItemString ====
 '':SetItemString(self @ [[#T|T]], item @ [[..:..:Gtk:Gtk:Item#T|Gtk.Gtk.Item.T]], item_value @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -227,11 +169,6 @@
   **** Warning ****
   gtk_combo_set_item_string has been deprecated since version 2.4 and should not
   be used in newly-written code. Use GtkComboBox instead.
-  Sets the string to place in the GtkEntry field when a particular list item is
-  selected. This is needed if the list item is not a simple label.
-  combo :      a GtkCombo.
-  item :       a GtkItem.
-  item_value : the string to place in the GtkEntry when item is selected.
 
 ==== :SetPopdownStrings ====
 '':SetPopdownStrings(self @ [[#T|T]], strings @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -239,10 +176,6 @@
   **** Warning ****
   gtk_combo_set_popdown_strings has been deprecated since version 2.4 and should
   not be used in newly-written code. Use GtkComboBox instead.
-  Convenience function to set all of the items in the popup list. (See the
-  example above.)
-  combo :   a GtkCombo.
-  strings : a list of strings, or NULL to clear the popup list
 
 ==== :SetUseArrows ====
 '':SetUseArrows(self @ [[#T|T]], val @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -250,11 +183,6 @@
   **** Warning ****
   gtk_combo_set_use_arrows has been deprecated since version 2.4 and should not
   be used in newly-written code. Use GtkComboBox instead.
-  Specifies if the arrow (cursor) keys can be used to step through the items in
-  the list. This is on by default.
-  combo : a GtkCombo.
-  val :   TRUE if the arrow keys can be used to step through the items in the
-          list.
 
 ==== New ====
 ''New() : [[# T| T]]''
@@ -262,8 +190,6 @@
   **** Warning ****
   gtk_combo_new has been deprecated since version 2.4 and should not be used in
   newly-written code. Use GtkComboBox instead.
-  Creates a new GtkCombo.
-  Returns : a new GtkCombo.
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''

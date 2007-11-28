@@ -28,6 +28,16 @@
 ==== New ====
 ''New(parent : [[..:..:Gtk:GooCanvas:ItemModel#T|Gtk.GooCanvas.ItemModel.T]], path_data : [[..:..:Std:String#T|Std.String.T]], ___ : [[..:..:Std:Object#T|Std.Object.T]]) : [[# T| T]]''
 
+  Creates a new path model.
+              the parent model, or NULL. If a parent is specified, it will assume
+  parent :    ownership of the item, and the item will automatically be freed
+              when it is removed from the parent. Otherwise call g_object_unref()
+              to free it.
+  path_data : the sequence of path commands, specified as a string using the same
+              syntax as in the Scalable_Vector_Graphics_(SVG) path element.
+  ... :       optional pairs of property names and values, and a terminating
+              NULL.
+  Returns :   a new path model.
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''

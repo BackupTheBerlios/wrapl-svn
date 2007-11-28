@@ -82,25 +82,6 @@
   radio_button : a GtkRadioButton.
   Returns :      a linked list containing all the radio buttons in the same group
                  as radio_button.
-  ***** Property Details *****
-  The "group" property
-    "group"                    GtkRadioButton        : Write
-  Sets a new group for a radio button.
-  ***** Signal Details *****
-  The "group-changed" signal
-  void                user_function                      (GtkRadioButton *style,
-                                                          gpointer
-  user_data)      : Run First
-  Emitted when the group of radio buttons that a radio button belongs to changes.
-  This is emitted when a radio button switches from being alone to being part of
-  a group of 2 or more buttons, or vice-versa, and when a button is moved from
-  one group of 2 or more buttons to a different one, but not when the composition
-  of the group that a button belongs to changes.
-  style :     the object which received the signal
-  user_data : user data set when the signal handler was connected.
-  Since 2.4
-  ***** See Also *****
-  GtkOptionMenu Another way of offering the user a single choice from many.
 
 ==== :Group ====
 '':Group(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -115,25 +96,6 @@
   radio_button : a GtkRadioButton.
   Returns :      a linked list containing all the radio buttons in the same group
                  as radio_button.
-  ***** Property Details *****
-  The "group" property
-    "group"                    GtkRadioButton        : Write
-  Sets a new group for a radio button.
-  ***** Signal Details *****
-  The "group-changed" signal
-  void                user_function                      (GtkRadioButton *style,
-                                                          gpointer
-  user_data)      : Run First
-  Emitted when the group of radio buttons that a radio button belongs to changes.
-  This is emitted when a radio button switches from being alone to being part of
-  a group of 2 or more buttons, or vice-versa, and when a button is moved from
-  one group of 2 or more buttons to a different one, but not when the composition
-  of the group that a button belongs to changes.
-  style :     the object which received the signal
-  user_data : user data set when the signal handler was connected.
-  Since 2.4
-  ***** See Also *****
-  GtkOptionMenu Another way of offering the user a single choice from many.
 
 ==== New ====
 ''New(group : [[..:..:Std:Object#T|Std.Object.T]]) : [[# T| T]]''

@@ -75,7 +75,6 @@
   Sets the desired width in characters of label to n_chars.
   label :   a GtkLabel
   n_chars : the new desired width, in characters.
-  Since 2.6
 
 ==== :SetUseUnderline ====
 '':SetUseUnderline(self @ [[#T|T]], setting @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -160,11 +159,9 @@
   is not enough space to render the entire string.
   label : a GtkLabel
   mode :  a PangoEllipsizeMode
-  Since 2.6
   Returns the ellipsizing position of the label. See gtk_label_set_ellipsize().
   label :   a GtkLabel
   Returns : PangoEllipsizeMode
-  Since 2.6
 
 ==== :SingleLineMode ====
 '':SingleLineMode(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
@@ -172,11 +169,9 @@
   Returns whether the label is in single line mode.
   label :   a GtkLabel
   Returns : TRUE when the label is in single line mode.
-  Since 2.6
   Sets whether the label is in single line mode.
   label :            a GtkLabel
   single_line_mode : TRUE if the label should be in single line mode
-  Since 2.6
 
 ==== :HaveTransform ====
 '':HaveTransform(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
@@ -194,11 +189,9 @@
   boundaries.
   label :     a GtkLabel
   wrap_mode : the line wrapping mode
-  Since 2.10
   Returns line wrap mode used by the label. See gtk_label_set_line_wrap_mode().
   label :   a GtkLabel
   Returns : TRUE if the lines of the label are automatically wrapped.
-  Since 2.10
 
 ==== :PatternSet ====
 '':PatternSet(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
@@ -221,8 +214,6 @@
   This will also clear any previously set mnemonic accelerators.
   label : a GtkLabel
   str :   The text you want to set
-  label : a GtkLabel
-  str :   a markup string (see Pango markup format)
   Fetches the text from a label widget, as displayed on the screen. This does not
   include any embedded underlines indicating mnemonics or Pango markup. (See
   gtk_label_get_label())
@@ -283,11 +274,6 @@
 
   **** Warning ****
   gtk_label_get is deprecated and should not be used in newly-written code.
-  Gets the current string of text within the GtkLabel and writes it to the given
-  str argument. It does not make a copy of this string so you must not write to
-  it.
-  label : The GtkLabel widget you want to get the text from.
-  str :   The reference to the pointer you want to point to the text.
 
 ==== :GetAngle ====
 '':GetAngle(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
@@ -295,7 +281,6 @@
   Gets the angle of rotation for the label. See gtk_label_set_angle().
   label :   a GtkLabel
   Returns : the angle of rotation for the label
-  Since 2.6
 
 ==== :GetAttributes ====
 '':GetAttributes(self @ [[#T|T]]) : [[..:..:Gtk:Pango:AttrList#T|Gtk.Pango.AttrList.T]]''
@@ -314,7 +299,6 @@
   Returns the ellipsizing position of the label. See gtk_label_set_ellipsize().
   label :   a GtkLabel
   Returns : PangoEllipsizeMode
-  Since 2.6
 
 ==== :GetJustify ====
 '':GetJustify(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Justification#T|Gtk.Gtk.Justification.T]]''
@@ -370,7 +354,6 @@
   Returns line wrap mode used by the label. See gtk_label_set_line_wrap_mode().
   label :   a GtkLabel
   Returns : TRUE if the lines of the label are automatically wrapped.
-  Since 2.10
 
 ==== :GetMaxWidthChars ====
 '':GetMaxWidthChars(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
@@ -379,7 +362,6 @@
   gtk_label_set_width_chars().
   label :   a GtkLabel
   Returns : the maximum width of the label in characters.
-  Since 2.6
 
 ==== :GetMnemonicKeyval ====
 '':GetMnemonicKeyval(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
@@ -422,7 +404,6 @@
   Returns whether the label is in single line mode.
   label :   a GtkLabel
   Returns : TRUE when the label is in single line mode.
-  Since 2.6
 
 ==== :GetText ====
 '':GetText(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
@@ -458,7 +439,6 @@
   gtk_label_set_width_chars().
   label :   a GtkLabel
   Returns : the width of the label in characters.
-  Since 2.6
 
 ==== :ParseUline ====
 '':ParseUline(self @ [[#T|T]], string @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
@@ -466,14 +446,6 @@
   **** Warning ****
   gtk_label_parse_uline is deprecated and should not be used in newly-written
   code.
-  Parses the given string for underscores and converts the next character to an
-  underlined character. The last character that was underlined will have its
-  lower-cased accelerator keyval returned (i.e. "_File" would return the keyval
-  for "f". This is probably only used within the GTK+ library itself for menu
-  items and such.
-  label :   The GtkLabel you want to affect.
-  string :  The string you want to parse for underlines.
-  Returns : The lowercase keyval of the last character underlined.
 
 ==== :SelectRegion ====
 '':SelectRegion(self @ [[#T|T]], start_offset @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], end_offset @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -495,17 +467,6 @@
   label : a GtkLabel
   angle : the angle that the baseline of the label makes with the horizontal, in
           degrees, measured counterclockwise
-  Since 2.6
-  ***** Property Details *****
-  The "angle" property
-    "angle"                    gdouble               : Read / Write
-  The angle that the baseline of the label makes with the horizontal, in degrees,
-  measured counterclockwise. An angle of 90 reads from from bottom to top, an
-  angle of 270, from top to bottom. Ignored if the label is selectable, wrapped,
-  or ellipsized.
-  Allowed values: [0,360]
-  Default value: 0
-  Since 2.6
 
 ==== :SetAttributes ====
 '':SetAttributes(self @ [[#T|T]], attrs @ [[..:..:Gtk:Pango:AttrList#T|Gtk.Pango.AttrList.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -515,8 +476,6 @@
   or "use-markup" properties are set to TRUE.
   label : a GtkLabel
   attrs : a PangoAttrList
-  label : a GtkLabel
-  str :   a markup string (see Pango markup format)
 
 ==== :SetEllipsize ====
 '':SetEllipsize(self @ [[#T|T]], mode @ [[..:..:Gtk:Pango:EllipsizeMode#T|Gtk.Pango.EllipsizeMode.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -525,7 +484,6 @@
   is not enough space to render the entire string.
   label : a GtkLabel
   mode :  a PangoEllipsizeMode
-  Since 2.6
 
 ==== :SetJustify ====
 '':SetJustify(self @ [[#T|T]], jtype @ [[..:..:Gtk:Gtk:Justification#T|Gtk.Gtk.Justification.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -568,7 +526,6 @@
   boundaries.
   label :     a GtkLabel
   wrap_mode : the line wrapping mode
-  Since 2.10
 
 ==== :SetMarkup ====
 '':SetMarkup(self @ [[#T|T]], str @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -582,18 +539,6 @@
   markup = g_markup_printf_escaped ("<span style=\"italic\">%s</span>", str);
   gtk_label_set_markup (GTK_LABEL (label), markup);
   g_free (markup);
-  label : a GtkLabel
-  str :   a markup string (see Pango markup format)
-  ===============================================================================
-  gtk_label_set_markup_with_mnemonic ()
-  void                gtk_label_set_markup_with_mnemonic  (GtkLabel *label,
-                                                           const gchar *str);
-  Parses str which is marked up with the Pango text markup language, setting the
-  label's text and attribute list based on the parse results. If characters in
-  str are preceded by an underscore, they are underlined indicating that they
-  represent a keyboard accelerator called a mnemonic.
-  The mnemonic key can be used to activate another widget, chosen automatically,
-  or explicitly using gtk_label_set_mnemonic_widget().
   label : a GtkLabel
   str :   a markup string (see Pango markup format)
 
@@ -615,7 +560,6 @@
   Sets the desired maximum width in characters of label to n_chars.
   label :   a GtkLabel
   n_chars : the new desired maximum width, in characters.
-  Since 2.6
 
 ==== :SetMnemonicWidget ====
 '':SetMnemonicWidget(self @ [[#T|T]], widget @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -657,7 +601,6 @@
   Sets whether the label is in single line mode.
   label :            a GtkLabel
   single_line_mode : TRUE if the label should be in single line mode
-  Since 2.6
 
 ==== :SetText ====
 '':SetText(self @ [[#T|T]], str @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -667,8 +610,6 @@
   This will also clear any previously set mnemonic accelerators.
   label : a GtkLabel
   str :   The text you want to set
-  label : a GtkLabel
-  str :   a markup string (see Pango markup format)
 
 ==== :SetTextWithMnemonic ====
 '':SetTextWithMnemonic(self @ [[#T|T]], str @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -688,8 +629,6 @@
   empty label widget.
   str :     The text of the label
   Returns : the new GtkLabel
-  label : a GtkLabel
-  str :   a markup string (see Pango markup format)
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''

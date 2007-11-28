@@ -43,7 +43,6 @@
   You can track the fullscreen state via the "window_state_event" signal on
   GtkWidget.
   window : a GtkWindow
-  Since 2.2
 
 ==== :Stick ====
 '':Stick(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -78,7 +77,6 @@
   attention to the window. This function sets this hint.
   window :  a GtkWindow
   setting : TRUE to mark this window as urgent
-  Since 2.8
 
 ==== :SetTypeHint ====
 '':SetTypeHint(self @ [[#T|T]], hint @ [[..:..:Gtk:Gdk:WindowTypeHint#T|Gtk.Gdk.WindowTypeHint.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -198,7 +196,6 @@
   window does not have an explicit window group.
   window :  a GtkWindow, or NULL
   Returns : the GtkWindowGroup for a window or the default group
-  Since 2.10
 
 ==== :ConfigureRequestCount ====
 '':ConfigureRequestCount(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
@@ -397,7 +394,6 @@
   gtk_window_has_toplevel_focus()
   window :  a GtkWindow
   Returns : TRUE if the window part of the current active window.
-  Since 2.4
 
 ==== :HasToplevelFocus ====
 '':HasToplevelFocus(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
@@ -407,7 +403,6 @@
   like GtkPlug, the results will differ.
   window :  a GtkWindow
   Returns : TRUE if the input focus is within this GtkWindow
-  Since 2.4
 
 ==== :FrameLeft ====
 '':FrameLeft(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
@@ -447,11 +442,9 @@
   mapped, it will be unmapped, and then remapped on the new screen.
   window : a GtkWindow.
   screen : a GdkScreen.
-  Since 2.2
   Returns the GdkScreen associated with window.
   window :  a GtkWindow.
   Returns : a GdkScreen.
-  Since 2.2
   Asks to place window in the fullscreen state. Note that you shouldn't assume
   the window is definitely full screen afterward, because other entities (e.g.
   the user or window_manager) could unfullscreen it again, and not all window
@@ -460,7 +453,6 @@
   You can track the fullscreen state via the "window_state_event" signal on
   GtkWidget.
   window : a GtkWindow
-  Since 2.2
   Asks to toggle off the fullscreen state for window. Note that you shouldn't
   assume the window is definitely not full screen afterward, because other
   entities (e.g. the user or window_manager) could fullscreen it again, and not
@@ -470,7 +462,6 @@
   You can track the fullscreen state via the "window_state_event" signal on
   GtkWidget.
   window : a GtkWindow
-  Since 2.2
 
 ==== :ActivateDefault ====
 '':ActivateDefault(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
@@ -571,7 +562,6 @@
   You can track the fullscreen state via the "window_state_event" signal on
   GtkWidget.
   window : a GtkWindow
-  Since 2.2
 
 ==== :GetAcceptFocus ====
 '':GetAcceptFocus(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
@@ -579,7 +569,6 @@
   Gets the value set by gtk_window_set_accept_focus().
   window :  a GtkWindow
   Returns : TRUE if window should receive the input focus
-  Since 2.4
 
 ==== :GetDecorated ====
 '':GetDecorated(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
@@ -606,7 +595,6 @@
   gtk_window_set_deletable().
   window :  a GtkWindow
   Returns : TRUE if the window has been set to have a close button
-  Since 2.10
 
 ==== :GetDestroyWithParent ====
 '':GetDestroyWithParent(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
@@ -632,7 +620,6 @@
   Gets the value set by gtk_window_set_focus_on_map().
   window :  a GtkWindow
   Returns : TRUE if window should receive the input focus when mapped.
-  Since 2.6
 
 ==== :GetFrameDimensions ====
 '':GetFrameDimensions(self @ [[#T|T]], left @ [[..:..:Std:Object#T|Std.Object.T]], top @ [[..:..:Std:Object#T|Std.Object.T]], right @ [[..:..:Std:Object#T|Std.Object.T]], bottom @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -664,7 +651,6 @@
   window does not have an explicit window group.
   window :  a GtkWindow, or NULL
   Returns : the GtkWindowGroup for a window or the default group
-  Since 2.10
 
 ==== :GetHasFrame ====
 '':GetHasFrame(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
@@ -698,7 +684,6 @@
   gtk_window_set_icon_name().
   window :  a GtkWindow
   Returns : the icon name or NULL if the window has no themed icon
-  Since 2.6
 
 ==== :GetMnemonicModifier ====
 '':GetMnemonicModifier(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
@@ -722,7 +707,6 @@
   Fetches the requested opacity for this window. See gtk_window_set_opacity().
   window :  a GtkWindow
   Returns : the requested opacity for this window.
-  Since 2.12
 
 ==== :GetPosition ====
 '':GetPosition(self @ [[#T|T]], root_x @ [[..:..:Std:Object#T|Std.Object.T]], root_y @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -782,7 +766,6 @@
   Returns the GdkScreen associated with window.
   window :  a GtkWindow.
   Returns : a GdkScreen.
-  Since 2.2
 
 ==== :GetSize ====
 '':GetSize(self @ [[#T|T]], width @ [[..:..:Std:Object#T|Std.Object.T]], height @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -828,7 +811,6 @@
   Gets the value set by gtk_window_set_skip_pager_hint().
   window :  a GtkWindow
   Returns : TRUE if window shouldn't be in pager
-  Since 2.2
 
 ==== :GetSkipTaskbarHint ====
 '':GetSkipTaskbarHint(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
@@ -836,7 +818,6 @@
   Gets the value set by gtk_window_set_skip_taskbar_hint()
   window :  a GtkWindow
   Returns : TRUE if window shouldn't be in taskbar
-  Since 2.2
 
 ==== :GetTitle ====
 '':GetTitle(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
@@ -869,7 +850,6 @@
   Gets the value set by gtk_window_set_urgency_hint()
   window :  a GtkWindow
   Returns : TRUE if window is urgent
-  Since 2.8
 
 ==== :HasToplevelFocus ====
 '':HasToplevelFocus(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
@@ -879,7 +859,6 @@
   like GtkPlug, the results will differ.
   window :  a GtkWindow
   Returns : TRUE if the input focus is within this GtkWindow
-  Since 2.4
 
 ==== :Iconify ====
 '':Iconify(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -905,7 +884,6 @@
   gtk_window_has_toplevel_focus()
   window :  a GtkWindow
   Returns : TRUE if the window part of the current active window.
-  Since 2.4
 
 ==== :Maximize ====
 '':Maximize(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -1022,9 +1000,6 @@
   
     return 0;
   }
-  window :   a GtkWindow
-  geometry : geometry string
-  Returns :  TRUE if string was parsed successfully
 
 ==== :Present ====
 '':Present(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -1051,7 +1026,6 @@
   window :    a GtkWindow
   timestamp : the timestamp of the user interaction (typically a button or key
               press event) which triggered this call
-  Since 2.8
 
 ==== :PropagateKeyEvent ====
 '':PropagateKeyEvent(self @ [[#T|T]], event @ [[..:..:Gtk:Gdk:EventKey#T|Gtk.Gdk.EventKey.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
@@ -1112,7 +1086,6 @@
   focus. This function sets this hint.
   window :  a GtkWindow
   setting : TRUE to let this window receive input focus
-  Since 2.4
 
 ==== :SetDecorated ====
 '':SetDecorated(self @ [[#T|T]], setting @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -1184,7 +1157,6 @@
   involved.
   window :  a GtkWindow
   setting : TRUE to decorate the window as deletable
-  Since 2.10
 
 ==== :SetDestroyWithParent ====
 '':SetDestroyWithParent(self @ [[#T|T]], setting @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -1213,7 +1185,6 @@
   focus when the window is mapped. This function sets this hint.
   window :  a GtkWindow
   setting : TRUE to let this window receive input focus on map
-  Since 2.6
 
 ==== :SetFrameDimensions ====
 '':SetFrameDimensions(self @ [[#T|T]], left @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], top @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], right @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], bottom @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -1299,7 +1270,6 @@
   filename : location of icon file
   err :      location to store error, or NULL.
   Returns :  TRUE if setting the icon succeeded.
-  Since 2.2
 
 ==== :SetIconList ====
 '':SetIconList(self @ [[#T|T]], list @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -1335,7 +1305,6 @@
   mentioned in the ICCCM.
   window : a GtkWindow
   name :   the name of the themed icon
-  Since 2.6
 
 ==== :SetKeepAbove ====
 '':SetKeepAbove(self @ [[#T|T]], setting @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -1353,7 +1322,6 @@
   applications e.g. for drawing attention to their dialogs.
   window :  a GtkWindow
   setting : whether to keep window above other windows
-  Since 2.4
 
 ==== :SetKeepBelow ====
 '':SetKeepBelow(self @ [[#T|T]], setting @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -1371,7 +1339,6 @@
   applications e.g. for drawing attention to their dialogs.
   window :  a GtkWindow
   setting : whether to keep window below other windows
-  Since 2.4
 
 ==== :SetMnemonicModifier ====
 '':SetMnemonicModifier(self @ [[#T|T]], modifier @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -1403,12 +1370,6 @@
   to flicker once on Windows.
   window :  a GtkWindow
   opacity : desired opacity, between 0 and 1
-  Since 2.12
-  ***** Property Details *****
-  The "accept-focus" property
-    "accept-focus"             gboolean              : Read / Write
-  TRUE if the window should receive the input focus.
-  Default value: TRUE
 
 ==== :SetPolicy ====
 '':SetPolicy(self @ [[#T|T]], allow_shrink @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], allow_grow @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], auto_shrink @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -1416,51 +1377,6 @@
   **** Warning ****
   gtk_window_set_policy is deprecated and should not be used in newly-written
   code. Use gtk_window_set_resizable() instead.
-  Changes how a toplevel window deals with its size request and user resize
-  attempts. There are really only two reasonable ways to call this function:
-     1. gtk_window_set_policy (GTK_WINDOW (window), FALSE, TRUE, FALSE) means
-        that the window is user-resizable.
-     2. gtk_window_set_policy (GTK_WINDOW (window), FALSE, FALSE, TRUE) means
-        that the window's size is program-controlled, and should simply match the
-        current size request of the window's children.
-  The first policy is the default, that is, by default windows are designed to be
-  resized by users.
-  The basic ugly truth of this function is that it should be simply: void
-  gtk_window_set_resizable (GtkWindow* window, gboolean setting); ...which is why
-  GTK+ 2.0 introduces gtk_window_set_resizable(), which you should use instead of
-  gtk_window_set_policy().
-  If set to TRUE, the allow_grow parameter allows the user to expand the window
-  beyond the size request of its child widgets. If allow_grow is TRUE, be sure to
-  check that your child widgets work properly as the window is resized.
-  A toplevel window will always change size to ensure its child widgets receive
-  their requested size. This means that if you add child widgets, the toplevel
-  window will expand to contain them. However, normally the toplevel will not
-  shrink to fit the size request of its children if it's too large; the
-  auto_shrink parameter causes the window to shrink when child widgets have too
-  much space. auto_shrink is normally used with the second of the two window
-  policies mentioned above. That is, set auto_shrink to TRUE if you want the
-  window to have a fixed, always-optimal size determined by your program.
-  Note that auto_shrink doesn't do anything if allow_shrink and allow_grow are
-  both set to FALSE.
-  Neither of the two suggested window policies set the allow_shrink parameter to
-  TRUE. If allow_shrink is TRUE, the user can shrink the window so that its
-  children do not receive their full size request; this is basically a bad thing,
-  because most widgets will look wrong if this happens. Furthermore GTK+ has a
-  tendency to re-expand the window if size is recalculated for any reason. The
-  upshot is that allow_shrink should always be set to FALSE.
-  Sometimes when you think you want to use allow_shrink, the real problem is that
-  some specific child widget is requesting too much space, so the user can't
-  shrink the window sufficiently. Perhaps you are calling
-  gtk_widget_set_size_request() on a child widget, and forcing its size request
-  to be too large. Instead of setting the child's usize, consider using
-  gtk_window_set_default_size() so that the child gets a larger allocation than
-  it requests.
-  window :       the window
-  allow_shrink : whether the user can shrink the window below its size request
-  allow_grow :   whether the user can grow the window larger than its size
-                 request
-  auto_shrink :  whether the window automatically snaps back to its size request
-                 if it's larger
 
 ==== :SetPosition ====
 '':SetPosition(self @ [[#T|T]], position @ [[..:..:Gtk:Gtk:WindowPosition#T|Gtk.Gtk.WindowPosition.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -1510,7 +1426,6 @@
   mapped, it will be unmapped, and then remapped on the new screen.
   window : a GtkWindow.
   screen : a GdkScreen.
-  Since 2.2
 
 ==== :SetSkipPagerHint ====
 '':SetSkipPagerHint(self @ [[#T|T]], setting @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -1521,7 +1436,6 @@
   representation of the windows on the screen.)
   window :  a GtkWindow
   setting : TRUE to keep this window from appearing in the pager
-  Since 2.2
 
 ==== :SetSkipTaskbarHint ====
 '':SetSkipTaskbarHint(self @ [[#T|T]], setting @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -1530,7 +1444,6 @@
   in the task bar. This function sets this hint.
   window :  a GtkWindow
   setting : TRUE to keep this window from appearing in the task bar
-  Since 2.2
 
 ==== :SetStartupId ====
 '':SetStartupId(self @ [[#T|T]], startup_id @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -1545,7 +1458,6 @@
   This function is only useful on X11, not with other GTK+ targets.
   window :     a GtkWindow
   startup_id : a string with startup-notification identifier
-  Since 2.12
 
 ==== New ====
 ''New(type : [[..:..:Gtk:Gtk:WindowType#T|Gtk.Gtk.WindowType.T]]) : [[# T| T]]''
@@ -1569,7 +1481,6 @@
   gtk_window_set_icon_list() called on them from a named themed icon, see
   gtk_window_set_icon_name().
   name : the name of the themed icon
-  Since 2.6
 
 ==== SetDefaultIconList ====
 ''SetDefaultIconList(list : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -1590,7 +1501,6 @@
   filename : location of icon file
   err :      location to store error, or NULL.
   Returns :  TRUE if setting the icon succeeded.
-  Since 2.2
 
 ==== SetDefaultIcon ====
 ''SetDefaultIcon(icon : [[..:..:Gtk:Gdk:Pixbuf#T|Gtk.Gdk.Pixbuf.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -1598,7 +1508,6 @@
   Sets an icon to be used as fallback for windows that haven't had
   gtk_window_set_icon() called on them from a pixbuf.
   icon : the icon
-  Since 2.4
 
 ==== SetAutoStartupNotification ====
 ''SetAutoStartupNotification(setting : [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -1612,7 +1521,6 @@
   splash screen, then re-enable it so that showing the main window would
   automatically result in notification.
   setting : TRUE to automatically do startup notification
-  Since 2.2
 
 ==== ListToplevels ====
 ''ListToplevels() : [[..:..:Std:List#T|Std.List.T]]''

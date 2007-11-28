@@ -19,8 +19,6 @@
   Creates a new horizontal scrollbar.
   adjustment : the GtkAdjustment to use, or NULL to create a new adjustment.
   Returns :    the new GtkHScrollbar.
-  ***** See Also *****
-  GtkScrollbar, GtkScrolledWindow
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''

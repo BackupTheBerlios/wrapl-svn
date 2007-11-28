@@ -35,7 +35,6 @@
   affects the menu item on the overflow menu.
   button :        a GtkToolButton
   use_underline : whether the button label has the form "_Open"
-  Since 2.4
 
 ==== :SetStockId ====
 '':SetStockId(self @ [[#T|T]], stock_id @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -45,7 +44,6 @@
   "icon_widget" properties.
   button :   a GtkToolButton
   stock_id : a name of a stock item, or NULL
-  Since 2.4
 
 ==== :SetLabelWidget ====
 '':SetLabelWidget(self @ [[#T|T]], label_widget @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -56,7 +54,6 @@
   as label. If "stock_id" is also NULL, button does not have a label.
   button :       a GtkToolButton
   label_widget : the widget used as label, or NULL
-  Since 2.4
 
 ==== :Priv ====
 '':Priv(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -69,7 +66,6 @@
   gtk_tool_button_set_icon_name().
   button :  a GtkToolButton
   Returns : the icon name or NULL if the tool button has no themed icon
-  Since 2.8
 
 ==== :GetIconWidget ====
 '':GetIconWidget(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
@@ -78,7 +74,6 @@
   gtk_tool_button_set_icon_widget().
   button :  a GtkToolButton
   Returns : The widget used as icon on button, or NULL.
-  Since 2.4
 
 ==== :GetLabel ====
 '':GetLabel(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
@@ -88,7 +83,6 @@
   owned by GTK+, and must not be modified or freed.
   button :  a GtkToolButton
   Returns : The label, or NULL
-  Since 2.4
 
 ==== :GetLabelWidget ====
 '':GetLabelWidget(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
@@ -97,14 +91,6 @@
   gtk_tool_button_set_label_widget().
   button :  a GtkToolButton
   Returns : The widget used as label on button, or NULL.
-  Since 2.4
-  ***** Property Details *****
-  The "icon-name" property
-    "icon-name"                gchararray            : Read / Write
-  The name of the themed icon displayed on the item. This property only has an
-  effect if not overridden by "label", "icon_widget" or "stock_id" properties.
-  Default value: NULL
-  Since 2.8
 
 ==== :GetStockId ====
 '':GetStockId(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
@@ -113,7 +99,6 @@
   returned string is owned by GTK+ and must not be freed or modifed.
   button :  a GtkToolButton
   Returns : the name of the stock item for button.
-  Since 2.4
 
 ==== :GetUseUnderline ====
 '':GetUseUnderline(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
@@ -123,7 +108,6 @@
   button :  a GtkToolButton
   Returns : TRUE if underscores in the label property are used as mnemonics on
             menu items on the overflow menu.
-  Since 2.4
 
 ==== :SetIconName ====
 '':SetIconName(self @ [[#T|T]], icon_name @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -133,7 +117,6 @@
   not overridden by non-NULL "label", "icon_widget" and "stock_id" properties.
   button :    a GtkToolButton
   icon_name : the name of the themed icon
-  Since 2.8
 
 ==== :SetIconWidget ====
 '':SetIconWidget(self @ [[#T|T]], icon_widget @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -143,7 +126,6 @@
   NULL, button will not have an icon.
   button :      a GtkToolButton
   icon_widget : the widget used as icon, or NULL
-  Since 2.4
 
 ==== :SetLabel ====
 '':SetLabel(self @ [[#T|T]], label @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -155,7 +137,6 @@
   have a label.
   button : a GtkToolButton
   label :  a string that will be used as label, or NULL.
-  Since 2.4
 
 ==== New ====
 ''New(icon_widget : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], label : [[..:..:Std:String#T|Std.String.T]]) : [[# T| T]]''
@@ -164,7 +145,6 @@
   icon_widget : a widget that will be used as icon widget, or NULL
   label :       a string that will be used as label, or NULL
   Returns :     A new GtkToolButton
-  Since 2.4
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
@@ -178,5 +158,4 @@
   It is an error if stock_id is not a name of a stock item.
   stock_id : the name of the stock item
   Returns :  A new GtkToolButton
-  Since 2.4
 

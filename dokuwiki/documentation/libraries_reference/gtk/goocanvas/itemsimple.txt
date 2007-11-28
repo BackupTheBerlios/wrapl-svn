@@ -51,11 +51,6 @@
   set_model() method.
   item :  a GooCanvasItemSimple.
   model : the model that item will view.
-  ***** Property Details *****
-  The "antialias" property
-    "antialias"                GooCairoAntialias     : Read / Write
-  The antialiasing mode to use.
-  Default value: CAIRO_ANTIALIAS_GRAY
 
 ==== :SimpleData ====
 '':SimpleData(self @ [[#T|T]]) : [[..:..:Gtk:GooCanvas:ItemSimpleData#T|Gtk.GooCanvas.ItemSimpleData.T]]''
@@ -157,11 +152,6 @@
   set_model() method.
   item :  a GooCanvasItemSimple.
   model : the model that item will view.
-  ***** Property Details *****
-  The "antialias" property
-    "antialias"                GooCairoAntialias     : Read / Write
-  The antialiasing mode to use.
-  Default value: CAIRO_ANTIALIAS_GRAY
 
 ==== :UserBoundsToDevice ====
 '':UserBoundsToDevice(self @ [[#T|T]], cr @ [[..:..:Gtk:Cairo:CairoT#T|Gtk.Cairo.CairoT.T]], bounds @ [[..:..:Gtk:GooCanvas:Bounds#T|Gtk.GooCanvas.Bounds.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''

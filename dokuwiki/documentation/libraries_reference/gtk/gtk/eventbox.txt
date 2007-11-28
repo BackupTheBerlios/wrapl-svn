@@ -38,9 +38,6 @@
   This problem doesn't occur for visible event boxes, because in that case, the
   event box window is actually the ancestor of the descendant windows, not just
   at the same place on the screen.
-  event_box :      a GtkEventBox
-  visible_window : boolean value
-  Since 2.4
 
 ==== :SetAboveChild ====
 '':SetAboveChild(self @ [[#T|T]], above_child @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -52,7 +49,6 @@
   The default is to keep the window below the child.
   event_box :   a GtkEventBox
   above_child : TRUE if the event box window is above the windows of its child
-  Since 2.4
 
 ==== :GetAboveChild ====
 '':GetAboveChild(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
@@ -61,7 +57,6 @@
   child. See gtk_event_box_set_above_child() for details.
   event_box : a GtkEventBox
   Returns :   TRUE if the event box window is above the window of its child.
-  Since 2.4
 
 ==== :GetVisibleWindow ====
 '':GetVisibleWindow(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
@@ -70,13 +65,6 @@
   gtk_event_box_set_visible_window() for details.
   event_box : a GtkEventBox
   Returns :   TRUE if the event box window is visible
-  Since 2.4
-  ***** Property Details *****
-  The "above-child" property
-    "above-child"              gboolean              : Read / Write
-  Whether the event-trapping window of the eventbox is above the window of the
-  child widget as opposed to below it.
-  Default value: FALSE
 
 ==== New ====
 ''New() : [[# T| T]]''

@@ -45,14 +45,6 @@
 
   Creates a new GtkCellRendererAccel.
   Returns : the new cell renderer
-  Since 2.10
-  ***** Property Details *****
-  The "accel-key" property
-    "accel-key"                guint                 : Read / Write
-  The keyval of the accelerator.
-  Allowed values: <= G_MAXINT
-  Default value: 0
-  Since 2.10
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''

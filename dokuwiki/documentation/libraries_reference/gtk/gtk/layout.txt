@@ -21,8 +21,6 @@
 
   **** Warning ****
   gtk_layout_thaw is deprecated and should not be used in newly-written code.
-  This is a deprecated function, it doesn't do anything useful.
-  layout : a GtkLayout
 
 ==== :SetVadjustment ====
 '':SetVadjustment(self @ [[#T|T]], adjustment @ [[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -31,10 +29,6 @@
   See GtkScrolledWindow, GtkScrollbar, GtkAdjustment for details.
   layout :     a GtkLayout
   adjustment : new scroll adjustment
-  ***** Property Details *****
-  The "hadjustment" property
-    "hadjustment"              GtkAdjustment         : Read / Write
-  The GtkAdjustment for the horizontal position.
 
 ==== :Children ====
 '':Children(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -76,10 +70,6 @@
   See GtkScrolledWindow, GtkScrollbar, GtkAdjustment for details.
   layout :     a GtkLayout
   adjustment : new scroll adjustment
-  ***** Property Details *****
-  The "hadjustment" property
-    "hadjustment"              GtkAdjustment         : Read / Write
-  The GtkAdjustment for the horizontal position.
 
 ==== :BinWindow ====
 '':BinWindow(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]]''
@@ -106,8 +96,6 @@
 
   **** Warning ****
   gtk_layout_freeze is deprecated and should not be used in newly-written code.
-  This is a deprecated function, it doesn't do anything useful.
-  layout : a GtkLayout
 
 ==== :GetHadjustment ====
 '':GetHadjustment(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]]''

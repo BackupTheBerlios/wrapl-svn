@@ -42,9 +42,6 @@
   **** Warning ****
   gtk_notebook_set_tab_vborder is deprecated and should not be used in newly-
   written code.
-  Sets the width of the vertical border of tab labels.
-  notebook :    a GtkNotebook
-  tab_vborder : width of the vertical border of tab labels.
 
 ==== :SetTabReorderable ====
 '':SetTabReorderable(self @ [[#T|T]], child @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], reorderable @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -53,7 +50,6 @@
   notebook :    a GtkNotebook
   child :       a child GtkWidget
   reorderable : whether the tab is reorderable or not.
-  Since 2.10
 
 ==== :SetTabPos ====
 '':SetTabPos(self @ [[#T|T]], pos @ [[..:..:Gtk:Gtk:PositionType#T|Gtk.Gtk.PositionType.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -136,9 +132,6 @@
   **** Warning ****
   gtk_notebook_set_tab_hborder is deprecated and should not be used in newly-
   written code.
-  Sets the width of the horizontal border of tab labels.
-  notebook :    a GtkNotebook
-  tab_hborder : width of the horizontal border of tab labels.
 
 ==== :TabVborder ====
 '':TabVborder(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
@@ -146,9 +139,6 @@
   **** Warning ****
   gtk_notebook_set_tab_vborder is deprecated and should not be used in newly-
   written code.
-  Sets the width of the vertical border of tab labels.
-  notebook :    a GtkNotebook
-  tab_vborder : width of the vertical border of tab labels.
 
 ==== :ShowTabs ====
 '':ShowTabs(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
@@ -285,7 +275,6 @@
   Gets the current group identificator pointer for notebook.
   notebook : a GtkNotebook
   Returns :  the group identificator, or NULL if none is set.
-  Since 2.12
 
 ==== :GetGroupId ====
 '':GetGroupId(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
@@ -293,10 +282,6 @@
   **** Warning ****
   gtk_notebook_get_group_id has been deprecated since version 2.12 and should not
   be used in newly-written code. use gtk_notebook_get_group() instead.
-  Gets the current group identificator for notebook.
-  notebook : a GtkNotebook
-  Returns :  the group identificator, or -1 if none is set.
-  Since 2.10
 
 ==== :GetMenuLabel ====
 '':GetMenuLabel(self @ [[#T|T]], child @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
@@ -324,7 +309,6 @@
   Gets the number of pages in a notebook.
   notebook : a GtkNotebook
   Returns :  the number of pages in the notebook.
-  Since 2.2
 
 ==== :GetNthPage ====
 '':GetNthPage(self @ [[#T|T]], page_num @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
@@ -365,7 +349,6 @@
   notebook : a GtkNotebook
   child :    a child GtkWidget
   Returns :  TRUE if the tab is detachable.
-  Since 2.10
 
 ==== :GetTabLabel ====
 '':GetTabLabel(self @ [[#T|T]], child @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
@@ -400,7 +383,6 @@
   notebook : a GtkNotebook
   child :    a child GtkWidget
   Returns :  TRUE if the tab is reorderable.
-  Since 2.10
 
 ==== :InsertPage ====
 '':InsertPage(self @ [[#T|T]], child @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], tab_label @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], position @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
@@ -537,7 +519,6 @@
   any other notebook.
   notebook : a GtkNotebook
   group :    a pointer to identify the notebook group, or NULL to unset it
-  Since 2.12
 
 ==== :SetGroupId ====
 '':SetGroupId(self @ [[#T|T]], group_id @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -545,13 +526,6 @@
   **** Warning ****
   gtk_notebook_set_group_id has been deprecated since version 2.12 and should not
   be used in newly-written code. use gtk_notebook_set_group() instead.
-  Sets an group identificator for notebook, notebooks sharing the same group
-  identificator will be able to exchange tabs via drag and drop. A notebook with
-  group identificator -1 will not be able to exchange tabs with any other
-  notebook.
-  notebook : a GtkNotebook
-  group_id : a group identificator, or -1 to unset it
-  Since 2.10
 
 ==== :SetHomogeneousTabs ====
 '':SetHomogeneousTabs(self @ [[#T|T]], homogeneous @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -559,9 +533,6 @@
   **** Warning ****
   gtk_notebook_set_homogeneous_tabs is deprecated and should not be used in
   newly-written code.
-  Sets whether the tabs must have all the same size or not.
-  notebook :    a GtkNotebook
-  homogeneous : TRUE if all tabs should be the same size.
 
 ==== :SetMenuLabel ====
 '':SetMenuLabel(self @ [[#T|T]], child @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], menu_label @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -608,11 +579,6 @@
   **** Warning ****
   gtk_notebook_set_tab_border is deprecated and should not be used in newly-
   written code.
-  Sets the width the border around the tab labels in a notebook. This is
-  equivalent to calling gtk_notebook_set_tab_hborder (notebook, border_width)
-  followed by gtk_notebook_set_tab_vborder (notebook, border_width).
-  notebook :     a GtkNotebook
-  border_width : width of the border around the tab labels.
 
 ==== :SetTabDetachable ====
 '':SetTabDetachable(self @ [[#T|T]], child @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], detachable @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -644,12 +610,6 @@
      process_widget (*child);
      gtk_container_remove (GTK_CONTAINER (notebook), *child);
    }
-  If you want a notebook to accept drags from other widgets, you will have to set
-  your own DnD code to do it.
-  notebook :   a GtkNotebook
-  child :      a child GtkWidget
-  detachable : whether the tab is detachable or not
-  Since 2.10
 
 ==== :SetTabHborder ====
 '':SetTabHborder(self @ [[#T|T]], tab_hborder @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -657,9 +617,6 @@
   **** Warning ****
   gtk_notebook_set_tab_hborder is deprecated and should not be used in newly-
   written code.
-  Sets the width of the horizontal border of tab labels.
-  notebook :    a GtkNotebook
-  tab_hborder : width of the horizontal border of tab labels.
 
 ==== :SetTabLabel ====
 '':SetTabLabel(self @ [[#T|T]], child @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], tab_label @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -703,13 +660,6 @@
   func :    the GtkNotebookWindowCreationFunc, or NULL
   data :    user data for func
   destroy : Destroy notifier for data, or NULL
-  Since 2.10
-  ***** Property Details *****
-  The "enable-popup" property
-    "enable-popup"             gboolean              : Read / Write
-  If TRUE, pressing the right mouse button on the notebook pops up a menu that
-  you can use to go to a page.
-  Default value: FALSE
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''

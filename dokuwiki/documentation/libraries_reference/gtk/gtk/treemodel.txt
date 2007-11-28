@@ -242,7 +242,6 @@
   tree_model : A GtkTreeModel.
   iter :       An GtkTreeIter.
   Returns :    A newly-allocated string. Must be freed with g_free().
-  Since 2.2
 
 ==== :GetValist ====
 '':GetValist(self @ [[#T|T]], iter @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]], var_args @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -392,19 +391,6 @@
                an array of integers mapping the current position of each child to
   new_order :  its old position before the re-ordering, i.e. new_order[newpos] =
                oldpos.
-  ***** Signal Details *****
-  The "row-changed" signal
-  void                user_function                      (GtkTreeModel
-  *tree_model,
-                                                          GtkTreePath  *path,
-                                                          GtkTreeIter  *iter,
-                                                          gpointer
-  user_data)       : Run Last
-  This signal is emitted when a row in the model has changed.
-  tree_model : the GtkTreeModel on which the signal is emitted
-  path :       a GtkTreePath identifying the changed row
-  iter :       a valid GtkTreeIter pointing to the changed row
-  user_data :  user data set when the signal handler was connected.
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''

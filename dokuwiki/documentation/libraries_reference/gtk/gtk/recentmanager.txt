@@ -45,11 +45,6 @@
   gtk_recent_manager_set_screen has been deprecated since version 2.12 and should
   not be used in newly-written code. This function has been deprecated and should
   not be used in newly written code. Calling this function has no effect.
-  Sets the screen for a recent manager; the screen is used to track the user's
-  currently configured recently used documents storage.
-  manager : a GtkRecentManager
-  screen :  a GdkScreen
-  Since 2.10
 
 ==== :SetLimit ====
 '':SetLimit(self @ [[#T|T]], limit @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -58,7 +53,6 @@
   function should return. If limit is set to -1, then return all the items.
   manager : a GtkRecentManager
   limit :   the maximum number of items to return, or -1.
-  Since 2.10
 
 ==== :RemoveItem ====
 '':RemoveItem(self @ [[#T|T]], uri @ [[..:..:Std:String#T|Std.String.T]], error @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
@@ -70,7 +64,6 @@
   error :   return location for a GError, or NULL
   Returns : TRUE if the item pointed by uri has been successfully removed by the
             recently used resources list, and FALSE otherwise.
-  Since 2.10
 
 ==== :PurgeItems ====
 '':PurgeItems(self @ [[#T|T]], error @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
@@ -80,7 +73,6 @@
   error :   a return location for a GError, or NULL
   Returns : the number of items that have been removed from the recently used
             resources list.
-  Since 2.10
 
 ==== :MoveItem ====
 '':MoveItem(self @ [[#T|T]], uri @ [[..:..:Std:String#T|Std.String.T]], new_uri @ [[..:..:Std:String#T|Std.String.T]], error @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
@@ -94,7 +86,6 @@
             pointed by uri in the list
   error :   a return location for a GError, or NULL
   Returns : TRUE on success.
-  Since 2.10
 
 ==== :Priv ====
 '':Priv(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -121,7 +112,6 @@
   recent_data : metadata of the resource
   Returns :     TRUE if the new item was successfully added to the recently used
                 resources list, FALSE otherwise.
-  Since 2.10
 
 ==== :AddItem ====
 '':AddItem(self @ [[#T|T]], uri @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
@@ -136,7 +126,6 @@
   uri :     a valid URI
   Returns : TRUE if the new item was successfully added to the recently used
             resources list
-  Since 2.10
 
 ==== :GetItems ====
 '':GetItems(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -146,7 +135,6 @@
             a list of newly allocated GtkRecentInfo objects. Use
   Returns : gtk_recent_info_unref() on each item inside the list, and then free
             the list itself using g_list_free().
-  Since 2.10
 
 ==== :GetLimit ====
 '':GetLimit(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
@@ -155,7 +143,6 @@
   function should return.
   manager : a GtkRecentManager
   Returns : the number of items to return, or -1 for every item.
-  Since 2.10
 
 ==== :HasItem ====
 '':HasItem(self @ [[#T|T]], uri @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
@@ -165,7 +152,6 @@
   manager : a GtkRecentManager
   uri :     a URI
   Returns : TRUE if the resource was found, FALSE otherwise.
-  Since 2.10
 
 ==== :LookupItem ====
 '':LookupItem(self @ [[#T|T]], uri @ [[..:..:Std:String#T|Std.String.T]], error @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Gtk:Gtk:RecentInfo#T|Gtk.Gtk.RecentInfo.T]]''
@@ -179,7 +165,6 @@
             a GtkRecentInfo structure containing information about the resource
   Returns : pointed by uri, or NULL if the URI was not registered in the recently
             used resources list. Free with gtk_recent_info_unref().
-  Since 2.10
 
 ==== New ====
 ''New() : [[# T| T]]''
@@ -191,7 +176,6 @@
   GtkRecentManager objects are expensive: be sure to create them only when
   needed. You should use gtk_recent_manager_get_default() instead.
   Returns : A newly created GtkRecentManager object.
-  Since 2.10
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
@@ -205,17 +189,6 @@
   should not be used in newly-written code. This function has been deprecated and
   should not be used in newly written code. Calling this function is equivalent
   to calling gtk_recent_manager_get_default().
-  Gets the recent manager object associated with screen; if this function has not
-  previously been called for the given screen, a new recent manager object will
-  be created and associated with the screen. Recent manager objects are fairly
-  expensive to create, so using this function is usually a better choice than
-  calling gtk_recent_manager_new() and setting the screen yourself; by using this
-  function a single recent manager object will be shared between users.
-  screen :  a GdkScreen
-            A unique GtkRecentManager associated with the given screen. This
-  Returns : recent manager is associated to the with the screen and can be used
-            as long as the screen is open. Do not ref or unref it.
-  Since 2.10
 
 ==== GetDefault ====
 ''GetDefault() : [[..:..:Gtk:Gtk:RecentManager#T|Gtk.Gtk.RecentManager.T]]''
@@ -224,7 +197,6 @@
   application without caring about memory management. The returned instance will
   be freed when you application terminates.
   Returns : A unique GtkRecentManager. Do not ref or unref it.
-  Since 2.10
 
 ==== ErrorQuark ====
 ''ErrorQuark() : [[..:..:Std:Object#T|Std.Object.T]]''

@@ -19,14 +19,6 @@
 
   Creates a new GtkCellRendererProgress.
   Returns : the new cell renderer
-  Since 2.6
-  ***** Property Details *****
-  The "orientation" property
-    "orientation"              GtkProgressBarOrientation  : Read / Write
-  The "orientation" property controls the direction and growth direction of the
-  progress bar (left-to-right, right-to-left, top-to-bottom or bottom-to-top).
-  Default value: GTK_PROGRESS_LEFT_TO_RIGHT
-  Since 2.12
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''

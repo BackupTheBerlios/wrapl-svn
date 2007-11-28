@@ -27,10 +27,6 @@
   **** Warning ****
   gtk_check_menu_item_set_show_toggle is deprecated and should not be used in
   newly-written code.
-  Controls whether the check box is shown at all times. Normally the check box is
-  shown only when it is active or while the menu item is selected.
-  menu_item : a GtkCheckMenuItem.
-  always :    boolean value indicating whether to always show the check box.
 
 ==== :SetInconsistent ====
 '':SetInconsistent(self @ [[#T|T]], setting @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -51,7 +47,6 @@
   Sets whether check_menu_item is drawn like a GtkRadioMenuItem
   check_menu_item : a GtkCheckMenuItem
   draw_as_radio :   whether check_menu_item is drawn like a GtkRadioMenuItem
-  Since 2.4
 
 ==== :Active ====
 '':Active(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
@@ -90,16 +85,9 @@
   Sets whether check_menu_item is drawn like a GtkRadioMenuItem
   check_menu_item : a GtkCheckMenuItem
   draw_as_radio :   whether check_menu_item is drawn like a GtkRadioMenuItem
-  Since 2.4
   Returns whether check_menu_item looks like a GtkRadioMenuItem
   check_menu_item : a GtkCheckMenuItem
   Returns :         Whether check_menu_item looks like a GtkRadioMenuItem
-  Since 2.4
-  ***** Property Details *****
-  The "active" property
-    "active"                   gboolean              : Read / Write
-  Whether the menu item is checked.
-  Default value: FALSE
 
 ==== :GetActive ====
 '':GetActive(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
@@ -115,12 +103,6 @@
   Returns whether check_menu_item looks like a GtkRadioMenuItem
   check_menu_item : a GtkCheckMenuItem
   Returns :         Whether check_menu_item looks like a GtkRadioMenuItem
-  Since 2.4
-  ***** Property Details *****
-  The "active" property
-    "active"                   gboolean              : Read / Write
-  Whether the menu item is checked.
-  Default value: FALSE
 
 ==== :GetInconsistent ====
 '':GetInconsistent(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''

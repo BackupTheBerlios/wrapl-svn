@@ -127,10 +127,6 @@
   added or removed from the associated widget.
   accel_label : a GtkAccelLabel.
   Returns :     always returns FALSE.
-  ***** Property Details *****
-  The "accel-closure" property
-    "accel-closure"            GClosure              : Read / Write
-  The closure to be monitored for accelerator changes.
 
 ==== New ====
 ''New(string : [[..:..:Std:String#T|Std.String.T]]) : [[# T| T]]''

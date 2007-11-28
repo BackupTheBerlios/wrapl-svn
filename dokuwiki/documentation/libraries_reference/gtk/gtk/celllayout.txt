@@ -45,7 +45,6 @@
   func :        The GtkCellLayoutDataFunc to use.
   func_data :   The user data for func.
   destroy :     The destroy notification for func_data.
-  Since 2.4
 
 ==== :AddAttribute ====
 '':AddAttribute(self @ [[#T|T]], cell @ [[..:..:Gtk:Gtk:CellRenderer#T|Gtk.Gtk.CellRenderer.T]], attribute @ [[..:..:Std:String#T|Std.String.T]], column @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -59,7 +58,6 @@
   cell :        A GtkCellRenderer.
   attribute :   An attribute on the renderer.
   column :      The column position on the model to get the attribute from.
-  Since 2.4
 
 ==== :Clear ====
 '':Clear(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -67,7 +65,6 @@
   Unsets all the mappings on all renderers on cell_layout and removes all
   renderers from cell_layout.
   cell_layout : A GtkCellLayout.
-  Since 2.4
 
 ==== :ClearAttributes ====
 '':ClearAttributes(self @ [[#T|T]], cell @ [[..:..:Gtk:Gtk:CellRenderer#T|Gtk.Gtk.CellRenderer.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -76,7 +73,6 @@
   gtk_cell_layout_set_attributes().
   cell_layout : A GtkCellLayout.
   cell :        A GtkCellRenderer to clear the attribute mapping on.
-  Since 2.4
 
 ==== :GetCells ====
 '':GetCells(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -86,7 +82,6 @@
                 a list of cell renderers. The list, but not the renderers has
   Returns :     been newly allocated and should be freed with g_list_free() when
                 no longer needed.
-  Since 2.12
 
 ==== :PackEnd ====
 '':PackEnd(self @ [[#T|T]], cell @ [[..:..:Gtk:Gtk:CellRenderer#T|Gtk.Gtk.CellRenderer.T]], expand @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -98,7 +93,6 @@
   cell_layout : A GtkCellLayout.
   cell :        A GtkCellRenderer.
   expand :      TRUE if cell is to be given extra space allocated to cell_layout.
-  Since 2.4
 
 ==== :PackStart ====
 '':PackStart(self @ [[#T|T]], cell @ [[..:..:Gtk:Gtk:CellRenderer#T|Gtk.Gtk.CellRenderer.T]], expand @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -110,7 +104,6 @@
   cell_layout : A GtkCellLayout.
   cell :        A GtkCellRenderer.
   expand :      TRUE if cell is to be given extra space allocated to cell_layout.
-  Since 2.4
 
 ==== :Reorder ====
 '':Reorder(self @ [[#T|T]], cell @ [[..:..:Gtk:Gtk:CellRenderer#T|Gtk.Gtk.CellRenderer.T]], position @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -120,7 +113,6 @@
   cell_layout : A GtkCellLayout.
   cell :        A GtkCellRenderer to reorder.
   position :    New position to insert cell at.
-  Since 2.4
 
 ==== :SetAttributes ====
 '':SetAttributes(self @ [[#T|T]], cell @ [[..:..:Gtk:Gtk:CellRenderer#T|Gtk.Gtk.CellRenderer.T]], ___ @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -131,7 +123,6 @@
   cell_layout : A GtkCellLayout.
   cell :        A GtkCellRenderer.
   ... :         A NULL-terminated list of attributes.
-  Since 2.4
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''

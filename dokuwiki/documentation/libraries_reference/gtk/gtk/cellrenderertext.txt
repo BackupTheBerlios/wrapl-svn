@@ -24,11 +24,6 @@
   height is determined by the properties again.
   renderer :       A GtkCellRendererText
   number_of_rows : Number of rows of text each cell renderer is allocated, or -1
-  ***** Property Details *****
-  The "align-set" property
-    "align-set"                gboolean              : Read / Write
-  Whether this tag affects the alignment mode.
-  Default value: FALSE
 
 ==== :CalcFixedHeight ====
 '':CalcFixedHeight(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
@@ -50,11 +45,6 @@
   height is determined by the properties again.
   renderer :       A GtkCellRendererText
   number_of_rows : Number of rows of text each cell renderer is allocated, or -1
-  ***** Property Details *****
-  The "align-set" property
-    "align-set"                gboolean              : Read / Write
-  Whether this tag affects the alignment mode.
-  Default value: FALSE
 
 ==== :FontScale ====
 '':FontScale(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''

@@ -75,11 +75,6 @@
   will be changed as little as possible.
   curve : a GtkCurve.
   type :  the type of the curve.
-  ***** Property Details *****
-  The "curve-type" property
-    "curve-type"               GtkCurveType          : Read / Write
-  Is this curve linear, spline interpolated, or free-form.
-  Default value: GTK_CURVE_TYPE_LINEAR
 
 ==== :Height ====
 '':Height(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
@@ -129,11 +124,6 @@
   will be changed as little as possible.
   curve : a GtkCurve.
   type :  the type of the curve.
-  ***** Property Details *****
-  The "curve-type" property
-    "curve-type"               GtkCurveType          : Read / Write
-  Is this curve linear, spline interpolated, or free-form.
-  Default value: GTK_CURVE_TYPE_LINEAR
 
 ==== :SetGamma ====
 '':SetGamma(self @ [[#T|T]], gamma_ @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''

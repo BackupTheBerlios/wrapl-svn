@@ -16,7 +16,6 @@
   renderer : a PangoRenderer
   matrix :   a PangoMatrix, or NULL to unset any existing matrix. (No matrix set
              is the same as setting the identity matrix.)
-  Since 1.8
 
 ==== :Underline ====
 '':Underline(self @ [[#T|T]]) : [[..:..:Gtk:Pango:Underline#T|Gtk.Pango.Underline.T]]''
@@ -32,7 +31,6 @@
   y :        Y coordinate of underline, in Pango units in user coordinate system
   width :    width of underline, in Pango units in user coordinate system
   height :   height of underline, in Pango units in user coordinate system
-  Since 1.8
 
 ==== :Strikethrough ====
 '':Strikethrough(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
@@ -49,7 +47,12 @@
   renderer : a PangoRenderer
   matrix :   a PangoMatrix, or NULL to unset any existing matrix. (No matrix set
              is the same as setting the identity matrix.)
-  Since 1.8
+  Gets the transformation matrix that will be applied when rendering. See
+  pango_renderer_set_matrix().
+  renderer : a PangoRenderer
+             the matrix, or NULL if no matrix has been set (which is the same as
+  Returns :  the identity matrix). The returned matrix is owned by Pango and must
+             not be modified or freed.
 
 ==== :Priv ====
 '':Priv(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -64,7 +67,6 @@
   on it. Calls to pango_renderer_activate() and pango_renderer_deactivate() can
   be nested and the renderer will only be initialized and deinitialized once.
   renderer : a PangoRenderer
-  Since 1.8
 
 ==== :Deactivate ====
 '':Deactivate(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -72,7 +74,6 @@
   Cleans up after rendering operations on renderer. See docs for
   pango_renderer_activate().
   renderer : a PangoRenderer
-  Since 1.8
 
 ==== :DrawErrorUnderline ====
 '':DrawErrorUnderline(self @ [[#T|T]], x @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], width @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], height @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -88,7 +89,6 @@
   y :        Y coordinate of underline, in Pango units in user coordinate system
   width :    width of underline, in Pango units in user coordinate system
   height :   height of underline, in Pango units in user coordinate system
-  Since 1.8
 
 ==== :DrawGlyph ====
 '':DrawGlyph(self @ [[#T|T]], font @ [[..:..:Gtk:Pango:Font#T|Gtk.Pango.Font.T]], glyph @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], x @ [[..:..:Std:Real#T|Std.Real.T]], y @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -99,7 +99,6 @@
   glyph :    the glyph index of a single glyph
   x :        X coordinate of left edge of baseline of glyph
   y :        Y coordinate of left edge of baseline of glyph
-  Since 1.8
 
 ==== :DrawGlyphs ====
 '':DrawGlyphs(self @ [[#T|T]], font @ [[..:..:Gtk:Pango:Font#T|Gtk.Pango.Font.T]], glyphs @ [[..:..:Gtk:Pango:GlyphString#T|Gtk.Pango.GlyphString.T]], x @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -112,7 +111,6 @@
              Pango units.
   y :        Y position of left edge of baseline, in user space coordinates in
              Pango units.
-  Since 1.8
 
 ==== :DrawLayout ====
 '':DrawLayout(self @ [[#T|T]], layout @ [[..:..:Gtk:Pango:Layout#T|Gtk.Pango.Layout.T]], x @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -124,7 +122,6 @@
              Pango units.
   y :        Y position of left edge of baseline, in user space coordinates in
              Pango units.
-  Since 1.8
 
 ==== :DrawLayoutLine ====
 '':DrawLayoutLine(self @ [[#T|T]], line @ [[..:..:Gtk:Pango:LayoutLine#T|Gtk.Pango.LayoutLine.T]], x @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -136,7 +133,6 @@
              Pango units.
   y :        Y position of left edge of baseline, in user space coordinates in
              Pango units.
-  Since 1.8
 
 ==== :DrawRectangle ====
 '':DrawRectangle(self @ [[#T|T]], part @ [[..:..:Gtk:Pango:RenderPart#T|Gtk.Pango.RenderPart.T]], x @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], width @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], height @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -153,7 +149,6 @@
              Pango units
   width :    width of rectangle in Pango units in user space coordinates
   height :   height of rectangle in Pango units in user space coordinates
-  Since 1.8
 
 ==== :DrawTrapezoid ====
 '':DrawTrapezoid(self @ [[#T|T]], part @ [[..:..:Gtk:Pango:RenderPart#T|Gtk.Pango.RenderPart.T]], y1_ @ [[..:..:Std:Real#T|Std.Real.T]], x11 @ [[..:..:Std:Real#T|Std.Real.T]], x21 @ [[..:..:Std:Real#T|Std.Real.T]], y2 @ [[..:..:Std:Real#T|Std.Real.T]], x12 @ [[..:..:Std:Real#T|Std.Real.T]], x22 @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -168,7 +163,6 @@
   y2 :       Y coordinate of bottom of trapezoid
   x12 :      X coordinate of left end of bottom of trapezoid
   x22 :      X coordinate of right end of bottom of trapezoid
-  Since 1.8
 
 ==== :GetColor ====
 '':GetColor(self @ [[#T|T]], part @ [[..:..:Gtk:Pango:RenderPart#T|Gtk.Pango.RenderPart.T]]) : [[..:..:Gtk:Pango:Color#T|Gtk.Pango.Color.T]]''
@@ -178,11 +172,16 @@
   part :     the part to get the color for
   Returns :  the color for the specified part, or NULL if it hasn't been set and
              should be inherited from the environment.
-  Since 1.8
 
 ==== :GetMatrix ====
 '':GetMatrix(self @ [[#T|T]]) : [[..:..:Gtk:Pango:Matrix#T|Gtk.Pango.Matrix.T]]''
 
+  Gets the transformation matrix that will be applied when rendering. See
+  pango_renderer_set_matrix().
+  renderer : a PangoRenderer
+             the matrix, or NULL if no matrix has been set (which is the same as
+  Returns :  the identity matrix). The returned matrix is owned by Pango and must
+             not be modified or freed.
 
 ==== :PartChanged ====
 '':PartChanged(self @ [[#T|T]], part @ [[..:..:Gtk:Pango:RenderPart#T|Gtk.Pango.RenderPart.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -192,12 +191,6 @@
   call. For instance, if a subclass of PangoRenderer was to add a stipple option
   for drawing underlines, it needs to call
   pango_renderer_part_changed (render, PANGO_RENDER_PART_UNDERLINE);
-  When the stipple changes or underlines with different stipples might be joined
-  together. Pango automatically calls this for changes to colors. (See
-  pango_renderer_set_color())
-  renderer : a PangoRenderer
-  part :     the part for which rendering has changed.
-  Since 1.8
 
 ==== :SetColor ====
 '':SetColor(self @ [[#T|T]], part @ [[..:..:Gtk:Pango:RenderPart#T|Gtk.Pango.RenderPart.T]], color @ [[..:..:Gtk:Pango:Color#T|Gtk.Pango.Color.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -206,7 +199,6 @@
   renderer : a PangoRenderer
   part :     the part to change the color of
   color :    the new color or NULL to unset the current color
-  Since 1.8
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''

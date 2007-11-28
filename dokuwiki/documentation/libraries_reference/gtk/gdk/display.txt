@@ -28,7 +28,6 @@
   screen :  the screen of display to warp the pointer to
   x :       the x coordinate of the destination
   y :       the y coordinate of the destination
-  Since 2.8
 
 ==== :Sync ====
 '':Sync(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -41,7 +40,6 @@
   This is most useful for X11. On windowing systems where requests are handled
   synchronously, this function will do nothing.
   display : a GdkDisplay
-  Since 2.2
 
 ==== :SupportsShapes ====
 '':SupportsShapes(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
@@ -50,7 +48,6 @@
   windows on display.
   display : a GdkDisplay
   Returns : TRUE if shaped windows are supported
-  Since 2.10
 
 ==== :SupportsSelectionNotification ====
 '':SupportsSelectionNotification(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
@@ -59,7 +56,6 @@
   selection changes.
   display : a GdkDisplay
   Returns : whether GdkEventOwnerChange events will be sent.
-  Since 2.6
 
 ==== :QueuedEvents ====
 '':QueuedEvents(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -77,7 +73,6 @@
   set this, it is a global user-configured setting.
   display : a GdkDisplay
   msec :    double click time in milliseconds (thousandths of a second)
-  Since 2.2
 
 ==== :CorePointer ====
 '':CorePointer(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Device#T|Gtk.Gdk.Device.T]]''
@@ -94,7 +89,6 @@
   new_hooks : a table of pointers to functions for getting quantities related to
               the current pointer position, or NULL to restore the default table.
   Returns :   the previous pointer hook table
-  Since 2.2
 
 ==== :Closed ====
 '':Closed(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
@@ -109,7 +103,6 @@
   global user-configured setting.
   display :  a GdkDisplay
   distance : distance in pixels
-  Since 2.4
 
 ==== :ButtonClickTime ====
 '':ButtonClickTime(self @ [[#T|T]], @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
@@ -143,14 +136,12 @@
                  event struct.
   func :         the function to call to process the event.
   data :         user data to pass to func.
-  Since 2.2
 
 ==== :Beep ====
 '':Beep(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
   Emits a short beep on display
   display : a GdkDisplay
-  Since 2.2
 
 ==== :Close ====
 '':Close(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -158,7 +149,6 @@
   Closes the connection to the windowing system for the given display, and cleans
   up associated resources.
   display : a GdkDisplay
-  Since 2.2
 
 ==== :Flush ====
 '':Flush(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -172,7 +162,6 @@
   This is most useful for X11. On windowing systems where requests are handled
   synchronously, this function will do nothing.
   display : a GdkDisplay
-  Since 2.4
 
 ==== :GetCorePointer ====
 '':GetCorePointer(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Device#T|Gtk.Gdk.Device.T]]''
@@ -184,7 +173,6 @@
   Returns the default size to use for cursors on display.
   display : a GdkDisplay
   Returns : the default cursor size.
-  Since 2.4
 
 ==== :GetDefaultGroup ====
 '':GetDefaultGroup(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]]''
@@ -193,7 +181,6 @@
   This window is implicitly created by GDK. See gdk_window_set_group().
   display : a GdkDisplay
   Returns : The default group leader window for display
-  Since 2.4
 
 ==== :GetDefaultScreen ====
 '':GetDefaultScreen(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Screen#T|Gtk.Gdk.Screen.T]]''
@@ -201,7 +188,6 @@
   Get the default GdkScreen for display.
   display : a GdkDisplay
   Returns : the default GdkScreen object for display
-  Since 2.2
 
 ==== :GetEvent ====
 '':GetEvent(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -211,7 +197,6 @@
   display : a GdkDisplay
   Returns : the next GdkEvent to be processed, or NULL if no events are pending.
             The returned GdkEvent should be freed with gdk_event_free().
-  Since 2.2
 
 ==== :GetMaximalCursorSize ====
 '':GetMaximalCursorSize(self @ [[#T|T]], width @ [[..:..:Std:Object#T|Std.Object.T]], height @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -220,7 +205,6 @@
   display : a GdkDisplay
   width :   the return location for the maximal cursor width
   height :  the return location for the maximal cursor height
-  Since 2.4
 
 ==== :GetNScreens ====
 '':GetNScreens(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
@@ -228,7 +212,6 @@
   Gets the number of screen managed by the display.
   display : a GdkDisplay
   Returns : number of screens.
-  Since 2.2
 
 ==== :GetName ====
 '':GetName(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
@@ -237,7 +220,6 @@
   display : a GdkDisplay
   Returns : a string representing the display name. This string is owned by GDK
             and should not be modified or freed.
-  Since 2.2
 
 ==== :GetPointer ====
 '':GetPointer(self @ [[#T|T]], screen @ [[..:..:Std:Object#T|Std.Object.T]], x @ [[..:..:Std:Object#T|Std.Object.T]], y @ [[..:..:Std:Object#T|Std.Object.T]], mask @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -249,7 +231,6 @@
   x :       location to store root window X coordinate of pointer, or NULL.
   y :       location to store root window Y coordinate of pointer, or NULL.
   mask :    location to store current modifier mask, or NULL
-  Since 2.2
 
 ==== :GetScreen ====
 '':GetScreen(self @ [[#T|T]], screen_num @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Gtk:Gdk:Screen#T|Gtk.Gdk.Screen.T]]''
@@ -258,7 +239,6 @@
   display :    a GdkDisplay
   screen_num : the screen number
   Returns :    the GdkScreen object
-  Since 2.2
 
 ==== :GetWindowAtPointer ====
 '':GetWindowAtPointer(self @ [[#T|T]], win_x @ [[..:..:Std:Object#T|Std.Object.T]], win_y @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]]''
@@ -270,7 +250,6 @@
   win_x :   return location for origin of the window under the pointer
   win_y :   return location for origin of the window under the pointer
   Returns : the window under the mouse pointer, or NULL
-  Since 2.2
 
 ==== :KeyboardUngrab ====
 '':KeyboardUngrab(self @ [[#T|T]], time_ @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -278,7 +257,6 @@
   Release any keyboard grab
   display : a GdkDisplay.
   time_ :   a timestap (e.g GDK_CURRENT_TIME).
-  Since 2.2
 
 ==== :ListDevices ====
 '':ListDevices(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -287,7 +265,6 @@
   statically allocated and should not be freed.
   display : a GdkDisplay
   Returns : a list of GdkDevice
-  Since 2.2
 
 ==== :PeekEvent ====
 '':PeekEvent(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -300,7 +277,6 @@
             a copy of the first GdkEvent on the event queue, or NULL if no events
   Returns : are in the queue. The returned GdkEvent should be freed with
             gdk_event_free().
-  Since 2.2
 
 ==== :PointerIsGrabbed ====
 '':PointerIsGrabbed(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
@@ -308,7 +284,6 @@
   Test if the pointer is grabbed.
   display : a GdkDisplay
   Returns : TRUE if an active X pointer grab is in effect
-  Since 2.2
 
 ==== :PointerUngrab ====
 '':PointerUngrab(self @ [[#T|T]], time_ @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -316,7 +291,6 @@
   Release any pointer grab.
   display : a GdkDisplay.
   time_ :   a timestap (e.g. GDK_CURRENT_TIME).
-  Since 2.2
 
 ==== :PutEvent ====
 '':PutEvent(self @ [[#T|T]], event @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -325,7 +299,6 @@
   display.
   display : a GdkDisplay
   event :   a GdkEvent.
-  Since 2.2
 
 ==== :RequestSelectionNotification ====
 '':RequestSelectionNotification(self @ [[#T|T]], selection @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
@@ -336,7 +309,6 @@
   selection : the GdkAtom naming the selection for which ownership change
               notification is requested
   Returns :   whether GdkEventOwnerChange events will be sent.
-  Since 2.6
 
 ==== :SetDoubleClickDistance ====
 '':SetDoubleClickDistance(self @ [[#T|T]], distance @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -347,7 +319,6 @@
   global user-configured setting.
   display :  a GdkDisplay
   distance : distance in pixels
-  Since 2.4
 
 ==== :SetDoubleClickTime ====
 '':SetDoubleClickTime(self @ [[#T|T]], msec @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -357,7 +328,6 @@
   set this, it is a global user-configured setting.
   display : a GdkDisplay
   msec :    double click time in milliseconds (thousandths of a second)
-  Since 2.2
 
 ==== :SetPointerHooks ====
 '':SetPointerHooks(self @ [[#T|T]], new_hooks @ [[..:..:Gtk:Gdk:DisplayPointerHooks#T|Gtk.Gdk.DisplayPointerHooks.T]]) : [[..:..:Gtk:Gdk:DisplayPointerHooks#T|Gtk.Gdk.DisplayPointerHooks.T]]''
@@ -370,7 +340,6 @@
   new_hooks : a table of pointers to functions for getting quantities related to
               the current pointer position, or NULL to restore the default table.
   Returns :   the previous pointer hook table
-  Since 2.2
 
 ==== :StoreClipboard ====
 '':StoreClipboard(self @ [[#T|T]], clipboard_window @ [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]], time_ @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], targets @ [[..:..:Gtk:Gdk:Atom#T|Gtk.Gdk.Atom.T]], n_targets @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -385,7 +354,6 @@
   targets :           an array of targets that should be saved, or NULL if all
                      available targets should be saved.
   n_targets :        length of the targets array
-  Since 2.6
 
 ==== :SupportsClipboardPersistence ====
 '':SupportsClipboardPersistence(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
@@ -395,7 +363,6 @@
   this checks if a clipboard daemon is running.
   display : a GdkDisplay
   Returns : TRUE if the display supports clipboard persistance.
-  Since 2.6
 
 ==== :SupportsComposite ====
 '':SupportsComposite(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
@@ -406,19 +373,6 @@
   available.
   display : a GdkDisplay
   Returns : TRUE if windows may be composited.
-  Since 2.12
-  ***** Signal Details *****
-  The "closed" signal
-  void                user_function                      (GdkDisplay *display,
-                                                          gboolean    is_error,
-                                                          gpointer    user_data)
-  : Run Last
-  The ::closed signal is emitted when the connection to the windowing system for
-  display is closed.
-  display :   the object on which the signal is emitted
-  is_error :  TRUE if the display was closed due to an error
-  user_data : user data set when the signal handler was connected.
-  Since 2.2
 
 ==== :SupportsCursorAlpha ====
 '':SupportsCursorAlpha(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
@@ -427,7 +381,6 @@
   cursors are restricted to bilevel alpha (i.e. a mask).
   display : a GdkDisplay
   Returns : whether cursors can have alpha channels.
-  Since 2.4
 
 ==== :SupportsCursorColor ====
 '':SupportsCursorColor(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
@@ -436,7 +389,6 @@
   cursors have only a forground and a background color.
   display : a GdkDisplay
   Returns : whether cursors can have multiple colors.
-  Since 2.4
 
 ==== :SupportsInputShapes ====
 '':SupportsInputShapes(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
@@ -445,7 +397,6 @@
   input shape of windows on display.
   display : a GdkDisplay
   Returns : TRUE if windows with modified input shape are supported
-  Since 2.10
 
 ==== GetDefault ====
 ''GetDefault() : [[..:..:Gtk:Gdk:Display#T|Gtk.Gdk.Display.T]]''
@@ -453,7 +404,6 @@
   Gets the default GdkDisplay. This is a convenience function for:
     gdk_display_manager_get_default_display (gdk_display_manager_get ())
   Returns : a GdkDisplay, or NULL if there is no default display.
-  Since 2.2
 
 ==== OpenDefaultLibgtkOnly ====
 ''OpenDefaultLibgtkOnly() : [[..:..:Gtk:Gdk:Display#T|Gtk.Gdk.Display.T]]''
@@ -465,7 +415,6 @@
   Opens a display.
   display_name : the name of the display to open
   Returns :      a GdkDisplay, or NULL if the display could not be opened.
-  Since 2.2
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''

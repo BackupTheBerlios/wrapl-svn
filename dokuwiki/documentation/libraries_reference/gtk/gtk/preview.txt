@@ -16,14 +16,6 @@
 
   **** Warning ****
   gtk_preview_size is deprecated and should not be used in newly-written code.
-  Set the size that the preview widget will request in response to a
-  "size_request" signal. The drawing area may actually be allocated a size larger
-  than this depending on how it is packed within the enclosing containers. The
-  effect of this is determined by whether the preview is set to expand or not
-  (see gtk_preview_expand())
-  preview : a GtkPreview.
-  width :   the new width.
-  height :  the new height.
 
 ==== :SetExpand ====
 '':SetExpand(self @ [[#T|T]], expand @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -31,15 +23,6 @@
   **** Warning ****
   gtk_preview_set_expand is deprecated and should not be used in newly-written
   code.
-  Determines the way that the the preview widget behaves when the size it is
-  allocated is larger than the requested size. If expand is FALSE, then the
-  preview's window and buffer will be no larger than the size set with
-  gtk_preview_size(), and the data set will be centered in the allocation if it
-  is larger. If expand is TRUE then the window and buffer will expand with the
-  allocation; the application is responsible for catching the "size_allocate"
-  signal and providing the data appropriate for this size.
-  preview : a GtkPreview.
-  expand :  whether the preview's window should expand or not.
 
 ==== :SetDither ====
 '':SetDither(self @ [[#T|T]], dither @ [[..:..:Gtk:Gdk:RgbDither#T|Gtk.Gdk.RgbDither.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -47,27 +30,12 @@
   **** Warning ****
   gtk_preview_set_dither is deprecated and should not be used in newly-written
   code.
-  Set the dithering mode for the display.
-  preview : a GtkPreview.
-  dither :  the dithering mode.
 
 ==== :Put ====
 '':Put(self @ [[#T|T]], window @ [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]], gc @ [[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]], srcx @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], srcy @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], destx @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], desty @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], width @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], height @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
   **** Warning ****
   gtk_preview_put is deprecated and should not be used in newly-written code.
-  Takes a portion of the contents of a preview widget and draws it onto the given
-  drawable, window.
-  preview : a GtkPreview.
-  window :  a window or pixmap.
-  gc :      The graphics context for the operation. Only the clip mask for this
-            GC matters.
-  srcx :    the x coordinate of the upper left corner in the source image.
-  srcy :    the y coordinate of the upper left corner in the source image.
-  destx :   the x coordinate of the upper left corner in the destination image.
-  desty :   the y coordinate of the upper left corner in the destination image.
-  width :   the width of the rectangular portion to draw.
-  height :  the height of the rectangular portion to draw.
 
 ==== :DrawRow ====
 '':DrawRow(self @ [[#T|T]], data @ [[..:..:Std:String#T|Std.String.T]], x @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], w @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -75,14 +43,6 @@
   **** Warning ****
   gtk_preview_draw_row is deprecated and should not be used in newly-written
   code.
-  Sets the data for a portion of a row.
-  preview : a GtkPreview.
-            the new data for the portion. It should contain w bytes of data if
-  data :    the preview is of type GTK_TYPE_GRAYSCALE, and 3*w bytes of data if
-            the preview is of type GTK_TYPE_COLOR.
-  x :       the starting value on the row to set.
-  y :       the row to change.
-  w :       the number of pixels in the row to change.
 
 ==== :Expand ====
 '':Expand(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
@@ -90,15 +50,6 @@
   **** Warning ****
   gtk_preview_set_expand is deprecated and should not be used in newly-written
   code.
-  Determines the way that the the preview widget behaves when the size it is
-  allocated is larger than the requested size. If expand is FALSE, then the
-  preview's window and buffer will be no larger than the size set with
-  gtk_preview_size(), and the data set will be centered in the allocation if it
-  is larger. If expand is TRUE then the window and buffer will expand with the
-  allocation; the application is responsible for catching the "size_allocate"
-  signal and providing the data appropriate for this size.
-  preview : a GtkPreview.
-  expand :  whether the preview's window should expand or not.
 
 ==== :Type ====
 '':Type(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
@@ -110,9 +61,6 @@
   **** Warning ****
   gtk_preview_set_dither is deprecated and should not be used in newly-written
   code.
-  Set the dithering mode for the display.
-  preview : a GtkPreview.
-  dither :  the dithering mode.
 
 ==== :Rowstride ====
 '':Rowstride(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
@@ -139,16 +87,12 @@
 
   **** Warning ****
   gtk_preview_new is deprecated and should not be used in newly-written code.
-  Create a new preview widget.
-  type :    the type data contained by the widget. (Grayscale or RGB)
-  Returns : a new GtkPreview
 
 ==== Uninit ====
 ''Uninit() : [[..:..:Std:Object#T|Std.Object.T]]''
 
   **** Warning ****
   gtk_preview_uninit is deprecated and should not be used in newly-written code.
-  This function is deprecated and does nothing.
 
 ==== SetReserved ====
 ''SetReserved(nreserved : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -156,8 +100,6 @@
   **** Warning ****
   gtk_preview_set_reserved is deprecated and should not be used in newly-written
   code.
-  This function is deprecated and does nothing.
-  nreserved : ignored.
 
 ==== SetInstallCmap ====
 ''SetInstallCmap(install_cmap : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -165,9 +107,6 @@
   **** Warning ****
   gtk_preview_set_install_cmap is deprecated and should not be used in newly-
   written code.
-  This function is deprecated and does nothing. GdkRGB will automatically pick a
-  private colormap if it cannot allocate sufficient colors.
-  install_cmap : ignored.
 
 ==== SetGamma ====
 ''SetGamma(gamma_ : [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -175,13 +114,6 @@
   **** Warning ****
   gtk_preview_set_gamma is deprecated and should not be used in newly-written
   code.
-  Set the gamma-correction value for all preview widgets. (This function will
-  eventually be replaced with a function that sets a per-preview-widget gamma
-  value). The resulting intensity is given by: destination_value * pow
-  (source_value/255, 1/gamma). The gamma value is applied when the data is set
-  with gtk_preview_draw_row() so changing this value will not affect existing
-  data in preview widgets.
-  gamma_ : the new gamma value.
 
 ==== SetColorCube ====
 ''SetColorCube(nred_shades : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], ngreen_shades : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], nblue_shades : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], ngray_shades : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -189,27 +121,12 @@
   **** Warning ****
   gtk_preview_set_color_cube is deprecated and should not be used in newly-
   written code.
-  This function is deprecated and does nothing. GdkRGB automatically picks an
-  optimium color cube for the display.
-  nred_shades :   ignored
-  ngreen_shades : ignored
-  nblue_shades :  ignored
-  ngray_shades :  ignored
 
 ==== Reset ====
 ''Reset() : [[..:..:Std:Object#T|Std.Object.T]]''
 
   **** Warning ****
   gtk_preview_reset is deprecated and should not be used in newly-written code.
-  This function is deprecated and does nothing. It was once used for changing the
-  colormap and visual on the fly.
-  ***** Property Details *****
-  The "expand" property
-    "expand"                   gboolean              : Read / Write
-  Whether the preview widget should take up the entire space it is allocated.
-  Default value: FALSE
-  ***** See Also *****
-  GdkRGB the backend used by GtkPreview.
 
 ==== GetVisual ====
 ''GetVisual() : [[..:..:Gtk:Gdk:Visual#T|Gtk.Gdk.Visual.T]]''
@@ -217,9 +134,6 @@
   **** Warning ****
   gtk_preview_get_visual is deprecated and should not be used in newly-written
   code.
-  Returns the visual used by preview widgets. This function is deprecated, and
-  you should use gdk_rgb_get_visual() instead.
-  Returns : the visual for previews.
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
@@ -231,10 +145,6 @@
   **** Warning ****
   gtk_preview_get_info is deprecated and should not be used in newly-written
   code.
-  Return a GtkPreviewInfo structure containing global information about preview
-  widgets.
-  Returns : a GtkPreviewInfo structure. The return value belongs to GTK+ and must
-            not be modified or freed.
 
 ==== GetCmap ====
 ''GetCmap() : [[..:..:Gtk:Gdk:Colormap#T|Gtk.Gdk.Colormap.T]]''
@@ -242,7 +152,4 @@
   **** Warning ****
   gtk_preview_get_cmap is deprecated and should not be used in newly-written
   code.
-  Returns the colormap used by preview widgets. This function is deprecated, and
-  you should use gdk_rgb_get_cmap() instead.
-  Returns : the colormap for previews.
 

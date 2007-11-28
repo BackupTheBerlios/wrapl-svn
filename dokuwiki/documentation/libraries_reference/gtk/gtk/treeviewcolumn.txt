@@ -43,13 +43,6 @@
   tree_column : A GtkTreeViewColumn
   Returns :     The tree view wherein column has been inserted if any, NULL
                 otherwise.
-  Since 2.12
-  ***** Property Details *****
-  The "alignment" property
-    "alignment"                gfloat                : Read / Write
-  X Alignment of the column header text or widget.
-  Allowed values: [0,1]
-  Default value: 0
 
 ==== :Button ====
 '':Button(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
@@ -337,11 +330,9 @@
   tree_column : A GtkTreeViewColumn
   expand :      TRUE if the column should take available extra space, FALSE if
                 not
-  Since 2.4
   Return TRUE if the column expands to take any available space.
   tree_column : a GtkTreeViewColumn
   Returns :     TRUE, if the column expands
-  Since 2.4
 
 ==== :AddAttribute ====
 '':AddAttribute(self @ [[#T|T]], cell_renderer @ [[..:..:Gtk:Gtk:CellRenderer#T|Gtk.Gtk.CellRenderer.T]], attribute @ [[..:..:Std:String#T|Std.String.T]], column @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -434,7 +425,6 @@
   editable and activatable cells.
   tree_column : A GtkTreeViewColumn
   cell :        A GtkCellRenderer
-  Since 2.2
 
 ==== :GetAlignment ====
 '':GetAlignment(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
@@ -465,7 +455,6 @@
   Return TRUE if the column expands to take any available space.
   tree_column : a GtkTreeViewColumn
   Returns :     TRUE, if the column expands
-  Since 2.4
 
 ==== :GetFixedWidth ====
 '':GetFixedWidth(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
@@ -558,13 +547,6 @@
   tree_column : A GtkTreeViewColumn
   Returns :     The tree view wherein column has been inserted if any, NULL
                 otherwise.
-  Since 2.12
-  ***** Property Details *****
-  The "alignment" property
-    "alignment"                gfloat                : Read / Write
-  X Alignment of the column header text or widget.
-  Allowed values: [0,1]
-  Default value: 0
 
 ==== :GetVisible ====
 '':GetVisible(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
@@ -615,7 +597,6 @@
   Flags the column, and the cell renderers added to this column, to have their
   sizes renegotiated.
   tree_column : A GtkTreeViewColumn
-  Since 2.8
 
 ==== :SetAlignment ====
 '':SetAlignment(self @ [[#T|T]], xalign @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -668,7 +649,6 @@
   tree_column : A GtkTreeViewColumn
   expand :      TRUE if the column should take available extra space, FALSE if
                 not
-  Since 2.4
 
 ==== :SetFixedWidth ====
 '':SetFixedWidth(self @ [[#T|T]], fixed_width @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -795,8 +775,4 @@
   COLOR_COLUMN,
                                                         NULL);
    }
-  title :   The title to set the header to.
-  cell :    The GtkCellRenderer.
-  ... :     A NULL-terminated list of attributes.
-  Returns : A newly created GtkTreeViewColumn.
 

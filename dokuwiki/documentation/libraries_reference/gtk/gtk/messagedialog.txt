@@ -50,7 +50,6 @@
   Pango text markup language.
   message_dialog : a GtkMessageDialog
   str :            markup string (see Pango markup format)
-  Since 2.4
 
 ==== :SetImage ====
 '':SetImage(self @ [[#T|T]], image @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -58,7 +57,6 @@
   Sets the dialog's image to image.
   dialog : a GtkMessageDialog
   image :  the image
-  Since 2.10
 
 ==== :FormatSecondaryText ====
 '':FormatSecondaryText(self @ [[#T|T]], message_format @ [[..:..:Std:String#T|Std.String.T]], ___ @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -70,7 +68,6 @@
   message_dialog : a GtkMessageDialog
   message_format : printf()-style format string, or NULL
   ... :            arguments for message_format
-  Since 2.6
 
 ==== :Image ====
 '':Image(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
@@ -78,7 +75,6 @@
   Sets the dialog's image to image.
   dialog : a GtkMessageDialog
   image :  the image
-  Since 2.10
 
 ==== :Label ====
 '':Label(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
@@ -99,16 +95,6 @@
   msg = g_markup_printf_escaped (message_format, ...);
   gtk_message_dialog_format_secondary_markup (message_dialog, "%s", msg);
   g_free (msg);
-  message_dialog : a GtkMessageDialog
-  message_format : printf()-style markup string (see Pango markup format), or
-                   NULL
-  ... :            arguments for message_format
-  Since 2.6
-  ***** Property Details *****
-  The "buttons" property
-    "buttons"                  GtkButtonsType        : Write / Construct Only
-  The buttons shown in the message dialog.
-  Default value: GTK_BUTTONS_NONE
 
 ==== New ====
 ''New(parent : [[..:..:Gtk:Gtk:Window#T|Gtk.Gtk.Window.T]], flags : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], type : [[..:..:Gtk:Gtk:MessageType#T|Gtk.Gtk.MessageType.T]], buttons : [[..:..:Gtk:Gtk:ButtonsType#T|Gtk.Gtk.ButtonsType.T]], message_format : [[..:..:Std:String#T|Std.String.T]], ___ : [[..:..:Std:Object#T|Std.Object.T]]) : [[# T| T]]''
@@ -152,12 +138,4 @@
                                     NULL);
    gtk_message_dialog_set_markup (GTK_MESSAGE_DIALOG (dialog),
                                   markup);
-  parent :         transient parent, or NULL for none
-  flags :          flags
-  type :           type of message
-  buttons :        set of buttons to use
-  message_format : printf()-style format string, or NULL
-  ... :            arguments for message_format
-  Returns :        a new GtkMessageDialog
-  Since 2.4
 

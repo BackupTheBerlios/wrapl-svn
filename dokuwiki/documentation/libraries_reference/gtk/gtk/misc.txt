@@ -58,12 +58,6 @@
   misc : a GtkMisc
   xpad : location to store padding in the X direction, or NULL
   ypad : location to store padding in the Y direction, or NULL
-  ***** Property Details *****
-  The "xalign" property
-    "xalign"                   gfloat                : Read / Write
-  The horizontal alignment, from 0 (left) to 1 (right). Reversed for RTL layouts.
-  Allowed values: [0,1]
-  Default value: 0.5
 
 ==== :SetAlignment ====
 '':SetAlignment(self @ [[#T|T]], xalign @ [[..:..:Std:Real#T|Std.Real.T]], yalign @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''

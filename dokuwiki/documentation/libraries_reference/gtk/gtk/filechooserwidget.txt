@@ -29,7 +29,6 @@
   GtkFileChooserDialog.
   action :  Open or save mode for the widget
   Returns : a new GtkFileChooserWidget
-  Since 2.4
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
@@ -45,7 +44,4 @@
   action :  Open or save mode for the widget
   backend : The name of the specific filesystem backend to use.
   Returns : a new GtkFileChooserWidget
-  Since 2.4
-  ***** See Also *****
-  GtkFileChooser, GtkFileChooserDialog
 

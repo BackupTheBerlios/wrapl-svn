@@ -38,20 +38,6 @@
   ... :        optional pairs of property names and values, and a terminating
                NULL.
   Returns :    a new polyline model.
-  Here's an example showing how to create a filled triangle with vertices at
-  (100,100), (300,100), and (200,300).
-   GooCanvasItemModel *polyline = goo_canvas_polyline_model_new (mygroup, TRUE,
-  3,
-                                                                 100.0, 100.0,
-                                                                 300.0, 100.0,
-                                                                 200.0, 300.0,
-                                                                 "stroke-color",
-  "red",
-                                                                 "line-width",
-  5.0,
-                                                                 "fill-color",
-  "blue",
-                                                                 NULL);
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
@@ -68,21 +54,4 @@
   y2 :      the y coordinate of the end of the line.
   ... :     optional pairs of property names and values, and a terminating NULL.
   Returns : a new polyline model.
-  Here's an example showing how to create a line from (100,100) to (300,300).
-   GooCanvasItemModel *polyline = goo_canvas_polyline_model_new_line (mygroup,
-                                                                      100.0,
-  100.0,
-                                                                      300.0,
-  300.0,
-                                                                      "stroke-
-  color", "red",
-                                                                      "line-
-  width", 5.0,
-                                                                      NULL);
-  ***** Property Details *****
-  The "arrow-length" property
-    "arrow-length"             gdouble               : Read / Write
-  The length of the arrows, as a multiple of the line width.
-  Allowed values: >= 0
-  Default value: 5
 

@@ -35,17 +35,6 @@
   y :       the y coordinate of the image.
   ... :     optional pairs of property names and values, and a terminating NULL.
   Returns : a new image model.
-  Here's an example showing how to create an image at (100.0, 100.0), using the
-  given pixbuf at its natural width and height:
-   GooCanvasItemModel *image = goo_canvas_image_model_new (mygroup, pixbuf,
-  100.0, 100.0,
-                                                           NULL);
-  ***** Property Details *****
-  The "height" property
-    "height"                   gdouble               : Read / Write
-  The height of the image.
-  Allowed values: >= 0
-  Default value: 0
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''

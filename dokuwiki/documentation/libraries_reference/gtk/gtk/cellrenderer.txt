@@ -38,7 +38,6 @@
   the "editing-done" signal of GtkCellEditable.
   cell :     A GtkCellRenderer
   canceled : TRUE if the editing has been canceled
-  Since 2.6
 
 ==== :Xalign ====
 '':Xalign(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
@@ -107,7 +106,6 @@
   the "editing-done" signal of GtkCellEditable.
   cell :     A GtkCellRenderer
   canceled : TRUE if the editing has been canceled
-  Since 2.6
 
 ==== :Activate ====
 '':Activate(self @ [[#T|T]], event @ [[..:..:Std:Object#T|Std.Object.T]], widget @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], path @ [[..:..:Std:String#T|Std.String.T]], background_area @ [[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]], cell_area @ [[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]], flags @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
@@ -132,12 +130,6 @@
   gtk_cell_renderer_editing_canceled has been deprecated since version 2.6 and
   should not be used in newly-written code. Use gtk_cell_renderer_stop_editing()
   instead
-  Causes the cell renderer to emit the "editing-canceled" signal.
-  This function is for use only by implementations of cell renderers that need to
-  notify the client program that an editing process was canceled and the changes
-  were not committed.
-  cell : A GtkCellRenderer
-  Since 2.4
 
 ==== :GetFixedSize ====
 '':GetFixedSize(self @ [[#T|T]], width @ [[..:..:Std:Object#T|Std.Object.T]], height @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -190,11 +182,6 @@
   cell :   A GtkCellRenderer
   width :  the width of the cell renderer, or -1
   height : the height of the cell renderer, or -1
-  ***** Property Details *****
-  The "cell-background" property
-    "cell-background"          gchararray            : Write
-  Cell background color as a string.
-  Default value: NULL
 
 ==== :StartEditing ====
 '':StartEditing(self @ [[#T|T]], event @ [[..:..:Std:Object#T|Std.Object.T]], widget @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], path @ [[..:..:Std:String#T|Std.String.T]], background_area @ [[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]], cell_area @ [[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]], flags @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Gtk:Gtk:CellEditable#T|Gtk.Gtk.CellEditable.T]]''

@@ -234,7 +234,6 @@
   nothing.
   chooser : a GtkFileChooser
   uri :     the URI to unselect
-  Since 2.4
 
 ==== :UnselectFilename ====
 '':UnselectFilename(self @ [[#T|T]], filename @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -244,7 +243,6 @@
   nothing.
   chooser :  a GtkFileChooser
   filename : the filename to unselect
-  Since 2.4
 
 ==== :AddFilter ====
 '':AddFilter(self @ [[#T|T]], filter @ [[..:..:Gtk:Gtk:FileFilter#T|Gtk.Gtk.FileFilter.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -255,7 +253,6 @@
   sink it if you want to keep a reference.
   chooser : a GtkFileChooser
   filter :  a GtkFileFilter
-  Since 2.4
 
 ==== :AddShortcutFolder ====
 '':AddShortcutFolder(self @ [[#T|T]], folder @ [[..:..:Std:String#T|Std.String.T]], error @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
@@ -269,7 +266,6 @@
   error :   location to store error, or NULL
   Returns : TRUE if the folder could be added successfully, FALSE otherwise. In
             the latter case, the error will be set as appropriate.
-  Since 2.4
 
 ==== :AddShortcutFolderUri ====
 '':AddShortcutFolderUri(self @ [[#T|T]], uri @ [[..:..:Std:String#T|Std.String.T]], error @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
@@ -283,7 +279,6 @@
   error :   location to store error, or NULL
   Returns : TRUE if the folder could be added successfully, FALSE otherwise. In
             the latter case, the error will be set as appropriate.
-  Since 2.4
 
 ==== :GetAction ====
 '':GetAction(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:FileChooserAction#T|Gtk.Gtk.FileChooserAction.T]]''
@@ -292,7 +287,6 @@
   gtk_file_chooser_set_action().
   chooser : a GtkFileChooser
   Returns : the action that the file selector is performing
-  Since 2.4
 
 ==== :GetCurrentFolder ====
 '':GetCurrentFolder(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
@@ -312,7 +306,6 @@
             the last folder that was requested from it; for example, as would be
             for calling gtk_file_chooser_set_current_folder() on a nonexistent
             folder.
-  Since 2.4
 
 ==== :GetCurrentFolderUri ====
 '':GetCurrentFolderUri(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
@@ -331,7 +324,6 @@
   Returns : folder that was requested from it; for example, as would be for
             calling gtk_file_chooser_set_current_folder_uri() on a nonexistent
             folder.
-  Since 2.4
 
 ==== :GetDoOverwriteConfirmation ====
 '':GetDoOverwriteConfirmation(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
@@ -341,7 +333,6 @@
   chooser : a GtkFileChooser
   Returns : TRUE if the file chooser will present a confirmation dialog; FALSE
             otherwise.
-  Since 2.8
 
 ==== :GetExtraWidget ====
 '':GetExtraWidget(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
@@ -349,7 +340,6 @@
   Gets the current preview widget; see gtk_file_chooser_set_extra_widget().
   chooser : a GtkFileChooser
   Returns : the current extra widget, or NULL
-  Since 2.4
 
 ==== :GetFilename ====
 '':GetFilename(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
@@ -362,7 +352,6 @@
             The currently selected filename, or NULL if no file is selected, or
   Returns : the selected file can't be represented with a local filename. Free
             with g_free().
-  Since 2.4
 
 ==== :GetFilenames ====
 '':GetFilenames(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -375,7 +364,6 @@
             a GSList containing the filenames of all selected files and
   Returns : subfolders in the current folder. Free the returned list with
             g_slist_free(), and the filenames with g_free().
-  Since 2.4
 
 ==== :GetFilter ====
 '':GetFilter(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:FileFilter#T|Gtk.Gtk.FileFilter.T]]''
@@ -383,7 +371,6 @@
   Gets the current filter; see gtk_file_chooser_set_filter().
   chooser : a GtkFileChooser
   Returns : the current filter, or NULL
-  Since 2.4
 
 ==== :GetLocalOnly ====
 '':GetLocalOnly(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
@@ -392,7 +379,6 @@
   gtk_file_chooser_set_local_only()
   chooser : a GtkFileChoosre
   Returns : TRUE if only local files can be selected.
-  Since 2.4
 
 ==== :GetPreviewFilename ====
 '':GetPreviewFilename(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
@@ -403,7 +389,6 @@
             the filename to preview, or NULL if no file is selected, or if the
   Returns : selected file cannot be represented as a local filename. Free with
             g_free()
-  Since 2.4
 
 ==== :GetPreviewUri ====
 '':GetPreviewUri(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
@@ -413,7 +398,6 @@
   chooser : a GtkFileChooser
   Returns : the URI for the file to preview, or NULL if no file is selected. Free
             with g_free().
-  Since 2.4
 
 ==== :GetPreviewWidget ====
 '':GetPreviewWidget(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
@@ -421,7 +405,6 @@
   Gets the current preview widget; see gtk_file_chooser_set_preview_widget().
   chooser : a GtkFileChooser
   Returns : the current preview widget, or NULL
-  Since 2.4
 
 ==== :GetPreviewWidgetActive ====
 '':GetPreviewWidgetActive(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
@@ -431,7 +414,6 @@
   gtk_file_chooser_set_preview_widget_active().
   chooser : a GtkFileChooser
   Returns : TRUE if the preview widget is active for the current filename.
-  Since 2.4
 
 ==== :GetSelectMultiple ====
 '':GetSelectMultiple(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
@@ -440,7 +422,6 @@
   gtk_file_chooser_set_select_multiple().
   chooser : a GtkFileChooser
   Returns : TRUE if multiple files can be selected.
-  Since 2.4
 
 ==== :GetShowHidden ====
 '':GetShowHidden(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
@@ -449,7 +430,6 @@
   gtk_file_chooser_set_show_hidden().
   chooser : a GtkFileChooser
   Returns : TRUE if hidden files and folders are displayed.
-  Since 2.6
 
 ==== :GetUri ====
 '':GetUri(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
@@ -461,7 +441,6 @@
   chooser : a GtkFileChooser
   Returns : The currently selected URI, or NULL if no file is selected. Free with
             g_free()
-  Since 2.4
 
 ==== :GetUris ====
 '':GetUris(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -472,7 +451,6 @@
             a GSList containing the URIs of all selected files and subfolders in
   Returns : the current folder. Free the returned list with g_slist_free(), and
             the filenames with g_free().
-  Since 2.4
 
 ==== :GetUsePreviewLabel ====
 '':GetUsePreviewLabel(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
@@ -492,7 +470,6 @@
             a GSList containing the current set of user selectable filters. The
   Returns : contents of the list are owned by GTK+, but you must free the list
             itself with g_slist_free() when you are done with it.
-  Since 2.4
 
 ==== :ListShortcutFolderUris ====
 '':ListShortcutFolderUris(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -502,12 +479,6 @@
   chooser : a GtkFileChooser
   Returns : A list of folder URIs, or NULL if there are no shortcut folders. Free
             the returned list with g_slist_free(), and the URIs with g_free().
-  Since 2.4
-  ***** Property Details *****
-  The "action" property
-    "action"                   GtkFileChooserAction  : Read / Write
-  The type of operation that the file selector is performing.
-  Default value: GTK_FILE_CHOOSER_ACTION_OPEN
 
 ==== :ListShortcutFolders ====
 '':ListShortcutFolders(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -518,7 +489,6 @@
             A list of folder filenames, or NULL if there are no shortcut folders.
   Returns : Free the returned list with g_slist_free(), and the filenames with
             g_free().
-  Since 2.4
 
 ==== :RemoveFilter ====
 '':RemoveFilter(self @ [[#T|T]], filter @ [[..:..:Gtk:Gtk:FileFilter#T|Gtk.Gtk.FileFilter.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -526,7 +496,6 @@
   Removes filter from the list of filters that the user can select between.
   chooser : a GtkFileChooser
   filter :  a GtkFileFilter
-  Since 2.4
 
 ==== :RemoveShortcutFolder ====
 '':RemoveShortcutFolder(self @ [[#T|T]], folder @ [[..:..:Std:String#T|Std.String.T]], error @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
@@ -538,7 +507,6 @@
             TRUE if the operation succeeds, FALSE otherwise. In the latter case,
   Returns : the error will be set as appropriate. See also:
             gtk_file_chooser_add_shortcut_folder()
-  Since 2.4
 
 ==== :RemoveShortcutFolderUri ====
 '':RemoveShortcutFolderUri(self @ [[#T|T]], uri @ [[..:..:Std:String#T|Std.String.T]], error @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
@@ -550,14 +518,12 @@
             TRUE if the operation succeeds, FALSE otherwise. In the latter case,
   Returns : the error will be set as appropriate. See also:
             gtk_file_chooser_add_shortcut_folder_uri()
-  Since 2.4
 
 ==== :SelectAll ====
 '':SelectAll(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
   Selects all the files in the current folder of a file chooser.
   chooser : a GtkFileChooser
-  Since 2.4
 
 ==== :SelectFilename ====
 '':SelectFilename(self @ [[#T|T]], filename @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
@@ -569,7 +535,6 @@
   filename : the filename to select
   Returns :  TRUE if both the folder could be changed and the file was selected
              successfully, FALSE otherwise.
-  Since 2.4
 
 ==== :SelectUri ====
 '':SelectUri(self @ [[#T|T]], uri @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
@@ -581,7 +546,6 @@
   uri :     the URI to select
   Returns : TRUE if both the folder could be changed and the URI was selected
             successfully, FALSE otherwise.
-  Since 2.4
 
 ==== :SetAction ====
 '':SetAction(self @ [[#T|T]], action @ [[..:..:Gtk:Gtk:FileChooserAction#T|Gtk.Gtk.FileChooserAction.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -592,7 +556,6 @@
   the action is GTK_FILE_CHOOSER_ACTION_OPEN.
   chooser : a GtkFileChooser
   action :  the action that the file selector is performing
-  Since 2.4
 
 ==== :SetCurrentFolder ====
 '':SetCurrentFolder(self @ [[#T|T]], filename @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
@@ -603,7 +566,6 @@
   chooser :  a GtkFileChooser
   filename : the full path of the new current folder
   Returns :  TRUE if the folder could be changed successfully, FALSE otherwise.
-  Since 2.4
 
 ==== :SetCurrentFolderUri ====
 '':SetCurrentFolderUri(self @ [[#T|T]], uri @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
@@ -614,7 +576,6 @@
   chooser : a GtkFileChooser
   uri :     the URI for the new current folder
   Returns : TRUE if the folder could be changed successfully, FALSE otherwise.
-  Since 2.4
 
 ==== :SetCurrentName ====
 '':SetCurrentName(self @ [[#T|T]], name @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -628,7 +589,6 @@
   gtk_file_chooser_set_current_name() as well.
   chooser : a GtkFileChooser
   name :    the filename to use, as a UTF-8 string
-  Since 2.4
 
 ==== :SetDoOverwriteConfirmation ====
 '':SetDoOverwriteConfirmation(self @ [[#T|T]], do_overwrite_confirmation @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -643,7 +603,6 @@
   "confirm-overwrite" signal; please refer to its documentation for the details.
   chooser :                   a GtkFileChooser
   do_overwrite_confirmation : whether to confirm overwriting in save mode
-  Since 2.8
 
 ==== :SetExtraWidget ====
 '':SetExtraWidget(self @ [[#T|T]], extra_widget @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -651,7 +610,6 @@
   Sets an application-supplied widget to provide extra options to the user.
   chooser :      a GtkFileChooser
   extra_widget : widget for extra options
-  Since 2.4
 
 ==== :SetFilename ====
 '':SetFilename(self @ [[#T|T]], filename @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
@@ -687,7 +645,6 @@
   filename : the filename to set as current
   Returns :  TRUE if both the folder could be changed and the file was selected
              successfully, FALSE otherwise.
-  Since 2.4
 
 ==== :SetFilter ====
 '':SetFilter(self @ [[#T|T]], filter @ [[..:..:Gtk:Gtk:FileFilter#T|Gtk.Gtk.FileFilter.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -699,7 +656,6 @@
   without letting the user change it.
   chooser : a GtkFileChooser
   filter :  a GtkFileFilter
-  Since 2.4
 
 ==== :SetLocalOnly ====
 '':SetLocalOnly(self @ [[#T|T]], local_only @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -712,7 +668,6 @@
   the URI functions like gtk_file_chooser_get_uri(),
   chooser :    a GtkFileChooser
   local_only : TRUE if only local files can be selected
-  Since 2.4
 
 ==== :SetPreviewWidget ====
 '':SetPreviewWidget(self @ [[#T|T]], preview_widget @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -731,7 +686,6 @@
   at all.
   chooser :        a GtkFileChooser
   preview_widget : widget for displaying preview.
-  Since 2.4
 
 ==== :SetPreviewWidgetActive ====
 '':SetPreviewWidgetActive(self @ [[#T|T]], active @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -743,7 +697,6 @@
   more details.
   chooser : a GtkFileChooser
   active :  whether to display the user-specified preview widget
-  Since 2.4
 
 ==== :SetSelectMultiple ====
 '':SetSelectMultiple(self @ [[#T|T]], select_multiple @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -753,7 +706,6 @@
   GTK_FILE_CHOOSER_ACTION_SELECT_FOLDER.
   chooser :         a GtkFileChooser
   select_multiple : TRUE if multiple files can be selected.
-  Since 2.4
 
 ==== :SetShowHidden ====
 '':SetShowHidden(self @ [[#T|T]], show_hidden @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -761,7 +713,6 @@
   Sets whether hidden files and folders are displayed in the file selector.
   chooser :     a GtkFileChooser
   show_hidden : TRUE if hidden files and folders should be displayed.
-  Since 2.6
 
 ==== :SetUri ====
 '':SetUri(self @ [[#T|T]], uri @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
@@ -797,7 +748,6 @@
   uri :     the URI to set as current
   Returns : TRUE if both the folder could be changed and the URI was selected
             successfully, FALSE otherwise.
-  Since 2.4
 
 ==== :SetUsePreviewLabel ====
 '':SetUsePreviewLabel(self @ [[#T|T]], use_label @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -810,14 +760,12 @@
   chooser :   a GtkFileChooser
   use_label : whether to display a stock label with the name of the previewed
               file
-  Since 2.4
 
 ==== :UnselectAll ====
 '':UnselectAll(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
   Unselects all the files in the current folder of a file chooser.
   chooser : a GtkFileChooser
-  Since 2.4
 
 ==== ErrorQuark ====
 ''ErrorQuark() : [[..:..:Std:Object#T|Std.Object.T]]''

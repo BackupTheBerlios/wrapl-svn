@@ -21,12 +21,6 @@
   a number to avoid clashes.
   action :       a GtkRecentAction
   show_numbers : TRUE if the shown items should be numbered
-  Since 2.12
-  ***** Property Details *****
-  The "show-numbers" property
-    "show-numbers"             gboolean              : Read / Write
-  Whether the items should be displayed with a number.
-  Default value: FALSE
 
 ==== :GetShowNumbers ====
 '':GetShowNumbers(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
@@ -34,7 +28,6 @@
   Returns the value set by gtk_recent_chooser_menu_set_show_numbers().
   action :  a GtkRecentAction
   Returns : TRUE if numbers should be shown.
-  Since 2.12
 
 ==== :Priv ====
 '':Priv(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -52,7 +45,6 @@
   stock_id : the stock icon to display in widgets representing the action, or
              NULL
   Returns :  the newly created GtkRecentAction.
-  Since 2.12
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
@@ -71,5 +63,4 @@
              NULL
   manager :  a GtkRecentManager, or NULL for using the default GtkRecentManager
   Returns :  the newly created GtkRecentAction
-  Since 2.12
 

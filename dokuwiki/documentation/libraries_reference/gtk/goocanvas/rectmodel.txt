@@ -36,20 +36,6 @@
   height :  the height of the rectangle.
   ... :     optional pairs of property names and values, and a terminating NULL.
   Returns : a new rectangle model.
-  Here's an example showing how to create a rectangle at (100,100) with a width
-  of 200 and a height of 100.
-   GooCanvasItemModel *rect = goo_canvas_rect_model_new (mygroup, 100.0, 100.0,
-  200.0, 100.0,
-                                                         "stroke-color", "red",
-                                                         "line-width", 5.0,
-                                                         "fill-color", "blue",
-                                                         NULL);
-  ***** Property Details *****
-  The "height" property
-    "height"                   gdouble               : Read / Write
-  The height of the rectangle.
-  Allowed values: >= 0
-  Default value: 0
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''

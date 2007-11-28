@@ -19,7 +19,6 @@
   Sets how items should be packed inside a menubar.
   menubar :  a GtkMenuBar.
   pack_dir : a new GtkPackDirection.
-  Since 2.8
 
 ==== :SetChildPackDirection ====
 '':SetChildPackDirection(self @ [[#T|T]], child_pack_dir @ [[..:..:Gtk:Gtk:PackDirection#T|Gtk.Gtk.PackDirection.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -27,7 +26,6 @@
   Sets how widgets should be packed inside the children of a menubar.
   menubar :        a GtkMenuBar.
   child_pack_dir : a new GtkPackDirection.
-  Since 2.8
 
 ==== :GetChildPackDirection ====
 '':GetChildPackDirection(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:PackDirection#T|Gtk.Gtk.PackDirection.T]]''
@@ -36,14 +34,6 @@
   gtk_menu_bar_set_child_pack_direction().
   menubar : a GtkMenuBar
   Returns : the child pack direction
-  Since 2.8
-  ***** Property Details *****
-  The "child-pack-direction" property
-    "child-pack-direction"     GtkPackDirection      : Read / Write
-  The pack direction of the menubar. It determines how the widgets contained in
-  child menuitems are arranged.
-  Default value: GTK_PACK_DIRECTION_LTR
-  Since 2.8
 
 ==== :GetPackDirection ====
 '':GetPackDirection(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:PackDirection#T|Gtk.Gtk.PackDirection.T]]''
@@ -52,7 +42,6 @@
   gtk_menu_bar_set_pack_direction().
   menubar : a GtkMenuBar
   Returns : the pack direction
-  Since 2.8
 
 ==== New ====
 ''New() : [[# T| T]]''

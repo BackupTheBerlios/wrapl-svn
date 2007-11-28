@@ -15,11 +15,6 @@
   **** Warning ****
   gtk_old_editable_claim_selection is deprecated and should not be used in newly-
   written code.
-  Claims or gives up ownership of the selection.
-  old_editable : a GtkOldEditable
-  claim :        if TRUE, claim ownership of the selection, if FALSE, give up
-                 ownership
-  time_ :        timestamp for this operation
 
 ==== :CurrentPos ====
 '':CurrentPos(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
@@ -55,12 +50,6 @@
   **** Warning ****
   gtk_old_editable_changed is deprecated and should not be used in newly-written
   code.
-  Emits the ::changed signal on old_editable.
-  old_editable : a GtkOldEditable
-  ***** Property Details *****
-  The "editable" property
-    "editable"                 gboolean              : Read / Write
-  Default value: FALSE
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''

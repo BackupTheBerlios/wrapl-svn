@@ -40,7 +40,6 @@
   Sets the width (in characters) that button will use to n_chars.
   button :  the button widget to examine.
   n_chars : the new width, in characters.
-  Since 2.6
 
 ==== :SetTitle ====
 '':SetTitle(self @ [[#T|T]], title @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -48,7 +47,6 @@
   Modifies the title of the browse dialog used by button.
   button : the button widget to modify.
   title :  the new browse dialog title.
-  Since 2.6
 
 ==== :SetFocusOnClick ====
 '':SetFocusOnClick(self @ [[#T|T]], focus_on_click @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -58,12 +56,6 @@
   don't want the keyboard focus removed from the main area of the application.
   button :         a GtkFileChooserButton
   focus_on_click : whether the button grabs focus when clicked with the mouse
-  Since 2.10
-  ***** Property Details *****
-  The "dialog" property
-    "dialog"                   GtkFileChooser        : Write / Construct Only
-  Instance of the GtkFileChooserDialog associated with the button.
-  Since 2.6
 
 ==== :GetWidthChars ====
 '':GetWidthChars(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
@@ -72,7 +64,6 @@
   button :  the button widget to examine.
   Returns : an integer width (in characters) that the button will use to size
             itself.
-  Since 2.6
 
 ==== :Priv ====
 '':Priv(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -85,7 +76,6 @@
   gtk_file_chooser_button_set_focus_on_click().
   button :  a GtkFileChooserButton
   Returns : TRUE if the button grabs focus when it is clicked with the mouse.
-  Since 2.10
 
 ==== :GetTitle ====
 '':GetTitle(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
@@ -94,7 +84,6 @@
   should not be modified or freed.
   button :  the button widget to examine.
   Returns : a pointer to the browse dialog's title.
-  Since 2.6
 
 ==== New ====
 ''New(title : [[..:..:Std:String#T|Std.String.T]], action : [[..:..:Gtk:Gtk:FileChooserAction#T|Gtk.Gtk.FileChooserAction.T]]) : [[# T| T]]''
@@ -103,7 +92,6 @@
   title :   the title of the browse dialog.
   action :  the open mode for the widget.
   Returns : a new button widget.
-  Since 2.6
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
@@ -121,7 +109,6 @@
   over the file selected in the dialog.
   dialog :  the widget to use as dialog
   Returns : a new button widget.
-  Since 2.6
 
 ==== NewWithBackend ====
 ''NewWithBackend(title : [[..:..:Std:String#T|Std.String.T]], action : [[..:..:Gtk:Gtk:FileChooserAction#T|Gtk.Gtk.FileChooserAction.T]], backend : [[..:..:Std:String#T|Std.String.T]]) : [[# T| T]]''
@@ -131,5 +118,4 @@
   action :  the open mode for the widget.
   backend : the name of the GtkFileSystem backend to use.
   Returns : a new button widget.
-  Since 2.6
 

@@ -31,22 +31,6 @@
   selection :  A GtkTreeSelection.
   start_path : The initial node of the range.
   end_path :   The initial node of the range.
-  Since 2.2
-  ***** Signal Details *****
-  The "changed" signal
-  void                user_function                      (GtkTreeSelection
-  *treeselection,
-                                                          gpointer
-  user_data)          : Run First
-  Emitted whenever the selection has (possibly) changed. Please note that this
-  signal is mostly a hint. It may only be emitted once when a range of rows are
-  selected, and it may occasionally be emitted when nothing has happened.
-  treeselection : the object which received the signal.
-  user_data :     user data set when the signal handler was connected.
-  ***** See Also *****
-  GtkTreeView, GtkTreeViewColumn, GtkTreeDnd, GtkTreeMode, GtkTreeSortable,
-  GtkTreeModelSort, GtkListStore, GtkTreeStore, GtkCellRenderer, GtkCellEditable,
-  GtkCellRendererPixbuf, GtkCellRendererText, GtkCellRendererToggle
 
 ==== :TreeView ====
 '':TreeView(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:TreeView#T|Gtk.Gtk.TreeView.T]]''
@@ -80,7 +64,6 @@
   Returns the number of rows that have been selected in tree.
   selection : A GtkTreeSelection.
   Returns :   The number of rows selected.
-  Since 2.2
 
 ==== :GetMode ====
 '':GetMode(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:SelectionMode#T|Gtk.Gtk.SelectionMode.T]]''
@@ -112,10 +95,6 @@
   To free the return value, use:
   g_list_foreach (list, gtk_tree_path_free, NULL);
   g_list_free (list);
-  selection : A GtkTreeSelection.
-  model :     A pointer to set to the GtkTreeModel, or NULL.
-  Returns :   A GList containing a GtkTreePath for each selected row.
-  Since 2.2
 
 ==== :GetTreeView ====
 '':GetTreeView(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:TreeView#T|Gtk.Gtk.TreeView.T]]''

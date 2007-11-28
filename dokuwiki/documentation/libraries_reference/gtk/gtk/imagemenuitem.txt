@@ -61,10 +61,6 @@
   label :   the text of the menu item, with an underscore in front of the
             mnemonic character
   Returns : a new GtkImageMenuItem
-  ***** Property Details *****
-  The "image" property
-    "image"                    GtkWidget             : Read / Write
-  Child widget to appear next to the menu text.
 
 ==== NewWithLabel ====
 ''NewWithLabel(label : [[..:..:Std:String#T|Std.String.T]]) : [[# T| T]]''

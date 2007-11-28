@@ -44,7 +44,6 @@
   See also gtk_scrolled_window_set_placement() and
   gtk_scrolled_window_get_placement().
   scrolled_window : a GtkScrolledWindow
-  Since 2.10
 
 ==== :SetVadjustment ====
 '':SetVadjustment(self @ [[#T|T]], vadjustment @ [[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -60,7 +59,6 @@
   scrolled_window : a GtkScrolledWindow
   Returns :         the horizontal scrollbar of the scrolled window, or NULL if
                     it does not have one.
-  Since 2.8
 
 ==== :Vscrollbar ====
 '':Vscrollbar(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
@@ -69,7 +67,6 @@
   scrolled_window : a GtkScrolledWindow
   Returns :         the vertical scrollbar of the scrolled window, or NULL if it
                     does not have one.
-  Since 2.8
 
 ==== :HscrollbarPolicy ====
 '':HscrollbarPolicy(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
@@ -105,10 +102,6 @@
   gtk_scrolled_window_set_shadow_type().
   scrolled_window : a GtkScrolledWindow
   Returns :         the current shadow type
-  ***** Property Details *****
-  The "hadjustment" property
-    "hadjustment"              GtkAdjustment         : Read / Write / Construct
-  The GtkAdjustment for the horizontal position.
 
 ==== :AddWithViewport ====
 '':AddWithViewport(self @ [[#T|T]], child @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -144,7 +137,6 @@
   scrolled_window : a GtkScrolledWindow
   Returns :         the horizontal scrollbar of the scrolled window, or NULL if
                     it does not have one.
-  Since 2.8
 
 ==== :GetPlacement ====
 '':GetPlacement(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:CornerType#T|Gtk.Gtk.CornerType.T]]''
@@ -174,10 +166,6 @@
   gtk_scrolled_window_set_shadow_type().
   scrolled_window : a GtkScrolledWindow
   Returns :         the current shadow type
-  ***** Property Details *****
-  The "hadjustment" property
-    "hadjustment"              GtkAdjustment         : Read / Write / Construct
-  The GtkAdjustment for the horizontal position.
 
 ==== :GetVadjustment ====
 '':GetVadjustment(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]]''
@@ -194,7 +182,6 @@
   scrolled_window : a GtkScrolledWindow
   Returns :         the vertical scrollbar of the scrolled window, or NULL if it
                     does not have one.
-  Since 2.8
 
 ==== :SetHadjustment ====
 '':SetHadjustment(self @ [[#T|T]], hadjustment @ [[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''

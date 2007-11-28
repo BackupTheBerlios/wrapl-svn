@@ -33,16 +33,6 @@
   **** Warning ****
   gtk_calendar_thaw has been deprecated since version 2.8 and should not be used
   in newly-written code.
-  Does nothing. Previously defrosted a calendar; all the changes made since the
-  last gtk_calendar_freeze() were displayed.
-  calendar : a GtkCalendar
-  ***** Property Details *****
-  The "day" property
-    "day"                      gint                  : Read / Write
-  The selected day (as a number between 1 and 31, or 0 to unselect the currently
-  selected day).
-  Allowed values: [0,31]
-  Default value: 0
 
 ==== :HeaderStyle ====
 '':HeaderStyle(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Style#T|Gtk.Gtk.Style.T]]''
@@ -149,9 +139,6 @@
   **** Warning ****
   gtk_calendar_display_options is deprecated and should not be used in newly-
   written code.
-  Sets display options (whether to display the heading and the month headings).
-  calendar : a GtkCalendar.
-  flags :    the display options to set.
 
 ==== :Freeze ====
 '':Freeze(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -159,9 +146,6 @@
   **** Warning ****
   gtk_calendar_freeze has been deprecated since version 2.8 and should not be
   used in newly-written code.
-  Does nothing. Previously locked the display of the calendar until it was thawed
-  with gtk_calendar_thaw().
-  calendar : a GtkCalendar
 
 ==== :GetDate ====
 '':GetDate(self @ [[#T|T]], year @ [[..:..:Std:Object#T|Std.Object.T]], month @ [[..:..:Std:Object#T|Std.Object.T]], day @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -178,7 +162,6 @@
   Returns the current display options of calendar.
   calendar : a GtkCalendar
   Returns :  the display options.
-  Since 2.4
 
 ==== :MarkDay ====
 '':MarkDay(self @ [[#T|T]], day @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
@@ -211,7 +194,6 @@
   Sets display options (whether to display the heading and the month headings).
   calendar : a GtkCalendar
   flags :    the display options to set
-  Since 2.4
 
 ==== New ====
 ''New() : [[# T| T]]''

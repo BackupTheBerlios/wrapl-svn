@@ -52,13 +52,6 @@
   this function is incorrect. For converting coordinates relative to the widget
   to bin_window coordinates, please see
   gtk_tree_view_convert_widget_to_bin_window_coords().
-  Converts bin_window coordinates to coordinates for the tree (the full
-  scrollable area of the tree).
-  tree_view : a GtkTreeView
-  wx :        X coordinate relative to bin_window
-  wy :        Y coordinate relative to bin_window
-  tx :        return location for tree X coordinate
-  ty :        return location for tree Y coordinate
 
 ==== :UnsetRowsDragSource ====
 '':UnsetRowsDragSource(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -81,13 +74,6 @@
   this function is incorrect. For converting bin_window coordinates to
   coordinates relative to bin_window, please see
   gtk_tree_view_convert_bin_window_to_widget_coords().
-  Converts tree coordinates (coordinates in full scrollable area of the tree) to
-  bin_window coordinates.
-  tree_view : a GtkTreeView
-  tx :        tree X coordinate
-  ty :        tree Y coordinate
-  wx :        return location for X coordinate relative to bin_window
-  wy :        return location for Y coordinate relative to bin_window
 
 ==== :Priv ====
 '':Priv(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -134,7 +120,6 @@
   by :        Y coordinate relative to bin_window
   tx :        return location for tree X coordinate
   ty :        return location for tree Y coordinate
-  Since 2.12
 
 ==== :ConvertBinWindowToWidgetCoords ====
 '':ConvertBinWindowToWidgetCoords(self @ [[#T|T]], bx @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], by @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], wx @ [[..:..:Std:Object#T|Std.Object.T]], wy @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -146,7 +131,6 @@
   by :        bin_window Y coordinate
   wx :        return location for widget X coordinate
   wy :        return location for widget Y coordinate
-  Since 2.12
 
 ==== :ConvertTreeToBinWindowCoords ====
 '':ConvertTreeToBinWindowCoords(self @ [[#T|T]], tx @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], ty @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], bx @ [[..:..:Std:Object#T|Std.Object.T]], by @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -158,7 +142,6 @@
   ty :        tree Y coordinate
   bx :        return location for X coordinate relative to bin_window
   by :        return location for Y coordinate relative to bin_window
-  Since 2.12
 
 ==== :ConvertTreeToWidgetCoords ====
 '':ConvertTreeToWidgetCoords(self @ [[#T|T]], tx @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], ty @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], wx @ [[..:..:Std:Object#T|Std.Object.T]], wy @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -170,7 +153,6 @@
   ty :        Y coordinate relative to the tree
   wx :        return location for widget X coordinate
   wy :        return location for widget Y coordinate
-  Since 2.12
 
 ==== :ConvertWidgetToBinWindowCoords ====
 '':ConvertWidgetToBinWindowCoords(self @ [[#T|T]], wx @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], wy @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], bx @ [[..:..:Std:Object#T|Std.Object.T]], by @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -182,7 +164,6 @@
   wy :        Y coordinate relative to the widget
   bx :        return location for bin_window X coordinate
   by :        return location for bin_window Y coordinate
-  Since 2.12
 
 ==== :ConvertWidgetToTreeCoords ====
 '':ConvertWidgetToTreeCoords(self @ [[#T|T]], wx @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], wy @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], tx @ [[..:..:Std:Object#T|Std.Object.T]], ty @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -194,7 +175,6 @@
   wy :        Y coordinate relative to the widget
   tx :        return location for tree X coordinate
   ty :        return location for tree Y coordinate
-  Since 2.12
 
 ==== :CreateRowDragIcon ====
 '':CreateRowDragIcon(self @ [[#T|T]], path @ [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]]) : [[..:..:Gtk:Gdk:Pixmap#T|Gtk.Gdk.Pixmap.T]]''
@@ -246,7 +226,6 @@
   necessary.
   tree_view : A GtkTreeView.
   path :      path to a row.
-  Since 2.2
 
 ==== :GetBackgroundArea ====
 '':GetBackgroundArea(self @ [[#T|T]], path @ [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]], column @ [[..:..:Gtk:Gtk:TreeViewColumn#T|Gtk.Gtk.TreeViewColumn.T]], rect @ [[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -356,7 +335,6 @@
   Returns whether or not tree lines are drawn in tree_view.
   tree_view : a GtkTreeView.
   Returns :   TRUE if tree lines are drawn in tree_view, FALSE otherwise.
-  Since 2.10
 
 ==== :GetExpanderColumn ====
 '':GetExpanderColumn(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:TreeViewColumn#T|Gtk.Gtk.TreeViewColumn.T]]''
@@ -372,7 +350,6 @@
   Returns whether fixed height mode is turned on for tree_view.
   tree_view : a GtkTreeView
   Returns :   TRUE if tree_view is in fixed height mode
-  Since 2.6
 
 ==== :GetGridLines ====
 '':GetGridLines(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:TreeViewGridLines#T|Gtk.Gtk.TreeViewGridLines.T]]''
@@ -381,7 +358,6 @@
   tree_view : a GtkTreeView
   Returns :   a GtkTreeViewGridLines value indicating which grid lines are
               enabled.
-  Since 2.10
 
 ==== :GetHadjustment ====
 '':GetHadjustment(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]]''
@@ -396,7 +372,6 @@
   Returns whether all header columns are clickable.
   tree_view : A GtkTreeView.
   Returns :   TRUE if all header columns are clickable, otherwise FALSE
-  Since 2.10
 
 ==== :GetHeadersVisible ====
 '':GetHeadersVisible(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
@@ -411,7 +386,6 @@
   Returns whether hover expansion mode is turned on for tree_view.
   tree_view : a GtkTreeView
   Returns :   TRUE if tree_view is in hover expansion mode
-  Since 2.6
 
 ==== :GetHoverSelection ====
 '':GetHoverSelection(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
@@ -419,7 +393,6 @@
   Returns whether hover selection mode is turned on for tree_view.
   tree_view : a GtkTreeView
   Returns :   TRUE if tree_view is in hover selection mode
-  Since 2.6
 
 ==== :GetLevelIndentation ====
 '':GetLevelIndentation(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
@@ -429,7 +402,6 @@
   tree_view : a GtkTreeView.
   Returns :   the amount of extra indentation for child levels in tree_view. A
               return value of 0 means that this feature is disabled.
-  Since 2.12
 
 ==== :GetModel ====
 '':GetModel(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:TreeModel#T|Gtk.Gtk.TreeModel.T]]''
@@ -479,7 +451,6 @@
   Returns the current row separator function.
   tree_view : a GtkTreeView
   Returns :   the current row separator function.
-  Since 2.6
 
 ==== :GetRubberBanding ====
 '':GetRubberBanding(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
@@ -489,7 +460,6 @@
   multiple rows by dragging the mouse.
   tree_view : a GtkTreeView
   Returns :   TRUE if rubber banding in tree_view is enabled.
-  Since 2.10
 
 ==== :GetRulesHint ====
 '':GetRulesHint(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
@@ -512,7 +482,6 @@
   tree_view. In case the built-in entry is being used, NULL will be returned.
   tree_view : A GtkTreeView
   Returns :   the entry currently in use as search entry.
-  Since 2.10
 
 ==== :GetSearchEqualFunc ====
 '':GetSearchEqualFunc(self @ [[#T|T]]) : [[..:..:Std:Function#T|Std.Function.T]]''
@@ -527,7 +496,6 @@
   Returns the positioning function currently in use.
   tree_view : A GtkTreeView
   Returns :   the currently used function for positioning the search dialog.
-  Since 2.10
 
 ==== :GetSelection ====
 '':GetSelection(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:TreeSelection#T|Gtk.Gtk.TreeSelection.T]]''
@@ -542,7 +510,6 @@
   Returns whether or not expanders are drawn in tree_view.
   tree_view : a GtkTreeView.
   Returns :   TRUE if expanders are drawn in tree_view, FALSE otherwise.
-  Since 2.12
 
 ==== :GetTooltipColumn ====
 '':GetTooltipColumn(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
@@ -552,7 +519,6 @@
   tree_view : a GtkTreeView
   Returns :   the index of the tooltip column that is currently being used, or -
               1 if this is disabled.
-  Since 2.12
 
 ==== :GetTooltipContext ====
 '':GetTooltipContext(self @ [[#T|T]], x @ [[..:..:Std:Object#T|Std.Object.T]], y @ [[..:..:Std:Object#T|Std.Object.T]], keyboard_tip @ [[..:..:Std:Symbol#T|Std.Symbol.T]], model @ [[..:..:Std:Object#T|Std.Object.T]], path @ [[..:..:Std:Object#T|Std.Object.T]], iter @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
@@ -574,7 +540,6 @@
   path :         a pointer to receive a GtkTreePath or NULL
   iter :         a pointer to receive a GtkTreeIter or NULL
   Returns :      whether or not the given tooltip context points to a row.
-  Since 2.12
 
 ==== :GetVadjustment ====
 '':GetVadjustment(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]]''
@@ -593,7 +558,6 @@
   start_path : Return location for start of region, or NULL.
   end_path :   Return location for end of region, or NULL.
   Returns :    TRUE, if valid paths were placed in start_path and end_path.
-  Since 2.8
 
 ==== :GetVisibleRect ====
 '':GetVisibleRect(self @ [[#T|T]], visible_rect @ [[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -658,7 +622,6 @@
   tree_view : a GtkTreeView
   Returns :   TRUE if a rubber banding operation is currently being done in
               tree_view.
-  Since 2.12
 
 ==== :MapExpandedRows ====
 '':MapExpandedRows(self @ [[#T|T]], func @ [[..:..:Std:Function#T|Std.Function.T]], data @ [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -787,7 +750,6 @@
   focus_column :  A GtkTreeViewColumn, or NULL
   focus_cell :    A GtkCellRenderer, or NULL
   start_editing : TRUE if the specified cell should start being edited.
-  Since 2.2
 
 ==== :SetDestroyCountFunc ====
 '':SetDestroyCountFunc(self @ [[#T|T]], func @ [[..:..:Std:Function#T|Std.Function.T]], data @ [[..:..:Std:Address#T|Std.Address.T]], destroy @ [[..:..:Std:Function#T|Std.Function.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -825,7 +787,6 @@
   does not have any visible effects for lists.
   tree_view : a GtkTreeView
   enabled :   TRUE to enable tree line drawing, FALSE otherwise.
-  Since 2.10
 
 ==== :SetExpanderColumn ====
 '':SetExpanderColumn(self @ [[#T|T]], column @ [[..:..:Gtk:Gtk:TreeViewColumn#T|Gtk.Gtk.TreeViewColumn.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -846,7 +807,6 @@
   GTK_TREE_VIEW_COLUMN_FIXED.
   tree_view : a GtkTreeView
   enable :    TRUE to enable fixed height mode
-  Since 2.6
 
 ==== :SetGridLines ====
 '':SetGridLines(self @ [[#T|T]], grid_lines @ [[..:..:Gtk:Gtk:TreeViewGridLines#T|Gtk.Gtk.TreeViewGridLines.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -855,7 +815,6 @@
   tree_view :  a GtkTreeView
   grid_lines : a GtkTreeViewGridLines value indicating which grid lines to
                enable.
-  Since 2.10
 
 ==== :SetHadjustment ====
 '':SetHadjustment(self @ [[#T|T]], adjustment @ [[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -885,7 +844,6 @@
   makes rows expand or collaps if the pointer moves over them.
   tree_view : a GtkTreeView
   expand :    TRUE to enable hover selection mode
-  Since 2.6
 
 ==== :SetHoverSelection ====
 '':SetHoverSelection(self @ [[#T|T]], hover @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -895,7 +853,6 @@
   selection modes GTK_SELECTION_SINGLE and GTK_SELECTION_BROWSE.
   tree_view : a GtkTreeView
   hover :     TRUE to enable hover selection mode
-  Since 2.6
 
 ==== :SetLevelIndentation ====
 '':SetLevelIndentation(self @ [[#T|T]], indentation @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -906,7 +863,6 @@
   will be used. This does not have any visible effects for lists.
   tree_view :   a GtkTreeView
   indentation : the amount, in pixels, of extra indentation in tree_view.
-  Since 2.12
 
 ==== :SetModel ====
 '':SetModel(self @ [[#T|T]], model @ [[..:..:Gtk:Gtk:TreeModel#T|Gtk.Gtk.TreeModel.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -941,7 +897,6 @@
   func :      a GtkTreeViewRowSeparatorFunc
   data :      user data to pass to func, or NULL
   destroy :   destroy notifier for data, or NULL
-  Since 2.6
 
 ==== :SetRubberBanding ====
 '':SetRubberBanding(self @ [[#T|T]], enable @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -951,7 +906,6 @@
   rows by dragging the mouse.
   tree_view : a GtkTreeView
   enable :    TRUE to enable rubber banding
-  Since 2.10
 
 ==== :SetRulesHint ====
 '':SetRulesHint(self @ [[#T|T]], setting @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -989,7 +943,6 @@
   tree_view : A GtkTreeView
   entry :     the entry the interactive search code of tree_view should use or
               NULL
-  Since 2.10
 
 ==== :SetSearchEqualFunc ====
 '':SetSearchEqualFunc(self @ [[#T|T]], search_equal_func @ [[..:..:Std:Function#T|Std.Function.T]], search_user_data @ [[..:..:Std:Address#T|Std.Address.T]], search_destroy @ [[..:..:Std:Function#T|Std.Function.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -1011,7 +964,6 @@
               the default search position function
   data :      user data to pass to func, or NULL
   destroy :   Destroy notifier for data, or NULL
-  Since 2.10
 
 ==== :SetShowExpanders ====
 '':SetShowExpanders(self @ [[#T|T]], enabled @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -1024,7 +976,6 @@
   visible effects for lists.
   tree_view : a GtkTreeView
   enabled :   TRUE to enable expander drawing, FALSE otherwise.
-  Since 2.12
 
 ==== :SetTooltipCell ====
 '':SetTooltipCell(self @ [[#T|T]], tooltip @ [[..:..:Gtk:Gtk:Tooltip#T|Gtk.Gtk.Tooltip.T]], path @ [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]], column @ [[..:..:Gtk:Gtk:TreeViewColumn#T|Gtk.Gtk.TreeViewColumn.T]], cell @ [[..:..:Gtk:Gtk:CellRenderer#T|Gtk.Gtk.CellRenderer.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -1041,7 +992,6 @@
   path :      a GtkTreePath or NULL
   column :    a GtkTreeViewColumn or NULL
   cell :      a GtkCellRenderer or NULL
-  Since 2.12
 
 ==== :SetTooltipColumn ====
 '':SetTooltipColumn(self @ [[#T|T]], column @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -1054,12 +1004,6 @@
   "query-tooltip" signal handler.
   tree_view : a GtkTreeView
   column :    an integer, which is a valid column number for tree_view's model
-  Since 2.12
-  ***** Property Details *****
-  The "enable-grid-lines" property
-    "enable-grid-lines"        GtkTreeViewGridLines  : Read / Write
-  Whether grid lines should be drawn in the tree view.
-  Default value: GTK_TREE_VIEW_GRID_LINES_NONE
 
 ==== :SetTooltipRow ====
 '':SetTooltipRow(self @ [[#T|T]], tooltip @ [[..:..:Gtk:Gtk:Tooltip#T|Gtk.Gtk.Tooltip.T]], path @ [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -1069,7 +1013,6 @@
   tree_view : a GtkTreeView
   tooltip :   a GtkTooltip
   path :      a GtkTreePath
-  Since 2.12
 
 ==== :SetVadjustment ====
 '':SetVadjustment(self @ [[#T|T]], adjustment @ [[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''

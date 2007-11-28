@@ -79,11 +79,6 @@
   appearance, it doesn't affect the semantics of the button.
   toggle_button : a GtkToggleButton
   setting :       TRUE if state is inconsistent
-  ***** Property Details *****
-  The "active" property
-    "active"                   gboolean              : Read / Write
-  If the toggle button should be pressed in or not.
-  Default value: FALSE
 
 ==== :SetActive ====
 '':SetActive(self @ [[#T|T]], is_active @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -127,11 +122,6 @@
   appearance, it doesn't affect the semantics of the button.
   toggle_button : a GtkToggleButton
   setting :       TRUE if state is inconsistent
-  ***** Property Details *****
-  The "active" property
-    "active"                   gboolean              : Read / Write
-  If the toggle button should be pressed in or not.
-  Default value: FALSE
 
 ==== :GetActive ====
 '':GetActive(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''

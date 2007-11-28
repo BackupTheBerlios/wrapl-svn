@@ -18,7 +18,6 @@
   the old model.
   cell_view : a GtkCellView
   model :     a GtkTreeModel
-  Since 2.6
 
 ==== :SetDisplayedRow ====
 '':SetDisplayedRow(self @ [[#T|T]], path @ [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -29,7 +28,6 @@
   state if say, the model for the GtkCellView becomes temporarily empty.
   cell_view : a GtkCellView
   path :      a GtkTreePath or NULL to unset.
-  Since 2.6
 
 ==== :SetBackgroundColor ====
 '':SetBackgroundColor(self @ [[#T|T]], color @ [[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -37,7 +35,6 @@
   Sets the background color of view.
   cell_view : a GtkCellView
   color :     the new background color
-  Since 2.6
 
 ==== :GetSizeOfRow ====
 '':GetSizeOfRow(self @ [[#T|T]], path @ [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]], requisition @ [[..:..:Gtk:Gtk:Requisition#T|Gtk.Gtk.Requisition.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
@@ -48,7 +45,6 @@
   path :        a GtkTreePath
   requisition : return location for the size
   Returns :     TRUE
-  Since 2.6
 
 ==== :GetDisplayedRow ====
 '':GetDisplayedRow(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]]''
@@ -57,7 +53,6 @@
   currently displayed, NULL is returned.
   cell_view : a GtkCellView
   Returns :   the currently displayed row or NULL
-  Since 2.6
 
 ==== :Priv ====
 '':Priv(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -71,19 +66,12 @@
               a list of cell renderers. The list, but not the renderers has been
   Returns :   newly allocated and should be freed with g_list_free() when no
               longer needed.
-  Since 2.6
-  ***** Property Details *****
-  The "background" property
-    "background"               gchararray            : Write
-  Background color as a string.
-  Default value: NULL
 
 ==== New ====
 ''New() : [[# T| T]]''
 
   Creates a new GtkCellView widget.
   Returns : A newly created GtkCellView widget.
-  Since 2.6
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
@@ -96,7 +84,6 @@
   its show text.
   text :    the text to display in the cell view
   Returns : A newly created GtkCellView widget.
-  Since 2.6
 
 ==== NewWithPixbuf ====
 ''NewWithPixbuf(pixbuf : [[..:..:Gtk:Gdk:Pixbuf#T|Gtk.Gdk.Pixbuf.T]]) : [[# T| T]]''
@@ -105,7 +92,6 @@
   its show pixbuf.
   pixbuf :  the image to display in the cell view
   Returns : A newly created GtkCellView widget.
-  Since 2.6
 
 ==== NewWithMarkup ====
 ''NewWithMarkup(markup : [[..:..:Std:String#T|Std.String.T]]) : [[# T| T]]''
@@ -115,5 +101,4 @@
   language.
   markup :  the text to display in the cell view
   Returns : A newly created GtkCellView widget.
-  Since 2.6
 

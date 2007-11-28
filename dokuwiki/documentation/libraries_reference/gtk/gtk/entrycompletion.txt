@@ -39,7 +39,6 @@
   g_object_set() to set the ::text_column property directly.
   completion : A GtkEntryCompletion.
   column :     The column in the model of completion to get strings from.
-  Since 2.4
 
 ==== :SetPopupSingleMatch ====
 '':SetPopupSingleMatch(self @ [[#T|T]], popup_single_match @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -49,7 +48,6 @@
   completion.
   completion :         a GtkEntryCompletion
   popup_single_match : TRUE if the popup should appear even for a single match
-  Since 2.8
 
 ==== :Priv ====
 '':Priv(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -62,7 +60,6 @@
   list with completions, using the current key. The completion list view will be
   updated accordingly.
   completion : A GtkEntryCompletion.
-  Since 2.4
 
 ==== :DeleteAction ====
 '':DeleteAction(self @ [[#T|T]], index_ @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -70,7 +67,6 @@
   Deletes the action at index_ from completion's action list.
   completion : A GtkEntryCompletion.
   index_ :     The index of the item to Delete.
-  Since 2.4
 
 ==== :GetCompletionPrefix ====
 '':GetCompletionPrefix(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
@@ -79,7 +75,6 @@
   if there's no completion ongoing.
   completion : a GtkEntryCompletion
   Returns :    the prefix for the current completion
-  Since 2.12
 
 ==== :GetEntry ====
 '':GetEntry(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
@@ -87,7 +82,6 @@
   Gets the entry completion has been attached to.
   completion : A GtkEntryCompletion.
   Returns :    The entry completion has been attached to.
-  Since 2.4
 
 ==== :GetInlineCompletion ====
 '':GetInlineCompletion(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
@@ -96,7 +90,6 @@
   automatically inserted in the entry.
   completion : a GtkEntryCompletion
   Returns :    TRUE if inline completion is turned on
-  Since 2.6
 
 ==== :GetInlineSelection ====
 '':GetInlineSelection(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
@@ -104,7 +97,6 @@
   Returns TRUE if inline-selection mode is turned on.
   completion : a GtkEntryCompletion
   Returns :    TRUE if inline-selection mode is on
-  Since 2.12
 
 ==== :GetMinimumKeyLength ====
 '':GetMinimumKeyLength(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
@@ -112,7 +104,6 @@
   Returns the minimum key length as set for completion.
   completion : A GtkEntryCompletion.
   Returns :    The currently used minimum key length.
-  Since 2.4
 
 ==== :GetModel ====
 '':GetModel(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:TreeModel#T|Gtk.Gtk.TreeModel.T]]''
@@ -121,7 +112,6 @@
   if the model is unset.
   completion : A GtkEntryCompletion.
   Returns :    A GtkTreeModel, or NULL if none is currently being used.
-  Since 2.4
 
 ==== :GetPopupCompletion ====
 '':GetPopupCompletion(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
@@ -129,7 +119,6 @@
   Returns whether the completions should be presented in a popup window.
   completion : a GtkEntryCompletion
   Returns :    TRUE if popup completion is turned on
-  Since 2.6
 
 ==== :GetPopupSetWidth ====
 '':GetPopupSetWidth(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
@@ -138,7 +127,6 @@
   entry.
   completion : a GtkEntryCompletion
   Returns :    TRUE if the popup window will be resized to the width of the entry
-  Since 2.8
 
 ==== :GetPopupSingleMatch ====
 '':GetPopupSingleMatch(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
@@ -148,15 +136,6 @@
   completion : a GtkEntryCompletion
   Returns :    TRUE if the popup window will appear regardless of the number of
                matches.
-  Since 2.8
-  ***** Property Details *****
-  The "inline-completion" property
-    "inline-completion"        gboolean              : Read / Write
-  Determines whether the common prefix of the possible completions should be
-  inserted automatically in the entry. Note that this requires text-column to be
-  set, even if you are using a custom match function.
-  Default value: FALSE
-  Since 2.6
 
 ==== :GetTextColumn ====
 '':GetTextColumn(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
@@ -164,7 +143,6 @@
   Returns the column in the model of completion to get strings from.
   completion : a GtkEntryCompletion
   Returns :    the column containing the strings
-  Since 2.6
 
 ==== :InsertActionMarkup ====
 '':InsertActionMarkup(self @ [[#T|T]], index_ @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], markup @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -174,7 +152,6 @@
   completion : A GtkEntryCompletion.
   index_ :     The index of the item to insert.
   markup :     Markup of the item to insert.
-  Since 2.4
 
 ==== :InsertActionText ====
 '':InsertActionText(self @ [[#T|T]], index_ @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], text @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -185,14 +162,12 @@
   completion : A GtkEntryCompletion.
   index_ :     The index of the item to insert.
   text :       Text of the item to insert.
-  Since 2.4
 
 ==== :InsertPrefix ====
 '':InsertPrefix(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
   Requests a prefix insertion.
   completion : a GtkEntryCompletion
-  Since 2.6
 
 ==== :SetInlineCompletion ====
 '':SetInlineCompletion(self @ [[#T|T]], inline_completion @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -201,7 +176,6 @@
   automatically inserted in the entry.
   completion :        a GtkEntryCompletion
   inline_completion : TRUE to do inline completion
-  Since 2.6
 
 ==== :SetInlineSelection ====
 '':SetInlineSelection(self @ [[#T|T]], inline_selection @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -210,7 +184,6 @@
   the entry.
   completion :       a GtkEntryCompletion
   inline_selection : TRUE to do inline selection
-  Since 2.12
 
 ==== :SetMatchFunc ====
 '':SetMatchFunc(self @ [[#T|T]], func @ [[..:..:Std:Function#T|Std.Function.T]], func_data @ [[..:..:Std:Address#T|Std.Address.T]], func_notify @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -221,7 +194,6 @@
   func :        The GtkEntryCompletionMatchFunc to use.
   func_data :   The user data for func.
   func_notify : Destroy notifier for func_data.
-  Since 2.4
 
 ==== :SetMinimumKeyLength ====
 '':SetMinimumKeyLength(self @ [[#T|T]], length @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -232,7 +204,6 @@
   dataset).
   completion : A GtkEntryCompletion.
   length :     The minimum length of the key in order to start completing.
-  Since 2.4
 
 ==== :SetModel ====
 '':SetModel(self @ [[#T|T]], model @ [[..:..:Gtk:Gtk:TreeModel#T|Gtk.Gtk.TreeModel.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -242,7 +213,6 @@
   unset the model.
   completion : A GtkEntryCompletion.
   model :      The GtkTreeModel.
-  Since 2.4
 
 ==== :SetPopupCompletion ====
 '':SetPopupCompletion(self @ [[#T|T]], popup_completion @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -250,7 +220,6 @@
   Sets whether the completions should be presented in a popup window.
   completion :       a GtkEntryCompletion
   popup_completion : TRUE to do popup completion
-  Since 2.6
 
 ==== :SetPopupSetWidth ====
 '':SetPopupSetWidth(self @ [[#T|T]], popup_set_width @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -259,14 +228,12 @@
   as the entry.
   completion :      a GtkEntryCompletion
   popup_set_width : TRUE to make the width of the popup the same as the entry
-  Since 2.8
 
 ==== New ====
 ''New() : [[# T| T]]''
 
   Creates a new GtkEntryCompletion object.
   Returns : A newly created GtkEntryCompletion object.
-  Since 2.4
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''

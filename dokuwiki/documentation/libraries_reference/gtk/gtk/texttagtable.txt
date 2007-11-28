@@ -65,16 +65,6 @@
   Returns the size of the table (number of tags)
   table :   a GtkTextTagTable
   Returns : number of tags in table
-  ***** Signal Details *****
-  The "tag-added" signal
-  void                user_function                      (GtkTextTagTable
-  *texttagtable,
-                                                          GtkTextTag      *arg1,
-                                                          gpointer
-  user_data)         : Run Last
-  texttagtable : the object which received the signal.
-  arg1 :
-  user_data :    user data set when the signal handler was connected.
 
 ==== New ====
 ''New() : [[# T| T]]''

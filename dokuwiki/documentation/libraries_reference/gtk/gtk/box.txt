@@ -190,11 +190,6 @@
   fill :      the new value of the "fill" child property
   padding :   the new value of the "padding" child property
   pack_type : the new value of the "pack-type" child property
-  ***** Property Details *****
-  The "homogeneous" property
-    "homogeneous"              gboolean              : Read / Write
-  Whether the children should all be the same size.
-  Default value: FALSE
 
 ==== :SetHomogeneous ====
 '':SetHomogeneous(self @ [[#T|T]], homogeneous @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''

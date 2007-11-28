@@ -108,18 +108,6 @@
 
   **** Warning ****
   This function is slow. Only use it for debugging and/or testing purposes.
-  Checks if the given iter is a valid iter for this GtkTreeModelSort.
-  tree_model_sort : A GtkTreeModelSort.
-  iter :            A GtkTreeIter.
-  Returns :         TRUE if the iter is valid, FALSE if the iter is invalid.
-  Since 2.2
-  ***** Property Details *****
-  The "model" property
-    "model"                    GtkTreeModel          : Read / Write / Construct
-  Only
-  The model for the TreeModelSort to sort.
-  ***** See Also *****
-  GtkTreeModel, GtkListStore, GtkTreeStore, GtkTreeSortable, GtkTreeModelFilter
 
 ==== :Root ====
 '':Root(self @ [[#T|T]]) : [[..:..:Std:Address#T|Std.Address.T]]''

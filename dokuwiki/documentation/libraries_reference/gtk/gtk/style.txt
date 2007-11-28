@@ -10,20 +10,12 @@
 
   **** Warning ****
   gtk_style_unref is deprecated and should not be used in newly-written code.
-  Deprecated equivalent of g_object_unref().
-  style : a GtkStyle.
 
 ==== :SetFont ====
 '':SetFont(self @ [[#T|T]], font @ [[..:..:Gtk:Gdk:Font#T|Gtk.Gdk.Font.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
   **** Warning ****
   gtk_style_set_font is deprecated and should not be used in newly-written code.
-  Sets the GdkFont to use for a given style. This is meant only as a replacement
-  for direct access to style->font and should not be used in new code. New code
-  should use style->font_desc instead.
-  style : a GtkStyle.
-  font :  a GdkFont, or NULL to use the GdkFont corresponding to style-
-          >font_desc.
 
 ==== :Black ====
 '':Black(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]]''
@@ -203,12 +195,6 @@
 
   **** Warning ****
   gtk_style_get_font is deprecated and should not be used in newly-written code.
-  Gets the GdkFont to use for the given style. This is meant only as a
-  replacement for direct access to style->font and should not be used in new
-  code. New code should use style->font_desc instead.
-  style :   a GtkStyle
-  Returns : the GdkFont for the style. This font is owned by the style; if you
-            want to keep around a copy, you must call gdk_font_ref().
 
 ==== :LookupColor ====
 '':LookupColor(self @ [[#T|T]], color_name @ [[..:..:Std:String#T|Std.String.T]], color @ [[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
@@ -221,7 +207,6 @@
   color_name : the name of the logical color to look up
   color :      the GdkColor to fill in
   Returns :    TRUE if the mapping was found.
-  Since 2.10
 
 ==== :LookupIconSet ====
 '':LookupIconSet(self @ [[#T|T]], stock_id @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Gtk:Gtk:IconSet#T|Gtk.Gtk.IconSet.T]]''
@@ -235,9 +220,6 @@
 
   **** Warning ****
   gtk_style_ref is deprecated and should not be used in newly-written code.
-  Deprecated equivalent of g_object_ref().
-  style :   a GtkStyle.
-  Returns : style.
 
 ==== :RenderIcon ====
 '':RenderIcon(self @ [[#T|T]], source @ [[..:..:Gtk:Gtk:IconSource#T|Gtk.Gtk.IconSource.T]], direction @ [[..:..:Gtk:Gtk:TextDirection#T|Gtk.Gtk.TextDirection.T]], state @ [[..:..:Gtk:Gtk:StateType#T|Gtk.Gtk.StateType.T]], size @ [[..:..:Gtk:Gtk:IconSize#T|Gtk.Gtk.IconSize.T]], widget @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], detail @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Gtk:Gdk:Pixbuf#T|Gtk.Gdk.Pixbuf.T]]''

@@ -37,12 +37,6 @@
   label :   The text of the button, with an underscore in front of the mnemonic
             character
   Returns : a new GtkCheckButton
-  ***** Style Property Details *****
-  The "indicator-size" style property
-    "indicator-size"           gint                  : Read
-  Size of check or radio indicator.
-  Allowed values: >= 0
-  Default value: 13
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''

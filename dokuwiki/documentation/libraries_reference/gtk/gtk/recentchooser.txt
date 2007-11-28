@@ -14,14 +14,12 @@
   Unselects uri inside chooser.
   chooser : a GtkRecentChooser
   uri :     a URI
-  Since 2.10
 
 ==== :UnselectAll ====
 '':UnselectAll(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
   Unselects all the items inside chooser.
   chooser : a GtkRecentChooser
-  Since 2.10
 
 ==== :AddFilter ====
 '':AddFilter(self @ [[#T|T]], filter @ [[..:..:Gtk:Gtk:RecentFilter#T|Gtk.Gtk.RecentFilter.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -31,7 +29,6 @@
   gtk_recent_chooser_set_filter().
   chooser : a GtkRecentChooser
   filter :  a GtkRecentFilter
-  Since 2.10
 
 ==== :GetCurrentItem ====
 '':GetCurrentItem(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:RecentInfo#T|Gtk.Gtk.RecentInfo.T]]''
@@ -40,7 +37,6 @@
   chooser : a GtkRecentChooser
   Returns : a GtkRecentInfo. Use gtk_recent_info_unref() when when you have
             finished using it.
-  Since 2.10
 
 ==== :GetCurrentUri ====
 '':GetCurrentUri(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
@@ -48,7 +44,6 @@
   Gets the URI currently selected by chooser.
   chooser : a GtkRecentChooser
   Returns : a newly allocated string holding a URI.
-  Since 2.10
 
 ==== :GetFilter ====
 '':GetFilter(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:RecentFilter#T|Gtk.Gtk.RecentFilter.T]]''
@@ -57,13 +52,6 @@
   of the recently used resources.
   chooser : a GtkRecentChooser
   Returns : a GtkRecentFilter object.
-  Since 2.10
-  ***** Property Details *****
-  The "filter" property
-    "filter"                   GtkRecentFilter       : Read / Write
-  The GtkRecentFilter object to be used when displaying the recently used
-  resources.
-  Since 2.10
 
 ==== :GetItems ====
 '':GetItems(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -75,7 +63,6 @@
             A newly allocated list of GtkRecentInfo objects. You should use
   Returns : gtk_recent_info_unref() on every item of the list, and then free the
             list itself using g_list_free().
-  Since 2.10
 
 ==== :GetLimit ====
 '':GetLimit(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
@@ -84,7 +71,6 @@
   gtk_recent_chooser_get_uris().
   chooser : a GtkRecentChooser
   Returns : A positive integer, or -1 meaning that all items are returned.
-  Since 2.10
 
 ==== :GetLocalOnly ====
 '':GetLocalOnly(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
@@ -93,7 +79,6 @@
   resources selector. See gtk_recent_chooser_set_local_only()
   chooser : a GtkRecentChooser
   Returns : TRUE if only local resources should be shown.
-  Since 2.10
 
 ==== :GetSelectMultiple ====
 '':GetSelectMultiple(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
@@ -101,7 +86,6 @@
   Gets whether chooser can select multiple items.
   chooser : a GtkRecentChooser
   Returns : TRUE if chooser can select more than one item.
-  Since 2.10
 
 ==== :GetShowIcons ====
 '':GetShowIcons(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
@@ -109,7 +93,6 @@
   Retrieves whether chooser should show an icon near the resource.
   chooser : a GtkRecentChooser
   Returns : TRUE if the icons should be displayed, FALSE otherwise.
-  Since 2.10
 
 ==== :GetShowNotFound ====
 '':GetShowNotFound(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
@@ -119,7 +102,6 @@
   chooser : a GtkRecentChooser
   Returns : TRUE if the resources not found should be displayed, and FALSE
             otheriwse.
-  Since 2.10
 
 ==== :GetShowNumbers ====
 '':GetShowNumbers(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
@@ -128,12 +110,6 @@
   gtk_recent_chooser_get_show_numbers has been deprecated since version 2.12 and
   should not be used in newly-written code. use
   gtk_recent_chooser_menu_get_show_numbers() instead.
-  Returns whether chooser should display recently used resources prepended by a
-  unique number.
-  chooser : a GtkRecentChooser
-  Returns : TRUE if the recent chooser should show display numbers, FALSE
-            otherwise.
-  Since 2.10
 
 ==== :GetShowPrivate ====
 '':GetShowPrivate(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
@@ -143,7 +119,6 @@
   chooser : a GtkRecentChooser
   Returns : TRUE if the recent chooser should show private items, FALSE
             otherwise.
-  Since 2.10
 
 ==== :GetShowTips ====
 '':GetShowTips(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
@@ -152,7 +127,6 @@
   recently user resource.
   chooser : a GtkRecentChooser
   Returns : TRUE if the recent chooser should show tooltips, FALSE otherwise.
-  Since 2.10
 
 ==== :GetSortType ====
 '':GetSortType(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:RecentSortType#T|Gtk.Gtk.RecentSortType.T]]''
@@ -160,7 +134,6 @@
   Gets the value set by gtk_recent_chooser_set_sort_type().
   chooser : a GtkRecentChooser
   Returns : the sorting order of the chooser.
-  Since 2.10
 
 ==== :GetUris ====
 '':GetUris(self @ [[#T|T]], length @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:List#T|Std.List.T]]''
@@ -173,7 +146,6 @@
   length :  return location for a the length of the URI list, or NULL
   Returns : A newly allocated, NULL terminated array of strings. Use g_strfreev()
             to free it.
-  Since 2.10
 
 ==== :ListFilters ====
 '':ListFilters(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -182,7 +154,6 @@
   chooser : a GtkRecentChooser
   Returns : A singly linked list of GtkRecentFilter objects. You should just free
             the returned list using g_slist_free().
-  Since 2.10
 
 ==== :RemoveFilter ====
 '':RemoveFilter(self @ [[#T|T]], filter @ [[..:..:Gtk:Gtk:RecentFilter#T|Gtk.Gtk.RecentFilter.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -190,7 +161,6 @@
   Removes filter from the list of GtkRecentFilter objects held by chooser.
   chooser : a GtkRecentChooser
   filter :  a GtkRecentFilter
-  Since 2.10
 
 ==== :SelectAll ====
 '':SelectAll(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -198,7 +168,6 @@
   Selects all the items inside chooser, if the chooser supports multiple
   selection.
   chooser : a GtkRecentChooser
-  Since 2.10
 
 ==== :SelectUri ====
 '':SelectUri(self @ [[#T|T]], uri @ [[..:..:Std:String#T|Std.String.T]], error @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
@@ -208,7 +177,6 @@
   uri :     a URI
   error :   return location for a GError, or NULL
   Returns : TRUE if uri was found.
-  Since 2.10
 
 ==== :SetCurrentUri ====
 '':SetCurrentUri(self @ [[#T|T]], uri @ [[..:..:Std:String#T|Std.String.T]], error @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
@@ -218,7 +186,6 @@
   uri :     a URI
   error :   return location for a GError, or NULL
   Returns : TRUE if the URI was found.
-  Since 2.10
 
 ==== :SetFilter ====
 '':SetFilter(self @ [[#T|T]], filter @ [[..:..:Gtk:Gtk:RecentFilter#T|Gtk.Gtk.RecentFilter.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -227,7 +194,6 @@
   displayed recently used resources.
   chooser : a GtkRecentChooser
   filter :  a GtkRecentFilter
-  Since 2.10
 
 ==== :SetLimit ====
 '':SetLimit(self @ [[#T|T]], limit @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -236,7 +202,6 @@
   gtk_recent_chooser_get_items() and gtk_recent_chooser_get_uris().
   chooser : a GtkRecentChooser
   limit :   a positive integer, or -1 for all items
-  Since 2.10
 
 ==== :SetLocalOnly ====
 '':SetLocalOnly(self @ [[#T|T]], local_only @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -247,7 +212,6 @@
   through the operating system native file system.
   chooser :    a GtkRecentChooser
   local_only : TRUE if only local files can be shown
-  Since 2.10
 
 ==== :SetSelectMultiple ====
 '':SetSelectMultiple(self @ [[#T|T]], select_multiple @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -255,7 +219,6 @@
   Sets whether chooser can select multiple items.
   chooser :         a GtkRecentChooser
   select_multiple : TRUE if chooser can select more than one item
-  Since 2.10
 
 ==== :SetShowIcons ====
 '':SetShowIcons(self @ [[#T|T]], show_icons @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -263,7 +226,6 @@
   Sets whether chooser should show an icon near the resource when displaying it.
   chooser :    a GtkRecentChooser
   show_icons : whether to show an icon near the resource
-  Since 2.10
 
 ==== :SetShowNotFound ====
 '':SetShowNotFound(self @ [[#T|T]], show_not_found @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -272,7 +234,6 @@
   find. This only applies to local resources.
   chooser :        a GtkRecentChooser
   show_not_found : whether to show the local items we didn't find
-  Since 2.10
 
 ==== :SetShowNumbers ====
 '':SetShowNumbers(self @ [[#T|T]], show_numbers @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -281,10 +242,6 @@
   gtk_recent_chooser_set_show_numbers has been deprecated since version 2.12 and
   should not be used in newly-written code. Use
   gtk_recent_chooser_menu_set_show_numbers() instead.
-  Whether to show recently used resources prepended by a unique number.
-  chooser :      a GtkRecentChooser
-  show_numbers : TRUE to show numbers, FALSE otherwise
-  Since 2.10
 
 ==== :SetShowPrivate ====
 '':SetShowPrivate(self @ [[#T|T]], show_private @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -292,7 +249,6 @@
   Whether to show recently used resources marked registered as private.
   chooser :      a GtkRecentChooser
   show_private : TRUE to show private items, FALSE otherwise
-  Since 2.10
 
 ==== :SetShowTips ====
 '':SetShowTips(self @ [[#T|T]], show_tips @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -301,7 +257,6 @@
   resource in a GtkRecentChooser widget.
   chooser :   a GtkRecentChooser
   show_tips : TRUE if tooltips should be shown
-  Since 2.10
 
 ==== :SetSortFunc ====
 '':SetSortFunc(self @ [[#T|T]], sort_func @ [[..:..:Std:Function#T|Std.Function.T]], sort_data @ [[..:..:Std:Address#T|Std.Address.T]], data_destroy @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -317,7 +272,6 @@
   sort_func :    the comparison function
   sort_data :    user data to pass to sort_func, or NULL
   data_destroy : destroy notifier for sort_data, or NULL
-  Since 2.10
 
 ==== :SetSortType ====
 '':SetSortType(self @ [[#T|T]], sort_type @ [[..:..:Gtk:Gtk:RecentSortType#T|Gtk.Gtk.RecentSortType.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -326,7 +280,6 @@
   chooser.
   chooser :   a GtkRecentChooser
   sort_type : sort order that the chooser should use
-  Since 2.10
 
 ==== ErrorQuark ====
 ''ErrorQuark() : [[..:..:Std:Object#T|Std.Object.T]]''

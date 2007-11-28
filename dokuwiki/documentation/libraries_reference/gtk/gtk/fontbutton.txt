@@ -19,7 +19,6 @@
   If use_size is TRUE, the font name will be written using the selected size.
   font_button : a GtkFontButton
   use_size :    If TRUE, font name will be written using the selected size.
-  Since 2.4
 
 ==== :SetUseFont ====
 '':SetUseFont(self @ [[#T|T]], use_font @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -27,7 +26,6 @@
   If use_font is TRUE, the font name will be written using the selected font.
   font_button : a GtkFontButton
   use_font :    If TRUE, font name will be written using font chosen.
-  Since 2.4
 
 ==== :SetTitle ====
 '':SetTitle(self @ [[#T|T]], title @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -35,7 +33,6 @@
   Sets the title for the font selection dialog.
   font_button : a GtkFontButton
   title :       a string containing the font selection dialog title
-  Since 2.4
 
 ==== :Priv ====
 '':Priv(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -47,7 +44,6 @@
   Retrieves the name of the currently selected font.
   font_button : a GtkFontButton
   Returns :     an internal copy of the font name which must not be freed.
-  Since 2.4
 
 ==== :GetShowSize ====
 '':GetShowSize(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
@@ -55,7 +51,6 @@
   Returns whether the font size will be shown in the label.
   font_button : a GtkFontButton
   Returns :     whether the font size will be shown in the label.
-  Since 2.4
 
 ==== :GetShowStyle ====
 '':GetShowStyle(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
@@ -63,7 +58,6 @@
   Returns whether the name of the font style will be shown in the label.
   font_button : a GtkFontButton
   Returns :     whether the font style will be shown in the label.
-  Since 2.4
 
 ==== :GetTitle ====
 '':GetTitle(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
@@ -71,13 +65,6 @@
   Retrieves the title of the font selection dialog.
   font_button : a GtkFontButton
   Returns :     an internal copy of the title string which must not be freed.
-  Since 2.4
-  ***** Property Details *****
-  The "font-name" property
-    "font-name"                gchararray            : Read / Write
-  The name of the currently selected font.
-  Default value: "Sans 12"
-  Since 2.4
 
 ==== :GetUseFont ====
 '':GetUseFont(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
@@ -85,7 +72,6 @@
   Returns whether the selected font is used in the label.
   font_button : a GtkFontButton
   Returns :     whether the selected font is used in the label.
-  Since 2.4
 
 ==== :GetUseSize ====
 '':GetUseSize(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
@@ -93,7 +79,6 @@
   Returns whether the selected size is used in the label.
   font_button : a GtkFontButton
   Returns :     whether the selected size is used in the label.
-  Since 2.4
 
 ==== :SetFontName ====
 '':SetFontName(self @ [[#T|T]], fontname @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
@@ -103,7 +88,6 @@
   fontname :    Name of font to display in font selection dialog
   Returns :     Return value of gtk_font_selection_dialog_set_font_name() if the
                 font selection dialog exists, otherwise FALSE.
-  Since 2.4
 
 ==== :SetShowSize ====
 '':SetShowSize(self @ [[#T|T]], show_size @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -112,7 +96,6 @@
   the selected font.
   font_button : a GtkFontButton
   show_size :   TRUE if font size should be displayed in dialog.
-  Since 2.4
 
 ==== :SetShowStyle ====
 '':SetShowStyle(self @ [[#T|T]], show_style @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -121,14 +104,12 @@
   selected font.
   font_button : a GtkFontButton
   show_style :  TRUE if font style should be displayed in label.
-  Since 2.4
 
 ==== New ====
 ''New() : [[# T| T]]''
 
   Creates a new font picker widget.
   Returns : a new font picker widget.
-  Since 2.4
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
@@ -140,5 +121,4 @@
   Creates a new font picker widget.
   fontname : Name of font to display in font selection dialog
   Returns :  a new font picker widget.
-  Since 2.4
 

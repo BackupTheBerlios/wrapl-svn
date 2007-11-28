@@ -79,7 +79,6 @@
   scale :   A GtkScale
   Returns : the PangoLayout for this scale, or NULL if the "draw-value" property
             is FALSE.
-  Since 2.4
 
 ==== :GetLayoutOffsets ====
 '':GetLayoutOffsets(self @ [[#T|T]], x @ [[..:..:Std:Object#T|Std.Object.T]], y @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -91,13 +90,6 @@
   scale : a GtkScale
   x :     location to store X offset of layout, or NULL
   y :     location to store Y offset of layout, or NULL
-  Since 2.4
-  ***** Property Details *****
-  The "digits" property
-    "digits"                   gint                  : Read / Write
-  The number of decimal places that are displayed in the value.
-  Allowed values: [-1,64]
-  Default value: 1
 
 ==== :GetValuePos ====
 '':GetValuePos(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:PositionType#T|Gtk.Gtk.PositionType.T]]''

@@ -22,7 +22,6 @@
   screen : a GdkScreen
   dpi :    the resolution in "dots per inch". (Physical inches aren't actually
            involved; the terminology is conventional.)
-  Since 2.10
 
 ==== :SetFontOptions ====
 '':SetFontOptions(self @ [[#T|T]], options @ [[..:..:Gtk:Cairo:CairoFontOptionsT#T|Gtk.Cairo.CairoFontOptionsT.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -34,7 +33,6 @@
   screen :  a GdkScreen
   options : a cairo_font_options_t, or NULL to unset any previously set default
             font options.
-  Since 2.10
 
 ==== :SetDefaultColormap ====
 '':SetDefaultColormap(self @ [[#T|T]], colormap @ [[..:..:Gtk:Gdk:Colormap#T|Gtk.Gdk.Colormap.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -42,7 +40,6 @@
   Sets the default colormap for screen.
   screen :   a GdkScreen
   colormap : a GdkColormap
-  Since 2.2
 
 ==== :MakeDisplayName ====
 '':MakeDisplayName(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
@@ -51,7 +48,6 @@
   screen as the default screen.
   screen :  a GdkScreen
   Returns : a newly allocated string, free with g_free()
-  Since 2.2
 
 ==== :ListVisuals ====
 '':ListVisuals(self @ [[#T|T]]) : [[..:..:Std:List#T|Std.List.T]]''
@@ -62,7 +58,6 @@
   Call g_list_free() on the return value when you're finished with it.
   screen :  the relevant GdkScreen.
   Returns : a list of visuals; the list must be freed, but not its contents
-  Since 2.2
 
 ==== :IsComposited ====
 '':IsComposited(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
@@ -74,7 +69,6 @@
   screen :  a GdkScreen
   Returns : Whether windows with RGBA visuals can reasonably be expected to have
             their alpha channels drawn correctly on the screen.
-  Since 2.10
 
 ==== :Closed ====
 '':Closed(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
@@ -87,7 +81,6 @@
   screen :  a GdkScreen
   Returns : the current font options, or NULL if no default font options have
             been set.
-  Since 2.10
   Sets the default font options for the screen. These options will be set on any
   PangoContext's newly created with gdk_pango_context_get_for_screen(). Changing
   the default set of font options does not affect contexts that have already been
@@ -95,7 +88,6 @@
   screen :  a GdkScreen
   options : a cairo_font_options_t, or NULL to unset any previously set default
             font options.
-  Since 2.10
 
 ==== :Resolution ====
 '':Resolution(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
@@ -104,7 +96,6 @@
   gdk_screen_set_resolution() for full details.
   screen :  a GdkScreen
   Returns : the current resolution, or -1 if no resolution has been set.
-  Since 2.10
   Sets the resolution for font handling on the screen. This is a scale factor
   between points specified in a PangoFontDescription and cairo units. The default
   value is 96, meaning that a 10 point font will be 13 units high. (10 * 96. /
@@ -112,7 +103,6 @@
   screen : a GdkScreen
   dpi :    the resolution in "dots per inch". (Physical inches aren't actually
            involved; the terminology is conventional.)
-  Since 2.10
 
 ==== :NormalGcs ====
 '':NormalGcs(self @ [[#T|T]], @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]]''
@@ -135,7 +125,6 @@
   limited to one long, i.e. four bytes.
   screen : the GdkScreen where the event will be broadcasted.
   event :  the GdkEvent.
-  Since 2.2
 
 ==== :GetActiveWindow ====
 '':GetActiveWindow(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]]''
@@ -151,7 +140,6 @@
   needed.
   screen :  a GdkScreen
   Returns : the currently active window, or NULL.
-  Since 2.10
 
 ==== :GetDefaultColormap ====
 '':GetDefaultColormap(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Colormap#T|Gtk.Gdk.Colormap.T]]''
@@ -159,7 +147,6 @@
   Gets the default colormap for screen.
   screen :  a GdkScreen
   Returns : the default GdkColormap.
-  Since 2.2
 
 ==== :GetDisplay ====
 '':GetDisplay(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Display#T|Gtk.Gdk.Display.T]]''
@@ -167,7 +154,6 @@
   Gets the display to which the screen belongs.
   screen :  a GdkScreen
   Returns : the display to which screen belongs
-  Since 2.2
 
 ==== :GetFontOptions ====
 '':GetFontOptions(self @ [[#T|T]]) : [[..:..:Gtk:Cairo:CairoFontOptionsT#T|Gtk.Cairo.CairoFontOptionsT.T]]''
@@ -176,7 +162,6 @@
   screen :  a GdkScreen
   Returns : the current font options, or NULL if no default font options have
             been set.
-  Since 2.10
 
 ==== :GetHeight ====
 '':GetHeight(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
@@ -184,7 +169,6 @@
   Gets the height of screen in pixels
   screen :  a GdkScreen
   Returns : the height of screen in pixels.
-  Since 2.2
 
 ==== :GetHeightMm ====
 '':GetHeightMm(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
@@ -193,7 +177,6 @@
   value will not be correct.
   screen :  a GdkScreen
   Returns : the heigth of screen in millimeters.
-  Since 2.2
 
 ==== :GetMonitorAtPoint ====
 '':GetMonitorAtPoint(self @ [[#T|T]], x @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
@@ -204,7 +187,6 @@
   y :       the y coordinate in the virtual screen.
   Returns : the monitor number in which the point (x,y) lies, or a monitor close
             to (x,y) if the point is not in any monitor.
-  Since 2.2
 
 ==== :GetMonitorAtWindow ====
 '':GetMonitorAtWindow(self @ [[#T|T]], window @ [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
@@ -215,7 +197,6 @@
   window :  a GdkWindow
   Returns : the monitor number in which most of window is located, or if window
             does not intersect any monitors, a monitor, close to window.
-  Since 2.2
 
 ==== :GetMonitorGeometry ====
 '':GetMonitorGeometry(self @ [[#T|T]], monitor_num @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], dest @ [[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -227,7 +208,6 @@
   screen :      a GdkScreen.
   monitor_num : the monitor number.
   dest :        a GdkRectangle to be filled with the monitor geometry
-  Since 2.2
 
 ==== :GetNMonitors ====
 '':GetNMonitors(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
@@ -235,7 +215,6 @@
   Returns the number of monitors which screen consists of.
   screen :  a GdkScreen.
   Returns : number of monitors which screen consists of.
-  Since 2.2
 
 ==== :GetNumber ====
 '':GetNumber(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
@@ -244,7 +223,6 @@
   (See gdk_screen_get_display())
   screen :  a GdkScreen
   Returns : the index
-  Since 2.2
 
 ==== :GetResolution ====
 '':GetResolution(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
@@ -253,7 +231,6 @@
   gdk_screen_set_resolution() for full details.
   screen :  a GdkScreen
   Returns : the current resolution, or -1 if no resolution has been set.
-  Since 2.10
 
 ==== :GetRgbColormap ====
 '':GetRgbColormap(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Colormap#T|Gtk.Gdk.Colormap.T]]''
@@ -264,7 +241,6 @@
   and visual. So there's no need to call this function.
   screen :  a GdkScreen.
   Returns : the preferred colormap
-  Since 2.2
 
 ==== :GetRgbVisual ====
 '':GetRgbVisual(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Visual#T|Gtk.Gdk.Visual.T]]''
@@ -276,7 +252,6 @@
   drawables with any visual.
   screen :  a GdkScreen
   Returns : The GdkVisual chosen by GdkRGB.
-  Since 2.2
 
 ==== :GetRgbaColormap ====
 '':GetRgbaColormap(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Colormap#T|Gtk.Gdk.Colormap.T]]''
@@ -293,7 +268,6 @@
   screen :  a GdkScreen.
   Returns : a colormap to use for windows with an alpha channel or NULL if the
             capability is not available.
-  Since 2.8
 
 ==== :GetRgbaVisual ====
 '':GetRgbaVisual(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Visual#T|Gtk.Gdk.Visual.T]]''
@@ -303,7 +277,6 @@
   screen :  a GdkScreen
   Returns : a visual to use for windows with an alpha channel or NULL if the
             capability is not available.
-  Since 2.8
 
 ==== :GetRootWindow ====
 '':GetRootWindow(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]]''
@@ -311,7 +284,6 @@
   Gets the root window of screen.
   screen :  a GdkScreen
   Returns : the root window
-  Since 2.2
 
 ==== :GetSetting ====
 '':GetSetting(self @ [[#T|T]], name @ [[..:..:Std:String#T|Std.String.T]], value @ [[..:..:Gtk:GObject:Value#T|Gtk.GObject.Value.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
@@ -324,7 +296,6 @@
   value :   location to store the value of the setting
   Returns : TRUE if the setting existed and a value was stored in value, FALSE
             otherwise.
-  Since 2.2
 
 ==== :GetSystemColormap ====
 '':GetSystemColormap(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Colormap#T|Gtk.Gdk.Colormap.T]]''
@@ -332,7 +303,6 @@
   Gets the system's default colormap for screen
   screen :  a GdkScreen
   Returns : the default colormap for screen.
-  Since 2.2
 
 ==== :GetSystemVisual ====
 '':GetSystemVisual(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Visual#T|Gtk.Gdk.Visual.T]]''
@@ -341,7 +311,6 @@
   window of the display. The return value should not be freed.
   screen :  a GdkScreen.
   Returns : the system visual
-  Since 2.2
 
 ==== :GetToplevelWindows ====
 '':GetToplevelWindows(self @ [[#T|T]]) : [[..:..:Std:List#T|Std.List.T]]''
@@ -353,7 +322,6 @@
   be freed.
   screen :  The GdkScreen where the toplevels are located.
   Returns : list of toplevel windows, free with g_list_free()
-  Since 2.2
 
 ==== :GetWidth ====
 '':GetWidth(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
@@ -361,7 +329,6 @@
   Gets the width of screen in pixels
   screen :  a GdkScreen
   Returns : the width of screen in pixels.
-  Since 2.2
 
 ==== :GetWidthMm ====
 '':GetWidthMm(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
@@ -370,7 +337,6 @@
   will not be correct.
   screen :  a GdkScreen
   Returns : the width of screen in millimeters.
-  Since 2.2
 
 ==== :GetWindowStack ====
 '':GetWindowStack(self @ [[#T|T]]) : [[..:..:Std:List#T|Std.List.T]]''
@@ -387,7 +353,6 @@
   using g_object_unref() when no longer needed.
   screen :  a GdkScreen
   Returns : a list of GdkWindows for the current window stack, or NULL.
-  Since 2.10
 
 ==== GetDefault ====
 ''GetDefault() : [[..:..:Gtk:Gdk:Screen#T|Gtk.Gdk.Screen.T]]''
@@ -395,7 +360,6 @@
   Gets the default screen for the default display. (See gdk_display_get_default
   ()).
   Returns : a GdkScreen, or NULL if there is no default display.
-  Since 2.2
 
 ==== WidthMm ====
 ''WidthMm() : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''

@@ -86,31 +86,6 @@
   Returns whether the statusbar has a resize grip.
   statusbar : a GtkStatusBar
   Returns :   TRUE if the statusbar has a resize grip.
-  ***** Property Details *****
-  The "has-resize-grip" property
-    "has-resize-grip"          gboolean              : Read / Write
-  Whether the statusbar has a grip for resizing the toplevel window.
-  Default value: TRUE
-  Since 2.4
-  ***** Style Property Details *****
-  The "shadow-type" style property
-    "shadow-type"              GtkShadowType         : Read
-  Style of bevel around the statusbar text.
-  Default value: GTK_SHADOW_IN
-  ***** Signal Details *****
-  The "text-popped" signal
-  void                user_function                      (GtkStatusbar
-  *statusbar,
-                                                          guint
-  context_id,
-                                                          gchar        *text,
-                                                          gpointer
-  user_data)       : Run Last
-  Is emitted whenever a new message is popped off a statusbar's stack.
-  statusbar :  the object which received the signal.
-  context_id : the context id of the relevant message/statusbar.
-  text :       the message that was just popped.
-  user_data :  user data set when the signal handler was connected.
 
 ==== :GetContextId ====
 '':GetContextId(self @ [[#T|T]], context_description @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
@@ -128,31 +103,6 @@
   Returns whether the statusbar has a resize grip.
   statusbar : a GtkStatusBar
   Returns :   TRUE if the statusbar has a resize grip.
-  ***** Property Details *****
-  The "has-resize-grip" property
-    "has-resize-grip"          gboolean              : Read / Write
-  Whether the statusbar has a grip for resizing the toplevel window.
-  Default value: TRUE
-  Since 2.4
-  ***** Style Property Details *****
-  The "shadow-type" style property
-    "shadow-type"              GtkShadowType         : Read
-  Style of bevel around the statusbar text.
-  Default value: GTK_SHADOW_IN
-  ***** Signal Details *****
-  The "text-popped" signal
-  void                user_function                      (GtkStatusbar
-  *statusbar,
-                                                          guint
-  context_id,
-                                                          gchar        *text,
-                                                          gpointer
-  user_data)       : Run Last
-  Is emitted whenever a new message is popped off a statusbar's stack.
-  statusbar :  the object which received the signal.
-  context_id : the context id of the relevant message/statusbar.
-  text :       the message that was just popped.
-  user_data :  user data set when the signal handler was connected.
 
 ==== :Pop ====
 '':Pop(self @ [[#T|T]], context_id @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''

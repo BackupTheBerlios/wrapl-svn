@@ -28,9 +28,6 @@
   Sets the text displayed in the preview area.
   fsd :  a GtkFontSelectionDialog.
   text : the text to display in the preview area.
-  ***** See Also *****
-  GtkFontSelection, GtkDialog the underlying widget for selecting fonts.
-                              the parent class of GtkFontSelectionDialog
 
 ==== :SetFontName ====
 '':SetFontName(self @ [[#T|T]], fontname @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
@@ -78,9 +75,6 @@
   **** Warning ****
   gtk_font_selection_dialog_get_font is deprecated and should not be used in
   newly-written code.
-  Gets the currently-selected font.
-  fsd :     a GtkFontSelectionDialog.
-  Returns : the currently-selected font, or NULL if no font is selected.
 
 ==== :GetFontName ====
 '':GetFontName(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''

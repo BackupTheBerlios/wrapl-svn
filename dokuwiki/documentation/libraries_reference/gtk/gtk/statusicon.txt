@@ -28,7 +28,6 @@
   Shows or hides a status icon.
   status_icon : a GtkStatusIcon
   visible :     TRUE to show the status icon, FALSE to hide it
-  Since 2.10
 
 ==== :SetTooltip ====
 '':SetTooltip(self @ [[#T|T]], tooltip_text @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -36,7 +35,6 @@
   Sets the tooltip of the status icon.
   status_icon :  a GtkStatusIcon
   tooltip_text : the tooltip text, or NULL
-  Since 2.10
 
 ==== :SetScreen ====
 '':SetScreen(self @ [[#T|T]], screen @ [[..:..:Gtk:Gdk:Screen#T|Gtk.Gdk.Screen.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -45,7 +43,6 @@
   mapped, it will be unmapped, and then remapped on the new screen.
   status_icon : a GtkStatusIcon
   screen :      a GdkScreen
-  Since 2.12
 
 ==== :SetFromStock ====
 '':SetFromStock(self @ [[#T|T]], stock_id @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -54,7 +51,6 @@
   gtk_status_icon_new_from_stock() for details.
   status_icon : a GtkStatusIcon
   stock_id :    a stock icon id
-  Since 2.10
 
 ==== :SetFromPixbuf ====
 '':SetFromPixbuf(self @ [[#T|T]], pixbuf @ [[..:..:Gtk:Gdk:Pixbuf#T|Gtk.Gdk.Pixbuf.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -63,7 +59,6 @@
   details.
   status_icon : a GtkStatusIcon
   pixbuf :      a GdkPixbuf or NULL
-  Since 2.10
 
 ==== :SetFromIconName ====
 '':SetFromIconName(self @ [[#T|T]], icon_name @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -72,7 +67,6 @@
   See gtk_status_icon_new_from_icon_name() for details.
   status_icon : a GtkStatusIcon
   icon_name :   an icon name
-  Since 2.10
 
 ==== :SetFromFile ====
 '':SetFromFile(self @ [[#T|T]], filename @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -81,7 +75,6 @@
   () for details.
   status_icon : a GtkStatusIcon
   filename :    a filename
-  Since 2.10
 
 ==== :Priv ====
 '':Priv(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -93,7 +86,6 @@
   Returns whether the icon is blinking, see gtk_status_icon_set_blinking().
   status_icon : a GtkStatusIcon
   Returns :     TRUE if the icon is blinking
-  Since 2.10
 
 ==== :GetGeometry ====
 '':GetGeometry(self @ [[#T|T]], screen @ [[..:..:Std:Object#T|Std.Object.T]], area @ [[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]], orientation @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
@@ -115,12 +107,6 @@
                 the screen is horizontal, a panel at the left or right is
                 vertical.
   Returns :     TRUE if the location information has been filled in
-  Since 2.10
-  ***** Property Details *****
-  The "blinking" property
-    "blinking"                 gboolean              : Read / Write
-  Whether or not the status icon is blinking.
-  Default value: FALSE
 
 ==== :GetIconName ====
 '':GetIconName(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
@@ -131,7 +117,6 @@
   GtkStatusIcon and should not be freed or modified.
   status_icon : a GtkStatusIcon
   Returns :     name of the displayed icon, or NULL if the image is empty.
-  Since 2.10
 
 ==== :GetPixbuf ====
 '':GetPixbuf(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Pixbuf#T|Gtk.Gdk.Pixbuf.T]]''
@@ -142,7 +127,6 @@
   reference to the returned pixbuf.
   status_icon : a GtkStatusIcon
   Returns :     the displayed pixbuf, or NULL if the image is empty.
-  Since 2.10
 
 ==== :GetScreen ====
 '':GetScreen(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Screen#T|Gtk.Gdk.Screen.T]]''
@@ -150,7 +134,6 @@
   Returns the GdkScreen associated with status_icon.
   status_icon : a GtkStatusIcon
   Returns :     a GdkScreen.
-  Since 2.12
 
 ==== :GetSize ====
 '':GetSize(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
@@ -163,7 +146,6 @@
   embedded (see gtk_status_icon_is_embedded()).
   status_icon : a GtkStatusIcon
   Returns :     the size that is available for the image
-  Since 2.10
 
 ==== :GetStock ====
 '':GetStock(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
@@ -175,7 +157,6 @@
   status_icon : a GtkStatusIcon
   Returns :     stock id of the displayed stock icon, or NULL if the image is
                 empty.
-  Since 2.10
 
 ==== :GetStorageType ====
 '':GetStorageType(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:ImageType#T|Gtk.Gtk.ImageType.T]]''
@@ -185,7 +166,6 @@
   GTK_IMAGE_EMPTY.
   status_icon : a GtkStatusIcon
   Returns :     the image representation being used
-  Since 2.10
 
 ==== :GetVisible ====
 '':GetVisible(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
@@ -195,7 +175,6 @@
   gtk_status_icon_is_embedded().
   status_icon : a GtkStatusIcon
   Returns :     TRUE if the status icon is visible
-  Since 2.10
 
 ==== :IsEmbedded ====
 '':IsEmbedded(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
@@ -203,7 +182,6 @@
   Returns whether the status icon is embedded in a notification area.
   status_icon : a GtkStatusIcon
   Returns :     TRUE if the status icon is embedded in a notification area.
-  Since 2.10
 
 ==== :SetBlinking ====
 '':SetBlinking(self @ [[#T|T]], blinking @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -213,14 +191,12 @@
   which case this setting has no effect.
   status_icon : a GtkStatusIcon
   blinking :    TRUE to turn blinking on, FALSE to turn it off
-  Since 2.10
 
 ==== New ====
 ''New() : [[# T| T]]''
 
   Creates an empty status icon object.
   Returns : a new GtkStatusIcon
-  Since 2.10
 
 ==== PositionMenu ====
 ''PositionMenu(menu : [[..:..:Gtk:Gtk:Menu#T|Gtk.Gtk.Menu.T]], x : [[..:..:Std:Object#T|Std.Object.T]], y : [[..:..:Std:Object#T|Std.Object.T]], push_in : [[..:..:Std:Object#T|Std.Object.T]], user_data : [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -234,7 +210,6 @@
   push_in :   aligned with the menu popup position (only useful for
               GtkOptionMenu).
   user_data : the status icon to position the menu on
-  Since 2.10
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
@@ -248,7 +223,6 @@
   gtk_icon_factory_add_default() and gtk_icon_factory_add().
   stock_id : a stock icon id
   Returns :  a new GtkStatusIcon
-  Since 2.10
 
 ==== NewFromPixbuf ====
 ''NewFromPixbuf(pixbuf : [[..:..:Gtk:Gdk:Pixbuf#T|Gtk.Gdk.Pixbuf.T]]) : [[# T| T]]''
@@ -258,7 +232,6 @@
   area, if necessary.
   pixbuf :  a GdkPixbuf
   Returns : a new GtkStatusIcon
-  Since 2.10
 
 ==== NewFromIconName ====
 ''NewFromIconName(icon_name : [[..:..:Std:String#T|Std.String.T]]) : [[# T| T]]''
@@ -267,7 +240,6 @@
   current icon theme is changed, the icon will be updated appropriately.
   icon_name : an icon name
   Returns :   a new GtkStatusIcon
-  Since 2.10
 
 ==== NewFromFile ====
 ''NewFromFile(filename : [[..:..:Std:String#T|Std.String.T]]) : [[# T| T]]''
@@ -277,5 +249,4 @@
   area, if necessary.
   filename : a filename
   Returns :  a new GtkStatusIcon
-  Since 2.10
 

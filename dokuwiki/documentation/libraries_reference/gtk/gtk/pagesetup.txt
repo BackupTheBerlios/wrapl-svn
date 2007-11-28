@@ -47,7 +47,6 @@
   key_file :   the GKeyFile to save the page setup to
   group_name : the group to add the settings to in key_file, or NULL to use the
                default name "Page Setup"
-  Since 2.12
 
 ==== :ToFile ====
 '':ToFile(self @ [[#T|T]], file_name @ [[..:..:Std:String#T|Std.String.T]], error @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
@@ -57,7 +56,6 @@
   file_name : the file to save to
   error :     return location for errors, or NULL
   Returns :   TRUE on success
-  Since 2.12
 
 ==== :SetTopMargin ====
 '':SetTopMargin(self @ [[#T|T]], margin @ [[..:..:Std:Real#T|Std.Real.T]], unit @ [[..:..:Gtk:Gtk:Unit#T|Gtk.Gtk.Unit.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -66,7 +64,6 @@
   setup :  a GtkPageSetup
   margin : the new top margin in units of unit
   unit :   the units for margin
-  Since 2.10
 
 ==== :SetRightMargin ====
 '':SetRightMargin(self @ [[#T|T]], margin @ [[..:..:Std:Real#T|Std.Real.T]], unit @ [[..:..:Gtk:Gtk:Unit#T|Gtk.Gtk.Unit.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -75,7 +72,6 @@
   setup :  a GtkPageSetup
   margin : the new right margin in units of unit
   unit :   the units for margin
-  Since 2.10
 
 ==== :Copy ====
 '':Copy(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:PageSetup#T|Gtk.Gtk.PageSetup.T]]''
@@ -83,7 +79,6 @@
   Copies a GtkPageSetup.
   other :   the GtkPageSetup to copy
   Returns : a copy of other
-  Since 2.10
 
 ==== :GetBottomMargin ====
 '':GetBottomMargin(self @ [[#T|T]], unit @ [[..:..:Gtk:Gtk:Unit#T|Gtk.Gtk.Unit.T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
@@ -92,7 +87,6 @@
   setup :   a GtkPageSetup
   unit :    the unit for the return value
   Returns : the bottom margin
-  Since 2.10
 
 ==== :GetLeftMargin ====
 '':GetLeftMargin(self @ [[#T|T]], unit @ [[..:..:Gtk:Gtk:Unit#T|Gtk.Gtk.Unit.T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
@@ -101,7 +95,6 @@
   setup :   a GtkPageSetup
   unit :    the unit for the return value
   Returns : the left margin
-  Since 2.10
 
 ==== :GetOrientation ====
 '':GetOrientation(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:PageOrientation#T|Gtk.Gtk.PageOrientation.T]]''
@@ -109,7 +102,6 @@
   Gets the page orientation of the GtkPageSetup.
   setup :   a GtkPageSetup
   Returns : the page orientation
-  Since 2.10
 
 ==== :GetPageHeight ====
 '':GetPageHeight(self @ [[#T|T]], unit @ [[..:..:Gtk:Gtk:Unit#T|Gtk.Gtk.Unit.T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
@@ -120,7 +112,6 @@
   setup :   a GtkPageSetup
   unit :    the unit for the return value
   Returns : the page height.
-  Since 2.10
 
 ==== :GetPageWidth ====
 '':GetPageWidth(self @ [[#T|T]], unit @ [[..:..:Gtk:Gtk:Unit#T|Gtk.Gtk.Unit.T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
@@ -131,7 +122,6 @@
   setup :   a GtkPageSetup
   unit :    the unit for the return value
   Returns : the page width.
-  Since 2.10
 
 ==== :GetPaperHeight ====
 '':GetPaperHeight(self @ [[#T|T]], unit @ [[..:..:Gtk:Gtk:Unit#T|Gtk.Gtk.Unit.T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
@@ -142,7 +132,6 @@
   setup :   a GtkPageSetup
   unit :    the unit for the return value
   Returns : the paper height.
-  Since 2.10
 
 ==== :GetPaperSize ====
 '':GetPaperSize(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:PaperSize#T|Gtk.Gtk.PaperSize.T]]''
@@ -150,7 +139,6 @@
   Gets the paper size of the GtkPageSetup.
   setup :   a GtkPageSetup
   Returns : the paper size
-  Since 2.10
 
 ==== :GetPaperWidth ====
 '':GetPaperWidth(self @ [[#T|T]], unit @ [[..:..:Gtk:Gtk:Unit#T|Gtk.Gtk.Unit.T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
@@ -161,7 +149,6 @@
   setup :   a GtkPageSetup
   unit :    the unit for the return value
   Returns : the paper width.
-  Since 2.10
 
 ==== :GetRightMargin ====
 '':GetRightMargin(self @ [[#T|T]], unit @ [[..:..:Gtk:Gtk:Unit#T|Gtk.Gtk.Unit.T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
@@ -170,7 +157,6 @@
   setup :   a GtkPageSetup
   unit :    the unit for the return value
   Returns : the right margin
-  Since 2.10
 
 ==== :GetTopMargin ====
 '':GetTopMargin(self @ [[#T|T]], unit @ [[..:..:Gtk:Gtk:Unit#T|Gtk.Gtk.Unit.T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
@@ -179,7 +165,6 @@
   setup :   a GtkPageSetup
   unit :    the unit for the return value
   Returns : the top margin
-  Since 2.10
 
 ==== :SetBottomMargin ====
 '':SetBottomMargin(self @ [[#T|T]], margin @ [[..:..:Std:Real#T|Std.Real.T]], unit @ [[..:..:Gtk:Gtk:Unit#T|Gtk.Gtk.Unit.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -188,7 +173,6 @@
   setup :  a GtkPageSetup
   margin : the new bottom margin in units of unit
   unit :   the units for margin
-  Since 2.10
 
 ==== :SetLeftMargin ====
 '':SetLeftMargin(self @ [[#T|T]], margin @ [[..:..:Std:Real#T|Std.Real.T]], unit @ [[..:..:Gtk:Gtk:Unit#T|Gtk.Gtk.Unit.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -197,7 +181,6 @@
   setup :  a GtkPageSetup
   margin : the new left margin in units of unit
   unit :   the units for margin
-  Since 2.10
 
 ==== :SetOrientation ====
 '':SetOrientation(self @ [[#T|T]], orientation @ [[..:..:Gtk:Gtk:PageOrientation#T|Gtk.Gtk.PageOrientation.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -205,7 +188,6 @@
   Sets the page orientation of the GtkPageSetup.
   setup :       a GtkPageSetup
   orientation : a GtkPageOrientation value
-  Since 2.10
 
 ==== :SetPaperSize ====
 '':SetPaperSize(self @ [[#T|T]], size @ [[..:..:Gtk:Gtk:PaperSize#T|Gtk.Gtk.PaperSize.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -214,7 +196,6 @@
   gtk_page_setup_set_paper_size_and_default_margins().
   setup : a GtkPageSetup
   size :  a GtkPaperSize
-  Since 2.10
 
 ==== :SetPaperSizeAndDefaultMargins ====
 '':SetPaperSizeAndDefaultMargins(self @ [[#T|T]], size @ [[..:..:Gtk:Gtk:PaperSize#T|Gtk.Gtk.PaperSize.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -223,14 +204,12 @@
   the new paper size.
   setup : a GtkPageSetup
   size :  a GtkPaperSize
-  Since 2.10
 
 ==== New ====
 ''New() : [[# T| T]]''
 
   Creates a new GtkPageSetup.
   Returns : a new GtkPageSetup.
-  Since 2.10
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
@@ -247,7 +226,6 @@
                default name "Page Setup"
   error :      return location for an error, or NULL
   Returns :    the restored GtkPageSetup
-  Since 2.12
 
 ==== NewFromFile ====
 ''NewFromFile(file_name : [[..:..:Std:String#T|Std.String.T]], error : [[..:..:Std:Object#T|Std.Object.T]]) : [[# T| T]]''
@@ -258,5 +236,4 @@
   file_name : the filename to read the page setup from
   error :     return location for an error, or NULL
   Returns :   the restored GtkPageSetup
-  Since 2.12
 

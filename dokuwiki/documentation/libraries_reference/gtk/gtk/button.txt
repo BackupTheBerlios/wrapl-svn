@@ -54,7 +54,6 @@
   Sets the position of the image relative to the text inside the button.
   button :   a GtkButton
   position : the position
-  Since 2.10
 
 ==== :EventWindow ====
 '':EventWindow(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]]''
@@ -133,12 +132,10 @@
   don't want the keyboard focus removed from the main area of the application.
   button :         a GtkButton
   focus_on_click : whether the button grabs focus when clicked with the mouse
-  Since 2.4
   Returns whether the button grabs focus when it is clicked with the mouse. See
   gtk_button_set_focus_on_click().
   button :  a GtkButton
   Returns : TRUE if the button grabs focus when it is clicked with the mouse.
-  Since 2.4
 
 ==== :Clicked ====
 '':Clicked(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -159,7 +156,6 @@
   button : a GtkButton
   xalign : return location for horizontal alignment
   yalign : return location for vertical alignment
-  Since 2.4
 
 ==== :GetFocusOnClick ====
 '':GetFocusOnClick(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
@@ -168,7 +164,6 @@
   gtk_button_set_focus_on_click().
   button :  a GtkButton
   Returns : TRUE if the button grabs focus when it is clicked with the mouse.
-  Since 2.4
 
 ==== :GetImage ====
 '':GetImage(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
@@ -178,7 +173,6 @@
   gtk_button_new_from_stock().
   button :  a GtkButton
   Returns : a GtkWidget or NULL in case there is no image
-  Since 2.6
 
 ==== :GetImagePosition ====
 '':GetImagePosition(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:PositionType#T|Gtk.Gtk.PositionType.T]]''
@@ -186,12 +180,6 @@
   Gets the position of the image relative to the text inside the button.
   button :  a GtkButton
   Returns : the position
-  Since 2.10
-  ***** Property Details *****
-  The "focus-on-click" property
-    "focus-on-click"           gboolean              : Read / Write
-  Whether the button grabs focus when it is clicked with the mouse.
-  Default value: TRUE
 
 ==== :GetLabel ====
 '':GetLabel(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
@@ -256,7 +244,6 @@
            right aligned
   yalign : the vertical position of the child, 0.0 is top aligned, 1.0 is bottom
            aligned
-  Since 2.4
 
 ==== :SetFocusOnClick ====
 '':SetFocusOnClick(self @ [[#T|T]], focus_on_click @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -266,7 +253,6 @@
   don't want the keyboard focus removed from the main area of the application.
   button :         a GtkButton
   focus_on_click : whether the button grabs focus when clicked with the mouse
-  Since 2.4
 
 ==== :SetImage ====
 '':SetImage(self @ [[#T|T]], image @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -276,7 +262,6 @@
   have to call gtk_widget_show() on image yourself.
   button : a GtkButton
   image :  a widget to set as the image for the button
-  Since 2.6
 
 ==== New ====
 ''New() : [[# T| T]]''

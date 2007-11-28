@@ -13,7 +13,6 @@
 
   Emits the "toggled" signal on the toggle action.
   action : the action object
-  Since 2.4
 
 ==== :SetDrawAsRadio ====
 '':SetDrawAsRadio(self @ [[#T|T]], draw_as_radio @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -21,7 +20,6 @@
   Sets whether the action should have proxies like a radio action.
   action :        the action object
   draw_as_radio : whether the action should have proxies like a radio action
-  Since 2.4
 
 ==== :PrivateData ====
 '':PrivateData(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -33,7 +31,6 @@
   Returns the checked state of the toggle action.
   action :  the action object
   Returns : the checked state of the toggle action
-  Since 2.4
 
 ==== :GetDrawAsRadio ====
 '':GetDrawAsRadio(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
@@ -41,13 +38,6 @@
   Returns whether the action should have proxies like a radio action.
   action :  the action object
   Returns : whether the action should have proxies like a radio action.
-  Since 2.4
-  ***** Property Details *****
-  The "active" property
-    "active"                   gboolean              : Read / Write
-  If the toggle action should be active in or not.
-  Default value: FALSE
-  Since 2.10
 
 ==== :SetActive ====
 '':SetActive(self @ [[#T|T]], is_active @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -55,7 +45,6 @@
   Sets the checked state on the toggle action.
   action :    the action object
   is_active : whether the action should be checked or not
-  Since 2.4
 
 ==== New ====
 ''New(name : [[..:..:Std:String#T|Std.String.T]], label : [[..:..:Std:String#T|Std.String.T]], tooltip : [[..:..:Std:String#T|Std.String.T]], stock_id : [[..:..:Std:String#T|Std.String.T]]) : [[# T| T]]''
@@ -69,7 +58,6 @@
   stock_id : The stock icon to display in widgets representing the action, or
              NULL
   Returns :  a new GtkToggleAction
-  Since 2.4
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''

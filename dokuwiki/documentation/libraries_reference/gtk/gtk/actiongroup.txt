@@ -50,13 +50,6 @@
   action_group : a GtkActionGroup
   string :       a string
   Returns :      the translation of string
-  Since 2.6
-  ***** Property Details *****
-  The "name" property
-    "name"                     gchararray            : Read / Write / Construct
-  Only
-  A name for the action group.
-  Default value: NULL
 
 ==== :SetVisible ====
 '':SetVisible(self @ [[#T|T]], visible @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -64,7 +57,6 @@
   Changes the visible of action_group.
   action_group : the action group
   visible :      new visiblity
-  Since 2.4
 
 ==== :PrivateData ====
 '':PrivateData(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -80,7 +72,6 @@
   use gtk_action_group_add_action_with_accel (..., NULL).
   action_group : the action group
   action :       an action
-  Since 2.4
 
 ==== :AddActionWithAccel ====
 '':AddActionWithAccel(self @ [[#T|T]], action @ [[..:..:Gtk:Gtk:Action#T|Gtk.Gtk.Action.T]], accelerator @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -94,7 +85,6 @@
                  the accelerator for the action, in the format understood by
   accelerator :  gtk_accelerator_parse(), or "" for no accelerator, or NULL to
                  use the stock accelerator
-  Since 2.4
 
 ==== :AddActions ====
 '':AddActions(self @ [[#T|T]], entries @ [[..:..:Gtk:Gtk:ActionEntry#T|Gtk.Gtk.ActionEntry.T]], n_entries @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], user_data @ [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -107,7 +97,6 @@
   entries :      an array of action descriptions
   n_entries :    the number of entries
   user_data :    data to pass to the action callbacks
-  Since 2.4
 
 ==== :AddActionsFull ====
 '':AddActionsFull(self @ [[#T|T]], entries @ [[..:..:Gtk:Gtk:ActionEntry#T|Gtk.Gtk.ActionEntry.T]], n_entries @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], user_data @ [[..:..:Std:Address#T|Std.Address.T]], destroy @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -119,7 +108,6 @@
   n_entries :    the number of entries
   user_data :    data to pass to the action callbacks
   destroy :      destroy notification callback for user_data
-  Since 2.4
 
 ==== :AddRadioActions ====
 '':AddRadioActions(self @ [[#T|T]], entries @ [[..:..:Gtk:Gtk:RadioActionEntry#T|Gtk.Gtk.RadioActionEntry.T]], n_entries @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], on_change @ [[..:..:Std:Object#T|Std.Object.T]], user_data @ [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -136,7 +124,6 @@
                  action should be activated
   on_change :    the callback to connect to the changed signal
   user_data :    data to pass to the action callbacks
-  Since 2.4
 
 ==== :AddRadioActionsFull ====
 '':AddRadioActionsFull(self @ [[#T|T]], entries @ [[..:..:Gtk:Gtk:RadioActionEntry#T|Gtk.Gtk.RadioActionEntry.T]], n_entries @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], on_change @ [[..:..:Std:Object#T|Std.Object.T]], user_data @ [[..:..:Std:Address#T|Std.Address.T]], destroy @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -151,7 +138,6 @@
   on_change :    the callback to connect to the changed signal
   user_data :    data to pass to the action callbacks
   destroy :      destroy notification callback for user_data
-  Since 2.4
 
 ==== :AddToggleActions ====
 '':AddToggleActions(self @ [[#T|T]], entries @ [[..:..:Gtk:Gtk:ToggleActionEntry#T|Gtk.Gtk.ToggleActionEntry.T]], n_entries @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], user_data @ [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -164,7 +150,6 @@
   entries :      an array of toggle action descriptions
   n_entries :    the number of entries
   user_data :    data to pass to the action callbacks
-  Since 2.4
 
 ==== :AddToggleActionsFull ====
 '':AddToggleActionsFull(self @ [[#T|T]], entries @ [[..:..:Gtk:Gtk:ToggleActionEntry#T|Gtk.Gtk.ToggleActionEntry.T]], n_entries @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], user_data @ [[..:..:Std:Address#T|Std.Address.T]], destroy @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -176,7 +161,6 @@
   n_entries :    the number of entries
   user_data :    data to pass to the action callbacks
   destroy :      destroy notification callback for user_data
-  Since 2.4
 
 ==== :GetAction ====
 '':GetAction(self @ [[#T|T]], action_name @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Gtk:Gtk:Action#T|Gtk.Gtk.Action.T]]''
@@ -185,7 +169,6 @@
   action_group : the action group
   action_name :  the name of the action
   Returns :      the action, or NULL if no action by that name exists
-  Since 2.4
 
 ==== :GetName ====
 '':GetName(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
@@ -193,7 +176,6 @@
   Gets the name of the action group.
   action_group : the action group
   Returns :      the name of the action group.
-  Since 2.4
 
 ==== :GetSensitive ====
 '':GetSensitive(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
@@ -203,7 +185,6 @@
   gtk_action_get_sensitive()) and their group is sensitive.
   action_group : the action group
   Returns :      TRUE if the group is sensitive.
-  Since 2.4
 
 ==== :GetVisible ====
 '':GetVisible(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
@@ -213,7 +194,6 @@
   gtk_action_get_visible()) and their group is visible.
   action_group : the action group
   Returns :      TRUE if the group is visible.
-  Since 2.4
 
 ==== :ListActions ====
 '':ListActions(self @ [[#T|T]]) : [[..:..:Std:List#T|Std.List.T]]''
@@ -221,7 +201,6 @@
   Lists the actions in the action group.
   action_group : the action group
   Returns :      an allocated list of the action objects in the action group
-  Since 2.4
 
 ==== :RemoveAction ====
 '':RemoveAction(self @ [[#T|T]], action @ [[..:..:Gtk:Gtk:Action#T|Gtk.Gtk.Action.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -229,7 +208,6 @@
   Removes an action object from the action group.
   action_group : the action group
   action :       an action
-  Since 2.4
 
 ==== :SetSensitive ====
 '':SetSensitive(self @ [[#T|T]], sensitive @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -237,7 +215,6 @@
   Changes the sensitivity of action_group
   action_group : the action group
   sensitive :    new sensitivity
-  Since 2.4
 
 ==== :SetTranslateFunc ====
 '':SetTranslateFunc(self @ [[#T|T]], func @ [[..:..:Std:Function#T|Std.Function.T]], data @ [[..:..:Std:Address#T|Std.Address.T]], notify @ [[..:..:Std:Function#T|Std.Function.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -251,7 +228,6 @@
   data :         data to be passed to func and notify
   notify :       a GtkDestroyNotify function to be called when action_group is
                  destroyed and when the translation function is changed again
-  Since 2.4
 
 ==== :SetTranslationDomain ====
 '':SetTranslationDomain(self @ [[#T|T]], domain @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -262,7 +238,6 @@
   gtk_action_group_set_translate_func().
   action_group : a GtkActionGroup
   domain :       the translation domain to use for dgettext() calls
-  Since 2.4
 
 ==== New ====
 ''New(name : [[..:..:Std:String#T|Std.String.T]]) : [[# T| T]]''
@@ -271,7 +246,6 @@
   associating keybindings with the actions.
   name :    the name of the action group.
   Returns : the new GtkActionGroup
-  Since 2.4
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''

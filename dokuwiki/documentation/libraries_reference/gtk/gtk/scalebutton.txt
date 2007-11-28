@@ -21,7 +21,6 @@
   emits the "value-changed" signal if the value changes.
   button : a GtkScaleButton
   value :  new value of the scale button
-  Since 2.12
 
 ==== :SetIcons ====
 '':SetIcons(self @ [[#T|T]], icons @ [[..:..:Std:List#T|Std.List.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -30,7 +29,6 @@
   property.
   button : a GtkScaleButton
   icons :  a NULL-terminated array of icon names
-  Since 2.12
 
 ==== :PlusButton ====
 '':PlusButton(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
@@ -51,7 +49,6 @@
   gtk_range_get_adjustment() for details.
   button :  a GtkScaleButton
   Returns : the adjustment associated with the scale
-  Since 2.12
 
 ==== :GetValue ====
 '':GetValue(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
@@ -59,11 +56,6 @@
   Gets the current value of the scale button.
   button :  a GtkScaleButton
   Returns : current value of the scale button
-  Since 2.12
-  ***** Property Details *****
-  The "adjustment" property
-    "adjustment"               GtkAdjustment         : Read / Write
-  The GtkAdjustment that contains the current value of this scale button object.
 
 ==== :SetAdjustment ====
 '':SetAdjustment(self @ [[#T|T]], adjustment @ [[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -72,7 +64,6 @@
   See gtk_range_set_adjustment() for details.
   button :     a GtkScaleButton
   adjustment : a GtkAdjustment
-  Since 2.12
 
 ==== New ====
 ''New(size : [[..:..:Gtk:Gtk:IconSize#T|Gtk.Gtk.IconSize.T]], min : [[..:..:Std:Real#T|Std.Real.T]], max : [[..:..:Std:Real#T|Std.Real.T]], step : [[..:..:Std:Real#T|Std.Real.T]], icons : [[..:..:Std:List#T|Std.List.T]]) : [[# T| T]]''
@@ -87,7 +78,6 @@
   icons :   a NULL-terminated array of icon names, or NULL if you want to set the
             list later with gtk_scale_button_set_icons()
   Returns : a new GtkScaleButton
-  Since 2.12
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''

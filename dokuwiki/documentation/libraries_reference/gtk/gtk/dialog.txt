@@ -202,7 +202,6 @@
   widget :  a widget in the action area of dialog
   Returns : the response id of widget, or GTK_RESPONSE_NONE if widget doesn't
             have a response id set.
-  Since 2.8
 
 ==== :Response ====
 '':Response(self @ [[#T|T]], response_id @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -245,12 +244,6 @@
            break;
       }
     gtk_widget_destroy (dialog);
-  Note that even though the recursive main loop gives the effect of a modal
-  dialog (it prevents the user from interacting with other windows in the same
-  window group while the dialog is run), callbacks such as timeouts, IO channel
-  watches, DND drops, etc, will be triggered during a gtk_dialog_run() call.
-  dialog :  a GtkDialog
-  Returns : response ID
 
 ==== :SetAlternativeButtonOrder ====
 '':SetAlternativeButtonOrder(self @ [[#T|T]], first_response_id @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], ___ @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -284,11 +277,6 @@
                                            GTK_RESPONSE_CANCEL,
                                            GTK_RESPONSE_HELP,
                                            -1);
-  dialog :            a GtkDialog
-  first_response_id : a response id used by one dialog's buttons
-  ... :               a list of more response ids of dialog's buttons, terminated
-                      by -1
-  Since 2.6
 
 ==== :SetAlternativeButtonOrderFromArray ====
 '':SetAlternativeButtonOrderFromArray(self @ [[#T|T]], n_params @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], new_order @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -301,18 +289,6 @@
   dialog :    a GtkDialog
   n_params :  the number of response ids in new_order
   new_order : an array of response ids of dialog's buttons
-  Since 2.6
-  ***** Property Details *****
-  The "has-separator" property
-    "has-separator"            gboolean              : Read / Write
-  The dialog has a separator bar above its buttons.
-  Default value: TRUE
-  ***** Style Property Details *****
-  The "action-area-border" style property
-    "action-area-border"       gint                  : Read
-  Width of border around the button area at the bottom of the dialog.
-  Allowed values: >= 0
-  Default value: 5
 
 ==== New ====
 ''New() : [[# T| T]]''
@@ -353,11 +329,4 @@
                                                     GTK_STOCK_CANCEL,
                                                     GTK_RESPONSE_REJECT,
                                                     NULL);
-  title :             Title of the dialog, or NULL
-  parent :            Transient parent of the dialog, or NULL
-  flags :             from GtkDialogFlags
-  first_button_text : stock ID or text to go in first button, or NULL
-  ... :               response ID for first button, then additional buttons,
-                      ending with NULL
-  Returns :           a new GtkDialog
 

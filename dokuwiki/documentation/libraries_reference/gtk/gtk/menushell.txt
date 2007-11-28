@@ -37,7 +37,6 @@
   See also gdk_keyboard_grab()
   menu_shell : a GtkMenuShell
   take_focus : TRUE if the menu shell should take the keyboard focus on popup.
-  Since 2.8
 
 ==== :Children ====
 '':Children(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -104,7 +103,6 @@
 
   Cancels the selection within the menu shell.
   menu_shell : a GtkMenuShell
-  Since 2.4
 
 ==== :Deactivate ====
 '':Deactivate(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -125,7 +123,6 @@
   Returns TRUE if the menu shell will take the keyboard focus on popup.
   menu_shell : a GtkMenuShell
   Returns :    TRUE if the menu shell will take the keyboard focus on popup.
-  Since 2.8
 
 ==== :Insert ====
 '':Insert(self @ [[#T|T]], child @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], position @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -154,7 +151,6 @@
   search_sensitive : otherwise select nothing if the first item isn't sensitive.
                      This should be FALSE if the menu is being popped up
                      initially.
-  Since 2.2
 
 ==== :SelectItem ====
 '':SelectItem(self @ [[#T|T]], menu_item @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''

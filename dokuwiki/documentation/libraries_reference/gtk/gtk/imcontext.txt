@@ -35,16 +35,6 @@
             before the cursor.
   n_chars : number of characters to delete.
   Returns : TRUE if the signal was handled.
-  ***** Signal Details *****
-  The "commit" signal
-  void                user_function                      (GtkIMContext
-  *imcontext,
-                                                          gchar        *arg1,
-                                                          gpointer
-  user_data)      : Run Last
-  imcontext : the object which received the signal.
-  arg1 :
-  user_data : user data set when the signal handler was connected.
 
 ==== :FilterKeypress ====
 '':FilterKeypress(self @ [[#T|T]], event @ [[..:..:Gtk:Gdk:EventKey#T|Gtk.Gdk.EventKey.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''

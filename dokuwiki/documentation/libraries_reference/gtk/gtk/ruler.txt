@@ -106,11 +106,6 @@
              NULL
   max_size : location to store the maximum size of the ruler used when
              calculating the space to leave for the text, or NULL.
-  ***** Property Details *****
-  The "lower" property
-    "lower"                    gdouble               : Read / Write
-  Lower limit of ruler.
-  Default value: 0
 
 ==== :SetMetric ====
 '':SetMetric(self @ [[#T|T]], metric @ [[..:..:Gtk:Gtk:MetricType#T|Gtk.Gtk.MetricType.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''

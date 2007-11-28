@@ -20,10 +20,6 @@
   **** Warning ****
   gtk_list_unselect_item is deprecated and should not be used in newly-written
   code.
-  Unselects the child number item of the list. Nothing happens if item is out of
-  bounds. The signal GtkList::unselect-child will be emitted.
-  list : the list widget.
-  item : the index of the child to unselect.
 
 ==== :UnselectChild ====
 '':UnselectChild(self @ [[#T|T]], child @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -31,9 +27,6 @@
   **** Warning ****
   gtk_list_unselect_child is deprecated and should not be used in newly-written
   code.
-  Unselects the given child. The signal GtkList::unselect-child will be emitted.
-  list :  the list widget.
-  child : the child to unselect.
 
 ==== :Children ====
 '':Children(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -45,52 +38,18 @@
   **** Warning ****
   gtk_list_extend_selection is deprecated and should not be used in newly-written
   code.
-  Extends the selection by moving the anchor according to scroll_type. Only in
-  GTK_SELECTION_EXTENDED.
-  list :                 the list widget.
-  scroll_type :          the direction and length.
-  position :             the position if scroll_type is GTK_SCROLL_JUMP.
-  auto_start_selection : if TRUE, gtk_list_start_selection() is automatically
-                         carried out before extending the selection.
   **** Warning ****
   gtk_list_start_selection is deprecated and should not be used in newly-written
   code.
-  Starts a selection (or part of selection) at the focused child. Only in
-  GTK_SELECTION_EXTENDED mode.
-  list : the list widget.
   **** Warning ****
   gtk_list_end_selection is deprecated and should not be used in newly-written
   code.
-  Ends the selection. Used with gtk_list_extend_selection() and
-  gtk_list_start_selection(). Only in GTK_SELECTION_EXTENDED mode.
-  list : the list widget.
   **** Warning ****
   gtk_list_undo_selection is deprecated and should not be used in newly-written
   code.
-  Restores the selection in the last state, only if selection mode is
-  GTK_SELECTION_EXTENDED. If this function is called twice, the selection is
-  cleared. This function sometimes gives stranges "last states".
-  list : the list widget.
   **** Warning ****
   gtk_list_end_drag_selection is deprecated and should not be used in newly-
   written code.
-  Stops the drag selection mode and ungrabs the pointer. This has no effect if a
-  drag selection is not active.
-  list : the list widget.
-  ***** Property Details *****
-  The "selection-mode" property
-    "selection-mode"           GtkSelectionMode      : Read / Write
-  Default value: GTK_SELECTION_NONE
-  ***** Signal Details *****
-  The "select-child" signal
-  void                user_function                      (GtkList   *list,
-                                                          GtkWidget *widget,
-                                                          gpointer   user_data)
-  : Run First
-  The child widget has just been selected.
-  list :      the object which received the signal.
-  widget :    the newly selected child.
-  user_data : user data set when the signal handler was connected.
 
 ==== :UndoSelection ====
 '':UndoSelection(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -98,10 +57,6 @@
   **** Warning ****
   gtk_list_undo_selection is deprecated and should not be used in newly-written
   code.
-  Restores the selection in the last state, only if selection mode is
-  GTK_SELECTION_EXTENDED. If this function is called twice, the selection is
-  cleared. This function sometimes gives stranges "last states".
-  list : the list widget.
 
 ==== :UndoUnselection ====
 '':UndoUnselection(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -141,18 +96,6 @@
   **** Warning ****
   gtk_list_set_selection_mode is deprecated and should not be used in newly-
   written code.
-  Set the list selection mode. The selection mode can be any value in ""
-  GTK_SELECTION_SINGLE   Zero or one element may be selected.
-  GTK_SELECTION_BROWSE   Exactly one element is always selected (this can be
-                         false after you have changed the selection mode).
-  GTK_SELECTION_MULTIPLE Any number of elements may be selected. Clicks toggle
-                         the state of an item.
-                         Any number of elements may be selected. Click-drag
-  GTK_SELECTION_EXTENDED selects a range of elements; the Ctrl key may be used to
-                         enlarge the selection, and Shift key to select between
-                         the focus and the child pointed to.
-  list : the list widget.
-  mode : the new selection mode.
 
 ==== :DragSelection ====
 '':DragSelection(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
@@ -160,23 +103,6 @@
   **** Warning ****
   gtk_list_end_drag_selection is deprecated and should not be used in newly-
   written code.
-  Stops the drag selection mode and ungrabs the pointer. This has no effect if a
-  drag selection is not active.
-  list : the list widget.
-  ***** Property Details *****
-  The "selection-mode" property
-    "selection-mode"           GtkSelectionMode      : Read / Write
-  Default value: GTK_SELECTION_NONE
-  ***** Signal Details *****
-  The "select-child" signal
-  void                user_function                      (GtkList   *list,
-                                                          GtkWidget *widget,
-                                                          gpointer   user_data)
-  : Run First
-  The child widget has just been selected.
-  list :      the object which received the signal.
-  widget :    the newly selected child.
-  user_data : user data set when the signal handler was connected.
 
 ==== :AddMode ====
 '':AddMode(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
@@ -184,9 +110,6 @@
   **** Warning ****
   gtk_list_toggle_add_mode is deprecated and should not be used in newly-written
   code.
-  Toggles between adding to the selection and beginning a new selection. Only in
-  GTK_SELECTION_EXTENDED. Useful with gtk_list_extend_selection().
-  list : the list widget.
 
 ==== :AppendItems ====
 '':AppendItems(self @ [[#T|T]], items @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -194,9 +117,6 @@
   **** Warning ****
   gtk_list_append_items is deprecated and should not be used in newly-written
   code.
-  Adds items to the end of the list.
-  list :  the list widget.
-  items : the items.
 
 ==== :ChildPosition ====
 '':ChildPosition(self @ [[#T|T]], child @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
@@ -204,10 +124,6 @@
   **** Warning ****
   gtk_list_child_position is deprecated and should not be used in newly-written
   code.
-  Searches the children of list for the index of child.
-  list :    the list widget.
-  child :   the child to look for.
-  Returns : the index of the child, -1 if not found.
 
 ==== :ClearItems ====
 '':ClearItems(self @ [[#T|T]], start @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], end @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -215,13 +131,6 @@
   **** Warning ****
   gtk_list_clear_items is deprecated and should not be used in newly-written
   code.
-  Removes the items between index start (included) and end (excluded) from the
-  list. If end is negative, or greater than the number of children of list, it's
-  assumed to be exactly the number of elements. If start is greater than or equal
-  to end, nothing is done.
-  list :  the list widget.
-  start : the index of the first item to remove.
-  end :   the index of the lest item to remove plus one.
 
 ==== :EndDragSelection ====
 '':EndDragSelection(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -229,23 +138,6 @@
   **** Warning ****
   gtk_list_end_drag_selection is deprecated and should not be used in newly-
   written code.
-  Stops the drag selection mode and ungrabs the pointer. This has no effect if a
-  drag selection is not active.
-  list : the list widget.
-  ***** Property Details *****
-  The "selection-mode" property
-    "selection-mode"           GtkSelectionMode      : Read / Write
-  Default value: GTK_SELECTION_NONE
-  ***** Signal Details *****
-  The "select-child" signal
-  void                user_function                      (GtkList   *list,
-                                                          GtkWidget *widget,
-                                                          gpointer   user_data)
-  : Run First
-  The child widget has just been selected.
-  list :      the object which received the signal.
-  widget :    the newly selected child.
-  user_data : user data set when the signal handler was connected.
 
 ==== :EndSelection ====
 '':EndSelection(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -253,9 +145,6 @@
   **** Warning ****
   gtk_list_end_selection is deprecated and should not be used in newly-written
   code.
-  Ends the selection. Used with gtk_list_extend_selection() and
-  gtk_list_start_selection(). Only in GTK_SELECTION_EXTENDED mode.
-  list : the list widget.
 
 ==== :ExtendSelection ====
 '':ExtendSelection(self @ [[#T|T]], scroll_type @ [[..:..:Gtk:Gtk:ScrollType#T|Gtk.Gtk.ScrollType.T]], position @ [[..:..:Std:Real#T|Std.Real.T]], auto_start_selection @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -263,13 +152,6 @@
   **** Warning ****
   gtk_list_extend_selection is deprecated and should not be used in newly-written
   code.
-  Extends the selection by moving the anchor according to scroll_type. Only in
-  GTK_SELECTION_EXTENDED.
-  list :                 the list widget.
-  scroll_type :          the direction and length.
-  position :             the position if scroll_type is GTK_SCROLL_JUMP.
-  auto_start_selection : if TRUE, gtk_list_start_selection() is automatically
-                         carried out before extending the selection.
 
 ==== :InsertItems ====
 '':InsertItems(self @ [[#T|T]], items @ [[..:..:Std:Object#T|Std.Object.T]], position @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -277,11 +159,6 @@
   **** Warning ****
   gtk_list_insert_items is deprecated and should not be used in newly-written
   code.
-  Inserts items into the list at the position position. The GList items must not
-  be freed after.
-  list :     the list widget.
-  items :    the items.
-  position : the position to insert items, starting at 0.
 
 ==== :PrependItems ====
 '':PrependItems(self @ [[#T|T]], items @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -289,9 +166,6 @@
   **** Warning ****
   gtk_list_prepend_items is deprecated and should not be used in newly-written
   code.
-  Inserts items at the beginning of the list.
-  list :  the list widget.
-  items : the items.
 
 ==== :RemoveItems ====
 '':RemoveItems(self @ [[#T|T]], items @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -299,9 +173,6 @@
   **** Warning ****
   gtk_list_remove_items is deprecated and should not be used in newly-written
   code.
-  Removes the items from the list.
-  list :  the list widget.
-  items : the items to remove.
 
 ==== :RemoveItemsNoUnref ====
 '':RemoveItemsNoUnref(self @ [[#T|T]], items @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -309,10 +180,6 @@
   **** Warning ****
   gtk_list_remove_items_no_unref is deprecated and should not be used in newly-
   written code.
-  Removes the items from the list, without unreferencing them. It may be useful
-  if you want to move the items from one list to another.
-  list :  the list widget.
-  items : the items.
 
 ==== :ScrollHorizontal ====
 '':ScrollHorizontal(self @ [[#T|T]], scroll_type @ [[..:..:Gtk:Gtk:ScrollType#T|Gtk.Gtk.ScrollType.T]], position @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -320,16 +187,6 @@
   **** Warning ****
   gtk_list_scroll_horizontal is deprecated and should not be used in newly-
   written code.
-  Scrolls list horizontaly. This supposes that the list is packed into a scrolled
-  window or something similar, and adjustments are well set. Step and page
-  increment are those from the horizontal adjustment of list. Backward means to
-  the left, and forward to the right. Out of bounds values are truncated.
-  scroll_type may be any valid GtkScrollType. If scroll_type is GTK_SCROLL_NONE,
-  nothing is done. If it's GTK_SCROLL_JUMP, the list scrolls to the ratio
-  position: 0 is full left, 1 is full right.
-  list :        the list widget.
-  scroll_type : the scrolling type.
-  position :    the position if scroll_type is GTK_SCROLL_JUMP
 
 ==== :ScrollVertical ====
 '':ScrollVertical(self @ [[#T|T]], scroll_type @ [[..:..:Gtk:Gtk:ScrollType#T|Gtk.Gtk.ScrollType.T]], position @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -337,25 +194,12 @@
   **** Warning ****
   gtk_list_scroll_vertical is deprecated and should not be used in newly-written
   code.
-  Scrolls list vertically. This supposes that the list is packed into a scrolled
-  window or something similar, and adjustments are well set. Step and page
-  increment are those from the vertical adjustment of list. Backward means up,
-  and forward down. Out of bounds values are truncated. scroll_type may be any
-  valid GtkScrollType. If scroll_type is GTK_SCROLL_NONE, nothing is done. If
-  it's GTK_SCROLL_JUMP, the list scrolls to the ratio position: 0 is top, 1 is
-  bottom.
-  list :        the list widget.
-  scroll_type : the scrolling type.
-  position :    the position if scroll_type is GTK_SCROLL_JUMP
 
 ==== :SelectAll ====
 '':SelectAll(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
   **** Warning ****
   gtk_list_select_all is deprecated and should not be used in newly-written code.
-  Selects all children of list. A signal will be emitted for each newly selected
-  child.
-  list : the list widget.
 
 ==== :SelectChild ====
 '':SelectChild(self @ [[#T|T]], child @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -363,9 +207,6 @@
   **** Warning ****
   gtk_list_select_child is deprecated and should not be used in newly-written
   code.
-  Selects the given child. The signal GtkList::select-child will be emitted.
-  list :  the list widget
-  child : the child to select.
 
 ==== :SelectItem ====
 '':SelectItem(self @ [[#T|T]], item @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -373,10 +214,6 @@
   **** Warning ****
   gtk_list_select_item is deprecated and should not be used in newly-written
   code.
-  Selects the child number item of the list. Nothing happens if item is out of
-  bounds. The signal GtkList::select-child will be emitted.
-  list : the list widget.
-  item : the index of the child to select.
 
 ==== :SetSelectionMode ====
 '':SetSelectionMode(self @ [[#T|T]], mode @ [[..:..:Gtk:Gtk:SelectionMode#T|Gtk.Gtk.SelectionMode.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -384,18 +221,6 @@
   **** Warning ****
   gtk_list_set_selection_mode is deprecated and should not be used in newly-
   written code.
-  Set the list selection mode. The selection mode can be any value in ""
-  GTK_SELECTION_SINGLE   Zero or one element may be selected.
-  GTK_SELECTION_BROWSE   Exactly one element is always selected (this can be
-                         false after you have changed the selection mode).
-  GTK_SELECTION_MULTIPLE Any number of elements may be selected. Clicks toggle
-                         the state of an item.
-                         Any number of elements may be selected. Click-drag
-  GTK_SELECTION_EXTENDED selects a range of elements; the Ctrl key may be used to
-                         enlarge the selection, and Shift key to select between
-                         the focus and the child pointed to.
-  list : the list widget.
-  mode : the new selection mode.
 
 ==== :StartSelection ====
 '':StartSelection(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -403,9 +228,6 @@
   **** Warning ****
   gtk_list_start_selection is deprecated and should not be used in newly-written
   code.
-  Starts a selection (or part of selection) at the focused child. Only in
-  GTK_SELECTION_EXTENDED mode.
-  list : the list widget.
 
 ==== :ToggleAddMode ====
 '':ToggleAddMode(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -413,9 +235,6 @@
   **** Warning ****
   gtk_list_toggle_add_mode is deprecated and should not be used in newly-written
   code.
-  Toggles between adding to the selection and beginning a new selection. Only in
-  GTK_SELECTION_EXTENDED. Useful with gtk_list_extend_selection().
-  list : the list widget.
 
 ==== :ToggleFocusRow ====
 '':ToggleFocusRow(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -423,21 +242,12 @@
   **** Warning ****
   gtk_list_toggle_focus_row is deprecated and should not be used in newly-written
   code.
-  Toggles the focus row. If the focus row is selected, it's unselected. If the
-  focus row is unselected, it's selected. If the selection mode of list is
-  GTK_SELECTION_BROWSE, this has no effect, as the selection is always at the
-  focus row.
-  list : the list widget.
 
 ==== :ToggleRow ====
 '':ToggleRow(self @ [[#T|T]], item @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
   **** Warning ****
   gtk_list_toggle_row is deprecated and should not be used in newly-written code.
-  Toggles the child item of list. If the selection mode of list is
-  GTK_SELECTION_BROWSE, the item is selected, and the others are unselected.
-  list : the list widget.
-  item : the child to toggle.
 
 ==== :UndoSelection ====
 '':UndoSelection(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -445,10 +255,6 @@
   **** Warning ****
   gtk_list_undo_selection is deprecated and should not be used in newly-written
   code.
-  Restores the selection in the last state, only if selection mode is
-  GTK_SELECTION_EXTENDED. If this function is called twice, the selection is
-  cleared. This function sometimes gives stranges "last states".
-  list : the list widget.
 
 ==== :UnselectAll ====
 '':UnselectAll(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -456,17 +262,12 @@
   **** Warning ****
   gtk_list_unselect_all is deprecated and should not be used in newly-written
   code.
-  Unselects all children of list. A signal will be emitted for each newly
-  unselected child.
-  list : the list widget.
 
 ==== New ====
 ''New() : [[# T| T]]''
 
   **** Warning ****
   gtk_list_new is deprecated and should not be used in newly-written code.
-  Creates a new GtkList.
-  Returns : the newly-created GtkList
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''

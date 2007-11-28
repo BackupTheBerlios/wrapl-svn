@@ -55,18 +55,6 @@
   height :  the height of the item, or -1 to use the widget's requested height.
   ... :     optional pairs of property names and values, and a terminating NULL.
   Returns : a new widget item.
-  Here's an example showing how to create an entry widget centered at (100.0,
-  100.0):
-   GtkWidget *entry = gtk_entry_new ();
-   GooCanvasItem *witem = goo_canvas_widget_new (mygroup, entry,
-                                                 100, 100, -1, -1,
-                                                 "anchor", GTK_ANCHOR_CENTER,
-                                                 NULL);
-  ***** Property Details *****
-  The "anchor" property
-    "anchor"                   GtkAnchorType         : Read / Write
-  How to position the widget relative to the item's x and y coordinate settings.
-  Default value: GTK_ANCHOR_NORTH_WEST
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''

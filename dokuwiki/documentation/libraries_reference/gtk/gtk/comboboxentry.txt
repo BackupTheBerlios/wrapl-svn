@@ -40,7 +40,6 @@
   text_column.
   entry_box :   A GtkComboBoxEntry.
   text_column : A column in model to get the strings from.
-  Since 2.4
 
 ==== :GetTextColumn ====
 '':GetTextColumn(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
@@ -48,15 +47,6 @@
   Returns the column which entry_box is using to get the strings from.
   entry_box : A GtkComboBoxEntry.
   Returns :   A column in the data source model of entry_box.
-  Since 2.4
-  ***** Property Details *****
-  The "text-column" property
-    "text-column"              gint                  : Read / Write
-  A column in the data source model to get the strings from.
-  Allowed values: >= -1
-  Default value: -1
-  ***** See Also *****
-  GtkComboBox
 
 ==== :Priv ====
 '':Priv(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -69,7 +59,6 @@
   construction, you should set a model using gtk_combo_box_set_model() and a
   text_column * using gtk_combo_box_entry_set_text_column().
   Returns : A new GtkComboBoxEntry.
-  Since 2.4
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
@@ -85,7 +74,6 @@
   model :       A GtkTreeModel.
   text_column : A column in model to get the strings from.
   Returns :     A new GtkComboBoxEntry.
-  Since 2.4
 
 ==== NewText ====
 ''NewText() : [[# T| T]]''
@@ -96,5 +84,4 @@
   convenience functions: gtk_combo_box_append_text(), gtk_combo_box_insert_text
   (), gtk_combo_box_prepend_text() and gtk_combo_box_remove_text().
   Returns : A new text GtkComboBoxEntry.
-  Since 2.4
 

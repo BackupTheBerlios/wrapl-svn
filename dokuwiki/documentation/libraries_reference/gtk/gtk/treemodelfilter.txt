@@ -32,7 +32,6 @@
   func :    A GtkTreeModelFilterVisibleFunc, the visible function.
   data :    User data to pass to the visible function, or NULL.
   destroy : Destroy notifier of data, or NULL.
-  Since 2.4
 
 ==== :SetVisibleColumn ====
 '':SetVisibleColumn(self @ [[#T|T]], column @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -42,7 +41,6 @@
   where TRUE means that a row is visible, and FALSE if not.
   filter : A GtkTreeModelFilter.
   column : A gint which is the column containing the visible information.
-  Since 2.4
 
 ==== :Priv ====
 '':Priv(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -57,12 +55,6 @@
   often) and there has been a lot of unreffed access to nodes. As a side effect
   of this function, all unreffed iters will be invalid.
   filter : A GtkTreeModelFilter.
-  Since 2.4
-  ***** Property Details *****
-  The "child-model" property
-    "child-model"              GtkTreeModel          : Read / Write / Construct
-  Only
-  The model for the filtermodel to filter.
 
 ==== :ConvertChildIterToIter ====
 '':ConvertChildIterToIter(self @ [[#T|T]], filter_iter @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]], child_iter @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
@@ -74,7 +66,6 @@
   child_iter :  A valid GtkTreeIter pointing to a row on the child model.
   Returns :     TRUE, if filter_iter was set, i.e. if child_iter is a valid
                 iterator pointing to a visible row in child model.
-  Since 2.4
 
 ==== :ConvertChildPathToPath ====
 '':ConvertChildPathToPath(self @ [[#T|T]], child_path @ [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]]) : [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]]''
@@ -86,7 +77,6 @@
   filter :     A GtkTreeModelFilter.
   child_path : A GtkTreePath to convert.
   Returns :    A newly allocated GtkTreePath, or NULL.
-  Since 2.4
 
 ==== :ConvertIterToChildIter ====
 '':ConvertIterToChildIter(self @ [[#T|T]], child_iter @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]], filter_iter @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -95,7 +85,6 @@
   filter :      A GtkTreeModelFilter.
   child_iter :  An uninitialized GtkTreeIter.
   filter_iter : A valid GtkTreeIter pointing to a row on filter.
-  Since 2.4
 
 ==== :ConvertPathToChildPath ====
 '':ConvertPathToChildPath(self @ [[#T|T]], filter_path @ [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]]) : [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]]''
@@ -107,7 +96,6 @@
   filter :      A GtkTreeModelFilter.
   filter_path : A GtkTreePath to convert.
   Returns :     A newly allocated GtkTreePath, or NULL.
-  Since 2.4
 
 ==== :GetModel ====
 '':GetModel(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:TreeModel#T|Gtk.Gtk.TreeModel.T]]''
@@ -115,7 +103,6 @@
   Returns a pointer to the child model of filter.
   filter :  A GtkTreeModelFilter.
   Returns : A pointer to a GtkTreeModel.
-  Since 2.4
 
 ==== :Refilter ====
 '':Refilter(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -123,7 +110,6 @@
   Emits ::row_changed for each row in the child model, which causes the filter to
   re-evaluate whether a row is visible or not.
   filter : A GtkTreeModelFilter.
-  Since 2.4
 
 ==== :SetModifyFunc ====
 '':SetModifyFunc(self @ [[#T|T]], n_columns @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], types @ [[..:..:Std:List#T|Std.List.T]], func @ [[..:..:Std:Function#T|Std.Function.T]], data @ [[..:..:Std:Address#T|Std.Address.T]], destroy @ [[..:..:Std:Function#T|Std.Function.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -140,7 +126,6 @@
   func :      A GtkTreeModelFilterModifyFunc
   data :      User data to pass to the modify function, or NULL.
   destroy :   Destroy notifier of data, or NULL.
-  Since 2.4
 
 ==== New ====
 ''New(child_model : [[..:..:Gtk:Gtk:TreeModel#T|Gtk.Gtk.TreeModel.T]], root : [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]]) : [[# T| T]]''
@@ -150,7 +135,6 @@
   child_model : A GtkTreeModel.
   root :        A GtkTreePath or NULL.
   Returns :     A new GtkTreeModel.
-  Since 2.4
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''

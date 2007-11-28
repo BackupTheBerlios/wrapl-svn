@@ -60,23 +60,10 @@
   not be used in newly-written code. gtk_menu_item_remove_submenu() is deprecated
   and should not be used in newly written code. Use gtk_menu_item_set_submenu()
   instead.
-  Removes the widget's submenu.
-  menu_item : a GtkMenuItem
   Gets the submenu underneath this menu item, if any. See
   gtk_menu_item_set_submenu().
   menu_item : a GtkMenuItem
   Returns :   submenu for this menu item, or NULL if none.
-  ***** Property Details *****
-  The "submenu" property
-    "submenu"                  GtkMenu               : Read / Write
-  The submenu attached to the menu item, or NULL if it has none.
-  Since 2.12
-  ***** Style Property Details *****
-  The "arrow-spacing" style property
-    "arrow-spacing"            gint                  : Read
-  Space between label and arrow.
-  Allowed values: >= 0
-  Default value: 10
 
 ==== :EventWindow ====
 '':EventWindow(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]]''
@@ -165,17 +152,6 @@
   gtk_menu_item_set_submenu().
   menu_item : a GtkMenuItem
   Returns :   submenu for this menu item, or NULL if none.
-  ***** Property Details *****
-  The "submenu" property
-    "submenu"                  GtkMenu               : Read / Write
-  The submenu attached to the menu item, or NULL if it has none.
-  Since 2.12
-  ***** Style Property Details *****
-  The "arrow-spacing" style property
-    "arrow-spacing"            gint                  : Read
-  Space between label and arrow.
-  Allowed values: >= 0
-  Default value: 10
 
 ==== :RemoveSubmenu ====
 '':RemoveSubmenu(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -185,8 +161,6 @@
   not be used in newly-written code. gtk_menu_item_remove_submenu() is deprecated
   and should not be used in newly written code. Use gtk_menu_item_set_submenu()
   instead.
-  Removes the widget's submenu.
-  menu_item : a GtkMenuItem
 
 ==== :Select ====
 '':Select(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''

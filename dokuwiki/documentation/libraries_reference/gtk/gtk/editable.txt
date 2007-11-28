@@ -97,14 +97,6 @@
   Retrieves whether editable is editable. See gtk_editable_set_editable().
   editable : a GtkEditable
   Returns :  TRUE if editable is editable.
-  ***** Signal Details *****
-  The "changed" signal
-  void                user_function                      (GtkEditable *editable,
-                                                          gpointer     user_data)
-  : Run Last
-  Indicates that the user has changed the contents of the widget.
-  editable :  the object which received the signal.
-  user_data : user data set when the signal handler was connected.
 
 ==== :GetPosition ====
 '':GetPosition(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''

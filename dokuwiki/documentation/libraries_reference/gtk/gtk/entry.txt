@@ -52,16 +52,10 @@
   gtk_entry_append_text is deprecated and should not be used in newly-written
   code. gtk_entry_append_text() is deprecated and should not be used in newly-
   written code. Use gtk_editable_insert_text() instead.
-  Appends the given text to the contents of the widget.
-  entry : a GtkEntry
-  text :  the text to append
   **** Warning ****
   gtk_entry_prepend_text is deprecated and should not be used in newly-written
   code. gtk_entry_prepend_text() is deprecated and should not be used in newly-
   written code. Use gtk_editable_insert_text() instead.
-  Prepends the given text to the contents of the widget.
-  entry : a GtkEntry
-  text :  the text to prepend
   Retrieves the contents of the entry widget. See also gtk_editable_get_chars().
   entry :   a GtkEntry
             a pointer to the contents of the widget as a string. This string
@@ -74,9 +68,6 @@
   **** Warning ****
   gtk_entry_set_editable is deprecated and should not be used in newly-written
   code. Use gtk_editable_set_editable() instead.
-  Determines if the user can edit the text in the editable widget or not.
-  entry :    a GtkEntry
-  editable : TRUE if the user is allowed to edit the text in the widget
 
 ==== :Visible ====
 '':Visible(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
@@ -281,9 +272,6 @@
   gtk_entry_append_text is deprecated and should not be used in newly-written
   code. gtk_entry_append_text() is deprecated and should not be used in newly-
   written code. Use gtk_editable_insert_text() instead.
-  Appends the given text to the contents of the widget.
-  entry : a GtkEntry
-  text :  the text to append
 
 ==== :GetActivatesDefault ====
 '':GetActivatesDefault(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
@@ -298,7 +286,6 @@
   Gets the value set by gtk_entry_set_alignment().
   entry :   a GtkEntry
   Returns : the alignment
-  Since 2.4
 
 ==== :GetCompletion ====
 '':GetCompletion(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:EntryCompletion#T|Gtk.Gtk.EntryCompletion.T]]''
@@ -306,7 +293,6 @@
   Returns the auxiliary completion object currently in use by entry.
   entry :   A GtkEntry
   Returns : The auxiliary completion object currently in use by entry.
-  Since 2.4
 
 ==== :GetCursorHadjustment ====
 '':GetCursorHadjustment(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]]''
@@ -315,13 +301,6 @@
   gtk_entry_set_cursor_hadjustment().
   entry :   a GtkEntry
   Returns : the horizontal cursor adjustment, or NULL if none has been set.
-  Since 2.12
-  ***** Property Details *****
-  The "activates-default" property
-    "activates-default"        gboolean              : Read / Write
-  Whether to activate the default widget (such as the default button in a dialog)
-  when Enter is pressed.
-  Default value: FALSE
 
 ==== :GetHasFrame ====
 '':GetHasFrame(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
@@ -337,7 +316,6 @@
   gtk_entry_set_inner_border() for more information.
   entry :   a GtkEntry
   Returns : the entry's GtkBorder, or NULL if none was set.
-  Since 2.10
 
 ==== :GetInvisibleChar ====
 '':GetInvisibleChar(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -432,9 +410,6 @@
   gtk_entry_prepend_text is deprecated and should not be used in newly-written
   code. gtk_entry_prepend_text() is deprecated and should not be used in newly-
   written code. Use gtk_editable_insert_text() instead.
-  Prepends the given text to the contents of the widget.
-  entry : a GtkEntry
-  text :  the text to prepend
 
 ==== :SelectRegion ====
 '':SelectRegion(self @ [[#T|T]], start @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], end @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -442,13 +417,6 @@
   **** Warning ****
   gtk_entry_select_region is deprecated and should not be used in newly-written
   code. Use gtk_editable_select_region() instead.
-  Selects a region of text. The characters that are selected are those characters
-  at positions from start_pos up to, but not including end_pos. If end_pos is
-  negative, then the the characters selected will be those characters from
-  start_pos to the end of the text.
-  entry : a GtkEntry
-  start : the starting position
-  end :   the end position
 
 ==== :SetActivatesDefault ====
 '':SetActivatesDefault(self @ [[#T|T]], setting @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -472,7 +440,6 @@
   entry :  a GtkEntry
   xalign : The horizontal alignment, from 0 (left) to 1 (right). Reversed for RTL
            layouts
-  Since 2.4
 
 ==== :SetCompletion ====
 '':SetCompletion(self @ [[#T|T]], completion @ [[..:..:Gtk:Gtk:EntryCompletion#T|Gtk.Gtk.EntryCompletion.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -483,7 +450,6 @@
   NULL.
   entry :      A GtkEntry
   completion : The GtkEntryCompletion or NULL
-  Since 2.4
 
 ==== :SetCursorHadjustment ====
 '':SetCursorHadjustment(self @ [[#T|T]], adjustment @ [[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -497,7 +463,6 @@
   entry :      a GtkEntry
   adjustment : an adjustment which should be adjusted when the cursor is moved,
                or NULL
-  Since 2.12
 
 ==== :SetEditable ====
 '':SetEditable(self @ [[#T|T]], editable @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -505,9 +470,6 @@
   **** Warning ****
   gtk_entry_set_editable is deprecated and should not be used in newly-written
   code. Use gtk_editable_set_editable() instead.
-  Determines if the user can edit the text in the editable widget or not.
-  entry :    a GtkEntry
-  editable : TRUE if the user is allowed to edit the text in the widget
 
 ==== :SetHasFrame ====
 '':SetHasFrame(self @ [[#T|T]], setting @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -527,7 +489,6 @@
   important.
   entry :  a GtkEntry
   border : a GtkBorder, or NULL
-  Since 2.10
 
 ==== :SetInvisibleChar ====
 '':SetInvisibleChar(self @ [[#T|T]], ch @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -557,14 +518,6 @@
   **** Warning ****
   gtk_entry_set_position is deprecated and should not be used in newly-written
   code. Use gtk_editable_set_position() instead.
-  Sets the cursor position in an entry to the given value.
-  entry :    a GtkEntry
-             the position of the cursor. The cursor is displayed before the
-             character with the given (base 0) index in the widget. The value
-  position : must be less than or equal to the number of characters in the
-             widget. A value of -1 indicates that the position should be set
-             after the last character in the entry. Note that this position is in
-             characters, not in bytes.
 
 ==== :SetText ====
 '':SetText(self @ [[#T|T]], text @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -589,13 +542,4 @@
   **** Warning ****
   gtk_entry_new_with_max_length is deprecated and should not be used in newly-
   written code.
-  Creates a new GtkEntry widget with the given maximum length.
-  Note: the existence of this function is inconsistent with the rest of the GTK+
-  API. The normal setup would be to just require the user to make an extra call
-  to gtk_entry_set_max_length() instead. It is not expected that this function
-  will be removed, but it would be better practice not to use it.
-            the maximum length of the entry, or 0 for no maximum. (other than the
-  max :     maximum length of entries.) The value passed in will be clamped to
-            the range 0-65536.
-  Returns : a new GtkEntry.
 

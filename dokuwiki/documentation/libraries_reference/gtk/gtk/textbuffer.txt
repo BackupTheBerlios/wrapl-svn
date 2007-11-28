@@ -16,13 +16,6 @@
   gtk_text_buffer_register_serialize_tagset()
   buffer : a GtkTextBuffer
   format : a GdkAtom representing a registered rich text format.
-  Since 2.10
-  ***** Property Details *****
-  The "copy-target-list" property
-    "copy-target-list"         GtkTargetList         : Read
-  The list of targets this buffer supports for clipboard copying and as DND
-  source.
-  Since 2.10
 
 ==== :UnregisterDeserializeFormat ====
 '':UnregisterDeserializeFormat(self @ [[#T|T]], format @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -32,7 +25,6 @@
   gtk_text_buffer_register_deserialize_tagset().
   buffer : a GtkTextBuffer
   format : a GdkAtom representing a registered rich text format.
-  Since 2.10
 
 ==== :TagTable ====
 '':TagTable(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:TextTagTable#T|Gtk.Gtk.TextTagTable.T]]''
@@ -83,7 +75,6 @@
   Indicates whether the buffer has some text currently selected.
   buffer :  a GtkTextBuffer
   Returns : TRUE if the there is text selected
-  Since 2.10
 
 ==== :AddMark ====
 '':AddMark(self @ [[#T|T]], mark @ [[..:..:Gtk:Gtk:TextMark#T|Gtk.Gtk.TextMark.T]], where @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -95,7 +86,6 @@
   buffer : a GtkTextBuffer
   mark :   the mark to add
   where :  location to place mark
-  Since 2.12
 
 ==== :AddSelectionClipboard ====
 '':AddSelectionClipboard(self @ [[#T|T]], clipboard @ [[..:..:Gtk:Gtk:Clipboard#T|Gtk.Gtk.Clipboard.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -142,7 +132,6 @@
   interactive :      whether the deletion is caused by user interaction
   default_editable : whether the buffer is editable by default
   Returns :          TRUE if the buffer was modified
-  Since 2.6
 
 ==== :BeginUserAction ====
 '':BeginUserAction(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -303,7 +292,6 @@
   length :          length of data
   error :           return location for a GError
   Returns :         TRUE on success, FALSE otherwise.
-  Since 2.10
 
 ==== :DeserializeGetCanCreateTags ====
 '':DeserializeGetCanCreateTags(self @ [[#T|T]], format @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
@@ -313,7 +301,6 @@
   buffer :  a GtkTextBuffer
   format :  a GdkAtom representing a registered rich text format
   Returns : whether deserializing this format may create tags
-  Since 2.10
 
 ==== :DeserializeSetCanCreateTags ====
 '':DeserializeSetCanCreateTags(self @ [[#T|T]], format @ [[..:..:Std:Object#T|Std.Object.T]], can_create_tags @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -334,7 +321,6 @@
   buffer :          a GtkTextBuffer
   format :          a GdkAtom representing a registered rich text format
   can_create_tags : whether deserializing this format may create tags
-  Since 2.10
 
 ==== :EndUserAction ====
 '':EndUserAction(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -371,7 +357,6 @@
   gtk_target_list_add_rich_text_targets() and gtk_target_list_add_text_targets().
   buffer :  a GtkTextBuffer
   Returns : the GtkTargetList
-  Since 2.10
 
 ==== :GetDeserializeFormats ====
 '':GetDeserializeFormats(self @ [[#T|T]], n_formats @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Gtk:Gdk:Atom#T|Gtk.Gdk.Atom.T]]''
@@ -382,7 +367,6 @@
   buffer :    a GtkTextBuffer
   n_formats : return location for the number of formats
   Returns :   an array of GdkAtoms representing the registered formats.
-  Since 2.10
 
 ==== :GetEndIter ====
 '':GetEndIter(self @ [[#T|T]], iter @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -401,7 +385,6 @@
   Indicates whether the buffer has some text currently selected.
   buffer :  a GtkTextBuffer
   Returns : TRUE if the there is text selected
-  Since 2.10
 
 ==== :GetInsert ====
 '':GetInsert(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:TextMark#T|Gtk.Gtk.TextMark.T]]''
@@ -505,7 +488,6 @@
   and gtk_target_list_add_text_targets().
   buffer :  a GtkTextBuffer
   Returns : the GtkTargetList
-  Since 2.10
 
 ==== :GetSelectionBound ====
 '':GetSelectionBound(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:TextMark#T|Gtk.Gtk.TextMark.T]]''
@@ -544,7 +526,6 @@
   buffer :    a GtkTextBuffer
   n_formats : return location for the number of formats
   Returns :   an array of GdkAtoms representing the registered formats.
-  Since 2.10
 
 ==== :GetSlice ====
 '':GetSlice(self @ [[#T|T]], start @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]], end @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]], include_hidden_chars @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:String#T|Std.String.T]]''
@@ -785,7 +766,6 @@
   user_data_destroy : a function to call when user_data is no longer needed
   Returns :           the GdkAtom that corresponds to the newly registered
                       format's mime-type.
-  Since 2.10
 
 ==== :RegisterDeserializeTagset ====
 '':RegisterDeserializeTagset(self @ [[#T|T]], tagset_name @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -796,7 +776,6 @@
   tagset_name : an optional tagset name, on NULL
   Returns :     the GdkAtom that corresponds to the newly registered format's
                 mime-type.
-  Since 2.10
 
 ==== :RegisterSerializeFormat ====
 '':RegisterSerializeFormat(self @ [[#T|T]], mime_type @ [[..:..:Std:String#T|Std.String.T]], function @ [[..:..:Std:Function#T|Std.Function.T]], user_data @ [[..:..:Std:Address#T|Std.Address.T]], user_data_destroy @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -810,7 +789,6 @@
   user_data_destroy : a function to call when user_data is no longer needed
   Returns :           the GdkAtom that corresponds to the newly registered
                       format's mime-type.
-  Since 2.10
 
 ==== :RegisterSerializeTagset ====
 '':RegisterSerializeTagset(self @ [[#T|T]], tagset_name @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -832,7 +810,6 @@
   tagset_name : an optional tagset name, on NULL
   Returns :     the GdkAtom that corresponds to the newly registered format's
                 mime-type.
-  Since 2.10
 
 ==== :RemoveAllTags ====
 '':RemoveAllTags(self @ [[#T|T]], start @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]], end @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -885,7 +862,6 @@
   buffer : a GtkTextBuffer
   ins :    where to put the "insert" mark
   bound :  where to put the "selection_bound" mark
-  Since 2.4
 
 ==== :Serialize ====
 '':Serialize(self @ [[#T|T]], content_buffer @ [[..:..:Gtk:Gtk:TextBuffer#T|Gtk.Gtk.TextBuffer.T]], format @ [[..:..:Std:Object#T|Std.Object.T]], start @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]], end @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]], length @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -902,7 +878,6 @@
   end :             end of block of test to serialize
   length :          return location for the length of the serialized data
   Returns :         the serialized data, encoded as format
-  Since 2.10
 
 ==== :SetModified ====
 '':SetModified(self @ [[#T|T]], setting @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''

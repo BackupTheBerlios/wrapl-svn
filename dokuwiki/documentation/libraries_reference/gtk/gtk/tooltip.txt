@@ -44,7 +44,6 @@
   for this: gtk_tree_view_set_tooltip_row() and gtk_tree_view_set_tooltip_cell().
   tooltip : a GtkTooltip
   rect :    a GdkRectangle
-  Since 2.12
 
 ==== :SetText ====
 '':SetText(self @ [[#T|T]], text @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -53,7 +52,6 @@
   hidden. See also gtk_tooltip_set_markup().
   tooltip : a GtkTooltip
   text :    a text string or NULL
-  Since 2.12
 
 ==== :SetCustom ====
 '':SetCustom(self @ [[#T|T]], custom_widget @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -63,7 +61,6 @@
   configured using gtk_tooltip_set_markup() and gtk_tooltip_set_icon().
   tooltip :       a GtkTooltip
   custom_widget : a GtkWidget
-  Since 2.12
 
 ==== :SetIcon ====
 '':SetIcon(self @ [[#T|T]], pixbuf @ [[..:..:Gtk:Gdk:Pixbuf#T|Gtk.Gdk.Pixbuf.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -72,7 +69,6 @@
   pixbuf is NULL, the image will be hidden.
   tooltip : a GtkTooltip
   pixbuf :  a GdkPixbuf, or NULL
-  Since 2.12
 
 ==== :SetIconFromStock ====
 '':SetIconFromStock(self @ [[#T|T]], stock_id @ [[..:..:Std:String#T|Std.String.T]], size @ [[..:..:Gtk:Gtk:IconSize#T|Gtk.Gtk.IconSize.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -83,7 +79,6 @@
   tooltip :  a GtkTooltip
   stock_id : a stock icon name, or NULL
   size :     a stock icon size
-  Since 2.12
 
 ==== :SetMarkup ====
 '':SetMarkup(self @ [[#T|T]], markup @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -92,7 +87,6 @@
   text markup language. If markup is NULL, the label will be hidden.
   tooltip : a GtkTooltip
   markup :  a markup string (see Pango markup format) or NULL
-  Since 2.12
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
@@ -105,5 +99,4 @@
   tooltip, or to show/hide the current tooltip. This function is useful to call
   when, for example, the state of the widget changed by a key press.
   display : a GdkDisplay
-  Since 2.12
 

@@ -33,20 +33,6 @@
   radius_y : the vertical radius of the ellipse.
   ... :      optional pairs of property names and values, and a terminating NULL.
   Returns :  a new ellipse item.
-  Here's an example showing how to create an ellipse centered at (100.0, 100.0),
-  with a horizontal radius of 50.0 and a vertical radius of 30.0. It is drawn
-  with a red outline with a width of 5.0 and filled with blue:
-   GooCanvasItem *ellipse = goo_canvas_ellipse_new (mygroup, 100.0, 100.0, 50.0,
-  30.0,
-                                                    "stroke-color", "red",
-                                                    "line-width", 5.0,
-                                                    "fill-color", "blue",
-                                                    NULL);
-  ***** Property Details *****
-  The "center-x" property
-    "center-x"                 gdouble               : Read / Write
-  The x coordinate of the center of the ellipse.
-  Default value: 0
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''

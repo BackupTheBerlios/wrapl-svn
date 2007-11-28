@@ -306,11 +306,6 @@
   **** Warning ****
   gtk_container_foreach_full is deprecated and should not be used in newly-
   written code. Use gtk_container_foreach() instead.
-  container :
-  callback :
-  marshal :
-  callback_data :
-  notify :
 
 ==== :GetBorderWidth ====
 '':GetBorderWidth(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
@@ -471,12 +466,6 @@
   n_properties : location to return the number of child properties found
   Returns :      a newly allocated NULL-terminated array of GParamSpec*. The
                  array must be freed with g_free().
-  ***** Property Details *****
-  The "border-width" property
-    "border-width"             guint                 : Read / Write
-  The width of the empty border outside the containers children.
-  Allowed values: <= G_MAXINT
-  Default value: 0
 
 ==== ClassInstallChildProperty ====
 ''ClassInstallChildProperty(cclass : [[..:..:Std:Object#T|Std.Object.T]], property_id : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], pspec : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''

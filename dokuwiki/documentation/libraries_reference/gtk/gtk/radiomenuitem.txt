@@ -44,22 +44,6 @@
   GtkRadioMenuItem. The list belongs to GTK+ and should not be freed.
   radio_menu_item : a GtkRadioMenuItem.
   Returns :         the group of radio_menu_item.
-  ***** Property Details *****
-  The "group" property
-    "group"                    GtkRadioMenuItem      : Write
-  The radio menu item whose group this widget belongs to.
-  Since 2.8
-  ***** Signal Details *****
-  The "group-changed" signal
-  void                user_function                      (GtkRadioMenuItem
-  *radiomenuitem,
-                                                          gpointer
-  user_data)          : Run First
-  radiomenuitem : the object which received the signal.
-  user_data :     user data set when the signal handler was connected.
-  ***** See Also *****
-  GtkMenuItem      because a radio menu item is a menu item.
-  GtkCheckMenuItem to know how to handle the check.
 
 ==== :Group ====
 '':Group(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -71,22 +55,6 @@
   GtkRadioMenuItem. The list belongs to GTK+ and should not be freed.
   radio_menu_item : a GtkRadioMenuItem.
   Returns :         the group of radio_menu_item.
-  ***** Property Details *****
-  The "group" property
-    "group"                    GtkRadioMenuItem      : Write
-  The radio menu item whose group this widget belongs to.
-  Since 2.8
-  ***** Signal Details *****
-  The "group-changed" signal
-  void                user_function                      (GtkRadioMenuItem
-  *radiomenuitem,
-                                                          gpointer
-  user_data)          : Run First
-  radiomenuitem : the object which received the signal.
-  user_data :     user data set when the signal handler was connected.
-  ***** See Also *****
-  GtkMenuItem      because a radio menu item is a menu item.
-  GtkCheckMenuItem to know how to handle the check.
 
 ==== New ====
 ''New(group : [[..:..:Std:Object#T|Std.Object.T]]) : [[# T| T]]''
@@ -117,7 +85,6 @@
   label :   the text of the button, with an underscore in front of the mnemonic
             character
   Returns : The new GtkRadioMenuItem
-  Since 2.4
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
@@ -131,7 +98,6 @@
   group :   an existing GtkRadioMenuItem
   label :   the text for the label
   Returns : The new GtkRadioMenuItem
-  Since 2.4
 
 ==== NewWithLabel ====
 ''NewWithLabel(group : [[..:..:Std:Object#T|Std.Object.T]], label : [[..:..:Std:String#T|Std.String.T]]) : [[# T| T]]''
@@ -147,5 +113,4 @@
   Creates a new GtkRadioMenuItem adding it to the same group as group.
   group :   An existing GtkRadioMenuItem
   Returns : The new GtkRadioMenuItem
-  Since 2.4
 

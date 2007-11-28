@@ -215,13 +215,11 @@
   text_view :   A GtkTextView
   accepts_tab : TRUE if pressing the Tab key should insert a tab character,
                 FALSE, if pressing the Tab key should move the keyboard focus.
-  Since 2.4
   Returns whether pressing the Tab key inserts a tab characters.
   gtk_text_view_set_accepts_tab().
   text_view : A GtkTextView
   Returns :   TRUE if pressing the Tab key inserts a tab character, FALSE if
               pressing the Tab key moves the keyboard focus.
-  Since 2.4
 
 ==== :WidthChanged ====
 '':WidthChanged(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
@@ -447,7 +445,6 @@
   text_view : A GtkTextView
   Returns :   TRUE if pressing the Tab key inserts a tab character, FALSE if
               pressing the Tab key moves the keyboard focus.
-  Since 2.4
 
 ==== :GetBorderWindowSize ====
 '':GetBorderWindowSize(self @ [[#T|T]], type @ [[..:..:Gtk:Gtk:TextWindowType#T|Gtk.Gtk.TextWindowType.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
@@ -531,7 +528,6 @@
               in the grapheme. 0 represents the trailing edge of the grapheme.
   x :         x position, in buffer coordinates
   y :         y position, in buffer coordinates
-  Since 2.6
 
 ==== :GetIterLocation ====
 '':GetIterLocation(self @ [[#T|T]], iter @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]], location @ [[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -589,7 +585,6 @@
   Returns whether the GtkTextView is in overwrite mode or not.
   text_view : a GtkTextView
   Returns :   whether text_view is in overwrite mode or not.
-  Since 2.4
 
 ==== :GetPixelsAboveLines ====
 '':GetPixelsAboveLines(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
@@ -768,7 +763,6 @@
   text_view :   A GtkTextView
   accepts_tab : TRUE if pressing the Tab key should insert a tab character,
                 FALSE, if pressing the Tab key should move the keyboard focus.
-  Since 2.4
 
 ==== :SetBorderWindowSize ====
 '':SetBorderWindowSize(self @ [[#T|T]], type @ [[..:..:Gtk:Gtk:TextWindowType#T|Gtk.Gtk.TextWindowType.T]], size @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -840,7 +834,6 @@
   Changes the GtkTextView overwrite mode.
   text_view : a GtkTextView
   overwrite : TRUE to turn on overwrite mode, FALSE to turn it off
-  Since 2.4
 
 ==== :SetPixelsAboveLines ====
 '':SetPixelsAboveLines(self @ [[#T|T]], pixels_above_lines @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
