@@ -103,10 +103,10 @@ void scanner_t::flush() {
 //	NextToken.LineNo = 0;
 };
 
-static char *scan_string_next(const char **Next, int Index) {
+static char *scan_string_next(scanner_t *Scanner, const char **Next, int Index) {
 	char Char;
 	switch (Char = *(*Next)++) {
-	case 0: return 0; // RAISE ERROR HERE!!!
+	case 0: Scanner->raise_error(Scanner->NextToken.LineNo, "Error: end of input in string");
 	case '\"': {
 		char *String = new char[Index + 1];
 		String[Index] = 0;
@@ -137,7 +137,7 @@ static char *scan_string_next(const char **Next, int Index) {
 	};
 	// FALLTHROUGH IS DELIBERATE!
 	default: {
-		char *String = scan_string_next(Next, Index + 1);
+		char *String = scan_string_next(Scanner, Next, Index + 1);
 		String[Index] = Char;
 		return String;
 	};
@@ -299,7 +299,7 @@ bool scanner_t::parse(int Type) {
 			case ':': ++Current; goto scan_symbol;
 			case '\"': ++Current;
 				NextToken.Type = tkCONST;
-				NextToken.Const = (Std$Object_t *)Std$String$new(scan_string_next(&Current, 0));
+				NextToken.Const = (Std$Object_t *)Std$String$new(scan_string_next(this, &Current, 0));
 				goto scan_done;
 			case '=': ++Current;
 				switch (*Current) {
@@ -471,7 +471,7 @@ bool scanner_t::parse(int Type) {
 				case '\"': {
 					++Current;
 					int Type; void *Value;
-					Riva$Module$import(Riva$Symbol, scan_string_next(&Current, 0), &Type, &Value);
+					Riva$Module$import(Riva$Symbol, scan_string_next(this, &Current, 0), &Type, &Value);
 					NextToken.Type = tkSYMBOL;
 					NextToken.Const = (Std$Object_t *)Value;
 					goto scan_done;

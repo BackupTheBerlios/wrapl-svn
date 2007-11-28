@@ -3,6 +3,7 @@ MOD Opaque;
 IMP Type, Target;
 IMP IO.File;
 IMP Std.String;
+IMP GetAPI;
 
 DEF T <- <[Type.T, Target.T]
 	ns, name, cname,
@@ -147,7 +148,9 @@ TO :process(t@T, srcdir, incdir, libdir) (
 	cfile:writes("// Number of included files = ", headers:size, "\n");
 	EVERY cfile:writes(headers:keys, "\n");
 	cfile:writes("/***********************************/\n");
-	cfile:writes("TYPE(T);\n\n");
+	cfile:writes("TYPE(T);\n");
+        EVERY cfile:writes("//  ", GetAPI.GetDesc(t:ns, t:cname):values, "\n");
+        cfile:writes("\n");
         cfile:writes("Gtk$", t:ns, "$", t:name, "_t Nil[] = {{T, 0}};\n\n");
 	EVERY ctor <- t:ctors:values DO (
 		params <- ctor:params;
@@ -159,6 +162,7 @@ TO :process(t@T, srcdir, incdir, libdir) (
                     cfile:writes("//@", names[i], " : ", types[i]:rtype, "\n");
                 );
                 cfile:writes("//: T\n");
+                EVERY cfile:writes("//  ", GetAPI.Get(t:ns, t:cname, ctor:cname):values, "\n");
 		EVERY i <- 1:to(n) DO (
 			EVERY cfile:writes("\t", types[i]:precall(names[i], "Args[" + (i - 1)@String.T + "]"):values, "\n");
 		);
@@ -182,6 +186,7 @@ TO :process(t@T, srcdir, incdir, libdir) (
                 );
                 returntype <- Type.Lookup(method:type);
                 cfile:writes("//:", returntype:rtype, "\n");
+                EVERY cfile:writes("//  ", GetAPI.Get(t:ns, t:cname, method:cname):values, "\n");
 		EVERY i <- 1:to(n) DO (
 			EVERY cfile:writes("\t", types[i]:precall(names[i], "Args[" + (i - 1)@String.T + "]"):values, "\n");
 		);
@@ -201,6 +206,7 @@ TO :process(t@T, srcdir, incdir, libdir) (
                 cfile:writes("//@self\n");
                 returntype <- Type.Lookup(method:type);
                 cfile:writes("//:", returntype:rtype, "\n");
+                EVERY cfile:writes("//  ", GetAPI.Get(t:ns, t:cname, method:cname):values, "\n");
 		cfile:writes("\t", t:ctype + " self = ((Gtk$", t:ns, "$", t:name, "_t *)Args[0].Val)->Value;\n");
 		cfile:writes("\t", returntype:ctype, " result = self->", method:cname, ";\n");
 		EVERY cfile:writes("\t", returntype:return("result"):values, "\n");
@@ -212,6 +218,7 @@ TO :process(t@T, srcdir, incdir, libdir) (
                 cfile:writes("//@self\n");
                 returntype <- Type.Lookup(method:type);
                 cfile:writes("//:", returntype:rtype, "\n");
+                EVERY cfile:writes("//  ", GetAPI.Get(t:ns, t:cname, method:cname):values, "\n");
 		cfile:writes("\t", t:ctype + " self = ((Gtk$", t:ns, "$", t:name, "_t *)Args[0].Val)->Value;\n");
 		cfile:writes("\tint index = ((Std$Integer_smallt *)Args[1].Val)->Value;\n");
 		cfile:writes("\t", returntype:ctype, " result = self->", method:cname, "[index];\n");
@@ -232,6 +239,7 @@ TO :process(t@T, srcdir, incdir, libdir) (
                 );
                 returntype <- Type.Lookup(method:type);
                 cfile:writes("//:", returntype:rtype, "\n");
+                EVERY cfile:writes("//  ", GetAPI.Get(t:ns, t:cname, method:cname):values, "\n");
 		EVERY i <- 1:to(n) DO (
 			EVERY cfile:writes("\t", types[i]:precall(names[i], "Args[" + (i - 1)@String.T + "]"):values, "\n");
 		);

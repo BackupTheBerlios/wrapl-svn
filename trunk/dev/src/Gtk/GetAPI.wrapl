@@ -1,0 +1,41 @@
+MOD GetAPI;
+
+IMP IO.Terminal USE Out;
+IMP IO USE Process;
+IMP Std.String USE Upper, Lower;
+
+DEF Get!(ns, name, function) (
+    VAR sgrep <- Process.Open("sgrep", [
+        "sgrep",
+        ${(("<h3>" .. "</pre>") containing "$function; ()" __ "</div>")},
+        ${/usr/share/gtk-doc/html/$ns:map(Upper, Lower);/$name;.html}
+    ]);
+    VAR html2text <- Process.Open("html2text", ["html2text", "-ascii", "-nobs", "-"]);
+    REP (WHILE html2text:writes(sgrep:read, "\n"));
+    html2text:shutdown(:write);
+    sgrep:close;
+    VAR result <- [];
+    REP (WHILE result:put(html2text:read));
+    html2text:close;
+    sgrep:result = 0 // FAIL;
+    RET result;
+);
+
+DEF GetDesc!(ns, name) (
+    VAR sgrep <- Process.Open("sgrep", [
+        "sgrep",
+        ${"<h2>Description</h2>" __ "<h2>Details</h2>"},
+        ${/usr/share/gtk-doc/html/$ns:map(Upper, Lower);/$name;.html}
+    ]);
+    VAR html2text <- Process.Open("html2text", ["html2text", "-ascii", "-nobs", "-"]);
+    REP (WHILE html2text:writes(sgrep:read, "\n"));
+    html2text:shutdown(:write);
+    sgrep:close;
+    VAR result <- [];
+    REP (WHILE result:put(html2text:read));
+    html2text:close;
+    sgrep:result = 0 // FAIL;
+    RET result;
+);
+
+END GetAPI.

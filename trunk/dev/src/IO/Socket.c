@@ -23,6 +23,7 @@ static IO$Stream_messaget ListenMessage[] = {{IO$Stream$MessageT, "Listen Error"
 static IO$Stream_messaget AcceptMessage[] = {{IO$Stream$MessageT, "Accept Error"}};
 static IO$Stream_messaget ConnectMessage[] = {{IO$Stream$MessageT, "Connect Error"}};
 static IO$Stream_messaget HostNotFoundMessage[] = {{IO$Stream$MessageT, "Host Not Found"}};
+static IO$Stream_messaget ShutdownMessage[] = {{IO$Stream$MessageT, "Shutdown Error"}};
 
 #ifdef LINUX
 Std$Integer_smallt STREAM[] = {{Std$Integer$SmallT, IO$Socket$SOCKSTREAM}};
@@ -114,6 +115,30 @@ METHOD("accept", TYP, T) {
 	return SUCCESS;
 };
 
+SYMBOL($read, "read");
+SYMBOL($write, "write");
+SYMBOL($both, "both");
+
+METHOD("shutdown", TYP, T, TYP, Std$Symbol$T) {
+    int Socket = ((IO$Posix_t *)Args[0].Val)->Handle;
+    int Type;
+    if (Args[1].Val == $read) {
+        Type = 0;
+    } else if (Args[1].Val == $write) {
+        Type = 1;
+    } else if (Args[1].Val == $both) {
+        Type = 2;
+    } else {
+        Result->Val = Std$String$new("Invalid argument to :shutdown(@IO.Socket.T)");
+        return MESSAGE;
+    };
+    if (shutdown(Socket, Type)) {
+        Result->Val = ShutdownMessage;
+        return MESSAGE;
+    };
+    return SUCCESS;
+};
+
 METHOD("connect", TYP, LocalT, TYP, Std$String$T) {
 	int Socket = ((IO$Posix_t *)Args[0].Val)->Handle;
 	struct sockaddr_un Name;
@@ -145,4 +170,5 @@ METHOD("connect", TYP, InetT, TYP, Std$String$T, TYP, Std$Integer$SmallT) {
 	};
 	return SUCCESS;
 };
+
 #endif

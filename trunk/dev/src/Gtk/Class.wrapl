@@ -3,6 +3,7 @@ MOD Class;
 IMP Type, Target;
 IMP Std.String;
 IMP IO.File;
+IMP GetAPI;
 
 DEF T <- <[Type.T, Target.T]
 	ns, name, cname, parent,
@@ -126,11 +127,14 @@ TO :process(t@T, srcdir, incdir, libdir) (
 	EVERY cfile:writes(headers:keys, "\n");
 	cfile:writes("/***********************************/\n");
 	t:cname = "GdkEvent_" => (
-		cfile:writes("TYPE(T);\n\n");
+		cfile:writes("TYPE(T);\n");
+                EVERY cfile:writes("//  ", GetAPI.GetDesc(t:ns, t:cname):values, "\n");
+                cfile:writes("\n");
 		VAR Convert(type, field) (
 			cfile:writes("METHOD(\"", type[6, 0], "\", TYP, T) {\n");
                         cfile:writes("//@self\n");
                         cfile:writes("//:Gtk$Gdk$", type, "$T\n");
+                        cfile:writes("//Returns : the appropriate type of event\n");
 			cfile:writes("\tGtk$", t:ns, "$", t:name, "_t *self = Args[0].Val;\n");
 			cfile:writes("\tGtk$Gdk$", type, "_t *result = new(Gtk$Gdk$", type, "_t);\n");
 			cfile:writes("\tresult->Type = Gtk$Gdk$", type, "$T;\n");
@@ -179,6 +183,9 @@ extern Std$Object_t Gtk$Gdk$EventType$OwnerChange[];
 extern Std$Object_t Gtk$Gdk$EventType$GrabBroken[];
 
 METHOD("Type", TYP, T) {
+//@event
+//:Gtk$Gdk$EventType$T
+//Returns : the type of event
     Gtk$Gdk$Event_t *self = Args[0].Val;
     switch (self->Value->type) {
     case GDK_NOTHING:           Result->Val = Gtk$Gdk$EventType$Nothing; return SUCCESS;
@@ -252,6 +259,7 @@ EOF);
                     cfile:writes("//@", names[i], " : ", types[i]:rtype, "\n");
                 );
                 cfile:writes("//: T\n");
+                EVERY cfile:writes("//  ", GetAPI.Get(t:ns, t:cname, ctor:cname):values, "\n");
 		EVERY i <- 1:to(n) DO (
 			EVERY cfile:writes("\t", types[i]:precall(names[i], "Args[" + (i - 1)@String.T + "]"):values, "\n");
 		);
@@ -275,6 +283,7 @@ EOF);
                 );
                 returntype <- Type.Lookup(method:type);
                 cfile:writes("//:", returntype:rtype, "\n");
+                EVERY cfile:writes("//  ", GetAPI.Get(t:ns, t:cname, method:cname):values, "\n");
 		EVERY i <- 1:to(n) DO (
 			EVERY cfile:writes("\t", types[i]:precall(names[i], "Args[" + (i - 1)@String.T + "]"):values, "\n");
 		);
@@ -302,6 +311,7 @@ EOF);
                 );
                 returntype <- Type.Lookup(method:type);
                 cfile:writes("//:", returntype:rtype, "\n");
+                EVERY cfile:writes("//  ", GetAPI.Get(t:ns, t:cname, method:cname):values, "\n");
 		EVERY i <- 1:to(n) DO (
 			EVERY cfile:writes("\t", types[i]:precall(names[i], "Args[" + (i - 1)@String.T + "]"):values, "\n");
 		);
