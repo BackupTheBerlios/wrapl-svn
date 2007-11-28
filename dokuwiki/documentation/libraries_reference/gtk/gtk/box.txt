@@ -125,22 +125,22 @@ widget : the GtkWidget to be added to box
 ==== :PackStart ====
 '':PackStart(self @ [[#T|T]], child @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], expand @ [[..:..:Std:Symbol#T|Std.Symbol.T]], fill @ [[..:..:Std:Symbol#T|Std.Symbol.T]], padding @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-|Adds child to box, packed with reference to the start of box. The child is
-|packed after any other child packed with reference to the start of box.
-|box :     a GtkBox
-|child :   the GtkWidget to be added to box
-|          TRUE if the new child is to be given extra space allocated to box.
-|expand :  The extra space will be divided evenly between all children of box
-|          that use this option
-|          TRUE if space given to child by the expand option is actually
-|          allocated to child, rather than just padding it. This parameter has
-|fill :    no effect if expand is set to FALSE. A child is always allocated the
-|          full height of a GtkHBox and the full width of a GtkVBox. This option
-|          affects the other dimension
-|          extra space in pixels to put between this child and its neighbors,
-|padding : over and above the global amount specified by "spacing" property. If
-|          child is a widget at one of the reference ends of box, then padding
-|          pixels are also put between child and the reference edge of box
+|Adds child to box, packed with reference to the start of box. The child is|
+|packed after any other child packed with reference to the start of box.|
+|box :     a GtkBox|
+|child :   the GtkWidget to be added to box|
+|          TRUE if the new child is to be given extra space allocated to box.|
+|expand :  The extra space will be divided evenly between all children of box|
+|          that use this option|
+|          TRUE if space given to child by the expand option is actually|
+|          allocated to child, rather than just padding it. This parameter has|
+|fill :    no effect if expand is set to FALSE. A child is always allocated the|
+|          full height of a GtkHBox and the full width of a GtkVBox. This option|
+|          affects the other dimension|
+|          extra space in pixels to put between this child and its neighbors,|
+|padding : over and above the global amount specified by "spacing" property. If|
+|          child is a widget at one of the reference ends of box, then padding|
+|          pixels are also put between child and the reference edge of box|
 
 ==== :PackStartDefaults ====
 '':PackStartDefaults(self @ [[#T|T]], widget @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
