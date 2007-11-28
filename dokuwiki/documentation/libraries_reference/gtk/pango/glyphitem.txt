@@ -3,7 +3,7 @@
 
 
 ==== :Split ====
-'':Split(self @ [[#T|T]], text @ [[..:..:Std:String#T|Std.String.T]], split_index @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Gtk:Pango:GlyphItem#T|Gtk.Pango.GlyphItem.T]]''
+'':Split(self @ [[#T|T]], text @[[..:..:Std:String#T|Std.String.T]], split_index @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Gtk:Pango:GlyphItem#T|Gtk.Pango.GlyphItem.T]]''
 
 
 ==== :Item ====
@@ -15,7 +15,7 @@
 
 
 ==== :ApplyAttrs ====
-'':ApplyAttrs(self @ [[#T|T]], text @ [[..:..:Std:String#T|Std.String.T]], list @ [[..:..:Gtk:Pango:AttrList#T|Gtk.Pango.AttrList.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':ApplyAttrs(self @ [[#T|T]], text @[[..:..:Std:String#T|Std.String.T]], list @[[..:..:Gtk:Pango:AttrList#T|Gtk.Pango.AttrList.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Free ====
@@ -23,7 +23,7 @@
 
 
 ==== :LetterSpace ====
-'':LetterSpace(self @ [[#T|T]], text @ [[..:..:Std:String#T|Std.String.T]], log_attrs @ [[..:..:Gtk:Pango:LogAttr#T|Gtk.Pango.LogAttr.T]], letter_spacing @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':LetterSpace(self @ [[#T|T]], text @[[..:..:Std:String#T|Std.String.T]], log_attrs @[[..:..:Gtk:Pango:LogAttr#T|Gtk.Pango.LogAttr.T]], letter_spacing @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====

@@ -51,7 +51,7 @@
 
 
 ==== :GetTargets ====
-'':GetTargets(self @ [[#T|T]], targets @ [[..:..:Std:Object#T|Std.Object.T]], n_atoms @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':GetTargets(self @ [[#T|T]], targets @[[..:..:Std:Object#T|Std.Object.T]], n_atoms @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :GetText ====
@@ -63,27 +63,27 @@
 
 
 ==== :Set ====
-'':Set(self @ [[#T|T]], type @ [[..:..:Std:Object#T|Std.Object.T]], format @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], data @ [[..:..:Std:String#T|Std.String.T]], length @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Set(self @ [[#T|T]], type @[[..:..:Std:Object#T|Std.Object.T]], format @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], data @[[..:..:Std:String#T|Std.String.T]], length @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetPixbuf ====
-'':SetPixbuf(self @ [[#T|T]], pixbuf @ [[..:..:Gtk:Gdk:Pixbuf#T|Gtk.Gdk.Pixbuf.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':SetPixbuf(self @ [[#T|T]], pixbuf @[[..:..:Gtk:Gdk:Pixbuf#T|Gtk.Gdk.Pixbuf.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :SetText ====
-'':SetText(self @ [[#T|T]], str @ [[..:..:Std:String#T|Std.String.T]], len @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':SetText(self @ [[#T|T]], str @[[..:..:Std:String#T|Std.String.T]], len @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :SetUris ====
-'':SetUris(self @ [[#T|T]], uris @ [[..:..:Std:List#T|Std.List.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':SetUris(self @ [[#T|T]], uris @[[..:..:Std:List#T|Std.List.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :TargetsIncludeImage ====
-'':TargetsIncludeImage(self @ [[#T|T]], writable @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':TargetsIncludeImage(self @ [[#T|T]], writable @[[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :TargetsIncludeRichText ====
-'':TargetsIncludeRichText(self @ [[#T|T]], buffer @ [[..:..:Gtk:Gtk:TextBuffer#T|Gtk.Gtk.TextBuffer.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':TargetsIncludeRichText(self @ [[#T|T]], buffer @[[..:..:Gtk:Gtk:TextBuffer#T|Gtk.Gtk.TextBuffer.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== New ====

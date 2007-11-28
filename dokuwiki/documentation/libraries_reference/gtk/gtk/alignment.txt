@@ -9,11 +9,11 @@
 
 
 ==== :SetPadding ====
-'':SetPadding(self @ [[#T|T]], padding_top @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], padding_bottom @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], padding_left @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], padding_right @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetPadding(self @ [[#T|T]], padding_top @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], padding_bottom @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], padding_left @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], padding_right @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Set ====
-'':Set(self @ [[#T|T]], xalign @ [[..:..:Std:Real#T|Std.Real.T]], yalign @ [[..:..:Std:Real#T|Std.Real.T]], xscale @ [[..:..:Std:Real#T|Std.Real.T]], yscale @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Set(self @ [[#T|T]], xalign @[[..:..:Std:Real#T|Std.Real.T]], yalign @[[..:..:Std:Real#T|Std.Real.T]], xscale @[[..:..:Std:Real#T|Std.Real.T]], yscale @[[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Xalign ====
@@ -33,7 +33,7 @@
 
 
 ==== :GetPadding ====
-'':GetPadding(self @ [[#T|T]], padding_top @ [[..:..:Std:Object#T|Std.Object.T]], padding_bottom @ [[..:..:Std:Object#T|Std.Object.T]], padding_left @ [[..:..:Std:Object#T|Std.Object.T]], padding_right @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':GetPadding(self @ [[#T|T]], padding_top @[[..:..:Std:Object#T|Std.Object.T]], padding_bottom @[[..:..:Std:Object#T|Std.Object.T]], padding_left @[[..:..:Std:Object#T|Std.Object.T]], padding_right @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====

@@ -5,7 +5,7 @@
 
 
 ==== :SetMatrix ====
-'':SetMatrix(self @ [[#T|T]], matrix @ [[..:..:Gtk:Pango:Matrix#T|Gtk.Pango.Matrix.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetMatrix(self @ [[#T|T]], matrix @[[..:..:Gtk:Pango:Matrix#T|Gtk.Pango.Matrix.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetBaseDir ====
@@ -41,39 +41,39 @@
 
 
 ==== :GetMetrics ====
-'':GetMetrics(self @ [[#T|T]], desc @ [[..:..:Gtk:Pango:FontDescription#T|Gtk.Pango.FontDescription.T]], language @ [[..:..:Gtk:Pango:Language#T|Gtk.Pango.Language.T]]) : [[..:..:Gtk:Pango:FontMetrics#T|Gtk.Pango.FontMetrics.T]]''
+'':GetMetrics(self @ [[#T|T]], desc @[[..:..:Gtk:Pango:FontDescription#T|Gtk.Pango.FontDescription.T]], language @[[..:..:Gtk:Pango:Language#T|Gtk.Pango.Language.T]]) : [[..:..:Gtk:Pango:FontMetrics#T|Gtk.Pango.FontMetrics.T]]''
 
 
 ==== :ListFamilies ====
-'':ListFamilies(self @ [[#T|T]], families @ [[..:..:Std:Object#T|Std.Object.T]], n_families @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':ListFamilies(self @ [[#T|T]], families @[[..:..:Std:Object#T|Std.Object.T]], n_families @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :LoadFont ====
-'':LoadFont(self @ [[#T|T]], desc @ [[..:..:Gtk:Pango:FontDescription#T|Gtk.Pango.FontDescription.T]]) : [[..:..:Gtk:Pango:Font#T|Gtk.Pango.Font.T]]''
+'':LoadFont(self @ [[#T|T]], desc @[[..:..:Gtk:Pango:FontDescription#T|Gtk.Pango.FontDescription.T]]) : [[..:..:Gtk:Pango:Font#T|Gtk.Pango.Font.T]]''
 
 
 ==== :LoadFontset ====
-'':LoadFontset(self @ [[#T|T]], desc @ [[..:..:Gtk:Pango:FontDescription#T|Gtk.Pango.FontDescription.T]], language @ [[..:..:Gtk:Pango:Language#T|Gtk.Pango.Language.T]]) : [[..:..:Gtk:Pango:Fontset#T|Gtk.Pango.Fontset.T]]''
+'':LoadFontset(self @ [[#T|T]], desc @[[..:..:Gtk:Pango:FontDescription#T|Gtk.Pango.FontDescription.T]], language @[[..:..:Gtk:Pango:Language#T|Gtk.Pango.Language.T]]) : [[..:..:Gtk:Pango:Fontset#T|Gtk.Pango.Fontset.T]]''
 
 
 ==== :SetBaseDir ====
-'':SetBaseDir(self @ [[#T|T]], direction @ [[..:..:Gtk:Pango:Direction#T|Gtk.Pango.Direction.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetBaseDir(self @ [[#T|T]], direction @[[..:..:Gtk:Pango:Direction#T|Gtk.Pango.Direction.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetBaseGravity ====
-'':SetBaseGravity(self @ [[#T|T]], gravity @ [[..:..:Gtk:Pango:Gravity#T|Gtk.Pango.Gravity.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetBaseGravity(self @ [[#T|T]], gravity @[[..:..:Gtk:Pango:Gravity#T|Gtk.Pango.Gravity.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetFontDescription ====
-'':SetFontDescription(self @ [[#T|T]], desc @ [[..:..:Gtk:Pango:FontDescription#T|Gtk.Pango.FontDescription.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetFontDescription(self @ [[#T|T]], desc @[[..:..:Gtk:Pango:FontDescription#T|Gtk.Pango.FontDescription.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetGravityHint ====
-'':SetGravityHint(self @ [[#T|T]], hint @ [[..:..:Gtk:Pango:GravityHint#T|Gtk.Pango.GravityHint.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetGravityHint(self @ [[#T|T]], hint @[[..:..:Gtk:Pango:GravityHint#T|Gtk.Pango.GravityHint.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetLanguage ====
-'':SetLanguage(self @ [[#T|T]], language @ [[..:..:Gtk:Pango:Language#T|Gtk.Pango.Language.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetLanguage(self @ [[#T|T]], language @[[..:..:Gtk:Pango:Language#T|Gtk.Pango.Language.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== GetType ====

@@ -7,7 +7,7 @@
 
 
 ==== :Remove ====
-'':Remove(self @ [[#T|T]], target @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Remove(self @ [[#T|T]], target @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :List ====
@@ -19,31 +19,31 @@
 
 
 ==== :Add ====
-'':Add(self @ [[#T|T]], target @ [[..:..:Std:Object#T|Std.Object.T]], flags @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], info @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Add(self @ [[#T|T]], target @[[..:..:Std:Object#T|Std.Object.T]], flags @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], info @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :AddImageTargets ====
-'':AddImageTargets(self @ [[#T|T]], info @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], writable @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':AddImageTargets(self @ [[#T|T]], info @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], writable @[[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :AddRichTextTargets ====
-'':AddRichTextTargets(self @ [[#T|T]], info @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], deserializable @ [[..:..:Std:Symbol#T|Std.Symbol.T]], buffer @ [[..:..:Gtk:Gtk:TextBuffer#T|Gtk.Gtk.TextBuffer.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':AddRichTextTargets(self @ [[#T|T]], info @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], deserializable @[[..:..:Std:Symbol#T|Std.Symbol.T]], buffer @[[..:..:Gtk:Gtk:TextBuffer#T|Gtk.Gtk.TextBuffer.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :AddTable ====
-'':AddTable(self @ [[#T|T]], targets @ [[..:..:Gtk:Gtk:TargetEntry#T|Gtk.Gtk.TargetEntry.T]], ntargets @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':AddTable(self @ [[#T|T]], targets @[[..:..:Gtk:Gtk:TargetEntry#T|Gtk.Gtk.TargetEntry.T]], ntargets @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :AddTextTargets ====
-'':AddTextTargets(self @ [[#T|T]], info @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':AddTextTargets(self @ [[#T|T]], info @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :AddUriTargets ====
-'':AddUriTargets(self @ [[#T|T]], info @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':AddUriTargets(self @ [[#T|T]], info @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Find ====
-'':Find(self @ [[#T|T]], target @ [[..:..:Std:Object#T|Std.Object.T]], info @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':Find(self @ [[#T|T]], target @[[..:..:Std:Object#T|Std.Object.T]], info @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :Ref ====

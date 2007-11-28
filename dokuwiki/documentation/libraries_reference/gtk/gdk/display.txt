@@ -5,7 +5,7 @@
 
 
 ==== :WarpPointer ====
-'':WarpPointer(self @ [[#T|T]], screen @ [[..:..:Gtk:Gdk:Screen#T|Gtk.Gdk.Screen.T]], x @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':WarpPointer(self @ [[#T|T]], screen @[[..:..:Gtk:Gdk:Screen#T|Gtk.Gdk.Screen.T]], x @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Sync ====
@@ -49,27 +49,27 @@
 
 
 ==== :ButtonClickTime ====
-'':ButtonClickTime(self @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':ButtonClickTime(self @ [[#T|T]], @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :ButtonWindow ====
-'':ButtonWindow(self @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]]''
+'':ButtonWindow(self @ [[#T|T]], @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]]''
 
 
 ==== :ButtonNumber ====
-'':ButtonNumber(self @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':ButtonNumber(self @ [[#T|T]], @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :ButtonX ====
-'':ButtonX(self @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':ButtonX(self @ [[#T|T]], @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :ButtonY ====
-'':ButtonY(self @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':ButtonY(self @ [[#T|T]], @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :AddClientMessageFilter ====
-'':AddClientMessageFilter(self @ [[#T|T]], message_type @ [[..:..:Std:Object#T|Std.Object.T]], func @ [[..:..:Std:Function#T|Std.Function.T]], data @ [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':AddClientMessageFilter(self @ [[#T|T]], message_type @[[..:..:Std:Object#T|Std.Object.T]], func @[[..:..:Std:Function#T|Std.Function.T]], data @[[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Beep ====
@@ -105,7 +105,7 @@
 
 
 ==== :GetMaximalCursorSize ====
-'':GetMaximalCursorSize(self @ [[#T|T]], width @ [[..:..:Std:Object#T|Std.Object.T]], height @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':GetMaximalCursorSize(self @ [[#T|T]], width @[[..:..:Std:Object#T|Std.Object.T]], height @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetNScreens ====
@@ -117,19 +117,19 @@
 
 
 ==== :GetPointer ====
-'':GetPointer(self @ [[#T|T]], screen @ [[..:..:Std:Object#T|Std.Object.T]], x @ [[..:..:Std:Object#T|Std.Object.T]], y @ [[..:..:Std:Object#T|Std.Object.T]], mask @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':GetPointer(self @ [[#T|T]], screen @[[..:..:Std:Object#T|Std.Object.T]], x @[[..:..:Std:Object#T|Std.Object.T]], y @[[..:..:Std:Object#T|Std.Object.T]], mask @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetScreen ====
-'':GetScreen(self @ [[#T|T]], screen_num @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Gtk:Gdk:Screen#T|Gtk.Gdk.Screen.T]]''
+'':GetScreen(self @ [[#T|T]], screen_num @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Gtk:Gdk:Screen#T|Gtk.Gdk.Screen.T]]''
 
 
 ==== :GetWindowAtPointer ====
-'':GetWindowAtPointer(self @ [[#T|T]], win_x @ [[..:..:Std:Object#T|Std.Object.T]], win_y @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]]''
+'':GetWindowAtPointer(self @ [[#T|T]], win_x @[[..:..:Std:Object#T|Std.Object.T]], win_y @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]]''
 
 
 ==== :KeyboardUngrab ====
-'':KeyboardUngrab(self @ [[#T|T]], time_ @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':KeyboardUngrab(self @ [[#T|T]], time_ @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :ListDevices ====
@@ -145,31 +145,31 @@
 
 
 ==== :PointerUngrab ====
-'':PointerUngrab(self @ [[#T|T]], time_ @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':PointerUngrab(self @ [[#T|T]], time_ @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :PutEvent ====
-'':PutEvent(self @ [[#T|T]], event @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':PutEvent(self @ [[#T|T]], event @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :RequestSelectionNotification ====
-'':RequestSelectionNotification(self @ [[#T|T]], selection @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':RequestSelectionNotification(self @ [[#T|T]], selection @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :SetDoubleClickDistance ====
-'':SetDoubleClickDistance(self @ [[#T|T]], distance @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetDoubleClickDistance(self @ [[#T|T]], distance @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetDoubleClickTime ====
-'':SetDoubleClickTime(self @ [[#T|T]], msec @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetDoubleClickTime(self @ [[#T|T]], msec @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetPointerHooks ====
-'':SetPointerHooks(self @ [[#T|T]], new_hooks @ [[..:..:Gtk:Gdk:DisplayPointerHooks#T|Gtk.Gdk.DisplayPointerHooks.T]]) : [[..:..:Gtk:Gdk:DisplayPointerHooks#T|Gtk.Gdk.DisplayPointerHooks.T]]''
+'':SetPointerHooks(self @ [[#T|T]], new_hooks @[[..:..:Gtk:Gdk:DisplayPointerHooks#T|Gtk.Gdk.DisplayPointerHooks.T]]) : [[..:..:Gtk:Gdk:DisplayPointerHooks#T|Gtk.Gdk.DisplayPointerHooks.T]]''
 
 
 ==== :StoreClipboard ====
-'':StoreClipboard(self @ [[#T|T]], clipboard_window @ [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]], time_ @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], targets @ [[..:..:Gtk:Gdk:Atom#T|Gtk.Gdk.Atom.T]], n_targets @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':StoreClipboard(self @ [[#T|T]], clipboard_window @[[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]], time_ @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], targets @[[..:..:Gtk:Gdk:Atom#T|Gtk.Gdk.Atom.T]], n_targets @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SupportsClipboardPersistence ====

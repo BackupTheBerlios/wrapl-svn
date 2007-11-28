@@ -8,15 +8,15 @@
 
 
 ==== :Update ====
-'':Update(self @ [[#T|T]], percentage @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Update(self @ [[#T|T]], percentage @[[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetText ====
-'':SetText(self @ [[#T|T]], text @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetText(self @ [[#T|T]], text @[[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetPulseStep ====
-'':SetPulseStep(self @ [[#T|T]], fraction @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetPulseStep(self @ [[#T|T]], fraction @[[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :BarStyle ====
@@ -88,31 +88,31 @@
 
 
 ==== :SetActivityBlocks ====
-'':SetActivityBlocks(self @ [[#T|T]], blocks @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetActivityBlocks(self @ [[#T|T]], blocks @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetActivityStep ====
-'':SetActivityStep(self @ [[#T|T]], step @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetActivityStep(self @ [[#T|T]], step @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetBarStyle ====
-'':SetBarStyle(self @ [[#T|T]], style @ [[..:..:Gtk:Gtk:ProgressBarStyle#T|Gtk.Gtk.ProgressBarStyle.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetBarStyle(self @ [[#T|T]], style @[[..:..:Gtk:Gtk:ProgressBarStyle#T|Gtk.Gtk.ProgressBarStyle.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetDiscreteBlocks ====
-'':SetDiscreteBlocks(self @ [[#T|T]], blocks @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetDiscreteBlocks(self @ [[#T|T]], blocks @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetEllipsize ====
-'':SetEllipsize(self @ [[#T|T]], mode @ [[..:..:Gtk:Pango:EllipsizeMode#T|Gtk.Pango.EllipsizeMode.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetEllipsize(self @ [[#T|T]], mode @[[..:..:Gtk:Pango:EllipsizeMode#T|Gtk.Pango.EllipsizeMode.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetFraction ====
-'':SetFraction(self @ [[#T|T]], fraction @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetFraction(self @ [[#T|T]], fraction @[[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetOrientation ====
-'':SetOrientation(self @ [[#T|T]], orientation @ [[..:..:Gtk:Gtk:ProgressBarOrientation#T|Gtk.Gtk.ProgressBarOrientation.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetOrientation(self @ [[#T|T]], orientation @[[..:..:Gtk:Gtk:ProgressBarOrientation#T|Gtk.Gtk.ProgressBarOrientation.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====

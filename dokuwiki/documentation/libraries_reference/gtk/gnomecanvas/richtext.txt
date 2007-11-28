@@ -7,7 +7,7 @@
 
 
 ==== :SetBuffer ====
-'':SetBuffer(self @ [[#T|T]], buffer @ [[..:..:Gtk:Gtk:TextBuffer#T|Gtk.Gtk.TextBuffer.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetBuffer(self @ [[#T|T]], buffer @[[..:..:Gtk:Gtk:TextBuffer#T|Gtk.Gtk.TextBuffer.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Priv ====
@@ -27,11 +27,11 @@
 
 
 ==== :GetIterAtLocation ====
-'':GetIterAtLocation(self @ [[#T|T]], iter @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]], x @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':GetIterAtLocation(self @ [[#T|T]], iter @[[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]], x @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetIterLocation ====
-'':GetIterLocation(self @ [[#T|T]], iter @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]], location @ [[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':GetIterLocation(self @ [[#T|T]], iter @[[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]], location @[[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :PasteClipboard ====

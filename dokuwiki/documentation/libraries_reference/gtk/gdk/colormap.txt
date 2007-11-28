@@ -13,7 +13,7 @@
 
 
 ==== :QueryColor ====
-'':QueryColor(self @ [[#T|T]], pixel @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], result @ [[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':QueryColor(self @ [[#T|T]], pixel @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], result @[[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetVisual ====
@@ -37,19 +37,19 @@
 
 
 ==== :AllocColor ====
-'':AllocColor(self @ [[#T|T]], color @ [[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]], writeable @ [[..:..:Std:Symbol#T|Std.Symbol.T]], best_match @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':AllocColor(self @ [[#T|T]], color @[[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]], writeable @[[..:..:Std:Symbol#T|Std.Symbol.T]], best_match @[[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :AllocColors ====
-'':AllocColors(self @ [[#T|T]], colors @ [[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]], ncolors @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], writeable @ [[..:..:Std:Symbol#T|Std.Symbol.T]], best_match @ [[..:..:Std:Symbol#T|Std.Symbol.T]], success @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':AllocColors(self @ [[#T|T]], colors @[[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]], ncolors @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], writeable @[[..:..:Std:Symbol#T|Std.Symbol.T]], best_match @[[..:..:Std:Symbol#T|Std.Symbol.T]], success @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Change ====
-'':Change(self @ [[#T|T]], ncolors @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Change(self @ [[#T|T]], ncolors @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :FreeColors ====
-'':FreeColors(self @ [[#T|T]], colors @ [[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]], ncolors @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':FreeColors(self @ [[#T|T]], colors @[[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]], ncolors @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetScreen ====

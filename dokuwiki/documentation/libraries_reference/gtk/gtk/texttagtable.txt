@@ -5,11 +5,11 @@
 
 
 ==== :Remove ====
-'':Remove(self @ [[#T|T]], tag @ [[..:..:Gtk:Gtk:TextTag#T|Gtk.Gtk.TextTag.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Remove(self @ [[#T|T]], tag @[[..:..:Gtk:Gtk:TextTag#T|Gtk.Gtk.TextTag.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Lookup ====
-'':Lookup(self @ [[#T|T]], name @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Gtk:Gtk:TextTag#T|Gtk.Gtk.TextTag.T]]''
+'':Lookup(self @ [[#T|T]], name @[[..:..:Std:String#T|Std.String.T]]) : [[..:..:Gtk:Gtk:TextTag#T|Gtk.Gtk.TextTag.T]]''
 
 
 ==== :Hash ====
@@ -29,11 +29,11 @@
 
 
 ==== :Add ====
-'':Add(self @ [[#T|T]], tag @ [[..:..:Gtk:Gtk:TextTag#T|Gtk.Gtk.TextTag.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Add(self @ [[#T|T]], tag @[[..:..:Gtk:Gtk:TextTag#T|Gtk.Gtk.TextTag.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Foreach ====
-'':Foreach(self @ [[#T|T]], func @ [[..:..:Std:Function#T|Std.Function.T]], data @ [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Foreach(self @ [[#T|T]], func @[[..:..:Std:Function#T|Std.Function.T]], data @[[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetSize ====

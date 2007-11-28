@@ -5,11 +5,11 @@
 
 
 ==== :SetVisibleFunc ====
-'':SetVisibleFunc(self @ [[#T|T]], func @ [[..:..:Std:Function#T|Std.Function.T]], data @ [[..:..:Std:Address#T|Std.Address.T]], destroy @ [[..:..:Std:Function#T|Std.Function.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetVisibleFunc(self @ [[#T|T]], func @[[..:..:Std:Function#T|Std.Function.T]], data @[[..:..:Std:Address#T|Std.Address.T]], destroy @[[..:..:Std:Function#T|Std.Function.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetVisibleColumn ====
-'':SetVisibleColumn(self @ [[#T|T]], column @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetVisibleColumn(self @ [[#T|T]], column @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Priv ====
@@ -21,19 +21,19 @@
 
 
 ==== :ConvertChildIterToIter ====
-'':ConvertChildIterToIter(self @ [[#T|T]], filter_iter @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]], child_iter @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':ConvertChildIterToIter(self @ [[#T|T]], filter_iter @[[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]], child_iter @[[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :ConvertChildPathToPath ====
-'':ConvertChildPathToPath(self @ [[#T|T]], child_path @ [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]]) : [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]]''
+'':ConvertChildPathToPath(self @ [[#T|T]], child_path @[[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]]) : [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]]''
 
 
 ==== :ConvertIterToChildIter ====
-'':ConvertIterToChildIter(self @ [[#T|T]], child_iter @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]], filter_iter @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':ConvertIterToChildIter(self @ [[#T|T]], child_iter @[[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]], filter_iter @[[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :ConvertPathToChildPath ====
-'':ConvertPathToChildPath(self @ [[#T|T]], filter_path @ [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]]) : [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]]''
+'':ConvertPathToChildPath(self @ [[#T|T]], filter_path @[[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]]) : [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]]''
 
 
 ==== :GetModel ====
@@ -45,7 +45,7 @@
 
 
 ==== :SetModifyFunc ====
-'':SetModifyFunc(self @ [[#T|T]], n_columns @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], types @ [[..:..:Std:List#T|Std.List.T]], func @ [[..:..:Std:Function#T|Std.Function.T]], data @ [[..:..:Std:Address#T|Std.Address.T]], destroy @ [[..:..:Std:Function#T|Std.Function.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetModifyFunc(self @ [[#T|T]], n_columns @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], types @[[..:..:Std:List#T|Std.List.T]], func @[[..:..:Std:Function#T|Std.Function.T]], data @[[..:..:Std:Address#T|Std.Address.T]], destroy @[[..:..:Std:Function#T|Std.Function.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====

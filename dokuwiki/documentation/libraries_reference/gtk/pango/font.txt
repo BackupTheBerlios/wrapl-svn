@@ -5,11 +5,11 @@
 
 
 ==== :GetMetrics ====
-'':GetMetrics(self @ [[#T|T]], language @ [[..:..:Gtk:Pango:Language#T|Gtk.Pango.Language.T]]) : [[..:..:Gtk:Pango:FontMetrics#T|Gtk.Pango.FontMetrics.T]]''
+'':GetMetrics(self @ [[#T|T]], language @[[..:..:Gtk:Pango:Language#T|Gtk.Pango.Language.T]]) : [[..:..:Gtk:Pango:FontMetrics#T|Gtk.Pango.FontMetrics.T]]''
 
 
 ==== :GetGlyphExtents ====
-'':GetGlyphExtents(self @ [[#T|T]], glyph @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], ink_rect @ [[..:..:Gtk:Pango:Rectangle#T|Gtk.Pango.Rectangle.T]], logical_rect @ [[..:..:Gtk:Pango:Rectangle#T|Gtk.Pango.Rectangle.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':GetGlyphExtents(self @ [[#T|T]], glyph @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], ink_rect @[[..:..:Gtk:Pango:Rectangle#T|Gtk.Pango.Rectangle.T]], logical_rect @[[..:..:Gtk:Pango:Rectangle#T|Gtk.Pango.Rectangle.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Describe ====
@@ -21,11 +21,11 @@
 
 
 ==== :FindShaper ====
-'':FindShaper(self @ [[#T|T]], language @ [[..:..:Gtk:Pango:Language#T|Gtk.Pango.Language.T]], ch @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Gtk:Pango:EngineShape#T|Gtk.Pango.EngineShape.T]]''
+'':FindShaper(self @ [[#T|T]], language @[[..:..:Gtk:Pango:Language#T|Gtk.Pango.Language.T]], ch @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Gtk:Pango:EngineShape#T|Gtk.Pango.EngineShape.T]]''
 
 
 ==== :GetCoverage ====
-'':GetCoverage(self @ [[#T|T]], language @ [[..:..:Gtk:Pango:Language#T|Gtk.Pango.Language.T]]) : [[..:..:Gtk:Pango:Coverage#T|Gtk.Pango.Coverage.T]]''
+'':GetCoverage(self @ [[#T|T]], language @[[..:..:Gtk:Pango:Language#T|Gtk.Pango.Language.T]]) : [[..:..:Gtk:Pango:Coverage#T|Gtk.Pango.Coverage.T]]''
 
 
 ==== :GetFontMap ====

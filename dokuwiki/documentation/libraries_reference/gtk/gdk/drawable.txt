@@ -9,115 +9,115 @@
 
 
 ==== :DrawArc ====
-'':DrawArc(self @ [[#T|T]], gc @ [[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]], filled @ [[..:..:Std:Symbol#T|Std.Symbol.T]], x @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], width @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], height @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], angle1 @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], angle2 @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':DrawArc(self @ [[#T|T]], gc @[[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]], filled @[[..:..:Std:Symbol#T|Std.Symbol.T]], x @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], width @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], height @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], angle1 @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], angle2 @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :DrawDrawable ====
-'':DrawDrawable(self @ [[#T|T]], gc @ [[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]], src @ [[..:..:Gtk:Gdk:Drawable#T|Gtk.Gdk.Drawable.T]], xsrc @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], ysrc @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], xdest @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], ydest @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], width @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], height @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':DrawDrawable(self @ [[#T|T]], gc @[[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]], src @[[..:..:Gtk:Gdk:Drawable#T|Gtk.Gdk.Drawable.T]], xsrc @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], ysrc @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], xdest @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], ydest @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], width @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], height @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :DrawGlyphs ====
-'':DrawGlyphs(self @ [[#T|T]], gc @ [[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]], font @ [[..:..:Gtk:Pango:Font#T|Gtk.Pango.Font.T]], x @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], glyphs @ [[..:..:Gtk:Pango:GlyphString#T|Gtk.Pango.GlyphString.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':DrawGlyphs(self @ [[#T|T]], gc @[[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]], font @[[..:..:Gtk:Pango:Font#T|Gtk.Pango.Font.T]], x @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], glyphs @[[..:..:Gtk:Pango:GlyphString#T|Gtk.Pango.GlyphString.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :DrawGlyphsTransformed ====
-'':DrawGlyphsTransformed(self @ [[#T|T]], gc @ [[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]], matrix @ [[..:..:Gtk:Pango:Matrix#T|Gtk.Pango.Matrix.T]], font @ [[..:..:Gtk:Pango:Font#T|Gtk.Pango.Font.T]], x @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], glyphs @ [[..:..:Gtk:Pango:GlyphString#T|Gtk.Pango.GlyphString.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':DrawGlyphsTransformed(self @ [[#T|T]], gc @[[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]], matrix @[[..:..:Gtk:Pango:Matrix#T|Gtk.Pango.Matrix.T]], font @[[..:..:Gtk:Pango:Font#T|Gtk.Pango.Font.T]], x @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], glyphs @[[..:..:Gtk:Pango:GlyphString#T|Gtk.Pango.GlyphString.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :DrawGrayImage ====
-'':DrawGrayImage(self @ [[#T|T]], gc @ [[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]], x @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], width @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], height @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], dith @ [[..:..:Gtk:Gdk:RgbDither#T|Gtk.Gdk.RgbDither.T]], buf @ [[..:..:Std:String#T|Std.String.T]], rowstride @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':DrawGrayImage(self @ [[#T|T]], gc @[[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]], x @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], width @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], height @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], dith @[[..:..:Gtk:Gdk:RgbDither#T|Gtk.Gdk.RgbDither.T]], buf @[[..:..:Std:String#T|Std.String.T]], rowstride @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :DrawImage ====
-'':DrawImage(self @ [[#T|T]], gc @ [[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]], image @ [[..:..:Gtk:Gdk:Image#T|Gtk.Gdk.Image.T]], xsrc @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], ysrc @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], xdest @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], ydest @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], width @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], height @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':DrawImage(self @ [[#T|T]], gc @[[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]], image @[[..:..:Gtk:Gdk:Image#T|Gtk.Gdk.Image.T]], xsrc @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], ysrc @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], xdest @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], ydest @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], width @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], height @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :DrawIndexedImage ====
-'':DrawIndexedImage(self @ [[#T|T]], gc @ [[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]], x @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], width @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], height @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], dith @ [[..:..:Gtk:Gdk:RgbDither#T|Gtk.Gdk.RgbDither.T]], buf @ [[..:..:Std:String#T|Std.String.T]], rowstride @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], cmap @ [[..:..:Gtk:Gdk:RgbCmap#T|Gtk.Gdk.RgbCmap.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':DrawIndexedImage(self @ [[#T|T]], gc @[[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]], x @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], width @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], height @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], dith @[[..:..:Gtk:Gdk:RgbDither#T|Gtk.Gdk.RgbDither.T]], buf @[[..:..:Std:String#T|Std.String.T]], rowstride @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], cmap @[[..:..:Gtk:Gdk:RgbCmap#T|Gtk.Gdk.RgbCmap.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :DrawLayout ====
-'':DrawLayout(self @ [[#T|T]], gc @ [[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]], x @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], layout @ [[..:..:Gtk:Pango:Layout#T|Gtk.Pango.Layout.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':DrawLayout(self @ [[#T|T]], gc @[[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]], x @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], layout @[[..:..:Gtk:Pango:Layout#T|Gtk.Pango.Layout.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :DrawLayoutLine ====
-'':DrawLayoutLine(self @ [[#T|T]], gc @ [[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]], x @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], line @ [[..:..:Gtk:Pango:LayoutLine#T|Gtk.Pango.LayoutLine.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':DrawLayoutLine(self @ [[#T|T]], gc @[[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]], x @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], line @[[..:..:Gtk:Pango:LayoutLine#T|Gtk.Pango.LayoutLine.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :DrawLayoutLineWithColors ====
-'':DrawLayoutLineWithColors(self @ [[#T|T]], gc @ [[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]], x @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], line @ [[..:..:Gtk:Pango:LayoutLine#T|Gtk.Pango.LayoutLine.T]], foreground @ [[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]], background @ [[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':DrawLayoutLineWithColors(self @ [[#T|T]], gc @[[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]], x @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], line @[[..:..:Gtk:Pango:LayoutLine#T|Gtk.Pango.LayoutLine.T]], foreground @[[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]], background @[[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :DrawLayoutWithColors ====
-'':DrawLayoutWithColors(self @ [[#T|T]], gc @ [[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]], x @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], layout @ [[..:..:Gtk:Pango:Layout#T|Gtk.Pango.Layout.T]], foreground @ [[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]], background @ [[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':DrawLayoutWithColors(self @ [[#T|T]], gc @[[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]], x @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], layout @[[..:..:Gtk:Pango:Layout#T|Gtk.Pango.Layout.T]], foreground @[[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]], background @[[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :DrawLine ====
-'':DrawLine(self @ [[#T|T]], gc @ [[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]], x1_ @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y1_ @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], x2_ @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y2_ @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':DrawLine(self @ [[#T|T]], gc @[[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]], x1_ @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y1_ @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], x2_ @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y2_ @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :DrawLines ====
-'':DrawLines(self @ [[#T|T]], gc @ [[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]], points @ [[..:..:Gtk:Gdk:Point#T|Gtk.Gdk.Point.T]], npoints @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':DrawLines(self @ [[#T|T]], gc @[[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]], points @[[..:..:Gtk:Gdk:Point#T|Gtk.Gdk.Point.T]], npoints @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :DrawPixbuf ====
-'':DrawPixbuf(self @ [[#T|T]], gc @ [[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]], pixbuf @ [[..:..:Gtk:Gdk:Pixbuf#T|Gtk.Gdk.Pixbuf.T]], src_x @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], src_y @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], dest_x @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], dest_y @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], width @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], height @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], dither @ [[..:..:Gtk:Gdk:RgbDither#T|Gtk.Gdk.RgbDither.T]], x_dither @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y_dither @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':DrawPixbuf(self @ [[#T|T]], gc @[[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]], pixbuf @[[..:..:Gtk:Gdk:Pixbuf#T|Gtk.Gdk.Pixbuf.T]], src_x @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], src_y @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], dest_x @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], dest_y @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], width @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], height @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], dither @[[..:..:Gtk:Gdk:RgbDither#T|Gtk.Gdk.RgbDither.T]], x_dither @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y_dither @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :DrawPoint ====
-'':DrawPoint(self @ [[#T|T]], gc @ [[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]], x @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':DrawPoint(self @ [[#T|T]], gc @[[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]], x @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :DrawPoints ====
-'':DrawPoints(self @ [[#T|T]], gc @ [[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]], points @ [[..:..:Gtk:Gdk:Point#T|Gtk.Gdk.Point.T]], npoints @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':DrawPoints(self @ [[#T|T]], gc @[[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]], points @[[..:..:Gtk:Gdk:Point#T|Gtk.Gdk.Point.T]], npoints @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :DrawPolygon ====
-'':DrawPolygon(self @ [[#T|T]], gc @ [[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]], filled @ [[..:..:Std:Symbol#T|Std.Symbol.T]], points @ [[..:..:Gtk:Gdk:Point#T|Gtk.Gdk.Point.T]], npoints @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':DrawPolygon(self @ [[#T|T]], gc @[[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]], filled @[[..:..:Std:Symbol#T|Std.Symbol.T]], points @[[..:..:Gtk:Gdk:Point#T|Gtk.Gdk.Point.T]], npoints @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :DrawRectangle ====
-'':DrawRectangle(self @ [[#T|T]], gc @ [[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]], filled @ [[..:..:Std:Symbol#T|Std.Symbol.T]], x @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], width @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], height @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':DrawRectangle(self @ [[#T|T]], gc @[[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]], filled @[[..:..:Std:Symbol#T|Std.Symbol.T]], x @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], width @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], height @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :DrawRgb32Image ====
-'':DrawRgb32Image(self @ [[#T|T]], gc @ [[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]], x @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], width @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], height @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], dith @ [[..:..:Gtk:Gdk:RgbDither#T|Gtk.Gdk.RgbDither.T]], buf @ [[..:..:Std:String#T|Std.String.T]], rowstride @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':DrawRgb32Image(self @ [[#T|T]], gc @[[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]], x @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], width @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], height @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], dith @[[..:..:Gtk:Gdk:RgbDither#T|Gtk.Gdk.RgbDither.T]], buf @[[..:..:Std:String#T|Std.String.T]], rowstride @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :DrawRgb32ImageDithalign ====
-'':DrawRgb32ImageDithalign(self @ [[#T|T]], gc @ [[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]], x @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], width @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], height @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], dith @ [[..:..:Gtk:Gdk:RgbDither#T|Gtk.Gdk.RgbDither.T]], buf @ [[..:..:Std:String#T|Std.String.T]], rowstride @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], xdith @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], ydith @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':DrawRgb32ImageDithalign(self @ [[#T|T]], gc @[[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]], x @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], width @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], height @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], dith @[[..:..:Gtk:Gdk:RgbDither#T|Gtk.Gdk.RgbDither.T]], buf @[[..:..:Std:String#T|Std.String.T]], rowstride @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], xdith @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], ydith @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :DrawRgbImage ====
-'':DrawRgbImage(self @ [[#T|T]], gc @ [[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]], x @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], width @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], height @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], dith @ [[..:..:Gtk:Gdk:RgbDither#T|Gtk.Gdk.RgbDither.T]], rgb_buf @ [[..:..:Std:String#T|Std.String.T]], rowstride @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':DrawRgbImage(self @ [[#T|T]], gc @[[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]], x @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], width @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], height @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], dith @[[..:..:Gtk:Gdk:RgbDither#T|Gtk.Gdk.RgbDither.T]], rgb_buf @[[..:..:Std:String#T|Std.String.T]], rowstride @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :DrawRgbImageDithalign ====
-'':DrawRgbImageDithalign(self @ [[#T|T]], gc @ [[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]], x @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], width @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], height @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], dith @ [[..:..:Gtk:Gdk:RgbDither#T|Gtk.Gdk.RgbDither.T]], rgb_buf @ [[..:..:Std:String#T|Std.String.T]], rowstride @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], xdith @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], ydith @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':DrawRgbImageDithalign(self @ [[#T|T]], gc @[[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]], x @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], width @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], height @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], dith @[[..:..:Gtk:Gdk:RgbDither#T|Gtk.Gdk.RgbDither.T]], rgb_buf @[[..:..:Std:String#T|Std.String.T]], rowstride @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], xdith @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], ydith @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :DrawSegments ====
-'':DrawSegments(self @ [[#T|T]], gc @ [[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]], segs @ [[..:..:Gtk:Gdk:Segment#T|Gtk.Gdk.Segment.T]], nsegs @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':DrawSegments(self @ [[#T|T]], gc @[[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]], segs @[[..:..:Gtk:Gdk:Segment#T|Gtk.Gdk.Segment.T]], nsegs @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :DrawString ====
-'':DrawString(self @ [[#T|T]], font @ [[..:..:Gtk:Gdk:Font#T|Gtk.Gdk.Font.T]], gc @ [[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]], x @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], string @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':DrawString(self @ [[#T|T]], font @[[..:..:Gtk:Gdk:Font#T|Gtk.Gdk.Font.T]], gc @[[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]], x @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], string @[[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :DrawText ====
-'':DrawText(self @ [[#T|T]], font @ [[..:..:Gtk:Gdk:Font#T|Gtk.Gdk.Font.T]], gc @ [[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]], x @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], text @ [[..:..:Std:String#T|Std.String.T]], text_length @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':DrawText(self @ [[#T|T]], font @[[..:..:Gtk:Gdk:Font#T|Gtk.Gdk.Font.T]], gc @[[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]], x @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], text @[[..:..:Std:String#T|Std.String.T]], text_length @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :DrawTextWc ====
-'':DrawTextWc(self @ [[#T|T]], font @ [[..:..:Gtk:Gdk:Font#T|Gtk.Gdk.Font.T]], gc @ [[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]], x @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], text @ [[..:..:Std:Object#T|Std.Object.T]], text_length @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':DrawTextWc(self @ [[#T|T]], font @[[..:..:Gtk:Gdk:Font#T|Gtk.Gdk.Font.T]], gc @[[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]], x @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], text @[[..:..:Std:Object#T|Std.Object.T]], text_length @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :DrawTrapezoids ====
-'':DrawTrapezoids(self @ [[#T|T]], gc @ [[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]], trapezoids @ [[..:..:Gtk:Gdk:Trapezoid#T|Gtk.Gdk.Trapezoid.T]], n_trapezoids @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':DrawTrapezoids(self @ [[#T|T]], gc @[[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]], trapezoids @[[..:..:Gtk:Gdk:Trapezoid#T|Gtk.Gdk.Trapezoid.T]], n_trapezoids @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :CopyToImage ====
-'':CopyToImage(self @ [[#T|T]], image @ [[..:..:Gtk:Gdk:Image#T|Gtk.Gdk.Image.T]], src_x @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], src_y @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], dest_x @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], dest_y @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], width @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], height @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Gtk:Gdk:Image#T|Gtk.Gdk.Image.T]]''
+'':CopyToImage(self @ [[#T|T]], image @[[..:..:Gtk:Gdk:Image#T|Gtk.Gdk.Image.T]], src_x @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], src_y @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], dest_x @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], dest_y @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], width @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], height @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Gtk:Gdk:Image#T|Gtk.Gdk.Image.T]]''
 
 
 ==== :GetClipRegion ====
@@ -129,7 +129,7 @@
 
 
 ==== :GetData ====
-'':GetData(self @ [[#T|T]], key @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Address#T|Std.Address.T]]''
+'':GetData(self @ [[#T|T]], key @[[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Address#T|Std.Address.T]]''
 
 
 ==== :GetDepth ====
@@ -141,7 +141,7 @@
 
 
 ==== :GetImage ====
-'':GetImage(self @ [[#T|T]], x @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], width @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], height @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Gtk:Gdk:Image#T|Gtk.Gdk.Image.T]]''
+'':GetImage(self @ [[#T|T]], x @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], width @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], height @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Gtk:Gdk:Image#T|Gtk.Gdk.Image.T]]''
 
 
 ==== :GetScreen ====
@@ -149,7 +149,7 @@
 
 
 ==== :GetSize ====
-'':GetSize(self @ [[#T|T]], width @ [[..:..:Std:Object#T|Std.Object.T]], height @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':GetSize(self @ [[#T|T]], width @[[..:..:Std:Object#T|Std.Object.T]], height @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetVisibleRegion ====
@@ -165,11 +165,11 @@
 
 
 ==== :SetColormap ====
-'':SetColormap(self @ [[#T|T]], colormap @ [[..:..:Gtk:Gdk:Colormap#T|Gtk.Gdk.Colormap.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetColormap(self @ [[#T|T]], colormap @[[..:..:Gtk:Gdk:Colormap#T|Gtk.Gdk.Colormap.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetData ====
-'':SetData(self @ [[#T|T]], key @ [[..:..:Std:String#T|Std.String.T]], data @ [[..:..:Std:Address#T|Std.Address.T]], destroy_func @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetData(self @ [[#T|T]], key @[[..:..:Std:String#T|Std.String.T]], data @[[..:..:Std:Address#T|Std.Address.T]], destroy_func @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== GetType ====

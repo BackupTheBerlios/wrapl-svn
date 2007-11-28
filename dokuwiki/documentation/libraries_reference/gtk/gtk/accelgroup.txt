@@ -9,7 +9,7 @@
 
 
 ==== :Query ====
-'':Query(self @ [[#T|T]], accel_key @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], accel_mods @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], n_entries @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Gtk:Gtk:AccelGroupEntry#T|Gtk.Gtk.AccelGroupEntry.T]]''
+'':Query(self @ [[#T|T]], accel_key @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], accel_mods @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], n_entries @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Gtk:Gtk:AccelGroupEntry#T|Gtk.Gtk.AccelGroupEntry.T]]''
 
 
 ==== :Lock ====
@@ -37,27 +37,27 @@
 
 
 ==== :Activate ====
-'':Activate(self @ [[#T|T]], accel_quark @ [[..:..:Std:Object#T|Std.Object.T]], acceleratable @ [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]], accel_key @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], accel_mods @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':Activate(self @ [[#T|T]], accel_quark @[[..:..:Std:Object#T|Std.Object.T]], acceleratable @[[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]], accel_key @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], accel_mods @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :Connect ====
-'':Connect(self @ [[#T|T]], accel_key @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], accel_mods @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], accel_flags @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], closure @ [[..:..:Gtk:GObject:Closure#T|Gtk.GObject.Closure.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Connect(self @ [[#T|T]], accel_key @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], accel_mods @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], accel_flags @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], closure @[[..:..:Gtk:GObject:Closure#T|Gtk.GObject.Closure.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :ConnectByPath ====
-'':ConnectByPath(self @ [[#T|T]], accel_path @ [[..:..:Std:String#T|Std.String.T]], closure @ [[..:..:Gtk:GObject:Closure#T|Gtk.GObject.Closure.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':ConnectByPath(self @ [[#T|T]], accel_path @[[..:..:Std:String#T|Std.String.T]], closure @[[..:..:Gtk:GObject:Closure#T|Gtk.GObject.Closure.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Disconnect ====
-'':Disconnect(self @ [[#T|T]], closure @ [[..:..:Gtk:GObject:Closure#T|Gtk.GObject.Closure.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':Disconnect(self @ [[#T|T]], closure @[[..:..:Gtk:GObject:Closure#T|Gtk.GObject.Closure.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :DisconnectKey ====
-'':DisconnectKey(self @ [[#T|T]], accel_key @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], accel_mods @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':DisconnectKey(self @ [[#T|T]], accel_key @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], accel_mods @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :Find ====
-'':Find(self @ [[#T|T]], find_func @ [[..:..:Std:Function#T|Std.Function.T]], data @ [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Gtk:Gtk:AccelKey#T|Gtk.Gtk.AccelKey.T]]''
+'':Find(self @ [[#T|T]], find_func @[[..:..:Std:Function#T|Std.Function.T]], data @[[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Gtk:Gtk:AccelKey#T|Gtk.Gtk.AccelKey.T]]''
 
 
 ==== New ====

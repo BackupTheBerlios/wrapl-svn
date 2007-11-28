@@ -5,11 +5,11 @@
 
 
 ==== :TranslateKeyboardState ====
-'':TranslateKeyboardState(self @ [[#T|T]], hardware_keycode @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], state @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], group @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], keyval @ [[..:..:Std:Object#T|Std.Object.T]], effective_group @ [[..:..:Std:Object#T|Std.Object.T]], level @ [[..:..:Std:Object#T|Std.Object.T]], consumed_modifiers @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':TranslateKeyboardState(self @ [[#T|T]], hardware_keycode @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], state @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], group @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], keyval @[[..:..:Std:Object#T|Std.Object.T]], effective_group @[[..:..:Std:Object#T|Std.Object.T]], level @[[..:..:Std:Object#T|Std.Object.T]], consumed_modifiers @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :LookupKey ====
-'':LookupKey(self @ [[#T|T]], key @ [[..:..:Gtk:Gdk:KeymapKey#T|Gtk.Gdk.KeymapKey.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':LookupKey(self @ [[#T|T]], key @[[..:..:Gtk:Gdk:KeymapKey#T|Gtk.Gdk.KeymapKey.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :HaveBidiLayouts ====
@@ -25,11 +25,11 @@
 
 
 ==== :GetEntriesForKeycode ====
-'':GetEntriesForKeycode(self @ [[#T|T]], hardware_keycode @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], keys @ [[..:..:Std:Object#T|Std.Object.T]], keyvals @ [[..:..:Std:Object#T|Std.Object.T]], n_entries @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':GetEntriesForKeycode(self @ [[#T|T]], hardware_keycode @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], keys @[[..:..:Std:Object#T|Std.Object.T]], keyvals @[[..:..:Std:Object#T|Std.Object.T]], n_entries @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :GetEntriesForKeyval ====
-'':GetEntriesForKeyval(self @ [[#T|T]], keyval @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], keys @ [[..:..:Std:Object#T|Std.Object.T]], n_keys @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':GetEntriesForKeyval(self @ [[#T|T]], keyval @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], keys @[[..:..:Std:Object#T|Std.Object.T]], n_keys @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== GetDefault ====

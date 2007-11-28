@@ -9,11 +9,11 @@
 
 
 ==== :WaitIsTargetAvailable ====
-'':WaitIsTargetAvailable(self @ [[#T|T]], target @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':WaitIsTargetAvailable(self @ [[#T|T]], target @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :WaitIsRichTextAvailable ====
-'':WaitIsRichTextAvailable(self @ [[#T|T]], buffer @ [[..:..:Gtk:Gtk:TextBuffer#T|Gtk.Gtk.TextBuffer.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':WaitIsRichTextAvailable(self @ [[#T|T]], buffer @[[..:..:Gtk:Gtk:TextBuffer#T|Gtk.Gtk.TextBuffer.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :Clear ====
@@ -29,43 +29,43 @@
 
 
 ==== :RequestContents ====
-'':RequestContents(self @ [[#T|T]], target @ [[..:..:Std:Object#T|Std.Object.T]], callback @ [[..:..:Std:Function#T|Std.Function.T]], user_data @ [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':RequestContents(self @ [[#T|T]], target @[[..:..:Std:Object#T|Std.Object.T]], callback @[[..:..:Std:Function#T|Std.Function.T]], user_data @[[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :RequestImage ====
-'':RequestImage(self @ [[#T|T]], callback @ [[..:..:Std:Function#T|Std.Function.T]], user_data @ [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':RequestImage(self @ [[#T|T]], callback @[[..:..:Std:Function#T|Std.Function.T]], user_data @[[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :RequestRichText ====
-'':RequestRichText(self @ [[#T|T]], buffer @ [[..:..:Gtk:Gtk:TextBuffer#T|Gtk.Gtk.TextBuffer.T]], callback @ [[..:..:Std:Function#T|Std.Function.T]], user_data @ [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':RequestRichText(self @ [[#T|T]], buffer @[[..:..:Gtk:Gtk:TextBuffer#T|Gtk.Gtk.TextBuffer.T]], callback @[[..:..:Std:Function#T|Std.Function.T]], user_data @[[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :RequestTargets ====
-'':RequestTargets(self @ [[#T|T]], callback @ [[..:..:Std:Function#T|Std.Function.T]], user_data @ [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':RequestTargets(self @ [[#T|T]], callback @[[..:..:Std:Function#T|Std.Function.T]], user_data @[[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :RequestText ====
-'':RequestText(self @ [[#T|T]], callback @ [[..:..:Std:Function#T|Std.Function.T]], user_data @ [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':RequestText(self @ [[#T|T]], callback @[[..:..:Std:Function#T|Std.Function.T]], user_data @[[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetCanStore ====
-'':SetCanStore(self @ [[#T|T]], targets @ [[..:..:Gtk:Gtk:TargetEntry#T|Gtk.Gtk.TargetEntry.T]], n_targets @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetCanStore(self @ [[#T|T]], targets @[[..:..:Gtk:Gtk:TargetEntry#T|Gtk.Gtk.TargetEntry.T]], n_targets @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetImage ====
-'':SetImage(self @ [[#T|T]], pixbuf @ [[..:..:Gtk:Gdk:Pixbuf#T|Gtk.Gdk.Pixbuf.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetImage(self @ [[#T|T]], pixbuf @[[..:..:Gtk:Gdk:Pixbuf#T|Gtk.Gdk.Pixbuf.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetText ====
-'':SetText(self @ [[#T|T]], text @ [[..:..:Std:String#T|Std.String.T]], len @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetText(self @ [[#T|T]], text @[[..:..:Std:String#T|Std.String.T]], len @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetWithData ====
-'':SetWithData(self @ [[#T|T]], targets @ [[..:..:Gtk:Gtk:TargetEntry#T|Gtk.Gtk.TargetEntry.T]], n_targets @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], get_func @ [[..:..:Std:Function#T|Std.Function.T]], clear_func @ [[..:..:Std:Function#T|Std.Function.T]], user_data @ [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':SetWithData(self @ [[#T|T]], targets @[[..:..:Gtk:Gtk:TargetEntry#T|Gtk.Gtk.TargetEntry.T]], n_targets @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], get_func @[[..:..:Std:Function#T|Std.Function.T]], clear_func @[[..:..:Std:Function#T|Std.Function.T]], user_data @[[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :SetWithOwner ====
-'':SetWithOwner(self @ [[#T|T]], targets @ [[..:..:Gtk:Gtk:TargetEntry#T|Gtk.Gtk.TargetEntry.T]], n_targets @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], get_func @ [[..:..:Std:Function#T|Std.Function.T]], clear_func @ [[..:..:Std:Function#T|Std.Function.T]], owner @ [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':SetWithOwner(self @ [[#T|T]], targets @[[..:..:Gtk:Gtk:TargetEntry#T|Gtk.Gtk.TargetEntry.T]], n_targets @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], get_func @[[..:..:Std:Function#T|Std.Function.T]], clear_func @[[..:..:Std:Function#T|Std.Function.T]], owner @[[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :Store ====
@@ -73,7 +73,7 @@
 
 
 ==== :WaitForContents ====
-'':WaitForContents(self @ [[#T|T]], target @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Gtk:Gtk:SelectionData#T|Gtk.Gtk.SelectionData.T]]''
+'':WaitForContents(self @ [[#T|T]], target @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Gtk:Gtk:SelectionData#T|Gtk.Gtk.SelectionData.T]]''
 
 
 ==== :WaitForImage ====
@@ -81,11 +81,11 @@
 
 
 ==== :WaitForRichText ====
-'':WaitForRichText(self @ [[#T|T]], buffer @ [[..:..:Gtk:Gtk:TextBuffer#T|Gtk.Gtk.TextBuffer.T]], format @ [[..:..:Gtk:Gdk:Atom#T|Gtk.Gdk.Atom.T]], length @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':WaitForRichText(self @ [[#T|T]], buffer @[[..:..:Gtk:Gtk:TextBuffer#T|Gtk.Gtk.TextBuffer.T]], format @[[..:..:Gtk:Gdk:Atom#T|Gtk.Gdk.Atom.T]], length @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :WaitForTargets ====
-'':WaitForTargets(self @ [[#T|T]], targets @ [[..:..:Std:Object#T|Std.Object.T]], n_targets @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':WaitForTargets(self @ [[#T|T]], targets @[[..:..:Std:Object#T|Std.Object.T]], n_targets @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :WaitForText ====

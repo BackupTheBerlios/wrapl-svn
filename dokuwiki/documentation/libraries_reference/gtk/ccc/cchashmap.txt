@@ -5,11 +5,11 @@
 
 
 ==== :Remove ====
-'':Remove(self @ [[#T|T]], key @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Remove(self @ [[#T|T]], key @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Lookup ====
-'':Lookup(self @ [[#T|T]], key @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Address#T|Std.Address.T]]''
+'':Lookup(self @ [[#T|T]], key @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Address#T|Std.Address.T]]''
 
 
 ==== :Fundamental ====
@@ -25,11 +25,11 @@
 
 
 ==== :Foreach ====
-'':Foreach(self @ [[#T|T]], func @ [[..:..:Std:Object#T|Std.Object.T]], user_data @ [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Foreach(self @ [[#T|T]], func @[[..:..:Std:Object#T|Std.Object.T]], user_data @[[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Insert ====
-'':Insert(self @ [[#T|T]], key @ [[..:..:Std:Address#T|Std.Address.T]], data @ [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Insert(self @ [[#T|T]], key @[[..:..:Std:Address#T|Std.Address.T]], data @[[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====

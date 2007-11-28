@@ -5,23 +5,23 @@
 
 
 ==== :UnselectUri ====
-'':UnselectUri(self @ [[#T|T]], uri @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':UnselectUri(self @ [[#T|T]], uri @[[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :UnselectFilename ====
-'':UnselectFilename(self @ [[#T|T]], filename @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':UnselectFilename(self @ [[#T|T]], filename @[[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :AddFilter ====
-'':AddFilter(self @ [[#T|T]], filter @ [[..:..:Gtk:Gtk:FileFilter#T|Gtk.Gtk.FileFilter.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':AddFilter(self @ [[#T|T]], filter @[[..:..:Gtk:Gtk:FileFilter#T|Gtk.Gtk.FileFilter.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :AddShortcutFolder ====
-'':AddShortcutFolder(self @ [[#T|T]], folder @ [[..:..:Std:String#T|Std.String.T]], error @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':AddShortcutFolder(self @ [[#T|T]], folder @[[..:..:Std:String#T|Std.String.T]], error @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :AddShortcutFolderUri ====
-'':AddShortcutFolderUri(self @ [[#T|T]], uri @ [[..:..:Std:String#T|Std.String.T]], error @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':AddShortcutFolderUri(self @ [[#T|T]], uri @[[..:..:Std:String#T|Std.String.T]], error @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :GetAction ====
@@ -109,15 +109,15 @@
 
 
 ==== :RemoveFilter ====
-'':RemoveFilter(self @ [[#T|T]], filter @ [[..:..:Gtk:Gtk:FileFilter#T|Gtk.Gtk.FileFilter.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':RemoveFilter(self @ [[#T|T]], filter @[[..:..:Gtk:Gtk:FileFilter#T|Gtk.Gtk.FileFilter.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :RemoveShortcutFolder ====
-'':RemoveShortcutFolder(self @ [[#T|T]], folder @ [[..:..:Std:String#T|Std.String.T]], error @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':RemoveShortcutFolder(self @ [[#T|T]], folder @[[..:..:Std:String#T|Std.String.T]], error @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :RemoveShortcutFolderUri ====
-'':RemoveShortcutFolderUri(self @ [[#T|T]], uri @ [[..:..:Std:String#T|Std.String.T]], error @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':RemoveShortcutFolderUri(self @ [[#T|T]], uri @[[..:..:Std:String#T|Std.String.T]], error @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :SelectAll ====
@@ -125,71 +125,71 @@
 
 
 ==== :SelectFilename ====
-'':SelectFilename(self @ [[#T|T]], filename @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':SelectFilename(self @ [[#T|T]], filename @[[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :SelectUri ====
-'':SelectUri(self @ [[#T|T]], uri @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':SelectUri(self @ [[#T|T]], uri @[[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :SetAction ====
-'':SetAction(self @ [[#T|T]], action @ [[..:..:Gtk:Gtk:FileChooserAction#T|Gtk.Gtk.FileChooserAction.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetAction(self @ [[#T|T]], action @[[..:..:Gtk:Gtk:FileChooserAction#T|Gtk.Gtk.FileChooserAction.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetCurrentFolder ====
-'':SetCurrentFolder(self @ [[#T|T]], filename @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':SetCurrentFolder(self @ [[#T|T]], filename @[[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :SetCurrentFolderUri ====
-'':SetCurrentFolderUri(self @ [[#T|T]], uri @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':SetCurrentFolderUri(self @ [[#T|T]], uri @[[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :SetCurrentName ====
-'':SetCurrentName(self @ [[#T|T]], name @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetCurrentName(self @ [[#T|T]], name @[[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetDoOverwriteConfirmation ====
-'':SetDoOverwriteConfirmation(self @ [[#T|T]], do_overwrite_confirmation @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetDoOverwriteConfirmation(self @ [[#T|T]], do_overwrite_confirmation @[[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetExtraWidget ====
-'':SetExtraWidget(self @ [[#T|T]], extra_widget @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetExtraWidget(self @ [[#T|T]], extra_widget @[[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetFilename ====
-'':SetFilename(self @ [[#T|T]], filename @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':SetFilename(self @ [[#T|T]], filename @[[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :SetFilter ====
-'':SetFilter(self @ [[#T|T]], filter @ [[..:..:Gtk:Gtk:FileFilter#T|Gtk.Gtk.FileFilter.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetFilter(self @ [[#T|T]], filter @[[..:..:Gtk:Gtk:FileFilter#T|Gtk.Gtk.FileFilter.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetLocalOnly ====
-'':SetLocalOnly(self @ [[#T|T]], local_only @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetLocalOnly(self @ [[#T|T]], local_only @[[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetPreviewWidget ====
-'':SetPreviewWidget(self @ [[#T|T]], preview_widget @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetPreviewWidget(self @ [[#T|T]], preview_widget @[[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetPreviewWidgetActive ====
-'':SetPreviewWidgetActive(self @ [[#T|T]], active @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetPreviewWidgetActive(self @ [[#T|T]], active @[[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetSelectMultiple ====
-'':SetSelectMultiple(self @ [[#T|T]], select_multiple @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetSelectMultiple(self @ [[#T|T]], select_multiple @[[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetShowHidden ====
-'':SetShowHidden(self @ [[#T|T]], show_hidden @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetShowHidden(self @ [[#T|T]], show_hidden @[[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetUri ====
-'':SetUri(self @ [[#T|T]], uri @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':SetUri(self @ [[#T|T]], uri @[[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :SetUsePreviewLabel ====
-'':SetUsePreviewLabel(self @ [[#T|T]], use_label @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetUsePreviewLabel(self @ [[#T|T]], use_label @[[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :UnselectAll ====

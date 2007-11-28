@@ -9,55 +9,55 @@
 
 
 ==== :ScaleSimple ====
-'':ScaleSimple(self @ [[#T|T]], dest_width @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], dest_height @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], interp_type @ [[..:..:Gtk:Gdk:InterpType#T|Gtk.Gdk.InterpType.T]]) : [[..:..:Gtk:Gdk:Pixbuf#T|Gtk.Gdk.Pixbuf.T]]''
+'':ScaleSimple(self @ [[#T|T]], dest_width @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], dest_height @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], interp_type @[[..:..:Gtk:Gdk:InterpType#T|Gtk.Gdk.InterpType.T]]) : [[..:..:Gtk:Gdk:Pixbuf#T|Gtk.Gdk.Pixbuf.T]]''
 
 
 ==== :Scale ====
-'':Scale(self @ [[#T|T]], dest @ [[..:..:Gtk:Gdk:Pixbuf#T|Gtk.Gdk.Pixbuf.T]], dest_x @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], dest_y @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], dest_width @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], dest_height @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], offset_x @ [[..:..:Std:Real#T|Std.Real.T]], offset_y @ [[..:..:Std:Real#T|Std.Real.T]], scale_x @ [[..:..:Std:Real#T|Std.Real.T]], scale_y @ [[..:..:Std:Real#T|Std.Real.T]], interp_type @ [[..:..:Gtk:Gdk:InterpType#T|Gtk.Gdk.InterpType.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Scale(self @ [[#T|T]], dest @[[..:..:Gtk:Gdk:Pixbuf#T|Gtk.Gdk.Pixbuf.T]], dest_x @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], dest_y @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], dest_width @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], dest_height @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], offset_x @[[..:..:Std:Real#T|Std.Real.T]], offset_y @[[..:..:Std:Real#T|Std.Real.T]], scale_x @[[..:..:Std:Real#T|Std.Real.T]], scale_y @[[..:..:Std:Real#T|Std.Real.T]], interp_type @[[..:..:Gtk:Gdk:InterpType#T|Gtk.Gdk.InterpType.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Savev ====
-'':Savev(self @ [[#T|T]], filename @ [[..:..:Std:String#T|Std.String.T]], type @ [[..:..:Std:String#T|Std.String.T]], option_keys @ [[..:..:Std:List#T|Std.List.T]], option_values @ [[..:..:Std:List#T|Std.List.T]], error @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':Savev(self @ [[#T|T]], filename @[[..:..:Std:String#T|Std.String.T]], type @[[..:..:Std:String#T|Std.String.T]], option_keys @[[..:..:Std:List#T|Std.List.T]], option_values @[[..:..:Std:List#T|Std.List.T]], error @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :SaveToCallbackv ====
-'':SaveToCallbackv(self @ [[#T|T]], save_func @ [[..:..:Std:Function#T|Std.Function.T]], user_data @ [[..:..:Std:Address#T|Std.Address.T]], type @ [[..:..:Std:String#T|Std.String.T]], option_keys @ [[..:..:Std:List#T|Std.List.T]], option_values @ [[..:..:Std:List#T|Std.List.T]], error @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':SaveToCallbackv(self @ [[#T|T]], save_func @[[..:..:Std:Function#T|Std.Function.T]], user_data @[[..:..:Std:Address#T|Std.Address.T]], type @[[..:..:Std:String#T|Std.String.T]], option_keys @[[..:..:Std:List#T|Std.List.T]], option_values @[[..:..:Std:List#T|Std.List.T]], error @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :SaveToCallback ====
-'':SaveToCallback(self @ [[#T|T]], save_func @ [[..:..:Std:Function#T|Std.Function.T]], user_data @ [[..:..:Std:Address#T|Std.Address.T]], type @ [[..:..:Std:String#T|Std.String.T]], error @ [[..:..:Std:Object#T|Std.Object.T]], ___ @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':SaveToCallback(self @ [[#T|T]], save_func @[[..:..:Std:Function#T|Std.Function.T]], user_data @[[..:..:Std:Address#T|Std.Address.T]], type @[[..:..:Std:String#T|Std.String.T]], error @[[..:..:Std:Object#T|Std.Object.T]], ___ @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :SaveToBufferv ====
-'':SaveToBufferv(self @ [[#T|T]], buffer @ [[..:..:Std:List#T|Std.List.T]], buffer_size @ [[..:..:Std:Object#T|Std.Object.T]], type @ [[..:..:Std:String#T|Std.String.T]], option_keys @ [[..:..:Std:List#T|Std.List.T]], option_values @ [[..:..:Std:List#T|Std.List.T]], error @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':SaveToBufferv(self @ [[#T|T]], buffer @[[..:..:Std:List#T|Std.List.T]], buffer_size @[[..:..:Std:Object#T|Std.Object.T]], type @[[..:..:Std:String#T|Std.String.T]], option_keys @[[..:..:Std:List#T|Std.List.T]], option_values @[[..:..:Std:List#T|Std.List.T]], error @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :SaveToBuffer ====
-'':SaveToBuffer(self @ [[#T|T]], buffer @ [[..:..:Std:List#T|Std.List.T]], buffer_size @ [[..:..:Std:Object#T|Std.Object.T]], type @ [[..:..:Std:String#T|Std.String.T]], error @ [[..:..:Std:Object#T|Std.Object.T]], ___ @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':SaveToBuffer(self @ [[#T|T]], buffer @[[..:..:Std:List#T|Std.List.T]], buffer_size @[[..:..:Std:Object#T|Std.Object.T]], type @[[..:..:Std:String#T|Std.String.T]], error @[[..:..:Std:Object#T|Std.Object.T]], ___ @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :Save ====
-'':Save(self @ [[#T|T]], filename @ [[..:..:Std:String#T|Std.String.T]], type @ [[..:..:Std:String#T|Std.String.T]], error @ [[..:..:Std:Object#T|Std.Object.T]], ___ @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':Save(self @ [[#T|T]], filename @[[..:..:Std:String#T|Std.String.T]], type @[[..:..:Std:String#T|Std.String.T]], error @[[..:..:Std:Object#T|Std.Object.T]], ___ @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :SaturateAndPixelate ====
-'':SaturateAndPixelate(self @ [[#T|T]], dest @ [[..:..:Gtk:Gdk:Pixbuf#T|Gtk.Gdk.Pixbuf.T]], saturation @ [[..:..:Std:Real#T|Std.Real.T]], pixelate @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SaturateAndPixelate(self @ [[#T|T]], dest @[[..:..:Gtk:Gdk:Pixbuf#T|Gtk.Gdk.Pixbuf.T]], saturation @[[..:..:Std:Real#T|Std.Real.T]], pixelate @[[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :RotateSimple ====
-'':RotateSimple(self @ [[#T|T]], angle @ [[..:..:Gtk:Gdk:PixbufRotation#T|Gtk.Gdk.PixbufRotation.T]]) : [[..:..:Gtk:Gdk:Pixbuf#T|Gtk.Gdk.Pixbuf.T]]''
+'':RotateSimple(self @ [[#T|T]], angle @[[..:..:Gtk:Gdk:PixbufRotation#T|Gtk.Gdk.PixbufRotation.T]]) : [[..:..:Gtk:Gdk:Pixbuf#T|Gtk.Gdk.Pixbuf.T]]''
 
 
 ==== :RenderToDrawableAlpha ====
-'':RenderToDrawableAlpha(self @ [[#T|T]], drawable @ [[..:..:Gtk:Gdk:Drawable#T|Gtk.Gdk.Drawable.T]], src_x @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], src_y @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], dest_x @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], dest_y @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], width @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], height @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], alpha_mode @ [[..:..:Gtk:Gdk:PixbufAlphaMode#T|Gtk.Gdk.PixbufAlphaMode.T]], alpha_threshold @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], dither @ [[..:..:Gtk:Gdk:RgbDither#T|Gtk.Gdk.RgbDither.T]], x_dither @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y_dither @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':RenderToDrawableAlpha(self @ [[#T|T]], drawable @[[..:..:Gtk:Gdk:Drawable#T|Gtk.Gdk.Drawable.T]], src_x @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], src_y @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], dest_x @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], dest_y @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], width @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], height @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], alpha_mode @[[..:..:Gtk:Gdk:PixbufAlphaMode#T|Gtk.Gdk.PixbufAlphaMode.T]], alpha_threshold @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], dither @[[..:..:Gtk:Gdk:RgbDither#T|Gtk.Gdk.RgbDither.T]], x_dither @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y_dither @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :RenderToDrawable ====
-'':RenderToDrawable(self @ [[#T|T]], drawable @ [[..:..:Gtk:Gdk:Drawable#T|Gtk.Gdk.Drawable.T]], gc @ [[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]], src_x @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], src_y @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], dest_x @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], dest_y @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], width @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], height @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], dither @ [[..:..:Gtk:Gdk:RgbDither#T|Gtk.Gdk.RgbDither.T]], x_dither @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y_dither @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':RenderToDrawable(self @ [[#T|T]], drawable @[[..:..:Gtk:Gdk:Drawable#T|Gtk.Gdk.Drawable.T]], gc @[[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]], src_x @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], src_y @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], dest_x @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], dest_y @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], width @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], height @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], dither @[[..:..:Gtk:Gdk:RgbDither#T|Gtk.Gdk.RgbDither.T]], x_dither @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y_dither @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :AddAlpha ====
-'':AddAlpha(self @ [[#T|T]], substitute_color @ [[..:..:Std:Symbol#T|Std.Symbol.T]], r @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], g @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], b @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Gtk:Gdk:Pixbuf#T|Gtk.Gdk.Pixbuf.T]]''
+'':AddAlpha(self @ [[#T|T]], substitute_color @[[..:..:Std:Symbol#T|Std.Symbol.T]], r @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], g @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], b @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Gtk:Gdk:Pixbuf#T|Gtk.Gdk.Pixbuf.T]]''
 
 
 ==== :ApplyEmbeddedOrientation ====
@@ -65,15 +65,15 @@
 
 
 ==== :Composite ====
-'':Composite(self @ [[#T|T]], dest @ [[..:..:Gtk:Gdk:Pixbuf#T|Gtk.Gdk.Pixbuf.T]], dest_x @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], dest_y @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], dest_width @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], dest_height @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], offset_x @ [[..:..:Std:Real#T|Std.Real.T]], offset_y @ [[..:..:Std:Real#T|Std.Real.T]], scale_x @ [[..:..:Std:Real#T|Std.Real.T]], scale_y @ [[..:..:Std:Real#T|Std.Real.T]], interp_type @ [[..:..:Gtk:Gdk:InterpType#T|Gtk.Gdk.InterpType.T]], overall_alpha @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Composite(self @ [[#T|T]], dest @[[..:..:Gtk:Gdk:Pixbuf#T|Gtk.Gdk.Pixbuf.T]], dest_x @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], dest_y @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], dest_width @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], dest_height @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], offset_x @[[..:..:Std:Real#T|Std.Real.T]], offset_y @[[..:..:Std:Real#T|Std.Real.T]], scale_x @[[..:..:Std:Real#T|Std.Real.T]], scale_y @[[..:..:Std:Real#T|Std.Real.T]], interp_type @[[..:..:Gtk:Gdk:InterpType#T|Gtk.Gdk.InterpType.T]], overall_alpha @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :CompositeColor ====
-'':CompositeColor(self @ [[#T|T]], dest @ [[..:..:Gtk:Gdk:Pixbuf#T|Gtk.Gdk.Pixbuf.T]], dest_x @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], dest_y @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], dest_width @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], dest_height @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], offset_x @ [[..:..:Std:Real#T|Std.Real.T]], offset_y @ [[..:..:Std:Real#T|Std.Real.T]], scale_x @ [[..:..:Std:Real#T|Std.Real.T]], scale_y @ [[..:..:Std:Real#T|Std.Real.T]], interp_type @ [[..:..:Gtk:Gdk:InterpType#T|Gtk.Gdk.InterpType.T]], overall_alpha @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], check_x @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], check_y @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], check_size @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], color1 @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], color2 @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':CompositeColor(self @ [[#T|T]], dest @[[..:..:Gtk:Gdk:Pixbuf#T|Gtk.Gdk.Pixbuf.T]], dest_x @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], dest_y @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], dest_width @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], dest_height @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], offset_x @[[..:..:Std:Real#T|Std.Real.T]], offset_y @[[..:..:Std:Real#T|Std.Real.T]], scale_x @[[..:..:Std:Real#T|Std.Real.T]], scale_y @[[..:..:Std:Real#T|Std.Real.T]], interp_type @[[..:..:Gtk:Gdk:InterpType#T|Gtk.Gdk.InterpType.T]], overall_alpha @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], check_x @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], check_y @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], check_size @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], color1 @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], color2 @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :CompositeColorSimple ====
-'':CompositeColorSimple(self @ [[#T|T]], dest_width @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], dest_height @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], interp_type @ [[..:..:Gtk:Gdk:InterpType#T|Gtk.Gdk.InterpType.T]], overall_alpha @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], check_size @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], color1 @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], color2 @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Gtk:Gdk:Pixbuf#T|Gtk.Gdk.Pixbuf.T]]''
+'':CompositeColorSimple(self @ [[#T|T]], dest_width @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], dest_height @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], interp_type @[[..:..:Gtk:Gdk:InterpType#T|Gtk.Gdk.InterpType.T]], overall_alpha @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], check_size @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], color1 @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], color2 @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Gtk:Gdk:Pixbuf#T|Gtk.Gdk.Pixbuf.T]]''
 
 
 ==== :Copy ====
@@ -81,15 +81,15 @@
 
 
 ==== :CopyArea ====
-'':CopyArea(self @ [[#T|T]], src_x @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], src_y @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], width @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], height @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], dest_pixbuf @ [[..:..:Gtk:Gdk:Pixbuf#T|Gtk.Gdk.Pixbuf.T]], dest_x @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], dest_y @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':CopyArea(self @ [[#T|T]], src_x @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], src_y @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], width @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], height @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], dest_pixbuf @[[..:..:Gtk:Gdk:Pixbuf#T|Gtk.Gdk.Pixbuf.T]], dest_x @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], dest_y @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Fill ====
-'':Fill(self @ [[#T|T]], pixel @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Fill(self @ [[#T|T]], pixel @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Flip ====
-'':Flip(self @ [[#T|T]], horizontal @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Gtk:Gdk:Pixbuf#T|Gtk.Gdk.Pixbuf.T]]''
+'':Flip(self @ [[#T|T]], horizontal @[[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Gtk:Gdk:Pixbuf#T|Gtk.Gdk.Pixbuf.T]]''
 
 
 ==== :GetBitsPerSample ====
@@ -101,11 +101,11 @@
 
 
 ==== :GetFromDrawable ====
-'':GetFromDrawable(self @ [[#T|T]], src @ [[..:..:Gtk:Gdk:Drawable#T|Gtk.Gdk.Drawable.T]], cmap @ [[..:..:Gtk:Gdk:Colormap#T|Gtk.Gdk.Colormap.T]], src_x @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], src_y @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], dest_x @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], dest_y @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], width @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], height @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Gtk:Gdk:Pixbuf#T|Gtk.Gdk.Pixbuf.T]]''
+'':GetFromDrawable(self @ [[#T|T]], src @[[..:..:Gtk:Gdk:Drawable#T|Gtk.Gdk.Drawable.T]], cmap @[[..:..:Gtk:Gdk:Colormap#T|Gtk.Gdk.Colormap.T]], src_x @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], src_y @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], dest_x @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], dest_y @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], width @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], height @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Gtk:Gdk:Pixbuf#T|Gtk.Gdk.Pixbuf.T]]''
 
 
 ==== :GetFromImage ====
-'':GetFromImage(self @ [[#T|T]], src @ [[..:..:Gtk:Gdk:Image#T|Gtk.Gdk.Image.T]], cmap @ [[..:..:Gtk:Gdk:Colormap#T|Gtk.Gdk.Colormap.T]], src_x @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], src_y @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], dest_x @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], dest_y @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], width @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], height @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Gtk:Gdk:Pixbuf#T|Gtk.Gdk.Pixbuf.T]]''
+'':GetFromImage(self @ [[#T|T]], src @[[..:..:Gtk:Gdk:Image#T|Gtk.Gdk.Image.T]], cmap @[[..:..:Gtk:Gdk:Colormap#T|Gtk.Gdk.Colormap.T]], src_x @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], src_y @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], dest_x @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], dest_y @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], width @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], height @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Gtk:Gdk:Pixbuf#T|Gtk.Gdk.Pixbuf.T]]''
 
 
 ==== :GetHasAlpha ====
@@ -121,7 +121,7 @@
 
 
 ==== :GetOption ====
-'':GetOption(self @ [[#T|T]], key @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:String#T|Std.String.T]]''
+'':GetOption(self @ [[#T|T]], key @[[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== :GetPixels ====
@@ -141,15 +141,15 @@
 
 
 ==== :RenderPixmapAndMask ====
-'':RenderPixmapAndMask(self @ [[#T|T]], pixmap_return @ [[..:..:Std:Object#T|Std.Object.T]], mask_return @ [[..:..:Std:Object#T|Std.Object.T]], alpha_threshold @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':RenderPixmapAndMask(self @ [[#T|T]], pixmap_return @[[..:..:Std:Object#T|Std.Object.T]], mask_return @[[..:..:Std:Object#T|Std.Object.T]], alpha_threshold @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :RenderPixmapAndMaskForColormap ====
-'':RenderPixmapAndMaskForColormap(self @ [[#T|T]], colormap @ [[..:..:Gtk:Gdk:Colormap#T|Gtk.Gdk.Colormap.T]], pixmap_return @ [[..:..:Std:Object#T|Std.Object.T]], mask_return @ [[..:..:Std:Object#T|Std.Object.T]], alpha_threshold @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':RenderPixmapAndMaskForColormap(self @ [[#T|T]], colormap @[[..:..:Gtk:Gdk:Colormap#T|Gtk.Gdk.Colormap.T]], pixmap_return @[[..:..:Std:Object#T|Std.Object.T]], mask_return @[[..:..:Std:Object#T|Std.Object.T]], alpha_threshold @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :RenderThresholdAlpha ====
-'':RenderThresholdAlpha(self @ [[#T|T]], bitmap @ [[..:..:Gtk:Gdk:Bitmap#T|Gtk.Gdk.Bitmap.T]], src_x @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], src_y @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], dest_x @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], dest_y @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], width @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], height @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], alpha_threshold @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':RenderThresholdAlpha(self @ [[#T|T]], bitmap @[[..:..:Gtk:Gdk:Bitmap#T|Gtk.Gdk.Bitmap.T]], src_x @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], src_y @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], dest_x @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], dest_y @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], width @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], height @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], alpha_threshold @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====

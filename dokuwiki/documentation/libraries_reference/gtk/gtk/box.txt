@@ -8,7 +8,7 @@
 
 
 ==== :SetSpacing ====
-'':SetSpacing(self @ [[#T|T]], spacing @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetSpacing(self @ [[#T|T]], spacing @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Children ====
@@ -32,35 +32,35 @@
 
 
 ==== :PackEnd ====
-'':PackEnd(self @ [[#T|T]], child @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], expand @ [[..:..:Std:Symbol#T|Std.Symbol.T]], fill @ [[..:..:Std:Symbol#T|Std.Symbol.T]], padding @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':PackEnd(self @ [[#T|T]], child @[[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], expand @[[..:..:Std:Symbol#T|Std.Symbol.T]], fill @[[..:..:Std:Symbol#T|Std.Symbol.T]], padding @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :PackEndDefaults ====
-'':PackEndDefaults(self @ [[#T|T]], widget @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':PackEndDefaults(self @ [[#T|T]], widget @[[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :PackStart ====
-'':PackStart(self @ [[#T|T]], child @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], expand @ [[..:..:Std:Symbol#T|Std.Symbol.T]], fill @ [[..:..:Std:Symbol#T|Std.Symbol.T]], padding @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':PackStart(self @ [[#T|T]], child @[[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], expand @[[..:..:Std:Symbol#T|Std.Symbol.T]], fill @[[..:..:Std:Symbol#T|Std.Symbol.T]], padding @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :PackStartDefaults ====
-'':PackStartDefaults(self @ [[#T|T]], widget @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':PackStartDefaults(self @ [[#T|T]], widget @[[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :QueryChildPacking ====
-'':QueryChildPacking(self @ [[#T|T]], child @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], expand @ [[..:..:Std:Object#T|Std.Object.T]], fill @ [[..:..:Std:Object#T|Std.Object.T]], padding @ [[..:..:Std:Object#T|Std.Object.T]], pack_type @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':QueryChildPacking(self @ [[#T|T]], child @[[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], expand @[[..:..:Std:Object#T|Std.Object.T]], fill @[[..:..:Std:Object#T|Std.Object.T]], padding @[[..:..:Std:Object#T|Std.Object.T]], pack_type @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :ReorderChild ====
-'':ReorderChild(self @ [[#T|T]], child @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], position @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':ReorderChild(self @ [[#T|T]], child @[[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], position @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetChildPacking ====
-'':SetChildPacking(self @ [[#T|T]], child @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], expand @ [[..:..:Std:Symbol#T|Std.Symbol.T]], fill @ [[..:..:Std:Symbol#T|Std.Symbol.T]], padding @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], pack_type @ [[..:..:Gtk:Gtk:PackType#T|Gtk.Gtk.PackType.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetChildPacking(self @ [[#T|T]], child @[[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], expand @[[..:..:Std:Symbol#T|Std.Symbol.T]], fill @[[..:..:Std:Symbol#T|Std.Symbol.T]], padding @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], pack_type @[[..:..:Gtk:Gtk:PackType#T|Gtk.Gtk.PackType.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetHomogeneous ====
-'':SetHomogeneous(self @ [[#T|T]], homogeneous @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetHomogeneous(self @ [[#T|T]], homogeneous @[[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== GetType ====

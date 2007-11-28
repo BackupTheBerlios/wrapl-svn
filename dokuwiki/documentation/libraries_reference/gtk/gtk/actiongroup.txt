@@ -5,11 +5,11 @@
 
 
 ==== :TranslateString ====
-'':TranslateString(self @ [[#T|T]], string @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:String#T|Std.String.T]]''
+'':TranslateString(self @ [[#T|T]], string @[[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== :SetVisible ====
-'':SetVisible(self @ [[#T|T]], visible @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetVisible(self @ [[#T|T]], visible @[[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :PrivateData ====
@@ -17,39 +17,39 @@
 
 
 ==== :AddAction ====
-'':AddAction(self @ [[#T|T]], action @ [[..:..:Gtk:Gtk:Action#T|Gtk.Gtk.Action.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':AddAction(self @ [[#T|T]], action @[[..:..:Gtk:Gtk:Action#T|Gtk.Gtk.Action.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :AddActionWithAccel ====
-'':AddActionWithAccel(self @ [[#T|T]], action @ [[..:..:Gtk:Gtk:Action#T|Gtk.Gtk.Action.T]], accelerator @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':AddActionWithAccel(self @ [[#T|T]], action @[[..:..:Gtk:Gtk:Action#T|Gtk.Gtk.Action.T]], accelerator @[[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :AddActions ====
-'':AddActions(self @ [[#T|T]], entries @ [[..:..:Gtk:Gtk:ActionEntry#T|Gtk.Gtk.ActionEntry.T]], n_entries @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], user_data @ [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':AddActions(self @ [[#T|T]], entries @[[..:..:Gtk:Gtk:ActionEntry#T|Gtk.Gtk.ActionEntry.T]], n_entries @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], user_data @[[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :AddActionsFull ====
-'':AddActionsFull(self @ [[#T|T]], entries @ [[..:..:Gtk:Gtk:ActionEntry#T|Gtk.Gtk.ActionEntry.T]], n_entries @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], user_data @ [[..:..:Std:Address#T|Std.Address.T]], destroy @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':AddActionsFull(self @ [[#T|T]], entries @[[..:..:Gtk:Gtk:ActionEntry#T|Gtk.Gtk.ActionEntry.T]], n_entries @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], user_data @[[..:..:Std:Address#T|Std.Address.T]], destroy @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :AddRadioActions ====
-'':AddRadioActions(self @ [[#T|T]], entries @ [[..:..:Gtk:Gtk:RadioActionEntry#T|Gtk.Gtk.RadioActionEntry.T]], n_entries @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], on_change @ [[..:..:Std:Object#T|Std.Object.T]], user_data @ [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':AddRadioActions(self @ [[#T|T]], entries @[[..:..:Gtk:Gtk:RadioActionEntry#T|Gtk.Gtk.RadioActionEntry.T]], n_entries @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], value @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], on_change @[[..:..:Std:Object#T|Std.Object.T]], user_data @[[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :AddRadioActionsFull ====
-'':AddRadioActionsFull(self @ [[#T|T]], entries @ [[..:..:Gtk:Gtk:RadioActionEntry#T|Gtk.Gtk.RadioActionEntry.T]], n_entries @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], on_change @ [[..:..:Std:Object#T|Std.Object.T]], user_data @ [[..:..:Std:Address#T|Std.Address.T]], destroy @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':AddRadioActionsFull(self @ [[#T|T]], entries @[[..:..:Gtk:Gtk:RadioActionEntry#T|Gtk.Gtk.RadioActionEntry.T]], n_entries @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], value @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], on_change @[[..:..:Std:Object#T|Std.Object.T]], user_data @[[..:..:Std:Address#T|Std.Address.T]], destroy @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :AddToggleActions ====
-'':AddToggleActions(self @ [[#T|T]], entries @ [[..:..:Gtk:Gtk:ToggleActionEntry#T|Gtk.Gtk.ToggleActionEntry.T]], n_entries @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], user_data @ [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':AddToggleActions(self @ [[#T|T]], entries @[[..:..:Gtk:Gtk:ToggleActionEntry#T|Gtk.Gtk.ToggleActionEntry.T]], n_entries @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], user_data @[[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :AddToggleActionsFull ====
-'':AddToggleActionsFull(self @ [[#T|T]], entries @ [[..:..:Gtk:Gtk:ToggleActionEntry#T|Gtk.Gtk.ToggleActionEntry.T]], n_entries @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], user_data @ [[..:..:Std:Address#T|Std.Address.T]], destroy @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':AddToggleActionsFull(self @ [[#T|T]], entries @[[..:..:Gtk:Gtk:ToggleActionEntry#T|Gtk.Gtk.ToggleActionEntry.T]], n_entries @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], user_data @[[..:..:Std:Address#T|Std.Address.T]], destroy @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetAction ====
-'':GetAction(self @ [[#T|T]], action_name @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Gtk:Gtk:Action#T|Gtk.Gtk.Action.T]]''
+'':GetAction(self @ [[#T|T]], action_name @[[..:..:Std:String#T|Std.String.T]]) : [[..:..:Gtk:Gtk:Action#T|Gtk.Gtk.Action.T]]''
 
 
 ==== :GetName ====
@@ -69,19 +69,19 @@
 
 
 ==== :RemoveAction ====
-'':RemoveAction(self @ [[#T|T]], action @ [[..:..:Gtk:Gtk:Action#T|Gtk.Gtk.Action.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':RemoveAction(self @ [[#T|T]], action @[[..:..:Gtk:Gtk:Action#T|Gtk.Gtk.Action.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetSensitive ====
-'':SetSensitive(self @ [[#T|T]], sensitive @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetSensitive(self @ [[#T|T]], sensitive @[[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetTranslateFunc ====
-'':SetTranslateFunc(self @ [[#T|T]], func @ [[..:..:Std:Function#T|Std.Function.T]], data @ [[..:..:Std:Address#T|Std.Address.T]], notify @ [[..:..:Std:Function#T|Std.Function.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetTranslateFunc(self @ [[#T|T]], func @[[..:..:Std:Function#T|Std.Function.T]], data @[[..:..:Std:Address#T|Std.Address.T]], notify @[[..:..:Std:Function#T|Std.Function.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetTranslationDomain ====
-'':SetTranslationDomain(self @ [[#T|T]], domain @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetTranslationDomain(self @ [[#T|T]], domain @[[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====

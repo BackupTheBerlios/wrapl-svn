@@ -3,11 +3,11 @@
 
 
 ==== :Translate ====
-'':Translate(self @ [[#T|T]], tx @ [[..:..:Std:Real#T|Std.Real.T]], ty @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Translate(self @ [[#T|T]], tx @[[..:..:Std:Real#T|Std.Real.T]], ty @[[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :TransformRectangle ====
-'':TransformRectangle(self @ [[#T|T]], rect @ [[..:..:Gtk:Pango:Rectangle#T|Gtk.Pango.Rectangle.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':TransformRectangle(self @ [[#T|T]], rect @[[..:..:Gtk:Pango:Rectangle#T|Gtk.Pango.Rectangle.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Xx ====
@@ -35,7 +35,7 @@
 
 
 ==== :Concat ====
-'':Concat(self @ [[#T|T]], new_matrix @ [[..:..:Gtk:Pango:Matrix#T|Gtk.Pango.Matrix.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Concat(self @ [[#T|T]], new_matrix @[[..:..:Gtk:Pango:Matrix#T|Gtk.Pango.Matrix.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Copy ====
@@ -51,23 +51,23 @@
 
 
 ==== :Rotate ====
-'':Rotate(self @ [[#T|T]], degrees @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Rotate(self @ [[#T|T]], degrees @[[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Scale ====
-'':Scale(self @ [[#T|T]], scale_x @ [[..:..:Std:Real#T|Std.Real.T]], scale_y @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Scale(self @ [[#T|T]], scale_x @[[..:..:Std:Real#T|Std.Real.T]], scale_y @[[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :TransformDistance ====
-'':TransformDistance(self @ [[#T|T]], dx @ [[..:..:Std:Object#T|Std.Object.T]], dy @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':TransformDistance(self @ [[#T|T]], dx @[[..:..:Std:Object#T|Std.Object.T]], dy @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :TransformPixelRectangle ====
-'':TransformPixelRectangle(self @ [[#T|T]], rect @ [[..:..:Gtk:Pango:Rectangle#T|Gtk.Pango.Rectangle.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':TransformPixelRectangle(self @ [[#T|T]], rect @[[..:..:Gtk:Pango:Rectangle#T|Gtk.Pango.Rectangle.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :TransformPoint ====
-'':TransformPoint(self @ [[#T|T]], x @ [[..:..:Std:Object#T|Std.Object.T]], y @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':TransformPoint(self @ [[#T|T]], x @[[..:..:Std:Object#T|Std.Object.T]], y @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====

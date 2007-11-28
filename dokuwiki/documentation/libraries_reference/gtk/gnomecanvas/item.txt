@@ -6,11 +6,11 @@
 
 
 ==== :W2i ====
-'':W2i(self @ [[#T|T]], x @ [[..:..:Std:Object#T|Std.Object.T]], y @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':W2i(self @ [[#T|T]], x @[[..:..:Std:Object#T|Std.Object.T]], y @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :UpdateSvpClip ====
-'':UpdateSvpClip(self @ [[#T|T]], p_svp @ [[..:..:Std:Object#T|Std.Object.T]], new_svp @ [[..:..:Gtk:Art:SVP#T|Gtk.Art.SVP.T]], clip_svp @ [[..:..:Gtk:Art:SVP#T|Gtk.Art.SVP.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':UpdateSvpClip(self @ [[#T|T]], p_svp @[[..:..:Std:Object#T|Std.Object.T]], new_svp @[[..:..:Gtk:Art:SVP#T|Gtk.Art.SVP.T]], clip_svp @[[..:..:Gtk:Art:SVP#T|Gtk.Art.SVP.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Canvas ====
@@ -42,23 +42,23 @@
 
 
 ==== :AffineAbsolute ====
-'':AffineAbsolute(self @ [[#T|T]], affine @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':AffineAbsolute(self @ [[#T|T]], affine @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :AffineRelative ====
-'':AffineRelative(self @ [[#T|T]], affine @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':AffineRelative(self @ [[#T|T]], affine @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Construct ====
-'':Construct(self @ [[#T|T]], parent @ [[..:..:Gtk:GnomeCanvas:Group#T|Gtk.GnomeCanvas.Group.T]], first_arg_name @ [[..:..:Std:String#T|Std.String.T]], args @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Construct(self @ [[#T|T]], parent @[[..:..:Gtk:GnomeCanvas:Group#T|Gtk.GnomeCanvas.Group.T]], first_arg_name @[[..:..:Std:String#T|Std.String.T]], args @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetBounds ====
-'':GetBounds(self @ [[#T|T]], x1 @ [[..:..:Std:Object#T|Std.Object.T]], y1 @ [[..:..:Std:Object#T|Std.Object.T]], x2 @ [[..:..:Std:Object#T|Std.Object.T]], y2 @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':GetBounds(self @ [[#T|T]], x1 @[[..:..:Std:Object#T|Std.Object.T]], y1 @[[..:..:Std:Object#T|Std.Object.T]], x2 @[[..:..:Std:Object#T|Std.Object.T]], y2 @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Grab ====
-'':Grab(self @ [[#T|T]], event_mask @ [[..:..:Std:Object#T|Std.Object.T]], cursor @ [[..:..:Gtk:Gdk:Cursor#T|Gtk.Gdk.Cursor.T]], etime @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':Grab(self @ [[#T|T]], event_mask @[[..:..:Std:Object#T|Std.Object.T]], cursor @[[..:..:Gtk:Gdk:Cursor#T|Gtk.Gdk.Cursor.T]], etime @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :GrabFocus ====
@@ -70,19 +70,19 @@
 
 
 ==== :I2cAffine ====
-'':I2cAffine(self @ [[#T|T]], affine @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':I2cAffine(self @ [[#T|T]], affine @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :I2w ====
-'':I2w(self @ [[#T|T]], x @ [[..:..:Std:Object#T|Std.Object.T]], y @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':I2w(self @ [[#T|T]], x @[[..:..:Std:Object#T|Std.Object.T]], y @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :I2wAffine ====
-'':I2wAffine(self @ [[#T|T]], affine @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':I2wAffine(self @ [[#T|T]], affine @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Lower ====
-'':Lower(self @ [[#T|T]], positions @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Lower(self @ [[#T|T]], positions @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :LowerToBottom ====
@@ -90,11 +90,11 @@
 
 
 ==== :Move ====
-'':Move(self @ [[#T|T]], dx @ [[..:..:Std:Real#T|Std.Real.T]], dy @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Move(self @ [[#T|T]], dx @[[..:..:Std:Real#T|Std.Real.T]], dy @[[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Raise ====
-'':Raise(self @ [[#T|T]], positions @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Raise(self @ [[#T|T]], positions @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :RaiseToTop ====
@@ -102,11 +102,11 @@
 
 
 ==== :Reparent ====
-'':Reparent(self @ [[#T|T]], new_group @ [[..:..:Gtk:GnomeCanvas:Group#T|Gtk.GnomeCanvas.Group.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Reparent(self @ [[#T|T]], new_group @[[..:..:Gtk:GnomeCanvas:Group#T|Gtk.GnomeCanvas.Group.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :RequestRedrawSvp ====
-'':RequestRedrawSvp(self @ [[#T|T]], svp @ [[..:..:Gtk:Art:SVP#T|Gtk.Art.SVP.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':RequestRedrawSvp(self @ [[#T|T]], svp @[[..:..:Gtk:Art:SVP#T|Gtk.Art.SVP.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :RequestUpdate ====
@@ -118,11 +118,11 @@
 
 
 ==== :Set ====
-'':Set(self @ [[#T|T]], first_arg_name @ [[..:..:Std:String#T|Std.String.T]], ___ @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Set(self @ [[#T|T]], first_arg_name @[[..:..:Std:String#T|Std.String.T]], ___ @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetValist ====
-'':SetValist(self @ [[#T|T]], first_arg_name @ [[..:..:Std:String#T|Std.String.T]], args @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetValist(self @ [[#T|T]], first_arg_name @[[..:..:Std:String#T|Std.String.T]], args @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Show ====
@@ -130,11 +130,11 @@
 
 
 ==== :Ungrab ====
-'':Ungrab(self @ [[#T|T]], etime @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Ungrab(self @ [[#T|T]], etime @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :UpdateSvp ====
-'':UpdateSvp(self @ [[#T|T]], p_svp @ [[..:..:Std:Object#T|Std.Object.T]], new_svp @ [[..:..:Gtk:Art:SVP#T|Gtk.Art.SVP.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':UpdateSvp(self @ [[#T|T]], p_svp @[[..:..:Std:Object#T|Std.Object.T]], new_svp @[[..:..:Gtk:Art:SVP#T|Gtk.Art.SVP.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====

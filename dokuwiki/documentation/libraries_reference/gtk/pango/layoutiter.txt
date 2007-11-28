@@ -19,11 +19,11 @@
 
 
 ==== :GetCharExtents ====
-'':GetCharExtents(self @ [[#T|T]], logical_rect @ [[..:..:Gtk:Pango:Rectangle#T|Gtk.Pango.Rectangle.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':GetCharExtents(self @ [[#T|T]], logical_rect @[[..:..:Gtk:Pango:Rectangle#T|Gtk.Pango.Rectangle.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetClusterExtents ====
-'':GetClusterExtents(self @ [[#T|T]], ink_rect @ [[..:..:Gtk:Pango:Rectangle#T|Gtk.Pango.Rectangle.T]], logical_rect @ [[..:..:Gtk:Pango:Rectangle#T|Gtk.Pango.Rectangle.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':GetClusterExtents(self @ [[#T|T]], ink_rect @[[..:..:Gtk:Pango:Rectangle#T|Gtk.Pango.Rectangle.T]], logical_rect @[[..:..:Gtk:Pango:Rectangle#T|Gtk.Pango.Rectangle.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetIndex ====
@@ -31,7 +31,7 @@
 
 
 ==== :GetLayoutExtents ====
-'':GetLayoutExtents(self @ [[#T|T]], ink_rect @ [[..:..:Gtk:Pango:Rectangle#T|Gtk.Pango.Rectangle.T]], logical_rect @ [[..:..:Gtk:Pango:Rectangle#T|Gtk.Pango.Rectangle.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':GetLayoutExtents(self @ [[#T|T]], ink_rect @[[..:..:Gtk:Pango:Rectangle#T|Gtk.Pango.Rectangle.T]], logical_rect @[[..:..:Gtk:Pango:Rectangle#T|Gtk.Pango.Rectangle.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetLine ====
@@ -39,7 +39,7 @@
 
 
 ==== :GetLineExtents ====
-'':GetLineExtents(self @ [[#T|T]], ink_rect @ [[..:..:Gtk:Pango:Rectangle#T|Gtk.Pango.Rectangle.T]], logical_rect @ [[..:..:Gtk:Pango:Rectangle#T|Gtk.Pango.Rectangle.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':GetLineExtents(self @ [[#T|T]], ink_rect @[[..:..:Gtk:Pango:Rectangle#T|Gtk.Pango.Rectangle.T]], logical_rect @[[..:..:Gtk:Pango:Rectangle#T|Gtk.Pango.Rectangle.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetLineReadonly ====
@@ -47,7 +47,7 @@
 
 
 ==== :GetLineYrange ====
-'':GetLineYrange(self @ [[#T|T]], y0_ @ [[..:..:Std:Object#T|Std.Object.T]], y1_ @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':GetLineYrange(self @ [[#T|T]], y0_ @[[..:..:Std:Object#T|Std.Object.T]], y1_ @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetRun ====
@@ -55,7 +55,7 @@
 
 
 ==== :GetRunExtents ====
-'':GetRunExtents(self @ [[#T|T]], ink_rect @ [[..:..:Gtk:Pango:Rectangle#T|Gtk.Pango.Rectangle.T]], logical_rect @ [[..:..:Gtk:Pango:Rectangle#T|Gtk.Pango.Rectangle.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':GetRunExtents(self @ [[#T|T]], ink_rect @[[..:..:Gtk:Pango:Rectangle#T|Gtk.Pango.Rectangle.T]], logical_rect @[[..:..:Gtk:Pango:Rectangle#T|Gtk.Pango.Rectangle.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetRunReadonly ====

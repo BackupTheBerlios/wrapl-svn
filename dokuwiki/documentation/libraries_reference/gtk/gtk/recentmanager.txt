@@ -5,23 +5,23 @@
 
 
 ==== :SetScreen ====
-'':SetScreen(self @ [[#T|T]], screen @ [[..:..:Gtk:Gdk:Screen#T|Gtk.Gdk.Screen.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetScreen(self @ [[#T|T]], screen @[[..:..:Gtk:Gdk:Screen#T|Gtk.Gdk.Screen.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetLimit ====
-'':SetLimit(self @ [[#T|T]], limit @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetLimit(self @ [[#T|T]], limit @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :RemoveItem ====
-'':RemoveItem(self @ [[#T|T]], uri @ [[..:..:Std:String#T|Std.String.T]], error @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':RemoveItem(self @ [[#T|T]], uri @[[..:..:Std:String#T|Std.String.T]], error @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :PurgeItems ====
-'':PurgeItems(self @ [[#T|T]], error @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':PurgeItems(self @ [[#T|T]], error @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :MoveItem ====
-'':MoveItem(self @ [[#T|T]], uri @ [[..:..:Std:String#T|Std.String.T]], new_uri @ [[..:..:Std:String#T|Std.String.T]], error @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':MoveItem(self @ [[#T|T]], uri @[[..:..:Std:String#T|Std.String.T]], new_uri @[[..:..:Std:String#T|Std.String.T]], error @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :Priv ====
@@ -29,11 +29,11 @@
 
 
 ==== :AddFull ====
-'':AddFull(self @ [[#T|T]], uri @ [[..:..:Std:String#T|Std.String.T]], recent_data @ [[..:..:Gtk:Gtk:RecentData#T|Gtk.Gtk.RecentData.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':AddFull(self @ [[#T|T]], uri @[[..:..:Std:String#T|Std.String.T]], recent_data @[[..:..:Gtk:Gtk:RecentData#T|Gtk.Gtk.RecentData.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :AddItem ====
-'':AddItem(self @ [[#T|T]], uri @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':AddItem(self @ [[#T|T]], uri @[[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :GetItems ====
@@ -45,11 +45,11 @@
 
 
 ==== :HasItem ====
-'':HasItem(self @ [[#T|T]], uri @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':HasItem(self @ [[#T|T]], uri @[[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :LookupItem ====
-'':LookupItem(self @ [[#T|T]], uri @ [[..:..:Std:String#T|Std.String.T]], error @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Gtk:Gtk:RecentInfo#T|Gtk.Gtk.RecentInfo.T]]''
+'':LookupItem(self @ [[#T|T]], uri @[[..:..:Std:String#T|Std.String.T]], error @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Gtk:Gtk:RecentInfo#T|Gtk.Gtk.RecentInfo.T]]''
 
 
 ==== New ====

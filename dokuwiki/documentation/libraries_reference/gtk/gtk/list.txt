@@ -8,11 +8,11 @@
 
 
 ==== :UnselectItem ====
-'':UnselectItem(self @ [[#T|T]], item @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':UnselectItem(self @ [[#T|T]], item @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :UnselectChild ====
-'':UnselectChild(self @ [[#T|T]], child @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':UnselectChild(self @ [[#T|T]], child @[[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Children ====
@@ -72,15 +72,15 @@
 
 
 ==== :AppendItems ====
-'':AppendItems(self @ [[#T|T]], items @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':AppendItems(self @ [[#T|T]], items @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :ChildPosition ====
-'':ChildPosition(self @ [[#T|T]], child @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':ChildPosition(self @ [[#T|T]], child @[[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :ClearItems ====
-'':ClearItems(self @ [[#T|T]], start @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], end @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':ClearItems(self @ [[#T|T]], start @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], end @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :EndDragSelection ====
@@ -92,31 +92,31 @@
 
 
 ==== :ExtendSelection ====
-'':ExtendSelection(self @ [[#T|T]], scroll_type @ [[..:..:Gtk:Gtk:ScrollType#T|Gtk.Gtk.ScrollType.T]], position @ [[..:..:Std:Real#T|Std.Real.T]], auto_start_selection @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':ExtendSelection(self @ [[#T|T]], scroll_type @[[..:..:Gtk:Gtk:ScrollType#T|Gtk.Gtk.ScrollType.T]], position @[[..:..:Std:Real#T|Std.Real.T]], auto_start_selection @[[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :InsertItems ====
-'':InsertItems(self @ [[#T|T]], items @ [[..:..:Std:Object#T|Std.Object.T]], position @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':InsertItems(self @ [[#T|T]], items @[[..:..:Std:Object#T|Std.Object.T]], position @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :PrependItems ====
-'':PrependItems(self @ [[#T|T]], items @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':PrependItems(self @ [[#T|T]], items @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :RemoveItems ====
-'':RemoveItems(self @ [[#T|T]], items @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':RemoveItems(self @ [[#T|T]], items @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :RemoveItemsNoUnref ====
-'':RemoveItemsNoUnref(self @ [[#T|T]], items @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':RemoveItemsNoUnref(self @ [[#T|T]], items @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :ScrollHorizontal ====
-'':ScrollHorizontal(self @ [[#T|T]], scroll_type @ [[..:..:Gtk:Gtk:ScrollType#T|Gtk.Gtk.ScrollType.T]], position @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':ScrollHorizontal(self @ [[#T|T]], scroll_type @[[..:..:Gtk:Gtk:ScrollType#T|Gtk.Gtk.ScrollType.T]], position @[[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :ScrollVertical ====
-'':ScrollVertical(self @ [[#T|T]], scroll_type @ [[..:..:Gtk:Gtk:ScrollType#T|Gtk.Gtk.ScrollType.T]], position @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':ScrollVertical(self @ [[#T|T]], scroll_type @[[..:..:Gtk:Gtk:ScrollType#T|Gtk.Gtk.ScrollType.T]], position @[[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SelectAll ====
@@ -124,15 +124,15 @@
 
 
 ==== :SelectChild ====
-'':SelectChild(self @ [[#T|T]], child @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SelectChild(self @ [[#T|T]], child @[[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SelectItem ====
-'':SelectItem(self @ [[#T|T]], item @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SelectItem(self @ [[#T|T]], item @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetSelectionMode ====
-'':SetSelectionMode(self @ [[#T|T]], mode @ [[..:..:Gtk:Gtk:SelectionMode#T|Gtk.Gtk.SelectionMode.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetSelectionMode(self @ [[#T|T]], mode @[[..:..:Gtk:Gtk:SelectionMode#T|Gtk.Gtk.SelectionMode.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :StartSelection ====
@@ -148,7 +148,7 @@
 
 
 ==== :ToggleRow ====
-'':ToggleRow(self @ [[#T|T]], item @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':ToggleRow(self @ [[#T|T]], item @[[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :UndoSelection ====

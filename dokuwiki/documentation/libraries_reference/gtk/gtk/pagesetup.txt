@@ -5,19 +5,19 @@
 
 
 ==== :ToKeyFile ====
-'':ToKeyFile(self @ [[#T|T]], key_file @ [[..:..:Std:Object#T|Std.Object.T]], group_name @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':ToKeyFile(self @ [[#T|T]], key_file @[[..:..:Std:Object#T|Std.Object.T]], group_name @[[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :ToFile ====
-'':ToFile(self @ [[#T|T]], file_name @ [[..:..:Std:String#T|Std.String.T]], error @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':ToFile(self @ [[#T|T]], file_name @[[..:..:Std:String#T|Std.String.T]], error @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :SetTopMargin ====
-'':SetTopMargin(self @ [[#T|T]], margin @ [[..:..:Std:Real#T|Std.Real.T]], unit @ [[..:..:Gtk:Gtk:Unit#T|Gtk.Gtk.Unit.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetTopMargin(self @ [[#T|T]], margin @[[..:..:Std:Real#T|Std.Real.T]], unit @[[..:..:Gtk:Gtk:Unit#T|Gtk.Gtk.Unit.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetRightMargin ====
-'':SetRightMargin(self @ [[#T|T]], margin @ [[..:..:Std:Real#T|Std.Real.T]], unit @ [[..:..:Gtk:Gtk:Unit#T|Gtk.Gtk.Unit.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetRightMargin(self @ [[#T|T]], margin @[[..:..:Std:Real#T|Std.Real.T]], unit @[[..:..:Gtk:Gtk:Unit#T|Gtk.Gtk.Unit.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Copy ====
@@ -25,11 +25,11 @@
 
 
 ==== :GetBottomMargin ====
-'':GetBottomMargin(self @ [[#T|T]], unit @ [[..:..:Gtk:Gtk:Unit#T|Gtk.Gtk.Unit.T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
+'':GetBottomMargin(self @ [[#T|T]], unit @[[..:..:Gtk:Gtk:Unit#T|Gtk.Gtk.Unit.T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :GetLeftMargin ====
-'':GetLeftMargin(self @ [[#T|T]], unit @ [[..:..:Gtk:Gtk:Unit#T|Gtk.Gtk.Unit.T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
+'':GetLeftMargin(self @ [[#T|T]], unit @[[..:..:Gtk:Gtk:Unit#T|Gtk.Gtk.Unit.T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :GetOrientation ====
@@ -37,15 +37,15 @@
 
 
 ==== :GetPageHeight ====
-'':GetPageHeight(self @ [[#T|T]], unit @ [[..:..:Gtk:Gtk:Unit#T|Gtk.Gtk.Unit.T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
+'':GetPageHeight(self @ [[#T|T]], unit @[[..:..:Gtk:Gtk:Unit#T|Gtk.Gtk.Unit.T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :GetPageWidth ====
-'':GetPageWidth(self @ [[#T|T]], unit @ [[..:..:Gtk:Gtk:Unit#T|Gtk.Gtk.Unit.T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
+'':GetPageWidth(self @ [[#T|T]], unit @[[..:..:Gtk:Gtk:Unit#T|Gtk.Gtk.Unit.T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :GetPaperHeight ====
-'':GetPaperHeight(self @ [[#T|T]], unit @ [[..:..:Gtk:Gtk:Unit#T|Gtk.Gtk.Unit.T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
+'':GetPaperHeight(self @ [[#T|T]], unit @[[..:..:Gtk:Gtk:Unit#T|Gtk.Gtk.Unit.T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :GetPaperSize ====
@@ -53,35 +53,35 @@
 
 
 ==== :GetPaperWidth ====
-'':GetPaperWidth(self @ [[#T|T]], unit @ [[..:..:Gtk:Gtk:Unit#T|Gtk.Gtk.Unit.T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
+'':GetPaperWidth(self @ [[#T|T]], unit @[[..:..:Gtk:Gtk:Unit#T|Gtk.Gtk.Unit.T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :GetRightMargin ====
-'':GetRightMargin(self @ [[#T|T]], unit @ [[..:..:Gtk:Gtk:Unit#T|Gtk.Gtk.Unit.T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
+'':GetRightMargin(self @ [[#T|T]], unit @[[..:..:Gtk:Gtk:Unit#T|Gtk.Gtk.Unit.T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :GetTopMargin ====
-'':GetTopMargin(self @ [[#T|T]], unit @ [[..:..:Gtk:Gtk:Unit#T|Gtk.Gtk.Unit.T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
+'':GetTopMargin(self @ [[#T|T]], unit @[[..:..:Gtk:Gtk:Unit#T|Gtk.Gtk.Unit.T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== :SetBottomMargin ====
-'':SetBottomMargin(self @ [[#T|T]], margin @ [[..:..:Std:Real#T|Std.Real.T]], unit @ [[..:..:Gtk:Gtk:Unit#T|Gtk.Gtk.Unit.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetBottomMargin(self @ [[#T|T]], margin @[[..:..:Std:Real#T|Std.Real.T]], unit @[[..:..:Gtk:Gtk:Unit#T|Gtk.Gtk.Unit.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetLeftMargin ====
-'':SetLeftMargin(self @ [[#T|T]], margin @ [[..:..:Std:Real#T|Std.Real.T]], unit @ [[..:..:Gtk:Gtk:Unit#T|Gtk.Gtk.Unit.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetLeftMargin(self @ [[#T|T]], margin @[[..:..:Std:Real#T|Std.Real.T]], unit @[[..:..:Gtk:Gtk:Unit#T|Gtk.Gtk.Unit.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetOrientation ====
-'':SetOrientation(self @ [[#T|T]], orientation @ [[..:..:Gtk:Gtk:PageOrientation#T|Gtk.Gtk.PageOrientation.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetOrientation(self @ [[#T|T]], orientation @[[..:..:Gtk:Gtk:PageOrientation#T|Gtk.Gtk.PageOrientation.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetPaperSize ====
-'':SetPaperSize(self @ [[#T|T]], size @ [[..:..:Gtk:Gtk:PaperSize#T|Gtk.Gtk.PaperSize.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetPaperSize(self @ [[#T|T]], size @[[..:..:Gtk:Gtk:PaperSize#T|Gtk.Gtk.PaperSize.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetPaperSizeAndDefaultMargins ====
-'':SetPaperSizeAndDefaultMargins(self @ [[#T|T]], size @ [[..:..:Gtk:Gtk:PaperSize#T|Gtk.Gtk.PaperSize.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetPaperSizeAndDefaultMargins(self @ [[#T|T]], size @[[..:..:Gtk:Gtk:PaperSize#T|Gtk.Gtk.PaperSize.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====

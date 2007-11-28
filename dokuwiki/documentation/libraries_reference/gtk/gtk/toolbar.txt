@@ -60,11 +60,11 @@
 
 
 ==== :AppendElement ====
-'':AppendElement(self @ [[#T|T]], type @ [[..:..:Gtk:Gtk:ToolbarChildType#T|Gtk.Gtk.ToolbarChildType.T]], widget @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], text @ [[..:..:Std:String#T|Std.String.T]], tooltip_text @ [[..:..:Std:String#T|Std.String.T]], tooltip_private_text @ [[..:..:Std:String#T|Std.String.T]], icon @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], callback @ [[..:..:Std:Function#T|Std.Function.T]], user_data @ [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
+'':AppendElement(self @ [[#T|T]], type @[[..:..:Gtk:Gtk:ToolbarChildType#T|Gtk.Gtk.ToolbarChildType.T]], widget @[[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], text @[[..:..:Std:String#T|Std.String.T]], tooltip_text @[[..:..:Std:String#T|Std.String.T]], tooltip_private_text @[[..:..:Std:String#T|Std.String.T]], icon @[[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], callback @[[..:..:Std:Function#T|Std.Function.T]], user_data @[[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
 
 ==== :AppendItem ====
-'':AppendItem(self @ [[#T|T]], text @ [[..:..:Std:String#T|Std.String.T]], tooltip_text @ [[..:..:Std:String#T|Std.String.T]], tooltip_private_text @ [[..:..:Std:String#T|Std.String.T]], icon @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], callback @ [[..:..:Std:Function#T|Std.Function.T]], user_data @ [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
+'':AppendItem(self @ [[#T|T]], text @[[..:..:Std:String#T|Std.String.T]], tooltip_text @[[..:..:Std:String#T|Std.String.T]], tooltip_private_text @[[..:..:Std:String#T|Std.String.T]], icon @[[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], callback @[[..:..:Std:Function#T|Std.Function.T]], user_data @[[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
 
 ==== :AppendSpace ====
@@ -72,11 +72,11 @@
 
 
 ==== :AppendWidget ====
-'':AppendWidget(self @ [[#T|T]], widget @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], tooltip_text @ [[..:..:Std:String#T|Std.String.T]], tooltip_private_text @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':AppendWidget(self @ [[#T|T]], widget @[[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], tooltip_text @[[..:..:Std:String#T|Std.String.T]], tooltip_private_text @[[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetDropIndex ====
-'':GetDropIndex(self @ [[#T|T]], x @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':GetDropIndex(self @ [[#T|T]], x @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :GetIconSize ====
@@ -84,7 +84,7 @@
 
 
 ==== :GetItemIndex ====
-'':GetItemIndex(self @ [[#T|T]], item @ [[..:..:Gtk:Gtk:ToolItem#T|Gtk.Gtk.ToolItem.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':GetItemIndex(self @ [[#T|T]], item @[[..:..:Gtk:Gtk:ToolItem#T|Gtk.Gtk.ToolItem.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :GetNItems ====
@@ -92,7 +92,7 @@
 
 
 ==== :GetNthItem ====
-'':GetNthItem(self @ [[#T|T]], n @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Gtk:Gtk:ToolItem#T|Gtk.Gtk.ToolItem.T]]''
+'':GetNthItem(self @ [[#T|T]], n @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Gtk:Gtk:ToolItem#T|Gtk.Gtk.ToolItem.T]]''
 
 
 ==== :GetOrientation ====
@@ -116,35 +116,35 @@
 
 
 ==== :Insert ====
-'':Insert(self @ [[#T|T]], item @ [[..:..:Gtk:Gtk:ToolItem#T|Gtk.Gtk.ToolItem.T]], pos @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Insert(self @ [[#T|T]], item @[[..:..:Gtk:Gtk:ToolItem#T|Gtk.Gtk.ToolItem.T]], pos @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :InsertElement ====
-'':InsertElement(self @ [[#T|T]], type @ [[..:..:Gtk:Gtk:ToolbarChildType#T|Gtk.Gtk.ToolbarChildType.T]], widget @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], text @ [[..:..:Std:String#T|Std.String.T]], tooltip_text @ [[..:..:Std:String#T|Std.String.T]], tooltip_private_text @ [[..:..:Std:String#T|Std.String.T]], icon @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], callback @ [[..:..:Std:Function#T|Std.Function.T]], user_data @ [[..:..:Std:Address#T|Std.Address.T]], position @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
+'':InsertElement(self @ [[#T|T]], type @[[..:..:Gtk:Gtk:ToolbarChildType#T|Gtk.Gtk.ToolbarChildType.T]], widget @[[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], text @[[..:..:Std:String#T|Std.String.T]], tooltip_text @[[..:..:Std:String#T|Std.String.T]], tooltip_private_text @[[..:..:Std:String#T|Std.String.T]], icon @[[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], callback @[[..:..:Std:Function#T|Std.Function.T]], user_data @[[..:..:Std:Address#T|Std.Address.T]], position @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
 
 ==== :InsertItem ====
-'':InsertItem(self @ [[#T|T]], text @ [[..:..:Std:String#T|Std.String.T]], tooltip_text @ [[..:..:Std:String#T|Std.String.T]], tooltip_private_text @ [[..:..:Std:String#T|Std.String.T]], icon @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], callback @ [[..:..:Std:Function#T|Std.Function.T]], user_data @ [[..:..:Std:Address#T|Std.Address.T]], position @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
+'':InsertItem(self @ [[#T|T]], text @[[..:..:Std:String#T|Std.String.T]], tooltip_text @[[..:..:Std:String#T|Std.String.T]], tooltip_private_text @[[..:..:Std:String#T|Std.String.T]], icon @[[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], callback @[[..:..:Std:Function#T|Std.Function.T]], user_data @[[..:..:Std:Address#T|Std.Address.T]], position @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
 
 ==== :InsertSpace ====
-'':InsertSpace(self @ [[#T|T]], position @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':InsertSpace(self @ [[#T|T]], position @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :InsertStock ====
-'':InsertStock(self @ [[#T|T]], stock_id @ [[..:..:Std:String#T|Std.String.T]], tooltip_text @ [[..:..:Std:String#T|Std.String.T]], tooltip_private_text @ [[..:..:Std:String#T|Std.String.T]], callback @ [[..:..:Std:Function#T|Std.Function.T]], user_data @ [[..:..:Std:Address#T|Std.Address.T]], position @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
+'':InsertStock(self @ [[#T|T]], stock_id @[[..:..:Std:String#T|Std.String.T]], tooltip_text @[[..:..:Std:String#T|Std.String.T]], tooltip_private_text @[[..:..:Std:String#T|Std.String.T]], callback @[[..:..:Std:Function#T|Std.Function.T]], user_data @[[..:..:Std:Address#T|Std.Address.T]], position @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
 
 ==== :InsertWidget ====
-'':InsertWidget(self @ [[#T|T]], widget @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], tooltip_text @ [[..:..:Std:String#T|Std.String.T]], tooltip_private_text @ [[..:..:Std:String#T|Std.String.T]], position @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':InsertWidget(self @ [[#T|T]], widget @[[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], tooltip_text @[[..:..:Std:String#T|Std.String.T]], tooltip_private_text @[[..:..:Std:String#T|Std.String.T]], position @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :PrependElement ====
-'':PrependElement(self @ [[#T|T]], type @ [[..:..:Gtk:Gtk:ToolbarChildType#T|Gtk.Gtk.ToolbarChildType.T]], widget @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], text @ [[..:..:Std:String#T|Std.String.T]], tooltip_text @ [[..:..:Std:String#T|Std.String.T]], tooltip_private_text @ [[..:..:Std:String#T|Std.String.T]], icon @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], callback @ [[..:..:Std:Function#T|Std.Function.T]], user_data @ [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
+'':PrependElement(self @ [[#T|T]], type @[[..:..:Gtk:Gtk:ToolbarChildType#T|Gtk.Gtk.ToolbarChildType.T]], widget @[[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], text @[[..:..:Std:String#T|Std.String.T]], tooltip_text @[[..:..:Std:String#T|Std.String.T]], tooltip_private_text @[[..:..:Std:String#T|Std.String.T]], icon @[[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], callback @[[..:..:Std:Function#T|Std.Function.T]], user_data @[[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
 
 ==== :PrependItem ====
-'':PrependItem(self @ [[#T|T]], text @ [[..:..:Std:String#T|Std.String.T]], tooltip_text @ [[..:..:Std:String#T|Std.String.T]], tooltip_private_text @ [[..:..:Std:String#T|Std.String.T]], icon @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], callback @ [[..:..:Std:Function#T|Std.Function.T]], user_data @ [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
+'':PrependItem(self @ [[#T|T]], text @[[..:..:Std:String#T|Std.String.T]], tooltip_text @[[..:..:Std:String#T|Std.String.T]], tooltip_private_text @[[..:..:Std:String#T|Std.String.T]], icon @[[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], callback @[[..:..:Std:Function#T|Std.Function.T]], user_data @[[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
 
 ==== :PrependSpace ====
@@ -152,35 +152,35 @@
 
 
 ==== :PrependWidget ====
-'':PrependWidget(self @ [[#T|T]], widget @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], tooltip_text @ [[..:..:Std:String#T|Std.String.T]], tooltip_private_text @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':PrependWidget(self @ [[#T|T]], widget @[[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], tooltip_text @[[..:..:Std:String#T|Std.String.T]], tooltip_private_text @[[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :RemoveSpace ====
-'':RemoveSpace(self @ [[#T|T]], position @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':RemoveSpace(self @ [[#T|T]], position @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetDropHighlightItem ====
-'':SetDropHighlightItem(self @ [[#T|T]], tool_item @ [[..:..:Gtk:Gtk:ToolItem#T|Gtk.Gtk.ToolItem.T]], index_ @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetDropHighlightItem(self @ [[#T|T]], tool_item @[[..:..:Gtk:Gtk:ToolItem#T|Gtk.Gtk.ToolItem.T]], index_ @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetIconSize ====
-'':SetIconSize(self @ [[#T|T]], icon_size @ [[..:..:Gtk:Gtk:IconSize#T|Gtk.Gtk.IconSize.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetIconSize(self @ [[#T|T]], icon_size @[[..:..:Gtk:Gtk:IconSize#T|Gtk.Gtk.IconSize.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetOrientation ====
-'':SetOrientation(self @ [[#T|T]], orientation @ [[..:..:Gtk:Gtk:Orientation#T|Gtk.Gtk.Orientation.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetOrientation(self @ [[#T|T]], orientation @[[..:..:Gtk:Gtk:Orientation#T|Gtk.Gtk.Orientation.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetShowArrow ====
-'':SetShowArrow(self @ [[#T|T]], show_arrow @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetShowArrow(self @ [[#T|T]], show_arrow @[[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetStyle ====
-'':SetStyle(self @ [[#T|T]], style @ [[..:..:Gtk:Gtk:ToolbarStyle#T|Gtk.Gtk.ToolbarStyle.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetStyle(self @ [[#T|T]], style @[[..:..:Gtk:Gtk:ToolbarStyle#T|Gtk.Gtk.ToolbarStyle.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetTooltips ====
-'':SetTooltips(self @ [[#T|T]], enable @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetTooltips(self @ [[#T|T]], enable @[[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====

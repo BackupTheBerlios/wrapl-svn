@@ -11,7 +11,7 @@
 
 
 ==== :Get ====
-'':Get(self @ [[#T|T]], type @ [[..:..:Gtk:Pango:AttrType#T|Gtk.Pango.AttrType.T]]) : [[..:..:Gtk:Pango:Attribute#T|Gtk.Pango.Attribute.T]]''
+'':Get(self @ [[#T|T]], type @[[..:..:Gtk:Pango:AttrType#T|Gtk.Pango.AttrType.T]]) : [[..:..:Gtk:Pango:Attribute#T|Gtk.Pango.Attribute.T]]''
 
 
 ==== :GetAttrs ====
@@ -19,7 +19,7 @@
 
 
 ==== :GetFont ====
-'':GetFont(self @ [[#T|T]], desc @ [[..:..:Gtk:Pango:FontDescription#T|Gtk.Pango.FontDescription.T]], language @ [[..:..:Std:Object#T|Std.Object.T]], extra_attrs @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':GetFont(self @ [[#T|T]], desc @[[..:..:Gtk:Pango:FontDescription#T|Gtk.Pango.FontDescription.T]], language @[[..:..:Std:Object#T|Std.Object.T]], extra_attrs @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Next ====
@@ -27,6 +27,6 @@
 
 
 ==== :Range ====
-'':Range(self @ [[#T|T]], start @ [[..:..:Std:Object#T|Std.Object.T]], end @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Range(self @ [[#T|T]], start @[[..:..:Std:Object#T|Std.Object.T]], end @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 

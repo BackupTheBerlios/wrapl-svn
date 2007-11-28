@@ -8,7 +8,7 @@
 
 
 ==== :SetPosition ====
-'':SetPosition(self @ [[#T|T]], position @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetPosition(self @ [[#T|T]], position @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Child1 ====
@@ -108,15 +108,15 @@
 
 
 ==== :Add1 ====
-'':Add1(self @ [[#T|T]], child @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Add1(self @ [[#T|T]], child @[[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Add2 ====
-'':Add2(self @ [[#T|T]], child @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Add2(self @ [[#T|T]], child @[[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :ComputePosition ====
-'':ComputePosition(self @ [[#T|T]], allocation @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], child1_req @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], child2_req @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':ComputePosition(self @ [[#T|T]], allocation @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], child1_req @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], child2_req @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetChild1 ====
@@ -132,11 +132,11 @@
 
 
 ==== :Pack1 ====
-'':Pack1(self @ [[#T|T]], child @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], resize @ [[..:..:Std:Symbol#T|Std.Symbol.T]], shrink @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Pack1(self @ [[#T|T]], child @[[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], resize @[[..:..:Std:Symbol#T|Std.Symbol.T]], shrink @[[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Pack2 ====
-'':Pack2(self @ [[#T|T]], child @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], resize @ [[..:..:Std:Symbol#T|Std.Symbol.T]], shrink @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Pack2(self @ [[#T|T]], child @[[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], resize @[[..:..:Std:Symbol#T|Std.Symbol.T]], shrink @[[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== GetType ====

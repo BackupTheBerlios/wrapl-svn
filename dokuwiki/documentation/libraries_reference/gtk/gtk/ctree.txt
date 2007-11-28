@@ -9,15 +9,15 @@
 
 
 ==== :UnselectRecursive ====
-'':UnselectRecursive(self @ [[#T|T]], node @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':UnselectRecursive(self @ [[#T|T]], node @[[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Unselect ====
-'':Unselect(self @ [[#T|T]], node @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Unselect(self @ [[#T|T]], node @[[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :ToggleExpansionRecursive ====
-'':ToggleExpansionRecursive(self @ [[#T|T]], node @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':ToggleExpansionRecursive(self @ [[#T|T]], node @[[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :LinesGc ====
@@ -53,159 +53,159 @@
 
 
 ==== :Collapse ====
-'':Collapse(self @ [[#T|T]], node @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Collapse(self @ [[#T|T]], node @[[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :CollapseRecursive ====
-'':CollapseRecursive(self @ [[#T|T]], node @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':CollapseRecursive(self @ [[#T|T]], node @[[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :CollapseToDepth ====
-'':CollapseToDepth(self @ [[#T|T]], node @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]], depth @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':CollapseToDepth(self @ [[#T|T]], node @[[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]], depth @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Expand ====
-'':Expand(self @ [[#T|T]], node @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Expand(self @ [[#T|T]], node @[[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :ExpandRecursive ====
-'':ExpandRecursive(self @ [[#T|T]], node @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':ExpandRecursive(self @ [[#T|T]], node @[[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :ExpandToDepth ====
-'':ExpandToDepth(self @ [[#T|T]], node @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]], depth @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':ExpandToDepth(self @ [[#T|T]], node @[[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]], depth @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :ExportToGnode ====
-'':ExportToGnode(self @ [[#T|T]], parent @ [[..:..:Std:Object#T|Std.Object.T]], sibling @ [[..:..:Std:Object#T|Std.Object.T]], node @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]], func @ [[..:..:Std:Function#T|Std.Function.T]], data @ [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':ExportToGnode(self @ [[#T|T]], parent @[[..:..:Std:Object#T|Std.Object.T]], sibling @[[..:..:Std:Object#T|Std.Object.T]], node @[[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]], func @[[..:..:Std:Function#T|Std.Function.T]], data @[[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Find ====
-'':Find(self @ [[#T|T]], node @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]], child @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':Find(self @ [[#T|T]], node @[[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]], child @[[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :FindAllByRowData ====
-'':FindAllByRowData(self @ [[#T|T]], node @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]], data @ [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':FindAllByRowData(self @ [[#T|T]], node @[[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]], data @[[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :FindAllByRowDataCustom ====
-'':FindAllByRowDataCustom(self @ [[#T|T]], node @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]], data @ [[..:..:Std:Address#T|Std.Address.T]], func @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':FindAllByRowDataCustom(self @ [[#T|T]], node @[[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]], data @[[..:..:Std:Address#T|Std.Address.T]], func @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :FindByRowData ====
-'':FindByRowData(self @ [[#T|T]], node @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]], data @ [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]]''
+'':FindByRowData(self @ [[#T|T]], node @[[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]], data @[[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]]''
 
 
 ==== :FindByRowDataCustom ====
-'':FindByRowDataCustom(self @ [[#T|T]], node @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]], data @ [[..:..:Std:Address#T|Std.Address.T]], func @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]]''
+'':FindByRowDataCustom(self @ [[#T|T]], node @[[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]], data @[[..:..:Std:Address#T|Std.Address.T]], func @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]]''
 
 
 ==== :FindNodePtr ====
-'':FindNodePtr(self @ [[#T|T]], ctree_row @ [[..:..:Gtk:Gtk:CTreeRow#T|Gtk.Gtk.CTreeRow.T]]) : [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]]''
+'':FindNodePtr(self @ [[#T|T]], ctree_row @[[..:..:Gtk:Gtk:CTreeRow#T|Gtk.Gtk.CTreeRow.T]]) : [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]]''
 
 
 ==== :GetNodeInfo ====
-'':GetNodeInfo(self @ [[#T|T]], node @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]], text @ [[..:..:Std:List#T|Std.List.T]], spacing @ [[..:..:Std:Object#T|Std.Object.T]], pixmap_closed @ [[..:..:Std:Object#T|Std.Object.T]], mask_closed @ [[..:..:Std:Object#T|Std.Object.T]], pixmap_opened @ [[..:..:Std:Object#T|Std.Object.T]], mask_opened @ [[..:..:Std:Object#T|Std.Object.T]], is_leaf @ [[..:..:Std:Object#T|Std.Object.T]], expanded @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':GetNodeInfo(self @ [[#T|T]], node @[[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]], text @[[..:..:Std:List#T|Std.List.T]], spacing @[[..:..:Std:Object#T|Std.Object.T]], pixmap_closed @[[..:..:Std:Object#T|Std.Object.T]], mask_closed @[[..:..:Std:Object#T|Std.Object.T]], pixmap_opened @[[..:..:Std:Object#T|Std.Object.T]], mask_opened @[[..:..:Std:Object#T|Std.Object.T]], is_leaf @[[..:..:Std:Object#T|Std.Object.T]], expanded @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :InsertGnode ====
-'':InsertGnode(self @ [[#T|T]], parent @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]], sibling @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]], gnode @ [[..:..:Std:Object#T|Std.Object.T]], func @ [[..:..:Std:Function#T|Std.Function.T]], data @ [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]]''
+'':InsertGnode(self @ [[#T|T]], parent @[[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]], sibling @[[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]], gnode @[[..:..:Std:Object#T|Std.Object.T]], func @[[..:..:Std:Function#T|Std.Function.T]], data @[[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]]''
 
 
 ==== :InsertNode ====
-'':InsertNode(self @ [[#T|T]], parent @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]], sibling @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]], text @ [[..:..:Std:List#T|Std.List.T]], spacing @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], pixmap_closed @ [[..:..:Gtk:Gdk:Pixmap#T|Gtk.Gdk.Pixmap.T]], mask_closed @ [[..:..:Gtk:Gdk:Bitmap#T|Gtk.Gdk.Bitmap.T]], pixmap_opened @ [[..:..:Gtk:Gdk:Pixmap#T|Gtk.Gdk.Pixmap.T]], mask_opened @ [[..:..:Gtk:Gdk:Bitmap#T|Gtk.Gdk.Bitmap.T]], is_leaf @ [[..:..:Std:Symbol#T|Std.Symbol.T]], expanded @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]]''
+'':InsertNode(self @ [[#T|T]], parent @[[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]], sibling @[[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]], text @[[..:..:Std:List#T|Std.List.T]], spacing @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], pixmap_closed @[[..:..:Gtk:Gdk:Pixmap#T|Gtk.Gdk.Pixmap.T]], mask_closed @[[..:..:Gtk:Gdk:Bitmap#T|Gtk.Gdk.Bitmap.T]], pixmap_opened @[[..:..:Gtk:Gdk:Pixmap#T|Gtk.Gdk.Pixmap.T]], mask_opened @[[..:..:Gtk:Gdk:Bitmap#T|Gtk.Gdk.Bitmap.T]], is_leaf @[[..:..:Std:Symbol#T|Std.Symbol.T]], expanded @[[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]]''
 
 
 ==== :IsAncestor ====
-'':IsAncestor(self @ [[#T|T]], node @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]], child @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':IsAncestor(self @ [[#T|T]], node @[[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]], child @[[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :IsHotSpot ====
-'':IsHotSpot(self @ [[#T|T]], x @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':IsHotSpot(self @ [[#T|T]], x @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :IsViewable ====
-'':IsViewable(self @ [[#T|T]], node @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':IsViewable(self @ [[#T|T]], node @[[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :Last ====
-'':Last(self @ [[#T|T]], node @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]]) : [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]]''
+'':Last(self @ [[#T|T]], node @[[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]]) : [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]]''
 
 
 ==== :Move ====
-'':Move(self @ [[#T|T]], node @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]], new_parent @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]], new_sibling @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Move(self @ [[#T|T]], node @[[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]], new_parent @[[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]], new_sibling @[[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :PostRecursive ====
-'':PostRecursive(self @ [[#T|T]], node @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]], func @ [[..:..:Std:Function#T|Std.Function.T]], data @ [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':PostRecursive(self @ [[#T|T]], node @[[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]], func @[[..:..:Std:Function#T|Std.Function.T]], data @[[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :PostRecursiveToDepth ====
-'':PostRecursiveToDepth(self @ [[#T|T]], node @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]], depth @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], func @ [[..:..:Std:Function#T|Std.Function.T]], data @ [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':PostRecursiveToDepth(self @ [[#T|T]], node @[[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]], depth @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], func @[[..:..:Std:Function#T|Std.Function.T]], data @[[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :PreRecursive ====
-'':PreRecursive(self @ [[#T|T]], node @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]], func @ [[..:..:Std:Function#T|Std.Function.T]], data @ [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':PreRecursive(self @ [[#T|T]], node @[[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]], func @[[..:..:Std:Function#T|Std.Function.T]], data @[[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :PreRecursiveToDepth ====
-'':PreRecursiveToDepth(self @ [[#T|T]], node @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]], depth @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], func @ [[..:..:Std:Function#T|Std.Function.T]], data @ [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':PreRecursiveToDepth(self @ [[#T|T]], node @[[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]], depth @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], func @[[..:..:Std:Function#T|Std.Function.T]], data @[[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :RealSelectRecursive ====
-'':RealSelectRecursive(self @ [[#T|T]], node @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]], state @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':RealSelectRecursive(self @ [[#T|T]], node @[[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]], state @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :RemoveNode ====
-'':RemoveNode(self @ [[#T|T]], node @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':RemoveNode(self @ [[#T|T]], node @[[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Select ====
-'':Select(self @ [[#T|T]], node @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Select(self @ [[#T|T]], node @[[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SelectRecursive ====
-'':SelectRecursive(self @ [[#T|T]], node @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SelectRecursive(self @ [[#T|T]], node @[[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetDragCompareFunc ====
-'':SetDragCompareFunc(self @ [[#T|T]], cmp_func @ [[..:..:Std:Function#T|Std.Function.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetDragCompareFunc(self @ [[#T|T]], cmp_func @[[..:..:Std:Function#T|Std.Function.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetExpanderStyle ====
-'':SetExpanderStyle(self @ [[#T|T]], expander_style @ [[..:..:Gtk:Gtk:CTreeExpanderStyle#T|Gtk.Gtk.CTreeExpanderStyle.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetExpanderStyle(self @ [[#T|T]], expander_style @[[..:..:Gtk:Gtk:CTreeExpanderStyle#T|Gtk.Gtk.CTreeExpanderStyle.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetIndent ====
-'':SetIndent(self @ [[#T|T]], indent @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetIndent(self @ [[#T|T]], indent @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetLineStyle ====
-'':SetLineStyle(self @ [[#T|T]], line_style @ [[..:..:Gtk:Gtk:CTreeLineStyle#T|Gtk.Gtk.CTreeLineStyle.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetLineStyle(self @ [[#T|T]], line_style @[[..:..:Gtk:Gtk:CTreeLineStyle#T|Gtk.Gtk.CTreeLineStyle.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetNodeInfo ====
-'':SetNodeInfo(self @ [[#T|T]], node @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]], text @ [[..:..:Std:String#T|Std.String.T]], spacing @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], pixmap_closed @ [[..:..:Gtk:Gdk:Pixmap#T|Gtk.Gdk.Pixmap.T]], mask_closed @ [[..:..:Gtk:Gdk:Bitmap#T|Gtk.Gdk.Bitmap.T]], pixmap_opened @ [[..:..:Gtk:Gdk:Pixmap#T|Gtk.Gdk.Pixmap.T]], mask_opened @ [[..:..:Gtk:Gdk:Bitmap#T|Gtk.Gdk.Bitmap.T]], is_leaf @ [[..:..:Std:Symbol#T|Std.Symbol.T]], expanded @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetNodeInfo(self @ [[#T|T]], node @[[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]], text @[[..:..:Std:String#T|Std.String.T]], spacing @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], pixmap_closed @[[..:..:Gtk:Gdk:Pixmap#T|Gtk.Gdk.Pixmap.T]], mask_closed @[[..:..:Gtk:Gdk:Bitmap#T|Gtk.Gdk.Bitmap.T]], pixmap_opened @[[..:..:Gtk:Gdk:Pixmap#T|Gtk.Gdk.Pixmap.T]], mask_opened @[[..:..:Gtk:Gdk:Bitmap#T|Gtk.Gdk.Bitmap.T]], is_leaf @[[..:..:Std:Symbol#T|Std.Symbol.T]], expanded @[[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetShowStub ====
-'':SetShowStub(self @ [[#T|T]], show_stub @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetShowStub(self @ [[#T|T]], show_stub @[[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetSpacing ====
-'':SetSpacing(self @ [[#T|T]], spacing @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetSpacing(self @ [[#T|T]], spacing @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SortNode ====
-'':SortNode(self @ [[#T|T]], node @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SortNode(self @ [[#T|T]], node @[[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SortRecursive ====
-'':SortRecursive(self @ [[#T|T]], node @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SortRecursive(self @ [[#T|T]], node @[[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :ToggleExpansion ====
-'':ToggleExpansion(self @ [[#T|T]], node @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':ToggleExpansion(self @ [[#T|T]], node @[[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====

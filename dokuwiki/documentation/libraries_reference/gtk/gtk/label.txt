@@ -8,15 +8,15 @@
 
 
 ==== :SetWidthChars ====
-'':SetWidthChars(self @ [[#T|T]], n_chars @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetWidthChars(self @ [[#T|T]], n_chars @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetUseUnderline ====
-'':SetUseUnderline(self @ [[#T|T]], setting @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetUseUnderline(self @ [[#T|T]], setting @[[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetUseMarkup ====
-'':SetUseMarkup(self @ [[#T|T]], setting @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetUseMarkup(self @ [[#T|T]], setting @[[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Label ====
@@ -96,7 +96,7 @@
 
 
 ==== :Get ====
-'':Get(self @ [[#T|T]], str @ [[..:..:Std:List#T|Std.List.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Get(self @ [[#T|T]], str @[[..:..:Std:List#T|Std.List.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetAngle ====
@@ -124,7 +124,7 @@
 
 
 ==== :GetLayoutOffsets ====
-'':GetLayoutOffsets(self @ [[#T|T]], x @ [[..:..:Std:Object#T|Std.Object.T]], y @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':GetLayoutOffsets(self @ [[#T|T]], x @[[..:..:Std:Object#T|Std.Object.T]], y @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetLineWrap ====
@@ -152,7 +152,7 @@
 
 
 ==== :GetSelectionBounds ====
-'':GetSelectionBounds(self @ [[#T|T]], start @ [[..:..:Std:Object#T|Std.Object.T]], end @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':GetSelectionBounds(self @ [[#T|T]], start @[[..:..:Std:Object#T|Std.Object.T]], end @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :GetSingleLineMode ====
@@ -176,75 +176,75 @@
 
 
 ==== :ParseUline ====
-'':ParseUline(self @ [[#T|T]], string @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':ParseUline(self @ [[#T|T]], string @[[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :SelectRegion ====
-'':SelectRegion(self @ [[#T|T]], start_offset @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], end_offset @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SelectRegion(self @ [[#T|T]], start_offset @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], end_offset @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetAngle ====
-'':SetAngle(self @ [[#T|T]], angle @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetAngle(self @ [[#T|T]], angle @[[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetAttributes ====
-'':SetAttributes(self @ [[#T|T]], attrs @ [[..:..:Gtk:Pango:AttrList#T|Gtk.Pango.AttrList.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetAttributes(self @ [[#T|T]], attrs @[[..:..:Gtk:Pango:AttrList#T|Gtk.Pango.AttrList.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetEllipsize ====
-'':SetEllipsize(self @ [[#T|T]], mode @ [[..:..:Gtk:Pango:EllipsizeMode#T|Gtk.Pango.EllipsizeMode.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetEllipsize(self @ [[#T|T]], mode @[[..:..:Gtk:Pango:EllipsizeMode#T|Gtk.Pango.EllipsizeMode.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetJustify ====
-'':SetJustify(self @ [[#T|T]], jtype @ [[..:..:Gtk:Gtk:Justification#T|Gtk.Gtk.Justification.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetJustify(self @ [[#T|T]], jtype @[[..:..:Gtk:Gtk:Justification#T|Gtk.Gtk.Justification.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetLabel ====
-'':SetLabel(self @ [[#T|T]], str @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetLabel(self @ [[#T|T]], str @[[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetLineWrap ====
-'':SetLineWrap(self @ [[#T|T]], wrap @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetLineWrap(self @ [[#T|T]], wrap @[[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetLineWrapMode ====
-'':SetLineWrapMode(self @ [[#T|T]], wrap_mode @ [[..:..:Gtk:Pango:WrapMode#T|Gtk.Pango.WrapMode.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetLineWrapMode(self @ [[#T|T]], wrap_mode @[[..:..:Gtk:Pango:WrapMode#T|Gtk.Pango.WrapMode.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetMarkup ====
-'':SetMarkup(self @ [[#T|T]], str @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetMarkup(self @ [[#T|T]], str @[[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetMarkupWithMnemonic ====
-'':SetMarkupWithMnemonic(self @ [[#T|T]], str @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetMarkupWithMnemonic(self @ [[#T|T]], str @[[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetMaxWidthChars ====
-'':SetMaxWidthChars(self @ [[#T|T]], n_chars @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetMaxWidthChars(self @ [[#T|T]], n_chars @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetMnemonicWidget ====
-'':SetMnemonicWidget(self @ [[#T|T]], widget @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetMnemonicWidget(self @ [[#T|T]], widget @[[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetPattern ====
-'':SetPattern(self @ [[#T|T]], pattern @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetPattern(self @ [[#T|T]], pattern @[[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetSelectable ====
-'':SetSelectable(self @ [[#T|T]], setting @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetSelectable(self @ [[#T|T]], setting @[[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetSingleLineMode ====
-'':SetSingleLineMode(self @ [[#T|T]], single_line_mode @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetSingleLineMode(self @ [[#T|T]], single_line_mode @[[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetText ====
-'':SetText(self @ [[#T|T]], str @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetText(self @ [[#T|T]], str @[[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetTextWithMnemonic ====
-'':SetTextWithMnemonic(self @ [[#T|T]], str @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetTextWithMnemonic(self @ [[#T|T]], str @[[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====

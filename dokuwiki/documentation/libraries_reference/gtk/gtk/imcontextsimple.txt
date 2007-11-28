@@ -6,11 +6,11 @@
 
 
 ==== :AddTable ====
-'':AddTable(self @ [[#T|T]], data @ [[..:..:Std:Object#T|Std.Object.T]], max_seq_len @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], n_seqs @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':AddTable(self @ [[#T|T]], data @[[..:..:Std:Object#T|Std.Object.T]], max_seq_len @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], n_seqs @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :ComposeBuffer ====
-'':ComposeBuffer(self @ [[#T|T]],  @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':ComposeBuffer(self @ [[#T|T]], @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Tables ====

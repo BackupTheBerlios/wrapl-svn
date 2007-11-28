@@ -3,11 +3,11 @@
 
 
 ==== :Union ====
-'':Union(self @ [[#T|T]], src1 @ [[..:..:Gtk:Art:DRect#T|Gtk.Art.DRect.T]], src2 @ [[..:..:Gtk:Art:DRect#T|Gtk.Art.DRect.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Union(self @ [[#T|T]], src1 @[[..:..:Gtk:Art:DRect#T|Gtk.Art.DRect.T]], src2 @[[..:..:Gtk:Art:DRect#T|Gtk.Art.DRect.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SvpUnion ====
-'':SvpUnion(self @ [[#T|T]], svp @ [[..:..:Gtk:Art:SVP#T|Gtk.Art.SVP.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SvpUnion(self @ [[#T|T]], svp @[[..:..:Gtk:Art:SVP#T|Gtk.Art.SVP.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :X0 ====
@@ -27,11 +27,11 @@
 
 
 ==== :AffineTransform ====
-'':AffineTransform(self @ [[#T|T]], src @ [[..:..:Gtk:Art:DRect#T|Gtk.Art.DRect.T]], matrix @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':AffineTransform(self @ [[#T|T]], src @[[..:..:Gtk:Art:DRect#T|Gtk.Art.DRect.T]], matrix @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Copy ====
-'':Copy(self @ [[#T|T]], src @ [[..:..:Gtk:Art:DRect#T|Gtk.Art.DRect.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Copy(self @ [[#T|T]], src @[[..:..:Gtk:Art:DRect#T|Gtk.Art.DRect.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Empty ====
@@ -39,11 +39,11 @@
 
 
 ==== :Intersect ====
-'':Intersect(self @ [[#T|T]], src1 @ [[..:..:Gtk:Art:DRect#T|Gtk.Art.DRect.T]], src2 @ [[..:..:Gtk:Art:DRect#T|Gtk.Art.DRect.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Intersect(self @ [[#T|T]], src1 @[[..:..:Gtk:Art:DRect#T|Gtk.Art.DRect.T]], src2 @[[..:..:Gtk:Art:DRect#T|Gtk.Art.DRect.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Svp ====
-'':Svp(self @ [[#T|T]], svp @ [[..:..:Gtk:Art:SVP#T|Gtk.Art.SVP.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Svp(self @ [[#T|T]], svp @[[..:..:Gtk:Art:SVP#T|Gtk.Art.SVP.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====

@@ -26,7 +26,7 @@
 
 
 ==== :TranslateCoordinates ====
-'':TranslateCoordinates(self @ [[#T|T]], dest_widget @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], src_x @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], src_y @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], dest_x @ [[..:..:Std:Object#T|Std.Object.T]], dest_y @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':TranslateCoordinates(self @ [[#T|T]], dest_widget @[[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], src_x @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], src_y @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], dest_x @[[..:..:Std:Object#T|Std.Object.T]], dest_y @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :ThawChildNotify ====
@@ -34,23 +34,23 @@
 
 
 ==== :StyleGetValist ====
-'':StyleGetValist(self @ [[#T|T]], first_property_name @ [[..:..:Std:String#T|Std.String.T]], var_args @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':StyleGetValist(self @ [[#T|T]], first_property_name @[[..:..:Std:String#T|Std.String.T]], var_args @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :StyleGetProperty ====
-'':StyleGetProperty(self @ [[#T|T]], property_name @ [[..:..:Std:String#T|Std.String.T]], value @ [[..:..:Gtk:GObject:Value#T|Gtk.GObject.Value.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':StyleGetProperty(self @ [[#T|T]], property_name @[[..:..:Std:String#T|Std.String.T]], value @[[..:..:Gtk:GObject:Value#T|Gtk.GObject.Value.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :StyleGet ====
-'':StyleGet(self @ [[#T|T]], first_property_name @ [[..:..:Std:String#T|Std.String.T]], ___ @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':StyleGet(self @ [[#T|T]], first_property_name @[[..:..:Std:String#T|Std.String.T]], ___ @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SizeRequest ====
-'':SizeRequest(self @ [[#T|T]], requisition @ [[..:..:Gtk:Gtk:Requisition#T|Gtk.Gtk.Requisition.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SizeRequest(self @ [[#T|T]], requisition @[[..:..:Gtk:Gtk:Requisition#T|Gtk.Gtk.Requisition.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SizeAllocate ====
-'':SizeAllocate(self @ [[#T|T]], allocation @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SizeAllocate(self @ [[#T|T]], allocation @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :ShowNow ====
@@ -66,7 +66,7 @@
 
 
 ==== :ShapeCombineMask ====
-'':ShapeCombineMask(self @ [[#T|T]], shape_mask @ [[..:..:Gtk:Gdk:Bitmap#T|Gtk.Gdk.Bitmap.T]], offset_x @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], offset_y @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':ShapeCombineMask(self @ [[#T|T]], shape_mask @[[..:..:Gtk:Gdk:Bitmap#T|Gtk.Gdk.Bitmap.T]], offset_x @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], offset_y @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :PrivateFlags ====
@@ -110,31 +110,31 @@
 
 
 ==== :AddAccelerator ====
-'':AddAccelerator(self @ [[#T|T]], accel_signal @ [[..:..:Std:String#T|Std.String.T]], accel_group @ [[..:..:Gtk:Gtk:AccelGroup#T|Gtk.Gtk.AccelGroup.T]], accel_key @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], accel_mods @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], accel_flags @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':AddAccelerator(self @ [[#T|T]], accel_signal @[[..:..:Std:String#T|Std.String.T]], accel_group @[[..:..:Gtk:Gtk:AccelGroup#T|Gtk.Gtk.AccelGroup.T]], accel_key @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], accel_mods @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], accel_flags @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :AddEvents ====
-'':AddEvents(self @ [[#T|T]], events @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':AddEvents(self @ [[#T|T]], events @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :AddMnemonicLabel ====
-'':AddMnemonicLabel(self @ [[#T|T]], label @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':AddMnemonicLabel(self @ [[#T|T]], label @[[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :CanActivateAccel ====
-'':CanActivateAccel(self @ [[#T|T]], signal_id @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':CanActivateAccel(self @ [[#T|T]], signal_id @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :ChildFocus ====
-'':ChildFocus(self @ [[#T|T]], direction @ [[..:..:Gtk:Gtk:DirectionType#T|Gtk.Gtk.DirectionType.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':ChildFocus(self @ [[#T|T]], direction @[[..:..:Gtk:Gtk:DirectionType#T|Gtk.Gtk.DirectionType.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :ChildNotify ====
-'':ChildNotify(self @ [[#T|T]], child_property @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':ChildNotify(self @ [[#T|T]], child_property @[[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :ClassPath ====
-'':ClassPath(self @ [[#T|T]], path_length @ [[..:..:Std:Object#T|Std.Object.T]], path @ [[..:..:Std:List#T|Std.List.T]], path_reversed @ [[..:..:Std:List#T|Std.List.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':ClassPath(self @ [[#T|T]], path_length @[[..:..:Std:Object#T|Std.Object.T]], path @[[..:..:Std:List#T|Std.List.T]], path_reversed @[[..:..:Std:List#T|Std.List.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :CreatePangoContext ====
@@ -142,7 +142,7 @@
 
 
 ==== :CreatePangoLayout ====
-'':CreatePangoLayout(self @ [[#T|T]], text @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Gtk:Pango:Layout#T|Gtk.Pango.Layout.T]]''
+'':CreatePangoLayout(self @ [[#T|T]], text @[[..:..:Std:String#T|Std.String.T]]) : [[..:..:Gtk:Pango:Layout#T|Gtk.Pango.Layout.T]]''
 
 
 ==== :Destroy ====
@@ -150,11 +150,11 @@
 
 
 ==== :Destroyed ====
-'':Destroyed(self @ [[#T|T]], widget_pointer @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Destroyed(self @ [[#T|T]], widget_pointer @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Draw ====
-'':Draw(self @ [[#T|T]], area @ [[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Draw(self @ [[#T|T]], area @[[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :EnsureStyle ====
@@ -166,7 +166,7 @@
 
 
 ==== :Event ====
-'':Event(self @ [[#T|T]], event @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':Event(self @ [[#T|T]], event @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :FreezeChildNotify ====
@@ -182,11 +182,11 @@
 
 
 ==== :GetAncestor ====
-'':GetAncestor(self @ [[#T|T]], widget_type @ [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
+'':GetAncestor(self @ [[#T|T]], widget_type @[[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
 
 ==== :GetChildRequisition ====
-'':GetChildRequisition(self @ [[#T|T]], requisition @ [[..:..:Gtk:Gtk:Requisition#T|Gtk.Gtk.Requisition.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':GetChildRequisition(self @ [[#T|T]], requisition @[[..:..:Gtk:Gtk:Requisition#T|Gtk.Gtk.Requisition.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetChildVisible ====
@@ -194,7 +194,7 @@
 
 
 ==== :GetClipboard ====
-'':GetClipboard(self @ [[#T|T]], selection @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Gtk:Gtk:Clipboard#T|Gtk.Gtk.Clipboard.T]]''
+'':GetClipboard(self @ [[#T|T]], selection @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Gtk:Gtk:Clipboard#T|Gtk.Gtk.Clipboard.T]]''
 
 
 ==== :GetColormap ====
@@ -250,7 +250,7 @@
 
 
 ==== :GetPointer ====
-'':GetPointer(self @ [[#T|T]], x @ [[..:..:Std:Object#T|Std.Object.T]], y @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':GetPointer(self @ [[#T|T]], x @[[..:..:Std:Object#T|Std.Object.T]], y @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetRootWindow ====
@@ -266,7 +266,7 @@
 
 
 ==== :GetSizeRequest ====
-'':GetSizeRequest(self @ [[#T|T]], width @ [[..:..:Std:Object#T|Std.Object.T]], height @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':GetSizeRequest(self @ [[#T|T]], width @[[..:..:Std:Object#T|Std.Object.T]], height @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetStyle ====
@@ -318,15 +318,15 @@
 
 
 ==== :InputShapeCombineMask ====
-'':InputShapeCombineMask(self @ [[#T|T]], shape_mask @ [[..:..:Gtk:Gdk:Bitmap#T|Gtk.Gdk.Bitmap.T]], offset_x @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], offset_y @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':InputShapeCombineMask(self @ [[#T|T]], shape_mask @[[..:..:Gtk:Gdk:Bitmap#T|Gtk.Gdk.Bitmap.T]], offset_x @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], offset_y @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Intersect ====
-'':Intersect(self @ [[#T|T]], area @ [[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]], intersection @ [[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':Intersect(self @ [[#T|T]], area @[[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]], intersection @[[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :IsAncestor ====
-'':IsAncestor(self @ [[#T|T]], ancestor @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':IsAncestor(self @ [[#T|T]], ancestor @[[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :IsComposited ====
@@ -338,7 +338,7 @@
 
 
 ==== :KeynavFailed ====
-'':KeynavFailed(self @ [[#T|T]], direction @ [[..:..:Gtk:Gtk:DirectionType#T|Gtk.Gtk.DirectionType.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':KeynavFailed(self @ [[#T|T]], direction @[[..:..:Gtk:Gtk:DirectionType#T|Gtk.Gtk.DirectionType.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :ListAccelClosures ====
@@ -354,39 +354,39 @@
 
 
 ==== :MnemonicActivate ====
-'':MnemonicActivate(self @ [[#T|T]], group_cycling @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':MnemonicActivate(self @ [[#T|T]], group_cycling @[[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :ModifyBase ====
-'':ModifyBase(self @ [[#T|T]], state @ [[..:..:Gtk:Gtk:StateType#T|Gtk.Gtk.StateType.T]], color @ [[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':ModifyBase(self @ [[#T|T]], state @[[..:..:Gtk:Gtk:StateType#T|Gtk.Gtk.StateType.T]], color @[[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :ModifyBg ====
-'':ModifyBg(self @ [[#T|T]], state @ [[..:..:Gtk:Gtk:StateType#T|Gtk.Gtk.StateType.T]], color @ [[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':ModifyBg(self @ [[#T|T]], state @[[..:..:Gtk:Gtk:StateType#T|Gtk.Gtk.StateType.T]], color @[[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :ModifyCursor ====
-'':ModifyCursor(self @ [[#T|T]], primary @ [[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]], secondary @ [[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':ModifyCursor(self @ [[#T|T]], primary @[[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]], secondary @[[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :ModifyFg ====
-'':ModifyFg(self @ [[#T|T]], state @ [[..:..:Gtk:Gtk:StateType#T|Gtk.Gtk.StateType.T]], color @ [[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':ModifyFg(self @ [[#T|T]], state @[[..:..:Gtk:Gtk:StateType#T|Gtk.Gtk.StateType.T]], color @[[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :ModifyFont ====
-'':ModifyFont(self @ [[#T|T]], font_desc @ [[..:..:Gtk:Pango:FontDescription#T|Gtk.Pango.FontDescription.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':ModifyFont(self @ [[#T|T]], font_desc @[[..:..:Gtk:Pango:FontDescription#T|Gtk.Pango.FontDescription.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :ModifyStyle ====
-'':ModifyStyle(self @ [[#T|T]], style @ [[..:..:Gtk:Gtk:RcStyle#T|Gtk.Gtk.RcStyle.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':ModifyStyle(self @ [[#T|T]], style @[[..:..:Gtk:Gtk:RcStyle#T|Gtk.Gtk.RcStyle.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :ModifyText ====
-'':ModifyText(self @ [[#T|T]], state @ [[..:..:Gtk:Gtk:StateType#T|Gtk.Gtk.StateType.T]], color @ [[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':ModifyText(self @ [[#T|T]], state @[[..:..:Gtk:Gtk:StateType#T|Gtk.Gtk.StateType.T]], color @[[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Path ====
-'':Path(self @ [[#T|T]], path_length @ [[..:..:Std:Object#T|Std.Object.T]], path @ [[..:..:Std:List#T|Std.List.T]], path_reversed @ [[..:..:Std:List#T|Std.List.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Path(self @ [[#T|T]], path_length @[[..:..:Std:Object#T|Std.Object.T]], path @[[..:..:Std:List#T|Std.List.T]], path_reversed @[[..:..:Std:List#T|Std.List.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :QueueClear ====
@@ -394,7 +394,7 @@
 
 
 ==== :QueueClearArea ====
-'':QueueClearArea(self @ [[#T|T]], x @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], width @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], height @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':QueueClearArea(self @ [[#T|T]], x @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], width @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], height @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :QueueDraw ====
@@ -402,7 +402,7 @@
 
 
 ==== :QueueDrawArea ====
-'':QueueDrawArea(self @ [[#T|T]], x @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], width @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], height @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':QueueDrawArea(self @ [[#T|T]], x @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], width @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], height @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :QueueResize ====
@@ -422,23 +422,23 @@
 
 
 ==== :RegionIntersect ====
-'':RegionIntersect(self @ [[#T|T]], region @ [[..:..:Gtk:Gdk:Region#T|Gtk.Gdk.Region.T]]) : [[..:..:Gtk:Gdk:Region#T|Gtk.Gdk.Region.T]]''
+'':RegionIntersect(self @ [[#T|T]], region @[[..:..:Gtk:Gdk:Region#T|Gtk.Gdk.Region.T]]) : [[..:..:Gtk:Gdk:Region#T|Gtk.Gdk.Region.T]]''
 
 
 ==== :RemoveAccelerator ====
-'':RemoveAccelerator(self @ [[#T|T]], accel_group @ [[..:..:Gtk:Gtk:AccelGroup#T|Gtk.Gtk.AccelGroup.T]], accel_key @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], accel_mods @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':RemoveAccelerator(self @ [[#T|T]], accel_group @[[..:..:Gtk:Gtk:AccelGroup#T|Gtk.Gtk.AccelGroup.T]], accel_key @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], accel_mods @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :RemoveMnemonicLabel ====
-'':RemoveMnemonicLabel(self @ [[#T|T]], label @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':RemoveMnemonicLabel(self @ [[#T|T]], label @[[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :RenderIcon ====
-'':RenderIcon(self @ [[#T|T]], stock_id @ [[..:..:Std:String#T|Std.String.T]], size @ [[..:..:Gtk:Gtk:IconSize#T|Gtk.Gtk.IconSize.T]], detail @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Gtk:Gdk:Pixbuf#T|Gtk.Gdk.Pixbuf.T]]''
+'':RenderIcon(self @ [[#T|T]], stock_id @[[..:..:Std:String#T|Std.String.T]], size @[[..:..:Gtk:Gtk:IconSize#T|Gtk.Gtk.IconSize.T]], detail @[[..:..:Std:String#T|Std.String.T]]) : [[..:..:Gtk:Gdk:Pixbuf#T|Gtk.Gdk.Pixbuf.T]]''
 
 
 ==== :Reparent ====
-'':Reparent(self @ [[#T|T]], new_parent @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Reparent(self @ [[#T|T]], new_parent @[[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :ResetRcStyles ====
@@ -450,111 +450,111 @@
 
 
 ==== :SendExpose ====
-'':SendExpose(self @ [[#T|T]], event @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':SendExpose(self @ [[#T|T]], event @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Set ====
-'':Set(self @ [[#T|T]], first_property_name @ [[..:..:Std:String#T|Std.String.T]], ___ @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Set(self @ [[#T|T]], first_property_name @[[..:..:Std:String#T|Std.String.T]], ___ @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetAccelPath ====
-'':SetAccelPath(self @ [[#T|T]], accel_path @ [[..:..:Std:String#T|Std.String.T]], accel_group @ [[..:..:Gtk:Gtk:AccelGroup#T|Gtk.Gtk.AccelGroup.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetAccelPath(self @ [[#T|T]], accel_path @[[..:..:Std:String#T|Std.String.T]], accel_group @[[..:..:Gtk:Gtk:AccelGroup#T|Gtk.Gtk.AccelGroup.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetAppPaintable ====
-'':SetAppPaintable(self @ [[#T|T]], app_paintable @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetAppPaintable(self @ [[#T|T]], app_paintable @[[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetChildVisible ====
-'':SetChildVisible(self @ [[#T|T]], is_visible @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetChildVisible(self @ [[#T|T]], is_visible @[[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetColormap ====
-'':SetColormap(self @ [[#T|T]], colormap @ [[..:..:Gtk:Gdk:Colormap#T|Gtk.Gdk.Colormap.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetColormap(self @ [[#T|T]], colormap @[[..:..:Gtk:Gdk:Colormap#T|Gtk.Gdk.Colormap.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetCompositeName ====
-'':SetCompositeName(self @ [[#T|T]], name @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetCompositeName(self @ [[#T|T]], name @[[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetDirection ====
-'':SetDirection(self @ [[#T|T]], dir @ [[..:..:Gtk:Gtk:TextDirection#T|Gtk.Gtk.TextDirection.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetDirection(self @ [[#T|T]], dir @[[..:..:Gtk:Gtk:TextDirection#T|Gtk.Gtk.TextDirection.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetDoubleBuffered ====
-'':SetDoubleBuffered(self @ [[#T|T]], double_buffered @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetDoubleBuffered(self @ [[#T|T]], double_buffered @[[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetEvents ====
-'':SetEvents(self @ [[#T|T]], events @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetEvents(self @ [[#T|T]], events @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetExtensionEvents ====
-'':SetExtensionEvents(self @ [[#T|T]], mode @ [[..:..:Gtk:Gdk:ExtensionMode#T|Gtk.Gdk.ExtensionMode.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetExtensionEvents(self @ [[#T|T]], mode @[[..:..:Gtk:Gdk:ExtensionMode#T|Gtk.Gdk.ExtensionMode.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetHasTooltip ====
-'':SetHasTooltip(self @ [[#T|T]], has_tooltip @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetHasTooltip(self @ [[#T|T]], has_tooltip @[[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetName ====
-'':SetName(self @ [[#T|T]], name @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetName(self @ [[#T|T]], name @[[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetNoShowAll ====
-'':SetNoShowAll(self @ [[#T|T]], no_show_all @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetNoShowAll(self @ [[#T|T]], no_show_all @[[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetParent ====
-'':SetParent(self @ [[#T|T]], parent @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetParent(self @ [[#T|T]], parent @[[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetParentWindow ====
-'':SetParentWindow(self @ [[#T|T]], parent_window @ [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetParentWindow(self @ [[#T|T]], parent_window @[[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetRedrawOnAllocate ====
-'':SetRedrawOnAllocate(self @ [[#T|T]], redraw_on_allocate @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetRedrawOnAllocate(self @ [[#T|T]], redraw_on_allocate @[[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetScrollAdjustments ====
-'':SetScrollAdjustments(self @ [[#T|T]], hadjustment @ [[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]], vadjustment @ [[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':SetScrollAdjustments(self @ [[#T|T]], hadjustment @[[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]], vadjustment @[[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :SetSensitive ====
-'':SetSensitive(self @ [[#T|T]], sensitive @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetSensitive(self @ [[#T|T]], sensitive @[[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetSizeRequest ====
-'':SetSizeRequest(self @ [[#T|T]], width @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], height @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetSizeRequest(self @ [[#T|T]], width @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], height @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetState ====
-'':SetState(self @ [[#T|T]], state @ [[..:..:Gtk:Gtk:StateType#T|Gtk.Gtk.StateType.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetState(self @ [[#T|T]], state @[[..:..:Gtk:Gtk:StateType#T|Gtk.Gtk.StateType.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetStyle ====
-'':SetStyle(self @ [[#T|T]], style @ [[..:..:Gtk:Gtk:Style#T|Gtk.Gtk.Style.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetStyle(self @ [[#T|T]], style @[[..:..:Gtk:Gtk:Style#T|Gtk.Gtk.Style.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetTooltipMarkup ====
-'':SetTooltipMarkup(self @ [[#T|T]], markup @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetTooltipMarkup(self @ [[#T|T]], markup @[[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetTooltipText ====
-'':SetTooltipText(self @ [[#T|T]], text @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetTooltipText(self @ [[#T|T]], text @[[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetTooltipWindow ====
-'':SetTooltipWindow(self @ [[#T|T]], custom_window @ [[..:..:Gtk:Gtk:Window#T|Gtk.Gtk.Window.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetTooltipWindow(self @ [[#T|T]], custom_window @[[..:..:Gtk:Gtk:Window#T|Gtk.Gtk.Window.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetUposition ====
-'':SetUposition(self @ [[#T|T]], x @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetUposition(self @ [[#T|T]], x @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetUsize ====
-'':SetUsize(self @ [[#T|T]], width @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], height @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetUsize(self @ [[#T|T]], width @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], height @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====

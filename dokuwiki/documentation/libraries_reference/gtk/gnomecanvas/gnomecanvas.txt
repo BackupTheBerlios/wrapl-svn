@@ -9,31 +9,31 @@
 
 
 ==== :WorldToWindow ====
-'':WorldToWindow(self @ [[#T|T]], worldx @ [[..:..:Std:Real#T|Std.Real.T]], worldy @ [[..:..:Std:Real#T|Std.Real.T]], winx @ [[..:..:Std:Object#T|Std.Object.T]], winy @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':WorldToWindow(self @ [[#T|T]], worldx @[[..:..:Std:Real#T|Std.Real.T]], worldy @[[..:..:Std:Real#T|Std.Real.T]], winx @[[..:..:Std:Object#T|Std.Object.T]], winy @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :WindowToWorld ====
-'':WindowToWorld(self @ [[#T|T]], winx @ [[..:..:Std:Real#T|Std.Real.T]], winy @ [[..:..:Std:Real#T|Std.Real.T]], worldx @ [[..:..:Std:Object#T|Std.Object.T]], worldy @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':WindowToWorld(self @ [[#T|T]], winx @[[..:..:Std:Real#T|Std.Real.T]], winy @[[..:..:Std:Real#T|Std.Real.T]], worldx @[[..:..:Std:Object#T|Std.Object.T]], worldy @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :W2cD ====
-'':W2cD(self @ [[#T|T]], wx @ [[..:..:Std:Real#T|Std.Real.T]], wy @ [[..:..:Std:Real#T|Std.Real.T]], cx @ [[..:..:Std:Object#T|Std.Object.T]], cy @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':W2cD(self @ [[#T|T]], wx @[[..:..:Std:Real#T|Std.Real.T]], wy @[[..:..:Std:Real#T|Std.Real.T]], cx @[[..:..:Std:Object#T|Std.Object.T]], cy @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :W2cAffine ====
-'':W2cAffine(self @ [[#T|T]], affine @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':W2cAffine(self @ [[#T|T]], affine @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :W2c ====
-'':W2c(self @ [[#T|T]], wx @ [[..:..:Std:Real#T|Std.Real.T]], wy @ [[..:..:Std:Real#T|Std.Real.T]], cx @ [[..:..:Std:Object#T|Std.Object.T]], cy @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':W2c(self @ [[#T|T]], wx @[[..:..:Std:Real#T|Std.Real.T]], wy @[[..:..:Std:Real#T|Std.Real.T]], cx @[[..:..:Std:Object#T|Std.Object.T]], cy @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :UpdateSvpClip ====
-'':UpdateSvpClip(self @ [[#T|T]], p_svp @ [[..:..:Std:Object#T|Std.Object.T]], new_svp @ [[..:..:Gtk:Art:SVP#T|Gtk.Art.SVP.T]], clip_svp @ [[..:..:Gtk:Art:SVP#T|Gtk.Art.SVP.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':UpdateSvpClip(self @ [[#T|T]], p_svp @[[..:..:Std:Object#T|Std.Object.T]], new_svp @[[..:..:Gtk:Art:SVP#T|Gtk.Art.SVP.T]], clip_svp @[[..:..:Gtk:Art:SVP#T|Gtk.Art.SVP.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :UpdateSvp ====
-'':UpdateSvp(self @ [[#T|T]], p_svp @ [[..:..:Std:Object#T|Std.Object.T]], new_svp @ [[..:..:Gtk:Art:SVP#T|Gtk.Art.SVP.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':UpdateSvp(self @ [[#T|T]], p_svp @[[..:..:Std:Object#T|Std.Object.T]], new_svp @[[..:..:Gtk:Art:SVP#T|Gtk.Art.SVP.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :UpdateNow ====
@@ -41,7 +41,7 @@
 
 
 ==== :SetStippleOrigin ====
-'':SetStippleOrigin(self @ [[#T|T]], gc @ [[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetStippleOrigin(self @ [[#T|T]], gc @[[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Root ====
@@ -181,7 +181,7 @@
 
 
 ==== :C2w ====
-'':C2w(self @ [[#T|T]], cx @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], cy @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], wx @ [[..:..:Std:Object#T|Std.Object.T]], wy @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':C2w(self @ [[#T|T]], cx @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], cy @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], wx @[[..:..:Std:Object#T|Std.Object.T]], wy @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetCenterScrollRegion ====
@@ -189,11 +189,11 @@
 
 
 ==== :GetColor ====
-'':GetColor(self @ [[#T|T]], spec @ [[..:..:Std:String#T|Std.String.T]], color @ [[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':GetColor(self @ [[#T|T]], spec @[[..:..:Std:String#T|Std.String.T]], color @[[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :GetColorPixel ====
-'':GetColorPixel(self @ [[#T|T]], rgba @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':GetColorPixel(self @ [[#T|T]], rgba @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :GetDither ====
@@ -201,23 +201,23 @@
 
 
 ==== :GetItemAt ====
-'':GetItemAt(self @ [[#T|T]], x @ [[..:..:Std:Real#T|Std.Real.T]], y @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Gtk:GnomeCanvas:Item#T|Gtk.GnomeCanvas.Item.T]]''
+'':GetItemAt(self @ [[#T|T]], x @[[..:..:Std:Real#T|Std.Real.T]], y @[[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Gtk:GnomeCanvas:Item#T|Gtk.GnomeCanvas.Item.T]]''
 
 
 ==== :GetScrollOffsets ====
-'':GetScrollOffsets(self @ [[#T|T]], cx @ [[..:..:Std:Object#T|Std.Object.T]], cy @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':GetScrollOffsets(self @ [[#T|T]], cx @[[..:..:Std:Object#T|Std.Object.T]], cy @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetScrollRegion ====
-'':GetScrollRegion(self @ [[#T|T]], x1 @ [[..:..:Std:Object#T|Std.Object.T]], y1 @ [[..:..:Std:Object#T|Std.Object.T]], x2 @ [[..:..:Std:Object#T|Std.Object.T]], y2 @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':GetScrollRegion(self @ [[#T|T]], x1 @[[..:..:Std:Object#T|Std.Object.T]], y1 @[[..:..:Std:Object#T|Std.Object.T]], x2 @[[..:..:Std:Object#T|Std.Object.T]], y2 @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :RequestRedraw ====
-'':RequestRedraw(self @ [[#T|T]], x1 @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y1 @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], x2 @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y2 @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':RequestRedraw(self @ [[#T|T]], x1 @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y1 @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], x2 @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y2 @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :RequestRedrawUta ====
-'':RequestRedrawUta(self @ [[#T|T]], uta @ [[..:..:Gtk:Art:Uta#T|Gtk.Art.Uta.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':RequestRedrawUta(self @ [[#T|T]], uta @[[..:..:Gtk:Art:Uta#T|Gtk.Art.Uta.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Root ====
@@ -225,23 +225,23 @@
 
 
 ==== :ScrollTo ====
-'':ScrollTo(self @ [[#T|T]], cx @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], cy @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':ScrollTo(self @ [[#T|T]], cx @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], cy @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetCenterScrollRegion ====
-'':SetCenterScrollRegion(self @ [[#T|T]], center_scroll_region @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetCenterScrollRegion(self @ [[#T|T]], center_scroll_region @[[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetDither ====
-'':SetDither(self @ [[#T|T]], dither @ [[..:..:Gtk:Gdk:RgbDither#T|Gtk.Gdk.RgbDither.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetDither(self @ [[#T|T]], dither @[[..:..:Gtk:Gdk:RgbDither#T|Gtk.Gdk.RgbDither.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetPixelsPerUnit ====
-'':SetPixelsPerUnit(self @ [[#T|T]], n @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetPixelsPerUnit(self @ [[#T|T]], n @[[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetScrollRegion ====
-'':SetScrollRegion(self @ [[#T|T]], x1 @ [[..:..:Std:Real#T|Std.Real.T]], y1 @ [[..:..:Std:Real#T|Std.Real.T]], x2 @ [[..:..:Std:Real#T|Std.Real.T]], y2 @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetScrollRegion(self @ [[#T|T]], x1 @[[..:..:Std:Real#T|Std.Real.T]], y1 @[[..:..:Std:Real#T|Std.Real.T]], x2 @[[..:..:Std:Real#T|Std.Real.T]], y2 @[[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====

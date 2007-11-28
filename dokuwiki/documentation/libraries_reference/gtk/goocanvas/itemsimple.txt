@@ -5,7 +5,7 @@
 
 
 ==== :UserBoundsToParent ====
-'':UserBoundsToParent(self @ [[#T|T]], cr @ [[..:..:Gtk:Cairo:CairoT#T|Gtk.Cairo.CairoT.T]], bounds @ [[..:..:Gtk:GooCanvas:Bounds#T|Gtk.GooCanvas.Bounds.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':UserBoundsToParent(self @ [[#T|T]], cr @[[..:..:Gtk:Cairo:CairoT#T|Gtk.Cairo.CairoT.T]], bounds @[[..:..:Gtk:GooCanvas:Bounds#T|Gtk.GooCanvas.Bounds.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Canvas ====
@@ -41,11 +41,11 @@
 
 
 ==== :Changed ====
-'':Changed(self @ [[#T|T]], recompute_bounds @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Changed(self @ [[#T|T]], recompute_bounds @[[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :CheckInPath ====
-'':CheckInPath(self @ [[#T|T]], x @ [[..:..:Std:Real#T|Std.Real.T]], y @ [[..:..:Std:Real#T|Std.Real.T]], cr @ [[..:..:Gtk:Cairo:CairoT#T|Gtk.Cairo.CairoT.T]], pointer_events @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':CheckInPath(self @ [[#T|T]], x @[[..:..:Std:Real#T|Std.Real.T]], y @[[..:..:Std:Real#T|Std.Real.T]], cr @[[..:..:Gtk:Cairo:CairoT#T|Gtk.Cairo.CairoT.T]], pointer_events @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :CheckStyle ====
@@ -57,19 +57,19 @@
 
 
 ==== :GetPathBounds ====
-'':GetPathBounds(self @ [[#T|T]], cr @ [[..:..:Gtk:Cairo:CairoT#T|Gtk.Cairo.CairoT.T]], bounds @ [[..:..:Gtk:GooCanvas:Bounds#T|Gtk.GooCanvas.Bounds.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':GetPathBounds(self @ [[#T|T]], cr @[[..:..:Gtk:Cairo:CairoT#T|Gtk.Cairo.CairoT.T]], bounds @[[..:..:Gtk:GooCanvas:Bounds#T|Gtk.GooCanvas.Bounds.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :PaintPath ====
-'':PaintPath(self @ [[#T|T]], cr @ [[..:..:Gtk:Cairo:CairoT#T|Gtk.Cairo.CairoT.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':PaintPath(self @ [[#T|T]], cr @[[..:..:Gtk:Cairo:CairoT#T|Gtk.Cairo.CairoT.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetModel ====
-'':SetModel(self @ [[#T|T]], model @ [[..:..:Gtk:GooCanvas:ItemModel#T|Gtk.GooCanvas.ItemModel.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetModel(self @ [[#T|T]], model @[[..:..:Gtk:GooCanvas:ItemModel#T|Gtk.GooCanvas.ItemModel.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :UserBoundsToDevice ====
-'':UserBoundsToDevice(self @ [[#T|T]], cr @ [[..:..:Gtk:Cairo:CairoT#T|Gtk.Cairo.CairoT.T]], bounds @ [[..:..:Gtk:GooCanvas:Bounds#T|Gtk.GooCanvas.Bounds.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':UserBoundsToDevice(self @ [[#T|T]], cr @[[..:..:Gtk:Cairo:CairoT#T|Gtk.Cairo.CairoT.T]], bounds @[[..:..:Gtk:GooCanvas:Bounds#T|Gtk.GooCanvas.Bounds.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== GetType ====

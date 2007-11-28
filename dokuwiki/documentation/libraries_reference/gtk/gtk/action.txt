@@ -5,11 +5,11 @@
 
 
 ==== :UnblockActivateFrom ====
-'':UnblockActivateFrom(self @ [[#T|T]], proxy @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':UnblockActivateFrom(self @ [[#T|T]], proxy @[[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetVisible ====
-'':SetVisible(self @ [[#T|T]], visible @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetVisible(self @ [[#T|T]], visible @[[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :PrivateData ====
@@ -21,7 +21,7 @@
 
 
 ==== :BlockActivateFrom ====
-'':BlockActivateFrom(self @ [[#T|T]], proxy @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':BlockActivateFrom(self @ [[#T|T]], proxy @[[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :ConnectAccelerator ====
@@ -29,11 +29,11 @@
 
 
 ==== :ConnectProxy ====
-'':ConnectProxy(self @ [[#T|T]], proxy @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':ConnectProxy(self @ [[#T|T]], proxy @[[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :CreateIcon ====
-'':CreateIcon(self @ [[#T|T]], icon_size @ [[..:..:Gtk:Gtk:IconSize#T|Gtk.Gtk.IconSize.T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
+'':CreateIcon(self @ [[#T|T]], icon_size @[[..:..:Gtk:Gtk:IconSize#T|Gtk.Gtk.IconSize.T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
 
 ==== :CreateMenu ====
@@ -53,7 +53,7 @@
 
 
 ==== :DisconnectProxy ====
-'':DisconnectProxy(self @ [[#T|T]], proxy @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':DisconnectProxy(self @ [[#T|T]], proxy @[[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetAccelClosure ====
@@ -89,15 +89,15 @@
 
 
 ==== :SetAccelGroup ====
-'':SetAccelGroup(self @ [[#T|T]], accel_group @ [[..:..:Gtk:Gtk:AccelGroup#T|Gtk.Gtk.AccelGroup.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetAccelGroup(self @ [[#T|T]], accel_group @[[..:..:Gtk:Gtk:AccelGroup#T|Gtk.Gtk.AccelGroup.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetAccelPath ====
-'':SetAccelPath(self @ [[#T|T]], accel_path @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetAccelPath(self @ [[#T|T]], accel_path @[[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetSensitive ====
-'':SetSensitive(self @ [[#T|T]], sensitive @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetSensitive(self @ [[#T|T]], sensitive @[[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====

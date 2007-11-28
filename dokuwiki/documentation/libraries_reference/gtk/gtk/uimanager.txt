@@ -5,15 +5,15 @@
 
 
 ==== :SetAddTearoffs ====
-'':SetAddTearoffs(self @ [[#T|T]], add_tearoffs @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetAddTearoffs(self @ [[#T|T]], add_tearoffs @[[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :RemoveUi ====
-'':RemoveUi(self @ [[#T|T]], merge_id @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':RemoveUi(self @ [[#T|T]], merge_id @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :RemoveActionGroup ====
-'':RemoveActionGroup(self @ [[#T|T]], action_group @ [[..:..:Gtk:Gtk:ActionGroup#T|Gtk.Gtk.ActionGroup.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':RemoveActionGroup(self @ [[#T|T]], action_group @[[..:..:Gtk:Gtk:ActionGroup#T|Gtk.Gtk.ActionGroup.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :PrivateData ====
@@ -21,15 +21,15 @@
 
 
 ==== :AddUi ====
-'':AddUi(self @ [[#T|T]], merge_id @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], path @ [[..:..:Std:String#T|Std.String.T]], name @ [[..:..:Std:String#T|Std.String.T]], action @ [[..:..:Std:String#T|Std.String.T]], type @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], top @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':AddUi(self @ [[#T|T]], merge_id @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], path @[[..:..:Std:String#T|Std.String.T]], name @[[..:..:Std:String#T|Std.String.T]], action @[[..:..:Std:String#T|Std.String.T]], type @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], top @[[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :AddUiFromFile ====
-'':AddUiFromFile(self @ [[#T|T]], filename @ [[..:..:Std:String#T|Std.String.T]], error @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':AddUiFromFile(self @ [[#T|T]], filename @[[..:..:Std:String#T|Std.String.T]], error @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :AddUiFromString ====
-'':AddUiFromString(self @ [[#T|T]], buffer @ [[..:..:Std:String#T|Std.String.T]], length @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], error @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':AddUiFromString(self @ [[#T|T]], buffer @[[..:..:Std:String#T|Std.String.T]], length @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], error @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :EnsureUpdate ====
@@ -41,7 +41,7 @@
 
 
 ==== :GetAction ====
-'':GetAction(self @ [[#T|T]], path @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Gtk:Gtk:Action#T|Gtk.Gtk.Action.T]]''
+'':GetAction(self @ [[#T|T]], path @[[..:..:Std:String#T|Std.String.T]]) : [[..:..:Gtk:Gtk:Action#T|Gtk.Gtk.Action.T]]''
 
 
 ==== :GetActionGroups ====
@@ -53,7 +53,7 @@
 
 
 ==== :GetToplevels ====
-'':GetToplevels(self @ [[#T|T]], types @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':GetToplevels(self @ [[#T|T]], types @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetUi ====
@@ -61,11 +61,11 @@
 
 
 ==== :GetWidget ====
-'':GetWidget(self @ [[#T|T]], path @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
+'':GetWidget(self @ [[#T|T]], path @[[..:..:Std:String#T|Std.String.T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
 
 ==== :InsertActionGroup ====
-'':InsertActionGroup(self @ [[#T|T]], action_group @ [[..:..:Gtk:Gtk:ActionGroup#T|Gtk.Gtk.ActionGroup.T]], pos @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':InsertActionGroup(self @ [[#T|T]], action_group @[[..:..:Gtk:Gtk:ActionGroup#T|Gtk.Gtk.ActionGroup.T]], pos @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====

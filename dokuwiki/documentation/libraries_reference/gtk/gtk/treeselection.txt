@@ -5,7 +5,7 @@
 
 
 ==== :UnselectRange ====
-'':UnselectRange(self @ [[#T|T]], start_path @ [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]], end_path @ [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':UnselectRange(self @ [[#T|T]], start_path @[[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]], end_path @[[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :TreeView ====
@@ -37,11 +37,11 @@
 
 
 ==== :GetSelected ====
-'':GetSelected(self @ [[#T|T]], model @ [[..:..:Std:Object#T|Std.Object.T]], iter @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':GetSelected(self @ [[#T|T]], model @[[..:..:Std:Object#T|Std.Object.T]], iter @[[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :GetSelectedRows ====
-'':GetSelectedRows(self @ [[#T|T]], model @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':GetSelectedRows(self @ [[#T|T]], model @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetTreeView ====
@@ -53,11 +53,11 @@
 
 
 ==== :IterIsSelected ====
-'':IterIsSelected(self @ [[#T|T]], iter @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':IterIsSelected(self @ [[#T|T]], iter @[[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :PathIsSelected ====
-'':PathIsSelected(self @ [[#T|T]], path @ [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':PathIsSelected(self @ [[#T|T]], path @[[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :SelectAll ====
@@ -65,27 +65,27 @@
 
 
 ==== :SelectIter ====
-'':SelectIter(self @ [[#T|T]], iter @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SelectIter(self @ [[#T|T]], iter @[[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SelectPath ====
-'':SelectPath(self @ [[#T|T]], path @ [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SelectPath(self @ [[#T|T]], path @[[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SelectRange ====
-'':SelectRange(self @ [[#T|T]], start_path @ [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]], end_path @ [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SelectRange(self @ [[#T|T]], start_path @[[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]], end_path @[[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SelectedForeach ====
-'':SelectedForeach(self @ [[#T|T]], func @ [[..:..:Std:Function#T|Std.Function.T]], data @ [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SelectedForeach(self @ [[#T|T]], func @[[..:..:Std:Function#T|Std.Function.T]], data @[[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetMode ====
-'':SetMode(self @ [[#T|T]], type @ [[..:..:Gtk:Gtk:SelectionMode#T|Gtk.Gtk.SelectionMode.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetMode(self @ [[#T|T]], type @[[..:..:Gtk:Gtk:SelectionMode#T|Gtk.Gtk.SelectionMode.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetSelectFunction ====
-'':SetSelectFunction(self @ [[#T|T]], func @ [[..:..:Std:Function#T|Std.Function.T]], data @ [[..:..:Std:Address#T|Std.Address.T]], destroy @ [[..:..:Std:Function#T|Std.Function.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetSelectFunction(self @ [[#T|T]], func @[[..:..:Std:Function#T|Std.Function.T]], data @[[..:..:Std:Address#T|Std.Address.T]], destroy @[[..:..:Std:Function#T|Std.Function.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :UnselectAll ====
@@ -93,11 +93,11 @@
 
 
 ==== :UnselectIter ====
-'':UnselectIter(self @ [[#T|T]], iter @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':UnselectIter(self @ [[#T|T]], iter @[[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :UnselectPath ====
-'':UnselectPath(self @ [[#T|T]], path @ [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':UnselectPath(self @ [[#T|T]], path @[[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== GetType ====

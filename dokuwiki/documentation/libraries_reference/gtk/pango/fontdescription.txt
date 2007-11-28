@@ -3,7 +3,7 @@
 
 
 ==== :UnsetFields ====
-'':UnsetFields(self @ [[#T|T]], to_unset @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':UnsetFields(self @ [[#T|T]], to_unset @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :ToString ====
@@ -15,7 +15,7 @@
 
 
 ==== :BetterMatch ====
-'':BetterMatch(self @ [[#T|T]], old_match @ [[..:..:Gtk:Pango:FontDescription#T|Gtk.Pango.FontDescription.T]], new_match @ [[..:..:Gtk:Pango:FontDescription#T|Gtk.Pango.FontDescription.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':BetterMatch(self @ [[#T|T]], old_match @[[..:..:Gtk:Pango:FontDescription#T|Gtk.Pango.FontDescription.T]], new_match @[[..:..:Gtk:Pango:FontDescription#T|Gtk.Pango.FontDescription.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :Copy ====
@@ -27,7 +27,7 @@
 
 
 ==== :Equal ====
-'':Equal(self @ [[#T|T]], desc2 @ [[..:..:Gtk:Pango:FontDescription#T|Gtk.Pango.FontDescription.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':Equal(self @ [[#T|T]], desc2 @[[..:..:Gtk:Pango:FontDescription#T|Gtk.Pango.FontDescription.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :Free ====
@@ -75,47 +75,47 @@
 
 
 ==== :Merge ====
-'':Merge(self @ [[#T|T]], desc_to_merge @ [[..:..:Gtk:Pango:FontDescription#T|Gtk.Pango.FontDescription.T]], replace_existing @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Merge(self @ [[#T|T]], desc_to_merge @[[..:..:Gtk:Pango:FontDescription#T|Gtk.Pango.FontDescription.T]], replace_existing @[[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :MergeStatic ====
-'':MergeStatic(self @ [[#T|T]], desc_to_merge @ [[..:..:Gtk:Pango:FontDescription#T|Gtk.Pango.FontDescription.T]], replace_existing @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':MergeStatic(self @ [[#T|T]], desc_to_merge @[[..:..:Gtk:Pango:FontDescription#T|Gtk.Pango.FontDescription.T]], replace_existing @[[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetAbsoluteSize ====
-'':SetAbsoluteSize(self @ [[#T|T]], size @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetAbsoluteSize(self @ [[#T|T]], size @[[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetFamily ====
-'':SetFamily(self @ [[#T|T]], family @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetFamily(self @ [[#T|T]], family @[[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetFamilyStatic ====
-'':SetFamilyStatic(self @ [[#T|T]], family @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetFamilyStatic(self @ [[#T|T]], family @[[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetGravity ====
-'':SetGravity(self @ [[#T|T]], gravity @ [[..:..:Gtk:Pango:Gravity#T|Gtk.Pango.Gravity.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetGravity(self @ [[#T|T]], gravity @[[..:..:Gtk:Pango:Gravity#T|Gtk.Pango.Gravity.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetSize ====
-'':SetSize(self @ [[#T|T]], size @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetSize(self @ [[#T|T]], size @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetStretch ====
-'':SetStretch(self @ [[#T|T]], stretch @ [[..:..:Gtk:Pango:Stretch#T|Gtk.Pango.Stretch.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetStretch(self @ [[#T|T]], stretch @[[..:..:Gtk:Pango:Stretch#T|Gtk.Pango.Stretch.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetStyle ====
-'':SetStyle(self @ [[#T|T]], style @ [[..:..:Gtk:Pango:Style#T|Gtk.Pango.Style.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetStyle(self @ [[#T|T]], style @[[..:..:Gtk:Pango:Style#T|Gtk.Pango.Style.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetVariant ====
-'':SetVariant(self @ [[#T|T]], variant @ [[..:..:Gtk:Pango:Variant#T|Gtk.Pango.Variant.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetVariant(self @ [[#T|T]], variant @[[..:..:Gtk:Pango:Variant#T|Gtk.Pango.Variant.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetWeight ====
-'':SetWeight(self @ [[#T|T]], weight @ [[..:..:Gtk:Pango:Weight#T|Gtk.Pango.Weight.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetWeight(self @ [[#T|T]], weight @[[..:..:Gtk:Pango:Weight#T|Gtk.Pango.Weight.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====

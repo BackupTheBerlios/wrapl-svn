@@ -10,15 +10,15 @@
 
 
 ==== :SetUseAlpha ====
-'':SetUseAlpha(self @ [[#T|T]], use_alpha @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetUseAlpha(self @ [[#T|T]], use_alpha @[[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetTitle ====
-'':SetTitle(self @ [[#T|T]], title @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetTitle(self @ [[#T|T]], title @[[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetColor ====
-'':SetColor(self @ [[#T|T]], color @ [[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetColor(self @ [[#T|T]], color @[[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Priv ====
@@ -30,7 +30,7 @@
 
 
 ==== :GetColor ====
-'':GetColor(self @ [[#T|T]], color @ [[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':GetColor(self @ [[#T|T]], color @[[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetTitle ====
@@ -42,7 +42,7 @@
 
 
 ==== :SetAlpha ====
-'':SetAlpha(self @ [[#T|T]], alpha @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetAlpha(self @ [[#T|T]], alpha @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====

@@ -9,15 +9,15 @@
 
 
 ==== :SetTitle ====
-'':SetTitle(self @ [[#T|T]], title @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetTitle(self @ [[#T|T]], title @[[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetTearoffState ====
-'':SetTearoffState(self @ [[#T|T]], torn_off @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetTearoffState(self @ [[#T|T]], torn_off @[[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetScreen ====
-'':SetScreen(self @ [[#T|T]], screen @ [[..:..:Gtk:Gdk:Screen#T|Gtk.Gdk.Screen.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetScreen(self @ [[#T|T]], screen @[[..:..:Gtk:Gdk:Screen#T|Gtk.Gdk.Screen.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :ParentMenuItem ====
@@ -133,11 +133,11 @@
 
 
 ==== :Attach ====
-'':Attach(self @ [[#T|T]], child @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], left_attach @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], right_attach @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], top_attach @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], bottom_attach @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Attach(self @ [[#T|T]], child @[[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], left_attach @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], right_attach @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], top_attach @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], bottom_attach @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :AttachToWidget ====
-'':AttachToWidget(self @ [[#T|T]], attach_widget @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], detacher @ [[..:..:Std:Function#T|Std.Function.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':AttachToWidget(self @ [[#T|T]], attach_widget @[[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], detacher @[[..:..:Std:Function#T|Std.Function.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Detach ====
@@ -169,11 +169,11 @@
 
 
 ==== :Popup ====
-'':Popup(self @ [[#T|T]], parent_menu_shell @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], parent_menu_item @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], func @ [[..:..:Std:Function#T|Std.Function.T]], data @ [[..:..:Std:Address#T|Std.Address.T]], button @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], activate_time @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Popup(self @ [[#T|T]], parent_menu_shell @[[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], parent_menu_item @[[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], func @[[..:..:Std:Function#T|Std.Function.T]], data @[[..:..:Std:Address#T|Std.Address.T]], button @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], activate_time @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :ReorderChild ====
-'':ReorderChild(self @ [[#T|T]], child @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], position @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':ReorderChild(self @ [[#T|T]], child @[[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], position @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Reposition ====
@@ -181,19 +181,19 @@
 
 
 ==== :SetAccelGroup ====
-'':SetAccelGroup(self @ [[#T|T]], accel_group @ [[..:..:Gtk:Gtk:AccelGroup#T|Gtk.Gtk.AccelGroup.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetAccelGroup(self @ [[#T|T]], accel_group @[[..:..:Gtk:Gtk:AccelGroup#T|Gtk.Gtk.AccelGroup.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetAccelPath ====
-'':SetAccelPath(self @ [[#T|T]], accel_path @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetAccelPath(self @ [[#T|T]], accel_path @[[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetActive ====
-'':SetActive(self @ [[#T|T]], index_ @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetActive(self @ [[#T|T]], index_ @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetMonitor ====
-'':SetMonitor(self @ [[#T|T]], monitor_num @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetMonitor(self @ [[#T|T]], monitor_num @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====

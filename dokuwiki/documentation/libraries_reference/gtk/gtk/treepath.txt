@@ -15,7 +15,7 @@
 
 
 ==== :PrependIndex ====
-'':PrependIndex(self @ [[#T|T]], index_ @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':PrependIndex(self @ [[#T|T]], index_ @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Next ====
@@ -23,11 +23,11 @@
 
 
 ==== :AppendIndex ====
-'':AppendIndex(self @ [[#T|T]], index_ @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':AppendIndex(self @ [[#T|T]], index_ @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Compare ====
-'':Compare(self @ [[#T|T]], b @ [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':Compare(self @ [[#T|T]], b @[[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Copy ====
@@ -51,11 +51,11 @@
 
 
 ==== :IsAncestor ====
-'':IsAncestor(self @ [[#T|T]], descendant @ [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':IsAncestor(self @ [[#T|T]], descendant @[[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :IsDescendant ====
-'':IsDescendant(self @ [[#T|T]], ancestor @ [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':IsDescendant(self @ [[#T|T]], ancestor @[[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== New ====

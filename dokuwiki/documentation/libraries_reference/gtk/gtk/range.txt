@@ -7,7 +7,7 @@
 
 
 ==== :SetValue ====
-'':SetValue(self @ [[#T|T]], value @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetValue(self @ [[#T|T]], value @[[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Adjustment ====
@@ -143,43 +143,43 @@
 
 
 ==== :SetAdjustment ====
-'':SetAdjustment(self @ [[#T|T]], adjustment @ [[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetAdjustment(self @ [[#T|T]], adjustment @[[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetFillLevel ====
-'':SetFillLevel(self @ [[#T|T]], fill_level @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetFillLevel(self @ [[#T|T]], fill_level @[[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetIncrements ====
-'':SetIncrements(self @ [[#T|T]], step @ [[..:..:Std:Real#T|Std.Real.T]], page @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetIncrements(self @ [[#T|T]], step @[[..:..:Std:Real#T|Std.Real.T]], page @[[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetInverted ====
-'':SetInverted(self @ [[#T|T]], setting @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetInverted(self @ [[#T|T]], setting @[[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetLowerStepperSensitivity ====
-'':SetLowerStepperSensitivity(self @ [[#T|T]], sensitivity @ [[..:..:Gtk:Gtk:SensitivityType#T|Gtk.Gtk.SensitivityType.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetLowerStepperSensitivity(self @ [[#T|T]], sensitivity @[[..:..:Gtk:Gtk:SensitivityType#T|Gtk.Gtk.SensitivityType.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetRange ====
-'':SetRange(self @ [[#T|T]], min @ [[..:..:Std:Real#T|Std.Real.T]], max @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetRange(self @ [[#T|T]], min @[[..:..:Std:Real#T|Std.Real.T]], max @[[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetRestrictToFillLevel ====
-'':SetRestrictToFillLevel(self @ [[#T|T]], restrict_to_fill_level @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetRestrictToFillLevel(self @ [[#T|T]], restrict_to_fill_level @[[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetShowFillLevel ====
-'':SetShowFillLevel(self @ [[#T|T]], show_fill_level @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetShowFillLevel(self @ [[#T|T]], show_fill_level @[[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetUpdatePolicy ====
-'':SetUpdatePolicy(self @ [[#T|T]], policy @ [[..:..:Gtk:Gtk:UpdateType#T|Gtk.Gtk.UpdateType.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetUpdatePolicy(self @ [[#T|T]], policy @[[..:..:Gtk:Gtk:UpdateType#T|Gtk.Gtk.UpdateType.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SetUpperStepperSensitivity ====
-'':SetUpperStepperSensitivity(self @ [[#T|T]], sensitivity @ [[..:..:Gtk:Gtk:SensitivityType#T|Gtk.Gtk.SensitivityType.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetUpperStepperSensitivity(self @ [[#T|T]], sensitivity @[[..:..:Gtk:Gtk:SensitivityType#T|Gtk.Gtk.SensitivityType.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== GetType ====

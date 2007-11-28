@@ -12,7 +12,7 @@
 
 
 ==== :read ====
-'':read( @ [[#T|T]],  @ [[..:Std:Address#T|Std.Address.T]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':read( @ [[#T|T]], @[[..:Std:Address#T|Std.Address.T]], @[[..:Std:Integer#SmallT|Std.Integer.SmallT]])''
 
 
 ==== :rest ====
@@ -20,7 +20,7 @@
 
 
 ==== :read ====
-'':read( @ [[#T|T]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':read( @ [[#T|T]], @[[..:Std:Integer#SmallT|Std.Integer.SmallT]])''
 
 
 ==== :read ====
@@ -28,19 +28,19 @@
 
 
 ==== :write ====
-'':write( @ [[#T|T]],  @ [[..:Std:Address#T|Std.Address.T]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':write( @ [[#T|T]], @[[..:Std:Address#T|Std.Address.T]], @[[..:Std:Integer#SmallT|Std.Integer.SmallT]])''
 
 
 ==== :write ====
-'':write( @ [[#T|T]],  @ [[..:Std:String#T|Std.String.T]])''
+'':write( @ [[#T|T]], @[[..:Std:String#T|Std.String.T]])''
 
 
 ==== :write ====
-'':write( @ [[#T|T]],  @ ANY)''
+'':write( @ [[#T|T]], @ANY)''
 
 
 ==== :seek ====
-'':seek( @ [[#T|T]],  @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+'':seek( @ [[#T|T]], @[[..:Std:Integer#SmallT|Std.Integer.SmallT]])''
 
 
 ==== New ====

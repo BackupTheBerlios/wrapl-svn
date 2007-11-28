@@ -9,7 +9,7 @@
 
 
 ==== :IterIsValid ====
-'':IterIsValid(self @ [[#T|T]], iter @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':IterIsValid(self @ [[#T|T]], iter @[[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :Root ====
@@ -81,19 +81,19 @@
 
 
 ==== :ConvertChildIterToIter ====
-'':ConvertChildIterToIter(self @ [[#T|T]], sort_iter @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]], child_iter @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':ConvertChildIterToIter(self @ [[#T|T]], sort_iter @[[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]], child_iter @[[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :ConvertChildPathToPath ====
-'':ConvertChildPathToPath(self @ [[#T|T]], child_path @ [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]]) : [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]]''
+'':ConvertChildPathToPath(self @ [[#T|T]], child_path @[[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]]) : [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]]''
 
 
 ==== :ConvertIterToChildIter ====
-'':ConvertIterToChildIter(self @ [[#T|T]], child_iter @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]], sorted_iter @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':ConvertIterToChildIter(self @ [[#T|T]], child_iter @[[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]], sorted_iter @[[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :ConvertPathToChildPath ====
-'':ConvertPathToChildPath(self @ [[#T|T]], sorted_path @ [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]]) : [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]]''
+'':ConvertPathToChildPath(self @ [[#T|T]], sorted_path @[[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]]) : [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]]''
 
 
 ==== :GetModel ====

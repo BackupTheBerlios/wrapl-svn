@@ -3,7 +3,7 @@
 
 
 ==== :XToIndex ====
-'':XToIndex(self @ [[#T|T]], x_pos @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], index_ @ [[..:..:Std:Object#T|Std.Object.T]], trailing @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':XToIndex(self @ [[#T|T]], x_pos @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], index_ @[[..:..:Std:Object#T|Std.Object.T]], trailing @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :Layout ====
@@ -31,19 +31,19 @@
 
 
 ==== :GetExtents ====
-'':GetExtents(self @ [[#T|T]], ink_rect @ [[..:..:Gtk:Pango:Rectangle#T|Gtk.Pango.Rectangle.T]], logical_rect @ [[..:..:Gtk:Pango:Rectangle#T|Gtk.Pango.Rectangle.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':GetExtents(self @ [[#T|T]], ink_rect @[[..:..:Gtk:Pango:Rectangle#T|Gtk.Pango.Rectangle.T]], logical_rect @[[..:..:Gtk:Pango:Rectangle#T|Gtk.Pango.Rectangle.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetPixelExtents ====
-'':GetPixelExtents(self @ [[#T|T]], ink_rect @ [[..:..:Gtk:Pango:Rectangle#T|Gtk.Pango.Rectangle.T]], logical_rect @ [[..:..:Gtk:Pango:Rectangle#T|Gtk.Pango.Rectangle.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':GetPixelExtents(self @ [[#T|T]], ink_rect @[[..:..:Gtk:Pango:Rectangle#T|Gtk.Pango.Rectangle.T]], logical_rect @[[..:..:Gtk:Pango:Rectangle#T|Gtk.Pango.Rectangle.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :GetXRanges ====
-'':GetXRanges(self @ [[#T|T]], start_index @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], end_index @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], ranges @ [[..:..:Std:Object#T|Std.Object.T]], n_ranges @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':GetXRanges(self @ [[#T|T]], start_index @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], end_index @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], ranges @[[..:..:Std:Object#T|Std.Object.T]], n_ranges @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :IndexToX ====
-'':IndexToX(self @ [[#T|T]], index_ @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], trailing @ [[..:..:Std:Symbol#T|Std.Symbol.T]], x_pos @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':IndexToX(self @ [[#T|T]], index_ @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], trailing @[[..:..:Std:Symbol#T|Std.Symbol.T]], x_pos @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Ref ====

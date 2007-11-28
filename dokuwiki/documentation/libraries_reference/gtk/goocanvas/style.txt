@@ -5,11 +5,11 @@
 
 
 ==== :SetStrokeOptions ====
-'':SetStrokeOptions(self @ [[#T|T]], cr @ [[..:..:Gtk:Cairo:CairoT#T|Gtk.Cairo.CairoT.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':SetStrokeOptions(self @ [[#T|T]], cr @[[..:..:Gtk:Cairo:CairoT#T|Gtk.Cairo.CairoT.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :SetProperty ====
-'':SetProperty(self @ [[#T|T]], property_id @ [[..:..:Std:Object#T|Std.Object.T]], value @ [[..:..:Gtk:GObject:Value#T|Gtk.GObject.Value.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetProperty(self @ [[#T|T]], property_id @[[..:..:Std:Object#T|Std.Object.T]], value @[[..:..:Gtk:GObject:Value#T|Gtk.GObject.Value.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Parent ====
@@ -29,15 +29,15 @@
 
 
 ==== :GetProperty ====
-'':GetProperty(self @ [[#T|T]], property_id @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Gtk:GObject:Value#T|Gtk.GObject.Value.T]]''
+'':GetProperty(self @ [[#T|T]], property_id @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Gtk:GObject:Value#T|Gtk.GObject.Value.T]]''
 
 
 ==== :SetFillOptions ====
-'':SetFillOptions(self @ [[#T|T]], cr @ [[..:..:Gtk:Cairo:CairoT#T|Gtk.Cairo.CairoT.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':SetFillOptions(self @ [[#T|T]], cr @[[..:..:Gtk:Cairo:CairoT#T|Gtk.Cairo.CairoT.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :SetParent ====
-'':SetParent(self @ [[#T|T]], parent @ [[..:..:Gtk:GooCanvas:Style#T|Gtk.GooCanvas.Style.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetParent(self @ [[#T|T]], parent @[[..:..:Gtk:GooCanvas:Style#T|Gtk.GooCanvas.Style.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====

@@ -23,11 +23,11 @@
 
 
 ==== :Moveto ====
-'':Moveto(self @ [[#T|T]], x @ [[..:..:Std:Real#T|Std.Real.T]], y @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Moveto(self @ [[#T|T]], x @[[..:..:Std:Real#T|Std.Real.T]], y @[[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :LinetoMoving ====
-'':LinetoMoving(self @ [[#T|T]], x @ [[..:..:Std:Real#T|Std.Real.T]], y @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':LinetoMoving(self @ [[#T|T]], x @[[..:..:Std:Real#T|Std.Real.T]], y @[[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :AllClosed ====
@@ -67,15 +67,15 @@
 
 
 ==== :Copy ====
-'':Copy(self @ [[#T|T]], src @ [[..:..:Gtk:GnomeCanvas:PathDef#T|Gtk.GnomeCanvas.PathDef.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Copy(self @ [[#T|T]], src @[[..:..:Gtk:GnomeCanvas:PathDef#T|Gtk.GnomeCanvas.PathDef.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Currentpoint ====
-'':Currentpoint(self @ [[#T|T]], p @ [[..:..:Gtk:Art:Point#T|Gtk.Art.Point.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Currentpoint(self @ [[#T|T]], p @[[..:..:Gtk:Art:Point#T|Gtk.Art.Point.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Curveto ====
-'':Curveto(self @ [[#T|T]], x0 @ [[..:..:Std:Real#T|Std.Real.T]], y0 @ [[..:..:Std:Real#T|Std.Real.T]], x1 @ [[..:..:Std:Real#T|Std.Real.T]], y1 @ [[..:..:Std:Real#T|Std.Real.T]], x2 @ [[..:..:Std:Real#T|Std.Real.T]], y2 @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Curveto(self @ [[#T|T]], x0 @[[..:..:Std:Real#T|Std.Real.T]], y0 @[[..:..:Std:Real#T|Std.Real.T]], x1 @[[..:..:Std:Real#T|Std.Real.T]], y1 @[[..:..:Std:Real#T|Std.Real.T]], x2 @[[..:..:Std:Real#T|Std.Real.T]], y2 @[[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Duplicate ====
@@ -83,7 +83,7 @@
 
 
 ==== :EnsureSpace ====
-'':EnsureSpace(self @ [[#T|T]], space @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':EnsureSpace(self @ [[#T|T]], space @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Finish ====
@@ -111,7 +111,7 @@
 
 
 ==== :Lineto ====
-'':Lineto(self @ [[#T|T]], x @ [[..:..:Std:Real#T|Std.Real.T]], y @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Lineto(self @ [[#T|T]], x @[[..:..:Std:Real#T|Std.Real.T]], y @[[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====

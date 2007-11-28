@@ -5,7 +5,7 @@
 
 
 ==== :Preinit ====
-'':Preinit(self @ [[#T|T]], app_id @ [[..:..:Std:String#T|Std.String.T]], app_version @ [[..:..:Std:String#T|Std.String.T]], argc @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], argv @ [[..:..:Std:List#T|Std.List.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Preinit(self @ [[#T|T]], app_id @[[..:..:Std:String#T|Std.String.T]], app_version @[[..:..:Std:String#T|Std.String.T]], argc @[[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], argv @[[..:..:Std:List#T|Std.List.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Postinit ====
@@ -17,7 +17,7 @@
 
 
 ==== :LocateFile ====
-'':LocateFile(self @ [[#T|T]], domain @ [[..:..:Gtk:Gnome:FileDomain#T|Gtk.Gnome.FileDomain.T]], file_name @ [[..:..:Std:String#T|Std.String.T]], only_if_exists @ [[..:..:Std:Symbol#T|Std.Symbol.T]], ret_locations @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:String#T|Std.String.T]]''
+'':LocateFile(self @ [[#T|T]], domain @[[..:..:Gtk:Gnome:FileDomain#T|Gtk.Gnome.FileDomain.T]], file_name @[[..:..:Std:String#T|Std.String.T]], only_if_exists @[[..:..:Std:Symbol#T|Std.Symbol.T]], ret_locations @[[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== :GetHumanReadableName ====
