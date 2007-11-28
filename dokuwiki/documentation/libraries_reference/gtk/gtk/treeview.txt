@@ -6,86 +6,88 @@
   * [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]
   * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
 
-Widget that displays any object that implements the GtkTreeModel interface.
-Please refer to the tree_widget_conceptual_overview for an overview of all the
-objects and data types related to the tree widget and how they work together.
-Several different coordinate systems are exposed in the GtkTreeView API. These
-are: [tree-view-coordinates.png]
-Widget coordinates -- coordinates relative to the widget (usually widget-
->window.
-Bin window coordinates -- coordinates relative to the window that GtkTreeView
-renders to.
-Tree coordinates -- coordinates relative to the entire scrollable area of
-GtkTreeView. These coordinates start at (0, 0) for row 0 of the tree.
-Several functions are available for converting between the different coordinate
-systems. The most common translations are between widget and bin window
-coordinates and between bin window and tree coordinates. For the former you can
-use gtk_tree_view_convert_widget_to_bin_window_coords() (and vice versa), for
-the latter gtk_tree_view_convert_bin_window_to_tree_coords() (and vice versa).
-**** GtkTreeView as GtkBuildable ****
-The GtkTreeView implementation of the GtkBuildable interface accepts
-GtkTreeViewColumn objects as <child> elements in UI definitions.
-Example 17.&#160;A UI definition fragment with GtkTreeView
-<object class="GtkTreeView">
-  <property name="model">liststore1</property>
-  <child>
-    <object class="GtkTreeViewColumn">
-      <property name="title">Test</property>
-      <child>
-        <object class="GtkCellRendererText"/>
-        <attributes>"
-          <attribute name="text">1</attribute>
-        </attributes>
-      </child>
-    </object>
-  </child>
-</object>
+  Widget that displays any object that implements the GtkTreeModel interface.
+  Please refer to the tree_widget_conceptual_overview for an overview of all the
+  objects and data types related to the tree widget and how they work together.
+  Several different coordinate systems are exposed in the GtkTreeView API. These
+  are: [tree-view-coordinates.png]
+  Widget coordinates -- coordinates relative to the widget (usually widget-
+  >window.
+  Bin window coordinates -- coordinates relative to the window that GtkTreeView
+  renders to.
+  Tree coordinates -- coordinates relative to the entire scrollable area of
+  GtkTreeView. These coordinates start at (0, 0) for row 0 of the tree.
+  Several functions are available for converting between the different coordinate
+  systems. The most common translations are between widget and bin window
+  coordinates and between bin window and tree coordinates. For the former you can
+  use gtk_tree_view_convert_widget_to_bin_window_coords() (and vice versa), for
+  the latter gtk_tree_view_convert_bin_window_to_tree_coords() (and vice versa).
+  **** GtkTreeView as GtkBuildable ****
+  The GtkTreeView implementation of the GtkBuildable interface accepts
+  GtkTreeViewColumn objects as <child> elements in UI definitions.
+  Example 17.&#160;A UI definition fragment with GtkTreeView
+  <object class="GtkTreeView">
+    <property name="model">liststore1</property>
+    <child>
+      <object class="GtkTreeViewColumn">
+        <property name="title">Test</property>
+        <child>
+          <object class="GtkCellRendererText"/>
+          <attributes>"
+            <attribute name="text">1</attribute>
+          </attributes>
+        </child>
+      </object>
+    </child>
+  </object>
+  
+  
 
 ==== :WidgetToTreeCoords ====
 '':WidgetToTreeCoords(self @ [[#T|T]], wx @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], wy @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], tx @ [[..:..:Std:Object#T|Std.Object.T]], ty @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-**** Warning ****
-gtk_tree_view_widget_to_tree_coords has been deprecated since version 2.12 and
-should not be used in newly-written code. Due to historial reasons the name of
-this function is incorrect. For converting coordinates relative to the widget
-to bin_window coordinates, please see
-gtk_tree_view_convert_widget_to_bin_window_coords().
-Converts bin_window coordinates to coordinates for the tree (the full
-scrollable area of the tree).
-tree_view : a GtkTreeView
-wx :        X coordinate relative to bin_window
-wy :        Y coordinate relative to bin_window
-tx :        return location for tree X coordinate
-ty :        return location for tree Y coordinate
+  **** Warning ****
+  gtk_tree_view_widget_to_tree_coords has been deprecated since version 2.12 and
+  should not be used in newly-written code. Due to historial reasons the name of
+  this function is incorrect. For converting coordinates relative to the widget
+  to bin_window coordinates, please see
+  gtk_tree_view_convert_widget_to_bin_window_coords().
+  Converts bin_window coordinates to coordinates for the tree (the full
+  scrollable area of the tree).
+  tree_view : a GtkTreeView
+  wx :        X coordinate relative to bin_window
+  wy :        Y coordinate relative to bin_window
+  tx :        return location for tree X coordinate
+  ty :        return location for tree Y coordinate
 
 ==== :UnsetRowsDragSource ====
 '':UnsetRowsDragSource(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-Undoes the effect of gtk_tree_view_enable_model_drag_source().
-tree_view : a GtkTreeView
+  Undoes the effect of gtk_tree_view_enable_model_drag_source().
+  tree_view : a GtkTreeView
 
 ==== :UnsetRowsDragDest ====
 '':UnsetRowsDragDest(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-Undoes the effect of gtk_tree_view_enable_model_drag_dest().
-tree_view : a GtkTreeView
+  Undoes the effect of gtk_tree_view_enable_model_drag_dest().
+  tree_view : a GtkTreeView
 
 ==== :TreeToWidgetCoords ====
 '':TreeToWidgetCoords(self @ [[#T|T]], tx @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], ty @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], wx @ [[..:..:Std:Object#T|Std.Object.T]], wy @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-**** Warning ****
-gtk_tree_view_tree_to_widget_coords has been deprecated since version 2.12 and
-should not be used in newly-written code. Due to historial reasons the name of
-this function is incorrect. For converting bin_window coordinates to
-coordinates relative to bin_window, please see
-gtk_tree_view_convert_bin_window_to_widget_coords().
-Converts tree coordinates (coordinates in full scrollable area of the tree) to
-bin_window coordinates.
-tree_view : a GtkTreeView
-tx :        tree X coordinate
-ty :        tree Y coordinate
-wx :        return location for X coordinate relative to bin_window
-wy :        return location for Y coordinate relative to bin_window
+  **** Warning ****
+  gtk_tree_view_tree_to_widget_coords has been deprecated since version 2.12 and
+  should not be used in newly-written code. Due to historial reasons the name of
+  this function is incorrect. For converting bin_window coordinates to
+  coordinates relative to bin_window, please see
+  gtk_tree_view_convert_bin_window_to_widget_coords().
+  Converts tree coordinates (coordinates in full scrollable area of the tree) to
+  bin_window coordinates.
+  tree_view : a GtkTreeView
+  tx :        tree X coordinate
+  ty :        tree Y coordinate
+  wx :        return location for X coordinate relative to bin_window
+  wy :        return location for Y coordinate relative to bin_window
 
 ==== :Priv ====
 '':Priv(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -94,993 +96,993 @@ wy :        return location for Y coordinate relative to bin_window
 ==== :AppendColumn ====
 '':AppendColumn(self @ [[#T|T]], column @ [[..:..:Gtk:Gtk:TreeViewColumn#T|Gtk.Gtk.TreeViewColumn.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-Appends column to the list of columns. If tree_view has "fixed_height" mode
-enabled, then column must have its "sizing" property set to be
-GTK_TREE_VIEW_COLUMN_FIXED.
-tree_view : A GtkTreeView.
-column :    The GtkTreeViewColumn to add.
-Returns :   The number of columns in tree_view after appending.
+  Appends column to the list of columns. If tree_view has "fixed_height" mode
+  enabled, then column must have its "sizing" property set to be
+  GTK_TREE_VIEW_COLUMN_FIXED.
+  tree_view : A GtkTreeView.
+  column :    The GtkTreeViewColumn to add.
+  Returns :   The number of columns in tree_view after appending.
 
 ==== :CollapseAll ====
 '':CollapseAll(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-Recursively collapses all visible, expanded nodes in tree_view.
-tree_view : A GtkTreeView.
+  Recursively collapses all visible, expanded nodes in tree_view.
+  tree_view : A GtkTreeView.
 
 ==== :CollapseRow ====
 '':CollapseRow(self @ [[#T|T]], path @ [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
-Collapses a row (hides its child rows, if they exist).
-tree_view : a GtkTreeView
-path :      path to a row in the tree_view
-Returns :   TRUE if the row was collapsed.
+  Collapses a row (hides its child rows, if they exist).
+  tree_view : a GtkTreeView
+  path :      path to a row in the tree_view
+  Returns :   TRUE if the row was collapsed.
 
 ==== :ColumnsAutosize ====
 '':ColumnsAutosize(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-Resizes all columns to their optimal width. Only works after the treeview has
-been realized.
-tree_view : A GtkTreeView.
+  Resizes all columns to their optimal width. Only works after the treeview has
+  been realized.
+  tree_view : A GtkTreeView.
 
 ==== :ConvertBinWindowToTreeCoords ====
 '':ConvertBinWindowToTreeCoords(self @ [[#T|T]], bx @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], by @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], tx @ [[..:..:Std:Object#T|Std.Object.T]], ty @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-Converts bin_window coordinates to coordinates for the tree (the full
-scrollable area of the tree).
-tree_view : a GtkTreeView
-bx :        X coordinate relative to bin_window
-by :        Y coordinate relative to bin_window
-tx :        return location for tree X coordinate
-ty :        return location for tree Y coordinate
-Since 2.12
+  Converts bin_window coordinates to coordinates for the tree (the full
+  scrollable area of the tree).
+  tree_view : a GtkTreeView
+  bx :        X coordinate relative to bin_window
+  by :        Y coordinate relative to bin_window
+  tx :        return location for tree X coordinate
+  ty :        return location for tree Y coordinate
+  Since 2.12
 
 ==== :ConvertBinWindowToWidgetCoords ====
 '':ConvertBinWindowToWidgetCoords(self @ [[#T|T]], bx @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], by @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], wx @ [[..:..:Std:Object#T|Std.Object.T]], wy @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-Converts bin_window coordinates (see gtk_tree_view_get_bin_window()) to widget
-relative coordinates.
-tree_view : a GtkTreeView
-bx :        bin_window X coordinate
-by :        bin_window Y coordinate
-wx :        return location for widget X coordinate
-wy :        return location for widget Y coordinate
-Since 2.12
+  Converts bin_window coordinates (see gtk_tree_view_get_bin_window()) to widget
+  relative coordinates.
+  tree_view : a GtkTreeView
+  bx :        bin_window X coordinate
+  by :        bin_window Y coordinate
+  wx :        return location for widget X coordinate
+  wy :        return location for widget Y coordinate
+  Since 2.12
 
 ==== :ConvertTreeToBinWindowCoords ====
 '':ConvertTreeToBinWindowCoords(self @ [[#T|T]], tx @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], ty @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], bx @ [[..:..:Std:Object#T|Std.Object.T]], by @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-Converts tree coordinates (coordinates in full scrollable area of the tree) to
-bin_window coordinates.
-tree_view : a GtkTreeView
-tx :        tree X coordinate
-ty :        tree Y coordinate
-bx :        return location for X coordinate relative to bin_window
-by :        return location for Y coordinate relative to bin_window
-Since 2.12
+  Converts tree coordinates (coordinates in full scrollable area of the tree) to
+  bin_window coordinates.
+  tree_view : a GtkTreeView
+  tx :        tree X coordinate
+  ty :        tree Y coordinate
+  bx :        return location for X coordinate relative to bin_window
+  by :        return location for Y coordinate relative to bin_window
+  Since 2.12
 
 ==== :ConvertTreeToWidgetCoords ====
 '':ConvertTreeToWidgetCoords(self @ [[#T|T]], tx @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], ty @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], wx @ [[..:..:Std:Object#T|Std.Object.T]], wy @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-Converts tree coordinates (coordinates in full scrollable area of the tree) to
-widget coordinates.
-tree_view : a GtkTreeView
-tx :        X coordinate relative to the tree
-ty :        Y coordinate relative to the tree
-wx :        return location for widget X coordinate
-wy :        return location for widget Y coordinate
-Since 2.12
+  Converts tree coordinates (coordinates in full scrollable area of the tree) to
+  widget coordinates.
+  tree_view : a GtkTreeView
+  tx :        X coordinate relative to the tree
+  ty :        Y coordinate relative to the tree
+  wx :        return location for widget X coordinate
+  wy :        return location for widget Y coordinate
+  Since 2.12
 
 ==== :ConvertWidgetToBinWindowCoords ====
 '':ConvertWidgetToBinWindowCoords(self @ [[#T|T]], wx @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], wy @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], bx @ [[..:..:Std:Object#T|Std.Object.T]], by @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-Converts widget coordinates to coordinates for the bin_window (see
-gtk_tree_view_get_bin_window()).
-tree_view : a GtkTreeView
-wx :        X coordinate relative to the widget
-wy :        Y coordinate relative to the widget
-bx :        return location for bin_window X coordinate
-by :        return location for bin_window Y coordinate
-Since 2.12
+  Converts widget coordinates to coordinates for the bin_window (see
+  gtk_tree_view_get_bin_window()).
+  tree_view : a GtkTreeView
+  wx :        X coordinate relative to the widget
+  wy :        Y coordinate relative to the widget
+  bx :        return location for bin_window X coordinate
+  by :        return location for bin_window Y coordinate
+  Since 2.12
 
 ==== :ConvertWidgetToTreeCoords ====
 '':ConvertWidgetToTreeCoords(self @ [[#T|T]], wx @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], wy @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], tx @ [[..:..:Std:Object#T|Std.Object.T]], ty @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-Converts widget coordinates to coordinates for the tree (the full scrollable
-area of the tree).
-tree_view : a GtkTreeView
-wx :        X coordinate relative to the widget
-wy :        Y coordinate relative to the widget
-tx :        return location for tree X coordinate
-ty :        return location for tree Y coordinate
-Since 2.12
+  Converts widget coordinates to coordinates for the tree (the full scrollable
+  area of the tree).
+  tree_view : a GtkTreeView
+  wx :        X coordinate relative to the widget
+  wy :        Y coordinate relative to the widget
+  tx :        return location for tree X coordinate
+  ty :        return location for tree Y coordinate
+  Since 2.12
 
 ==== :CreateRowDragIcon ====
 '':CreateRowDragIcon(self @ [[#T|T]], path @ [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]]) : [[..:..:Gtk:Gdk:Pixmap#T|Gtk.Gdk.Pixmap.T]]''
 
-Creates a GdkPixmap representation of the row at path. This image is used for a
-drag icon.
-tree_view : a GtkTreeView
-path :      a GtkTreePath in tree_view
-Returns :   a newly-allocated pixmap of the drag icon.
+  Creates a GdkPixmap representation of the row at path. This image is used for a
+  drag icon.
+  tree_view : a GtkTreeView
+  path :      a GtkTreePath in tree_view
+  Returns :   a newly-allocated pixmap of the drag icon.
 
 ==== :EnableModelDragDest ====
 '':EnableModelDragDest(self @ [[#T|T]], targets @ [[..:..:Gtk:Gtk:TargetEntry#T|Gtk.Gtk.TargetEntry.T]], n_targets @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], actions @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-Turns tree_view into a drop destination for automatic DND.
-tree_view : a GtkTreeView
-targets :   the table of targets that the drag will support
-n_targets : the number of items in targets
-actions :   the bitmask of possible actions for a drag from this widget
+  Turns tree_view into a drop destination for automatic DND.
+  tree_view : a GtkTreeView
+  targets :   the table of targets that the drag will support
+  n_targets : the number of items in targets
+  actions :   the bitmask of possible actions for a drag from this widget
 
 ==== :EnableModelDragSource ====
 '':EnableModelDragSource(self @ [[#T|T]], start_button_mask @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], targets @ [[..:..:Gtk:Gtk:TargetEntry#T|Gtk.Gtk.TargetEntry.T]], n_targets @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], actions @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-Turns tree_view into a drag source for automatic DND.
-tree_view :         a GtkTreeView
-start_button_mask : Mask of allowed buttons to start drag
-targets :           the table of targets that the drag will support
-n_targets :         the number of items in targets
-actions :           the bitmask of possible actions for a drag from this widget
+  Turns tree_view into a drag source for automatic DND.
+  tree_view :         a GtkTreeView
+  start_button_mask : Mask of allowed buttons to start drag
+  targets :           the table of targets that the drag will support
+  n_targets :         the number of items in targets
+  actions :           the bitmask of possible actions for a drag from this widget
 
 ==== :ExpandAll ====
 '':ExpandAll(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-Recursively expands all nodes in the tree_view.
-tree_view : A GtkTreeView.
+  Recursively expands all nodes in the tree_view.
+  tree_view : A GtkTreeView.
 
 ==== :ExpandRow ====
 '':ExpandRow(self @ [[#T|T]], path @ [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]], open_all @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
-Opens the row so its children are visible.
-tree_view : a GtkTreeView
-path :      path to a row
-open_all :  whether to recursively expand, or just expand immediate children
-Returns :   TRUE if the row existed and had children
+  Opens the row so its children are visible.
+  tree_view : a GtkTreeView
+  path :      path to a row
+  open_all :  whether to recursively expand, or just expand immediate children
+  Returns :   TRUE if the row existed and had children
 
 ==== :ExpandToPath ====
 '':ExpandToPath(self @ [[#T|T]], path @ [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-Expands the row at path. This will also expand all parent rows of path as
-necessary.
-tree_view : A GtkTreeView.
-path :      path to a row.
-Since 2.2
+  Expands the row at path. This will also expand all parent rows of path as
+  necessary.
+  tree_view : A GtkTreeView.
+  path :      path to a row.
+  Since 2.2
 
 ==== :GetBackgroundArea ====
 '':GetBackgroundArea(self @ [[#T|T]], path @ [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]], column @ [[..:..:Gtk:Gtk:TreeViewColumn#T|Gtk.Gtk.TreeViewColumn.T]], rect @ [[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-Fills the bounding rectangle in bin_window coordinates for the cell at the row
-specified by path and the column specified by column. If path is NULL, or
-points to a node not found in the tree, the y and height fields of the
-rectangle will be filled with 0. If column is NULL, the x and width fields will
-be filled with 0. The returned rectangle is equivalent to the background_area
-passed to gtk_cell_renderer_render(). These background areas tile to cover the
-entire bin window. Contrast with the cell_area, returned by
-gtk_tree_view_get_cell_area(), which returns only the cell itself, excluding
-surrounding borders and the tree expander area.
-tree_view : a GtkTreeView
-path :      a GtkTreePath for the row, or NULL to get only horizontal
-            coordinates
-column :    a GtkTreeViewColumn for the column, or NULL to get only vertical
-            coordiantes
-rect :      rectangle to fill with cell background rect
+  Fills the bounding rectangle in bin_window coordinates for the cell at the row
+  specified by path and the column specified by column. If path is NULL, or
+  points to a node not found in the tree, the y and height fields of the
+  rectangle will be filled with 0. If column is NULL, the x and width fields will
+  be filled with 0. The returned rectangle is equivalent to the background_area
+  passed to gtk_cell_renderer_render(). These background areas tile to cover the
+  entire bin window. Contrast with the cell_area, returned by
+  gtk_tree_view_get_cell_area(), which returns only the cell itself, excluding
+  surrounding borders and the tree expander area.
+  tree_view : a GtkTreeView
+  path :      a GtkTreePath for the row, or NULL to get only horizontal
+              coordinates
+  column :    a GtkTreeViewColumn for the column, or NULL to get only vertical
+              coordiantes
+  rect :      rectangle to fill with cell background rect
 
 ==== :GetBinWindow ====
 '':GetBinWindow(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]]''
 
-Returns the window that tree_view renders to. This is used primarily to compare
-to event->window to confirm that the event on tree_view is on the right window.
-tree_view : A GtkTreeView
-Returns :   A GdkWindow, or NULL when tree_view hasn't been realized yet
+  Returns the window that tree_view renders to. This is used primarily to compare
+  to event->window to confirm that the event on tree_view is on the right window.
+  tree_view : A GtkTreeView
+  Returns :   A GdkWindow, or NULL when tree_view hasn't been realized yet
 
 ==== :GetCellArea ====
 '':GetCellArea(self @ [[#T|T]], path @ [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]], column @ [[..:..:Gtk:Gtk:TreeViewColumn#T|Gtk.Gtk.TreeViewColumn.T]], rect @ [[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-Fills the bounding rectangle in bin_window coordinates for the cell at the row
-specified by path and the column specified by column. If path is NULL, or
-points to a path not currently displayed, the y and height fields of the
-rectangle will be filled with 0. If column is NULL, the x and width fields will
-be filled with 0. The sum of all cell rects does not cover the entire tree;
-there are extra pixels in between rows, for example. The returned rectangle is
-equivalent to the cell_area passed to gtk_cell_renderer_render(). This function
-is only valid if tree_view is realized.
-tree_view : a GtkTreeView
-path :      a GtkTreePath for the row, or NULL to get only horizontal
-            coordinates
-column :    a GtkTreeViewColumn for the column, or NULL to get only vertical
-            coordinates
-rect :      rectangle to fill with cell rect
+  Fills the bounding rectangle in bin_window coordinates for the cell at the row
+  specified by path and the column specified by column. If path is NULL, or
+  points to a path not currently displayed, the y and height fields of the
+  rectangle will be filled with 0. If column is NULL, the x and width fields will
+  be filled with 0. The sum of all cell rects does not cover the entire tree;
+  there are extra pixels in between rows, for example. The returned rectangle is
+  equivalent to the cell_area passed to gtk_cell_renderer_render(). This function
+  is only valid if tree_view is realized.
+  tree_view : a GtkTreeView
+  path :      a GtkTreePath for the row, or NULL to get only horizontal
+              coordinates
+  column :    a GtkTreeViewColumn for the column, or NULL to get only vertical
+              coordinates
+  rect :      rectangle to fill with cell rect
 
 ==== :GetColumn ====
 '':GetColumn(self @ [[#T|T]], n @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Gtk:Gtk:TreeViewColumn#T|Gtk.Gtk.TreeViewColumn.T]]''
 
-Gets the GtkTreeViewColumn at the given position in the tree_view.
-tree_view : A GtkTreeView.
-n :         The position of the column, counting from 0.
-Returns :   The GtkTreeViewColumn, or NULL if the position is outside the range
-            of columns.
+  Gets the GtkTreeViewColumn at the given position in the tree_view.
+  tree_view : A GtkTreeView.
+  n :         The position of the column, counting from 0.
+  Returns :   The GtkTreeViewColumn, or NULL if the position is outside the range
+              of columns.
 
 ==== :GetColumns ====
 '':GetColumns(self @ [[#T|T]]) : [[..:..:Std:List#T|Std.List.T]]''
 
-Returns a GList of all the GtkTreeViewColumn s currently in tree_view. The
-returned list must be freed with g_list_free().
-tree_view : A GtkTreeView
-Returns :   A list of GtkTreeViewColumn s
+  Returns a GList of all the GtkTreeViewColumn s currently in tree_view. The
+  returned list must be freed with g_list_free().
+  tree_view : A GtkTreeView
+  Returns :   A list of GtkTreeViewColumn s
 
 ==== :GetCursor ====
 '':GetCursor(self @ [[#T|T]], path @ [[..:..:Std:Object#T|Std.Object.T]], focus_column @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-Fills in path and focus_column with the current path and focus column. If the
-cursor isn't currently set, then *path will be NULL. If no column currently has
-focus, then *focus_column will be NULL.
-The returned GtkTreePath must be freed with gtk_tree_path_free() when you are
-done with it.
-tree_view :    A GtkTreeView
-path :         A pointer to be filled with the current cursor path, or NULL
-focus_column : A pointer to be filled with the current focus column, or NULL
+  Fills in path and focus_column with the current path and focus column. If the
+  cursor isn't currently set, then *path will be NULL. If no column currently has
+  focus, then *focus_column will be NULL.
+  The returned GtkTreePath must be freed with gtk_tree_path_free() when you are
+  done with it.
+  tree_view :    A GtkTreeView
+  path :         A pointer to be filled with the current cursor path, or NULL
+  focus_column : A pointer to be filled with the current focus column, or NULL
 
 ==== :GetDestRowAtPos ====
 '':GetDestRowAtPos(self @ [[#T|T]], drag_x @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], drag_y @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], path @ [[..:..:Std:Object#T|Std.Object.T]], pos @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
-Determines the destination row for a given position. drag_x and drag_y are
-expected to be in widget coordinates.
-tree_view : a GtkTreeView
-drag_x :    the position to determine the destination row for
-drag_y :    the position to determine the destination row for
-path :      Return location for the path of the highlighted row, or NULL.
-pos :       Return location for the drop position, or NULL
-Returns :   whether there is a row at the given position.
+  Determines the destination row for a given position. drag_x and drag_y are
+  expected to be in widget coordinates.
+  tree_view : a GtkTreeView
+  drag_x :    the position to determine the destination row for
+  drag_y :    the position to determine the destination row for
+  path :      Return location for the path of the highlighted row, or NULL.
+  pos :       Return location for the drop position, or NULL
+  Returns :   whether there is a row at the given position.
 
 ==== :GetDragDestRow ====
 '':GetDragDestRow(self @ [[#T|T]], path @ [[..:..:Std:Object#T|Std.Object.T]], pos @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-Gets information about the row that is highlighted for feedback.
-tree_view : a GtkTreeView
-path :      Return location for the path of the highlighted row, or NULL.
-pos :       Return location for the drop position, or NULL
+  Gets information about the row that is highlighted for feedback.
+  tree_view : a GtkTreeView
+  path :      Return location for the path of the highlighted row, or NULL.
+  pos :       Return location for the drop position, or NULL
 
 ==== :GetEnableSearch ====
 '':GetEnableSearch(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
-Returns whether or not the tree allows to start interactive searching by typing
-in text.
-tree_view : A GtkTreeView
-Returns :   whether or not to let the user search interactively
+  Returns whether or not the tree allows to start interactive searching by typing
+  in text.
+  tree_view : A GtkTreeView
+  Returns :   whether or not to let the user search interactively
 
 ==== :GetEnableTreeLines ====
 '':GetEnableTreeLines(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
-Returns whether or not tree lines are drawn in tree_view.
-tree_view : a GtkTreeView.
-Returns :   TRUE if tree lines are drawn in tree_view, FALSE otherwise.
-Since 2.10
+  Returns whether or not tree lines are drawn in tree_view.
+  tree_view : a GtkTreeView.
+  Returns :   TRUE if tree lines are drawn in tree_view, FALSE otherwise.
+  Since 2.10
 
 ==== :GetExpanderColumn ====
 '':GetExpanderColumn(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:TreeViewColumn#T|Gtk.Gtk.TreeViewColumn.T]]''
 
-Returns the column that is the current expander column. This column has the
-expander arrow drawn next to it.
-tree_view : A GtkTreeView
-Returns :   The expander column.
+  Returns the column that is the current expander column. This column has the
+  expander arrow drawn next to it.
+  tree_view : A GtkTreeView
+  Returns :   The expander column.
 
 ==== :GetFixedHeightMode ====
 '':GetFixedHeightMode(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
-Returns whether fixed height mode is turned on for tree_view.
-tree_view : a GtkTreeView
-Returns :   TRUE if tree_view is in fixed height mode
-Since 2.6
+  Returns whether fixed height mode is turned on for tree_view.
+  tree_view : a GtkTreeView
+  Returns :   TRUE if tree_view is in fixed height mode
+  Since 2.6
 
 ==== :GetGridLines ====
 '':GetGridLines(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:TreeViewGridLines#T|Gtk.Gtk.TreeViewGridLines.T]]''
 
-Returns which grid lines are enabled in tree_view.
-tree_view : a GtkTreeView
-Returns :   a GtkTreeViewGridLines value indicating which grid lines are
-            enabled.
-Since 2.10
+  Returns which grid lines are enabled in tree_view.
+  tree_view : a GtkTreeView
+  Returns :   a GtkTreeViewGridLines value indicating which grid lines are
+              enabled.
+  Since 2.10
 
 ==== :GetHadjustment ====
 '':GetHadjustment(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]]''
 
-Gets the GtkAdjustment currently being used for the horizontal aspect.
-tree_view : A GtkTreeView
-Returns :   A GtkAdjustment object, or NULL if none is currently being used.
+  Gets the GtkAdjustment currently being used for the horizontal aspect.
+  tree_view : A GtkTreeView
+  Returns :   A GtkAdjustment object, or NULL if none is currently being used.
 
 ==== :GetHeadersClickable ====
 '':GetHeadersClickable(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
-Returns whether all header columns are clickable.
-tree_view : A GtkTreeView.
-Returns :   TRUE if all header columns are clickable, otherwise FALSE
-Since 2.10
+  Returns whether all header columns are clickable.
+  tree_view : A GtkTreeView.
+  Returns :   TRUE if all header columns are clickable, otherwise FALSE
+  Since 2.10
 
 ==== :GetHeadersVisible ====
 '':GetHeadersVisible(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
-Returns TRUE if the headers on the tree_view are visible.
-tree_view : A GtkTreeView.
-Returns :   Whether the headers are visible or not.
+  Returns TRUE if the headers on the tree_view are visible.
+  tree_view : A GtkTreeView.
+  Returns :   Whether the headers are visible or not.
 
 ==== :GetHoverExpand ====
 '':GetHoverExpand(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
-Returns whether hover expansion mode is turned on for tree_view.
-tree_view : a GtkTreeView
-Returns :   TRUE if tree_view is in hover expansion mode
-Since 2.6
+  Returns whether hover expansion mode is turned on for tree_view.
+  tree_view : a GtkTreeView
+  Returns :   TRUE if tree_view is in hover expansion mode
+  Since 2.6
 
 ==== :GetHoverSelection ====
 '':GetHoverSelection(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
-Returns whether hover selection mode is turned on for tree_view.
-tree_view : a GtkTreeView
-Returns :   TRUE if tree_view is in hover selection mode
-Since 2.6
+  Returns whether hover selection mode is turned on for tree_view.
+  tree_view : a GtkTreeView
+  Returns :   TRUE if tree_view is in hover selection mode
+  Since 2.6
 
 ==== :GetLevelIndentation ====
 '':GetLevelIndentation(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-Returns the amount, in pixels, of extra indentation for child levels in
-tree_view.
-tree_view : a GtkTreeView.
-Returns :   the amount of extra indentation for child levels in tree_view. A
-            return value of 0 means that this feature is disabled.
-Since 2.12
+  Returns the amount, in pixels, of extra indentation for child levels in
+  tree_view.
+  tree_view : a GtkTreeView.
+  Returns :   the amount of extra indentation for child levels in tree_view. A
+              return value of 0 means that this feature is disabled.
+  Since 2.12
 
 ==== :GetModel ====
 '':GetModel(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:TreeModel#T|Gtk.Gtk.TreeModel.T]]''
 
-Returns the model the GtkTreeView is based on. Returns NULL if the model is
-unset.
-tree_view : a GtkTreeView
-Returns :   A GtkTreeModel, or NULL if none is currently being used.
+  Returns the model the GtkTreeView is based on. Returns NULL if the model is
+  unset.
+  tree_view : a GtkTreeView
+  Returns :   A GtkTreeModel, or NULL if none is currently being used.
 
 ==== :GetPathAtPos ====
 '':GetPathAtPos(self @ [[#T|T]], x @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], path @ [[..:..:Std:Object#T|Std.Object.T]], column @ [[..:..:Std:Object#T|Std.Object.T]], cell_x @ [[..:..:Std:Object#T|Std.Object.T]], cell_y @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
-Finds the path at the point (x, y), relative to bin_window coordinates (please
-see gtk_tree_view_get_bin_window()). That is, x and y are relative to an events
-coordinates. x and y must come from an event on the tree_view only where event-
->window == gtk_tree_view_get_bin_window (). It is primarily for things like
-popup menus. If path is non-NULL, then it will be filled with the GtkTreePath
-at that point. This path should be freed with gtk_tree_path_free(). If column
-is non-NULL, then it will be filled with the column at that point. cell_x and
-cell_y return the coordinates relative to the cell background (i.e. the
-background_area passed to gtk_cell_renderer_render()). This function is only
-meaningful if tree_view is realized.
-For converting widget coordinates (eg. the ones you get from GtkWidget::query-
-tooltip), please see gtk_tree_view_convert_widget_to_bin_window_coords().
-tree_view : A GtkTreeView.
-x :         The x position to be identified (relative to bin_window).
-y :         The y position to be identified (relative to bin_window).
-path :      A pointer to a GtkTreePath pointer to be filled in, or NULL
-column :    A pointer to a GtkTreeViewColumn pointer to be filled in, or NULL
-cell_x :    A pointer where the X coordinate relative to the cell can be
-            placed, or NULL
-cell_y :    A pointer where the Y coordinate relative to the cell can be
-            placed, or NULL
-Returns :   TRUE if a row exists at that coordinate.
+  Finds the path at the point (x, y), relative to bin_window coordinates (please
+  see gtk_tree_view_get_bin_window()). That is, x and y are relative to an events
+  coordinates. x and y must come from an event on the tree_view only where event-
+  >window == gtk_tree_view_get_bin_window (). It is primarily for things like
+  popup menus. If path is non-NULL, then it will be filled with the GtkTreePath
+  at that point. This path should be freed with gtk_tree_path_free(). If column
+  is non-NULL, then it will be filled with the column at that point. cell_x and
+  cell_y return the coordinates relative to the cell background (i.e. the
+  background_area passed to gtk_cell_renderer_render()). This function is only
+  meaningful if tree_view is realized.
+  For converting widget coordinates (eg. the ones you get from GtkWidget::query-
+  tooltip), please see gtk_tree_view_convert_widget_to_bin_window_coords().
+  tree_view : A GtkTreeView.
+  x :         The x position to be identified (relative to bin_window).
+  y :         The y position to be identified (relative to bin_window).
+  path :      A pointer to a GtkTreePath pointer to be filled in, or NULL
+  column :    A pointer to a GtkTreeViewColumn pointer to be filled in, or NULL
+  cell_x :    A pointer where the X coordinate relative to the cell can be
+              placed, or NULL
+  cell_y :    A pointer where the Y coordinate relative to the cell can be
+              placed, or NULL
+  Returns :   TRUE if a row exists at that coordinate.
 
 ==== :GetReorderable ====
 '':GetReorderable(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
-Retrieves whether the user can reorder the tree via drag-and-drop. See
-gtk_tree_view_set_reorderable().
-tree_view : a GtkTreeView
-Returns :   TRUE if the tree can be reordered.
+  Retrieves whether the user can reorder the tree via drag-and-drop. See
+  gtk_tree_view_set_reorderable().
+  tree_view : a GtkTreeView
+  Returns :   TRUE if the tree can be reordered.
 
 ==== :GetRowSeparatorFunc ====
 '':GetRowSeparatorFunc(self @ [[#T|T]]) : [[..:..:Std:Function#T|Std.Function.T]]''
 
-Returns the current row separator function.
-tree_view : a GtkTreeView
-Returns :   the current row separator function.
-Since 2.6
+  Returns the current row separator function.
+  tree_view : a GtkTreeView
+  Returns :   the current row separator function.
+  Since 2.6
 
 ==== :GetRubberBanding ====
 '':GetRubberBanding(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
-Returns whether rubber banding is turned on for tree_view. If the selection
-mode is GTK_SELECTION_MULTIPLE, rubber banding will allow the user to select
-multiple rows by dragging the mouse.
-tree_view : a GtkTreeView
-Returns :   TRUE if rubber banding in tree_view is enabled.
-Since 2.10
+  Returns whether rubber banding is turned on for tree_view. If the selection
+  mode is GTK_SELECTION_MULTIPLE, rubber banding will allow the user to select
+  multiple rows by dragging the mouse.
+  tree_view : a GtkTreeView
+  Returns :   TRUE if rubber banding in tree_view is enabled.
+  Since 2.10
 
 ==== :GetRulesHint ====
 '':GetRulesHint(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
-Gets the setting set by gtk_tree_view_set_rules_hint().
-tree_view : a GtkTreeView
-Returns :   TRUE if rules are useful for the user of this tree
+  Gets the setting set by gtk_tree_view_set_rules_hint().
+  tree_view : a GtkTreeView
+  Returns :   TRUE if rules are useful for the user of this tree
 
 ==== :GetSearchColumn ====
 '':GetSearchColumn(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-Gets the column searched on by the interactive search code.
-tree_view : A GtkTreeView
-Returns :   the column the interactive search code searches in.
+  Gets the column searched on by the interactive search code.
+  tree_view : A GtkTreeView
+  Returns :   the column the interactive search code searches in.
 
 ==== :GetSearchEntry ====
 '':GetSearchEntry(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Entry#T|Gtk.Gtk.Entry.T]]''
 
-Returns the GtkEntry which is currently in use as interactive search entry for
-tree_view. In case the built-in entry is being used, NULL will be returned.
-tree_view : A GtkTreeView
-Returns :   the entry currently in use as search entry.
-Since 2.10
+  Returns the GtkEntry which is currently in use as interactive search entry for
+  tree_view. In case the built-in entry is being used, NULL will be returned.
+  tree_view : A GtkTreeView
+  Returns :   the entry currently in use as search entry.
+  Since 2.10
 
 ==== :GetSearchEqualFunc ====
 '':GetSearchEqualFunc(self @ [[#T|T]]) : [[..:..:Std:Function#T|Std.Function.T]]''
 
-Returns the compare function currently in use.
-tree_view : A GtkTreeView
-Returns :   the currently used compare function for the search code.
+  Returns the compare function currently in use.
+  tree_view : A GtkTreeView
+  Returns :   the currently used compare function for the search code.
 
 ==== :GetSearchPositionFunc ====
 '':GetSearchPositionFunc(self @ [[#T|T]]) : [[..:..:Std:Function#T|Std.Function.T]]''
 
-Returns the positioning function currently in use.
-tree_view : A GtkTreeView
-Returns :   the currently used function for positioning the search dialog.
-Since 2.10
+  Returns the positioning function currently in use.
+  tree_view : A GtkTreeView
+  Returns :   the currently used function for positioning the search dialog.
+  Since 2.10
 
 ==== :GetSelection ====
 '':GetSelection(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:TreeSelection#T|Gtk.Gtk.TreeSelection.T]]''
 
-Gets the GtkTreeSelection associated with tree_view.
-tree_view : A GtkTreeView.
-Returns :   A GtkTreeSelection object.
+  Gets the GtkTreeSelection associated with tree_view.
+  tree_view : A GtkTreeView.
+  Returns :   A GtkTreeSelection object.
 
 ==== :GetShowExpanders ====
 '':GetShowExpanders(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
-Returns whether or not expanders are drawn in tree_view.
-tree_view : a GtkTreeView.
-Returns :   TRUE if expanders are drawn in tree_view, FALSE otherwise.
-Since 2.12
+  Returns whether or not expanders are drawn in tree_view.
+  tree_view : a GtkTreeView.
+  Returns :   TRUE if expanders are drawn in tree_view, FALSE otherwise.
+  Since 2.12
 
 ==== :GetTooltipColumn ====
 '':GetTooltipColumn(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-Returns the column of tree_view's model which is being used for displaying
-tooltips on tree_view's rows.
-tree_view : a GtkTreeView
-Returns :   the index of the tooltip column that is currently being used, or -
-            1 if this is disabled.
-Since 2.12
+  Returns the column of tree_view's model which is being used for displaying
+  tooltips on tree_view's rows.
+  tree_view : a GtkTreeView
+  Returns :   the index of the tooltip column that is currently being used, or -
+              1 if this is disabled.
+  Since 2.12
 
 ==== :GetTooltipContext ====
 '':GetTooltipContext(self @ [[#T|T]], x @ [[..:..:Std:Object#T|Std.Object.T]], y @ [[..:..:Std:Object#T|Std.Object.T]], keyboard_tip @ [[..:..:Std:Symbol#T|Std.Symbol.T]], model @ [[..:..:Std:Object#T|Std.Object.T]], path @ [[..:..:Std:Object#T|Std.Object.T]], iter @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
-This function is supposed to be used in a "query-tooltip" signal handler for
-GtkTreeView. The x, y and keyboard_tip values which are received in the signal
-handler, should be passed to this function without modification.
-The return value indicates whether there is a tree view row at the given
-coordinates (TRUE) or not (FALSE) for mouse tooltips. For keyboard tooltips the
-row returned will be the cursor row. When TRUE, then any of model, path and
-iter which have been provided will be set to point to that row and the
-corresponding model. x and y will always be converted to be relative to
-tree_view's bin_window if keyboard_tooltip is FALSE.
-tree_view :    a GtkTreeView
-x :            the x coordinate (relative to widget coordinates)
-y :            the y coordinate (relative to widget coordinates)
-keyboard_tip : whether this is a keyboard tooltip or not
-model :        a pointer to receive a GtkTreeModel or NULL
-path :         a pointer to receive a GtkTreePath or NULL
-iter :         a pointer to receive a GtkTreeIter or NULL
-Returns :      whether or not the given tooltip context points to a row.
-Since 2.12
+  This function is supposed to be used in a "query-tooltip" signal handler for
+  GtkTreeView. The x, y and keyboard_tip values which are received in the signal
+  handler, should be passed to this function without modification.
+  The return value indicates whether there is a tree view row at the given
+  coordinates (TRUE) or not (FALSE) for mouse tooltips. For keyboard tooltips the
+  row returned will be the cursor row. When TRUE, then any of model, path and
+  iter which have been provided will be set to point to that row and the
+  corresponding model. x and y will always be converted to be relative to
+  tree_view's bin_window if keyboard_tooltip is FALSE.
+  tree_view :    a GtkTreeView
+  x :            the x coordinate (relative to widget coordinates)
+  y :            the y coordinate (relative to widget coordinates)
+  keyboard_tip : whether this is a keyboard tooltip or not
+  model :        a pointer to receive a GtkTreeModel or NULL
+  path :         a pointer to receive a GtkTreePath or NULL
+  iter :         a pointer to receive a GtkTreeIter or NULL
+  Returns :      whether or not the given tooltip context points to a row.
+  Since 2.12
 
 ==== :GetVadjustment ====
 '':GetVadjustment(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]]''
 
-Gets the GtkAdjustment currently being used for the vertical aspect.
-tree_view : A GtkTreeView
-Returns :   A GtkAdjustment object, or NULL if none is currently being used.
+  Gets the GtkAdjustment currently being used for the vertical aspect.
+  tree_view : A GtkTreeView
+  Returns :   A GtkAdjustment object, or NULL if none is currently being used.
 
 ==== :GetVisibleRange ====
 '':GetVisibleRange(self @ [[#T|T]], start_path @ [[..:..:Std:Object#T|Std.Object.T]], end_path @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
-Sets start_path and end_path to be the first and last visible path. Note that
-there may be invisible paths in between.
-The paths should be freed with gtk_tree_path_free() after use.
-tree_view :  A GtkTreeView
-start_path : Return location for start of region, or NULL.
-end_path :   Return location for end of region, or NULL.
-Returns :    TRUE, if valid paths were placed in start_path and end_path.
-Since 2.8
+  Sets start_path and end_path to be the first and last visible path. Note that
+  there may be invisible paths in between.
+  The paths should be freed with gtk_tree_path_free() after use.
+  tree_view :  A GtkTreeView
+  start_path : Return location for start of region, or NULL.
+  end_path :   Return location for end of region, or NULL.
+  Returns :    TRUE, if valid paths were placed in start_path and end_path.
+  Since 2.8
 
 ==== :GetVisibleRect ====
 '':GetVisibleRect(self @ [[#T|T]], visible_rect @ [[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-Fills visible_rect with the currently-visible region of the buffer, in tree
-coordinates. Convert to bin_window coordinates with
-gtk_tree_view_convert_tree_to_bin_window_coords(). Tree coordinates start at
-0,0 for row 0 of the tree, and cover the entire scrollable area of the tree.
-tree_view :    a GtkTreeView
-visible_rect : rectangle to fill
+  Fills visible_rect with the currently-visible region of the buffer, in tree
+  coordinates. Convert to bin_window coordinates with
+  gtk_tree_view_convert_tree_to_bin_window_coords(). Tree coordinates start at
+  0,0 for row 0 of the tree, and cover the entire scrollable area of the tree.
+  tree_view :    a GtkTreeView
+  visible_rect : rectangle to fill
 
 ==== :InsertColumn ====
 '':InsertColumn(self @ [[#T|T]], column @ [[..:..:Gtk:Gtk:TreeViewColumn#T|Gtk.Gtk.TreeViewColumn.T]], position @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-This inserts the column into the tree_view at position. If position is -1, then
-the column is inserted at the end. If tree_view has "fixed_height" mode
-enabled, then column must have its "sizing" property set to be
-GTK_TREE_VIEW_COLUMN_FIXED.
-tree_view : A GtkTreeView.
-column :    The GtkTreeViewColumn to be inserted.
-position :  The position to insert column in.
-Returns :   The number of columns in tree_view after insertion.
+  This inserts the column into the tree_view at position. If position is -1, then
+  the column is inserted at the end. If tree_view has "fixed_height" mode
+  enabled, then column must have its "sizing" property set to be
+  GTK_TREE_VIEW_COLUMN_FIXED.
+  tree_view : A GtkTreeView.
+  column :    The GtkTreeViewColumn to be inserted.
+  position :  The position to insert column in.
+  Returns :   The number of columns in tree_view after insertion.
 
 ==== :InsertColumnWithAttributes ====
 '':InsertColumnWithAttributes(self @ [[#T|T]], position @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], title @ [[..:..:Std:String#T|Std.String.T]], cell @ [[..:..:Gtk:Gtk:CellRenderer#T|Gtk.Gtk.CellRenderer.T]], ___ @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-Creates a new GtkTreeViewColumn and inserts it into the tree_view at position.
-If position is -1, then the newly created column is inserted at the end. The
-column is initialized with the attributes given. If tree_view has
-"fixed_height" mode enabled, then the new column will have its sizing property
-set to be GTK_TREE_VIEW_COLUMN_FIXED.
-tree_view : A GtkTreeView
-position :  The position to insert the new column in.
-title :     The title to set the header to.
-cell :      The GtkCellRenderer.
-... :       A NULL-terminated list of attributes.
-Returns :   The number of columns in tree_view after insertion.
+  Creates a new GtkTreeViewColumn and inserts it into the tree_view at position.
+  If position is -1, then the newly created column is inserted at the end. The
+  column is initialized with the attributes given. If tree_view has
+  "fixed_height" mode enabled, then the new column will have its sizing property
+  set to be GTK_TREE_VIEW_COLUMN_FIXED.
+  tree_view : A GtkTreeView
+  position :  The position to insert the new column in.
+  title :     The title to set the header to.
+  cell :      The GtkCellRenderer.
+  ... :       A NULL-terminated list of attributes.
+  Returns :   The number of columns in tree_view after insertion.
 
 ==== :InsertColumnWithDataFunc ====
 '':InsertColumnWithDataFunc(self @ [[#T|T]], position @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], title @ [[..:..:Std:String#T|Std.String.T]], cell @ [[..:..:Gtk:Gtk:CellRenderer#T|Gtk.Gtk.CellRenderer.T]], func @ [[..:..:Std:Function#T|Std.Function.T]], data @ [[..:..:Std:Address#T|Std.Address.T]], dnotify @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-Convenience function that inserts a new column into the GtkTreeView with the
-given cell renderer and a GtkCellDataFunc to set cell renderer attributes
-(normally using data from the model). See also
-gtk_tree_view_column_set_cell_data_func(), gtk_tree_view_column_pack_start().
-If tree_view has "fixed_height" mode enabled, then the new column will have its
-"sizing" property set to be GTK_TREE_VIEW_COLUMN_FIXED.
-tree_view : a GtkTreeView
-position :  Position to insert, -1 for append
-title :     column title
-cell :      cell renderer for column
-func :      function to set attributes of cell renderer
-data :      data for func
-dnotify :   destroy notifier for data
-Returns :   number of columns in the tree view post-insert
+  Convenience function that inserts a new column into the GtkTreeView with the
+  given cell renderer and a GtkCellDataFunc to set cell renderer attributes
+  (normally using data from the model). See also
+  gtk_tree_view_column_set_cell_data_func(), gtk_tree_view_column_pack_start().
+  If tree_view has "fixed_height" mode enabled, then the new column will have its
+  "sizing" property set to be GTK_TREE_VIEW_COLUMN_FIXED.
+  tree_view : a GtkTreeView
+  position :  Position to insert, -1 for append
+  title :     column title
+  cell :      cell renderer for column
+  func :      function to set attributes of cell renderer
+  data :      data for func
+  dnotify :   destroy notifier for data
+  Returns :   number of columns in the tree view post-insert
 
 ==== :IsRubberBandingActive ====
 '':IsRubberBandingActive(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
-Returns whether a rubber banding operation is currently being done in
-tree_view.
-tree_view : a GtkTreeView
-Returns :   TRUE if a rubber banding operation is currently being done in
-            tree_view.
-Since 2.12
+  Returns whether a rubber banding operation is currently being done in
+  tree_view.
+  tree_view : a GtkTreeView
+  Returns :   TRUE if a rubber banding operation is currently being done in
+              tree_view.
+  Since 2.12
 
 ==== :MapExpandedRows ====
 '':MapExpandedRows(self @ [[#T|T]], func @ [[..:..:Std:Function#T|Std.Function.T]], data @ [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-Calls func on all expanded rows.
-tree_view : A GtkTreeView
-func :      A function to be called
-data :      User data to be passed to the function.
+  Calls func on all expanded rows.
+  tree_view : A GtkTreeView
+  func :      A function to be called
+  data :      User data to be passed to the function.
 
 ==== :MoveColumnAfter ====
 '':MoveColumnAfter(self @ [[#T|T]], column @ [[..:..:Gtk:Gtk:TreeViewColumn#T|Gtk.Gtk.TreeViewColumn.T]], base_column @ [[..:..:Gtk:Gtk:TreeViewColumn#T|Gtk.Gtk.TreeViewColumn.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-Moves column to be after to base_column. If base_column is NULL, then column is
-placed in the first position.
-tree_view :   A GtkTreeView
-column :      The GtkTreeViewColumn to be moved.
-base_column : The GtkTreeViewColumn to be moved relative to, or NULL.
+  Moves column to be after to base_column. If base_column is NULL, then column is
+  placed in the first position.
+  tree_view :   A GtkTreeView
+  column :      The GtkTreeViewColumn to be moved.
+  base_column : The GtkTreeViewColumn to be moved relative to, or NULL.
 
 ==== :RemoveColumn ====
 '':RemoveColumn(self @ [[#T|T]], column @ [[..:..:Gtk:Gtk:TreeViewColumn#T|Gtk.Gtk.TreeViewColumn.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-Removes column from tree_view.
-tree_view : A GtkTreeView.
-column :    The GtkTreeViewColumn to remove.
-Returns :   The number of columns in tree_view after removing.
+  Removes column from tree_view.
+  tree_view : A GtkTreeView.
+  column :    The GtkTreeViewColumn to remove.
+  Returns :   The number of columns in tree_view after removing.
 
 ==== :RowActivated ====
 '':RowActivated(self @ [[#T|T]], path @ [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]], column @ [[..:..:Gtk:Gtk:TreeViewColumn#T|Gtk.Gtk.TreeViewColumn.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-Activates the cell determined by path and column.
-tree_view : A GtkTreeView
-path :      The GtkTreePath to be activated.
-column :    The GtkTreeViewColumn to be activated.
+  Activates the cell determined by path and column.
+  tree_view : A GtkTreeView
+  path :      The GtkTreePath to be activated.
+  column :    The GtkTreeViewColumn to be activated.
 
 ==== :RowExpanded ====
 '':RowExpanded(self @ [[#T|T]], path @ [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
-Returns TRUE if the node pointed to by path is expanded in tree_view.
-tree_view : A GtkTreeView.
-path :      A GtkTreePath to test expansion state.
-Returns :   TRUE if path is expanded.
+  Returns TRUE if the node pointed to by path is expanded in tree_view.
+  tree_view : A GtkTreeView.
+  path :      A GtkTreePath to test expansion state.
+  Returns :   TRUE if path is expanded.
 
 ==== :ScrollToCell ====
 '':ScrollToCell(self @ [[#T|T]], path @ [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]], column @ [[..:..:Gtk:Gtk:TreeViewColumn#T|Gtk.Gtk.TreeViewColumn.T]], use_align @ [[..:..:Std:Symbol#T|Std.Symbol.T]], row_align @ [[..:..:Std:Real#T|Std.Real.T]], col_align @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-Moves the alignments of tree_view to the position specified by column and path.
-If column is NULL, then no horizontal scrolling occurs. Likewise, if path is
-NULL no vertical scrolling occurs. At a minimum, one of column or path need to
-be non-NULL. row_align determines where the row is placed, and col_align
-determines where column is placed. Both are expected to be between 0.0 and 1.0.
-0.0 means left/top alignment, 1.0 means right/bottom alignment, 0.5 means
-center.
-If use_align is FALSE, then the alignment arguments are ignored, and the tree
-does the minimum amount of work to scroll the cell onto the screen. This means
-that the cell will be scrolled to the edge closest to its current position. If
-the cell is currently visible on the screen, nothing is done.
-This function only works if the model is set, and path is a valid row on the
-model. If the model changes before the tree_view is realized, the centered path
-will be modified to reflect this change.
-tree_view : A GtkTreeView.
-path :      The path of the row to move to, or NULL.
-column :    The GtkTreeViewColumn to move horizontally to, or NULL.
-use_align : whether to use alignment arguments, or FALSE.
-row_align : The vertical alignment of the row specified by path.
-col_align : The horizontal alignment of the column specified by column.
+  Moves the alignments of tree_view to the position specified by column and path.
+  If column is NULL, then no horizontal scrolling occurs. Likewise, if path is
+  NULL no vertical scrolling occurs. At a minimum, one of column or path need to
+  be non-NULL. row_align determines where the row is placed, and col_align
+  determines where column is placed. Both are expected to be between 0.0 and 1.0.
+  0.0 means left/top alignment, 1.0 means right/bottom alignment, 0.5 means
+  center.
+  If use_align is FALSE, then the alignment arguments are ignored, and the tree
+  does the minimum amount of work to scroll the cell onto the screen. This means
+  that the cell will be scrolled to the edge closest to its current position. If
+  the cell is currently visible on the screen, nothing is done.
+  This function only works if the model is set, and path is a valid row on the
+  model. If the model changes before the tree_view is realized, the centered path
+  will be modified to reflect this change.
+  tree_view : A GtkTreeView.
+  path :      The path of the row to move to, or NULL.
+  column :    The GtkTreeViewColumn to move horizontally to, or NULL.
+  use_align : whether to use alignment arguments, or FALSE.
+  row_align : The vertical alignment of the row specified by path.
+  col_align : The horizontal alignment of the column specified by column.
 
 ==== :ScrollToPoint ====
 '':ScrollToPoint(self @ [[#T|T]], tree_x @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], tree_y @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-Scrolls the tree view such that the top-left corner of the visible area is
-tree_x, tree_y, where tree_x and tree_y are specified in tree coordinates. The
-tree_view must be realized before this function is called. If it isn't, you
-probably want to be using gtk_tree_view_scroll_to_cell().
-If either tree_x or tree_y are -1, then that direction isn't scrolled.
-tree_view : a GtkTreeView
-tree_x :    X coordinate of new top-left pixel of visible area, or -1
-tree_y :    Y coordinate of new top-left pixel of visible area, or -1
+  Scrolls the tree view such that the top-left corner of the visible area is
+  tree_x, tree_y, where tree_x and tree_y are specified in tree coordinates. The
+  tree_view must be realized before this function is called. If it isn't, you
+  probably want to be using gtk_tree_view_scroll_to_cell().
+  If either tree_x or tree_y are -1, then that direction isn't scrolled.
+  tree_view : a GtkTreeView
+  tree_x :    X coordinate of new top-left pixel of visible area, or -1
+  tree_y :    Y coordinate of new top-left pixel of visible area, or -1
 
 ==== :SetColumnDragFunction ====
 '':SetColumnDragFunction(self @ [[#T|T]], func @ [[..:..:Std:Function#T|Std.Function.T]], user_data @ [[..:..:Std:Address#T|Std.Address.T]], destroy @ [[..:..:Std:Function#T|Std.Function.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-Sets a user function for determining where a column may be dropped when
-dragged. This function is called on every column pair in turn at the beginning
-of a column drag to determine where a drop can take place. The arguments passed
-to func are: the tree_view, the GtkTreeViewColumn being dragged, the two
-GtkTreeViewColumn s determining the drop spot, and user_data. If either of the
-GtkTreeViewColumn arguments for the drop spot are NULL, then they indicate an
-edge. If func is set to be NULL, then tree_view reverts to the default behavior
-of allowing all columns to be dropped everywhere.
-tree_view : A GtkTreeView.
-func :      A function to determine which columns are reorderable, or NULL.
-user_data : User data to be passed to func, or NULL
-destroy :   Destroy notifier for user_data, or NULL
+  Sets a user function for determining where a column may be dropped when
+  dragged. This function is called on every column pair in turn at the beginning
+  of a column drag to determine where a drop can take place. The arguments passed
+  to func are: the tree_view, the GtkTreeViewColumn being dragged, the two
+  GtkTreeViewColumn s determining the drop spot, and user_data. If either of the
+  GtkTreeViewColumn arguments for the drop spot are NULL, then they indicate an
+  edge. If func is set to be NULL, then tree_view reverts to the default behavior
+  of allowing all columns to be dropped everywhere.
+  tree_view : A GtkTreeView.
+  func :      A function to determine which columns are reorderable, or NULL.
+  user_data : User data to be passed to func, or NULL
+  destroy :   Destroy notifier for user_data, or NULL
 
 ==== :SetCursor ====
 '':SetCursor(self @ [[#T|T]], path @ [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]], focus_column @ [[..:..:Gtk:Gtk:TreeViewColumn#T|Gtk.Gtk.TreeViewColumn.T]], start_editing @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-Sets the current keyboard focus to be at path, and selects it. This is useful
-when you want to focus the user's attention on a particular row. If
-focus_column is not NULL, then focus is given to the column specified by it.
-Additionally, if focus_column is specified, and start_editing is TRUE, then
-editing should be started in the specified cell. This function is often
-followed by gtk_widget_grab_focus (tree_view) in order to give keyboard focus
-to the widget. Please note that editing can only happen when the widget is
-realized.
-tree_view :     A GtkTreeView
-path :          A GtkTreePath
-focus_column :  A GtkTreeViewColumn, or NULL
-start_editing : TRUE if the specified cell should start being edited.
+  Sets the current keyboard focus to be at path, and selects it. This is useful
+  when you want to focus the user's attention on a particular row. If
+  focus_column is not NULL, then focus is given to the column specified by it.
+  Additionally, if focus_column is specified, and start_editing is TRUE, then
+  editing should be started in the specified cell. This function is often
+  followed by gtk_widget_grab_focus (tree_view) in order to give keyboard focus
+  to the widget. Please note that editing can only happen when the widget is
+  realized.
+  tree_view :     A GtkTreeView
+  path :          A GtkTreePath
+  focus_column :  A GtkTreeViewColumn, or NULL
+  start_editing : TRUE if the specified cell should start being edited.
 
 ==== :SetCursorOnCell ====
 '':SetCursorOnCell(self @ [[#T|T]], path @ [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]], focus_column @ [[..:..:Gtk:Gtk:TreeViewColumn#T|Gtk.Gtk.TreeViewColumn.T]], focus_cell @ [[..:..:Gtk:Gtk:CellRenderer#T|Gtk.Gtk.CellRenderer.T]], start_editing @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-Sets the current keyboard focus to be at path, and selects it. This is useful
-when you want to focus the user's attention on a particular row. If
-focus_column is not NULL, then focus is given to the column specified by it. If
-focus_column and focus_cell are not NULL, and focus_column contains 2 or more
-editable or activatable cells, then focus is given to the cell specified by
-focus_cell. Additionally, if focus_column is specified, and start_editing is
-TRUE, then editing should be started in the specified cell. This function is
-often followed by gtk_widget_grab_focus (tree_view) in order to give keyboard
-focus to the widget. Please note that editing can only happen when the widget
-is realized.
-tree_view :     A GtkTreeView
-path :          A GtkTreePath
-focus_column :  A GtkTreeViewColumn, or NULL
-focus_cell :    A GtkCellRenderer, or NULL
-start_editing : TRUE if the specified cell should start being edited.
-Since 2.2
+  Sets the current keyboard focus to be at path, and selects it. This is useful
+  when you want to focus the user's attention on a particular row. If
+  focus_column is not NULL, then focus is given to the column specified by it. If
+  focus_column and focus_cell are not NULL, and focus_column contains 2 or more
+  editable or activatable cells, then focus is given to the cell specified by
+  focus_cell. Additionally, if focus_column is specified, and start_editing is
+  TRUE, then editing should be started in the specified cell. This function is
+  often followed by gtk_widget_grab_focus (tree_view) in order to give keyboard
+  focus to the widget. Please note that editing can only happen when the widget
+  is realized.
+  tree_view :     A GtkTreeView
+  path :          A GtkTreePath
+  focus_column :  A GtkTreeViewColumn, or NULL
+  focus_cell :    A GtkCellRenderer, or NULL
+  start_editing : TRUE if the specified cell should start being edited.
+  Since 2.2
 
 ==== :SetDestroyCountFunc ====
 '':SetDestroyCountFunc(self @ [[#T|T]], func @ [[..:..:Std:Function#T|Std.Function.T]], data @ [[..:..:Std:Address#T|Std.Address.T]], destroy @ [[..:..:Std:Function#T|Std.Function.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-This function should almost never be used. It is meant for private use by ATK
-for determining the number of visible children that are removed when the user
-collapses a row, or a row is deleted.
-tree_view : A GtkTreeView
-func :      Function to be called when a view row is destroyed, or NULL
-data :      User data to be passed to func, or NULL
-destroy :   Destroy notifier for data, or NULL
+  This function should almost never be used. It is meant for private use by ATK
+  for determining the number of visible children that are removed when the user
+  collapses a row, or a row is deleted.
+  tree_view : A GtkTreeView
+  func :      Function to be called when a view row is destroyed, or NULL
+  data :      User data to be passed to func, or NULL
+  destroy :   Destroy notifier for data, or NULL
 
 ==== :SetDragDestRow ====
 '':SetDragDestRow(self @ [[#T|T]], path @ [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]], pos @ [[..:..:Gtk:Gtk:TreeViewDropPosition#T|Gtk.Gtk.TreeViewDropPosition.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-Sets the row that is highlighted for feedback.
-tree_view : a GtkTreeView
-path :      The path of the row to highlight, or NULL.
-pos :       Specifies whether to drop before, after or into the row
+  Sets the row that is highlighted for feedback.
+  tree_view : a GtkTreeView
+  path :      The path of the row to highlight, or NULL.
+  pos :       Specifies whether to drop before, after or into the row
 
 ==== :SetEnableSearch ====
 '':SetEnableSearch(self @ [[#T|T]], enable_search @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-If enable_search is set, then the user can type in text to search through the
-tree interactively (this is sometimes called "typeahead find").
-Note that even if this is FALSE, the user can still initiate a search using the
-"start-interactive-search" key binding.
-tree_view :     A GtkTreeView
-enable_search : TRUE, if the user can search interactively
+  If enable_search is set, then the user can type in text to search through the
+  tree interactively (this is sometimes called "typeahead find").
+  Note that even if this is FALSE, the user can still initiate a search using the
+  "start-interactive-search" key binding.
+  tree_view :     A GtkTreeView
+  enable_search : TRUE, if the user can search interactively
 
 ==== :SetEnableTreeLines ====
 '':SetEnableTreeLines(self @ [[#T|T]], enabled @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-Sets whether to draw lines interconnecting the expanders in tree_view. This
-does not have any visible effects for lists.
-tree_view : a GtkTreeView
-enabled :   TRUE to enable tree line drawing, FALSE otherwise.
-Since 2.10
+  Sets whether to draw lines interconnecting the expanders in tree_view. This
+  does not have any visible effects for lists.
+  tree_view : a GtkTreeView
+  enabled :   TRUE to enable tree line drawing, FALSE otherwise.
+  Since 2.10
 
 ==== :SetExpanderColumn ====
 '':SetExpanderColumn(self @ [[#T|T]], column @ [[..:..:Gtk:Gtk:TreeViewColumn#T|Gtk.Gtk.TreeViewColumn.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-Sets the column to draw the expander arrow at. It must be in tree_view. If
-column is NULL, then the expander arrow is always at the first visible column.
-If you do not want expander arrow to appear in your tree, set the expander
-column to a hidden column.
-tree_view : A GtkTreeView
-column :    NULL, or the column to draw the expander arrow at.
+  Sets the column to draw the expander arrow at. It must be in tree_view. If
+  column is NULL, then the expander arrow is always at the first visible column.
+  If you do not want expander arrow to appear in your tree, set the expander
+  column to a hidden column.
+  tree_view : A GtkTreeView
+  column :    NULL, or the column to draw the expander arrow at.
 
 ==== :SetFixedHeightMode ====
 '':SetFixedHeightMode(self @ [[#T|T]], enable @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-Enables or disables the fixed height mode of tree_view. Fixed height mode
-speeds up GtkTreeView by assuming that all rows have the same height. Only
-enable this option if all rows are the same height and all columns are of type
-GTK_TREE_VIEW_COLUMN_FIXED.
-tree_view : a GtkTreeView
-enable :    TRUE to enable fixed height mode
-Since 2.6
+  Enables or disables the fixed height mode of tree_view. Fixed height mode
+  speeds up GtkTreeView by assuming that all rows have the same height. Only
+  enable this option if all rows are the same height and all columns are of type
+  GTK_TREE_VIEW_COLUMN_FIXED.
+  tree_view : a GtkTreeView
+  enable :    TRUE to enable fixed height mode
+  Since 2.6
 
 ==== :SetGridLines ====
 '':SetGridLines(self @ [[#T|T]], grid_lines @ [[..:..:Gtk:Gtk:TreeViewGridLines#T|Gtk.Gtk.TreeViewGridLines.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-Sets which grid lines to draw in tree_view.
-tree_view :  a GtkTreeView
-grid_lines : a GtkTreeViewGridLines value indicating which grid lines to
-             enable.
-Since 2.10
+  Sets which grid lines to draw in tree_view.
+  tree_view :  a GtkTreeView
+  grid_lines : a GtkTreeViewGridLines value indicating which grid lines to
+               enable.
+  Since 2.10
 
 ==== :SetHadjustment ====
 '':SetHadjustment(self @ [[#T|T]], adjustment @ [[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-Sets the GtkAdjustment for the current horizontal aspect.
-tree_view :  A GtkTreeView
-adjustment : The GtkAdjustment to set, or NULL
+  Sets the GtkAdjustment for the current horizontal aspect.
+  tree_view :  A GtkTreeView
+  adjustment : The GtkAdjustment to set, or NULL
 
 ==== :SetHeadersClickable ====
 '':SetHeadersClickable(self @ [[#T|T]], setting @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-Allow the column title buttons to be clicked.
-tree_view : A GtkTreeView.
-setting :   TRUE if the columns are clickable.
+  Allow the column title buttons to be clicked.
+  tree_view : A GtkTreeView.
+  setting :   TRUE if the columns are clickable.
 
 ==== :SetHeadersVisible ====
 '':SetHeadersVisible(self @ [[#T|T]], headers_visible @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-Sets the visibility state of the headers.
-tree_view :       A GtkTreeView.
-headers_visible : TRUE if the headers are visible
+  Sets the visibility state of the headers.
+  tree_view :       A GtkTreeView.
+  headers_visible : TRUE if the headers are visible
 
 ==== :SetHoverExpand ====
 '':SetHoverExpand(self @ [[#T|T]], expand @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-Enables of disables the hover expansion mode of tree_view. Hover expansion
-makes rows expand or collaps if the pointer moves over them.
-tree_view : a GtkTreeView
-expand :    TRUE to enable hover selection mode
-Since 2.6
+  Enables of disables the hover expansion mode of tree_view. Hover expansion
+  makes rows expand or collaps if the pointer moves over them.
+  tree_view : a GtkTreeView
+  expand :    TRUE to enable hover selection mode
+  Since 2.6
 
 ==== :SetHoverSelection ====
 '':SetHoverSelection(self @ [[#T|T]], hover @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-Enables of disables the hover selection mode of tree_view. Hover selection
-makes the selected row follow the pointer. Currently, this works only for the
-selection modes GTK_SELECTION_SINGLE and GTK_SELECTION_BROWSE.
-tree_view : a GtkTreeView
-hover :     TRUE to enable hover selection mode
-Since 2.6
+  Enables of disables the hover selection mode of tree_view. Hover selection
+  makes the selected row follow the pointer. Currently, this works only for the
+  selection modes GTK_SELECTION_SINGLE and GTK_SELECTION_BROWSE.
+  tree_view : a GtkTreeView
+  hover :     TRUE to enable hover selection mode
+  Since 2.6
 
 ==== :SetLevelIndentation ====
 '':SetLevelIndentation(self @ [[#T|T]], indentation @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-Sets the amount of extra indentation for child levels to use in tree_view in
-addition to the default indentation. The value should be specified in pixels, a
-value of 0 disables this feature and in this case only the default indentation
-will be used. This does not have any visible effects for lists.
-tree_view :   a GtkTreeView
-indentation : the amount, in pixels, of extra indentation in tree_view.
-Since 2.12
+  Sets the amount of extra indentation for child levels to use in tree_view in
+  addition to the default indentation. The value should be specified in pixels, a
+  value of 0 disables this feature and in this case only the default indentation
+  will be used. This does not have any visible effects for lists.
+  tree_view :   a GtkTreeView
+  indentation : the amount, in pixels, of extra indentation in tree_view.
+  Since 2.12
 
 ==== :SetModel ====
 '':SetModel(self @ [[#T|T]], model @ [[..:..:Gtk:Gtk:TreeModel#T|Gtk.Gtk.TreeModel.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-Sets the model for a GtkTreeView. If the tree_view already has a model set, it
-will remove it before setting the new model. If model is NULL, then it will
-unset the old model.
-tree_view : A GtkTreeNode.
-model :     The model.
+  Sets the model for a GtkTreeView. If the tree_view already has a model set, it
+  will remove it before setting the new model. If model is NULL, then it will
+  unset the old model.
+  tree_view : A GtkTreeNode.
+  model :     The model.
 
 ==== :SetReorderable ====
 '':SetReorderable(self @ [[#T|T]], reorderable @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-This function is a convenience function to allow you to reorder models that
-support the GtkDragSourceIface and the GtkDragDestIface. Both GtkTreeStore and
-GtkListStore support these. If reorderable is TRUE, then the user can reorder
-the model by dragging and dropping rows. The developer can listen to these
-changes by connecting to the model's row_inserted and row_deleted signals.
-This function does not give you any degree of control over the order -- any
-reordering is allowed. If more control is needed, you should probably handle
-drag and drop manually.
-tree_view :   A GtkTreeView.
-reorderable : TRUE, if the tree can be reordered.
+  This function is a convenience function to allow you to reorder models that
+  support the GtkDragSourceIface and the GtkDragDestIface. Both GtkTreeStore and
+  GtkListStore support these. If reorderable is TRUE, then the user can reorder
+  the model by dragging and dropping rows. The developer can listen to these
+  changes by connecting to the model's row_inserted and row_deleted signals.
+  This function does not give you any degree of control over the order -- any
+  reordering is allowed. If more control is needed, you should probably handle
+  drag and drop manually.
+  tree_view :   A GtkTreeView.
+  reorderable : TRUE, if the tree can be reordered.
 
 ==== :SetRowSeparatorFunc ====
 '':SetRowSeparatorFunc(self @ [[#T|T]], func @ [[..:..:Std:Function#T|Std.Function.T]], data @ [[..:..:Std:Address#T|Std.Address.T]], destroy @ [[..:..:Std:Function#T|Std.Function.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-Sets the row separator function, which is used to determine whether a row
-should be drawn as a separator. If the row separator function is NULL, no
-separators are drawn. This is the default value.
-tree_view : a GtkTreeView
-func :      a GtkTreeViewRowSeparatorFunc
-data :      user data to pass to func, or NULL
-destroy :   destroy notifier for data, or NULL
-Since 2.6
+  Sets the row separator function, which is used to determine whether a row
+  should be drawn as a separator. If the row separator function is NULL, no
+  separators are drawn. This is the default value.
+  tree_view : a GtkTreeView
+  func :      a GtkTreeViewRowSeparatorFunc
+  data :      user data to pass to func, or NULL
+  destroy :   destroy notifier for data, or NULL
+  Since 2.6
 
 ==== :SetRubberBanding ====
 '':SetRubberBanding(self @ [[#T|T]], enable @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-Enables or disables rubber banding in tree_view. If the selection mode is
-GTK_SELECTION_MULTIPLE, rubber banding will allow the user to select multiple
-rows by dragging the mouse.
-tree_view : a GtkTreeView
-enable :    TRUE to enable rubber banding
-Since 2.10
+  Enables or disables rubber banding in tree_view. If the selection mode is
+  GTK_SELECTION_MULTIPLE, rubber banding will allow the user to select multiple
+  rows by dragging the mouse.
+  tree_view : a GtkTreeView
+  enable :    TRUE to enable rubber banding
+  Since 2.10
 
 ==== :SetRulesHint ====
 '':SetRulesHint(self @ [[#T|T]], setting @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-This function tells GTK+ that the user interface for your application requires
-users to read across tree rows and associate cells with one another. By
-default, GTK+ will then render the tree with alternating row colors. Do not use
-it just because you prefer the appearance of the ruled tree; that's a question
-for the theme. Some themes will draw tree rows in alternating colors even when
-rules are turned off, and users who prefer that appearance all the time can
-choose those themes. You should call this function only as a semantic hint to
-the theme engine that your tree makes alternating colors useful from a
-functional standpoint (since it has lots of columns, generally).
-tree_view : a GtkTreeView
-setting :   TRUE if the tree requires reading across rows
+  This function tells GTK+ that the user interface for your application requires
+  users to read across tree rows and associate cells with one another. By
+  default, GTK+ will then render the tree with alternating row colors. Do not use
+  it just because you prefer the appearance of the ruled tree; that's a question
+  for the theme. Some themes will draw tree rows in alternating colors even when
+  rules are turned off, and users who prefer that appearance all the time can
+  choose those themes. You should call this function only as a semantic hint to
+  the theme engine that your tree makes alternating colors useful from a
+  functional standpoint (since it has lots of columns, generally).
+  tree_view : a GtkTreeView
+  setting :   TRUE if the tree requires reading across rows
 
 ==== :SetSearchColumn ====
 '':SetSearchColumn(self @ [[#T|T]], column @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-Sets column as the column where the interactive search code should search in.
-If the sort column is set, users can use the "start-interactive-search" key
-binding to bring up search popup. The enable-search property controls whether
-simply typing text will also start an interactive search.
-Note that column refers to a column of the model.
-tree_view : A GtkTreeView
-column :    the column of the model to search in, or -1 to disable searching
+  Sets column as the column where the interactive search code should search in.
+  If the sort column is set, users can use the "start-interactive-search" key
+  binding to bring up search popup. The enable-search property controls whether
+  simply typing text will also start an interactive search.
+  Note that column refers to a column of the model.
+  tree_view : A GtkTreeView
+  column :    the column of the model to search in, or -1 to disable searching
 
 ==== :SetSearchEntry ====
 '':SetSearchEntry(self @ [[#T|T]], entry @ [[..:..:Gtk:Gtk:Entry#T|Gtk.Gtk.Entry.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-Sets the entry which the interactive search code will use for this tree_view.
-This is useful when you want to provide a search entry in our interface at all
-time at a fixed position. Passing NULL for entry will make the interactive
-search code use the built-in popup entry again.
-tree_view : A GtkTreeView
-entry :     the entry the interactive search code of tree_view should use or
-            NULL
-Since 2.10
+  Sets the entry which the interactive search code will use for this tree_view.
+  This is useful when you want to provide a search entry in our interface at all
+  time at a fixed position. Passing NULL for entry will make the interactive
+  search code use the built-in popup entry again.
+  tree_view : A GtkTreeView
+  entry :     the entry the interactive search code of tree_view should use or
+              NULL
+  Since 2.10
 
 ==== :SetSearchEqualFunc ====
 '':SetSearchEqualFunc(self @ [[#T|T]], search_equal_func @ [[..:..:Std:Function#T|Std.Function.T]], search_user_data @ [[..:..:Std:Address#T|Std.Address.T]], search_destroy @ [[..:..:Std:Function#T|Std.Function.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-Sets the compare function for the interactive search capabilities; note that
-somewhat like strcmp() returning 0 for equality GtkTreeViewSearchEqualFunc
-returns FALSE on matches.
-tree_view :         A GtkTreeView
-search_equal_func : the compare function to use during the search
-search_user_data :  user data to pass to search_equal_func, or NULL
-search_destroy :    Destroy notifier for search_user_data, or NULL
+  Sets the compare function for the interactive search capabilities; note that
+  somewhat like strcmp() returning 0 for equality GtkTreeViewSearchEqualFunc
+  returns FALSE on matches.
+  tree_view :         A GtkTreeView
+  search_equal_func : the compare function to use during the search
+  search_user_data :  user data to pass to search_equal_func, or NULL
+  search_destroy :    Destroy notifier for search_user_data, or NULL
 
 ==== :SetSearchPositionFunc ====
 '':SetSearchPositionFunc(self @ [[#T|T]], func @ [[..:..:Std:Function#T|Std.Function.T]], data @ [[..:..:Std:Address#T|Std.Address.T]], destroy @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-Sets the function to use when positioning the seach dialog.
-tree_view : A GtkTreeView
-func :      the function to use to position the search dialog, or NULL to use
-            the default search position function
-data :      user data to pass to func, or NULL
-destroy :   Destroy notifier for data, or NULL
-Since 2.10
+  Sets the function to use when positioning the seach dialog.
+  tree_view : A GtkTreeView
+  func :      the function to use to position the search dialog, or NULL to use
+              the default search position function
+  data :      user data to pass to func, or NULL
+  destroy :   Destroy notifier for data, or NULL
+  Since 2.10
 
 ==== :SetShowExpanders ====
 '':SetShowExpanders(self @ [[#T|T]], enabled @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-Sets whether to draw and enable expanders and indent child rows in tree_view.
-When disabled there will be no expanders visible in trees and there will be no
-way to expand and collapse rows by default. Also note that hiding the expanders
-will disable the default indentation. You can set a custom indentation in this
-case using gtk_tree_view_set_level_indentation(). This does not have any
-visible effects for lists.
-tree_view : a GtkTreeView
-enabled :   TRUE to enable expander drawing, FALSE otherwise.
-Since 2.12
+  Sets whether to draw and enable expanders and indent child rows in tree_view.
+  When disabled there will be no expanders visible in trees and there will be no
+  way to expand and collapse rows by default. Also note that hiding the expanders
+  will disable the default indentation. You can set a custom indentation in this
+  case using gtk_tree_view_set_level_indentation(). This does not have any
+  visible effects for lists.
+  tree_view : a GtkTreeView
+  enabled :   TRUE to enable expander drawing, FALSE otherwise.
+  Since 2.12
 
 ==== :SetTooltipCell ====
 '':SetTooltipCell(self @ [[#T|T]], tooltip @ [[..:..:Gtk:Gtk:Tooltip#T|Gtk.Gtk.Tooltip.T]], path @ [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]], column @ [[..:..:Gtk:Gtk:TreeViewColumn#T|Gtk.Gtk.TreeViewColumn.T]], cell @ [[..:..:Gtk:Gtk:CellRenderer#T|Gtk.Gtk.CellRenderer.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-Sets the tip area of tooltip to the area path, column and cell have in common.
-For example if path is NULL and column is set, the tip area will be set to the
-full area covered by column. See also gtk_tooltip_set_tip_area().
-Note that if path is not specified and cell is set and part of a column
-containing the expander, the tooltip might not show and hide at the correct
-position. In such cases path must be set to the current node under the mouse
-cursor for this function to operate correctly.
-tree_view : a GtkTreeView
-tooltip :   a GtkTooltip
-path :      a GtkTreePath or NULL
-column :    a GtkTreeViewColumn or NULL
-cell :      a GtkCellRenderer or NULL
-Since 2.12
+  Sets the tip area of tooltip to the area path, column and cell have in common.
+  For example if path is NULL and column is set, the tip area will be set to the
+  full area covered by column. See also gtk_tooltip_set_tip_area().
+  Note that if path is not specified and cell is set and part of a column
+  containing the expander, the tooltip might not show and hide at the correct
+  position. In such cases path must be set to the current node under the mouse
+  cursor for this function to operate correctly.
+  tree_view : a GtkTreeView
+  tooltip :   a GtkTooltip
+  path :      a GtkTreePath or NULL
+  column :    a GtkTreeViewColumn or NULL
+  cell :      a GtkCellRenderer or NULL
+  Since 2.12
 
 ==== :SetTooltipColumn ====
 '':SetTooltipColumn(self @ [[#T|T]], column @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-If you only plan to have simple (text-only) tooltips on full rows, you can use
-this function to have GtkTreeView handle these automatically for you. column
-should be set to the column in tree_view's model containing the tooltip texts,
-or -1 to disable this feature.
-When enabled, "has-tooltip" will be set to TRUE and tree_view will connect a
-"query-tooltip" signal handler.
-tree_view : a GtkTreeView
-column :    an integer, which is a valid column number for tree_view's model
-Since 2.12
-***** Property Details *****
-The "enable-grid-lines" property
-  "enable-grid-lines"        GtkTreeViewGridLines  : Read / Write
-Whether grid lines should be drawn in the tree view.
-Default value: GTK_TREE_VIEW_GRID_LINES_NONE
+  If you only plan to have simple (text-only) tooltips on full rows, you can use
+  this function to have GtkTreeView handle these automatically for you. column
+  should be set to the column in tree_view's model containing the tooltip texts,
+  or -1 to disable this feature.
+  When enabled, "has-tooltip" will be set to TRUE and tree_view will connect a
+  "query-tooltip" signal handler.
+  tree_view : a GtkTreeView
+  column :    an integer, which is a valid column number for tree_view's model
+  Since 2.12
+  ***** Property Details *****
+  The "enable-grid-lines" property
+    "enable-grid-lines"        GtkTreeViewGridLines  : Read / Write
+  Whether grid lines should be drawn in the tree view.
+  Default value: GTK_TREE_VIEW_GRID_LINES_NONE
 
 ==== :SetTooltipRow ====
 '':SetTooltipRow(self @ [[#T|T]], tooltip @ [[..:..:Gtk:Gtk:Tooltip#T|Gtk.Gtk.Tooltip.T]], path @ [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-Sets the tip area of tooltip to be the area covered by the row at path. See
-also gtk_tooltip_set_tip_area().
-tree_view : a GtkTreeView
-tooltip :   a GtkTooltip
-path :      a GtkTreePath
-Since 2.12
+  Sets the tip area of tooltip to be the area covered by the row at path. See
+  also gtk_tooltip_set_tip_area().
+  tree_view : a GtkTreeView
+  tooltip :   a GtkTooltip
+  path :      a GtkTreePath
+  Since 2.12
 
 ==== :SetVadjustment ====
 '':SetVadjustment(self @ [[#T|T]], adjustment @ [[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-Sets the GtkAdjustment for the current vertical aspect.
-tree_view :  A GtkTreeView
-adjustment : The GtkAdjustment to set, or NULL
+  Sets the GtkAdjustment for the current vertical aspect.
+  tree_view :  A GtkTreeView
+  adjustment : The GtkAdjustment to set, or NULL
 
 ==== New ====
 ''New() : [[# T| T]]''
 
-Creates a new GtkTreeView widget.
-Returns : A newly created GtkTreeView widget.
+  Creates a new GtkTreeView widget.
+  Returns : A newly created GtkTreeView widget.
 
 ==== ModeGetType ====
 ''ModeGetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
@@ -1093,7 +1095,7 @@ Returns : A newly created GtkTreeView widget.
 ==== NewWithModel ====
 ''NewWithModel(model : [[..:..:Gtk:Gtk:TreeModel#T|Gtk.Gtk.TreeModel.T]]) : [[# T| T]]''
 
-Creates a new GtkTreeView widget with the model initialized to model.
-model :   the model.
-Returns : A newly created GtkTreeView widget.
+  Creates a new GtkTreeView widget with the model initialized to model.
+  model :   the model.
+  Returns : A newly created GtkTreeView widget.
 

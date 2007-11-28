@@ -3,95 +3,98 @@
 === inherits from ===
   * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
 
-GtkRecentManager provides a facility for adding, removing and looking up
-recently used files. Each recently used file is identified by its URI, and has
-meta-data associated to it, like the names and command lines of the
-applications that have registered it, the number of time each application has
-registered the same file, the mime type of the file and whether the file should
-be displayed only by the applications that have registered it.
-The GtkRecentManager acts like a database of all the recently used files. You
-can create new GtkRecentManager objects, but it is more efficient to use the
-standard recent manager for the GdkScreen so that informations about the
-recently used files is shared with other people using them. In case the default
-screen is being used, adding a new recently used file is as simple as:
-GtkRecentManager *manager;
-manager = gtk_recent_manager_get_default ();
-gtk_recent_manager_add_item (manager, file_uri);
-While looking up a recently used file is as simple as:
-GtkRecentManager *manager;
-GtkRecentInfo *info;
-GError *error = NULL;
-manager = gtk_recent_manager_get_default ();
-info = gtk_recent_manager_lookup_item (manager, file_uri, &error);
-if (error)
-  {
-    g_warning ("Could not find the file: %s", error->message);
-    g_error_free (error);
-  }
-else
-  {
-    /* Use the info object */
-    gtk_recent_info_unref (info);
-  }
-Recently used files are supported since GTK+ 2.10.
+  GtkRecentManager provides a facility for adding, removing and looking up
+  recently used files. Each recently used file is identified by its URI, and has
+  meta-data associated to it, like the names and command lines of the
+  applications that have registered it, the number of time each application has
+  registered the same file, the mime type of the file and whether the file should
+  be displayed only by the applications that have registered it.
+  The GtkRecentManager acts like a database of all the recently used files. You
+  can create new GtkRecentManager objects, but it is more efficient to use the
+  standard recent manager for the GdkScreen so that informations about the
+  recently used files is shared with other people using them. In case the default
+  screen is being used, adding a new recently used file is as simple as:
+  GtkRecentManager *manager;
+  
+  manager = gtk_recent_manager_get_default ();
+  gtk_recent_manager_add_item (manager, file_uri);
+  While looking up a recently used file is as simple as:
+  GtkRecentManager *manager;
+  GtkRecentInfo *info;
+  GError *error = NULL;
+  
+  manager = gtk_recent_manager_get_default ();
+  info = gtk_recent_manager_lookup_item (manager, file_uri, &error);
+  if (error)
+    {
+      g_warning ("Could not find the file: %s", error->message);
+      g_error_free (error);
+    }
+  else
+    {
+      /* Use the info object */
+      gtk_recent_info_unref (info);
+    }
+  Recently used files are supported since GTK+ 2.10.
+  
 
 ==== :SetScreen ====
 '':SetScreen(self @ [[#T|T]], screen @ [[..:..:Gtk:Gdk:Screen#T|Gtk.Gdk.Screen.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-**** Warning ****
-gtk_recent_manager_set_screen has been deprecated since version 2.12 and should
-not be used in newly-written code. This function has been deprecated and should
-not be used in newly written code. Calling this function has no effect.
-Sets the screen for a recent manager; the screen is used to track the user's
-currently configured recently used documents storage.
-manager : a GtkRecentManager
-screen :  a GdkScreen
-Since 2.10
+  **** Warning ****
+  gtk_recent_manager_set_screen has been deprecated since version 2.12 and should
+  not be used in newly-written code. This function has been deprecated and should
+  not be used in newly written code. Calling this function has no effect.
+  Sets the screen for a recent manager; the screen is used to track the user's
+  currently configured recently used documents storage.
+  manager : a GtkRecentManager
+  screen :  a GdkScreen
+  Since 2.10
 
 ==== :SetLimit ====
 '':SetLimit(self @ [[#T|T]], limit @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-Sets the maximum number of item that the gtk_recent_manager_get_items()
-function should return. If limit is set to -1, then return all the items.
-manager : a GtkRecentManager
-limit :   the maximum number of items to return, or -1.
-Since 2.10
+  Sets the maximum number of item that the gtk_recent_manager_get_items()
+  function should return. If limit is set to -1, then return all the items.
+  manager : a GtkRecentManager
+  limit :   the maximum number of items to return, or -1.
+  Since 2.10
 
 ==== :RemoveItem ====
 '':RemoveItem(self @ [[#T|T]], uri @ [[..:..:Std:String#T|Std.String.T]], error @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
-Removes a resource pointed by uri from the recently used resources list handled
-by a recent manager.
-manager : a GtkRecentManager
-uri :     the URI of the item you wish to remove
-error :   return location for a GError, or NULL
-Returns : TRUE if the item pointed by uri has been successfully removed by the
-          recently used resources list, and FALSE otherwise.
-Since 2.10
+  Removes a resource pointed by uri from the recently used resources list handled
+  by a recent manager.
+  manager : a GtkRecentManager
+  uri :     the URI of the item you wish to remove
+  error :   return location for a GError, or NULL
+  Returns : TRUE if the item pointed by uri has been successfully removed by the
+            recently used resources list, and FALSE otherwise.
+  Since 2.10
 
 ==== :PurgeItems ====
 '':PurgeItems(self @ [[#T|T]], error @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-Purges every item from the recently used resources list.
-manager : a GtkRecentManager
-error :   a return location for a GError, or NULL
-Returns : the number of items that have been removed from the recently used
-          resources list.
-Since 2.10
+  Purges every item from the recently used resources list.
+  manager : a GtkRecentManager
+  error :   a return location for a GError, or NULL
+  Returns : the number of items that have been removed from the recently used
+            resources list.
+  Since 2.10
 
 ==== :MoveItem ====
 '':MoveItem(self @ [[#T|T]], uri @ [[..:..:Std:String#T|Std.String.T]], new_uri @ [[..:..:Std:String#T|Std.String.T]], error @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
-Changes the location of a recently used resource from uri to new_uri.
-Please note that this function will not affect the resource pointed by the
-URIs, but only the URI used in the recently used resources list.
-manager : a GtkRecentManager
-uri :     the URI of a recently used resource
-new_uri : the new URI of the recently used resource, or NULL to remove the item
-          pointed by uri in the list
-error :   a return location for a GError, or NULL
-Returns : TRUE on success.
-Since 2.10
+  Changes the location of a recently used resource from uri to new_uri.
+  Please note that this function will not affect the resource pointed by the
+  URIs, but only the URI used in the recently used resources list.
+  manager : a GtkRecentManager
+  uri :     the URI of a recently used resource
+  new_uri : the new URI of the recently used resource, or NULL to remove the item
+            pointed by uri in the list
+  error :   a return location for a GError, or NULL
+  Returns : TRUE on success.
+  Since 2.10
 
 ==== :Priv ====
 '':Priv(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -100,95 +103,95 @@ Since 2.10
 ==== :AddFull ====
 '':AddFull(self @ [[#T|T]], uri @ [[..:..:Std:String#T|Std.String.T]], recent_data @ [[..:..:Gtk:Gtk:RecentData#T|Gtk.Gtk.RecentData.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
-Adds a new resource, pointed by uri, into the recently used resources list,
-using the metadata specified inside the GtkRecentData structure passed in
-recent_data.
-The passed URI will be used to identify this resource inside the list.
-In order to register the new recently used resource, metadata about the
-resource must be passed as well as the URI; the metadata is stored in a
-GtkRecentData structure, which must contain the MIME type of the resource
-pointed by the URI; the name of the application that is registering the item,
-and a command line to be used when launching the item.
-Optionally, a GtkRecentData structure might contain a UTF-8 string to be used
-when viewing the item instead of the last component of the URI; a short
-description of the item; whether the item should be considered private - that
-is, should be displayed only by the applications that have registered it.
-manager :     a GtkRecentManager
-uri :         a valid URI
-recent_data : metadata of the resource
-Returns :     TRUE if the new item was successfully added to the recently used
-              resources list, FALSE otherwise.
-Since 2.10
+  Adds a new resource, pointed by uri, into the recently used resources list,
+  using the metadata specified inside the GtkRecentData structure passed in
+  recent_data.
+  The passed URI will be used to identify this resource inside the list.
+  In order to register the new recently used resource, metadata about the
+  resource must be passed as well as the URI; the metadata is stored in a
+  GtkRecentData structure, which must contain the MIME type of the resource
+  pointed by the URI; the name of the application that is registering the item,
+  and a command line to be used when launching the item.
+  Optionally, a GtkRecentData structure might contain a UTF-8 string to be used
+  when viewing the item instead of the last component of the URI; a short
+  description of the item; whether the item should be considered private - that
+  is, should be displayed only by the applications that have registered it.
+  manager :     a GtkRecentManager
+  uri :         a valid URI
+  recent_data : metadata of the resource
+  Returns :     TRUE if the new item was successfully added to the recently used
+                resources list, FALSE otherwise.
+  Since 2.10
 
 ==== :AddItem ====
 '':AddItem(self @ [[#T|T]], uri @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
-Adds a new resource, pointed by uri, into the recently used resources list.
-This function automatically retrieves some of the needed metadata and setting
-other metadata to common default values; it then feeds the data to
-gtk_recent_manager_add_full().
-See gtk_recent_manager_add_full() if you want to explicitly define the metadata
-for the resource pointed by uri.
-manager : a GtkRecentManager
-uri :     a valid URI
-Returns : TRUE if the new item was successfully added to the recently used
-          resources list
-Since 2.10
+  Adds a new resource, pointed by uri, into the recently used resources list.
+  This function automatically retrieves some of the needed metadata and setting
+  other metadata to common default values; it then feeds the data to
+  gtk_recent_manager_add_full().
+  See gtk_recent_manager_add_full() if you want to explicitly define the metadata
+  for the resource pointed by uri.
+  manager : a GtkRecentManager
+  uri :     a valid URI
+  Returns : TRUE if the new item was successfully added to the recently used
+            resources list
+  Since 2.10
 
 ==== :GetItems ====
 '':GetItems(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-Gets the list of recently used resources.
-manager : a GtkRecentManager
-          a list of newly allocated GtkRecentInfo objects. Use
-Returns : gtk_recent_info_unref() on each item inside the list, and then free
-          the list itself using g_list_free().
-Since 2.10
+  Gets the list of recently used resources.
+  manager : a GtkRecentManager
+            a list of newly allocated GtkRecentInfo objects. Use
+  Returns : gtk_recent_info_unref() on each item inside the list, and then free
+            the list itself using g_list_free().
+  Since 2.10
 
 ==== :GetLimit ====
 '':GetLimit(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-Gets the maximum number of items that the gtk_recent_manager_get_items()
-function should return.
-manager : a GtkRecentManager
-Returns : the number of items to return, or -1 for every item.
-Since 2.10
+  Gets the maximum number of items that the gtk_recent_manager_get_items()
+  function should return.
+  manager : a GtkRecentManager
+  Returns : the number of items to return, or -1 for every item.
+  Since 2.10
 
 ==== :HasItem ====
 '':HasItem(self @ [[#T|T]], uri @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
-Checks whether there is a recently used resource registered with uri inside the
-recent manager.
-manager : a GtkRecentManager
-uri :     a URI
-Returns : TRUE if the resource was found, FALSE otherwise.
-Since 2.10
+  Checks whether there is a recently used resource registered with uri inside the
+  recent manager.
+  manager : a GtkRecentManager
+  uri :     a URI
+  Returns : TRUE if the resource was found, FALSE otherwise.
+  Since 2.10
 
 ==== :LookupItem ====
 '':LookupItem(self @ [[#T|T]], uri @ [[..:..:Std:String#T|Std.String.T]], error @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Gtk:Gtk:RecentInfo#T|Gtk.Gtk.RecentInfo.T]]''
 
-Searches for a URI inside the recently used resources list, and returns a
-structure containing informations about the resource like its MIME type, or its
-display name.
-manager : a GtkRecentManager
-uri :     a URI
-error :   a return location for a GError, or NULL
-          a GtkRecentInfo structure containing information about the resource
-Returns : pointed by uri, or NULL if the URI was not registered in the recently
-          used resources list. Free with gtk_recent_info_unref().
-Since 2.10
+  Searches for a URI inside the recently used resources list, and returns a
+  structure containing informations about the resource like its MIME type, or its
+  display name.
+  manager : a GtkRecentManager
+  uri :     a URI
+  error :   a return location for a GError, or NULL
+            a GtkRecentInfo structure containing information about the resource
+  Returns : pointed by uri, or NULL if the URI was not registered in the recently
+            used resources list. Free with gtk_recent_info_unref().
+  Since 2.10
 
 ==== New ====
 ''New() : [[# T| T]]''
 
-Creates a new recent manager object. Recent manager objects are used to handle
-the list of recently used resources. A GtkRecentManager object monitors the
-recently used resources list, and emits the "changed" signal each time
-something inside the list changes.
-GtkRecentManager objects are expensive: be sure to create them only when
-needed. You should use gtk_recent_manager_get_default() instead.
-Returns : A newly created GtkRecentManager object.
-Since 2.10
+  Creates a new recent manager object. Recent manager objects are used to handle
+  the list of recently used resources. A GtkRecentManager object monitors the
+  recently used resources list, and emits the "changed" signal each time
+  something inside the list changes.
+  GtkRecentManager objects are expensive: be sure to create them only when
+  needed. You should use gtk_recent_manager_get_default() instead.
+  Returns : A newly created GtkRecentManager object.
+  Since 2.10
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
@@ -197,34 +200,34 @@ Since 2.10
 ==== GetForScreen ====
 ''GetForScreen(screen : [[..:..:Gtk:Gdk:Screen#T|Gtk.Gdk.Screen.T]]) : [[..:..:Gtk:Gtk:RecentManager#T|Gtk.Gtk.RecentManager.T]]''
 
-**** Warning ****
-gtk_recent_manager_get_for_screen has been deprecated since version 2.12 and
-should not be used in newly-written code. This function has been deprecated and
-should not be used in newly written code. Calling this function is equivalent
-to calling gtk_recent_manager_get_default().
-Gets the recent manager object associated with screen; if this function has not
-previously been called for the given screen, a new recent manager object will
-be created and associated with the screen. Recent manager objects are fairly
-expensive to create, so using this function is usually a better choice than
-calling gtk_recent_manager_new() and setting the screen yourself; by using this
-function a single recent manager object will be shared between users.
-screen :  a GdkScreen
-          A unique GtkRecentManager associated with the given screen. This
-Returns : recent manager is associated to the with the screen and can be used
-          as long as the screen is open. Do not ref or unref it.
-Since 2.10
+  **** Warning ****
+  gtk_recent_manager_get_for_screen has been deprecated since version 2.12 and
+  should not be used in newly-written code. This function has been deprecated and
+  should not be used in newly written code. Calling this function is equivalent
+  to calling gtk_recent_manager_get_default().
+  Gets the recent manager object associated with screen; if this function has not
+  previously been called for the given screen, a new recent manager object will
+  be created and associated with the screen. Recent manager objects are fairly
+  expensive to create, so using this function is usually a better choice than
+  calling gtk_recent_manager_new() and setting the screen yourself; by using this
+  function a single recent manager object will be shared between users.
+  screen :  a GdkScreen
+            A unique GtkRecentManager associated with the given screen. This
+  Returns : recent manager is associated to the with the screen and can be used
+            as long as the screen is open. Do not ref or unref it.
+  Since 2.10
 
 ==== GetDefault ====
 ''GetDefault() : [[..:..:Gtk:Gtk:RecentManager#T|Gtk.Gtk.RecentManager.T]]''
 
-Gets a unique instance of GtkRecentManager, that you can share in your
-application without caring about memory management. The returned instance will
-be freed when you application terminates.
-Returns : A unique GtkRecentManager. Do not ref or unref it.
-Since 2.10
+  Gets a unique instance of GtkRecentManager, that you can share in your
+  application without caring about memory management. The returned instance will
+  be freed when you application terminates.
+  Returns : A unique GtkRecentManager. Do not ref or unref it.
+  Since 2.10
 
 ==== ErrorQuark ====
 ''ErrorQuark() : [[..:..:Std:Object#T|Std.Object.T]]''
 
-The GQuark used for GtkRecentManagerError errors.
+  The GQuark used for GtkRecentManagerError errors.
 

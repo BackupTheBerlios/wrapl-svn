@@ -9,12 +9,13 @@
   * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
   * [[..:..:Gtk:Gtk:FileChooser#T|Gtk.Gtk.FileChooser.T]]
 
-GtkFileChooserWidget is a widget suitable for selecting files. It is the main
-building block of a GtkFileChooserDialog. Most applications will only need to
-use the latter; you can use GtkFileChooserWidget as part of a larger window if
-you have special needs.
-Note that GtkFileChooserWidget does not have any methods of its own. Instead,
-you should use the functions that work on a GtkFileChooser.
+  GtkFileChooserWidget is a widget suitable for selecting files. It is the main
+  building block of a GtkFileChooserDialog. Most applications will only need to
+  use the latter; you can use GtkFileChooserWidget as part of a larger window if
+  you have special needs.
+  Note that GtkFileChooserWidget does not have any methods of its own. Instead,
+  you should use the functions that work on a GtkFileChooser.
+  
 
 ==== :Priv ====
 '':Priv(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -23,12 +24,12 @@ you should use the functions that work on a GtkFileChooser.
 ==== New ====
 ''New(action : [[..:..:Gtk:Gtk:FileChooserAction#T|Gtk.Gtk.FileChooserAction.T]]) : [[# T| T]]''
 
-Creates a new GtkFileChooserWidget. This is a file chooser widget that can be
-embedded in custom windows, and it is the same widget that is used by
-GtkFileChooserDialog.
-action :  Open or save mode for the widget
-Returns : a new GtkFileChooserWidget
-Since 2.4
+  Creates a new GtkFileChooserWidget. This is a file chooser widget that can be
+  embedded in custom windows, and it is the same widget that is used by
+  GtkFileChooserDialog.
+  action :  Open or save mode for the widget
+  Returns : a new GtkFileChooserWidget
+  Since 2.4
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
@@ -37,14 +38,14 @@ Since 2.4
 ==== NewWithBackend ====
 ''NewWithBackend(action : [[..:..:Gtk:Gtk:FileChooserAction#T|Gtk.Gtk.FileChooserAction.T]], backend : [[..:..:Std:String#T|Std.String.T]]) : [[# T| T]]''
 
-Creates a new GtkFileChooserWidget with a specified backend. This is especially
-useful if you use gtk_file_chooser_set_local_only() to allow non-local files.
-This is a file chooser widget that can be embedded in custom windows and it is
-the same widget that is used by GtkFileChooserDialog.
-action :  Open or save mode for the widget
-backend : The name of the specific filesystem backend to use.
-Returns : a new GtkFileChooserWidget
-Since 2.4
-***** See Also *****
-GtkFileChooser, GtkFileChooserDialog
+  Creates a new GtkFileChooserWidget with a specified backend. This is especially
+  useful if you use gtk_file_chooser_set_local_only() to allow non-local files.
+  This is a file chooser widget that can be embedded in custom windows and it is
+  the same widget that is used by GtkFileChooserDialog.
+  action :  Open or save mode for the widget
+  backend : The name of the specific filesystem backend to use.
+  Returns : a new GtkFileChooserWidget
+  Since 2.4
+  ***** See Also *****
+  GtkFileChooser, GtkFileChooserDialog
 

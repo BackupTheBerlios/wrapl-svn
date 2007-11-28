@@ -7,32 +7,33 @@
   * [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]
   * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
 
-The GtkVScale widget is used to allow the user to select a value using a
-vertical slider. To create one, use gtk_hscale_new_with_range().
-The position to show the current value, and the number of decimal places shown
-can be set using the parent GtkScale class's functions.
+  The GtkVScale widget is used to allow the user to select a value using a
+  vertical slider. To create one, use gtk_hscale_new_with_range().
+  The position to show the current value, and the number of decimal places shown
+  can be set using the parent GtkScale class's functions.
+  
 
 ==== New ====
 ''New(adjustment : [[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]]) : [[# T| T]]''
 
-Creates a new GtkVScale.
-adjustment : the GtkAdjustment which sets the range of the scale.
-Returns :    a new GtkVScale.
+  Creates a new GtkVScale.
+  adjustment : the GtkAdjustment which sets the range of the scale.
+  Returns :    a new GtkVScale.
 
 ==== NewWithRange ====
 ''NewWithRange(min : [[..:..:Std:Real#T|Std.Real.T]], max : [[..:..:Std:Real#T|Std.Real.T]], step : [[..:..:Std:Real#T|Std.Real.T]]) : [[# T| T]]''
 
-Creates a new vertical scale widget that lets the user input a number between
-min and max (including min and max) with the increment step. step must be
-nonzero; it's the distance the slider moves when using the arrow keys to adjust
-the scale value.
-Note that the way in which the precision is derived works best if step is a
-power of ten. If the resulting precision is not suitable for your needs, use
-gtk_scale_set_digits() to correct it.
-min :     minimum value
-max :     maximum value
-step :    step increment (tick size) used with keyboard shortcuts
-Returns : a new GtkVScale
+  Creates a new vertical scale widget that lets the user input a number between
+  min and max (including min and max) with the increment step. step must be
+  nonzero; it's the distance the slider moves when using the arrow keys to adjust
+  the scale value.
+  Note that the way in which the precision is derived works best if step is a
+  power of ten. If the resulting precision is not suitable for your needs, use
+  gtk_scale_set_digits() to correct it.
+  min :     minimum value
+  max :     maximum value
+  step :    step increment (tick size) used with keyboard shortcuts
+  Returns : a new GtkVScale
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''

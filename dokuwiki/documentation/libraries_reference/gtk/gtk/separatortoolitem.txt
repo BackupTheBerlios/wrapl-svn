@@ -8,40 +8,41 @@
   * [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]
   * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
 
-A GtkSeparatorItem is a GtkToolItem that separates groups of other
-GtkToolItems. Depending on the theme, a GtkSeparatorToolItem will often look
-like a vertical line on horizontally docked toolbars.
-If the property "expand" is TRUE and the property "draw" is FALSE, a
-GtkSeparatorToolItem will act as a "spring" that forces other items to the ends
-of the toolbar.
-Use gtk_separator_tool_item_new() to create a new GtkSeparatorToolItem.
+  A GtkSeparatorItem is a GtkToolItem that separates groups of other
+  GtkToolItems. Depending on the theme, a GtkSeparatorToolItem will often look
+  like a vertical line on horizontally docked toolbars.
+  If the property "expand" is TRUE and the property "draw" is FALSE, a
+  GtkSeparatorToolItem will act as a "spring" that forces other items to the ends
+  of the toolbar.
+  Use gtk_separator_tool_item_new() to create a new GtkSeparatorToolItem.
+  
 
 ==== :SetDraw ====
 '':SetDraw(self @ [[#T|T]], draw @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-When separator_tool_items is drawn as a vertical line, or just blank. Setting
-this FALSE along with gtk_tool_item_set_expand() is useful to create an item
-that forces following items to the end of the toolbar.
-item : a GtkSeparatorToolItem
-draw : whether separator_tool_item is drawn as a vertical line
-Since 2.4
+  When separator_tool_items is drawn as a vertical line, or just blank. Setting
+  this FALSE along with gtk_tool_item_set_expand() is useful to create an item
+  that forces following items to the end of the toolbar.
+  item : a GtkSeparatorToolItem
+  draw : whether separator_tool_item is drawn as a vertical line
+  Since 2.4
 
 ==== :GetDraw ====
 '':GetDraw(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
-Returns whether separator_tool_item is drawn as a line, or just blank. See
-gtk_separator_tool_item_set_draw().
-item :    a GtkSeparatorToolItem
-Returns : TRUE if separator_tool_item is drawn as a line, or just blank.
-Since 2.4
-***** Property Details *****
-The "draw" property
-  "draw"                     gboolean              : Read / Write
-Whether the separator is drawn, or just blank.
-Default value: TRUE
-***** See Also *****
-GtkToolbar         The toolbar widget
-GtkRadioToolButton A toolbar item containing a radio button
+  Returns whether separator_tool_item is drawn as a line, or just blank. See
+  gtk_separator_tool_item_set_draw().
+  item :    a GtkSeparatorToolItem
+  Returns : TRUE if separator_tool_item is drawn as a line, or just blank.
+  Since 2.4
+  ***** Property Details *****
+  The "draw" property
+    "draw"                     gboolean              : Read / Write
+  Whether the separator is drawn, or just blank.
+  Default value: TRUE
+  ***** See Also *****
+  GtkToolbar         The toolbar widget
+  GtkRadioToolButton A toolbar item containing a radio button
 
 ==== :Priv ====
 '':Priv(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -50,9 +51,9 @@ GtkRadioToolButton A toolbar item containing a radio button
 ==== New ====
 ''New() : [[# T| T]]''
 
-Create a new GtkSeparatorToolItem
-Returns : the new GtkSeparatorToolItem
-Since 2.4
+  Create a new GtkSeparatorToolItem
+  Returns : the new GtkSeparatorToolItem
+  Since 2.4
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''

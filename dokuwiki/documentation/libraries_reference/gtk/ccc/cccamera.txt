@@ -3,6 +3,7 @@
 === inherits from ===
   * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
 
+  
 
 ==== :SetRoot ====
 '':SetRoot(self @ [[#T|T]], root @ [[..:..:Gtk:CCC:CcItem#T|Gtk.CCC.CcItem.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -11,13 +12,13 @@
 ==== New ====
 ''New() : [[# T| T]]''
 
-Returns :
+  Returns :
 
 ==== GetRoot ====
 ''GetRoot(self : [[..:..:Gtk:CCC:CcItem#T|Gtk.CCC.CcItem.T]]) : [[..:..:Gtk:CCC:CcItem#T|Gtk.CCC.CcItem.T]]''
 
-self :
-Returns :
+  self :
+  Returns :
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
@@ -26,6 +27,6 @@ Returns :
 ==== NewRoot ====
 ''NewRoot(root : [[..:..:Gtk:CCC:CcItem#T|Gtk.CCC.CcItem.T]]) : [[# T| T]]''
 
-root :
-Returns :
+  root :
+  Returns :
 

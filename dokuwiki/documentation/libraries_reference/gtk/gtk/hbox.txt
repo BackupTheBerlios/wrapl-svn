@@ -7,20 +7,21 @@
   * [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]
   * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
 
-GtkHBox is a container that organizes child widgets into a single row.
-Use the GtkBox packing interface to determine the arrangement, spacing, width,
-and alignment of GtkHBox children.
-All children are allocated the same height.
+  GtkHBox is a container that organizes child widgets into a single row.
+  Use the GtkBox packing interface to determine the arrangement, spacing, width,
+  and alignment of GtkHBox children.
+  All children are allocated the same height.
+  
 
 ==== New ====
 ''New(homogeneous : [[..:..:Std:Symbol#T|Std.Symbol.T]], spacing : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[# T| T]]''
 
-Creates a new GtkHBox.
-homogeneous : TRUE if all children are to be given equal space allotments.
-spacing :     the number of pixels to place by default between children.
-Returns :     a new GtkHBox.
-***** See Also *****
-GtkVBox a sister class that organizes widgets into a column.
+  Creates a new GtkHBox.
+  homogeneous : TRUE if all children are to be given equal space allotments.
+  spacing :     the number of pixels to place by default between children.
+  Returns :     a new GtkHBox.
+  ***** See Also *****
+  GtkVBox a sister class that organizes widgets into a column.
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''

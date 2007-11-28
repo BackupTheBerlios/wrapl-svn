@@ -6,17 +6,18 @@
   * [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]
   * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
 
-The GtkVSeparator widget is a vertical separator, used to group the widgets
-within a window. It displays a vertical line with a shadow to make it appear
-sunken into the interface.
+  The GtkVSeparator widget is a vertical separator, used to group the widgets
+  within a window. It displays a vertical line with a shadow to make it appear
+  sunken into the interface.
+  
 
 ==== New ====
 ''New() : [[# T| T]]''
 
-Creates a new GtkVSeparator.
-Returns : a new GtkVSeparator.
-***** See Also *****
-GtkHSeparator a horizontal separator.
+  Creates a new GtkVSeparator.
+  Returns : a new GtkVSeparator.
+  ***** See Also *****
+  GtkHSeparator a horizontal separator.
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''

@@ -4,169 +4,179 @@
   * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
   * [[..:..:Gtk:Gtk:TreeModel#T|Gtk.Gtk.TreeModel.T]]
 
-The GtkListStore object is a list model for use with a GtkTreeView widget. It
-implements the GtkTreeModel interface, and consequentialy, can use all of the
-methods available there. It also implements the GtkTreeSortable interface so it
-can be sorted by the view. Finally, it also implements the tree drag and drop
-interfaces.
-The GtkListStore can accept most GObject types as a column type, though it
-can't accept all custom types. Internally, it will keep a copy of data passed
-in (such as a string or a boxed pointer). Columns that accept GObjects are
-handled a little differently. The GtkListStore will keep a reference to the
-object instead of copying the value. As a result, if the object is modified, it
-is up to the application writer to call gtk_tree_model_row_changed to emit the
-"row_changed" signal. This most commonly affects lists with GdkPixbufs stored.
-Example 21.&#160;Creating a simple list store.
-enum {
-  COLUMN_STRING,
-  COLUMN_INT,
-  COLUMN_BOOLEAN,
-  N_COLUMNS
-};
-{
-  GtkListStore *list_store;
-  GtkTreePath *path;
-  GtkTreeIter iter;
-  gint i;
-  list_store = gtk_list_store_new (N_COLUMNS,
-                                   G_TYPE_STRING,
-                                   G_TYPE_INT,
-                                   G_TYPE_BOOLEAN);
-  for (i = 0; i < 10; i++)
-    {
-      gchar *some_data;
-      some_data = get_some_data (i);
-      /* Add a new row to the model */
-      gtk_list_store_append (list_store, &iter);
-      gtk_list_store_set (list_store, &iter,
-                          COLUMN_STRING, some_data,
-                          COLUMN_INT, i,
-                          COLUMN_BOOLEAN,  FALSE,
-                          -1);
-      /* As the store will keep a copy of the string internally, we
-       * free some_data.
-       */
-      g_free (some_data);
-    }
-  /* Modify a particular row */
-  path = gtk_tree_path_new_from_string ("4");
-  gtk_tree_model_get_iter (GTK_TREE_MODEL (list_store),
-                           &iter,
-                           path);
-  gtk_tree_path_free (path);
-  gtk_list_store_set (list_store, &iter,
-                      COLUMN_BOOLEAN, TRUE,
-                      -1);
-}
-**** Performance Considerations ****
-Internally, the GtkListStore was implemented with a linked list with a tail
-pointer prior to GTK+ 2.6. As a result, it was fast at data insertion and
-deletion, and not fast at random data access. The GtkListStore sets the
-GTK_TREE_MODEL_ITERS_PERSIST flag, which means that GtkTreeIters can be cached
-while the row exists. Thus, if access to a particular row is needed often and
-your code is expected to run on older versions of GTK+, it is worth keeping the
-iter around.
-It is important to note that only the methods gtk_list_store_insert_with_values
-() and gtk_list_store_insert_with_valuesv() are atomic, in the sense that the
-row is being appended to the store and the values filled in in a single
-operation with regard to GtkTreeModel signaling. In contrast, using e.g.
-gtk_list_store_append() and then gtk_list_store_set() will first create a row,
-which triggers the "row-inserted" signal on GtkListStore. The row, however, is
-still empty, and any signal handler connecting to "row-inserted" on this
-particular store should be prepared for the situation that the row might be
-empty. This is especially important if you are wrapping the GtkListStore inside
-a GtkTreeModelFilter and are using a GtkTreeModelFilterVisibleFunc. Using any
-of the non-atomic operations to append rows to the GtkListStore will cause the
-GtkTreeModelFilterVisibleFunc to be visited with an empty row first; the
-function must be prepared for that.
-===============================================================================
-**** GtkListStore as GtkBuildable ****
-The GtkListStore implementation of the GtkBuildable interface allows to specify
-the model columns with a <columns> element that may contain multiple <column>
-elements, each specifying one model column. The "type" attribute specifies the
-data type for the column.
-Additionally, it is possible to specify content for the list store in the UI
-definition, with the <data> element. It can contain multiple <row> elements,
-each specifying to content for one row of the list model. Inside a <row>, the
-<col> elements specify the content for individual cells.
-Note that it is probably more common to define your models in the code, and one
-might consider it a layering violation to specify the content of a list store
-in a UI definition, data, not presentation, and common wisdom is to separate
-the two, as far as possible.
-Example 22.&#160;A UI Definition fragment for a list store
-<object class="GtkListStore">
-  <columns>
-    <column type="gchararray"/>
-    <column type="gchararray"/>
-    <column type="gint"/>
-  </columns>
-  <data>
-    <row>
-      <col id="0">John</col>
-      <col id="1">Doe</col>
-      <col id="2">25</col>
-    </row>
-    <row>
-      <col id="0">Johan</col>
-      <col id="1">Dahlin</col>
-      <col id="2">50</col>
-    </row>
-  </data>
-</object>
+  The GtkListStore object is a list model for use with a GtkTreeView widget. It
+  implements the GtkTreeModel interface, and consequentialy, can use all of the
+  methods available there. It also implements the GtkTreeSortable interface so it
+  can be sorted by the view. Finally, it also implements the tree drag and drop
+  interfaces.
+  The GtkListStore can accept most GObject types as a column type, though it
+  can't accept all custom types. Internally, it will keep a copy of data passed
+  in (such as a string or a boxed pointer). Columns that accept GObjects are
+  handled a little differently. The GtkListStore will keep a reference to the
+  object instead of copying the value. As a result, if the object is modified, it
+  is up to the application writer to call gtk_tree_model_row_changed to emit the
+  "row_changed" signal. This most commonly affects lists with GdkPixbufs stored.
+  Example 21.&#160;Creating a simple list store.
+  enum {
+    COLUMN_STRING,
+    COLUMN_INT,
+    COLUMN_BOOLEAN,
+    N_COLUMNS
+  };
+  
+  {
+    GtkListStore *list_store;
+    GtkTreePath *path;
+    GtkTreeIter iter;
+    gint i;
+  
+    list_store = gtk_list_store_new (N_COLUMNS,
+                                     G_TYPE_STRING,
+                                     G_TYPE_INT,
+                                     G_TYPE_BOOLEAN);
+  
+    for (i = 0; i < 10; i++)
+      {
+        gchar *some_data;
+  
+        some_data = get_some_data (i);
+  
+        /* Add a new row to the model */
+        gtk_list_store_append (list_store, &iter);
+        gtk_list_store_set (list_store, &iter,
+                            COLUMN_STRING, some_data,
+                            COLUMN_INT, i,
+                            COLUMN_BOOLEAN,  FALSE,
+                            -1);
+  
+        /* As the store will keep a copy of the string internally, we
+         * free some_data.
+         */
+        g_free (some_data);
+      }
+  
+    /* Modify a particular row */
+    path = gtk_tree_path_new_from_string ("4");
+    gtk_tree_model_get_iter (GTK_TREE_MODEL (list_store),
+                             &iter,
+                             path);
+    gtk_tree_path_free (path);
+    gtk_list_store_set (list_store, &iter,
+                        COLUMN_BOOLEAN, TRUE,
+                        -1);
+  }
+  
+  **** Performance Considerations ****
+  Internally, the GtkListStore was implemented with a linked list with a tail
+  pointer prior to GTK+ 2.6. As a result, it was fast at data insertion and
+  deletion, and not fast at random data access. The GtkListStore sets the
+  GTK_TREE_MODEL_ITERS_PERSIST flag, which means that GtkTreeIters can be cached
+  while the row exists. Thus, if access to a particular row is needed often and
+  your code is expected to run on older versions of GTK+, it is worth keeping the
+  iter around.
+  It is important to note that only the methods gtk_list_store_insert_with_values
+  () and gtk_list_store_insert_with_valuesv() are atomic, in the sense that the
+  row is being appended to the store and the values filled in in a single
+  operation with regard to GtkTreeModel signaling. In contrast, using e.g.
+  gtk_list_store_append() and then gtk_list_store_set() will first create a row,
+  which triggers the "row-inserted" signal on GtkListStore. The row, however, is
+  still empty, and any signal handler connecting to "row-inserted" on this
+  particular store should be prepared for the situation that the row might be
+  empty. This is especially important if you are wrapping the GtkListStore inside
+  a GtkTreeModelFilter and are using a GtkTreeModelFilterVisibleFunc. Using any
+  of the non-atomic operations to append rows to the GtkListStore will cause the
+  GtkTreeModelFilterVisibleFunc to be visited with an empty row first; the
+  function must be prepared for that.
+  ===============================================================================
+  **** GtkListStore as GtkBuildable ****
+  The GtkListStore implementation of the GtkBuildable interface allows to specify
+  the model columns with a <columns> element that may contain multiple <column>
+  elements, each specifying one model column. The "type" attribute specifies the
+  data type for the column.
+  Additionally, it is possible to specify content for the list store in the UI
+  definition, with the <data> element. It can contain multiple <row> elements,
+  each specifying to content for one row of the list model. Inside a <row>, the
+  <col> elements specify the content for individual cells.
+  Note that it is probably more common to define your models in the code, and one
+  might consider it a layering violation to specify the content of a list store
+  in a UI definition, data, not presentation, and common wisdom is to separate
+  the two, as far as possible.
+  Example 22.&#160;A UI Definition fragment for a list store
+  <object class="GtkListStore">
+    <columns>
+      <column type="gchararray"/>
+      <column type="gchararray"/>
+      <column type="gint"/>
+    </columns>
+    <data>
+      <row>
+        <col id="0">John</col>
+        <col id="1">Doe</col>
+        <col id="2">25</col>
+      </row>
+      <row>
+        <col id="0">Johan</col>
+        <col id="1">Dahlin</col>
+        <col id="2">50</col>
+      </row>
+    </data>
+  </object>
+  
+  
 
 ==== :Swap ====
 '':Swap(self @ [[#T|T]], a @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]], b @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-Swaps a and b in store. Note that this function only works with unsorted
-stores.
-store : A GtkListStore.
-a :     A GtkTreeIter.
-b :     Another GtkTreeIter.
-Since 2.2
+  Swaps a and b in store. Note that this function only works with unsorted
+  stores.
+  store : A GtkListStore.
+  a :     A GtkTreeIter.
+  b :     Another GtkTreeIter.
+  Since 2.2
 
 ==== :SetValuesv ====
 '':SetValuesv(self @ [[#T|T]], iter @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]], columns @ [[..:..:Std:Object#T|Std.Object.T]], values @ [[..:..:Gtk:GObject:Value#T|Gtk.GObject.Value.T]], n_values @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-A variant of gtk_list_store_set_valist() which takes the columns and values as
-two arrays, instead of varargs. This function is mainly intended for language-
-bindings and in case the number of columns to change is not known until run-
-time.
-list_store : A GtkListStore
-iter :       A valid GtkTreeIter for the row being modified
-columns :    an array of column numbers
-values :     an array of GValues
-n_values :   the length of the columns and values arrays
-Since 2.12
-with the difference that the former will only emit a row_inserted signal, while
-the latter will emit row_inserted, row_changed and, if the list store is
-sorted, rows_reordered. Since emitting the rows_reordered signal repeatedly can
-affect the performance of the program, gtk_list_store_insert_with_values()
-should generally be preferred when inserting rows in a sorted list store.
-list_store : A GtkListStore
-iter :       An unset GtkTreeIter to set to the new row, or NULL.
-position :   position to insert the new row
-... :        pairs of column number and value, terminated with -1
-Since 2.6
+  A variant of gtk_list_store_set_valist() which takes the columns and values as
+  two arrays, instead of varargs. This function is mainly intended for language-
+  bindings and in case the number of columns to change is not known until run-
+  time.
+  list_store : A GtkListStore
+  iter :       A valid GtkTreeIter for the row being modified
+  columns :    an array of column numbers
+  values :     an array of GValues
+  n_values :   the length of the columns and values arrays
+  Since 2.12
+  with the difference that the former will only emit a row_inserted signal, while
+  the latter will emit row_inserted, row_changed and, if the list store is
+  sorted, rows_reordered. Since emitting the rows_reordered signal repeatedly can
+  affect the performance of the program, gtk_list_store_insert_with_values()
+  should generally be preferred when inserting rows in a sorted list store.
+  list_store : A GtkListStore
+  iter :       An unset GtkTreeIter to set to the new row, or NULL.
+  position :   position to insert the new row
+  ... :        pairs of column number and value, terminated with -1
+  Since 2.6
 
 ==== :SetValue ====
 '':SetValue(self @ [[#T|T]], iter @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]], column @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], value @ [[..:..:Gtk:GObject:Value#T|Gtk.GObject.Value.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-Sets the data in the cell specified by iter and column. The type of value must
-be convertible to the type of the column.
-list_store : A GtkListStore
-iter :       A valid GtkTreeIter for the row being modified
-column :     column number to modify
-value :      new value for the cell
-with the difference that the former will only emit a row_inserted signal, while
-the latter will emit row_inserted, row_changed and, if the list store is
-sorted, rows_reordered. Since emitting the rows_reordered signal repeatedly can
-affect the performance of the program, gtk_list_store_insert_with_values()
-should generally be preferred when inserting rows in a sorted list store.
-list_store : A GtkListStore
-iter :       An unset GtkTreeIter to set to the new row, or NULL.
-position :   position to insert the new row
-... :        pairs of column number and value, terminated with -1
-Since 2.6
+  Sets the data in the cell specified by iter and column. The type of value must
+  be convertible to the type of the column.
+  list_store : A GtkListStore
+  iter :       A valid GtkTreeIter for the row being modified
+  column :     column number to modify
+  value :      new value for the cell
+  with the difference that the former will only emit a row_inserted signal, while
+  the latter will emit row_inserted, row_changed and, if the list store is
+  sorted, rows_reordered. Since emitting the rows_reordered signal repeatedly can
+  affect the performance of the program, gtk_list_store_insert_with_values()
+  should generally be preferred when inserting rows in a sorted list store.
+  list_store : A GtkListStore
+  iter :       An unset GtkTreeIter to set to the new row, or NULL.
+  position :   position to insert the new row
+  ... :        pairs of column number and value, terminated with -1
+  Since 2.6
 
 ==== :Stamp ====
 '':Stamp(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
@@ -195,13 +205,13 @@ Since 2.6
 ==== :Order ====
 '':Order(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:SortType#T|Gtk.Gtk.SortType.T]]''
 
-Reorders store to follow the order indicated by new_order. Note that this
-function only works with unsorted stores.
-store :     A GtkListStore.
-            an array of integers mapping the new position of each child to its
-new_order : old position before the re-ordering, i.e. new_order[newpos] =
-            oldpos.
-Since 2.2
+  Reorders store to follow the order indicated by new_order. Note that this
+  function only works with unsorted stores.
+  store :     A GtkListStore.
+              an array of integers mapping the new position of each child to its
+  new_order : old position before the re-ordering, i.e. new_order[newpos] =
+              oldpos.
+  Since 2.2
 
 ==== :ColumnHeaders ====
 '':ColumnHeaders(self @ [[#T|T]]) : [[..:..:Std:List#T|Std.List.T]]''
@@ -230,296 +240,296 @@ Since 2.2
 ==== :Append ====
 '':Append(self @ [[#T|T]], iter @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-Appends a new row to list_store. iter will be changed to point to this new row.
-The row will be empty after this function is called. To fill in values, you
-need to call gtk_list_store_set() or gtk_list_store_set_value().
-list_store : A GtkListStore
-iter :       An unset GtkTreeIter to set to the appended row
+  Appends a new row to list_store. iter will be changed to point to this new row.
+  The row will be empty after this function is called. To fill in values, you
+  need to call gtk_list_store_set() or gtk_list_store_set_value().
+  list_store : A GtkListStore
+  iter :       An unset GtkTreeIter to set to the appended row
 
 ==== :Clear ====
 '':Clear(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-Removes all rows from the list store.
-list_store : a GtkListStore.
+  Removes all rows from the list store.
+  list_store : a GtkListStore.
 
 ==== :Insert ====
 '':Insert(self @ [[#T|T]], iter @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]], position @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-Creates a new row at position. iter will be changed to point to this new row.
-If position is larger than the number of rows on the list, then the new row
-will be appended to the list. The row will be empty after this function is
-called. To fill in values, you need to call gtk_list_store_set() or
-gtk_list_store_set_value().
-list_store : A GtkListStore
-iter :       An unset GtkTreeIter to set to the new row
-position :   position to insert the new row
-with the difference that the former will only emit a row_inserted signal, while
-the latter will emit row_inserted, row_changed and, if the list store is
-sorted, rows_reordered. Since emitting the rows_reordered signal repeatedly can
-affect the performance of the program, gtk_list_store_insert_with_values()
-should generally be preferred when inserting rows in a sorted list store.
-list_store : A GtkListStore
-iter :       An unset GtkTreeIter to set to the new row, or NULL.
-position :   position to insert the new row
-... :        pairs of column number and value, terminated with -1
-Since 2.6
+  Creates a new row at position. iter will be changed to point to this new row.
+  If position is larger than the number of rows on the list, then the new row
+  will be appended to the list. The row will be empty after this function is
+  called. To fill in values, you need to call gtk_list_store_set() or
+  gtk_list_store_set_value().
+  list_store : A GtkListStore
+  iter :       An unset GtkTreeIter to set to the new row
+  position :   position to insert the new row
+  with the difference that the former will only emit a row_inserted signal, while
+  the latter will emit row_inserted, row_changed and, if the list store is
+  sorted, rows_reordered. Since emitting the rows_reordered signal repeatedly can
+  affect the performance of the program, gtk_list_store_insert_with_values()
+  should generally be preferred when inserting rows in a sorted list store.
+  list_store : A GtkListStore
+  iter :       An unset GtkTreeIter to set to the new row, or NULL.
+  position :   position to insert the new row
+  ... :        pairs of column number and value, terminated with -1
+  Since 2.6
 
 ==== :InsertAfter ====
 '':InsertAfter(self @ [[#T|T]], iter @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]], sibling @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-Inserts a new row after sibling. If sibling is NULL, then the row will be
-prepended to the beginning of the list. iter will be changed to point to this
-new row. The row will be empty after this function is called. To fill in
-values, you need to call gtk_list_store_set() or gtk_list_store_set_value().
-list_store : A GtkListStore
-iter :       An unset GtkTreeIter to set to the new row
-sibling :    A valid GtkTreeIter, or NULL
-with the difference that the former will only emit a row_inserted signal, while
-the latter will emit row_inserted, row_changed and, if the list store is
-sorted, rows_reordered. Since emitting the rows_reordered signal repeatedly can
-affect the performance of the program, gtk_list_store_insert_with_values()
-should generally be preferred when inserting rows in a sorted list store.
-list_store : A GtkListStore
-iter :       An unset GtkTreeIter to set to the new row, or NULL.
-position :   position to insert the new row
-... :        pairs of column number and value, terminated with -1
-Since 2.6
+  Inserts a new row after sibling. If sibling is NULL, then the row will be
+  prepended to the beginning of the list. iter will be changed to point to this
+  new row. The row will be empty after this function is called. To fill in
+  values, you need to call gtk_list_store_set() or gtk_list_store_set_value().
+  list_store : A GtkListStore
+  iter :       An unset GtkTreeIter to set to the new row
+  sibling :    A valid GtkTreeIter, or NULL
+  with the difference that the former will only emit a row_inserted signal, while
+  the latter will emit row_inserted, row_changed and, if the list store is
+  sorted, rows_reordered. Since emitting the rows_reordered signal repeatedly can
+  affect the performance of the program, gtk_list_store_insert_with_values()
+  should generally be preferred when inserting rows in a sorted list store.
+  list_store : A GtkListStore
+  iter :       An unset GtkTreeIter to set to the new row, or NULL.
+  position :   position to insert the new row
+  ... :        pairs of column number and value, terminated with -1
+  Since 2.6
 
 ==== :InsertBefore ====
 '':InsertBefore(self @ [[#T|T]], iter @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]], sibling @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-Inserts a new row before sibling. If sibling is NULL, then the row will be
-appended to the end of the list. iter will be changed to point to this new row.
-The row will be empty after this function is called. To fill in values, you
-need to call gtk_list_store_set() or gtk_list_store_set_value().
-list_store : A GtkListStore
-iter :       An unset GtkTreeIter to set to the new row
-sibling :    A valid GtkTreeIter, or NULL
-with the difference that the former will only emit a row_inserted signal, while
-the latter will emit row_inserted, row_changed and, if the list store is
-sorted, rows_reordered. Since emitting the rows_reordered signal repeatedly can
-affect the performance of the program, gtk_list_store_insert_with_values()
-should generally be preferred when inserting rows in a sorted list store.
-list_store : A GtkListStore
-iter :       An unset GtkTreeIter to set to the new row, or NULL.
-position :   position to insert the new row
-... :        pairs of column number and value, terminated with -1
-Since 2.6
+  Inserts a new row before sibling. If sibling is NULL, then the row will be
+  appended to the end of the list. iter will be changed to point to this new row.
+  The row will be empty after this function is called. To fill in values, you
+  need to call gtk_list_store_set() or gtk_list_store_set_value().
+  list_store : A GtkListStore
+  iter :       An unset GtkTreeIter to set to the new row
+  sibling :    A valid GtkTreeIter, or NULL
+  with the difference that the former will only emit a row_inserted signal, while
+  the latter will emit row_inserted, row_changed and, if the list store is
+  sorted, rows_reordered. Since emitting the rows_reordered signal repeatedly can
+  affect the performance of the program, gtk_list_store_insert_with_values()
+  should generally be preferred when inserting rows in a sorted list store.
+  list_store : A GtkListStore
+  iter :       An unset GtkTreeIter to set to the new row, or NULL.
+  position :   position to insert the new row
+  ... :        pairs of column number and value, terminated with -1
+  Since 2.6
 
 ==== :InsertWithValues ====
 '':InsertWithValues(self @ [[#T|T]], iter @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]], position @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], ___ @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-Creates a new row at position. iter will be changed to point to this new row.
-If position is larger than the number of rows on the list, then the new row
-will be appended to the list. The row will be filled with the values given to
-this function.
-Calling gtk_list_store_insert_with_values(list_store, iter, position...) has
-the same effect as calling
-gtk_list_store_insert (list_store, iter, position);
-gtk_list_store_set (list_store, iter, ...);
-with the difference that the former will only emit a row_inserted signal, while
-the latter will emit row_inserted, row_changed and, if the list store is
-sorted, rows_reordered. Since emitting the rows_reordered signal repeatedly can
-affect the performance of the program, gtk_list_store_insert_with_values()
-should generally be preferred when inserting rows in a sorted list store.
-list_store : A GtkListStore
-iter :       An unset GtkTreeIter to set to the new row, or NULL.
-position :   position to insert the new row
-... :        pairs of column number and value, terminated with -1
-Since 2.6
-===============================================================================
-gtk_list_store_insert_with_valuesv ()
-void                gtk_list_store_insert_with_valuesv  (GtkListStore
-*list_store,
-                                                         GtkTreeIter *iter,
-                                                         gint position,
-                                                         gint *columns,
-                                                         GValue *values,
-                                                         gint n_values);
-A variant of gtk_list_store_insert_with_values() which takes the columns and
-values as two arrays, instead of varargs. This function is mainly intended for
-language-bindings.
-list_store : A GtkListStore
-iter :       An unset GtkTreeIter to set to the new row, or NULL.
-position :   position to insert the new row
-columns :    an array of column numbers
-values :     an array of GValues
-n_values :   the length of the columns and values arrays
-Since 2.6
+  Creates a new row at position. iter will be changed to point to this new row.
+  If position is larger than the number of rows on the list, then the new row
+  will be appended to the list. The row will be filled with the values given to
+  this function.
+  Calling gtk_list_store_insert_with_values(list_store, iter, position...) has
+  the same effect as calling
+  gtk_list_store_insert (list_store, iter, position);
+  gtk_list_store_set (list_store, iter, ...);
+  with the difference that the former will only emit a row_inserted signal, while
+  the latter will emit row_inserted, row_changed and, if the list store is
+  sorted, rows_reordered. Since emitting the rows_reordered signal repeatedly can
+  affect the performance of the program, gtk_list_store_insert_with_values()
+  should generally be preferred when inserting rows in a sorted list store.
+  list_store : A GtkListStore
+  iter :       An unset GtkTreeIter to set to the new row, or NULL.
+  position :   position to insert the new row
+  ... :        pairs of column number and value, terminated with -1
+  Since 2.6
+  ===============================================================================
+  gtk_list_store_insert_with_valuesv ()
+  void                gtk_list_store_insert_with_valuesv  (GtkListStore
+  *list_store,
+                                                           GtkTreeIter *iter,
+                                                           gint position,
+                                                           gint *columns,
+                                                           GValue *values,
+                                                           gint n_values);
+  A variant of gtk_list_store_insert_with_values() which takes the columns and
+  values as two arrays, instead of varargs. This function is mainly intended for
+  language-bindings.
+  list_store : A GtkListStore
+  iter :       An unset GtkTreeIter to set to the new row, or NULL.
+  position :   position to insert the new row
+  columns :    an array of column numbers
+  values :     an array of GValues
+  n_values :   the length of the columns and values arrays
+  Since 2.6
 
 ==== :InsertWithValuesv ====
 '':InsertWithValuesv(self @ [[#T|T]], iter @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]], position @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], columns @ [[..:..:Std:Object#T|Std.Object.T]], values @ [[..:..:Gtk:GObject:Value#T|Gtk.GObject.Value.T]], n_values @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-A variant of gtk_list_store_insert_with_values() which takes the columns and
-values as two arrays, instead of varargs. This function is mainly intended for
-language-bindings.
-list_store : A GtkListStore
-iter :       An unset GtkTreeIter to set to the new row, or NULL.
-position :   position to insert the new row
-columns :    an array of column numbers
-values :     an array of GValues
-n_values :   the length of the columns and values arrays
-Since 2.6
+  A variant of gtk_list_store_insert_with_values() which takes the columns and
+  values as two arrays, instead of varargs. This function is mainly intended for
+  language-bindings.
+  list_store : A GtkListStore
+  iter :       An unset GtkTreeIter to set to the new row, or NULL.
+  position :   position to insert the new row
+  columns :    an array of column numbers
+  values :     an array of GValues
+  n_values :   the length of the columns and values arrays
+  Since 2.6
 
 ==== :IterIsValid ====
 '':IterIsValid(self @ [[#T|T]], iter @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
-**** Warning ****
-This function is slow. Only use it for debugging and/or testing purposes.
-Checks if the given iter is a valid iter for this GtkListStore.
-list_store : A GtkListStore.
-iter :       A GtkTreeIter.
-Returns :    TRUE if the iter is valid, FALSE if the iter is invalid.
-Since 2.2
+  **** Warning ****
+  This function is slow. Only use it for debugging and/or testing purposes.
+  Checks if the given iter is a valid iter for this GtkListStore.
+  list_store : A GtkListStore.
+  iter :       A GtkTreeIter.
+  Returns :    TRUE if the iter is valid, FALSE if the iter is invalid.
+  Since 2.2
 
 ==== :MoveAfter ====
 '':MoveAfter(self @ [[#T|T]], iter @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]], position @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-Moves iter in store to the position after position. Note that this function
-only works with unsorted stores. If position is NULL, iter will be moved to the
-start of the list.
-store :    A GtkListStore.
-iter :     A GtkTreeIter.
-position : A GtkTreeIter or NULL.
-Since 2.2
-***** See Also *****
-GtkTreeModel, GtkTreeStore
+  Moves iter in store to the position after position. Note that this function
+  only works with unsorted stores. If position is NULL, iter will be moved to the
+  start of the list.
+  store :    A GtkListStore.
+  iter :     A GtkTreeIter.
+  position : A GtkTreeIter or NULL.
+  Since 2.2
+  ***** See Also *****
+  GtkTreeModel, GtkTreeStore
 
 ==== :MoveBefore ====
 '':MoveBefore(self @ [[#T|T]], iter @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]], position @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-Moves iter in store to the position before position. Note that this function
-only works with unsorted stores. If position is NULL, iter will be moved to the
-end of the list.
-store :    A GtkListStore.
-iter :     A GtkTreeIter.
-position : A GtkTreeIter, or NULL.
-Since 2.2
+  Moves iter in store to the position before position. Note that this function
+  only works with unsorted stores. If position is NULL, iter will be moved to the
+  end of the list.
+  store :    A GtkListStore.
+  iter :     A GtkTreeIter.
+  position : A GtkTreeIter, or NULL.
+  Since 2.2
 
 ==== :Prepend ====
 '':Prepend(self @ [[#T|T]], iter @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-Prepends a new row to list_store. iter will be changed to point to this new
-row. The row will be empty after this function is called. To fill in values,
-you need to call gtk_list_store_set() or gtk_list_store_set_value().
-list_store : A GtkListStore
-iter :       An unset GtkTreeIter to set to the prepend row
+  Prepends a new row to list_store. iter will be changed to point to this new
+  row. The row will be empty after this function is called. To fill in values,
+  you need to call gtk_list_store_set() or gtk_list_store_set_value().
+  list_store : A GtkListStore
+  iter :       An unset GtkTreeIter to set to the prepend row
 
 ==== :Remove ====
 '':Remove(self @ [[#T|T]], iter @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
-Removes the given row from the list store. After being removed, iter is set to
-be the next valid row, or invalidated if it pointed to the last row in
-list_store.
-list_store : A GtkListStore
-iter :       A valid GtkTreeIter
-Returns :    TRUE if iter is valid, FALSE if not.
-with the difference that the former will only emit a row_inserted signal, while
-the latter will emit row_inserted, row_changed and, if the list store is
-sorted, rows_reordered. Since emitting the rows_reordered signal repeatedly can
-affect the performance of the program, gtk_list_store_insert_with_values()
-should generally be preferred when inserting rows in a sorted list store.
-list_store : A GtkListStore
-iter :       An unset GtkTreeIter to set to the new row, or NULL.
-position :   position to insert the new row
-... :        pairs of column number and value, terminated with -1
-Since 2.6
+  Removes the given row from the list store. After being removed, iter is set to
+  be the next valid row, or invalidated if it pointed to the last row in
+  list_store.
+  list_store : A GtkListStore
+  iter :       A valid GtkTreeIter
+  Returns :    TRUE if iter is valid, FALSE if not.
+  with the difference that the former will only emit a row_inserted signal, while
+  the latter will emit row_inserted, row_changed and, if the list store is
+  sorted, rows_reordered. Since emitting the rows_reordered signal repeatedly can
+  affect the performance of the program, gtk_list_store_insert_with_values()
+  should generally be preferred when inserting rows in a sorted list store.
+  list_store : A GtkListStore
+  iter :       An unset GtkTreeIter to set to the new row, or NULL.
+  position :   position to insert the new row
+  ... :        pairs of column number and value, terminated with -1
+  Since 2.6
 
 ==== :Reorder ====
 '':Reorder(self @ [[#T|T]], new_order @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-Reorders store to follow the order indicated by new_order. Note that this
-function only works with unsorted stores.
-store :     A GtkListStore.
-            an array of integers mapping the new position of each child to its
-new_order : old position before the re-ordering, i.e. new_order[newpos] =
-            oldpos.
-Since 2.2
+  Reorders store to follow the order indicated by new_order. Note that this
+  function only works with unsorted stores.
+  store :     A GtkListStore.
+              an array of integers mapping the new position of each child to its
+  new_order : old position before the re-ordering, i.e. new_order[newpos] =
+              oldpos.
+  Since 2.2
 
 ==== :Set ====
 '':Set(self @ [[#T|T]], iter @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]], ___ @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-Sets the value of one or more cells in the row referenced by iter. The variable
-argument list should contain integer column numbers, each column number
-followed by the value to be set. The list is terminated by a -1. For example,
-to set column 0 with type G_TYPE_STRING to "Foo", you would write
-gtk_list_store_set (store, iter, 0, "Foo", -1).
-list_store : a GtkListStore
-iter :       row iterator
-... :        pairs of column number and value, terminated with -1
-with the difference that the former will only emit a row_inserted signal, while
-the latter will emit row_inserted, row_changed and, if the list store is
-sorted, rows_reordered. Since emitting the rows_reordered signal repeatedly can
-affect the performance of the program, gtk_list_store_insert_with_values()
-should generally be preferred when inserting rows in a sorted list store.
-list_store : A GtkListStore
-iter :       An unset GtkTreeIter to set to the new row, or NULL.
-position :   position to insert the new row
-... :        pairs of column number and value, terminated with -1
-Since 2.6
+  Sets the value of one or more cells in the row referenced by iter. The variable
+  argument list should contain integer column numbers, each column number
+  followed by the value to be set. The list is terminated by a -1. For example,
+  to set column 0 with type G_TYPE_STRING to "Foo", you would write
+  gtk_list_store_set (store, iter, 0, "Foo", -1).
+  list_store : a GtkListStore
+  iter :       row iterator
+  ... :        pairs of column number and value, terminated with -1
+  with the difference that the former will only emit a row_inserted signal, while
+  the latter will emit row_inserted, row_changed and, if the list store is
+  sorted, rows_reordered. Since emitting the rows_reordered signal repeatedly can
+  affect the performance of the program, gtk_list_store_insert_with_values()
+  should generally be preferred when inserting rows in a sorted list store.
+  list_store : A GtkListStore
+  iter :       An unset GtkTreeIter to set to the new row, or NULL.
+  position :   position to insert the new row
+  ... :        pairs of column number and value, terminated with -1
+  Since 2.6
 
 ==== :SetColumnTypes ====
 '':SetColumnTypes(self @ [[#T|T]], n_columns @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], types @ [[..:..:Std:List#T|Std.List.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-This function is meant primarily for GObjects that inherit from GtkListStore,
-and should only be used when constructing a new GtkListStore. It will not
-function after a row has been added, or a method on the GtkTreeModel interface
-is called.
-list_store : A GtkListStore
-n_columns :  Number of columns for the list store
-types :      An array length n of GTypes
-with the difference that the former will only emit a row_inserted signal, while
-the latter will emit row_inserted, row_changed and, if the list store is
-sorted, rows_reordered. Since emitting the rows_reordered signal repeatedly can
-affect the performance of the program, gtk_list_store_insert_with_values()
-should generally be preferred when inserting rows in a sorted list store.
-list_store : A GtkListStore
-iter :       An unset GtkTreeIter to set to the new row, or NULL.
-position :   position to insert the new row
-... :        pairs of column number and value, terminated with -1
-Since 2.6
+  This function is meant primarily for GObjects that inherit from GtkListStore,
+  and should only be used when constructing a new GtkListStore. It will not
+  function after a row has been added, or a method on the GtkTreeModel interface
+  is called.
+  list_store : A GtkListStore
+  n_columns :  Number of columns for the list store
+  types :      An array length n of GTypes
+  with the difference that the former will only emit a row_inserted signal, while
+  the latter will emit row_inserted, row_changed and, if the list store is
+  sorted, rows_reordered. Since emitting the rows_reordered signal repeatedly can
+  affect the performance of the program, gtk_list_store_insert_with_values()
+  should generally be preferred when inserting rows in a sorted list store.
+  list_store : A GtkListStore
+  iter :       An unset GtkTreeIter to set to the new row, or NULL.
+  position :   position to insert the new row
+  ... :        pairs of column number and value, terminated with -1
+  Since 2.6
 
 ==== :SetValist ====
 '':SetValist(self @ [[#T|T]], iter @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]], var_args @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-See gtk_list_store_set(); this version takes a va_list for use by language
-bindings.
-list_store : A GtkListStore
-iter :       A valid GtkTreeIter for the row being modified
-var_args :   va_list of column/value pairs
-with the difference that the former will only emit a row_inserted signal, while
-the latter will emit row_inserted, row_changed and, if the list store is
-sorted, rows_reordered. Since emitting the rows_reordered signal repeatedly can
-affect the performance of the program, gtk_list_store_insert_with_values()
-should generally be preferred when inserting rows in a sorted list store.
-list_store : A GtkListStore
-iter :       An unset GtkTreeIter to set to the new row, or NULL.
-position :   position to insert the new row
-... :        pairs of column number and value, terminated with -1
-Since 2.6
+  See gtk_list_store_set(); this version takes a va_list for use by language
+  bindings.
+  list_store : A GtkListStore
+  iter :       A valid GtkTreeIter for the row being modified
+  var_args :   va_list of column/value pairs
+  with the difference that the former will only emit a row_inserted signal, while
+  the latter will emit row_inserted, row_changed and, if the list store is
+  sorted, rows_reordered. Since emitting the rows_reordered signal repeatedly can
+  affect the performance of the program, gtk_list_store_insert_with_values()
+  should generally be preferred when inserting rows in a sorted list store.
+  list_store : A GtkListStore
+  iter :       An unset GtkTreeIter to set to the new row, or NULL.
+  position :   position to insert the new row
+  ... :        pairs of column number and value, terminated with -1
+  Since 2.6
 
 ==== New ====
 ''New(n_columns : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], ___ : [[..:..:Std:Object#T|Std.Object.T]]) : [[# T| T]]''
 
-Creates a new list store as with n_columns columns each of the types passed in.
-Note that only types derived from standard GObject fundamental types are
-supported.
-As an example, gtk_tree_store_new (3, G_TYPE_INT, G_TYPE_STRING,
-GDK_TYPE_PIXBUF); will create a new GtkListStore with three columns, of type
-int, string and GdkPixbuf respectively.
-n_columns : number of columns in the list store
-... :       all GType types for the columns, from first to last
-Returns :   a new GtkListStore
-with the difference that the former will only emit a row_inserted signal, while
-the latter will emit row_inserted, row_changed and, if the list store is
-sorted, rows_reordered. Since emitting the rows_reordered signal repeatedly can
-affect the performance of the program, gtk_list_store_insert_with_values()
-should generally be preferred when inserting rows in a sorted list store.
-list_store : A GtkListStore
-iter :       An unset GtkTreeIter to set to the new row, or NULL.
-position :   position to insert the new row
-... :        pairs of column number and value, terminated with -1
-Since 2.6
+  Creates a new list store as with n_columns columns each of the types passed in.
+  Note that only types derived from standard GObject fundamental types are
+  supported.
+  As an example, gtk_tree_store_new (3, G_TYPE_INT, G_TYPE_STRING,
+  GDK_TYPE_PIXBUF); will create a new GtkListStore with three columns, of type
+  int, string and GdkPixbuf respectively.
+  n_columns : number of columns in the list store
+  ... :       all GType types for the columns, from first to last
+  Returns :   a new GtkListStore
+  with the difference that the former will only emit a row_inserted signal, while
+  the latter will emit row_inserted, row_changed and, if the list store is
+  sorted, rows_reordered. Since emitting the rows_reordered signal repeatedly can
+  affect the performance of the program, gtk_list_store_insert_with_values()
+  should generally be preferred when inserting rows in a sorted list store.
+  list_store : A GtkListStore
+  iter :       An unset GtkTreeIter to set to the new row, or NULL.
+  position :   position to insert the new row
+  ... :        pairs of column number and value, terminated with -1
+  Since 2.6
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
@@ -528,18 +538,18 @@ Since 2.6
 ==== Newv ====
 ''Newv(n_columns : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], types : [[..:..:Std:List#T|Std.List.T]]) : [[# T| T]]''
 
-Non-vararg creation function. Used primarily by language bindings.
-n_columns : number of columns in the list store
-types :     an array of GType types for the columns, from first to last
-Returns :   a new GtkListStore
-with the difference that the former will only emit a row_inserted signal, while
-the latter will emit row_inserted, row_changed and, if the list store is
-sorted, rows_reordered. Since emitting the rows_reordered signal repeatedly can
-affect the performance of the program, gtk_list_store_insert_with_values()
-should generally be preferred when inserting rows in a sorted list store.
-list_store : A GtkListStore
-iter :       An unset GtkTreeIter to set to the new row, or NULL.
-position :   position to insert the new row
-... :        pairs of column number and value, terminated with -1
-Since 2.6
+  Non-vararg creation function. Used primarily by language bindings.
+  n_columns : number of columns in the list store
+  types :     an array of GType types for the columns, from first to last
+  Returns :   a new GtkListStore
+  with the difference that the former will only emit a row_inserted signal, while
+  the latter will emit row_inserted, row_changed and, if the list store is
+  sorted, rows_reordered. Since emitting the rows_reordered signal repeatedly can
+  affect the performance of the program, gtk_list_store_insert_with_values()
+  should generally be preferred when inserting rows in a sorted list store.
+  list_store : A GtkListStore
+  iter :       An unset GtkTreeIter to set to the new row, or NULL.
+  position :   position to insert the new row
+  ... :        pairs of column number and value, terminated with -1
+  Since 2.6
 

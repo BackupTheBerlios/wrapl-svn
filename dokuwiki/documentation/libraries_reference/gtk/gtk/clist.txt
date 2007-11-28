@@ -6,41 +6,42 @@
   * [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]
   * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
 
-The GtkCList widget is a very useful multi-columned scrolling list. It can
-display data in nicely aligned vertical columns, with titles at the top of the
-list.
-GtkCList has been deprecated since GTK+ 2.0 and should not be used in newly
-written code. Use GtkTreeView instead.
+  The GtkCList widget is a very useful multi-columned scrolling list. It can
+  display data in nicely aligned vertical columns, with titles at the top of the
+  list.
+  GtkCList has been deprecated since GTK+ 2.0 and should not be used in newly
+  written code. Use GtkTreeView instead.
+  
 
 ==== :UnselectRow ====
 '':UnselectRow(self @ [[#T|T]], row @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], column @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-**** Warning ****
-gtk_clist_unselect_row is deprecated and should not be used in newly-written
-code.
-Unselects the specified row. Causes the "unselect-row" signal to be emitted for
-the specified row and column.
-clist :  The GtkCList to affect.
-row :    The row to select.
-column : The column to select.
+  **** Warning ****
+  gtk_clist_unselect_row is deprecated and should not be used in newly-written
+  code.
+  Unselects the specified row. Causes the "unselect-row" signal to be emitted for
+  the specified row and column.
+  clist :  The GtkCList to affect.
+  row :    The row to select.
+  column : The column to select.
 
 ==== :UnselectAll ====
 '':UnselectAll(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-**** Warning ****
-gtk_clist_unselect_all is deprecated and should not be used in newly-written
-code.
-Unselects all rows in the CList.
-clist : The GtkCList to affect.
+  **** Warning ****
+  gtk_clist_unselect_all is deprecated and should not be used in newly-written
+  code.
+  Unselects all rows in the CList.
+  clist : The GtkCList to affect.
 
 ==== :UndoSelection ====
 '':UndoSelection(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-**** Warning ****
-gtk_clist_undo_selection is deprecated and should not be used in newly-written
-code.
-Undoes the last selection for an "extended selection mode" CList.
-clist : The GtkCList to affect.
+  **** Warning ****
+  gtk_clist_undo_selection is deprecated and should not be used in newly-written
+  code.
+  Undoes the last selection for an "extended selection mode" CList.
+  clist : The GtkCList to affect.
 
 ==== :Flags ====
 '':Flags(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
@@ -65,23 +66,23 @@ clist : The GtkCList to affect.
 ==== :Rows ====
 '':Rows(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-**** Warning ****
-gtk_clist_swap_rows is deprecated and should not be used in newly-written code.
-Swaps the two specified rows with each other.
-clist : The GtkCList to affect.
-row1 :  Number of the first row.
-row2 :  Number of the second row.
+  **** Warning ****
+  gtk_clist_swap_rows is deprecated and should not be used in newly-written code.
+  Swaps the two specified rows with each other.
+  clist : The GtkCList to affect.
+  row1 :  Number of the first row.
+  row2 :  Number of the second row.
 
 ==== :RowHeight ====
 '':RowHeight(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-**** Warning ****
-gtk_clist_set_row_height is deprecated and should not be used in newly-written
-code.
-Causes the GtkCList to have a specified height for its rows. Setting the row
-height to 0 allows the GtkCList to adjust automatically to data in the row.
-clist :  The GtkCList to affect.
-height : The height, in pixels.
+  **** Warning ****
+  gtk_clist_set_row_height is deprecated and should not be used in newly-written
+  code.
+  Causes the GtkCList to have a specified height for its rows. Setting the row
+  height to 0 allows the GtkCList to adjust automatically to data in the row.
+  clist :  The GtkCList to affect.
+  height : The height, in pixels.
 
 ==== :RowList ====
 '':RowList(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -106,13 +107,13 @@ height : The height, in pixels.
 ==== :Column ====
 '':Column(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:CListColumn#T|Gtk.Gtk.CListColumn.T]]''
 
-**** Warning ****
-gtk_clist_set_sort_column is deprecated and should not be used in newly-written
-code.
-Sets the sort column of the clist. The sort column is used by the default
-compare function to determine which column to sort by.
-clist :  The GtkCList to affect.
-column : The column to sort by
+  **** Warning ****
+  gtk_clist_set_sort_column is deprecated and should not be used in newly-written
+  code.
+  Sets the sort column of the clist. The sort column is used by the default
+  compare function to determine which column to sort by.
+  clist :  The GtkCList to affect.
+  column : The column to sort by
 
 ==== :ClistWindow ====
 '':ClistWindow(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]]''
@@ -137,36 +138,36 @@ column : The column to sort by
 ==== :ShadowType ====
 '':ShadowType(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:ShadowType#T|Gtk.Gtk.ShadowType.T]]''
 
-**** Warning ****
-gtk_clist_set_shadow_type is deprecated and should not be used in newly-written
-code.
-Sets the shadow type for the specified CList. Changing this value will cause
-the GtkCList to update its visuals.
-clist : The GtkCList to affect.
-type :  The GtkShadowType desired.
+  **** Warning ****
+  gtk_clist_set_shadow_type is deprecated and should not be used in newly-written
+  code.
+  Sets the shadow type for the specified CList. Changing this value will cause
+  the GtkCList to update its visuals.
+  clist : The GtkCList to affect.
+  type :  The GtkShadowType desired.
 
 ==== :SelectionMode ====
 '':SelectionMode(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:SelectionMode#T|Gtk.Gtk.SelectionMode.T]]''
 
-**** Warning ****
-gtk_clist_set_selection_mode is deprecated and should not be used in newly-
-written code.
-Sets the selection mode for the specified CList. This allows you to set whether
-only one or more than one item can be selected at a time in the widget. Note
-that setting the widget's selection mode to one of GTK_SELECTION_BROWSE or
-GTK_SELECTION_SINGLE will cause all the items in the GtkCList to become
-deselected.
-clist : The GtkCList to affect.
-mode :  The GtkSelectionMode type to set for this CList.
+  **** Warning ****
+  gtk_clist_set_selection_mode is deprecated and should not be used in newly-
+  written code.
+  Sets the selection mode for the specified CList. This allows you to set whether
+  only one or more than one item can be selected at a time in the widget. Note
+  that setting the widget's selection mode to one of GTK_SELECTION_BROWSE or
+  GTK_SELECTION_SINGLE will cause all the items in the GtkCList to become
+  deselected.
+  clist : The GtkCList to affect.
+  mode :  The GtkSelectionMode type to set for this CList.
 
 ==== :Selection ====
 '':Selection(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-**** Warning ****
-gtk_clist_undo_selection is deprecated and should not be used in newly-written
-code.
-Undoes the last selection for an "extended selection mode" CList.
-clist : The GtkCList to affect.
+  **** Warning ****
+  gtk_clist_undo_selection is deprecated and should not be used in newly-written
+  code.
+  Undoes the last selection for an "extended selection mode" CList.
+  clist : The GtkCList to affect.
 
 ==== :SelectionEnd ====
 '':SelectionEnd(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -175,11 +176,11 @@ clist : The GtkCList to affect.
 ==== :UndoSelection ====
 '':UndoSelection(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-**** Warning ****
-gtk_clist_undo_selection is deprecated and should not be used in newly-written
-code.
-Undoes the last selection for an "extended selection mode" CList.
-clist : The GtkCList to affect.
+  **** Warning ****
+  gtk_clist_undo_selection is deprecated and should not be used in newly-written
+  code.
+  Undoes the last selection for an "extended selection mode" CList.
+  clist : The GtkCList to affect.
 
 ==== :UndoUnselection ====
 '':UndoUnselection(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -200,42 +201,42 @@ clist : The GtkCList to affect.
 ==== :Hadjustment ====
 '':Hadjustment(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]]''
 
-**** Warning ****
-gtk_clist_get_hadjustment is deprecated and should not be used in newly-written
-code.
-Gets the GtkAdjustment currently being used for the horizontal aspect.
-clist :   The GtkCList to check.
-Returns : A GtkAdjustment object, or NULL if none is currently being used.
-**** Warning ****
-gtk_clist_set_hadjustment is deprecated and should not be used in newly-written
-code.
-Allows you to set the GtkAdjustment to be used for the horizontal aspect of the
-GtkCList widget.
-clist :      The GtkCList to affect.
-adjustment : A pointer to a GtkAdjustment widget, or NULL.
+  **** Warning ****
+  gtk_clist_get_hadjustment is deprecated and should not be used in newly-written
+  code.
+  Gets the GtkAdjustment currently being used for the horizontal aspect.
+  clist :   The GtkCList to check.
+  Returns : A GtkAdjustment object, or NULL if none is currently being used.
+  **** Warning ****
+  gtk_clist_set_hadjustment is deprecated and should not be used in newly-written
+  code.
+  Allows you to set the GtkAdjustment to be used for the horizontal aspect of the
+  GtkCList widget.
+  clist :      The GtkCList to affect.
+  adjustment : A pointer to a GtkAdjustment widget, or NULL.
 
 ==== :Vadjustment ====
 '':Vadjustment(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]]''
 
-**** Warning ****
-gtk_clist_get_vadjustment is deprecated and should not be used in newly-written
-code.
-Gets the GtkAdjustment currently being used for the vertical aspect.
-clist :   The GtkCList to check.
-Returns : A GtkAdjustment object, or NULL if none is currently being used.
-**** Warning ****
-gtk_clist_set_vadjustment is deprecated and should not be used in newly-written
-code.
-Allows you to set the GtkAdjustment to be used for the vertical aspect of the
-GtkCList widget.
-clist :      The GtkCList to affect.
-adjustment : A pointer to a GtkAdjustment widget, or NULL.
-***** Property Details *****
-The "n-columns" property
-  "n-columns"                guint                 : Read / Write / Construct
-Only
-An integer value for a column.
-Default value: 0
+  **** Warning ****
+  gtk_clist_get_vadjustment is deprecated and should not be used in newly-written
+  code.
+  Gets the GtkAdjustment currently being used for the vertical aspect.
+  clist :   The GtkCList to check.
+  Returns : A GtkAdjustment object, or NULL if none is currently being used.
+  **** Warning ****
+  gtk_clist_set_vadjustment is deprecated and should not be used in newly-written
+  code.
+  Allows you to set the GtkAdjustment to be used for the vertical aspect of the
+  GtkCList widget.
+  clist :      The GtkCList to affect.
+  adjustment : A pointer to a GtkAdjustment widget, or NULL.
+  ***** Property Details *****
+  The "n-columns" property
+    "n-columns"                guint                 : Read / Write / Construct
+  Only
+  An integer value for a column.
+  Default value: 0
 
 ==== :XorGc ====
 '':XorGc(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]]''
@@ -288,13 +289,13 @@ Default value: 0
 ==== :SortType ====
 '':SortType(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:SortType#T|Gtk.Gtk.SortType.T]]''
 
-**** Warning ****
-gtk_clist_set_sort_type is deprecated and should not be used in newly-written
-code.
-Sets the sort type of the GtkClist. This is either GTK_SORT_ASCENDING for
-ascening sort or GTK_SORT_DESCENDING for descending sort.
-clist :     The GtkCList to affect.
-sort_type : the GtkSortType to use
+  **** Warning ****
+  gtk_clist_set_sort_type is deprecated and should not be used in newly-written
+  code.
+  Sets the sort type of the GtkClist. This is either GTK_SORT_ASCENDING for
+  ascening sort or GTK_SORT_DESCENDING for descending sort.
+  clist :     The GtkCList to affect.
+  sort_type : the GtkSortType to use
 
 ==== :Compare ====
 '':Compare(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -303,13 +304,13 @@ sort_type : the GtkSortType to use
 ==== :SortColumn ====
 '':SortColumn(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-**** Warning ****
-gtk_clist_set_sort_column is deprecated and should not be used in newly-written
-code.
-Sets the sort column of the clist. The sort column is used by the default
-compare function to determine which column to sort by.
-clist :  The GtkCList to affect.
-column : The column to sort by
+  **** Warning ****
+  gtk_clist_set_sort_column is deprecated and should not be used in newly-written
+  code.
+  Sets the sort column of the clist. The sort column is used by the default
+  compare function to determine which column to sort by.
+  clist :  The GtkCList to affect.
+  column : The column to sort by
 
 ==== :DragHighlightRow ====
 '':DragHighlightRow(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
@@ -322,722 +323,722 @@ column : The column to sort by
 ==== :ButtonActions ====
 '':ButtonActions(self @ [[#T|T]], @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-**** Warning ****
-gtk_clist_set_button_actions is deprecated and should not be used in newly-
-written code.
-Sets the action(s) that the specified mouse button will have on the CList.
-clist :          The GtkCList to affect.
-                 The mouse button to set. The values here, unlike in the rest
-button :         of GTK+ start from 0. For instance, the right mouse button,
-                 which is 3 elsewhere, should be given as 2 here.
-button_actions : A logically OR'd value of GtkButtonAction values for the
-                 button.
+  **** Warning ****
+  gtk_clist_set_button_actions is deprecated and should not be used in newly-
+  written code.
+  Sets the action(s) that the specified mouse button will have on the CList.
+  clist :          The GtkCList to affect.
+                   The mouse button to set. The values here, unlike in the rest
+  button :         of GTK+ start from 0. For instance, the right mouse button,
+                   which is 3 elsewhere, should be given as 2 here.
+  button_actions : A logically OR'd value of GtkButtonAction values for the
+                   button.
 
 ==== :Append ====
 '':Append(self @ [[#T|T]], text @ [[..:..:Std:List#T|Std.List.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-**** Warning ****
-gtk_clist_append is deprecated and should not be used in newly-written code.
-Adds a row to the CList at the bottom.
-clist :   The GtkCList to affect.
-text :    An array of strings to add.
-Returns : The number of the row added.
+  **** Warning ****
+  gtk_clist_append is deprecated and should not be used in newly-written code.
+  Adds a row to the CList at the bottom.
+  clist :   The GtkCList to affect.
+  text :    An array of strings to add.
+  Returns : The number of the row added.
 
 ==== :Clear ====
 '':Clear(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-**** Warning ****
-gtk_clist_clear is deprecated and should not be used in newly-written code.
-Removes all the CList's rows.
-clist : The GtkCList to affect.
+  **** Warning ****
+  gtk_clist_clear is deprecated and should not be used in newly-written code.
+  Removes all the CList's rows.
+  clist : The GtkCList to affect.
 
 ==== :ColumnsAutosize ====
 '':ColumnsAutosize(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-**** Warning ****
-gtk_clist_columns_autosize is deprecated and should not be used in newly-
-written code.
-Auto-sizes all columns in the CList and returns the total width of the CList.
-clist :   The GtkCList to affect.
-Returns : The total width of the CList.
+  **** Warning ****
+  gtk_clist_columns_autosize is deprecated and should not be used in newly-
+  written code.
+  Auto-sizes all columns in the CList and returns the total width of the CList.
+  clist :   The GtkCList to affect.
+  Returns : The total width of the CList.
 
 ==== :FindRowFromData ====
 '':FindRowFromData(self @ [[#T|T]], data @ [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-**** Warning ****
-gtk_clist_find_row_from_data is deprecated and should not be used in newly-
-written code.
-Searches the CList for the row with the specified data.
-clist :   The GtkCList to search.
-data :    The data to search for a match.
-Returns : The number of the matching row, or -1 if no match could be found.
+  **** Warning ****
+  gtk_clist_find_row_from_data is deprecated and should not be used in newly-
+  written code.
+  Searches the CList for the row with the specified data.
+  clist :   The GtkCList to search.
+  data :    The data to search for a match.
+  Returns : The number of the matching row, or -1 if no match could be found.
 
 ==== :Freeze ====
 '':Freeze(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-**** Warning ****
-gtk_clist_freeze is deprecated and should not be used in newly-written code.
-Causes the GtkCList to stop updating its visuals until a matching call to
-gtk_clist_thaw() is made. This function is useful if a lot of changes will be
-made to the widget that may cause a lot of visual updating to occur. Note that
-calls to gtk_clist_freeze() can be nested.
-clist : The GtkCList to freeze.
+  **** Warning ****
+  gtk_clist_freeze is deprecated and should not be used in newly-written code.
+  Causes the GtkCList to stop updating its visuals until a matching call to
+  gtk_clist_thaw() is made. This function is useful if a lot of changes will be
+  made to the widget that may cause a lot of visual updating to occur. Note that
+  calls to gtk_clist_freeze() can be nested.
+  clist : The GtkCList to freeze.
 
 ==== :GetCellStyle ====
 '':GetCellStyle(self @ [[#T|T]], row @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], column @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Gtk:Gtk:Style#T|Gtk.Gtk.Style.T]]''
 
-**** Warning ****
-gtk_clist_get_cell_style is deprecated and should not be used in newly-written
-code.
-Gets the current style of the specified cell.
-clist :   The GtkCList to affect.
-row :     The row of the cell.
-column :  The column of the cell.
-Returns : A GtkStyle object.
+  **** Warning ****
+  gtk_clist_get_cell_style is deprecated and should not be used in newly-written
+  code.
+  Gets the current style of the specified cell.
+  clist :   The GtkCList to affect.
+  row :     The row of the cell.
+  column :  The column of the cell.
+  Returns : A GtkStyle object.
 
 ==== :GetCellType ====
 '':GetCellType(self @ [[#T|T]], row @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], column @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Gtk:Gtk:CellType#T|Gtk.Gtk.CellType.T]]''
 
-**** Warning ****
-gtk_clist_get_cell_type is deprecated and should not be used in newly-written
-code.
-Checks the type of cell at the location specified.
-clist :   The GtkCList to affect.
-row :     The row of the cell.
-column :  The column of the cell.
-Returns : A GtkCellType value describing the cell.
+  **** Warning ****
+  gtk_clist_get_cell_type is deprecated and should not be used in newly-written
+  code.
+  Checks the type of cell at the location specified.
+  clist :   The GtkCList to affect.
+  row :     The row of the cell.
+  column :  The column of the cell.
+  Returns : A GtkCellType value describing the cell.
 
 ==== :GetColumnTitle ====
 '':GetColumnTitle(self @ [[#T|T]], column @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:String#T|Std.String.T]]''
 
-**** Warning ****
-gtk_clist_get_column_title is deprecated and should not be used in newly-
-written code.
-Gets the current title of the specified column
-clist :   The GtkCList to affect.
-column :  The column to query.
-Returns : The title of the column.
+  **** Warning ****
+  gtk_clist_get_column_title is deprecated and should not be used in newly-
+  written code.
+  Gets the current title of the specified column
+  clist :   The GtkCList to affect.
+  column :  The column to query.
+  Returns : The title of the column.
 
 ==== :GetColumnWidget ====
 '':GetColumnWidget(self @ [[#T|T]], column @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
-**** Warning ****
-gtk_clist_get_column_widget is deprecated and should not be used in newly-
-written code.
-Gets the widget in the column header for the specified column.
-clist :   The GtkCList to affect.
-column :  The column to query.
-Returns : Pointer to a GtkWidget for the column header.
+  **** Warning ****
+  gtk_clist_get_column_widget is deprecated and should not be used in newly-
+  written code.
+  Gets the widget in the column header for the specified column.
+  clist :   The GtkCList to affect.
+  column :  The column to query.
+  Returns : Pointer to a GtkWidget for the column header.
 
 ==== :GetHadjustment ====
 '':GetHadjustment(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]]''
 
-**** Warning ****
-gtk_clist_get_hadjustment is deprecated and should not be used in newly-written
-code.
-Gets the GtkAdjustment currently being used for the horizontal aspect.
-clist :   The GtkCList to check.
-Returns : A GtkAdjustment object, or NULL if none is currently being used.
+  **** Warning ****
+  gtk_clist_get_hadjustment is deprecated and should not be used in newly-written
+  code.
+  Gets the GtkAdjustment currently being used for the horizontal aspect.
+  clist :   The GtkCList to check.
+  Returns : A GtkAdjustment object, or NULL if none is currently being used.
 
 ==== :GetPixmap ====
 '':GetPixmap(self @ [[#T|T]], row @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], column @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], pixmap @ [[..:..:Std:Object#T|Std.Object.T]], mask @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-**** Warning ****
-gtk_clist_get_pixmap is deprecated and should not be used in newly-written
-code.
-Gets the pixmap and bitmap mask of the specified cell. The returned mask value
-can be NULL.
-clist :   The GtkCList to affect.
-row :     The row of the cell.
-column :  The column of the cell.
-pixmap :  A pointer to a pointer to store the cell's GdkPixmap.
-mask :    A pointer to a pointer to store the cell's GdkBitmap mask.
-Returns : 1 if the cell's pixmap could be retrieved, 0 otherwise.
+  **** Warning ****
+  gtk_clist_get_pixmap is deprecated and should not be used in newly-written
+  code.
+  Gets the pixmap and bitmap mask of the specified cell. The returned mask value
+  can be NULL.
+  clist :   The GtkCList to affect.
+  row :     The row of the cell.
+  column :  The column of the cell.
+  pixmap :  A pointer to a pointer to store the cell's GdkPixmap.
+  mask :    A pointer to a pointer to store the cell's GdkBitmap mask.
+  Returns : 1 if the cell's pixmap could be retrieved, 0 otherwise.
 
 ==== :GetPixtext ====
 '':GetPixtext(self @ [[#T|T]], row @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], column @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], text @ [[..:..:Std:List#T|Std.List.T]], spacing @ [[..:..:Std:Object#T|Std.Object.T]], pixmap @ [[..:..:Std:Object#T|Std.Object.T]], mask @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-**** Warning ****
-gtk_clist_get_pixtext is deprecated and should not be used in newly-written
-code.
-Gets the text, pixmap and bitmap mask for the specified cell.
-clist :   The GtkCList to affect.
-row :     The row to query.
-column :  The column to query.
-text :    A pointer to a pointer to store the text.
-spacing : A pointer to a guint8 to store the spacing.
-pixmap :  A pointer to a GdkPixmap pointer to store the cell's pixmap.
-mask :    A pointer to a GdkBitmap pointer to store the cell's bitmap mask.
-Returns : 1 if the retrieval was successful, 0 otherwise.
+  **** Warning ****
+  gtk_clist_get_pixtext is deprecated and should not be used in newly-written
+  code.
+  Gets the text, pixmap and bitmap mask for the specified cell.
+  clist :   The GtkCList to affect.
+  row :     The row to query.
+  column :  The column to query.
+  text :    A pointer to a pointer to store the text.
+  spacing : A pointer to a guint8 to store the spacing.
+  pixmap :  A pointer to a GdkPixmap pointer to store the cell's pixmap.
+  mask :    A pointer to a GdkBitmap pointer to store the cell's bitmap mask.
+  Returns : 1 if the retrieval was successful, 0 otherwise.
 
 ==== :GetRowData ====
 '':GetRowData(self @ [[#T|T]], row @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Address#T|Std.Address.T]]''
 
-**** Warning ****
-gtk_clist_get_row_data is deprecated and should not be used in newly-written
-code.
-Gets the currently set data for the specified row.
-clist :   The GtkCList to affect.
-row :     The row to query.
-Returns : The data set for the row.
+  **** Warning ****
+  gtk_clist_get_row_data is deprecated and should not be used in newly-written
+  code.
+  Gets the currently set data for the specified row.
+  clist :   The GtkCList to affect.
+  row :     The row to query.
+  Returns : The data set for the row.
 
 ==== :GetRowStyle ====
 '':GetRowStyle(self @ [[#T|T]], row @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Gtk:Gtk:Style#T|Gtk.Gtk.Style.T]]''
 
-**** Warning ****
-gtk_clist_get_row_style is deprecated and should not be used in newly-written
-code.
-Gets the style set for the specified row.
-clist :   The GtkCList to affect.
-row :     The row to query.
-Returns : The GtkStyle of the row.
+  **** Warning ****
+  gtk_clist_get_row_style is deprecated and should not be used in newly-written
+  code.
+  Gets the style set for the specified row.
+  clist :   The GtkCList to affect.
+  row :     The row to query.
+  Returns : The GtkStyle of the row.
 
 ==== :GetSelectable ====
 '':GetSelectable(self @ [[#T|T]], row @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
-**** Warning ****
-gtk_clist_get_selectable is deprecated and should not be used in newly-written
-code.
-Gets whether the specified row is selectable or not.
-clist :   The GtkCList to affect.
-row :     The row to query.
-Returns : A gboolean value.
+  **** Warning ****
+  gtk_clist_get_selectable is deprecated and should not be used in newly-written
+  code.
+  Gets whether the specified row is selectable or not.
+  clist :   The GtkCList to affect.
+  row :     The row to query.
+  Returns : A gboolean value.
 
 ==== :GetSelectionInfo ====
 '':GetSelectionInfo(self @ [[#T|T]], x @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], row @ [[..:..:Std:Object#T|Std.Object.T]], column @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-**** Warning ****
-gtk_clist_get_selection_info is deprecated and should not be used in newly-
-written code.
-Gets the row and column at the specified pixel position in the CList.
-clist :   The GtkCList to affect.
-x :       The horizontal pixel position to check.
-y :       The vertical pixel position to check..
-row :     Pointer to a gint to store the row value.
-column :  Pointer to a gint to store the column value.
-Returns : 1 if row/column is returned and in range, 0 otherwise.
+  **** Warning ****
+  gtk_clist_get_selection_info is deprecated and should not be used in newly-
+  written code.
+  Gets the row and column at the specified pixel position in the CList.
+  clist :   The GtkCList to affect.
+  x :       The horizontal pixel position to check.
+  y :       The vertical pixel position to check..
+  row :     Pointer to a gint to store the row value.
+  column :  Pointer to a gint to store the column value.
+  Returns : 1 if row/column is returned and in range, 0 otherwise.
 
 ==== :GetText ====
 '':GetText(self @ [[#T|T]], row @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], column @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], text @ [[..:..:Std:List#T|Std.List.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-**** Warning ****
-gtk_clist_get_text is deprecated and should not be used in newly-written code.
-Gets the text for the specified cell.
-clist :   The GtkCList to affect.
-row :     The row to query.
-column :  The column to query.
-text :    A pointer to a pointer to store the text.
-Returns : 1 if the cell's text could be retrieved, 0 otherwise.
+  **** Warning ****
+  gtk_clist_get_text is deprecated and should not be used in newly-written code.
+  Gets the text for the specified cell.
+  clist :   The GtkCList to affect.
+  row :     The row to query.
+  column :  The column to query.
+  text :    A pointer to a pointer to store the text.
+  Returns : 1 if the cell's text could be retrieved, 0 otherwise.
 
 ==== :GetVadjustment ====
 '':GetVadjustment(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]]''
 
-**** Warning ****
-gtk_clist_get_vadjustment is deprecated and should not be used in newly-written
-code.
-Gets the GtkAdjustment currently being used for the vertical aspect.
-clist :   The GtkCList to check.
-Returns : A GtkAdjustment object, or NULL if none is currently being used.
+  **** Warning ****
+  gtk_clist_get_vadjustment is deprecated and should not be used in newly-written
+  code.
+  Gets the GtkAdjustment currently being used for the vertical aspect.
+  clist :   The GtkCList to check.
+  Returns : A GtkAdjustment object, or NULL if none is currently being used.
 
 ==== :Insert ====
 '':Insert(self @ [[#T|T]], row @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], text @ [[..:..:Std:List#T|Std.List.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-**** Warning ****
-gtk_clist_insert is deprecated and should not be used in newly-written code.
-Adds a row of text to the CList at the specified position.
-clist :   The GtkCList to affect.
-row :     The row where the text should be inserted.
-text :    An array of string to add.
-Returns : The number of the row added.
+  **** Warning ****
+  gtk_clist_insert is deprecated and should not be used in newly-written code.
+  Adds a row of text to the CList at the specified position.
+  clist :   The GtkCList to affect.
+  row :     The row where the text should be inserted.
+  text :    An array of string to add.
+  Returns : The number of the row added.
 
 ==== :Moveto ====
 '':Moveto(self @ [[#T|T]], row @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], column @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], row_align @ [[..:..:Std:Real#T|Std.Real.T]], col_align @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-**** Warning ****
-gtk_clist_moveto is deprecated and should not be used in newly-written code.
-Tells the CList widget to visually move to the specified row and column.
-clist :     The GtkCList to affect.
-row :       The row to which to move.
-column :    The column to which to move.
-row_align : A value between 0 and 1 that describes the positioning of the row
-            in relation to the viewable area of the CList's contents.
-col_align : A value between 0 and 1 that describes the positioning of the
-            column in relation to the viewable area of the CList's contents.
+  **** Warning ****
+  gtk_clist_moveto is deprecated and should not be used in newly-written code.
+  Tells the CList widget to visually move to the specified row and column.
+  clist :     The GtkCList to affect.
+  row :       The row to which to move.
+  column :    The column to which to move.
+  row_align : A value between 0 and 1 that describes the positioning of the row
+              in relation to the viewable area of the CList's contents.
+  col_align : A value between 0 and 1 that describes the positioning of the
+              column in relation to the viewable area of the CList's contents.
 
 ==== :OptimalColumnWidth ====
 '':OptimalColumnWidth(self @ [[#T|T]], column @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-**** Warning ****
-gtk_clist_optimal_column_width is deprecated and should not be used in newly-
-written code.
-Gets the required width in pixels that is needed to show everything in the
-specified column.
-clist :   The GtkCList to check.
-column :  The column to check.
-Returns : The required width in pixels for the column.
+  **** Warning ****
+  gtk_clist_optimal_column_width is deprecated and should not be used in newly-
+  written code.
+  Gets the required width in pixels that is needed to show everything in the
+  specified column.
+  clist :   The GtkCList to check.
+  column :  The column to check.
+  Returns : The required width in pixels for the column.
 
 ==== :Prepend ====
 '':Prepend(self @ [[#T|T]], text @ [[..:..:Std:List#T|Std.List.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-**** Warning ****
-gtk_clist_prepend is deprecated and should not be used in newly-written code.
-Adds a row to the CList at the top.
-clist :   The GtkCList to affect.
-text :    An array of strings to add.
-Returns : The number of the row added.
+  **** Warning ****
+  gtk_clist_prepend is deprecated and should not be used in newly-written code.
+  Adds a row to the CList at the top.
+  clist :   The GtkCList to affect.
+  text :    An array of strings to add.
+  Returns : The number of the row added.
 
 ==== :Remove ====
 '':Remove(self @ [[#T|T]], row @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-**** Warning ****
-gtk_clist_remove is deprecated and should not be used in newly-written code.
-Removes the specified row from the CList.
-clist : The GtkCList to affect.
-row :   The row to remove.
+  **** Warning ****
+  gtk_clist_remove is deprecated and should not be used in newly-written code.
+  Removes the specified row from the CList.
+  clist : The GtkCList to affect.
+  row :   The row to remove.
 
 ==== :SelectAll ====
 '':SelectAll(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-**** Warning ****
-gtk_clist_select_all is deprecated and should not be used in newly-written
-code.
-Selects all rows in the CList. This function has no affect for a CList in
-"single" or "browse" selection mode.
-clist : The GtkCList to affect.
+  **** Warning ****
+  gtk_clist_select_all is deprecated and should not be used in newly-written
+  code.
+  Selects all rows in the CList. This function has no affect for a CList in
+  "single" or "browse" selection mode.
+  clist : The GtkCList to affect.
 
 ==== :SelectRow ====
 '':SelectRow(self @ [[#T|T]], row @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], column @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-**** Warning ****
-gtk_clist_select_row is deprecated and should not be used in newly-written
-code.
-Selects the specified row. Causes the "select-row" signal to be emitted for the
-specified row and column.
-clist :  The GtkCList to affect.
-row :    The row to select.
-column : The column to select.
+  **** Warning ****
+  gtk_clist_select_row is deprecated and should not be used in newly-written
+  code.
+  Selects the specified row. Causes the "select-row" signal to be emitted for the
+  specified row and column.
+  clist :  The GtkCList to affect.
+  row :    The row to select.
+  column : The column to select.
 
 ==== :SetAutoSort ====
 '':SetAutoSort(self @ [[#T|T]], auto_sort @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-**** Warning ****
-gtk_clist_set_auto_sort is deprecated and should not be used in newly-written
-code.
-Turns on or off auto sort of the GtkCList. If auto sort is on, then the CList
-will be resorted when a row is inserted into the CList.
-clist :     The GtkCList to affect.
-auto_sort : whether auto sort should be on or off
+  **** Warning ****
+  gtk_clist_set_auto_sort is deprecated and should not be used in newly-written
+  code.
+  Turns on or off auto sort of the GtkCList. If auto sort is on, then the CList
+  will be resorted when a row is inserted into the CList.
+  clist :     The GtkCList to affect.
+  auto_sort : whether auto sort should be on or off
 
 ==== :SetBackground ====
 '':SetBackground(self @ [[#T|T]], row @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], color @ [[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-**** Warning ****
-gtk_clist_set_background is deprecated and should not be used in newly-written
-code.
-Sets the background color for the specified row.
-clist : The GtkCList to affect.
-row :   The row to affect.
-color : A pointer to a GdkColor structure.
+  **** Warning ****
+  gtk_clist_set_background is deprecated and should not be used in newly-written
+  code.
+  Sets the background color for the specified row.
+  clist : The GtkCList to affect.
+  row :   The row to affect.
+  color : A pointer to a GdkColor structure.
 
 ==== :SetButtonActions ====
 '':SetButtonActions(self @ [[#T|T]], button @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], button_actions @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-**** Warning ****
-gtk_clist_set_button_actions is deprecated and should not be used in newly-
-written code.
-Sets the action(s) that the specified mouse button will have on the CList.
-clist :          The GtkCList to affect.
-                 The mouse button to set. The values here, unlike in the rest
-button :         of GTK+ start from 0. For instance, the right mouse button,
-                 which is 3 elsewhere, should be given as 2 here.
-button_actions : A logically OR'd value of GtkButtonAction values for the
-                 button.
+  **** Warning ****
+  gtk_clist_set_button_actions is deprecated and should not be used in newly-
+  written code.
+  Sets the action(s) that the specified mouse button will have on the CList.
+  clist :          The GtkCList to affect.
+                   The mouse button to set. The values here, unlike in the rest
+  button :         of GTK+ start from 0. For instance, the right mouse button,
+                   which is 3 elsewhere, should be given as 2 here.
+  button_actions : A logically OR'd value of GtkButtonAction values for the
+                   button.
 
 ==== :SetCellStyle ====
 '':SetCellStyle(self @ [[#T|T]], row @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], column @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], style @ [[..:..:Gtk:Gtk:Style#T|Gtk.Gtk.Style.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-**** Warning ****
-gtk_clist_set_cell_style is deprecated and should not be used in newly-written
-code.
-Sets the style for the specified cell.
-clist :  The GtkCList to affect.
-row :    The row of the cell.
-column : The column of the cell.
-style :  A pointer to a GtkStyle structure.
+  **** Warning ****
+  gtk_clist_set_cell_style is deprecated and should not be used in newly-written
+  code.
+  Sets the style for the specified cell.
+  clist :  The GtkCList to affect.
+  row :    The row of the cell.
+  column : The column of the cell.
+  style :  A pointer to a GtkStyle structure.
 
 ==== :SetColumnAutoResize ====
 '':SetColumnAutoResize(self @ [[#T|T]], column @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], auto_resize @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-**** Warning ****
-gtk_clist_set_column_auto_resize is deprecated and should not be used in newly-
-written code.
-Lets you specify whether a column should be automatically resized by the widget
-when data is added or removed. Enabling auto-resize on a column explicity
-disallows user-resizing of the column.
-clist :       The GtkCList to affect.
-column :      The column on which to set auto-resizing.
-auto_resize : TRUE or FALSE.
+  **** Warning ****
+  gtk_clist_set_column_auto_resize is deprecated and should not be used in newly-
+  written code.
+  Lets you specify whether a column should be automatically resized by the widget
+  when data is added or removed. Enabling auto-resize on a column explicity
+  disallows user-resizing of the column.
+  clist :       The GtkCList to affect.
+  column :      The column on which to set auto-resizing.
+  auto_resize : TRUE or FALSE.
 
 ==== :SetColumnJustification ====
 '':SetColumnJustification(self @ [[#T|T]], column @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], justification @ [[..:..:Gtk:Gtk:Justification#T|Gtk.Gtk.Justification.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-**** Warning ****
-gtk_clist_set_column_justification is deprecated and should not be used in
-newly-written code.
-Sets the justification to be used for all text in the specified column.
-clist :         The GtkCList to affect.
-column :        The column which should be affected.
-justification : A GtkJustification value for the column.
+  **** Warning ****
+  gtk_clist_set_column_justification is deprecated and should not be used in
+  newly-written code.
+  Sets the justification to be used for all text in the specified column.
+  clist :         The GtkCList to affect.
+  column :        The column which should be affected.
+  justification : A GtkJustification value for the column.
 
 ==== :SetColumnMaxWidth ====
 '':SetColumnMaxWidth(self @ [[#T|T]], column @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], max_width @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-**** Warning ****
-gtk_clist_set_column_max_width is deprecated and should not be used in newly-
-written code.
-Causes the column specified to have a maximum width, preventing the user from
-resizing it larger than that specified.
-clist :     The GtkCList to affect.
-column :    The column to set the maximum width.
-max_width : The width, in pixels.
+  **** Warning ****
+  gtk_clist_set_column_max_width is deprecated and should not be used in newly-
+  written code.
+  Causes the column specified to have a maximum width, preventing the user from
+  resizing it larger than that specified.
+  clist :     The GtkCList to affect.
+  column :    The column to set the maximum width.
+  max_width : The width, in pixels.
 
 ==== :SetColumnMinWidth ====
 '':SetColumnMinWidth(self @ [[#T|T]], column @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], min_width @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-**** Warning ****
-gtk_clist_set_column_min_width is deprecated and should not be used in newly-
-written code.
-Causes the column specified to have a minimum width, preventing the user from
-resizing it smaller than that specified.
-clist :     The GtkCList to affect.
-column :    The column to set the minimum width.
-min_width : The width, in pixels.
+  **** Warning ****
+  gtk_clist_set_column_min_width is deprecated and should not be used in newly-
+  written code.
+  Causes the column specified to have a minimum width, preventing the user from
+  resizing it smaller than that specified.
+  clist :     The GtkCList to affect.
+  column :    The column to set the minimum width.
+  min_width : The width, in pixels.
 
 ==== :SetColumnResizeable ====
 '':SetColumnResizeable(self @ [[#T|T]], column @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], resizeable @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-**** Warning ****
-gtk_clist_set_column_resizeable is deprecated and should not be used in newly-
-written code.
-Lets you specify whether a specified column should be resizeable by the user.
-Note that turning on resizeability for the column will automatically shut off
-auto-resizing, but turning off resizeability will NOT turn on auto-resizing.
-This must be done manually via a call to gtk_clist_set_column_auto_resize().
-clist :      The GtkCList to affect.
-column :     The column on which to set resizeability.
-resizeable : TRUE or FALSE.
+  **** Warning ****
+  gtk_clist_set_column_resizeable is deprecated and should not be used in newly-
+  written code.
+  Lets you specify whether a specified column should be resizeable by the user.
+  Note that turning on resizeability for the column will automatically shut off
+  auto-resizing, but turning off resizeability will NOT turn on auto-resizing.
+  This must be done manually via a call to gtk_clist_set_column_auto_resize().
+  clist :      The GtkCList to affect.
+  column :     The column on which to set resizeability.
+  resizeable : TRUE or FALSE.
 
 ==== :SetColumnTitle ====
 '':SetColumnTitle(self @ [[#T|T]], column @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], title @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-**** Warning ****
-gtk_clist_set_column_title is deprecated and should not be used in newly-
-written code.
-Sets the title for the specified column.
-clist :  The GtkCList to affect.
-column : The column whose title should be changed.
-title :  A string to be the column's title.
+  **** Warning ****
+  gtk_clist_set_column_title is deprecated and should not be used in newly-
+  written code.
+  Sets the title for the specified column.
+  clist :  The GtkCList to affect.
+  column : The column whose title should be changed.
+  title :  A string to be the column's title.
 
 ==== :SetColumnVisibility ====
 '':SetColumnVisibility(self @ [[#T|T]], column @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], visible @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-**** Warning ****
-gtk_clist_set_column_visibility is deprecated and should not be used in newly-
-written code.
-Allows you to set whether a specified column in the GtkCList should be hidden
-or shown. Note that at least one column must always be showing, so attempting
-to hide the last visible column will be ignored.
-clist :   The GtkCList to affect.
-column :  The column to set visibility.
-visible : TRUE or FALSE.
+  **** Warning ****
+  gtk_clist_set_column_visibility is deprecated and should not be used in newly-
+  written code.
+  Allows you to set whether a specified column in the GtkCList should be hidden
+  or shown. Note that at least one column must always be showing, so attempting
+  to hide the last visible column will be ignored.
+  clist :   The GtkCList to affect.
+  column :  The column to set visibility.
+  visible : TRUE or FALSE.
 
 ==== :SetColumnWidget ====
 '':SetColumnWidget(self @ [[#T|T]], column @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], widget @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-**** Warning ****
-gtk_clist_set_column_widget is deprecated and should not be used in newly-
-written code.
-Sets a widget to be used as the specified column's title. This can be used to
-place a pixmap or something else as the column title, instead of the standard
-text.
-clist :  The GtkCList to affect.
-column : The column whose title should be a widget.
-widget : A pointer to a previously create widget.
+  **** Warning ****
+  gtk_clist_set_column_widget is deprecated and should not be used in newly-
+  written code.
+  Sets a widget to be used as the specified column's title. This can be used to
+  place a pixmap or something else as the column title, instead of the standard
+  text.
+  clist :  The GtkCList to affect.
+  column : The column whose title should be a widget.
+  widget : A pointer to a previously create widget.
 
 ==== :SetColumnWidth ====
 '':SetColumnWidth(self @ [[#T|T]], column @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], width @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-**** Warning ****
-gtk_clist_set_column_width is deprecated and should not be used in newly-
-written code.
-Causes the column specified for the GtkCList to be set to a specified width.
-clist :  The GtkCList to affect.
-column : The column to set the width.
-width :  The width, in pixels.
+  **** Warning ****
+  gtk_clist_set_column_width is deprecated and should not be used in newly-
+  written code.
+  Causes the column specified for the GtkCList to be set to a specified width.
+  clist :  The GtkCList to affect.
+  column : The column to set the width.
+  width :  The width, in pixels.
 
 ==== :SetCompareFunc ====
 '':SetCompareFunc(self @ [[#T|T]], cmp_func @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-**** Warning ****
-gtk_clist_set_compare_func is deprecated and should not be used in newly-
-written code.
-Sets the compare function of the GtkClist to cmp_func. If cmp_func is NULL,
-then the default compare function is used. The default compare function sorts
-ascending or with the type set by gtk_clist_set_sort_type() by the column set
-by gtk_clist_set_sort_column().
-clist :    The GtkCList to affect.
-cmp_func : The GtkCompareFunction to use.
+  **** Warning ****
+  gtk_clist_set_compare_func is deprecated and should not be used in newly-
+  written code.
+  Sets the compare function of the GtkClist to cmp_func. If cmp_func is NULL,
+  then the default compare function is used. The default compare function sorts
+  ascending or with the type set by gtk_clist_set_sort_type() by the column set
+  by gtk_clist_set_sort_column().
+  clist :    The GtkCList to affect.
+  cmp_func : The GtkCompareFunction to use.
 
 ==== :SetForeground ====
 '':SetForeground(self @ [[#T|T]], row @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], color @ [[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-**** Warning ****
-gtk_clist_set_foreground is deprecated and should not be used in newly-written
-code.
-Sets the foreground color for the specified row.
-clist : The GtkCList to affect.
-row :   The row to affect.
-color : A pointer to a GdkColor structure.
+  **** Warning ****
+  gtk_clist_set_foreground is deprecated and should not be used in newly-written
+  code.
+  Sets the foreground color for the specified row.
+  clist : The GtkCList to affect.
+  row :   The row to affect.
+  color : A pointer to a GdkColor structure.
 
 ==== :SetHadjustment ====
 '':SetHadjustment(self @ [[#T|T]], adjustment @ [[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-**** Warning ****
-gtk_clist_set_hadjustment is deprecated and should not be used in newly-written
-code.
-Allows you to set the GtkAdjustment to be used for the horizontal aspect of the
-GtkCList widget.
-clist :      The GtkCList to affect.
-adjustment : A pointer to a GtkAdjustment widget, or NULL.
+  **** Warning ****
+  gtk_clist_set_hadjustment is deprecated and should not be used in newly-written
+  code.
+  Allows you to set the GtkAdjustment to be used for the horizontal aspect of the
+  GtkCList widget.
+  clist :      The GtkCList to affect.
+  adjustment : A pointer to a GtkAdjustment widget, or NULL.
 
 ==== :SetPixmap ====
 '':SetPixmap(self @ [[#T|T]], row @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], column @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], pixmap @ [[..:..:Gtk:Gdk:Pixmap#T|Gtk.Gdk.Pixmap.T]], mask @ [[..:..:Gtk:Gdk:Bitmap#T|Gtk.Gdk.Bitmap.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-**** Warning ****
-gtk_clist_set_pixmap is deprecated and should not be used in newly-written
-code.
-Sets a pixmap for the specified cell.
-clist :  The GtkCList to affect.
-row :    The row of the cell.
-column : The column of the cell.
-pixmap : A pointer to a GdkPixmap to place in the cell.
-mask :   A pointer to a GdkBitmap mask for the cell.
+  **** Warning ****
+  gtk_clist_set_pixmap is deprecated and should not be used in newly-written
+  code.
+  Sets a pixmap for the specified cell.
+  clist :  The GtkCList to affect.
+  row :    The row of the cell.
+  column : The column of the cell.
+  pixmap : A pointer to a GdkPixmap to place in the cell.
+  mask :   A pointer to a GdkBitmap mask for the cell.
 
 ==== :SetPixtext ====
 '':SetPixtext(self @ [[#T|T]], row @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], column @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], text @ [[..:..:Std:String#T|Std.String.T]], spacing @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], pixmap @ [[..:..:Gtk:Gdk:Pixmap#T|Gtk.Gdk.Pixmap.T]], mask @ [[..:..:Gtk:Gdk:Bitmap#T|Gtk.Gdk.Bitmap.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-**** Warning ****
-gtk_clist_set_pixtext is deprecated and should not be used in newly-written
-code.
-Sets text and a pixmap/bitmap on the specified cell.
-clist :   The GtkCList to affect.
-row :     The row of the cell.
-column :  The column of the cell.
-text :    The text to set in the cell.
-spacing : The spacing between the cell's text and pixmap.
-pixmap :  A pointer to a GdkPixmap for the cell.
-mask :    A pointer to a GdkBitmap mask for the cell.
+  **** Warning ****
+  gtk_clist_set_pixtext is deprecated and should not be used in newly-written
+  code.
+  Sets text and a pixmap/bitmap on the specified cell.
+  clist :   The GtkCList to affect.
+  row :     The row of the cell.
+  column :  The column of the cell.
+  text :    The text to set in the cell.
+  spacing : The spacing between the cell's text and pixmap.
+  pixmap :  A pointer to a GdkPixmap for the cell.
+  mask :    A pointer to a GdkBitmap mask for the cell.
 
 ==== :SetReorderable ====
 '':SetReorderable(self @ [[#T|T]], reorderable @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-**** Warning ****
-gtk_clist_set_reorderable is deprecated and should not be used in newly-written
-code.
-Sets whether the CList's rows are re-orderable using drag-and-drop.
-clist :       The GtkCList to affect.
-reorderable : TRUE or FALSE.
+  **** Warning ****
+  gtk_clist_set_reorderable is deprecated and should not be used in newly-written
+  code.
+  Sets whether the CList's rows are re-orderable using drag-and-drop.
+  clist :       The GtkCList to affect.
+  reorderable : TRUE or FALSE.
 
 ==== :SetRowData ====
 '':SetRowData(self @ [[#T|T]], row @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], data @ [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-**** Warning ****
-gtk_clist_set_row_data is deprecated and should not be used in newly-written
-code.
-Sets data for the specified row. This is the same as calling
-gtk_clist_set_row_data_full(clist, row, data, NULL).
-clist : The GtkCList to affect.
-row :   The row to affect.
-data :  The data to set for the row.
+  **** Warning ****
+  gtk_clist_set_row_data is deprecated and should not be used in newly-written
+  code.
+  Sets data for the specified row. This is the same as calling
+  gtk_clist_set_row_data_full(clist, row, data, NULL).
+  clist : The GtkCList to affect.
+  row :   The row to affect.
+  data :  The data to set for the row.
 
 ==== :SetRowDataFull ====
 '':SetRowDataFull(self @ [[#T|T]], row @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], data @ [[..:..:Std:Address#T|Std.Address.T]], destroy @ [[..:..:Std:Function#T|Std.Function.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-**** Warning ****
-gtk_clist_set_row_data_full is deprecated and should not be used in newly-
-written code.
-Sets the data for specified row, with a callback when the row is destroyed.
-clist :   The GtkCList to affect.
-row :     The row to affect.
-data :    The data to set for the row.
-destroy : A GtkDestroyNotify function to be called when the row is destroyed.
+  **** Warning ****
+  gtk_clist_set_row_data_full is deprecated and should not be used in newly-
+  written code.
+  Sets the data for specified row, with a callback when the row is destroyed.
+  clist :   The GtkCList to affect.
+  row :     The row to affect.
+  data :    The data to set for the row.
+  destroy : A GtkDestroyNotify function to be called when the row is destroyed.
 
 ==== :SetRowHeight ====
 '':SetRowHeight(self @ [[#T|T]], height @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-**** Warning ****
-gtk_clist_set_row_height is deprecated and should not be used in newly-written
-code.
-Causes the GtkCList to have a specified height for its rows. Setting the row
-height to 0 allows the GtkCList to adjust automatically to data in the row.
-clist :  The GtkCList to affect.
-height : The height, in pixels.
+  **** Warning ****
+  gtk_clist_set_row_height is deprecated and should not be used in newly-written
+  code.
+  Causes the GtkCList to have a specified height for its rows. Setting the row
+  height to 0 allows the GtkCList to adjust automatically to data in the row.
+  clist :  The GtkCList to affect.
+  height : The height, in pixels.
 
 ==== :SetRowStyle ====
 '':SetRowStyle(self @ [[#T|T]], row @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], style @ [[..:..:Gtk:Gtk:Style#T|Gtk.Gtk.Style.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-**** Warning ****
-gtk_clist_set_row_style is deprecated and should not be used in newly-written
-code.
-Sets the style for all cells in the specified row.
-clist : The GtkCList to affect.
-row :   The row to affect.
-style : A pointer to a GtkStyle to set.
+  **** Warning ****
+  gtk_clist_set_row_style is deprecated and should not be used in newly-written
+  code.
+  Sets the style for all cells in the specified row.
+  clist : The GtkCList to affect.
+  row :   The row to affect.
+  style : A pointer to a GtkStyle to set.
 
 ==== :SetSelectable ====
 '':SetSelectable(self @ [[#T|T]], row @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], selectable @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-**** Warning ****
-gtk_clist_set_selectable is deprecated and should not be used in newly-written
-code.
-Sets whether the specified row is selectable or not.
-clist :      The GtkCList to affect.
-row :        The row to affect.
-selectable : TRUE or FALSE.
+  **** Warning ****
+  gtk_clist_set_selectable is deprecated and should not be used in newly-written
+  code.
+  Sets whether the specified row is selectable or not.
+  clist :      The GtkCList to affect.
+  row :        The row to affect.
+  selectable : TRUE or FALSE.
 
 ==== :SetSelectionMode ====
 '':SetSelectionMode(self @ [[#T|T]], mode @ [[..:..:Gtk:Gtk:SelectionMode#T|Gtk.Gtk.SelectionMode.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-**** Warning ****
-gtk_clist_set_selection_mode is deprecated and should not be used in newly-
-written code.
-Sets the selection mode for the specified CList. This allows you to set whether
-only one or more than one item can be selected at a time in the widget. Note
-that setting the widget's selection mode to one of GTK_SELECTION_BROWSE or
-GTK_SELECTION_SINGLE will cause all the items in the GtkCList to become
-deselected.
-clist : The GtkCList to affect.
-mode :  The GtkSelectionMode type to set for this CList.
+  **** Warning ****
+  gtk_clist_set_selection_mode is deprecated and should not be used in newly-
+  written code.
+  Sets the selection mode for the specified CList. This allows you to set whether
+  only one or more than one item can be selected at a time in the widget. Note
+  that setting the widget's selection mode to one of GTK_SELECTION_BROWSE or
+  GTK_SELECTION_SINGLE will cause all the items in the GtkCList to become
+  deselected.
+  clist : The GtkCList to affect.
+  mode :  The GtkSelectionMode type to set for this CList.
 
 ==== :SetShadowType ====
 '':SetShadowType(self @ [[#T|T]], type @ [[..:..:Gtk:Gtk:ShadowType#T|Gtk.Gtk.ShadowType.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-**** Warning ****
-gtk_clist_set_shadow_type is deprecated and should not be used in newly-written
-code.
-Sets the shadow type for the specified CList. Changing this value will cause
-the GtkCList to update its visuals.
-clist : The GtkCList to affect.
-type :  The GtkShadowType desired.
+  **** Warning ****
+  gtk_clist_set_shadow_type is deprecated and should not be used in newly-written
+  code.
+  Sets the shadow type for the specified CList. Changing this value will cause
+  the GtkCList to update its visuals.
+  clist : The GtkCList to affect.
+  type :  The GtkShadowType desired.
 
 ==== :SetShift ====
 '':SetShift(self @ [[#T|T]], row @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], column @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], vertical @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], horizontal @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-**** Warning ****
-gtk_clist_set_shift is deprecated and should not be used in newly-written code.
-Sets the vertical and horizontal shift of the specified cell.
-clist :      The GtkCList to affect.
-row :        The row of the cell.
-column :     The column of the cell.
-vertical :   The value to set for the vertical shift.
-horizontal : The value to set for the vertical shift.
+  **** Warning ****
+  gtk_clist_set_shift is deprecated and should not be used in newly-written code.
+  Sets the vertical and horizontal shift of the specified cell.
+  clist :      The GtkCList to affect.
+  row :        The row of the cell.
+  column :     The column of the cell.
+  vertical :   The value to set for the vertical shift.
+  horizontal : The value to set for the vertical shift.
 
 ==== :SetSortColumn ====
 '':SetSortColumn(self @ [[#T|T]], column @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-**** Warning ****
-gtk_clist_set_sort_column is deprecated and should not be used in newly-written
-code.
-Sets the sort column of the clist. The sort column is used by the default
-compare function to determine which column to sort by.
-clist :  The GtkCList to affect.
-column : The column to sort by
+  **** Warning ****
+  gtk_clist_set_sort_column is deprecated and should not be used in newly-written
+  code.
+  Sets the sort column of the clist. The sort column is used by the default
+  compare function to determine which column to sort by.
+  clist :  The GtkCList to affect.
+  column : The column to sort by
 
 ==== :SetSortType ====
 '':SetSortType(self @ [[#T|T]], sort_type @ [[..:..:Gtk:Gtk:SortType#T|Gtk.Gtk.SortType.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-**** Warning ****
-gtk_clist_set_sort_type is deprecated and should not be used in newly-written
-code.
-Sets the sort type of the GtkClist. This is either GTK_SORT_ASCENDING for
-ascening sort or GTK_SORT_DESCENDING for descending sort.
-clist :     The GtkCList to affect.
-sort_type : the GtkSortType to use
+  **** Warning ****
+  gtk_clist_set_sort_type is deprecated and should not be used in newly-written
+  code.
+  Sets the sort type of the GtkClist. This is either GTK_SORT_ASCENDING for
+  ascening sort or GTK_SORT_DESCENDING for descending sort.
+  clist :     The GtkCList to affect.
+  sort_type : the GtkSortType to use
 
 ==== :SetText ====
 '':SetText(self @ [[#T|T]], row @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], column @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], text @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-**** Warning ****
-gtk_clist_set_text is deprecated and should not be used in newly-written code.
-Sets the displayed text in the specified cell.
-clist :  The GtkCList to affect.
-row :    The row of the cell.
-column : The column of the cell.
-text :   The text to set in the cell.
+  **** Warning ****
+  gtk_clist_set_text is deprecated and should not be used in newly-written code.
+  Sets the displayed text in the specified cell.
+  clist :  The GtkCList to affect.
+  row :    The row of the cell.
+  column : The column of the cell.
+  text :   The text to set in the cell.
 
 ==== :SetUseDragIcons ====
 '':SetUseDragIcons(self @ [[#T|T]], use_icons @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-**** Warning ****
-gtk_clist_set_use_drag_icons is deprecated and should not be used in newly-
-written code.
-Determines whether the GtkClist should use icons when doing drag-and-drop
-operations.
-clist :     The GtkCList to affect.
-use_icons : TRUE or FALSE.
+  **** Warning ****
+  gtk_clist_set_use_drag_icons is deprecated and should not be used in newly-
+  written code.
+  Determines whether the GtkClist should use icons when doing drag-and-drop
+  operations.
+  clist :     The GtkCList to affect.
+  use_icons : TRUE or FALSE.
 
 ==== :SetVadjustment ====
 '':SetVadjustment(self @ [[#T|T]], adjustment @ [[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-**** Warning ****
-gtk_clist_set_vadjustment is deprecated and should not be used in newly-written
-code.
-Allows you to set the GtkAdjustment to be used for the vertical aspect of the
-GtkCList widget.
-clist :      The GtkCList to affect.
-adjustment : A pointer to a GtkAdjustment widget, or NULL.
-***** Property Details *****
-The "n-columns" property
-  "n-columns"                guint                 : Read / Write / Construct
-Only
-An integer value for a column.
-Default value: 0
+  **** Warning ****
+  gtk_clist_set_vadjustment is deprecated and should not be used in newly-written
+  code.
+  Allows you to set the GtkAdjustment to be used for the vertical aspect of the
+  GtkCList widget.
+  clist :      The GtkCList to affect.
+  adjustment : A pointer to a GtkAdjustment widget, or NULL.
+  ***** Property Details *****
+  The "n-columns" property
+    "n-columns"                guint                 : Read / Write / Construct
+  Only
+  An integer value for a column.
+  Default value: 0
 
 ==== :Sort ====
 '':Sort(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-**** Warning ****
-gtk_clist_sort is deprecated and should not be used in newly-written code.
-Sorts the GtkClist according to the current compare function, which can be set
-with the gtk_clist_set_compare_func() function.
-clist : The GtkCList to sort.
+  **** Warning ****
+  gtk_clist_sort is deprecated and should not be used in newly-written code.
+  Sorts the GtkClist according to the current compare function, which can be set
+  with the gtk_clist_set_compare_func() function.
+  clist : The GtkCList to sort.
 
 ==== :SwapRows ====
 '':SwapRows(self @ [[#T|T]], row1 @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], row2 @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-**** Warning ****
-gtk_clist_swap_rows is deprecated and should not be used in newly-written code.
-Swaps the two specified rows with each other.
-clist : The GtkCList to affect.
-row1 :  Number of the first row.
-row2 :  Number of the second row.
+  **** Warning ****
+  gtk_clist_swap_rows is deprecated and should not be used in newly-written code.
+  Swaps the two specified rows with each other.
+  clist : The GtkCList to affect.
+  row1 :  Number of the first row.
+  row2 :  Number of the second row.
 
 ==== :Thaw ====
 '':Thaw(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-**** Warning ****
-gtk_clist_thaw is deprecated and should not be used in newly-written code.
-Causes the specified GtkCList to allow visual updates.
-clist : The GtkCList to thaw.
+  **** Warning ****
+  gtk_clist_thaw is deprecated and should not be used in newly-written code.
+  Causes the specified GtkCList to allow visual updates.
+  clist : The GtkCList to thaw.
 
 ==== New ====
 ''New(columns : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[# T| T]]''
 
-**** Warning ****
-gtk_clist_new is deprecated and should not be used in newly-written code.
-Creates a new GtkCList widget for use.
-columns : The number of columns the GtkCList should have.
-Returns : A pointer to a new GtkCList object.
+  **** Warning ****
+  gtk_clist_new is deprecated and should not be used in newly-written code.
+  Creates a new GtkCList widget for use.
+  columns : The number of columns the GtkCList should have.
+  Returns : A pointer to a new GtkCList object.
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
@@ -1046,12 +1047,12 @@ Returns : A pointer to a new GtkCList object.
 ==== NewWithTitles ====
 ''NewWithTitles(columns : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], titles : [[..:..:Std:List#T|Std.List.T]]) : [[# T| T]]''
 
-**** Warning ****
-gtk_clist_new_with_titles is deprecated and should not be used in newly-written
-code.
-Creates a new GtkCList widget with column titles for use.
-columns : The number of columns the GtkCList should have.
-titles :  A string array of titles for the widget. There should be enough
-          strings in the array for the specified number of columns.
-Returns : A pointer to a new GtkCList object.
+  **** Warning ****
+  gtk_clist_new_with_titles is deprecated and should not be used in newly-written
+  code.
+  Creates a new GtkCList widget with column titles for use.
+  columns : The number of columns the GtkCList should have.
+  titles :  A string array of titles for the widget. There should be enough
+            strings in the array for the specified number of columns.
+  Returns : A pointer to a new GtkCList object.
 

@@ -1,44 +1,45 @@
 ====== CellEditable ======
 ==== T ====
 
-The GtkCellEditable interface must be implemented for widgets to be usable when
-editing the contents of a GtkTreeView cell.
+  The GtkCellEditable interface must be implemented for widgets to be usable when
+  editing the contents of a GtkTreeView cell.
+  
 
 ==== :StartEditing ====
 '':StartEditing(self @ [[#T|T]], event @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-Begins editing on a cell_editable. event is the GdkEvent that began the editing
-process. It may be NULL, in the instance that editing was initiated through
-programatic means.
-cell_editable : A GtkCellEditable
-event :         A GdkEvent, or NULL
+  Begins editing on a cell_editable. event is the GdkEvent that began the editing
+  process. It may be NULL, in the instance that editing was initiated through
+  programatic means.
+  cell_editable : A GtkCellEditable
+  event :         A GdkEvent, or NULL
 
 ==== :EditingDone ====
 '':EditingDone(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-Emits the "editing-done" signal.
-cell_editable : A GtkTreeEditable
+  Emits the "editing-done" signal.
+  cell_editable : A GtkTreeEditable
 
 ==== :RemoveWidget ====
 '':RemoveWidget(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-Emits the "remove-widget" signal.
-cell_editable : A GtkTreeEditable
-***** Signal Details *****
-The "editing-done" signal
-void                user_function                      (GtkCellEditable
-*cell_editable,
-                                                        gpointer
-user_data)          : Run Last
-This signal is a sign for the cell renderer to update its value from the
-cell_editable.
-Implementations of GtkCellEditable are responsible for emitting this signal
-when they are done editing, e.g. GtkEntry is emitting it when the user presses
-Enter.
-gtk_cell_editable_editing_done() is a convenience method for emitting ::
-editing-done.
-cell_editable : the object on which the signal was emitted
-user_data :     user data set when the signal handler was connected.
+  Emits the "remove-widget" signal.
+  cell_editable : A GtkTreeEditable
+  ***** Signal Details *****
+  The "editing-done" signal
+  void                user_function                      (GtkCellEditable
+  *cell_editable,
+                                                          gpointer
+  user_data)          : Run Last
+  This signal is a sign for the cell renderer to update its value from the
+  cell_editable.
+  Implementations of GtkCellEditable are responsible for emitting this signal
+  when they are done editing, e.g. GtkEntry is emitting it when the user presses
+  Enter.
+  gtk_cell_editable_editing_done() is a convenience method for emitting ::
+  editing-done.
+  cell_editable : the object on which the signal was emitted
+  user_data :     user data set when the signal handler was connected.
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''

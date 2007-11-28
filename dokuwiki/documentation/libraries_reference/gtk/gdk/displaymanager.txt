@@ -3,41 +3,42 @@
 === inherits from ===
   * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
 
-The purpose of the GdkDisplayManager singleton object is to offer notification
-when displays appear or disappear or the default display changes.
+  The purpose of the GdkDisplayManager singleton object is to offer notification
+  when displays appear or disappear or the default display changes.
+  
 
 ==== :SetDefaultDisplay ====
 '':SetDefaultDisplay(self @ [[#T|T]], display @ [[..:..:Gtk:Gdk:Display#T|Gtk.Gdk.Display.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-Sets display as the default display.
-display_manager : a GdkDisplayManager
-display :         a GdkDisplay
-Since 2.2
+  Sets display as the default display.
+  display_manager : a GdkDisplayManager
+  display :         a GdkDisplay
+  Since 2.2
 
 ==== :ListDisplays ====
 '':ListDisplays(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-List all currently open displays.
-display_manager : a GdkDisplayManager
-Returns :         a newly allocated GSList of GdkDisplay objects. Free this
-                  list with g_slist_free() when you are done with it.
-Since 2.2
+  List all currently open displays.
+  display_manager : a GdkDisplayManager
+  Returns :         a newly allocated GSList of GdkDisplay objects. Free this
+                    list with g_slist_free() when you are done with it.
+  Since 2.2
 
 ==== :GetDefaultDisplay ====
 '':GetDefaultDisplay(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Display#T|Gtk.Gdk.Display.T]]''
 
-Gets the default GdkDisplay.
-display_manager : a GdkDisplayManager
-Returns :         a GdkDisplay, or NULL if there is no default display.
-Since 2.2
+  Gets the default GdkDisplay.
+  display_manager : a GdkDisplayManager
+  Returns :         a GdkDisplay, or NULL if there is no default display.
+  Since 2.2
 
 ==== Get ====
 ''Get() : [[..:..:Gtk:Gdk:DisplayManager#T|Gtk.Gdk.DisplayManager.T]]''
 
-Returns the global GdkDisplayManager singleton; gdk_parse_pargs(), gdk_init(),
-or gdk_init_check() must have been called first.
-Returns : the singleton GdkDisplayManager object.
-Since 2.2
+  Returns the global GdkDisplayManager singleton; gdk_parse_pargs(), gdk_init(),
+  or gdk_init_check() must have been called first.
+  Returns : the singleton GdkDisplayManager object.
+  Since 2.2
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''

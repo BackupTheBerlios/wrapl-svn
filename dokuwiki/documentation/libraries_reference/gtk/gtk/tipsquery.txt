@@ -7,41 +7,42 @@
   * [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]
   * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
 
-The GtkTipsQuery widget is a subclass of GtkLabel which is used to display help
-about widgets in a user interface.
-A query is started with a call to gtk_tips_query_start_query(), usually when
-some kind of 'Help' button is pressed. The GtkTipsQuery then grabs all events,
-stopping the user interface from functioning normally. Then as the user moves
-the mouse over the widgets, the GtkTipsQuery displays each widget's tooltip
-text.
-By connecting to the "widget-entered" or "widget-selected" signals, it is
-possible to customize the GtkTipsQuery to perform other actions when widgets
-are entered or selected. For example, a help browser could be opened with
-documentation on the widget selected.
-At some point a call to gtk_tips_query_stop_query() must be made in order to
-stop the query and return the interface to its normal state. The
-gtk_tips_query_set_caller() function can be used to specify a widget which the
-user can select to stop the query (often the same button used to start the
-query).
+  The GtkTipsQuery widget is a subclass of GtkLabel which is used to display help
+  about widgets in a user interface.
+  A query is started with a call to gtk_tips_query_start_query(), usually when
+  some kind of 'Help' button is pressed. The GtkTipsQuery then grabs all events,
+  stopping the user interface from functioning normally. Then as the user moves
+  the mouse over the widgets, the GtkTipsQuery displays each widget's tooltip
+  text.
+  By connecting to the "widget-entered" or "widget-selected" signals, it is
+  possible to customize the GtkTipsQuery to perform other actions when widgets
+  are entered or selected. For example, a help browser could be opened with
+  documentation on the widget selected.
+  At some point a call to gtk_tips_query_stop_query() must be made in order to
+  stop the query and return the interface to its normal state. The
+  gtk_tips_query_set_caller() function can be used to specify a widget which the
+  user can select to stop the query (often the same button used to start the
+  query).
+  
 
 ==== :StopQuery ====
 '':StopQuery(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-**** Warning ****
-gtk_tips_query_stop_query is deprecated and should not be used in newly-written
-code.
-Stops a query.
-tips_query : a GtkTipsQuery.
+  **** Warning ****
+  gtk_tips_query_stop_query is deprecated and should not be used in newly-written
+  code.
+  Stops a query.
+  tips_query : a GtkTipsQuery.
 
 ==== :StartQuery ====
 '':StartQuery(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-**** Warning ****
-gtk_tips_query_start_query is deprecated and should not be used in newly-
-written code.
-Starts a query. The GtkTipsQuery widget will take control of the mouse and as
-the mouse moves it will display the tooltip of the widget beneath the mouse.
-tips_query : a GtkTipsQuery.
+  **** Warning ****
+  gtk_tips_query_start_query is deprecated and should not be used in newly-
+  written code.
+  Starts a query. The GtkTipsQuery widget will take control of the mouse and as
+  the mouse moves it will display the tooltip of the widget beneath the mouse.
+  tips_query : a GtkTipsQuery.
 
 ==== :EmitAlways ====
 '':EmitAlways(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
@@ -62,13 +63,13 @@ tips_query : a GtkTipsQuery.
 ==== :Caller ====
 '':Caller(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
-**** Warning ****
-gtk_tips_query_set_caller is deprecated and should not be used in newly-written
-code.
-Sets the widget which initiates the query, usually a button. If the caller is
-selected while the query is running, the query is automatically stopped.
-tips_query : a GtkTipsQuery.
-caller :     the widget which initiates the query.
+  **** Warning ****
+  gtk_tips_query_set_caller is deprecated and should not be used in newly-written
+  code.
+  Sets the widget which initiates the query, usually a button. If the caller is
+  selected while the query is running, the query is automatically stopped.
+  tips_query : a GtkTipsQuery.
+  caller :     the widget which initiates the query.
 
 ==== :LastCrossed ====
 '':LastCrossed(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
@@ -81,40 +82,40 @@ caller :     the widget which initiates the query.
 ==== :SetCaller ====
 '':SetCaller(self @ [[#T|T]], caller @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-**** Warning ****
-gtk_tips_query_set_caller is deprecated and should not be used in newly-written
-code.
-Sets the widget which initiates the query, usually a button. If the caller is
-selected while the query is running, the query is automatically stopped.
-tips_query : a GtkTipsQuery.
-caller :     the widget which initiates the query.
+  **** Warning ****
+  gtk_tips_query_set_caller is deprecated and should not be used in newly-written
+  code.
+  Sets the widget which initiates the query, usually a button. If the caller is
+  selected while the query is running, the query is automatically stopped.
+  tips_query : a GtkTipsQuery.
+  caller :     the widget which initiates the query.
 
 ==== :SetLabels ====
 '':SetLabels(self @ [[#T|T]], label_inactive @ [[..:..:Std:String#T|Std.String.T]], label_no_tip @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-**** Warning ****
-gtk_tips_query_set_labels is deprecated and should not be used in newly-written
-code.
-Sets the text to display when the query is not in effect, and the text to
-display when the query is in effect but the widget beneath the pointer has no
-tooltip.
-tips_query :     a GtkTipsQuery.
-label_inactive : the text to display when the query is not running.
-label_no_tip :   the text to display when the query is running but the widget
-                 beneath the pointer has no tooltip.
-***** Property Details *****
-The "caller" property
-  "caller"                   GtkWidget             : Read / Write
-The widget that starts the tips query, usually a button. If it is selected
-while the query is in effect the query is automatically stopped.
+  **** Warning ****
+  gtk_tips_query_set_labels is deprecated and should not be used in newly-written
+  code.
+  Sets the text to display when the query is not in effect, and the text to
+  display when the query is in effect but the widget beneath the pointer has no
+  tooltip.
+  tips_query :     a GtkTipsQuery.
+  label_inactive : the text to display when the query is not running.
+  label_no_tip :   the text to display when the query is running but the widget
+                   beneath the pointer has no tooltip.
+  ***** Property Details *****
+  The "caller" property
+    "caller"                   GtkWidget             : Read / Write
+  The widget that starts the tips query, usually a button. If it is selected
+  while the query is in effect the query is automatically stopped.
 
 ==== New ====
 ''New() : [[# T| T]]''
 
-**** Warning ****
-gtk_tips_query_new is deprecated and should not be used in newly-written code.
-Creates a new GtkTipsQuery.
-Returns : a new GtkTipsQuery.
+  **** Warning ****
+  gtk_tips_query_new is deprecated and should not be used in newly-written code.
+  Creates a new GtkTipsQuery.
+  Returns : a new GtkTipsQuery.
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''

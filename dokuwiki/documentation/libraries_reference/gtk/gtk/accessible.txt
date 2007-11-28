@@ -4,13 +4,14 @@
   * [[..:..:Gtk:Atk:Object#T|Gtk.Atk.Object.T]]
   * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
 
+  
 
 ==== :ConnectWidgetDestroyed ====
 '':ConnectWidgetDestroyed(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-This function specifies the callback function to be called when the widget
-corresponding to a GtkAccessible is destroyed.
-accessible : a GtkAccessible
+  This function specifies the callback function to be called when the widget
+  corresponding to a GtkAccessible is destroyed.
+  accessible : a GtkAccessible
 
 ==== :Widget ====
 '':Widget(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''

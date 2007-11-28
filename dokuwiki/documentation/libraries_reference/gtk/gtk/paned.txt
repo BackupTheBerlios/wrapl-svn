@@ -6,61 +6,66 @@
   * [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]
   * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
 
-GtkPaned is the base class for widgets with two panes, arranged either
-horizontally (GtkHPaned) or vertically (GtkVPaned). Child widgets are added to
-the panes of the widget with gtk_paned_pack1() and gtk_paned_pack2(). The
-division beween the two children is set by default from the size requests of
-the children, but it can be adjusted by the user.
-A paned widget draws a separator between the two child widgets and a small
-handle that the user can drag to adjust the division. It does not draw any
-relief around the children or around the separator. (The space in which the
-separator is called the gutter.) Often, it is useful to put each child inside a
-GtkFrame with the shadow type set to GTK_SHADOW_IN so that the gutter appears
-as a ridge.
-Each child has two options that can be set, resize and shrink. If resize is
-true, then when the GtkPaned is resized, that child will expand or shrink along
-with the paned widget. If shrink is true, then when that child can be made
-smaller than its requisition by the user. Setting shrink to FALSE allows the
-application to set a minimum size. If resize is false for both children, then
-this is treated as if resize is true for both children.
-The application can set the position of the slider as if it were set by the
-user, by calling gtk_paned_set_position().
-Example 47.&#160;Creating a paned widget with minimum sizes.
-GtkWidget *hpaned = gtk_hpaned_new ();
-GtkWidget *frame1 = gtk_frame_new (NULL);
-GtkWidget *frame2 = gtk_frame_new (NULL);
-gtk_frame_set_shadow_type (GTK_FRAME (frame1), GTK_SHADOW_IN);
-gtk_frame_set_shadow_type (GTK_FRAME (frame2), GTK_SHADOW_IN);
-gtk_widget_set_size_request (hpaned, 200 + GTK_PANED (hpaned)->gutter_size, -
-1);
-gtk_paned_pack1 (GTK_PANED (hpaned), frame1, TRUE, FALSE);
-gtk_widget_set_size_request (frame1, 50, -1);
-gtk_paned_pack2 (GTK_PANED (hpaned), frame2, FALSE, FALSE);
-gtk_widget_set_size_request (frame2, 50, -1);
+  GtkPaned is the base class for widgets with two panes, arranged either
+  horizontally (GtkHPaned) or vertically (GtkVPaned). Child widgets are added to
+  the panes of the widget with gtk_paned_pack1() and gtk_paned_pack2(). The
+  division beween the two children is set by default from the size requests of
+  the children, but it can be adjusted by the user.
+  A paned widget draws a separator between the two child widgets and a small
+  handle that the user can drag to adjust the division. It does not draw any
+  relief around the children or around the separator. (The space in which the
+  separator is called the gutter.) Often, it is useful to put each child inside a
+  GtkFrame with the shadow type set to GTK_SHADOW_IN so that the gutter appears
+  as a ridge.
+  Each child has two options that can be set, resize and shrink. If resize is
+  true, then when the GtkPaned is resized, that child will expand or shrink along
+  with the paned widget. If shrink is true, then when that child can be made
+  smaller than its requisition by the user. Setting shrink to FALSE allows the
+  application to set a minimum size. If resize is false for both children, then
+  this is treated as if resize is true for both children.
+  The application can set the position of the slider as if it were set by the
+  user, by calling gtk_paned_set_position().
+  Example 47.&#160;Creating a paned widget with minimum sizes.
+  GtkWidget *hpaned = gtk_hpaned_new ();
+  GtkWidget *frame1 = gtk_frame_new (NULL);
+  GtkWidget *frame2 = gtk_frame_new (NULL);
+  gtk_frame_set_shadow_type (GTK_FRAME (frame1), GTK_SHADOW_IN);
+  gtk_frame_set_shadow_type (GTK_FRAME (frame2), GTK_SHADOW_IN);
+  
+  gtk_widget_set_size_request (hpaned, 200 + GTK_PANED (hpaned)->gutter_size, -
+  1);
+  
+  gtk_paned_pack1 (GTK_PANED (hpaned), frame1, TRUE, FALSE);
+  gtk_widget_set_size_request (frame1, 50, -1);
+  
+  gtk_paned_pack2 (GTK_PANED (hpaned), frame2, FALSE, FALSE);
+  gtk_widget_set_size_request (frame2, 50, -1);
+  
+  
 
 ==== :SetPosition ====
 '':SetPosition(self @ [[#T|T]], position @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-Sets the position of the divider between the two panes.
-paned :    a GtkPaned widget
-position : pixel position of divider, a negative value means that the position
-           is unset.
+  Sets the position of the divider between the two panes.
+  paned :    a GtkPaned widget
+  position : pixel position of divider, a negative value means that the position
+             is unset.
 
 ==== :Child1 ====
 '':Child1(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
-Obtains the first child of the paned widget.
-paned :   a GtkPaned widget
-Returns : first child, or NULL if it is not set.
-Since 2.4
+  Obtains the first child of the paned widget.
+  paned :   a GtkPaned widget
+  Returns : first child, or NULL if it is not set.
+  Since 2.4
 
 ==== :Child2 ====
 '':Child2(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
-Obtains the second child of the paned widget.
-paned :   a GtkPaned widget
-Returns : second child, or NULL if it is not set.
-Since 2.4
+  Obtains the second child of the paned widget.
+  paned :   a GtkPaned widget
+  Returns : second child, or NULL if it is not set.
+  Since 2.4
 
 ==== :Handle ====
 '':Handle(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]]''
@@ -153,18 +158,18 @@ Since 2.4
 ==== :Add1 ====
 '':Add1(self @ [[#T|T]], child @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-Adds a child to the top or left pane with default parameters. This is
-equivalent to gtk_paned_pack1 (paned, child, FALSE, TRUE).
-paned : a paned widget
-child : the child to add
+  Adds a child to the top or left pane with default parameters. This is
+  equivalent to gtk_paned_pack1 (paned, child, FALSE, TRUE).
+  paned : a paned widget
+  child : the child to add
 
 ==== :Add2 ====
 '':Add2(self @ [[#T|T]], child @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-Adds a child to the bottom or right pane with default parameters. This is
-equivalent to gtk_paned_pack2 (paned, child, TRUE, TRUE).
-paned : a paned widget
-child : the child to add
+  Adds a child to the bottom or right pane with default parameters. This is
+  equivalent to gtk_paned_pack2 (paned, child, TRUE, TRUE).
+  paned : a paned widget
+  child : the child to add
 
 ==== :ComputePosition ====
 '':ComputePosition(self @ [[#T|T]], allocation @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], child1_req @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], child2_req @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -173,51 +178,51 @@ child : the child to add
 ==== :GetChild1 ====
 '':GetChild1(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
-Obtains the first child of the paned widget.
-paned :   a GtkPaned widget
-Returns : first child, or NULL if it is not set.
-Since 2.4
+  Obtains the first child of the paned widget.
+  paned :   a GtkPaned widget
+  Returns : first child, or NULL if it is not set.
+  Since 2.4
 
 ==== :GetChild2 ====
 '':GetChild2(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
-Obtains the second child of the paned widget.
-paned :   a GtkPaned widget
-Returns : second child, or NULL if it is not set.
-Since 2.4
+  Obtains the second child of the paned widget.
+  paned :   a GtkPaned widget
+  Returns : second child, or NULL if it is not set.
+  Since 2.4
 
 ==== :GetPosition ====
 '':GetPosition(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-Obtains the position of the divider between the two panes.
-paned :   a GtkPaned widget
-Returns : position of the divider
-***** Property Details *****
-The "max-position" property
-  "max-position"             gint                  : Read
-The largest possible value for the position property. This property is derived
-from the size and shrinkability of the widget's children.
-Allowed values: >= 0
-Default value: 2147483647
-Since 2.4
+  Obtains the position of the divider between the two panes.
+  paned :   a GtkPaned widget
+  Returns : position of the divider
+  ***** Property Details *****
+  The "max-position" property
+    "max-position"             gint                  : Read
+  The largest possible value for the position property. This property is derived
+  from the size and shrinkability of the widget's children.
+  Allowed values: >= 0
+  Default value: 2147483647
+  Since 2.4
 
 ==== :Pack1 ====
 '':Pack1(self @ [[#T|T]], child @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], resize @ [[..:..:Std:Symbol#T|Std.Symbol.T]], shrink @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-Adds a child to the top or left pane.
-paned :  a paned widget
-child :  the child to add
-resize : should this child expand when the paned widget is resized.
-shrink : can this child be made smaller than its requisition.
+  Adds a child to the top or left pane.
+  paned :  a paned widget
+  child :  the child to add
+  resize : should this child expand when the paned widget is resized.
+  shrink : can this child be made smaller than its requisition.
 
 ==== :Pack2 ====
 '':Pack2(self @ [[#T|T]], child @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], resize @ [[..:..:Std:Symbol#T|Std.Symbol.T]], shrink @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-Adds a child to the bottom or right pane.
-paned :  a paned widget
-child :  the child to add
-resize : should this child expand when the paned widget is resized.
-shrink : can this child be made smaller than its requisition.
+  Adds a child to the bottom or right pane.
+  paned :  a paned widget
+  child :  the child to add
+  resize : should this child expand when the paned widget is resized.
+  shrink : can this child be made smaller than its requisition.
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''

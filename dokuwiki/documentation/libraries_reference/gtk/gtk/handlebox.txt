@@ -7,44 +7,45 @@
   * [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]
   * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
 
-The GtkHandleBox widget allows a portion of a window to be "torn off". It is a
-bin widget which displays its child and a handle that the user can drag to tear
-off a separate window (the float window) containing the child widget. A thin
-ghost is drawn in the original location of the handlebox. By dragging the
-separate window back to its original location, it can be reattached.
-When reattaching, the ghost and float window, must be aligned along one of the
-edges, the snap edge. This either can be specified by the application
-programmer explicitely, or GTK+ will pick a reasonable default based on the
-handle position.
-To make detaching and reattaching the handlebox as minimally confusing as
-possible to the user, it is important to set the snap edge so that the snap
-edge does not move when the handlebox is deattached. For instance, if the
-handlebox is packed at the bottom of a VBox, then when the handlebox is
-detached, the bottom edge of the handlebox's allocation will remain fixed as
-the height of the handlebox shrinks, so the snap edge should be set to
-GTK_POS_BOTTOM.
+  The GtkHandleBox widget allows a portion of a window to be "torn off". It is a
+  bin widget which displays its child and a handle that the user can drag to tear
+  off a separate window (the float window) containing the child widget. A thin
+  ghost is drawn in the original location of the handlebox. By dragging the
+  separate window back to its original location, it can be reattached.
+  When reattaching, the ghost and float window, must be aligned along one of the
+  edges, the snap edge. This either can be specified by the application
+  programmer explicitely, or GTK+ will pick a reasonable default based on the
+  handle position.
+  To make detaching and reattaching the handlebox as minimally confusing as
+  possible to the user, it is important to set the snap edge so that the snap
+  edge does not move when the handlebox is deattached. For instance, if the
+  handlebox is packed at the bottom of a VBox, then when the handlebox is
+  detached, the bottom edge of the handlebox's allocation will remain fixed as
+  the height of the handlebox shrinks, so the snap edge should be set to
+  GTK_POS_BOTTOM.
+  
 
 ==== :SetSnapEdge ====
 '':SetSnapEdge(self @ [[#T|T]], edge @ [[..:..:Gtk:Gtk:PositionType#T|Gtk.Gtk.PositionType.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-Sets the snap edge of a handlebox. The snap edge is the edge of the detached
-child that must be aligned with the corresponding edge of the "ghost" left
-behind when the child was detached to reattach the torn-off window. Usually,
-the snap edge should be chosen so that it stays in the same place on the screen
-when the handlebox is torn off.
-If the snap edge is not set, then an appropriate value will be guessed from the
-handle position. If the handle position is GTK_POS_RIGHT or GTK_POS_LEFT, then
-the snap edge will be GTK_POS_TOP, otherwise it will be GTK_POS_LEFT.
-handle_box : a GtkHandleBox
-edge :       the snap edge, or -1 to unset the value; in which case GTK+ will
-             try to guess an appropriate value in the future.
+  Sets the snap edge of a handlebox. The snap edge is the edge of the detached
+  child that must be aligned with the corresponding edge of the "ghost" left
+  behind when the child was detached to reattach the torn-off window. Usually,
+  the snap edge should be chosen so that it stays in the same place on the screen
+  when the handlebox is torn off.
+  If the snap edge is not set, then an appropriate value will be guessed from the
+  handle position. If the handle position is GTK_POS_RIGHT or GTK_POS_LEFT, then
+  the snap edge will be GTK_POS_TOP, otherwise it will be GTK_POS_LEFT.
+  handle_box : a GtkHandleBox
+  edge :       the snap edge, or -1 to unset the value; in which case GTK+ will
+               try to guess an appropriate value in the future.
 
 ==== :SetShadowType ====
 '':SetShadowType(self @ [[#T|T]], type @ [[..:..:Gtk:Gtk:ShadowType#T|Gtk.Gtk.ShadowType.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-Sets the type of shadow to be drawn around the border of the handle box.
-handle_box : a GtkHandleBox
-type :       the shadow type.
+  Sets the type of shadow to be drawn around the border of the handle box.
+  handle_box : a GtkHandleBox
+  type :       the shadow type.
 
 ==== :BinWindow ====
 '':BinWindow(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]]''
@@ -57,24 +58,24 @@ type :       the shadow type.
 ==== :ShadowType ====
 '':ShadowType(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:ShadowType#T|Gtk.Gtk.ShadowType.T]]''
 
-Sets the type of shadow to be drawn around the border of the handle box.
-handle_box : a GtkHandleBox
-type :       the shadow type.
-Gets the type of shadow drawn around the handle box. See
-gtk_handle_box_set_shadow_type().
-handle_box : a GtkHandleBox
-Returns :    the type of shadow currently drawn around the handle box.
+  Sets the type of shadow to be drawn around the border of the handle box.
+  handle_box : a GtkHandleBox
+  type :       the shadow type.
+  Gets the type of shadow drawn around the handle box. See
+  gtk_handle_box_set_shadow_type().
+  handle_box : a GtkHandleBox
+  Returns :    the type of shadow currently drawn around the handle box.
 
 ==== :HandlePosition ====
 '':HandlePosition(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-Sets the side of the handlebox where the handle is drawn.
-handle_box : a GtkHandleBox
-position :   the side of the handlebox where the handle should be drawn.
-Gets the handle position of the handle box. See
-gtk_handle_box_set_handle_position().
-handle_box : a GtkHandleBox
-Returns :    the current handle position.
+  Sets the side of the handlebox where the handle is drawn.
+  handle_box : a GtkHandleBox
+  position :   the side of the handlebox where the handle should be drawn.
+  Gets the handle position of the handle box. See
+  gtk_handle_box_set_handle_position().
+  handle_box : a GtkHandleBox
+  Returns :    the current handle position.
 
 ==== :FloatWindowMapped ====
 '':FloatWindowMapped(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
@@ -95,27 +96,27 @@ Returns :    the current handle position.
 ==== :SnapEdge ====
 '':SnapEdge(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-Sets the snap edge of a handlebox. The snap edge is the edge of the detached
-child that must be aligned with the corresponding edge of the "ghost" left
-behind when the child was detached to reattach the torn-off window. Usually,
-the snap edge should be chosen so that it stays in the same place on the screen
-when the handlebox is torn off.
-If the snap edge is not set, then an appropriate value will be guessed from the
-handle position. If the handle position is GTK_POS_RIGHT or GTK_POS_LEFT, then
-the snap edge will be GTK_POS_TOP, otherwise it will be GTK_POS_LEFT.
-handle_box : a GtkHandleBox
-edge :       the snap edge, or -1 to unset the value; in which case GTK+ will
-             try to guess an appropriate value in the future.
-Gets the edge used for determining reattachment of the handle box. See
-gtk_handle_box_set_snap_edge().
-handle_box : a GtkHandleBox
-Returns :    the edge used for determining reattachment, or (GtkPositionType)-
-             1 if this is determined (as per default) from the handle position.
-***** Property Details *****
-The "handle-position" property
-  "handle-position"          GtkPositionType       : Read / Write
-Position of the handle relative to the child widget.
-Default value: GTK_POS_LEFT
+  Sets the snap edge of a handlebox. The snap edge is the edge of the detached
+  child that must be aligned with the corresponding edge of the "ghost" left
+  behind when the child was detached to reattach the torn-off window. Usually,
+  the snap edge should be chosen so that it stays in the same place on the screen
+  when the handlebox is torn off.
+  If the snap edge is not set, then an appropriate value will be guessed from the
+  handle position. If the handle position is GTK_POS_RIGHT or GTK_POS_LEFT, then
+  the snap edge will be GTK_POS_TOP, otherwise it will be GTK_POS_LEFT.
+  handle_box : a GtkHandleBox
+  edge :       the snap edge, or -1 to unset the value; in which case GTK+ will
+               try to guess an appropriate value in the future.
+  Gets the edge used for determining reattachment of the handle box. See
+  gtk_handle_box_set_snap_edge().
+  handle_box : a GtkHandleBox
+  Returns :    the edge used for determining reattachment, or (GtkPositionType)-
+               1 if this is determined (as per default) from the handle position.
+  ***** Property Details *****
+  The "handle-position" property
+    "handle-position"          GtkPositionType       : Read / Write
+  Position of the handle relative to the child widget.
+  Default value: GTK_POS_LEFT
 
 ==== :DeskoffX ====
 '':DeskoffX(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
@@ -136,45 +137,45 @@ Default value: GTK_POS_LEFT
 ==== :GetHandlePosition ====
 '':GetHandlePosition(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:PositionType#T|Gtk.Gtk.PositionType.T]]''
 
-Gets the handle position of the handle box. See
-gtk_handle_box_set_handle_position().
-handle_box : a GtkHandleBox
-Returns :    the current handle position.
+  Gets the handle position of the handle box. See
+  gtk_handle_box_set_handle_position().
+  handle_box : a GtkHandleBox
+  Returns :    the current handle position.
 
 ==== :GetShadowType ====
 '':GetShadowType(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:ShadowType#T|Gtk.Gtk.ShadowType.T]]''
 
-Gets the type of shadow drawn around the handle box. See
-gtk_handle_box_set_shadow_type().
-handle_box : a GtkHandleBox
-Returns :    the type of shadow currently drawn around the handle box.
+  Gets the type of shadow drawn around the handle box. See
+  gtk_handle_box_set_shadow_type().
+  handle_box : a GtkHandleBox
+  Returns :    the type of shadow currently drawn around the handle box.
 
 ==== :GetSnapEdge ====
 '':GetSnapEdge(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:PositionType#T|Gtk.Gtk.PositionType.T]]''
 
-Gets the edge used for determining reattachment of the handle box. See
-gtk_handle_box_set_snap_edge().
-handle_box : a GtkHandleBox
-Returns :    the edge used for determining reattachment, or (GtkPositionType)-
-             1 if this is determined (as per default) from the handle position.
-***** Property Details *****
-The "handle-position" property
-  "handle-position"          GtkPositionType       : Read / Write
-Position of the handle relative to the child widget.
-Default value: GTK_POS_LEFT
+  Gets the edge used for determining reattachment of the handle box. See
+  gtk_handle_box_set_snap_edge().
+  handle_box : a GtkHandleBox
+  Returns :    the edge used for determining reattachment, or (GtkPositionType)-
+               1 if this is determined (as per default) from the handle position.
+  ***** Property Details *****
+  The "handle-position" property
+    "handle-position"          GtkPositionType       : Read / Write
+  Position of the handle relative to the child widget.
+  Default value: GTK_POS_LEFT
 
 ==== :SetHandlePosition ====
 '':SetHandlePosition(self @ [[#T|T]], position @ [[..:..:Gtk:Gtk:PositionType#T|Gtk.Gtk.PositionType.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-Sets the side of the handlebox where the handle is drawn.
-handle_box : a GtkHandleBox
-position :   the side of the handlebox where the handle should be drawn.
+  Sets the side of the handlebox where the handle is drawn.
+  handle_box : a GtkHandleBox
+  position :   the side of the handlebox where the handle should be drawn.
 
 ==== New ====
 ''New() : [[# T| T]]''
 
-Create a new handle box.
-Returns : a new GtkHandleBox.
+  Create a new handle box.
+  Returns : a new GtkHandleBox.
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''

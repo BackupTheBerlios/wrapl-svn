@@ -3,17 +3,18 @@
 === inherits from ===
   * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
 
-GtkVolumeButton is a subclass of GtkScaleButton that has been tailored for use
-as a volume control widget with suitable icons, tooltips and accessible labels.
+  GtkVolumeButton is a subclass of GtkScaleButton that has been tailored for use
+  as a volume control widget with suitable icons, tooltips and accessible labels.
+  
 
 ==== New ====
 ''New() : [[# T| T]]''
 
-Creates a GtkVolumeButton, with a range between 0 and 100, with a stepping of
-2. Volume values can be obtained and modified using the functions from
-GtkScaleButton.
-Returns : a new GtkVolumeButton
-Since 2.12
+  Creates a GtkVolumeButton, with a range between 0 and 100, with a stepping of
+  2. Volume values can be obtained and modified using the functions from
+  GtkScaleButton.
+  Returns : a new GtkVolumeButton
+  Since 2.12
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''

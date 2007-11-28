@@ -4,15 +4,16 @@
   * [[..:..:Gtk:GooCanvas:ItemSimple#T|Gtk.GooCanvas.ItemSimple.T]]
   * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
 
-GooCanvasEllipse represents an ellipse item.
-It is a subclass of GooCanvasItemSimple and so inherits all of the style
-properties such as "stroke-color", "fill-color" and "line-width".
-It also implements the GooCanvasItem interface, so you can use the
-GooCanvasItem functions such as goo_canvas_item_raise() and
-goo_canvas_item_rotate().
-To create a GooCanvasEllipse use goo_canvas_ellipse_new().
-To get or set the properties of an existing GooCanvasEllipse, use g_object_get
-() and g_object_set().
+  GooCanvasEllipse represents an ellipse item.
+  It is a subclass of GooCanvasItemSimple and so inherits all of the style
+  properties such as "stroke-color", "fill-color" and "line-width".
+  It also implements the GooCanvasItem interface, so you can use the
+  GooCanvasItem functions such as goo_canvas_item_raise() and
+  goo_canvas_item_rotate().
+  To create a GooCanvasEllipse use goo_canvas_ellipse_new().
+  To get or set the properties of an existing GooCanvasEllipse, use g_object_get
+  () and g_object_set().
+  
 
 ==== :EllipseData ====
 '':EllipseData(self @ [[#T|T]]) : [[..:..:Gtk:GooCanvas:EllipseData#T|Gtk.GooCanvas.EllipseData.T]]''
@@ -21,31 +22,31 @@ To get or set the properties of an existing GooCanvasEllipse, use g_object_get
 ==== New ====
 ''New(parent : [[..:..:Gtk:GooCanvas:Item#T|Gtk.GooCanvas.Item.T]], center_x : [[..:..:Std:Real#T|Std.Real.T]], center_y : [[..:..:Std:Real#T|Std.Real.T]], radius_x : [[..:..:Std:Real#T|Std.Real.T]], radius_y : [[..:..:Std:Real#T|Std.Real.T]], ___ : [[..:..:Std:Object#T|Std.Object.T]]) : [[# T| T]]''
 
-Creates a new ellipse item.
-           the parent item, or NULL. If a parent is specified, it will assume
-parent :   ownership of the item, and the item will automatically be freed when
-           it is removed from the parent. Otherwise call g_object_unref() to
-           free it.
-center_x : the x coordinate of the center of the ellipse.
-center_y : the y coordinate of the center of the ellipse.
-radius_x : the horizontal radius of the ellipse.
-radius_y : the vertical radius of the ellipse.
-... :      optional pairs of property names and values, and a terminating NULL.
-Returns :  a new ellipse item.
-Here's an example showing how to create an ellipse centered at (100.0, 100.0),
-with a horizontal radius of 50.0 and a vertical radius of 30.0. It is drawn
-with a red outline with a width of 5.0 and filled with blue:
- GooCanvasItem *ellipse = goo_canvas_ellipse_new (mygroup, 100.0, 100.0, 50.0,
-30.0,
-                                                  "stroke-color", "red",
-                                                  "line-width", 5.0,
-                                                  "fill-color", "blue",
-                                                  NULL);
-***** Property Details *****
-The "center-x" property
-  "center-x"                 gdouble               : Read / Write
-The x coordinate of the center of the ellipse.
-Default value: 0
+  Creates a new ellipse item.
+             the parent item, or NULL. If a parent is specified, it will assume
+  parent :   ownership of the item, and the item will automatically be freed when
+             it is removed from the parent. Otherwise call g_object_unref() to
+             free it.
+  center_x : the x coordinate of the center of the ellipse.
+  center_y : the y coordinate of the center of the ellipse.
+  radius_x : the horizontal radius of the ellipse.
+  radius_y : the vertical radius of the ellipse.
+  ... :      optional pairs of property names and values, and a terminating NULL.
+  Returns :  a new ellipse item.
+  Here's an example showing how to create an ellipse centered at (100.0, 100.0),
+  with a horizontal radius of 50.0 and a vertical radius of 30.0. It is drawn
+  with a red outline with a width of 5.0 and filled with blue:
+   GooCanvasItem *ellipse = goo_canvas_ellipse_new (mygroup, 100.0, 100.0, 50.0,
+  30.0,
+                                                    "stroke-color", "red",
+                                                    "line-width", 5.0,
+                                                    "fill-color", "blue",
+                                                    NULL);
+  ***** Property Details *****
+  The "center-x" property
+    "center-x"                 gdouble               : Read / Write
+  The x coordinate of the center of the ellipse.
+  Default value: 0
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
