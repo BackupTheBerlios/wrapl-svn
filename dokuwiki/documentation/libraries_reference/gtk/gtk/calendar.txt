@@ -5,34 +5,28 @@
   * [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]
   * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
 
-  GtkCalendar is a widget that displays a calendar, one month at a time. It can
-  be created with gtk_calendar_new().
-  The month and year currently displayed can be altered with
-  gtk_calendar_select_month(). The exact day can be selected from the displayed
-  month using gtk_calendar_select_day().
-  To place a visual marker on a particular day, use gtk_calendar_mark_day() and
-  to remove the marker, gtk_calendar_unmark_day(). Alternative, all marks can be
-  cleared with gtk_calendar_clear_marks().
-  The way in which the calendar itself is displayed can be altered using
-  gtk_calendar_set_display_options().
-  The selected date can be retrieved from a GtkCalendar using
-  gtk_calendar_get_date().
+  GtkCalendar is a widget that displays a calendar, one month at a time. It can be created with gtk_calendar_new().
+  The month and year currently displayed can be altered with gtk_calendar_select_month(). The exact day can be selected from the displayed month using gtk_calendar_select_day().
+  To place a visual marker on a particular day, use gtk_calendar_mark_day() and to remove the marker, gtk_calendar_unmark_day(). Alternative, all marks can be cleared with gtk_calendar_clear_marks().
+  The way in which the calendar itself is displayed can be altered using gtk_calendar_set_display_options().
+  The selected date can be retrieved from a GtkCalendar using gtk_calendar_get_date().
   
 
 ==== :UnmarkDay ====
 '':UnmarkDay(self @ [[#T|T]], day @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
   Removes the visual marker from a particular day.
+  
   calendar : a GtkCalendar.
   day :      the day number to unmark between 1 and 31.
   Returns :  TRUE, always
+  
 
 ==== :Thaw ====
 '':Thaw(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  **** Warning ****
-  gtk_calendar_thaw has been deprecated since version 2.8 and should not be used
-  in newly-written code.
+  === Warning ===
+  gtk_calendar_thaw has been deprecated since version 2.8 and should not be used in newly-written code.
 
 ==== :HeaderStyle ====
 '':HeaderStyle(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Style#T|Gtk.Gtk.Style.T]]''
@@ -46,10 +40,12 @@
 '':Month(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
   Shifts the calendar to a different month.
+  
   calendar : a GtkCalendar
   month :    a month number between 0 and 11.
   year :     the year the month is in.
   Returns :  TRUE, always
+  
 
 ==== :Year ====
 '':Year(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
@@ -103,17 +99,22 @@
 '':Day(self @ [[#T|T]], @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
   Selects a day from the current month.
+  
   calendar : a GtkCalendar.
-  day :      the day number between 1 and 31, or 0 to unselect the currently
-             selected day.
+  day :      the day number between 1 and 31, or 0 to unselect the currently selected day.
+  
   Places a visual marker on a particular day.
+  
   calendar : a GtkCalendar
   day :      the day number to mark between 1 and 31.
   Returns :  TRUE, always
+  
   Removes the visual marker from a particular day.
+  
   calendar : a GtkCalendar.
   day :      the day number to unmark between 1 and 31.
   Returns :  TRUE, always
+  
 
 ==== :MarkedDate ====
 '':MarkedDate(self @ [[#T|T]], @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
@@ -131,75 +132,88 @@
 '':ClearMarks(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
   Remove all visual markers.
+  
   calendar : a GtkCalendar
+  
 
 ==== :DisplayOptions ====
 '':DisplayOptions(self @ [[#T|T]], flags @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  **** Warning ****
-  gtk_calendar_display_options is deprecated and should not be used in newly-
-  written code.
+  === Warning ===
+  gtk_calendar_display_options is deprecated and should not be used in newly-written code.
 
 ==== :Freeze ====
 '':Freeze(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  **** Warning ****
-  gtk_calendar_freeze has been deprecated since version 2.8 and should not be
-  used in newly-written code.
+  === Warning ===
+  gtk_calendar_freeze has been deprecated since version 2.8 and should not be used in newly-written code.
 
 ==== :GetDate ====
 '':GetDate(self @ [[#T|T]], year @ [[..:..:Std:Object#T|Std.Object.T]], month @ [[..:..:Std:Object#T|Std.Object.T]], day @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
   Obtains the selected date from a GtkCalendar.
+  
   calendar : a GtkCalendar
   year :     location to store the year number, or NULL
   month :    location to store the month number (between 0 and 11), or NULL
   day :      location to store the day number (between 1 and 31), or NULL
+  
 
 ==== :GetDisplayOptions ====
 '':GetDisplayOptions(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
   Returns the current display options of calendar.
+  
   calendar : a GtkCalendar
   Returns :  the display options.
+  
 
 ==== :MarkDay ====
 '':MarkDay(self @ [[#T|T]], day @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
   Places a visual marker on a particular day.
+  
   calendar : a GtkCalendar
   day :      the day number to mark between 1 and 31.
   Returns :  TRUE, always
+  
 
 ==== :SelectDay ====
 '':SelectDay(self @ [[#T|T]], day @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
   Selects a day from the current month.
+  
   calendar : a GtkCalendar.
-  day :      the day number between 1 and 31, or 0 to unselect the currently
-             selected day.
+  day :      the day number between 1 and 31, or 0 to unselect the currently selected day.
+  
 
 ==== :SelectMonth ====
 '':SelectMonth(self @ [[#T|T]], month @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], year @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
   Shifts the calendar to a different month.
+  
   calendar : a GtkCalendar
   month :    a month number between 0 and 11.
   year :     the year the month is in.
   Returns :  TRUE, always
+  
 
 ==== :SetDisplayOptions ====
 '':SetDisplayOptions(self @ [[#T|T]], flags @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
   Sets display options (whether to display the heading and the month headings).
+  
   calendar : a GtkCalendar
   flags :    the display options to set
+  
 
 ==== New ====
 ''New() : [[# T| T]]''
 
   Creates a new calendar, with the current date being selected.
+  
   Returns : a newly GtkCalendar widget
+  
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''

@@ -25,7 +25,7 @@
 
 
 ==== :SaveToCallback ====
-'':SaveToCallback(self @ [[#T|T]], save_func @ [[..:..:Std:Function#T|Std.Function.T]], user_data @ [[..:..:Std:Address#T|Std.Address.T]], type @ [[..:..:Std:String#T|Std.String.T]], error @ [[..:..:Std:Object#T|Std.Object.T]], @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':SaveToCallback(self @ [[#T|T]], save_func @ [[..:..:Std:Function#T|Std.Function.T]], user_data @ [[..:..:Std:Address#T|Std.Address.T]], type @ [[..:..:Std:String#T|Std.String.T]], error @ [[..:..:Std:Object#T|Std.Object.T]], __etc__ @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :SaveToBufferv ====
@@ -33,11 +33,11 @@
 
 
 ==== :SaveToBuffer ====
-'':SaveToBuffer(self @ [[#T|T]], buffer @ [[..:..:Std:List#T|Std.List.T]], buffer_size @ [[..:..:Std:Object#T|Std.Object.T]], type @ [[..:..:Std:String#T|Std.String.T]], error @ [[..:..:Std:Object#T|Std.Object.T]], @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':SaveToBuffer(self @ [[#T|T]], buffer @ [[..:..:Std:List#T|Std.List.T]], buffer_size @ [[..:..:Std:Object#T|Std.Object.T]], type @ [[..:..:Std:String#T|Std.String.T]], error @ [[..:..:Std:Object#T|Std.Object.T]], __etc__ @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :Save ====
-'':Save(self @ [[#T|T]], filename @ [[..:..:Std:String#T|Std.String.T]], type @ [[..:..:Std:String#T|Std.String.T]], error @ [[..:..:Std:Object#T|Std.Object.T]], @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':Save(self @ [[#T|T]], filename @ [[..:..:Std:String#T|Std.String.T]], type @ [[..:..:Std:String#T|Std.String.T]], error @ [[..:..:Std:Object#T|Std.Object.T]], __etc__ @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :SaturateAndPixelate ====

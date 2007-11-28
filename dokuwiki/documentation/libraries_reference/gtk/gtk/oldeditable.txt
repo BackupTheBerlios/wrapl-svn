@@ -5,16 +5,14 @@
   * [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]
   * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
 
-  GtkOldEditable has been deprecated since GTK+ 2.0 and should not be used in
-  newly written code. Use the GtkEditable interface instead.
+  GtkOldEditable has been deprecated since GTK+ 2.0 and should not be used in newly written code. Use the GtkEditable interface instead.
   
 
 ==== :ClaimSelection ====
 '':ClaimSelection(self @ [[#T|T]], claim @ [[..:..:Std:Symbol#T|Std.Symbol.T]], time_ @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  **** Warning ****
-  gtk_old_editable_claim_selection is deprecated and should not be used in newly-
-  written code.
+  === Warning ===
+  gtk_old_editable_claim_selection is deprecated and should not be used in newly-written code.
 
 ==== :CurrentPos ====
 '':CurrentPos(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
@@ -47,9 +45,8 @@
 ==== :Changed ====
 '':Changed(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  **** Warning ****
-  gtk_old_editable_changed is deprecated and should not be used in newly-written
-  code.
+  === Warning ===
+  gtk_old_editable_changed is deprecated and should not be used in newly-written code.
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''

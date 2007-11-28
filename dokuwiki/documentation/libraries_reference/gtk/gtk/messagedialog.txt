@@ -9,14 +9,8 @@
   * [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]
   * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
 
-  GtkMessageDialog presents a dialog with an image representing the type of
-  message (Error, Question, etc.) alongside some message text. It's simply a
-  convenience widget; you could construct the equivalent of GtkMessageDialog from
-  GtkDialog without too much effort, but GtkMessageDialog saves typing.
-  The easiest way to do a modal message dialog is to use gtk_dialog_run(), though
-  you can also pass in the GTK_DIALOG_MODAL flag, gtk_dialog_run() automatically
-  makes the dialog modal and waits for the user to respond to it. gtk_dialog_run
-  () returns when any dialog button is clicked.
+  GtkMessageDialog presents a dialog with an image representing the type of message (Error, Question, etc.) alongside some message text. It's simply a convenience widget; you could construct the equivalent of GtkMessageDialog from GtkDialog without too much effort, but GtkMessageDialog saves typing.
+  The easiest way to do a modal message dialog is to use gtk_dialog_run(), though you can also pass in the GTK_DIALOG_MODAL flag, gtk_dialog_run() automatically makes the dialog modal and waits for the user to respond to it. gtk_dialog_run() returns when any dialog button is clicked.
   Example 6.&#160;A modal dialog.
    dialog = gtk_message_dialog_new (main_application_window,
                                     GTK_DIALOG_DESTROY_WITH_PARENT,
@@ -46,50 +40,51 @@
 ==== :SetMarkup ====
 '':SetMarkup(self @ [[#T|T]], str @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Sets the text of the message dialog to be str, which is marked up with the
-  Pango text markup language.
+  Sets the text of the message dialog to be str, which is marked up with the Pango text markup language.
+  
   message_dialog : a GtkMessageDialog
   str :            markup string (see Pango markup format)
+  
 
 ==== :SetImage ====
 '':SetImage(self @ [[#T|T]], image @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
   Sets the dialog's image to image.
+  
   dialog : a GtkMessageDialog
   image :  the image
+  
 
 ==== :FormatSecondaryText ====
-'':FormatSecondaryText(self @ [[#T|T]], message_format @ [[..:..:Std:String#T|Std.String.T]], @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':FormatSecondaryText(self @ [[#T|T]], message_format @ [[..:..:Std:String#T|Std.String.T]], __etc__ @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Sets the secondary text of the message dialog to be message_format (with printf
-  ()-style).
-  Note that setting a secondary text makes the primary text become bold, unless
-  you have provided explicit markup.
+  Sets the secondary text of the message dialog to be message_format (with printf()-style).
+  Note that setting a secondary text makes the primary text become bold, unless you have provided explicit markup.
+  
   message_dialog : a GtkMessageDialog
   message_format : printf()-style format string, or NULL
   ... :            arguments for message_format
+  
 
 ==== :Image ====
 '':Image(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
   Sets the dialog's image to image.
+  
   dialog : a GtkMessageDialog
   image :  the image
+  
 
 ==== :Label ====
 '':Label(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
 
 ==== :FormatSecondaryMarkup ====
-'':FormatSecondaryMarkup(self @ [[#T|T]], message_format @ [[..:..:Std:String#T|Std.String.T]], @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':FormatSecondaryMarkup(self @ [[#T|T]], message_format @ [[..:..:Std:String#T|Std.String.T]], __etc__ @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Sets the secondary text of the message dialog to be message_format (with printf
-  ()-style), which is marked up with the Pango text markup language.
-  Note that setting a secondary text makes the primary text become bold, unless
-  you have provided explicit markup.
-  Due to an oversight, this function does not escape special XML characters like
-  gtk_message_dialog_new_with_markup() does. Thus, if the arguments may contain
-  special XML characters, you should use g_markup_printf_escaped() to escape it.
+  Sets the secondary text of the message dialog to be message_format (with printf()-style), which is marked up with the Pango text markup language.
+  Note that setting a secondary text makes the primary text become bold, unless you have provided explicit markup.
+  Due to an oversight, this function does not escape special XML characters like gtk_message_dialog_new_with_markup() does. Thus, if the arguments may contain special XML characters, you should use g_markup_printf_escaped() to escape it.
   gchar *msg;
   
   msg = g_markup_printf_escaped (message_format, ...);
@@ -97,12 +92,10 @@
   g_free (msg);
 
 ==== New ====
-''New(parent : [[..:..:Gtk:Gtk:Window#T|Gtk.Gtk.Window.T]], flags : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], type : [[..:..:Gtk:Gtk:MessageType#T|Gtk.Gtk.MessageType.T]], buttons : [[..:..:Gtk:Gtk:ButtonsType#T|Gtk.Gtk.ButtonsType.T]], message_format : [[..:..:Std:String#T|Std.String.T]], ... : [[..:..:Std:Object#T|Std.Object.T]]) : [[# T| T]]''
+''New(parent : [[..:..:Gtk:Gtk:Window#T|Gtk.Gtk.Window.T]], flags : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], type : [[..:..:Gtk:Gtk:MessageType#T|Gtk.Gtk.MessageType.T]], buttons : [[..:..:Gtk:Gtk:ButtonsType#T|Gtk.Gtk.ButtonsType.T]], message_format : [[..:..:Std:String#T|Std.String.T]], __etc__ : [[..:..:Std:Object#T|Std.Object.T]]) : [[# T| T]]''
 
-  Creates a new message dialog, which is a simple dialog with an icon indicating
-  the dialog type (error, warning, etc.) and some text the user may want to see.
-  When the user clicks a button a "response" signal is emitted with response IDs
-  from GtkResponseType. See GtkDialog for more details.
+  Creates a new message dialog, which is a simple dialog with an icon indicating the dialog type (error, warning, etc.) and some text the user may want to see. When the user clicks a button a "response" signal is emitted with response IDs from GtkResponseType. See GtkDialog for more details.
+  
   parent :         transient parent, or NULL for none
   flags :          flags
   type :           type of message
@@ -110,26 +103,17 @@
   message_format : printf()-style format string, or NULL
   ... :            arguments for message_format
   Returns :        a new GtkMessageDialog
+  
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 
 ==== NewWithMarkup ====
-''NewWithMarkup(parent : [[..:..:Gtk:Gtk:Window#T|Gtk.Gtk.Window.T]], flags : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], type : [[..:..:Gtk:Gtk:MessageType#T|Gtk.Gtk.MessageType.T]], buttons : [[..:..:Gtk:Gtk:ButtonsType#T|Gtk.Gtk.ButtonsType.T]], message_format : [[..:..:Std:String#T|Std.String.T]], ... : [[..:..:Std:Object#T|Std.Object.T]]) : [[# T| T]]''
+''NewWithMarkup(parent : [[..:..:Gtk:Gtk:Window#T|Gtk.Gtk.Window.T]], flags : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], type : [[..:..:Gtk:Gtk:MessageType#T|Gtk.Gtk.MessageType.T]], buttons : [[..:..:Gtk:Gtk:ButtonsType#T|Gtk.Gtk.ButtonsType.T]], message_format : [[..:..:Std:String#T|Std.String.T]], __etc__ : [[..:..:Std:Object#T|Std.Object.T]]) : [[# T| T]]''
 
-  Creates a new message dialog, which is a simple dialog with an icon indicating
-  the dialog type (error, warning, etc.) and some text which is marked up with
-  the Pango text markup language. When the user clicks a button a "response"
-  signal is emitted with response IDs from GtkResponseType. See GtkDialog for
-  more details.
-  Special XML characters in the printf() arguments passed to this function will
-  automatically be escaped as necessary. (See g_markup_printf_escaped() for how
-  this is implemented.) Usually this is what you want, but if you have an
-  existing Pango markup string that you want to use literally as the label, then
-  you need to use gtk_message_dialog_set_markup() instead, since you can't pass
-  the markup string either as the format (it might contain '%' characters) or as
-  a string argument.
+  Creates a new message dialog, which is a simple dialog with an icon indicating the dialog type (error, warning, etc.) and some text which is marked up with the Pango text markup language. When the user clicks a button a "response" signal is emitted with response IDs from GtkResponseType. See GtkDialog for more details.
+  Special XML characters in the printf() arguments passed to this function will automatically be escaped as necessary. (See g_markup_printf_escaped() for how this is implemented.) Usually this is what you want, but if you have an existing Pango markup string that you want to use literally as the label, then you need to use gtk_message_dialog_set_markup() instead, since you can't pass the markup string either as the format (it might contain '%' characters) or as a string argument.
    GtkWidget *dialog;
    dialog = gtk_message_dialog_new (main_application_window,
                                     GTK_DIALOG_DESTROY_WITH_PARENT,

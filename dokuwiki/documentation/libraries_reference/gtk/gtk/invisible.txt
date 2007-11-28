@@ -5,39 +5,46 @@
   * [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]
   * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
 
-  The GtkInvisible widget is used internally in GTK+, and is probably not very
-  useful for application developers.
-  It is used for reliable pointer grabs and selection handling in the code for
-  drag-and-drop.
+  The GtkInvisible widget is used internally in GTK+, and is probably not very useful for application developers.
+  It is used for reliable pointer grabs and selection handling in the code for drag-and-drop.
   
 
 ==== :SetScreen ====
 '':SetScreen(self @ [[#T|T]], screen @ [[..:..:Gtk:Gdk:Screen#T|Gtk.Gdk.Screen.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
   Sets the GdkScreen where the GtkInvisible object will be displayed.
+  
   invisible : a GtkInvisible.
   screen :    a GdkScreen.
+  
 
 ==== :GetScreen ====
 '':GetScreen(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Screen#T|Gtk.Gdk.Screen.T]]''
 
   Returns the GdkScreen object associated with invisible
+  
   invisible : a GtkInvisible.
   Returns :   the associated GdkScreen.
+  
 
 ==== :Screen ====
 '':Screen(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Screen#T|Gtk.Gdk.Screen.T]]''
 
   Creates a new GtkInvisible object for a specified screen
-  screen :  a GdkScreen which identifies on which the new GtkInvisible will be
-            created.
+  
+  screen :  a GdkScreen which identifies on which the new GtkInvisible will be created.
   Returns : a newly created GtkInvisible object
+  
   Sets the GdkScreen where the GtkInvisible object will be displayed.
+  
   invisible : a GtkInvisible.
   screen :    a GdkScreen.
+  
   Returns the GdkScreen object associated with invisible
+  
   invisible : a GtkInvisible.
   Returns :   the associated GdkScreen.
+  
 
 ==== :HasUserRefCount ====
 '':HasUserRefCount(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
@@ -47,7 +54,9 @@
 ''New() : [[# T| T]]''
 
   Creates a new GtkInvisible.
+  
   Returns : a new GtkInvisible.
+  
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
@@ -57,7 +66,8 @@
 ''NewForScreen(screen : [[..:..:Gtk:Gdk:Screen#T|Gtk.Gdk.Screen.T]]) : [[# T| T]]''
 
   Creates a new GtkInvisible object for a specified screen
-  screen :  a GdkScreen which identifies on which the new GtkInvisible will be
-            created.
+  
+  screen :  a GdkScreen which identifies on which the new GtkInvisible will be created.
   Returns : a newly created GtkInvisible object
+  
 

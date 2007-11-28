@@ -4,26 +4,25 @@
   * [[..:..:Gtk:Pango:Font#T|Gtk.Pango.Font.T]]
   * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
 
-  PangoFcFont is a base class for font implementation using the Fontconfig and
-  FreeType libraries. It is used in the Xft and FreeType backends shipped with
-  Pango, but can also be used when creating new backends. Any backend deriving
-  from this base class will take advantage of the wide range of shapers
-  implemented using FreeType that come with Pango.
+  PangoFcFont is a base class for font implementation using the Fontconfig and FreeType libraries. It is used in the Xft and FreeType backends shipped with Pango, but can also be used when creating new backends. Any backend deriving from this base class will take advantage of the wide range of shapers implemented using FreeType that come with Pango.
   
 
 ==== :UnlockFace ====
 '':UnlockFace(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
   Releases a font previously obtained with pango_fc_font_lock_face().
+  
   font : a PangoFcFont.
+  
 
 ==== :LockFace ====
 '':LockFace(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Gets the FreeType FT_Face associated with a font, This face will be kept around
-  until you call pango_fc_font_unlock_face().
+  Gets the FreeType FT_Face associated with a font, This face will be kept around until you call pango_fc_font_unlock_face().
+  
   font :    a PangoFcFont.
   Returns : the FreeType FT_Face associated with font.
+  
 
 ==== DescriptionFromPattern ====
 ''DescriptionFromPattern(pattern : [[..:..:Std:Object#T|Std.Object.T]], include_size : [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Gtk:Pango:FontDescription#T|Gtk.Pango.FontDescription.T]]''

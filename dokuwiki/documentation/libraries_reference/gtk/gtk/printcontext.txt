@@ -3,12 +3,8 @@
 === inherits from ===
   * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
 
-  A GtkPrintContext encapsulates context information that is required when
-  drawing pages for printing, such as the cairo context and important parameters
-  like page size and resolution. It also lets you easily create PangoLayout and
-  PangoContext objects that match the font metrics of the cairo surface.
-  GtkPrintContext objects gets passed to the ::begin-print, ::end-print, ::
-  request-page-setup and ::draw-page signals on the GtkPrintOperation.
+  A GtkPrintContext encapsulates context information that is required when drawing pages for printing, such as the cairo context and important parameters like page size and resolution. It also lets you easily create PangoLayout and PangoContext objects that match the font metrics of the cairo surface.
+  GtkPrintContext objects gets passed to the ::begin-print, ::end-print, ::request-page-setup and ::draw-page signals on the GtkPrintOperation.
   Example 41.&#160;Using GtkPrintContext in a ::draw-page callback
   static void
   draw_page (GtkPrintOperation *operation,
@@ -69,77 +65,94 @@
 '':SetCairoContext(self @ [[#T|T]], cr @ [[..:..:Gtk:Cairo:CairoT#T|Gtk.Cairo.CairoT.T]], dpi_x @ [[..:..:Std:Real#T|Std.Real.T]], dpi_y @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
   Sets a new cairo context on a print context.
-  This function is intended to be used when implementing an internal print
-  preview, it is not needed for printing, since GTK+ itself creates a suitable
-  cairo context in that case.
+  This function is intended to be used when implementing an internal print preview, it is not needed for printing, since GTK+ itself creates a suitable cairo context in that case.
+  
   context : a GtkPrintContext
   cr :      the cairo context
   dpi_x :   the horizontal resolution to use with cr
   dpi_y :   the vertical resolution to use with cr
+  
 
 ==== :CreatePangoContext ====
 '':CreatePangoContext(self @ [[#T|T]]) : [[..:..:Gtk:Pango:Context#T|Gtk.Pango.Context.T]]''
 
   Creates a new PangoContext that can be used with the GtkPrintContext.
+  
   context : a GtkPrintContext
   Returns : a new Pango context for context
+  
 
 ==== :CreatePangoLayout ====
 '':CreatePangoLayout(self @ [[#T|T]]) : [[..:..:Gtk:Pango:Layout#T|Gtk.Pango.Layout.T]]''
 
   Creates a new PangoLayout that is suitable for use with the GtkPrintContext.
+  
   context : a GtkPrintContext
   Returns : a new Pango layout for context
+  
 
 ==== :GetCairoContext ====
 '':GetCairoContext(self @ [[#T|T]]) : [[..:..:Gtk:Cairo:CairoT#T|Gtk.Cairo.CairoT.T]]''
 
   Obtains the cairo context that is associated with the GtkPrintContext.
+  
   context : a GtkPrintContext
   Returns : the cairo context of context
+  
 
 ==== :GetDpiX ====
 '':GetDpiX(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
   Obtains the horizontal resolution of the GtkPrintContext, in dots per inch.
+  
   context : a GtkPrintContext
   Returns : the horizontal resolution of context
+  
 
 ==== :GetDpiY ====
 '':GetDpiY(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
   Obtains the vertical resolution of the GtkPrintContext, in dots per inch.
+  
   context : a GtkPrintContext
   Returns : the vertical resolution of context
+  
 
 ==== :GetHeight ====
 '':GetHeight(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
   Obtains the height of the GtkPrintContext, in pixels.
+  
   context : a GtkPrintContext
   Returns : the height of context
+  
 
 ==== :GetPageSetup ====
 '':GetPageSetup(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:PageSetup#T|Gtk.Gtk.PageSetup.T]]''
 
-  Obtains the GtkPageSetup that determines the page dimensions of the
-  GtkPrintContext.
+  Obtains the GtkPageSetup that determines the page dimensions of the GtkPrintContext.
+  
   context : a GtkPrintContext
   Returns : the page setup of context
+  
 
 ==== :GetPangoFontmap ====
 '':GetPangoFontmap(self @ [[#T|T]]) : [[..:..:Gtk:Pango:FontMap#T|Gtk.Pango.FontMap.T]]''
 
   Returns a PangoFontMap that is suitable for use with the GtkPrintContext.
+  
   context : a GtkPrintContext
   Returns : the font map of context
+  
 
 ==== :GetWidth ====
 '':GetWidth(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
   Obtains the width of the GtkPrintContext, in pixels.
+  
   context : a GtkPrintContext
   Returns : the width of context
+  
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''

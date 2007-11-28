@@ -16,11 +16,11 @@
 
 
 ==== Emit ====
-''Emit(object : [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]], signal_id : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], ... : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+''Emit(object : [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]], signal_id : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], __etc__ : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== EmitByName ====
-''EmitByName(object : [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]], name : [[..:..:Std:String#T|Std.String.T]], ... : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+''EmitByName(object : [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]], name : [[..:..:Std:String#T|Std.String.T]], __etc__ : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== EmitStopByName ====
@@ -36,7 +36,7 @@
 
 
 ==== New ====
-''New(name : [[..:..:Std:String#T|Std.String.T]], signal_flags : [[..:..:Gtk:Gtk:SignalRunType#T|Gtk.Gtk.SignalRunType.T]], object_type : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]], function_offset : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], marshaller : [[..:..:Std:Object#T|Std.Object.T]], return_val : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]], n_args : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], ... : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+''New(name : [[..:..:Std:String#T|Std.String.T]], signal_flags : [[..:..:Gtk:Gtk:SignalRunType#T|Gtk.Gtk.SignalRunType.T]], object_type : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]], function_offset : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], marshaller : [[..:..:Std:Object#T|Std.Object.T]], return_val : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]], n_args : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], __etc__ : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== Newv ====

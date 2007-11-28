@@ -5,17 +5,11 @@
   * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
 
   GooCanvasTextModel represents a model for text items.
-  It is a subclass of GooCanvasItemModelSimple and so inherits all of the style
-  properties such as "fill-color".
-  It also implements the GooCanvasItemModel interface, so you can use the
-  GooCanvasItemModel functions such as goo_canvas_item_model_raise() and
-  goo_canvas_item_model_rotate().
+  It is a subclass of GooCanvasItemModelSimple and so inherits all of the style properties such as "fill-color".
+  It also implements the GooCanvasItemModel interface, so you can use the GooCanvasItemModel functions such as goo_canvas_item_model_raise() and goo_canvas_item_model_rotate().
   To create a GooCanvasTextModel use goo_canvas_text_model_new().
-  To get or set the properties of an existing GooCanvasTextModel, use
-  g_object_get() and g_object_set().
-  To respond to events such as mouse clicks on the text item you must connect to
-  the signal handlers of the corresponding GooCanvasText objects. (See
-  goo_canvas_get_item() and "item-created".)
+  To get or set the properties of an existing GooCanvasTextModel, use g_object_get() and g_object_set().
+  To respond to events such as mouse clicks on the text item you must connect to the signal handlers of the corresponding GooCanvasText objects. (See goo_canvas_get_item() and "item-created".)
   
 
 ==== :TextData ====
@@ -23,24 +17,19 @@
 
 
 ==== New ====
-''New(parent : [[..:..:Gtk:GooCanvas:ItemModel#T|Gtk.GooCanvas.ItemModel.T]], string : [[..:..:Std:String#T|Std.String.T]], x : [[..:..:Std:Real#T|Std.Real.T]], y : [[..:..:Std:Real#T|Std.Real.T]], width : [[..:..:Std:Real#T|Std.Real.T]], anchor : [[..:..:Gtk:Gtk:AnchorType#T|Gtk.Gtk.AnchorType.T]], ... : [[..:..:Std:Object#T|Std.Object.T]]) : [[# T| T]]''
+''New(parent : [[..:..:Gtk:GooCanvas:ItemModel#T|Gtk.GooCanvas.ItemModel.T]], string : [[..:..:Std:String#T|Std.String.T]], x : [[..:..:Std:Real#T|Std.Real.T]], y : [[..:..:Std:Real#T|Std.Real.T]], width : [[..:..:Std:Real#T|Std.Real.T]], anchor : [[..:..:Gtk:Gtk:AnchorType#T|Gtk.Gtk.AnchorType.T]], __etc__ : [[..:..:Std:Object#T|Std.Object.T]]) : [[# T| T]]''
 
   Creates a new text model.
-            the parent model, or NULL. If a parent is specified, it will assume
-  parent :  ownership of the item, and the item will automatically be freed when
-            it is removed from the parent. Otherwise call g_object_unref() to
-            free it.
+  
+  parent :  the parent model, or NULL. If a parent is specified, it will assume ownership of the item, and the item will automatically be freed when it is removed from the parent. Otherwise call g_object_unref() to free it.
   string :  the text to display.
   x :       the x coordinate of the text.
   y :       the y coordinate of the text.
   width :   the width of the text item, or -1 for unlimited width.
-            the position of the text relative to the given x and y coordinates.
-            For example an anchor of GDK_ANCHOR_NW will result in the top-left of
-  anchor :  the text being placed at the given x and y coordinates. An anchor of
-            GDK_ANCHOR_CENTER will result in the center of the text being placed
-            at the x and y coordinates.
+  anchor :  the position of the text relative to the given x and y coordinates. For example an anchor of GDK_ANCHOR_NW will result in the top-left of the text being placed at the given x and y coordinates. An anchor of GDK_ANCHOR_CENTER will result in the center of the text being placed at the x and y coordinates.
   ... :     optional pairs of property names and values, and a terminating NULL.
   Returns : a new text model.
+  
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''

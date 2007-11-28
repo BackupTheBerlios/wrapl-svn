@@ -6,115 +6,125 @@
   * [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]
   * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
 
-  A GtkScale is a slider control used to select a numeric value. To use it,
-  you'll probably want to investigate the methods on its base class, GtkRange, in
-  addition to the methods for GtkScale itself. To set the value of a scale, you
-  would normally use gtk_range_set_value(). To detect changes to the value, you
-  would normally use the "value_changed" signal.
-  The GtkScale widget is an abstract class, used only for deriving the subclasses
-  GtkHScale and GtkVScale. To create a scale widget, call
-  gtk_hscale_new_with_range() or gtk_vscale_new_with_range().
+  A GtkScale is a slider control used to select a numeric value. To use it, you'll probably want to investigate the methods on its base class, GtkRange, in addition to the methods for GtkScale itself. To set the value of a scale, you would normally use gtk_range_set_value(). To detect changes to the value, you would normally use the "value_changed" signal.
+  The GtkScale widget is an abstract class, used only for deriving the subclasses GtkHScale and GtkVScale. To create a scale widget, call gtk_hscale_new_with_range() or gtk_vscale_new_with_range().
   
 
 ==== :SetValuePos ====
 '':SetValuePos(self @ [[#T|T]], pos @ [[..:..:Gtk:Gtk:PositionType#T|Gtk.Gtk.PositionType.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
   Sets the position in which the current value is displayed.
+  
   scale : a GtkScale.
   pos :   the position in which the current value is displayed.
+  
 
 ==== :Digits ====
 '':Digits(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-  Sets the number of decimal places that are displayed in the value. Also causes
-  the value of the adjustment to be rounded off to this number of digits, so the
-  retrieved value matches the value the user saw.
+  Sets the number of decimal places that are displayed in the value. Also causes the value of the adjustment to be rounded off to this number of digits, so the retrieved value matches the value the user saw.
+  
   scale :  a GtkScale.
-  digits : the number of decimal places to display, e.g. use 1 to display 1.0, 2
-           to display 1.00 etc.
+  digits : the number of decimal places to display, e.g. use 1 to display 1.0, 2 to display 1.00 etc.
+  
   Gets the number of decimal places that are displayed in the value.
+  
   scale :   a GtkScale.
   Returns : the number of decimal places that are displayed.
+  
 
 ==== :DrawValue ====
 '':DrawValue(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-  Specifies whether the current value is displayed as a string next to the
-  slider.
+  Specifies whether the current value is displayed as a string next to the slider.
+  
   scale :      a GtkScale.
   draw_value : a boolean.
+  
   Returns whether the current value is displayed as a string next to the slider.
+  
   scale :   a GtkScale.
   Returns : whether the current value is displayed as a string.
+  
 
 ==== :ValuePos ====
 '':ValuePos(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
   Sets the position in which the current value is displayed.
+  
   scale : a GtkScale.
   pos :   the position in which the current value is displayed.
+  
   Gets the position in which the current value is displayed.
+  
   scale :   a GtkScale.
   Returns : the position in which the current value is displayed.
+  
 
 ==== :GetDigits ====
 '':GetDigits(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
   Gets the number of decimal places that are displayed in the value.
+  
   scale :   a GtkScale.
   Returns : the number of decimal places that are displayed.
+  
 
 ==== :GetDrawValue ====
 '':GetDrawValue(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
   Returns whether the current value is displayed as a string next to the slider.
+  
   scale :   a GtkScale.
   Returns : whether the current value is displayed as a string.
+  
 
 ==== :GetLayout ====
 '':GetLayout(self @ [[#T|T]]) : [[..:..:Gtk:Pango:Layout#T|Gtk.Pango.Layout.T]]''
 
-  Gets the PangoLayout used to display the scale. The returned object is owned by
-  the scale so does not need to be freed by the caller.
+  Gets the PangoLayout used to display the scale. The returned object is owned by the scale so does not need to be freed by the caller.
+  
   scale :   A GtkScale
-  Returns : the PangoLayout for this scale, or NULL if the "draw-value" property
-            is FALSE.
+  Returns : the PangoLayout for this scale, or NULL if the "draw-value" property is FALSE.
+  
 
 ==== :GetLayoutOffsets ====
 '':GetLayoutOffsets(self @ [[#T|T]], x @ [[..:..:Std:Object#T|Std.Object.T]], y @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Obtains the coordinates where the scale will draw the PangoLayout representing
-  the text in the scale. Remember when using the PangoLayout function you need to
-  convert to and from pixels using PANGO_PIXELS() or PANGO_SCALE.
+  Obtains the coordinates where the scale will draw the PangoLayout representing the text in the scale. Remember when using the PangoLayout function you need to convert to and from pixels using PANGO_PIXELS() or PANGO_SCALE.
   If the "draw-value" property is FALSE, the return values are undefined.
+  
   scale : a GtkScale
   x :     location to store X offset of layout, or NULL
   y :     location to store Y offset of layout, or NULL
+  
 
 ==== :GetValuePos ====
 '':GetValuePos(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:PositionType#T|Gtk.Gtk.PositionType.T]]''
 
   Gets the position in which the current value is displayed.
+  
   scale :   a GtkScale.
   Returns : the position in which the current value is displayed.
+  
 
 ==== :SetDigits ====
 '':SetDigits(self @ [[#T|T]], digits @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Sets the number of decimal places that are displayed in the value. Also causes
-  the value of the adjustment to be rounded off to this number of digits, so the
-  retrieved value matches the value the user saw.
+  Sets the number of decimal places that are displayed in the value. Also causes the value of the adjustment to be rounded off to this number of digits, so the retrieved value matches the value the user saw.
+  
   scale :  a GtkScale.
-  digits : the number of decimal places to display, e.g. use 1 to display 1.0, 2
-           to display 1.00 etc.
+  digits : the number of decimal places to display, e.g. use 1 to display 1.0, 2 to display 1.00 etc.
+  
 
 ==== :SetDrawValue ====
 '':SetDrawValue(self @ [[#T|T]], draw_value @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Specifies whether the current value is displayed as a string next to the
-  slider.
+  Specifies whether the current value is displayed as a string next to the slider.
+  
   scale :      a GtkScale.
   draw_value : a boolean.
+  
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''

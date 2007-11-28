@@ -8,19 +8,25 @@
 ==== :SetRoot ====
 '':SetRoot(self @ [[#T|T]], root @ [[..:..:Gtk:CCC:CcItem#T|Gtk.CCC.CcItem.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+  
   self :
   root :
+  
 
 ==== New ====
 ''New() : [[# T| T]]''
 
+  
   Returns :
+  
 
 ==== GetRoot ====
 ''GetRoot(self : [[..:..:Gtk:CCC:CcItem#T|Gtk.CCC.CcItem.T]]) : [[..:..:Gtk:CCC:CcItem#T|Gtk.CCC.CcItem.T]]''
 
+  
   self :
   Returns :
+  
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
@@ -29,6 +35,8 @@
 ==== NewRoot ====
 ''NewRoot(root : [[..:..:Gtk:CCC:CcItem#T|Gtk.CCC.CcItem.T]]) : [[# T| T]]''
 
+  
   root :
   Returns :
+  
 

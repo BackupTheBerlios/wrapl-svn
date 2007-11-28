@@ -3,30 +3,22 @@
 === inherits from ===
   * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
 
-  GooCanvasItemSimple is used as a base class for all of the standard canvas
-  items. It can also be used as the base class for new custom canvas items.
+  GooCanvasItemSimple is used as a base class for all of the standard canvas items. It can also be used as the base class for new custom canvas items.
   It provides default implementations for many of the GooCanvasItem methods.
-  For very simple items, all that is needed is to implement the create_path()
-  method. (GooCanvasEllipse, GooCanvasRect and GooCanvasPath do this.)
-  More complicated items need to implement the update(), paint() and is_item_at()
-  methods. (GooCanvasImage, GooCanvasPolyline, GooCanvasText and GooCanvasWidget
-  do this.) They may also need to override some of the other GooCanvasItem
-  methods such as set_canvas(), set_parent() or allocate_area() if special code
-  is needed. (GooCanvasWidget does this to make sure the GtkWidget is embedded in
-  the GooCanvas widget correctly.)
+  For very simple items, all that is needed is to implement the create_path() method. (GooCanvasEllipse, GooCanvasRect and GooCanvasPath do this.)
+  More complicated items need to implement the update(), paint() and is_item_at() methods. (GooCanvasImage, GooCanvasPolyline, GooCanvasText and GooCanvasWidget do this.) They may also need to override some of the other GooCanvasItem methods such as set_canvas(), set_parent() or allocate_area() if special code is needed. (GooCanvasWidget does this to make sure the GtkWidget is embedded in the GooCanvas widget correctly.)
   
 
 ==== :UserBoundsToParent ====
 '':UserBoundsToParent(self @ [[#T|T]], cr @ [[..:..:Gtk:Cairo:CairoT#T|Gtk.Cairo.CairoT.T]], bounds @ [[..:..:Gtk:GooCanvas:Bounds#T|Gtk.GooCanvas.Bounds.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  This function is intended to be used by subclasses of GooCanvasItemSimple,
-  typically in their get_requested_area() method.
-  It converts the item's bounds to a bounding box in its parent's coordinate
-  space. If the item has no transformation matrix set then no conversion is
-  needed.
+  This function is intended to be used by subclasses of GooCanvasItemSimple, typically in their get_requested_area() method.
+  It converts the item's bounds to a bounding box in its parent's coordinate space. If the item has no transformation matrix set then no conversion is needed.
+  
   item :   a GooCanvasItemSimple.
   cr :     a cairo context.
   bounds : the bounds of the item, in the item's coordinate space.
+  
 
 ==== :Canvas ====
 '':Canvas(self @ [[#T|T]]) : [[..:..:Gtk:GooCanvas:GooCanvas#T|Gtk.GooCanvas.GooCanvas.T]]''
@@ -35,22 +27,22 @@
 ==== :Parent ====
 '':Parent(self @ [[#T|T]]) : [[..:..:Gtk:GooCanvas:Item#T|Gtk.GooCanvas.Item.T]]''
 
-  This function is intended to be used by subclasses of GooCanvasItemSimple,
-  typically in their get_requested_area() method.
-  It converts the item's bounds to a bounding box in its parent's coordinate
-  space. If the item has no transformation matrix set then no conversion is
-  needed.
+  This function is intended to be used by subclasses of GooCanvasItemSimple, typically in their get_requested_area() method.
+  It converts the item's bounds to a bounding box in its parent's coordinate space. If the item has no transformation matrix set then no conversion is needed.
+  
   item :   a GooCanvasItemSimple.
   cr :     a cairo context.
   bounds : the bounds of the item, in the item's coordinate space.
+  
 
 ==== :Model ====
 '':Model(self @ [[#T|T]]) : [[..:..:Gtk:GooCanvas:ItemModelSimple#T|Gtk.GooCanvas.ItemModelSimple.T]]''
 
-  This function should be called by subclasses of GooCanvasItemSimple in their
-  set_model() method.
+  This function should be called by subclasses of GooCanvasItemSimple in their set_model() method.
+  
   item :  a GooCanvasItemSimple.
   model : the model that item will view.
+  
 
 ==== :SimpleData ====
 '':SimpleData(self @ [[#T|T]]) : [[..:..:Gtk:GooCanvas:ItemSimpleData#T|Gtk.GooCanvas.ItemSimpleData.T]]''
@@ -59,17 +51,14 @@
 ==== :Bounds ====
 '':Bounds(self @ [[#T|T]]) : [[..:..:Gtk:GooCanvas:Bounds#T|Gtk.GooCanvas.Bounds.T]]''
 
-  This function is intended to be used by subclasses of GooCanvasItemSimple,
-  typically in their update() or get_requested_area() methods.
-  It calculates the bounds of the current path, using the item's style settings,
-  and stores the results in the given GooCanvasBounds struct.
-  The returned bounds contains the bounding box of the path in device space,
-  converted to user space coordinates. To calculate the bounds completely in user
-  space, use cairo_identity_matrix() to temporarily reset the current
-  transformation matrix to the identity matrix.
+  This function is intended to be used by subclasses of GooCanvasItemSimple, typically in their update() or get_requested_area() methods.
+  It calculates the bounds of the current path, using the item's style settings, and stores the results in the given GooCanvasBounds struct.
+  The returned bounds contains the bounding box of the path in device space, converted to user space coordinates. To calculate the bounds completely in user space, use cairo_identity_matrix() to temporarily reset the current transformation matrix to the identity matrix.
+  
   item :   a GooCanvasItemSimple.
   cr :     a cairo context.
   bounds : the GooCanvasBounds struct to store the resulting bounding box.
+  
 
 ==== :NeedUpdate ====
 '':NeedUpdate(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
@@ -87,81 +76,85 @@
 '':Changed(self @ [[#T|T]], recompute_bounds @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
   This function is intended to be used by subclasses of GooCanvasItemSimple.
-  It is used as a callback for the "changed" signal of the item models. It
-  requests an update or redraw of the item as appropriate.
+  It is used as a callback for the "changed" signal of the item models. It requests an update or redraw of the item as appropriate.
+  
   item :             a GooCanvasItemSimple.
   recompute_bounds : if the item's bounds need to be recomputed.
+  
 
 ==== :CheckInPath ====
 '':CheckInPath(self @ [[#T|T]], x @ [[..:..:Std:Real#T|Std.Real.T]], y @ [[..:..:Std:Real#T|Std.Real.T]], cr @ [[..:..:Gtk:Cairo:CairoT#T|Gtk.Cairo.CairoT.T]], pointer_events @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
   This function is intended to be used by subclasses of GooCanvasItemSimple.
-  It checks if the given point is in the current path, using the item's style
-  settings.
+  It checks if the given point is in the current path, using the item's style settings.
+  
   item :           a GooCanvasItemSimple.
   x :              the x coordinate of the point.
   y :              the y coordinate of the point.
   cr :             a cairo context.
   pointer_events : specifies which parts of the path to check.
   Returns :        TRUE if the given point is in the current path.
+  
 
 ==== :CheckStyle ====
 '':CheckStyle(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  This function is intended to be used by subclasses of GooCanvasItemSimple,
-  typically in their update() or get_requested_area() methods.
-  It ensures that the item's style is setup correctly. If the item has its own
-  GooCanvasStyle it makes sure the parent is set correctly. If it doesn't have
-  its own style it uses the parent item's style.
+  This function is intended to be used by subclasses of GooCanvasItemSimple, typically in their update() or get_requested_area() methods.
+  It ensures that the item's style is setup correctly. If the item has its own GooCanvasStyle it makes sure the parent is set correctly. If it doesn't have its own style it uses the parent item's style.
+  
   item : a GooCanvasItemSimple.
+  
 
 ==== :GetLineWidth ====
 '':GetLineWidth(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
   Gets the item's line width.
+  
   item :    a GooCanvasItemSimple.
   Returns : the item's line width.
+  
 
 ==== :GetPathBounds ====
 '':GetPathBounds(self @ [[#T|T]], cr @ [[..:..:Gtk:Cairo:CairoT#T|Gtk.Cairo.CairoT.T]], bounds @ [[..:..:Gtk:GooCanvas:Bounds#T|Gtk.GooCanvas.Bounds.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  This function is intended to be used by subclasses of GooCanvasItemSimple,
-  typically in their update() or get_requested_area() methods.
-  It calculates the bounds of the current path, using the item's style settings,
-  and stores the results in the given GooCanvasBounds struct.
-  The returned bounds contains the bounding box of the path in device space,
-  converted to user space coordinates. To calculate the bounds completely in user
-  space, use cairo_identity_matrix() to temporarily reset the current
-  transformation matrix to the identity matrix.
+  This function is intended to be used by subclasses of GooCanvasItemSimple, typically in their update() or get_requested_area() methods.
+  It calculates the bounds of the current path, using the item's style settings, and stores the results in the given GooCanvasBounds struct.
+  The returned bounds contains the bounding box of the path in device space, converted to user space coordinates. To calculate the bounds completely in user space, use cairo_identity_matrix() to temporarily reset the current transformation matrix to the identity matrix.
+  
   item :   a GooCanvasItemSimple.
   cr :     a cairo context.
   bounds : the GooCanvasBounds struct to store the resulting bounding box.
+  
 
 ==== :PaintPath ====
 '':PaintPath(self @ [[#T|T]], cr @ [[..:..:Gtk:Cairo:CairoT#T|Gtk.Cairo.CairoT.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
   This function is intended to be used by subclasses of GooCanvasItemSimple.
   It paints the current path, using the item's style settings.
+  
   item : a GooCanvasItemSimple.
   cr :   a cairo context.
+  
 
 ==== :SetModel ====
 '':SetModel(self @ [[#T|T]], model @ [[..:..:Gtk:GooCanvas:ItemModel#T|Gtk.GooCanvas.ItemModel.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  This function should be called by subclasses of GooCanvasItemSimple in their
-  set_model() method.
+  This function should be called by subclasses of GooCanvasItemSimple in their set_model() method.
+  
   item :  a GooCanvasItemSimple.
   model : the model that item will view.
+  
 
 ==== :UserBoundsToDevice ====
 '':UserBoundsToDevice(self @ [[#T|T]], cr @ [[..:..:Gtk:Cairo:CairoT#T|Gtk.Cairo.CairoT.T]], bounds @ [[..:..:Gtk:GooCanvas:Bounds#T|Gtk.GooCanvas.Bounds.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  This function is intended to be used by subclasses of GooCanvasItemSimple,
-  typically in their update() or get_requested_area() methods.
+  This function is intended to be used by subclasses of GooCanvasItemSimple, typically in their update() or get_requested_area() methods.
   It converts the item's bounds to a bounding box in device space.
+  
   item :   a GooCanvasItemSimple.
   cr :     a cairo context.
   bounds : the bounds of the item, in the item's coordinate space.
+  
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''

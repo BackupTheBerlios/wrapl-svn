@@ -8,8 +8,7 @@
   * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
 
   GtkVBox is a container that organizes child widgets into a single column.
-  Use the GtkBox packing interface to determine the arrangement, spacing, height,
-  and alignment of GtkVBox children.
+  Use the GtkBox packing interface to determine the arrangement, spacing, height, and alignment of GtkVBox children.
   All children are allocated the same width.
   
 
@@ -17,9 +16,11 @@
 ''New(homogeneous : [[..:..:Std:Symbol#T|Std.Symbol.T]], spacing : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[# T| T]]''
 
   Creates a new GtkVBox.
+  
   homogeneous : TRUE if all children are to be given equal space allotments.
   spacing :     the number of pixels to place by default between children.
   Returns :     a new GtkVBox.
+  
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''

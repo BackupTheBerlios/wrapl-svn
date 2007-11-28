@@ -7,19 +7,10 @@
   * [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]
   * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
 
-  A GtkExpander allows the user to hide or show its child by clicking on an
-  expander triangle similar to the triangles used in a GtkTreeView.
-  Normally you use an expander as you would use any other descendant of GtkBin;
-  you create the child widget and use gtk_container_add() to add it to the
-  expander. When the expander is toggled, it will take care of showing and hiding
-  the child automatically.
+  A GtkExpander allows the user to hide or show its child by clicking on an expander triangle similar to the triangles used in a GtkTreeView.
+  Normally you use an expander as you would use any other descendant of GtkBin; you create the child widget and use gtk_container_add() to add it to the expander. When the expander is toggled, it will take care of showing and hiding the child automatically.
   Special Usage
-  There are situations in which you may prefer to show and hide the expanded
-  widget yourself, such as when you want to actually create the widget at
-  expansion time. In this case, create a GtkExpander but do not add a child to
-  it. The expander widget has an expanded property which can be used to monitor
-  its expansion state. You should watch this property with a signal connection as
-  follows:
+  There are situations in which you may prefer to show and hide the expanded widget yourself, such as when you want to actually create the widget at expansion time. In this case, create a GtkExpander but do not add a child to it. The expander widget has an expanded property which can be used to monitor its expansion state. You should watch this property with a signal connection as follows:
   expander = gtk_expander_new_with_mnemonic ("_More Options");
   g_signal_connect (expander, "notify::expanded",
                     G_CALLBACK (expander_callback), NULL);
@@ -44,11 +35,8 @@
         /* Hide or destroy widgets */
       }
   }
-  **** GtkExpander as GtkBuildable ****
-  The GtkExpander implementation of the GtkBuildable interface supports placing a
-  child in the label position by specifying "label" as the "type" attribute of a
-  <child> element. A normal content child can be specified without specifying a
-  <child> type attribute.
+  === GtkExpander as GtkBuildable ===
+  The GtkExpander implementation of the GtkBuildable interface supports placing a child in the label position by specifying "label" as the "type" attribute of a <child> element. A normal content child can be specified without specifying a <child> type attribute.
   Example 38.&#160;A UI definition fragment with GtkExpander
   <object class="GtkExpander">
     <child type="label">
@@ -64,26 +52,29 @@
 ==== :SetUseUnderline ====
 '':SetUseUnderline(self @ [[#T|T]], use_underline @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  If true, an underline in the text of the expander label indicates the next
-  character should be used for the mnemonic accelerator key.
+  If true, an underline in the text of the expander label indicates the next character should be used for the mnemonic accelerator key.
+  
   expander :      a GtkExpander
   use_underline : TRUE if underlines in the text indicate mnemonics
+  
 
 ==== :SetUseMarkup ====
 '':SetUseMarkup(self @ [[#T|T]], use_markup @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Sets whether the text of the label contains markup in Pango's text markup
-  language. See gtk_label_set_markup().
+  Sets whether the text of the label contains markup in Pango's text markup language. See gtk_label_set_markup().
+  
   expander :   a GtkExpander
   use_markup : TRUE if the label's text should be parsed for markup
+  
 
 ==== :SetSpacing ====
 '':SetSpacing(self @ [[#T|T]], spacing @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Sets the spacing field of expander, which is the number of pixels to place
-  between expander and the child.
+  Sets the spacing field of expander, which is the number of pixels to place between expander and the child.
+  
   expander : a GtkExpander
   spacing :  distance between the expander and child in pixels.
+  
 
 ==== :Priv ====
 '':Priv(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -92,84 +83,94 @@
 ==== :GetExpanded ====
 '':GetExpanded(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
-  Queries a GtkExpander and returns its current state. Returns TRUE if the child
-  widget is revealed.
+  Queries a GtkExpander and returns its current state. Returns TRUE if the child widget is revealed.
   See gtk_expander_set_expanded().
+  
   expander : a GtkExpander
   Returns :  the current state of the expander.
+  
 
 ==== :GetLabel ====
 '':GetLabel(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
-  Fetches the text from the label of the expander, as set by
-  gtk_expander_set_label(). If the label text has not been set the return value
-  will be NULL. This will be the case if you create an empty button with
-  gtk_button_new() to use as a container.
+  Fetches the text from the label of the expander, as set by gtk_expander_set_label(). If the label text has not been set the return value will be NULL. This will be the case if you create an empty button with gtk_button_new() to use as a container.
+  
   expander : a GtkExpander
-  Returns :  The text of the label widget. This string is owned by the widget and
-             must not be modified or freed.
+  Returns :  The text of the label widget. This string is owned by the widget and must not be modified or freed.
+  
 
 ==== :GetLabelWidget ====
 '':GetLabelWidget(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
   Retrieves the label widget for the frame. See gtk_expander_set_label_widget().
+  
   expander : a GtkExpander
   Returns :  the label widget, or NULL if there is none.
+  
 
 ==== :GetSpacing ====
 '':GetSpacing(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
   Gets the value set by gtk_expander_set_spacing().
+  
   expander : a GtkExpander
   Returns :  spacing between the expander and child.
+  
 
 ==== :GetUseMarkup ====
 '':GetUseMarkup(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
-  Returns whether the label's text is interpreted as marked up with the Pango
-  text markup language. See gtk_expander_set_use_markup().
+  Returns whether the label's text is interpreted as marked up with the Pango text markup language. See gtk_expander_set_use_markup().
+  
   expander : a GtkExpander
   Returns :  TRUE if the label's text will be parsed for markup
+  
 
 ==== :GetUseUnderline ====
 '':GetUseUnderline(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
-  Returns whether an embedded underline in the expander label indicates a
-  mnemonic. See gtk_expander_set_use_underline().
+  Returns whether an embedded underline in the expander label indicates a mnemonic. See gtk_expander_set_use_underline().
+  
   expander : a GtkExpander
-  Returns :  TRUE if an embedded underline in the expander label indicates the
-             mnemonic accelerator keys.
+  Returns :  TRUE if an embedded underline in the expander label indicates the mnemonic accelerator keys.
+  
 
 ==== :SetExpanded ====
 '':SetExpanded(self @ [[#T|T]], expanded @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Sets the state of the expander. Set to TRUE, if you want the child widget to be
-  revealed, and FALSE if you want the child widget to be hidden.
+  Sets the state of the expander. Set to TRUE, if you want the child widget to be revealed, and FALSE if you want the child widget to be hidden.
+  
   expander : a GtkExpander
   expanded : whether the child widget is revealed
+  
 
 ==== :SetLabel ====
 '':SetLabel(self @ [[#T|T]], label @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
   Sets the text of the label of the expander to label.
   This will also clear any previously set labels.
+  
   expander : a GtkExpander
   label :    a string
+  
 
 ==== :SetLabelWidget ====
 '':SetLabelWidget(self @ [[#T|T]], label_widget @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Set the label widget for the expander. This is the widget that will appear
-  embedded alongside the expander arrow.
+  Set the label widget for the expander. This is the widget that will appear embedded alongside the expander arrow.
+  
   expander :     a GtkExpander
   label_widget : the new label widget
+  
 
 ==== New ====
 ''New(label : [[..:..:Std:String#T|Std.String.T]]) : [[# T| T]]''
 
   Creates a new expander using label as the text of the label.
+  
   label :   the text of the label
   Returns : a new GtkExpander widget.
+  
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
@@ -178,12 +179,9 @@
 ==== NewWithMnemonic ====
 ''NewWithMnemonic(label : [[..:..:Std:String#T|Std.String.T]]) : [[# T| T]]''
 
-  Creates a new expander using label as the text of the label. If characters in
-  label are preceded by an underscore, they are underlined. If you need a literal
-  underscore character in a label, use '__' (two underscores). The first
-  underlined character represents a keyboard accelerator called a mnemonic.
-  Pressing Alt and that key activates the button.
-  label :   the text of the label with an underscore in front of the mnemonic
-            character
+  Creates a new expander using label as the text of the label. If characters in label are preceded by an underscore, they are underlined. If you need a literal underscore character in a label, use '__' (two underscores). The first underlined character represents a keyboard accelerator called a mnemonic. Pressing Alt and that key activates the button.
+  
+  label :   the text of the label with an underscore in front of the mnemonic character
   Returns : a new GtkExpander widget.
+  
 

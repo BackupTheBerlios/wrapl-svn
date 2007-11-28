@@ -8,17 +8,9 @@
   * [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]
   * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
 
-  The GtkCombo widget consists of a single-line text entry field and a drop-down
-  list. The drop-down list is displayed when the user clicks on a small arrow
-  button to the right of the entry field.
-  The drop-down list is a GtkList widget and can be accessed using the list
-  member of the GtkCombo. List elements can contain arbitrary widgets, but if an
-  element is not a plain label, then you must use the gtk_list_set_item_string()
-  function. This sets the string which will be placed in the text entry field
-  when the item is selected.
-  By default, the user can step through the items in the list using the arrow
-  (cursor) keys, though this behaviour can be turned off with
-  gtk_combo_set_use_arrows().
+  The GtkCombo widget consists of a single-line text entry field and a drop-down list. The drop-down list is displayed when the user clicks on a small arrow button to the right of the entry field.
+  The drop-down list is a GtkList widget and can be accessed using the list member of the GtkCombo. List elements can contain arbitrary widgets, but if an element is not a plain label, then you must use the gtk_list_set_item_string() function. This sets the string which will be placed in the text entry field when the item is selected.
+  By default, the user can step through the items in the list using the arrow (cursor) keys, though this behaviour can be turned off with gtk_combo_set_use_arrows().
   As of GTK+ 2.4, GtkCombo has been deprecated in favor of GtkComboBox.
   Example 52.&#160;Creating a GtkCombo widget with simple text items.
     GtkWidget *combo;
@@ -67,16 +59,14 @@
 ==== :SetValueInList ====
 '':SetValueInList(self @ [[#T|T]], val @ [[..:..:Std:Symbol#T|Std.Symbol.T]], ok_if_empty @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  **** Warning ****
-  gtk_combo_set_value_in_list has been deprecated since version 2.4 and should
-  not be used in newly-written code. Use GtkComboBox instead.
+  === Warning ===
+  gtk_combo_set_value_in_list has been deprecated since version 2.4 and should not be used in newly-written code. Use GtkComboBox instead.
 
 ==== :SetUseArrowsAlways ====
 '':SetUseArrowsAlways(self @ [[#T|T]], val @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  **** Warning ****
-  gtk_combo_set_use_arrows_always has been deprecated since version 2.4 and
-  should not be used in newly-written code. Use GtkComboBox instead.
+  === Warning ===
+  gtk_combo_set_use_arrows_always has been deprecated since version 2.4 and should not be used in newly-written code. Use GtkComboBox instead.
 
 ==== :Entry ====
 '':Entry(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
@@ -97,9 +87,8 @@
 ==== :List ====
 '':List(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
-  **** Warning ****
-  gtk_combo_set_value_in_list has been deprecated since version 2.4 and should
-  not be used in newly-written code. Use GtkComboBox instead.
+  === Warning ===
+  gtk_combo_set_value_in_list has been deprecated since version 2.4 and should not be used in newly-written code. Use GtkComboBox instead.
 
 ==== :EntryChangeId ====
 '':EntryChangeId(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
@@ -112,9 +101,8 @@
 ==== :ValueInList ====
 '':ValueInList(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-  **** Warning ****
-  gtk_combo_set_value_in_list has been deprecated since version 2.4 and should
-  not be used in newly-written code. Use GtkComboBox instead.
+  === Warning ===
+  gtk_combo_set_value_in_list has been deprecated since version 2.4 and should not be used in newly-written code. Use GtkComboBox instead.
 
 ==== :OkIfEmpty ====
 '':OkIfEmpty(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
@@ -123,23 +111,20 @@
 ==== :CaseSensitive ====
 '':CaseSensitive(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-  **** Warning ****
-  gtk_combo_set_case_sensitive has been deprecated since version 2.4 and should
-  not be used in newly-written code. Use GtkComboBox instead.
+  === Warning ===
+  gtk_combo_set_case_sensitive has been deprecated since version 2.4 and should not be used in newly-written code. Use GtkComboBox instead.
 
 ==== :UseArrows ====
 '':UseArrows(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-  **** Warning ****
-  gtk_combo_set_use_arrows has been deprecated since version 2.4 and should not
-  be used in newly-written code. Use GtkComboBox instead.
+  === Warning ===
+  gtk_combo_set_use_arrows has been deprecated since version 2.4 and should not be used in newly-written code. Use GtkComboBox instead.
 
 ==== :UseArrowsAlways ====
 '':UseArrowsAlways(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-  **** Warning ****
-  gtk_combo_set_use_arrows_always has been deprecated since version 2.4 and
-  should not be used in newly-written code. Use GtkComboBox instead.
+  === Warning ===
+  gtk_combo_set_use_arrows_always has been deprecated since version 2.4 and should not be used in newly-written code. Use GtkComboBox instead.
 
 ==== :CurrentButton ====
 '':CurrentButton(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
@@ -152,44 +137,38 @@
 ==== :DisableActivate ====
 '':DisableActivate(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  **** Warning ****
-  gtk_combo_disable_activate has been deprecated since version 2.4 and should not
-  be used in newly-written code. Use GtkComboBox instead.
+  === Warning ===
+  gtk_combo_disable_activate has been deprecated since version 2.4 and should not be used in newly-written code. Use GtkComboBox instead.
 
 ==== :SetCaseSensitive ====
 '':SetCaseSensitive(self @ [[#T|T]], val @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  **** Warning ****
-  gtk_combo_set_case_sensitive has been deprecated since version 2.4 and should
-  not be used in newly-written code. Use GtkComboBox instead.
+  === Warning ===
+  gtk_combo_set_case_sensitive has been deprecated since version 2.4 and should not be used in newly-written code. Use GtkComboBox instead.
 
 ==== :SetItemString ====
 '':SetItemString(self @ [[#T|T]], item @ [[..:..:Gtk:Gtk:Item#T|Gtk.Gtk.Item.T]], item_value @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  **** Warning ****
-  gtk_combo_set_item_string has been deprecated since version 2.4 and should not
-  be used in newly-written code. Use GtkComboBox instead.
+  === Warning ===
+  gtk_combo_set_item_string has been deprecated since version 2.4 and should not be used in newly-written code. Use GtkComboBox instead.
 
 ==== :SetPopdownStrings ====
 '':SetPopdownStrings(self @ [[#T|T]], strings @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  **** Warning ****
-  gtk_combo_set_popdown_strings has been deprecated since version 2.4 and should
-  not be used in newly-written code. Use GtkComboBox instead.
+  === Warning ===
+  gtk_combo_set_popdown_strings has been deprecated since version 2.4 and should not be used in newly-written code. Use GtkComboBox instead.
 
 ==== :SetUseArrows ====
 '':SetUseArrows(self @ [[#T|T]], val @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  **** Warning ****
-  gtk_combo_set_use_arrows has been deprecated since version 2.4 and should not
-  be used in newly-written code. Use GtkComboBox instead.
+  === Warning ===
+  gtk_combo_set_use_arrows has been deprecated since version 2.4 and should not be used in newly-written code. Use GtkComboBox instead.
 
 ==== New ====
 ''New() : [[# T| T]]''
 
-  **** Warning ****
-  gtk_combo_new has been deprecated since version 2.4 and should not be used in
-  newly-written code. Use GtkComboBox instead.
+  === Warning ===
+  gtk_combo_new has been deprecated since version 2.4 and should not be used in newly-written code. Use GtkComboBox instead.
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''

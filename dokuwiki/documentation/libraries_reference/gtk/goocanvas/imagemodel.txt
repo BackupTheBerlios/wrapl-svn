@@ -5,17 +5,11 @@
   * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
 
   GooCanvasImageModel represent a model for image items.
-  It is a subclass of GooCanvasItemModelSimple and so inherits all of the style
-  properties such as "operator" and "pointer-events".
-  It also implements the GooCanvasItemModel interface, so you can use the
-  GooCanvasItemModel functions such as goo_canvas_item_model_raise() and
-  goo_canvas_item_model_rotate().
+  It is a subclass of GooCanvasItemModelSimple and so inherits all of the style properties such as "operator" and "pointer-events".
+  It also implements the GooCanvasItemModel interface, so you can use the GooCanvasItemModel functions such as goo_canvas_item_model_raise() and goo_canvas_item_model_rotate().
   To create a GooCanvasImageModel use goo_canvas_image_model_new().
-  To get or set the properties of an existing GooCanvasImageModel, use
-  g_object_get() and g_object_set().
-  To respond to events such as mouse clicks on the image you must connect to the
-  signal handlers of the corresponding GooCanvasImage objects. (See
-  goo_canvas_get_item() and "item-created".)
+  To get or set the properties of an existing GooCanvasImageModel, use g_object_get() and g_object_set().
+  To respond to events such as mouse clicks on the image you must connect to the signal handlers of the corresponding GooCanvasImage objects. (See goo_canvas_get_item() and "item-created".)
   
 
 ==== :ImageData ====
@@ -23,18 +17,17 @@
 
 
 ==== New ====
-''New(parent : [[..:..:Gtk:GooCanvas:ItemModel#T|Gtk.GooCanvas.ItemModel.T]], pixbuf : [[..:..:Gtk:Gdk:Pixbuf#T|Gtk.Gdk.Pixbuf.T]], x : [[..:..:Std:Real#T|Std.Real.T]], y : [[..:..:Std:Real#T|Std.Real.T]], ... : [[..:..:Std:Object#T|Std.Object.T]]) : [[# T| T]]''
+''New(parent : [[..:..:Gtk:GooCanvas:ItemModel#T|Gtk.GooCanvas.ItemModel.T]], pixbuf : [[..:..:Gtk:Gdk:Pixbuf#T|Gtk.Gdk.Pixbuf.T]], x : [[..:..:Std:Real#T|Std.Real.T]], y : [[..:..:Std:Real#T|Std.Real.T]], __etc__ : [[..:..:Std:Object#T|Std.Object.T]]) : [[# T| T]]''
 
   Creates a new image model.
-            the parent model, or NULL. If a parent is specified, it will assume
-  parent :  ownership of the item, and the item will automatically be freed when
-            it is removed from the parent. Otherwise call g_object_unref() to
-            free it.
+  
+  parent :  the parent model, or NULL. If a parent is specified, it will assume ownership of the item, and the item will automatically be freed when it is removed from the parent. Otherwise call g_object_unref() to free it.
   pixbuf :  the GdkPixbuf containing the image data, or NULL.
   x :       the x coordinate of the image.
   y :       the y coordinate of the image.
   ... :     optional pairs of property names and values, and a terminating NULL.
   Returns : a new image model.
+  
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''

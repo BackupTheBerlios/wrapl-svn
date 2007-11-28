@@ -5,24 +5,26 @@
   * [[..:..:Gtk:Gtk:Action#T|Gtk.Gtk.Action.T]]
   * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
 
-  A GtkRadioAction is similar to GtkRadioMenuItem. A number of radio actions can
-  be linked together so that only one may be active at any one time.
+  A GtkRadioAction is similar to GtkRadioMenuItem. A number of radio actions can be linked together so that only one may be active at any one time.
   
 
 ==== :SetGroup ====
 '':SetGroup(self @ [[#T|T]], group @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
   Sets the radio group for the radio action object.
+  
   action : the action object
   group :  a list representing a radio group
+  
 
 ==== :SetCurrentValue ====
 '':SetCurrentValue(self @ [[#T|T]], current_value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Sets the currently active group member to the member with value property
-  current_value.
+  Sets the currently active group member to the member with value property current_value.
+  
   action :        a GtkRadioAction
   current_value : the new value
+  
 
 ==== :PrivateData ====
 '':PrivateData(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -31,16 +33,16 @@
 ==== :GetCurrentValue ====
 '':GetCurrentValue(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-  Obtains the value property of the currently active member of the group to which
-  action belongs.
+  Obtains the value property of the currently active member of the group to which action belongs.
+  
   action :  a GtkRadioAction
   Returns : The value of the currently active group member
+  
 
 ==== :GetGroup ====
 '':GetGroup(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Returns the list representing the radio group for this object. Note that the
-  returned list is only valid until the next change to the group.
+  Returns the list representing the radio group for this object. Note that the returned list is only valid until the next change to the group.
   A common way to set up a group of radio group is the following:
     GSList *group = NULL;
     GtkRadioAction *action;
@@ -56,17 +58,15 @@
 ==== New ====
 ''New(name : [[..:..:Std:String#T|Std.String.T]], label : [[..:..:Std:String#T|Std.String.T]], tooltip : [[..:..:Std:String#T|Std.String.T]], stock_id : [[..:..:Std:String#T|Std.String.T]], value : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[# T| T]]''
 
-  Creates a new GtkRadioAction object. To add the action to a GtkActionGroup and
-  set the accelerator for the action, call gtk_action_group_add_action_with_accel
-  ().
+  Creates a new GtkRadioAction object. To add the action to a GtkActionGroup and set the accelerator for the action, call gtk_action_group_add_action_with_accel().
+  
   name :     A unique name for the action
   label :    The label displayed in menu items and on buttons, or NULL
   tooltip :  A tooltip for this action, or NULL
-  stock_id : The stock icon to display in widgets representing this action, or
-             NULL
-  value :    The value which gtk_radio_action_get_current_value() should return
-             if this action is selected.
+  stock_id : The stock icon to display in widgets representing this action, or NULL
+  value :    The value which gtk_radio_action_get_current_value() should return if this action is selected.
   Returns :  a new GtkRadioAction
+  
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''

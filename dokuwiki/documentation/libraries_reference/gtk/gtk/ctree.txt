@@ -7,38 +7,30 @@
   * [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]
   * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
 
-  The GtkCTree widget is used for showing a hierarchical tree to the user, for
-  example a directory tree.
+  The GtkCTree widget is used for showing a hierarchical tree to the user, for example a directory tree.
   The tree is internally represented as a set of GtkCTreeNode structures.
-  The interface has much in common with the GtkCList widget: rows (nodes) can be
-  selected by the user etc.
-  Positions in the tree are often indicated by two arguments, a parent and a
-  sibling, both GtkCTreeNode pointers. If the parent is NULL, the position is at
-  the root of the tree and if the sibling is NULL, it will be the last child of
-  parent, otherwise it will be inserted just before the sibling.
-  GtkCTree has been deprecated since GTK+ 2.0 and should not be used in newly
-  written code. Use GtkTreeView instead.
+  The interface has much in common with the GtkCList widget: rows (nodes) can be selected by the user etc.
+  Positions in the tree are often indicated by two arguments, a parent and a sibling, both GtkCTreeNode pointers. If the parent is NULL, the position is at the root of the tree and if the sibling is NULL, it will be the last child of parent, otherwise it will be inserted just before the sibling.
+  GtkCTree has been deprecated since GTK+ 2.0 and should not be used in newly written code. Use GtkTreeView instead.
   
 
 ==== :UnselectRecursive ====
 '':UnselectRecursive(self @ [[#T|T]], node @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  **** Warning ****
-  gtk_ctree_unselect_recursive is deprecated and should not be used in newly-
-  written code.
+  === Warning ===
+  gtk_ctree_unselect_recursive is deprecated and should not be used in newly-written code.
 
 ==== :Unselect ====
 '':Unselect(self @ [[#T|T]], node @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  **** Warning ****
+  === Warning ===
   gtk_ctree_unselect is deprecated and should not be used in newly-written code.
 
 ==== :ToggleExpansionRecursive ====
 '':ToggleExpansionRecursive(self @ [[#T|T]], node @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  **** Warning ****
-  gtk_ctree_toggle_expansion_recursive is deprecated and should not be used in
-  newly-written code.
+  === Warning ===
+  gtk_ctree_toggle_expansion_recursive is deprecated and should not be used in newly-written code.
 
 ==== :LinesGc ====
 '':LinesGc(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]]''
@@ -59,23 +51,20 @@
 ==== :LineStyle ====
 '':LineStyle(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-  **** Warning ****
-  gtk_ctree_set_line_style is deprecated and should not be used in newly-written
-  code.
+  === Warning ===
+  gtk_ctree_set_line_style is deprecated and should not be used in newly-written code.
 
 ==== :ExpanderStyle ====
 '':ExpanderStyle(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-  **** Warning ****
-  gtk_ctree_set_expander_style is deprecated and should not be used in newly-
-  written code.
+  === Warning ===
+  gtk_ctree_set_expander_style is deprecated and should not be used in newly-written code.
 
 ==== :ShowStub ====
 '':ShowStub(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-  **** Warning ****
-  gtk_ctree_set_show_stub is deprecated and should not be used in newly-written
-  code.
+  === Warning ===
+  gtk_ctree_set_show_stub is deprecated and should not be used in newly-written code.
 
 ==== :DragCompare ====
 '':DragCompare(self @ [[#T|T]]) : [[..:..:Std:Function#T|Std.Function.T]]''
@@ -84,273 +73,241 @@
 ==== :Collapse ====
 '':Collapse(self @ [[#T|T]], node @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  **** Warning ****
+  === Warning ===
   gtk_ctree_collapse is deprecated and should not be used in newly-written code.
 
 ==== :CollapseRecursive ====
 '':CollapseRecursive(self @ [[#T|T]], node @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  **** Warning ****
-  gtk_ctree_collapse_recursive is deprecated and should not be used in newly-
-  written code.
+  === Warning ===
+  gtk_ctree_collapse_recursive is deprecated and should not be used in newly-written code.
 
 ==== :CollapseToDepth ====
 '':CollapseToDepth(self @ [[#T|T]], node @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]], depth @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  **** Warning ****
-  gtk_ctree_collapse_to_depth is deprecated and should not be used in newly-
-  written code.
+  === Warning ===
+  gtk_ctree_collapse_to_depth is deprecated and should not be used in newly-written code.
 
 ==== :Expand ====
 '':Expand(self @ [[#T|T]], node @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  **** Warning ****
+  === Warning ===
   gtk_ctree_expand is deprecated and should not be used in newly-written code.
 
 ==== :ExpandRecursive ====
 '':ExpandRecursive(self @ [[#T|T]], node @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  **** Warning ****
-  gtk_ctree_expand_recursive is deprecated and should not be used in newly-
-  written code.
+  === Warning ===
+  gtk_ctree_expand_recursive is deprecated and should not be used in newly-written code.
 
 ==== :ExpandToDepth ====
 '':ExpandToDepth(self @ [[#T|T]], node @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]], depth @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  **** Warning ****
-  gtk_ctree_expand_to_depth is deprecated and should not be used in newly-written
-  code.
+  === Warning ===
+  gtk_ctree_expand_to_depth is deprecated and should not be used in newly-written code.
 
 ==== :ExportToGnode ====
 '':ExportToGnode(self @ [[#T|T]], parent @ [[..:..:Std:Object#T|Std.Object.T]], sibling @ [[..:..:Std:Object#T|Std.Object.T]], node @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]], func @ [[..:..:Std:Function#T|Std.Function.T]], data @ [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  **** Warning ****
-  gtk_ctree_export_to_gnode is deprecated and should not be used in newly-written
-  code.
+  === Warning ===
+  gtk_ctree_export_to_gnode is deprecated and should not be used in newly-written code.
 
 ==== :Find ====
 '':Find(self @ [[#T|T]], node @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]], child @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
-  **** Warning ****
+  === Warning ===
   gtk_ctree_find is deprecated and should not be used in newly-written code.
 
 ==== :FindAllByRowData ====
 '':FindAllByRowData(self @ [[#T|T]], node @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]], data @ [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  **** Warning ****
-  gtk_ctree_find_all_by_row_data is deprecated and should not be used in newly-
-  written code.
+  === Warning ===
+  gtk_ctree_find_all_by_row_data is deprecated and should not be used in newly-written code.
 
 ==== :FindAllByRowDataCustom ====
 '':FindAllByRowDataCustom(self @ [[#T|T]], node @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]], data @ [[..:..:Std:Address#T|Std.Address.T]], func @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  **** Warning ****
-  gtk_ctree_find_all_by_row_data_custom is deprecated and should not be used in
-  newly-written code.
+  === Warning ===
+  gtk_ctree_find_all_by_row_data_custom is deprecated and should not be used in newly-written code.
 
 ==== :FindByRowData ====
 '':FindByRowData(self @ [[#T|T]], node @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]], data @ [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]]''
 
-  **** Warning ****
-  gtk_ctree_find_by_row_data is deprecated and should not be used in newly-
-  written code.
+  === Warning ===
+  gtk_ctree_find_by_row_data is deprecated and should not be used in newly-written code.
 
 ==== :FindByRowDataCustom ====
 '':FindByRowDataCustom(self @ [[#T|T]], node @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]], data @ [[..:..:Std:Address#T|Std.Address.T]], func @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]]''
 
-  **** Warning ****
-  gtk_ctree_find_by_row_data_custom is deprecated and should not be used in
-  newly-written code.
+  === Warning ===
+  gtk_ctree_find_by_row_data_custom is deprecated and should not be used in newly-written code.
 
 ==== :FindNodePtr ====
 '':FindNodePtr(self @ [[#T|T]], ctree_row @ [[..:..:Gtk:Gtk:CTreeRow#T|Gtk.Gtk.CTreeRow.T]]) : [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]]''
 
-  **** Warning ****
-  gtk_ctree_find_node_ptr is deprecated and should not be used in newly-written
-  code.
+  === Warning ===
+  gtk_ctree_find_node_ptr is deprecated and should not be used in newly-written code.
 
 ==== :GetNodeInfo ====
 '':GetNodeInfo(self @ [[#T|T]], node @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]], text @ [[..:..:Std:List#T|Std.List.T]], spacing @ [[..:..:Std:Object#T|Std.Object.T]], pixmap_closed @ [[..:..:Std:Object#T|Std.Object.T]], mask_closed @ [[..:..:Std:Object#T|Std.Object.T]], pixmap_opened @ [[..:..:Std:Object#T|Std.Object.T]], mask_opened @ [[..:..:Std:Object#T|Std.Object.T]], is_leaf @ [[..:..:Std:Object#T|Std.Object.T]], expanded @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
-  **** Warning ****
-  gtk_ctree_get_node_info is deprecated and should not be used in newly-written
-  code.
+  === Warning ===
+  gtk_ctree_get_node_info is deprecated and should not be used in newly-written code.
 
 ==== :InsertGnode ====
 '':InsertGnode(self @ [[#T|T]], parent @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]], sibling @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]], gnode @ [[..:..:Std:Object#T|Std.Object.T]], func @ [[..:..:Std:Function#T|Std.Function.T]], data @ [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]]''
 
-  **** Warning ****
-  gtk_ctree_insert_gnode is deprecated and should not be used in newly-written
-  code.
+  === Warning ===
+  gtk_ctree_insert_gnode is deprecated and should not be used in newly-written code.
 
 ==== :InsertNode ====
 '':InsertNode(self @ [[#T|T]], parent @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]], sibling @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]], text @ [[..:..:Std:List#T|Std.List.T]], spacing @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], pixmap_closed @ [[..:..:Gtk:Gdk:Pixmap#T|Gtk.Gdk.Pixmap.T]], mask_closed @ [[..:..:Gtk:Gdk:Bitmap#T|Gtk.Gdk.Bitmap.T]], pixmap_opened @ [[..:..:Gtk:Gdk:Pixmap#T|Gtk.Gdk.Pixmap.T]], mask_opened @ [[..:..:Gtk:Gdk:Bitmap#T|Gtk.Gdk.Bitmap.T]], is_leaf @ [[..:..:Std:Symbol#T|Std.Symbol.T]], expanded @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]]''
 
-  **** Warning ****
-  gtk_ctree_insert_node is deprecated and should not be used in newly-written
-  code.
+  === Warning ===
+  gtk_ctree_insert_node is deprecated and should not be used in newly-written code.
 
 ==== :IsAncestor ====
 '':IsAncestor(self @ [[#T|T]], node @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]], child @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
-  **** Warning ****
-  gtk_ctree_is_ancestor is deprecated and should not be used in newly-written
-  code.
+  === Warning ===
+  gtk_ctree_is_ancestor is deprecated and should not be used in newly-written code.
 
 ==== :IsHotSpot ====
 '':IsHotSpot(self @ [[#T|T]], x @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
-  **** Warning ****
-  gtk_ctree_is_hot_spot is deprecated and should not be used in newly-written
-  code.
+  === Warning ===
+  gtk_ctree_is_hot_spot is deprecated and should not be used in newly-written code.
 
 ==== :IsViewable ====
 '':IsViewable(self @ [[#T|T]], node @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
-  **** Warning ****
-  gtk_ctree_is_viewable is deprecated and should not be used in newly-written
-  code.
+  === Warning ===
+  gtk_ctree_is_viewable is deprecated and should not be used in newly-written code.
 
 ==== :Last ====
 '':Last(self @ [[#T|T]], node @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]]) : [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]]''
 
-  **** Warning ****
+  === Warning ===
   gtk_ctree_last is deprecated and should not be used in newly-written code.
 
 ==== :Move ====
 '':Move(self @ [[#T|T]], node @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]], new_parent @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]], new_sibling @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  **** Warning ****
+  === Warning ===
   gtk_ctree_move is deprecated and should not be used in newly-written code.
 
 ==== :PostRecursive ====
 '':PostRecursive(self @ [[#T|T]], node @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]], func @ [[..:..:Std:Function#T|Std.Function.T]], data @ [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  **** Warning ****
-  gtk_ctree_post_recursive is deprecated and should not be used in newly-written
-  code.
+  === Warning ===
+  gtk_ctree_post_recursive is deprecated and should not be used in newly-written code.
 
 ==== :PostRecursiveToDepth ====
 '':PostRecursiveToDepth(self @ [[#T|T]], node @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]], depth @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], func @ [[..:..:Std:Function#T|Std.Function.T]], data @ [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  **** Warning ****
-  gtk_ctree_post_recursive_to_depth is deprecated and should not be used in
-  newly-written code.
+  === Warning ===
+  gtk_ctree_post_recursive_to_depth is deprecated and should not be used in newly-written code.
 
 ==== :PreRecursive ====
 '':PreRecursive(self @ [[#T|T]], node @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]], func @ [[..:..:Std:Function#T|Std.Function.T]], data @ [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  **** Warning ****
-  gtk_ctree_pre_recursive is deprecated and should not be used in newly-written
-  code.
+  === Warning ===
+  gtk_ctree_pre_recursive is deprecated and should not be used in newly-written code.
 
 ==== :PreRecursiveToDepth ====
 '':PreRecursiveToDepth(self @ [[#T|T]], node @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]], depth @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], func @ [[..:..:Std:Function#T|Std.Function.T]], data @ [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  **** Warning ****
-  gtk_ctree_pre_recursive_to_depth is deprecated and should not be used in newly-
-  written code.
+  === Warning ===
+  gtk_ctree_pre_recursive_to_depth is deprecated and should not be used in newly-written code.
 
 ==== :RealSelectRecursive ====
 '':RealSelectRecursive(self @ [[#T|T]], node @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]], state @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  **** Warning ****
-  gtk_ctree_real_select_recursive is deprecated and should not be used in newly-
-  written code.
+  === Warning ===
+  gtk_ctree_real_select_recursive is deprecated and should not be used in newly-written code.
 
 ==== :RemoveNode ====
 '':RemoveNode(self @ [[#T|T]], node @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  **** Warning ****
-  gtk_ctree_remove_node is deprecated and should not be used in newly-written
-  code.
+  === Warning ===
+  gtk_ctree_remove_node is deprecated and should not be used in newly-written code.
 
 ==== :Select ====
 '':Select(self @ [[#T|T]], node @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  **** Warning ****
+  === Warning ===
   gtk_ctree_select is deprecated and should not be used in newly-written code.
 
 ==== :SelectRecursive ====
 '':SelectRecursive(self @ [[#T|T]], node @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  **** Warning ****
-  gtk_ctree_select_recursive is deprecated and should not be used in newly-
-  written code.
+  === Warning ===
+  gtk_ctree_select_recursive is deprecated and should not be used in newly-written code.
 
 ==== :SetDragCompareFunc ====
 '':SetDragCompareFunc(self @ [[#T|T]], cmp_func @ [[..:..:Std:Function#T|Std.Function.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  **** Warning ****
-  gtk_ctree_set_drag_compare_func is deprecated and should not be used in newly-
-  written code.
+  === Warning ===
+  gtk_ctree_set_drag_compare_func is deprecated and should not be used in newly-written code.
 
 ==== :SetExpanderStyle ====
 '':SetExpanderStyle(self @ [[#T|T]], expander_style @ [[..:..:Gtk:Gtk:CTreeExpanderStyle#T|Gtk.Gtk.CTreeExpanderStyle.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  **** Warning ****
-  gtk_ctree_set_expander_style is deprecated and should not be used in newly-
-  written code.
+  === Warning ===
+  gtk_ctree_set_expander_style is deprecated and should not be used in newly-written code.
 
 ==== :SetIndent ====
 '':SetIndent(self @ [[#T|T]], indent @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  **** Warning ****
-  gtk_ctree_set_indent is deprecated and should not be used in newly-written
-  code.
+  === Warning ===
+  gtk_ctree_set_indent is deprecated and should not be used in newly-written code.
 
 ==== :SetLineStyle ====
 '':SetLineStyle(self @ [[#T|T]], line_style @ [[..:..:Gtk:Gtk:CTreeLineStyle#T|Gtk.Gtk.CTreeLineStyle.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  **** Warning ****
-  gtk_ctree_set_line_style is deprecated and should not be used in newly-written
-  code.
+  === Warning ===
+  gtk_ctree_set_line_style is deprecated and should not be used in newly-written code.
 
 ==== :SetNodeInfo ====
 '':SetNodeInfo(self @ [[#T|T]], node @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]], text @ [[..:..:Std:String#T|Std.String.T]], spacing @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], pixmap_closed @ [[..:..:Gtk:Gdk:Pixmap#T|Gtk.Gdk.Pixmap.T]], mask_closed @ [[..:..:Gtk:Gdk:Bitmap#T|Gtk.Gdk.Bitmap.T]], pixmap_opened @ [[..:..:Gtk:Gdk:Pixmap#T|Gtk.Gdk.Pixmap.T]], mask_opened @ [[..:..:Gtk:Gdk:Bitmap#T|Gtk.Gdk.Bitmap.T]], is_leaf @ [[..:..:Std:Symbol#T|Std.Symbol.T]], expanded @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  **** Warning ****
-  gtk_ctree_set_node_info is deprecated and should not be used in newly-written
-  code.
+  === Warning ===
+  gtk_ctree_set_node_info is deprecated and should not be used in newly-written code.
 
 ==== :SetShowStub ====
 '':SetShowStub(self @ [[#T|T]], show_stub @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  **** Warning ****
-  gtk_ctree_set_show_stub is deprecated and should not be used in newly-written
-  code.
+  === Warning ===
+  gtk_ctree_set_show_stub is deprecated and should not be used in newly-written code.
 
 ==== :SetSpacing ====
 '':SetSpacing(self @ [[#T|T]], spacing @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  **** Warning ****
-  gtk_ctree_set_spacing is deprecated and should not be used in newly-written
-  code.
+  === Warning ===
+  gtk_ctree_set_spacing is deprecated and should not be used in newly-written code.
 
 ==== :SortNode ====
 '':SortNode(self @ [[#T|T]], node @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  **** Warning ****
+  === Warning ===
   gtk_ctree_sort_node is deprecated and should not be used in newly-written code.
 
 ==== :SortRecursive ====
 '':SortRecursive(self @ [[#T|T]], node @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  **** Warning ****
-  gtk_ctree_sort_recursive is deprecated and should not be used in newly-written
-  code.
+  === Warning ===
+  gtk_ctree_sort_recursive is deprecated and should not be used in newly-written code.
 
 ==== :ToggleExpansion ====
 '':ToggleExpansion(self @ [[#T|T]], node @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  **** Warning ****
-  gtk_ctree_toggle_expansion is deprecated and should not be used in newly-
-  written code.
+  === Warning ===
+  gtk_ctree_toggle_expansion is deprecated and should not be used in newly-written code.
 
 ==== New ====
 ''New(columns : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], tree_column : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[# T| T]]''
 
-  **** Warning ****
+  === Warning ===
   gtk_ctree_new is deprecated and should not be used in newly-written code.
 
 ==== GetType ====
@@ -360,7 +317,6 @@
 ==== NewWithTitles ====
 ''NewWithTitles(columns : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], tree_column : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], titles : [[..:..:Std:List#T|Std.List.T]]) : [[# T| T]]''
 
-  **** Warning ****
-  gtk_ctree_new_with_titles is deprecated and should not be used in newly-written
-  code.
+  === Warning ===
+  gtk_ctree_new_with_titles is deprecated and should not be used in newly-written code.
 

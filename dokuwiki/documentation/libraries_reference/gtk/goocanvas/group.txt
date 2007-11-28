@@ -4,20 +4,11 @@
   * [[..:..:Gtk:GooCanvas:ItemSimple#T|Gtk.GooCanvas.ItemSimple.T]]
   * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
 
-  GooCanvasGroup represents a group of items. Groups can be nested to any depth,
-  to create a hierarchy of items. Items are ordered within each group, with later
-  items being displayed above earlier items.
-  GooCanvasGroup is a subclass of GooCanvasItemSimple and so inherits all of the
-  style properties such as "stroke-color", "fill-color" and "line-width". Setting
-  a style property on a GooCanvasGroup will affect all children of the
-  GooCanvasGroup (unless the children override the property setting).
-  GooCanvasGroup implements the GooCanvasItem interface, so you can use the
-  GooCanvasItem functions such as goo_canvas_item_raise() and
-  goo_canvas_item_rotate(), and the properties such as "visibility" and "pointer-
-  events".
+  GooCanvasGroup represents a group of items. Groups can be nested to any depth, to create a hierarchy of items. Items are ordered within each group, with later items being displayed above earlier items.
+  GooCanvasGroup is a subclass of GooCanvasItemSimple and so inherits all of the style properties such as "stroke-color", "fill-color" and "line-width". Setting a style property on a GooCanvasGroup will affect all children of the GooCanvasGroup (unless the children override the property setting).
+  GooCanvasGroup implements the GooCanvasItem interface, so you can use the GooCanvasItem functions such as goo_canvas_item_raise() and goo_canvas_item_rotate(), and the properties such as "visibility" and "pointer-events".
   To create a GooCanvasGroup use goo_canvas_group_new().
-  To get or set the properties of an existing GooCanvasGroup, use g_object_get()
-  and g_object_set().
+  To get or set the properties of an existing GooCanvasGroup, use g_object_get() and g_object_set().
   
 
 ==== :Items ====
@@ -25,15 +16,14 @@
 
 
 ==== New ====
-''New(parent : [[..:..:Gtk:GooCanvas:Item#T|Gtk.GooCanvas.Item.T]], ... : [[..:..:Std:Object#T|Std.Object.T]]) : [[# T| T]]''
+''New(parent : [[..:..:Gtk:GooCanvas:Item#T|Gtk.GooCanvas.Item.T]], __etc__ : [[..:..:Std:Object#T|Std.Object.T]]) : [[# T| T]]''
 
   Creates a new group item.
-            the parent item, or NULL. If a parent is specified, it will assume
-  parent :  ownership of the item, and the item will automatically be freed when
-            it is removed from the parent. Otherwise call g_object_unref() to
-            free it.
+  
+  parent :  the parent item, or NULL. If a parent is specified, it will assume ownership of the item, and the item will automatically be freed when it is removed from the parent. Otherwise call g_object_unref() to free it.
   ... :     optional pairs of property names and values, and a terminating NULL.
   Returns : a new group item.
+  
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''

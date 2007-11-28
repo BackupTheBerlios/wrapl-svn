@@ -8,40 +8,50 @@
 ==== :SetStringProperty ====
 '':SetStringProperty(self @ [[#T|T]], name @ [[..:..:Std:String#T|Std.String.T]], v_string @ [[..:..:Std:String#T|Std.String.T]], origin @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+  
   settings :
   name :
   v_string :
   origin :
+  
 
 ==== :SetPropertyValue ====
 '':SetPropertyValue(self @ [[#T|T]], name @ [[..:..:Std:String#T|Std.String.T]], svalue @ [[..:..:Gtk:Gtk:SettingsValue#T|Gtk.Gtk.SettingsValue.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+  
   settings :
   name :
   svalue :
+  
 
 ==== :SetLongProperty ====
 '':SetLongProperty(self @ [[#T|T]], name @ [[..:..:Std:String#T|Std.String.T]], v_long @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], origin @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+  
   settings :
   name :
   v_long :
   origin :
+  
 
 ==== :SetDoubleProperty ====
 '':SetDoubleProperty(self @ [[#T|T]], name @ [[..:..:Std:String#T|Std.String.T]], v_double @ [[..:..:Std:Real#T|Std.Real.T]], origin @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+  
   settings :
   name :
   v_double :
   origin :
+  
 
 ==== :Screen ====
 '':Screen(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Screen#T|Gtk.Gdk.Screen.T]]''
 
   Gets the GtkSettings object for screen, creating it if necessary.
+  
   screen :  a GdkScreen.
   Returns : a GtkSettings object.
+  
 
 ==== :QueuedSettings ====
 '':QueuedSettings(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -58,21 +68,25 @@
 ==== GetDefault ====
 ''GetDefault() : [[..:..:Gtk:Gtk:Settings#T|Gtk.Gtk.Settings.T]]''
 
-  Gets the GtkSettings object for the default GDK screen, creating it if
-  necessary. See gtk_settings_get_for_screen().
-  Returns : a GtkSettings object. If there is no default screen, then returns
-            NULL.
+  Gets the GtkSettings object for the default GDK screen, creating it if necessary. See gtk_settings_get_for_screen().
+  
+  Returns : a GtkSettings object. If there is no default screen, then returns NULL.
+  
 
 ==== InstallPropertyParser ====
 ''InstallPropertyParser(pspec : [[..:..:Std:Object#T|Std.Object.T]], parser : [[..:..:Std:Function#T|Std.Function.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+  
   pspec :
   parser :
+  
 
 ==== InstallProperty ====
 ''InstallProperty(pspec : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+  
   pspec :
+  
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
@@ -82,6 +96,8 @@
 ''GetForScreen(screen : [[..:..:Gtk:Gdk:Screen#T|Gtk.Gdk.Screen.T]]) : [[..:..:Gtk:Gtk:Settings#T|Gtk.Gtk.Settings.T]]''
 
   Gets the GtkSettings object for screen, creating it if necessary.
+  
   screen :  a GdkScreen.
   Returns : a GtkSettings object.
+  
 

@@ -8,45 +8,32 @@
   * [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]
   * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
 
-  A GtkOptionMenu is a widget that allows the user to choose from a list of valid
-  choices. The GtkOptionMenu displays the selected choice. When activated the
-  GtkOptionMenu displays a popup GtkMenu which allows the user to make a new
-  choice.
-  Using a GtkOptionMenu is simple; build a GtkMenu, by calling gtk_menu_new(),
-  then appending menu items to it with gtk_menu_shell_append(). Set that menu on
-  the option menu with gtk_option_menu_set_menu(). Set the selected menu item
-  with gtk_option_menu_set_history(); connect to the "changed" signal on the
-  option menu; in the "changed" signal, check the new selected menu item with
-  gtk_option_menu_get_history().
+  A GtkOptionMenu is a widget that allows the user to choose from a list of valid choices. The GtkOptionMenu displays the selected choice. When activated the GtkOptionMenu displays a popup GtkMenu which allows the user to make a new choice.
+  Using a GtkOptionMenu is simple; build a GtkMenu, by calling gtk_menu_new(), then appending menu items to it with gtk_menu_shell_append(). Set that menu on the option menu with gtk_option_menu_set_menu(). Set the selected menu item with gtk_option_menu_set_history(); connect to the "changed" signal on the option menu; in the "changed" signal, check the new selected menu item with gtk_option_menu_get_history().
   As of GTK+ 2.4, GtkOptionMenu has been deprecated in favor of GtkComboBox.
   
 
 ==== :SetMenu ====
 '':SetMenu(self @ [[#T|T]], menu @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  **** Warning ****
-  gtk_option_menu_set_menu has been deprecated since version 2.4 and should not
-  be used in newly-written code. Use GtkComboBox instead.
+  === Warning ===
+  gtk_option_menu_set_menu has been deprecated since version 2.4 and should not be used in newly-written code. Use GtkComboBox instead.
 
 ==== :SetHistory ====
 '':SetHistory(self @ [[#T|T]], index_ @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  **** Warning ****
-  gtk_option_menu_set_history has been deprecated since version 2.4 and should
-  not be used in newly-written code. Use GtkComboBox instead.
+  === Warning ===
+  gtk_option_menu_set_history has been deprecated since version 2.4 and should not be used in newly-written code. Use GtkComboBox instead.
 
 ==== :Menu ====
 '':Menu(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
-  **** Warning ****
-  gtk_option_menu_get_menu has been deprecated since version 2.4 and should not
-  be used in newly-written code. Use GtkComboBox instead.
-  **** Warning ****
-  gtk_option_menu_set_menu has been deprecated since version 2.4 and should not
-  be used in newly-written code. Use GtkComboBox instead.
-  **** Warning ****
-  gtk_option_menu_remove_menu has been deprecated since version 2.4 and should
-  not be used in newly-written code. Use GtkComboBox instead.
+  === Warning ===
+  gtk_option_menu_get_menu has been deprecated since version 2.4 and should not be used in newly-written code. Use GtkComboBox instead.
+  === Warning ===
+  gtk_option_menu_set_menu has been deprecated since version 2.4 and should not be used in newly-written code. Use GtkComboBox instead.
+  === Warning ===
+  gtk_option_menu_remove_menu has been deprecated since version 2.4 and should not be used in newly-written code. Use GtkComboBox instead.
 
 ==== :MenuItem ====
 '':MenuItem(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
@@ -63,30 +50,26 @@
 ==== :GetHistory ====
 '':GetHistory(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-  **** Warning ****
-  gtk_option_menu_get_history has been deprecated since version 2.4 and should
-  not be used in newly-written code. Use GtkComboBox instead.
+  === Warning ===
+  gtk_option_menu_get_history has been deprecated since version 2.4 and should not be used in newly-written code. Use GtkComboBox instead.
 
 ==== :GetMenu ====
 '':GetMenu(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
-  **** Warning ****
-  gtk_option_menu_get_menu has been deprecated since version 2.4 and should not
-  be used in newly-written code. Use GtkComboBox instead.
+  === Warning ===
+  gtk_option_menu_get_menu has been deprecated since version 2.4 and should not be used in newly-written code. Use GtkComboBox instead.
 
 ==== :RemoveMenu ====
 '':RemoveMenu(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  **** Warning ****
-  gtk_option_menu_remove_menu has been deprecated since version 2.4 and should
-  not be used in newly-written code. Use GtkComboBox instead.
+  === Warning ===
+  gtk_option_menu_remove_menu has been deprecated since version 2.4 and should not be used in newly-written code. Use GtkComboBox instead.
 
 ==== New ====
 ''New() : [[# T| T]]''
 
-  **** Warning ****
-  gtk_option_menu_new has been deprecated since version 2.4 and should not be
-  used in newly-written code. Use GtkComboBox instead.
+  === Warning ===
+  gtk_option_menu_new has been deprecated since version 2.4 and should not be used in newly-written code. Use GtkComboBox instead.
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
