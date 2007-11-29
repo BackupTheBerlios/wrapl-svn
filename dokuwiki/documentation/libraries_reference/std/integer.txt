@@ -1,23 +1,23 @@
 ====== Integer ======
 ==== T ====
 
-base type of all integer types
+  base type of all integer types
 
 ==== SmallT ====
 === inherits from ===
   * [[#T|T]]
 
-integers that fit into a signed machine word.
+  integers that fit into a signed machine word.
 
 ==== BigT ====
 === inherits from ===
   * [[#T|T]]
 
-arbritrary precision integers.<br/>
-note: instances of type <em>BigT</em> should never contain values which can fit into a signed machine word.
+  arbritrary precision integers.<br/>
+  note: instances of type <em>BigT</em> should never contain values which can fit into a signed machine word.
 
 ==== ToSmallSmall ====
 ''ToSmallSmall(from : [[#SmallT|SmallT]], to : [[#SmallT|SmallT]]) : [[#SmallT|SmallT]]''
 
-generates the values from <em>from</em> to <em>to</em> inclusive
+  generates the values from <em>from</em> to <em>to</em> inclusive
 
