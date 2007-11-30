@@ -394,11 +394,15 @@ static inline void store_reg(assembler_t *Assembler, operand_t *Operand) {
 		switch (Operand->Loop) {
 		case -1: {
 			| mov eax, [ebp + Assembler->Temps + 8 * Operand->Index + 4]
+                        | test eax, eax
+                        | jz &incorrect_assign
 			| mov [eax], ecx
 			break;
 		};
 		case 0: {
 			| mov eax, [ebp + Assembler->Locals + 8 * Operand->Index + 4]
+                        | test eax, eax
+                        | jz &incorrect_assign
 			| mov [eax], ecx
 			break;
 		};
@@ -409,6 +413,8 @@ static inline void store_reg(assembler_t *Assembler, operand_t *Operand) {
 				| mov eax, [ebp + Assembler->Scopes + 4 * Operand->Loop]
 			};
 			| mov eax, [eax + 8 * Operand->Index + 4]
+                        | test eax, eax
+                        | jz &incorrect_assign
 			| mov [eax], ecx
 			break;
 		};
@@ -417,6 +423,8 @@ static inline void store_reg(assembler_t *Assembler, operand_t *Operand) {
 	};
 	case operand_t::TEMP: {
 		| mov eax, [ebp + Assembler->Temps + 8 * Operand->Index + 4]
+                | test eax, eax
+                | jz &incorrect_assign
 		| mov [eax], ecx
 		break;
 	};
@@ -459,11 +467,15 @@ void store_con_inst_t::encode(assembler_t *Assembler) {
 			switch (Operand->Loop) {
 			case -1: {
 				| mov eax, [ebp + Assembler->Temps + 8 * Operand->Index + 4]
+                                | test eax, eax
+                                | jz &incorrect_assign
 				| mov dword [eax], Value
 				break;
 			};
 			case 0: {
 				| mov eax, [ebp + Assembler->Locals + 8 * Operand->Index + 4]
+                                | test eax, eax
+                                | jz &incorrect_assign
 				| mov dword [eax], Value
 				break;
 			};
@@ -474,6 +486,8 @@ void store_con_inst_t::encode(assembler_t *Assembler) {
 					| mov eax, [ebp + Assembler->Scopes + 4 * Operand->Loop]
 				};
 				| mov eax, [eax + 8 * Operand->Index + 4]
+                                | test eax, eax
+                                | jz &incorrect_assign
 				| mov dword [eax], Value
 				break;
 			};
@@ -482,10 +496,14 @@ void store_con_inst_t::encode(assembler_t *Assembler) {
 		};
 		case operand_t::TEMP: {
 			| mov eax, [ebp + Assembler->Temps + 8 * Operand->Index + 4]
+                        | test eax, eax
+                        | jz &incorrect_assign
 			| mov dword [eax], Value
 			break;
 		};
 		case operand_t::REGR: {
+                        | test edx, edx
+                        | jz &incorrect_assign
 			| mov dword [edx], Value
 			break;
 		};

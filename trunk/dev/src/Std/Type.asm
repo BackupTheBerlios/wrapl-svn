@@ -12,7 +12,7 @@ endstruct
 %define Std$Type$T T
 
 c_type T
-;the type of all types
+;  the type of all types
 c_func T.invoke
 	push ecx
 	mov eax, [type(ecx).Fields]
@@ -51,7 +51,7 @@ c_func T.invoke
 	ret
 
 func Of, 1
-;returns the type of value
+;  returns the type of value
 ;@value
 ;:T
 	mov eax, [argument(edi).Val]
@@ -85,7 +85,7 @@ extern Std$Symbol$_typetable_put
 extern Std$Array$_new
 
 unchecked_func New
-;creates a new type derived from parents and adding fields
+;  creates a new type derived from parents and adding fields
 ;@fields : Std$Array$T
 ;@parents... : T
 ;:T

@@ -15,223 +15,221 @@ DEF Type <- <[Item] name, parents>;
 DEF Symbol <- <[Item] name>;
 DEF Param <- <[] name, type, default>;
 
-VAR outfile, baseurl;
+VAR txtfile, htmfile, baseurl;
 
--=
-DEF WriteID(id) (
-    id = "ANY" => RET outfile:write("ANY");
+DEF WriteIDh(id) (
+    id = "ANY" => RET htmfile:write("ANY");
     VAR path <- ALL id:split("$");
-    outfile:write("<a href=\"");
+    htmfile:write("<a href=\"");
     VAR name <- path:pull;
     path:length > 1 => (
         VAR module <- path:pull;
-        outfile:write(baseurl);
-        EVERY outfile:writes(path:values, "/");
-        outfile:writes(${$module;.html});
+        htmfile:write(baseurl);
+        EVERY htmfile:writes(path:values:lower, "/");
+        htmfile:writes(${$module:lower;.html});
     );
-    outfile:writes(${#$name;">$id:map("$", ".");</a>});
+    htmfile:writes(${#$name;">$id:map("$", ".");</a>});
 );
 
-TO :write(item@Item) (
-    outfile:write("<p>To be implemented...</p>\n\n");
+TO :writeh(item@Item) (
+    htmfile:write("<p>To be implemented...</p>\n\n");
 );
 
-TO :write(item@Type) (
-    outfile:writes(${<a name="$item:name;"><h3><code>TYPE $item:name;});
+TO :writeh(item@Type) (
+    htmfile:writes(${<a name="$item:name;"><h3><code>$item:name;});
     VAR parents <- item:parents;
     parents:length > 0 => (
-        outfile:write(" <: ");
-        WriteID(parents:pop);
+        htmfile:write(" <: ");
+        WriteIDh(parents:pop);
         VAR parent;
         REP (WHILE parent <- parents:pop;
-            outfile:write(", ");
-            WriteID(parent);
+            htmfile:write(", ");
+            WriteIDh(parent);
         );
     );
-    outfile:write(";</code></h3></a>\n");
-    outfile:write("<p>\n");
-    EVERY outfile:writes(item:comment:values, "<br/>\n");
-    outfile:write("</p>\n<hr/>\n");
+    htmfile:write(";</code></h3></a>\n");
+    htmfile:write("<p>\n");
+    EVERY htmfile:writes(item:comment:values, "<br/>\n");
+    htmfile:write("</p>\n<hr/>\n");
 );
 
-TO :write(item@Method) (
-    outfile:writes(${<h3><code>METHOD :$item:symbol;(});
+TO :writeh(item@Method) (
+    htmfile:writes(${<h3><code>:$item:symbol;(});
     VAR params <- item:params;
     VAR signature <- item:signature;
-    outfile:write(params:pop:name);
+    htmfile:write(params:pop:name);
     WHEN signature:pop IS "VAL" DO (
-        outfile:write(" = ");
-        WriteID(signature:pop);
+        htmfile:write(" = ");
+        WriteIDh(signature:pop);
     ) IS "TYP" DO (
-        outfile:write(" @ ");
-        WriteID(signature:pop);
+        htmfile:write(" @ ");
+        WriteIDh(signature:pop);
     ) IS "ANY", "SKP" DO (
-        outfile:write(" @ ANY");
+        htmfile:write(" @ ANY");
     );
     REP (WHILE signature:length > 0;
-        outfile:write(", ");
-        outfile:write(params:pop:name);
+        htmfile:write(", ");
+        htmfile:write(params:pop:name);
         WHEN signature:pop IS "VAL" DO (
-            outfile:write(" = ");
-            WriteID(signature:pop);
+            htmfile:write(" = ");
+            WriteIDh(signature:pop);
         ) IS "TYP" DO (
-            outfile:write(" @ ");
-            WriteID(signature:pop);
+            htmfile:write(" @ ");
+            WriteIDh(signature:pop);
         ) IS "ANY", "SKP" DO (
-            outfile:write(" @ ANY");
+            htmfile:write(" @ ANY");
         );
     );
     item:return ~== NIL => (
-        outfile:write(") : ");
-        WriteID(item:return);
+        htmfile:write(") : ");
+        WriteIDh(item:return);
     ) // (
-        outfile:write(")");
+        htmfile:write(")");
     );
-    outfile:write(";</code></h3>\n");
-    outfile:write("<p>\n");
-    EVERY outfile:writes(item:comment:values, "<br/>\n");
-    outfile:write("</p>\n<hr/>\n");   
+    htmfile:write(";</code></h3>\n");
+    htmfile:write("<p>\n");
+    EVERY htmfile:writes(item:comment:values, "<br/>\n");
+    htmfile:write("</p>\n<hr/>\n");   
 );
 
-TO :write(item@Function) (
-    outfile:writes(${<a name="$item:name;"><h3><code>FUNCTION $item:name;(});
+TO :writeh(item@Function) (
+    htmfile:writes(${<a name="$item:name;"><h3><code>$item:name;(});
     VAR params <- item:params;
     params:length > 0 => (
         VAR param <- params:pop;
-        outfile:writes(param:name);
+        htmfile:writes(param:name);
         param:type ~== NIL => (
-            outfile:writes(" : ");
-            WriteID(param:type);
+            htmfile:writes(" : ");
+            WriteIDh(param:type);
         );
-        outfile:writes(" := ", NIL ~== param:default);
+        htmfile:writes(" := ", NIL ~== param:default);
         REP (WHILE param <- params:pop;
-            outfile:writes(", ", param:name);
+            htmfile:writes(", ", param:name);
             param:type ~== NIL => (
-                outfile:writes(" : ");
-                WriteID(param:type);
+                htmfile:writes(" : ");
+                WriteIDh(param:type);
             );
-            outfile:writes(" := ", NIL ~== param:default);
+            htmfile:writes(" := ", NIL ~== param:default);
         );
     );
     item:return ~== NIL => (
-        outfile:write(") : ");
-        WriteID(item:return);
+        htmfile:write(") : ");
+        WriteIDh(item:return);
     ) // (
-        outfile:write(")");
+        htmfile:write(")");
     );
-    outfile:write(";</code></h3></a>\n");
-    outfile:write("<p>\n");
-    EVERY outfile:writes(item:comment:values, "<br/>\n");
-    outfile:write("</p>\n<hr/>\n");
+    htmfile:write(";</code></h3></a>\n");
+    htmfile:write("<p>\n");
+    EVERY htmfile:writes(item:comment:values, "<br/>\n");
+    htmfile:write("</p>\n<hr/>\n");
 );
-=-
 
 DEF WriteID(id) (
-    id = "ANY" => RET outfile:write("ANY");
+    id = "ANY" => RET txtfile:write("ANY");
     VAR path <- ALL id:split("$");
-    outfile:write("[[");
+    txtfile:write("[[");
     VAR name <- path:pull;
     path:length > 1 => (
         VAR module <- path:pull;
-        outfile:write(baseurl);
-        EVERY outfile:writes(path:values, ":");
-        outfile:writes(module);
+        txtfile:write(baseurl);
+        EVERY txtfile:writes(path:values, ":");
+        txtfile:writes(module);
     );
-    outfile:writes(${#$name;|$id:map("$", ".");]]});
+    txtfile:writes(${#$name;|$id:map("$", ".");]]});
 );
 
 TO :write(item@Item) (
-    outfile:write("<p>To be implemented...</p>\n\n");
+    txtfile:write("To be implemented...\n\n");
 );
 
 TO :write(item@Type) (
-    outfile:writes("==== ", item:name, " ====\n");
+    txtfile:writes("==== ", item:name, " ====\n");
     VAR parents <- item:parents;
     parents:length > 0 => (
         VAR parent;
-        outfile:writes("=== inherits from ===\n");
-        REP (WHILE parent <- parents:pop;
-            outfile:writes("  * ");
+        txtfile:writes("=== inherits from ===\n");
+        EVERY parent <- parents:values DO (
+            txtfile:writes("  * ");
             WriteID(parent);
-            outfile:writes("\n");
+            txtfile:writes("\n");
         );
     );
-    outfile:write("\n");
-    EVERY outfile:writes(item:comment:values, "\n");
-    outfile:write("\n");
+    txtfile:write("\n");
+    EVERY txtfile:writes(item:comment:values, "\n");
+    txtfile:write("\n");
 );
 
 TO :write(item@Method) (
-    outfile:writes("==== :", item:symbol, " ====\n");
-    outfile:writes("\'\':", item:symbol, "(");
-    VAR params <- item:params;
-    VAR signature <- item:signature;
-    outfile:write(params:pop:name);
+    txtfile:writes("==== :", item:symbol, " ====\n");
+    txtfile:writes("\'\':", item:symbol, "(");
+    VAR params <- item:params:copy;
+    VAR signature <- item:signature:copy;
+    txtfile:write(params:pop:name);
     WHEN signature:pop IS "VAL" DO (
-        outfile:write(" = ");
+        txtfile:write(" = ");
         WriteID(signature:pop);
     ) IS "TYP" DO (
-        outfile:write(" @ ");
+        txtfile:write(" @ ");
         WriteID(signature:pop);
     ) IS "ANY", "SKP" DO (
-        outfile:write(" @ ANY");
+        txtfile:write(" @ ANY");
     );
     REP (WHILE signature:length > 0;
-        outfile:write(", ");
-        outfile:writes(params:pop:name, " ");
+        txtfile:write(", ");
+        txtfile:writes(params:pop:name, " ");
         WHEN signature:pop IS "VAL" DO (
-            outfile:write("= ");
+            txtfile:write("= ");
             WriteID(signature:pop);
         ) IS "TYP" DO (
-            outfile:write("@ ");
+            txtfile:write("@ ");
             WriteID(signature:pop);
         ) IS "ANY", "SKP" DO (
-            outfile:write("@ ANY");
+            txtfile:write("@ ANY");
         );
     );
     item:return ~== NIL => (
-        outfile:write(") : ");
+        txtfile:write(") : ");
         WriteID(item:return);
     ) // (
-        outfile:write(")");
+        txtfile:write(")");
     );
-    outfile:write("\'\'\n");
-    outfile:write("\n");
-    EVERY outfile:writes(item:comment:values, "\n");
-    outfile:write("\n");   
+    txtfile:write("\'\'\n");
+    txtfile:write("\n");
+    EVERY txtfile:writes(item:comment:values, "\n");
+    txtfile:write("\n");   
 );
 
 TO :write(item@Function) (
-    outfile:writes("==== ", item:name, " ====\n");
-    outfile:writes("\'\'", item:name, "(");
-    VAR params <- item:params;
+    txtfile:writes("==== ", item:name, " ====\n");
+    txtfile:writes("\'\'", item:name, "(");
+    VAR params <- item:params:copy;
     params:length > 0 => (
         VAR param <- params:pop;
-        outfile:writes(param:name);
+        txtfile:writes(param:name);
         param:type ~== NIL => (
-            outfile:writes(" : ");
+            txtfile:writes(" : ");
             WriteID(param:type);
         );
-        outfile:writes(" := ", NIL ~== param:default);
+        txtfile:writes(" := ", NIL ~== param:default);
         REP (WHILE param <- params:pop;
-            outfile:writes(", ", param:name);
+            txtfile:writes(", ", param:name);
             param:type ~== NIL => (
-                outfile:writes(" : ");
+                txtfile:writes(" : ");
                 WriteID(param:type);
             );
-            outfile:writes(" := ", NIL ~== param:default);
+            txtfile:writes(" := ", NIL ~== param:default);
         );
     );
     item:return ~== NIL => (
-        outfile:write(") : ");
+        txtfile:write(") : ");
         WriteID(item:return);
     ) // (
-        outfile:write(")");
+        txtfile:write(")");
     );
-    outfile:write("\'\'\n");
-    outfile:write("\n");
-    EVERY outfile:writes(item:comment:values, "\n");
-    outfile:write("\n");
+    txtfile:write("\'\'\n");
+    txtfile:write("\n");
+    EVERY txtfile:writes(item:comment:values, "\n");
+    txtfile:write("\n");
 );
 
 Args:length = 0 => (
@@ -242,7 +240,8 @@ Args:length = 0 => (
 VAR type, file, args;
 VAR module;
 VAR includes <- [];
-VAR outfilename;
+VAR txtfilename;
+VAR htmfilename;
 
 VAR i <- 1, option;
 REP (WHILE option <- Args[i];
@@ -251,7 +250,9 @@ REP (WHILE option <- Args[i];
         option[2] = "I" => (
             includes:put(option[3, 0] | SEND "-I expects directory");
         ) // option[2] = "o" => (
-            outfilename <- option[3, 0] | SEND "-o expects a filename";
+            txtfilename <- option[3, 0] | SEND "-o expects a filename";
+        ) // option[2] = "p" => (
+            htmfilename <- option[3, 0] | SEND "-p expects a filename";
         );
     ) // (
         module <- option;
@@ -512,17 +513,23 @@ items:sort(<a, b> (
     RET;
 ));
 
-outfilename ~== NIL => (
-    outfile <- File.Open(outfilename, File.WRITE + File.TEXT);
-    --outfile:write("<html><head></head><body>\n");
-    --outfile:writes("<h3><tt>MODULE ", module:map("/", "."), ";</tt></h3>");
+txtfilename ~== NIL => (
+    txtfile <- File.Open(txtfilename, File.WRITE + File.TEXT);
     VAR last;
     EVERY last <- module:split("/");
-    outfile:writes("====== ", last, " ======\n");
+    txtfile:writes("====== ", last, " ======\n");
     EVERY items:values:write;
-    --outfile:writes("<h3><tt>END ", module:map("/", "."), ".</tt></h3>");
-    --outfile:write("</body></html>");
-    outfile:close;
+    txtfile:close;
+);
+
+baseurl <- baseurl:map(":", "/");
+
+htmfilename ~== NIL => (
+    htmfile <- File.Open(htmfilename, File.WRITE + File.TEXT);
+    htmfile:write("<html><head></head><body>\n");
+    htmfile:writes("<h3><tt>", module:map("/", "."), "</tt></h3>\n");
+    EVERY items:values:writeh;
+    htmfile:write("</body></html>");
 );
 
 END Main.

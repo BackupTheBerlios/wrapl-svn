@@ -3,7 +3,7 @@
 extern Std$Type$T
 
 c_type T
-;the base type of all types
+;  the base type of all types
 .invoke: equ 0
 
 c_data Nil
@@ -12,7 +12,7 @@ c_data Nil
 unchecked_func New
 ;@object : T
 ;: T
-;creates a new object of the same type as <em>object</em>
+;  creates a new object of the same type as <em>object</em>
 	mov ecx, [argument(edi).Val]
 	add edi, byte sizeof(argument)
 	dec esi

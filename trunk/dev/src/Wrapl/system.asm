@@ -121,15 +121,8 @@ backtrack:
 	jmp [invoke_function.returntable + 4 * eax]
 
 
-c_data IncorrectTypeMessageT
-	dd Std$Type$T
-	dd .types
-	dd 0
-	dd 0
-	dd 0
-.types:
-	dd IncorrectTypeMessageT
-	dd 0
+c_type IncorrectTypeMessageT
+.invoke: equ 0
 
 method "@", TYP, IncorrectTypeMessageT, VAL, Std$String$T
 	mov ecx, .String
@@ -156,6 +149,39 @@ global incorrect_type
 section .text
 incorrect_type:
 	mov ecx, IncorrectTypeMessage
+	xor edx, edx
+	mov eax, 2
+	jmp [bstate(ebp).Handler]
+
+
+c_type IncorrectAssignMessageT
+.invoke: equ 0
+
+method "@", TYP, IncorrectAssignMessageT, VAL, Std$String$T
+	mov ecx, .String
+	xor edx, edx
+	xor eax, eax
+	ret
+section .data
+.String:
+	dd Std$String$T
+	dd Std$Integer$SmallT, 24
+	dd 1
+	dd Std$Integer$SmallT, 24
+	dd Std$Address$T, .chars
+	dd 0, 0, 0, 0
+.chars:
+	db "Assignment to location 0", 0
+
+global IncorrectAssignMessage
+section .data
+IncorrectAssignMessage:
+	dd IncorrectAssignMessageT
+
+global incorrect_assign
+section .text
+incorrect_assign:
+	mov ecx, IncorrectAssignMessage
 	xor edx, edx
 	mov eax, 2
 	jmp [bstate(ebp).Handler]
