@@ -171,11 +171,12 @@
   <attr path="/api/namespace/object/method[@cname='gdk_pixbuf_add_alpha']/parameters/parameter[@name='b']" name="type">int</attr>
   <attr path="/api/namespace/object/method[@cname='gdk_pixbuf_get_pixels']/return-type" name="type">gpointer</attr>
   <add-node path="/api/namespace/struct[@cname='cairo_t']">
-    <constructor name="Create" cname="cairo_create" shared="true">
+    <method name="Create" cname="cairo_create" shared="true">
+      <return-type type="cairo_t*"/>
       <parameters>
         <parameter name="target" type="cairo_surface_t*"/>
       </parameters>
-    </constructor>
+    </method>
     <method name="SetOperator" cname="cairo_set_operator">
       <return-type type="void"/>
       <parameters>
@@ -749,14 +750,16 @@
     </method>
   </add-node>
   <add-node path="/api/namespace/struct[@cname='cairo_surface_t']">
-    <constructor name="ImageSurfaceCreate" cname="cairo_image_surface_create" shared="true">
+    <method name="ImageSurfaceCreate" cname="cairo_image_surface_create" shared="true">
+      <return-type type="cairo_surface_t*"/>
       <parameters>
         <parameter name="format" type="cairo_format_t"/>
         <parameter name="width" type="int"/>
         <parameter name="height" type="int"/>
       </parameters>
-    </constructor>
-    <constructor name="ImageSurfaceCreateForData" cname="cairo_image_surface_create_for_data" shared="true">
+    </method>
+    <method name="ImageSurfaceCreateForData" cname="cairo_image_surface_create_for_data" shared="true">
+      <return-type type="cairo_surface_t*"/>
       <parameters>
         <parameter name="data" type="gpointer"/>
         <parameter name="format" type="cairo_format_t"/>
@@ -764,7 +767,7 @@
         <parameter name="height" type="int"/>
         <parameter name="stride" type="int"/>
       </parameters>
-    </constructor>
+    </method>
   </add-node>
   <add-node path="/api/namespace[@name='Cairo']">
     <enum name="CairoFormatT" cname="cairo_format_t" type="enum">
@@ -796,35 +799,40 @@
   <attr path="/api/namespace/enum[@name='PointerEvents']/member[@name='Fill']" name="value">GOO_CANVAS_EVENTS_FILL_MASK</attr>
   <attr path="/api/namespace/enum[@name='PointerEvents']/member[@name='Stroke']" name="value">GOO_CANVAS_EVENTS_STROKE_MASK</attr>
   <add-node path="/api/namespace/struct[@cname='cairo_pattern_t']">
-    <constructor name="CreateRgb" cname="cairo_pattern_create_rgb" shared="true">
+    <method name="CreateRgb" cname="cairo_pattern_create_rgb" shared="true">
+      <return-type type="cairo_pattern_t*"/>
       <parameters>
         <parameter name="red" type="double"/>
         <parameter name="green" type="double"/>
         <parameter name="blue" type="double"/>
       </parameters>
-    </constructor>
-    <constructor name="CreateRgba" cname="cairo_pattern_create_rgba" shared="true">
+    </method>
+    <method name="CreateRgba" cname="cairo_pattern_create_rgba" shared="true">
+      <return-type type="cairo_pattern_t*"/>
       <parameters>
         <parameter name="red" type="double"/>
         <parameter name="green" type="double"/>
         <parameter name="blue" type="double"/>
         <parameter name="alpha" type="double"/>
       </parameters>
-    </constructor>
-    <constructor name="CreateForSurface" cname="cairo_pattern_create_for_surface" shared="true">
+    </method>
+    <method name="CreateForSurface" cname="cairo_pattern_create_for_surface" shared="true">
+      <return-type type="cairo_pattern_t*"/>
       <parameters>
         <parameter name="surface" type="cairo_surface_t*"/>
       </parameters>
-    </constructor>
-    <constructor name="CreateLinear" cname="cairo_pattern_create_linear" shared="true">
+    </method>
+    <method name="CreateLinear" cname="cairo_pattern_create_linear" shared="true">
+      <return-type type="cairo_pattern_t*"/>
       <parameters>
         <parameter name="x0" type="double"/>
         <parameter name="y0" type="double"/>
         <parameter name="x1" type="double"/>
         <parameter name="y1" type="double"/>
       </parameters>
-    </constructor>
-    <constructor name="CreateRadial" cname="cairo_pattern_create_radial" shared="true">
+    </method>
+    <method name="CreateRadial" cname="cairo_pattern_create_radial" shared="true">
+      <return-type type="cairo_pattern_t*"/>
       <parameters>
         <parameter name="cx0" type="double"/>
         <parameter name="cy0" type="double"/>
@@ -833,7 +841,7 @@
         <parameter name="cy1" type="double"/>
         <parameter name="radius1" type="double"/>
       </parameters>
-    </constructor>
+    </method>
     <method name="GetType" cname="cairo_pattern_get_type">
       <return-type type="cairo_pattern_type_t"/>
     </method>
