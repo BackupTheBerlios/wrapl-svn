@@ -1,0 +1,40 @@
+====== Listeners ======
+==== T ====
+
+
+==== :RemoveIf ====
+'':RemoveIf(self @ [[#T|T]], predicate @ [[..:..:Std:Function#T|Std.Function.T]], user_data @ [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+
+
+==== :Add ====
+'':Add(self @ [[#T|T]], listen_point @ [[..:..:Std:String#T|Std.String.T]], listener_data @ [[..:..:Std:Address#T|Std.Address.T]], destroy_notify @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+
+
+==== :Count ====
+'':Count(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+
+
+==== :Foreach ====
+'':Foreach(self @ [[#T|T]], callback @ [[..:..:Std:Function#T|Std.Function.T]], user_data @ [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+
+
+==== :Free ====
+'':Free(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+
+
+==== :GetData ====
+'':GetData(self @ [[#T|T]], cnxn_id @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], listener_data_p @ [[..:..:Std:Object#T|Std.Object.T]], location_p @ [[..:..:Std:List#T|Std.List.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+
+
+==== :Notify ====
+'':Notify(self @ [[#T|T]], all_above @ [[..:..:Std:String#T|Std.String.T]], callback @ [[..:..:Std:Function#T|Std.Function.T]], user_data @ [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+
+
+==== :Remove ====
+'':Remove(self @ [[#T|T]], cnxn_id @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+
+
+==== New ====
+''New() : [[# T| T]]''
+
+

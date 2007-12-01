@@ -1,0 +1,92 @@
+====== Schema ======
+==== T ====
+
+
+==== :SetType ====
+'':SetType(self @ [[#T|T]], type @ [[..:..:Gtk:Conf:ValueType#T|Gtk.Conf.ValueType.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+
+
+==== :Copy ====
+'':Copy(self @ [[#T|T]]) : [[..:..:Gtk:Conf:Schema#T|Gtk.Conf.Schema.T]]''
+
+
+==== :Free ====
+'':Free(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+
+
+==== :GetCarType ====
+'':GetCarType(self @ [[#T|T]]) : [[..:..:Gtk:Conf:ValueType#T|Gtk.Conf.ValueType.T]]''
+
+
+==== :GetCdrType ====
+'':GetCdrType(self @ [[#T|T]]) : [[..:..:Gtk:Conf:ValueType#T|Gtk.Conf.ValueType.T]]''
+
+
+==== :GetDefaultValue ====
+'':GetDefaultValue(self @ [[#T|T]]) : [[..:..:Gtk:Conf:Value#T|Gtk.Conf.Value.T]]''
+
+
+==== :GetListType ====
+'':GetListType(self @ [[#T|T]]) : [[..:..:Gtk:Conf:ValueType#T|Gtk.Conf.ValueType.T]]''
+
+
+==== :GetLocale ====
+'':GetLocale(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
+
+
+==== :GetLongDesc ====
+'':GetLongDesc(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
+
+
+==== :GetOwner ====
+'':GetOwner(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
+
+
+==== :GetShortDesc ====
+'':GetShortDesc(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
+
+
+==== :GetType ====
+'':GetType(self @ [[#T|T]]) : [[..:..:Gtk:Conf:ValueType#T|Gtk.Conf.ValueType.T]]''
+
+
+==== :SetCarType ====
+'':SetCarType(self @ [[#T|T]], type @ [[..:..:Gtk:Conf:ValueType#T|Gtk.Conf.ValueType.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+
+
+==== :SetCdrType ====
+'':SetCdrType(self @ [[#T|T]], type @ [[..:..:Gtk:Conf:ValueType#T|Gtk.Conf.ValueType.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+
+
+==== :SetDefaultValue ====
+'':SetDefaultValue(self @ [[#T|T]], val @ [[..:..:Gtk:Conf:Value#T|Gtk.Conf.Value.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+
+
+==== :SetDefaultValueNocopy ====
+'':SetDefaultValueNocopy(self @ [[#T|T]], val @ [[..:..:Gtk:Conf:Value#T|Gtk.Conf.Value.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+
+
+==== :SetListType ====
+'':SetListType(self @ [[#T|T]], type @ [[..:..:Gtk:Conf:ValueType#T|Gtk.Conf.ValueType.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+
+
+==== :SetLocale ====
+'':SetLocale(self @ [[#T|T]], locale @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+
+
+==== :SetLongDesc ====
+'':SetLongDesc(self @ [[#T|T]], desc @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+
+
+==== :SetOwner ====
+'':SetOwner(self @ [[#T|T]], owner @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+
+
+==== :SetShortDesc ====
+'':SetShortDesc(self @ [[#T|T]], desc @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+
+
+==== New ====
+''New() : [[# T| T]]''
+
+

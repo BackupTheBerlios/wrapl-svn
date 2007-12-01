@@ -1,0 +1,151 @@
+====== Applet ======
+==== T ====
+=== inherits from ===
+  * [[..:..:Gtk:Gtk:EventBox#T|Gtk.Gtk.EventBox.T]]
+  * [[..:..:Gtk:Gtk:Bin#T|Gtk.Gtk.Bin.T]]
+  * [[..:..:Gtk:Gtk:Container#T|Gtk.Gtk.Container.T]]
+  * [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]
+  * [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]
+  * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
+
+
+==== :SetupMenuFromFile ====
+'':SetupMenuFromFile(self @ [[#T|T]], opt_datadir @ [[..:..:Std:String#T|Std.String.T]], file @ [[..:..:Std:String#T|Std.String.T]], opt_app_name @ [[..:..:Std:String#T|Std.String.T]], verb_list @ [[..:..:Std:Object#T|Std.Object.T]], user_data @ [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+
+
+==== :SetupMenu ====
+'':SetupMenu(self @ [[#T|T]], xml @ [[..:..:Std:String#T|Std.String.T]], verb_list @ [[..:..:Std:Object#T|Std.Object.T]], user_data @ [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+
+
+==== :SetSizeHints ====
+'':SetSizeHints(self @ [[#T|T]], size_hints @ [[..:..:Std:Object#T|Std.Object.T]], n_elements @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], base_size @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+
+
+==== :SetFlags ====
+'':SetFlags(self @ [[#T|T]], flags @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+
+
+==== :SetBackgroundWidget ====
+'':SetBackgroundWidget(self @ [[#T|T]], widget @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+
+
+==== :RequestFocus ====
+'':RequestFocus(self @ [[#T|T]], timestamp @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+
+
+==== :Priv ====
+'':Priv(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+
+
+==== :AddPreferences ====
+'':AddPreferences(self @ [[#T|T]], schema_dir @ [[..:..:Std:String#T|Std.String.T]], opt_error @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+
+
+==== :GconfGetBool ====
+'':GconfGetBool(self @ [[#T|T]], key @ [[..:..:Std:String#T|Std.String.T]], opt_error @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+
+
+==== :GconfGetFloat ====
+'':GconfGetFloat(self @ [[#T|T]], key @ [[..:..:Std:String#T|Std.String.T]], opt_error @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
+
+
+==== :GconfGetFullKey ====
+'':GconfGetFullKey(self @ [[#T|T]], key @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:String#T|Std.String.T]]''
+
+
+==== :GconfGetInt ====
+'':GconfGetInt(self @ [[#T|T]], key @ [[..:..:Std:String#T|Std.String.T]], opt_error @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+
+
+==== :GconfGetList ====
+'':GconfGetList(self @ [[#T|T]], key @ [[..:..:Std:String#T|Std.String.T]], list_type @ [[..:..:Gtk:Conf:ValueType#T|Gtk.Conf.ValueType.T]], opt_error @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+
+
+==== :GconfGetString ====
+'':GconfGetString(self @ [[#T|T]], key @ [[..:..:Std:String#T|Std.String.T]], opt_error @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:String#T|Std.String.T]]''
+
+
+==== :GconfGetValue ====
+'':GconfGetValue(self @ [[#T|T]], key @ [[..:..:Std:String#T|Std.String.T]], opt_error @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Gtk:Conf:Value#T|Gtk.Conf.Value.T]]''
+
+
+==== :GconfSetBool ====
+'':GconfSetBool(self @ [[#T|T]], key @ [[..:..:Std:String#T|Std.String.T]], the_bool @ [[..:..:Std:Symbol#T|Std.Symbol.T]], opt_error @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+
+
+==== :GconfSetFloat ====
+'':GconfSetFloat(self @ [[#T|T]], key @ [[..:..:Std:String#T|Std.String.T]], the_float @ [[..:..:Std:Real#T|Std.Real.T]], opt_error @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+
+
+==== :GconfSetInt ====
+'':GconfSetInt(self @ [[#T|T]], key @ [[..:..:Std:String#T|Std.String.T]], the_int @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], opt_error @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+
+
+==== :GconfSetList ====
+'':GconfSetList(self @ [[#T|T]], key @ [[..:..:Std:String#T|Std.String.T]], list_type @ [[..:..:Gtk:Conf:ValueType#T|Gtk.Conf.ValueType.T]], list @ [[..:..:Std:Object#T|Std.Object.T]], opt_error @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+
+
+==== :GconfSetString ====
+'':GconfSetString(self @ [[#T|T]], key @ [[..:..:Std:String#T|Std.String.T]], the_string @ [[..:..:Std:String#T|Std.String.T]], opt_error @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+
+
+==== :GconfSetValue ====
+'':GconfSetValue(self @ [[#T|T]], key @ [[..:..:Std:String#T|Std.String.T]], value @ [[..:..:Gtk:Conf:Value#T|Gtk.Conf.Value.T]], opt_error @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+
+
+==== :GetBackground ====
+'':GetBackground(self @ [[#T|T]], color @ [[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]], pixmap @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Gtk:Panel:AppletBackgroundType#T|Gtk.Panel.AppletBackgroundType.T]]''
+
+
+==== :GetControl ====
+'':GetControl(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+
+
+==== :GetFlags ====
+'':GetFlags(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+
+
+==== :GetLockedDown ====
+'':GetLockedDown(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+
+
+==== :GetOrient ====
+'':GetOrient(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+
+
+==== :GetPopupComponent ====
+'':GetPopupComponent(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+
+
+==== :GetPreferencesKey ====
+'':GetPreferencesKey(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
+
+
+==== :GetSize ====
+'':GetSize(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+
+
+==== New ====
+''New() : [[# T| T]]''
+
+
+==== ShlibFactoryClosure ====
+''ShlibFactoryClosure(iid : [[..:..:Std:String#T|Std.String.T]], applet_type : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]], poa : [[..:..:Std:Object#T|Std.Object.T]], impl_ptr : [[..:..:Std:Address#T|Std.Address.T]], closure : [[..:..:Gtk:GObject:Closure#T|Gtk.GObject.Closure.T]], ev : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+
+
+==== ShlibFactory ====
+''ShlibFactory(iid : [[..:..:Std:String#T|Std.String.T]], applet_type : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]], poa : [[..:..:Std:Object#T|Std.Object.T]], impl_ptr : [[..:..:Std:Address#T|Std.Address.T]], callback : [[..:..:Std:Function#T|Std.Function.T]], user_data : [[..:..:Std:Address#T|Std.Address.T]], ev : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+
+
+==== GetType ====
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
+
+
+==== FactoryMainClosure ====
+''FactoryMainClosure(iid : [[..:..:Std:String#T|Std.String.T]], applet_type : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]], closure : [[..:..:Gtk:GObject:Closure#T|Gtk.GObject.Closure.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+
+
+==== FactoryMain ====
+''FactoryMain(iid : [[..:..:Std:String#T|Std.String.T]], applet_type : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]], callback : [[..:..:Std:Function#T|Std.Function.T]], data : [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+
+

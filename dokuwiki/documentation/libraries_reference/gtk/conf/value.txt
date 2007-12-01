@@ -1,0 +1,120 @@
+====== Value ======
+==== T ====
+
+
+==== :ToString ====
+'':ToString(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
+
+
+==== :SetString ====
+'':SetString(self @ [[#T|T]], the_str @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+
+
+==== :Type ====
+'':Type(self @ [[#T|T]]) : [[..:..:Gtk:Conf:ValueType#T|Gtk.Conf.ValueType.T]]''
+
+
+==== :Compare ====
+'':Compare(self @ [[#T|T]], value_b @ [[..:..:Gtk:Conf:Value#T|Gtk.Conf.Value.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+
+
+==== :Copy ====
+'':Copy(self @ [[#T|T]]) : [[..:..:Gtk:Conf:Value#T|Gtk.Conf.Value.T]]''
+
+
+==== :Free ====
+'':Free(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+
+
+==== :GetBool ====
+'':GetBool(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+
+
+==== :GetCar ====
+'':GetCar(self @ [[#T|T]]) : [[..:..:Gtk:Conf:Value#T|Gtk.Conf.Value.T]]''
+
+
+==== :GetCdr ====
+'':GetCdr(self @ [[#T|T]]) : [[..:..:Gtk:Conf:Value#T|Gtk.Conf.Value.T]]''
+
+
+==== :GetFloat ====
+'':GetFloat(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
+
+
+==== :GetInt ====
+'':GetInt(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+
+
+==== :GetList ====
+'':GetList(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+
+
+==== :GetListType ====
+'':GetListType(self @ [[#T|T]]) : [[..:..:Gtk:Conf:ValueType#T|Gtk.Conf.ValueType.T]]''
+
+
+==== :GetSchema ====
+'':GetSchema(self @ [[#T|T]]) : [[..:..:Gtk:Conf:Schema#T|Gtk.Conf.Schema.T]]''
+
+
+==== :GetString ====
+'':GetString(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
+
+
+==== :SetBool ====
+'':SetBool(self @ [[#T|T]], the_bool @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+
+
+==== :SetCar ====
+'':SetCar(self @ [[#T|T]], car @ [[..:..:Gtk:Conf:Value#T|Gtk.Conf.Value.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+
+
+==== :SetCarNocopy ====
+'':SetCarNocopy(self @ [[#T|T]], car @ [[..:..:Gtk:Conf:Value#T|Gtk.Conf.Value.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+
+
+==== :SetCdr ====
+'':SetCdr(self @ [[#T|T]], cdr @ [[..:..:Gtk:Conf:Value#T|Gtk.Conf.Value.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+
+
+==== :SetCdrNocopy ====
+'':SetCdrNocopy(self @ [[#T|T]], cdr @ [[..:..:Gtk:Conf:Value#T|Gtk.Conf.Value.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+
+
+==== :SetFloat ====
+'':SetFloat(self @ [[#T|T]], the_float @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+
+
+==== :SetInt ====
+'':SetInt(self @ [[#T|T]], the_int @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+
+
+==== :SetList ====
+'':SetList(self @ [[#T|T]], list @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+
+
+==== :SetListNocopy ====
+'':SetListNocopy(self @ [[#T|T]], list @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+
+
+==== :SetListType ====
+'':SetListType(self @ [[#T|T]], type @ [[..:..:Gtk:Conf:ValueType#T|Gtk.Conf.ValueType.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+
+
+==== :SetSchema ====
+'':SetSchema(self @ [[#T|T]], sc @ [[..:..:Gtk:Conf:Schema#T|Gtk.Conf.Schema.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+
+
+==== :SetSchemaNocopy ====
+'':SetSchemaNocopy(self @ [[#T|T]], sc @ [[..:..:Gtk:Conf:Schema#T|Gtk.Conf.Schema.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+
+
+==== New ====
+''New(type : [[..:..:Gtk:Conf:ValueType#T|Gtk.Conf.ValueType.T]]) : [[# T| T]]''
+
+
+==== NewFromString ====
+''NewFromString(type : [[..:..:Gtk:Conf:ValueType#T|Gtk.Conf.ValueType.T]], str : [[..:..:Std:String#T|Std.String.T]], err : [[..:..:Std:Object#T|Std.Object.T]]) : [[# T| T]]''
+
+

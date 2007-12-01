@@ -1,0 +1,88 @@
+====== ChangeSet ======
+==== T ====
+
+
+==== :Unset ====
+'':Unset(self @ [[#T|T]], key @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+
+
+==== :Unref ====
+'':Unref(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+
+
+==== :CheckValue ====
+'':CheckValue(self @ [[#T|T]], key @ [[..:..:Std:String#T|Std.String.T]], value_retloc @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+
+
+==== :Clear ====
+'':Clear(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+
+
+==== :Foreach ====
+'':Foreach(self @ [[#T|T]], func @ [[..:..:Std:Function#T|Std.Function.T]], user_data @ [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+
+
+==== :GetUserData ====
+'':GetUserData(self @ [[#T|T]]) : [[..:..:Std:Address#T|Std.Address.T]]''
+
+
+==== :Ref ====
+'':Ref(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+
+
+==== :Remove ====
+'':Remove(self @ [[#T|T]], key @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+
+
+==== :Set ====
+'':Set(self @ [[#T|T]], key @ [[..:..:Std:String#T|Std.String.T]], value @ [[..:..:Gtk:Conf:Value#T|Gtk.Conf.Value.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+
+
+==== :SetBool ====
+'':SetBool(self @ [[#T|T]], key @ [[..:..:Std:String#T|Std.String.T]], val @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+
+
+==== :SetFloat ====
+'':SetFloat(self @ [[#T|T]], key @ [[..:..:Std:String#T|Std.String.T]], val @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+
+
+==== :SetInt ====
+'':SetInt(self @ [[#T|T]], key @ [[..:..:Std:String#T|Std.String.T]], val @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+
+
+==== :SetList ====
+'':SetList(self @ [[#T|T]], key @ [[..:..:Std:String#T|Std.String.T]], list_type @ [[..:..:Gtk:Conf:ValueType#T|Gtk.Conf.ValueType.T]], list @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+
+
+==== :SetNocopy ====
+'':SetNocopy(self @ [[#T|T]], key @ [[..:..:Std:String#T|Std.String.T]], value @ [[..:..:Gtk:Conf:Value#T|Gtk.Conf.Value.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+
+
+==== :SetPair ====
+'':SetPair(self @ [[#T|T]], key @ [[..:..:Std:String#T|Std.String.T]], car_type @ [[..:..:Gtk:Conf:ValueType#T|Gtk.Conf.ValueType.T]], cdr_type @ [[..:..:Gtk:Conf:ValueType#T|Gtk.Conf.ValueType.T]], address_of_car @ [[..:..:Std:Object#T|Std.Object.T]], address_of_cdr @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+
+
+==== :SetSchema ====
+'':SetSchema(self @ [[#T|T]], key @ [[..:..:Std:String#T|Std.String.T]], val @ [[..:..:Gtk:Conf:Schema#T|Gtk.Conf.Schema.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+
+
+==== :SetString ====
+'':SetString(self @ [[#T|T]], key @ [[..:..:Std:String#T|Std.String.T]], val @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+
+
+==== :SetUserData ====
+'':SetUserData(self @ [[#T|T]], data @ [[..:..:Std:Address#T|Std.Address.T]], dnotify @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+
+
+==== :Size ====
+'':Size(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+
+
+==== New ====
+''New() : [[# T| T]]''
+
+
+==== GetType ====
+''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
+
+

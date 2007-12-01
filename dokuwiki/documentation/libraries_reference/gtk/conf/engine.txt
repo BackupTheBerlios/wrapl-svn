@@ -1,0 +1,180 @@
+====== Engine ======
+==== T ====
+
+
+==== :Unset ====
+'':Unset(self @ [[#T|T]], key @ [[..:..:Std:String#T|Std.String.T]], err @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+
+
+==== :Unref ====
+'':Unref(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+
+
+==== :SuggestSync ====
+'':SuggestSync(self @ [[#T|T]], err @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+
+
+==== :SetUserData ====
+'':SetUserData(self @ [[#T|T]], data @ [[..:..:Std:Address#T|Std.Address.T]], dnotify @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+
+
+==== :SetString ====
+'':SetString(self @ [[#T|T]], key @ [[..:..:Std:String#T|Std.String.T]], val @ [[..:..:Std:String#T|Std.String.T]], err @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+
+
+==== :AllDirs ====
+'':AllDirs(self @ [[#T|T]], dir @ [[..:..:Std:String#T|Std.String.T]], err @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+
+
+==== :AllEntries ====
+'':AllEntries(self @ [[#T|T]], dir @ [[..:..:Std:String#T|Std.String.T]], err @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+
+
+==== :AssociateSchema ====
+'':AssociateSchema(self @ [[#T|T]], key @ [[..:..:Std:String#T|Std.String.T]], schema_key @ [[..:..:Std:String#T|Std.String.T]], err @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+
+
+==== :ChangeSetFromCurrent ====
+'':ChangeSetFromCurrent(self @ [[#T|T]], err @ [[..:..:Std:Object#T|Std.Object.T]], first_key @ [[..:..:Std:String#T|Std.String.T]], __etc__ @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Gtk:Conf:ChangeSet#T|Gtk.Conf.ChangeSet.T]]''
+
+
+==== :ChangeSetFromCurrentv ====
+'':ChangeSetFromCurrentv(self @ [[#T|T]], keys @ [[..:..:Std:List#T|Std.List.T]], err @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Gtk:Conf:ChangeSet#T|Gtk.Conf.ChangeSet.T]]''
+
+
+==== :CommitChangeSet ====
+'':CommitChangeSet(self @ [[#T|T]], cs @ [[..:..:Gtk:Conf:ChangeSet#T|Gtk.Conf.ChangeSet.T]], remove @ [[..:..:Std:Symbol#T|Std.Symbol.T]], err @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+
+
+==== :DirExists ====
+'':DirExists(self @ [[#T|T]], dir @ [[..:..:Std:String#T|Std.String.T]], err @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+
+
+==== :Get ====
+'':Get(self @ [[#T|T]], key @ [[..:..:Std:String#T|Std.String.T]], err @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Gtk:Conf:Value#T|Gtk.Conf.Value.T]]''
+
+
+==== :GetBool ====
+'':GetBool(self @ [[#T|T]], key @ [[..:..:Std:String#T|Std.String.T]], err @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+
+
+==== :GetDefaultFromSchema ====
+'':GetDefaultFromSchema(self @ [[#T|T]], key @ [[..:..:Std:String#T|Std.String.T]], err @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Gtk:Conf:Value#T|Gtk.Conf.Value.T]]''
+
+
+==== :GetEntry ====
+'':GetEntry(self @ [[#T|T]], key @ [[..:..:Std:String#T|Std.String.T]], locale @ [[..:..:Std:String#T|Std.String.T]], use_schema_default @ [[..:..:Std:Symbol#T|Std.Symbol.T]], err @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Gtk:Conf:Entry#T|Gtk.Conf.Entry.T]]''
+
+
+==== :GetFloat ====
+'':GetFloat(self @ [[#T|T]], key @ [[..:..:Std:String#T|Std.String.T]], err @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
+
+
+==== :GetFull ====
+'':GetFull(self @ [[#T|T]], key @ [[..:..:Std:String#T|Std.String.T]], locale @ [[..:..:Std:String#T|Std.String.T]], use_schema_default @ [[..:..:Std:Symbol#T|Std.Symbol.T]], is_default_p @ [[..:..:Std:Object#T|Std.Object.T]], is_writable_p @ [[..:..:Std:Object#T|Std.Object.T]], err @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Gtk:Conf:Value#T|Gtk.Conf.Value.T]]''
+
+
+==== :GetInt ====
+'':GetInt(self @ [[#T|T]], key @ [[..:..:Std:String#T|Std.String.T]], err @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+
+
+==== :GetList ====
+'':GetList(self @ [[#T|T]], key @ [[..:..:Std:String#T|Std.String.T]], list_type @ [[..:..:Gtk:Conf:ValueType#T|Gtk.Conf.ValueType.T]], err @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+
+
+==== :GetPair ====
+'':GetPair(self @ [[#T|T]], key @ [[..:..:Std:String#T|Std.String.T]], car_type @ [[..:..:Gtk:Conf:ValueType#T|Gtk.Conf.ValueType.T]], cdr_type @ [[..:..:Gtk:Conf:ValueType#T|Gtk.Conf.ValueType.T]], car_retloc @ [[..:..:Std:Address#T|Std.Address.T]], cdr_retloc @ [[..:..:Std:Address#T|Std.Address.T]], err @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+
+
+==== :GetSchema ====
+'':GetSchema(self @ [[#T|T]], key @ [[..:..:Std:String#T|Std.String.T]], err @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Gtk:Conf:Schema#T|Gtk.Conf.Schema.T]]''
+
+
+==== :GetString ====
+'':GetString(self @ [[#T|T]], key @ [[..:..:Std:String#T|Std.String.T]], err @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:String#T|Std.String.T]]''
+
+
+==== :GetUserData ====
+'':GetUserData(self @ [[#T|T]]) : [[..:..:Std:Address#T|Std.Address.T]]''
+
+
+==== :GetWithLocale ====
+'':GetWithLocale(self @ [[#T|T]], key @ [[..:..:Std:String#T|Std.String.T]], locale @ [[..:..:Std:String#T|Std.String.T]], err @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Gtk:Conf:Value#T|Gtk.Conf.Value.T]]''
+
+
+==== :GetWithoutDefault ====
+'':GetWithoutDefault(self @ [[#T|T]], key @ [[..:..:Std:String#T|Std.String.T]], err @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Gtk:Conf:Value#T|Gtk.Conf.Value.T]]''
+
+
+==== :KeyIsWritable ====
+'':KeyIsWritable(self @ [[#T|T]], key @ [[..:..:Std:String#T|Std.String.T]], err @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+
+
+==== :NotifyAdd ====
+'':NotifyAdd(self @ [[#T|T]], namespace_section @ [[..:..:Std:String#T|Std.String.T]], func @ [[..:..:Std:Function#T|Std.Function.T]], user_data @ [[..:..:Std:Address#T|Std.Address.T]], err @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+
+
+==== :NotifyRemove ====
+'':NotifyRemove(self @ [[#T|T]], cnxn @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+
+
+==== :Ref ====
+'':Ref(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+
+
+==== :RemoveDir ====
+'':RemoveDir(self @ [[#T|T]], dir @ [[..:..:Std:String#T|Std.String.T]], err @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+
+
+==== :ReverseChangeSet ====
+'':ReverseChangeSet(self @ [[#T|T]], cs @ [[..:..:Gtk:Conf:ChangeSet#T|Gtk.Conf.ChangeSet.T]], err @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Gtk:Conf:ChangeSet#T|Gtk.Conf.ChangeSet.T]]''
+
+
+==== :Set ====
+'':Set(self @ [[#T|T]], key @ [[..:..:Std:String#T|Std.String.T]], value @ [[..:..:Gtk:Conf:Value#T|Gtk.Conf.Value.T]], err @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+
+
+==== :SetBool ====
+'':SetBool(self @ [[#T|T]], key @ [[..:..:Std:String#T|Std.String.T]], val @ [[..:..:Std:Symbol#T|Std.Symbol.T]], err @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+
+
+==== :SetFloat ====
+'':SetFloat(self @ [[#T|T]], key @ [[..:..:Std:String#T|Std.String.T]], val @ [[..:..:Std:Real#T|Std.Real.T]], err @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+
+
+==== :SetInt ====
+'':SetInt(self @ [[#T|T]], key @ [[..:..:Std:String#T|Std.String.T]], val @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], err @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+
+
+==== :SetList ====
+'':SetList(self @ [[#T|T]], key @ [[..:..:Std:String#T|Std.String.T]], list_type @ [[..:..:Gtk:Conf:ValueType#T|Gtk.Conf.ValueType.T]], list @ [[..:..:Std:Object#T|Std.Object.T]], err @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+
+
+==== :SetPair ====
+'':SetPair(self @ [[#T|T]], key @ [[..:..:Std:String#T|Std.String.T]], car_type @ [[..:..:Gtk:Conf:ValueType#T|Gtk.Conf.ValueType.T]], cdr_type @ [[..:..:Gtk:Conf:ValueType#T|Gtk.Conf.ValueType.T]], address_of_car @ [[..:..:Std:Object#T|Std.Object.T]], address_of_cdr @ [[..:..:Std:Object#T|Std.Object.T]], err @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+
+
+==== :SetSchema ====
+'':SetSchema(self @ [[#T|T]], key @ [[..:..:Std:String#T|Std.String.T]], val @ [[..:..:Gtk:Conf:Schema#T|Gtk.Conf.Schema.T]], err @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+
+
+==== GetDefault ====
+''GetDefault() : [[..:..:Gtk:Conf:Engine#T|Gtk.Conf.Engine.T]]''
+
+
+==== GetLocalForAddresses ====
+''GetLocalForAddresses(addresses : [[..:..:Std:Object#T|Std.Object.T]], err : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Gtk:Conf:Engine#T|Gtk.Conf.Engine.T]]''
+
+
+==== GetLocal ====
+''GetLocal(address : [[..:..:Std:String#T|Std.String.T]], err : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Gtk:Conf:Engine#T|Gtk.Conf.Engine.T]]''
+
+
+==== GetForAddresses ====
+''GetForAddresses(addresses : [[..:..:Std:Object#T|Std.Object.T]], err : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Gtk:Conf:Engine#T|Gtk.Conf.Engine.T]]''
+
+
+==== GetForAddress ====
+''GetForAddress(address : [[..:..:Std:String#T|Std.String.T]], err : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Gtk:Conf:Engine#T|Gtk.Conf.Engine.T]]''
+
+

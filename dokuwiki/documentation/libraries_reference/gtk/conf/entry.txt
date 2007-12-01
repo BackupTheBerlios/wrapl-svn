@@ -1,0 +1,84 @@
+====== Entry ======
+==== T ====
+
+
+==== :Unref ====
+'':Unref(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+
+
+==== :StealValue ====
+'':StealValue(self @ [[#T|T]]) : [[..:..:Gtk:Conf:Value#T|Gtk.Conf.Value.T]]''
+
+
+==== :Key ====
+'':Key(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
+
+
+==== :Value ====
+'':Value(self @ [[#T|T]]) : [[..:..:Gtk:Conf:Value#T|Gtk.Conf.Value.T]]''
+
+
+==== :Copy ====
+'':Copy(self @ [[#T|T]]) : [[..:..:Gtk:Conf:Entry#T|Gtk.Conf.Entry.T]]''
+
+
+==== :Equal ====
+'':Equal(self @ [[#T|T]], b @ [[..:..:Gtk:Conf:Entry#T|Gtk.Conf.Entry.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+
+
+==== :Free ====
+'':Free(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+
+
+==== :GetIsDefault ====
+'':GetIsDefault(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+
+
+==== :GetIsWritable ====
+'':GetIsWritable(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+
+
+==== :GetKey ====
+'':GetKey(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
+
+
+==== :GetSchemaName ====
+'':GetSchemaName(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
+
+
+==== :GetValue ====
+'':GetValue(self @ [[#T|T]]) : [[..:..:Gtk:Conf:Value#T|Gtk.Conf.Value.T]]''
+
+
+==== :Ref ====
+'':Ref(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+
+
+==== :SetIsDefault ====
+'':SetIsDefault(self @ [[#T|T]], is_default @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+
+
+==== :SetIsWritable ====
+'':SetIsWritable(self @ [[#T|T]], is_writable @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+
+
+==== :SetSchemaName ====
+'':SetSchemaName(self @ [[#T|T]], name @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+
+
+==== :SetValue ====
+'':SetValue(self @ [[#T|T]], val @ [[..:..:Gtk:Conf:Value#T|Gtk.Conf.Value.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+
+
+==== :SetValueNocopy ====
+'':SetValueNocopy(self @ [[#T|T]], val @ [[..:..:Gtk:Conf:Value#T|Gtk.Conf.Value.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+
+
+==== New ====
+''New(key : [[..:..:Std:String#T|Std.String.T]], val : [[..:..:Gtk:Conf:Value#T|Gtk.Conf.Value.T]]) : [[# T| T]]''
+
+
+==== NewNocopy ====
+''NewNocopy(key : [[..:..:Std:String#T|Std.String.T]], val : [[..:..:Gtk:Conf:Value#T|Gtk.Conf.Value.T]]) : [[# T| T]]''
+
+
