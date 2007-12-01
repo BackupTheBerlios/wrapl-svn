@@ -2,3 +2,27 @@
 ==== T ====
 
 
+==== :GetType ====
+'':GetType(self @ [[#T|T]]) : [[..:..:Gtk:Cairo:CairoPatternTypeT#T|Gtk.Cairo.CairoPatternTypeT.T]]''
+
+
+==== CreateRgb ====
+''CreateRgb(red : [[..:..:Std:Real#T|Std.Real.T]], green : [[..:..:Std:Real#T|Std.Real.T]], blue : [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Gtk:Cairo:CairoPatternT#T|Gtk.Cairo.CairoPatternT.T]]''
+
+
+==== CreateForSurface ====
+''CreateForSurface(surface : [[..:..:Gtk:Cairo:CairoSurfaceT#T|Gtk.Cairo.CairoSurfaceT.T]]) : [[..:..:Gtk:Cairo:CairoPatternT#T|Gtk.Cairo.CairoPatternT.T]]''
+
+
+==== CreateLinear ====
+''CreateLinear(x0 : [[..:..:Std:Real#T|Std.Real.T]], y0 : [[..:..:Std:Real#T|Std.Real.T]], x1 : [[..:..:Std:Real#T|Std.Real.T]], y1 : [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Gtk:Cairo:CairoPatternT#T|Gtk.Cairo.CairoPatternT.T]]''
+
+
+==== CreateRadial ====
+''CreateRadial(cx0 : [[..:..:Std:Real#T|Std.Real.T]], cy0 : [[..:..:Std:Real#T|Std.Real.T]], radius0 : [[..:..:Std:Real#T|Std.Real.T]], cx1 : [[..:..:Std:Real#T|Std.Real.T]], cy1 : [[..:..:Std:Real#T|Std.Real.T]], radius1 : [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Gtk:Cairo:CairoPatternT#T|Gtk.Cairo.CairoPatternT.T]]''
+
+
+==== CreateRgba ====
+''CreateRgba(red : [[..:..:Std:Real#T|Std.Real.T]], green : [[..:..:Std:Real#T|Std.Real.T]], blue : [[..:..:Std:Real#T|Std.Real.T]], alpha : [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Gtk:Cairo:CairoPatternT#T|Gtk.Cairo.CairoPatternT.T]]''
+
+
