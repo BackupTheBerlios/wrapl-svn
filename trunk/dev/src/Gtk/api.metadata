@@ -847,4 +847,6 @@
     </method>
   </add-node>
   <remove-node path="/api/namespace/struct[@cname='POA_GNOME_Vertigo_PanelShell__epv']"/>
+  <attr path="/api/namespace/struct[@cname='GConfEngine']/method[@cname='gconf_engine_commit_change_set']/parameters/parameter[@name='remove']" name="type">gboolean</attr>
+  <attr path="/api/namespace/object[@cname='GConfClient']/method[@cname='gconf_client_commit_change_set']/parameters/parameter[@name='remove']" name="type">gboolean</attr>
 </metadata>
