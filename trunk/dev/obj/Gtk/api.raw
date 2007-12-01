@@ -37617,4 +37617,1593 @@
       <field name="Wrap" cname="wrap" bits="3" type="guint" />
     </struct>
   </namespace>
+  <namespace name="Panel" library="libgtk">
+    <enum name="AppletShell_ImethodsIndex" cname="GNOME_Vertigo_PanelAppletShell__imethods_index" type="enum">
+      <member cname="GNOME_Vertigo_PanelAppletShell_popup_menu__imethods_index" name="Index" />
+    </enum>
+    <enum name="Shell_ImethodsIndex" cname="GNOME_Vertigo_PanelShell__imethods_index" type="enum">
+      <member cname="GNOME_Vertigo_PanelShell_displayRunDialog__imethods_index" name="Index" />
+    </enum>
+    <enum name="AppletBackgroundType" cname="PanelAppletBackgroundType" type="enum">
+      <member cname="PANEL_NO_BACKGROUND" name="NoBackground" />
+      <member cname="PANEL_COLOR_BACKGROUND" name="ColorBackground" />
+      <member cname="PANEL_PIXMAP_BACKGROUND" name="PixmapBackground" />
+    </enum>
+    <enum name="AppletFlags" cname="PanelAppletFlags" type="flags">
+      <member cname="PANEL_APPLET_FLAGS_NONE" name="FlagsNone" />
+      <member cname="PANEL_APPLET_EXPAND_MAJOR" name="ExpandMajor" value="1 &lt;&lt; 0" />
+      <member cname="PANEL_APPLET_EXPAND_MINOR" name="ExpandMinor" value="1 &lt;&lt; 1" />
+      <member cname="PANEL_APPLET_HAS_HANDLE" name="HasHandle" value="1 &lt;&lt; 2" />
+    </enum>
+    <callback name="AppletFactoryCallback" cname="PanelAppletFactoryCallback">
+      <return-type type="gboolean" />
+      <parameters>
+        <parameter type="PanelApplet*" name="applet" />
+        <parameter type="const-gchar*" name="iid" />
+        <parameter type="gpointer" name="user_data" />
+      </parameters>
+    </callback>
+    <object name="Applet" cname="PanelApplet" parent="GtkEventBox">
+      <field name="Priv" cname="priv" type="PanelAppletPrivate*" />
+      <method name="AddPreferences" cname="panel_applet_add_preferences">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="const-gchar*" name="schema_dir" />
+          <parameter type="GError**" name="opt_error" />
+        </parameters>
+      </method>
+      <method name="FactoryMain" cname="panel_applet_factory_main" shared="true">
+        <return-type type="int" />
+        <parameters>
+          <parameter type="const-gchar*" name="iid" />
+          <parameter type="GType" name="applet_type" />
+          <parameter type="PanelAppletFactoryCallback" name="callback" />
+          <parameter type="gpointer" name="data" />
+        </parameters>
+      </method>
+      <method name="FactoryMainClosure" cname="panel_applet_factory_main_closure" shared="true">
+        <return-type type="int" />
+        <parameters>
+          <parameter type="const-gchar*" name="iid" />
+          <parameter type="GType" name="applet_type" />
+          <parameter type="GClosure*" name="closure" />
+        </parameters>
+      </method>
+      <method name="GconfGetBool" cname="panel_applet_gconf_get_bool">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="const-gchar*" name="key" />
+          <parameter type="GError**" name="opt_error" />
+        </parameters>
+      </method>
+      <method name="GconfGetFloat" cname="panel_applet_gconf_get_float">
+        <return-type type="gdouble" />
+        <parameters>
+          <parameter type="const-gchar*" name="key" />
+          <parameter type="GError**" name="opt_error" />
+        </parameters>
+      </method>
+      <method name="GconfGetFullKey" cname="panel_applet_gconf_get_full_key">
+        <return-type type="gchar*" />
+        <parameters>
+          <parameter type="const-gchar*" name="key" />
+        </parameters>
+      </method>
+      <method name="GconfGetInt" cname="panel_applet_gconf_get_int">
+        <return-type type="gint" />
+        <parameters>
+          <parameter type="const-gchar*" name="key" />
+          <parameter type="GError**" name="opt_error" />
+        </parameters>
+      </method>
+      <method name="GconfGetList" cname="panel_applet_gconf_get_list">
+        <return-type type="GSList*" />
+        <parameters>
+          <parameter type="const-gchar*" name="key" />
+          <parameter type="GConfValueType" name="list_type" />
+          <parameter type="GError**" name="opt_error" />
+        </parameters>
+      </method>
+      <method name="GconfGetString" cname="panel_applet_gconf_get_string">
+        <return-type type="gchar*" />
+        <parameters>
+          <parameter type="const-gchar*" name="key" />
+          <parameter type="GError**" name="opt_error" />
+        </parameters>
+      </method>
+      <method name="GconfGetValue" cname="panel_applet_gconf_get_value">
+        <return-type type="GConfValue*" />
+        <parameters>
+          <parameter type="const-gchar*" name="key" />
+          <parameter type="GError**" name="opt_error" />
+        </parameters>
+      </method>
+      <method name="GconfSetBool" cname="panel_applet_gconf_set_bool">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="const-gchar*" name="key" />
+          <parameter type="gboolean" name="the_bool" />
+          <parameter type="GError**" name="opt_error" />
+        </parameters>
+      </method>
+      <method name="GconfSetFloat" cname="panel_applet_gconf_set_float">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="const-gchar*" name="key" />
+          <parameter type="gdouble" name="the_float" />
+          <parameter type="GError**" name="opt_error" />
+        </parameters>
+      </method>
+      <method name="GconfSetInt" cname="panel_applet_gconf_set_int">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="const-gchar*" name="key" />
+          <parameter type="gint" name="the_int" />
+          <parameter type="GError**" name="opt_error" />
+        </parameters>
+      </method>
+      <method name="GconfSetList" cname="panel_applet_gconf_set_list">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="const-gchar*" name="key" />
+          <parameter type="GConfValueType" name="list_type" />
+          <parameter type="GSList*" name="list" />
+          <parameter type="GError**" name="opt_error" />
+        </parameters>
+      </method>
+      <method name="GconfSetString" cname="panel_applet_gconf_set_string">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="const-gchar*" name="key" />
+          <parameter type="const-gchar*" name="the_string" />
+          <parameter type="GError**" name="opt_error" />
+        </parameters>
+      </method>
+      <method name="GconfSetValue" cname="panel_applet_gconf_set_value">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="const-gchar*" name="key" />
+          <parameter type="GConfValue*" name="value" />
+          <parameter type="GError**" name="opt_error" />
+        </parameters>
+      </method>
+      <method name="GetBackground" cname="panel_applet_get_background">
+        <return-type type="PanelAppletBackgroundType" />
+        <parameters>
+          <parameter type="GdkColor*" name="color" />
+          <parameter type="GdkPixmap**" name="pixmap" />
+        </parameters>
+      </method>
+      <method name="GetControl" cname="panel_applet_get_control">
+        <return-type type="BonoboControl*" />
+      </method>
+      <method name="GetFlags" cname="panel_applet_get_flags">
+        <return-type type="PanelAppletFlags" />
+      </method>
+      <method name="GetLockedDown" cname="panel_applet_get_locked_down">
+        <return-type type="gboolean" />
+      </method>
+      <method name="GetOrient" cname="panel_applet_get_orient">
+        <return-type type="PanelAppletOrient" />
+      </method>
+      <method name="GetPopupComponent" cname="panel_applet_get_popup_component">
+        <return-type type="BonoboUIComponent*" />
+      </method>
+      <method name="GetPreferencesKey" cname="panel_applet_get_preferences_key">
+        <return-type type="gchar*" />
+      </method>
+      <method name="GetSize" cname="panel_applet_get_size">
+        <return-type type="guint" />
+      </method>
+      <method name="GetType" cname="panel_applet_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+      <constructor cname="panel_applet_new" />
+      <method name="RequestFocus" cname="panel_applet_request_focus">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="guint32" name="timestamp" />
+        </parameters>
+      </method>
+      <method name="SetBackgroundWidget" cname="panel_applet_set_background_widget">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GtkWidget*" name="widget" />
+        </parameters>
+      </method>
+      <method name="SetFlags" cname="panel_applet_set_flags">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="PanelAppletFlags" name="flags" />
+        </parameters>
+      </method>
+      <method name="SetSizeHints" cname="panel_applet_set_size_hints">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="const-int*" name="size_hints" />
+          <parameter type="int" name="n_elements" />
+          <parameter type="int" name="base_size" />
+        </parameters>
+      </method>
+      <method name="SetupMenu" cname="panel_applet_setup_menu">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="const-gchar*" name="xml" />
+          <parameter type="const-BonoboUIVerb*" name="verb_list" />
+          <parameter type="gpointer" name="user_data" />
+        </parameters>
+      </method>
+      <method name="SetupMenuFromFile" cname="panel_applet_setup_menu_from_file">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="const-gchar*" name="opt_datadir" />
+          <parameter type="const-gchar*" name="file" />
+          <parameter type="const-gchar*" name="opt_app_name" />
+          <parameter type="const-BonoboUIVerb*" name="verb_list" />
+          <parameter type="gpointer" name="user_data" />
+        </parameters>
+      </method>
+      <method name="ShlibFactory" cname="panel_applet_shlib_factory" shared="true">
+        <return-type type="Bonobo_Unknown" />
+        <parameters>
+          <parameter type="const-char*" name="iid" />
+          <parameter type="GType" name="applet_type" />
+          <parameter type="PortableServer_POA" name="poa" />
+          <parameter type="gpointer" name="impl_ptr" />
+          <parameter type="PanelAppletFactoryCallback" name="callback" />
+          <parameter type="gpointer" name="user_data" />
+          <parameter type="CORBA_Environment*" name="ev" />
+        </parameters>
+      </method>
+      <method name="ShlibFactoryClosure" cname="panel_applet_shlib_factory_closure" shared="true">
+        <return-type type="Bonobo_Unknown" />
+        <parameters>
+          <parameter type="const-char*" name="iid" />
+          <parameter type="GType" name="applet_type" />
+          <parameter type="PortableServer_POA" name="poa" />
+          <parameter type="gpointer" name="impl_ptr" />
+          <parameter type="GClosure*" name="closure" />
+          <parameter type="CORBA_Environment*" name="ev" />
+        </parameters>
+      </method>
+    </object>
+    <alias name="Orient" cname="GNOME_Vertigo_PanelOrient" type="CORBA_unsigned_short" />
+    <alias name="Size" cname="GNOME_Vertigo_PanelSize" type="CORBA_unsigned_short" />
+    <struct name="AppletShell" cname="POA_GNOME_Vertigo_PanelAppletShell">
+      <field name="Private" cname="_private" type="void*" />
+      <field name="Vepv" cname="vepv" type="POA_GNOME_Vertigo_PanelAppletShell__vepv*" />
+    </struct>
+    <struct name="AppletShell_Epv" cname="POA_GNOME_Vertigo_PanelAppletShell__epv">
+      <field name="Private" cname="_private" type="void*" />
+      <callback cname="popup_menu">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="PortableServer_Servant" name="_servant," />
+        </parameters>
+      </callback>
+    </struct>
+    <struct name="AppletShell_Vepv" cname="POA_GNOME_Vertigo_PanelAppletShell__vepv">
+      <field name="BaseEpv" cname="_base_epv" type="PortableServer_ServantBase__epv*" />
+      <field name="Bonobo_UnknownEpv" cname="Bonobo_Unknown_epv" type="POA_Bonobo_Unknown__epv*" />
+      <field name="GNOME_Vertigo_PanelAppletShellEpv" cname="GNOME_Vertigo_PanelAppletShell_epv" type="POA_GNOME_Vertigo_PanelAppletShell__epv*" />
+    </struct>
+    <struct name="Shell" cname="POA_GNOME_Vertigo_PanelShell">
+      <field name="Private" cname="_private" type="void*" />
+      <field name="Vepv" cname="vepv" type="POA_GNOME_Vertigo_PanelShell__vepv*" />
+    </struct>
+    <struct name="Shell_Epv" cname="POA_GNOME_Vertigo_PanelShell__epv">
+      <field name="Struct" cname="struct-CORBA_TypeCode_struct-TC_CORBA_sequence_CORBA_long_struct" type="ORBIT2_MAYBE_CONST" />
+      <field name="CORBASequence_CORBALong" cname="CORBA_sequence_CORBA_long GNOME_Vertigo_SizeHintList" type="typedef" />
+      <field name="Struct" cname="struct-CORBA_TypeCode_struct-TC_GNOME_Vertigo_SizeHintList_struct" type="ORBIT2_MAYBE_CONST" />
+      <field name="CORBAString" cname="CORBA_string GNOME_Vertigo_PanelBackground" type="typedef" />
+      <field name="Struct" cname="struct-CORBA_TypeCode_struct-TC_GNOME_Vertigo_PanelBackground_struct" type="ORBIT2_MAYBE_CONST" />
+      <field name="CORBA_Object" cname="CORBA_Object GNOME_Vertigo_PanelShell" type="typedef" />
+      <field name="CORBAUnsignedLong" cname="CORBA_unsigned_long GNOME_Vertigo_PanelShell__classid" type="extern" />
+      <field name="Struct" cname="struct-CORBA_TypeCode_struct-TC_GNOME_Vertigo_PanelShell_struct" type="ORBIT2_MAYBE_CONST" />
+      <field name="CORBA_Object" cname="CORBA_Object GNOME_Vertigo_PanelAppletShell" type="typedef" />
+      <field name="CORBAUnsignedLong" cname="CORBA_unsigned_long GNOME_Vertigo_PanelAppletShell__classid" type="extern" />
+      <field name="Struct" cname="struct-CORBA_TypeCode_struct-TC_GNOME_Vertigo_PanelAppletShell_struct" type="ORBIT2_MAYBE_CONST" />
+      <field name="Private" cname="_private" type="void*" />
+      <callback cname="displayRunDialog">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="PortableServer_Servant" name="_servant," />
+        </parameters>
+      </callback>
+    </struct>
+    <struct name="Shell_Vepv" cname="POA_GNOME_Vertigo_PanelShell__vepv">
+      <field name="BaseEpv" cname="_base_epv" type="PortableServer_ServantBase__epv*" />
+      <field name="Bonobo_UnknownEpv" cname="Bonobo_Unknown_epv" type="POA_Bonobo_Unknown__epv*" />
+      <field name="GNOME_Vertigo_PanelShellEpv" cname="GNOME_Vertigo_PanelShell_epv" type="POA_GNOME_Vertigo_PanelShell__epv*" />
+    </struct>
+    <alias name="AppletOrient" cname="PanelAppletOrient" type="CORBA_unsigned_short" />
+  </namespace>
+  <namespace name="Conf" library="libgtk">
+    <enum name="ClientErrorHandlingMode" cname="GConfClientErrorHandlingMode" type="enum">
+      <member cname="GCONF_CLIENT_HANDLE_NONE" name="None" />
+      <member cname="GCONF_CLIENT_HANDLE_UNRETURNED" name="Unreturned" />
+      <member cname="GCONF_CLIENT_HANDLE_ALL" name="All" />
+    </enum>
+    <enum name="ClientPreloadType" cname="GConfClientPreloadType" type="enum">
+      <member cname="GCONF_CLIENT_PRELOAD_NONE" name="None" />
+      <member cname="GCONF_CLIENT_PRELOAD_ONELEVEL" name="Onelevel" />
+      <member cname="GCONF_CLIENT_PRELOAD_RECURSIVE" name="Recursive" />
+    </enum>
+    <enum name="Error" cname="GConfError" type="enum">
+      <member cname="GCONF_ERROR_SUCCESS" name="Success" />
+      <member cname="GCONF_ERROR_FAILED" name="Failed" value="1" />
+      <member cname="GCONF_ERROR_NO_SERVER" name="NoServer" value="2" />
+      <member cname="GCONF_ERROR_NO_PERMISSION" name="NoPermission" value="3" />
+      <member cname="GCONF_ERROR_BAD_ADDRESS" name="BadAddress" value="4" />
+      <member cname="GCONF_ERROR_BAD_KEY" name="BadKey" value="5" />
+      <member cname="GCONF_ERROR_PARSE_ERROR" name="ParseError" value="6" />
+      <member cname="GCONF_ERROR_CORRUPT" name="Corrupt" value="7" />
+      <member cname="GCONF_ERROR_TYPE_MISMATCH" name="TypeMismatch" value="8" />
+      <member cname="GCONF_ERROR_IS_DIR" name="IsDir" value="9" />
+      <member cname="GCONF_ERROR_IS_KEY" name="IsKey" value="10" />
+      <member cname="GCONF_ERROR_OVERRIDDEN" name="Overridden" value="11" />
+      <member cname="GCONF_ERROR_OAF_ERROR" name="OafError" value="12" />
+      <member cname="GCONF_ERROR_LOCAL_ENGINE" name="LocalEngine" value="13" />
+      <member cname="GCONF_ERROR_LOCK_FAILED" name="LockFailed" value="14" />
+      <member cname="GCONF_ERROR_NO_WRITABLE_DATABASE" name="NoWritableDatabase" value="15" />
+      <member cname="GCONF_ERROR_IN_SHUTDOWN" name="InShutdown" value="16" />
+    </enum>
+    <enum name="UnsetFlags" cname="GConfUnsetFlags" type="flags">
+      <member cname="GCONF_UNSET_INCLUDING_SCHEMA_NAMES" name="Names" value="1 &lt;&lt; 0" />
+    </enum>
+    <enum name="ValueType" cname="GConfValueType" type="enum">
+      <member cname="GCONF_VALUE_INVALID" name="Invalid" />
+      <member cname="GCONF_VALUE_STRING" name="String" />
+      <member cname="GCONF_VALUE_INT" name="Int" />
+      <member cname="GCONF_VALUE_FLOAT" name="Float" />
+      <member cname="GCONF_VALUE_BOOL" name="Bool" />
+      <member cname="GCONF_VALUE_SCHEMA" name="Schema" />
+      <member cname="GCONF_VALUE_LIST" name="List" />
+      <member cname="GCONF_VALUE_PAIR" name="Pair" />
+    </enum>
+    <callback name="ChangeSetForeachFunc" cname="GConfChangeSetForeachFunc">
+      <return-type type="void" />
+      <parameters>
+        <parameter type="GConfChangeSet*" name="cs" />
+        <parameter type="const-gchar*" name="key" />
+        <parameter type="GConfValue*" name="value" />
+        <parameter type="gpointer" name="user_data" />
+      </parameters>
+    </callback>
+    <callback name="ClientErrorHandlerFunc" cname="GConfClientErrorHandlerFunc">
+      <return-type type="void" />
+      <parameters>
+        <parameter type="GConfClient*" name="client" />
+        <parameter type="GError*" name="error" />
+      </parameters>
+    </callback>
+    <callback name="ClientNotifyFunc" cname="GConfClientNotifyFunc">
+      <return-type type="void" />
+      <parameters>
+        <parameter type="GConfClient*" name="client" />
+        <parameter type="guint" name="cnxn_id" />
+        <parameter type="GConfEntry*" name="entry" />
+        <parameter type="gpointer" name="user_data" />
+      </parameters>
+    </callback>
+    <callback name="ListenersCallback" cname="GConfListenersCallback">
+      <return-type type="void" />
+      <parameters>
+        <parameter type="GConfListeners*" name="listeners" />
+        <parameter type="const-gchar*" name="all_above_key" />
+        <parameter type="guint" name="cnxn_id" />
+        <parameter type="gpointer" name="listener_data" />
+        <parameter type="gpointer" name="user_data" />
+      </parameters>
+    </callback>
+    <callback name="ListenersForeach" cname="GConfListenersForeach">
+      <return-type type="void" />
+      <parameters>
+        <parameter type="const-gchar*" name="location" />
+        <parameter type="guint" name="cnxn_id" />
+        <parameter type="gpointer" name="listener_data" />
+        <parameter type="gpointer" name="user_data" />
+      </parameters>
+    </callback>
+    <callback name="ListenersPredicate" cname="GConfListenersPredicate">
+      <return-type type="gboolean" />
+      <parameters>
+        <parameter type="const-gchar*" name="location" />
+        <parameter type="guint" name="cnxn_id" />
+        <parameter type="gpointer" name="listener_data" />
+        <parameter type="gpointer" name="user_data" />
+      </parameters>
+    </callback>
+    <callback name="NotifyFunc" cname="GConfNotifyFunc">
+      <return-type type="void" />
+      <parameters>
+        <parameter type="GConfEngine*" name="conf" />
+        <parameter type="guint" name="cnxn_id" />
+        <parameter type="GConfEntry*" name="entry" />
+        <parameter type="gpointer" name="user_data" />
+      </parameters>
+    </callback>
+    <object name="Client" cname="GConfClient" parent="GObject">
+      <field name="Engine" cname="engine" type="GConfEngine*" />
+      <field name="ErrorMode" cname="error_mode" type="GConfClientErrorHandlingMode" />
+      <field name="DirHash" cname="dir_hash" type="GHashTable*" />
+      <field name="CacheHash" cname="cache_hash" type="GHashTable*" />
+      <field name="Listeners" cname="listeners" type="GConfListeners*" />
+      <field name="NotifyList" cname="notify_list" type="GSList*" />
+      <field name="NotifyHandler" cname="notify_handler" type="guint" />
+      <field name="PendingNotifyCount" cname="pending_notify_count" type="int" />
+      <field name="Pad1" cname="pad1" type="gpointer" />
+      <field name="Pad2" cname="pad2" type="int" />
+      <method name="AddDir" cname="gconf_client_add_dir">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="const-gchar*" name="dir" />
+          <parameter type="GConfClientPreloadType" name="preload" />
+          <parameter type="GError**" name="err" />
+        </parameters>
+      </method>
+      <method name="AllDirs" cname="gconf_client_all_dirs">
+        <return-type type="GSList*" />
+        <parameters>
+          <parameter type="const-gchar*" name="dir" />
+          <parameter type="GError**" name="err" />
+        </parameters>
+      </method>
+      <method name="AllEntries" cname="gconf_client_all_entries">
+        <return-type type="GSList*" />
+        <parameters>
+          <parameter type="const-gchar*" name="dir" />
+          <parameter type="GError**" name="err" />
+        </parameters>
+      </method>
+      <method name="ChangeSetFromCurrent" cname="gconf_client_change_set_from_current">
+        <return-type type="GConfChangeSet*" />
+        <parameters>
+          <parameter type="GError**" name="err" />
+          <parameter type="const-gchar*" name="first_key" />
+          <parameter ellipsis="true" />
+        </parameters>
+      </method>
+      <method name="ChangeSetFromCurrentv" cname="gconf_client_change_set_from_currentv">
+        <return-type type="GConfChangeSet*" />
+        <parameters>
+          <parameter type="const-gchar**" name="keys" />
+          <parameter type="GError**" name="err" />
+        </parameters>
+      </method>
+      <method name="ClearCache" cname="gconf_client_clear_cache">
+        <return-type type="void" />
+      </method>
+      <method name="CommitChangeSet" cname="gconf_client_commit_change_set">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="GConfChangeSet*" name="cs" />
+          <parameter type="/*" name="remove" />
+          <parameter type="GError**" name="err" />
+        </parameters>
+      </method>
+      <method name="DirExists" cname="gconf_client_dir_exists">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="const-gchar*" name="dir" />
+          <parameter type="GError**" name="err" />
+        </parameters>
+      </method>
+      <method name="Error" cname="gconf_client_error">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GError*" name="error" />
+        </parameters>
+      </method>
+      <method name="Get" cname="gconf_client_get">
+        <return-type type="GConfValue*" />
+        <parameters>
+          <parameter type="const-gchar*" name="key" />
+          <parameter type="GError**" name="err" />
+        </parameters>
+      </method>
+      <method name="GetBool" cname="gconf_client_get_bool">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="const-gchar*" name="key" />
+          <parameter type="GError**" name="err" />
+        </parameters>
+      </method>
+      <method name="GetDefault" cname="gconf_client_get_default" shared="true">
+        <return-type type="GConfClient*" />
+      </method>
+      <method name="GetDefaultFromSchema" cname="gconf_client_get_default_from_schema">
+        <return-type type="GConfValue*" />
+        <parameters>
+          <parameter type="const-gchar*" name="key" />
+          <parameter type="GError**" name="err" />
+        </parameters>
+      </method>
+      <method name="GetEntry" cname="gconf_client_get_entry">
+        <return-type type="GConfEntry*" />
+        <parameters>
+          <parameter type="const-gchar*" name="key" />
+          <parameter type="const-gchar*" name="locale" />
+          <parameter type="gboolean" name="use_schema_default" />
+          <parameter type="GError**" name="err" />
+        </parameters>
+      </method>
+      <method name="GetFloat" cname="gconf_client_get_float">
+        <return-type type="gdouble" />
+        <parameters>
+          <parameter type="const-gchar*" name="key" />
+          <parameter type="GError**" name="err" />
+        </parameters>
+      </method>
+      <method name="GetForEngine" cname="gconf_client_get_for_engine" shared="true">
+        <return-type type="GConfClient*" />
+        <parameters>
+          <parameter type="GConfEngine*" name="engine" />
+        </parameters>
+      </method>
+      <method name="GetInt" cname="gconf_client_get_int">
+        <return-type type="gint" />
+        <parameters>
+          <parameter type="const-gchar*" name="key" />
+          <parameter type="GError**" name="err" />
+        </parameters>
+      </method>
+      <method name="GetList" cname="gconf_client_get_list">
+        <return-type type="GSList*" />
+        <parameters>
+          <parameter type="const-gchar*" name="key" />
+          <parameter type="GConfValueType" name="list_type" />
+          <parameter type="GError**" name="err" />
+        </parameters>
+      </method>
+      <method name="GetPair" cname="gconf_client_get_pair">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="const-gchar*" name="key" />
+          <parameter type="GConfValueType" name="car_type" />
+          <parameter type="GConfValueType" name="cdr_type" />
+          <parameter type="gpointer" name="car_retloc" />
+          <parameter type="gpointer" name="cdr_retloc" />
+          <parameter type="GError**" name="err" />
+        </parameters>
+      </method>
+      <method name="GetSchema" cname="gconf_client_get_schema">
+        <return-type type="GConfSchema*" />
+        <parameters>
+          <parameter type="const-gchar*" name="key" />
+          <parameter type="GError**" name="err" />
+        </parameters>
+      </method>
+      <method name="GetString" cname="gconf_client_get_string">
+        <return-type type="gchar*" />
+        <parameters>
+          <parameter type="const-gchar*" name="key" />
+          <parameter type="GError**" name="err" />
+        </parameters>
+      </method>
+      <method name="GetType" cname="gconf_client_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+      <method name="GetWithoutDefault" cname="gconf_client_get_without_default">
+        <return-type type="GConfValue*" />
+        <parameters>
+          <parameter type="const-gchar*" name="key" />
+          <parameter type="GError**" name="err" />
+        </parameters>
+      </method>
+      <method name="KeyIsWritable" cname="gconf_client_key_is_writable">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="const-gchar*" name="key" />
+          <parameter type="GError**" name="err" />
+        </parameters>
+      </method>
+      <method name="Notify" cname="gconf_client_notify">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="const-char*" name="key" />
+        </parameters>
+      </method>
+      <method name="NotifyAdd" cname="gconf_client_notify_add">
+        <return-type type="guint" />
+        <parameters>
+          <parameter type="const-gchar*" name="namespace_section" />
+          <parameter type="GConfClientNotifyFunc" name="func" />
+          <parameter type="gpointer" name="user_data" />
+          <parameter type="GFreeFunc" name="destroy_notify" />
+          <parameter type="GError**" name="err" />
+        </parameters>
+      </method>
+      <method name="NotifyRemove" cname="gconf_client_notify_remove">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="guint" name="cnxn" />
+        </parameters>
+      </method>
+      <method name="Preload" cname="gconf_client_preload">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="const-gchar*" name="dirname" />
+          <parameter type="GConfClientPreloadType" name="type" />
+          <parameter type="GError**" name="err" />
+        </parameters>
+      </method>
+      <method name="RecursiveUnset" cname="gconf_client_recursive_unset">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="const-char*" name="key" />
+          <parameter type="GConfUnsetFlags" name="flags" />
+          <parameter type="GError**" name="err" />
+        </parameters>
+      </method>
+      <method name="RemoveDir" cname="gconf_client_remove_dir">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="const-gchar*" name="dir" />
+          <parameter type="GError**" name="err" />
+        </parameters>
+      </method>
+      <method name="ReverseChangeSet" cname="gconf_client_reverse_change_set">
+        <return-type type="GConfChangeSet*" />
+        <parameters>
+          <parameter type="GConfChangeSet*" name="cs" />
+          <parameter type="GError**" name="err" />
+        </parameters>
+      </method>
+      <method name="Set" cname="gconf_client_set">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="const-gchar*" name="key" />
+          <parameter type="const-GConfValue*" name="val" />
+          <parameter type="GError**" name="err" />
+        </parameters>
+      </method>
+      <method name="SetBool" cname="gconf_client_set_bool">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="const-gchar*" name="key" />
+          <parameter type="gboolean" name="val" />
+          <parameter type="GError**" name="err" />
+        </parameters>
+      </method>
+      <method name="SetErrorHandling" cname="gconf_client_set_error_handling">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GConfClientErrorHandlingMode" name="mode" />
+        </parameters>
+      </method>
+      <method name="SetFloat" cname="gconf_client_set_float">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="const-gchar*" name="key" />
+          <parameter type="gdouble" name="val" />
+          <parameter type="GError**" name="err" />
+        </parameters>
+      </method>
+      <method name="SetGlobalDefaultErrorHandler" cname="gconf_client_set_global_default_error_handler" shared="true">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GConfClientErrorHandlerFunc" name="func" />
+        </parameters>
+      </method>
+      <method name="SetInt" cname="gconf_client_set_int">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="const-gchar*" name="key" />
+          <parameter type="gint" name="val" />
+          <parameter type="GError**" name="err" />
+        </parameters>
+      </method>
+      <method name="SetList" cname="gconf_client_set_list">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="const-gchar*" name="key" />
+          <parameter type="GConfValueType" name="list_type" />
+          <parameter type="GSList*" name="list" />
+          <parameter type="GError**" name="err" />
+        </parameters>
+      </method>
+      <method name="SetPair" cname="gconf_client_set_pair">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="const-gchar*" name="key" />
+          <parameter type="GConfValueType" name="car_type" />
+          <parameter type="GConfValueType" name="cdr_type" />
+          <parameter type="gconstpointer" name="address_of_car" />
+          <parameter type="gconstpointer" name="address_of_cdr" />
+          <parameter type="GError**" name="err" />
+        </parameters>
+      </method>
+      <method name="SetSchema" cname="gconf_client_set_schema">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="const-gchar*" name="key" />
+          <parameter type="const-GConfSchema*" name="val" />
+          <parameter type="GError**" name="err" />
+        </parameters>
+      </method>
+      <method name="SetString" cname="gconf_client_set_string">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="const-gchar*" name="key" />
+          <parameter type="const-gchar*" name="val" />
+          <parameter type="GError**" name="err" />
+        </parameters>
+      </method>
+      <method name="SuggestSync" cname="gconf_client_suggest_sync">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GError**" name="err" />
+        </parameters>
+      </method>
+      <method name="UnreturnedError" cname="gconf_client_unreturned_error">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GError*" name="error" />
+        </parameters>
+      </method>
+      <method name="Unset" cname="gconf_client_unset">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="const-gchar*" name="key" />
+          <parameter type="GError**" name="err" />
+        </parameters>
+      </method>
+      <method name="ValueChanged" cname="gconf_client_value_changed">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="const-gchar*" name="key" />
+          <parameter type="GConfValue*" name="value" />
+        </parameters>
+      </method>
+    </object>
+    <struct name="ChangeSet" cname="GConfChangeSet" opaque="true">
+      <method name="CheckValue" cname="gconf_change_set_check_value">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="const-gchar*" name="key" />
+          <parameter type="GConfValue**" name="value_retloc" />
+        </parameters>
+      </method>
+      <method name="Clear" cname="gconf_change_set_clear">
+        <return-type type="void" />
+      </method>
+      <method name="Foreach" cname="gconf_change_set_foreach">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GConfChangeSetForeachFunc" name="func" />
+          <parameter type="gpointer" name="user_data" />
+        </parameters>
+      </method>
+      <method name="GetType" cname="gconf_change_set_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+      <method name="GetUserData" cname="gconf_change_set_get_user_data">
+        <return-type type="gpointer" />
+      </method>
+      <constructor cname="gconf_change_set_new" />
+      <method name="Ref" cname="gconf_change_set_ref">
+        <return-type type="void" />
+      </method>
+      <method name="Remove" cname="gconf_change_set_remove">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="const-gchar*" name="key" />
+        </parameters>
+      </method>
+      <method name="Set" cname="gconf_change_set_set">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="const-gchar*" name="key" />
+          <parameter type="GConfValue*" name="value" />
+        </parameters>
+      </method>
+      <method name="SetBool" cname="gconf_change_set_set_bool">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="const-gchar*" name="key" />
+          <parameter type="gboolean" name="val" />
+        </parameters>
+      </method>
+      <method name="SetFloat" cname="gconf_change_set_set_float">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="const-gchar*" name="key" />
+          <parameter type="gdouble" name="val" />
+        </parameters>
+      </method>
+      <method name="SetInt" cname="gconf_change_set_set_int">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="const-gchar*" name="key" />
+          <parameter type="gint" name="val" />
+        </parameters>
+      </method>
+      <method name="SetList" cname="gconf_change_set_set_list">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="const-gchar*" name="key" />
+          <parameter type="GConfValueType" name="list_type" />
+          <parameter type="GSList*" name="list" />
+        </parameters>
+      </method>
+      <method name="SetNocopy" cname="gconf_change_set_set_nocopy">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="const-gchar*" name="key" />
+          <parameter type="GConfValue*" name="value" />
+        </parameters>
+      </method>
+      <method name="SetPair" cname="gconf_change_set_set_pair">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="const-gchar*" name="key" />
+          <parameter type="GConfValueType" name="car_type" />
+          <parameter type="GConfValueType" name="cdr_type" />
+          <parameter type="gconstpointer" name="address_of_car" />
+          <parameter type="gconstpointer" name="address_of_cdr" />
+        </parameters>
+      </method>
+      <method name="SetSchema" cname="gconf_change_set_set_schema">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="const-gchar*" name="key" />
+          <parameter type="GConfSchema*" name="val" />
+        </parameters>
+      </method>
+      <method name="SetString" cname="gconf_change_set_set_string">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="const-gchar*" name="key" />
+          <parameter type="const-gchar*" name="val" />
+        </parameters>
+      </method>
+      <method name="SetUserData" cname="gconf_change_set_set_user_data">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="gpointer" name="data" />
+          <parameter type="GDestroyNotify" name="dnotify" />
+        </parameters>
+      </method>
+      <method name="Size" cname="gconf_change_set_size">
+        <return-type type="guint" />
+      </method>
+      <method name="Unref" cname="gconf_change_set_unref">
+        <return-type type="void" />
+      </method>
+      <method name="Unset" cname="gconf_change_set_unset">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="const-gchar*" name="key" />
+        </parameters>
+      </method>
+    </struct>
+    <struct name="Engine" cname="GConfEngine" opaque="true">
+      <method name="AllDirs" cname="gconf_engine_all_dirs">
+        <return-type type="GSList*" />
+        <parameters>
+          <parameter type="const-gchar*" name="dir" />
+          <parameter type="GError**" name="err" />
+        </parameters>
+      </method>
+      <method name="AllEntries" cname="gconf_engine_all_entries">
+        <return-type type="GSList*" />
+        <parameters>
+          <parameter type="const-gchar*" name="dir" />
+          <parameter type="GError**" name="err" />
+        </parameters>
+      </method>
+      <method name="AssociateSchema" cname="gconf_engine_associate_schema">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="const-gchar*" name="key" />
+          <parameter type="const-gchar*" name="schema_key" />
+          <parameter type="GError**" name="err" />
+        </parameters>
+      </method>
+      <method name="ChangeSetFromCurrent" cname="gconf_engine_change_set_from_current">
+        <return-type type="GConfChangeSet*" />
+        <parameters>
+          <parameter type="GError**" name="err" />
+          <parameter type="const-gchar*" name="first_key" />
+          <parameter ellipsis="true" />
+        </parameters>
+      </method>
+      <method name="ChangeSetFromCurrentv" cname="gconf_engine_change_set_from_currentv">
+        <return-type type="GConfChangeSet*" />
+        <parameters>
+          <parameter type="const-gchar**" name="keys" />
+          <parameter type="GError**" name="err" />
+        </parameters>
+      </method>
+      <method name="CommitChangeSet" cname="gconf_engine_commit_change_set">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="GConfChangeSet*" name="cs" />
+          <parameter type="/*" name="remove" />
+          <parameter type="GError**" name="err" />
+        </parameters>
+      </method>
+      <method name="DirExists" cname="gconf_engine_dir_exists">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="const-gchar*" name="dir" />
+          <parameter type="GError**" name="err" />
+        </parameters>
+      </method>
+      <method name="Get" cname="gconf_engine_get">
+        <return-type type="GConfValue*" />
+        <parameters>
+          <parameter type="const-gchar*" name="key" />
+          <parameter type="GError**" name="err" />
+        </parameters>
+      </method>
+      <method name="GetBool" cname="gconf_engine_get_bool">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="const-gchar*" name="key" />
+          <parameter type="GError**" name="err" />
+        </parameters>
+      </method>
+      <method name="GetDefault" cname="gconf_engine_get_default" shared="true">
+        <return-type type="GConfEngine*" />
+      </method>
+      <method name="GetDefaultFromSchema" cname="gconf_engine_get_default_from_schema">
+        <return-type type="GConfValue*" />
+        <parameters>
+          <parameter type="const-gchar*" name="key" />
+          <parameter type="GError**" name="err" />
+        </parameters>
+      </method>
+      <method name="GetEntry" cname="gconf_engine_get_entry">
+        <return-type type="GConfEntry*" />
+        <parameters>
+          <parameter type="const-gchar*" name="key" />
+          <parameter type="const-gchar*" name="locale" />
+          <parameter type="gboolean" name="use_schema_default" />
+          <parameter type="GError**" name="err" />
+        </parameters>
+      </method>
+      <method name="GetFloat" cname="gconf_engine_get_float">
+        <return-type type="gdouble" />
+        <parameters>
+          <parameter type="const-gchar*" name="key" />
+          <parameter type="GError**" name="err" />
+        </parameters>
+      </method>
+      <method name="GetForAddress" cname="gconf_engine_get_for_address" shared="true">
+        <return-type type="GConfEngine*" />
+        <parameters>
+          <parameter type="const-gchar*" name="address" />
+          <parameter type="GError**" name="err" />
+        </parameters>
+      </method>
+      <method name="GetForAddresses" cname="gconf_engine_get_for_addresses" shared="true">
+        <return-type type="GConfEngine*" />
+        <parameters>
+          <parameter type="GSList*" name="addresses" />
+          <parameter type="GError**" name="err" />
+        </parameters>
+      </method>
+      <method name="GetFull" cname="gconf_engine_get_full">
+        <return-type type="GConfValue*" />
+        <parameters>
+          <parameter type="const-gchar*" name="key" />
+          <parameter type="const-gchar*" name="locale" />
+          <parameter type="gboolean" name="use_schema_default" />
+          <parameter type="gboolean*" name="is_default_p" />
+          <parameter type="gboolean*" name="is_writable_p" />
+          <parameter type="GError**" name="err" />
+        </parameters>
+      </method>
+      <method name="GetInt" cname="gconf_engine_get_int">
+        <return-type type="gint" />
+        <parameters>
+          <parameter type="const-gchar*" name="key" />
+          <parameter type="GError**" name="err" />
+        </parameters>
+      </method>
+      <method name="GetList" cname="gconf_engine_get_list">
+        <return-type type="GSList*" />
+        <parameters>
+          <parameter type="const-gchar*" name="key" />
+          <parameter type="GConfValueType" name="list_type" />
+          <parameter type="GError**" name="err" />
+        </parameters>
+      </method>
+      <method name="GetLocal" cname="gconf_engine_get_local" shared="true">
+        <return-type type="GConfEngine*" />
+        <parameters>
+          <parameter type="const-char*" name="address" />
+          <parameter type="GError**" name="err" />
+        </parameters>
+      </method>
+      <method name="GetLocalForAddresses" cname="gconf_engine_get_local_for_addresses" shared="true">
+        <return-type type="GConfEngine*" />
+        <parameters>
+          <parameter type="GSList*" name="addresses" />
+          <parameter type="GError**" name="err" />
+        </parameters>
+      </method>
+      <method name="GetPair" cname="gconf_engine_get_pair">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="const-gchar*" name="key" />
+          <parameter type="GConfValueType" name="car_type" />
+          <parameter type="GConfValueType" name="cdr_type" />
+          <parameter type="gpointer" name="car_retloc" />
+          <parameter type="gpointer" name="cdr_retloc" />
+          <parameter type="GError**" name="err" />
+        </parameters>
+      </method>
+      <method name="GetSchema" cname="gconf_engine_get_schema">
+        <return-type type="GConfSchema*" />
+        <parameters>
+          <parameter type="const-gchar*" name="key" />
+          <parameter type="GError**" name="err" />
+        </parameters>
+      </method>
+      <method name="GetString" cname="gconf_engine_get_string">
+        <return-type type="gchar*" />
+        <parameters>
+          <parameter type="const-gchar*" name="key" />
+          <parameter type="GError**" name="err" />
+        </parameters>
+      </method>
+      <method name="GetUserData" cname="gconf_engine_get_user_data">
+        <return-type type="gpointer" />
+      </method>
+      <method name="GetWithLocale" cname="gconf_engine_get_with_locale">
+        <return-type type="GConfValue*" />
+        <parameters>
+          <parameter type="const-gchar*" name="key" />
+          <parameter type="const-gchar*" name="locale" />
+          <parameter type="GError**" name="err" />
+        </parameters>
+      </method>
+      <method name="GetWithoutDefault" cname="gconf_engine_get_without_default">
+        <return-type type="GConfValue*" />
+        <parameters>
+          <parameter type="const-gchar*" name="key" />
+          <parameter type="GError**" name="err" />
+        </parameters>
+      </method>
+      <method name="KeyIsWritable" cname="gconf_engine_key_is_writable">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="const-gchar*" name="key" />
+          <parameter type="GError**" name="err" />
+        </parameters>
+      </method>
+      <method name="NotifyAdd" cname="gconf_engine_notify_add">
+        <return-type type="guint" />
+        <parameters>
+          <parameter type="const-gchar*" name="namespace_section" />
+          <parameter type="GConfNotifyFunc" name="func" />
+          <parameter type="gpointer" name="user_data" />
+          <parameter type="GError**" name="err" />
+        </parameters>
+      </method>
+      <method name="NotifyRemove" cname="gconf_engine_notify_remove">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="guint" name="cnxn" />
+        </parameters>
+      </method>
+      <method name="Ref" cname="gconf_engine_ref">
+        <return-type type="void" />
+      </method>
+      <method name="RemoveDir" cname="gconf_engine_remove_dir">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="const-gchar*" name="dir" />
+          <parameter type="GError**" name="err" />
+        </parameters>
+      </method>
+      <method name="ReverseChangeSet" cname="gconf_engine_reverse_change_set">
+        <return-type type="GConfChangeSet*" />
+        <parameters>
+          <parameter type="GConfChangeSet*" name="cs" />
+          <parameter type="GError**" name="err" />
+        </parameters>
+      </method>
+      <method name="Set" cname="gconf_engine_set">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="const-gchar*" name="key" />
+          <parameter type="const-GConfValue*" name="value" />
+          <parameter type="GError**" name="err" />
+        </parameters>
+      </method>
+      <method name="SetBool" cname="gconf_engine_set_bool">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="const-gchar*" name="key" />
+          <parameter type="gboolean" name="val" />
+          <parameter type="GError**" name="err" />
+        </parameters>
+      </method>
+      <method name="SetFloat" cname="gconf_engine_set_float">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="const-gchar*" name="key" />
+          <parameter type="gdouble" name="val" />
+          <parameter type="GError**" name="err" />
+        </parameters>
+      </method>
+      <method name="SetInt" cname="gconf_engine_set_int">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="const-gchar*" name="key" />
+          <parameter type="gint" name="val" />
+          <parameter type="GError**" name="err" />
+        </parameters>
+      </method>
+      <method name="SetList" cname="gconf_engine_set_list">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="const-gchar*" name="key" />
+          <parameter type="GConfValueType" name="list_type" />
+          <parameter type="GSList*" name="list" />
+          <parameter type="GError**" name="err" />
+        </parameters>
+      </method>
+      <method name="SetPair" cname="gconf_engine_set_pair">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="const-gchar*" name="key" />
+          <parameter type="GConfValueType" name="car_type" />
+          <parameter type="GConfValueType" name="cdr_type" />
+          <parameter type="gconstpointer" name="address_of_car" />
+          <parameter type="gconstpointer" name="address_of_cdr" />
+          <parameter type="GError**" name="err" />
+        </parameters>
+      </method>
+      <method name="SetSchema" cname="gconf_engine_set_schema">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="const-gchar*" name="key" />
+          <parameter type="const-GConfSchema*" name="val" />
+          <parameter type="GError**" name="err" />
+        </parameters>
+      </method>
+      <method name="SetString" cname="gconf_engine_set_string">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="const-gchar*" name="key" />
+          <parameter type="const-gchar*" name="val" />
+          <parameter type="GError**" name="err" />
+        </parameters>
+      </method>
+      <method name="SetUserData" cname="gconf_engine_set_user_data">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="gpointer" name="data" />
+          <parameter type="GDestroyNotify" name="dnotify" />
+        </parameters>
+      </method>
+      <method name="SuggestSync" cname="gconf_engine_suggest_sync">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GError**" name="err" />
+        </parameters>
+      </method>
+      <method name="Unref" cname="gconf_engine_unref">
+        <return-type type="void" />
+      </method>
+      <method name="Unset" cname="gconf_engine_unset">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="const-gchar*" name="key" />
+          <parameter type="GError**" name="err" />
+        </parameters>
+      </method>
+    </struct>
+    <struct name="Entry" cname="GConfEntry" opaque="true">
+      <field name="Key" cname="key" type="char*" access="public" writeable="true" />
+      <field name="Value" cname="value" type="GConfValue*" access="public" writeable="true" />
+      <method name="Copy" cname="gconf_entry_copy">
+        <return-type type="GConfEntry*" owned="true" />
+      </method>
+      <method name="Equal" cname="gconf_entry_equal">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="const-GConfEntry*" name="b" />
+        </parameters>
+      </method>
+      <method name="Free" cname="gconf_entry_free" deprecated="1">
+        <return-type type="void" />
+      </method>
+      <method name="GetIsDefault" cname="gconf_entry_get_is_default">
+        <return-type type="gboolean" />
+      </method>
+      <method name="GetIsWritable" cname="gconf_entry_get_is_writable">
+        <return-type type="gboolean" />
+      </method>
+      <method name="GetKey" cname="gconf_entry_get_key">
+        <return-type type="const-char*" />
+      </method>
+      <method name="GetSchemaName" cname="gconf_entry_get_schema_name">
+        <return-type type="const-char*" />
+      </method>
+      <method name="GetValue" cname="gconf_entry_get_value">
+        <return-type type="GConfValue*" />
+      </method>
+      <constructor cname="gconf_entry_new">
+        <parameters>
+          <parameter type="const-gchar*" name="key" />
+          <parameter type="const-GConfValue*" name="val" />
+        </parameters>
+      </constructor>
+      <constructor cname="gconf_entry_new_nocopy">
+        <parameters>
+          <parameter type="gchar*" name="key" />
+          <parameter type="GConfValue*" name="val" />
+        </parameters>
+      </constructor>
+      <method name="Ref" cname="gconf_entry_ref">
+        <return-type type="void" />
+      </method>
+      <method name="SetIsDefault" cname="gconf_entry_set_is_default">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="gboolean" name="is_default" />
+        </parameters>
+      </method>
+      <method name="SetIsWritable" cname="gconf_entry_set_is_writable">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="gboolean" name="is_writable" />
+        </parameters>
+      </method>
+      <method name="SetSchemaName" cname="gconf_entry_set_schema_name">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="const-gchar*" name="name" />
+        </parameters>
+      </method>
+      <method name="SetValue" cname="gconf_entry_set_value">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="const-GConfValue*" name="val" />
+        </parameters>
+      </method>
+      <method name="SetValueNocopy" cname="gconf_entry_set_value_nocopy">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GConfValue*" name="val" />
+        </parameters>
+      </method>
+      <method name="StealValue" cname="gconf_entry_steal_value">
+        <return-type type="GConfValue*" />
+      </method>
+      <method name="Unref" cname="gconf_entry_unref">
+        <return-type type="void" />
+      </method>
+    </struct>
+    <struct name="EnumStringPair" cname="GConfEnumStringPair">
+      <field name="EnumValue" cname="enum_value" type="gint" />
+      <field name="Str" cname="str" type="const-gchar*" />
+    </struct>
+    <struct name="Listeners" cname="GConfListeners" opaque="true">
+      <method name="Add" cname="gconf_listeners_add">
+        <return-type type="guint" />
+        <parameters>
+          <parameter type="const-gchar*" name="listen_point" />
+          <parameter type="gpointer" name="listener_data" />
+          <parameter type="GFreeFunc" name="destroy_notify" />
+        </parameters>
+      </method>
+      <method name="Count" cname="gconf_listeners_count">
+        <return-type type="guint" />
+      </method>
+      <method name="Foreach" cname="gconf_listeners_foreach">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GConfListenersForeach" name="callback" />
+          <parameter type="gpointer" name="user_data" />
+        </parameters>
+      </method>
+      <method name="Free" cname="gconf_listeners_free">
+        <return-type type="void" />
+      </method>
+      <method name="GetData" cname="gconf_listeners_get_data">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="guint" name="cnxn_id" />
+          <parameter type="gpointer*" name="listener_data_p" />
+          <parameter type="const-gchar**" name="location_p" />
+        </parameters>
+      </method>
+      <constructor cname="gconf_listeners_new" />
+      <method name="Notify" cname="gconf_listeners_notify">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="const-gchar*" name="all_above" />
+          <parameter type="GConfListenersCallback" name="callback" />
+          <parameter type="gpointer" name="user_data" />
+        </parameters>
+      </method>
+      <method name="Remove" cname="gconf_listeners_remove">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="guint" name="cnxn_id" />
+        </parameters>
+      </method>
+      <method name="RemoveIf" cname="gconf_listeners_remove_if">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GConfListenersPredicate" name="predicate" />
+          <parameter type="gpointer" name="user_data" />
+        </parameters>
+      </method>
+    </struct>
+    <struct name="MetaInfo" cname="GConfMetaInfo" opaque="true">
+      <field name="Schema" cname="schema" type="gchar*" access="public" writeable="true" />
+      <field name="ModUser" cname="mod_user" type="gchar*" access="public" writeable="true" />
+      <field name="ModTime" cname="mod_time" type="GTime" access="public" writeable="true" />
+      <method name="Free" cname="gconf_meta_info_free">
+        <return-type type="void" />
+      </method>
+      <method name="GetModUser" cname="gconf_meta_info_get_mod_user">
+        <return-type type="const-char*" />
+      </method>
+      <method name="GetSchema" cname="gconf_meta_info_get_schema">
+        <return-type type="const-char*" />
+      </method>
+      <method name="ModTime" cname="gconf_meta_info_mod_time">
+        <return-type type="GTime" />
+      </method>
+      <constructor cname="gconf_meta_info_new" />
+      <method name="SetModTime" cname="gconf_meta_info_set_mod_time">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GTime" name="mod_time" />
+        </parameters>
+      </method>
+      <method name="SetModUser" cname="gconf_meta_info_set_mod_user">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="const-gchar*" name="mod_user" />
+        </parameters>
+      </method>
+      <method name="SetSchema" cname="gconf_meta_info_set_schema">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="const-gchar*" name="schema_name" />
+        </parameters>
+      </method>
+    </struct>
+    <struct name="Schema" cname="GConfSchema" opaque="true">
+      <method name="Copy" cname="gconf_schema_copy">
+        <return-type type="GConfSchema*" owned="true" />
+      </method>
+      <method name="Free" cname="gconf_schema_free">
+        <return-type type="void" />
+      </method>
+      <method name="GetCarType" cname="gconf_schema_get_car_type">
+        <return-type type="GConfValueType" />
+      </method>
+      <method name="GetCdrType" cname="gconf_schema_get_cdr_type">
+        <return-type type="GConfValueType" />
+      </method>
+      <method name="GetDefaultValue" cname="gconf_schema_get_default_value">
+        <return-type type="GConfValue*" />
+      </method>
+      <method name="GetListType" cname="gconf_schema_get_list_type">
+        <return-type type="GConfValueType" />
+      </method>
+      <method name="GetLocale" cname="gconf_schema_get_locale">
+        <return-type type="const-char*" />
+      </method>
+      <method name="GetLongDesc" cname="gconf_schema_get_long_desc">
+        <return-type type="const-char*" />
+      </method>
+      <method name="GetOwner" cname="gconf_schema_get_owner">
+        <return-type type="const-char*" />
+      </method>
+      <method name="GetShortDesc" cname="gconf_schema_get_short_desc">
+        <return-type type="const-char*" />
+      </method>
+      <method name="GetType" cname="gconf_schema_get_type">
+        <return-type type="GConfValueType" />
+      </method>
+      <constructor cname="gconf_schema_new" />
+      <method name="SetCarType" cname="gconf_schema_set_car_type">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GConfValueType" name="type" />
+        </parameters>
+      </method>
+      <method name="SetCdrType" cname="gconf_schema_set_cdr_type">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GConfValueType" name="type" />
+        </parameters>
+      </method>
+      <method name="SetDefaultValue" cname="gconf_schema_set_default_value">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="const-GConfValue*" name="val" />
+        </parameters>
+      </method>
+      <method name="SetDefaultValueNocopy" cname="gconf_schema_set_default_value_nocopy">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GConfValue*" name="val" />
+        </parameters>
+      </method>
+      <method name="SetListType" cname="gconf_schema_set_list_type">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GConfValueType" name="type" />
+        </parameters>
+      </method>
+      <method name="SetLocale" cname="gconf_schema_set_locale">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="const-gchar*" name="locale" />
+        </parameters>
+      </method>
+      <method name="SetLongDesc" cname="gconf_schema_set_long_desc">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="const-gchar*" name="desc" />
+        </parameters>
+      </method>
+      <method name="SetOwner" cname="gconf_schema_set_owner">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="const-gchar*" name="owner" />
+        </parameters>
+      </method>
+      <method name="SetShortDesc" cname="gconf_schema_set_short_desc">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="const-gchar*" name="desc" />
+        </parameters>
+      </method>
+      <method name="SetType" cname="gconf_schema_set_type">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GConfValueType" name="type" />
+        </parameters>
+      </method>
+    </struct>
+    <struct name="Value" cname="GConfValue" opaque="true">
+      <field name="Type" cname="type" type="GConfValueType" access="public" writeable="true" />
+      <method name="Compare" cname="gconf_value_compare">
+        <return-type type="int" />
+        <parameters>
+          <parameter type="const-GConfValue*" name="value_b" />
+        </parameters>
+      </method>
+      <method name="Copy" cname="gconf_value_copy">
+        <return-type type="GConfValue*" owned="true" />
+      </method>
+      <method name="Free" cname="gconf_value_free">
+        <return-type type="void" />
+      </method>
+      <method name="GetBool" cname="gconf_value_get_bool">
+        <return-type type="gboolean" />
+      </method>
+      <method name="GetCar" cname="gconf_value_get_car">
+        <return-type type="GConfValue*" />
+      </method>
+      <method name="GetCdr" cname="gconf_value_get_cdr">
+        <return-type type="GConfValue*" />
+      </method>
+      <method name="GetFloat" cname="gconf_value_get_float">
+        <return-type type="double" />
+      </method>
+      <method name="GetInt" cname="gconf_value_get_int">
+        <return-type type="int" />
+      </method>
+      <method name="GetList" cname="gconf_value_get_list">
+        <return-type type="GSList*" />
+      </method>
+      <method name="GetListType" cname="gconf_value_get_list_type">
+        <return-type type="GConfValueType" />
+      </method>
+      <method name="GetSchema" cname="gconf_value_get_schema">
+        <return-type type="GConfSchema*" />
+      </method>
+      <method name="GetString" cname="gconf_value_get_string">
+        <return-type type="const-char*" />
+      </method>
+      <constructor cname="gconf_value_new">
+        <parameters>
+          <parameter type="GConfValueType" name="type" />
+        </parameters>
+      </constructor>
+      <constructor cname="gconf_value_new_from_string">
+        <parameters>
+          <parameter type="GConfValueType" name="type" />
+          <parameter type="const-gchar*" name="str" />
+          <parameter type="GError**" name="err" />
+        </parameters>
+      </constructor>
+      <method name="SetBool" cname="gconf_value_set_bool">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="gboolean" name="the_bool" />
+        </parameters>
+      </method>
+      <method name="SetCar" cname="gconf_value_set_car">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="const-GConfValue*" name="car" />
+        </parameters>
+      </method>
+      <method name="SetCarNocopy" cname="gconf_value_set_car_nocopy">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GConfValue*" name="car" />
+        </parameters>
+      </method>
+      <method name="SetCdr" cname="gconf_value_set_cdr">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="const-GConfValue*" name="cdr" />
+        </parameters>
+      </method>
+      <method name="SetCdrNocopy" cname="gconf_value_set_cdr_nocopy">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GConfValue*" name="cdr" />
+        </parameters>
+      </method>
+      <method name="SetFloat" cname="gconf_value_set_float">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="gdouble" name="the_float" />
+        </parameters>
+      </method>
+      <method name="SetInt" cname="gconf_value_set_int">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="gint" name="the_int" />
+        </parameters>
+      </method>
+      <method name="SetList" cname="gconf_value_set_list">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GSList*" name="list" />
+        </parameters>
+      </method>
+      <method name="SetListNocopy" cname="gconf_value_set_list_nocopy">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GSList*" name="list" />
+        </parameters>
+      </method>
+      <method name="SetListType" cname="gconf_value_set_list_type">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GConfValueType" name="type" />
+        </parameters>
+      </method>
+      <method name="SetSchema" cname="gconf_value_set_schema">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="const-GConfSchema*" name="sc" />
+        </parameters>
+      </method>
+      <method name="SetSchemaNocopy" cname="gconf_value_set_schema_nocopy">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GConfSchema*" name="sc" />
+        </parameters>
+      </method>
+      <method name="SetString" cname="gconf_value_set_string">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="const-gchar*" name="the_str" />
+        </parameters>
+      </method>
+      <method name="ToString" cname="gconf_value_to_string">
+        <return-type type="gchar*" />
+      </method>
+    </struct>
+  </namespace>
 </api>
