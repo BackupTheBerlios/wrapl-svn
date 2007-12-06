@@ -3,7 +3,6 @@ BASENAME = $(LIB_DIR)IO$(DIRSEP)
 CFLAGS += -std=gnu99
 LDFLAGS += Std.rlib Riva.rlib Util.rlib
 
-RivaProgram($(BASENAME)Stream, Stream)
 LDFLAGS += IO$(DIRSEP)Stream.rlib
 if $(equal $(OSTYPE), Win32)
 	LDFLAGS += kernel32.rlib IO$(DIRSEP)Windows.rlib
