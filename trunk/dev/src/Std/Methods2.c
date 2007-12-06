@@ -729,6 +729,7 @@ typedef struct any_char_resume_data {
 } any_char_resume_data;
 
 static inline void *findcset(const char *Chars, uint8_t *Mask, int Length) {
+    if (Length == 0) return 0;
     do {
         char Char = *Chars;
         if (Mask[Char / 8] & (1 << (Char % 8))) return Chars;
