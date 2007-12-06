@@ -375,6 +375,26 @@ GLOBAL_FUNCTION(New, 0) {
 	return SUCCESS;
 };
 
+LOCAL_FUNCTION(IdentityCompare) {
+    static Std$Integer_smallt Below[] = {{Std$Integer$SmallT, -1}};
+    static Std$Integer_smallt Equal[] = {{Std$Integer$SmallT, 0}};
+    static Std$Integer_smallt Above[] = {{Std$Integer$SmallT, 1}};
+    unsigned long A = (unsigned long)Args[0].Val;
+    unsigned long B = (unsigned long)Args[1].Val;
+    Result->Val = (A == B) ? Equal : (A > B) ? Above : Below;
+    return SUCCESS;
+};
+
+LOCAL_FUNCTION(IdentityHash) {
+    Result->Val = Std$Integer$new_small((unsigned long)Args[0].Val);
+    return SUCCESS;
+};
+
+GLOBAL_FUNCTION(NewIdentity, 0) {
+    Result->Val = avl_create((Std$Object_t *)IdentityCompare, (Std$Object_t *)IdentityHash);
+    return SUCCESS;
+};
+
 METHOD("empty", TYP, T) {
 	struct avl_table *Table = (struct avl_table *)Args[0].Val;
 	Table->avl_root = 0;

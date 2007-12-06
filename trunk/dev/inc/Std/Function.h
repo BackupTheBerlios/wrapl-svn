@@ -88,12 +88,12 @@ RIVA_CFUN(long, resume, Std$Function_result *);
 
 #define LOCAL_FUNCTION(NAME)\
 	static long invoke_ ## NAME(Std$Function_ct *Fun, unsigned long Count, Std$Function_argument *Args, Std$Function_result *Result);\
-	static Std$Function_ct NAME = {Std$Function$CT, invoke_ ## NAME};\
+	static Std$Function_ct NAME[] = {{Std$Function$CT, invoke_ ## NAME}};\
 	static long invoke_ ## NAME(Std$Function_ct *Fun, unsigned long Count, Std$Function_argument *Args, Std$Function_result *Result)
 
 #define GLOBAL_FUNCTION(NAME, COUNT)\
 	static long invoke_ ## NAME(Std$Function_checkedct *Fun, unsigned long Count, Std$Function_argument *Args, Std$Function_result *Result);\
-	Std$Function_checkedct NAME = {Std$Function$CheckedCT, invoke_ ## NAME, COUNT, __FILE__, __LINE__};\
+	Std$Function_checkedct NAME[] = {{Std$Function$CheckedCT, invoke_ ## NAME, COUNT, __FILE__, __LINE__}};\
 	static long invoke_ ## NAME(Std$Function_checkedct *Fun, unsigned long Count, Std$Function_argument *Args, Std$Function_result *Result)
 
 #endif

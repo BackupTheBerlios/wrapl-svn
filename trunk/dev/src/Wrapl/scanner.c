@@ -146,14 +146,15 @@ static char *scan_string_next(scanner_t *Scanner, const char **Next, int Index) 
 
 static Std$String_t *scan_string_block0_next(scanner_t *Scanner, int Index, bool *ExprMode) {
 	const char *Line = Scanner->NextChar;
-	const char *Find;
-	if (Find = strchr(Line, '$')) {
-		if (Find[1] == ';') {
-			int Length = Find + 1 - Line;
+	const char *Find1 = strchr(Line, '$');
+	const char *Find2 = strchr(Line, '}');
+	if (Find1 && ((Find2 == 0) || (Find1 < Find2))) {
+		if (Find1[1] == ';') {
+			int Length = Find1 + 1 - Line;
 			char *Chars = Riva$Memory$alloc(Length + 1);
 			memcpy(Chars, Line, Length);
 			Chars[Length] = 0;
-			Scanner->NextChar = Find + 2;
+			Scanner->NextChar = Find1 + 2;
 			Std$String_t *String = scan_string_block0_next(Scanner, Index + 1, ExprMode);
 			String->Length.Value += Length;
 			String->Blocks[Index].Length.Type = Std$Integer$SmallT;
@@ -161,13 +162,13 @@ static Std$String_t *scan_string_block0_next(scanner_t *Scanner, int Index, bool
 			String->Blocks[Index].Chars.Type = Std$Address$T;
 			String->Blocks[Index].Chars.Value = Chars;
 			return String;
-		} else if (Find[1] == '}') {
-			int Length = Find + 1 - Line;
+		} else if (Find1[1] == '}') {
+			int Length = Find1 + 1 - Line;
 			char *Chars = Riva$Memory$alloc(Length + 1);
 			memcpy(Chars, Line, Length - 1);
 			Chars[Length - 1] = '}';
 			Chars[Length] = 0;
-			Scanner->NextChar = Find + 2;
+			Scanner->NextChar = Find1 + 2;
 			Std$String_t *String = scan_string_block0_next(Scanner, Index + 1, ExprMode);
 			String->Length.Value += Length;
 			String->Blocks[Index].Length.Type = Std$Integer$SmallT;
@@ -175,8 +176,8 @@ static Std$String_t *scan_string_block0_next(scanner_t *Scanner, int Index, bool
 			String->Blocks[Index].Chars.Type = Std$Address$T;
 			String->Blocks[Index].Chars.Value = Chars;
 			return String;
-		} else if (Find != Line) {
-			int Length = Find - Line;
+		} else if (Find1 != Line) {
+			int Length = Find1 - Line;
 			char *Chars = Riva$Memory$alloc(Length + 1);
 			memcpy(Chars, Line, Length);
 			Chars[Length] = 0;
@@ -184,7 +185,7 @@ static Std$String_t *scan_string_block0_next(scanner_t *Scanner, int Index, bool
 			String->Type = Std$String$T;
 			String->Length.Type = Std$Integer$SmallT;
 			String->Count = Index + 1;
-			Scanner->NextChar = Find + 1;
+			Scanner->NextChar = Find1 + 1;
 			*ExprMode = true;
 			String->Length.Value += Length;
 			String->Blocks[Index].Length.Type = Std$Integer$SmallT;
@@ -193,12 +194,12 @@ static Std$String_t *scan_string_block0_next(scanner_t *Scanner, int Index, bool
 			String->Blocks[Index].Chars.Value = Chars;
 			return String;
 		} else {
-			Scanner->NextChar = Find + 1;
+			Scanner->NextChar = Find1 + 1;
 			*ExprMode = true;
 			return Std$String$Nil;
 		};
-	} else if (Find = strchr(Line, '}')) {
-		int Length = Find - Line;
+	} else if (Find2) {
+		int Length = Find2 - Line;
 		char *Chars = Riva$Memory$alloc(Length + 1);
 		memcpy(Chars, Line, Length);
 		Chars[Length] = 0;
@@ -206,7 +207,7 @@ static Std$String_t *scan_string_block0_next(scanner_t *Scanner, int Index, bool
 		String->Type = Std$String$T;
 		String->Length.Type = Std$Integer$SmallT;
 		String->Count = Index + 1;
-		Scanner->NextChar = Find + 1;
+		Scanner->NextChar = Find2 + 1;
 		String->Length.Value += Length;
 		String->Blocks[Index].Length.Type = Std$Integer$SmallT;
 		String->Blocks[Index].Length.Value = Length;
