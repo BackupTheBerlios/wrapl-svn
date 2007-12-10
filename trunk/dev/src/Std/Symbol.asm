@@ -51,7 +51,11 @@ proceed %+ %1:;(index, score, table)
 	add ebx, byte 20
 	mov edi, [symbol(eax).Function]
 	test edi, edi
+%if %1 = 1
+	jz %%continue0
+%else
 	jz %%nofunction0
+%endif
 	cmp ebx, [_bestscore]
 	jna %%nofunction0
 	mov [_bestscore], ebx
@@ -94,7 +98,11 @@ proceed %+ %1:;(index, score, table)
 	mov ebx, [esp + 8]
 	add ebx, byte 16
 	mov ecx, [symbol(eax).Function]
+%if %1 = 1
+	jecxz %%continue1
+%else
 	jecxz %%nofunction1
+%endif
 	cmp ebx, [_bestscore]
 	jna %%nofunction1
 	mov [_bestscore], ebx
@@ -140,7 +148,11 @@ proceed %+ %1:;(index, score, table)
 	mov ebx, [esp + 8]
 	add ebx, byte 8
 	mov ecx, [symbol(eax).Function]
+%if %1 = 1
+	jecxz %%continue1
+%else
 	jecxz %%nofunction2
+%endif
 	cmp ebx, [_bestscore]
 	jna %%nofunction2
 	mov [_bestscore], ebx

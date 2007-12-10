@@ -945,7 +945,7 @@ operand_t *every_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t *
 	label_t *Label1 = new label_t;
 	Condition->compile(Compiler, Start, Label0);
 	Label0 = Compiler->push_trap(LineNo, Label0, Label1);
-		Label0 = Compiler->push_loop(LineNo, Label0, Success);
+		Label0 = Compiler->push_loop(LineNo, Label1, Success);
 			Body->compile(Compiler, Label0, Label1);
 		Compiler->pop_loop();
 	Compiler->pop_trap();
