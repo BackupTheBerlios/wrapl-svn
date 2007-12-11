@@ -39,6 +39,15 @@ GLOBAL_FUNCTION(New, 0) {
 	return SUCCESS;
 };
 
+Std$Object_t *_empty() {
+	_list *List = new(_list);
+	List->Type = T;
+	List->Length = 0;
+	List->Lower = List->Upper = 0;
+	List->Access = 4;
+	return List;
+};
+
 Std$Object_t *_new(long Count, ...) {
 	Std$Object_t **Values = (&Count + 1);
 	_list *List = new(_list);
@@ -312,6 +321,56 @@ METHOD("pull", TYP, T) {
 	List->Access = 4;
 	Result->Val = Node->Value;
 	return SUCCESS;
+};
+
+void _push(_list *List, Std$Object_t *Value) {
+	_node *Node = new(_node);
+	Node->Value = Value;
+	Node->Next = List->Head;
+	if (List->Head) List->Head->Prev = Node; else List->Tail = Node;
+	List->Head = Node;
+	++List->Length;
+	if (List->Array) {++List->Lower; ++List->Upper;};
+	List->Index = 1; List->Cache = List->Head;
+	List->Access = 4;
+};
+
+void _put(_list *List, Std$Object_t *Value) {
+	_node *Node = new(_node);
+	Node->Value = Value;
+	Node->Prev = List->Tail;
+	if (List->Tail) List->Tail->Next = Node; else List->Head = Node;
+	List->Tail = Node;
+	++List->Length;
+	List->Index = 1; List->Cache = List->Head;
+	List->Access = 4;
+};
+
+Std$Object_t *_pop(_list *List) {
+	_node *Node = List->Head;
+	if (!Node) return FAILURE;
+	if (List->Head = Node->Next) List->Head->Prev = 0; else List->Tail = 0;
+	--List->Length;
+	if (List->Array) {
+		if (List->Lower > 1) --List->Lower; else ++List->Array;
+		--List->Upper;
+	};
+	List->Index = 1; List->Cache = List->Head;
+	List->Access = 4;
+	return Node->Value;
+};
+
+Std$Object_t *_pull(_list *List) {
+	_node *Node = List->Tail;
+	if (!Node) return FAILURE;
+	if (List->Tail = Node->Prev) List->Tail->Next = 0; else List->Head = 0;
+	--List->Length;
+	if (List->Array) {
+		if (List->Upper > List->Length) --List->Upper;
+	};
+	List->Index = 1; List->Cache = List->Head;
+	List->Access = 4;
+	return Node->Value;
 };
 
 static void build_index_array(_list *List) {

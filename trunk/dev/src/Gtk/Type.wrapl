@@ -357,4 +357,18 @@ TO :return(=glistobjecttype, result) [
 ];
 Define("reusable-GList[GObject]*", glistobjecttype);
 
+VAR glisttype <- T();
+TO :headers(t@T) ["#include <Gtk/GObject/Object.h>"];
+TO :libraries(t@T) ["Gtk/GObject/Object.rlib"];
+TO :rtype(=glisttype) "Std$List$T";
+TO :ctype(=glisttype) "GList *";
+TO :return(=glisttype, result) [
+	"{",
+	"\tStd$Object_t *list = Std$List$empty();",
+	"\tfor(GList *node = " + result + "; node; node = node->next) Std$List$put(list, Gtk$GObject$Object$to_riva(node->data));",
+	"\tResult->Val = list;",
+	"};"
+];
+Define("GList*", glisttype);
+
 END Type.
