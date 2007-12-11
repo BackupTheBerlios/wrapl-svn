@@ -8,6 +8,8 @@ SYMBOL($false, "false");
 
 TYPE(T);
 
+static GType RivaType;
+
 Std$Object_t *_to_riva(const GValue *Value) {
 	switch (G_VALUE_TYPE(Value)) {
 	case G_TYPE_NONE: return Std$Object$Nil;
@@ -26,7 +28,9 @@ Std$Object_t *_to_riva(const GValue *Value) {
 	case G_TYPE_POINTER: return Std$Address$new(g_value_get_pointer(Value));
 	default: {
 		Std$Type_t *Type;
-		if (G_VALUE_HOLDS(Value, G_TYPE_OBJECT)) {
+		if (G_VALUE_TYPE(Value) == Gtk$GObject$Type$RIVA->Value) {
+			return g_value_peek_pointer(Value);
+		} else if (G_VALUE_HOLDS(Value, G_TYPE_OBJECT)) {
 			return Gtk$GObject$Object$to_riva(g_value_get_object(Value));
 		} else if (g_value_fits_pointer(Value) && (Type = Gtk$GObject$Type$to_riva(G_VALUE_TYPE(Value)))) {
 			Gtk$GObject$Object_t *Object = new(Gtk$GObject$Object_t);
@@ -72,7 +76,8 @@ void _to_gtk(Std$Object_t *Source, GValue *Dest) {
                     return;
                 };
             };
-            printf("Error: unable to convert object to GValue.\n");
+	    g_value_init(Dest, Gtk$GObject$Type$RIVA->Value);
+	    Dest->data[0].v_pointer = Source;
         };
 };
 
@@ -153,6 +158,13 @@ METHOD("Set", TYP, T, VAL, $false) {
 	g_value_init(Value->Value, G_TYPE_BOOLEAN);
 	g_value_set_boolean(Value->Value, FALSE);
 	return SUCCESS;
+};
+
+METHOD("Set", TYP, T, ANY) {
+    Gtk$GObject$Value_t *Value = Args[0].Val;
+    g_value_init(Value->Value, Gtk$GObject$Type$RIVA->Value);
+    Value->Value->data[0].v_pointer = Args[1].Val;
+    return SUCCESS;
 };
 
 METHOD("Unset", TYP, T) {

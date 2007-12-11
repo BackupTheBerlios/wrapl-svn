@@ -14,6 +14,8 @@ typedef struct Gtk$GObject$Type_t {
 
 extern Std$Type_t Gtk$GObject$Type$T[];
 
+extern Gtk$GObject$Type_t Gtk$GObject$Type$RIVA[];
+
 RIVA_CFUN(Std$Type_t *, to_riva, GType);
 
 #undef RIVA_MODULE
