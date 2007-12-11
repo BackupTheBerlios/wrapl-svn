@@ -2,12 +2,20 @@
 ==== T ====
 
 
-==== :Gamma ====
-'':Gamma(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
+==== :setGamma ====
+'':setGamma(self @ [[#T|T]], value @ [[..:..:Std:Real#T|Std.Real.T]])''
 
 
 ==== :Lookup ====
 '':Lookup(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
+
+
+==== :setLookup ====
+'':setLookup(self @ [[#T|T]], value @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== :Gamma ====
+'':Gamma(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== New ====

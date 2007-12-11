@@ -2,64 +2,124 @@
 ==== T ====
 
 
-==== :TypeHint ====
-'':TypeHint(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:WindowTypeHint#T|Gtk.Gdk.WindowTypeHint.T]]''
+==== :setTypeHint ====
+'':setTypeHint(self @ [[#T|T]], value @ [[..:..:Gtk:Gdk:WindowTypeHint#T|Gtk.Gdk.WindowTypeHint.T]])''
 
 
 ==== :Title ====
 '':Title(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
+==== :setTitle ====
+'':setTitle(self @ [[#T|T]], value @ [[..:..:Std:String#T|Std.String.T]])''
+
+
 ==== :EventMask ====
 '':EventMask(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+
+
+==== :setEventMask ====
+'':setEventMask(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
 
 
 ==== :X ====
 '':X(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
+==== :setX ====
+'':setX(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
 ==== :Y ====
 '':Y(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+
+
+==== :setY ====
+'':setY(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
 
 
 ==== :Width ====
 '':Width(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
+==== :setWidth ====
+'':setWidth(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
 ==== :Height ====
 '':Height(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+
+
+==== :setHeight ====
+'':setHeight(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
 
 
 ==== :Wclass ====
 '':Wclass(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:WindowClass#T|Gtk.Gdk.WindowClass.T]]''
 
 
+==== :setWclass ====
+'':setWclass(self @ [[#T|T]], value @ [[..:..:Gtk:Gdk:WindowClass#T|Gtk.Gdk.WindowClass.T]])''
+
+
 ==== :Visual ====
 '':Visual(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Visual#T|Gtk.Gdk.Visual.T]]''
+
+
+==== :setVisual ====
+'':setVisual(self @ [[#T|T]], value @ [[..:..:Gtk:Gdk:Visual#T|Gtk.Gdk.Visual.T]])''
 
 
 ==== :Colormap ====
 '':Colormap(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Colormap#T|Gtk.Gdk.Colormap.T]]''
 
 
+==== :setColormap ====
+'':setColormap(self @ [[#T|T]], value @ [[..:..:Gtk:Gdk:Colormap#T|Gtk.Gdk.Colormap.T]])''
+
+
 ==== :WindowType ====
 '':WindowType(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:WindowType#T|Gtk.Gdk.WindowType.T]]''
+
+
+==== :setWindowType ====
+'':setWindowType(self @ [[#T|T]], value @ [[..:..:Gtk:Gdk:WindowType#T|Gtk.Gdk.WindowType.T]])''
 
 
 ==== :Cursor ====
 '':Cursor(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Cursor#T|Gtk.Gdk.Cursor.T]]''
 
 
+==== :setCursor ====
+'':setCursor(self @ [[#T|T]], value @ [[..:..:Gtk:Gdk:Cursor#T|Gtk.Gdk.Cursor.T]])''
+
+
 ==== :WmclassName ====
 '':WmclassName(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
+
+
+==== :setWmclassName ====
+'':setWmclassName(self @ [[#T|T]], value @ [[..:..:Std:String#T|Std.String.T]])''
 
 
 ==== :WmclassClass ====
 '':WmclassClass(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
+==== :setWmclassClass ====
+'':setWmclassClass(self @ [[#T|T]], value @ [[..:..:Std:String#T|Std.String.T]])''
+
+
 ==== :OverrideRedirect ====
 '':OverrideRedirect(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+
+
+==== :setOverrideRedirect ====
+'':setOverrideRedirect(self @ [[#T|T]], value @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+
+
+==== :TypeHint ====
+'':TypeHint(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:WindowTypeHint#T|Gtk.Gdk.WindowTypeHint.T]]''
 
 
 ==== New ====

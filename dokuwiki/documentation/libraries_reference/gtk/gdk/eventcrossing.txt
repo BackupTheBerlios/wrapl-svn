@@ -2,56 +2,108 @@
 ==== T ====
 
 
-==== :State ====
-'':State(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+==== :setState ====
+'':setState(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
 
 
 ==== :Type ====
 '':Type(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:EventType#T|Gtk.Gdk.EventType.T]]''
 
 
+==== :setType ====
+'':setType(self @ [[#T|T]], value @ [[..:..:Gtk:Gdk:EventType#T|Gtk.Gdk.EventType.T]])''
+
+
 ==== :Window ====
 '':Window(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]]''
+
+
+==== :setWindow ====
+'':setWindow(self @ [[#T|T]], value @ [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]])''
 
 
 ==== :SendEvent ====
 '':SendEvent(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
+==== :setSendEvent ====
+'':setSendEvent(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
 ==== :Subwindow ====
 '':Subwindow(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]]''
+
+
+==== :setSubwindow ====
+'':setSubwindow(self @ [[#T|T]], value @ [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]])''
 
 
 ==== :Time ====
 '':Time(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
+==== :setTime ====
+'':setTime(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
 ==== :X ====
 '':X(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
+
+
+==== :setX ====
+'':setX(self @ [[#T|T]], value @ [[..:..:Std:Real#T|Std.Real.T]])''
 
 
 ==== :Y ====
 '':Y(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
+==== :setY ====
+'':setY(self @ [[#T|T]], value @ [[..:..:Std:Real#T|Std.Real.T]])''
+
+
 ==== :XRoot ====
 '':XRoot(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
+
+
+==== :setXRoot ====
+'':setXRoot(self @ [[#T|T]], value @ [[..:..:Std:Real#T|Std.Real.T]])''
 
 
 ==== :YRoot ====
 '':YRoot(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
+==== :setYRoot ====
+'':setYRoot(self @ [[#T|T]], value @ [[..:..:Std:Real#T|Std.Real.T]])''
+
+
 ==== :Mode ====
 '':Mode(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:CrossingMode#T|Gtk.Gdk.CrossingMode.T]]''
+
+
+==== :setMode ====
+'':setMode(self @ [[#T|T]], value @ [[..:..:Gtk:Gdk:CrossingMode#T|Gtk.Gdk.CrossingMode.T]])''
 
 
 ==== :Detail ====
 '':Detail(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:NotifyType#T|Gtk.Gdk.NotifyType.T]]''
 
 
+==== :setDetail ====
+'':setDetail(self @ [[#T|T]], value @ [[..:..:Gtk:Gdk:NotifyType#T|Gtk.Gdk.NotifyType.T]])''
+
+
 ==== :Focus ====
 '':Focus(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+
+
+==== :setFocus ====
+'':setFocus(self @ [[#T|T]], value @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
+
+
+==== :State ====
+'':State(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== New ====

@@ -2,52 +2,100 @@
 ==== T ====
 
 
-==== :IsExpandableSpace ====
-'':IsExpandableSpace(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+==== :setIsExpandableSpace ====
+'':setIsExpandableSpace(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
 
 
 ==== :IsLineBreak ====
 '':IsLineBreak(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
+==== :setIsLineBreak ====
+'':setIsLineBreak(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
 ==== :IsMandatoryBreak ====
 '':IsMandatoryBreak(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+
+
+==== :setIsMandatoryBreak ====
+'':setIsMandatoryBreak(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
 
 
 ==== :IsCharBreak ====
 '':IsCharBreak(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
+==== :setIsCharBreak ====
+'':setIsCharBreak(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
 ==== :IsWhite ====
 '':IsWhite(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+
+
+==== :setIsWhite ====
+'':setIsWhite(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
 
 
 ==== :IsCursorPosition ====
 '':IsCursorPosition(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
+==== :setIsCursorPosition ====
+'':setIsCursorPosition(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
 ==== :IsWordStart ====
 '':IsWordStart(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+
+
+==== :setIsWordStart ====
+'':setIsWordStart(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
 
 
 ==== :IsWordEnd ====
 '':IsWordEnd(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
+==== :setIsWordEnd ====
+'':setIsWordEnd(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
 ==== :IsSentenceBoundary ====
 '':IsSentenceBoundary(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+
+
+==== :setIsSentenceBoundary ====
+'':setIsSentenceBoundary(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
 
 
 ==== :IsSentenceStart ====
 '':IsSentenceStart(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
+==== :setIsSentenceStart ====
+'':setIsSentenceStart(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
 ==== :IsSentenceEnd ====
 '':IsSentenceEnd(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
+==== :setIsSentenceEnd ====
+'':setIsSentenceEnd(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
 ==== :BackspaceDeletesCharacter ====
 '':BackspaceDeletesCharacter(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+
+
+==== :setBackspaceDeletesCharacter ====
+'':setBackspaceDeletesCharacter(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :IsExpandableSpace ====
+'':IsExpandableSpace(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== New ====

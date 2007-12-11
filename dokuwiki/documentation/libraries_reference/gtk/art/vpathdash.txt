@@ -2,16 +2,28 @@
 ==== T ====
 
 
-==== :Dash ====
-'':Dash(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+==== :setDash ====
+'':setDash(self @ [[#T|T]], value @ [[..:..:Std:Object#T|Std.Object.T]])''
 
 
 ==== :Offset ====
 '':Offset(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
+==== :setOffset ====
+'':setOffset(self @ [[#T|T]], value @ [[..:..:Std:Real#T|Std.Real.T]])''
+
+
 ==== :NDash ====
 '':NDash(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+
+
+==== :setNDash ====
+'':setNDash(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :Dash ====
+'':Dash(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====

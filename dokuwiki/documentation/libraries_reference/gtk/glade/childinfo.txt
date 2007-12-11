@@ -2,20 +2,36 @@
 ==== T ====
 
 
-==== :InternalChild ====
-'':InternalChild(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
+==== :setInternalChild ====
+'':setInternalChild(self @ [[#T|T]], value @ [[..:..:Std:String#T|Std.String.T]])''
 
 
 ==== :Properties ====
 '':Properties(self @ [[#T|T]]) : [[..:..:Gtk:Glade:Property#T|Gtk.Glade.Property.T]]''
 
 
+==== :setProperties ====
+'':setProperties(self @ [[#T|T]], value @ [[..:..:Gtk:Glade:Property#T|Gtk.Glade.Property.T]])''
+
+
 ==== :NProperties ====
 '':NProperties(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
+==== :setNProperties ====
+'':setNProperties(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
 ==== :Child ====
 '':Child(self @ [[#T|T]]) : [[..:..:Gtk:Glade:WidgetInfo#T|Gtk.Glade.WidgetInfo.T]]''
+
+
+==== :setChild ====
+'':setChild(self @ [[#T|T]], value @ [[..:..:Gtk:Glade:WidgetInfo#T|Gtk.Glade.WidgetInfo.T]])''
+
+
+==== :InternalChild ====
+'':InternalChild(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== New ====

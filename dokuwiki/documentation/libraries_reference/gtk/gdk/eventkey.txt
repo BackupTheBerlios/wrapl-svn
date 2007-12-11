@@ -2,48 +2,92 @@
 ==== T ====
 
 
-==== :IsModifier ====
-'':IsModifier(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+==== :setIsModifier ====
+'':setIsModifier(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
 
 
 ==== :Type ====
 '':Type(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:EventType#T|Gtk.Gdk.EventType.T]]''
 
 
+==== :setType ====
+'':setType(self @ [[#T|T]], value @ [[..:..:Gtk:Gdk:EventType#T|Gtk.Gdk.EventType.T]])''
+
+
 ==== :Window ====
 '':Window(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]]''
+
+
+==== :setWindow ====
+'':setWindow(self @ [[#T|T]], value @ [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]])''
 
 
 ==== :SendEvent ====
 '':SendEvent(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
+==== :setSendEvent ====
+'':setSendEvent(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
 ==== :Time ====
 '':Time(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+
+
+==== :setTime ====
+'':setTime(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
 
 
 ==== :State ====
 '':State(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
+==== :setState ====
+'':setState(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
 ==== :Keyval ====
 '':Keyval(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+
+
+==== :setKeyval ====
+'':setKeyval(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
 
 
 ==== :Length ====
 '':Length(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
+==== :setLength ====
+'':setLength(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
 ==== :String ====
 '':String(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
+
+
+==== :setString ====
+'':setString(self @ [[#T|T]], value @ [[..:..:Std:String#T|Std.String.T]])''
 
 
 ==== :HardwareKeycode ====
 '':HardwareKeycode(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
+==== :setHardwareKeycode ====
+'':setHardwareKeycode(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
 ==== :Group ====
 '':Group(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+
+
+==== :setGroup ====
+'':setGroup(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :IsModifier ====
+'':IsModifier(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== New ====

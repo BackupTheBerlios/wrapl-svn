@@ -10,20 +10,36 @@
 '':Copy(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Border#T|Gtk.Gtk.Border.T]]''
 
 
-==== :Bottom ====
-'':Bottom(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+==== :setBottom ====
+'':setBottom(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
 
 
 ==== :Left ====
 '':Left(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
+==== :setLeft ====
+'':setLeft(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
 ==== :Right ====
 '':Right(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
+==== :setRight ====
+'':setRight(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
 ==== :Top ====
 '':Top(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+
+
+==== :setTop ====
+'':setTop(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :Bottom ====
+'':Bottom(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== New ====

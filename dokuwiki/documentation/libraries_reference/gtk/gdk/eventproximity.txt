@@ -2,24 +2,44 @@
 ==== T ====
 
 
-==== :Device ====
-'':Device(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Device#T|Gtk.Gdk.Device.T]]''
+==== :setDevice ====
+'':setDevice(self @ [[#T|T]], value @ [[..:..:Gtk:Gdk:Device#T|Gtk.Gdk.Device.T]])''
 
 
 ==== :Type ====
 '':Type(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:EventType#T|Gtk.Gdk.EventType.T]]''
 
 
+==== :setType ====
+'':setType(self @ [[#T|T]], value @ [[..:..:Gtk:Gdk:EventType#T|Gtk.Gdk.EventType.T]])''
+
+
 ==== :Window ====
 '':Window(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]]''
+
+
+==== :setWindow ====
+'':setWindow(self @ [[#T|T]], value @ [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]])''
 
 
 ==== :SendEvent ====
 '':SendEvent(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
+==== :setSendEvent ====
+'':setSendEvent(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
 ==== :Time ====
 '':Time(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+
+
+==== :setTime ====
+'':setTime(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :Device ====
+'':Device(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Device#T|Gtk.Gdk.Device.T]]''
 
 
 ==== New ====

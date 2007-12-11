@@ -4,17 +4,10 @@
   * [[..:..:Gtk:Gtk:IMContext#T|Gtk.Gtk.IMContext.T]]
   * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
 
-  
 
 ==== :AppendMenuitems ====
 '':AppendMenuitems(self @ [[#T|T]], menushell @ [[..:..:Gtk:Gtk:MenuShell#T|Gtk.Gtk.MenuShell.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Add menuitems for various available input methods to a menu; the menuitems, when selected, will switch the input method
-  for the context and the global default input method.
-  
-  context :   a GtkIMMultiContext
-  menushell : a GtkMenuShell
-  
 
 ==== :ContextId ====
 '':ContextId(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
@@ -31,10 +24,6 @@
 ==== New ====
 ''New() : [[# T| T]]''
 
-  Creates a new GtkIMMulticontext.
-  
-  Returns : a new GtkIMMulticontext.
-  
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''

@@ -2,28 +2,52 @@
 ==== T ====
 
 
-==== :Mask ====
-'':Mask(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Bitmap#T|Gtk.Gdk.Bitmap.T]]''
+==== :setMask ====
+'':setMask(self @ [[#T|T]], value @ [[..:..:Gtk:Gdk:Bitmap#T|Gtk.Gdk.Bitmap.T]])''
 
 
 ==== :Type ====
 '':Type(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:CellType#T|Gtk.Gtk.CellType.T]]''
 
 
+==== :setType ====
+'':setType(self @ [[#T|T]], value @ [[..:..:Gtk:Gtk:CellType#T|Gtk.Gtk.CellType.T]])''
+
+
 ==== :Vertical ====
 '':Vertical(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+
+
+==== :setVertical ====
+'':setVertical(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
 
 
 ==== :Horizontal ====
 '':Horizontal(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
+==== :setHorizontal ====
+'':setHorizontal(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
 ==== :Style ====
 '':Style(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Style#T|Gtk.Gtk.Style.T]]''
 
 
+==== :setStyle ====
+'':setStyle(self @ [[#T|T]], value @ [[..:..:Gtk:Gtk:Style#T|Gtk.Gtk.Style.T]])''
+
+
 ==== :Pixmap ====
 '':Pixmap(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Pixmap#T|Gtk.Gdk.Pixmap.T]]''
+
+
+==== :setPixmap ====
+'':setPixmap(self @ [[#T|T]], value @ [[..:..:Gtk:Gdk:Pixmap#T|Gtk.Gdk.Pixmap.T]])''
+
+
+==== :Mask ====
+'':Mask(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Bitmap#T|Gtk.Gdk.Bitmap.T]]''
 
 
 ==== New ====

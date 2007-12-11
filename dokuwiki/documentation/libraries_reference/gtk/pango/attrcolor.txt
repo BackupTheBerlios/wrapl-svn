@@ -2,12 +2,20 @@
 ==== T ====
 
 
-==== :Color ====
-'':Color(self @ [[#T|T]]) : [[..:..:Gtk:Pango:Color#T|Gtk.Pango.Color.T]]''
+==== :setColor ====
+'':setColor(self @ [[#T|T]], value @ [[..:..:Gtk:Pango:Color#T|Gtk.Pango.Color.T]])''
 
 
 ==== :Attr ====
 '':Attr(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+
+
+==== :setAttr ====
+'':setAttr(self @ [[#T|T]], value @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :Color ====
+'':Color(self @ [[#T|T]]) : [[..:..:Gtk:Pango:Color#T|Gtk.Pango.Color.T]]''
 
 
 ==== New ====

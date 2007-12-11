@@ -6,29 +6,18 @@
   * [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]
   * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
 
-  The GtkCList widget is a very useful multi-columned scrolling list. It can display data in nicely
-  aligned vertical columns, with titles at the top of the list.
-  GtkCList has been deprecated since GTK+ 2.0 and should not be used in newly written code. Use
-  GtkTreeView instead.
-  
 
 ==== :UnselectRow ====
 '':UnselectRow(self @ [[#T|T]], row @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], column @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  === Warning ===
-  gtk_clist_unselect_row is deprecated and should not be used in newly-written code.
 
 ==== :UnselectAll ====
 '':UnselectAll(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  === Warning ===
-  gtk_clist_unselect_all is deprecated and should not be used in newly-written code.
 
 ==== :UndoSelection ====
 '':UndoSelection(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  === Warning ===
-  gtk_clist_undo_selection is deprecated and should not be used in newly-written code.
 
 ==== :Flags ====
 '':Flags(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
@@ -59,11 +48,11 @@
 
 
 ==== :RowList ====
-'':RowList(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':RowList(self @ [[#T|T]]) : [[..:..:Std:List#T|Std.List.T]]''
 
 
 ==== :RowListEnd ====
-'':RowListEnd(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':RowListEnd(self @ [[#T|T]]) : [[..:..:Std:List#T|Std.List.T]]''
 
 
 ==== :Columns ====
@@ -111,19 +100,19 @@
 
 
 ==== :Selection ====
-'':Selection(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Selection(self @ [[#T|T]]) : [[..:..:Std:List#T|Std.List.T]]''
 
 
 ==== :SelectionEnd ====
-'':SelectionEnd(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SelectionEnd(self @ [[#T|T]]) : [[..:..:Std:List#T|Std.List.T]]''
 
 
 ==== :UndoSelection ====
-'':UndoSelection(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':UndoSelection(self @ [[#T|T]]) : [[..:..:Std:List#T|Std.List.T]]''
 
 
 ==== :UndoUnselection ====
-'':UndoUnselection(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':UndoUnselection(self @ [[#T|T]]) : [[..:..:Std:List#T|Std.List.T]]''
 
 
 ==== :UndoAnchor ====
@@ -221,368 +210,246 @@
 ==== :Append ====
 '':Append(self @ [[#T|T]], text @ [[..:..:Std:List#T|Std.List.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-  === Warning ===
-  gtk_clist_append is deprecated and should not be used in newly-written code.
 
 ==== :Clear ====
 '':Clear(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  === Warning ===
-  gtk_clist_clear is deprecated and should not be used in newly-written code.
 
 ==== :ColumnsAutosize ====
 '':ColumnsAutosize(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-  === Warning ===
-  gtk_clist_columns_autosize is deprecated and should not be used in newly-written code.
 
 ==== :FindRowFromData ====
 '':FindRowFromData(self @ [[#T|T]], data @ [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-  === Warning ===
-  gtk_clist_find_row_from_data is deprecated and should not be used in newly-written code.
 
 ==== :Freeze ====
 '':Freeze(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  === Warning ===
-  gtk_clist_freeze is deprecated and should not be used in newly-written code.
 
 ==== :GetCellStyle ====
 '':GetCellStyle(self @ [[#T|T]], row @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], column @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Gtk:Gtk:Style#T|Gtk.Gtk.Style.T]]''
 
-  === Warning ===
-  gtk_clist_get_cell_style is deprecated and should not be used in newly-written code.
 
 ==== :GetCellType ====
 '':GetCellType(self @ [[#T|T]], row @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], column @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Gtk:Gtk:CellType#T|Gtk.Gtk.CellType.T]]''
 
-  === Warning ===
-  gtk_clist_get_cell_type is deprecated and should not be used in newly-written code.
 
 ==== :GetColumnTitle ====
 '':GetColumnTitle(self @ [[#T|T]], column @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:String#T|Std.String.T]]''
 
-  === Warning ===
-  gtk_clist_get_column_title is deprecated and should not be used in newly-written code.
 
 ==== :GetColumnWidget ====
 '':GetColumnWidget(self @ [[#T|T]], column @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
-  === Warning ===
-  gtk_clist_get_column_widget is deprecated and should not be used in newly-written code.
 
 ==== :GetHadjustment ====
 '':GetHadjustment(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]]''
 
-  === Warning ===
-  gtk_clist_get_hadjustment is deprecated and should not be used in newly-written code.
 
 ==== :GetPixmap ====
 '':GetPixmap(self @ [[#T|T]], row @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], column @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], pixmap @ [[..:..:Std:Object#T|Std.Object.T]], mask @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-  === Warning ===
-  gtk_clist_get_pixmap is deprecated and should not be used in newly-written code.
 
 ==== :GetPixtext ====
 '':GetPixtext(self @ [[#T|T]], row @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], column @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], text @ [[..:..:Std:List#T|Std.List.T]], spacing @ [[..:..:Std:Object#T|Std.Object.T]], pixmap @ [[..:..:Std:Object#T|Std.Object.T]], mask @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-  === Warning ===
-  gtk_clist_get_pixtext is deprecated and should not be used in newly-written code.
 
 ==== :GetRowData ====
 '':GetRowData(self @ [[#T|T]], row @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Address#T|Std.Address.T]]''
 
-  === Warning ===
-  gtk_clist_get_row_data is deprecated and should not be used in newly-written code.
 
 ==== :GetRowStyle ====
 '':GetRowStyle(self @ [[#T|T]], row @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Gtk:Gtk:Style#T|Gtk.Gtk.Style.T]]''
 
-  === Warning ===
-  gtk_clist_get_row_style is deprecated and should not be used in newly-written code.
 
 ==== :GetSelectable ====
 '':GetSelectable(self @ [[#T|T]], row @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
-  === Warning ===
-  gtk_clist_get_selectable is deprecated and should not be used in newly-written code.
 
 ==== :GetSelectionInfo ====
 '':GetSelectionInfo(self @ [[#T|T]], x @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], row @ [[..:..:Std:Object#T|Std.Object.T]], column @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-  === Warning ===
-  gtk_clist_get_selection_info is deprecated and should not be used in newly-written code.
 
 ==== :GetText ====
 '':GetText(self @ [[#T|T]], row @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], column @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], text @ [[..:..:Std:List#T|Std.List.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-  === Warning ===
-  gtk_clist_get_text is deprecated and should not be used in newly-written code.
 
 ==== :GetVadjustment ====
 '':GetVadjustment(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]]''
 
-  === Warning ===
-  gtk_clist_get_vadjustment is deprecated and should not be used in newly-written code.
 
 ==== :Insert ====
 '':Insert(self @ [[#T|T]], row @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], text @ [[..:..:Std:List#T|Std.List.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-  === Warning ===
-  gtk_clist_insert is deprecated and should not be used in newly-written code.
 
 ==== :Moveto ====
 '':Moveto(self @ [[#T|T]], row @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], column @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], row_align @ [[..:..:Std:Real#T|Std.Real.T]], col_align @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  === Warning ===
-  gtk_clist_moveto is deprecated and should not be used in newly-written code.
 
 ==== :OptimalColumnWidth ====
 '':OptimalColumnWidth(self @ [[#T|T]], column @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-  === Warning ===
-  gtk_clist_optimal_column_width is deprecated and should not be used in newly-written code.
 
 ==== :Prepend ====
 '':Prepend(self @ [[#T|T]], text @ [[..:..:Std:List#T|Std.List.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-  === Warning ===
-  gtk_clist_prepend is deprecated and should not be used in newly-written code.
 
 ==== :Remove ====
 '':Remove(self @ [[#T|T]], row @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  === Warning ===
-  gtk_clist_remove is deprecated and should not be used in newly-written code.
 
 ==== :SelectAll ====
 '':SelectAll(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  === Warning ===
-  gtk_clist_select_all is deprecated and should not be used in newly-written code.
 
 ==== :SelectRow ====
 '':SelectRow(self @ [[#T|T]], row @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], column @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  === Warning ===
-  gtk_clist_select_row is deprecated and should not be used in newly-written code.
 
 ==== :SetAutoSort ====
 '':SetAutoSort(self @ [[#T|T]], auto_sort @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  === Warning ===
-  gtk_clist_set_auto_sort is deprecated and should not be used in newly-written code.
 
 ==== :SetBackground ====
 '':SetBackground(self @ [[#T|T]], row @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], color @ [[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  === Warning ===
-  gtk_clist_set_background is deprecated and should not be used in newly-written code.
 
 ==== :SetButtonActions ====
 '':SetButtonActions(self @ [[#T|T]], button @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], button_actions @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  === Warning ===
-  gtk_clist_set_button_actions is deprecated and should not be used in newly-written code.
 
 ==== :SetCellStyle ====
 '':SetCellStyle(self @ [[#T|T]], row @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], column @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], style @ [[..:..:Gtk:Gtk:Style#T|Gtk.Gtk.Style.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  === Warning ===
-  gtk_clist_set_cell_style is deprecated and should not be used in newly-written code.
 
 ==== :SetColumnAutoResize ====
 '':SetColumnAutoResize(self @ [[#T|T]], column @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], auto_resize @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  === Warning ===
-  gtk_clist_set_column_auto_resize is deprecated and should not be used in newly-written code.
 
 ==== :SetColumnJustification ====
 '':SetColumnJustification(self @ [[#T|T]], column @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], justification @ [[..:..:Gtk:Gtk:Justification#T|Gtk.Gtk.Justification.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  === Warning ===
-  gtk_clist_set_column_justification is deprecated and should not be used in newly-written code.
 
 ==== :SetColumnMaxWidth ====
 '':SetColumnMaxWidth(self @ [[#T|T]], column @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], max_width @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  === Warning ===
-  gtk_clist_set_column_max_width is deprecated and should not be used in newly-written code.
 
 ==== :SetColumnMinWidth ====
 '':SetColumnMinWidth(self @ [[#T|T]], column @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], min_width @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  === Warning ===
-  gtk_clist_set_column_min_width is deprecated and should not be used in newly-written code.
 
 ==== :SetColumnResizeable ====
 '':SetColumnResizeable(self @ [[#T|T]], column @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], resizeable @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  === Warning ===
-  gtk_clist_set_column_resizeable is deprecated and should not be used in newly-written code.
 
 ==== :SetColumnTitle ====
 '':SetColumnTitle(self @ [[#T|T]], column @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], title @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  === Warning ===
-  gtk_clist_set_column_title is deprecated and should not be used in newly-written code.
 
 ==== :SetColumnVisibility ====
 '':SetColumnVisibility(self @ [[#T|T]], column @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], visible @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  === Warning ===
-  gtk_clist_set_column_visibility is deprecated and should not be used in newly-written code.
 
 ==== :SetColumnWidget ====
 '':SetColumnWidget(self @ [[#T|T]], column @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], widget @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  === Warning ===
-  gtk_clist_set_column_widget is deprecated and should not be used in newly-written code.
 
 ==== :SetColumnWidth ====
 '':SetColumnWidth(self @ [[#T|T]], column @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], width @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  === Warning ===
-  gtk_clist_set_column_width is deprecated and should not be used in newly-written code.
 
 ==== :SetCompareFunc ====
 '':SetCompareFunc(self @ [[#T|T]], cmp_func @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  === Warning ===
-  gtk_clist_set_compare_func is deprecated and should not be used in newly-written code.
 
 ==== :SetForeground ====
 '':SetForeground(self @ [[#T|T]], row @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], color @ [[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  === Warning ===
-  gtk_clist_set_foreground is deprecated and should not be used in newly-written code.
 
 ==== :SetHadjustment ====
 '':SetHadjustment(self @ [[#T|T]], adjustment @ [[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  === Warning ===
-  gtk_clist_set_hadjustment is deprecated and should not be used in newly-written code.
 
 ==== :SetPixmap ====
 '':SetPixmap(self @ [[#T|T]], row @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], column @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], pixmap @ [[..:..:Gtk:Gdk:Pixmap#T|Gtk.Gdk.Pixmap.T]], mask @ [[..:..:Gtk:Gdk:Bitmap#T|Gtk.Gdk.Bitmap.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  === Warning ===
-  gtk_clist_set_pixmap is deprecated and should not be used in newly-written code.
 
 ==== :SetPixtext ====
 '':SetPixtext(self @ [[#T|T]], row @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], column @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], text @ [[..:..:Std:String#T|Std.String.T]], spacing @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], pixmap @ [[..:..:Gtk:Gdk:Pixmap#T|Gtk.Gdk.Pixmap.T]], mask @ [[..:..:Gtk:Gdk:Bitmap#T|Gtk.Gdk.Bitmap.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  === Warning ===
-  gtk_clist_set_pixtext is deprecated and should not be used in newly-written code.
 
 ==== :SetReorderable ====
 '':SetReorderable(self @ [[#T|T]], reorderable @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  === Warning ===
-  gtk_clist_set_reorderable is deprecated and should not be used in newly-written code.
 
 ==== :SetRowData ====
 '':SetRowData(self @ [[#T|T]], row @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], data @ [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  === Warning ===
-  gtk_clist_set_row_data is deprecated and should not be used in newly-written code.
 
 ==== :SetRowDataFull ====
 '':SetRowDataFull(self @ [[#T|T]], row @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], data @ [[..:..:Std:Address#T|Std.Address.T]], destroy @ [[..:..:Std:Function#T|Std.Function.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  === Warning ===
-  gtk_clist_set_row_data_full is deprecated and should not be used in newly-written code.
 
 ==== :SetRowHeight ====
 '':SetRowHeight(self @ [[#T|T]], height @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  === Warning ===
-  gtk_clist_set_row_height is deprecated and should not be used in newly-written code.
 
 ==== :SetRowStyle ====
 '':SetRowStyle(self @ [[#T|T]], row @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], style @ [[..:..:Gtk:Gtk:Style#T|Gtk.Gtk.Style.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  === Warning ===
-  gtk_clist_set_row_style is deprecated and should not be used in newly-written code.
 
 ==== :SetSelectable ====
 '':SetSelectable(self @ [[#T|T]], row @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], selectable @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  === Warning ===
-  gtk_clist_set_selectable is deprecated and should not be used in newly-written code.
 
 ==== :SetSelectionMode ====
 '':SetSelectionMode(self @ [[#T|T]], mode @ [[..:..:Gtk:Gtk:SelectionMode#T|Gtk.Gtk.SelectionMode.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  === Warning ===
-  gtk_clist_set_selection_mode is deprecated and should not be used in newly-written code.
 
 ==== :SetShadowType ====
 '':SetShadowType(self @ [[#T|T]], type @ [[..:..:Gtk:Gtk:ShadowType#T|Gtk.Gtk.ShadowType.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  === Warning ===
-  gtk_clist_set_shadow_type is deprecated and should not be used in newly-written code.
 
 ==== :SetShift ====
 '':SetShift(self @ [[#T|T]], row @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], column @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], vertical @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], horizontal @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  === Warning ===
-  gtk_clist_set_shift is deprecated and should not be used in newly-written code.
 
 ==== :SetSortColumn ====
 '':SetSortColumn(self @ [[#T|T]], column @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  === Warning ===
-  gtk_clist_set_sort_column is deprecated and should not be used in newly-written code.
 
 ==== :SetSortType ====
 '':SetSortType(self @ [[#T|T]], sort_type @ [[..:..:Gtk:Gtk:SortType#T|Gtk.Gtk.SortType.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  === Warning ===
-  gtk_clist_set_sort_type is deprecated and should not be used in newly-written code.
 
 ==== :SetText ====
 '':SetText(self @ [[#T|T]], row @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], column @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], text @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  === Warning ===
-  gtk_clist_set_text is deprecated and should not be used in newly-written code.
 
 ==== :SetUseDragIcons ====
 '':SetUseDragIcons(self @ [[#T|T]], use_icons @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  === Warning ===
-  gtk_clist_set_use_drag_icons is deprecated and should not be used in newly-written code.
 
 ==== :SetVadjustment ====
 '':SetVadjustment(self @ [[#T|T]], adjustment @ [[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  === Warning ===
-  gtk_clist_set_vadjustment is deprecated and should not be used in newly-written code.
 
 ==== :Sort ====
 '':Sort(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  === Warning ===
-  gtk_clist_sort is deprecated and should not be used in newly-written code.
 
 ==== :SwapRows ====
 '':SwapRows(self @ [[#T|T]], row1 @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], row2 @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  === Warning ===
-  gtk_clist_swap_rows is deprecated and should not be used in newly-written code.
 
 ==== :Thaw ====
 '':Thaw(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  === Warning ===
-  gtk_clist_thaw is deprecated and should not be used in newly-written code.
 
 ==== New ====
 ''New(columns : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[# T| T]]''
 
-  === Warning ===
-  gtk_clist_new is deprecated and should not be used in newly-written code.
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
@@ -591,6 +458,4 @@
 ==== NewWithTitles ====
 ''NewWithTitles(columns : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], titles : [[..:..:Std:List#T|Std.List.T]]) : [[# T| T]]''
 
-  === Warning ===
-  gtk_clist_new_with_titles is deprecated and should not be used in newly-written code.
 

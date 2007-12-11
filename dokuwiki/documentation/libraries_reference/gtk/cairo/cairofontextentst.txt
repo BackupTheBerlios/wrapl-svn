@@ -2,24 +2,44 @@
 ==== T ====
 
 
-==== :MaxYAdvance ====
-'':MaxYAdvance(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
+==== :setMaxYAdvance ====
+'':setMaxYAdvance(self @ [[#T|T]], value @ [[..:..:Std:Real#T|Std.Real.T]])''
 
 
 ==== :Ascent ====
 '':Ascent(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
+==== :setAscent ====
+'':setAscent(self @ [[#T|T]], value @ [[..:..:Std:Real#T|Std.Real.T]])''
+
+
 ==== :Descent ====
 '':Descent(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
+
+
+==== :setDescent ====
+'':setDescent(self @ [[#T|T]], value @ [[..:..:Std:Real#T|Std.Real.T]])''
 
 
 ==== :Height ====
 '':Height(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
+==== :setHeight ====
+'':setHeight(self @ [[#T|T]], value @ [[..:..:Std:Real#T|Std.Real.T]])''
+
+
 ==== :MaxXAdvance ====
 '':MaxXAdvance(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
+
+
+==== :setMaxXAdvance ====
+'':setMaxXAdvance(self @ [[#T|T]], value @ [[..:..:Std:Real#T|Std.Real.T]])''
+
+
+==== :MaxYAdvance ====
+'':MaxYAdvance(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== New ====

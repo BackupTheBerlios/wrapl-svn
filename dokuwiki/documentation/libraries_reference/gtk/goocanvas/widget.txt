@@ -4,16 +4,6 @@
   * [[..:..:Gtk:GooCanvas:ItemSimple#T|Gtk.GooCanvas.ItemSimple.T]]
   * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
 
-  GooCanvasWidget provides support for placing any GtkWidget in the canvas.
-  Note that there are a number of limitations in the use of ""
-   * It doesn't support any transformation besides simple translation. This means you can't scale a
-     canvas with a GooCanvasWidget in it.
-   * It doesn't support layering, so you can't place other items beneath or above the GooCanvasWidget.
-   * It doesn't support rendering of widgets to a given cairo_t, which means you can't output the
-     widget to a pdf or postscript file.
-   * It doesn't have a model/view variant like the other standard items, so it can only be used in a
-     simple canvas without a model.
-  
 
 ==== :Anchor ====
 '':Anchor(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:AnchorType#T|Gtk.Gtk.AnchorType.T]]''
@@ -42,18 +32,6 @@
 ==== New ====
 ''New(parent : [[..:..:Gtk:GooCanvas:Item#T|Gtk.GooCanvas.Item.T]], widget : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], x : [[..:..:Std:Real#T|Std.Real.T]], y : [[..:..:Std:Real#T|Std.Real.T]], width : [[..:..:Std:Real#T|Std.Real.T]], height : [[..:..:Std:Real#T|Std.Real.T]], __etc__ : [[..:..:Std:Object#T|Std.Object.T]]) : [[# T| T]]''
 
-  Creates a new widget item.
-  
-  parent :  the parent item, or NULL. If a parent is specified, it will assume ownership of the item, and the item will
-            automatically be freed when it is removed from the parent. Otherwise call g_object_unref() to free it.
-  widget :  the widget.
-  x :       the x coordinate of the item.
-  y :       the y coordinate of the item.
-  width :   the width of the item, or -1 to use the widget's requested width.
-  height :  the height of the item, or -1 to use the widget's requested height.
-  ... :     optional pairs of property names and values, and a terminating NULL.
-  Returns : a new widget item.
-  
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''

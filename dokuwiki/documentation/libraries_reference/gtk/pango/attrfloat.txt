@@ -2,12 +2,20 @@
 ==== T ====
 
 
-==== :Value ====
-'':Value(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
+==== :setValue ====
+'':setValue(self @ [[#T|T]], value @ [[..:..:Std:Real#T|Std.Real.T]])''
 
 
 ==== :Attr ====
 '':Attr(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+
+
+==== :setAttr ====
+'':setAttr(self @ [[#T|T]], value @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :Value ====
+'':Value(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== New ====

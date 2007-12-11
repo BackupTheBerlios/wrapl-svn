@@ -2,20 +2,36 @@
 ==== T ====
 
 
-==== :Args ====
-'':Args(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:BindingArg#T|Gtk.Gtk.BindingArg.T]]''
+==== :setArgs ====
+'':setArgs(self @ [[#T|T]], value @ [[..:..:Gtk:Gtk:BindingArg#T|Gtk.Gtk.BindingArg.T]])''
 
 
 ==== :Next ====
 '':Next(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:BindingSignal#T|Gtk.Gtk.BindingSignal.T]]''
 
 
+==== :setNext ====
+'':setNext(self @ [[#T|T]], value @ [[..:..:Gtk:Gtk:BindingSignal#T|Gtk.Gtk.BindingSignal.T]])''
+
+
 ==== :SignalName ====
 '':SignalName(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
+==== :setSignalName ====
+'':setSignalName(self @ [[#T|T]], value @ [[..:..:Std:String#T|Std.String.T]])''
+
+
 ==== :NArgs ====
 '':NArgs(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+
+
+==== :setNArgs ====
+'':setNArgs(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :Args ====
+'':Args(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:BindingArg#T|Gtk.Gtk.BindingArg.T]]''
 
 
 ==== New ====

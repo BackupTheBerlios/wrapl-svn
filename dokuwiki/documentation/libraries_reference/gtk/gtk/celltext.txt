@@ -2,24 +2,44 @@
 ==== T ====
 
 
-==== :Text ====
-'':Text(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
+==== :setText ====
+'':setText(self @ [[#T|T]], value @ [[..:..:Std:String#T|Std.String.T]])''
 
 
 ==== :Type ====
 '':Type(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:CellType#T|Gtk.Gtk.CellType.T]]''
 
 
+==== :setType ====
+'':setType(self @ [[#T|T]], value @ [[..:..:Gtk:Gtk:CellType#T|Gtk.Gtk.CellType.T]])''
+
+
 ==== :Vertical ====
 '':Vertical(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+
+
+==== :setVertical ====
+'':setVertical(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
 
 
 ==== :Horizontal ====
 '':Horizontal(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
+==== :setHorizontal ====
+'':setHorizontal(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
 ==== :Style ====
 '':Style(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Style#T|Gtk.Gtk.Style.T]]''
+
+
+==== :setStyle ====
+'':setStyle(self @ [[#T|T]], value @ [[..:..:Gtk:Gtk:Style#T|Gtk.Gtk.Style.T]])''
+
+
+==== :Text ====
+'':Text(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== New ====

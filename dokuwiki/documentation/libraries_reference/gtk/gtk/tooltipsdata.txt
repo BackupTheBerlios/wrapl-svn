@@ -2,20 +2,36 @@
 ==== T ====
 
 
+==== :setTipPrivate ====
+'':setTipPrivate(self @ [[#T|T]], value @ [[..:..:Std:String#T|Std.String.T]])''
+
+
 ==== :TipPrivate ====
 '':TipPrivate(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
-
-
-==== :TipText ====
-'':TipText(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== :Tooltips ====
 '':Tooltips(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Tooltips#T|Gtk.Gtk.Tooltips.T]]''
 
 
+==== :setTooltips ====
+'':setTooltips(self @ [[#T|T]], value @ [[..:..:Gtk:Gtk:Tooltips#T|Gtk.Gtk.Tooltips.T]])''
+
+
 ==== :Widget ====
 '':Widget(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
+
+
+==== :setWidget ====
+'':setWidget(self @ [[#T|T]], value @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]])''
+
+
+==== :TipText ====
+'':TipText(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
+
+
+==== :setTipText ====
+'':setTipText(self @ [[#T|T]], value @ [[..:..:Std:String#T|Std.String.T]])''
 
 
 ==== New ====

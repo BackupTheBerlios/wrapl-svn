@@ -14,28 +14,56 @@
 '':Selection(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
+==== :setSelection ====
+'':setSelection(self @ [[#T|T]], value @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
 ==== :Target ====
 '':Target(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+
+
+==== :setTarget ====
+'':setTarget(self @ [[#T|T]], value @ [[..:..:Std:Object#T|Std.Object.T]])''
 
 
 ==== :Type ====
 '':Type(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
+==== :setType ====
+'':setType(self @ [[#T|T]], value @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
 ==== :Format ====
 '':Format(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+
+
+==== :setFormat ====
+'':setFormat(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
 
 
 ==== :Data ====
 '':Data(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
+==== :setData ====
+'':setData(self @ [[#T|T]], value @ [[..:..:Std:String#T|Std.String.T]])''
+
+
 ==== :Length ====
 '':Length(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
+==== :setLength ====
+'':setLength(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
 ==== :Display ====
 '':Display(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Display#T|Gtk.Gdk.Display.T]]''
+
+
+==== :setDisplay ====
+'':setDisplay(self @ [[#T|T]], value @ [[..:..:Gtk:Gdk:Display#T|Gtk.Gdk.Display.T]])''
 
 
 ==== :Copy ====

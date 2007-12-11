@@ -9,16 +9,20 @@
 '':compare( @ [[#T|T]])''
 
 
-==== :empty ====
-'':empty( @ [[#T|T]])''
-
-
 ==== :hash ====
 '':hash( @ [[#T|T]])''
 
 
+==== :empty ====
+'':empty( @ [[#T|T]])''
+
+
 ==== :size ====
 '':size( @ [[#T|T]])''
+
+
+==== :values ====
+'':values( @ [[#T|T]])''
 
 
 ==== :copy ====
@@ -73,10 +77,6 @@
 '':keys( @ [[#T|T]])''
 
 
-==== :values ====
-'':values( @ [[#T|T]])''
-
-
 ==== New ====
 ''New()''
 
@@ -87,5 +87,9 @@
 
 ==== Make ====
 ''Make()''
+
+
+==== NewIdentity ====
+''NewIdentity()''
 
 

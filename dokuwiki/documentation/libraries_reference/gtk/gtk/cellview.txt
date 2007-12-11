@@ -5,60 +5,26 @@
   * [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]
   * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
 
-  A GtkCellView displays a single row of a GtkTreeModel, using cell renderers just like GtkTreeView.
-  GtkCellView doesn't support some of the more complex features of GtkTreeView, like cell editing and
-  drag and drop.
-  
 
 ==== :SetModel ====
 '':SetModel(self @ [[#T|T]], model @ [[..:..:Gtk:Gtk:TreeModel#T|Gtk.Gtk.TreeModel.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Sets the model for cell_view. If cell_view already has a model set, it will remove it before setting the new model. If
-  model is NULL, then it will unset the old model.
-  
-  cell_view : a GtkCellView
-  model :     a GtkTreeModel
-  
 
 ==== :SetDisplayedRow ====
 '':SetDisplayedRow(self @ [[#T|T]], path @ [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Sets the row of the model that is currently displayed by the GtkCellView. If the path is unset, then the contents of the
-  cellview "stick" at their last value; this is not normally a desired result, but may be a needed intermediate state if
-  say, the model for the GtkCellView becomes temporarily empty.
-  
-  cell_view : a GtkCellView
-  path :      a GtkTreePath or NULL to unset.
-  
 
 ==== :SetBackgroundColor ====
 '':SetBackgroundColor(self @ [[#T|T]], color @ [[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Sets the background color of view.
-  
-  cell_view : a GtkCellView
-  color :     the new background color
-  
 
 ==== :GetSizeOfRow ====
 '':GetSizeOfRow(self @ [[#T|T]], path @ [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]], requisition @ [[..:..:Gtk:Gtk:Requisition#T|Gtk.Gtk.Requisition.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
-  Sets requisition to the size needed by cell_view to display the model row pointed to by path.
-  
-  cell_view :   a GtkCellView
-  path :        a GtkTreePath
-  requisition : return location for the size
-  Returns :     TRUE
-  
 
 ==== :GetDisplayedRow ====
 '':GetDisplayedRow(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:TreePath#T|Gtk.Gtk.TreePath.T]]''
 
-  Returns a GtkTreePath referring to the currently displayed row. If no row is currently displayed, NULL is returned.
-  
-  cell_view : a GtkCellView
-  Returns :   the currently displayed row or NULL
-  
 
 ==== :Priv ====
 '':Priv(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -67,20 +33,10 @@
 ==== :GetCellRenderers ====
 '':GetCellRenderers(self @ [[#T|T]]) : [[..:..:Std:List#T|Std.List.T]]''
 
-  Returns the cell renderers which have been added to cell_view.
-  
-  cell_view : a GtkCellView
-  Returns :   a list of cell renderers. The list, but not the renderers has been newly allocated and should be freed with
-              g_list_free() when no longer needed.
-  
 
 ==== New ====
 ''New() : [[# T| T]]''
 
-  Creates a new GtkCellView widget.
-  
-  Returns : A newly created GtkCellView widget.
-  
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
@@ -89,28 +45,12 @@
 ==== NewWithText ====
 ''NewWithText(text : [[..:..:Std:String#T|Std.String.T]]) : [[# T| T]]''
 
-  Creates a new GtkCellView widget, adds a GtkCellRendererText to it, and makes its show text.
-  
-  text :    the text to display in the cell view
-  Returns : A newly created GtkCellView widget.
-  
 
 ==== NewWithPixbuf ====
 ''NewWithPixbuf(pixbuf : [[..:..:Gtk:Gdk:Pixbuf#T|Gtk.Gdk.Pixbuf.T]]) : [[# T| T]]''
 
-  Creates a new GtkCellView widget, adds a GtkCellRendererPixbuf to it, and makes its show pixbuf.
-  
-  pixbuf :  the image to display in the cell view
-  Returns : A newly created GtkCellView widget.
-  
 
 ==== NewWithMarkup ====
 ''NewWithMarkup(markup : [[..:..:Std:String#T|Std.String.T]]) : [[# T| T]]''
 
-  Creates a new GtkCellView widget, adds a GtkCellRendererText to it, and makes its show markup. The text can text can be
-  marked up with the Pango text markup language.
-  
-  markup :  the text to display in the cell view
-  Returns : A newly created GtkCellView widget.
-  
 

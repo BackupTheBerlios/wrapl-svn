@@ -10,24 +10,48 @@
 '':Buf(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
+==== :setBuf ====
+'':setBuf(self @ [[#T|T]], value @ [[..:..:Std:String#T|Std.String.T]])''
+
+
 ==== :Rect ====
 '':Rect(self @ [[#T|T]]) : [[..:..:Gtk:Art:IRect#T|Gtk.Art.IRect.T]]''
+
+
+==== :setRect ====
+'':setRect(self @ [[#T|T]], value @ [[..:..:Gtk:Art:IRect#T|Gtk.Art.IRect.T]])''
 
 
 ==== :BufRowstride ====
 '':BufRowstride(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
+==== :setBufRowstride ====
+'':setBufRowstride(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
 ==== :BgColor ====
 '':BgColor(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+
+
+==== :setBgColor ====
+'':setBgColor(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
 
 
 ==== :IsBg ====
 '':IsBg(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
+==== :setIsBg ====
+'':setIsBg(self @ [[#T|T]], value @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
 ==== :IsBuf ====
 '':IsBuf(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+
+
+==== :setIsBuf ====
+'':setIsBuf(self @ [[#T|T]], value @ [[..:..:Std:Object#T|Std.Object.T]])''
 
 
 ==== New ====

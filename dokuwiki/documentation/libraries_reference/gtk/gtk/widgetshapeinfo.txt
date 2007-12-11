@@ -2,16 +2,28 @@
 ==== T ====
 
 
-==== :ShapeMask ====
-'':ShapeMask(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Bitmap#T|Gtk.Gdk.Bitmap.T]]''
+==== :setShapeMask ====
+'':setShapeMask(self @ [[#T|T]], value @ [[..:..:Gtk:Gdk:Bitmap#T|Gtk.Gdk.Bitmap.T]])''
 
 
 ==== :OffsetX ====
 '':OffsetX(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
+==== :setOffsetX ====
+'':setOffsetX(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
 ==== :OffsetY ====
 '':OffsetY(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+
+
+==== :setOffsetY ====
+'':setOffsetY(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :ShapeMask ====
+'':ShapeMask(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Bitmap#T|Gtk.Gdk.Bitmap.T]]''
 
 
 ==== New ====

@@ -2,32 +2,60 @@
 ==== T ====
 
 
-==== :ReconfigureArrows ====
-'':ReconfigureArrows(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+==== :setReconfigureArrows ====
+'':setReconfigureArrows(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
 
 
 ==== :Coords ====
 '':Coords(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
+==== :setCoords ====
+'':setCoords(self @ [[#T|T]], value @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
 ==== :ArrowData ====
 '':ArrowData(self @ [[#T|T]]) : [[..:..:Gtk:GooCanvas:PolylineArrowData#T|Gtk.GooCanvas.PolylineArrowData.T]]''
+
+
+==== :setArrowData ====
+'':setArrowData(self @ [[#T|T]], value @ [[..:..:Gtk:GooCanvas:PolylineArrowData#T|Gtk.GooCanvas.PolylineArrowData.T]])''
 
 
 ==== :NumPoints ====
 '':NumPoints(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
+==== :setNumPoints ====
+'':setNumPoints(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
 ==== :ClosePath ====
 '':ClosePath(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+
+
+==== :setClosePath ====
+'':setClosePath(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
 
 
 ==== :StartArrow ====
 '':StartArrow(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
+==== :setStartArrow ====
+'':setStartArrow(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
 ==== :EndArrow ====
 '':EndArrow(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+
+
+==== :setEndArrow ====
+'':setEndArrow(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :ReconfigureArrows ====
+'':ReconfigureArrows(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== New ====

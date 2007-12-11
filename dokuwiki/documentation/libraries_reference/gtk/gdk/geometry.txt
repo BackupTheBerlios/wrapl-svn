@@ -2,48 +2,92 @@
 ==== T ====
 
 
-==== :WinGravity ====
-'':WinGravity(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Gravity#T|Gtk.Gdk.Gravity.T]]''
+==== :setWinGravity ====
+'':setWinGravity(self @ [[#T|T]], value @ [[..:..:Gtk:Gdk:Gravity#T|Gtk.Gdk.Gravity.T]])''
 
 
 ==== :MinWidth ====
 '':MinWidth(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
+==== :setMinWidth ====
+'':setMinWidth(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
 ==== :MinHeight ====
 '':MinHeight(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+
+
+==== :setMinHeight ====
+'':setMinHeight(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
 
 
 ==== :MaxWidth ====
 '':MaxWidth(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
+==== :setMaxWidth ====
+'':setMaxWidth(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
 ==== :MaxHeight ====
 '':MaxHeight(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+
+
+==== :setMaxHeight ====
+'':setMaxHeight(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
 
 
 ==== :BaseWidth ====
 '':BaseWidth(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
+==== :setBaseWidth ====
+'':setBaseWidth(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
 ==== :BaseHeight ====
 '':BaseHeight(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+
+
+==== :setBaseHeight ====
+'':setBaseHeight(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
 
 
 ==== :WidthInc ====
 '':WidthInc(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
+==== :setWidthInc ====
+'':setWidthInc(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
 ==== :HeightInc ====
 '':HeightInc(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+
+
+==== :setHeightInc ====
+'':setHeightInc(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
 
 
 ==== :MinAspect ====
 '':MinAspect(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
+==== :setMinAspect ====
+'':setMinAspect(self @ [[#T|T]], value @ [[..:..:Std:Real#T|Std.Real.T]])''
+
+
 ==== :MaxAspect ====
 '':MaxAspect(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
+
+
+==== :setMaxAspect ====
+'':setMaxAspect(self @ [[#T|T]], value @ [[..:..:Std:Real#T|Std.Real.T]])''
+
+
+==== :WinGravity ====
+'':WinGravity(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Gravity#T|Gtk.Gdk.Gravity.T]]''
 
 
 ==== New ====

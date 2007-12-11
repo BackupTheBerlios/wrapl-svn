@@ -6,97 +6,18 @@
   * [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]
   * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
 
-  A GtkSpinButton is an ideal way to allow the user to set the value of some attribute. Rather than
-  having to directly type a number into a GtkEntry, GtkSpinButton allows the user to click on one of
-  two arrows to increment or decrement the displayed value. A value can still be typed in, with the
-  bonus that it can be checked to ensure it is in a given range.
-  The main properties of a GtkSpinButton are through a GtkAdjustment. See the GtkAdjustment section
-  for more details about an adjustment's properties.
-  Example 12.&#160;Using a GtkSpinButton to get an integer.
-  
-  /* Provides a function to retrieve an integer value from a GtkSpinButton
-   * and creates a spin button to model percentage values.
-   */
-  
-  gint grab_int_value (GtkSpinButton *a_spinner, gpointer user_data) {
-     return gtk_spin_button_get_value_as_int (a_spinner);
-  }
-  
-  void create_integer_spin_button (void) {
-  
-     GtkWidget *window, *spinner;
-     GtkAdjustment *spinner_adj;
-  
-     spinner_adj = (GtkAdjustment *) gtk_adjustment_new (50.0, 0.0, 100.0, 1.0, 5.0, 5.0);
-  
-     window = gtk_window_new (GTK_WINDOW_TOPLEVEL);
-     gtk_container_set_border_width (GTK_CONTAINER (window), 5);
-  
-     /* creates the spinner, with no decimal places */
-     spinner = gtk_spin_button_new (spinner_adj, 1.0, 0);
-     gtk_container_add (GTK_CONTAINER (window), spinner);
-  
-     gtk_widget_show_all (window);
-     return;
-  }
-  
-  Example 13.&#160;Using a GtkSpinButton to get a floating point value.
-  
-  /* Provides a function to retrieve a floating point value from a
-   * GtkSpinButton, and creates a high precision spin button.
-   */
-  
-  gfloat grab_int_value (GtkSpinButton *a_spinner, gpointer user_data) {
-     return gtk_spin_button_get_value (a_spinner);
-  }
-  
-  void create_floating_spin_button (void) {
-  
-     GtkWidget *window, *spinner;
-     GtkAdjustment *spinner_adj;
-  
-     spinner_adj = (GtkAdjustment *) gtk_adjustment_new (2.500, 0.0, 5.0, 0.001, 0.1, 0.1);
-  
-     window = gtk_window_new (GTK_WINDOW_TOPLEVEL);
-     gtk_container_set_border_width (GTK_CONTAINER (window), 5);
-  
-     /* creates the spinner, with three decimal places */
-     spinner = gtk_spin_button_new (spinner_adj, 0.001, 3);
-     gtk_container_add (GTK_CONTAINER (window), spinner);
-  
-     gtk_widget_show_all (window);
-     return;
-  }
-  
-  
 
 ==== :Update ====
 '':Update(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Manually force an update of the spin button.
-  
-  spin_button : a GtkSpinButton
-  
 
 ==== :Spin ====
 '':Spin(self @ [[#T|T]], direction @ [[..:..:Gtk:Gtk:SpinType#T|Gtk.Gtk.SpinType.T]], increment @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Increment or decrement a spin button's value in a specified direction by a specified amount.
-  
-  spin_button : a GtkSpinButton
-  direction :   a GtkSpinType indicating the direction to spin.
-  increment :   step increment to apply in the specified direction.
-  
 
 ==== :SetWrap ====
 '':SetWrap(self @ [[#T|T]], wrap @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Sets the flag that determines if a spin button value wraps around to the opposite limit when the upper or lower limit of
-  the range is exceeded.
-  
-  spin_button : a GtkSpinButton
-  wrap :        a flag indicating if wrapping behavior is performed.
-  
 
 ==== :Adjustment ====
 '':Adjustment(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]]''
@@ -161,195 +82,82 @@
 ==== :Configure ====
 '':Configure(self @ [[#T|T]], adjustment @ [[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]], climb_rate @ [[..:..:Std:Real#T|Std.Real.T]], digits @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Changes the properties of an existing spin button. The adjustment, climb rate, and number of decimal places are all
-  changed accordingly, after this function call.
-  
-  spin_button : a GtkSpinButton.
-  adjustment :  a GtkAdjustment.
-  climb_rate :  the new climb rate.
-  digits :      the number of decimal places to display in the spin button.
-  
 
 ==== :GetAdjustment ====
 '':GetAdjustment(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]]''
 
-  Get the adjustment associated with a GtkSpinButton
-  
-  spin_button : a GtkSpinButton
-  Returns :     the GtkAdjustment of spin_button
-  
 
 ==== :GetDigits ====
 '':GetDigits(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-  Fetches the precision of spin_button. See gtk_spin_button_set_digits().
-  
-  spin_button : a GtkSpinButton
-  Returns :     the current precision
-  
 
 ==== :GetIncrements ====
 '':GetIncrements(self @ [[#T|T]], step @ [[..:..:Std:Object#T|Std.Object.T]], page @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Gets the current step and page the increments used by spin_button. See gtk_spin_button_set_increments().
-  
-  spin_button : a GtkSpinButton
-  step :        location to store step increment, or NULL
-  page :        location to store page increment, or NULL
-  
 
 ==== :GetNumeric ====
 '':GetNumeric(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
-  Returns whether non-numeric text can be typed into the spin button. See gtk_spin_button_set_numeric().
-  
-  spin_button : a GtkSpinButton
-  Returns :     TRUE if only numeric text can be entered
-  
 
 ==== :GetRange ====
 '':GetRange(self @ [[#T|T]], min @ [[..:..:Std:Object#T|Std.Object.T]], max @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Gets the range allowed for spin_button. See gtk_spin_button_set_range().
-  
-  spin_button : a GtkSpinButton
-  min :         location to store minimum allowed value, or NULL
-  max :         location to store maximum allowed value, or NULL
-  
 
 ==== :GetSnapToTicks ====
 '':GetSnapToTicks(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
-  Returns whether the values are corrected to the nearest step. See gtk_spin_button_set_snap_to_ticks().
-  
-  spin_button : a GtkSpinButton
-  Returns :     TRUE if values are snapped to the nearest step.
-  
 
 ==== :GetUpdatePolicy ====
 '':GetUpdatePolicy(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:SpinButtonUpdatePolicy#T|Gtk.Gtk.SpinButtonUpdatePolicy.T]]''
 
-  Gets the update behavior of a spin button. See gtk_spin_button_set_update_policy().
-  
-  spin_button : a GtkSpinButton
-  Returns :     the current update policy
-  
 
 ==== :GetValue ====
 '':GetValue(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
-  Get the value in the spin_button.
-  
-  spin_button : a GtkSpinButton
-  Returns :     the value of spin_button
-  
 
 ==== :GetValueAsInt ====
 '':GetValueAsInt(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-  Get the value spin_button represented as an integer.
-  
-  spin_button : a GtkSpinButton
-  Returns :     the value of spin_button
-  
 
 ==== :GetWrap ====
 '':GetWrap(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
-  Returns whether the spin button's value wraps around to the opposite limit when the upper or lower limit of the range is
-  exceeded. See gtk_spin_button_set_wrap().
-  
-  spin_button : a GtkSpinButton
-  Returns :     TRUE if the spin button wraps around
-  
 
 ==== :SetAdjustment ====
 '':SetAdjustment(self @ [[#T|T]], adjustment @ [[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Replaces the GtkAdjustment associated with spin_button.
-  
-  spin_button : a GtkSpinButton
-  adjustment :  a GtkAdjustment to replace the existing adjustment
-  
 
 ==== :SetDigits ====
 '':SetDigits(self @ [[#T|T]], digits @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Set the precision to be displayed by spin_button. Up to 20 digit precision is allowed.
-  
-  spin_button : a GtkSpinButton
-  digits :      the number of digits after the decimal point to be displayed for the spin button's value
-  
 
 ==== :SetIncrements ====
 '':SetIncrements(self @ [[#T|T]], step @ [[..:..:Std:Real#T|Std.Real.T]], page @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Sets the step and page increments for spin_button. This affects how quickly the value changes when the spin button's
-  arrows are activated.
-  
-  spin_button : a GtkSpinButton
-  step :        increment applied for a button 1 press.
-  page :        increment applied for a button 2 press.
-  
 
 ==== :SetNumeric ====
 '':SetNumeric(self @ [[#T|T]], numeric @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Sets the flag that determines if non-numeric text can be typed into the spin button.
-  
-  spin_button : a GtkSpinButton
-  numeric :     flag indicating if only numeric entry is allowed.
-  
 
 ==== :SetRange ====
 '':SetRange(self @ [[#T|T]], min @ [[..:..:Std:Real#T|Std.Real.T]], max @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Sets the minimum and maximum allowable values for spin_button
-  
-  spin_button : a GtkSpinButton
-  min :         minimum allowable value
-  max :         maximum allowable value
-  
 
 ==== :SetSnapToTicks ====
 '':SetSnapToTicks(self @ [[#T|T]], snap_to_ticks @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Sets the policy as to whether values are corrected to the nearest step increment when a spin button is activated after
-  providing an invalid value.
-  
-  spin_button :   a GtkSpinButton
-  snap_to_ticks : a flag indicating if invalid values should be corrected.
-  
 
 ==== :SetUpdatePolicy ====
 '':SetUpdatePolicy(self @ [[#T|T]], policy @ [[..:..:Gtk:Gtk:SpinButtonUpdatePolicy#T|Gtk.Gtk.SpinButtonUpdatePolicy.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Sets the update behavior of a spin button. This determines whether the spin button is always updated or only when a
-  valid value is set.
-  
-  spin_button : a GtkSpinButton
-  policy :      a GtkSpinButtonUpdatePolicy value
-  
 
 ==== :SetValue ====
 '':SetValue(self @ [[#T|T]], value @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Set the value of spin_button.
-  
-  spin_button : a GtkSpinButton
-  value :       the new value
-  
 
 ==== New ====
 ''New(adjustment : [[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]], climb_rate : [[..:..:Std:Real#T|Std.Real.T]], digits : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[# T| T]]''
 
-  Creates a new GtkSpinButton.
-  
-  adjustment : the GtkAdjustment object that this spin button should use.
-  climb_rate : specifies how much the spin button changes when an arrow is clicked on.
-  digits :     the number of decimal places to display.
-  Returns :    The new spin button as a GtkWidget.
-  
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
@@ -358,15 +166,4 @@
 ==== NewWithRange ====
 ''NewWithRange(min : [[..:..:Std:Real#T|Std.Real.T]], max : [[..:..:Std:Real#T|Std.Real.T]], step : [[..:..:Std:Real#T|Std.Real.T]]) : [[# T| T]]''
 
-  This is a convenience constructor that allows creation of a numeric GtkSpinButton without manually creating an
-  adjustment. The value is initially set to the minimum value and a page increment of 10 * step is the default. The
-  precision of the spin button is equivalent to the precision of step.
-  Note that the way in which the precision is derived works best if step is a power of ten. If the resulting precision is
-  not suitable for your needs, use gtk_spin_button_set_digits() to correct it.
-  
-  min :     Minimum allowable value
-  max :     Maximum allowable value
-  step :    Increment added or subtracted by spinning the widget
-  Returns : The new spin button as a GtkWidget.
-  
 

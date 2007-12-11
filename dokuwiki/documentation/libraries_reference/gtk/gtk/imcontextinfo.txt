@@ -2,24 +2,44 @@
 ==== T ====
 
 
-==== :DefaultLocales ====
-'':DefaultLocales(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
+==== :setDefaultLocales ====
+'':setDefaultLocales(self @ [[#T|T]], value @ [[..:..:Std:String#T|Std.String.T]])''
 
 
 ==== :ContextId ====
 '':ContextId(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
+==== :setContextId ====
+'':setContextId(self @ [[#T|T]], value @ [[..:..:Std:String#T|Std.String.T]])''
+
+
 ==== :ContextName ====
 '':ContextName(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
+
+
+==== :setContextName ====
+'':setContextName(self @ [[#T|T]], value @ [[..:..:Std:String#T|Std.String.T]])''
 
 
 ==== :Domain ====
 '':Domain(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
+==== :setDomain ====
+'':setDomain(self @ [[#T|T]], value @ [[..:..:Std:String#T|Std.String.T]])''
+
+
 ==== :DomainDirname ====
 '':DomainDirname(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
+
+
+==== :setDomainDirname ====
+'':setDomainDirname(self @ [[#T|T]], value @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== :DefaultLocales ====
+'':DefaultLocales(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== New ====

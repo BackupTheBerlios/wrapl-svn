@@ -2,24 +2,44 @@
 ==== T ====
 
 
-==== :Height ====
-'':Height(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
+==== :setHeight ====
+'':setHeight(self @ [[#T|T]], value @ [[..:..:Std:Real#T|Std.Real.T]])''
 
 
 ==== :Pattern ====
 '':Pattern(self @ [[#T|T]]) : [[..:..:Gtk:Cairo:CairoPatternT#T|Gtk.Cairo.CairoPatternT.T]]''
 
 
+==== :setPattern ====
+'':setPattern(self @ [[#T|T]], value @ [[..:..:Gtk:Cairo:CairoPatternT#T|Gtk.Cairo.CairoPatternT.T]])''
+
+
 ==== :X ====
 '':X(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
+
+
+==== :setX ====
+'':setX(self @ [[#T|T]], value @ [[..:..:Std:Real#T|Std.Real.T]])''
 
 
 ==== :Y ====
 '':Y(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
+==== :setY ====
+'':setY(self @ [[#T|T]], value @ [[..:..:Std:Real#T|Std.Real.T]])''
+
+
 ==== :Width ====
 '':Width(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
+
+
+==== :setWidth ====
+'':setWidth(self @ [[#T|T]], value @ [[..:..:Std:Real#T|Std.Real.T]])''
+
+
+==== :Height ====
+'':Height(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== New ====

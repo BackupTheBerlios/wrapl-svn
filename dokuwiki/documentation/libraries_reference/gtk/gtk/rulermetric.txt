@@ -10,12 +10,24 @@
 '':MetricName(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
+==== :setMetricName ====
+'':setMetricName(self @ [[#T|T]], value @ [[..:..:Std:String#T|Std.String.T]])''
+
+
 ==== :Abbrev ====
 '':Abbrev(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
+==== :setAbbrev ====
+'':setAbbrev(self @ [[#T|T]], value @ [[..:..:Std:String#T|Std.String.T]])''
+
+
 ==== :PixelsPerUnit ====
 '':PixelsPerUnit(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
+
+
+==== :setPixelsPerUnit ====
+'':setPixelsPerUnit(self @ [[#T|T]], value @ [[..:..:Std:Real#T|Std.Real.T]])''
 
 
 ==== :RulerScale ====

@@ -2,20 +2,36 @@
 ==== T ====
 
 
+==== :setPoints ====
+'':setPoints(self @ [[#T|T]], value @ [[..:..:Gtk:Art:Point#T|Gtk.Art.Point.T]])''
+
+
 ==== :Points ====
 '':Points(self @ [[#T|T]]) : [[..:..:Gtk:Art:Point#T|Gtk.Art.Point.T]]''
-
-
-==== :Bbox ====
-'':Bbox(self @ [[#T|T]]) : [[..:..:Gtk:Art:DRect#T|Gtk.Art.DRect.T]]''
 
 
 ==== :NPoints ====
 '':NPoints(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
+==== :setNPoints ====
+'':setNPoints(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
 ==== :Dir ====
 '':Dir(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+
+
+==== :setDir ====
+'':setDir(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :Bbox ====
+'':Bbox(self @ [[#T|T]]) : [[..:..:Gtk:Art:DRect#T|Gtk.Art.DRect.T]]''
+
+
+==== :setBbox ====
+'':setBbox(self @ [[#T|T]], value @ [[..:..:Gtk:Art:DRect#T|Gtk.Art.DRect.T]])''
 
 
 ==== New ====

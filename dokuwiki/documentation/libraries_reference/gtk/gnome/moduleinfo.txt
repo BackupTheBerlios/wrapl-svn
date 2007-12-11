@@ -2,52 +2,100 @@
 ==== T ====
 
 
+==== :setGetGoptionGroupFunc ====
+'':setGetGoptionGroupFunc(self @ [[#T|T]], value @ [[..:..:Std:Function#T|Std.Function.T]])''
+
+
 ==== :GetGoptionGroupFunc ====
 '':GetGoptionGroupFunc(self @ [[#T|T]]) : [[..:..:Std:Function#T|Std.Function.T]]''
-
-
-==== :OptPrefix ====
-'':OptPrefix(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== :Name ====
 '':Name(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
+==== :setName ====
+'':setName(self @ [[#T|T]], value @ [[..:..:Std:String#T|Std.String.T]])''
+
+
 ==== :Version ====
 '':Version(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
+
+
+==== :setVersion ====
+'':setVersion(self @ [[#T|T]], value @ [[..:..:Std:String#T|Std.String.T]])''
 
 
 ==== :Description ====
 '':Description(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
+==== :setDescription ====
+'':setDescription(self @ [[#T|T]], value @ [[..:..:Std:String#T|Std.String.T]])''
+
+
 ==== :Requirements ====
 '':Requirements(self @ [[#T|T]]) : [[..:..:Gtk:Gnome:ModuleRequirement#T|Gtk.Gnome.ModuleRequirement.T]]''
+
+
+==== :setRequirements ====
+'':setRequirements(self @ [[#T|T]], value @ [[..:..:Gtk:Gnome:ModuleRequirement#T|Gtk.Gnome.ModuleRequirement.T]])''
 
 
 ==== :InstanceInit ====
 '':InstanceInit(self @ [[#T|T]]) : [[..:..:Std:Function#T|Std.Function.T]]''
 
 
+==== :setInstanceInit ====
+'':setInstanceInit(self @ [[#T|T]], value @ [[..:..:Std:Function#T|Std.Function.T]])''
+
+
 ==== :PreArgsParse ====
 '':PreArgsParse(self @ [[#T|T]]) : [[..:..:Std:Function#T|Std.Function.T]]''
+
+
+==== :setPreArgsParse ====
+'':setPreArgsParse(self @ [[#T|T]], value @ [[..:..:Std:Function#T|Std.Function.T]])''
 
 
 ==== :PostArgsParse ====
 '':PostArgsParse(self @ [[#T|T]]) : [[..:..:Std:Function#T|Std.Function.T]]''
 
 
+==== :setPostArgsParse ====
+'':setPostArgsParse(self @ [[#T|T]], value @ [[..:..:Std:Function#T|Std.Function.T]])''
+
+
 ==== :Options ====
 '':Options(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+
+
+==== :setOptions ====
+'':setOptions(self @ [[#T|T]], value @ [[..:..:Std:Object#T|Std.Object.T]])''
 
 
 ==== :InitPass ====
 '':InitPass(self @ [[#T|T]]) : [[..:..:Std:Function#T|Std.Function.T]]''
 
 
+==== :setInitPass ====
+'':setInitPass(self @ [[#T|T]], value @ [[..:..:Std:Function#T|Std.Function.T]])''
+
+
 ==== :ClassInit ====
 '':ClassInit(self @ [[#T|T]]) : [[..:..:Std:Function#T|Std.Function.T]]''
+
+
+==== :setClassInit ====
+'':setClassInit(self @ [[#T|T]], value @ [[..:..:Std:Function#T|Std.Function.T]])''
+
+
+==== :OptPrefix ====
+'':OptPrefix(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
+
+
+==== :setOptPrefix ====
+'':setOptPrefix(self @ [[#T|T]], value @ [[..:..:Std:String#T|Std.String.T]])''
 
 
 ==== New ====

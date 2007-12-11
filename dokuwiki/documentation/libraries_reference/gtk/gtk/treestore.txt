@@ -4,59 +4,18 @@
   * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
   * [[..:..:Gtk:Gtk:TreeModel#T|Gtk.Gtk.TreeModel.T]]
 
-  The GtkTreeStore object is a list model for use with a GtkTreeView widget. It implements the
-  GtkTreeModel interface, and consequentialy, can use all of the methods available there. It also
-  implements the GtkTreeSortable interface so it can be sorted by the view. Finally, it also
-  implements the tree drag and drop interfaces.
-  === GtkTreeStore as GtkBuildable ===
-  The GtkTreeStore implementation of the GtkBuildable interface allows to specify the model columns
-  with a <columns> element that may contain multiple <column> elements, each specifying one model
-  column. The "type" attribute specifies the data type for the column.
-  Example 23.&#160;A UI Definition fragment for a tree store
-  <object class="GtkTreeStore">
-    <columns>
-      <column type="gchararray"/>
-      <column type="gchararray"/>
-      <column type="gint"/>
-    </columns>
-  </object>
-  
-  
 
 ==== :Swap ====
 '':Swap(self @ [[#T|T]], a @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]], b @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Swaps a and b in the same level of tree_store. Note that this function only works with unsorted stores.
-  
-  tree_store : A GtkTreeStore.
-  a :          A GtkTreeIter.
-  b :          Another GtkTreeIter.
-  
 
 ==== :SetValuesv ====
 '':SetValuesv(self @ [[#T|T]], iter @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]], columns @ [[..:..:Std:Object#T|Std.Object.T]], values @ [[..:..:Gtk:GObject:Value#T|Gtk.GObject.Value.T]], n_values @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  A variant of gtk_tree_store_set_valist() which takes the columns and values as two arrays, instead of varargs. This
-  function is mainly intended for language bindings or in case the number of columns to change is not known until run-
-  time.
-  
-  tree_store : A GtkTreeStore
-  iter :       A valid GtkTreeIter for the row being modified
-  columns :    an array of column numbers
-  values :     an array of GValues
-  n_values :   the length of the columns and values arrays
-  
 
 ==== :SetValue ====
 '':SetValue(self @ [[#T|T]], iter @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]], column @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], value @ [[..:..:Gtk:GObject:Value#T|Gtk.GObject.Value.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Sets the data in the cell specified by iter and column. The type of value must be convertible to the type of the column.
-  
-  tree_store : a GtkTreeStore
-  iter :       A valid GtkTreeIter for the row being modified
-  column :     column number to modify
-  value :      new value for the cell
-  
 
 ==== :Stamp ====
 '':Stamp(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
@@ -79,7 +38,7 @@
 
 
 ==== :SortList ====
-'':SortList(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SortList(self @ [[#T|T]]) : [[..:..:Std:List#T|Std.List.T]]''
 
 
 ==== :Order ====
@@ -109,229 +68,78 @@
 ==== :Append ====
 '':Append(self @ [[#T|T]], iter @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]], parent @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Appends a new row to tree_store. If parent is non-NULL, then it will append the new row after the last child of parent,
-  otherwise it will append a row to the top level. iter will be changed to point to this new row. The row will be empty
-  after this function is called. To fill in values, you need to call gtk_tree_store_set() or gtk_tree_store_set_value().
-  
-  tree_store : A GtkTreeStore
-  iter :       An unset GtkTreeIter to set to the appended row
-  parent :     A valid GtkTreeIter, or NULL
-  
 
 ==== :Clear ====
 '':Clear(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Removes all rows from tree_store
-  
-  tree_store : a GtkTreeStore
-  
 
 ==== :Insert ====
 '':Insert(self @ [[#T|T]], iter @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]], parent @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]], position @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Creates a new row at position. If parent is non-NULL, then the row will be made a child of parent. Otherwise, the row
-  will be created at the toplevel. If position is larger than the number of rows at that level, then the new row will be
-  inserted to the end of the list. iter will be changed to point to this new row. The row will be empty after this
-  function is called. To fill in values, you need to call gtk_tree_store_set() or gtk_tree_store_set_value().
-  
-  tree_store : A GtkTreeStore
-  iter :       An unset GtkTreeIter to set to the new row
-  parent :     A valid GtkTreeIter, or NULL
-  position :   position to insert the new row
-  
 
 ==== :InsertAfter ====
 '':InsertAfter(self @ [[#T|T]], iter @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]], parent @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]], sibling @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Inserts a new row after sibling. If sibling is NULL, then the row will be prepended to parent 's children. If parent and
-  sibling are NULL, then the row will be prepended to the toplevel. If both sibling and parent are set, then parent must
-  be the parent of sibling. When sibling is set, parent is optional.
-  iter will be changed to point to this new row. The row will be empty after this function is called. To fill in values,
-  you need to call gtk_tree_store_set() or gtk_tree_store_set_value().
-  
-  tree_store : A GtkTreeStore
-  iter :       An unset GtkTreeIter to set to the new row
-  parent :     A valid GtkTreeIter, or NULL
-  sibling :    A valid GtkTreeIter, or NULL
-  
 
 ==== :InsertBefore ====
 '':InsertBefore(self @ [[#T|T]], iter @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]], parent @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]], sibling @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Inserts a new row before sibling. If sibling is NULL, then the row will be appended to parent 's children. If parent and
-  sibling are NULL, then the row will be appended to the toplevel. If both sibling and parent are set, then parent must be
-  the parent of sibling. When sibling is set, parent is optional.
-  iter will be changed to point to this new row. The row will be empty after this function is called. To fill in values,
-  you need to call gtk_tree_store_set() or gtk_tree_store_set_value().
-  
-  tree_store : A GtkTreeStore
-  iter :       An unset GtkTreeIter to set to the new row
-  parent :     A valid GtkTreeIter, or NULL
-  sibling :    A valid GtkTreeIter, or NULL
-  
 
 ==== :InsertWithValues ====
 '':InsertWithValues(self @ [[#T|T]], iter @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]], parent @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]], position @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], __etc__ @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Creates a new row at position. iter will be changed to point to this new row. If position is larger than the number of
-  rows on the list, then the new row will be appended to the list. The row will be filled with the values given to this
-  function.
-  Calling gtk_tree_store_insert_with_values (tree_store, iter, position, ...) has the same effect as calling
-  gtk_tree_store_insert (tree_store, iter, position);
-  gtk_tree_store_set (tree_store, iter, ...);
 
 ==== :InsertWithValuesv ====
 '':InsertWithValuesv(self @ [[#T|T]], iter @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]], parent @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]], position @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], columns @ [[..:..:Std:Object#T|Std.Object.T]], values @ [[..:..:Gtk:GObject:Value#T|Gtk.GObject.Value.T]], n_values @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  A variant of gtk_tree_store_insert_with_values() which takes the columns and values as two arrays, instead of varargs.
-  This function is mainly intended for language bindings.
-  
-  tree_store : A GtkTreeStore
-  iter :       An unset GtkTreeIter to set the new row, or NULL.
-  parent :     A valid GtkTreeIter, or NULL
-  position :   position to insert the new row
-  columns :    an array of column numbers
-  values :     an array of GValues
-  n_values :   the length of the columns and values arrays
-  
 
 ==== :IsAncestor ====
 '':IsAncestor(self @ [[#T|T]], iter @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]], descendant @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
-  Returns TRUE if iter is an ancestor of descendant. That is, iter is the parent (or grandparent or great-grandparent) of
-  descendant.
-  
-  tree_store : A GtkTreeStore
-  iter :       A valid GtkTreeIter
-  descendant : A valid GtkTreeIter
-  Returns :    TRUE, if iter is an ancestor of descendant
-  
 
 ==== :IterDepth ====
 '':IterDepth(self @ [[#T|T]], iter @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-  Returns the depth of iter. This will be 0 for anything on the root level, 1 for anything down a level, etc.
-  
-  tree_store : A GtkTreeStore
-  iter :       A valid GtkTreeIter
-  Returns :    The depth of iter
-  
 
 ==== :IterIsValid ====
 '':IterIsValid(self @ [[#T|T]], iter @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
-  WARNING: This function is slow. Only use it for debugging and/or testing purposes.
-  Checks if the given iter is a valid iter for this GtkTreeStore.
-  
-  tree_store : A GtkTreeStore.
-  iter :       A GtkTreeIter.
-  Returns :    TRUE if the iter is valid, FALSE if the iter is invalid.
-  
 
 ==== :MoveAfter ====
 '':MoveAfter(self @ [[#T|T]], iter @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]], position @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Moves iter in tree_store to the position after position. iter and position should be in the same level. Note that this
-  function only works with unsorted stores. If position is NULL, iter will be moved to the start of the level.
-  
-  tree_store : A GtkTreeStore.
-  iter :       A GtkTreeIter.
-  position :   A GtkTreeIter.
-  
 
 ==== :MoveBefore ====
 '':MoveBefore(self @ [[#T|T]], iter @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]], position @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Moves iter in tree_store to the position before position. iter and position should be in the same level. Note that this
-  function only works with unsorted stores. If position is NULL, iter will be moved to the end of the level.
-  
-  tree_store : A GtkTreeStore.
-  iter :       A GtkTreeIter.
-  position :   A GtkTreeIter or NULL.
-  
 
 ==== :Prepend ====
 '':Prepend(self @ [[#T|T]], iter @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]], parent @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Prepends a new row to tree_store. If parent is non-NULL, then it will prepend the new row before the first child of
-  parent, otherwise it will prepend a row to the top level. iter will be changed to point to this new row. The row will be
-  empty after this function is called. To fill in values, you need to call gtk_tree_store_set() or
-  gtk_tree_store_set_value().
-  
-  tree_store : A GtkTreeStore
-  iter :       An unset GtkTreeIter to set to the prepended row
-  parent :     A valid GtkTreeIter, or NULL
-  
 
 ==== :Remove ====
 '':Remove(self @ [[#T|T]], iter @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
-  Removes iter from tree_store. After being removed, iter is set to the next valid row at that level, or invalidated if it
-  previously pointed to the last one.
-  
-  tree_store : A GtkTreeStore
-  iter :       A valid GtkTreeIter
-  Returns :    TRUE if iter is still valid, FALSE if not.
-  
 
 ==== :Reorder ====
 '':Reorder(self @ [[#T|T]], parent @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]], new_order @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Reorders the children of parent in tree_store to follow the order indicated by new_order. Note that this function only
-  works with unsorted stores.
-  
-  tree_store : A GtkTreeStore.
-  parent :     A GtkTreeIter.
-  new_order :  an array of integers mapping the new position of each child to its old position before the re-ordering,
-               i.e. new_order[newpos] = oldpos.
-  
 
 ==== :Set ====
 '':Set(self @ [[#T|T]], iter @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]], __etc__ @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Sets the value of one or more cells in the row referenced by iter. The variable argument list should contain integer
-  column numbers, each column number followed by the value to be set. The list is terminated by a -1. For example, to set
-  column 0 with type G_TYPE_STRING to "Foo", you would write gtk_tree_store_set (store, iter, 0, "Foo", -1).
-  
-  tree_store : A GtkTreeStore
-  iter :       A valid GtkTreeIter for the row being modified
-  ... :        pairs of column number and value, terminated with -1
-  
 
 ==== :SetColumnTypes ====
 '':SetColumnTypes(self @ [[#T|T]], n_columns @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], types @ [[..:..:Std:List#T|Std.List.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  This function is meant primarily for GObjects that inherit from GtkTreeStore, and should only be used when constructing
-  a new GtkTreeStore. It will not function after a row has been added, or a method on the GtkTreeModel interface is
-  called.
-  
-  tree_store : A GtkTreeStore
-  n_columns :  Number of columns for the tree store
-  types :      An array of GType types, one for each column
-  
 
 ==== :SetValist ====
 '':SetValist(self @ [[#T|T]], iter @ [[..:..:Gtk:Gtk:TreeIter#T|Gtk.Gtk.TreeIter.T]], var_args @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  See gtk_tree_store_set(); this version takes a va_list for use by language bindings.
-  
-  tree_store : A GtkTreeStore
-  iter :       A valid GtkTreeIter for the row being modified
-  var_args :   va_list of column/value pairs
-  
 
 ==== New ====
 ''New(n_columns : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], __etc__ : [[..:..:Std:Object#T|Std.Object.T]]) : [[# T| T]]''
 
-  Creates a new tree store as with n_columns columns each of the types passed in. Note that only types derived from
-  standard GObject fundamental types are supported.
-  As an example, gtk_tree_store_new (3, G_TYPE_INT, G_TYPE_STRING, GDK_TYPE_PIXBUF); will create a new GtkTreeStore with
-  three columns, of type int, string and GdkPixbuf respectively.
-  
-  n_columns : number of columns in the tree store
-  ... :       all GType types for the columns, from first to last
-  Returns :   a new GtkTreeStore
-  
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
@@ -340,10 +148,4 @@
 ==== Newv ====
 ''Newv(n_columns : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], types : [[..:..:Std:List#T|Std.List.T]]) : [[# T| T]]''
 
-  Non vararg creation function. Used primarily by language bindings.
-  
-  n_columns : number of columns in the tree store
-  types :     an array of GType types for the columns, from first to last
-  Returns :   a new GtkTreeStore
-  
 

@@ -2,32 +2,60 @@
 ==== T ====
 
 
-==== :YRoot ====
-'':YRoot(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+==== :setYRoot ====
+'':setYRoot(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
 
 
 ==== :Type ====
 '':Type(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:EventType#T|Gtk.Gdk.EventType.T]]''
 
 
+==== :setType ====
+'':setType(self @ [[#T|T]], value @ [[..:..:Gtk:Gdk:EventType#T|Gtk.Gdk.EventType.T]])''
+
+
 ==== :Window ====
 '':Window(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]]''
+
+
+==== :setWindow ====
+'':setWindow(self @ [[#T|T]], value @ [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]])''
 
 
 ==== :SendEvent ====
 '':SendEvent(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
+==== :setSendEvent ====
+'':setSendEvent(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
 ==== :Context ====
 '':Context(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:DragContext#T|Gtk.Gdk.DragContext.T]]''
+
+
+==== :setContext ====
+'':setContext(self @ [[#T|T]], value @ [[..:..:Gtk:Gdk:DragContext#T|Gtk.Gdk.DragContext.T]])''
 
 
 ==== :Time ====
 '':Time(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
+==== :setTime ====
+'':setTime(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
 ==== :XRoot ====
 '':XRoot(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+
+
+==== :setXRoot ====
+'':setXRoot(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :YRoot ====
+'':YRoot(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== New ====

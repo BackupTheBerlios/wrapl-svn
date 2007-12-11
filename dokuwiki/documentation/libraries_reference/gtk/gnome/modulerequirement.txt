@@ -2,12 +2,20 @@
 ==== T ====
 
 
-==== :ModuleInfo ====
-'':ModuleInfo(self @ [[#T|T]]) : [[..:..:Gtk:Gnome:ModuleInfo#T|Gtk.Gnome.ModuleInfo.T]]''
+==== :setModuleInfo ====
+'':setModuleInfo(self @ [[#T|T]], value @ [[..:..:Gtk:Gnome:ModuleInfo#T|Gtk.Gnome.ModuleInfo.T]])''
 
 
 ==== :RequiredVersion ====
 '':RequiredVersion(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
+
+
+==== :setRequiredVersion ====
+'':setRequiredVersion(self @ [[#T|T]], value @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== :ModuleInfo ====
+'':ModuleInfo(self @ [[#T|T]]) : [[..:..:Gtk:Gnome:ModuleInfo#T|Gtk.Gnome.ModuleInfo.T]]''
 
 
 ==== New ====

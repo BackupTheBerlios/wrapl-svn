@@ -2,72 +2,140 @@
 ==== T ====
 
 
-==== :NChildren ====
-'':NChildren(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+==== :setNChildren ====
+'':setNChildren(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
 
 
 ==== :Parent ====
 '':Parent(self @ [[#T|T]]) : [[..:..:Gtk:Glade:WidgetInfo#T|Gtk.Glade.WidgetInfo.T]]''
 
 
+==== :setParent ====
+'':setParent(self @ [[#T|T]], value @ [[..:..:Gtk:Glade:WidgetInfo#T|Gtk.Glade.WidgetInfo.T]])''
+
+
 ==== :Classname ====
 '':Classname(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
+
+
+==== :setClassname ====
+'':setClassname(self @ [[#T|T]], value @ [[..:..:Std:String#T|Std.String.T]])''
 
 
 ==== :Name ====
 '':Name(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
+==== :setName ====
+'':setName(self @ [[#T|T]], value @ [[..:..:Std:String#T|Std.String.T]])''
+
+
 ==== :Properties ====
 '':Properties(self @ [[#T|T]]) : [[..:..:Gtk:Glade:Property#T|Gtk.Glade.Property.T]]''
+
+
+==== :setProperties ====
+'':setProperties(self @ [[#T|T]], value @ [[..:..:Gtk:Glade:Property#T|Gtk.Glade.Property.T]])''
 
 
 ==== :NProperties ====
 '':NProperties(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
+==== :setNProperties ====
+'':setNProperties(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
 ==== :AtkProps ====
 '':AtkProps(self @ [[#T|T]]) : [[..:..:Gtk:Glade:Property#T|Gtk.Glade.Property.T]]''
+
+
+==== :setAtkProps ====
+'':setAtkProps(self @ [[#T|T]], value @ [[..:..:Gtk:Glade:Property#T|Gtk.Glade.Property.T]])''
 
 
 ==== :NAtkProps ====
 '':NAtkProps(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
+==== :setNAtkProps ====
+'':setNAtkProps(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
 ==== :Signals ====
 '':Signals(self @ [[#T|T]]) : [[..:..:Gtk:Glade:SignalInfo#T|Gtk.Glade.SignalInfo.T]]''
+
+
+==== :setSignals ====
+'':setSignals(self @ [[#T|T]], value @ [[..:..:Gtk:Glade:SignalInfo#T|Gtk.Glade.SignalInfo.T]])''
 
 
 ==== :NSignals ====
 '':NSignals(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
+==== :setNSignals ====
+'':setNSignals(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
 ==== :AtkActions ====
 '':AtkActions(self @ [[#T|T]]) : [[..:..:Gtk:Glade:AtkActionInfo#T|Gtk.Glade.AtkActionInfo.T]]''
+
+
+==== :setAtkActions ====
+'':setAtkActions(self @ [[#T|T]], value @ [[..:..:Gtk:Glade:AtkActionInfo#T|Gtk.Glade.AtkActionInfo.T]])''
 
 
 ==== :NAtkActions ====
 '':NAtkActions(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
+==== :setNAtkActions ====
+'':setNAtkActions(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
 ==== :Relations ====
 '':Relations(self @ [[#T|T]]) : [[..:..:Gtk:Glade:AtkRelationInfo#T|Gtk.Glade.AtkRelationInfo.T]]''
+
+
+==== :setRelations ====
+'':setRelations(self @ [[#T|T]], value @ [[..:..:Gtk:Glade:AtkRelationInfo#T|Gtk.Glade.AtkRelationInfo.T]])''
 
 
 ==== :NRelations ====
 '':NRelations(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
+==== :setNRelations ====
+'':setNRelations(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
 ==== :Accels ====
 '':Accels(self @ [[#T|T]]) : [[..:..:Gtk:Glade:AccelInfo#T|Gtk.Glade.AccelInfo.T]]''
+
+
+==== :setAccels ====
+'':setAccels(self @ [[#T|T]], value @ [[..:..:Gtk:Glade:AccelInfo#T|Gtk.Glade.AccelInfo.T]])''
 
 
 ==== :NAccels ====
 '':NAccels(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
+==== :setNAccels ====
+'':setNAccels(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
 ==== :Children ====
 '':Children(self @ [[#T|T]]) : [[..:..:Gtk:Glade:ChildInfo#T|Gtk.Glade.ChildInfo.T]]''
+
+
+==== :setChildren ====
+'':setChildren(self @ [[#T|T]], value @ [[..:..:Gtk:Glade:ChildInfo#T|Gtk.Glade.ChildInfo.T]])''
+
+
+==== :NChildren ====
+'':NChildren(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== New ====

@@ -2,12 +2,20 @@
 ==== T ====
 
 
-==== :Widgets ====
-'':Widgets(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+==== :setWidgets ====
+'':setWidgets(self @ [[#T|T]], value @ [[..:..:Std:Object#T|Std.Object.T]])''
 
 
 ==== :Path ====
 '':Path(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
+
+
+==== :setPath ====
+'':setPath(self @ [[#T|T]], value @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== :Widgets ====
+'':Widgets(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====

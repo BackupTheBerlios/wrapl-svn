@@ -2,44 +2,84 @@
 ==== T ====
 
 
+==== :setSelectable ====
+'':setSelectable(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
 ==== :Selectable ====
 '':Selectable(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
-==== :BgSet ====
-'':BgSet(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
-
-
-==== :FgSet ====
-'':FgSet(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+==== :setBgSet ====
+'':setBgSet(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
 
 
 ==== :Cell ====
 '':Cell(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
+==== :setCell ====
+'':setCell(self @ [[#T|T]], value @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
 ==== :State ====
 '':State(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:StateType#T|Gtk.Gtk.StateType.T]]''
+
+
+==== :setState ====
+'':setState(self @ [[#T|T]], value @ [[..:..:Gtk:Gtk:StateType#T|Gtk.Gtk.StateType.T]])''
 
 
 ==== :Foreground ====
 '':Foreground(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]]''
 
 
+==== :setForeground ====
+'':setForeground(self @ [[#T|T]], value @ [[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]])''
+
+
 ==== :Background ====
 '':Background(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]]''
+
+
+==== :setBackground ====
+'':setBackground(self @ [[#T|T]], value @ [[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]])''
 
 
 ==== :Style ====
 '':Style(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Style#T|Gtk.Gtk.Style.T]]''
 
 
+==== :setStyle ====
+'':setStyle(self @ [[#T|T]], value @ [[..:..:Gtk:Gtk:Style#T|Gtk.Gtk.Style.T]])''
+
+
 ==== :Data ====
 '':Data(self @ [[#T|T]]) : [[..:..:Std:Address#T|Std.Address.T]]''
 
 
+==== :setData ====
+'':setData(self @ [[#T|T]], value @ [[..:..:Std:Address#T|Std.Address.T]])''
+
+
 ==== :Destroy ====
 '':Destroy(self @ [[#T|T]]) : [[..:..:Std:Function#T|Std.Function.T]]''
+
+
+==== :setDestroy ====
+'':setDestroy(self @ [[#T|T]], value @ [[..:..:Std:Function#T|Std.Function.T]])''
+
+
+==== :FgSet ====
+'':FgSet(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+
+
+==== :setFgSet ====
+'':setFgSet(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :BgSet ====
+'':BgSet(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== New ====

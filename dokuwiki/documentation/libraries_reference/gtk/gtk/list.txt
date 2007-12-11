@@ -6,39 +6,29 @@
   * [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]
   * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
 
-  The GtkList widget is a container whose children are displayed vertically in order, and can be
-  selected. The list has many selection modes, which are programmer selective and depend on how many
-  elements are able to be selected at the same time.
-  GtkList has been deprecated since GTK+ 2.0 and should not be used in newly written code. Use
-  GtkTreeView instead.
-  
 
 ==== :UnselectItem ====
 '':UnselectItem(self @ [[#T|T]], item @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  === Warning ===
-  gtk_list_unselect_item is deprecated and should not be used in newly-written code.
 
 ==== :UnselectChild ====
 '':UnselectChild(self @ [[#T|T]], child @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  === Warning ===
-  gtk_list_unselect_child is deprecated and should not be used in newly-written code.
 
 ==== :Children ====
-'':Children(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Children(self @ [[#T|T]]) : [[..:..:Std:List#T|Std.List.T]]''
 
 
 ==== :Selection ====
-'':Selection(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Selection(self @ [[#T|T]]) : [[..:..:Std:List#T|Std.List.T]]''
 
 
 ==== :UndoSelection ====
-'':UndoSelection(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':UndoSelection(self @ [[#T|T]]) : [[..:..:Std:List#T|Std.List.T]]''
 
 
 ==== :UndoUnselection ====
-'':UndoUnselection(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':UndoUnselection(self @ [[#T|T]]) : [[..:..:Std:List#T|Std.List.T]]''
 
 
 ==== :LastFocusChild ====
@@ -82,142 +72,96 @@
 
 
 ==== :AppendItems ====
-'':AppendItems(self @ [[#T|T]], items @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':AppendItems(self @ [[#T|T]], items @ [[..:..:Std:List#T|Std.List.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  === Warning ===
-  gtk_list_append_items is deprecated and should not be used in newly-written code.
 
 ==== :ChildPosition ====
 '':ChildPosition(self @ [[#T|T]], child @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-  === Warning ===
-  gtk_list_child_position is deprecated and should not be used in newly-written code.
 
 ==== :ClearItems ====
 '':ClearItems(self @ [[#T|T]], start @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], end @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  === Warning ===
-  gtk_list_clear_items is deprecated and should not be used in newly-written code.
 
 ==== :EndDragSelection ====
 '':EndDragSelection(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  === Warning ===
-  gtk_list_end_drag_selection is deprecated and should not be used in newly-written code.
 
 ==== :EndSelection ====
 '':EndSelection(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  === Warning ===
-  gtk_list_end_selection is deprecated and should not be used in newly-written code.
 
 ==== :ExtendSelection ====
 '':ExtendSelection(self @ [[#T|T]], scroll_type @ [[..:..:Gtk:Gtk:ScrollType#T|Gtk.Gtk.ScrollType.T]], position @ [[..:..:Std:Real#T|Std.Real.T]], auto_start_selection @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  === Warning ===
-  gtk_list_extend_selection is deprecated and should not be used in newly-written code.
 
 ==== :InsertItems ====
-'':InsertItems(self @ [[#T|T]], items @ [[..:..:Std:Object#T|Std.Object.T]], position @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':InsertItems(self @ [[#T|T]], items @ [[..:..:Std:List#T|Std.List.T]], position @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  === Warning ===
-  gtk_list_insert_items is deprecated and should not be used in newly-written code.
 
 ==== :PrependItems ====
-'':PrependItems(self @ [[#T|T]], items @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':PrependItems(self @ [[#T|T]], items @ [[..:..:Std:List#T|Std.List.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  === Warning ===
-  gtk_list_prepend_items is deprecated and should not be used in newly-written code.
 
 ==== :RemoveItems ====
-'':RemoveItems(self @ [[#T|T]], items @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':RemoveItems(self @ [[#T|T]], items @ [[..:..:Std:List#T|Std.List.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  === Warning ===
-  gtk_list_remove_items is deprecated and should not be used in newly-written code.
 
 ==== :RemoveItemsNoUnref ====
-'':RemoveItemsNoUnref(self @ [[#T|T]], items @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':RemoveItemsNoUnref(self @ [[#T|T]], items @ [[..:..:Std:List#T|Std.List.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  === Warning ===
-  gtk_list_remove_items_no_unref is deprecated and should not be used in newly-written code.
 
 ==== :ScrollHorizontal ====
 '':ScrollHorizontal(self @ [[#T|T]], scroll_type @ [[..:..:Gtk:Gtk:ScrollType#T|Gtk.Gtk.ScrollType.T]], position @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  === Warning ===
-  gtk_list_scroll_horizontal is deprecated and should not be used in newly-written code.
 
 ==== :ScrollVertical ====
 '':ScrollVertical(self @ [[#T|T]], scroll_type @ [[..:..:Gtk:Gtk:ScrollType#T|Gtk.Gtk.ScrollType.T]], position @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  === Warning ===
-  gtk_list_scroll_vertical is deprecated and should not be used in newly-written code.
 
 ==== :SelectAll ====
 '':SelectAll(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  === Warning ===
-  gtk_list_select_all is deprecated and should not be used in newly-written code.
 
 ==== :SelectChild ====
 '':SelectChild(self @ [[#T|T]], child @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  === Warning ===
-  gtk_list_select_child is deprecated and should not be used in newly-written code.
 
 ==== :SelectItem ====
 '':SelectItem(self @ [[#T|T]], item @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  === Warning ===
-  gtk_list_select_item is deprecated and should not be used in newly-written code.
 
 ==== :SetSelectionMode ====
 '':SetSelectionMode(self @ [[#T|T]], mode @ [[..:..:Gtk:Gtk:SelectionMode#T|Gtk.Gtk.SelectionMode.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  === Warning ===
-  gtk_list_set_selection_mode is deprecated and should not be used in newly-written code.
 
 ==== :StartSelection ====
 '':StartSelection(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  === Warning ===
-  gtk_list_start_selection is deprecated and should not be used in newly-written code.
 
 ==== :ToggleAddMode ====
 '':ToggleAddMode(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  === Warning ===
-  gtk_list_toggle_add_mode is deprecated and should not be used in newly-written code.
 
 ==== :ToggleFocusRow ====
 '':ToggleFocusRow(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  === Warning ===
-  gtk_list_toggle_focus_row is deprecated and should not be used in newly-written code.
 
 ==== :ToggleRow ====
 '':ToggleRow(self @ [[#T|T]], item @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  === Warning ===
-  gtk_list_toggle_row is deprecated and should not be used in newly-written code.
 
 ==== :UndoSelection ====
 '':UndoSelection(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  === Warning ===
-  gtk_list_undo_selection is deprecated and should not be used in newly-written code.
 
 ==== :UnselectAll ====
 '':UnselectAll(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  === Warning ===
-  gtk_list_unselect_all is deprecated and should not be used in newly-written code.
 
 ==== New ====
 ''New() : [[# T| T]]''
 
-  === Warning ===
-  gtk_list_new is deprecated and should not be used in newly-written code.
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''

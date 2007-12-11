@@ -2,20 +2,36 @@
 ==== T ====
 
 
-==== :Label ====
-'':Label(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
+==== :setLabel ====
+'':setLabel(self @ [[#T|T]], value @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]])''
 
 
 ==== :Type ====
 '':Type(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:ToolbarChildType#T|Gtk.Gtk.ToolbarChildType.T]]''
 
 
+==== :setType ====
+'':setType(self @ [[#T|T]], value @ [[..:..:Gtk:Gtk:ToolbarChildType#T|Gtk.Gtk.ToolbarChildType.T]])''
+
+
 ==== :Widget ====
 '':Widget(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
 
+==== :setWidget ====
+'':setWidget(self @ [[#T|T]], value @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]])''
+
+
 ==== :Icon ====
 '':Icon(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
+
+
+==== :setIcon ====
+'':setIcon(self @ [[#T|T]], value @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]])''
+
+
+==== :Label ====
+'':Label(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
 
 ==== New ====

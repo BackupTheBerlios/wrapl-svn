@@ -2,28 +2,52 @@
 ==== T ====
 
 
-==== :Count ====
-'':Count(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+==== :setCount ====
+'':setCount(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
 
 
 ==== :Type ====
 '':Type(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:EventType#T|Gtk.Gdk.EventType.T]]''
 
 
+==== :setType ====
+'':setType(self @ [[#T|T]], value @ [[..:..:Gtk:Gdk:EventType#T|Gtk.Gdk.EventType.T]])''
+
+
 ==== :Window ====
 '':Window(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]]''
+
+
+==== :setWindow ====
+'':setWindow(self @ [[#T|T]], value @ [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]])''
 
 
 ==== :SendEvent ====
 '':SendEvent(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
+==== :setSendEvent ====
+'':setSendEvent(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
 ==== :Area ====
 '':Area(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]]''
 
 
+==== :setArea ====
+'':setArea(self @ [[#T|T]], value @ [[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]])''
+
+
 ==== :Region ====
 '':Region(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Region#T|Gtk.Gdk.Region.T]]''
+
+
+==== :setRegion ====
+'':setRegion(self @ [[#T|T]], value @ [[..:..:Gtk:Gdk:Region#T|Gtk.Gdk.Region.T]])''
+
+
+==== :Count ====
+'':Count(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== New ====

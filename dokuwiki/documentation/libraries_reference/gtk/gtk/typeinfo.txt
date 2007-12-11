@@ -2,36 +2,68 @@
 ==== T ====
 
 
-==== :BaseClassInitFunc ====
-'':BaseClassInitFunc(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+==== :setBaseClassInitFunc ====
+'':setBaseClassInitFunc(self @ [[#T|T]], value @ [[..:..:Std:Object#T|Std.Object.T]])''
 
 
 ==== :TypeName ====
 '':TypeName(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
+==== :setTypeName ====
+'':setTypeName(self @ [[#T|T]], value @ [[..:..:Std:String#T|Std.String.T]])''
+
+
 ==== :ObjectSize ====
 '':ObjectSize(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+
+
+==== :setObjectSize ====
+'':setObjectSize(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
 
 
 ==== :ClassSize ====
 '':ClassSize(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
+==== :setClassSize ====
+'':setClassSize(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
 ==== :ClassInitFunc ====
 '':ClassInitFunc(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+
+
+==== :setClassInitFunc ====
+'':setClassInitFunc(self @ [[#T|T]], value @ [[..:..:Std:Object#T|Std.Object.T]])''
 
 
 ==== :ObjectInitFunc ====
 '':ObjectInitFunc(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
+==== :setObjectInitFunc ====
+'':setObjectInitFunc(self @ [[#T|T]], value @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
 ==== :Reserved1 ====
 '':Reserved1(self @ [[#T|T]]) : [[..:..:Std:Address#T|Std.Address.T]]''
 
 
+==== :setReserved1 ====
+'':setReserved1(self @ [[#T|T]], value @ [[..:..:Std:Address#T|Std.Address.T]])''
+
+
 ==== :Reserved2 ====
 '':Reserved2(self @ [[#T|T]]) : [[..:..:Std:Address#T|Std.Address.T]]''
+
+
+==== :setReserved2 ====
+'':setReserved2(self @ [[#T|T]], value @ [[..:..:Std:Address#T|Std.Address.T]])''
+
+
+==== :BaseClassInitFunc ====
+'':BaseClassInitFunc(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====

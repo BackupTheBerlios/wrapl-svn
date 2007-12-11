@@ -2,16 +2,28 @@
 ==== T ====
 
 
-==== :FrameTimeout ====
-'':FrameTimeout(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+==== :setFrameTimeout ====
+'':setFrameTimeout(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
 
 
 ==== :Anim ====
 '':Anim(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:PixbufAnimation#T|Gtk.Gdk.PixbufAnimation.T]]''
 
 
+==== :setAnim ====
+'':setAnim(self @ [[#T|T]], value @ [[..:..:Gtk:Gdk:PixbufAnimation#T|Gtk.Gdk.PixbufAnimation.T]])''
+
+
 ==== :Iter ====
 '':Iter(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:PixbufAnimationIter#T|Gtk.Gdk.PixbufAnimationIter.T]]''
+
+
+==== :setIter ====
+'':setIter(self @ [[#T|T]], value @ [[..:..:Gtk:Gdk:PixbufAnimationIter#T|Gtk.Gdk.PixbufAnimationIter.T]])''
+
+
+==== :FrameTimeout ====
+'':FrameTimeout(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== New ====

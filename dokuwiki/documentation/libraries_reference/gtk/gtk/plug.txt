@@ -8,45 +8,18 @@
   * [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]
   * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
 
-  Together with GtkSocket, GtkPlug provides the ability to embed widgets from one process into another
-  process in a fashion that is transparent to the user. One process creates a GtkSocket widget and,
-  passes the ID of that widgets window to the other process, which then creates a GtkPlug with that
-  window ID. Any widgets contained in the GtkPlug then will appear inside the first applications
-  window.
-  === Note ===
-  The GtkPlug and GtkSocket widgets are currently not available on all platforms supported by GTK+.
-  
 
 ==== :GetId ====
 '':GetId(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-  Gets the window ID of a GtkPlug widget, which can then be used to embed this window inside another window, for instance
-  with gtk_socket_add_id().
-  
-  plug :    a GtkPlug.
-  Returns : the window ID for the plug
-  
 
 ==== :ConstructForDisplay ====
 '':ConstructForDisplay(self @ [[#T|T]], display @ [[..:..:Gtk:Gdk:Display#T|Gtk.Gdk.Display.T]], socket_id @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Finish the initialization of plug for a given GtkSocket identified by socket_id which is currently displayed on display.
-  This function will generally only be used by classes deriving from GtkPlug.
-  
-  plug :      a GtkPlug.
-  display :   the GdkDisplay associated with socket_id's GtkSocket.
-  socket_id : the XID of the socket's window.
-  
 
 ==== :Construct ====
 '':Construct(self @ [[#T|T]], socket_id @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Finish the initialization of plug for a given GtkSocket identified by socket_id. This function will generally only be
-  used by classes deriving from GtkPlug.
-  
-  plug :      a GtkPlug.
-  socket_id : the XID of the socket's window.
-  
 
 ==== :SocketWindow ====
 '':SocketWindow(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]]''
@@ -71,12 +44,6 @@
 ==== New ====
 ''New(socket_id : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[# T| T]]''
 
-  Creates a new plug widget inside the GtkSocket identified by socket_id. If socket_id is 0, the plug is left "unplugged"
-  and can later be plugged into a GtkSocket by gtk_socket_add_id().
-  
-  socket_id : the window ID of the socket, or 0.
-  Returns :   the new GtkPlug widget.
-  
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
@@ -85,10 +52,4 @@
 ==== NewForDisplay ====
 ''NewForDisplay(display : [[..:..:Gtk:Gdk:Display#T|Gtk.Gdk.Display.T]], socket_id : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[# T| T]]''
 
-  Create a new plug widget inside the GtkSocket identified by socket_id.
-  
-  display :   the GdkDisplay on which socket_id is displayed
-  socket_id : the XID of the socket's window.
-  Returns :   the new GtkPlug widget.
-  
 

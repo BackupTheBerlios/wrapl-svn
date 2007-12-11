@@ -2,40 +2,76 @@
 ==== T ====
 
 
-==== :ExtraAttrs ====
-'':ExtraAttrs(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+==== :setExtraAttrs ====
+'':setExtraAttrs(self @ [[#T|T]], value @ [[..:..:Std:Object#T|Std.Object.T]])''
 
 
 ==== :ShapeEngine ====
 '':ShapeEngine(self @ [[#T|T]]) : [[..:..:Gtk:Pango:EngineShape#T|Gtk.Pango.EngineShape.T]]''
 
 
+==== :setShapeEngine ====
+'':setShapeEngine(self @ [[#T|T]], value @ [[..:..:Gtk:Pango:EngineShape#T|Gtk.Pango.EngineShape.T]])''
+
+
 ==== :LangEngine ====
 '':LangEngine(self @ [[#T|T]]) : [[..:..:Gtk:Pango:EngineLang#T|Gtk.Pango.EngineLang.T]]''
+
+
+==== :setLangEngine ====
+'':setLangEngine(self @ [[#T|T]], value @ [[..:..:Gtk:Pango:EngineLang#T|Gtk.Pango.EngineLang.T]])''
 
 
 ==== :Font ====
 '':Font(self @ [[#T|T]]) : [[..:..:Gtk:Pango:Font#T|Gtk.Pango.Font.T]]''
 
 
+==== :setFont ====
+'':setFont(self @ [[#T|T]], value @ [[..:..:Gtk:Pango:Font#T|Gtk.Pango.Font.T]])''
+
+
 ==== :Level ====
 '':Level(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+
+
+==== :setLevel ====
+'':setLevel(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
 
 
 ==== :Gravity ====
 '':Gravity(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
+==== :setGravity ====
+'':setGravity(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
 ==== :Flags ====
 '':Flags(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+
+
+==== :setFlags ====
+'':setFlags(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
 
 
 ==== :Script ====
 '':Script(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
+==== :setScript ====
+'':setScript(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
 ==== :Language ====
 '':Language(self @ [[#T|T]]) : [[..:..:Gtk:Pango:Language#T|Gtk.Pango.Language.T]]''
+
+
+==== :setLanguage ====
+'':setLanguage(self @ [[#T|T]], value @ [[..:..:Gtk:Pango:Language#T|Gtk.Pango.Language.T]])''
+
+
+==== :ExtraAttrs ====
+'':ExtraAttrs(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====

@@ -2,16 +2,28 @@
 ==== T ====
 
 
-==== :ThemeChangeId ====
-'':ThemeChangeId(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+==== :setThemeChangeId ====
+'':setThemeChangeId(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
 
 
 ==== :IconName ====
 '':IconName(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
+==== :setIconName ====
+'':setIconName(self @ [[#T|T]], value @ [[..:..:Std:String#T|Std.String.T]])''
+
+
 ==== :Pixbuf ====
 '':Pixbuf(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Pixbuf#T|Gtk.Gdk.Pixbuf.T]]''
+
+
+==== :setPixbuf ====
+'':setPixbuf(self @ [[#T|T]], value @ [[..:..:Gtk:Gdk:Pixbuf#T|Gtk.Gdk.Pixbuf.T]])''
+
+
+==== :ThemeChangeId ====
+'':ThemeChangeId(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== New ====

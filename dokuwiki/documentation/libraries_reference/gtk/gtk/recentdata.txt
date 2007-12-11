@@ -2,32 +2,60 @@
 ==== T ====
 
 
-==== :IsPrivate ====
-'':IsPrivate(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+==== :setIsPrivate ====
+'':setIsPrivate(self @ [[#T|T]], value @ [[..:..:Std:Symbol#T|Std.Symbol.T]])''
 
 
 ==== :DisplayName ====
 '':DisplayName(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
+==== :setDisplayName ====
+'':setDisplayName(self @ [[#T|T]], value @ [[..:..:Std:String#T|Std.String.T]])''
+
+
 ==== :Description ====
 '':Description(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
+
+
+==== :setDescription ====
+'':setDescription(self @ [[#T|T]], value @ [[..:..:Std:String#T|Std.String.T]])''
 
 
 ==== :MimeType ====
 '':MimeType(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
+==== :setMimeType ====
+'':setMimeType(self @ [[#T|T]], value @ [[..:..:Std:String#T|Std.String.T]])''
+
+
 ==== :AppName ====
 '':AppName(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
+
+
+==== :setAppName ====
+'':setAppName(self @ [[#T|T]], value @ [[..:..:Std:String#T|Std.String.T]])''
 
 
 ==== :AppExec ====
 '':AppExec(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
+==== :setAppExec ====
+'':setAppExec(self @ [[#T|T]], value @ [[..:..:Std:String#T|Std.String.T]])''
+
+
 ==== :Groups ====
 '':Groups(self @ [[#T|T]]) : [[..:..:Std:List#T|Std.List.T]]''
+
+
+==== :setGroups ====
+'':setGroups(self @ [[#T|T]], value @ [[..:..:Std:List#T|Std.List.T]])''
+
+
+==== :IsPrivate ====
+'':IsPrivate(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== New ====

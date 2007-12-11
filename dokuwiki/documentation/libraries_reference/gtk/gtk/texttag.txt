@@ -3,36 +3,14 @@
 === inherits from ===
   * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
 
-  You may wish to begin by reading the text widget conceptual overview which gives an overview of all
-  the objects and data types related to the text widget and how they work together.
-  Tags should be in the GtkTextTagTable for a given GtkTextBuffer before using them with that buffer.
-  gtk_text_buffer_create_tag() is the best way to create tags. See gtk-demo for numerous examples.
-  The "invisible" property was not implemented for GTK+ 2.0; it's planned to be implemented in future
-  releases.
-  
 
 ==== :SetPriority ====
 '':SetPriority(self @ [[#T|T]], priority @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Sets the priority of a GtkTextTag. Valid priorities are start at 0 and go to one less than gtk_text_tag_table_get_size
-  (). Each tag in a table has a unique priority; setting the priority of one tag shifts the priorities of all the other
-  tags in the table to maintain a unique priority for each tag. Higher priority tags "win" if two tags both set the same
-  text attribute. When adding a tag to a tag table, it will be assigned the highest priority in the table by default; so
-  normally the precedence of a set of tags is the order in which they were added to the table, or created with
-  gtk_text_buffer_create_tag(), which adds the tag to the buffer's table automatically.
-  
-  tag :      a GtkTextTag
-  priority : the new priority
-  
 
 ==== :GetPriority ====
 '':GetPriority(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-  Get the tag priority.
-  
-  tag :     a GtkTextTag
-  Returns : The tag's priority.
-  
 
 ==== :Table ====
 '':Table(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:TextTagTable#T|Gtk.Gtk.TextTagTable.T]]''
@@ -149,23 +127,10 @@
 ==== :Event ====
 '':Event(self @ [[#T|T]], event_object @ [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]], event @ [[..:..:Std:Object#T|Std.Object.T]], iter @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
-  Emits the "event" signal on the GtkTextTag.
-  
-  tag :          a GtkTextTag
-  event_object : object that received the event, such as a widget
-  event :        the event
-  iter :         location where the event was received
-  Returns :      result of signal emission (whether the event was handled)
-  
 
 ==== New ====
 ''New(name : [[..:..:Std:String#T|Std.String.T]]) : [[# T| T]]''
 
-  Creates a GtkTextTag. Configure the tag using object arguments, i.e. using g_object_set().
-  
-  name :    tag name, or NULL
-  Returns : a new GtkTextTag
-  
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''

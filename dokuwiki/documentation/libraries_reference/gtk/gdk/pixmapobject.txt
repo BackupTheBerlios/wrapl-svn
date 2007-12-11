@@ -2,16 +2,28 @@
 ==== T ====
 
 
-==== :Depth ====
-'':Depth(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+==== :setDepth ====
+'':setDepth(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
 
 
 ==== :ParentInstance ====
 '':ParentInstance(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
+==== :setParentInstance ====
+'':setParentInstance(self @ [[#T|T]], value @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
 ==== :Impl ====
 '':Impl(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Drawable#T|Gtk.Gdk.Drawable.T]]''
+
+
+==== :setImpl ====
+'':setImpl(self @ [[#T|T]], value @ [[..:..:Gtk:Gdk:Drawable#T|Gtk.Gdk.Drawable.T]])''
+
+
+==== :Depth ====
+'':Depth(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== New ====

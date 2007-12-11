@@ -2,12 +2,20 @@
 ==== T ====
 
 
-==== :Value ====
-'':Value(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+==== :setValue ====
+'':setValue(self @ [[#T|T]], value @ [[..:..:Std:Object#T|Std.Object.T]])''
 
 
 ==== :Origin ====
 '':Origin(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
+
+
+==== :setOrigin ====
+'':setOrigin(self @ [[#T|T]], value @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== :Value ====
+'':Value(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====

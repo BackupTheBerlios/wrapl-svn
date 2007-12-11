@@ -2,48 +2,92 @@
 ==== T ====
 
 
-==== :Expanded ====
-'':Expanded(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+==== :setExpanded ====
+'':setExpanded(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
 
 
 ==== :Row ====
 '':Row(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:CListRow#T|Gtk.Gtk.CListRow.T]]''
 
 
+==== :setRow ====
+'':setRow(self @ [[#T|T]], value @ [[..:..:Gtk:Gtk:CListRow#T|Gtk.Gtk.CListRow.T]])''
+
+
 ==== :Parent ====
 '':Parent(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]]''
+
+
+==== :setParent ====
+'':setParent(self @ [[#T|T]], value @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]])''
 
 
 ==== :Sibling ====
 '':Sibling(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]]''
 
 
+==== :setSibling ====
+'':setSibling(self @ [[#T|T]], value @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]])''
+
+
 ==== :Children ====
 '':Children(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]]''
+
+
+==== :setChildren ====
+'':setChildren(self @ [[#T|T]], value @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]])''
 
 
 ==== :PixmapClosed ====
 '':PixmapClosed(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Pixmap#T|Gtk.Gdk.Pixmap.T]]''
 
 
+==== :setPixmapClosed ====
+'':setPixmapClosed(self @ [[#T|T]], value @ [[..:..:Gtk:Gdk:Pixmap#T|Gtk.Gdk.Pixmap.T]])''
+
+
 ==== :MaskClosed ====
 '':MaskClosed(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Bitmap#T|Gtk.Gdk.Bitmap.T]]''
+
+
+==== :setMaskClosed ====
+'':setMaskClosed(self @ [[#T|T]], value @ [[..:..:Gtk:Gdk:Bitmap#T|Gtk.Gdk.Bitmap.T]])''
 
 
 ==== :PixmapOpened ====
 '':PixmapOpened(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Pixmap#T|Gtk.Gdk.Pixmap.T]]''
 
 
+==== :setPixmapOpened ====
+'':setPixmapOpened(self @ [[#T|T]], value @ [[..:..:Gtk:Gdk:Pixmap#T|Gtk.Gdk.Pixmap.T]])''
+
+
 ==== :MaskOpened ====
 '':MaskOpened(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Bitmap#T|Gtk.Gdk.Bitmap.T]]''
+
+
+==== :setMaskOpened ====
+'':setMaskOpened(self @ [[#T|T]], value @ [[..:..:Gtk:Gdk:Bitmap#T|Gtk.Gdk.Bitmap.T]])''
 
 
 ==== :Level ====
 '':Level(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
+==== :setLevel ====
+'':setLevel(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
 ==== :IsLeaf ====
 '':IsLeaf(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+
+
+==== :setIsLeaf ====
+'':setIsLeaf(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :Expanded ====
+'':Expanded(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== New ====

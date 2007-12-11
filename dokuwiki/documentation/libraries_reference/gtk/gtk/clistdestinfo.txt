@@ -2,12 +2,20 @@
 ==== T ====
 
 
-==== :InsertPos ====
-'':InsertPos(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:CListDragPos#T|Gtk.Gtk.CListDragPos.T]]''
+==== :setInsertPos ====
+'':setInsertPos(self @ [[#T|T]], value @ [[..:..:Gtk:Gtk:CListDragPos#T|Gtk.Gtk.CListDragPos.T]])''
 
 
 ==== :Cell ====
 '':Cell(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:CListCellInfo#T|Gtk.Gtk.CListCellInfo.T]]''
+
+
+==== :setCell ====
+'':setCell(self @ [[#T|T]], value @ [[..:..:Gtk:Gtk:CListCellInfo#T|Gtk.Gtk.CListCellInfo.T]])''
+
+
+==== :InsertPos ====
+'':InsertPos(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:CListDragPos#T|Gtk.Gtk.CListDragPos.T]]''
 
 
 ==== New ====

@@ -2,12 +2,24 @@
 ==== T ====
 
 
+==== :setValue ====
+'':setValue(self @ [[#T|T]], value @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
 ==== :Value ====
 '':Value(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
+==== :setOrigin ====
+'':setOrigin(self @ [[#T|T]], value @ [[..:..:Std:String#T|Std.String.T]])''
+
+
 ==== :Origin ====
 '':Origin(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
+
+
+==== :setPropertyName ====
+'':setPropertyName(self @ [[#T|T]], value @ [[..:..:Std:Object#T|Std.Object.T]])''
 
 
 ==== :PropertyName ====
@@ -16,6 +28,10 @@
 
 ==== :TypeName ====
 '':TypeName(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+
+
+==== :setTypeName ====
+'':setTypeName(self @ [[#T|T]], value @ [[..:..:Std:Object#T|Std.Object.T]])''
 
 
 ==== New ====

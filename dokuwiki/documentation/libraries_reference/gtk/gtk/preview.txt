@@ -5,40 +5,26 @@
   * [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]
   * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
 
-  The GtkPreview widget provides a simple interface used to display images as RGB or grayscale data.
-  It's deprecated; just use a GdkPixbuf displayed by a GtkImage, or perhaps a GtkDrawingArea.
-  GtkPreview has no advantage over those approaches.
-  
 
 ==== :Size ====
 '':Size(self @ [[#T|T]], width @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], height @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  === Warning ===
-  gtk_preview_size is deprecated and should not be used in newly-written code.
 
 ==== :SetExpand ====
 '':SetExpand(self @ [[#T|T]], expand @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  === Warning ===
-  gtk_preview_set_expand is deprecated and should not be used in newly-written code.
 
 ==== :SetDither ====
 '':SetDither(self @ [[#T|T]], dither @ [[..:..:Gtk:Gdk:RgbDither#T|Gtk.Gdk.RgbDither.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  === Warning ===
-  gtk_preview_set_dither is deprecated and should not be used in newly-written code.
 
 ==== :Put ====
 '':Put(self @ [[#T|T]], window @ [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]], gc @ [[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]], srcx @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], srcy @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], destx @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], desty @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], width @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], height @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  === Warning ===
-  gtk_preview_put is deprecated and should not be used in newly-written code.
 
 ==== :DrawRow ====
 '':DrawRow(self @ [[#T|T]], data @ [[..:..:Std:String#T|Std.String.T]], x @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], w @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  === Warning ===
-  gtk_preview_draw_row is deprecated and should not be used in newly-written code.
 
 ==== :Expand ====
 '':Expand(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
@@ -75,50 +61,34 @@
 ==== New ====
 ''New(type : [[..:..:Gtk:Gtk:PreviewType#T|Gtk.Gtk.PreviewType.T]]) : [[# T| T]]''
 
-  === Warning ===
-  gtk_preview_new is deprecated and should not be used in newly-written code.
 
 ==== Uninit ====
 ''Uninit() : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  === Warning ===
-  gtk_preview_uninit is deprecated and should not be used in newly-written code.
 
 ==== SetReserved ====
 ''SetReserved(nreserved : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  === Warning ===
-  gtk_preview_set_reserved is deprecated and should not be used in newly-written code.
 
 ==== SetInstallCmap ====
 ''SetInstallCmap(install_cmap : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  === Warning ===
-  gtk_preview_set_install_cmap is deprecated and should not be used in newly-written code.
 
 ==== SetGamma ====
 ''SetGamma(gamma_ : [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  === Warning ===
-  gtk_preview_set_gamma is deprecated and should not be used in newly-written code.
 
 ==== SetColorCube ====
 ''SetColorCube(nred_shades : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], ngreen_shades : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], nblue_shades : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], ngray_shades : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  === Warning ===
-  gtk_preview_set_color_cube is deprecated and should not be used in newly-written code.
 
 ==== Reset ====
 ''Reset() : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  === Warning ===
-  gtk_preview_reset is deprecated and should not be used in newly-written code.
 
 ==== GetVisual ====
 ''GetVisual() : [[..:..:Gtk:Gdk:Visual#T|Gtk.Gdk.Visual.T]]''
 
-  === Warning ===
-  gtk_preview_get_visual is deprecated and should not be used in newly-written code.
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
@@ -127,12 +97,8 @@
 ==== GetInfo ====
 ''GetInfo() : [[..:..:Gtk:Gtk:PreviewInfo#T|Gtk.Gtk.PreviewInfo.T]]''
 
-  === Warning ===
-  gtk_preview_get_info is deprecated and should not be used in newly-written code.
 
 ==== GetCmap ====
 ''GetCmap() : [[..:..:Gtk:Gdk:Colormap#T|Gtk.Gdk.Colormap.T]]''
 
-  === Warning ===
-  gtk_preview_get_cmap is deprecated and should not be used in newly-written code.
 

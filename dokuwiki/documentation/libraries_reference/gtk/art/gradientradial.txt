@@ -10,16 +10,32 @@
 '':Fx(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
+==== :setFx ====
+'':setFx(self @ [[#T|T]], value @ [[..:..:Std:Real#T|Std.Real.T]])''
+
+
 ==== :Fy ====
 '':Fy(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
+
+
+==== :setFy ====
+'':setFy(self @ [[#T|T]], value @ [[..:..:Std:Real#T|Std.Real.T]])''
 
 
 ==== :NStops ====
 '':NStops(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
+==== :setNStops ====
+'':setNStops(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
 ==== :Stops ====
 '':Stops(self @ [[#T|T]]) : [[..:..:Gtk:Art:GradientStop#T|Gtk.Art.GradientStop.T]]''
+
+
+==== :setStops ====
+'':setStops(self @ [[#T|T]], value @ [[..:..:Gtk:Art:GradientStop#T|Gtk.Art.GradientStop.T]])''
 
 
 ==== New ====

@@ -8,31 +8,14 @@
   * [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]
   * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
 
-  A GtkSeparatorItem is a GtkToolItem that separates groups of other GtkToolItems. Depending on the
-  theme, a GtkSeparatorToolItem will often look like a vertical line on horizontally docked toolbars.
-  If the property "expand" is TRUE and the property "draw" is FALSE, a GtkSeparatorToolItem will act
-  as a "spring" that forces other items to the ends of the toolbar.
-  Use gtk_separator_tool_item_new() to create a new GtkSeparatorToolItem.
-  
 
 ==== :SetDraw ====
 '':SetDraw(self @ [[#T|T]], draw @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  When separator_tool_items is drawn as a vertical line, or just blank. Setting this FALSE along with
-  gtk_tool_item_set_expand() is useful to create an item that forces following items to the end of the toolbar.
-  
-  item : a GtkSeparatorToolItem
-  draw : whether separator_tool_item is drawn as a vertical line
-  
 
 ==== :GetDraw ====
 '':GetDraw(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
-  Returns whether separator_tool_item is drawn as a line, or just blank. See gtk_separator_tool_item_set_draw().
-  
-  item :    a GtkSeparatorToolItem
-  Returns : TRUE if separator_tool_item is drawn as a line, or just blank.
-  
 
 ==== :Priv ====
 '':Priv(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -41,10 +24,6 @@
 ==== New ====
 ''New() : [[# T| T]]''
 
-  Create a new GtkSeparatorToolItem
-  
-  Returns : the new GtkSeparatorToolItem
-  
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''

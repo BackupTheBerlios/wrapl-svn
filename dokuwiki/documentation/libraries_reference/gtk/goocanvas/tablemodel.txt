@@ -5,23 +5,6 @@
   * [[..:..:Gtk:GooCanvas:ItemModelSimple#T|Gtk.GooCanvas.ItemModelSimple.T]]
   * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
 
-  GooCanvasTableModel is a model for a table container used to lay out other canvas items. It is used
-  in a similar way to how the GtkTable widget is used to lay out GTK+ widgets.
-  Item models are added to the table using the normal methods, then
-  goo_canvas_item_model_set_child_properties() is used to specify how each child item is to be
-  positioned within the table (i.e. which row and column it is in, how much padding it should have and
-  whether it should expand or shrink).
-  GooCanvasTableModel is a subclass of GooCanvasItemModelSimple and so inherits all of the style
-  properties such as "stroke-color", "fill-color" and "line-width". Setting a style property on a
-  GooCanvasTableModel will affect all children of the GooCanvasTableModel (unless the children
-  override the property setting).
-  GooCanvasTableModel implements the GooCanvasItemModel interface, so you can use the
-  GooCanvasItemModel functions such as goo_canvas_item_model_raise() and goo_canvas_item_rotate(), and
-  the properties such as "visibility" and "pointer-events".
-  To create a GooCanvasTableModel use goo_canvas_table_model_new().
-  To get or set the properties of an existing GooCanvasTableModel, use g_object_get() and g_object_set
-  ().
-  
 
 ==== :TableData ====
 '':TableData(self @ [[#T|T]]) : [[..:..:Gtk:GooCanvas:TableData#T|Gtk.GooCanvas.TableData.T]]''
@@ -30,13 +13,6 @@
 ==== New ====
 ''New(parent : [[..:..:Gtk:GooCanvas:ItemModel#T|Gtk.GooCanvas.ItemModel.T]], __etc__ : [[..:..:Std:Object#T|Std.Object.T]]) : [[# T| T]]''
 
-  Creates a new table model.
-  
-  parent :  the parent model, or NULL. If a parent is specified, it will assume ownership of the item, and the item will
-            automatically be freed when it is removed from the parent. Otherwise call g_object_unref() to free it.
-  ... :     optional pairs of property names and values, and a terminating NULL.
-  Returns : a new table model.
-  
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''

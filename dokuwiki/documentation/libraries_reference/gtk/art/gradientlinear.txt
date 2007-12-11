@@ -2,28 +2,52 @@
 ==== T ====
 
 
-==== :Stops ====
-'':Stops(self @ [[#T|T]]) : [[..:..:Gtk:Art:GradientStop#T|Gtk.Art.GradientStop.T]]''
+==== :setStops ====
+'':setStops(self @ [[#T|T]], value @ [[..:..:Gtk:Art:GradientStop#T|Gtk.Art.GradientStop.T]])''
 
 
 ==== :A ====
 '':A(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
+==== :setA ====
+'':setA(self @ [[#T|T]], value @ [[..:..:Std:Real#T|Std.Real.T]])''
+
+
 ==== :B ====
 '':B(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
+
+
+==== :setB ====
+'':setB(self @ [[#T|T]], value @ [[..:..:Std:Real#T|Std.Real.T]])''
 
 
 ==== :C ====
 '':C(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
+==== :setC ====
+'':setC(self @ [[#T|T]], value @ [[..:..:Std:Real#T|Std.Real.T]])''
+
+
 ==== :Spread ====
 '':Spread(self @ [[#T|T]]) : [[..:..:Gtk:Art:GradientSpread#T|Gtk.Art.GradientSpread.T]]''
 
 
+==== :setSpread ====
+'':setSpread(self @ [[#T|T]], value @ [[..:..:Gtk:Art:GradientSpread#T|Gtk.Art.GradientSpread.T]])''
+
+
 ==== :NStops ====
 '':NStops(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+
+
+==== :setNStops ====
+'':setNStops(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :Stops ====
+'':Stops(self @ [[#T|T]]) : [[..:..:Gtk:Art:GradientStop#T|Gtk.Art.GradientStop.T]]''
 
 
 ==== New ====

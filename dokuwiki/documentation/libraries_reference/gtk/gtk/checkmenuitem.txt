@@ -9,47 +9,22 @@
   * [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]
   * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
 
-  A GtkCheckMenuItem is a menu item that maintains the state of a boolean value in addition to a
-  GtkMenuItem's usual role in activating application code.
-  A check box indicating the state of the boolean value is displayed at the left side of the
-  GtkMenuItem. Activating the GtkMenuItem toggles the value.
-  
 
 ==== :Toggled ====
 '':Toggled(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Emits the GtkCheckMenuItem::toggled signal.
-  
-  check_menu_item : a GtkCheckMenuItem.
-  
 
 ==== :SetShowToggle ====
 '':SetShowToggle(self @ [[#T|T]], always @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  === Warning ===
-  gtk_check_menu_item_set_show_toggle is deprecated and should not be used in newly-written code.
 
 ==== :SetInconsistent ====
 '':SetInconsistent(self @ [[#T|T]], setting @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  If the user has selected a range of elements (such as some text or spreadsheet cells) that are affected by a boolean
-  setting, and the current values in that range are inconsistent, you may want to display the check in an "in between"
-  state. This function turns on "in between" display. Normally you would turn off the inconsistent state again if the user
-  explicitly selects a setting. This has to be done manually, gtk_check_menu_item_set_inconsistent() only affects visual
-  appearance, it doesn't affect the semantics of the widget.
-  
-  check_menu_item : a GtkCheckMenuItem
-  setting :         TRUE to display an "inconsistent" third state check
-  
 
 ==== :SetDrawAsRadio ====
 '':SetDrawAsRadio(self @ [[#T|T]], draw_as_radio @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Sets whether check_menu_item is drawn like a GtkRadioMenuItem
-  
-  check_menu_item : a GtkCheckMenuItem
-  draw_as_radio :   whether check_menu_item is drawn like a GtkRadioMenuItem
-  
 
 ==== :Active ====
 '':Active(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
@@ -70,46 +45,22 @@
 ==== :GetActive ====
 '':GetActive(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
-  Returns whether the check menu item is active. See gtk_check_menu_item_set_active().
-  
-  check_menu_item : a GtkCheckMenuItem
-  Returns :         TRUE if the menu item is checked.
-  
 
 ==== :GetDrawAsRadio ====
 '':GetDrawAsRadio(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
-  Returns whether check_menu_item looks like a GtkRadioMenuItem
-  
-  check_menu_item : a GtkCheckMenuItem
-  Returns :         Whether check_menu_item looks like a GtkRadioMenuItem
-  
 
 ==== :GetInconsistent ====
 '':GetInconsistent(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
-  Retrieves the value set by gtk_check_menu_item_set_inconsistent().
-  
-  check_menu_item : a GtkCheckMenuItem
-  Returns :         TRUE if inconsistent
-  
 
 ==== :SetActive ====
 '':SetActive(self @ [[#T|T]], is_active @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Sets the active state of the menu item's check box.
-  
-  check_menu_item : a GtkCheckMenuItem.
-  is_active :       boolean value indicating whether the check box is active.
-  
 
 ==== New ====
 ''New() : [[# T| T]]''
 
-  Creates a new GtkCheckMenuItem.
-  
-  Returns : a new GtkCheckMenuItem.
-  
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
@@ -118,19 +69,8 @@
 ==== NewWithMnemonic ====
 ''NewWithMnemonic(label : [[..:..:Std:String#T|Std.String.T]]) : [[# T| T]]''
 
-  Creates a new GtkCheckMenuItem containing a label. The label will be created using gtk_label_new_with_mnemonic(), so
-  underscores in label indicate the mnemonic for the menu item.
-  
-  label :   The text of the button, with an underscore in front of the mnemonic character
-  Returns : a new GtkCheckMenuItem
-  
 
 ==== NewWithLabel ====
 ''NewWithLabel(label : [[..:..:Std:String#T|Std.String.T]]) : [[# T| T]]''
 
-  Creates a new GtkCheckMenuItem with a label.
-  
-  label :   the string to use for the label.
-  Returns : a new GtkCheckMenuItem.
-  
 

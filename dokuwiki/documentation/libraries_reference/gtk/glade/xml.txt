@@ -3,52 +3,18 @@
 === inherits from ===
   * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
 
-  This object represents an `instantiation' of an XML interface description. When one of these objects
-  is created, the XML file is read, and the interface is created. The GladeXML object then provides an
-  interface for accessing the widgets in the interface by the names assigned to them inside the XML
-  description.
-  The GladeXML object can also be used to connect handlers to the named signals in the description.
-  Libglade also provides an interface by which it can look up the signal handler names in the
-  program's symbol table and automatically connect as many handlers up as it can that way.
-  
 
 ==== :SignalConnectFull ====
 '':SignalConnectFull(self @ [[#T|T]], handler_name @ [[..:..:Std:String#T|Std.String.T]], func @ [[..:..:Std:Function#T|Std.Function.T]], user_data @ [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  This function is similar to glade_xml_signal_connect, except that it allows you to give an arbitrary function that will
-  be used for actually connecting the signals. This is mainly useful for writers of interpreted language bindings, or
-  applications where you need more control over the signal connection process.
-  
-  self :         the GladeXML object.
-  handler_name : the name of the signal handler that we want to connect.
-  func :         the function to use to connect the signals.
-  user_data :    arbitrary data to pass to the connect function.
-  
 
 ==== :SignalConnectData ====
 '':SignalConnectData(self @ [[#T|T]], handlername @ [[..:..:Std:String#T|Std.String.T]], func @ [[..:..:Std:Object#T|Std.Object.T]], user_data @ [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  In the glade interface descriptions, signal handlers are specified for widgets by name. This function allows you to
-  connect a C function to all signals in the GladeXML file with the given signal handler name.
-  It differs from glade_xml_signal_connect since it allows you to specify the data parameter for the signal handler. It is
-  also a small demonstration of how to use glade_xml_signal_connect_full.
-  
-  self :        the GladeXML object
-  handlername : the signal handler name
-  func :        the signal handler function
-  user_data :   the signal handler data
-  
 
 ==== :SignalConnect ====
 '':SignalConnect(self @ [[#T|T]], handlername @ [[..:..:Std:String#T|Std.String.T]], func @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  In the glade interface descriptions, signal handlers are specified for widgets by name. This function allows you to
-  connect a C function to all signals in the GladeXML file with the given signal handler name.
-  
-  self :        the GladeXML object
-  handlername : the signal handler name
-  func :        the signal handler function
-  
 
 ==== :Filename ====
 '':Filename(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
@@ -65,14 +31,6 @@
 ==== :Construct ====
 '':Construct(self @ [[#T|T]], fname @ [[..:..:Std:String#T|Std.String.T]], root @ [[..:..:Std:String#T|Std.String.T]], domain @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
-  This routine can be used by bindings (such as gtk--) to help construct a GladeXML object, if it is needed.
-  
-  self :    the GladeXML object
-  fname :   the XML filename
-  root :    the root widget node (or NULL for none)
-  domain :  the translation domain (or NULL for the default)
-  Returns : TRUE if the construction succeeded.
-  
 
 ==== :ConstructFromBuffer ====
 '':ConstructFromBuffer(self @ [[#T|T]], buffer @ [[..:..:Std:String#T|Std.String.T]], size @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], root @ [[..:..:Std:String#T|Std.String.T]], domain @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
@@ -85,24 +43,10 @@
 ==== :GetWidget ====
 '':GetWidget(self @ [[#T|T]], name @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
-  This function is used to get a pointer to the GtkWidget corresponding to name in the interface description. You would
-  use this if you have to do anything to the widget after loading.
-  
-  self :    the GladeXML object.
-  name :    the name of the widget.
-  Returns : the widget matching name, or NULL if none exists.
-  
 
 ==== :GetWidgetPrefix ====
-'':GetWidgetPrefix(self @ [[#T|T]], name @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':GetWidgetPrefix(self @ [[#T|T]], name @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:List#T|Std.List.T]]''
 
-  This function is used to get a list of pointers to the GtkWidget(s) with names that start with the string name in the
-  interface description. You would use this if you have to do something to all of these widgets after loading.
-  
-  self :    the GladeXML object.
-  name :    the name of the widget.
-  Returns : A list of the widget that match name as the start of their name, or NULL if none exists.
-  
 
 ==== :HandleInternalChild ====
 '':HandleInternalChild(self @ [[#T|T]], parent @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], child_info @ [[..:..:Gtk:Glade:ChildInfo#T|Gtk.Glade.ChildInfo.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -135,39 +79,14 @@
 ==== :SignalAutoconnect ====
 '':SignalAutoconnect(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  This function is a variation of glade_xml_signal_connect. It uses gmodule's introspective features (by openning the
-  module NULL) to look at the application's symbol table. From here it tries to match the signal handler names given in
-  the interface description with symbols in the application and connects the signals.
-  Note that this function will not work correctly if gmodule is not supported on the platform.
-  
-  self : the GladeXML object.
-  
 
 ==== :SignalAutoconnectFull ====
 '':SignalAutoconnectFull(self @ [[#T|T]], func @ [[..:..:Std:Function#T|Std.Function.T]], user_data @ [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  This function is similar to glade_xml_signal_connect_full, except that it will try to connect all signals in the
-  interface, not just a single named handler. It can be thought of the interpeted language binding version of
-  glade_xml_signal_autoconnect, except that it does not require gmodule to function correctly.
-  
-  self :      the GladeXML object.
-  func :      the function used to connect the signals.
-  user_data : arbitrary data that will be passed to the connection function.
-  
 
 ==== New ====
 ''New(fname : [[..:..:Std:String#T|Std.String.T]], root : [[..:..:Std:String#T|Std.String.T]], domain : [[..:..:Std:String#T|Std.String.T]]) : [[# T| T]]''
 
-  Creates a new GladeXML object (and the corresponding widgets) from the XML file fname. Optionally it will only build the
-  interface from the widget node root (if it is not NULL). This feature is useful if you only want to build say a toolbar
-  or menu from the XML file, but not the window it is embedded in. Note also that the XML parse tree is cached to speed up
-  creating another GladeXML object for the same file
-  
-  fname :   the XML file name.
-  root :    the widget node in fname to start building from (or NULL)
-  domain :  the translation domain for the XML file (or NULL for default)
-  Returns : the newly created GladeXML object, or NULL on failure.
-  
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
@@ -176,14 +95,4 @@
 ==== NewFromBuffer ====
 ''NewFromBuffer(buffer : [[..:..:Std:String#T|Std.String.T]], size : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], root : [[..:..:Std:String#T|Std.String.T]], domain : [[..:..:Std:String#T|Std.String.T]]) : [[# T| T]]''
 
-  Creates a new GladeXML object (and the corresponding widgets) from the buffer buffer. Optionally it will only build the
-  interface from the widget node root (if it is not NULL). This feature is useful if you only want to build say a toolbar
-  or menu from the XML document, but not the window it is embedded in.
-  
-  buffer :  the memory buffer containing the XML document.
-  size :    the size of the buffer.
-  root :    the widget node in buffer to start building from (or NULL)
-  domain :  the translation domain to use for this interface (or NULL)
-  Returns : the newly created GladeXML object, or NULL on failure.
-  
 

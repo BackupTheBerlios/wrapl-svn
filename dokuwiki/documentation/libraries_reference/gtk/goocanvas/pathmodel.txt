@@ -4,20 +4,6 @@
   * [[..:..:Gtk:GooCanvas:ItemModelSimple#T|Gtk.GooCanvas.ItemModelSimple.T]]
   * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
 
-  GooCanvasPathModel represents a model for path items, which are a series of one or more lines,
-  bezier curves, or elliptical arcs.
-  It is a subclass of GooCanvasItemModelSimple and so inherits all of the style properties such as
-  "stroke-color", "fill-color" and "line-width".
-  It also implements the GooCanvasItemModel interface, so you can use the GooCanvasItemModel functions
-  such as goo_canvas_item_model_raise() and goo_canvas_item_model_rotate().
-  GooCanvasPathModel uses the same path specification strings as the Scalable Vector Graphics (SVG)
-  path element. For details see the SVG specification.
-  To create a GooCanvasPathModel use goo_canvas_path_model_new().
-  To get or set the properties of an existing GooCanvasPathModel, use g_object_get() and g_object_set
-  ().
-  To respond to events such as mouse clicks on the path you must connect to the signal handlers of the
-  corresponding GooCanvasPath objects. (See goo_canvas_get_item() and "item-created".)
-  
 
 ==== :PathData ====
 '':PathData(self @ [[#T|T]]) : [[..:..:Gtk:GooCanvas:PathData#T|Gtk.GooCanvas.PathData.T]]''
@@ -26,15 +12,6 @@
 ==== New ====
 ''New(parent : [[..:..:Gtk:GooCanvas:ItemModel#T|Gtk.GooCanvas.ItemModel.T]], path_data : [[..:..:Std:String#T|Std.String.T]], __etc__ : [[..:..:Std:Object#T|Std.Object.T]]) : [[# T| T]]''
 
-  Creates a new path model.
-  
-  parent :    the parent model, or NULL. If a parent is specified, it will assume ownership of the item, and the item will
-              automatically be freed when it is removed from the parent. Otherwise call g_object_unref() to free it.
-  path_data : the sequence of path commands, specified as a string using the same syntax as in the Scalable Vector
-              Graphics (SVG) path element.
-  ... :       optional pairs of property names and values, and a terminating NULL.
-  Returns :   a new path model.
-  
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''

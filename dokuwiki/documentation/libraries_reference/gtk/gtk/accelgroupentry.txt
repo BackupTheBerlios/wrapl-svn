@@ -2,16 +2,28 @@
 ==== T ====
 
 
-==== :AccelPathQuark ====
-'':AccelPathQuark(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+==== :setAccelPathQuark ====
+'':setAccelPathQuark(self @ [[#T|T]], value @ [[..:..:Std:Object#T|Std.Object.T]])''
 
 
 ==== :Key ====
 '':Key(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:AccelKey#T|Gtk.Gtk.AccelKey.T]]''
 
 
+==== :setKey ====
+'':setKey(self @ [[#T|T]], value @ [[..:..:Gtk:Gtk:AccelKey#T|Gtk.Gtk.AccelKey.T]])''
+
+
 ==== :Closure ====
 '':Closure(self @ [[#T|T]]) : [[..:..:Gtk:GObject:Closure#T|Gtk.GObject.Closure.T]]''
+
+
+==== :setClosure ====
+'':setClosure(self @ [[#T|T]], value @ [[..:..:Gtk:GObject:Closure#T|Gtk.GObject.Closure.T]])''
+
+
+==== :AccelPathQuark ====
+'':AccelPathQuark(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====

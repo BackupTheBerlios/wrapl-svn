@@ -3,34 +3,14 @@
 === inherits from ===
   * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
 
-  GooCanvasStyle provides support for cascading style properties for canvas items. It is intended to
-  be used when implementing new canvas items.
-  Style properties are identified by a unique GQuark, and contain arbitrary data stored in a GValue.
-  GooCanvasStyle also provides a few convenience functions such as goo_canvas_style_set_stroke_options
-  () and goo_canvas_style_set_fill_options() which efficiently apply an item's standard style
-  properties to the given cairo_t.
-  
 
 ==== :SetStrokeOptions ====
 '':SetStrokeOptions(self @ [[#T|T]], cr @ [[..:..:Gtk:Cairo:CairoT#T|Gtk.Cairo.CairoT.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
-  Sets the standard cairo stroke options using the given style.
-  
-  style :   a style.
-  cr :      a cairo context.
-  Returns : TRUE if a paint source is set, or FALSE if the stroke should be skipped.
-  
 
 ==== :SetProperty ====
 '':SetProperty(self @ [[#T|T]], property_id @ [[..:..:Std:Object#T|Std.Object.T]], value @ [[..:..:Gtk:GObject:Value#T|Gtk.GObject.Value.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Sets a property in the style, replacing any current setting.
-  Note that this will override the property setting in ancestor GooCanvasStyle objects.
-  
-  style :       a style.
-  property_id : the property identifier.
-  value :       the value of the property.
-  
 
 ==== :Parent ====
 '':Parent(self @ [[#T|T]]) : [[..:..:Gtk:GooCanvas:Style#T|Gtk.GooCanvas.Style.T]]''
@@ -43,60 +23,26 @@
 ==== :Copy ====
 '':Copy(self @ [[#T|T]]) : [[..:..:Gtk:GooCanvas:Style#T|Gtk.GooCanvas.Style.T]]''
 
-  Copies the given GooCanvasStyle, by copying all of its properties. Though the parent of the new style is left unset.
-  
-  style :   a GooCanvasStyle.
-  Returns : a copy of the given GooCanvasStyle.
-  
 
 ==== :GetParent ====
 '':GetParent(self @ [[#T|T]]) : [[..:..:Gtk:GooCanvas:Style#T|Gtk.GooCanvas.Style.T]]''
 
-  Gets the parent of the style.
-  
-  style :   a style.
-  Returns : the parent of the given style, or NULL.
-  
 
 ==== :GetProperty ====
 '':GetProperty(self @ [[#T|T]], property_id @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Gtk:GObject:Value#T|Gtk.GObject.Value.T]]''
 
-  Gets the value of a property.
-  This searches though all the GooCanvasStyle's own list of property settings and also all ancestor GooCanvasStyle
-  objects.
-  Note that it returns a pointer to the internal GValue setting, which should not be changed.
-  
-  style :       a style.
-  property_id : the property identifier.
-  Returns :     the property value, or NULL if it isn't set.
-  
 
 ==== :SetFillOptions ====
 '':SetFillOptions(self @ [[#T|T]], cr @ [[..:..:Gtk:Cairo:CairoT#T|Gtk.Cairo.CairoT.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
-  Sets the standard cairo fill options using the given style.
-  
-  style :   a style.
-  cr :      a cairo context.
-  Returns : TRUE if a paint source is set, or FALSE if the fill should be skipped.
-  
 
 ==== :SetParent ====
 '':SetParent(self @ [[#T|T]], parent @ [[..:..:Gtk:GooCanvas:Style#T|Gtk.GooCanvas.Style.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Sets the parent of the style.
-  
-  style :  a style.
-  parent : the new parent.
-  
 
 ==== New ====
 ''New() : [[# T| T]]''
 
-  Creates a new GooCanvasStyle.
-  
-  Returns : a new GooCanvasStyle.
-  
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''

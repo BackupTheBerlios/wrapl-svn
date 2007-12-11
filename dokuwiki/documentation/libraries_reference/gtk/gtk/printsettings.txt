@@ -3,613 +3,258 @@
 === inherits from ===
   * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
 
-  A GtkPrintSettings object represents the settings of a print dialog in a system-independent way. The
-  main use for this object is that once you've printed you can get a settings object that represents
-  the settings the user chose, and the next time you print you can pass that object in so that the
-  user doesn't have to re-set all his settings.
-  Its also possible to enumerate the settings so that you can easily save the settings for the next
-  time your app runs, or even store them in a document. The predefined keys try to use shared values
-  as much as possible so that moving such a document between systems still works.
-  Printing support was added in GTK+ 2.10.
-  
 
 ==== :Unset ====
 '':Unset(self @ [[#T|T]], key @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Removes any value associated with key. This has the same effect as setting the value to NULL.
-  
-  settings : a GtkPrintSettings
-  key :      a key
-  
 
 ==== :ToKeyFile ====
 '':ToKeyFile(self @ [[#T|T]], key_file @ [[..:..:Std:Object#T|Std.Object.T]], group_name @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  This function adds the print settings from settings to key_file.
-  
-  settings :   a GtkPrintSettings
-  key_file :   the GKeyFile to save the print settings to
-  group_name : the group to add the settings to in key_file, or NULL to use the default "Print Settings"
-  
 
 ==== :ToFile ====
 '':ToFile(self @ [[#T|T]], file_name @ [[..:..:Std:String#T|Std.String.T]], error @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
-  This function saves the print settings from settings to file_name.
-  
-  settings :  a GtkPrintSettings
-  file_name : the file to save to
-  error :     return location for errors, or NULL
-  Returns :   TRUE on success
-  
 
 ==== :SetUseColor ====
 '':SetUseColor(self @ [[#T|T]], use_color @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Sets the value of GTK_PRINT_SETTINGS_USE_COLOR.
-  
-  settings :  a GtkPrintSettings
-  use_color : whether to use color
-  
 
 ==== :Copy ====
 '':Copy(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:PrintSettings#T|Gtk.Gtk.PrintSettings.T]]''
 
-  Copies a GtkPrintSettings object.
-  
-  other :   a GtkPrintSettings
-  Returns : a newly allocated copy of other
-  
 
 ==== :Foreach ====
 '':Foreach(self @ [[#T|T]], func @ [[..:..:Std:Function#T|Std.Function.T]], user_data @ [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Calls func for each key-value pair of settings.
-  
-  settings :  a GtkPrintSettings
-  func :      the function to call
-  user_data : user data for func
-  
 
 ==== :Get ====
 '':Get(self @ [[#T|T]], key @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
-  Looks up the string value associated with key.
-  
-  settings : a GtkPrintSettings
-  key :      a key
-  Returns :  the string value for key
-  
 
 ==== :GetBool ====
 '':GetBool(self @ [[#T|T]], key @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
-  Returns the boolean represented by the value that is associated with key.
-  The string "true" represents TRUE, any other string FALSE.
-  
-  settings : a GtkPrintSettings
-  key :      a key
-  Returns :  TRUE, if key maps to a true value.
-  
 
 ==== :GetCollate ====
 '':GetCollate(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
-  Gets the value of GTK_PRINT_SETTINGS_COLLATE.
-  
-  settings : a GtkPrintSettings
-  Returns :  whether to collate the printed pages
-  
 
 ==== :GetDefaultSource ====
 '':GetDefaultSource(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
-  Gets the value of GTK_PRINT_SETTINGS_DEFAULT_SOURCE.
-  
-  settings : a GtkPrintSettings
-  Returns :  the default source
-  
 
 ==== :GetDither ====
 '':GetDither(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
-  Gets the value of GTK_PRINT_SETTINGS_DITHER.
-  
-  settings : a GtkPrintSettings
-  Returns :  the dithering that is used
-  
 
 ==== :GetDouble ====
 '':GetDouble(self @ [[#T|T]], key @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
-  Returns the double value associated with key, or 0.
-  
-  settings : a GtkPrintSettings
-  key :      a key
-  Returns :  the double value of key
-  
 
 ==== :GetDoubleWithDefault ====
 '':GetDoubleWithDefault(self @ [[#T|T]], key @ [[..:..:Std:String#T|Std.String.T]], def @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
-  Returns the floating point number represented by the value that is associated with key, or default_val if the value does
-  not represent a floating point number.
-  Floating point numbers are parsed with g_ascii_strtod().
-  
-  settings : a GtkPrintSettings
-  key :      a key
-  def :      the default value
-  Returns :  the floating point number associated with key
-  
 
 ==== :GetDuplex ====
 '':GetDuplex(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:PrintDuplex#T|Gtk.Gtk.PrintDuplex.T]]''
 
-  Gets the value of GTK_PRINT_SETTINGS_DUPLEX.
-  
-  settings : a GtkPrintSettings
-  Returns :  whether to print the output in duplex.
-  
 
 ==== :GetFinishings ====
 '':GetFinishings(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
-  Gets the value of GTK_PRINT_SETTINGS_FINISHINGS.
-  
-  settings : a GtkPrintSettings
-  Returns :  the finishings
-  
 
 ==== :GetInt ====
 '':GetInt(self @ [[#T|T]], key @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-  Returns the integer value of key, or 0.
-  
-  settings : a GtkPrintSettings
-  key :      a key
-  Returns :  the integer value of key
-  
 
 ==== :GetIntWithDefault ====
 '':GetIntWithDefault(self @ [[#T|T]], key @ [[..:..:Std:String#T|Std.String.T]], def @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-  Returns the value of key, interpreted as an integer, or the default value.
-  
-  settings : a GtkPrintSettings
-  key :      a key
-  def :      the default value
-  Returns :  the integer value of key
-  
 
 ==== :GetLength ====
 '':GetLength(self @ [[#T|T]], key @ [[..:..:Std:String#T|Std.String.T]], unit @ [[..:..:Gtk:Gtk:Unit#T|Gtk.Gtk.Unit.T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
-  Returns the value associated with key, interpreted as a length. The returned value is converted to units.
-  
-  settings : a GtkPrintSettings
-  key :      a key
-  unit :     the unit of the return value
-  Returns :  the length value of key, converted to unit
-  
 
 ==== :GetMediaType ====
 '':GetMediaType(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
-  Gets the value of GTK_PRINT_SETTINGS_MEDIA_TYPE.
-  The set of media types is defined in PWG 5101.1-2002 PWG.
-  
-  settings : a GtkPrintSettings
-  Returns :  the media type
-  
 
 ==== :GetNCopies ====
 '':GetNCopies(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-  Gets the value of GTK_PRINT_SETTINGS_N_COPIES.
-  
-  settings : a GtkPrintSettings
-  Returns :  the number of copies to print
-  
 
 ==== :GetNumberUp ====
 '':GetNumberUp(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-  Gets the value of GTK_PRINT_SETTINGS_NUMBER_UP.
-  
-  settings : a GtkPrintSettings
-  Returns :  the number of pages per sheet
-  
 
 ==== :GetOrientation ====
 '':GetOrientation(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:PageOrientation#T|Gtk.Gtk.PageOrientation.T]]''
 
-  Get the value of GTK_PRINT_SETTINGS_ORIENTATION, converted to a GtkPageOrientation.
-  
-  settings : a GtkPrintSettings
-  Returns :  the orientation
-  
 
 ==== :GetOutputBin ====
 '':GetOutputBin(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
-  Gets the value of GTK_PRINT_SETTINGS_OUTPUT_BIN.
-  
-  settings : a GtkPrintSettings
-  Returns :  the output bin
-  
 
 ==== :GetPageRanges ====
 '':GetPageRanges(self @ [[#T|T]], num_ranges @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Gtk:Gtk:PageRange#T|Gtk.Gtk.PageRange.T]]''
 
-  Gets the value of GTK_PRINT_SETTINGS_PAGE_RANGES.
-  
-  settings :   a GtkPrintSettings
-  num_ranges : return location for the length of the returned array
-  Returns :    an array of GtkPageRanges. Use g_free() to free the array when it is no longer needed.
-  
 
 ==== :GetPageSet ====
 '':GetPageSet(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:PageSet#T|Gtk.Gtk.PageSet.T]]''
 
-  Gets the value of GTK_PRINT_SETTINGS_PAGE_SET.
-  
-  settings : a GtkPrintSettings
-  Returns :  the set of pages to print
-  
 
 ==== :GetPaperHeight ====
 '':GetPaperHeight(self @ [[#T|T]], unit @ [[..:..:Gtk:Gtk:Unit#T|Gtk.Gtk.Unit.T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
-  Gets the value of GTK_PRINT_SETTINGS_PAPER_HEIGHT, converted to unit.
-  
-  settings : a GtkPrintSettings
-  unit :     the unit for the return value
-  Returns :  the paper height, in units of unit
-  
 
 ==== :GetPaperSize ====
 '':GetPaperSize(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:PaperSize#T|Gtk.Gtk.PaperSize.T]]''
 
-  Gets the value of GTK_PRINT_SETTINGS_PAPER_FORMAT, converted to a GtkPaperSize.
-  
-  settings : a GtkPrintSettings
-  Returns :  the paper size
-  
 
 ==== :GetPaperWidth ====
 '':GetPaperWidth(self @ [[#T|T]], unit @ [[..:..:Gtk:Gtk:Unit#T|Gtk.Gtk.Unit.T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
-  Gets the value of GTK_PRINT_SETTINGS_PAPER_WIDTH, converted to unit.
-  
-  settings : a GtkPrintSettings
-  unit :     the unit for the return value
-  Returns :  the paper width, in units of unit
-  
 
 ==== :GetPrintPages ====
 '':GetPrintPages(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:PrintPages#T|Gtk.Gtk.PrintPages.T]]''
 
-  Gets the value of GTK_PRINT_SETTINGS_PRINT_PAGES.
-  
-  settings : a GtkPrintSettings
-  Returns :  which pages to print
-  
 
 ==== :GetPrinter ====
 '':GetPrinter(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
-  Convenience function to obtain the value of GTK_PRINT_SETTINGS_PRINTER.
-  
-  settings : a GtkPrintSettings
-  Returns :  the printer name
-  
 
 ==== :GetQuality ====
 '':GetQuality(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:PrintQuality#T|Gtk.Gtk.PrintQuality.T]]''
 
-  Gets the value of GTK_PRINT_SETTINGS_QUALITY.
-  
-  settings : a GtkPrintSettings
-  Returns :  the print quality
-  
 
 ==== :GetResolution ====
 '':GetResolution(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-  Gets the value of GTK_PRINT_SETTINGS_RESOLUTION.
-  
-  settings : a GtkPrintSettings
-  Returns :  the resolution in dpi
-  
 
 ==== :GetReverse ====
 '':GetReverse(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
-  Gets the value of GTK_PRINT_SETTINGS_REVERSE.
-  
-  settings : a GtkPrintSettings
-  Returns :  whether to reverse the order of the printed pages
-  
 
 ==== :GetScale ====
 '':GetScale(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
-  Gets the value of GTK_PRINT_SETTINGS_SCALE.
-  
-  settings : a GtkPrintSettings
-  Returns :  the scale in percent
-  
 
 ==== :GetUseColor ====
 '':GetUseColor(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
-  Gets the value of GTK_PRINT_SETTINGS_USE_COLOR.
-  
-  settings : a GtkPrintSettings
-  Returns :  whether to use color
-  
 
 ==== :HasKey ====
 '':HasKey(self @ [[#T|T]], key @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
-  Returns TRUE, if a value is associated with key.
-  
-  settings : a GtkPrintSettings
-  key :      a key
-  Returns :  TRUE, if key has a value
-  
 
 ==== :Set ====
 '':Set(self @ [[#T|T]], key @ [[..:..:Std:String#T|Std.String.T]], value @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Associates value with key.
-  
-  settings : a GtkPrintSettings
-  key :      a key
-  value :    a string value, or NULL
-  
 
 ==== :SetBool ====
 '':SetBool(self @ [[#T|T]], key @ [[..:..:Std:String#T|Std.String.T]], value @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Sets key to a boolean value.
-  
-  settings : a GtkPrintSettings
-  key :      a key
-  value :    a boolean
-  
 
 ==== :SetCollate ====
 '':SetCollate(self @ [[#T|T]], collate @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Sets the value of GTK_PRINT_SETTINGS_COLLATE.
-  
-  settings : a GtkPrintSettings
-  collate :  whether to collate the output
-  
 
 ==== :SetDefaultSource ====
 '':SetDefaultSource(self @ [[#T|T]], default_source @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Sets the value of GTK_PRINT_SETTINGS_DEFAULT_SOURCE.
-  
-  settings :       a GtkPrintSettings
-  default_source : the default source
-  
 
 ==== :SetDither ====
 '':SetDither(self @ [[#T|T]], dither @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Sets the value of GTK_PRINT_SETTINGS_DITHER.
-  
-  settings : a GtkPrintSettings
-  dither :   the dithering that is used
-  
 
 ==== :SetDouble ====
 '':SetDouble(self @ [[#T|T]], key @ [[..:..:Std:String#T|Std.String.T]], value @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Sets key to a double value.
-  
-  settings : a GtkPrintSettings
-  key :      a key
-  value :    a double value
-  
 
 ==== :SetDuplex ====
 '':SetDuplex(self @ [[#T|T]], duplex @ [[..:..:Gtk:Gtk:PrintDuplex#T|Gtk.Gtk.PrintDuplex.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Sets the value of GTK_PRINT_SETTINGS_DUPLEX.
-  
-  settings : a GtkPrintSettings
-  duplex :   a GtkPrintDuplex value
-  
 
 ==== :SetFinishings ====
 '':SetFinishings(self @ [[#T|T]], finishings @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Sets the value of GTK_PRINT_SETTINGS_FINISHINGS.
-  
-  settings :   a GtkPrintSettings
-  finishings : the finishings
-  
 
 ==== :SetInt ====
 '':SetInt(self @ [[#T|T]], key @ [[..:..:Std:String#T|Std.String.T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Sets key to an integer value.
-  
-  settings : a GtkPrintSettings
-  key :      a key
-  value :    an integer
-  
 
 ==== :SetLength ====
 '':SetLength(self @ [[#T|T]], key @ [[..:..:Std:String#T|Std.String.T]], value @ [[..:..:Std:Real#T|Std.Real.T]], unit @ [[..:..:Gtk:Gtk:Unit#T|Gtk.Gtk.Unit.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Associates a length in units of unit with key.
-  
-  settings : a GtkPrintSettings
-  key :      a key
-  value :    a length
-  unit :     the unit of length
-  
 
 ==== :SetMediaType ====
 '':SetMediaType(self @ [[#T|T]], media_type @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Sets the value of GTK_PRINT_SETTINGS_MEDIA_TYPE.
-  The set of media types is defined in PWG 5101.1-2002 PWG.
-  
-  settings :   a GtkPrintSettings
-  media_type : the media type
-  
 
 ==== :SetNCopies ====
 '':SetNCopies(self @ [[#T|T]], num_copies @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Sets the value of GTK_PRINT_SETTINGS_N_COPIES.
-  
-  settings :   a GtkPrintSettings
-  num_copies : the number of copies
-  
 
 ==== :SetNumberUp ====
 '':SetNumberUp(self @ [[#T|T]], number_up @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Sets the value of GTK_PRINT_SETTINGS_NUMBER_UP.
-  
-  settings :  a GtkPrintSettings
-  number_up : the number of pages per sheet
-  
 
 ==== :SetOrientation ====
 '':SetOrientation(self @ [[#T|T]], orientation @ [[..:..:Gtk:Gtk:PageOrientation#T|Gtk.Gtk.PageOrientation.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Sets the value of GTK_PRINT_SETTINGS_ORIENTATION.
-  
-  settings :    a GtkPrintSettings
-  orientation : a page orientation
-  
 
 ==== :SetOutputBin ====
 '':SetOutputBin(self @ [[#T|T]], output_bin @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Sets the value of GTK_PRINT_SETTINGS_OUTPUT_BIN.
-  
-  settings :   a GtkPrintSettings
-  output_bin : the output bin
-  
 
 ==== :SetPageRanges ====
 '':SetPageRanges(self @ [[#T|T]], page_ranges @ [[..:..:Gtk:Gtk:PageRange#T|Gtk.Gtk.PageRange.T]], num_ranges @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Sets the value of GTK_PRINT_SETTINGS_PAGE_RANGES.
-  
-  settings :    a GtkPrintSettings
-  page_ranges : an array of GtkPageRanges
-  num_ranges :  the length of page_ranges
-  
 
 ==== :SetPageSet ====
 '':SetPageSet(self @ [[#T|T]], page_set @ [[..:..:Gtk:Gtk:PageSet#T|Gtk.Gtk.PageSet.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Sets the value of GTK_PRINT_SETTINGS_PAGE_SET.
-  
-  settings : a GtkPrintSettings
-  page_set : a GtkPageSet value
-  
 
 ==== :SetPaperHeight ====
 '':SetPaperHeight(self @ [[#T|T]], height @ [[..:..:Std:Real#T|Std.Real.T]], unit @ [[..:..:Gtk:Gtk:Unit#T|Gtk.Gtk.Unit.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Sets the value of GTK_PRINT_SETTINGS_PAPER_HEIGHT.
-  
-  settings : a GtkPrintSettings
-  height :   the paper height
-  unit :     the units of height
-  
 
 ==== :SetPaperSize ====
 '':SetPaperSize(self @ [[#T|T]], paper_size @ [[..:..:Gtk:Gtk:PaperSize#T|Gtk.Gtk.PaperSize.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Sets the value of GTK_PRINT_SETTINGS_PAPER_FORMAT, GTK_PRINT_SETTINGS_PAPER_WIDTH and GTK_PRINT_SETTINGS_PAPER_HEIGHT.
-  
-  settings :   a GtkPrintSettings
-  paper_size : a paper size
-  
 
 ==== :SetPaperWidth ====
 '':SetPaperWidth(self @ [[#T|T]], width @ [[..:..:Std:Real#T|Std.Real.T]], unit @ [[..:..:Gtk:Gtk:Unit#T|Gtk.Gtk.Unit.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Sets the value of GTK_PRINT_SETTINGS_PAPER_WIDTH.
-  
-  settings : a GtkPrintSettings
-  width :    the paper width
-  unit :     the units of width
-  
 
 ==== :SetPrintPages ====
 '':SetPrintPages(self @ [[#T|T]], pages @ [[..:..:Gtk:Gtk:PrintPages#T|Gtk.Gtk.PrintPages.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Sets the value of GTK_PRINT_SETTINGS_PRINT_PAGES.
-  
-  settings : a GtkPrintSettings
-  pages :    a GtkPrintPages value
-  
 
 ==== :SetPrinter ====
 '':SetPrinter(self @ [[#T|T]], printer @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Convenience function to set GTK_PRINT_SETTINGS_PRINTER to printer.
-  
-  settings : a GtkPrintSettings
-  printer :  the printer name
-  
 
 ==== :SetQuality ====
 '':SetQuality(self @ [[#T|T]], quality @ [[..:..:Gtk:Gtk:PrintQuality#T|Gtk.Gtk.PrintQuality.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Sets the value of GTK_PRINT_SETTINGS_QUALITY.
-  
-  settings : a GtkPrintSettings
-  quality :  a GtkPrintQuality value
-  
 
 ==== :SetResolution ====
 '':SetResolution(self @ [[#T|T]], resolution @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Sets the value of GTK_PRINT_SETTINGS_RESOLUTION.
-  
-  settings :   a GtkPrintSettings
-  resolution : the resolution in dpi
-  
 
 ==== :SetReverse ====
 '':SetReverse(self @ [[#T|T]], reverse @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Sets the value of GTK_PRINT_SETTINGS_REVERSE.
-  
-  settings : a GtkPrintSettings
-  reverse :  whether to reverse the output
-  
 
 ==== :SetScale ====
 '':SetScale(self @ [[#T|T]], scale @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Sets the value of GTK_PRINT_SETTINGS_SCALE.
-  
-  settings : a GtkPrintSettings
-  scale :    the scale in percent
-  
 
 ==== New ====
 ''New() : [[# T| T]]''
 
-  Creates a new GtkPrintSettings object.
-  
-  Returns : a new GtkPrintSettings object
-  
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
@@ -618,23 +263,8 @@
 ==== NewFromKeyFile ====
 ''NewFromKeyFile(key_file : [[..:..:Std:Object#T|Std.Object.T]], group_name : [[..:..:Std:String#T|Std.String.T]], error : [[..:..:Std:Object#T|Std.Object.T]]) : [[# T| T]]''
 
-  Reads the print settings from the group group_name in key_file. Returns a new GtkPrintSettings object with the restored
-  settings, or NULL if an error occurred.
-  
-  key_file :   the GKeyFile to retrieve the settings from
-  group_name : the name of the group to use
-  error :      return location for errors, or NULL
-  Returns :    the restored GtkPrintSettings
-  
 
 ==== NewFromFile ====
 ''NewFromFile(file_name : [[..:..:Std:String#T|Std.String.T]], error : [[..:..:Std:Object#T|Std.Object.T]]) : [[# T| T]]''
 
-  Reads the print settings from filename. Returns a new GtkPrintSettings object with the restored settings, or NULL if an
-  error occurred. See gtk_print_settings_to_file().
-  
-  file_name : the filename to read the settings from
-  error :     return location for errors, or NULL
-  Returns :   the restored GtkPrintSettings
-  
 

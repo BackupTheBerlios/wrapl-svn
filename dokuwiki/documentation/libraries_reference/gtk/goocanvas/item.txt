@@ -59,7 +59,7 @@
 
 
 ==== :GetItemsAt ====
-'':GetItemsAt(self @ [[#T|T]], x @ [[..:..:Std:Real#T|Std.Real.T]], y @ [[..:..:Std:Real#T|Std.Real.T]], cr @ [[..:..:Gtk:Cairo:CairoT#T|Gtk.Cairo.CairoT.T]], is_pointer_event @ [[..:..:Std:Symbol#T|Std.Symbol.T]], parent_is_visible @ [[..:..:Std:Symbol#T|Std.Symbol.T]], found_items @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':GetItemsAt(self @ [[#T|T]], x @ [[..:..:Std:Real#T|Std.Real.T]], y @ [[..:..:Std:Real#T|Std.Real.T]], cr @ [[..:..:Gtk:Cairo:CairoT#T|Gtk.Cairo.CairoT.T]], is_pointer_event @ [[..:..:Std:Symbol#T|Std.Symbol.T]], parent_is_visible @ [[..:..:Std:Symbol#T|Std.Symbol.T]], found_items @ [[..:..:Std:List#T|Std.List.T]]) : [[..:..:Std:List#T|Std.List.T]]''
 
 
 ==== :GetModel ====

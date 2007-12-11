@@ -2,24 +2,44 @@
 ==== T ====
 
 
-==== :Widget ====
-'':Widget(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
+==== :setWidget ====
+'':setWidget(self @ [[#T|T]], value @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]])''
 
 
 ==== :Path ====
 '':Path(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
+==== :setPath ====
+'':setPath(self @ [[#T|T]], value @ [[..:..:Std:String#T|Std.String.T]])''
+
+
 ==== :Accelerator ====
 '':Accelerator(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
+
+
+==== :setAccelerator ====
+'':setAccelerator(self @ [[#T|T]], value @ [[..:..:Std:String#T|Std.String.T]])''
 
 
 ==== :Callback ====
 '':Callback(self @ [[#T|T]]) : [[..:..:Std:Function#T|Std.Function.T]]''
 
 
+==== :setCallback ====
+'':setCallback(self @ [[#T|T]], value @ [[..:..:Std:Function#T|Std.Function.T]])''
+
+
 ==== :CallbackData ====
 '':CallbackData(self @ [[#T|T]]) : [[..:..:Std:Address#T|Std.Address.T]]''
+
+
+==== :setCallbackData ====
+'':setCallbackData(self @ [[#T|T]], value @ [[..:..:Std:Address#T|Std.Address.T]])''
+
+
+==== :Widget ====
+'':Widget(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
 
 ==== New ====

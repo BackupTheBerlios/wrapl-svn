@@ -2,16 +2,28 @@
 ==== T ====
 
 
-==== :Signal ====
-'':Signal(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
+==== :setSignal ====
+'':setSignal(self @ [[#T|T]], value @ [[..:..:Std:String#T|Std.String.T]])''
 
 
 ==== :Key ====
 '':Key(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
+==== :setKey ====
+'':setKey(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
 ==== :Modifiers ====
 '':Modifiers(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+
+
+==== :setModifiers ====
+'':setModifiers(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :Signal ====
+'':Signal(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== New ====

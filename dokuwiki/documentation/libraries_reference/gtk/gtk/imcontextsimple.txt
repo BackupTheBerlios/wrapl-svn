@@ -4,22 +4,10 @@
   * [[..:..:Gtk:Gtk:IMContext#T|Gtk.Gtk.IMContext.T]]
   * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
 
-  
 
 ==== :AddTable ====
 '':AddTable(self @ [[#T|T]], data @ [[..:..:Std:Object#T|Std.Object.T]], max_seq_len @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], n_seqs @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Adds an additional table to search to the input context. Each row of the table consists of max_seq_len key symbols
-  followed by two guint16 interpreted as the high and low words of a gunicode value. Tables are searched starting from the
-  last added.
-  The table must be sorted in dictionary order on the numeric value of the key symbol fields. (Values beyond the length of
-  the sequence should be zero.)
-  
-  context_simple : A GtkIMContextSimple
-  data :           the table
-  max_seq_len :    Maximum length of a sequence in the table (cannot be greater than GTK_MAX_COMPOSE_LEN)
-  n_seqs :         number of sequences in the table
-  
 
 ==== :ComposeBuffer ====
 '':ComposeBuffer(self @ [[#T|T]], @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
@@ -48,10 +36,6 @@
 ==== New ====
 ''New() : [[# T| T]]''
 
-  Creates a new GtkIMContextSimple.
-  
-  Returns : a new GtkIMContextSimple.
-  
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''

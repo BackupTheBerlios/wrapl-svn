@@ -8,13 +8,6 @@
   * [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]
   * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
 
-  GtkRecentChooserWidget is a widget suitable for selecting recently used files. It is the main
-  building block of a GtkRecentChooserDialog. Most applications will only need to use the latter; you
-  can use GtkRecentChooserWidget as part of a larger window if you have special needs.
-  Note that GtkRecentChooserWidget does not have any methods of its own. Instead, you should use the
-  functions that work on a GtkRecentChooser.
-  Recently used files are supported since GTK+ 2.10.
-  
 
 ==== :Priv ====
 '':Priv(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -23,11 +16,6 @@
 ==== New ====
 ''New() : [[# T| T]]''
 
-  Creates a new GtkRecentChooserWidget object. This is an embeddable widget used to access the recently used resources
-  list.
-  
-  Returns : a new GtkRecentChooserWidget
-  
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
@@ -36,11 +24,4 @@
 ==== NewForManager ====
 ''NewForManager(manager : [[..:..:Gtk:Gtk:RecentManager#T|Gtk.Gtk.RecentManager.T]]) : [[# T| T]]''
 
-  Creates a new GtkRecentChooserWidget with a specified recent manager.
-  This is useful if you have implemented your own recent manager, or if you have a customized instance of a
-  GtkRecentManager object.
-  
-  manager : a GtkRecentManager
-  Returns : a new GtkRecentChooserWidget
-  
 

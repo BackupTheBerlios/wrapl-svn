@@ -2,20 +2,36 @@
 ==== T ====
 
 
-==== :RadiusY ====
-'':RadiusY(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
+==== :setRadiusY ====
+'':setRadiusY(self @ [[#T|T]], value @ [[..:..:Std:Real#T|Std.Real.T]])''
 
 
 ==== :CenterX ====
 '':CenterX(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
+==== :setCenterX ====
+'':setCenterX(self @ [[#T|T]], value @ [[..:..:Std:Real#T|Std.Real.T]])''
+
+
 ==== :CenterY ====
 '':CenterY(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
+==== :setCenterY ====
+'':setCenterY(self @ [[#T|T]], value @ [[..:..:Std:Real#T|Std.Real.T]])''
+
+
 ==== :RadiusX ====
 '':RadiusX(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
+
+
+==== :setRadiusX ====
+'':setRadiusX(self @ [[#T|T]], value @ [[..:..:Std:Real#T|Std.Real.T]])''
+
+
+==== :RadiusY ====
+'':RadiusY(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== New ====

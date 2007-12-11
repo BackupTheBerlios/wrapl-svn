@@ -2,52 +2,100 @@
 ==== T ====
 
 
-==== :HasTooltip ====
-'':HasTooltip(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+==== :setHasTooltip ====
+'':setHasTooltip(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
 
 
 ==== :Style ====
 '':Style(self @ [[#T|T]]) : [[..:..:Gtk:GooCanvas:Style#T|Gtk.GooCanvas.Style.T]]''
 
 
+==== :setStyle ====
+'':setStyle(self @ [[#T|T]], value @ [[..:..:Gtk:GooCanvas:Style#T|Gtk.GooCanvas.Style.T]])''
+
+
 ==== :Transform ====
 '':Transform(self @ [[#T|T]]) : [[..:..:Gtk:Cairo:CairoMatrixT#T|Gtk.Cairo.CairoMatrixT.T]]''
+
+
+==== :setTransform ====
+'':setTransform(self @ [[#T|T]], value @ [[..:..:Gtk:Cairo:CairoMatrixT#T|Gtk.Cairo.CairoMatrixT.T]])''
 
 
 ==== :ClipPathCommands ====
 '':ClipPathCommands(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
+==== :setClipPathCommands ====
+'':setClipPathCommands(self @ [[#T|T]], value @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
 ==== :Tooltip ====
 '':Tooltip(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
+
+
+==== :setTooltip ====
+'':setTooltip(self @ [[#T|T]], value @ [[..:..:Std:String#T|Std.String.T]])''
 
 
 ==== :VisibilityThreshold ====
 '':VisibilityThreshold(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
+==== :setVisibilityThreshold ====
+'':setVisibilityThreshold(self @ [[#T|T]], value @ [[..:..:Std:Real#T|Std.Real.T]])''
+
+
 ==== :Visibility ====
 '':Visibility(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+
+
+==== :setVisibility ====
+'':setVisibility(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
 
 
 ==== :PointerEvents ====
 '':PointerEvents(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
+==== :setPointerEvents ====
+'':setPointerEvents(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
 ==== :CanFocus ====
 '':CanFocus(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+
+
+==== :setCanFocus ====
+'':setCanFocus(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
 
 
 ==== :OwnStyle ====
 '':OwnStyle(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
+==== :setOwnStyle ====
+'':setOwnStyle(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
 ==== :ClipFillRule ====
 '':ClipFillRule(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
+==== :setClipFillRule ====
+'':setClipFillRule(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
 ==== :CacheSetting ====
 '':CacheSetting(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+
+
+==== :setCacheSetting ====
+'':setCacheSetting(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :HasTooltip ====
+'':HasTooltip(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== New ====

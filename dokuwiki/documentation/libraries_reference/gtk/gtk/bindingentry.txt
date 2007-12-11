@@ -2,40 +2,76 @@
 ==== T ====
 
 
+==== :setSignals ====
+'':setSignals(self @ [[#T|T]], value @ [[..:..:Gtk:Gtk:BindingSignal#T|Gtk.Gtk.BindingSignal.T]])''
+
+
 ==== :Signals ====
 '':Signals(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:BindingSignal#T|Gtk.Gtk.BindingSignal.T]]''
+
+
+==== :setHashNext ====
+'':setHashNext(self @ [[#T|T]], value @ [[..:..:Gtk:Gtk:BindingEntry#T|Gtk.Gtk.BindingEntry.T]])''
 
 
 ==== :HashNext ====
 '':HashNext(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:BindingEntry#T|Gtk.Gtk.BindingEntry.T]]''
 
 
+==== :setSetNext ====
+'':setSetNext(self @ [[#T|T]], value @ [[..:..:Gtk:Gtk:BindingEntry#T|Gtk.Gtk.BindingEntry.T]])''
+
+
 ==== :SetNext ====
 '':SetNext(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:BindingEntry#T|Gtk.Gtk.BindingEntry.T]]''
-
-
-==== :MarksUnbound ====
-'':MarksUnbound(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
-
-
-==== :InEmission ====
-'':InEmission(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
-
-
-==== :Destroyed ====
-'':Destroyed(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :Keyval ====
 '':Keyval(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
+==== :setKeyval ====
+'':setKeyval(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
 ==== :Modifiers ====
 '':Modifiers(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
+==== :setModifiers ====
+'':setModifiers(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
 ==== :BindingSet ====
 '':BindingSet(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:BindingSet#T|Gtk.Gtk.BindingSet.T]]''
+
+
+==== :setBindingSet ====
+'':setBindingSet(self @ [[#T|T]], value @ [[..:..:Gtk:Gtk:BindingSet#T|Gtk.Gtk.BindingSet.T]])''
+
+
+==== :Destroyed ====
+'':Destroyed(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+
+
+==== :setDestroyed ====
+'':setDestroyed(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :InEmission ====
+'':InEmission(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+
+
+==== :setInEmission ====
+'':setInEmission(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :MarksUnbound ====
+'':MarksUnbound(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+
+
+==== :setMarksUnbound ====
+'':setMarksUnbound(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
 
 
 ==== New ====

@@ -10,20 +10,40 @@
 '':Width(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
+==== :setWidth ====
+'':setWidth(self @ [[#T|T]], value @ [[..:..:Std:Real#T|Std.Real.T]])''
+
+
 ==== :Height ====
 '':Height(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
+
+
+==== :setHeight ====
+'':setHeight(self @ [[#T|T]], value @ [[..:..:Std:Real#T|Std.Real.T]])''
 
 
 ==== :BorderWidth ====
 '':BorderWidth(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
+==== :setBorderWidth ====
+'':setBorderWidth(self @ [[#T|T]], value @ [[..:..:Std:Real#T|Std.Real.T]])''
+
+
 ==== :Children ====
 '':Children(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
+==== :setChildren ====
+'':setChildren(self @ [[#T|T]], value @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
 ==== :LayoutData ====
 '':LayoutData(self @ [[#T|T]]) : [[..:..:Gtk:GooCanvas:TableLayoutData#T|Gtk.GooCanvas.TableLayoutData.T]]''
+
+
+==== :setLayoutData ====
+'':setLayoutData(self @ [[#T|T]], value @ [[..:..:Gtk:GooCanvas:TableLayoutData#T|Gtk.GooCanvas.TableLayoutData.T]])''
 
 
 ==== New ====

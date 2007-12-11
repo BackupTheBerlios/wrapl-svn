@@ -2,28 +2,52 @@
 ==== T ====
 
 
-==== :ExtraData ====
-'':ExtraData(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+==== :setExtraData ====
+'':setExtraData(self @ [[#T|T]], value @ [[..:..:Std:Object#T|Std.Object.T]])''
 
 
 ==== :Path ====
 '':Path(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
+==== :setPath ====
+'':setPath(self @ [[#T|T]], value @ [[..:..:Std:String#T|Std.String.T]])''
+
+
 ==== :Accelerator ====
 '':Accelerator(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
+
+
+==== :setAccelerator ====
+'':setAccelerator(self @ [[#T|T]], value @ [[..:..:Std:String#T|Std.String.T]])''
 
 
 ==== :Callback ====
 '':Callback(self @ [[#T|T]]) : [[..:..:Std:Function#T|Std.Function.T]]''
 
 
+==== :setCallback ====
+'':setCallback(self @ [[#T|T]], value @ [[..:..:Std:Function#T|Std.Function.T]])''
+
+
 ==== :CallbackAction ====
 '':CallbackAction(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
+==== :setCallbackAction ====
+'':setCallbackAction(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
 ==== :ItemType ====
 '':ItemType(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
+
+
+==== :setItemType ====
+'':setItemType(self @ [[#T|T]], value @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== :ExtraData ====
+'':ExtraData(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====

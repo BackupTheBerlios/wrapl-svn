@@ -14,16 +14,32 @@
 '':Stamp(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
+==== :setStamp ====
+'':setStamp(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
 ==== :UserData ====
 '':UserData(self @ [[#T|T]]) : [[..:..:Std:Address#T|Std.Address.T]]''
+
+
+==== :setUserData ====
+'':setUserData(self @ [[#T|T]], value @ [[..:..:Std:Address#T|Std.Address.T]])''
 
 
 ==== :UserData2 ====
 '':UserData2(self @ [[#T|T]]) : [[..:..:Std:Address#T|Std.Address.T]]''
 
 
+==== :setUserData2 ====
+'':setUserData2(self @ [[#T|T]], value @ [[..:..:Std:Address#T|Std.Address.T]])''
+
+
 ==== :UserData3 ====
 '':UserData3(self @ [[#T|T]]) : [[..:..:Std:Address#T|Std.Address.T]]''
+
+
+==== :setUserData3 ====
+'':setUserData3(self @ [[#T|T]], value @ [[..:..:Std:Address#T|Std.Address.T]])''
 
 
 ==== New ====

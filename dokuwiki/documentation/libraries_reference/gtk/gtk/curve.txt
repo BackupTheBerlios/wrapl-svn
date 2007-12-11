@@ -6,40 +6,14 @@
   * [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]
   * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
 
-  === Note ===
-  This widget is considered too specialized/little-used for GTK+, and will in the future be moved to
-  some other package. If your application needs this widget, feel free to use it, as the widget does
-  work and is useful in some applications; it's just not of general interest. However, we are not
-  accepting new features for the widget, and it will eventually move out of the GTK+ distribution.
-  The GtkCurve widget allows the user to edit a curve covering a range of values. It is typically used
-  to fine-tune color balances in graphics applications like the Gimp.
-  The GtkCurve widget has 3 modes of operation - spline, linear and free. In spline mode the user
-  places points on the curve which are automatically connected together into a smooth curve. In linear
-  mode the user places points on the curve which are connected by straight lines. In free mode the
-  user can draw the points of the curve freely, and they are not connected at all.
-  
 
 ==== :SetVector ====
 '':SetVector(self @ [[#T|T]], veclen @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], vector @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Sets the vector of points on the curve. The curve type is set to GTK_CURVE_TYPE_FREE.
-  
-  curve :  a GtkCurve.
-  veclen : the number of points.
-  vector : the points on the curve.
-  
 
 ==== :SetRange ====
 '':SetRange(self @ [[#T|T]], min_x @ [[..:..:Std:Real#T|Std.Real.T]], max_x @ [[..:..:Std:Real#T|Std.Real.T]], min_y @ [[..:..:Std:Real#T|Std.Real.T]], max_y @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Sets the minimum and maximum x and y values of the curve. The curve is also reset with a call to gtk_curve_reset().
-  
-  curve : a GtkCurve.
-  min_x : the minimum x value.
-  max_x : the maximum x value.
-  min_y : the minimum y value.
-  max_y : the maximum y value.
-  
 
 ==== :CursorType ====
 '':CursorType(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
@@ -96,50 +70,22 @@
 ==== :GetVector ====
 '':GetVector(self @ [[#T|T]], veclen @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], vector @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Returns a vector of points representing the curve.
-  
-  curve :  a GtkCurve.
-  veclen : the number of points to calculate.
-  vector : returns the points.
-  
 
 ==== :Reset ====
 '':Reset(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Resets the curve to a straight line from the minimum x and y values to the maximum x and y values (i.e. from the bottom-
-  left to the top-right corners). The curve type is not changed.
-  
-  curve : a GtkCurve.
-  
 
 ==== :SetCurveType ====
 '':SetCurveType(self @ [[#T|T]], type @ [[..:..:Gtk:Gtk:CurveType#T|Gtk.Gtk.CurveType.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Sets the type of the curve. The curve will remain unchanged except when changing from a free curve to a linear or spline
-  curve, in which case the curve will be changed as little as possible.
-  
-  curve : a GtkCurve.
-  type :  the type of the curve.
-  
 
 ==== :SetGamma ====
 '':SetGamma(self @ [[#T|T]], gamma_ @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Recomputes the entire curve using the given gamma value. A gamma value of 1 results in a straight line. Values greater
-  than 1 result in a curve above the straight line. Values less than 1 result in a curve below the straight line. The
-  curve type is changed to GTK_CURVE_TYPE_FREE. FIXME: Needs a more precise definition of gamma.
-  
-  curve :  a GtkCurve.
-  gamma_ : the gamma value.
-  
 
 ==== New ====
 ''New() : [[# T| T]]''
 
-  Creates a new GtkCurve.
-  
-  Returns : a new GtkCurve.
-  
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''

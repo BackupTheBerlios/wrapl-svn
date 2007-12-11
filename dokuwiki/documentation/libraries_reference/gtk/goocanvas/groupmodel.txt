@@ -4,22 +4,6 @@
   * [[..:..:Gtk:GooCanvas:ItemModelSimple#T|Gtk.GooCanvas.ItemModelSimple.T]]
   * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
 
-  GooCanvasGroupModel represents a group of items. Groups can be nested to any depth, to create a
-  hierarchy of items. Items are ordered within each group, with later items being displayed above
-  earlier items.
-  GooCanvasGroupModel is a subclass of GooCanvasItemModelSimple and so inherits all of the style
-  properties such as "stroke-color", "fill-color" and "line-width". Setting a style property on a
-  GooCanvasGroupModel will affect all children of the GooCanvasGroupModel (unless the children
-  override the property setting).
-  GooCanvasGroupModel implements the GooCanvasItemModel interface, so you can use the
-  GooCanvasItemModel functions such as goo_canvas_item_model_raise() and goo_canvas_item_model_rotate
-  (), and the properties such as "visibility" and "pointer-events".
-  To create a GooCanvasGroupModel use goo_canvas_group_model_new().
-  To get or set the properties of an existing GooCanvasGroupModel, use g_object_get() and g_object_set
-  ().
-  To respond to events such as mouse clicks on the group you must connect to the signal handlers of
-  the corresponding GooCanvasGroup objects. (See goo_canvas_get_item() and "item-created".)
-  
 
 ==== :Children ====
 '':Children(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -28,13 +12,6 @@
 ==== New ====
 ''New(parent : [[..:..:Gtk:GooCanvas:ItemModel#T|Gtk.GooCanvas.ItemModel.T]], __etc__ : [[..:..:Std:Object#T|Std.Object.T]]) : [[# T| T]]''
 
-  Creates a new group item.
-  
-  parent :  the parent model, or NULL. If a parent is specified, it will assume ownership of the item, and the item will
-            automatically be freed when it is removed from the parent. Otherwise call g_object_unref() to free it.
-  ... :     optional pairs of property names and values, and a terminating NULL.
-  Returns : a new group model.
-  
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''

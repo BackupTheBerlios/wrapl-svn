@@ -4,53 +4,10 @@
   * [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]
   * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
 
-  This is the base class for all canvas items. Canvas items are the drawing elements of a GnomeCanvas.
-  Example items include lines, ellipses, polygons, images, text, curves and even arbitrary GTK+
-  widgets.
-  Canvas items use the GObject property system to query and set parameters. Properties are inherited
-  so, for example, a GnomeCanvasPolygon has a "fill-color" property that is inherited from its parent
-  class object GnomeCanvasShape. So be sure to check the parent classes of GnomeCanvasItem objects
-  when looking for item properties. More information on GObject properties can be found in the glib
-  library GObject API reference documentation.
-  To create a new canvas item call gnome_canvas_item_new() which takes a parent GnomeCanvasGroup,
-  GType of the item to create, and a NULL terminated list of name/value GObject properties to set for
-  the new item.
-  To change an existing canvas item's properties call gnome_canvas_item_set(), or g_object_set() can
-  also be used.
-  There are several functions to change the drawing stacking order of an item. Call
-  gnome_canvas_item_raise() to raise an item a specified number of positions or
-  gnome_canvas_item_lower() to lower it. To raise an item to the top call
-  gnome_canvas_item_raise_to_top(). The gnome_canvas_item_lower_to_bottom() function will put it at
-  the bottom.
-  To show an item call gnome_canvas_item_show(). Note that canvas item's are shown by default and so
-  do not need to be explicitly shown after creation (contrary to GTK+ widget behavior). Call
-  gnome_canvas_item_hide() to hide an item.
-  To move an item relative to its current position (item coordinates) call gnome_canvas_item_move() or
-  gnome_canvas_item_affine_relative() for more complex transforms. gnome_canvas_item_affine_absolute()
-  can be used to set an item's transform to specific values (not offsets).
-  To convert between world and item coordinate systems call gnome_canvas_item_w2i(), and to convert in
-  the other direction call gnome_canvas_item_i2w(). To get the transform for converting from item to
-  world coordinates use gnome_canvas_item_i2w_affine() or for converting item to canvas coordinates,
-  gnome_canvas_item_i2c_affine().
-  Handling user input for interactive items is accomplished through a few functions and the "event"
-  signal. To grab the mouse cursor call gnome_canvas_item_grab(), it can be ungrabbed with
-  gnome_canvas_item_ungrab() (see gdk_pointer_grab() of the GTK+ library for details). To grab
-  keyboard focus call gnome_canvas_item_grab_focus(). Received events will be signaled via the "event"
-  signal.
-  Some other useful functions include a reparenting routine, gnome_canvas_item_reparent(), and a
-  function to query the bounding box of an item (a minumum rectangular area containing all parts of
-  the item), gnome_canvas_item_get_bounds().
-  
 
 ==== :W2i ====
 '':W2i(self @ [[#T|T]], x @ [[..:..:Std:Object#T|Std.Object.T]], y @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Converts a coordinate pair from world coordinates to item-relative coordinates.
-  
-  item : A canvas item.
-  x :    X coordinate to convert (input/output value).
-  y :    Y coordinate to convert (input/output value).
-  
 
 ==== :UpdateSvpClip ====
 '':UpdateSvpClip(self @ [[#T|T]], p_svp @ [[..:..:Std:Object#T|Std.Object.T]], new_svp @ [[..:..:Gtk:Art:SVP#T|Gtk.Art.SVP.T]], clip_svp @ [[..:..:Gtk:Art:SVP#T|Gtk.Art.SVP.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -87,162 +44,66 @@
 ==== :AffineAbsolute ====
 '':AffineAbsolute(self @ [[#T|T]], affine @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Makes the item's affine transformation matrix be equal to the specified matrix. NULL affine is treated as identity.
-  
-  item :   A canvas item.
-  affine : An affine transformation matrix.
-  
 
 ==== :AffineRelative ====
 '':AffineRelative(self @ [[#T|T]], affine @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Combines the specified affine transformation matrix with the item's current transformation. NULL affine is not allowed.
-  
-  item :   A canvas item.
-  affine : An affine transformation matrix.
-  
 
 ==== :Construct ====
 '':Construct(self @ [[#T|T]], parent @ [[..:..:Gtk:GnomeCanvas:Group#T|Gtk.GnomeCanvas.Group.T]], first_arg_name @ [[..:..:Std:String#T|Std.String.T]], args @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Constructs a canvas item; meant for use only by item implementations.
-  
-  item :           An unconstructed canvas item.
-  parent :         The parent group for the item.
-  first_arg_name : The name of the first argument for configuring the item.
-  args :           The list of arguments used to configure the item.
-  
 
 ==== :GetBounds ====
 '':GetBounds(self @ [[#T|T]], x1 @ [[..:..:Std:Object#T|Std.Object.T]], y1 @ [[..:..:Std:Object#T|Std.Object.T]], x2 @ [[..:..:Std:Object#T|Std.Object.T]], y2 @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Queries the bounding box of a canvas item. The bounds are returned in the coordinate system of the item's parent.
-  
-  item : A canvas item.
-  x1 :   Leftmost edge of the bounding box (return value).
-  y1 :   Upper edge of the bounding box (return value).
-  x2 :   Rightmost edge of the bounding box (return value).
-  y2 :   Lower edge of the bounding box (return value).
-  
 
 ==== :Grab ====
 '':Grab(self @ [[#T|T]], event_mask @ [[..:..:Std:Object#T|Std.Object.T]], cursor @ [[..:..:Gtk:Gdk:Cursor#T|Gtk.Gdk.Cursor.T]], etime @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
-  Specifies that all events that match the specified event mask should be sent to the specified item, and also grabs the
-  mouse by calling gdk_pointer_grab(). The event mask is also used when grabbing the pointer. If cursor is not NULL, then
-  that cursor is used while the grab is active. The etime parameter is the timestamp required for grabbing the mouse.
-  Return value: If an item was already grabbed, it returns GDK_GRAB_ALREADY_GRABBED. If the specified item was hidden by
-  calling gnome_canvas_item_hide(), then it
-  
-  item :       A canvas item.
-  event_mask : Mask of events that will be sent to this item.
-  cursor :     If non-NULL, the cursor that will be used while the grab is active.
-  etime :      The timestamp required for grabbing the mouse, or GDK_CURRENT_TIME.
-  Returns :    GDK_GRAB_NOT_VIEWABLE. Else, it returns the result of calling gdk_pointer_grab().
-  
 
 ==== :GrabFocus ====
 '':GrabFocus(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Makes the specified item take the keyboard focus, so all keyboard events will be sent to it. If the canvas widget itself
-  did not have the focus, it grabs it as well.
-  
-  item : A canvas item.
-  
 
 ==== :Hide ====
 '':Hide(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Hides a canvas item. If the item was already hidden, then no action is taken.
-  
-  item : A canvas item.
-  
 
 ==== :I2cAffine ====
 '':I2cAffine(self @ [[#T|T]], affine @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Gets the affine transform that converts from item-relative coordinates to canvas pixel coordinates.
-  
-  item :   A canvas item.
-  affine : An affine transformation matrix (return value).
-  
 
 ==== :I2w ====
 '':I2w(self @ [[#T|T]], x @ [[..:..:Std:Object#T|Std.Object.T]], y @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Converts a coordinate pair from item-relative coordinates to world coordinates.
-  
-  item : A canvas item.
-  x :    X coordinate to convert (input/output value).
-  y :    Y coordinate to convert (input/output value).
-  
 
 ==== :I2wAffine ====
 '':I2wAffine(self @ [[#T|T]], affine @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Gets the affine transform that converts from the item's coordinate system to world coordinates.
-  
-  item :   A canvas item
-  affine : An affine transformation matrix (return value).
-  
 
 ==== :Lower ====
 '':Lower(self @ [[#T|T]], positions @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Lowers the item in its parent's stack by the specified number of positions. If the number of positions is greater than
-  the distance to the bottom of the stack, then the item is put at the bottom.
-  
-  item :      A canvas item.
-  positions : Number of steps to lower the item.
-  
 
 ==== :LowerToBottom ====
 '':LowerToBottom(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Lowers an item to the bottom of its parent's stack.
-  
-  item : A canvas item.
-  
 
 ==== :Move ====
 '':Move(self @ [[#T|T]], dx @ [[..:..:Std:Real#T|Std.Real.T]], dy @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Moves a canvas item by creating an affine transformation matrix for translation by using the specified values. This
-  happens in item local coordinate system, so if you have nontrivial transform, it most probably does not do, what you
-  want.
-  
-  item : A canvas item.
-  dx :   Horizontal offset.
-  dy :   Vertical offset.
-  
 
 ==== :Raise ====
 '':Raise(self @ [[#T|T]], positions @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Raises the item in its parent's stack by the specified number of positions. If the number of positions is greater than
-  the distance to the top of the stack, then the item is put at the top.
-  
-  item :      A canvas item.
-  positions : Number of steps to raise the item.
-  
 
 ==== :RaiseToTop ====
 '':RaiseToTop(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Raises an item to the top of its parent's stack.
-  
-  item : A canvas item.
-  
 
 ==== :Reparent ====
 '':Reparent(self @ [[#T|T]], new_group @ [[..:..:Gtk:GnomeCanvas:Group#T|Gtk.GnomeCanvas.Group.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Changes the parent of the specified item to be the new group. The item keeps its group-relative coordinates as for its
-  old parent, so the item may change its absolute position within the canvas.
-  
-  item :      A canvas item.
-  new_group : A canvas group.
-  
 
 ==== :RequestRedrawSvp ====
 '':RequestRedrawSvp(self @ [[#T|T]], svp @ [[..:..:Gtk:Art:SVP#T|Gtk.Art.SVP.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -251,10 +112,6 @@
 ==== :RequestUpdate ====
 '':RequestUpdate(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  To be used only by item implementations. Requests that the canvas queue an update for the specified item.
-  
-  item : A canvas item.
-  
 
 ==== :ResetBounds ====
 '':ResetBounds(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -263,41 +120,18 @@
 ==== :Set ====
 '':Set(self @ [[#T|T]], first_arg_name @ [[..:..:Std:String#T|Std.String.T]], __etc__ @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Configures a canvas item. The arguments in the item are set to the specified values, and the item is repainted as
-  appropriate.
-  
-  item :           A canvas item.
-  first_arg_name : The list of object argument name/value pairs used to configure the item.
-  ... :
-  
 
 ==== :SetValist ====
 '':SetValist(self @ [[#T|T]], first_arg_name @ [[..:..:Std:String#T|Std.String.T]], args @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Configures a canvas item. The arguments in the item are set to the specified values, and the item is repainted as
-  appropriate.
-  
-  item :           A canvas item.
-  first_arg_name : The name of the first argument used to configure the item.
-  args :           The list of object argument name/value pairs used to configure the item.
-  
 
 ==== :Show ====
 '':Show(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Shows a canvas item. If the item was already shown, then no action is taken.
-  
-  item : A canvas item.
-  
 
 ==== :Ungrab ====
 '':Ungrab(self @ [[#T|T]], etime @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Ungrabs the item, which must have been grabbed in the canvas, and ungrabs the mouse.
-  
-  item :  A canvas item that holds a grab.
-  etime : The timestamp for ungrabbing the mouse.
-  
 
 ==== :UpdateSvp ====
 '':UpdateSvp(self @ [[#T|T]], p_svp @ [[..:..:Std:Object#T|Std.Object.T]], new_svp @ [[..:..:Gtk:Art:SVP#T|Gtk.Art.SVP.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -306,18 +140,6 @@
 ==== New ====
 ''New(parent : [[..:..:Gtk:GnomeCanvas:Group#T|Gtk.GnomeCanvas.Group.T]], type : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]], first_arg_name : [[..:..:Std:String#T|Std.String.T]], __etc__ : [[..:..:Std:Object#T|Std.Object.T]]) : [[# T| T]]''
 
-  Creates a new canvas item with parent as its parent group. The item is created at the top of its parent's stack, and
-  starts up as visible. The item is of the specified type, for example, it can be gnome_canvas_rect_get_type(). The list
-  of object arguments/value pairs is used to configure the item. If you need to pass construct time parameters, you should
-  use g_object_new() to pass the parameters and gnome_canvas_item_construct() to set up the canvas item.
-  
-  parent :         The parent group for the new item.
-  type :           The object type of the item.
-  first_arg_name : A list of object argument name/value pairs, NULL-terminated, used to configure the item. For example,
-                   "fill_color", "black", "width_units", 5.0, NULL.
-  ... :
-  Returns :        The newly-created item.
-  
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''

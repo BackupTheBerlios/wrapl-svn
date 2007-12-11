@@ -2,24 +2,44 @@
 ==== T ====
 
 
-==== :MimeType ====
-'':MimeType(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
+==== :setMimeType ====
+'':setMimeType(self @ [[#T|T]], value @ [[..:..:Std:String#T|Std.String.T]])''
 
 
 ==== :Contains ====
 '':Contains(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
+==== :setContains ====
+'':setContains(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
 ==== :Filename ====
 '':Filename(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
+
+
+==== :setFilename ====
+'':setFilename(self @ [[#T|T]], value @ [[..:..:Std:String#T|Std.String.T]])''
 
 
 ==== :Uri ====
 '':Uri(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
+==== :setUri ====
+'':setUri(self @ [[#T|T]], value @ [[..:..:Std:String#T|Std.String.T]])''
+
+
 ==== :DisplayName ====
 '':DisplayName(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
+
+
+==== :setDisplayName ====
+'':setDisplayName(self @ [[#T|T]], value @ [[..:..:Std:String#T|Std.String.T]])''
+
+
+==== :MimeType ====
+'':MimeType(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== New ====

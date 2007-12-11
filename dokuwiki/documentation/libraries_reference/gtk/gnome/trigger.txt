@@ -2,16 +2,28 @@
 ==== T ====
 
 
-==== :Level ====
-'':Level(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
+==== :setLevel ====
+'':setLevel(self @ [[#T|T]], value @ [[..:..:Std:String#T|Std.String.T]])''
 
 
 ==== :Type ====
 '':Type(self @ [[#T|T]]) : [[..:..:Gtk:Gnome:TriggerType#T|Gtk.Gnome.TriggerType.T]]''
 
 
+==== :setType ====
+'':setType(self @ [[#T|T]], value @ [[..:..:Gtk:Gnome:TriggerType#T|Gtk.Gnome.TriggerType.T]])''
+
+
 ==== :Function ====
 '':Function(self @ [[#T|T]]) : [[..:..:Std:Function#T|Std.Function.T]]''
+
+
+==== :setFunction ====
+'':setFunction(self @ [[#T|T]], value @ [[..:..:Std:Function#T|Std.Function.T]])''
+
+
+==== :Level ====
+'':Level(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== New ====

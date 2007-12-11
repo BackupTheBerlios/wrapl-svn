@@ -2,16 +2,28 @@
 ==== T ====
 
 
-==== :Attr ====
-'':Attr(self @ [[#T|T]]) : [[..:..:Gtk:Pango:GlyphVisAttr#T|Gtk.Pango.GlyphVisAttr.T]]''
+==== :setAttr ====
+'':setAttr(self @ [[#T|T]], value @ [[..:..:Gtk:Pango:GlyphVisAttr#T|Gtk.Pango.GlyphVisAttr.T]])''
 
 
 ==== :Glyph ====
 '':Glyph(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
+==== :setGlyph ====
+'':setGlyph(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
 ==== :Geometry ====
 '':Geometry(self @ [[#T|T]]) : [[..:..:Gtk:Pango:GlyphGeometry#T|Gtk.Pango.GlyphGeometry.T]]''
+
+
+==== :setGeometry ====
+'':setGeometry(self @ [[#T|T]], value @ [[..:..:Gtk:Pango:GlyphGeometry#T|Gtk.Pango.GlyphGeometry.T]])''
+
+
+==== :Attr ====
+'':Attr(self @ [[#T|T]]) : [[..:..:Gtk:Pango:GlyphVisAttr#T|Gtk.Pango.GlyphVisAttr.T]]''
 
 
 ==== New ====

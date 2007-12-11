@@ -5,18 +5,10 @@
   * [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]
   * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
 
-  A canvas item that displays a GtkTextBuffer which is a flexible text display and editing widget.
-  Consult GtkTextBuffer info in the GTK+ Reference documentation for more details.
-  
 
 ==== :SetBuffer ====
 '':SetBuffer(self @ [[#T|T]], buffer @ [[..:..:Gtk:Gtk:TextBuffer#T|Gtk.Gtk.TextBuffer.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Sets the buffer field of the text to buffer.
-  
-  text :   a GnomeCanvasRichText.
-  buffer : a GtkTextBuffer.
-  
 
 ==== :Priv ====
 '':Priv(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -25,57 +17,26 @@
 ==== :CopyClipboard ====
 '':CopyClipboard(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Copies the currently selected text to clipboard.
-  
-  text : a GnomeCanvasRichText.
-  
 
 ==== :CutClipboard ====
 '':CutClipboard(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Copies the currently selected text to clipboard, then deletes said text if it's editable.
-  
-  text : a GnomeCanvasRichText.
-  
 
 ==== :GetBuffer ====
 '':GetBuffer(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:TextBuffer#T|Gtk.Gtk.TextBuffer.T]]''
 
-  Returns a GtkTextBuffer associated with the GnomeCanvasRichText. This function creates a new GtkTextBuffer if the text
-  buffer is NULL.
-  
-  text :    a GnomeCanvasRichText.
-  Returns : the GtkTextBuffer.
-  
 
 ==== :GetIterAtLocation ====
 '':GetIterAtLocation(self @ [[#T|T]], iter @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]], x @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Retrieves the iterator at the buffer coordinates x and y.
-  
-  text : a GnomeCanvasRichText.
-  iter : a GtkTextIter.
-  x :    x position, in buffer coordinates.
-  y :    y position, in buffer coordinates.
-  
 
 ==== :GetIterLocation ====
 '':GetIterLocation(self @ [[#T|T]], iter @ [[..:..:Gtk:Gtk:TextIter#T|Gtk.Gtk.TextIter.T]], location @ [[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Gets a rectangle which roughly contains the character at iter.
-  
-  text :     a GnomeCanvasRichText.
-  iter :     a GtkTextIter.
-  location : a GdkRectangle containing the bounds of the character at iter.
-  
 
 ==== :PasteClipboard ====
 '':PasteClipboard(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
-  Pastes the contents of the clipboard at the insertion point.
-  
-  text : a GnomeCanvasRichText.
-  
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''

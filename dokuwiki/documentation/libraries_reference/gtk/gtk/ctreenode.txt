@@ -2,16 +2,16 @@
 ==== T ====
 
 
+==== :setList ====
+'':setList(self @ [[#T|T]], value @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
 ==== :List ====
 '':List(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== New ====
 ''New()''
-
-
-==== GetCellType ====
-''GetCellType(ctree : [[..:..:Gtk:Gtk:CTree#T|Gtk.Gtk.CTree.T]], node : [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]], column : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Gtk:Gtk:CellType#T|Gtk.Gtk.CellType.T]]''
 
 
 ==== GetPixmap ====
@@ -96,6 +96,10 @@
 
 ==== SetText ====
 ''SetText(ctree : [[..:..:Gtk:Gtk:CTree#T|Gtk.Gtk.CTree.T]], node : [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]], column : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], text : [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+
+
+==== GetCellType ====
+''GetCellType(ctree : [[..:..:Gtk:Gtk:CTree#T|Gtk.Gtk.CTree.T]], node : [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]], column : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Gtk:Gtk:CellType#T|Gtk.Gtk.CellType.T]]''
 
 
 ==== GetCellStyle ====

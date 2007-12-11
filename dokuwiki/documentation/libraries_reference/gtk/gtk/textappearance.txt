@@ -2,64 +2,124 @@
 ==== T ====
 
 
-==== :Pad4 ====
-'':Pad4(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+==== :setPad4 ====
+'':setPad4(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
 
 
 ==== :BgColor ====
 '':BgColor(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]]''
 
 
+==== :setBgColor ====
+'':setBgColor(self @ [[#T|T]], value @ [[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]])''
+
+
 ==== :FgColor ====
 '':FgColor(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]]''
+
+
+==== :setFgColor ====
+'':setFgColor(self @ [[#T|T]], value @ [[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]])''
 
 
 ==== :BgStipple ====
 '':BgStipple(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Bitmap#T|Gtk.Gdk.Bitmap.T]]''
 
 
+==== :setBgStipple ====
+'':setBgStipple(self @ [[#T|T]], value @ [[..:..:Gtk:Gdk:Bitmap#T|Gtk.Gdk.Bitmap.T]])''
+
+
 ==== :FgStipple ====
 '':FgStipple(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Bitmap#T|Gtk.Gdk.Bitmap.T]]''
+
+
+==== :setFgStipple ====
+'':setFgStipple(self @ [[#T|T]], value @ [[..:..:Gtk:Gdk:Bitmap#T|Gtk.Gdk.Bitmap.T]])''
 
 
 ==== :Rise ====
 '':Rise(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
+==== :setRise ====
+'':setRise(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
 ==== :Padding1 ====
 '':Padding1(self @ [[#T|T]]) : [[..:..:Std:Address#T|Std.Address.T]]''
+
+
+==== :setPadding1 ====
+'':setPadding1(self @ [[#T|T]], value @ [[..:..:Std:Address#T|Std.Address.T]])''
 
 
 ==== :Underline ====
 '':Underline(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
+==== :setUnderline ====
+'':setUnderline(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
 ==== :Strikethrough ====
 '':Strikethrough(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+
+
+==== :setStrikethrough ====
+'':setStrikethrough(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
 
 
 ==== :DrawBg ====
 '':DrawBg(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
+==== :setDrawBg ====
+'':setDrawBg(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
 ==== :InsideSelection ====
 '':InsideSelection(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+
+
+==== :setInsideSelection ====
+'':setInsideSelection(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
 
 
 ==== :IsText ====
 '':IsText(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
+==== :setIsText ====
+'':setIsText(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
 ==== :Pad1 ====
 '':Pad1(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+
+
+==== :setPad1 ====
+'':setPad1(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
 
 
 ==== :Pad2 ====
 '':Pad2(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
+==== :setPad2 ====
+'':setPad2(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
 ==== :Pad3 ====
 '':Pad3(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+
+
+==== :setPad3 ====
+'':setPad3(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :Pad4 ====
+'':Pad4(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== New ====

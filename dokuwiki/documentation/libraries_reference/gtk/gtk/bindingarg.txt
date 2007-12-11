@@ -2,20 +2,36 @@
 ==== T ====
 
 
-==== :StringData ====
-'':StringData(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
+==== :setStringData ====
+'':setStringData(self @ [[#T|T]], value @ [[..:..:Std:String#T|Std.String.T]])''
 
 
 ==== :ArgType ====
 '':ArgType(self @ [[#T|T]]) : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
 
 
+==== :setArgType ====
+'':setArgType(self @ [[#T|T]], value @ [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]])''
+
+
 ==== :LongData ====
 '':LongData(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
+==== :setLongData ====
+'':setLongData(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
 ==== :DoubleData ====
 '':DoubleData(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
+
+
+==== :setDoubleData ====
+'':setDoubleData(self @ [[#T|T]], value @ [[..:..:Std:Real#T|Std.Real.T]])''
+
+
+==== :StringData ====
+'':StringData(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== New ====

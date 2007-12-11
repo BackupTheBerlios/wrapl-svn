@@ -10,12 +10,20 @@
 '':Copy(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Requisition#T|Gtk.Gtk.Requisition.T]]''
 
 
-==== :Height ====
-'':Height(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+==== :setHeight ====
+'':setHeight(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
 
 
 ==== :Width ====
 '':Width(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+
+
+==== :setWidth ====
+'':setWidth(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :Height ====
+'':Height(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== New ====

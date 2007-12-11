@@ -2,20 +2,36 @@
 ==== T ====
 
 
-==== :Homogeneous ====
-'':Homogeneous(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+==== :setHomogeneous ====
+'':setHomogeneous(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
 
 
 ==== :Size ====
 '':Size(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
+==== :setSize ====
+'':setSize(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
 ==== :DefaultSpacing ====
 '':DefaultSpacing(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
+==== :setDefaultSpacing ====
+'':setDefaultSpacing(self @ [[#T|T]], value @ [[..:..:Std:Real#T|Std.Real.T]])''
+
+
 ==== :Spacings ====
 '':Spacings(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+
+
+==== :setSpacings ====
+'':setSpacings(self @ [[#T|T]], value @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
+==== :Homogeneous ====
+'':Homogeneous(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== New ====

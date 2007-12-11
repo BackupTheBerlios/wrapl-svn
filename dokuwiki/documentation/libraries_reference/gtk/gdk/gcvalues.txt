@@ -2,76 +2,148 @@
 ==== T ====
 
 
-==== :JoinStyle ====
-'':JoinStyle(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:JoinStyle#T|Gtk.Gdk.JoinStyle.T]]''
+==== :setJoinStyle ====
+'':setJoinStyle(self @ [[#T|T]], value @ [[..:..:Gtk:Gdk:JoinStyle#T|Gtk.Gdk.JoinStyle.T]])''
 
 
 ==== :Foreground ====
 '':Foreground(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]]''
 
 
+==== :setForeground ====
+'':setForeground(self @ [[#T|T]], value @ [[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]])''
+
+
 ==== :Background ====
 '':Background(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]]''
+
+
+==== :setBackground ====
+'':setBackground(self @ [[#T|T]], value @ [[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]])''
 
 
 ==== :Font ====
 '':Font(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Font#T|Gtk.Gdk.Font.T]]''
 
 
+==== :setFont ====
+'':setFont(self @ [[#T|T]], value @ [[..:..:Gtk:Gdk:Font#T|Gtk.Gdk.Font.T]])''
+
+
 ==== :Function ====
 '':Function(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Function#T|Gtk.Gdk.Function.T]]''
+
+
+==== :setFunction ====
+'':setFunction(self @ [[#T|T]], value @ [[..:..:Gtk:Gdk:Function#T|Gtk.Gdk.Function.T]])''
 
 
 ==== :Fill ====
 '':Fill(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Fill#T|Gtk.Gdk.Fill.T]]''
 
 
+==== :setFill ====
+'':setFill(self @ [[#T|T]], value @ [[..:..:Gtk:Gdk:Fill#T|Gtk.Gdk.Fill.T]])''
+
+
 ==== :Tile ====
 '':Tile(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Pixmap#T|Gtk.Gdk.Pixmap.T]]''
+
+
+==== :setTile ====
+'':setTile(self @ [[#T|T]], value @ [[..:..:Gtk:Gdk:Pixmap#T|Gtk.Gdk.Pixmap.T]])''
 
 
 ==== :Stipple ====
 '':Stipple(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Pixmap#T|Gtk.Gdk.Pixmap.T]]''
 
 
+==== :setStipple ====
+'':setStipple(self @ [[#T|T]], value @ [[..:..:Gtk:Gdk:Pixmap#T|Gtk.Gdk.Pixmap.T]])''
+
+
 ==== :ClipMask ====
 '':ClipMask(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Pixmap#T|Gtk.Gdk.Pixmap.T]]''
+
+
+==== :setClipMask ====
+'':setClipMask(self @ [[#T|T]], value @ [[..:..:Gtk:Gdk:Pixmap#T|Gtk.Gdk.Pixmap.T]])''
 
 
 ==== :SubwindowMode ====
 '':SubwindowMode(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:SubwindowMode#T|Gtk.Gdk.SubwindowMode.T]]''
 
 
+==== :setSubwindowMode ====
+'':setSubwindowMode(self @ [[#T|T]], value @ [[..:..:Gtk:Gdk:SubwindowMode#T|Gtk.Gdk.SubwindowMode.T]])''
+
+
 ==== :TsXOrigin ====
 '':TsXOrigin(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+
+
+==== :setTsXOrigin ====
+'':setTsXOrigin(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
 
 
 ==== :TsYOrigin ====
 '':TsYOrigin(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
+==== :setTsYOrigin ====
+'':setTsYOrigin(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
 ==== :ClipXOrigin ====
 '':ClipXOrigin(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+
+
+==== :setClipXOrigin ====
+'':setClipXOrigin(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
 
 
 ==== :ClipYOrigin ====
 '':ClipYOrigin(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
+==== :setClipYOrigin ====
+'':setClipYOrigin(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
 ==== :GraphicsExposures ====
 '':GraphicsExposures(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+
+
+==== :setGraphicsExposures ====
+'':setGraphicsExposures(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
 
 
 ==== :LineWidth ====
 '':LineWidth(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
+==== :setLineWidth ====
+'':setLineWidth(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
 ==== :LineStyle ====
 '':LineStyle(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:LineStyle#T|Gtk.Gdk.LineStyle.T]]''
 
 
+==== :setLineStyle ====
+'':setLineStyle(self @ [[#T|T]], value @ [[..:..:Gtk:Gdk:LineStyle#T|Gtk.Gdk.LineStyle.T]])''
+
+
 ==== :CapStyle ====
 '':CapStyle(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:CapStyle#T|Gtk.Gdk.CapStyle.T]]''
+
+
+==== :setCapStyle ====
+'':setCapStyle(self @ [[#T|T]], value @ [[..:..:Gtk:Gdk:CapStyle#T|Gtk.Gdk.CapStyle.T]])''
+
+
+==== :JoinStyle ====
+'':JoinStyle(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:JoinStyle#T|Gtk.Gdk.JoinStyle.T]]''
 
 
 ==== New ====

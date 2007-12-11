@@ -2,56 +2,108 @@
 ==== T ====
 
 
+==== :setButtonPassive ====
+'':setButtonPassive(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
 ==== :ButtonPassive ====
 '':ButtonPassive(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+
+
+==== :setAutoResize ====
+'':setAutoResize(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
 
 
 ==== :AutoResize ====
 '':AutoResize(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
+==== :setResizeable ====
+'':setResizeable(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
 ==== :Resizeable ====
 '':Resizeable(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
-==== :WidthSet ====
-'':WidthSet(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
-
-
-==== :Visible ====
-'':Visible(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
-
-
-==== :Justification ====
-'':Justification(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Justification#T|Gtk.Gtk.Justification.T]]''
-
-
-==== :MaxWidth ====
-'':MaxWidth(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+==== :setWidthSet ====
+'':setWidthSet(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
 
 
 ==== :Title ====
 '':Title(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
+==== :setTitle ====
+'':setTitle(self @ [[#T|T]], value @ [[..:..:Std:String#T|Std.String.T]])''
+
+
 ==== :Area ====
 '':Area(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]]''
+
+
+==== :setArea ====
+'':setArea(self @ [[#T|T]], value @ [[..:..:Gtk:Gdk:Rectangle#T|Gtk.Gdk.Rectangle.T]])''
 
 
 ==== :Button ====
 '':Button(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
 
+==== :setButton ====
+'':setButton(self @ [[#T|T]], value @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]])''
+
+
 ==== :Window ====
 '':Window(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]]''
+
+
+==== :setWindow ====
+'':setWindow(self @ [[#T|T]], value @ [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]])''
 
 
 ==== :Width ====
 '':Width(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
+==== :setWidth ====
+'':setWidth(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
 ==== :MinWidth ====
 '':MinWidth(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+
+
+==== :setMinWidth ====
+'':setMinWidth(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :MaxWidth ====
+'':MaxWidth(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+
+
+==== :setMaxWidth ====
+'':setMaxWidth(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :Justification ====
+'':Justification(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Justification#T|Gtk.Gtk.Justification.T]]''
+
+
+==== :setJustification ====
+'':setJustification(self @ [[#T|T]], value @ [[..:..:Gtk:Gtk:Justification#T|Gtk.Gtk.Justification.T]])''
+
+
+==== :Visible ====
+'':Visible(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+
+
+==== :setVisible ====
+'':setVisible(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :WidthSet ====
+'':WidthSet(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== New ====

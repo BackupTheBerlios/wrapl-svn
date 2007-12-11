@@ -2,116 +2,228 @@
 ==== T ====
 
 
+==== :setUpdateAndDescendantsFreezeCount ====
+'':setUpdateAndDescendantsFreezeCount(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
 ==== :UpdateAndDescendantsFreezeCount ====
 '':UpdateAndDescendantsFreezeCount(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
-
-
-==== :EventMask ====
-'':EventMask(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :ParentInstance ====
 '':ParentInstance(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
+==== :setParentInstance ====
+'':setParentInstance(self @ [[#T|T]], value @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
 ==== :Impl ====
 '':Impl(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Drawable#T|Gtk.Gdk.Drawable.T]]''
+
+
+==== :setImpl ====
+'':setImpl(self @ [[#T|T]], value @ [[..:..:Gtk:Gdk:Drawable#T|Gtk.Gdk.Drawable.T]])''
 
 
 ==== :Parent ====
 '':Parent(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:WindowObject#T|Gtk.Gdk.WindowObject.T]]''
 
 
+==== :setParent ====
+'':setParent(self @ [[#T|T]], value @ [[..:..:Gtk:Gdk:WindowObject#T|Gtk.Gdk.WindowObject.T]])''
+
+
 ==== :UserData ====
 '':UserData(self @ [[#T|T]]) : [[..:..:Std:Address#T|Std.Address.T]]''
+
+
+==== :setUserData ====
+'':setUserData(self @ [[#T|T]], value @ [[..:..:Std:Address#T|Std.Address.T]])''
 
 
 ==== :X ====
 '':X(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
+==== :setX ====
+'':setX(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
 ==== :Y ====
 '':Y(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+
+
+==== :setY ====
+'':setY(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
 
 
 ==== :ExtensionEvents ====
 '':ExtensionEvents(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
+==== :setExtensionEvents ====
+'':setExtensionEvents(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
 ==== :Filters ====
-'':Filters(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Filters(self @ [[#T|T]]) : [[..:..:Std:List#T|Std.List.T]]''
+
+
+==== :setFilters ====
+'':setFilters(self @ [[#T|T]], value @ [[..:..:Std:List#T|Std.List.T]])''
 
 
 ==== :Children ====
-'':Children(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Children(self @ [[#T|T]]) : [[..:..:Std:List#T|Std.List.T]]''
+
+
+==== :setChildren ====
+'':setChildren(self @ [[#T|T]], value @ [[..:..:Std:List#T|Std.List.T]])''
 
 
 ==== :BgColor ====
 '':BgColor(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]]''
 
 
+==== :setBgColor ====
+'':setBgColor(self @ [[#T|T]], value @ [[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]])''
+
+
 ==== :BgPixmap ====
 '':BgPixmap(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Pixmap#T|Gtk.Gdk.Pixmap.T]]''
+
+
+==== :setBgPixmap ====
+'':setBgPixmap(self @ [[#T|T]], value @ [[..:..:Gtk:Gdk:Pixmap#T|Gtk.Gdk.Pixmap.T]])''
 
 
 ==== :PaintStack ====
 '':PaintStack(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
+==== :setPaintStack ====
+'':setPaintStack(self @ [[#T|T]], value @ [[..:..:Std:Object#T|Std.Object.T]])''
+
+
 ==== :UpdateArea ====
 '':UpdateArea(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Region#T|Gtk.Gdk.Region.T]]''
+
+
+==== :setUpdateArea ====
+'':setUpdateArea(self @ [[#T|T]], value @ [[..:..:Gtk:Gdk:Region#T|Gtk.Gdk.Region.T]])''
 
 
 ==== :UpdateFreezeCount ====
 '':UpdateFreezeCount(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
+==== :setUpdateFreezeCount ====
+'':setUpdateFreezeCount(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
 ==== :WindowType ====
 '':WindowType(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+
+
+==== :setWindowType ====
+'':setWindowType(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
 
 
 ==== :Depth ====
 '':Depth(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
+==== :setDepth ====
+'':setDepth(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
 ==== :ResizeCount ====
 '':ResizeCount(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+
+
+==== :setResizeCount ====
+'':setResizeCount(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
 
 
 ==== :State ====
 '':State(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
+==== :setState ====
+'':setState(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
 ==== :GuffawGravity ====
 '':GuffawGravity(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+
+
+==== :setGuffawGravity ====
+'':setGuffawGravity(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
 
 
 ==== :InputOnly ====
 '':InputOnly(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
+==== :setInputOnly ====
+'':setInputOnly(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
 ==== :ModalHint ====
 '':ModalHint(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+
+
+==== :setModalHint ====
+'':setModalHint(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
 
 
 ==== :Composited ====
 '':Composited(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
+==== :setComposited ====
+'':setComposited(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
 ==== :Destroyed ====
 '':Destroyed(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+
+
+==== :setDestroyed ====
+'':setDestroyed(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
 
 
 ==== :AcceptFocus ====
 '':AcceptFocus(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
+==== :setAcceptFocus ====
+'':setAcceptFocus(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
 ==== :FocusOnMap ====
 '':FocusOnMap(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
+==== :setFocusOnMap ====
+'':setFocusOnMap(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
 ==== :Shaped ====
 '':Shaped(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+
+
+==== :setShaped ====
+'':setShaped(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :EventMask ====
+'':EventMask(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+
+
+==== :setEventMask ====
+'':setEventMask(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
 
 
 ==== New ====

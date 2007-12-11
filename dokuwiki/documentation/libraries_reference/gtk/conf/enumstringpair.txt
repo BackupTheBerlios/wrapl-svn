@@ -2,12 +2,20 @@
 ==== T ====
 
 
-==== :Str ====
-'':Str(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
+==== :setStr ====
+'':setStr(self @ [[#T|T]], value @ [[..:..:Std:String#T|Std.String.T]])''
 
 
 ==== :EnumValue ====
 '':EnumValue(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+
+
+==== :setEnumValue ====
+'':setEnumValue(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :Str ====
+'':Str(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
 
 ==== New ====

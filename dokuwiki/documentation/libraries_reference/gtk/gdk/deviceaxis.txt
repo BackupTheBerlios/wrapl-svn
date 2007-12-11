@@ -2,16 +2,28 @@
 ==== T ====
 
 
-==== :Max ====
-'':Max(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
+==== :setMax ====
+'':setMax(self @ [[#T|T]], value @ [[..:..:Std:Real#T|Std.Real.T]])''
 
 
 ==== :Use ====
 '':Use(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:AxisUse#T|Gtk.Gdk.AxisUse.T]]''
 
 
+==== :setUse ====
+'':setUse(self @ [[#T|T]], value @ [[..:..:Gtk:Gdk:AxisUse#T|Gtk.Gdk.AxisUse.T]])''
+
+
 ==== :Min ====
 '':Min(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
+
+
+==== :setMin ====
+'':setMin(self @ [[#T|T]], value @ [[..:..:Std:Real#T|Std.Real.T]])''
+
+
+==== :Max ====
+'':Max(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
 
 ==== New ====

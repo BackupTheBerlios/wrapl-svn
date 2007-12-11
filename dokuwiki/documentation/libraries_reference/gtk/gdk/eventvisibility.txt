@@ -2,20 +2,36 @@
 ==== T ====
 
 
-==== :State ====
-'':State(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:VisibilityState#T|Gtk.Gdk.VisibilityState.T]]''
+==== :setState ====
+'':setState(self @ [[#T|T]], value @ [[..:..:Gtk:Gdk:VisibilityState#T|Gtk.Gdk.VisibilityState.T]])''
 
 
 ==== :Type ====
 '':Type(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:EventType#T|Gtk.Gdk.EventType.T]]''
 
 
+==== :setType ====
+'':setType(self @ [[#T|T]], value @ [[..:..:Gtk:Gdk:EventType#T|Gtk.Gdk.EventType.T]])''
+
+
 ==== :Window ====
 '':Window(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]]''
 
 
+==== :setWindow ====
+'':setWindow(self @ [[#T|T]], value @ [[..:..:Gtk:Gdk:Window#T|Gtk.Gdk.Window.T]])''
+
+
 ==== :SendEvent ====
 '':SendEvent(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+
+
+==== :setSendEvent ====
+'':setSendEvent(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :State ====
+'':State(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:VisibilityState#T|Gtk.Gdk.VisibilityState.T]]''
 
 
 ==== New ====

@@ -4,17 +4,6 @@
   * [[..:..:Gtk:GooCanvas:ItemSimple#T|Gtk.GooCanvas.ItemSimple.T]]
   * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
 
-  GooCanvasPath represents a path item, which is a series of one or more lines, bezier curves, or
-  elliptical arcs.
-  It is a subclass of GooCanvasItemSimple and so inherits all of the style properties such as "stroke-
-  color", "fill-color" and "line-width".
-  It also implements the GooCanvasItem interface, so you can use the GooCanvasItem functions such as
-  goo_canvas_item_raise() and goo_canvas_item_rotate().
-  GooCanvasPath uses the same path specification strings as the Scalable Vector Graphics (SVG) path
-  element. For details see the SVG specification.
-  To create a GooCanvasPath use goo_canvas_path_new().
-  To get or set the properties of an existing GooCanvasPath, use g_object_get() and g_object_set().
-  
 
 ==== :PathData ====
 '':PathData(self @ [[#T|T]]) : [[..:..:Gtk:GooCanvas:PathData#T|Gtk.GooCanvas.PathData.T]]''
@@ -23,15 +12,6 @@
 ==== New ====
 ''New(parent : [[..:..:Gtk:GooCanvas:Item#T|Gtk.GooCanvas.Item.T]], path_data : [[..:..:Std:String#T|Std.String.T]], __etc__ : [[..:..:Std:Object#T|Std.Object.T]]) : [[# T| T]]''
 
-  Creates a new path item.
-  
-  parent :    the parent item, or NULL. If a parent is specified, it will assume ownership of the item, and the item will
-              automatically be freed when it is removed from the parent. Otherwise call g_object_unref() to free it.
-  path_data : the sequence of path commands, specified as a string using the same syntax as in the Scalable Vector
-              Graphics (SVG) path element.
-  ... :       optional pairs of property names and values, and a terminating NULL.
-  Returns :   a new path item.
-  
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''

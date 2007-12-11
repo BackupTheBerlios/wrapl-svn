@@ -36,7 +36,7 @@
 
 
 ==== ItemizeWithBaseDir ====
-''ItemizeWithBaseDir(context : [[..:..:Gtk:Pango:Context#T|Gtk.Pango.Context.T]], base_dir : [[..:..:Gtk:Pango:Direction#T|Gtk.Pango.Direction.T]], text : [[..:..:Std:String#T|Std.String.T]], start_index : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], length : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], attrs : [[..:..:Gtk:Pango:AttrList#T|Gtk.Pango.AttrList.T]], cached_iter : [[..:..:Gtk:Pango:AttrIterator#T|Gtk.Pango.AttrIterator.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+''ItemizeWithBaseDir(context : [[..:..:Gtk:Pango:Context#T|Gtk.Pango.Context.T]], base_dir : [[..:..:Gtk:Pango:Direction#T|Gtk.Pango.Direction.T]], text : [[..:..:Std:String#T|Std.String.T]], start_index : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], length : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], attrs : [[..:..:Gtk:Pango:AttrList#T|Gtk.Pango.AttrList.T]], cached_iter : [[..:..:Gtk:Pango:AttrIterator#T|Gtk.Pango.AttrIterator.T]]) : [[..:..:Std:List#T|Std.List.T]]''
 
 
 ==== ParseEnum ====
@@ -72,7 +72,7 @@
 
 
 ==== ReorderItems ====
-''ReorderItems(logical_items : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+''ReorderItems(logical_items : [[..:..:Std:List#T|Std.List.T]]) : [[..:..:Std:List#T|Std.List.T]]''
 
 
 ==== ScanInt ====
