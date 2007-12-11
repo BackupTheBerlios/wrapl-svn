@@ -17,9 +17,11 @@ DEF Get!(ns, name, function) (
     VAR html2text <- Process.Open("html2text", ["html2text", "-rcfile", "../../src/Gtk/html2textrc", "-ascii", "-nobs", "-width", "120", "-"]);
     REP (WHILE html2text:writes(sgrep:read, "\n"));
     html2text:shutdown(:write);
+    sgrep:wait;
     sgrep:close;
     VAR result <- [];
     REP (WHILE result:put(html2text:read));
+    html2text:wait;
     html2text:close;
     sgrep:result = 0 // FAIL;
     RET result;
@@ -37,9 +39,11 @@ DEF GetDesc!(ns, name) (
     VAR html2text <- Process.Open("html2text", ["html2text", "-rcfile", "../../src/Gtk/html2textrc", "-ascii", "-nobs", "-width", "100", "-"]);
     REP (WHILE html2text:writes(sgrep:read, "\n"));
     html2text:shutdown(:write);
+    sgrep:wait;
     sgrep:close;
     VAR result <- [];
     REP (WHILE result:put(html2text:read));
+    html2text:wait;
     html2text:close;
     sgrep:result = 0 // FAIL;
     RET result;

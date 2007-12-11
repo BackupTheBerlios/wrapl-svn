@@ -243,6 +243,14 @@ TO :process(t@T, srcdir, incdir, libdir) (
 		EVERY cfile:writes("\t", returntype:return("result"):values, "\n");
 		cfile:write("\treturn SUCCESS;\n");
 		cfile:write("};\n\n");
+		cfile:writes("METHOD(\"set", method:name, "\", TYP, T, ", returntype:sigtype, ") {\n");
+                cfile:writes("//@self\n");
+		cfile:writes("//@value\n");
+                EVERY cfile:writes("//  ", GetAPI.Get(t:ns, t:cname, method:cname):values, "\n");
+		cfile:writes("\tGtk$", t:ns, "$", t:name, "_t * self = Args[0].Val;\n");
+		EVERY cfile:writes("\t", returntype:fromriva("self->Value->" + method:cname, "Args[1]"):values, "\n");
+		cfile:write("\treturn SUCCESS;\n");
+		cfile:write("};\n\n");
 	);
 	EVERY method <- t:arrays:values DO (
 		cfile:writes("METHOD(\"", method:name, "\", TYP, T, TYP, Std$Integer$SmallT) {\n");

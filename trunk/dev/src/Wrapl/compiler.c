@@ -71,7 +71,7 @@ uint32_t compiler_t::new_temporary(uint32_t Count) {DEBUG
 	return Function->Loop->Expression->Temps->allocate(Count);
 };
 
-label_t *compiler_t::push_loop(uint32_t LineNo, label_t *Start, label_t *Exit) {DEBUG
+label_t *compiler_t::push_loop(uint32_t LineNo, label_t *Start, label_t *Step, label_t *Exit) {DEBUG
 	function_t::loop_t *Loop = new function_t::loop_t;
 	Loop->Index = -1;
 	Loop->Free0 = new bitset_t(Function->Loop->Free0);
@@ -80,6 +80,7 @@ label_t *compiler_t::push_loop(uint32_t LineNo, label_t *Start, label_t *Exit) {
 	Loop->Trap = Function->Loop->Trap;
 	Loop->Receiver = Function->Loop->Receiver;
 	Start->link(LineNo, Loop->Start = new label_t);
+	Loop->Step = Step;
 	Loop->Exit = Exit;
 	Loop->Prev = Function->Loop;
 	Loop->Expression = Function->Loop->Expression;
@@ -902,7 +903,7 @@ operand_t *rep_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t *Su
 	label_t *Label0 = new label_t;
 	Label0->link(LineNo, Start);
 	label_t *Label1 = Compiler->push_trap(LineNo, Start, Label0);
-		Label1 = Compiler->push_loop(LineNo, Label1, Success);
+		Label1 = Compiler->push_loop(LineNo, Label1, Label1, Success);
 			Body->compile(Compiler, Label1, Start);
 		Compiler->pop_loop();
 	Compiler->pop_trap();
@@ -936,7 +937,7 @@ operand_t *step_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t *S
 	if (Prev->Receiver != Loop->Receiver) {
 		Start->recv(LineNo, Prev->Receiver);
 	};
-	Start->link(LineNo, Loop->Start);
+	Start->link(LineNo, Loop->Step);
 	return Register;
 };
 
@@ -945,7 +946,7 @@ operand_t *every_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t *
 	label_t *Label1 = new label_t;
 	Condition->compile(Compiler, Start, Label0);
 	Label0 = Compiler->push_trap(LineNo, Label0, Label1);
-		Label0 = Compiler->push_loop(LineNo, Label1, Success);
+		Label0 = Compiler->push_loop(LineNo, Label0, Label1, Success);
 			Body->compile(Compiler, Label0, Label1);
 		Compiler->pop_loop();
 	Compiler->pop_trap();

@@ -44,7 +44,7 @@ struct compiler_t {
 			int32_t Index;
 			uint32_t NoOfLocals;
 			bitset_t *Free0, *Free1;
-			label_t *Start, *Start0, *Exit, *Receiver;
+			label_t *Start, *Start0, *Step, *Exit, *Receiver;
 			trap_t *Trap;
 			expression_t *Expression;
 			operand_t *Self;
@@ -85,7 +85,7 @@ struct compiler_t {
 	operand_t *new_local(bool Reference = false);
 	uint32_t new_temporary(uint32_t Count = 1);
 
-	label_t *push_loop(uint32_t LineNo, label_t *Start, label_t *Exit);
+	label_t *push_loop(uint32_t LineNo, label_t *Start, label_t *Step, label_t *Exit);
 	void pop_loop();
 
 	void push_expression();

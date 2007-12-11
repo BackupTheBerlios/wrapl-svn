@@ -1047,7 +1047,13 @@ typedef struct code_header_t {
 operand_t *label_t::assemble(const frame_t *Frame, operand_t *Operand) {
 	label_t Assembly;
 	memset(&Assembly, 0, sizeof(Assembly));
+#ifdef ASSEMBLER_LISTING
+	printf("Arranging labels...\n");
+#endif
 	use_label(&Assembly, this, true);
+#ifdef ASSEMBLER_LISTING
+	printf("done.\n");
+#endif	
 	for (inst_t *Inst = Assembly.Next; Inst; Inst = Inst->Next) Inst->add_sources();
 
 	int NoOfConsts = 0;

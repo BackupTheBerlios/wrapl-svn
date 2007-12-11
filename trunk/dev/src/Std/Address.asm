@@ -65,3 +65,17 @@ func FromRef, 1
 	xor edx, edx
 	xor eax, eax
 	ret
+
+func ToVal, 1
+    mov eax, [argument(edi).Val]
+    mov ecx, [address(eax).Value]
+    xor edx, edx
+    xor eax, eax
+    ret
+
+func ToRef, 1
+    mov eax, [argument(edi).Val]
+    mov edx, [address(eax).Value]
+    mov ecx, [edx]
+    xor eax, eax
+    ret
