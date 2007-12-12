@@ -8,4 +8,6 @@ LDFLAGS += Std.rlib Riva.rlib libexpat.rlib
 Xml:\
     $(RivaModule Xml/Parser, Parser)
 
+.SUBDIRS: Scew
+
 .DEFAULT: Xml

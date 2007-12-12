@@ -9,11 +9,14 @@ IMP Wrapl;
 IMP Sys.Module;
 IMP Sys.Process;
 IMP Sys.Config;
+IMP Sys.Log;
 
 VAR arg;
 EVERY WHEN arg <- Process.Args:values
 IS "-u" DO
 	Config.Set("Wrapl.AllowUndeclared")
+IS "-l" DO
+	Log.Enable();
 DO
 	Out:writes("Warning: unknown argument: ", arg, ".\n")
 ;
