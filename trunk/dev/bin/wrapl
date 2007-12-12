@@ -15,7 +15,7 @@ VAR arg;
 EVERY WHEN arg <- Process.Args:values
 IS "-u" DO
 	Config.Set("Wrapl.AllowUndeclared")
-IS "-l" DO
+IS "-v" DO
 	Log.Enable();
 DO
 	Out:writes("Warning: unknown argument: ", arg, ".\n")
