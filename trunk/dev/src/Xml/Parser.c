@@ -1,5 +1,5 @@
 #include <Std.h>
-#include <Riva/Memory.h>
+#include <Riva.h>
 #include <expat.h>
 
 typedef struct parser_t {
@@ -18,21 +18,27 @@ typedef struct callback_t {
 
 TYPE(T);
 
+extern int Riva$Symbol[];
+
 static void startelementhandler(parser_t *Parser, const XML_Char *Name, const XML_Char **Attrs) {
 	if (Parser->StartElementHandler != Std$Object$Nil) {
 		Std$Function_result Result0;
 		Std$Object_t *Table = Std$Table$new(0, 0);
+		int Type; void *Value;
+		Riva$Module$import(Riva$Symbol, Name, &Type, &Value);
 		for (const XML_Char **Attr = Attrs; Attr[0]; Attr += 2) {
 			Std$Table$insert(Table, Std$String$copy(Attr[0]), Std$String$copy(Attr[1]));
 		};
-		Std$Function$call(Parser->StartElementHandler, 3, &Result0, Parser->UserData, &Parser->UserData, Std$String$copy(Name), 0, Table, 0);
+		Std$Function$call(Parser->StartElementHandler, 3, &Result0, Parser->UserData, &Parser->UserData, Value, 0, Table, 0);
 	};
 };
 
 static void endelementhandler(parser_t *Parser, const XML_Char *Name) {
 	if (Parser->EndElementHandler != Std$Object$Nil) {
 		Std$Function_result Result0;
-		Std$Function$call(Parser->EndElementHandler, 2, &Result0, Parser->UserData, &Parser->UserData, Std$String$copy(Name), 0);
+		int Type; void *Value;
+		Riva$Module$import(Riva$Symbol, Name, &Type, &Value);
+		Std$Function$call(Parser->EndElementHandler, 2, &Result0, Parser->UserData, &Parser->UserData, Value, 0);
 	};
 };
 
@@ -44,6 +50,8 @@ static void characterdatahandler(parser_t *Parser, const XML_Char *String, int L
 };
 
 GLOBAL_FUNCTION(New, 0) {
+//:T
+//  Creates and returns a new parser
 	XML_Memory_Handling_Suite Suite = {
 		Riva$Memory$alloc,
 		Riva$Memory$realloc,
@@ -67,6 +75,10 @@ GLOBAL_FUNCTION(New, 0) {
 };
 
 METHOD("parse", TYP, T, TYP, Std$String$T) {
+//@t
+//@string
+//:T
+//  Parses string and calls the appropiate event handlers
 	XML_Parser *Parser = ((parser_t *)Args[0].Val)->Handle;
 	Std$String_t *String = Args[1].Val;
 	for (int I = 0; I < String->Count; ++I) {
