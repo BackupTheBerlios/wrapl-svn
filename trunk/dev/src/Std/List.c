@@ -988,6 +988,77 @@ METHOD("find", TYP, T, ANY) {
 	return FAILURE;
 };
 
+typedef struct where_generator {
+	Std$Function_cstate State;
+	_node *Current;
+	long Index;
+	Std$Object_t *Test;
+} where_generator;
+
+typedef struct where_resume_data {
+	where_generator *Generator;
+	Std$Function_argument Result;
+} where_resume_data;
+
+static long resume_where_list(where_resume_data *Data) {
+	where_generator *Generator = Data->Generator;
+	_node *Node = Generator->Current;
+	int Index = Generator->Index;
+	for (_node *Node = Generator->Current; Node; Node = Node->Next) {
+		++Index;
+		Std$Function_result Result0;
+		switch (Std$Function$call(Generator->Test, 1, &Result0, Node->Value, 0)) {
+		case SUSPEND: case SUCCESS: {
+			Data->Result.Val = Std$Integer$new_small(Index);
+			if (Node->Next) {
+				Generator->Current = Node->Next;
+				Generator->Index = Index;
+				return SUSPEND;
+			} else {
+				return SUCCESS;
+			};
+		};
+		case FAILURE: continue;
+		case MESSAGE: {
+			Data->Result.Val = Result0.Val;
+			return MESSAGE;
+		};
+		};
+	};
+	return FAILURE;
+};
+
+METHOD("where", TYP, T, TYP, Std$Function$T) {
+	int Index = 0;
+	for (_node *Node = ((_list *)Args[0].Val)->Head; Node; Node = Node->Next) {
+		++Index;
+		Std$Function_result Result0;
+		switch (Std$Function$call(Args[1].Val, 1, &Result0, Node->Value, 0)) {
+		case SUSPEND: case SUCCESS: {
+			Result->Val = Std$Integer$new_small(Index);
+			if (Node->Next) {
+				where_generator *Generator = new(where_generator);
+				Generator->State.Run = Std$Function$resume_c;
+				Generator->State.Invoke = resume_where_list;
+				Generator->Current = Node->Next;
+				Generator->Index = Index;
+				Generator->Test = Args[1].Val;
+				Result->State = Generator;
+				return SUSPEND;
+			} else {
+				return SUCCESS;
+			};
+		};
+		case FAILURE: continue;
+		case MESSAGE: {
+			Result->Val = Result0.Val;
+			return MESSAGE;
+		};
+		};
+	};
+	return FAILURE;
+};
+
 METHOD("remove", TYP, T, ANY) {
 	_list *List = Args[0].Val;
 	for (_node *Node = List->Head; Node; Node = Node->Next) {
