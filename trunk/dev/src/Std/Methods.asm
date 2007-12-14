@@ -4155,7 +4155,7 @@ method "in", ANY, TYP, Std$Type$T
 	jz .fail
 	cmp ebx, eax
 	jne .loop
-	xor edx, edx
+	mov edx, [argument(edi).Ref]
 	xor eax, eax
 	ret
 .fail:

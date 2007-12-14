@@ -27,11 +27,11 @@ DEF Environment <- <[]
 
 DEF StartHandlers <- {
 
-"virtual_method" IS <env, attrs> (
+:virtual_method IS <env, attrs> (
 	env:method <- env:object:addvirtual(attrs["name"], attrs["cname"]);
 ),
 
-"field" IS <env, attrs> (
+:field IS <env, attrs> (
 	attrs["array_len"] => (
 		env:object:addarray(attrs["name"], attrs["cname"], attrs["type"]);
 	) // (
@@ -39,11 +39,11 @@ DEF StartHandlers <- {
 	);
 ),
 
-"return-type" IS <env, attrs> (
+:"return-type" IS <env, attrs> (
 	env:method:type <- attrs["type"];
 ),
 
-"method" IS <env, attrs> (
+:method IS <env, attrs> (
 	attrs["shared"] => (
 		env:method <- env:object:addshared(attrs["name"], attrs["cname"]);
 	) // (
@@ -51,21 +51,21 @@ DEF StartHandlers <- {
 	);
 ),
 
-"implements" IS <env, attrs> (
+:implements IS <env, attrs> (
 	env:object:addinterface(attrs["interface"]);
 ),
 
-"api" IS <env, attrs> (
+:api IS <env, attrs> (
 ),
 
-"alias" IS <env, attrs> (
+:alias IS <env, attrs> (
 	Alias.New(env:namespace, attrs["name"], attrs["cname"], attrs["type"]);
 ),
 
-"parameters" IS <env, attrs> (
+:parameters IS <env, attrs> (
 ),
 
-"callback" IS <env, attrs> (
+:callback IS <env, attrs> (
 	attrs["name"] => (
 		env:method <- Callback.New(env:namespace, attrs["name"], attrs["cname"]);
 	) // (
@@ -73,23 +73,23 @@ DEF StartHandlers <- {
 	);
 ),
 
-"interface" IS <env, attrs> (
+:interface IS <env, attrs> (
 	env:object <- Interface.New(env:namespace, attrs["name"], attrs["cname"]);
 ),
 
-"class" IS <env, attrs> (
+:class IS <env, attrs> (
 	env:object <- Class.New(env:namespace, attrs["name"], attrs["cname"]);
 ),
 
-"namespace" IS <env, attrs> (
+:namespace IS <env, attrs> (
 	env:namespace <- attrs["name"];
 ),
 
-"object" IS <env, attrs> (
+:object IS <env, attrs> (
 	env:object <- Object.New(env:namespace, attrs["name"], attrs["cname"], attrs["parent"] | "GObject");
 ),
 
-"struct" IS <env, attrs> (
+:struct IS <env, attrs> (
 	attrs["opaque"] => (
 		env:object <- Opaque.New(env:namespace, attrs["name"], attrs["cname"]);
 	) // (
@@ -97,15 +97,15 @@ DEF StartHandlers <- {
 	);
 ),
 
-"member" IS <env, attrs> (
+:member IS <env, attrs> (
 	env:object:member(attrs["name"], attrs["cname"], attrs["value"] | "");
 ),
 
-"constructor" IS <env, attrs> (
+:constructor IS <env, attrs> (
 	env:method <- env:object:addctor(attrs["cname"]);
 ),
 
-"enum" IS <env, attrs> (
+:enum IS <env, attrs> (
 	attrs["type"] = "enum" => (
 		env:object <- Enum.New(env:namespace, attrs["name"], attrs["cname"]);
 	) // attrs["type"] = "flags" => (
@@ -113,7 +113,7 @@ DEF StartHandlers <- {
 	);
 ),
 
-"parameter" IS <env, attrs> (
+:parameter IS <env, attrs> (
 	attrs["ellipsis"] => (
 		env:method:addparam("__etc__", "ellipsis");
 	) // attrs["array"] => (
@@ -125,7 +125,7 @@ DEF StartHandlers <- {
 	);
 ),
 
-"static-string" IS <env, attrs> (
+:"static-string" IS <env, attrs> (
 )
 
 };
