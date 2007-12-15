@@ -7,8 +7,9 @@
 
 
 ==== :parse ====
-'':parse( @ [[#T|T]], @ [[..:Std:String#T|Std.String.T]])''
+'':parse(t @ [[#T|T]], string @ [[..:Std:String#T|Std.String.T]]) : [[#T|T]]''
 
+  Parses string and calls the appropiate event handlers
 
 ==== :finish ====
 '':finish( @ [[#T|T]])''
@@ -27,6 +28,7 @@
 
 
 ==== New ====
-''New()''
+''New() : [[#T|T]]''
 
+  Creates and returns a new parser
 
