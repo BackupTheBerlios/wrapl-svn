@@ -15,6 +15,7 @@ static int wrapl_load(Riva$Module_t *Module, const char *Path) {
 	for (int I = strlen(Path) - 1; I >= 0; --I) {
 		if (Path[I] == PATHCHR) {
 			memcpy(LoadPath = (char *)Riva$Memory$alloc_atomic(I + 2), Path, I + 1);
+			LoadPath[I + 1] = 0;
 			break;
 		};
 	};
