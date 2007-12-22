@@ -73,6 +73,8 @@ extern Std$Type_t Std$Function$T[];
 extern Std$Type_t Std$Function$CT[];
 extern Std$Type_t Std$Function$CheckedCT[];
 extern Std$Object_t Std$Function$Nil[];
+extern Std$Object_t Std$Function$Constant[];
+extern Std$Object_t Std$Function$Variable[];
 
 RIVA_CFUN(long, resume_c, Std$Function_cresumedata *);
 RIVA_CFUN(long, invoke, Std$Object_t *, long, Std$Function_result *, Std$Function_argument *);

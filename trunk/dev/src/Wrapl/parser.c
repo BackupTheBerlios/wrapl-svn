@@ -476,6 +476,16 @@ static expr_t *parse_factor(scanner_t *Scanner) {
 			//};
 			Fields->Next = Parents;
 			return new invoke_expr_t(LineNo, new const_expr_t(Scanner->Token.LineNo, Std$Type$New), Fields);
+		} else if (Scanner->parse(tkHASH)) {
+			expr_t *Value = accept_expr(Scanner);
+			Scanner->accept(tkSEMICOLON);
+			Scanner->accept(tkGREATER);
+			return new invoke_expr_t(LineNo, new const_expr_t(Scanner->Token.LineNo, Std$Function$Constant), Value);
+		} else if (Scanner->parse(tkQUERY)) {
+			expr_t *Value = accept_expr(Scanner);
+			Scanner->accept(tkSEMICOLON);
+			Scanner->accept(tkGREATER);
+			return new invoke_expr_t(LineNo, new const_expr_t(Scanner->Token.LineNo, Std$Function$Variable), Value);
 		} else {
 			func_expr_t::parameter_t *Parameters = accept_parameters(Scanner);
 			Scanner->accept(tkGREATER);
@@ -558,7 +568,7 @@ static expr_t *parse_factor(scanner_t *Scanner) {
 			Scanner->accept(tkRPAREN);
 		};
 		expr_t *Body;
-		if (Scanner->parse(tkDO)) {
+		if (Scanner->parse(tkIS)) {
 			Body = accept_expr(Scanner);
 		} else {
 			Body = new func_expr_t(LineNo, TP.Parameters, accept_expr(Scanner));

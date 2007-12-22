@@ -65,53 +65,14 @@ Std$Type_t *_to_riva(GType GtkType) {
 	return RivaType;
 };
 
-static void riva_value_init(GValue *Value) {
+static gpointer riva_value_copy(gpointer Value) {
+    return Value;
 };
 
-static void riva_value_free(GValue *Value) {
-};
-
-static void riva_value_copy(const GValue *Src, GValue *Dst) {
-    Dst->data[0].v_pointer = Src->data[0].v_pointer;
-};
-
-static gpointer riva_value_peek_pointer(const GValue *Value) {
-    return Value->data[0].v_pointer;
-};
-
-static gchar *riva_collect_value(GValue *Value, guint N, GTypeCValue *Values, guint Flags) {
-    Value->data[0].v_pointer = Values[0].v_pointer;
-    return 0;
-};
-
-static gchar *riva_lcopy_value(const GValue *Value, guint N, GTypeCValue *Values, guint Flags) {
-    Std$Object_t **p = Values[0].v_pointer;
-    *p = Value->data[0].v_pointer;
-    return 0;
-};
-
-static void riva_instance_init(GTypeInstance *instance, gpointer g_class) {
+static void riva_value_free(gpointer Value) {
 };
 
 void __init(Riva$Module_t *Module) {
     g_type_init();
-    RIVA->Value = g_type_fundamental_next();
-    GTypeValueTable ValueTable = {
-	.value_init = riva_value_init,
-	.value_free = riva_value_free,
-	.value_copy = riva_value_copy,
-	.value_peek_pointer = riva_value_peek_pointer,
-	.collect_format = "p",
-	.collect_value = riva_collect_value,
-	.lcopy_format = "p",
-	.lcopy_value = riva_lcopy_value
-    };
-    GTypeInfo Info = {0,};
-    Info.class_size = sizeof(Info);
-    Info.instance_size = 4;
-    Info.value_table = &ValueTable;
-    Info.instance_init = riva_instance_init;
-    GTypeFundamentalInfo FundamentalInfo = {0,};
-    FundamentalInfo.type_flags = G_TYPE_FLAG_INSTANTIATABLE | G_TYPE_FLAG_CLASSED;
-    g_type_register_fundamental(RIVA->Value, "riva", &Info, &FundamentalInfo, 0);
+    RIVA->Value = g_pointer_type_register_static("riva");
 };

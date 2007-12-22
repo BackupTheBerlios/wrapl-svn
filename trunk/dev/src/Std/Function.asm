@@ -176,3 +176,49 @@ c_func _invoke
 	pop esi
 	pop ebx
 	ret
+
+struct constant, value
+    .Value: resd 1
+endstruct
+
+c_type ConstantT, T
+.invoke:
+    lea edx, [constant(ecx).Value]
+    mov ecx, [constant(ecx).Value]
+    xor eax, eax
+    ret
+
+func Constant, 1
+    push byte sizeof(constant)
+    call Riva$Memory$_alloc
+    add esp, byte 4
+    mov ecx, [argument(edi).Val]
+    mov [value(eax).Type], dword ConstantT
+    mov [constant(eax).Value], ecx
+    mov ecx, eax
+    xor edx, edx
+    xor eax, eax
+    ret
+
+struct variable, value
+    .Address: resd 1
+endstruct
+
+c_type VariableT, T
+.invoke:
+    mov edx, [variable(ecx).Address]
+    mov ecx, [edx]
+    xor eax, eax
+    ret
+
+func Variable, 1
+    push byte sizeof(constant)
+    call Riva$Memory$_alloc
+    add esp, byte 4
+    mov edx, [argument(edi).Ref]
+    mov [value(eax).Type], dword VariableT
+    mov [variable(eax).Address], edx
+    mov ecx, eax
+    xor edx, edx
+    xor eax, eax
+    ret
