@@ -44,8 +44,8 @@ static void glade_connect_func(const gchar *HandlerName, GObject *Object, const 
 static int glade_load(Riva$Module_t *Module, const char *Path) {
 	GladeXML *Handle = glade_xml_new(Path, 0, 0);
 	if (Handle == 0) return 0;
-	glade_xml_signal_autoconnect_full(Handle, glade_connect_func, 0);
 	Riva$Module$setup(Module, Handle, glade_import);
+	glade_xml_signal_autoconnect_full(Handle, glade_connect_func, 0);
 	return 1;
 };
 
