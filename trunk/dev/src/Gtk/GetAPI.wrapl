@@ -11,19 +11,18 @@ DEF Get!(ns, name, function) (
     FileSys.Exists(dir) // FAIL;
     VAR sgrep <- Process.Open("sgrep", [
         "sgrep",
-        ${(("<h3>" .. "</pre>") containing "</a>$function; ()" __ "</div>")},
+        '(("<h3>" .. "</pre>") containing "</a>{function} ()" __ "</div>")',
         dir + "/" + name + ".html"
     ]);
     VAR html2text <- Process.Open("html2text", ["html2text", "-rcfile", "../../src/Gtk/html2textrc", "-ascii", "-nobs", "-width", "120", "-"]);
     REP (WHILE html2text:writes(sgrep:read, "\n"));
     html2text:shutdown(:write);
-    sgrep:wait;
     sgrep:close;
     VAR result <- [];
     REP (WHILE result:put(html2text:read));
     html2text:wait;
     html2text:close;
-    sgrep:result = 0 // FAIL;
+    sgrep:wait = 0 // FAIL;
     RET result;
 );
 
@@ -33,19 +32,18 @@ DEF GetDesc!(ns, name) (
     FileSys.Exists(dir) // FAIL;
     VAR sgrep <- Process.Open("sgrep", [
         "sgrep",
-        ${"<h2>Description</h2>" __ "<h2>Details</h2>"},
+        '"<h2>Description</h2>" __ "<h2>Details</h2>"',
         dir + "/" + name + ".html"
     ]);
     VAR html2text <- Process.Open("html2text", ["html2text", "-rcfile", "../../src/Gtk/html2textrc", "-ascii", "-nobs", "-width", "100", "-"]);
     REP (WHILE html2text:writes(sgrep:read, "\n"));
     html2text:shutdown(:write);
-    sgrep:wait;
     sgrep:close;
     VAR result <- [];
     REP (WHILE result:put(html2text:read));
     html2text:wait;
     html2text:close;
-    sgrep:result = 0 // FAIL;
+    sgrep:wait = 0 // FAIL;
     RET result;
 );
 

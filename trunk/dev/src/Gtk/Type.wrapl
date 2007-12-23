@@ -218,7 +218,7 @@ TO :ctype(=stringarraytype) "const char * const *";
 TO :precall(=stringarraytype, name, arg) [
 	"Std$List_t * " + name + "_list = " + arg + ".Val;",
 	--"const char ** " + name + " = Riva$Memory$alloc(sizeof(const char *) * " + name + "_list->Length);",
-        ${const char *$name;[$name;_list->Length];},
+        'const char *{name}[{name}_list->Length];',
 	"const char ** " + name + "_ptr = " + name + ";",
 	"for (Std$List_node *Node = " + name + "_list->Head; Node; Node = Node->Next) {",
 	"\t*(" + name + "_ptr++) = Std$String$flatten(Node->Value);",

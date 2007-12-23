@@ -1,4 +1,4 @@
-#!/usr/bin/riva
+#!/home/raja/Work/Wrapl/bin/riva
 MOD Main;
 
 IMP IO.File;
@@ -26,9 +26,9 @@ DEF WriteIDh(id) (
         VAR module <- path:pull;
         htmfile:write(baseurl);
         EVERY htmfile:writes(path:values:lower, "/");
-        htmfile:writes(${$module:lower;.html});
+        htmfile:writes('{module:lower}.html');
     );
-    htmfile:writes(${#$name;">$id:map("$", ".");</a>});
+    htmfile:writes('#{name}">{id:map("$", ".")}</a>');
 );
 
 TO :writeh(item@Item) (
@@ -36,7 +36,7 @@ TO :writeh(item@Item) (
 );
 
 TO :writeh(item@Type) (
-    htmfile:writes(${<a name="$item:name;"><h3><code>$item:name;});
+    htmfile:writes('<a name="{item:name}"><h3><code>{item:name}');
     VAR parents <- item:parents;
     parents:length > 0 => (
         htmfile:write(" <: ");
@@ -54,7 +54,7 @@ TO :writeh(item@Type) (
 );
 
 TO :writeh(item@Method) (
-    htmfile:writes(${<h3><code>:$item:symbol;(});
+    htmfile:writes('<h3><code>:{item:symbol}(');
     VAR params <- item:params;
     VAR signature <- item:signature;
     htmfile:write(params:pop:name);
@@ -93,7 +93,7 @@ TO :writeh(item@Method) (
 );
 
 TO :writeh(item@Function) (
-    htmfile:writes(${<a name="$item:name;"><h3><code>$item:name;(});
+    htmfile:writes('<a name="{item:name}"><h3><code>{item:name}(');
     VAR params <- item:params;
     params:length > 0 => (
         VAR param <- params:pop;
@@ -135,7 +135,7 @@ DEF WriteID(id) (
         EVERY txtfile:writes(path:values, ":");
         txtfile:writes(module);
     );
-    txtfile:writes(${#$name;|$id:map("$", ".");]]});
+    txtfile:writes('#{name}|{id:map("$", ".")}]]');
 );
 
 TO :write(item@Item) (

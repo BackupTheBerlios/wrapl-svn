@@ -124,13 +124,13 @@ static char *scan_string_next(scanner_t *Scanner, const char **Next, int Index) 
 			case '0' ... '9': Char = 16 * (Code - '0'); break;
 			case 'A' ... 'F': Char = 16 * (Code - 'A'); break;
 			case 'a' ... 'f': Char = 16 * (Code - 'a'); break;
-			default: return 0; // RAISE ERROR HERE!!!
+			default: Scanner->raise_error(Scanner->NextToken.LineNo, "Error: invalid character code in string");
 			};
 			switch (Code = *(*Next)++) {
 			case '0' ... '9': Char += Code; break;
 			case 'A' ... 'F': Char += Code; break;
 			case 'a' ... 'f': Char += Code; break;
-			default: return 0;
+			default: Scanner->raise_error(Scanner->NextToken.LineNo, "Error: invalid character code in string");
 			};
 		};
 		};
@@ -145,108 +145,100 @@ static char *scan_string_next(scanner_t *Scanner, const char **Next, int Index) 
 };
 
 static Std$String_t *scan_string_block0_next(scanner_t *Scanner, int Index, bool *ExprMode) {
-	const char *Line = Scanner->NextChar;
-	const char *Find1 = strchr(Line, '$');
-	const char *Find2 = strchr(Line, '}');
-	if (Find1 && ((Find2 == 0) || (Find1 < Find2))) {
-		if (Find1[1] == ';') {
-			int Length = Find1 + 1 - Line;
-			char *Chars = Riva$Memory$alloc(Length + 1);
-			memcpy(Chars, Line, Length);
-			Chars[Length] = 0;
-			Scanner->NextChar = Find1 + 2;
-			Std$String_t *String = scan_string_block0_next(Scanner, Index + 1, ExprMode);
-			String->Length.Value += Length;
-			String->Blocks[Index].Length.Type = Std$Integer$SmallT;
-			String->Blocks[Index].Length.Value = Length;
-			String->Blocks[Index].Chars.Type = Std$Address$T;
-			String->Blocks[Index].Chars.Value = Chars;
-			return String;
-		} else if (Find1[1] == '}') {
-			int Length = Find1 + 1 - Line;
-			char *Chars = Riva$Memory$alloc(Length + 1);
-			memcpy(Chars, Line, Length - 1);
-			Chars[Length - 1] = '}';
-			Chars[Length] = 0;
-			Scanner->NextChar = Find1 + 2;
-			Std$String_t *String = scan_string_block0_next(Scanner, Index + 1, ExprMode);
-			String->Length.Value += Length;
-			String->Blocks[Index].Length.Type = Std$Integer$SmallT;
-			String->Blocks[Index].Length.Value = Length;
-			String->Blocks[Index].Chars.Type = Std$Address$T;
-			String->Blocks[Index].Chars.Value = Chars;
-			return String;
-		} else if (Find1 != Line) {
-			int Length = Find1 - Line;
-			char *Chars = Riva$Memory$alloc(Length + 1);
-			memcpy(Chars, Line, Length);
-			Chars[Length] = 0;
-			Std$String_t *String = (Std$String_t *)Riva$Memory$alloc(sizeof(Std$String_t) + (Index + 2) * sizeof(Std$String_block));
-			String->Type = Std$String$T;
-			String->Length.Type = Std$Integer$SmallT;
-			String->Count = Index + 1;
-			Scanner->NextChar = Find1 + 1;
-			*ExprMode = true;
-			String->Length.Value += Length;
-			String->Blocks[Index].Length.Type = Std$Integer$SmallT;
-			String->Blocks[Index].Length.Value = Length;
-			String->Blocks[Index].Chars.Type = Std$Address$T;
-			String->Blocks[Index].Chars.Value = Chars;
-			return String;
-		} else {
-			Scanner->NextChar = Find1 + 1;
-			*ExprMode = true;
-			return Std$String$Nil;
-		};
-	} else if (Find2) {
-		int Length = Find2 - Line;
-		char *Chars = Riva$Memory$alloc(Length + 1);
-		memcpy(Chars, Line, Length);
-		Chars[Length] = 0;
-		Std$String_t *String = (Std$String_t *)Riva$Memory$alloc(sizeof(Std$String_t) + (Index + 2) * sizeof(Std$String_block));
-		String->Type = Std$String$T;
-		String->Length.Type = Std$Integer$SmallT;
-		String->Count = Index + 1;
-		Scanner->NextChar = Find2 + 1;
-		String->Length.Value += Length;
-		String->Blocks[Index].Length.Type = Std$Integer$SmallT;
-		String->Blocks[Index].Length.Value = Length;
-		String->Blocks[Index].Chars.Type = Std$Address$T;
-		String->Blocks[Index].Chars.Value = Chars;
-		return String;
-	} else {
-		const char *NextLine = Scanner->readl(Scanner->Source);
-		if (NextLine == 0) Scanner->raise_error(Scanner->NextToken.LineNo, "Error: end of input in block string");
-		++Scanner->NextToken.LineNo;
-		Std$String_t *String;
-		Scanner->NextChar = NextLine;
-		String = scan_string_block0_next(Scanner, Index + 1, ExprMode);
-		int Length = strlen(Line);
-		char *Chars = Riva$Memory$alloc(Length + 2);
-		memcpy(Chars, Line, Length);
-		Chars[Length] = '\n';
-		Chars[++Length] = 0;
-		String->Length.Value += Length;
-		String->Blocks[Index].Length.Type = Std$Integer$SmallT;
-		String->Blocks[Index].Length.Value = Length;
-		String->Blocks[Index].Chars.Type = Std$Address$T;
-		String->Blocks[Index].Chars.Value = Chars;
-		return String;
-	};
+    Start: char Char = *(Scanner->NextChar++);
+    switch (Char) {
+    case 0: {
+        Scanner->NextChar = Scanner->readl(Scanner->Source);
+        if (Scanner->NextChar == 0) Scanner->raise_error(Scanner->NextToken.LineNo, "Error: end of input in block string");
+        ++Scanner->NextToken.LineNo;
+        Std$String_t *String = scan_string_block0_next(Scanner, Index + 1, ExprMode);
+        ((char *)String->Blocks->Chars.Value)[Index] = '\n';
+        return String;
+    };
+    case '\\': {
+        Char = *(Scanner->NextChar++);
+        switch (Char) {
+        case 0: {
+            Scanner->NextChar = Scanner->readl(Scanner->Source);
+            if (Scanner->NextChar == 0) Scanner->raise_error(Scanner->NextToken.LineNo, "Error: end of input in block string");
+            ++Scanner->NextToken.LineNo;
+            goto Start;
+        };
+        case 'n': Char = '\n'; break;
+        case 'r': Char = '\r'; break;
+        case 't': Char = '\t'; break;
+        case 'x': {
+            char Code;
+            switch (Code = *(Scanner->NextChar++)) {
+            case '0' ... '9': Char = 16 * (Code - '0'); break;
+            case 'A' ... 'F': Char = 16 * (Code - 'A'); break;
+            case 'a' ... 'f': Char = 16 * (Code - 'a'); break;
+            default: Scanner->raise_error(Scanner->NextToken.LineNo, "Error: invalid character code in string");
+            };
+            switch (Code = *(Scanner->NextChar++)) {
+            case '0' ... '9': Char += Code; break;
+            case 'A' ... 'F': Char += Code; break;
+            case 'a' ... 'f': Char += Code; break;
+            default: Scanner->raise_error(Scanner->NextToken.LineNo, "Error: invalid character code in string");
+            };
+        };
+        };
+        Std$String_t *String = scan_string_block0_next(Scanner, Index + 1, ExprMode);
+        ((char *)String->Blocks->Chars.Value)[Index] = Char;
+        return String;
+    };
+    case '{': {
+        *ExprMode = true;
+        if (Index > 0) {
+            char *Chars = Riva$Memory$alloc_atomic(Index + 1);
+            Chars[Index] = 0;
+            return Std$String$new_length(Chars, Index);
+        } else {
+            return 0;
+        };
+    };
+    case '\'': {
+        *ExprMode = false;
+        if (Index > 0) {
+            char *Chars = Riva$Memory$alloc_atomic(Index + 1);
+            Chars[Index] = 0;
+            return Std$String$new_length(Chars, Index);
+        } else {
+            return 0;
+        };
+    };
+    default: {
+        Std$String_t *String = scan_string_block0_next(Scanner, Index + 1, ExprMode);
+        ((char *)String->Blocks->Chars.Value)[Index] = Char;
+        return String;
+    };
+    };
 };
-
 static void scan_string_block0(scanner_t *Scanner) {
-	expr_t *Head, *Tail;
+	expr_t Head;
+    Head.Next = 0;
+    expr_t *Tail = &Head;
 	bool ExprMode = false;
-	Head = Tail = new const_expr_t(Scanner->Token.LineNo, scan_string_block0_next(Scanner, 0, &ExprMode));
-	while (ExprMode) {
-		Scanner->NextToken.Type = 0;
-		Tail = (Tail->Next = accept_expr(Scanner));
-		ExprMode = false;
-		Tail = (Tail->Next = new const_expr_t(Scanner->Token.LineNo, scan_string_block0_next(Scanner, 0, &ExprMode)));
+	Std$String_t *String = scan_string_block0_next(Scanner, 0, &ExprMode);
+    if (String) {
+		if (ExprMode == false) {
+			Scanner->NextToken.Type = tkCONST;
+			Scanner->NextToken.Const = (Std$Object_t *)String;
+			return;
+		} else {
+			Tail = (Tail->Next = new const_expr_t(Scanner->Token.LineNo, String));
+		};
+	};
+    while (ExprMode) {
+        Scanner->NextToken.Type = 0;
+        Tail = (Tail->Next = accept_expr(Scanner));
+        Scanner->accept(tkRBRACE);
+        ExprMode = false;
+		Std$String_t *String = scan_string_block0_next(Scanner, 0, &ExprMode);
+	    if (String) Tail = (Tail->Next = new const_expr_t(Scanner->Token.LineNo, String));
 	};
 	Scanner->NextToken.Type = tkSTRBLOCK;
-	Scanner->NextToken.Const = (Std$Object_t *)Head;
+	Scanner->NextToken.Const = (Std$Object_t *)Head.Next;
 };
 
 static Std$String_t *scan_string_block_next(scanner_t *Scanner, const char *End, int EndLength, const char **Current, int Index) {
@@ -301,6 +293,11 @@ bool scanner_t::parse(int Type) {
 			case '\"': ++Current;
 				NextToken.Type = tkCONST;
 				NextToken.Const = (Std$Object_t *)Std$String$new(scan_string_next(this, &Current, 0));
+				goto scan_done;
+                        case '\'':
+                                NextChar = ++Current;
+				scan_string_block0(this);
+				Current = NextChar;
 				goto scan_done;
 			case '=': ++Current;
 				switch (*Current) {
@@ -378,15 +375,7 @@ bool scanner_t::parse(int Type) {
 			case '%': ++Current; NextToken.Type = tkMODULO; goto scan_done;
 			case '!': ++Current; NextToken.Type = tkEXCLAIM; goto scan_done;
 			case '#': ++Current; NextToken.Type = tkHASH; goto scan_done;
-			case '$': ++Current;
-				switch (*Current) {
-				case '{':
-					NextChar = ++Current;
-					scan_string_block0(this);
-					Current = NextChar;
-					goto scan_done;
-				default: NextToken.Type = tkSELF; goto scan_done;
-				};
+			case '$': ++Current; NextToken.Type = tkSELF; goto scan_done;
 			default: raise_error(NextToken.LineNo, "Error: invalid character \'%c\'", *Current);
 			};
 			scan_integer: {
