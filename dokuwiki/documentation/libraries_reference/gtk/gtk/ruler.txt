@@ -5,10 +5,29 @@
   * [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]
   * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
 
+  === Note ===
+  This widget is considered too specialized/little-used for GTK+, and will in the future be moved to
+  some other package. If your application needs this widget, feel free to use it, as the widget does
+  work and is useful in some applications; it's just not of general interest. However, we are not
+  accepting new features for the widget, and it will eventually move out of the GTK+ distribution.
+  The GTKRuler widget is a base class for horizontal and vertical rulers. Rulers are used to show the
+  mouse pointer's location in a window. The ruler can either be horizontal or vertical on the window.
+  Within the ruler a small triangle indicates the location of the mouse relative to the horizontal or
+  vertical ruler. See GtkHRuler to learn how to create a new horizontal ruler. See GtkVRuler to learn
+  how to create a new vertical ruler.
+  
 
 ==== :SetRange ====
 '':SetRange(self @ [[#T|T]], lower @ [[..:..:Std:Real#T|Std.Real.T]], upper @ [[..:..:Std:Real#T|Std.Real.T]], position @ [[..:..:Std:Real#T|Std.Real.T]], max_size @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+  This sets the range of the ruler.
+  
+  ruler :    the gtkruler
+  lower :    the lower limit of the ruler
+  upper :    the upper limit of the ruler
+  position : the mark on the ruler
+  max_size : the maximum size of the ruler used when calculating the space to leave for the text
+  
 
 ==== :BackingStore ====
 '':BackingStore(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Pixmap#T|Gtk.Gdk.Pixmap.T]]''
@@ -61,14 +80,34 @@
 ==== :GetMetric ====
 '':GetMetric(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:MetricType#T|Gtk.Gtk.MetricType.T]]''
 
+  Gets the units used for a GtkRuler. See gtk_ruler_set_metric().
+  
+  ruler :   a GtkRuler
+  Returns : the units currently used for ruler
+  
 
 ==== :GetRange ====
 '':GetRange(self @ [[#T|T]], lower @ [[..:..:Std:Object#T|Std.Object.T]], upper @ [[..:..:Std:Object#T|Std.Object.T]], position @ [[..:..:Std:Object#T|Std.Object.T]], max_size @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+  Retrieves values indicating the range and current position of a GtkRuler. See gtk_ruler_set_range().
+  
+  ruler :    a GtkRuler
+  lower :    location to store lower limit of the ruler, or NULL
+  upper :    location to store upper limit of the ruler, or NULL
+  position : location to store the current position of the mark on the ruler, or NULL
+  max_size : location to store the maximum size of the ruler used when calculating the space to leave for the text, or
+             NULL.
+  
 
 ==== :SetMetric ====
 '':SetMetric(self @ [[#T|T]], metric @ [[..:..:Gtk:Gtk:MetricType#T|Gtk.Gtk.MetricType.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+  This calls the GTKMetricType to set the ruler to units defined. Available units are GTK_PIXELS, GTK_INCHES, or
+  GTK_CENTIMETERS. The default unit of measurement is GTK_PIXELS.
+  
+  ruler :  the gtkruler
+  metric : the unit of measurement
+  
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''

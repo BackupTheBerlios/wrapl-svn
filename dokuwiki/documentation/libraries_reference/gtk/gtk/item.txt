@@ -7,18 +7,32 @@
   * [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]
   * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
 
+  The GtkItem widget is an abstract base class for GtkMenuItem, GtkListItem and GtkTreeItem.
+  
 
 ==== :Toggle ====
 '':Toggle(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+  Emits the "toggle" signal on the given item.
+  
+  item : a GtkItem.
+  
 
 ==== :Select ====
 '':Select(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+  Emits the "select" signal on the given item.
+  
+  item : a GtkItem.
+  
 
 ==== :Deselect ====
 '':Deselect(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+  Emits the "deselect" signal on the given item.
+  
+  item : a GtkItem.
+  
 
 ==== FactoriesPathDelete ====
 ''FactoriesPathDelete(ifactory_path : [[..:..:Std:String#T|Std.String.T]], path : [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''

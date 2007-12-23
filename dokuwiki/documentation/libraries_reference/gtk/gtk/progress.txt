@@ -5,10 +5,15 @@
   * [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]
   * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
 
+  A GtkProgress is the abstract base class used to derive a GtkProgressBar which provides a visual
+  representation of the progress of a long running operation.
+  
 
 ==== :SetValue ====
 '':SetValue(self @ [[#T|T]], value @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+  === Warning ===
+  gtk_progress_set_value is deprecated and should not be used in newly-written code.
 
 ==== :Adjustment ====
 '':Adjustment(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]]''
@@ -45,50 +50,74 @@
 ==== :Configure ====
 '':Configure(self @ [[#T|T]], value @ [[..:..:Std:Real#T|Std.Real.T]], hmin @ [[..:..:Std:Real#T|Std.Real.T]], max @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+  === Warning ===
+  gtk_progress_configure is deprecated and should not be used in newly-written code.
 
 ==== :GetCurrentPercentage ====
 '':GetCurrentPercentage(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
+  === Warning ===
+  gtk_progress_get_current_percentage is deprecated and should not be used in newly-written code.
 
 ==== :GetCurrentText ====
 '':GetCurrentText(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
+  === Warning ===
+  gtk_progress_get_current_text is deprecated and should not be used in newly-written code.
 
 ==== :GetPercentageFromValue ====
 '':GetPercentageFromValue(self @ [[#T|T]], value @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
+  === Warning ===
+  gtk_progress_get_percentage_from_value is deprecated and should not be used in newly-written code.
 
 ==== :GetTextFromValue ====
 '':GetTextFromValue(self @ [[#T|T]], value @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
+  === Warning ===
+  gtk_progress_get_text_from_value is deprecated and should not be used in newly-written code.
 
 ==== :GetValue ====
 '':GetValue(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
+  === Warning ===
+  gtk_progress_get_value is deprecated and should not be used in newly-written code.
 
 ==== :SetActivityMode ====
 '':SetActivityMode(self @ [[#T|T]], activity_mode @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+  === Warning ===
+  gtk_progress_set_activity_mode is deprecated and should not be used in newly-written code.
 
 ==== :SetAdjustment ====
 '':SetAdjustment(self @ [[#T|T]], adjustment @ [[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+  === Warning ===
+  gtk_progress_set_adjustment is deprecated and should not be used in newly-written code.
 
 ==== :SetFormatString ====
 '':SetFormatString(self @ [[#T|T]], format @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+  === Warning ===
+  gtk_progress_set_format_string is deprecated and should not be used in newly-written code.
 
 ==== :SetPercentage ====
 '':SetPercentage(self @ [[#T|T]], percentage @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+  === Warning ===
+  gtk_progress_set_percentage is deprecated and should not be used in newly-written code.
 
 ==== :SetShowText ====
 '':SetShowText(self @ [[#T|T]], show_text @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+  === Warning ===
+  gtk_progress_set_show_text is deprecated and should not be used in newly-written code.
 
 ==== :SetTextAlignment ====
 '':SetTextAlignment(self @ [[#T|T]], x_align @ [[..:..:Std:Real#T|Std.Real.T]], y_align @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+  === Warning ===
+  gtk_progress_set_text_alignment is deprecated and should not be used in newly-written code.
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''

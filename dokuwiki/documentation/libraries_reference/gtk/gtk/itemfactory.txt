@@ -4,38 +4,57 @@
   * [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]
   * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
 
+  As of GTK+ 2.4, GtkItemFactory has been deprecated in favour of GtkUIManager.
+  
 
 ==== :SetTranslateFunc ====
 '':SetTranslateFunc(self @ [[#T|T]], func @ [[..:..:Std:Function#T|Std.Function.T]], data @ [[..:..:Std:Address#T|Std.Address.T]], notify @ [[..:..:Std:Function#T|Std.Function.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+  === Warning ===
+  gtk_item_factory_set_translate_func has been deprecated since version 2.4 and should not be used in newly-written code.
 
 ==== :PopupWithData ====
 '':PopupWithData(self @ [[#T|T]], popup_data @ [[..:..:Std:Address#T|Std.Address.T]], destroy @ [[..:..:Std:Function#T|Std.Function.T]], x @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], mouse_button @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], time_ @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+  === Warning ===
+  gtk_item_factory_popup_with_data has been deprecated since version 2.4 and should not be used in newly-written code.
 
 ==== :PopupData ====
 '':PopupData(self @ [[#T|T]]) : [[..:..:Std:Address#T|Std.Address.T]]''
 
+  === Warning ===
+  gtk_item_factory_popup_data has been deprecated since version 2.4 and should not be used in newly-written code.
 
 ==== :Popup ====
 '':Popup(self @ [[#T|T]], x @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], mouse_button @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], time_ @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+  === Warning ===
+  gtk_item_factory_popup has been deprecated since version 2.4 and should not be used in newly-written code.
 
 ==== :GetWidgetByAction ====
 '':GetWidgetByAction(self @ [[#T|T]], action @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
+  === Warning ===
+  gtk_item_factory_get_widget_by_action has been deprecated since version 2.4 and should not be used in newly-written
+  code.
 
 ==== :GetWidget ====
 '':GetWidget(self @ [[#T|T]], path @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
+  === Warning ===
+  gtk_item_factory_get_widget has been deprecated since version 2.4 and should not be used in newly-written code.
 
 ==== :GetItemByAction ====
 '':GetItemByAction(self @ [[#T|T]], action @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
+  === Warning ===
+  gtk_item_factory_get_item_by_action has been deprecated since version 2.4 and should not be used in newly-written code.
 
 ==== :GetItem ====
 '':GetItem(self @ [[#T|T]], path @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
 
+  === Warning ===
+  gtk_item_factory_get_item has been deprecated since version 2.4 and should not be used in newly-written code.
 
 ==== :Path ====
 '':Path(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
@@ -68,42 +87,63 @@
 ==== :Construct ====
 '':Construct(self @ [[#T|T]], container_type @ [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]], path @ [[..:..:Std:String#T|Std.String.T]], accel_group @ [[..:..:Gtk:Gtk:AccelGroup#T|Gtk.Gtk.AccelGroup.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+  === Warning ===
+  gtk_item_factory_construct has been deprecated since version 2.4 and should not be used in newly-written code.
 
 ==== :CreateItem ====
 '':CreateItem(self @ [[#T|T]], entry @ [[..:..:Gtk:Gtk:ItemFactoryEntry#T|Gtk.Gtk.ItemFactoryEntry.T]], callback_data @ [[..:..:Std:Address#T|Std.Address.T]], callback_type @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+  === Warning ===
+  gtk_item_factory_create_item has been deprecated since version 2.4 and should not be used in newly-written code.
 
 ==== :CreateItems ====
 '':CreateItems(self @ [[#T|T]], n_entries @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], entries @ [[..:..:Gtk:Gtk:ItemFactoryEntry#T|Gtk.Gtk.ItemFactoryEntry.T]], callback_data @ [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+  === Warning ===
+  gtk_item_factory_create_items has been deprecated since version 2.4 and should not be used in newly-written code.
 
 ==== :CreateItemsAc ====
 '':CreateItemsAc(self @ [[#T|T]], n_entries @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], entries @ [[..:..:Gtk:Gtk:ItemFactoryEntry#T|Gtk.Gtk.ItemFactoryEntry.T]], callback_data @ [[..:..:Std:Address#T|Std.Address.T]], callback_type @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+  === Warning ===
+  gtk_item_factory_create_items_ac has been deprecated since version 2.4 and should not be used in newly-written code.
 
 ==== :DeleteEntries ====
 '':DeleteEntries(self @ [[#T|T]], n_entries @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], entries @ [[..:..:Gtk:Gtk:ItemFactoryEntry#T|Gtk.Gtk.ItemFactoryEntry.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+  === Warning ===
+  gtk_item_factory_delete_entries has been deprecated since version 2.4 and should not be used in newly-written code.
 
 ==== :DeleteEntry ====
 '':DeleteEntry(self @ [[#T|T]], entry @ [[..:..:Gtk:Gtk:ItemFactoryEntry#T|Gtk.Gtk.ItemFactoryEntry.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+  === Warning ===
+  gtk_item_factory_delete_entry has been deprecated since version 2.4 and should not be used in newly-written code.
 
 ==== :DeleteItem ====
 '':DeleteItem(self @ [[#T|T]], path @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+  === Warning ===
+  gtk_item_factory_delete_item has been deprecated since version 2.4 and should not be used in newly-written code.
 
 ==== New ====
 ''New(container_type : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]], path : [[..:..:Std:String#T|Std.String.T]], accel_group : [[..:..:Gtk:Gtk:AccelGroup#T|Gtk.Gtk.AccelGroup.T]]) : [[# T| T]]''
 
+  === Warning ===
+  gtk_item_factory_new has been deprecated since version 2.4 and should not be used in newly-written code.
 
 ==== PopupDataFromWidget ====
 ''PopupDataFromWidget(widget : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Address#T|Std.Address.T]]''
 
+  === Warning ===
+  gtk_item_factory_popup_data_from_widget has been deprecated since version 2.4 and should not be used in newly-written
+  code.
 
 ==== PathFromWidget ====
 ''PathFromWidget(widget : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
+  === Warning ===
+  gtk_item_factory_path_from_widget has been deprecated since version 2.4 and should not be used in newly-written code.
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
@@ -112,16 +152,26 @@
 ==== FromWidget ====
 ''FromWidget(widget : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Gtk:Gtk:ItemFactory#T|Gtk.Gtk.ItemFactory.T]]''
 
+  === Warning ===
+  gtk_item_factory_from_widget is deprecated and should not be used in newly-written code. 2.4
 
 ==== FromPath ====
 ''FromPath(path : [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Gtk:Gtk:ItemFactory#T|Gtk.Gtk.ItemFactory.T]]''
 
+  === Warning ===
+  gtk_item_factory_from_path has been deprecated since version 2.4 and should not be used in newly-written code.
 
 ==== CreateMenuEntries ====
 ''CreateMenuEntries(n_entries : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], entries : [[..:..:Gtk:Gtk:MenuEntry#T|Gtk.Gtk.MenuEntry.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+  === Warning ===
+  gtk_item_factory_create_menu_entries has been deprecated since version 2.4 and should not be used in newly-written code.
 
 ==== AddForeign ====
 ''AddForeign(accel_widget : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], full_path : [[..:..:Std:String#T|Std.String.T]], accel_group : [[..:..:Gtk:Gtk:AccelGroup#T|Gtk.Gtk.AccelGroup.T]], keyval : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], modifiers : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+  === Warning ===
+  gtk_item_factory_add_foreign has been deprecated since version 2.4 and should not be used in newly-written code. The
+  recommended API for this purpose are the functions gtk_menu_item_set_accel_path() and gtk_widget_set_accel_path(); don't
+  use gtk_item_factory_add_foreign() in new code, since it is likely to be removed in the future.
 

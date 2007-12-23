@@ -4,18 +4,75 @@
   * [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]
   * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
 
+  Tooltips are the messages that appear next to a widget when the mouse pointer is held over it for a
+  short amount of time. They are especially helpful for adding more verbose descriptions of things
+  such as buttons in a toolbar.
+  An individual tooltip belongs to a group of tooltips. A group is created with a call to
+  gtk_tooltips_new(). Every tooltip in the group can then be turned off with a call to
+  gtk_tooltips_disable() and enabled with gtk_tooltips_enable().
+  The length of time the user must keep the mouse over a widget before the tip is shown, can be
+  altered with gtk_tooltips_set_delay(). This is set on a 'per group of tooltips' basis.
+  To assign a tip to a particular GtkWidget, gtk_tooltips_set_tip() is used.
+  === Note ===
+  Tooltips can only be set on widgets which have their own X window and receive enter and leave
+  events. To check if a widget has its own window use GTK_WIDGET_NO_WINDOW(). To add a tooltip to a
+  widget that doesn't have its own window, place the widget inside a GtkEventBox and add a tooltip to
+  that instead.
+  The default appearance of all tooltips in a program is determined by the current GTK+ theme that the
+  user has selected.
+  Information about the tooltip (if any) associated with an arbitrary widget can be retrieved using
+  gtk_tooltips_data_get().
+  Example 54.&#160;Adding tooltips to buttons.
+     GtkWidget *load_button, *save_button, *hbox;
+     GtkTooltips *button_bar_tips;
+  
+     button_bar_tips = gtk_tooltips_new ();
+  
+     /* Create the buttons and pack them into a GtkHBox */
+     hbox = gtk_hbox_new (TRUE, 2);
+  
+     load_button = gtk_button_new_with_label ("Load a file");
+     gtk_box_pack_start (GTK_BOX (hbox), load_button, TRUE, TRUE, 2);
+     gtk_widget_show (load_button);
+  
+     save_button = gtk_button_new_with_label ("Save a file");
+     gtk_box_pack_start (GTK_BOX (hbox), save_button, TRUE, TRUE, 2);
+     gtk_widget_show (save_button);
+     gtk_widget_show (hbox);
+  
+     /* Add the tips */
+     gtk_tooltips_set_tip (GTK_TOOLTIPS (button_bar_tips), load_button,
+  				 "Load a new document into this window",
+  				 "Requests the filename of a document.
+  				  This will then be loaded into the current
+  				  window, replacing the contents of whatever
+  				  is already loaded.");
+     gtk_tooltips_set_tip (GTK_TOOLTIPS (button_bar_tips), save_button,
+  				 "Saves the current document to a file",
+  				 "If you have saved the document previously,
+  				  then the new version will be saved over the
+  				  old one. Otherwise, you will be prompted for
+  				  a filename.");
+  
+  
 
 ==== :SetTip ====
 '':SetTip(self @ [[#T|T]], widget @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], tip_text @ [[..:..:Std:String#T|Std.String.T]], tip_private @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+  === Warning ===
+  gtk_tooltips_set_tip has been deprecated since version 2.12 and should not be used in newly-written code.
 
 ==== :SetDelay ====
 '':SetDelay(self @ [[#T|T]], delay @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+  === Warning ===
+  gtk_tooltips_set_delay has been deprecated since version 2.12 and should not be used in newly-written code.
 
 ==== :ForceWindow ====
 '':ForceWindow(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+  === Warning ===
+  gtk_tooltips_force_window has been deprecated since version 2.12 and should not be used in newly-written code.
 
 ==== :TipWindow ====
 '':TipWindow(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
@@ -60,14 +117,20 @@
 ==== :Disable ====
 '':Disable(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+  === Warning ===
+  gtk_tooltips_disable has been deprecated since version 2.12 and should not be used in newly-written code.
 
 ==== :Enable ====
 '':Enable(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+  === Warning ===
+  gtk_tooltips_enable has been deprecated since version 2.12 and should not be used in newly-written code.
 
 ==== New ====
 ''New() : [[# T| T]]''
 
+  === Warning ===
+  gtk_tooltips_new has been deprecated since version 2.12 and should not be used in newly-written code.
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
@@ -76,4 +139,7 @@
 ==== GetInfoFromTipWindow ====
 ''GetInfoFromTipWindow(tip_window : [[..:..:Gtk:Gtk:Window#T|Gtk.Gtk.Window.T]], tooltips : [[..:..:Std:Object#T|Std.Object.T]], current_widget : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
+  === Warning ===
+  gtk_tooltips_get_info_from_tip_window has been deprecated since version 2.12 and should not be used in newly-written
+  code.
 

@@ -7,10 +7,29 @@
   * [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]
   * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
 
+  The primary purpose of this class is to keep track of the various properties of GtkHButtonBox and
+  GtkVButtonBox widgets.
+  gtk_button_box_get_child_size() retrieves the minimum width and height for widgets in a given button
+  box. gtk_button_box_set_child_size() allows those properties to be changed.
+  The internal padding of buttons can be retrieved and changed per button box using
+  gtk_button_box_get_child_ipadding() and gtk_button_box_set_child_ipadding() respectively.
+  gtk_button_box_get_spacing() and gtk_button_box_set_spacing() retrieve and change default number of
+  pixels between buttons, respectively.
+  gtk_button_box_get_layout() and gtk_button_box_set_layout() retrieve and alter the method used to
+  spread the buttons in a button box across the container, respectively.
+  The main purpose of GtkButtonBox is to make sure the children have all the same size. Therefore it
+  ignores the homogeneous property which it inherited from GtkBox, and always behaves as if
+  homogeneous was TRUE.
+  
 
 ==== :SetLayout ====
 '':SetLayout(self @ [[#T|T]], layout_style @ [[..:..:Gtk:Gtk:ButtonBoxStyle#T|Gtk.Gtk.ButtonBoxStyle.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+  Changes the way buttons are arranged in their container.
+  
+  widget :       a GtkButtonBox.
+  layout_style : the new layout style.
+  
 
 ==== :ChildMinWidth ====
 '':ChildMinWidth(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
@@ -35,30 +54,65 @@
 ==== :GetChildIpadding ====
 '':GetChildIpadding(self @ [[#T|T]], ipad_x @ [[..:..:Std:Object#T|Std.Object.T]], ipad_y @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+  === Warning ===
+  gtk_button_box_get_child_ipadding is deprecated and should not be used in newly-written code. Use the style properties
+  "child-internal-pad-x/-y" instead.
 
 ==== :GetChildSecondary ====
 '':GetChildSecondary(self @ [[#T|T]], child @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
+  Returns whether child should appear in a secondary group of children.
+  
+  widget :  a GtkButtonBox
+  child :   a child of widget
+  Returns : whether child should appear in a secondary group of children.
+  
 
 ==== :GetChildSize ====
 '':GetChildSize(self @ [[#T|T]], min_width @ [[..:..:Std:Object#T|Std.Object.T]], min_height @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+  === Warning ===
+  gtk_button_box_get_child_size is deprecated and should not be used in newly-written code. Use the style properties
+  "child-min-width/-height" instead.
 
 ==== :GetLayout ====
 '':GetLayout(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:ButtonBoxStyle#T|Gtk.Gtk.ButtonBoxStyle.T]]''
 
+  Retrieves the method being used to arrange the buttons in a button box.
+  
+  widget :  a GtkButtonBox.
+  Returns : the method used to layout buttons in widget.
+  
 
 ==== :SetChildIpadding ====
 '':SetChildIpadding(self @ [[#T|T]], ipad_x @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], ipad_y @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+  === Warning ===
+  gtk_button_box_set_child_ipadding is deprecated and should not be used in newly-written code. Use the style properties
+  "child-internal-pad-x/-y" instead.
 
 ==== :SetChildSecondary ====
 '':SetChildSecondary(self @ [[#T|T]], child @ [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]], is_secondary @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+  Sets whether child should appear in a secondary group of children. A typical use of a secondary child is the help button
+  in a dialog.
+  This group appears after the other children if the style is GTK_BUTTONBOX_START, GTK_BUTTONBOX_SPREAD or
+  GTK_BUTTONBOX_EDGE, and before the other children if the style is GTK_BUTTONBOX_END. For horizontal button boxes, the
+  definition of before/after depends on direction of the widget (see gtk_widget_set_direction()). If the style is
+  GTK_BUTTONBOX_START or GTK_BUTTONBOX_END, then the secondary children are aligned at the other end of the button box
+  from the main children. For the other styles, they appear immediately next to the main children.
+  
+  widget :       a GtkButtonBox
+  child :        a child of widget
+  is_secondary : if TRUE, the child appears in a secondary group of the button box.
+  
 
 ==== :SetChildSize ====
 '':SetChildSize(self @ [[#T|T]], min_width @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], min_height @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+  === Warning ===
+  gtk_button_box_set_child_size is deprecated and should not be used in newly-written code. Use the style properties
+  "child-min-width/-height" instead.
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''

@@ -7,26 +7,114 @@
   * [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]
   * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
 
+  The GnomeCanvas is an engine for structured graphics that offers a rich imaging model, high
+  performance rendering, and a powerful, high level API. It offers a choice of two rendering back-
+  ends, one based on Xlib for extremely fast display, and another based on Libart, a sophisticated,
+  antialiased, alpha-compositing engine. This widget can be used for flexible display of graphics and
+  for creating interactive user interface elements.
+  To create a new GnomeCanvas widget call gnome_canvas_new() or gnome_canvas_new_aa() for an anti-
+  aliased mode canvas.
+  A GnomeCanvas widget contains one or more GnomeCanvasItem objects. Items consist of graphing
+  elements like lines, ellipses, polygons, images, text, and curves. These items are organized using
+  GnomeCanvasGroup objects, which are themselves derived from GnomeCanvasItem. Since a group is an
+  item it can be contained within other groups, forming a tree of canvas items. Certain operations,
+  like translating and scaling, can be performed on all items in a group.
+  There is a special root group created by a GnomeCanvas. This is the top level group under which all
+  items in a canvas are contained. To get the root group from a canvas call gnome_canvas_root(). To
+  clear a canvas you can simply walk through the item_list member of the GnomeCanvasGroup and call
+  gtk_object_destroy() on each one.
+  There are several different coordinate systems used by GnomeCanvas widgets. The primary system is a
+  logical, abstract coordinate space called world coordinates. World coordinates are expressed as
+  unbounded double floating point numbers. When it comes to rendering to a screen the canvas pixel
+  coordinate system (also referred to as just canvas coordinates) is used. This system uses integers
+  to specify screen pixel positions. A user defined scaling factor and offset are used to convert
+  between world coordinates and canvas coordinates. Each item in a canvas has its own coordinate
+  system called item coordinates. This system is specified in world coordinates but they are relative
+  to an item (0.0, 0.0 would be the top left corner of the item). The final coordinate system of
+  interest is window coordinates. These are like canvas coordinates but are offsets from within a
+  window a canvas is displayed in. This last system is rarely used, but is useful when manually
+  handling GDK events (such as drag and drop) which are specified in window coordinates (the events
+  processed by the canvas are already converted for you).
+  Along with different coordinate systems comes functions to convert between them. gnome_canvas_w2c()
+  converts world to canvas pixel coordinates and gnome_canvas_c2w() converts from canvas to world.
+  gnome_canvas_w2c_d() is like gnome_canvas_w2c() but returns the pixel coordinates as doubles which
+  is useful to avoid precision loss from integer rounding. To get the affine transform matrix for
+  converting from world coordinates to canvas coordinates call gnome_canvas_w2c_affine().
+  gnome_canvas_window_to_world() converts from window to world coordinates and
+  gnome_canvas_world_to_window() converts in the other direction. There are no functions for
+  converting between canvas and window coordinates, since this is just a matter of subtracting the
+  canvas scrolling offset. To convert to/from item coordinates use the functions defined for
+  GnomeCanvasItem objects.
+  To set the canvas zoom factor (canvas pixels per world unit, the scaling factor) call
+  gnome_canvas_set_pixels_per_unit(), setting this to 1.0 will cause the two coordinate systems to
+  correspond (e.g., [5, 6] in pixel units would be [5.0, 6.0] in world units).
+  Defining the scrollable area of a canvas widget is done by calling gnome_canvas_set_scroll_region()
+  and to get the current region gnome_canvas_get_scroll_region() can be used. If the window is larger
+  than the canvas scrolling region it can optionally be centered in the window. Use
+  gnome_canvas_set_center_scroll_region() to enable or disable this behavior. To scroll to a
+  particular canvas pixel coordinate use gnome_canvas_scroll_to() (typically not used since scrollbars
+  are usually set up to handle the scrolling), and to get the current canvas pixel scroll offset call
+  gnome_canvas_get_scroll_offsets().
+  
 
 ==== :WorldToWindow ====
 '':WorldToWindow(self @ [[#T|T]], worldx @ [[..:..:Std:Real#T|Std.Real.T]], worldy @ [[..:..:Std:Real#T|Std.Real.T]], winx @ [[..:..:Std:Object#T|Std.Object.T]], winy @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+  Converts world coordinates into window-relative coordinates.
+  
+  canvas : A canvas.
+  worldx : World X coordinate.
+  worldy : World Y coordinate.
+  winx :   X window-relative coordinate.
+  winy :   Y window-relative coordinate.
+  
 
 ==== :WindowToWorld ====
 '':WindowToWorld(self @ [[#T|T]], winx @ [[..:..:Std:Real#T|Std.Real.T]], winy @ [[..:..:Std:Real#T|Std.Real.T]], worldx @ [[..:..:Std:Object#T|Std.Object.T]], worldy @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+  Converts window-relative coordinates into world coordinates. You can use this when you need to convert mouse coordinates
+  into world coordinates, for example.
+  
+  canvas : A canvas.
+  winx :   Window-relative X coordinate.
+  winy :   Window-relative Y coordinate.
+  worldx : X world coordinate (return value).
+  worldy : Y world coordinate (return value).
+  
 
 ==== :W2cD ====
 '':W2cD(self @ [[#T|T]], wx @ [[..:..:Std:Real#T|Std.Real.T]], wy @ [[..:..:Std:Real#T|Std.Real.T]], cx @ [[..:..:Std:Object#T|Std.Object.T]], cy @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+  Converts world coordinates into canvas pixel coordinates. This version returns coordinates in floating point
+  coordinates, for greater precision.
+  
+  canvas : A canvas.
+  wx :     World X coordinate.
+  wy :     World Y coordinate.
+  cx :     X pixel coordinate (return value).
+  cy :     Y pixel coordinate (return value).
+  
 
 ==== :W2cAffine ====
 '':W2cAffine(self @ [[#T|T]], affine @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+  Gets the affine transform that converts from world coordinates to canvas pixel coordinates.
+  
+  canvas : A canvas.
+  affine : An affine transformation matrix (return value).
+  
 
 ==== :W2c ====
 '':W2c(self @ [[#T|T]], wx @ [[..:..:Std:Real#T|Std.Real.T]], wy @ [[..:..:Std:Real#T|Std.Real.T]], cx @ [[..:..:Std:Object#T|Std.Object.T]], cy @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+  Converts world coordinates into canvas pixel coordinates.
+  
+  canvas : A canvas.
+  wx :     World X coordinate.
+  wy :     World Y coordinate.
+  cx :     X pixel coordinate (return value).
+  cy :     Y pixel coordinate (return value).
+  
 
 ==== :UpdateSvpClip ====
 '':UpdateSvpClip(self @ [[#T|T]], p_svp @ [[..:..:Std:Object#T|Std.Object.T]], new_svp @ [[..:..:Gtk:Art:SVP#T|Gtk.Art.SVP.T]], clip_svp @ [[..:..:Gtk:Art:SVP#T|Gtk.Art.SVP.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -39,10 +127,22 @@
 ==== :UpdateNow ====
 '':UpdateNow(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+  Forces an immediate update and redraw of a canvas. If the canvas does not have any pending update or redraw requests,
+  then no action is taken. This is typically only used by applications that need explicit control of when the display is
+  updated, like games. It is not needed by normal applications.
+  
+  canvas : A canvas.
+  
 
 ==== :SetStippleOrigin ====
 '':SetStippleOrigin(self @ [[#T|T]], gc @ [[..:..:Gtk:Gdk:GC#T|Gtk.Gdk.GC.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+  Sets the stipple origin of the specified GC as is appropriate for the canvas, so that it will be aligned with other
+  stipple patterns used by canvas items. This is typically only needed by item implementations.
+  
+  canvas : A canvas.
+  gc :     GC on which to set the stipple origin.
+  
 
 ==== :Root ====
 '':Root(self @ [[#T|T]]) : [[..:..:Gtk:GnomeCanvas:Item#T|Gtk.GnomeCanvas.Item.T]]''
@@ -183,70 +283,193 @@
 ==== :C2w ====
 '':C2w(self @ [[#T|T]], cx @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], cy @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], wx @ [[..:..:Std:Object#T|Std.Object.T]], wy @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+  Converts canvas pixel coordinates to world coordinates.
+  
+  canvas : A canvas.
+  cx :     Canvas pixel X coordinate.
+  cy :     Canvas pixel Y coordinate.
+  wx :     X world coordinate (return value).
+  wy :     Y world coordinate (return value).
+  
 
 ==== :GetCenterScrollRegion ====
 '':GetCenterScrollRegion(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
+  Returns whether the canvas is set to center the scrolling region in the window if the former is smaller than the canvas'
+  allocation.
+  
+  canvas :  A canvas.
+  Returns : Whether the scroll region is being centered in the canvas window.
+  
 
 ==== :GetColor ====
 '':GetColor(self @ [[#T|T]], spec @ [[..:..:Std:String#T|Std.String.T]], color @ [[..:..:Gtk:Gdk:Color#T|Gtk.Gdk.Color.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
+  Allocates a color based on the specified X color specification. As a convenience to item implementations, it returns
+  TRUE if the color was allocated, or FALSE if the specification was NULL. A NULL color specification is considered as
+  "transparent" by the canvas.
+  
+  canvas :  A canvas.
+  spec :    X color specification, or NULL for "transparent".
+  color :   Returns the allocated color.
+  Returns : TRUE if spec is non-NULL and the color is allocated. If spec is NULL, then returns FALSE.
+  
 
 ==== :GetColorPixel ====
 '':GetColorPixel(self @ [[#T|T]], rgba @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
+  Allocates a color from the RGBA value passed into this function. The alpha opacity value is discarded, since normal X
+  colors do not support it.
+  
+  canvas :  A canvas.
+  rgba :    RGBA color specification.
+  Returns : Allocated pixel value corresponding to the specified color.
+  
 
 ==== :GetDither ====
 '':GetDither(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:RgbDither#T|Gtk.Gdk.RgbDither.T]]''
 
+  Returns the type of dithering used to render an antialiased canvas.
+  
+  canvas :  A canvas.
+  Returns : The dither setting.
+  
 
 ==== :GetItemAt ====
 '':GetItemAt(self @ [[#T|T]], x @ [[..:..:Std:Real#T|Std.Real.T]], y @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Gtk:GnomeCanvas:Item#T|Gtk.GnomeCanvas.Item.T]]''
 
+  Looks for the item that is under the specified position, which must be specified in world coordinates.
+  
+  canvas :  A canvas.
+  x :       X position in world coordinates.
+  y :       Y position in world coordinates.
+  Returns : The sought item, or NULL if no item is at the specified coordinates.
+  
 
 ==== :GetScrollOffsets ====
 '':GetScrollOffsets(self @ [[#T|T]], cx @ [[..:..:Std:Object#T|Std.Object.T]], cy @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+  Queries the scrolling offsets of a canvas. The values are returned in canvas pixel units.
+  
+  canvas : A canvas.
+  cx :     Horizontal scrolling offset (return value).
+  cy :     Vertical scrolling offset (return value).
+  
 
 ==== :GetScrollRegion ====
 '':GetScrollRegion(self @ [[#T|T]], x1 @ [[..:..:Std:Object#T|Std.Object.T]], y1 @ [[..:..:Std:Object#T|Std.Object.T]], x2 @ [[..:..:Std:Object#T|Std.Object.T]], y2 @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+  Queries the scrolling region of a canvas.
+  
+  canvas : A canvas.
+  x1 :     Leftmost limit of the scrolling region (return value).
+  y1 :     Upper limit of the scrolling region (return value).
+  x2 :     Rightmost limit of the scrolling region (return value).
+  y2 :     Lower limit of the scrolling region (return value).
+  
 
 ==== :RequestRedraw ====
 '':RequestRedraw(self @ [[#T|T]], x1 @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y1 @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], x2 @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y2 @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+  Convenience function that informs a canvas that the specified rectangle needs to be repainted. This function converts
+  the rectangle to a microtile array and feeds it to gnome_canvas_request_redraw_uta(). The rectangle includes x1 and y1,
+  but not x2 and y2. To be used only by item implementations.
+  
+  canvas : A canvas.
+  x1 :     Leftmost coordinate of the rectangle to be redrawn.
+  y1 :     Upper coordinate of the rectangle to be redrawn.
+  x2 :     Rightmost coordinate of the rectangle to be redrawn, plus 1.
+  y2 :     Lower coordinate of the rectangle to be redrawn, plus 1.
+  
 
 ==== :RequestRedrawUta ====
 '':RequestRedrawUta(self @ [[#T|T]], uta @ [[..:..:Gtk:Art:Uta#T|Gtk.Art.Uta.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+  Informs a canvas that the specified area, given as a microtile array, needs to be repainted. To be used only by item
+  implementations.
+  
+  canvas : A canvas.
+  uta :    Microtile array that specifies the area to be redrawn. It will be freed by this function, so the argument you
+           pass will be invalid after you call this function.
+  
 
 ==== :Root ====
 '':Root(self @ [[#T|T]]) : [[..:..:Gtk:GnomeCanvas:Group#T|Gtk.GnomeCanvas.Group.T]]''
 
+  Queries the root group of a canvas.
+  
+  canvas :  A canvas.
+  Returns : The root group of the specified canvas.
+  
 
 ==== :ScrollTo ====
 '':ScrollTo(self @ [[#T|T]], cx @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], cy @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+  Makes a canvas scroll to the specified offsets, given in canvas pixel units. The canvas will adjust the view so that it
+  is not outside the scrolling region. This function is typically not used, as it is better to hook scrollbars to the
+  canvas layout's scrolling adjusments.
+  
+  canvas : A canvas.
+  cx :     Horizontal scrolling offset in canvas pixel units.
+  cy :     Vertical scrolling offset in canvas pixel units.
+  
 
 ==== :SetCenterScrollRegion ====
 '':SetCenterScrollRegion(self @ [[#T|T]], center_scroll_region @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+  When the scrolling region of the canvas is smaller than the canvas window, e.g. the allocation of the canvas, it can be
+  either centered on the window or simply made to be on the upper-left corner on the window. This function lets you
+  configure this property.
+  
+  canvas :               A canvas.
+  center_scroll_region : Whether to center the scrolling region in the canvas window when it is smaller than the canvas'
+                         allocation.
+  
 
 ==== :SetDither ====
 '':SetDither(self @ [[#T|T]], dither @ [[..:..:Gtk:Gdk:RgbDither#T|Gtk.Gdk.RgbDither.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+  Controls dithered rendering for antialiased canvases. The value of dither should be GDK_RGB_DITHER_NONE,
+  GDK_RGB_DITHER_NORMAL, or GDK_RGB_DITHER_MAX. The default canvas setting is GDK_RGB_DITHER_NORMAL.
+  
+  canvas : A canvas.
+  dither : Type of dithering used to render an antialiased canvas.
+  
 
 ==== :SetPixelsPerUnit ====
 '':SetPixelsPerUnit(self @ [[#T|T]], n @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+  Sets the zooming factor of a canvas by specifying the number of pixels that correspond to one canvas unit.
+  The anchor point for zooming, i.e. the point that stays fixed and all others zoom inwards or outwards from it, depends
+  on whether the canvas is set to center the scrolling region or not. You can control this using the
+  gnome_canvas_set_center_scroll_region() function. If the canvas is set to center the scroll region, then the center of
+  the canvas window is used as the anchor point for zooming. Otherwise, the upper-left corner of the canvas window is used
+  as the anchor point.
+  
+  canvas : A canvas.
+  n :      The number of pixels that correspond to one canvas unit.
+  
 
 ==== :SetScrollRegion ====
 '':SetScrollRegion(self @ [[#T|T]], x1 @ [[..:..:Std:Real#T|Std.Real.T]], y1 @ [[..:..:Std:Real#T|Std.Real.T]], x2 @ [[..:..:Std:Real#T|Std.Real.T]], y2 @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+  Sets the scrolling region of a canvas to the specified rectangle. The canvas will then be able to scroll only within
+  this region. The view of the canvas is adjusted as appropriate to display as much of the new region as possible.
+  
+  canvas : A canvas.
+  x1 :     Leftmost limit of the scrolling region.
+  y1 :     Upper limit of the scrolling region.
+  x2 :     Rightmost limit of the scrolling region.
+  y2 :     Lower limit of the scrolling region.
+  
 
 ==== New ====
 ''New() : [[# T| T]]''
 
+  Creates a new empty canvas in non-antialiased mode.
+  
+  Returns : A newly-created canvas.
+  
 
 ==== UpdateBbox ====
 ''UpdateBbox(item : [[..:..:Gtk:GnomeCanvas:Item#T|Gtk.GnomeCanvas.Item.T]], x1 : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y1 : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], x2 : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], y2 : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
@@ -279,4 +502,8 @@
 ==== NewAa ====
 ''NewAa() : [[# T| T]]''
 
+  Creates a new empty canvas in antialiased mode.
+  
+  Returns : A newly-created antialiased canvas.
+  
 

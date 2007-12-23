@@ -8,14 +8,29 @@
   * [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]
   * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
 
+  GtkScaleButton provides a button which pops up a scale widget. This kind of widget is commonly used
+  for volume controls in multimedia applications, and GTK+ provides a GtkVolumeButton subclass that is
+  tailored for this use case.
+  
 
 ==== :SetValue ====
 '':SetValue(self @ [[#T|T]], value @ [[..:..:Std:Real#T|Std.Real.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+  Sets the current value of the scale; if the value is outside the minimum or maximum range values, it will be clamped to
+  fit inside them. The scale button emits the "value-changed" signal if the value changes.
+  
+  button : a GtkScaleButton
+  value :  new value of the scale button
+  
 
 ==== :SetIcons ====
 '':SetIcons(self @ [[#T|T]], icons @ [[..:..:Std:List#T|Std.List.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+  Sets the icons to be used by the scale button. For details, see the "icons" property.
+  
+  button : a GtkScaleButton
+  icons :  a NULL-terminated array of icon names
+  
 
 ==== :PlusButton ====
 '':PlusButton(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
@@ -32,18 +47,43 @@
 ==== :GetAdjustment ====
 '':GetAdjustment(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]]''
 
+  Gets the GtkAdjustment associated with the GtkScaleButton's scale. See gtk_range_get_adjustment() for details.
+  
+  button :  a GtkScaleButton
+  Returns : the adjustment associated with the scale
+  
 
 ==== :GetValue ====
 '':GetValue(self @ [[#T|T]]) : [[..:..:Std:Real#T|Std.Real.T]]''
 
+  Gets the current value of the scale button.
+  
+  button :  a GtkScaleButton
+  Returns : current value of the scale button
+  
 
 ==== :SetAdjustment ====
 '':SetAdjustment(self @ [[#T|T]], adjustment @ [[..:..:Gtk:Gtk:Adjustment#T|Gtk.Gtk.Adjustment.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+  Sets the GtkAdjustment to be used as a model for the GtkScaleButton's scale. See gtk_range_set_adjustment() for details.
+  
+  button :     a GtkScaleButton
+  adjustment : a GtkAdjustment
+  
 
 ==== New ====
 ''New(size : [[..:..:Gtk:Gtk:IconSize#T|Gtk.Gtk.IconSize.T]], min : [[..:..:Std:Real#T|Std.Real.T]], max : [[..:..:Std:Real#T|Std.Real.T]], step : [[..:..:Std:Real#T|Std.Real.T]], icons : [[..:..:Std:List#T|Std.List.T]]) : [[# T| T]]''
 
+  Creates a GtkScaleButton, with a range between min and max, with a stepping of step.
+  
+  size :    a stock icon size
+  min :     the minimum value of the scale (usually 0)
+  max :     the maximum value of the scale (usually 100)
+  step :    the stepping of value when a scroll-wheel event, or up/down arrow event occurs (usually 2)
+  icons :   a NULL-terminated array of icon names, or NULL if you want to set the list later with
+            gtk_scale_button_set_icons()
+  Returns : a new GtkScaleButton
+  
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''

@@ -7,10 +7,17 @@
   * [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]
   * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
 
+  The HPaned widget is a container widget with two children arranged horizontally. The division
+  between the two panes is adjustable by the user by dragging a handle. See GtkPaned for details.
+  
 
 ==== New ====
 ''New() : [[# T| T]]''
 
+  Create a new GtkHPaned
+  
+  Returns : the new GtkHPaned
+  
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''

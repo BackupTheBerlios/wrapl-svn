@@ -9,14 +9,75 @@
   * [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]
   * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
 
+  GtkFileSelection has been superseded by the newer GtkFileChooser family of widgets.
+  GtkFileSelection should be used to retrieve file or directory names from the user. It will create a
+  new dialog window containing a directory list, and a file list corresponding to the current working
+  directory. The filesystem can be navigated using the directory list or the drop-down history menu.
+  Alternatively, the TAB key can be used to navigate using filename completion - common in text based
+  editors such as emacs and jed.
+  File selection dialogs are created with a call to gtk_file_selection_new().
+  The default filename can be set using gtk_file_selection_set_filename() and the selected filename
+  retrieved using gtk_file_selection_get_filename().
+  Use gtk_file_selection_complete() to display files and directories that match a given pattern. This
+  can be used for example, to show only *.txt files, or only files beginning with gtk*.
+  Simple file operations; create directory, delete file, and rename file, are available from buttons
+  at the top of the dialog. These can be hidden using gtk_file_selection_hide_fileop_buttons() and
+  shown again using gtk_file_selection_show_fileop_buttons().
+  Example 30.&#160;Getting a filename from the user.
+  
+  /* The file selection widget and the string to store the chosen filename */
+  
+  void store_filename (GtkWidget *widget, gpointer user_data) {
+     GtkWidget *file_selector = GTK_WIDGET (user_data);
+     const gchar *selected_filename;
+  
+     selected_filename = gtk_file_selection_get_filename (GTK_FILE_SELECTION (file_selector));
+     g_print ("Selected filename: %s\n", selected_filename);
+  }
+  
+  void create_file_selection (void) {
+  
+     GtkWidget *file_selector;
+  
+     /* Create the selector */
+  
+     file_selector = gtk_file_selection_new ("Please select a file for editing.");
+  
+     g_signal_connect (GTK_FILE_SELECTION (file_selector)->ok_button,
+                       "clicked",
+                       G_CALLBACK (store_filename),
+                       file_selector);
+     			
+     /* Ensure that the dialog box is destroyed when the user clicks a button. */
+  
+     g_signal_connect_swapped (GTK_FILE_SELECTION (file_selector)->ok_button,
+                               "clicked",
+                               G_CALLBACK (gtk_widget_destroy),
+                               file_selector);
+  
+     g_signal_connect_swapped (GTK_FILE_SELECTION (file_selector)->cancel_button,
+                               "clicked",
+                               G_CALLBACK (gtk_widget_destroy),
+                               file_selector);
+  
+     /* Display that dialog */
+  
+     gtk_widget_show (file_selector);
+  }
+  
+  
 
 ==== :ShowFileopButtons ====
 '':ShowFileopButtons(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+  === Warning ===
+  gtk_file_selection_show_fileop_buttons is deprecated and should not be used in newly-written code.
 
 ==== :SetSelectMultiple ====
 '':SetSelectMultiple(self @ [[#T|T]], select_multiple @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+  === Warning ===
+  gtk_file_selection_set_select_multiple is deprecated and should not be used in newly-written code.
 
 ==== :DirList ====
 '':DirList(self @ [[#T|T]]) : [[..:..:Gtk:Gtk:Widget#T|Gtk.Gtk.Widget.T]]''
@@ -109,30 +170,45 @@
 ==== :Complete ====
 '':Complete(self @ [[#T|T]], pattern @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+  === Warning ===
+  gtk_file_selection_complete is deprecated and should not be used in newly-written code.
 
 ==== :GetFilename ====
 '':GetFilename(self @ [[#T|T]]) : [[..:..:Std:String#T|Std.String.T]]''
 
+  === Warning ===
+  gtk_file_selection_get_filename is deprecated and should not be used in newly-written code.
 
 ==== :GetSelectMultiple ====
 '':GetSelectMultiple(self @ [[#T|T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
+  === Warning ===
+  gtk_file_selection_get_select_multiple is deprecated and should not be used in newly-written code.
 
 ==== :GetSelections ====
 '':GetSelections(self @ [[#T|T]]) : [[..:..:Std:List#T|Std.List.T]]''
 
+  === Warning ===
+  gtk_file_selection_get_selections is deprecated and should not be used in newly-written code.
 
 ==== :HideFileopButtons ====
 '':HideFileopButtons(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+  === Warning ===
+  gtk_file_selection_hide_fileop_buttons is deprecated and should not be used in newly-written code.
 
 ==== :SetFilename ====
 '':SetFilename(self @ [[#T|T]], filename @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+  === Warning ===
+  gtk_file_selection_set_filename is deprecated and should not be used in newly-written code.
 
 ==== New ====
 ''New(title : [[..:..:Std:String#T|Std.String.T]]) : [[# T| T]]''
 
+  === Warning ===
+  gtk_file_selection_new is deprecated and should not be used in newly-written code. Use gtk_file_chooser_dialog_new()
+  instead
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''

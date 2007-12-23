@@ -6,14 +6,27 @@
   * [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]
   * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
 
+  The GtkPixmap widget displays a graphical image or icon. The icon is typically created using
+  gdk_pixmap_colormap_create_from_xpm() or gdk_pixmap_colormap_create_from_xpm_d().
+  The pixels in a GtkPixmap cannot be manipulated by the application after creation, since under the X
+  Window system the pixel data is stored on the X server and so is not available to the client
+  application. If you want to create graphical images which can be manipulated by the application,
+  look at GtkImage and GdkRGB.
+  GtkPixmap has been deprecated since GTK+ 2.0 and should not be used in newly written code. Use
+  GtkImage instead.
+  
 
 ==== :SetBuildInsensitive ====
 '':SetBuildInsensitive(self @ [[#T|T]], build @ [[..:..:Std:Symbol#T|Std.Symbol.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+  === Warning ===
+  gtk_pixmap_set_build_insensitive is deprecated and should not be used in newly-written code.
 
 ==== :Set ====
 '':Set(self @ [[#T|T]], val @ [[..:..:Gtk:Gdk:Pixmap#T|Gtk.Gdk.Pixmap.T]], mask @ [[..:..:Gtk:Gdk:Bitmap#T|Gtk.Gdk.Bitmap.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+  === Warning ===
+  gtk_pixmap_set is deprecated and should not be used in newly-written code.
 
 ==== :Pixmap ====
 '':Pixmap(self @ [[#T|T]]) : [[..:..:Gtk:Gdk:Pixmap#T|Gtk.Gdk.Pixmap.T]]''
@@ -34,10 +47,14 @@
 ==== :Get ====
 '':Get(self @ [[#T|T]], val @ [[..:..:Std:Object#T|Std.Object.T]], mask @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
+  === Warning ===
+  gtk_pixmap_get is deprecated and should not be used in newly-written code.
 
 ==== New ====
 ''New(pixmap : [[..:..:Gtk:Gdk:Pixmap#T|Gtk.Gdk.Pixmap.T]], mask : [[..:..:Gtk:Gdk:Bitmap#T|Gtk.Gdk.Bitmap.T]]) : [[# T| T]]''
 
+  === Warning ===
+  gtk_pixmap_new is deprecated and should not be used in newly-written code.
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''

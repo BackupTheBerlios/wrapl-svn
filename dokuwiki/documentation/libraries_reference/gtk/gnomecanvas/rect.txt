@@ -7,6 +7,9 @@
   * [[..:..:Gtk:Gtk:Object#T|Gtk.Gtk.Object.T]]
   * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
 
+  A canvas item for drawing rectangles and squares. The parameters are defined in the parent classes
+  including GnomeCanvasRE which is shared with GnomeCanvasEllipse items as well.
+  
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''

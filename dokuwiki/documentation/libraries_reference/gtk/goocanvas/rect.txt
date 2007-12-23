@@ -4,6 +4,14 @@
   * [[..:..:Gtk:GooCanvas:ItemSimple#T|Gtk.GooCanvas.ItemSimple.T]]
   * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
 
+  GooCanvasRect represents a rectangle item.
+  It is a subclass of GooCanvasItemSimple and so inherits all of the style properties such as "stroke-
+  color", "fill-color" and "line-width".
+  It also implements the GooCanvasItem interface, so you can use the GooCanvasItem functions such as
+  goo_canvas_item_raise() and goo_canvas_item_rotate().
+  To create a GooCanvasRect use goo_canvas_rect_new().
+  To get or set the properties of an existing GooCanvasRect, use g_object_get() and g_object_set().
+  
 
 ==== :RectData ====
 '':RectData(self @ [[#T|T]]) : [[..:..:Gtk:GooCanvas:RectData#T|Gtk.GooCanvas.RectData.T]]''
@@ -12,6 +20,17 @@
 ==== New ====
 ''New(parent : [[..:..:Gtk:GooCanvas:Item#T|Gtk.GooCanvas.Item.T]], x : [[..:..:Std:Real#T|Std.Real.T]], y : [[..:..:Std:Real#T|Std.Real.T]], width : [[..:..:Std:Real#T|Std.Real.T]], height : [[..:..:Std:Real#T|Std.Real.T]], __etc__ : [[..:..:Std:Object#T|Std.Object.T]]) : [[# T| T]]''
 
+  Creates a new rectangle item.
+  
+  parent :  the parent item, or NULL. If a parent is specified, it will assume ownership of the item, and the item will
+            automatically be freed when it is removed from the parent. Otherwise call g_object_unref() to free it.
+  x :       the x coordinate of the left of the rectangle.
+  y :       the y coordinate of the top of the rectangle.
+  width :   the width of the rectangle.
+  height :  the height of the rectangle.
+  ... :     optional pairs of property names and values, and a terminating NULL.
+  Returns : a new rectangle item.
+  
 
 ==== GetType ====
 ''GetType() : [[..:..:Gtk:GObject:Type#T|Gtk.GObject.Type.T]]''
