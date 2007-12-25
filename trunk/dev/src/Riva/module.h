@@ -32,4 +32,7 @@ extern void module_add_directory(const char *Dir);
 
 extern void module_init(void);
 
+extern char *concat2(const char *, const char *);
+extern char *concat3(const char *, const char *, const char *);
+
 #endif

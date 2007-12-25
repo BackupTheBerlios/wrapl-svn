@@ -11,15 +11,6 @@
 #include "assembler.h"
 
 static int wrapl_load(Riva$Module_t *Module, const char *Path) {
-	char *LoadPath = 0;
-	for (int I = strlen(Path) - 1; I >= 0; --I) {
-		if (Path[I] == PATHCHR) {
-			memcpy(LoadPath = (char *)Riva$Memory$alloc_atomic(I + 2), Path, I + 1);
-			LoadPath[I + 1] = 0;
-			break;
-		};
-	};
-	Riva$Module$set_path(Module, LoadPath);
 	Sys$Module_t *Module0 = new Sys$Module_t;
 	Module0->Type = Sys$Module$T;
 	Module0->Handle = Module;

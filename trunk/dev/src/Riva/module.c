@@ -19,7 +19,6 @@
 
 #ifdef WINDOWS
 static inline const char *module_fixup_path(const char *Path) {
-    if (Path == 0) return 0;
     if (strchr(Path, '/')) {
         char *NewPath = strdup(Path);
         for (char *P = NewPath; *P; ++P) if (*P == '/') *P = PATHCHR;
@@ -59,8 +58,25 @@ typedef struct path_node {
 
 static path_node *Library = 0;
 
+char *concat2(const char *A, const char *B) {
+	int Length = strlen(A) + strlen(B);
+	char *R = GC_malloc_atomic(Length + 1);
+	stpcpy(stpcpy(R, A), B);
+	R[Length] = 0;
+	return R;
+};
+
+char *concat3(const char *A, const char *B, const char *C) {
+	int Length = strlen(A) + strlen(B) + strlen(C);
+	char *R = GC_malloc_atomic(Length + 1);
+	stpcpy(stpcpy(stpcpy(R, A), B), C);
+	R[Length] = 0;
+	return R;
+};
+
 void module_add_directory(const char *Dir) {
     FIXUP_PATH(Dir);
+	Dir = canonicalize_file_name(Dir);
     log_writef("Adding %s to library search path.\n", Dir);
     long Length = strlen(Dir);
     path_node *Node;
@@ -81,6 +97,7 @@ void module_add_directory(const char *Dir) {
 typedef struct loader_node {
 	struct loader_node *Next;
 	module_loader _load;
+	int Length;
 	char Extension[];
 } loader_node;
 
@@ -90,6 +107,7 @@ void module_add_loader(const char *Extension, module_loader _load) {
 	long Length = strlen(Extension) + 1;
 	loader_node *Node = GC_malloc_stubborn(sizeof(loader_node) + Length);
 	memcpy(Node->Extension, Extension, Length);
+	Node->Length = Length - 1;
     Node->_load = _load;
     Node->Next = Loaders;
 	GC_end_stubborn_change(Node);
@@ -164,30 +182,28 @@ module_t *module_run(const char *Name, const char *Path) {
 	};
 };
 
-static module_t *module_try_load(const char *Path, const char *Name, loader_node *Loader) {
-	char FullPath[256];
-	char *ExtPtr = stpcpy(stpcpy(FullPath, Path), Name);
-	stpcpy(ExtPtr, Loader->Extension);
+static module_t *module_try_load(const char *Key, loader_node *Loader) {
+	const char *File = concat2(Key, Loader->Extension);
 	struct stat Stat;
-	if (stat(FullPath, &Stat) == 0) {
-		int Length = ExtPtr - FullPath;
-		char *Key = GC_malloc_atomic(Length + 1);
-		memcpy(Key, FullPath, Length);
-		Key[Length] = 0;
-		int Level = ModuleLevel++;
-		for (int I = 0; I < Level; ++I) log_writef("|   ");
-		log_writef("Loading: %s\n", FullPath);
+	if (stat(File, &Stat) == 0) {
+		char *Base = basename(File);
+		int Length = Base - File;
+		char *Path = GC_malloc_atomic(Length + 1);
+		memcpy(Path, File, Length);
+		Path[Length] = 0;
+		for (int I = ++ModuleLevel; --I;) log_writef("|   ");
+		log_writef("Loading: %s\n", File);
 		module_t *Module = new(module_t);
-		Module->Name = Name;
+		Module->Name = Key;
 		Module->Import = default_import;
+		Module->Path = Path;
 		stringtable_put(Modules, Key, Module);
-		if (Loader->_load(Module, FullPath) == 0) {
-			log_errorf("Error: error loading %s\n", FullPath);
+		if (Loader->_load(Module, File) == 0) {
+			log_errorf("Error: error loading %s\n", File);
 			return 0;
 		};
-		for (int I = 0; I < Level; ++I) log_writef("|   ");
-		log_writef("Loaded: %s\n", FullPath);
-		ModuleLevel--;
+		for (int I = ModuleLevel--; --I;) log_writef("|   ");
+		log_writef("Loaded: %s\n", File);
 		return Module;
 	} else {
 		return 0;
@@ -195,16 +211,18 @@ static module_t *module_try_load(const char *Path, const char *Name, loader_node
 };
 
 module_t *module_load(const char *Path, const char *Name) {
-	FIXUP_PATH(Name);
-	FIXUP_PATH(Path);
-	module_t *Module;
-	char FullPath[256];
+	FIXUP_PATH(Name);	module_t *Module;
 	if (Path) {
-		stpcpy(stpcpy(FullPath, Path), Name);
-		Module = stringtable_get(Modules, FullPath);
+#ifdef LINUX
+		Path = canonicalize_file_name(Path);
+		if (Path == 0) return 0;
+#else
+#endif
+		const char *Key = concat3(Path, PATHSTR, Name);
+		Module = stringtable_get(Modules, Key);
 		if (Module) return Module;
 		for (loader_node *Loader = Loaders; Loader; Loader = Loader->Next) {
-			Module = module_try_load(Path, Name, Loader);
+			Module = module_try_load(Key, Loader);
 			if (Module) return Module;
 		};
 		return 0;
@@ -212,15 +230,12 @@ module_t *module_load(const char *Path, const char *Name) {
 	Module = stringtable_get(Modules, Name);
 	if (Module) return Module;
 	for (path_node *Node = Library; Node; Node = Node->Next) {
-		stpcpy(stpcpy(FullPath, Node->Dir), Name);
-		Module = stringtable_get(Modules, FullPath);
+		Module = stringtable_get(Modules, concat2(Node->Dir, Name));
 		if (Module) return Module;
 	};
 	for (loader_node *Loader = Loaders; Loader; Loader = Loader->Next) {
-		//Module = module_try_load("", Name, Loader);
-		//if (Module) return Module;
 		for (path_node *Node = Library; Node; Node = Node->Next) {
-			Module = module_try_load(Node->Dir, Name, Loader);
+			Module = module_try_load(concat2(Node->Dir, Name), Loader);
 			if (Module) return Module;
 		};
 	};

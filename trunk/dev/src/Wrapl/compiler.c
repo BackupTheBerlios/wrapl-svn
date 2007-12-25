@@ -212,11 +212,11 @@ operand_t *compiler_t::lookup(int LineNo, const char *Name) {DEBUG
 			switch (Scope->Type) {
 			case scope_t::SC_GLOBAL: {
 				if (Operand->Type == operand_t::FUTR) {
-					Sys$Module_t *Module = Sys$Module$load(0, Operand->Module);
-					if (Module == 0) raise_error(LineNo, "Error: module not found %s\n", Operand->Module);
+					Sys$Module_t *Module = Sys$Module$load(Operand->Path, Operand->Name);
+					if (Module == 0) raise_error(LineNo, "Error: module not found %s\n", Operand->Name);
 					if (Operand->Import) {
 						if (Sys$Module$import(Module, Operand->Import, (int *)&Operand->Type, (void **)&Operand->Value) == 0) {
-							raise_error(LineNo, "Error: import not found %s.%s\n", Operand->Module, Operand->Import);
+							raise_error(LineNo, "Error: import not found %s.%s\n", Operand->Name, Operand->Import);
 						};
 					} else {
 						Operand->Type = operand_t::CNST;
@@ -1551,10 +1551,10 @@ operand_t *module_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t 
 		if (Var->Exported) Sys$Module$export(Module, Var->Name, 1, Address);
 	};
 	for (module_expr_t::globalimp_t *Imp = Imps; Imp; Imp = Imp->Next) {
-		int Length = Imp->Relative ? strlen(ModulePath) : 0;
+		int Length = 0;
 		for (module_expr_t::globalimp_t::path_t *Path = Imp->Path; Path; Path = Path->Next) Length += strlen(Path->Part) + 1;
 		char *ImportPath = new char[Length];
-		char *Temp = Imp->Relative ? stpcpy(ImportPath, ModulePath) : ImportPath;
+		char *Temp = ImportPath;
 		for (module_expr_t::globalimp_t::path_t *Path = Imp->Path; Path; Path = Path->Next) {
 			Temp = stpcpy(Temp, Path->Part);
 			Temp++[0] = PATHCHR;
@@ -1563,17 +1563,19 @@ operand_t *module_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t 
 		operand_t *Operand = new operand_t;
 		if (Imp->Exported) {
 			Operand->Type = operand_t::CNST;
-			Operand->Value = (Std$Object_t *)Sys$Module$load(0, ImportPath);
+			Operand->Value = (Std$Object_t *)Sys$Module$load(Imp->Relative ? ModulePath : 0, ImportPath);
 			Sys$Module$export(Module, Imp->Alias, 0, Operand->Value);
 		} else {
 			Operand->Type = operand_t::FUTR;
-			Operand->Module = ImportPath;
+			Operand->Path = Imp->Relative ? ModulePath : 0;
+			Operand->Name = ImportPath;
 		};
 		Compiler->declare(Imp->Alias, Operand);
 		for (module_expr_t::globalimp_t::uselist_t *Use = Imp->Uses; Use; Use = Use->Next) {
 			operand_t *Operand = new operand_t;
 			Operand->Type = operand_t::FUTR;
-			Operand->Module = ImportPath;
+			Operand->Path = Imp->Relative ? ModulePath : 0;
+			Operand->Name = ImportPath;
 			Operand->Import = Use->Name;
 			Compiler->declare(Use->Name, Operand);
 		};
@@ -1648,7 +1650,6 @@ void module_expr_t::compile(compiler_t *Compiler) {DEBUG
 
 int command_expr_t::compile(compiler_t *Compiler, Std$Function_result *Result) {DEBUG
 	char ModulePath[256];
-	int PathLength;
 	bool InitPath = false;
 	for (command_expr_t::globalvar_t *Var = Vars; Var; Var = Var->Next) {
 		operand_t *Operand = new operand_t;
@@ -1662,25 +1663,26 @@ int command_expr_t::compile(compiler_t *Compiler, Std$Function_result *Result) {
 		if (Imp->Relative && !InitPath) {
 			getcwd(ModulePath, 256);
 			strcat(ModulePath, PATHSTR);
-			PathLength = strlen(ModulePath);
 		};
 		operand_t *Operand = new operand_t;
 		Operand->Type = operand_t::FUTR;
-		int Length = Imp->Relative ? PathLength : 0;
+		int Length = 0;
 		for (command_expr_t::globalimp_t::path_t *Path = Imp->Path; Path; Path = Path->Next) Length += strlen(Path->Part) + 1;
 		char *ImportPath = new char[Length];
-		char *Temp = Imp->Relative ? stpcpy(ImportPath, ModulePath) : ImportPath;
+		char *Temp = ImportPath;
 		for (command_expr_t::globalimp_t::path_t *Path = Imp->Path; Path; Path = Path->Next) {
 			Temp = stpcpy(Temp, Path->Part);
 			Temp++[0] = PATHCHR;
 		};
 		(--Temp)[0] = 0;
-		Operand->Module = ImportPath;
+		Operand->Name = Imp->Relative ? ModulePath : 0;
+		Operand->Name = ImportPath;
 		Compiler->declare(Imp->Alias, Operand);
 		for (command_expr_t::globalimp_t::uselist_t *Use = Imp->Uses; Use; Use = Use->Next) {
 			operand_t *Operand = new operand_t;
 			Operand->Type = operand_t::FUTR;
-			Operand->Module = ImportPath;
+			Operand->Path = Imp->Relative ? ModulePath : 0;
+			Operand->Name = ImportPath;
 			Operand->Import = Use->Name;
 			Compiler->declare(Use->Name, Operand);
 		};

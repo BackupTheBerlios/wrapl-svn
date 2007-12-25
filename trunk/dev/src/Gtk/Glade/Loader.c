@@ -1,8 +1,22 @@
 #include <Riva.h>
+#include <Std.h>
 #include <Sys/Module.h>
 #include <Gtk/GObject/Closure.h>
 #include <Gtk/GObject/Object.h>
 #include <glade/glade.h>
+#include <string.h>
+
+#ifdef WINDOWS
+
+#define PATHSTR "\\"
+#define PATHCHR '\\'
+
+#else
+
+#define PATHSTR "/"
+#define PATHCHR '/'
+
+#endif
 
 static int glade_import(GladeXML *Handle, const char *Symbol, int *IsRef, void **Data) {
 	GtkWidget *Widget = glade_xml_get_widget(Handle, Symbol);
@@ -15,14 +29,19 @@ static int glade_import(GladeXML *Handle, const char *Symbol, int *IsRef, void *
 	};
 };
 
-static void glade_connect_func(const gchar *HandlerName, GObject *Object, const gchar *SignalName, const gchar *SignalData, GObject *ConnectObject, gboolean After, Riva$Module_t *Module) {
+static void glade_connect_func(const gchar *HandlerName, GObject *Object, const gchar *SignalName, const gchar *SignalData, GObject *ConnectObject, gboolean After, const char *LoadPath) {
 	int Length = strlen(HandlerName);
 	char HandlerModule[Length + 1];
 	strcpy(HandlerModule, HandlerName);
 	char *HandlerImport = strchr(HandlerModule, '.');
+	Riva$Module_t *Module;
 	if (HandlerImport) {
 		*(HandlerImport++) = 0;
-		Module = Riva$Module$load(0, HandlerModule);
+		if (HandlerModule[0] == '@') {
+			Module = Riva$Module$load(LoadPath, HandlerModule + 1);
+		} else {
+			Module = Riva$Module$load(0, HandlerModule);
+		};
 	} else {
 		HandlerImport = HandlerModule;
 	};
@@ -45,7 +64,7 @@ static int glade_load(Riva$Module_t *Module, const char *Path) {
 	GladeXML *Handle = glade_xml_new(Path, 0, 0);
 	if (Handle == 0) return 0;
 	Riva$Module$setup(Module, Handle, glade_import);
-	glade_xml_signal_autoconnect_full(Handle, glade_connect_func, 0);
+	glade_xml_signal_autoconnect_full(Handle, glade_connect_func, Riva$Module$get_path(Module));
 	return 1;
 };
 

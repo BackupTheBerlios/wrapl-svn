@@ -46,13 +46,7 @@ static int directory_load(module_t *Module, const char *FileName) {
 	struct stat Stat;
 	stat(FileName, &Stat);
 	if (S_ISDIR(Stat.st_mode)) {
-		int Length = strlen(FileName);
-		char *Path = GC_malloc_atomic(Length + 2);
-		strcpy(Path, FileName);
-		Path[Length] = '/';
-		Path[Length + 1] = 0;
-		module_setup(Module, Path, (module_importer)directory_import);
-                module_set_path(Module, Path);
+		module_setup(Module, canonicalize_file_name(FileName), (module_importer)directory_import);
 	} else {
 		return 0;
 	};

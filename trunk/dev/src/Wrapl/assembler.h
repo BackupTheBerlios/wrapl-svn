@@ -32,7 +32,7 @@ struct operand_t {
 		Std$Object_t *Value;
 		struct {void *Entry; upscope_t *UpScopes;};
 		Std$Object_t **Address;
-		struct {const char *Module, *Import;};
+		struct {const char *Path, *Name, *Import;};
 	};
 };
 
