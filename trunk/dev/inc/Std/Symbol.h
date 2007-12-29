@@ -34,10 +34,10 @@ RIVA_CFUN(Std$Symbol_t *, new_string, char *);
 #define SYMBOL(Name, Value)\
 	static char Name[] __attribute__ ((section (".symbols"))) = Value;
 
-#define ANY 1
-#define SKP 1
-#define VAL 2
-#define TYP 3
+#define ANY (void *)1
+#define SKP (void *)1
+#define VAL (void *)2
+#define TYP (void *)3
 
 #define method_hint2(X, Y) __ ## X ## Y
 #define method_hint(X, Y) method_hint2(X, Y)

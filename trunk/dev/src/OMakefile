@@ -77,3 +77,9 @@ section
 section
 	vmount($(SRC_DIR)NME, $(OBJ_DIR)NME)
 	.SUBDIRS: $(OBJ_DIR)NME
+
+if $(defined IRRLICHT)
+	section
+		vmount ($(SRC_DIR)Irrlicht, $(OBJ_DIR)Irrlicht)
+		.SUBDIRS: $(OBJ_DIR)Irrlicht
+

@@ -75,8 +75,11 @@ char *concat3(const char *A, const char *B, const char *C) {
 };
 
 void module_add_directory(const char *Dir) {
-    FIXUP_PATH(Dir);
+#ifdef LINUX
 	Dir = canonicalize_file_name(Dir);
+#else
+	FIXUP_PATH(Dir);
+#endif
     log_writef("Adding %s to library search path.\n", Dir);
     long Length = strlen(Dir);
     path_node *Node;
@@ -97,7 +100,6 @@ void module_add_directory(const char *Dir) {
 typedef struct loader_node {
 	struct loader_node *Next;
 	module_loader _load;
-	int Length;
 	char Extension[];
 } loader_node;
 
@@ -107,7 +109,6 @@ void module_add_loader(const char *Extension, module_loader _load) {
 	long Length = strlen(Extension) + 1;
 	loader_node *Node = GC_malloc_stubborn(sizeof(loader_node) + Length);
 	memcpy(Node->Extension, Extension, Length);
-	Node->Length = Length - 1;
     Node->_load = _load;
     Node->Next = Loaders;
 	GC_end_stubborn_change(Node);
