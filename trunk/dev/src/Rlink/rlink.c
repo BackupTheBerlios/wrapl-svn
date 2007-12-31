@@ -951,6 +951,7 @@ int main(int Argc, char **Argv) {
 		for (export_t *Export = Exports.Head; Export; Export = Export->Next) {
 			if (Export->Section == 0) {
 				symbol_t *Symbol = (symbol_t *)stringtable_get(GlobalTable, Export->Internal);
+				if (Symbol == 0) Symbol = (symbol_t *)stringtable_get(WeakTable, Export->Internal);
 				if (Symbol) {
 					section_require(Export->Section = Symbol->Section);
 					Export->Offset = Symbol->Offset;

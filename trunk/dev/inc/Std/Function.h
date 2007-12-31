@@ -35,6 +35,7 @@ typedef struct Std$Function_ct Std$Function_ct;
 typedef struct Std$Function_checkedct Std$Function_checkedct;
 typedef struct Std$Function_cstate Std$Function_cstate;
 typedef struct Std$Function_cresumedata Std$Function_cresumedata;
+typedef long (* Std$Function_cresumefn)(Std$Function_cresumedata *Data);
 
 struct Std$Function_asmt {
 	Std$Type_t *Type;
@@ -66,7 +67,7 @@ struct Std$Function_cresumedata {
 
 struct Std$Function_cstate {
 	void *Run, *Chain, *Resume;
-	long (* Invoke)(Std$Function_cresumedata *Data);
+	Std$Function_cresumefn Invoke;
 };
 
 extern Std$Type_t Std$Function$T[];

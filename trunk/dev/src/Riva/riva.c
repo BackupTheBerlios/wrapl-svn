@@ -164,14 +164,6 @@ static int riva_load(module_t *Module, const char *FileName) {
 	module_setup(Module, Riva, (module_importer)riva_import);
 
 	gzFile File = gzopen(FileName, "rb");
-	char *LoadPath;
-	for (int I = strlen(FileName) - 1; I >= 0; --I) {
-		if (FileName[I] == PATHCHR) {
-			strncpy(LoadPath = (char *)GC_malloc_atomic(I + 2), FileName, I + 1);
-			break;
-		};
-	};
-	module_set_path(Module, LoadPath);
 
 	uint32_t Magic; gzread(File, &Magic, 4);
 	if (Magic != 0x41564952) return 0;
@@ -224,7 +216,7 @@ static int riva_load(module_t *Module, const char *FileName) {
 			if (Section->Flags == LIBRARY_ABS) {
 				Section->Path = 0;
 			} else if (Section->Flags == LIBRARY_REL) {
-				Section->Path = LoadPath;
+				Section->Path = module_get_path(Module);
 			};
 			for (char *P = Section->Name; *P; ++P) if (*P == '/') *P = PATHCHR;
 		break;};
@@ -274,7 +266,7 @@ static int riva_load(module_t *Module, const char *FileName) {
 		char *Path = 0;
 		gzread(File, Name, Length);
 		Name[Length] = 0;
-		if (Flags == LIBRARY_REL) Path = LoadPath;
+		if (Flags == LIBRARY_REL) Path = module_get_path(Module);
 		for (char *P = Name; *P; ++P) if (*P == '/') *P = PATHCHR;
 		module_load(Path, Name);
 	};

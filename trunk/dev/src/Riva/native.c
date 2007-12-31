@@ -71,6 +71,7 @@ static int native_load(module_t *Module, const char *FileName) {
 		module_setup(Module, Handle, native_import);
 		return 1;
 	};
+	log_errorf("Error: %s\n", dlerror());
 	return 0;
 };
 
@@ -82,7 +83,7 @@ void native_init(void) {
 	Module = module_alias("libc");
 	module_setup(Module, Handle, native_import);
 	module_export(Module, "atexit", 0, &atexit);
-	
+
 	module_setup(module_alias("libgcc"), Handle, native_import);
 	
 	Module = module_alias("libpthread");
