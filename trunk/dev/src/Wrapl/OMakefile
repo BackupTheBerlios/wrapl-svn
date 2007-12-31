@@ -29,10 +29,10 @@ $(file assembler-internal.c): $(file assembler-internal.dasc)
 $(file keywords.c): $(file keywords.lst)
 	gperf -S 3 -L C++ -C -t -K Name -Z keyword -H hash -N lookup $(file keywords.lst) > $(file keywords.c)
 
-system$(EXT_OBJ): version
+system$(EXT_OBJ): build
 
-version: :value: $(shell svnversion -n ../..)
-	svnversion -n ../.. > version
+build: :value: $(shell svnversion -n ../..)
+	svnversion -n ../.. > build
 
 Wrapl: $(RivaModule Wrapl, $(FILES))
 

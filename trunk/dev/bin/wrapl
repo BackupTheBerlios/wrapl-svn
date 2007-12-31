@@ -21,7 +21,7 @@ DO
 	Out:writes("Warning: unknown argument: ", arg, ".\n")
 ;
 
-Out:write("Interactive Wrapl Version: " + Wrapl.Version + "\n");
+Out:writes("Interactive Wrapl [", Config.Get("version"), ":", Config.Get("build"), "]\n");
 
 VAR session <- Wrapl.SessionNew(In);
 VAR result;
@@ -35,9 +35,9 @@ REP (
 		RECV msg DO msg IN Symbol.NoMethodMessageT => (
 			VAR mod;
 			(mod <- Module.FromVal(result)) => (
-				Out:writes(mod[1]:map("/", "."), ".", mod[2]);
+				Out:writes(mod[1], ".", mod[2]);
 			) // (mod <- Module.FromVal(?result)) => (
-				Out:writes("<", mod[1]:map("/", "."), ".", mod[2], ":", Address.FromVal(result), ">");
+				Out:write('<{mod[1]}.{mod[2]}:{Address.FromVal(result)}>');
 			) // (
 				Out:write("<value>");
 			);

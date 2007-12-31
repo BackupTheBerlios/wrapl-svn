@@ -20,18 +20,10 @@ extern Std$Integer$SmallT
 extern Std$Address$T
 extern Riva$Memory$_alloc
 
-c_data Version
-	dd Std$String$T
-	dd Std$Integer$SmallT, .end - .chars
-	dd 1
-	dd Std$Integer$SmallT, .end - .chars
-	dd Std$Address$T, .chars
-	dd 0, 0, 0, 0
-.chars:
-	db "0.7."
-	incbin "version"
-	db 0
-.end:
+global Build
+c_string Build
+	incbin "build"
+c_strend
 
 c_data WraplT
 	dd Std$Type$T

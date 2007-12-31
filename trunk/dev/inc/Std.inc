@@ -294,4 +294,19 @@ section .methods
 
 %endif
 
+%macro c_string 1
+%1:
+	dd Std$String$T
+	dd Std$Integer$SmallT, .end - .chars
+	dd 1
+	dd Std$Integer$SmallT, .end - .chars
+	dd Std$Address$T, .chars
+	dd 0, 0, 0, 0
+.chars:
+%endmacro
+
+%macro c_strend 0
+.end: db 0
+%endmacro
+
 %endif

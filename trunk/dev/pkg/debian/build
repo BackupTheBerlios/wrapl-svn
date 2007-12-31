@@ -25,6 +25,11 @@ cp ../../../../bin/riva usr/bin
 sed s/"#!INTERPRETER"/"#!\/usr\/bin\/riva"/ ../../../bin/wrapl > usr/bin/wrapl
 chmod a+x usr/bin/wrapl
 cp ../../../bin/riva.conf.linux usr/bin/riva.conf
+cat >> usr/bin/riva.conf <<EOF
+
+config(version, $1)
+config(build, $V)
+EOF
 cp -r ../../../../lib/* usr/lib/riva/
 cd usr/lib/riva
 rm -rf `find -name "\.svn"`
