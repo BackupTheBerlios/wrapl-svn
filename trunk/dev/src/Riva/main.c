@@ -9,6 +9,8 @@
 #include <windows.h>
 #else
 #include <pthread.h>
+#include <signal.h>
+#include <execinfo.h>
 #endif
 
 #include <gc/gc.h>
@@ -83,6 +85,17 @@ static void read_config(void) {
 	ParseArgs = cfg_getbool(Cfg, "parseargs");
 	MainModule = cfg_getstr(Cfg, "module");
 };	
+
+static void segv_handler(int Signal, struct sigcontext Context) {
+	printf("Segmentation fault in ");
+	char *Module, *Symbol;
+	if (module_lookup(GC_base((void *)Context.eip), &Module, &Symbol)) {
+		printf("%s.%s\n", Module, Symbol);
+	} else {
+		printf("0x%x\n", Context.eip);
+	};
+	exit(1);
+};
 
 static const char **Args;
 static unsigned int NoOfArgs = 0;
@@ -204,6 +217,13 @@ int main(int Argc, char **Argv) {
 		NoOfArgs = Argc - 1;
 	};
 finished: 0;
+#ifdef LINUX
+	struct sigaction Action;
+	Action.sa_handler = (void *)segv_handler;
+	sigemptyset(&Action.sa_mask);
+	Action.sa_flags = SA_RESTART;
+	sigaction(SIGSEGV, &Action, NULL);
+#endif
 	module_t *System = module_alias("Riva/System");
 	module_export(System, "_Args", 0, &Args);
 	module_export(System, "_NoOfArgs", 0, &NoOfArgs);

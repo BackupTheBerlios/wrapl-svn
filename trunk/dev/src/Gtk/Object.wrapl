@@ -54,6 +54,7 @@ gobject:rtype <- "Gtk$GObject$Object$T";
 gobject:ctype <- "GObject*";
 gobject:headers <- ["#include <Gtk/GObject/Object.h>"];
 gobject:libraries <- ["Gtk/GObject/Object.rlib"];
+gobject:interfaces <- [];
 Type.Define("GObject*", gobject);
 
 TO :addfield(t@T, name, cname, type) (
@@ -132,6 +133,7 @@ TO :process(t@T, srcdir, incdir, libdir) (
 	VAR cfile <- File.Open(srcdir + base + ".c", File.WRITE + File.TEXT);
 	cfile:writes("#include <Gtk/", base, ".h>\n");
 	cfile:writes("#include <Riva/Memory.h>\n");
+        EVERY t:interfaces:put(t:parents:interfaces:values);
 	VAR method, param, i, returntype, types, names, n, params, ctor, type;
 	EVERY ctor <- t:ctors:values DO (
 		EVERY headers:insert(Type.Lookup(ctor:params:values:type):headers:values);

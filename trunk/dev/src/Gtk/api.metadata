@@ -1,5 +1,29 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <metadata>
+  <remove-node path='/api/namespace/alias[@name="Gboolean"]'/>
+  <remove-node path='/api/namespace/alias[@name="Gchar"]'/>
+  <remove-node path='/api/namespace/alias[@name="Gdouble"]'/>
+  <remove-node path='/api/namespace/alias[@name="Gfloat"]'/>
+  <remove-node path='/api/namespace/alias[@name="Gint"]'/>
+  <remove-node path='/api/namespace/alias[@name="Glong"]'/>
+  <remove-node path='/api/namespace/alias[@name="Gshort"]'/>
+  <remove-node path='/api/namespace/alias[@name="Guchar"]'/>
+  <remove-node path='/api/namespace/alias[@name="Guint"]'/>
+  <remove-node path='/api/namespace/alias[@name="Gulong"]'/>
+  <remove-node path='/api/namespace/alias[@name="Gunichar"]'/>
+  <remove-node path='/api/namespace/alias[@name="Gunichar2"]'/>
+  <remove-node path='/api/namespace/alias[@name="Gushort"]'/>
+  <remove-node path="/api/namespace/struct[@name='GDate']/method[@name='ToStructTm']"/>
+  <remove-node path="/api/namespace/struct[@name='GOnce']"/>
+  <attr path="/api/namespace/enum[@name='GIOFlags']/member[@name='GetMask']" name="value">1 &lt;&lt; 5- 1</attr>
+  <remove-node path="/api/namespace/struct[@name='GIOChannel']/method[@name='Win32GetFd']"/>
+  <remove-node path="/api/namespace/struct[@name='GIOChannel']/method[@name='Win32MakePollfd']"/>
+  <remove-node path="/api/namespace/struct[@name='GIOChannel']/method[@name='Win32NewFd']"/>
+  <remove-node path="/api/namespace/struct[@name='GIOChannel']/method[@name='Win32NewMessages']"/>
+  <remove-node path="/api/namespace/struct[@name='GIOChannel']/method[@name='Win32NewSocket']"/>
+  <remove-node path="/api/namespace/struct[@name='GIOChannel']/method[@name='Win32Poll']"/>
+  <remove-node path="/api/namespace/enum[@name='GTraverseFlags']/member[@name='Leafs']"/>
+  <remove-node path="/api/namespace/enum[@name='GTraverseFlags']/member[@name='NonLeafs']"/>
   <remove-node path="/api/namespace/class/method[@cname='gnome_config_set_set_handler']"/>
   <remove-node path="/api/namespace/class/method[@cname='gnome_config_set_sync_handler']"/>
   <remove-node path="/api/namespace/struct[@cname='GtkCell']"/>
@@ -59,6 +83,9 @@
   </add-node>
   <add-node path="/api/namespace/object[@cname='GtkFileChooserWidget']">
     <implements interface="GtkFileChooser"/>
+  </add-node>
+  <add-node path="/api/namespace/object[@cname='GooCanvasItemSimple']">
+    <implements interface="GooCanvasItem"/>
   </add-node>
   <attr path="/api/namespace/object/method[@cname='gtk_container_get_children']/return-type" name="type">reusable-GList[GObject]*</attr>
   <attr path="/api/namespace/object/method[@cname='gtk_action_group_list_actions']/return-type" name="type">reusable-GList[GObject]*</attr>

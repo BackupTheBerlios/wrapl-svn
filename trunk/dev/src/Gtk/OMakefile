@@ -1,5 +1,5 @@
 .PHONY: GtkAll GtkGObject GtkGtk GtkGdk GtkAtk GtkPango GtkGlade GtkGnome GtkGnomeCanvas GtkArt\
-    GtkCairo GtkCCC GtkGooCanvas GtkPanel GConf
+    GtkCairo GtkCCC GtkGooCanvas GtkPanel GtkGlib GConf
 
 GTK_LIB_DIR = $(LIB_DIR)Gtk$(DIRSEP)
 GTK_SRC_DIR = $(SRC_DIR)Gtk$(DIRSEP)
@@ -32,11 +32,11 @@ clean:
 	$(rm api.xml)
 	$(rm $(GTK_AUTOGEN))
 
-.SUBDIRS: GObject Gtk Gdk Pango Glade
+.SUBDIRS: GObject Gtk Gdk Pango Glade Glib
 
 if $(equal $(OSTYPE), Unix)
 	.SUBDIRS: Gnome GnomeCanvas Art Cairo CCC GooCanvas Panel Conf
 
-Gtk: GtkGObject $(GTK_AUTOGEN) GtkGtk GtkGdk GtkPango GtkGlade $(GTK_LIB_DIR)TypeMap.riva
+Gtk: GtkGObject $(GTK_AUTOGEN) GtkGlib GtkGtk GtkGdk GtkPango GtkGlade $(GTK_LIB_DIR)TypeMap.riva
 
 GtkAll: Gtk GtkGnome GtkGnomeCanvas GtkArt GtkCairo GtkCCC GtkGooCanvas GtkPanel GConf

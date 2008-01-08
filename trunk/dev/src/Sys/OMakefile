@@ -1,6 +1,6 @@
 BASENAME = $(LIB_DIR)Sys$(DIRSEP)
 
-CFLAGS += -std=gnu99
+CFLAGS += -std=gnu99 --save-temps
 LDFLAGS += Std.rlib Riva.rlib
 if $(equal $(OSTYPE), Win32)
 	LDFLAGS += kernel32.rlib

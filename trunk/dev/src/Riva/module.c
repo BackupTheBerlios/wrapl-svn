@@ -116,6 +116,7 @@ void module_add_loader(const char *Extension, module_loader _load) {
 };
 
 int module_lookup(void *Address, const char **ModuleName, const char **SymbolName) {
+	if (Address == 0) return 0;
 	for (int I = 0; I < Modules->Size; ++I) {
 		if (Modules->Entries[I].Key) {
 			module_t *Module = Modules->Entries[I].Value;
