@@ -1,4 +1,5 @@
 #include <IO/Posix.h>
+#include <Util/TypedFunction.h>
 #include <Std.h>
 #include <Riva.h>
 #include <string.h>
@@ -334,4 +335,9 @@ void __init(void *Module) {
 	Util$TypeTable$put(IO$Stream$ReaderT_Methods, ReaderT, &_ReaderT_Methods);
 	Util$TypeTable$put(IO$Stream$WriterT_Methods, WriterT, &_WriterT_Methods);
 	Util$TypeTable$put(IO$Stream$SeekerT_Methods, SeekerT, &_SeekerT_Methods);
+
+	Util$TypedFunction$add(IO$Stream$read, T, posix_read);
+	Util$TypedFunction$add(IO$Stream$readc, T, posix_readc);
+	Util$TypedFunction$add(IO$Stream$readn, T, posix_readn);
+	Util$TypedFunction$add(IO$Stream$readl, T, posix_readl);
 };
