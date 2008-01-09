@@ -83,7 +83,7 @@ static int stream_eoi(IO$Stream_t *Stream) {
 	};
 };
 
-static int stream_read(IO$Stream_t *Stream, char *Buffer, int Count) {
+int stream_read(IO$Stream_t *Stream, char *Buffer, int Count) {
 	Std$Function_result Result;
 	if (Std$Function$call($read, 2, &Result, Stream, 0, Std$Address$new(Buffer), 0, Std$Integer$new_small(Count), 0) < FAILURE) {
 		return ((Std$Integer_smallt *)Result.Val)->Value;
@@ -92,7 +92,7 @@ static int stream_read(IO$Stream_t *Stream, char *Buffer, int Count) {
 	};
 };
 
-static char stream_readc(IO$Stream_t *Stream) {
+char stream_readc(IO$Stream_t *Stream) {
 	Std$Function_result Result;
 	if (Std$Function$call($read, 2, &Result, Stream, 0, Std$Integer$new_small(1), 0) < FAILURE) {
 		Std$String_t *String = Result.Val;
@@ -102,7 +102,7 @@ static char stream_readc(IO$Stream_t *Stream) {
 	};
 };
 
-static char *stream_readn(IO$Stream_t *Stream, int Count) {
+char *stream_readn(IO$Stream_t *Stream, int Count) {
 	Std$Function_result Result;
 	if (Std$Function$call($read, 2, &Result, Stream, 0, Std$Integer$new_small(Count), 0) < FAILURE) {
 		return Std$String$flatten(Result.Val);
@@ -111,7 +111,7 @@ static char *stream_readn(IO$Stream_t *Stream, int Count) {
 	};
 };
 
-static char *stream_readl(IO$Stream_t *Stream) {
+char *stream_readl(IO$Stream_t *Stream) {
 	Std$Function_result Result;
 	if (Std$Function$call($read, 1, &Result, Stream, 0) < FAILURE) {
 		return Std$String$flatten(Result.Val);
