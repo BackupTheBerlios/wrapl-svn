@@ -1,7 +1,7 @@
 BASENAME = $(LIB_DIR)IO$(DIRSEP)
 
 CFLAGS += -std=gnu99
-LDFLAGS += Std.rlib Riva.rlib Util.rlib
+LDFLAGS += Std.rlib Riva.rlib Util.rlib Util/TypedFunction.rlib
 
 LDFLAGS += IO$(DIRSEP)Stream.rlib
 if $(equal $(OSTYPE), Win32)
@@ -14,7 +14,7 @@ else
 	export
 IO:\
     $(RivaModule IO/File, File)\
-    $(RivaModule IO/Stream, Stream)\
+    $(RivaModule IO/Stream, Stream Stream2)\
     $(RivaModule IO/Terminal, Terminal)\
     $(RivaModule IO/Socket, Socket)\
     $(RivaModule IO/$(NATIVE), $(NATIVE))\

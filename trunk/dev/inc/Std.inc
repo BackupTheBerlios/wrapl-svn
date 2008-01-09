@@ -1,5 +1,5 @@
-%ifndef WRAPL_INC
-%define WRAPL_INC
+%ifndef STD_INC
+%define STD_INC
 
 %macro struct 1.nolist
 	%define %1(X) X + %1
@@ -47,12 +47,14 @@ c_type __LINE__, %1
 
 %macro unchecked_func 1
 	global %1
-section .d %+ %s, class=data,use32
+;section .d %+ __LINE__, class=data,use32
+section .d %+ 100, class=data,use32
 align 8
 %1:
 	dd Std$Function$AsmT
 	dd %%here
-section .t %+ %s, class=text,use32
+;section .t %+ __LINE__, class=text,use32
+section .t %+ 100, class=text,use32
 align 8
 %%here:
 %endmacro
@@ -61,7 +63,8 @@ align 8
 	global %1
 	global %1.invoke
 	global %1.unchecked
-section .d %+ %s, class=data,use32
+;section .d %+ __LINE__, class=data,use32
+section .d %+ 100, class=data,use32
 align 8
 %1:
 	dd Std$Function$CheckedAsmT
@@ -73,27 +76,31 @@ align 8
 	dd __LINE__
 %%file:
 	db __FILE__, 0
-section .t %+ %s, class=text,use32
+;section .t %+ __LINE__, class=text,use32
+section .t %+ 100, class=text,use32
 align 8
 .invoke:
 %endmacro
 
 %macro c_func 1
-	section .u %+ %s, class=text,use32
+;section .u %+ __LINE__, class=text,use32
+section .u %+ 100, class=text,use32
 	align 8
 	global %1
 	%1:
 %endmacro
 
 %macro c_data 1
-	section .e %+ %s, class=data,use32
+;section .e %+ __LINE__, class=data,use32
+section .e %+ 100, class=data,use32
 	align 8
 	global %1
 	%1:
 %endmacro
 
 %macro c_type 1
-    section .e %+ %s, class=data,use32
+;section .e %+ __LINE__, class=data,use32
+section .e %+ 100, class=data,use32
     align 8
     global %1
     %1:
@@ -105,11 +112,13 @@ align 8
     .types:
         dd %1
 	dd 0
-    section .u %+ %s, class=text, use32
+;section .u %+ __LINE__, class=text, use32
+section .u %+ 100, class=text, use32
 %endmacro
 
 %macro c_type 2+
-    section .e %+ %s, class=data,use32
+;section .e %+ __LINE__, class=data,use32
+section .e %+ 100, class=data,use32
     align 8
     global %1
     %1:
@@ -121,7 +130,8 @@ align 8
     .types:
         dd %1, %2
 	dd 0
-    section .u %+ %s, class=text, use32
+;section .u %+ __LINE__, class=text, use32
+section .u %+ 100, class=text, use32
 %endmacro
 
 %endif

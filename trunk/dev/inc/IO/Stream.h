@@ -37,6 +37,11 @@ typedef struct IO$Stream_reader_methods {
 	char *(*readl)(IO$Stream_t *);
 } IO$Stream_reader_methods;
 
+RIVA_CFUN(int, read, IO$Stream_t *, char *, int);
+RIVA_CFUN(char, readc, IO$Stream_t *);
+RIVA_CFUN(char *, readn, IO$Stream_t *, int);
+RIVA_CFUN(char *, readl, IO$Stream_t *);
+
 typedef struct IO$Stream_writer_methods {
 	int (*write)(IO$Stream_t *, const char *, int);
 	void (*writec)(IO$Stream_t *, char);
