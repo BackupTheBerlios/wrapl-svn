@@ -3,11 +3,8 @@ BASENAME = $(LIB_DIR)Util$(DIRSEP)
 CFLAGS += -std=gnu99
 LDFLAGS += Std.rlib Riva.rlib
 
-RivaProgram($(BASENAME)StringTable, StringTable)
-RivaProgram($(BASENAME)TypeTable, TypeTable)
-RivaProgram($(BASENAME)ObjectTable, ObjectTable)
-
 Util:\
-	$(BASENAME)StringTable.riva\
-	$(BASENAME)TypeTable.riva\
-	$(BASENAME)ObjectTable.riva
+	$(RivaModule Util/TypedFunction, TypedFunction)\
+	$(RivaModule Util/StringTable, StringTable)\
+	$(RivaModule Util/TypeTable, TypeTable)\
+	$(RivaModule Util/ObjectTable, ObjectTable)
