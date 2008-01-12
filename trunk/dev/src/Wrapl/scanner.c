@@ -90,8 +90,6 @@ const char *Tokens[] = {
 
 scanner_t::scanner_t(IO$Stream_t *Source) {
 	this->Source = Source;
-	IO$Stream_reader_methods *ReaderMethods = (IO$Stream_reader_methods *)Util$TypeTable$get(IO$Stream$ReaderT_Methods, Source->Type);
-	//readl = ReaderMethods->readl;
 	NextChar = "";
 	NextToken.Type = 0;
 	NextToken.LineNo = 0;

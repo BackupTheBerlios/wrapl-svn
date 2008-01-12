@@ -1,6 +1,7 @@
 %include "Std.inc"
 
 extern Riva$Memory$_alloc
+extern Riva$Memory$_alloc_uncollectable
 
 struct table
 	resb 27
@@ -11,6 +12,7 @@ struct table
 .Entries2: resd 1
 	resb 2
 .Space: resd 1
+.Entries3: resd 1
 endstruct
 
 struct node
@@ -115,6 +117,7 @@ c_func _add
 	pop edx
 	pop edx
 	mov [table(esi).Entries], eax
+	mov [table(esi).Entries3], eax
 	add eax, byte 4
 	mov [table(esi).Entries2], eax
 	sub eax, byte 4

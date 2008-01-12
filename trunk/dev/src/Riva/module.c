@@ -247,8 +247,14 @@ module_t *module_load(const char *Path, const char *Name) {
 module_t *module_load_file(const char *FileName) {
 	struct stat Stat;
 	if (stat(FileName, &Stat) == 0) {
+		char *Base = basename(FileName);
+		int Length = Base - FileName;
+		char *Path = GC_malloc_atomic(Length + 1);
+		memcpy(Path, FileName, Length);
+		Path[Length] = 0;
 		module_t *Module = new(module_t);
 		Module->Name = FileName;
+		Module->Path = Path;
 		Module->Import = default_import;
 		for (loader_node *Loader = Loaders; Loader; Loader = Loader->Next) {
 			if (Loader->_load(Module, FileName)) return Module;
@@ -260,8 +266,14 @@ module_t *module_load_file(const char *FileName) {
 module_t *module_load_file_type(const char *FileName, const char *Type) {
 	struct stat Stat;
 	if (stat(FileName, &Stat) == 0) {
+		char *Base = basename(FileName);
+		int Length = Base - FileName;
+		char *Path = GC_malloc_atomic(Length + 1);
+		memcpy(Path, FileName, Length);
+		Path[Length] = 0;
 		module_t *Module = new(module_t);
 		Module->Name = FileName;
+		Module->Path = Path;
 		Module->Import = default_import;
 		for (loader_node *Loader = Loaders; Loader; Loader = Loader->Next) {
 			if (strcmp(Loader->Extension, Type) == 0) {

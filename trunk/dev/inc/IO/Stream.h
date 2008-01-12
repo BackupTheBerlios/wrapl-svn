@@ -24,48 +24,27 @@ extern Std$Type_t IO$Stream$SeekerT[];
 
 extern Std$Type_t IO$Stream$MessageT[];
 
-typedef struct IO$Stream_t_methods {
-	void (*flush)(IO$Stream_t *);
-	void (*close)(IO$Stream_t *);
-} IO$Stream_t_methods;
-
-typedef struct IO$Stream_reader_methods {
-	int (*eoi)(IO$Stream_t *);
-	int (*read)(IO$Stream_t *, char *, int);
-	char (*readc)(IO$Stream_t *);
-	char *(*readn)(IO$Stream_t *, int);
-	char *(*readl)(IO$Stream_t *);
-} IO$Stream_reader_methods;
-
+RIVA_CFUN(void, flush, IO$Stream_t *);
+RIVA_CFUN(void, close, IO$Stream_t *);
+RIVA_CFUN(int, eoi, IO$Stream_t *);
 RIVA_CFUN(int, read, IO$Stream_t *, char *, int);
 RIVA_CFUN(char, readc, IO$Stream_t *);
 RIVA_CFUN(char *, readn, IO$Stream_t *, int);
 RIVA_CFUN(char *, readl, IO$Stream_t *);
-
-typedef struct IO$Stream_writer_methods {
-	int (*write)(IO$Stream_t *, const char *, int);
-	void (*writec)(IO$Stream_t *, char);
-	void (*writes)(IO$Stream_t *, const char *);
-	void (*writef)(IO$Stream_t *, const char *, ...);
-} IO$Stream_writer_methods;
+RIVA_CFUN(int, write, IO$Stream_t *, const char *, int);
+RIVA_CFUN(void, writec, IO$Stream_t *, char);
+RIVA_CFUN(void, writes, IO$Stream_t *, const char *);
+RIVA_CFUN(void, writef, IO$Stream_t *, const char *, ...);
+RIVA_CFUN(int, seek, IO$Stream_t *, int, int);
+RIVA_CFUN(int, tell, IO$Stream_t *);
 
 #define IO$Stream_SEEK_SET 0
 #define IO$Stream_SEEK_CUR 1
 #define IO$Stream_SEEK_END 2
 
-typedef struct IO$Stream_seeker_methods {
-	int (*seek)(IO$Stream_t *, int, int);
-	int (*tell)(IO$Stream_t *);
-} IO$Stream_seeker_methods;
-
 extern Std$Integer_smallt IO$Stream$SEEK_SET[];
 extern Std$Integer_smallt IO$Stream$SEEK_CUR[];
 extern Std$Integer_smallt IO$Stream$SEEK_END[];
-
-extern Util$TypeTable_t IO$Stream$T_Methods[];
-extern Util$TypeTable_t IO$Stream$ReaderT_Methods[];
-extern Util$TypeTable_t IO$Stream$WriterT_Methods[];
-extern Util$TypeTable_t IO$Stream$SeekerT_Methods[];
 
 #undef RIVA_MODULE
 

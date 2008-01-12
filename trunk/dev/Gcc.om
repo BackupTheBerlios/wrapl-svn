@@ -148,7 +148,7 @@ foreach(CXX_EXT, $(CXX_EXTS))
 
     export
 
-%$(EXT_OBJ): %.asm
+%$(EXT_OBJ): %.asm :scanner: scan-asm-%.asm
     $(AS) $(ASFLAGS) $(PREFIXED_INCLUDES) $(ASOUT)$@ $<
 
 %.c: %.y
@@ -195,6 +195,7 @@ public.CGeneratedFiles(files) =
 public.LocalCGeneratedFiles(files) =
     .SCANNER: scan-c-%: $(files)
     .SCANNER: scan-cxx-%: $(files)
+	.SCANNER: scan-asm-%: $(files)
     .SCANNER: %$(EXT_OBJ): $(files)
     export
 
@@ -219,7 +220,7 @@ foreach(CXX_EXT, $(CXX_EXTS))
 
     export
 
-.SCANNER: scan-c-%.asm: %.asm /.PHONY/CGeneratedFilesTarget :value: $(digest-in-path-optional $(INCLUDES), $&)
+.SCANNER: scan-asm-%.asm: %.asm /.PHONY/CGeneratedFilesTarget :value: $(digest-in-path-optional $(INCLUDES), $&)
 	$(AS) $(ASFLAGS) $(PREFIXED_INCLUDES) -M $<
 
 # Define a function to build a C-library

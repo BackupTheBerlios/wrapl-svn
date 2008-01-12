@@ -1,4 +1,5 @@
 #include <IO/Stream.h>
+#include <Util/TypedFunction.h>
 #include <Std.h>
 #include <Riva/Memory.h>
 #include <stdio.h>
@@ -29,6 +30,20 @@ METHOD("@", TYP, MessageT, VAL, Std$String$T) {
 	Result->Val = Std$String$new(Msg->Message);
 	return SUCCESS;
 };
+
+extern void _flush(IO$Stream_t *);
+extern void _close(IO$Stream_t *);
+extern int _eoi(IO$Stream_t *);
+extern int _read(IO$Stream_t *, char *, int);
+extern char _readc(IO$Stream_t *);
+extern char *_readn(IO$Stream_t *, int);
+extern char *_readl(IO$Stream_t *);
+extern int _write(IO$Stream_t *, const char *, int);
+extern void _writec(IO$Stream_t *, char);
+extern void _writes(IO$Stream_t *, const char *);
+extern void _writef(IO$Stream_t *, const char *, ...);
+extern int _seek(IO$Stream_t *, int, int);
+extern int _tell(IO$Stream_t *);
 
 static IO$Stream_messaget ConvertMessage[] = {{MessageT, "Conversion Error"}};
 
@@ -83,7 +98,7 @@ static int stream_eoi(IO$Stream_t *Stream) {
 	};
 };
 
-int stream_read(IO$Stream_t *Stream, char *Buffer, int Count) {
+static int stream_read(IO$Stream_t *Stream, char *Buffer, int Count) {
 	Std$Function_result Result;
 	if (Std$Function$call($read, 2, &Result, Stream, 0, Std$Address$new(Buffer), 0, Std$Integer$new_small(Count), 0) < FAILURE) {
 		return ((Std$Integer_smallt *)Result.Val)->Value;
@@ -92,7 +107,7 @@ int stream_read(IO$Stream_t *Stream, char *Buffer, int Count) {
 	};
 };
 
-char stream_readc(IO$Stream_t *Stream) {
+static char stream_readc(IO$Stream_t *Stream) {
 	Std$Function_result Result;
 	if (Std$Function$call($read, 2, &Result, Stream, 0, Std$Integer$new_small(1), 0) < FAILURE) {
 		Std$String_t *String = Result.Val;
@@ -102,7 +117,7 @@ char stream_readc(IO$Stream_t *Stream) {
 	};
 };
 
-char *stream_readn(IO$Stream_t *Stream, int Count) {
+static char *stream_readn(IO$Stream_t *Stream, int Count) {
 	Std$Function_result Result;
 	if (Std$Function$call($read, 2, &Result, Stream, 0, Std$Integer$new_small(Count), 0) < FAILURE) {
 		return Std$String$flatten(Result.Val);
@@ -111,7 +126,7 @@ char *stream_readn(IO$Stream_t *Stream, int Count) {
 	};
 };
 
-char *stream_readl(IO$Stream_t *Stream) {
+static char *stream_readl(IO$Stream_t *Stream) {
 	Std$Function_result Result;
 	if (Std$Function$call($read, 1, &Result, Stream, 0) < FAILURE) {
 		return Std$String$flatten(Result.Val);
@@ -172,49 +187,17 @@ static int stream_tell(IO$Stream_t *Stream) {
 	};
 };
 
-static IO$Stream_t_methods _T_Methods = {
-	stream_flush,
-	stream_close
-};
-
-static IO$Stream_reader_methods _ReaderT_Methods = {
-	stream_eoi,
-	stream_read,
-	stream_readc,
-	stream_readn,
-	stream_readl
-};
-
-static IO$Stream_writer_methods _WriterT_Methods = {
-	stream_write,
-	stream_writec,
-	stream_writes,
-	stream_writef
-};
-
-static IO$Stream_seeker_methods _SeekerT_Methods = {
-	stream_seek,
-	stream_tell
-};
-
-Util$TypeTable_t T_Methods[] = {Util$TypeTable$INIT};
-Util$TypeTable_t ReaderT_Methods[] = {Util$TypeTable$INIT};
-Util$TypeTable_t WriterT_Methods[] = {Util$TypeTable$INIT};
-Util$TypeTable_t SeekerT_Methods[] = {Util$TypeTable$INIT};
-
 METHOD("copy", TYP, ReaderT, TYP, WriterT, TYP, Std$Integer$SmallT) {
 	IO$Stream_t *Rd = Args[0].Val;
 	IO$Stream_t *Wr = Args[1].Val;
 	int Rem = ((Std$Integer_smallt *)Args[2].Val)->Value;
-	IO$Stream_reader_methods *RdMethods = Util$TypeTable$get(ReaderT_Methods, Rd->Type);
-	IO$Stream_writer_methods *WrMethods = Util$TypeTable$get(WriterT_Methods, Wr->Type);
 	char Buffer[1024];
 	while (Rem > 1024) {
-		int Read = RdMethods->read(Rd, Buffer, 1024);
+		int Read = _read(Rd, Buffer, 1024);
 		Rem -= Read;
 		char *Ptr = Buffer;
 		while (Read) {
-			int Written = WrMethods->write(Wr, Ptr, Read);
+			int Written = _write(Wr, Ptr, Read);
 			Read -= Written;
 			Ptr += Written;
 		};
@@ -222,13 +205,13 @@ METHOD("copy", TYP, ReaderT, TYP, WriterT, TYP, Std$Integer$SmallT) {
 	char *Ptr = Buffer;
 	int Rem2 = Rem;
 	while (Rem) {
-		int Read = RdMethods->read(Rd, Ptr, Rem);
+		int Read = _read(Rd, Ptr, Rem);
 		Rem -= Read;
 		Ptr += Read;
 	};
 	Ptr = Buffer;
 	while (Rem2) {
-		int Written = WrMethods->write(Wr, Ptr, Rem2);
+		int Written = _write(Wr, Ptr, Rem2);
 		Rem2 -= Written;
 		Ptr += Written;
 	};
@@ -236,8 +219,17 @@ METHOD("copy", TYP, ReaderT, TYP, WriterT, TYP, Std$Integer$SmallT) {
 };
 
 void __init(void *Module) {
-	Util$TypeTable$put(T_Methods, T, &_T_Methods);
-	Util$TypeTable$put(ReaderT_Methods, ReaderT, &_ReaderT_Methods);
-	Util$TypeTable$put(WriterT_Methods, WriterT, &_WriterT_Methods);
-	Util$TypeTable$put(SeekerT_Methods, SeekerT, &_SeekerT_Methods);
+	Util$TypedFunction$add(_flush, T, stream_flush);
+	Util$TypedFunction$add(_close, T, stream_close);
+	Util$TypedFunction$add(_eoi, ReaderT, stream_eoi);
+	Util$TypedFunction$add(_read, ReaderT, stream_read);
+	Util$TypedFunction$add(_readc, ReaderT, stream_readc);
+	Util$TypedFunction$add(_readn, ReaderT, stream_readn);
+	Util$TypedFunction$add(_readl, ReaderT, stream_readl);
+	Util$TypedFunction$add(_write, WriterT, stream_write);
+	Util$TypedFunction$add(_writec, WriterT, stream_writec);
+	Util$TypedFunction$add(_writes, WriterT, stream_writes);
+	Util$TypedFunction$add(_writef, WriterT, stream_writef);
+	Util$TypedFunction$add(_seek, SeekerT, stream_seek);
+	Util$TypedFunction$add(_tell, SeekerT, stream_tell);
 };

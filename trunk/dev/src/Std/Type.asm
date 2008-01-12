@@ -292,11 +292,11 @@ unchecked_func New
 	jmp .sort
 
 %macro field_getter 1
-section .dfields class=data, use32
+section .dfields noexec
 get_field_%1:
 	dd Std$Function$AsmT
 	dd %%here
-section .cfields class=text, use32
+section .cfields exec
 %%here:
 	mov edx, [argument(edi).Val]
 	add edx, 4 + (4 * %1)
@@ -305,7 +305,7 @@ section .cfields class=text, use32
 	ret
 %endmacro
 
-section .dfields class=data,use32
+section .dfields noexec
 align 8
 FieldGetter:
 %assign i 0

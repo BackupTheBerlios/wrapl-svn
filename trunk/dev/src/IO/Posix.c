@@ -305,39 +305,18 @@ METHOD("poll", TYP, T, TYP, Std$Integer$SmallT, TYP, Std$Integer$SmallT) {
 	return SUCCESS;
 };
 
-static IO$Stream_t_methods _T_Methods = {
-	posix_flush,
-	posix_close
-};
-
-static IO$Stream_reader_methods _ReaderT_Methods = {
-	posix_eoi,
-	posix_read,
-	posix_readc,
-	posix_readn,
-	posix_readl
-};
-
-static IO$Stream_writer_methods _WriterT_Methods = {
-	posix_write,
-	posix_writec,
-	posix_writes,
-	posix_writef
-};
-
-static IO$Stream_seeker_methods _SeekerT_Methods = {
-	posix_seek,
-	posix_tell
-};
-
 void __init(void *Module) {
-	Util$TypeTable$put(IO$Stream$T_Methods, T, &_T_Methods);
-	Util$TypeTable$put(IO$Stream$ReaderT_Methods, ReaderT, &_ReaderT_Methods);
-	Util$TypeTable$put(IO$Stream$WriterT_Methods, WriterT, &_WriterT_Methods);
-	Util$TypeTable$put(IO$Stream$SeekerT_Methods, SeekerT, &_SeekerT_Methods);
-
-	Util$TypedFunction$add(IO$Stream$read, T, posix_read);
-	Util$TypedFunction$add(IO$Stream$readc, T, posix_readc);
-	Util$TypedFunction$add(IO$Stream$readn, T, posix_readn);
-	Util$TypedFunction$add(IO$Stream$readl, T, posix_readl);
+	Util$TypedFunction$add(IO$Stream$flush, T, posix_flush);
+	Util$TypedFunction$add(IO$Stream$close, T, posix_close);
+	Util$TypedFunction$add(IO$Stream$eoi, ReaderT, posix_eoi);
+	Util$TypedFunction$add(IO$Stream$read, ReaderT, posix_read);
+	Util$TypedFunction$add(IO$Stream$readc, ReaderT, posix_readc);
+	Util$TypedFunction$add(IO$Stream$readn, ReaderT, posix_readn);
+	Util$TypedFunction$add(IO$Stream$readl, ReaderT, posix_readl);
+	Util$TypedFunction$add(IO$Stream$write, WriterT, posix_write);
+	Util$TypedFunction$add(IO$Stream$writec, WriterT, posix_writec);
+	Util$TypedFunction$add(IO$Stream$writes, WriterT, posix_writes);
+	Util$TypedFunction$add(IO$Stream$writef, WriterT, posix_writef);
+	Util$TypedFunction$add(IO$Stream$seek, SeekerT, posix_seek);
+	Util$TypedFunction$add(IO$Stream$tell, SeekerT, posix_tell);
 };

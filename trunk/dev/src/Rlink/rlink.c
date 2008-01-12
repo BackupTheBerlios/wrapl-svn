@@ -451,7 +451,7 @@ static void bfd_section_setup(bfd_section_t *Section) {
 };
 
 static void bfd_section_debug(bfd_section_t *Section, FILE *File) {
-	fprintf(File, "%d: text section: %d[%d]\n", ((section_t *)Section)->Index, Section->Size, Section->Flags);
+	fprintf(File, "%d: text section: %d[%s]\n", ((section_t *)Section)->Index, Section->Size, (Section->Flags & FLAG_GC) ? "GC" : "NOGC");
 
 	if (!(Section->Flags & FLAG_GC)) {
 		ud_t UD[1];
@@ -464,7 +464,7 @@ static void bfd_section_debug(bfd_section_t *Section, FILE *File) {
 
 	for (unsigned long I = 0; I < Section->NoOfRelocs; ++I) {
 		relocation_t *Reloc = &Section->Relocs[I];
-		fprintf(File, "\t%4d:\t%d[%d|%d]\n", Reloc->Position, Reloc->Section->Index, Reloc->Size, Reloc->Flags);
+		fprintf(File, "\t%4x:\t%d[%d|%d]\n", Reloc->Position, Reloc->Section->Index, Reloc->Size, Reloc->Flags);
 	};
 };
 
@@ -497,6 +497,7 @@ static bfd_section_t *new_bfd_section(asection *Sect, bfd *Bfd, bfd_info_t *BfdI
 	Section->BfdInfo = BfdInfo;
 	Section->Sect = Sect;
 	Section->Next = 0;
+	Section->Flags = 0;
 	if (Sect->flags & SEC_DATA) Section->Flags |= FLAG_GC;
 	return Section;
 };

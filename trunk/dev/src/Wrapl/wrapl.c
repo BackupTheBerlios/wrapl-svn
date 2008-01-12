@@ -15,10 +15,9 @@ static int wrapl_load(Riva$Module_t *Module, const char *Path) {
 	Module0->Type = Sys$Module$T;
 	Module0->Handle = Module;
 	IO$Stream_t *Source = (IO$Stream_t *)IO$File$open(Path, IO$File$OPENREAD | IO$File$OPENTEXT);
-	IO$Stream_t_methods *Methods = (IO$Stream_t_methods *)Util$TypeTable$get(IO$Stream$T_Methods, Source->Type);
 	scanner_t *Scanner = new scanner_t(Source);
 	if (setjmp(Scanner->Error.Handler)) {
-		Methods->close(Source);
+		IO$Stream$close(Source);
 		printf("%s(%d): %s\n", Path, Scanner->Error.LineNo, Scanner->Error.Message);
 		return 0;
 	};
@@ -26,11 +25,11 @@ static int wrapl_load(Riva$Module_t *Module, const char *Path) {
 	if (Scanner->parse(tkHASH) || Scanner->parse(tkAT)) {
 		Scanner->flush();
 		Expr = parse_module(Scanner, Module0);
-		Methods->close(Source);
+		IO$Stream$close(Source);
 		if (Expr == 0) return 0;
 	} else {
 		Expr = accept_module(Scanner, Module0);
-		Methods->close(Source);
+		IO$Stream$close(Source);
 	};
 #ifdef PARSER_LISTING
 	Expr->print(0);
