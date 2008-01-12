@@ -15,7 +15,7 @@ c_type T
 ;  the type of all types
 c_func T.invoke
 	push ecx
-	mov eax, [type(ecx).Fields]
+	mov eax, [type0(ecx).Fields]
 	mov eax, [small_int(array(eax).Length).Value]
 	push eax
 	lea eax, [4 * eax + 4]
@@ -75,10 +75,10 @@ c_func _new
 ;	add esp, byte 4
 ;	mov [value(eax).Type], dword T
 ;	pop ecx
-;	pop dword [type(eax).Levels]
-;	pop dword [type(eax).Fields]
+;	pop dword [type0(eax).Levels]
+;	pop dword [type0(eax).Fields]
 ;	mov [ecx], eax
-;	mov [type(eax).Types], ecx
+;	mov [type0(eax).Types], ecx
 ;	ret
 
 extern Std$Symbol$_typetable_put
@@ -91,7 +91,7 @@ unchecked_func New
 ;:T
 	push edi
 	push esi
-	push byte sizeof(type)
+	push byte sizeof(type0)
 	call Riva$Memory$_alloc
 	mov [esp], eax
 	mov [value(eax).Type], dword T
@@ -102,10 +102,10 @@ unchecked_func New
 	jz near .noparents
 .sizeloop:
 	mov eax, [argument(edi + 8 * esi).Val]
-	mov ebx, [type(eax).Fields]
+	mov ebx, [type0(eax).Fields]
 	mov ebx, [small_int(array(ebx).Length).Value]
 	add [esp], ebx
-	mov ebx, [type(eax).Levels]
+	mov ebx, [type0(eax).Levels]
 	mov ebx, [levels(ebx).Length]
 	add [esp + 4], ebx
 	dec esi
@@ -147,7 +147,7 @@ unchecked_func New
 	dec ebx
 .fieldcopyloop:
 	mov esi, [argument(edx + 8 * ebx).Val]
-	mov esi, [type(esi).Fields]
+	mov esi, [type0(esi).Fields]
 	mov ecx, [small_int(array(esi).Length).Value]
 	mov esi, [array(esi).Values]
 	rep movsd
@@ -160,8 +160,8 @@ unchecked_func New
 	add edi, byte 4
 .typecopyloop:
 	mov esi, [argument(edx + 8 * ebx).Val]
-	mov ecx, [type(esi).Levels]
-	mov esi, [type(esi).Types]
+	mov ecx, [type0(esi).Levels]
+	mov esi, [type0(esi).Types]
 	mov ecx, [levels(ecx).Length]
 	rep movsd
 	dec ebx
@@ -174,7 +174,7 @@ unchecked_func New
 	dec ebx
 .levelcopyloop:
 	mov esi, [argument(edx + 8 * ebx).Val]
-	mov esi, [type(esi).Levels]
+	mov esi, [type0(esi).Levels]
 	mov ecx, [levels(esi).Length]
 .levelcopyloop0:
 	add esi, byte 4
@@ -225,9 +225,9 @@ unchecked_func New
 .nofields:
 	add esp, byte 8
 	mov ecx, [esp + 20]
-	pop dword [type(ecx).Levels]
-	pop dword [type(ecx).Types]
-	pop dword [type(ecx).Fields]
+	pop dword [type0(ecx).Levels]
+	pop dword [type0(ecx).Types]
+	pop dword [type0(ecx).Fields]
 	xor edx, edx
 	add esp, byte 20
 	xor eax, eax

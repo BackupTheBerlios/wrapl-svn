@@ -17,4 +17,4 @@ unchecked_func New
 	add edi, byte sizeof(argument)
 	dec esi
 	mov eax, [value(ecx).Type]
-	jmp [type(eax).Invoke]
+	jmp [type0(eax).Invoke]

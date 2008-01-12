@@ -5,8 +5,6 @@ extern Riva$Memory$_alloc_atomic
 extern Riva$Memory$_alloc_small
 extern Std$Type$T
 
-section .data
-
 c_type T
 .invoke: equ 0
 

@@ -53,7 +53,7 @@ method "insert", TYP, T, ANY, ANY
 
 method "[]", TYP, T, TYP, Std$Type$T
 	mov esi, [argument(edi + 8).Val]
-	mov esi, [type(esi).Types]
+	mov esi, [type0(esi).Types]
 	mov ebx, [esi]
 .type_loop:
 	mov ecx, ebx
@@ -311,7 +311,7 @@ c_func _get
 	push esi
 	push ebp
 	mov esi, [esp + 24]
-	mov esi, [type(esi).Types]
+	mov esi, [type0(esi).Types]
 	mov ebx, [esi]
 .type_loop:
 	mov ecx, ebx

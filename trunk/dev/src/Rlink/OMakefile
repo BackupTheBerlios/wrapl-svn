@@ -1,6 +1,7 @@
 BASENAME = $(DEV_BIN)rlink
 PROGRAM = $(BASENAME)$(EXE)
 
+#ASFLAGS += -g stabs
 CFLAGS += -O3 -std=gnu99
 
 FILES[] =
@@ -12,7 +13,7 @@ if $(equal $(OSTYPE), Win32)
 	export
 
 if $(equal $(OSTYPE), Unix)
-	LDFLAGS += -lz -llua5.1 -lbfd -s
+	LDFLAGS += -lz -llua5.1 -lbfd -s -ludis86
 	export
 
 CProgram($(BASENAME), $(FILES))

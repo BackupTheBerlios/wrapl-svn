@@ -1,6 +1,7 @@
-section .text class=code use32
-section .data class=data use32
-section .bss class=bss use32
+bits 32
+;section .text class=code use32
+;section .data class=data use32
+;section .bss class=bss use32
 
 %macro struct 1.nolist
 	%define %1(X) X + %1

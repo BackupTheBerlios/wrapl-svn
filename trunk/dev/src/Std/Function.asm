@@ -114,7 +114,7 @@ c_func _call
 	mov esi, [esp + 20]
 	mov ecx, [esp + 16]
 	mov eax, [value(ecx).Type]
-	call [type(eax).Invoke]
+	call [type0(eax).Invoke]
 	mov edi, [esp + 24]
 	;cmp eax, byte 0
 	;jl .state
@@ -161,7 +161,7 @@ c_func _invoke
 	mov esi, [esp + 20]
 	mov ecx, [esp + 16]
 	mov eax, [value(ecx).Type]
-	call [type(eax).Invoke]
+	call [type0(eax).Invoke]
 	mov edi, [esp + 24]
 ;	cmp eax, byte 0
 ;	jl .state

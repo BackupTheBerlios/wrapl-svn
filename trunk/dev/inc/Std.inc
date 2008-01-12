@@ -1,6 +1,35 @@
 %ifndef STD_INC
 %define STD_INC
 
+bits32
+section .symbols noexec
+section .methods noexec
+section .text
+
+%macro __newsect 3
+%ifdef WINDOWS
+	section %1%2 class=%3 use32
+%else
+	[section %1%2 %3]
+%endif
+%endmacro
+
+%macro textsect 0
+%ifdef WINDOWS
+	__newsect .t, __LINE__, text
+%else
+	__newsect .t, __LINE__, exec
+%endif
+%endmacro
+
+%macro datasect 0
+%ifdef WINDOWS
+	__newsect .d, __LINE__, data
+%else
+	__newsect .d, __LINE__, noexec
+%endif
+%endmacro
+
 %macro struct 1.nolist
 	%define %1(X) X + %1
 	struc %1
@@ -46,25 +75,22 @@ c_type __LINE__, %1
 %endmacro
 
 %macro unchecked_func 1
-	global %1
-;section .d %+ __LINE__, class=data,use32
-section .d %+ 100, class=data,use32
+	global %1:data
+datasect
 align 8
 %1:
 	dd Std$Function$AsmT
 	dd %%here
-;section .t %+ __LINE__, class=text,use32
-section .t %+ 100, class=text,use32
+textsect
 align 8
 %%here:
 %endmacro
 
 %macro func 2
-	global %1
-	global %1.invoke
-	global %1.unchecked
-;section .d %+ __LINE__, class=data,use32
-section .d %+ 100, class=data,use32
+	global %1:data
+	global %1.invoke:function
+	global %1.unchecked:data
+datasect
 align 8
 %1:
 	dd Std$Function$CheckedAsmT
@@ -76,33 +102,29 @@ align 8
 	dd __LINE__
 %%file:
 	db __FILE__, 0
-;section .t %+ __LINE__, class=text,use32
-section .t %+ 100, class=text,use32
+textsect
 align 8
 .invoke:
 %endmacro
 
 %macro c_func 1
-;section .u %+ __LINE__, class=text,use32
-section .u %+ 100, class=text,use32
+textsect
 	align 8
-	global %1
+	global %1:function
 	%1:
 %endmacro
 
 %macro c_data 1
-;section .e %+ __LINE__, class=data,use32
-section .e %+ 100, class=data,use32
+datasect
 	align 8
-	global %1
+	global %1:data
 	%1:
 %endmacro
 
 %macro c_type 1
-;section .e %+ __LINE__, class=data,use32
-section .e %+ 100, class=data,use32
+datasect
     align 8
-    global %1
+    global %1:data
     %1:
         dd Std$Type$T
         dd .types
@@ -112,15 +134,13 @@ section .e %+ 100, class=data,use32
     .types:
         dd %1
 	dd 0
-;section .u %+ __LINE__, class=text, use32
-section .u %+ 100, class=text, use32
+textsect
 %endmacro
 
 %macro c_type 2+
-;section .e %+ __LINE__, class=data,use32
-section .e %+ 100, class=data,use32
+datasect
     align 8
-    global %1
+    global %1:data
     %1:
         dd Std$Type$T
         dd .types
@@ -130,8 +150,7 @@ section .e %+ 100, class=data,use32
     .types:
         dd %1, %2
 	dd 0
-;section .u %+ __LINE__, class=text, use32
-section .u %+ 100, class=text, use32
+textsect
 %endmacro
 
 %endif
@@ -140,7 +159,14 @@ struct value
 	.Type:		resd 1
 endstruct
 
-struct type, value
+;struct type, value
+;	.Types:			resd 1
+;	.Invoke:		resd 1; invoke(value, args, count)
+;	.Fields:		resd 1
+;	.Levels:		resd 1
+;endstruct
+
+struct type0, value
 	.Types:			resd 1
 	.Invoke:		resd 1; invoke(value, args, count)
 	.Fields:		resd 1
@@ -283,11 +309,13 @@ section .symbols
 section .methods
 	dd %%SYMBOL
 	dd %2, 0
-	dd unchecked_func %+ __LINE__
-section .data
+	dd %%FUNCTION
+datasect
 align 8
-unchecked_func %+ __LINE__: dd Std$Function$AsmT, %%entry
-section .methodtext
+%%FUNCTION:
+	dd Std$Function$AsmT, %%entry
+textsect
+method %+ __LINE__:
 align 8
 %%entry:
 %endmacro
@@ -318,5 +346,7 @@ section .methods
 %macro c_strend 0
 .end: db 0
 %endmacro
+
+textsect
 
 %endif

@@ -2,10 +2,6 @@ open build/Common
 ASM_EXT = .asm
 open Gcc
 
-.SCANNER: scan-c-%.asm: %.asm /.PHONY/CGeneratedFilesTarget :value: $(digest-in-path-optional $(INCLUDES), $&)
-	$(AS) $(ASFLAGS) $(PREFIXED_INCLUDES) -M $<
-
-
 DefineCommandVars()
 
 BIN_DIR = $(dir ../bin)$(DIRSEP)

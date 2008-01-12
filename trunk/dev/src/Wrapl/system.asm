@@ -80,7 +80,7 @@ global backtrack
 section .text
 invoke_function:
 	mov eax, [value(ecx).Type]
-	call [type(eax).Invoke]
+	call [type0(eax).Invoke]
 .loop:
 	pop esi
 	pop edi

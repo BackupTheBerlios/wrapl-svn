@@ -88,12 +88,12 @@ static void read_config(void) {
 
 static void segv_handler(int Signal, struct sigcontext Context) {
 	printf("Segmentation fault in ");
-	char *Module, *Symbol;
-	if (module_lookup(GC_base((void *)Context.eip), &Module, &Symbol)) {
-		printf("%s.%s\n", Module, Symbol);
-	} else {
-		printf("0x%x\n", Context.eip);
-	};
+	//char *Module, *Symbol;
+	//if (module_lookup(GC_base((void *)Context.eip), &Module, &Symbol)) {
+	//	printf("%s.%s\n", Module, Symbol);
+	//} else {
+	//	printf("0x%x\n", Context.eip);
+	//};
 	exit(1);
 };
 

@@ -6,7 +6,6 @@
 extern Std$Type$T
 extern Std$Function$T
 extern Riva$Memory$_alloc
-extern Riva$Memory$_alloc_uncollectable
 
 struct __arg__
 	.Types:	resd 1
@@ -203,14 +202,14 @@ proceed %+ %1:;(index, score, table)
 	ret 8
 %endmacro
 
-section .text
+textsect
 %assign i 1
 %rep 64
 	_proceed_ i
 	%assign i i + 1
 %endrep
 
-section .data
+datasect
 Proceed:
 	dd 0
 %assign i 1
@@ -220,7 +219,7 @@ Proceed:
 %endrep
 
 c_type T, Std$Function$T
-c_data T.invoke
+c_func T.invoke
 	push esi
 	push edi
 	mov ebx, esi
@@ -235,7 +234,7 @@ c_data T.invoke
 	mov eax, [argument(edi + 8 * esi).Val]
 	mov edx, [value(eax).Type]
 	push eax
-	push dword [type(edx).Types]
+	push dword [type0(edx).Types]
 	dec esi
 	jns .argloop
 	mov eax, ecx
@@ -250,13 +249,13 @@ c_data T.invoke
 	pop edi
 	pop esi
 	mov eax, [value(ecx).Type]
-	jmp [type(eax).Invoke]
+	jmp [type0(eax).Invoke]
 .noargs:
 	mov ecx, [symbol(ecx).Function]
 	pop edi
 	pop esi
 	mov eax, [value(ecx).Type]
-	jmp [type(eax).Invoke]
+	jmp [type0(eax).Invoke]
 
 c_data NoMethodMessageT
 	dd Std$Type$T
@@ -402,6 +401,7 @@ unchecked_func Set
 	ret
 
 c_func _add_methods;(methods)
+	;int3
 	push ebp
 	push esi
 	push edi
@@ -423,13 +423,6 @@ c_func _add_methods;(methods)
 	mov ebx, [edi]
 	add edi, byte 4
 	jmp [.select + 4 * ebx]
-section .data
-.select:
-	dd .end
-	dd .skp
-	dd .val
-	dd .typ
-section .text
 .end:
 	mov ebx, [edi]
 	add edi, byte 4
@@ -461,6 +454,13 @@ section .text
 	call typetable_put
 	pop edi
 	jmp .add
+datasect
+.select:
+	dd .end
+	dd .skp
+	dd .val
+	dd .typ
+
 
 c_func _typetable_put;(table, type)
 typetable_put:

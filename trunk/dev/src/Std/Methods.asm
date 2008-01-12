@@ -428,7 +428,7 @@ method "@", ADDRESS, VAL, Std$String$T
 	xor edx, edx
 	xor eax, eax
 	ret
-section .data
+datasect
 .format:
 	db "%x", 0, 0
 
@@ -436,7 +436,7 @@ method "@", ANY, TYP, Std$Type$T
 	mov ecx, [argument(edi).Val]
 	mov edx, [argument(edi + 8).Val]
 	mov eax, [value(ecx).Type]
-	mov eax, [type(eax).Types]
+	mov eax, [type0(eax).Types]
 .loop:
 	cmp [eax], edx
 	je .matched
@@ -457,7 +457,7 @@ method "@", ANY, TYP, Std$Type$T
 	xor eax, eax
 	ret
 
-section .data
+datasect
 LESS: dd Std$Integer$SmallT, -1
 ZERO:
 EQUAL: dd Std$Integer$SmallT, 0
@@ -494,7 +494,7 @@ method "@", VAL, Std$Object$Nil, VAL, Std$String$T
 	xor edx, edx
 	xor eax, eax
 	ret
-section .data
+datasect
 .nilstr:
 	dd Std$String$T
 	dd Std$Integer$SmallT
@@ -528,7 +528,7 @@ method "@", TYP, Std$Symbol$NoMethodMessageT, VAL, Std$String$T
 	call Std$String$Add.invoke
 	add esp, byte 16
 	ret
-section .data
+datasect
 .messagestr:
 	dd Std$String$T
 	dd Std$Integer$SmallT
@@ -558,7 +558,7 @@ method "@", TYP, Std$Function$FewArgsMessageT, VAL, Std$String$T
 	xor edx, edx
 	xor eax, eax
 	ret
-section .data
+datasect
 .format: db "%s:%d: expected %d args, received %d", 0
 
 method "@", SMALLINT, VAL, Std$String$T
@@ -577,7 +577,7 @@ method "@", SMALLINT, VAL, Std$String$T
 	xor edx, edx
 	xor eax, eax
 	ret
-section .data
+datasect
 .format:
 	db "%d", 0, 0
 
@@ -597,7 +597,7 @@ method "hex", SMALLINT
 	xor edx, edx
 	xor eax, eax
 	ret
-section .data
+datasect
 .format:
 	db "%x", 0, 0
 
@@ -701,7 +701,7 @@ method "apply", TYP, Std$Array$T, TYP, Std$Function$T
 	shr esi, 1
 	mov edi, [array(eax).Values]
 	mov eax, [value(ecx).Type]
-	jmp [type(eax).Invoke]
+	jmp [type0(eax).Invoke]
 
 method "apply", TYP, Std$Function$T, TYP, Std$Array$T
 	mov eax, [argument(edi + 8).Val]
@@ -709,7 +709,7 @@ method "apply", TYP, Std$Function$T, TYP, Std$Array$T
 	mov esi, [small_int(array(eax).Length).Value]
 	mov edi, [array(eax).Values]
 	mov eax, [value(ecx).Type]
-	jmp [type(eax).Invoke]
+	jmp [type0(eax).Invoke]
 
 extern __gmpz_init_set_si
 extern __gmpz_add_ui
@@ -769,7 +769,7 @@ add_small_small:
 	mov eax, [argument(edi + 8).Val]
 	mov eax, [small_int(eax).Value]
 	neg eax
-	jns sub_small_small.finish
+	jns near sub_small_small.finish
 	neg eax
 .finish:
 	push eax
@@ -807,7 +807,7 @@ sub_small_small:
 	mov eax, [argument(edi + 8).Val]
 	mov eax, [small_int(eax).Value]
 	neg eax
-	jns add_small_small.finish
+	jns near add_small_small.finish
 	neg eax
 .finish:
 	push eax
@@ -977,7 +977,7 @@ sar_small_small:
 	mov ecx, [small_int(ebx).Value]
 	neg ecx
 	jz .noshift
-	jns sal_small_small.run
+	jns near sal_small_small.run
 	neg ecx
 .run:
 	sar eax, cl
@@ -1572,7 +1572,7 @@ add_big_small:
 	mov eax, [argument(edi + 8).Val]
 	mov eax, [small_int(eax).Value]
 	neg eax
-	jns sub_big_small.finish
+	jns near sub_big_small.finish
 	neg eax
 .finish:
 	push eax
@@ -1595,7 +1595,7 @@ sub_big_small:
 	mov eax, [argument(edi + 8).Val]
 	mov eax, [small_int(eax).Value]
 	neg eax
-	jns add_big_small.finish
+	jns near add_big_small.finish
 	neg eax
 .finish:
 	push eax
@@ -1689,7 +1689,7 @@ sal_big_small:
 	mov eax, [argument(edi + 8).Val]
 	mov ecx, [small_int(eax).Value]
 	neg ecx
-	jns sar_big_small.finish
+	jns near sar_big_small.finish
 	neg ecx
 .finish:
 	push ecx
@@ -1712,7 +1712,7 @@ sar_big_small:
 	mov eax, [argument(edi + 8).Val]
 	mov ecx, [small_int(eax).Value]
 	neg ecx
-	jns sal_big_small.finish
+	jns near sal_big_small.finish
 	neg ecx
 .finish:
 	push ecx
@@ -1735,7 +1735,7 @@ shl_big_small:
 	mov eax, [argument(edi + 8).Val]
 	mov ecx, [small_int(eax).Value]
 	neg ecx
-	js shr_big_small.finish
+	js near shr_big_small.finish
 	neg ecx
 .finish:
 	push ecx
@@ -1758,7 +1758,7 @@ shr_big_small:
 	mov eax, [argument(edi + 8).Val]
 	mov ecx, [small_int(eax).Value]
 	neg ecx
-	js shl_big_small.finish
+	js near shl_big_small.finish
 	neg ecx
 .finish:
 	push ecx
@@ -2016,7 +2016,7 @@ method "*", SMALLINT, BIGINT
 	jmp finish_integer
 
 method "div", SMALLINT, BIGINT
-section .data
+datasect
 	mov ecx, .zero
 	xor edx, edx
 	xor eax, eax
@@ -2211,7 +2211,7 @@ finish_integer:
 	xor edx, edx
 	xor eax, eax
 	ret
-.convert_to_small
+.convert_to_small:
 	push esp
 	call __gmpz_get_si
 	add esp, byte 16
@@ -3330,7 +3330,7 @@ method "[]", STRING, SMALLINT, SMALLINT
 .outofbounds:
 	mov eax, 1
 	ret
-section .data
+datasect
 .empty_string:
 	dd Std$String$T
 	dd Std$Integer$SmallT
@@ -3345,7 +3345,7 @@ extern Std$Symbol$T.invoke
 
 method "fields", TYP, Std$Type$T
 	mov ecx, [argument(edi).Val]
-	mov ecx, [type(ecx).Fields]
+	mov ecx, [type0(ecx).Fields]
 	xor edx, edx
 	xor eax, eax
 	ret
@@ -4098,7 +4098,6 @@ method "zeros", BIGINT, SMALLINT, SMALLINT
 	inc eax
 	ret
 
-extern __gmpz_bit_small
 method "bit", BIGINT, SMALLINT
 	mov ecx, [argument(edi).Val]
 	mov eax, [argument(edi + 8).Val]
@@ -4146,7 +4145,7 @@ method "in", ANY, TYP, Std$Type$T
 	mov ecx, [argument(edi).Val]
 	mov eax, [argument(edi + 8).Val]
 	mov edx, [value(ecx).Type]
-	mov edx, [type(edx).Types]
+	mov edx, [type0(edx).Types]
 	sub edx, byte 4
 .loop:
 	add edx, byte 4
@@ -4166,7 +4165,7 @@ method "in", ANY, TYP, Std$Type$T
 method "<", TYP, Std$Type$T, TYP, Std$Type$T
 	mov eax, [argument(edi).Val]
 	mov ecx, [argument(edi + 8).Val]
-	mov eax, [type(eax).Types]
+	mov eax, [type0(eax).Types]
 .loop:
 	add eax, byte 4
 	mov ebx, [eax]
@@ -4185,7 +4184,7 @@ method "<", TYP, Std$Type$T, TYP, Std$Type$T
 method ">", TYP, Std$Type$T, TYP, Std$Type$T
 	mov ecx, [argument(edi + 8).Val]
 	mov edx, [argument(edi).Val]
-	mov eax, [type(ecx).Types]
+	mov eax, [type0(ecx).Types]
 .loop:
 	add eax, byte 4
 	mov ebx, [eax]
@@ -4204,7 +4203,7 @@ method ">", TYP, Std$Type$T, TYP, Std$Type$T
 method "<=", TYP, Std$Type$T, TYP, Std$Type$T
 	mov eax, [argument(edi).Val]
 	mov ecx, [argument(edi + 8).Val]
-	mov eax, [type(eax).Types]
+	mov eax, [type0(eax).Types]
 	sub eax, byte 4
 .loop:
 	add eax, byte 4
@@ -4224,7 +4223,7 @@ method "<=", TYP, Std$Type$T, TYP, Std$Type$T
 method ">=", TYP, Std$Type$T, TYP, Std$Type$T
 	mov ecx, [argument(edi + 8).Val]
 	mov edx, [argument(edi).Val]
-	mov eax, [type(ecx).Types]
+	mov eax, [type0(ecx).Types]
 	sub eax, byte 4
 .loop:
 	add eax, byte 4

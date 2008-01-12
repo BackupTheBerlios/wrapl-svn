@@ -6,6 +6,8 @@
 #include <zlib.h>
 #include <sys/stat.h>
 
+#include <udis86.h>
+
 #ifdef LINUX
 #include <lua5.1/lua.h>
 #include <lua5.1/lauxlib.h>
@@ -127,7 +129,8 @@ static void new_export(const char *Internal, const char *External, uint32_t Flag
 
 static inline void section_require(section_t *Section) {
 	if (Section->Index != SEC_UNUSED) return;
-	Section->Index = NoOfSections++;
+	Section->Index = NoOfSections;
+	NoOfSections++;
 	Section->Next = 0;
 	if (Sections.Head) {
 		Sections.Tail->Next = Section;
@@ -449,6 +452,20 @@ static void bfd_section_setup(bfd_section_t *Section) {
 
 static void bfd_section_debug(bfd_section_t *Section, FILE *File) {
 	fprintf(File, "%d: text section: %d[%d]\n", ((section_t *)Section)->Index, Section->Size, Section->Flags);
+
+	if (!(Section->Flags & FLAG_GC)) {
+		ud_t UD[1];
+		ud_init(UD);
+		ud_set_mode(UD, 32);
+		ud_set_syntax(UD, UD_SYN_INTEL);
+		ud_set_input_buffer(UD, Section->Code, Section->Size);
+		while (ud_disassemble(UD)) fprintf(File, "\t%6d: %s\n", (uint32_t)ud_insn_off(UD), ud_insn_asm(UD));
+	};
+
+	for (unsigned long I = 0; I < Section->NoOfRelocs; ++I) {
+		relocation_t *Reloc = &Section->Relocs[I];
+		fprintf(File, "\t%4d:\t%d[%d|%d]\n", Reloc->Position, Reloc->Section->Index, Reloc->Size, Reloc->Flags);
+	};
 };
 
 static void bfd_section_write(bfd_section_t *Section, gzFile File) {
@@ -548,13 +565,15 @@ static method_section_t *new_method_section() {
 
 static void add_bfd_section(bfd *Bfd, asection *Sect, bfd_info_t *BfdInfo) {
 	if (strcmp(Sect->name, ".symbols") == 0) {
-		Sect->userdata = new_symbols_section(Sect, Bfd);
+		if (Sect->size) Sect->userdata = new_symbols_section(Sect, Bfd);
 	} else if (strcmp(Sect->name, ".methods") == 0) {
-		method_section_t *Section = new_method_section();
-		bfd_section_t *Block = new_bfd_section(Sect, Bfd, BfdInfo);
-		Block->Next = Section->Blocks;
-		Section->Blocks = Block;
-		Sect->userdata = Block;
+		if (Sect->size) {
+			method_section_t *Section = new_method_section();
+			bfd_section_t *Block = new_bfd_section(Sect, Bfd, BfdInfo);
+			Block->Next = Section->Blocks;
+			Section->Blocks = Block;
+			Sect->userdata = Block;
+		};
 	} else if (Sect->flags & SEC_THREAD_LOCAL) {
 		printf("Thread local storage not supported yet!\n");
 		exit(1);

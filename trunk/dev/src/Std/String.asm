@@ -327,7 +327,7 @@ func $Add, 2
 	xor edx, edx
 	xor eax, eax
 	ret
-.second_not_empty
+.second_not_empty:
 	mov edx, [string(eax).Count]
 	add esi, ecx
 	mov ecx, [string(ebx).Count]
@@ -468,7 +468,7 @@ c_func _add
 	pop esi
 	pop ebx
 	ret
-.second_not_empty
+.second_not_empty:
 	mov edx, [string(eax).Count]
 	add esi, ecx
 	mov ecx, [string(ebx).Count]

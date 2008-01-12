@@ -84,7 +84,7 @@ extern const char *Tokens[];
 
 struct scanner_t {
 	IO$Stream_t *Source;
-	char *(*readl)(IO$Stream_t *);
+	//char *(*readl)(IO$Stream_t *);
 
 	const char *NextChar;
 
