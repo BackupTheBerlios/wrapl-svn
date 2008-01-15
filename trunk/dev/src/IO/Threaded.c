@@ -90,7 +90,12 @@ METHOD("read", TYP, T, TYP, Std$Address$T, TYP, Std$Integer$SmallT) {
 	lock(Stream);
 	node_t *Node = Stream->Head;
 	if (Node == 0) {
-		if (Stream->Closed) {
+		if (Stream->Closed == 1) {
+			Stream->Closed = 2;
+			unlock(Stream);
+			Result->Val = Zero;
+			return SUCCESS;
+		} else if (Stream->Closed == 2) {
 			unlock(Stream);
 			Result->Val = ReadMessage;
 			return MESSAGE;
@@ -134,7 +139,11 @@ static int buffer_read(buffer_t *Stream, char *Buffer, int Count) {
 	lock(Stream);
 	node_t *Node = Stream->Head;
 	if (Node == 0) {
-		if (Stream->Closed) {
+		if (Stream->Closed == 1) {
+			Stream->Closed = 2;
+			unlock(Stream);
+			return 0;
+		} else if (Stream->Closed == 2) {
 			unlock(Stream);
 			return -1;
 		};
@@ -174,7 +183,11 @@ static char buffer_readc(buffer_t *Stream) {
 	lock(Stream);
 	node_t *Node = Stream->Head;
 	if (Node == 0) {
-		if (Stream->Closed) {
+		if (Stream->Closed == 1) {
+			Stream->Closed = 2;
+			unlock(Stream);
+			return EOF;
+		} else if (Stream->Closed == 2) {
 			unlock(Stream);
 			return -1;
 		};
@@ -203,7 +216,13 @@ METHOD("rest", TYP, T) {
 	buffer_t *Stream = Args[0].Val;
 	lock(Stream);
 	if (Stream->Head == 0) {
-		if (Stream->Closed) {
+		if (Stream->Closed == 1) {
+			Stream->Closed = 2;
+			unlock(Stream);
+			Result->Val = Std$String$new_length("", 0);
+			return SUCCESS;
+		};
+		if (Stream->Closed == 2) {
 			unlock(Stream);
 			Result->Val = ReadMessage;
 			return MESSAGE;
@@ -291,12 +310,19 @@ METHOD("read", TYP, T, TYP, Std$Integer$SmallT) {
 	buffer_t *Stream = Args[0].Val;
 	lock(Stream);
 	if (Stream->Head == 0) {
-		if (Stream->Closed) {
+		if (Stream->Closed == 1) {
+			Stream->Closed = 2;
+			unlock(Stream);
+			return FAILURE;
+		} else if (Stream->Closed == 2) {
 			Result->Val = ReadMessage;
 			return MESSAGE;
 		};
 		wait(Stream);
-		if (Stream->Head == 0) return FAILURE;
+		if (Stream->Head == 0) {
+			unlock(Stream);
+			return FAILURE;
+		};
 	};
 	Result->Val = _readn_string_next(Stream, Stream->Head, 0, ((Std$Integer_smallt *)Args[1].Val)->Value);
 	unlock(Stream);
@@ -342,7 +368,12 @@ static char *_readn_line_next(buffer_t *Stream, node_t *Node, unsigned long Inde
 static char *buffer_readn(buffer_t *Stream, int Count) {
 	lock(Stream);
 	if (Stream->Head == 0) {
-		if (Stream->Closed) {
+		if (Stream->Closed == 1) {
+			Stream->Closed = 2;
+			unlock(Stream);
+			return "";
+		};
+		if (Stream->Closed == 2) {
 			unlock(Stream);
 			return 0;
 		};
@@ -414,12 +445,19 @@ METHOD("read", TYP, T) {
 	buffer_t *Stream = Args[0].Val;
 	lock(Stream);
 	if (Stream->Head == 0) {
-		if (Stream->Closed) {
+		if (Stream->Closed == 1) {
+			Stream->Closed = 2;
+			unlock(Stream);
+			return FAILURE;
+		} else if (Stream->Closed == 2) {
 			Result->Val = ReadMessage;
 			return MESSAGE;
 		};
 		wait(Stream);
-		if (Stream->Head == 0) return FAILURE;
+		if (Stream->Head == 0) {
+			unlock(Stream);
+			return FAILURE;
+		};
 	};
 	Result->Val = _read_string_next(Stream, Stream->Head, 0);
 	unlock(Stream);
@@ -467,7 +505,11 @@ static char *_read_line_next(buffer_t *Stream, node_t *Node, unsigned long Index
 static char *buffer_readl(buffer_t *Stream) {
 	lock(Stream);
 	if (Stream->Head == 0) {
-		if (Stream->Closed) {
+		if (Stream->Closed == 1) {
+			Stream->Closed = 2;
+			unlock(Stream);
+			return 0;
+		} else if (Stream->Closed == 2) {
 			unlock(Stream);
 			return 0;
 		};
