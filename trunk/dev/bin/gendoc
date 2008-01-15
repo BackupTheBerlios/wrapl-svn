@@ -278,7 +278,7 @@ EVERY file <- Args[i:to(Args:length)] DO (
         --gcc:wait;
         VAR line, info;
         REP (WHILE line <- gcc:read;
-            WHEN line:split("(") IS "MODULE" DO (
+            WHEN 1 OF line:split("(") IS "MODULE" DO (
                 line <- line[8, 0]:split(")");
                 info <- ALL line:split(", ");
                 item <- Module();
@@ -380,17 +380,17 @@ EVERY file <- Args[i:to(Args:length)] DO (
         gcc:close;
         input:close;
     ) IS "asm" DO (
-        args <- ["nasm", "-DDOCUMENTING", "-e", file];
+        args <- ["yasm", "-DDOCUMENTING", "-e", file];
         EVERY args:put("-I", includes:values);
         --Out:writes("Processing asm file ", args, "\n");
-        VAR nasm <- Process.Open("nasm", args);
+        VAR yasm <- Process.Open("yasm", args);
         VAR input <- File.Open(file, File.READ + File.TEXT);
         VAR lineno <- 1;
         VAR item;
-        --nasm:wait;
+        --yasm:wait;
         VAR line, info;
-        REP (WHILE line <- nasm:read;
-            WHEN line:split(" ") IS "module" DO (
+        REP (WHILE line <- yasm:read;
+            WHEN 1 OF line:split(" ") IS "module" DO (
                 line <- line[8, 0];
                 info <- ALL line:split(", ");
                 item <- Module();
@@ -496,7 +496,7 @@ EVERY file <- Args[i:to(Args:length)] DO (
                 items:put(item);
             );
         );
-        nasm:close;
+        yasm:close;
         input:close;
     ) DO (
         SEND "unknown filetype";

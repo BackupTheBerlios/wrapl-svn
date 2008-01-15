@@ -15,6 +15,9 @@ IMP Sys.Config;
 IMP Sys.Log;
 IMP Sys.Thread;
 
+DEF _exit <- :?;
+DEF _help <- :?;
+
 VAR global;
 
 DEF Init() (
@@ -52,6 +55,8 @@ DEF Init() (
     );
     global <- Wrapl.SessionNew(In);
     --Wrapl.SessionVar(global, "_", result);
+    Wrapl.SessionDef(global, "exit", _exit);
+    Wrapl.SessionDef(global, "help", _help);
     ClientFunc(global, Out);
 );
 
@@ -61,17 +66,24 @@ DEF ClientFunc(session, out) (
     REP (
         out:write("--> ");
 	(result <- Wrapl.SessionEval(session)) => (
-            out:write(result);
-            RECV msg DO msg IN Symbol.NoMethodMessageT => (
-		(result <- Module.FromVal(result)) => (
-                    out:writes(result[1], ".", result[2]);
-		) // (result <- Module.FromVal(?result)) => (
-                    out:write('<{result[1]}.{result[2]}:{Address.FromVal(result)}>');
-		) // (
-                    out:write("<value>");
-		);
-            ) // (
-                SEND msg;
+            WHEN result IS _exit DO (
+                out:close;
+                RET;
+            ) IS _help DO (
+                out:write("Commands: exit\n");
+            ) DO (
+                out:write(result);
+                RECV msg DO msg IN Symbol.NoMethodMessageT => (
+                    (result <- Module.FromVal(result)) => (
+                        out:writes(result[1], ".", result[2]);
+                    ) // (result <- Module.FromVal(?result)) => (
+                        out:write('<{result[1]}.{result[2]}:{Address.FromVal(result)}>');
+                    ) // (
+                        out:write("<value>");
+                    );
+                ) // (
+                    SEND msg;
+                );
             );
 	) // (
             out:write("failure");
