@@ -614,7 +614,7 @@
   
 
 ==== SetWindowCreationHook ====
-''SetWindowCreationHook(func : [[..:..:Std:Function#T|Std.Function.T]], data : [[..:..:Std:Address#T|Std.Address.T]], destroy : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+''SetWindowCreationHook(func : [[..:..:Std:Function#T|Std.Function.T]], data : [[..:..:Std:Address#T|Std.Address.T]], destroy : [[..:..:Std:Function#T|Std.Function.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
   Installs a global function used to create a window when a detached tab is dropped in an empty area.
   

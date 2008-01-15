@@ -3,7 +3,7 @@
 
 
 ==== :DestroyFunc ====
-'':DestroyFunc(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':DestroyFunc(self @ [[#T|T]]) : [[..:..:Std:Function#T|Std.Function.T]]''
 
 
 ==== :CopyFunc ====
@@ -31,6 +31,6 @@
 
 
 ==== NewWithData ====
-''NewWithData(ink_rect : [[..:..:Gtk:Pango:Rectangle#T|Gtk.Pango.Rectangle.T]], logical_rect : [[..:..:Gtk:Pango:Rectangle#T|Gtk.Pango.Rectangle.T]], data : [[..:..:Std:Address#T|Std.Address.T]], copy_func : [[..:..:Std:Function#T|Std.Function.T]], destroy_func : [[..:..:Std:Object#T|Std.Object.T]]) : [[# T| T]]''
+''NewWithData(ink_rect : [[..:..:Gtk:Pango:Rectangle#T|Gtk.Pango.Rectangle.T]], logical_rect : [[..:..:Gtk:Pango:Rectangle#T|Gtk.Pango.Rectangle.T]], data : [[..:..:Std:Address#T|Std.Address.T]], copy_func : [[..:..:Std:Function#T|Std.Function.T]], destroy_func : [[..:..:Std:Function#T|Std.Function.T]]) : [[# T| T]]''
 
 

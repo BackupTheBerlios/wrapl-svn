@@ -13,7 +13,7 @@
 
 
 ==== :UnreturnedError ====
-'':UnreturnedError(self @ [[#T|T]], error @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':UnreturnedError(self @ [[#T|T]], error @ [[..:..:Gtk:Glib:GError#T|Gtk.Glib.GError.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :SuggestSync ====
@@ -29,11 +29,11 @@
 
 
 ==== :DirHash ====
-'':DirHash(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':DirHash(self @ [[#T|T]]) : [[..:..:Gtk:Glib:GHashTable#T|Gtk.Glib.GHashTable.T]]''
 
 
 ==== :CacheHash ====
-'':CacheHash(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':CacheHash(self @ [[#T|T]]) : [[..:..:Gtk:Glib:GHashTable#T|Gtk.Glib.GHashTable.T]]''
 
 
 ==== :Listeners ====
@@ -93,7 +93,7 @@
 
 
 ==== :Error ====
-'':Error(self @ [[#T|T]], error @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Error(self @ [[#T|T]], error @ [[..:..:Gtk:Glib:GError#T|Gtk.Glib.GError.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== :Get ====
@@ -149,7 +149,7 @@
 
 
 ==== :NotifyAdd ====
-'':NotifyAdd(self @ [[#T|T]], namespace_section @ [[..:..:Std:String#T|Std.String.T]], func @ [[..:..:Std:Function#T|Std.Function.T]], user_data @ [[..:..:Std:Address#T|Std.Address.T]], destroy_notify @ [[..:..:Std:Object#T|Std.Object.T]], err @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+'':NotifyAdd(self @ [[#T|T]], namespace_section @ [[..:..:Std:String#T|Std.String.T]], func @ [[..:..:Std:Function#T|Std.Function.T]], user_data @ [[..:..:Std:Address#T|Std.Address.T]], destroy_notify @ [[..:..:Std:Function#T|Std.Function.T]], err @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :NotifyRemove ====

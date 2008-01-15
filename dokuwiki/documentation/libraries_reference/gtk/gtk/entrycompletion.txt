@@ -205,7 +205,7 @@
   
 
 ==== :SetMatchFunc ====
-'':SetMatchFunc(self @ [[#T|T]], func @ [[..:..:Std:Function#T|Std.Function.T]], func_data @ [[..:..:Std:Address#T|Std.Address.T]], func_notify @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetMatchFunc(self @ [[#T|T]], func @ [[..:..:Std:Function#T|Std.Function.T]], func_data @ [[..:..:Std:Address#T|Std.Address.T]], func_notify @ [[..:..:Std:Function#T|Std.Function.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
   Sets the match function for completion to be func. The match function is used to determine if a row should or should not
   be in the completion list.

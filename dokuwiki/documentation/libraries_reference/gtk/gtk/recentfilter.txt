@@ -58,7 +58,7 @@
   
 
 ==== :AddCustom ====
-'':AddCustom(self @ [[#T|T]], needed @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], func @ [[..:..:Std:Function#T|Std.Function.T]], data @ [[..:..:Std:Address#T|Std.Address.T]], data_destroy @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':AddCustom(self @ [[#T|T]], needed @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], func @ [[..:..:Std:Function#T|Std.Function.T]], data @ [[..:..:Std:Address#T|Std.Address.T]], data_destroy @ [[..:..:Std:Function#T|Std.Function.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
   Adds a rule to a filter that allows resources based on a custom callback function. The bitfield needed which is passed
   in provides information about what sorts of information that the filter function needs; this allows GTK+ to avoid

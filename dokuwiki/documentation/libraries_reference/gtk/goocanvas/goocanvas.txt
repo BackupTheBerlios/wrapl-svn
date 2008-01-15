@@ -241,7 +241,7 @@
 
 
 ==== :ModelToItem ====
-'':ModelToItem(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':ModelToItem(self @ [[#T|T]]) : [[..:..:Gtk:Glib:GHashTable#T|Gtk.Glib.GHashTable.T]]''
 
 
 ==== :Units ====
@@ -599,7 +599,7 @@
   
 
 ==== ParsePathData ====
-''ParsePathData(path_data : [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+''ParsePathData(path_data : [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Gtk:Glib:GArray#T|Gtk.Glib.GArray.T]]''
 
 
 ==== GetType ====
@@ -607,6 +607,6 @@
 
 
 ==== CreatePath ====
-''CreatePath(commands : [[..:..:Std:Object#T|Std.Object.T]], cr : [[..:..:Gtk:Cairo:CairoT#T|Gtk.Cairo.CairoT.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+''CreatePath(commands : [[..:..:Gtk:Glib:GArray#T|Gtk.Glib.GArray.T]], cr : [[..:..:Gtk:Cairo:CairoT#T|Gtk.Cairo.CairoT.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 

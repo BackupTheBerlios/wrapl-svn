@@ -19,19 +19,19 @@
 
 
 ==== :setPropertyName ====
-'':setPropertyName(self @ [[#T|T]], value @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':setPropertyName(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
 
 
 ==== :PropertyName ====
-'':PropertyName(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':PropertyName(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :TypeName ====
-'':TypeName(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':TypeName(self @ [[#T|T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== :setTypeName ====
-'':setTypeName(self @ [[#T|T]], value @ [[..:..:Std:Object#T|Std.Object.T]])''
+'':setTypeName(self @ [[#T|T]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]])''
 
 
 ==== New ====
@@ -39,22 +39,22 @@
 
 
 ==== ParseRequisition ====
-''ParseRequisition(pspec : [[..:..:Std:Object#T|Std.Object.T]], gstring : [[..:..:Std:Object#T|Std.Object.T]], property_value : [[..:..:Gtk:GObject:Value#T|Gtk.GObject.Value.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+''ParseRequisition(pspec : [[..:..:Std:Object#T|Std.Object.T]], gstring : [[..:..:Gtk:Glib:GString#T|Gtk.Glib.GString.T]], property_value : [[..:..:Gtk:GObject:Value#T|Gtk.GObject.Value.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== ParseFlags ====
-''ParseFlags(pspec : [[..:..:Std:Object#T|Std.Object.T]], gstring : [[..:..:Std:Object#T|Std.Object.T]], property_value : [[..:..:Gtk:GObject:Value#T|Gtk.GObject.Value.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+''ParseFlags(pspec : [[..:..:Std:Object#T|Std.Object.T]], gstring : [[..:..:Gtk:Glib:GString#T|Gtk.Glib.GString.T]], property_value : [[..:..:Gtk:GObject:Value#T|Gtk.GObject.Value.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== ParseEnum ====
-''ParseEnum(pspec : [[..:..:Std:Object#T|Std.Object.T]], gstring : [[..:..:Std:Object#T|Std.Object.T]], property_value : [[..:..:Gtk:GObject:Value#T|Gtk.GObject.Value.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+''ParseEnum(pspec : [[..:..:Std:Object#T|Std.Object.T]], gstring : [[..:..:Gtk:Glib:GString#T|Gtk.Glib.GString.T]], property_value : [[..:..:Gtk:GObject:Value#T|Gtk.GObject.Value.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== ParseColor ====
-''ParseColor(pspec : [[..:..:Std:Object#T|Std.Object.T]], gstring : [[..:..:Std:Object#T|Std.Object.T]], property_value : [[..:..:Gtk:GObject:Value#T|Gtk.GObject.Value.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+''ParseColor(pspec : [[..:..:Std:Object#T|Std.Object.T]], gstring : [[..:..:Gtk:Glib:GString#T|Gtk.Glib.GString.T]], property_value : [[..:..:Gtk:GObject:Value#T|Gtk.GObject.Value.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== ParseBorder ====
-''ParseBorder(pspec : [[..:..:Std:Object#T|Std.Object.T]], gstring : [[..:..:Std:Object#T|Std.Object.T]], property_value : [[..:..:Gtk:GObject:Value#T|Gtk.GObject.Value.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+''ParseBorder(pspec : [[..:..:Std:Object#T|Std.Object.T]], gstring : [[..:..:Gtk:Glib:GString#T|Gtk.Glib.GString.T]], property_value : [[..:..:Gtk:GObject:Value#T|Gtk.GObject.Value.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 

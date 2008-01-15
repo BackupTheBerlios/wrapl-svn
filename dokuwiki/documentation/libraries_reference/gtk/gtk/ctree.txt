@@ -107,7 +107,7 @@
   gtk_ctree_expand_to_depth is deprecated and should not be used in newly-written code.
 
 ==== :ExportToGnode ====
-'':ExportToGnode(self @ [[#T|T]], parent @ [[..:..:Std:Object#T|Std.Object.T]], sibling @ [[..:..:Std:Object#T|Std.Object.T]], node @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]], func @ [[..:..:Std:Function#T|Std.Function.T]], data @ [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':ExportToGnode(self @ [[#T|T]], parent @ [[..:..:Gtk:Glib:GNode#T|Gtk.Glib.GNode.T]], sibling @ [[..:..:Gtk:Glib:GNode#T|Gtk.Glib.GNode.T]], node @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]], func @ [[..:..:Std:Function#T|Std.Function.T]], data @ [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Gtk:Glib:GNode#T|Gtk.Glib.GNode.T]]''
 
   === Warning ===
   gtk_ctree_export_to_gnode is deprecated and should not be used in newly-written code.
@@ -125,7 +125,7 @@
   gtk_ctree_find_all_by_row_data is deprecated and should not be used in newly-written code.
 
 ==== :FindAllByRowDataCustom ====
-'':FindAllByRowDataCustom(self @ [[#T|T]], node @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]], data @ [[..:..:Std:Address#T|Std.Address.T]], func @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:List#T|Std.List.T]]''
+'':FindAllByRowDataCustom(self @ [[#T|T]], node @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]], data @ [[..:..:Std:Address#T|Std.Address.T]], func @ [[..:..:Std:Function#T|Std.Function.T]]) : [[..:..:Std:List#T|Std.List.T]]''
 
   === Warning ===
   gtk_ctree_find_all_by_row_data_custom is deprecated and should not be used in newly-written code.
@@ -137,7 +137,7 @@
   gtk_ctree_find_by_row_data is deprecated and should not be used in newly-written code.
 
 ==== :FindByRowDataCustom ====
-'':FindByRowDataCustom(self @ [[#T|T]], node @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]], data @ [[..:..:Std:Address#T|Std.Address.T]], func @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]]''
+'':FindByRowDataCustom(self @ [[#T|T]], node @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]], data @ [[..:..:Std:Address#T|Std.Address.T]], func @ [[..:..:Std:Function#T|Std.Function.T]]) : [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]]''
 
   === Warning ===
   gtk_ctree_find_by_row_data_custom is deprecated and should not be used in newly-written code.
@@ -155,7 +155,7 @@
   gtk_ctree_get_node_info is deprecated and should not be used in newly-written code.
 
 ==== :InsertGnode ====
-'':InsertGnode(self @ [[#T|T]], parent @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]], sibling @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]], gnode @ [[..:..:Std:Object#T|Std.Object.T]], func @ [[..:..:Std:Function#T|Std.Function.T]], data @ [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]]''
+'':InsertGnode(self @ [[#T|T]], parent @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]], sibling @ [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]], gnode @ [[..:..:Gtk:Glib:GNode#T|Gtk.Glib.GNode.T]], func @ [[..:..:Std:Function#T|Std.Function.T]], data @ [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Gtk:Gtk:CTreeNode#T|Gtk.Gtk.CTreeNode.T]]''
 
   === Warning ===
   gtk_ctree_insert_gnode is deprecated and should not be used in newly-written code.

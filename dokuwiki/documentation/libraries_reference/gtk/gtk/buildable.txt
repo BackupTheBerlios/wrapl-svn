@@ -23,7 +23,7 @@
 
 
 ==== :CustomTagStart ====
-'':CustomTagStart(self @ [[#T|T]], builder @ [[..:..:Gtk:Gtk:Builder#T|Gtk.Gtk.Builder.T]], child @ [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]], tagname @ [[..:..:Std:String#T|Std.String.T]], parser @ [[..:..:Std:Object#T|Std.Object.T]], data @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+'':CustomTagStart(self @ [[#T|T]], builder @ [[..:..:Gtk:Gtk:Builder#T|Gtk.Gtk.Builder.T]], child @ [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]], tagname @ [[..:..:Std:String#T|Std.String.T]], parser @ [[..:..:Gtk:Glib:GMarkupParser#T|Gtk.Glib.GMarkupParser.T]], data @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== :GetInternalChild ====

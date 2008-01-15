@@ -68,7 +68,7 @@
 
 
 ==== ReadLine ====
-''ReadLine(stream : [[..:..:Std:Object#T|Std.Object.T]], str : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+''ReadLine(stream : [[..:..:Std:Object#T|Std.Object.T]], str : [[..:..:Gtk:Glib:GString#T|Gtk.Glib.GString.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== ReorderItems ====
@@ -80,11 +80,11 @@
 
 
 ==== ScanString ====
-''ScanString(pos : [[..:..:Std:Object#T|Std.Object.T]], out : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+''ScanString(pos : [[..:..:Std:Object#T|Std.Object.T]], out : [[..:..:Gtk:Glib:GString#T|Gtk.Glib.GString.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== ScanWord ====
-''ScanWord(pos : [[..:..:Std:Object#T|Std.Object.T]], out : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
+''ScanWord(pos : [[..:..:Std:Object#T|Std.Object.T]], out : [[..:..:Gtk:Glib:GString#T|Gtk.Glib.GString.T]]) : [[..:..:Std:Symbol#T|Std.Symbol.T]]''
 
 
 ==== ScriptForUnichar ====

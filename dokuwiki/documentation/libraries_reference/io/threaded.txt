@@ -1,4 +1,4 @@
-====== Buffer ======
+====== Threaded ======
 ==== T ====
 === inherits from ===
   * [[..:IO:Stream#ReaderT|IO.Stream.ReaderT]]
@@ -8,6 +8,10 @@
 
 ==== :write ====
 '':write( @ [[#T|T]], @ [[..:Std:String#T|Std.String.T]])''
+
+
+==== :close ====
+'':close( @ [[#T|T]])''
 
 
 ==== :read ====

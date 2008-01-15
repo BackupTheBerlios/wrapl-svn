@@ -30,7 +30,7 @@
   
 
 ==== :SetCellDataFunc ====
-'':SetCellDataFunc(self @ [[#T|T]], cell @ [[..:..:Gtk:Gtk:CellRenderer#T|Gtk.Gtk.CellRenderer.T]], func @ [[..:..:Std:Function#T|Std.Function.T]], func_data @ [[..:..:Std:Address#T|Std.Address.T]], destroy @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetCellDataFunc(self @ [[#T|T]], cell @ [[..:..:Gtk:Gtk:CellRenderer#T|Gtk.Gtk.CellRenderer.T]], func @ [[..:..:Std:Function#T|Std.Function.T]], func_data @ [[..:..:Std:Address#T|Std.Address.T]], destroy @ [[..:..:Std:Function#T|Std.Function.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
   Sets the GtkCellLayoutDataFunc to use for cell_layout. This function is used instead of the standard attributes mapping
   for setting the column value, and should set the value of cell_layout's cell renderer(s) as appropriate. func may be

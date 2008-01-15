@@ -295,7 +295,7 @@
   
 
 ==== :SetSortFunc ====
-'':SetSortFunc(self @ [[#T|T]], sort_func @ [[..:..:Std:Function#T|Std.Function.T]], sort_data @ [[..:..:Std:Address#T|Std.Address.T]], data_destroy @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetSortFunc(self @ [[#T|T]], sort_func @ [[..:..:Std:Function#T|Std.Function.T]], sort_data @ [[..:..:Std:Address#T|Std.Address.T]], data_destroy @ [[..:..:Std:Function#T|Std.Function.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
   Sets the comparison function used when sorting to be sort_func. If the chooser has the sort type set to
   GTK_RECENT_SORT_CUSTOM then the chooser will sort using this function.
@@ -319,7 +319,7 @@
   
 
 ==== ErrorQuark ====
-''ErrorQuark() : [[..:..:Std:Object#T|Std.Object.T]]''
+''ErrorQuark() : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== GetType ====

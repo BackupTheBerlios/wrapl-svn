@@ -100,7 +100,7 @@
   
 
 ==== :AddActionsFull ====
-'':AddActionsFull(self @ [[#T|T]], entries @ [[..:..:Gtk:Gtk:ActionEntry#T|Gtk.Gtk.ActionEntry.T]], n_entries @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], user_data @ [[..:..:Std:Address#T|Std.Address.T]], destroy @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':AddActionsFull(self @ [[#T|T]], entries @ [[..:..:Gtk:Gtk:ActionEntry#T|Gtk.Gtk.ActionEntry.T]], n_entries @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], user_data @ [[..:..:Std:Address#T|Std.Address.T]], destroy @ [[..:..:Std:Function#T|Std.Function.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
   This variant of gtk_action_group_add_actions() adds a GDestroyNotify callback for user_data.
   
@@ -127,7 +127,7 @@
   
 
 ==== :AddRadioActionsFull ====
-'':AddRadioActionsFull(self @ [[#T|T]], entries @ [[..:..:Gtk:Gtk:RadioActionEntry#T|Gtk.Gtk.RadioActionEntry.T]], n_entries @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], on_change @ [[..:..:Std:Object#T|Std.Object.T]], user_data @ [[..:..:Std:Address#T|Std.Address.T]], destroy @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':AddRadioActionsFull(self @ [[#T|T]], entries @ [[..:..:Gtk:Gtk:RadioActionEntry#T|Gtk.Gtk.RadioActionEntry.T]], n_entries @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], value @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], on_change @ [[..:..:Std:Object#T|Std.Object.T]], user_data @ [[..:..:Std:Address#T|Std.Address.T]], destroy @ [[..:..:Std:Function#T|Std.Function.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
   This variant of gtk_action_group_add_radio_actions() adds a GDestroyNotify callback for user_data.
   
@@ -154,7 +154,7 @@
   
 
 ==== :AddToggleActionsFull ====
-'':AddToggleActionsFull(self @ [[#T|T]], entries @ [[..:..:Gtk:Gtk:ToggleActionEntry#T|Gtk.Gtk.ToggleActionEntry.T]], n_entries @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], user_data @ [[..:..:Std:Address#T|Std.Address.T]], destroy @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':AddToggleActionsFull(self @ [[#T|T]], entries @ [[..:..:Gtk:Gtk:ToggleActionEntry#T|Gtk.Gtk.ToggleActionEntry.T]], n_entries @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], user_data @ [[..:..:Std:Address#T|Std.Address.T]], destroy @ [[..:..:Std:Function#T|Std.Function.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
   This variant of gtk_action_group_add_toggle_actions() adds a GDestroyNotify callback for user_data.
   

@@ -38,7 +38,7 @@
   
 
 ==== :ToKeyFile ====
-'':ToKeyFile(self @ [[#T|T]], key_file @ [[..:..:Std:Object#T|Std.Object.T]], group_name @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':ToKeyFile(self @ [[#T|T]], key_file @ [[..:..:Gtk:Glib:GKeyFile#T|Gtk.Glib.GKeyFile.T]], group_name @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
   This function adds the page setup from setup to key_file.
   
@@ -250,7 +250,7 @@
 
 
 ==== NewFromKeyFile ====
-''NewFromKeyFile(key_file : [[..:..:Std:Object#T|Std.Object.T]], group_name : [[..:..:Std:String#T|Std.String.T]], error : [[..:..:Std:Object#T|Std.Object.T]]) : [[# T| T]]''
+''NewFromKeyFile(key_file : [[..:..:Gtk:Glib:GKeyFile#T|Gtk.Glib.GKeyFile.T]], group_name : [[..:..:Std:String#T|Std.String.T]], error : [[..:..:Std:Object#T|Std.Object.T]]) : [[# T| T]]''
 
   Reads the page setup from the group group_name in the key file key_file. Returns a new GtkPageSetup object with the
   restored page setup, or NULL if an error occurred.

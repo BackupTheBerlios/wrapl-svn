@@ -11,7 +11,7 @@
   
 
 ==== :AddDecoderFindFunc ====
-'':AddDecoderFindFunc(self @ [[#T|T]], findfunc @ [[..:..:Std:Function#T|Std.Function.T]], user_data @ [[..:..:Std:Address#T|Std.Address.T]], dnotify @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':AddDecoderFindFunc(self @ [[#T|T]], findfunc @ [[..:..:Std:Function#T|Std.Function.T]], user_data @ [[..:..:Std:Address#T|Std.Address.T]], dnotify @ [[..:..:Std:Function#T|Std.Function.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
   This function saves a callback method in the PangoFcFontMap that will be called whenever new fonts are created. If the
   function returns a PangoFcDecoder, that decoder will be used to determine both coverage via a FcCharSet and a one-to-one

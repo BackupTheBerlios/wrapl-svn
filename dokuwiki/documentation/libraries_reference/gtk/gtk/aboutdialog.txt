@@ -316,7 +316,7 @@
   
 
 ==== SetUrlHook ====
-''SetUrlHook(func : [[..:..:Std:Function#T|Std.Function.T]], data : [[..:..:Std:Address#T|Std.Address.T]], destroy : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Function#T|Std.Function.T]]''
+''SetUrlHook(func : [[..:..:Std:Function#T|Std.Function.T]], data : [[..:..:Std:Address#T|Std.Address.T]], destroy : [[..:..:Std:Function#T|Std.Function.T]]) : [[..:..:Std:Function#T|Std.Function.T]]''
 
   Installs a global function to be called whenever the user activates a URL link in an about dialog.
   
@@ -327,7 +327,7 @@
   
 
 ==== SetEmailHook ====
-''SetEmailHook(func : [[..:..:Std:Function#T|Std.Function.T]], data : [[..:..:Std:Address#T|Std.Address.T]], destroy : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Function#T|Std.Function.T]]''
+''SetEmailHook(func : [[..:..:Std:Function#T|Std.Function.T]], data : [[..:..:Std:Address#T|Std.Address.T]], destroy : [[..:..:Std:Function#T|Std.Function.T]]) : [[..:..:Std:Function#T|Std.Function.T]]''
 
   Installs a global function to be called whenever the user activates an email link in an about dialog.
   

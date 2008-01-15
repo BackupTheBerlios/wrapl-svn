@@ -22,7 +22,7 @@
   
 
 ==== :SetProperty ====
-'':SetProperty(self @ [[#T|T]], property_id @ [[..:..:Std:Object#T|Std.Object.T]], value @ [[..:..:Gtk:GObject:Value#T|Gtk.GObject.Value.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetProperty(self @ [[#T|T]], property_id @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], value @ [[..:..:Gtk:GObject:Value#T|Gtk.GObject.Value.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
   Sets a property in the style, replacing any current setting.
   Note that this will override the property setting in ancestor GooCanvasStyle objects.
@@ -37,7 +37,7 @@
 
 
 ==== :Properties ====
-'':Properties(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Properties(self @ [[#T|T]]) : [[..:..:Gtk:Glib:GArray#T|Gtk.Glib.GArray.T]]''
 
 
 ==== :Copy ====
@@ -59,7 +59,7 @@
   
 
 ==== :GetProperty ====
-'':GetProperty(self @ [[#T|T]], property_id @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Gtk:GObject:Value#T|Gtk.GObject.Value.T]]''
+'':GetProperty(self @ [[#T|T]], property_id @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Gtk:GObject:Value#T|Gtk.GObject.Value.T]]''
 
   Gets the value of a property.
   This searches though all the GooCanvasStyle's own list of property settings and also all ancestor GooCanvasStyle

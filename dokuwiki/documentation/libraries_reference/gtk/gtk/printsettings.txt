@@ -23,7 +23,7 @@
   
 
 ==== :ToKeyFile ====
-'':ToKeyFile(self @ [[#T|T]], key_file @ [[..:..:Std:Object#T|Std.Object.T]], group_name @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':ToKeyFile(self @ [[#T|T]], key_file @ [[..:..:Gtk:Glib:GKeyFile#T|Gtk.Glib.GKeyFile.T]], group_name @ [[..:..:Std:String#T|Std.String.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
   This function adds the print settings from settings to key_file.
   
@@ -616,7 +616,7 @@
 
 
 ==== NewFromKeyFile ====
-''NewFromKeyFile(key_file : [[..:..:Std:Object#T|Std.Object.T]], group_name : [[..:..:Std:String#T|Std.String.T]], error : [[..:..:Std:Object#T|Std.Object.T]]) : [[# T| T]]''
+''NewFromKeyFile(key_file : [[..:..:Gtk:Glib:GKeyFile#T|Gtk.Glib.GKeyFile.T]], group_name : [[..:..:Std:String#T|Std.String.T]], error : [[..:..:Std:Object#T|Std.Object.T]]) : [[# T| T]]''
 
   Reads the print settings from the group group_name in key_file. Returns a new GtkPrintSettings object with the restored
   settings, or NULL if an error occurred.

@@ -3,6 +3,7 @@
 === inherits from ===
   * [[..:..:Gtk:GooCanvas:ItemSimple#T|Gtk.GooCanvas.ItemSimple.T]]
   * [[..:..:Gtk:GObject:Object#T|Gtk.GObject.Object.T]]
+  * [[..:..:Gtk:GooCanvas:Item#T|Gtk.GooCanvas.Item.T]]
 
   GooCanvasGroup represents a group of items. Groups can be nested to any depth, to create a hierarchy
   of items. Items are ordered within each group, with later items being displayed above earlier items.
@@ -17,7 +18,7 @@
   
 
 ==== :Items ====
-'':Items(self @ [[#T|T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':Items(self @ [[#T|T]]) : [[..:..:Gtk:Glib:GPtrArray#T|Gtk.Glib.GPtrArray.T]]''
 
 
 ==== New ====

@@ -51,7 +51,7 @@
   
 
 ==== SetUriHook ====
-''SetUriHook(func : [[..:..:Std:Function#T|Std.Function.T]], data : [[..:..:Std:Address#T|Std.Address.T]], destroy : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Function#T|Std.Function.T]]''
+''SetUriHook(func : [[..:..:Std:Function#T|Std.Function.T]], data : [[..:..:Std:Address#T|Std.Address.T]], destroy : [[..:..:Std:Function#T|Std.Function.T]]) : [[..:..:Std:Function#T|Std.Function.T]]''
 
   Sets func as the function that should be invoked every time a user clicks a GtkLinkButton. This function is called
   before every callback registered for the "clicked" signal.

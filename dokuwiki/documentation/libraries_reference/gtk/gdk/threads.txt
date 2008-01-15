@@ -1,18 +1,18 @@
 ====== Threads ======
 ==== AddIdle ====
-''AddIdle(function : [[..:..:Std:Object#T|Std.Object.T]], data : [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+''AddIdle(function : [[..:..:Std:Function#T|Std.Function.T]], data : [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== AddIdleFull ====
-''AddIdleFull(priority : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], function : [[..:..:Std:Object#T|Std.Object.T]], data : [[..:..:Std:Address#T|Std.Address.T]], notify : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+''AddIdleFull(priority : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], function : [[..:..:Std:Function#T|Std.Function.T]], data : [[..:..:Std:Address#T|Std.Address.T]], notify : [[..:..:Std:Function#T|Std.Function.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== AddTimeout ====
-''AddTimeout(interval : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], function : [[..:..:Std:Object#T|Std.Object.T]], data : [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+''AddTimeout(interval : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], function : [[..:..:Std:Function#T|Std.Function.T]], data : [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== AddTimeoutFull ====
-''AddTimeoutFull(priority : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], interval : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], function : [[..:..:Std:Object#T|Std.Object.T]], data : [[..:..:Std:Address#T|Std.Address.T]], notify : [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
+''AddTimeoutFull(priority : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], interval : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], function : [[..:..:Std:Function#T|Std.Function.T]], data : [[..:..:Std:Address#T|Std.Address.T]], notify : [[..:..:Std:Function#T|Std.Function.T]]) : [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]''
 
 
 ==== Enter ====

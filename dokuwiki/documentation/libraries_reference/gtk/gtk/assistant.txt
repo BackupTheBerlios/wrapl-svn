@@ -203,7 +203,7 @@
   
 
 ==== :SetForwardPageFunc ====
-'':SetForwardPageFunc(self @ [[#T|T]], page_func @ [[..:..:Std:Function#T|Std.Function.T]], data @ [[..:..:Std:Address#T|Std.Address.T]], destroy @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetForwardPageFunc(self @ [[#T|T]], page_func @ [[..:..:Std:Function#T|Std.Function.T]], data @ [[..:..:Std:Address#T|Std.Address.T]], destroy @ [[..:..:Std:Function#T|Std.Function.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
   Sets the page forwarding function to be page_func, this function will be used to determine what will be the next page
   when the user presses the forward button. Setting page_func to NULL will make the assistant to use the default forward

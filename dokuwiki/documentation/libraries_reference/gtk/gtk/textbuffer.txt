@@ -771,7 +771,7 @@
   
 
 ==== :RegisterDeserializeFormat ====
-'':RegisterDeserializeFormat(self @ [[#T|T]], mime_type @ [[..:..:Std:String#T|Std.String.T]], function @ [[..:..:Std:Function#T|Std.Function.T]], user_data @ [[..:..:Std:Address#T|Std.Address.T]], user_data_destroy @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':RegisterDeserializeFormat(self @ [[#T|T]], mime_type @ [[..:..:Std:String#T|Std.String.T]], function @ [[..:..:Std:Function#T|Std.Function.T]], user_data @ [[..:..:Std:Address#T|Std.Address.T]], user_data_destroy @ [[..:..:Std:Function#T|Std.Function.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
   This function registers a rich text deserialization function along with its mime_type with the passed buffer.
   
@@ -795,7 +795,7 @@
   
 
 ==== :RegisterSerializeFormat ====
-'':RegisterSerializeFormat(self @ [[#T|T]], mime_type @ [[..:..:Std:String#T|Std.String.T]], function @ [[..:..:Std:Function#T|Std.Function.T]], user_data @ [[..:..:Std:Address#T|Std.Address.T]], user_data_destroy @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':RegisterSerializeFormat(self @ [[#T|T]], mime_type @ [[..:..:Std:String#T|Std.String.T]], function @ [[..:..:Std:Function#T|Std.Function.T]], user_data @ [[..:..:Std:Address#T|Std.Address.T]], user_data_destroy @ [[..:..:Std:Function#T|Std.Function.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
   This function registers a rich text serialization function along with its mime_type with the passed buffer.
   

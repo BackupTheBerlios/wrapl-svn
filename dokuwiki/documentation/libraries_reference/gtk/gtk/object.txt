@@ -84,7 +84,7 @@
   gtk_object_get is deprecated and should not be used in newly-written code. Use g_object_get() instead.
 
 ==== :GetDataById ====
-'':GetDataById(self @ [[#T|T]], data_id @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Address#T|Std.Address.T]]''
+'':GetDataById(self @ [[#T|T]], data_id @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Address#T|Std.Address.T]]''
 
   === Warning ===
   gtk_object_get_data_by_id is deprecated and should not be used in newly-written code. Use g_object_get_qdata() instead.
@@ -109,7 +109,7 @@
   object data to NULL instead.
 
 ==== :RemoveDataById ====
-'':RemoveDataById(self @ [[#T|T]], data_id @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':RemoveDataById(self @ [[#T|T]], data_id @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
   === Warning ===
   gtk_object_remove_data_by_id is deprecated and should not be used in newly-written code. Use g_object_set_qdata() with
@@ -123,7 +123,7 @@
   instead.
 
 ==== :RemoveNoNotifyById ====
-'':RemoveNoNotifyById(self @ [[#T|T]], key_id @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':RemoveNoNotifyById(self @ [[#T|T]], key_id @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
   === Warning ===
   gtk_object_remove_no_notify_by_id is deprecated and should not be used in newly-written code. Use g_object_steal_qdata()
@@ -136,13 +136,13 @@
   gtk_object_set is deprecated and should not be used in newly-written code. Use g_object_set() instead.
 
 ==== :SetDataById ====
-'':SetDataById(self @ [[#T|T]], data_id @ [[..:..:Std:Object#T|Std.Object.T]], data @ [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetDataById(self @ [[#T|T]], data_id @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], data @ [[..:..:Std:Address#T|Std.Address.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
   === Warning ===
   gtk_object_set_data_by_id is deprecated and should not be used in newly-written code. Use g_object_set_qdata() instead.
 
 ==== :SetDataByIdFull ====
-'':SetDataByIdFull(self @ [[#T|T]], data_id @ [[..:..:Std:Object#T|Std.Object.T]], data @ [[..:..:Std:Address#T|Std.Address.T]], destroy @ [[..:..:Std:Function#T|Std.Function.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetDataByIdFull(self @ [[#T|T]], data_id @ [[..:..:Std:Integer#SmallT|Std.Integer.SmallT]], data @ [[..:..:Std:Address#T|Std.Address.T]], destroy @ [[..:..:Std:Function#T|Std.Function.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
   === Warning ===
   gtk_object_set_data_by_id_full is deprecated and should not be used in newly-written code. Use g_object_set_qdata_full()

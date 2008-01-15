@@ -169,7 +169,7 @@
 
 
 ==== :SetData ====
-'':SetData(self @ [[#T|T]], key @ [[..:..:Std:String#T|Std.String.T]], data @ [[..:..:Std:Address#T|Std.Address.T]], destroy_func @ [[..:..:Std:Object#T|Std.Object.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
+'':SetData(self @ [[#T|T]], key @ [[..:..:Std:String#T|Std.String.T]], data @ [[..:..:Std:Address#T|Std.Address.T]], destroy_func @ [[..:..:Std:Function#T|Std.Function.T]]) : [[..:..:Std:Object#T|Std.Object.T]]''
 
 
 ==== GetType ====
