@@ -831,6 +831,12 @@ operand_t *ident_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t *
 	return Compiler->lookup(LineNo, Name);
 };
 
+operand_t *ident_expr_t::constant(compiler_t *Compiler, bool Relaxed) {DEBUG
+	operand_t *Operand = Compiler->lookup(LineNo, Name);
+	if (Operand->Type != operand_t::CNST) return 0;
+	return Operand;
+};
+
 operand_t *qualident_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t *Success) {DEBUG
 	const char *Ident = Names->Ident;
 	operand_t *Operand = Compiler->lookup(LineNo, Ident);

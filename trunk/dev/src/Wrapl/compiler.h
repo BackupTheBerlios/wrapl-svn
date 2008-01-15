@@ -217,6 +217,7 @@ struct ident_expr_t : expr_t {
 	};
 	PRINT_METHOD
 	operand_t *compile(compiler_t *Compiler, label_t *Start, label_t *Success);
+	operand_t *constant(compiler_t *Compiler, bool Relaxed);
 };
 
 struct qualident_expr_t : expr_t {

@@ -3,7 +3,7 @@ MOD Main;
 
 IMP IO.File;
 IMP IO.Terminal USE In, Out;
-IMP Sys.Process USE Args, Exit;
+IMP Sys.Program USE Args, Exit;
 IMP IO.Process;
 IMP Std.Integer;
 
