@@ -1,3 +1,5 @@
+library("libpthread.rlib")
+
 if WINDOWS then
 	_export = export
 	export = function(Name)
@@ -5,14 +7,6 @@ if WINDOWS then
 	end
 end
 
-export("__init")
+export("__init");
 export("T")
 export("New")
-
-if LINUX then
-	export("INET")
-	export("LOCAL")
-	export("STREAM")
-	export("DGRAM")
-	export("RAW")
-end

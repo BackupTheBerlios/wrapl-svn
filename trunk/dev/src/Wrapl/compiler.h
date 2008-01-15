@@ -81,6 +81,11 @@ struct compiler_t {
 		Function = 0;
 	};
 
+	compiler_t(scope_t *Shared) {
+		Scope = Global = Shared;
+		Function = 0;
+	};
+
 	operand_t *new_parameter(bool Indirect);
 	operand_t *new_local(bool Reference = false);
 	uint32_t new_temporary(uint32_t Count = 1);

@@ -19,6 +19,7 @@ IO:\
     $(RivaModule IO/Socket, Socket)\
     $(RivaModule IO/$(NATIVE), $(NATIVE))\
     $(RivaModule IO/Process, Process)\
-    $(RivaModule IO/Buffer, Buffer)
+    $(RivaModule IO/Buffer, Buffer)\
+	$(RivaModule IO/Threaded, Threaded)
 
 .DEFAULT: IO

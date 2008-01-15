@@ -1,4 +1,5 @@
 #include <IO/Socket.h>
+#include <Util/TypedFunction.h>
 #include <Riva/Memory.h>
 #include <Std.h>
 
@@ -10,6 +11,7 @@
 #include <netinet/in.h>
 #include <sys/un.h>
 #include <netdb.h>
+#include <signal.h>
 #else
 #endif
 
@@ -119,7 +121,11 @@ SYMBOL($read, "read");
 SYMBOL($write, "write");
 SYMBOL($both, "both");
 
-METHOD("shutdown", TYP, T, TYP, Std$Symbol$T) {
+static void socket_close(IO$Posix_t *Stream, int Mode) {
+	shutdown(Stream->Handle, Mode);
+};
+
+METHOD("close", TYP, T, TYP, Std$Symbol$T) {
     int Socket = ((IO$Posix_t *)Args[0].Val)->Handle;
     int Type;
     if (Args[1].Val == $read) {
@@ -169,6 +175,18 @@ METHOD("connect", TYP, InetT, TYP, Std$String$T, TYP, Std$Integer$SmallT) {
 		return MESSAGE;
 	};
 	return SUCCESS;
+};
+
+static void pipe_handler(int Signal) {
+};
+
+void __init(void) {
+	Util$TypedFunction$set(IO$Stream$close, T, socket_close);
+	struct sigaction Action;
+	Action.sa_handler = (void *)pipe_handler;
+	sigemptyset(&Action.sa_mask);
+	Action.sa_flags = SA_RESTART;
+	sigaction(SIGPIPE, &Action, NULL);
 };
 
 #endif

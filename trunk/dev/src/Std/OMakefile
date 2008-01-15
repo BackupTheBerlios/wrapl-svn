@@ -1,6 +1,5 @@
 BASENAME = $(LIB_DIR)Std$(DIRSEP)
 
-ASFLAGS += -w0
 CFLAGS += -std=gnu99
 LDFLAGS += Std.rlib Riva.rlib libgmp.rlib
 if $(equal $(OSTYPE), Win32)

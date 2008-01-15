@@ -1,3 +1,5 @@
+library("libpthread.rlib")
+
 if WINDOWS then
 	_export = export
 	export = function(Name)
@@ -18,3 +20,10 @@ export("__POLLIN", "POLLIN")
 export("__POLLOUT", "POLLOUT")
 export("__POLLHUP", "POLLHUP")
 export("__POLLPRI", "POLLPRI")
+export("ConvertMessage")
+export("ReadMessage")
+export("WriteMessage")
+export("FlushMessage")
+export("SeekMessage")
+export("CloseMessage")
+export("PollMessage")

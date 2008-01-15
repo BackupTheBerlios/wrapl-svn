@@ -20,7 +20,7 @@ struct node
 .Value: resd 1
 endstruct
 
-c_func _add
+c_func _set
 	push ebx
 	push edi
 	push esi
@@ -201,3 +201,48 @@ c_func _add
 	call .sort_section
 .no_recurse_2:
 	ret 8
+
+c_func _get
+	push ebx
+	push edi
+	push esi
+	push ebp
+	mov esi, [esp + 24]
+	mov esi, [type0(esi).Types]
+	mov ebx, [esi]
+.type_loop:
+	mov ecx, ebx
+	ror ecx, 3
+	mov eax, [esp + 20]
+	mov edx, [table(eax).Mask]
+	mov ebp, [table(eax).Entries]
+	mov eax, ebx
+	; ecx = increment
+	; ebx = hash/key
+	; edx = mask
+	; eax = index
+	; ebp = entries
+.search_loop:
+	lea eax, [eax + 2 * ecx + 1]
+	and eax, edx
+	cmp [node(ebp + 8 * eax).Key], ebx
+	ja .not_present
+	jb .search_loop
+	mov eax, [node(ebp + 8 * eax).Value]
+	pop ebp
+	pop esi
+	pop edi
+	pop ebx
+	ret
+.not_present:
+	add esi, byte 4
+	mov ebx, [esi]
+	test ebx, ebx
+	jnz .type_loop
+	xor eax, eax
+	dec eax
+	pop ebp
+	pop esi
+	pop edi
+	pop ebx
+	ret

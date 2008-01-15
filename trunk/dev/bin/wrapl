@@ -4,56 +4,123 @@ MOD Main;
 IMP Std.String;
 IMP Std.Symbol;
 IMP Std.Address;
+IMP Std.Integer;
 IMP IO.Terminal USE In, Out;
+IMP IO.Socket;
+IMP IO.Posix;
 IMP Wrapl;
 IMP Sys.Module;
-IMP Sys.Process;
+IMP Sys.Program USE Args;
 IMP Sys.Config;
 IMP Sys.Log;
+IMP Sys.Thread;
 
-VAR arg;
-EVERY WHEN arg <- Process.Args:values
-IS "-u" DO
-	Config.Set("Wrapl.AllowUndeclared")
-IS "-v" DO
-	Log.Enable();
-DO
-	Out:writes("Warning: unknown argument: ", arg, ".\n")
-;
+VAR global;
 
-Out:writes("Interactive Wrapl [", Config.Get("version"), ":", Config.Get("build"), "]\n");
-
-VAR session <- Wrapl.SessionNew(In);
-VAR result;
-
-Wrapl.SessionVar(session, "_", result);
-
-REP (
-	Out:write("--> ");
-	(result <- Wrapl.SessionEval(session)) => (
-		Out:write(result);
-		RECV msg DO msg IN Symbol.NoMethodMessageT => (
-			VAR mod;
-			(mod <- Module.FromVal(result)) => (
-				Out:writes(mod[1], ".", mod[2]);
-			) // (mod <- Module.FromVal(?result)) => (
-				Out:write('<{mod[1]}.{mod[2]}:{Address.FromVal(result)}>');
-			) // (
-				Out:write("<value>");
-			);
-		) // (
-			SEND msg;
-		);
-	) // (
-		Out:write("failure");
-	);
-	RECV msg DO msg IN Wrapl.ErrorMessageT => (
-		Out:writes("console", msg);
-	) // (
-		Out:write("Unhandled message: ");
-		Out:write(msg);
-		RECV msg2 DO Out:write("<value>");
-	);
+DEF Init() (
+    VAR i <- 0, client, address;
+    REP (WHILE i <= Args:length;
+        WHEN Args[i] IS "-u" DO (
+            Config.Set("Wrapl.AllowUndeclared");
+        ) IS "-v" DO (
+            Log.Enable();
+        ) IS "-sf" DO (
+            i <- i + 1;
+            CreateServerFile(Args[i]);
+        ) IS "-sp" DO (
+            i <- i + 1;
+            CreateServerOnPort(Args[i]@Integer.T);
+        ) IS "-cf" DO (
+            i <- i + 1;
+            client <- Socket.New(Socket.LOCAL, Socket.STREAM);
+            client:connect(Args[i]);
+            In:link(client);
+            client:link(Out);
+            RET;
+        ) IS "-cp" DO (
+            i <- i + 1;
+            client <- Socket.New(Socket.INET, Socket.STREAM);
+            address <- ALL Args[i]:split(":");
+            client:connect(address[1], address[2]@Integer.T);
+            In:link(client);
+            client:link(Out);
+            RET;
+        ) DO (
+            Out:writes("Warning: unknown argument: ", Args[i], ".\n")
+        );
+        i <- i + 1;
+    );
+    global <- Wrapl.SessionNew(In);
+    --Wrapl.SessionVar(global, "_", result);
+    ClientFunc(global, Out);
 );
+
+DEF ClientFunc(session, out) (
+    out:writes("Interactive Wrapl [", Config.Get("version"), ":", Wrapl.Build, "]\n");
+    VAR result;
+    REP (
+        out:write("--> ");
+	(result <- Wrapl.SessionEval(session)) => (
+            out:write(result);
+            RECV msg DO msg IN Symbol.NoMethodMessageT => (
+		(result <- Module.FromVal(result)) => (
+                    out:writes(result[1], ".", result[2]);
+		) // (result <- Module.FromVal(?result)) => (
+                    out:write('<{result[1]}.{result[2]}:{Address.FromVal(result)}>');
+		) // (
+                    out:write("<value>");
+		);
+            ) // (
+                SEND msg;
+            );
+	) // (
+            out:write("failure");
+	);
+        RECV msg DO msg IN Wrapl.ErrorMessageT => (
+            out:writes("console", msg);
+            RECV msg DO RET Out:write("Client disconnected.\n");
+        ) // (
+            out:write("Unhandled message: ");
+            out:write(msg);
+            RECV msg2 DO out:write("<value>");
+	);
+    );
+);
+
+DEF CreateServerFile(filename) (
+    Out:writes("Creating server file: ", filename, "\n");
+    VAR server <- Socket.New(Socket.LOCAL, Socket.STREAM);
+    server:bind(filename);
+    server:listen(10);
+    Thread.New(<> (
+        VAR client, session;
+        REP (
+            client <- server:accept;
+            Out:writes("Client connected.\n");
+            session <- Wrapl.SessionNew(client, global);
+            Thread.New(ClientFunc, session, client);
+            client <- NIL;
+            session <- NIL;
+        );
+    ));
+);
+
+DEF CreateServerOnPort(port) (
+    Out:writes("Creating server on port: ", port, "\n");
+    VAR server <- Socket.New(Socket.INET, Socket.STREAM);
+    server:bind(port);
+    server:listen(10);
+    Thread.New(<> (
+        VAR client, session;
+        REP (
+            client <- server:accept;
+            Out:writes("Client connected.\n");
+            session <- Wrapl.SessionNew(client, global);
+            Thread.New(ClientFunc, session, client);
+        );
+    ));
+);
+
+Init();
 
 END Main.

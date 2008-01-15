@@ -32,7 +32,7 @@ METHOD("@", TYP, MessageT, VAL, Std$String$T) {
 };
 
 extern void _flush(IO$Stream_t *);
-extern void _close(IO$Stream_t *);
+extern void _close(IO$Stream_t *, int);
 extern int _eoi(IO$Stream_t *);
 extern int _read(IO$Stream_t *, char *, int);
 extern char _readc(IO$Stream_t *);
@@ -84,9 +84,9 @@ static void stream_flush(IO$Stream_t *Stream) {
 	Std$Function$call($flush, 1, &Result, Stream, 0);
 };
 
-static void stream_close(IO$Stream_t *Stream) {
+static void stream_close(IO$Stream_t *Stream, int Mode) {
 	Std$Function_result Result;
-	Std$Function$call($close, 1, &Result, Stream, 0);
+	Std$Function$call($close, 2, &Result, Stream, 0, Std$Integer$new_small(Mode), 0);
 };
 
 static int stream_eoi(IO$Stream_t *Stream) {
@@ -218,18 +218,60 @@ METHOD("copy", TYP, ReaderT, TYP, WriterT, TYP, Std$Integer$SmallT) {
 	return SUCCESS;
 };
 
+#ifdef LINUX
+
+#include <pthread.h>
+
+typedef struct pair_t {
+	IO$Stream_t *Rd, *Wr;
+} pair_t;
+
+static void *_link_thread_func(pair_t *Pair) {
+	char Buffer[256];
+	IO$Stream_t *Rd = Pair->Rd;
+	IO$Stream_t *Wr = Pair->Wr;
+	int (*read)(IO$Stream_t *, char *, int) = Util$TypedFunction$get(_read, Rd->Type);
+	int (*write)(IO$Stream_t *, char *, int) = Util$TypedFunction$get(_write, Wr->Type);
+	Pair = 0;
+	for (;;) {
+		int BytesRead = read(Rd, Buffer, 256);
+		if (BytesRead <= 0) {
+			_close(Wr, 1);
+			return;
+		};
+		char *Tmp = Buffer;
+		while (BytesRead) {
+			int BytesWritten = write(Wr, Tmp, BytesRead);
+			if (BytesWritten < 0) return;
+			Tmp += BytesWritten;
+			BytesRead -= BytesWritten;
+		};
+	};
+};
+
+METHOD("link", TYP, T, TYP, T) {
+	pthread_t Thread[1];
+	pair_t *Pair = new(pair_t);
+	Pair->Rd = Args[0].Val;
+	Pair->Wr = Args[1].Val;
+	pthread_create(Thread, 0, _link_thread_func, Pair);
+	return SUCCESS;
+};
+
+#endif
+
 void __init(void *Module) {
-	Util$TypedFunction$add(_flush, T, stream_flush);
-	Util$TypedFunction$add(_close, T, stream_close);
-	Util$TypedFunction$add(_eoi, ReaderT, stream_eoi);
-	Util$TypedFunction$add(_read, ReaderT, stream_read);
-	Util$TypedFunction$add(_readc, ReaderT, stream_readc);
-	Util$TypedFunction$add(_readn, ReaderT, stream_readn);
-	Util$TypedFunction$add(_readl, ReaderT, stream_readl);
-	Util$TypedFunction$add(_write, WriterT, stream_write);
-	Util$TypedFunction$add(_writec, WriterT, stream_writec);
-	Util$TypedFunction$add(_writes, WriterT, stream_writes);
-	Util$TypedFunction$add(_writef, WriterT, stream_writef);
-	Util$TypedFunction$add(_seek, SeekerT, stream_seek);
-	Util$TypedFunction$add(_tell, SeekerT, stream_tell);
+	Util$TypedFunction$set(_flush, T, stream_flush);
+	Util$TypedFunction$set(_close, T, stream_close);
+	Util$TypedFunction$set(_eoi, ReaderT, stream_eoi);
+	Util$TypedFunction$set(_read, ReaderT, stream_read);
+	Util$TypedFunction$set(_readc, ReaderT, stream_readc);
+	Util$TypedFunction$set(_readn, ReaderT, stream_readn);
+	Util$TypedFunction$set(_readl, ReaderT, stream_readl);
+	Util$TypedFunction$set(_write, WriterT, stream_write);
+	Util$TypedFunction$set(_writec, WriterT, stream_writec);
+	Util$TypedFunction$set(_writes, WriterT, stream_writes);
+	Util$TypedFunction$set(_writef, WriterT, stream_writef);
+	Util$TypedFunction$set(_seek, SeekerT, stream_seek);
+	Util$TypedFunction$set(_tell, SeekerT, stream_tell);
 };

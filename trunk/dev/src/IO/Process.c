@@ -28,6 +28,8 @@ GLOBAL_FUNCTION(Open, 2) {
 		Result->Val = Std$String$new("Error: Pipe creation failed.");
 		return MESSAGE;
 	};
+	//fcntl(Pair[0], F_SETFL, fcntl(Pair[0], F_GETFL, 0) | O_NONBLOCK);
+	//fcntl(Pair[1], F_SETFL, fcntl(Pair[1], F_GETFL, 0) | O_NONBLOCK);
 	pid_t Pid = fork();
 	if (Pid == -1) {
 		close(Pair[0]);

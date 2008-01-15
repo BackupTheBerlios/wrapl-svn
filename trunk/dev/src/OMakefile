@@ -2,7 +2,8 @@
 .DEFAULT: Riva Rlink Std Util Sys IO Wrapl Math Xml
 
 CFLAGS += -O3 -fexpensive-optimizations -fomit-frame-pointer -w -D_GNU_SOURCE -fdata-sections -ffunction-sections
-#ASFLAGS += -Ov
+#ASFLAGS += -Ov -w-all
+ASFLAGS += -O2 -w0
 
 if $(equal $(OSTYPE), Win32)
 	CFLAGS += -DWINDOWS -DWIN32_THREADS

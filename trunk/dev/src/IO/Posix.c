@@ -8,6 +8,7 @@
 #include <unistd.h>
 #include <fcntl.h>
 #include <sys/poll.h>
+#include <pthread.h>
 
 SYMBOL($AS, "@");
 
@@ -20,18 +21,28 @@ TYPE(SeekerT, T, IO$Stream$SeekerT, IO$Stream$T);
 TYPE(TextReaderT, T, ReaderT, IO$Stream$TextReaderT, IO$Stream$ReaderT, IO$Stream$T);
 TYPE(TextWriterT, T, WriterT, IO$Stream$TextWriterT, IO$Stream$WriterT, IO$Stream$T);
 
-static IO$Stream_messaget ConvertMessage[] = {{IO$Stream$MessageT, "Conversion Error"}};
-static IO$Stream_messaget ReadMessage[] = {{IO$Stream$MessageT, "Read Error"}};
-static IO$Stream_messaget WriteMessage[] = {{IO$Stream$MessageT, "Write Error"}};
-static IO$Stream_messaget FlushMessage[] = {{IO$Stream$MessageT, "Flush Error"}};
-static IO$Stream_messaget SeekMessage[] = {{IO$Stream$MessageT, "Seek Error"}};
-static IO$Stream_messaget CloseMessage[] = {{IO$Stream$MessageT, "Close Error"}};
-static IO$Stream_messaget PollMessage[] = {{IO$Stream$MessageT, "Poll Error"}};
+IO$Stream_messaget ConvertMessage[] = {{IO$Stream$MessageT, "Conversion Error"}};
+IO$Stream_messaget ReadMessage[] = {{IO$Stream$MessageT, "Read Error"}};
+IO$Stream_messaget WriteMessage[] = {{IO$Stream$MessageT, "Write Error"}};
+IO$Stream_messaget FlushMessage[] = {{IO$Stream$MessageT, "Flush Error"}};
+IO$Stream_messaget SeekMessage[] = {{IO$Stream$MessageT, "Seek Error"}};
+IO$Stream_messaget CloseMessage[] = {{IO$Stream$MessageT, "Close Error"}};
+IO$Stream_messaget PollMessage[] = {{IO$Stream$MessageT, "Poll Error"}};
 
 Std$Integer_smallt __POLLIN[] = {{Std$Integer$SmallT, POLLIN}};
 Std$Integer_smallt __POLLOUT[] = {{Std$Integer$SmallT, POLLOUT}};
 Std$Integer_smallt __POLLHUP[] = {{Std$Integer$SmallT, POLLHUP}};
 Std$Integer_smallt __POLLPRI[] = {{Std$Integer$SmallT, POLLPRI}};
+
+/*
+O_APPEND
+O_NONBLOCK
+O_NDELAY
+O_ASYNC
+O_FSYNC
+O_SYNC
+O_NOATIME
+*/
 
 METHOD("flush", TYP, T) {
 	IO$Posix_t *Stream = Args[0].Val;
@@ -65,7 +76,7 @@ METHOD("closed", TYP, T) {
 	return FAILURE;
 };
 
-static void posix_close(IO$Posix_t *Stream) {
+static void posix_close(IO$Posix_t *Stream, int Mode) {
 	if (close(Stream->Handle) == 0) {
 		Riva$Memory$register_finalizer(Stream, 0, 0, 0, 0);
 	};
@@ -84,6 +95,7 @@ IO$Posix_t *_posix_new(Std$Type_t *Type, int Handle) {
 	Stream->Type = Type;
 	Stream->Handle = Handle;
 	Riva$Memory$register_finalizer(Stream, posix_finalize, 0, 0, 0);
+	fcntl(Handle, F_SETFD, fcntl(Handle, F_GETFD, 0) | FD_CLOEXEC);
 	return Stream;
 };
 
@@ -192,7 +204,8 @@ METHOD("read", TYP, TextReaderT) {
 };
 
 static char *posix_readl(IO$Posix_t *Stream) {
-	return _read_line_next(Stream->Handle, 0);
+	char *Line = _read_line_next(Stream->Handle, 0);
+	return Line;
 };
 
 METHOD("write", TYP, WriterT, TYP, Std$Address$T, TYP, Std$Integer$SmallT) {
@@ -305,18 +318,54 @@ METHOD("poll", TYP, T, TYP, Std$Integer$SmallT, TYP, Std$Integer$SmallT) {
 	return SUCCESS;
 };
 
+/*
+typedef struct pair_t {
+	IO$Posix_t *Rd, *Wr;
+} pair_t;
+
+static void *_link_thread_func(pair_t *Pair) {
+	char Buffer[256];
+	int Rd = Pair->Rd->Handle;
+	int Wr = Pair->Wr->Handle;
+	Pair = 0;
+	for (;;) {
+		int BytesRead = read(Rd, Buffer, 256);
+		if (BytesRead <= 0) {
+			shutdown(Wr, 1);
+			return;
+		};
+		char *Tmp = Buffer;
+		while (BytesRead) {
+			int BytesWritten = write(Wr, Tmp, BytesRead);
+			if (BytesWritten < 0) return;
+			Tmp += BytesWritten;
+			BytesRead -= BytesWritten;
+		};
+	};
+};
+
+METHOD("link", TYP, T, TYP, T) {
+	pthread_t Thread[1];
+	pair_t *Pair = new(pair_t);
+	Pair->Rd = Args[0].Val;
+	Pair->Wr = Args[1].Val;
+	pthread_create(Thread, 0, _link_thread_func, Pair);
+	return SUCCESS;
+};
+*/
+
 void __init(void *Module) {
-	Util$TypedFunction$add(IO$Stream$flush, T, posix_flush);
-	Util$TypedFunction$add(IO$Stream$close, T, posix_close);
-	Util$TypedFunction$add(IO$Stream$eoi, ReaderT, posix_eoi);
-	Util$TypedFunction$add(IO$Stream$read, ReaderT, posix_read);
-	Util$TypedFunction$add(IO$Stream$readc, ReaderT, posix_readc);
-	Util$TypedFunction$add(IO$Stream$readn, ReaderT, posix_readn);
-	Util$TypedFunction$add(IO$Stream$readl, ReaderT, posix_readl);
-	Util$TypedFunction$add(IO$Stream$write, WriterT, posix_write);
-	Util$TypedFunction$add(IO$Stream$writec, WriterT, posix_writec);
-	Util$TypedFunction$add(IO$Stream$writes, WriterT, posix_writes);
-	Util$TypedFunction$add(IO$Stream$writef, WriterT, posix_writef);
-	Util$TypedFunction$add(IO$Stream$seek, SeekerT, posix_seek);
-	Util$TypedFunction$add(IO$Stream$tell, SeekerT, posix_tell);
+	Util$TypedFunction$set(IO$Stream$flush, T, posix_flush);
+	Util$TypedFunction$set(IO$Stream$close, T, posix_close);
+	Util$TypedFunction$set(IO$Stream$eoi, ReaderT, posix_eoi);
+	Util$TypedFunction$set(IO$Stream$read, ReaderT, posix_read);
+	Util$TypedFunction$set(IO$Stream$readc, ReaderT, posix_readc);
+	Util$TypedFunction$set(IO$Stream$readn, ReaderT, posix_readn);
+	Util$TypedFunction$set(IO$Stream$readl, ReaderT, posix_readl);
+	Util$TypedFunction$set(IO$Stream$write, WriterT, posix_write);
+	Util$TypedFunction$set(IO$Stream$writec, WriterT, posix_writec);
+	Util$TypedFunction$set(IO$Stream$writes, WriterT, posix_writes);
+	Util$TypedFunction$set(IO$Stream$writef, WriterT, posix_writef);
+	Util$TypedFunction$set(IO$Stream$seek, SeekerT, posix_seek);
+	Util$TypedFunction$set(IO$Stream$tell, SeekerT, posix_tell);
 };

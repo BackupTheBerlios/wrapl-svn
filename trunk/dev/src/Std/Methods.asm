@@ -3359,10 +3359,14 @@ method "new", TYP, Std$Type$T
 	pop edi
 	pop esi
 	push ecx
+	push dword [argument(edi).Val]
+	push dword [argument(edi).Ref]
 	mov [argument(edi).Val], ecx
 	mov [argument(edi).Ref], dword 0
 	mov ecx, ?init
 	call Std$Symbol$T.invoke
+	pop dword [argument(edi).Ref]
+	pop dword [argument(edi).Val]
 	pop ecx
 	xor edx, edx
 	xor eax, eax

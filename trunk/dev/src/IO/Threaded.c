@@ -5,12 +5,16 @@
 #include <stdint.h>
 #include <stdio.h>
 #include <stdarg.h>
+#include <pthread.h>
 
 typedef struct node_t node_t;
 
 typedef struct buffer_t {
 	Std$Type_t *Type;
 	node_t *Head, *Tail;
+	pthread_cond_t Ready[1];
+	pthread_mutex_t Lock[1];
+	int Closed;
 } buffer_t;
 
 struct node_t {
@@ -21,9 +25,40 @@ struct node_t {
 
 TYPE(T, IO$Stream$ReaderT, IO$Stream$WriterT, IO$Stream$T);
 
+static IO$Stream_messaget ConvertMessage[] = {{IO$Stream$MessageT, "Conversion Error"}};
+static IO$Stream_messaget ReadMessage[] = {{IO$Stream$MessageT, "Read Error"}};
+static IO$Stream_messaget WriteMessage[] = {{IO$Stream$MessageT, "Write Error"}};
+static IO$Stream_messaget FlushMessage[] = {{IO$Stream$MessageT, "Flush Error"}};
+static IO$Stream_messaget SeekMessage[] = {{IO$Stream$MessageT, "Seek Error"}};
+static IO$Stream_messaget CloseMessage[] = {{IO$Stream$MessageT, "Close Error"}};
+static IO$Stream_messaget PollMessage[] = {{IO$Stream$MessageT, "Poll Error"}};
+
+static inline void lock(buffer_t *Stream) {
+	pthread_mutex_lock(Stream->Lock);
+};
+
+static inline void unlock(buffer_t *Stream) {
+	pthread_mutex_unlock(Stream->Lock);
+};
+
+static inline void wait(buffer_t *Stream) {
+	pthread_cond_wait(Stream->Ready, Stream->Lock);
+};
+
+static inline void broadcast(buffer_t *Stream) {
+	pthread_cond_broadcast(Stream->Ready);
+};
+
+static void buffer_finalize(buffer_t *Stream, void *Data) {
+	pthread_mutex_destroy(Stream->Lock);
+	pthread_cond_destroy(Stream->Ready);
+};
+
 GLOBAL_FUNCTION(New, 0) {
 	buffer_t *Stream = new(buffer_t);
 	Stream->Type = T;
+	pthread_cond_init(Stream->Ready, 0);
+	pthread_mutex_init(Stream->Lock, 0);
 	Result->Val = Stream;
 	return SUCCESS;
 };
@@ -32,17 +67,41 @@ static int buffer_eoi(buffer_t *Stream) {
 	return (Stream->Head == 0);
 };
 
+METHOD("close", TYP, T) {
+	buffer_t *Stream = Args[0].Val;
+	lock(Stream);
+	Stream->Closed = 1;
+	broadcast(Stream);
+	unlock(Stream);
+	return SUCCESS;
+};
+
 static int buffer_close(buffer_t *Stream, int Mode) {
+	lock(Stream);
+	Stream->Closed = 1;
+	broadcast(Stream);
+	unlock(Stream);
 };
 
 static Std$Integer_smallt Zero[] = {{Std$Integer$SmallT, 0}};
 
 METHOD("read", TYP, T, TYP, Std$Address$T, TYP, Std$Integer$SmallT) {
 	buffer_t *Stream = Args[0].Val;
+	lock(Stream);
 	node_t *Node = Stream->Head;
 	if (Node == 0) {
-		Result->Val = Zero;
-		return SUCCESS;
+		if (Stream->Closed) {
+			unlock(Stream);
+			Result->Val = ReadMessage;
+			return MESSAGE;
+		};
+		wait(Stream);
+		Node = Stream->Head;
+		if (Node == 0) {
+			unlock(Stream);
+			Result->Val = Zero;
+			return SUCCESS;
+		};
 	};
 	uint32_t Total = 0;
 	const char *Src = Node->Chars;
@@ -66,13 +125,26 @@ METHOD("read", TYP, T, TYP, Std$Address$T, TYP, Std$Integer$SmallT) {
 	Total += Rem1;
 	Node->Chars += Rem1;
 	Stream->Head = Node;
+	pthread_mutex_unlock(Stream->Lock);
 	Result->Val = Std$Integer$new_small(Total);
 	return SUCCESS;
 };
 
 static int buffer_read(buffer_t *Stream, char *Buffer, int Count) {
+	lock(Stream);
 	node_t *Node = Stream->Head;
-	if (Node == 0) return 0;
+	if (Node == 0) {
+		if (Stream->Closed) {
+			unlock(Stream);
+			return -1;
+		};
+		wait(Stream);
+		Node = Stream->Head;
+		if (Node == 0) {
+			unlock(Stream);
+			return 0;
+		};
+	};
 	uint32_t Total = 0;
 	const char *Src = Node->Chars;
 	const char *Dst = Buffer;
@@ -94,12 +166,25 @@ static int buffer_read(buffer_t *Stream, char *Buffer, int Count) {
 	Total += Rem1;
 	Node->Chars += Rem1;
 	Stream->Head = Node;
+	unlock(Stream);
 	return Total;
 };
 
 static char buffer_readc(buffer_t *Stream) {
+	lock(Stream);
 	node_t *Node = Stream->Head;
-	if (Node == 0) return EOF;
+	if (Node == 0) {
+		if (Stream->Closed) {
+			unlock(Stream);
+			return -1;
+		};
+		wait(Stream);
+		Node = Stream->Head;
+		if (Node == 0) {
+			unlock(Stream);
+			return EOF;
+		};
+	};
 	char Char = Node->Chars[0];
 	if (Node->Length == 1) {
 		if (Stream->Head = Node->Next) {
@@ -110,11 +195,26 @@ static char buffer_readc(buffer_t *Stream) {
 		Node->Chars++;
 		Node->Length--;
 	};
+	unlock(Stream);
 	return Char;
 };
 
 METHOD("rest", TYP, T) {
 	buffer_t *Stream = Args[0].Val;
+	lock(Stream);
+	if (Stream->Head == 0) {
+		if (Stream->Closed) {
+			unlock(Stream);
+			Result->Val = ReadMessage;
+			return MESSAGE;
+		};
+		wait(Stream);
+		if (Stream->Closed) {
+			unlock(Stream);
+			Result->Val = Std$String$new_length("", 0);
+			return SUCCESS;
+		};
+	};
 	int NoOfBlocks = 0;
 	for (node_t *Node = Stream->Head; Node; Node = Node->Next) ++NoOfBlocks;
 	Std$String_t *String = Riva$Memory$alloc(sizeof(Std$String_t) + (NoOfBlocks + 1) * sizeof(Std$String_block));
@@ -130,19 +230,33 @@ METHOD("rest", TYP, T) {
 		Block++;
 	};
 	Stream->Head = Stream->Tail = 0;
+	unlock(Stream);
 	Result->Val = String;
 	return SUCCESS;
 };
 
 static Std$String_t *_readn_string_next(buffer_t *Stream, node_t *Node, unsigned long Index, unsigned long Rem) {
 	if (Node == 0) {
-		Std$String_t *String = Riva$Memory$alloc(sizeof(Std$String_t) + (Index + 1) * sizeof(Std$String_block));
-		String->Type = Std$String$T;
-		String->Length.Type = Std$Integer$SmallT;
-		String->Count = Index;
-		Stream->Head = Stream->Tail = 0;
-		return String;
-	} else if (Rem <= Node->Length) {
+		if (Stream->Closed) {
+			Std$String_t *String = Riva$Memory$alloc(sizeof(Std$String_t) + (Index + 1) * sizeof(Std$String_block));
+			String->Type = Std$String$T;
+			String->Length.Type = Std$Integer$SmallT;
+			String->Count = Index;
+			Stream->Head = Stream->Tail = 0;
+			return String;
+		};
+		wait(Stream);
+		Node = Stream->Head;
+		if (Node == 0) {
+			Std$String_t *String = Riva$Memory$alloc(sizeof(Std$String_t) + (Index + 1) * sizeof(Std$String_block));
+			String->Type = Std$String$T;
+			String->Length.Type = Std$Integer$SmallT;
+			String->Count = Index;
+			Stream->Head = Stream->Tail = 0;
+			return String;
+		};
+	};
+	if (Rem <= Node->Length) {
 		Std$String_t *String = Riva$Memory$alloc(sizeof(Std$String_t) + (Index + 2) * sizeof(Std$String_block));
 		String->Type = Std$String$T;
 		String->Length.Type = Std$Integer$SmallT;
@@ -175,20 +289,36 @@ static Std$String_t *_readn_string_next(buffer_t *Stream, node_t *Node, unsigned
 
 METHOD("read", TYP, T, TYP, Std$Integer$SmallT) {
 	buffer_t *Stream = Args[0].Val;
-	if (Stream->Head) {
-		Result->Val = _readn_string_next(Stream, Stream->Head, 0, ((Std$Integer_smallt *)Args[1].Val)->Value);
-		return SUCCESS;
-	} else {
-		return FAILURE;		
+	lock(Stream);
+	if (Stream->Head == 0) {
+		if (Stream->Closed) {
+			Result->Val = ReadMessage;
+			return MESSAGE;
+		};
+		wait(Stream);
+		if (Stream->Head == 0) return FAILURE;
 	};
+	Result->Val = _readn_string_next(Stream, Stream->Head, 0, ((Std$Integer_smallt *)Args[1].Val)->Value);
+	unlock(Stream);
+	return SUCCESS;
 };
 
 static char *_readn_line_next(buffer_t *Stream, node_t *Node, unsigned long Index, unsigned long Rem) {
 	if (Node == 0) {
-		char *String = Riva$Memory$alloc_atomic(Index + 2);
-		String[Index + 1] = 0;
-		return String;
-	} else if (Rem <= Node->Length) {
+		if (Stream->Closed) {
+			char *String = Riva$Memory$alloc_atomic(Index + 2);
+			String[Index + 1] = 0;
+			return String;
+		};
+		wait(Stream);
+		Node = Stream->Head;
+		if (Node == 0) {
+			char *String = Riva$Memory$alloc_atomic(Index + 2);
+			String[Index + 1] = 0;
+			return String;
+		};
+	};
+	if (Rem <= Node->Length) {
 		char *String = Riva$Memory$alloc_atomic(Index + Rem + 1);
 		String[Index + Rem] = 0;
 		memcpy(String + Index, Node->Chars, Rem);
@@ -210,101 +340,146 @@ static char *_readn_line_next(buffer_t *Stream, node_t *Node, unsigned long Inde
 };
 
 static char *buffer_readn(buffer_t *Stream, int Count) {
-	if (Stream->Head) {
-		return _readn_line_next(Stream, Stream->Head, 0, Count);
-	} else {
-		return 0;
+	lock(Stream);
+	if (Stream->Head == 0) {
+		if (Stream->Closed) {
+			unlock(Stream);
+			return 0;
+		};
+		wait(Stream);
+		if (Stream->Head == 0) {
+			unlock(Stream);
+			return "";
+		};
 	};
+	char *String = _readn_line_next(Stream, Stream->Head, 0, Count);
+	unlock(Stream);
+	return String;
 };
 
 static Std$String_t *_read_string_next(buffer_t *Stream, node_t *Node, unsigned long Index) {
 	if (Node == 0) {
-		Std$String_t *String = Riva$Memory$alloc(sizeof(Std$String_t) + (Index + 1) * sizeof(Std$String_block));
-		String->Type = Std$String$T;
-		String->Length.Type = Std$Integer$SmallT;
-		String->Count = Index;
-		Stream->Head = Stream->Tail = 0;
-		return String;
-	} else {
-		char *Find = memchr(Node->Chars, '\n', Node->Length);
-		if (Find) {
-			Std$String_t *String = Riva$Memory$alloc(sizeof(Std$String_t) + (Index + 2) * sizeof(Std$String_block));
+		if (Stream->Closed) {
+			Std$String_t *String = Riva$Memory$alloc(sizeof(Std$String_t) + (Index + 1) * sizeof(Std$String_block));
 			String->Type = Std$String$T;
 			String->Length.Type = Std$Integer$SmallT;
-			String->Length.Value = Find - Node->Chars;
-			String->Count = Index + 1;
-			String->Blocks[Index].Length.Type = Std$Integer$SmallT;
-			String->Blocks[Index].Length.Value = Find - Node->Chars;
-			String->Blocks[Index].Chars.Type = Std$Address$T;
-			String->Blocks[Index].Chars.Value = Node->Chars;
-			if (Node->Length -= (Find + 1 - Node->Chars)) {
-				Node->Chars = Find + 1;
-				Stream->Head = Node;
-			} else {
-				if (Stream->Head = Node->Next) {
-				} else {
-					Stream->Tail = 0;
-				};
-			};
-			return String;
-		} else {
-			Std$String_t *String = _read_string_next(Stream, Node->Next, Index + 1);
-			String->Length.Value += Node->Length;
-			String->Blocks[Index].Length.Type = Std$Integer$SmallT;
-			String->Blocks[Index].Length.Value = Node->Length;
-			String->Blocks[Index].Chars.Type = Std$Address$T;
-			String->Blocks[Index].Chars.Value = Node->Chars;
+			String->Count = Index;
+			Stream->Head = Stream->Tail = 0;
 			return String;
 		};
+		wait(Stream);
+		Node = Stream->Head;
+		if (Node == 0) {
+			Std$String_t *String = Riva$Memory$alloc(sizeof(Std$String_t) + (Index + 1) * sizeof(Std$String_block));
+			String->Type = Std$String$T;
+			String->Length.Type = Std$Integer$SmallT;
+			String->Count = Index;
+			Stream->Head = Stream->Tail = 0;
+			return String;
+		};
+	};
+	char *Find = memchr(Node->Chars, '\n', Node->Length);
+	if (Find) {
+		Std$String_t *String = Riva$Memory$alloc(sizeof(Std$String_t) + (Index + 2) * sizeof(Std$String_block));
+		String->Type = Std$String$T;
+		String->Length.Type = Std$Integer$SmallT;
+		String->Length.Value = Find - Node->Chars;
+		String->Count = Index + 1;
+		String->Blocks[Index].Length.Type = Std$Integer$SmallT;
+		String->Blocks[Index].Length.Value = Find - Node->Chars;
+		String->Blocks[Index].Chars.Type = Std$Address$T;
+		String->Blocks[Index].Chars.Value = Node->Chars;
+		if (Node->Length -= (Find + 1 - Node->Chars)) {
+			Node->Chars = Find + 1;
+			Stream->Head = Node;
+		} else {
+			if (Stream->Head = Node->Next) {
+			} else {
+				Stream->Tail = 0;
+			};
+		};
+		return String;
+	} else {
+		Std$String_t *String = _read_string_next(Stream, Node->Next, Index + 1);
+		String->Length.Value += Node->Length;
+		String->Blocks[Index].Length.Type = Std$Integer$SmallT;
+		String->Blocks[Index].Length.Value = Node->Length;
+		String->Blocks[Index].Chars.Type = Std$Address$T;
+		String->Blocks[Index].Chars.Value = Node->Chars;
+		return String;
 	};
 };
 
 METHOD("read", TYP, T) {
 	buffer_t *Stream = Args[0].Val;
-	if (Stream->Head) {
-		Result->Val = _read_string_next(Stream, Stream->Head, 0);
-		return SUCCESS;
-	} else {
-		return FAILURE;		
+	lock(Stream);
+	if (Stream->Head == 0) {
+		if (Stream->Closed) {
+			Result->Val = ReadMessage;
+			return MESSAGE;
+		};
+		wait(Stream);
+		if (Stream->Head == 0) return FAILURE;
 	};
+	Result->Val = _read_string_next(Stream, Stream->Head, 0);
+	unlock(Stream);
+	return SUCCESS;
 };
 
 static char *_read_line_next(buffer_t *Stream, node_t *Node, unsigned long Index) {
 	if (Node == 0) {
-		char *String = Riva$Memory$alloc_atomic(Index + 2);
-		String[Index + 1] = 0;
-		return String;
-	} else {
-		char *Find = memchr(Node->Chars, '\n', Node->Length);
-		if (Find) {
-			int Length = Find - Node->Chars;
-			char *String = Riva$Memory$alloc_atomic(Index + Length + 1);
-			String[Index + Length] = 0;
-			memcpy(String + Index, Node->Chars, Length);
-			if (Node->Length -= (Length + 1)) {
-				Node->Chars = Find + 1;
-				Stream->Head = Node;
-			} else {
-				if (Stream->Head = Node->Next) {
-				} else {
-					Stream->Tail = 0;
-				};
-			};
-			return String;
-		} else {
-			char *String = _read_line_next(Stream, Node->Next, Index + Node->Length);
-			memcpy(String + Index, Node->Chars, Node->Length);
+		if (Stream->Closed) {
+			char *String = Riva$Memory$alloc_atomic(Index + 2);
+			String[Index + 1] = 0;
 			return String;
 		};
+		wait(Stream);
+		Node = Stream->Head;
+		if (Node == 0) {
+			char *String = Riva$Memory$alloc_atomic(Index + 2);
+			String[Index + 1] = 0;
+			return String;
+		};
+	};
+	char *Find = memchr(Node->Chars, '\n', Node->Length);
+	if (Find) {
+		int Length = Find - Node->Chars;
+		char *String = Riva$Memory$alloc_atomic(Index + Length + 1);
+		String[Index + Length] = 0;
+		memcpy(String + Index, Node->Chars, Length);
+		if (Node->Length -= (Length + 1)) {
+			Node->Chars = Find + 1;
+			Stream->Head = Node;
+		} else {
+			if (Stream->Head = Node->Next) {
+			} else {
+				Stream->Tail = 0;
+			};
+		};
+		return String;
+	} else {
+		char *String = _read_line_next(Stream, Node->Next, Index + Node->Length);
+		memcpy(String + Index, Node->Chars, Node->Length);
+		return String;
 	};
 };
 
 static char *buffer_readl(buffer_t *Stream) {
-	if (Stream->Head) {
-		return _read_line_next(Stream, Stream->Head, 0);
-	} else {
-		return 0;
+	lock(Stream);
+	if (Stream->Head == 0) {
+		if (Stream->Closed) {
+			unlock(Stream);
+			return 0;
+		};
+		wait(Stream);
+		if (Stream->Head == 0) {
+			unlock(Stream);
+			return 0;
+		};
 	};
+	char *String = _read_line_next(Stream, Stream->Head, 0);
+	unlock(Stream);
+	return String;
 };
 
 METHOD("write", TYP, T, TYP, Std$Address$T, TYP, Std$Integer$SmallT) {
@@ -315,6 +490,7 @@ METHOD("write", TYP, T, TYP, Std$Address$T, TYP, Std$Integer$SmallT) {
 	node_t *Node = new(node_t);
 	Node->Length = Length;
 	Node->Chars = Chars;
+	lock(Stream);
 	if (Stream->Tail) {
 		Stream->Tail->Next = Node;
 		Stream->Tail = Node;
@@ -322,6 +498,8 @@ METHOD("write", TYP, T, TYP, Std$Address$T, TYP, Std$Integer$SmallT) {
 		Stream->Head = Node;
 		Stream->Tail = Node;
 	};
+	broadcast(Stream);
+	unlock(Stream);
 	Result->Val = Args[2].Val;
 	return SUCCESS;
 };
@@ -332,6 +510,7 @@ static int buffer_write(buffer_t *Stream, const char *Buffer, int Count) {
 	node_t *Node = new(node_t);
 	Node->Length = Count;
 	Node->Chars = Chars;
+	lock(Stream);
 	if (Stream->Tail) {
 		Stream->Tail->Next = Node;
 		Stream->Tail = Node;
@@ -339,6 +518,8 @@ static int buffer_write(buffer_t *Stream, const char *Buffer, int Count) {
 		Stream->Head = Node;
 		Stream->Tail = Node;
 	};
+	broadcast(Stream);
+	unlock(Stream);
 	return Count;};
 
 static void buffer_writec(buffer_t *Stream, char Char) {
@@ -347,6 +528,7 @@ static void buffer_writec(buffer_t *Stream, char Char) {
 	node_t *Node = new(node_t);
 	Node->Length = 1;
 	Node->Chars = Chars;
+	lock(Stream);
 	if (Stream->Tail) {
 		Stream->Tail->Next = Node;
 		Stream->Tail = Node;
@@ -354,6 +536,8 @@ static void buffer_writec(buffer_t *Stream, char Char) {
 		Stream->Head = Node;
 		Stream->Tail = Node;
 	};
+	broadcast(Stream);
+	unlock(Stream);
 	return 1;
 };
 
@@ -365,6 +549,7 @@ METHOD("write", TYP, T, TYP, Std$String$T) {
 		node_t *Node = new(node_t);
 		Node->Chars = Block->Chars.Value;
 		Node->Length = Block->Length.Value;
+		lock(Stream);
 		if (Stream->Tail) {
 			Stream->Tail->Next = Node;
 		} else {
@@ -378,6 +563,8 @@ METHOD("write", TYP, T, TYP, Std$String$T) {
 			Node->Length = Block->Length.Value;
 		};
 		Stream->Tail = Node;
+		broadcast(Stream);
+		unlock(Stream);
 	};
 	Result->Arg = Args[0];
 	return SUCCESS;
@@ -390,6 +577,7 @@ static void buffer_writes(buffer_t *Stream, const char *Text) {
 	node_t *Node = new(node_t);
 	Node->Length = Length;
 	Node->Chars = Chars;
+	lock(Stream);
 	if (Stream->Tail) {
 		Stream->Tail->Next = Node;
 		Stream->Tail = Node;
@@ -397,6 +585,8 @@ static void buffer_writes(buffer_t *Stream, const char *Text) {
 		Stream->Head = Node;
 		Stream->Tail = Node;
 	};
+	broadcast(Stream);
+	unlock(Stream);
 	return Length;
 };
 
@@ -408,6 +598,7 @@ static void buffer_writef(buffer_t *Stream, const char *Format, ...) {
 	node_t *Node = new(node_t);
 	Node->Length = Length;
 	Node->Chars = Chars;
+	lock(Stream);
 	if (Stream->Tail) {
 		Stream->Tail->Next = Node;
 		Stream->Tail = Node;
@@ -415,6 +606,8 @@ static void buffer_writef(buffer_t *Stream, const char *Format, ...) {
 		Stream->Head = Node;
 		Stream->Tail = Node;
 	};
+	broadcast(Stream);
+	unlock(Stream);
 	return Length;
 };
 

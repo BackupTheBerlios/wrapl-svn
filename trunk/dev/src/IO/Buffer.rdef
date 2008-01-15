@@ -5,5 +5,6 @@ if WINDOWS then
 	end
 end
 
+export("__init");
 export("T")
 export("New")

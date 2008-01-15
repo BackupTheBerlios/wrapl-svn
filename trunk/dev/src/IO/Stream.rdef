@@ -1,3 +1,5 @@
+library("libpthread.rlib")
+
 if WINDOWS then
 	_export = export
 	export = function(Name)

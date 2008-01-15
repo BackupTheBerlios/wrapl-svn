@@ -71,7 +71,7 @@ static int native_load(module_t *Module, const char *FileName) {
 		module_setup(Module, Handle, native_import);
 		return 1;
 	};
-	log_errorf("Error: %s\n", dlerror());
+	//log_errorf("Error: %s\n", dlerror());
 	return 0;
 };
 

@@ -69,7 +69,12 @@ GLOBAL_FUNCTION(SessionNew, 1) {
 	session_t *Session = new session_t;
 	Session->Type = SessionT;
 	Session->Scanner = new scanner_t(Args[0].Val);
-	Session->Compiler = new compiler_t();
+	if (Count > 1) {
+		session_t *Existing = (session_t *)Args[1].Val;
+		Session->Compiler = new compiler_t(Existing->Compiler->Global);
+	} else {
+		Session->Compiler = new compiler_t();
+	};
 	Result->Val = (Std$Object_t *)Session;
 	return SUCCESS;
 };
