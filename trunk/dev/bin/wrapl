@@ -60,15 +60,23 @@ DEF Init() (
     ClientFunc(global, Out);
 );
 
+DEF clients <- [];
+
 DEF ClientFunc(session, out) (
+    clients:put(out);
     out:writes("Interactive Wrapl [", Config.Get("version"), ":", Wrapl.Build, "]\n");
     VAR result;
     REP (
         out:write("--> ");
 	(result <- Wrapl.SessionEval(session)) => (
             WHEN result IS _exit DO (
-                out:close;
-                RET;
+                session == global => (
+                    EVERY clients:values:write("Exiting.\n");
+                    EVERY clients:values:close;
+                    Program.Exit(0);
+                );
+                clients:remove(out);
+                RET out:close;
             ) IS _help DO (
                 out:write("Commands: exit\n");
             ) DO (
@@ -90,7 +98,10 @@ DEF ClientFunc(session, out) (
 	);
         RECV msg DO msg IN Wrapl.ErrorMessageT => (
             out:writes("console", msg);
-            RECV msg DO RET Out:write("Client disconnected.\n");
+            RECV msg DO (
+                clients:remove(out);
+                RET Out:write("Client disconnected.\n");
+            );
         ) // (
             out:write("Unhandled message: ");
             out:write(msg);
@@ -108,7 +119,6 @@ DEF CreateServerFile(filename) (
         VAR client, session;
         REP (
             client <- server:accept;
-            Out:writes("Client connected.\n");
             session <- Wrapl.SessionNew(client, global);
             Thread.New(ClientFunc, session, client);
             client <- NIL;
@@ -126,7 +136,6 @@ DEF CreateServerOnPort(port) (
         VAR client, session;
         REP (
             client <- server:accept;
-            Out:writes("Client connected.\n");
             session <- Wrapl.SessionNew(client, global);
             Thread.New(ClientFunc, session, client);
         );
