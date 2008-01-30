@@ -1,5 +1,5 @@
 LDFLAGS += Std.rlib Riva.rlib Util.rlib Sys$(DIRSEP)Module.rlib IO$(DIRSEP)Stream.rlib IO$(DIRSEP)File.rlib
-CFLAGS += -x c++ -fpermissive -fno-exceptions -fno-rtti -Wno-non-virtual-dtor -I$(OBJ_DIR)Wrapl -I$(SRC_DIR)Wrapl
+CFLAGS += -x c++ -fpermissive -fno-exceptions -fno-rtti -Wno-non-virtual-dtor -I$(OBJ_DIR)Wrapl -I$(SRC_DIR)Wrapl/Loader
 
 FILES[] =
 	assembler

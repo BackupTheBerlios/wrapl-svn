@@ -1,6 +1,6 @@
 BASENAME = $(LIB_DIR)Web$(DIRSEP)
 
-CFLAGS += -std=gnu99 --save-temps
+CFLAGS += -std=gnu99 -s
 LDFLAGS += Std.rlib Riva.rlib
 if $(equal $(OSTYPE), Win32)
 	LDFLAGS += kernel32.rlib
