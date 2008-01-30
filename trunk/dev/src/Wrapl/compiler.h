@@ -128,8 +128,14 @@ struct expr_t {
 #if defined(PARSER_LISTING) || defined(ASSEMBLER_LISTING)
 	virtual void print(int Indent) {};
 #endif
+	enum precomp_t {PC_NONE, PC_PARTIAL, PC_FULL};
 	virtual operand_t *compile(compiler_t *Compiler, label_t *Start, label_t *Success) {return 0;};
-	virtual operand_t *constant(compiler_t *Compiler, bool Relaxed = false) {return 0;};
+	virtual operand_t *constant(compiler_t *Compiler) {return 0;};
+	virtual operand_t *precompile(compiler_t *Compiler, precomp_t &Type) {
+		operand_t *Operand = constant(Compiler);
+		if (Operand) Type = PC_FULL;
+		return Operand;
+	};
 };
 
 struct assign_expr_t : expr_t {
@@ -186,7 +192,8 @@ struct const_expr_t : expr_t {
 	};
 	PRINT_METHOD
 	operand_t *compile(compiler_t *Compiler, label_t *Start, label_t *Success);
-	operand_t *constant(compiler_t *Compiler, bool Relaxed) {return Operand;};
+	operand_t *constant(compiler_t *Compiler) {return Operand;};
+	operand_t *precompile(compiler_t *Compiler, precomp_t &Type) {Type = PC_FULL; return Operand;};
 };
 
 struct func_expr_t : expr_t {
@@ -206,7 +213,7 @@ struct func_expr_t : expr_t {
 	};
 	PRINT_METHOD
 	operand_t *compile(compiler_t *Compiler, label_t *Start, label_t *Success);
-	operand_t *constant(compiler_t *Compiler, bool Relaxed);
+	operand_t *precompile(compiler_t *Compiler, precomp_t &Type);
 };
 
 struct ident_expr_t : expr_t {
@@ -217,7 +224,7 @@ struct ident_expr_t : expr_t {
 	};
 	PRINT_METHOD
 	operand_t *compile(compiler_t *Compiler, label_t *Start, label_t *Success);
-	operand_t *constant(compiler_t *Compiler, bool Relaxed);
+	operand_t *constant(compiler_t *Compiler);
 };
 
 struct qualident_expr_t : expr_t {
@@ -231,7 +238,7 @@ struct qualident_expr_t : expr_t {
 	};
 	PRINT_METHOD
 	operand_t *compile(compiler_t *Compiler, label_t *Start, label_t *Success);
-	operand_t *constant(compiler_t *Compiler, bool Relaxed);
+	operand_t *constant(compiler_t *Compiler);
 };
 
 struct ret_expr_t : expr_t {
@@ -487,6 +494,7 @@ struct block_expr_t : expr_t {
 		int LineNo;
 		const char *Name;
 		expr_t *Value;
+		precomp_t Type;
 	};
 	struct receiver_t {
 		const char *Var;
@@ -530,6 +538,7 @@ struct module_expr_t : expr_t {
 		const char *Name;
 		bool Exported;
 		expr_t *Value;
+		precomp_t Type;
 	};
 
 	Sys$Module_t *Module;
@@ -571,6 +580,7 @@ struct command_expr_t : expr_t {
 		int LineNo;
 		const char *Name;
 		expr_t *Value;
+		precomp_t Type;
 	};
 
 	globalimp_t *Imps;

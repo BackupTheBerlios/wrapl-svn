@@ -68,7 +68,9 @@ operand_t *compiler_t::new_local(bool Reference) {DEBUG
 };
 
 uint32_t compiler_t::new_temporary(uint32_t Count) {DEBUG
-	return Function->Loop->Expression->Temps->allocate(Count);
+	int Index = Function->Loop->Expression->Temps->allocate(Count);
+	//printf("Allocating temps: %d - %d\n", Index, Index + Count - 1);
+	return Index;
 };
 
 label_t *compiler_t::push_loop(uint32_t LineNo, label_t *Start, label_t *Step, label_t *Exit) {DEBUG
@@ -96,6 +98,7 @@ void compiler_t::pop_loop() {DEBUG
 };
 
 void compiler_t::push_expression() {DEBUG
+	//printf("push_expression\n");
 	function_t::loop_t::expression_t *New = new function_t::loop_t::expression_t;
 	function_t::loop_t::expression_t *Old = Function->Loop->Expression;
 	New->Temps = new bitset_t(Old->Temps);
@@ -104,8 +107,10 @@ void compiler_t::push_expression() {DEBUG
 };
 
 void compiler_t::pop_expression() {DEBUG
+	//printf("pop_expression\n");
 	function_t::loop_t::expression_t *Expression = Function->Loop->Expression;
 	uint32_t NoOfTemps = Expression->Temps->size();
+	//printf("NoOfTemps = %d\n", NoOfTemps);
 	if (NoOfTemps > Function->Frame.NoOfTemps) Function->Frame.NoOfTemps = NoOfTemps;
 	Function->Loop->Expression = Expression->Prev;
 };
@@ -634,7 +639,7 @@ void command_expr_t::print(int Indent) {
 operand_t *assign_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t *Success) {DEBUG
 	label_t *Label0 = new label_t;
 	operand_t *Dest = Left->compile(Compiler, Start, Label0);
-	if (operand_t *Src = Right->constant(Compiler, true)) {
+	if (operand_t *Src = Right->constant(Compiler)) {
 		Label0->store_con(LineNo, Dest, Src->Value);
 		Label0->link(LineNo, Success);
 		return Src;
@@ -795,17 +800,19 @@ operand_t *parallel_invoke_expr_t::compile(compiler_t *Compiler, label_t *Start,
 operand_t *func_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t *Success) {DEBUG
 	Compiler->push_function();
 		Compiler->push_scope(compiler_t::scope_t::SC_LOCAL);
-			for (func_expr_t::parameter_t *Parameter = Parameters; Parameter; Parameter = Parameter->Next) {
-				operand_t *ParamOperand = Compiler->new_parameter(Parameter->Reference);
-				Compiler->declare(Parameter->Name, ParamOperand);
-			};
-			label_t *Start0 = new label_t;
-			label_t *Success0 = new label_t;
-			label_t *Failure0 = new label_t;
-			Success0->load(LineNo, Body->compile(Compiler, Compiler->push_trap(LineNo, Start0, Failure0), Success0));
-			Success0->ret(LineNo);
-			Failure0->fail(LineNo);
-			Compiler->pop_trap();
+			Compiler->push_expression();
+				for (func_expr_t::parameter_t *Parameter = Parameters; Parameter; Parameter = Parameter->Next) {
+					operand_t *ParamOperand = Compiler->new_parameter(Parameter->Reference);
+					Compiler->declare(Parameter->Name, ParamOperand);
+				};
+				label_t *Start0 = new label_t;
+				label_t *Success0 = new label_t;
+				label_t *Failure0 = new label_t;
+				Success0->load(LineNo, Body->compile(Compiler, Compiler->push_trap(LineNo, Start0, Failure0), Success0));
+				Success0->ret(LineNo);
+				Failure0->fail(LineNo);
+				Compiler->pop_trap();
+			Compiler->pop_expression();
 		Compiler->pop_scope();
 	frame_t *Frame = Compiler->pop_function();
 //#ifdef ASSEMBLER_LISTING
@@ -817,12 +824,12 @@ operand_t *func_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t *S
 	return Closure;
 };
 
-operand_t *func_expr_t::constant(compiler_t *Compiler, bool Relaxed) {DEBUG
-	if (Relaxed) return 0;
+operand_t *func_expr_t::precompile(compiler_t *Compiler, precomp_t &Type) {DEBUG
 	Constant = new operand_t;
 	Constant->Type = operand_t::CNST;
 	closure_t *Closure = new closure_t;
 	Constant->Value = (Std$Object_t *)Closure;
+	Type = PC_PARTIAL;
 	return Constant;
 };
 
@@ -831,7 +838,7 @@ operand_t *ident_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t *
 	return Compiler->lookup(LineNo, Name);
 };
 
-operand_t *ident_expr_t::constant(compiler_t *Compiler, bool Relaxed) {DEBUG
+operand_t *ident_expr_t::constant(compiler_t *Compiler) {DEBUG
 	operand_t *Operand = Compiler->lookup(LineNo, Name);
 	if (Operand->Type != operand_t::CNST) return 0;
 	return Operand;
@@ -854,7 +861,7 @@ operand_t *qualident_expr_t::compile(compiler_t *Compiler, label_t *Start, label
 	return Operand;
 };
 
-operand_t *qualident_expr_t::constant(compiler_t *Compiler, bool Relaxed) {DEBUG
+operand_t *qualident_expr_t::constant(compiler_t *Compiler) {DEBUG
 	const char *Ident = Names->Ident;
 	operand_t *Operand = Compiler->lookup(LineNo, Ident);
 	for (qualident_expr_t::name_t *Name = Names->Next; Name; Name = Name->Next) {
@@ -1210,7 +1217,7 @@ operand_t *cond_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t *S
 		Failure1->load(LineNo, this->Failure->compile(Compiler, Failure0, Failure1));
 		Failure1->link(LineNo, Success);
 		
-		Expr->Temps = new bitset_t(SuccessTemps, FailureTemps);
+		Expr->Temps->reserve(SuccessTemps);
 	};
 	return Register;
 };
@@ -1436,30 +1443,42 @@ operand_t *block_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t *
 	operand_t *Result = 0;
 	Compiler->push_scope(compiler_t::scope_t::SC_LOCAL);
 	for (block_expr_t::localdef_t *Def = Defs; Def; Def = Def->Next) {
-		operand_t *Operand = Def->Value->constant(Compiler);
+		operand_t *Operand = Def->Value->precompile(Compiler, Def->Type);
 		if (Operand) Compiler->declare(Def->Name, Operand);
 	};
 	for (block_expr_t::localdef_t *Def = Defs; Def; Def = Def->Next) {
-		Compiler->push_function();
-		label_t *Start = new label_t;
-		label_t *Success = new label_t;
-		label_t *Failure = new label_t;
-			Compiler->push_expression();
-				Success->load(LineNo, Def->Value->compile(Compiler, Compiler->push_trap(LineNo, Start, Failure), Success));
-				Compiler->pop_trap();
-				Success->ret(LineNo);
-				Failure->fail(LineNo);
-			Compiler->pop_expression();
-		frame_t *Frame = Compiler->pop_function();
-		operand_t *Closure = Start->assemble(Frame);
-		Std$Function_result Result;
-		if (Std$Function$call(Closure->Value, 0, &Result) < FAILURE) {
-			operand_t *Operand = new operand_t;
-			Operand->Type = operand_t::CNST;
-			Operand->Value = Result.Val;
-			Compiler->declare(Def->Name, Operand);
-		} else {
-			Compiler->raise_error(LineNo, "Error: constant initialization failed");
+		switch (Def->Type) {
+		case PC_NONE: {
+			Compiler->push_function();
+			label_t *Start = new label_t;
+			label_t *Success = new label_t;
+			label_t *Failure = new label_t;
+				Compiler->push_expression();
+					Success->load(LineNo, Def->Value->compile(Compiler, Compiler->push_trap(LineNo, Start, Failure), Success));
+					Compiler->pop_trap();
+					Success->ret(LineNo);
+					Failure->fail(LineNo);
+				Compiler->pop_expression();
+			frame_t *Frame = Compiler->pop_function();
+			operand_t *Closure = Start->assemble(Frame);
+			Std$Function_result Result;
+			if (Std$Function$call(Closure->Value, 0, &Result) < FAILURE) {
+				operand_t *Operand = new operand_t;
+				Operand->Type = operand_t::CNST;
+				Operand->Value = Result.Val;
+				Compiler->declare(Def->Name, Operand);
+			} else {
+				Compiler->raise_error(LineNo, "Error: constant initialization failed");
+			};
+			break;
+		};
+		case PC_PARTIAL: {
+			Def->Value->compile(Compiler, new label_t, new label_t);
+			break;
+		};
+		case PC_FULL: {
+			break;
+		};
 		};
 	};
 	for (block_expr_t::localvar_t *Var = Vars; Var; Var = Var->Next) {
@@ -1470,7 +1489,7 @@ operand_t *block_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t *
 		compiler_t::function_t::loop_t *Loop = Compiler->Function->Loop;
 		compiler_t::function_t::loop_t::expression_t *Expr0 = Loop->Expression;
 		bitset_t *RecvTemps = new bitset_t(Expr0->Temps);
-		bitset_t *FinalTemps = Expr0->Temps;
+		bitset_t *BodyTemps = Expr0->Temps;
 		Expr0->Temps = RecvTemps;
 		label_t *OldReceiver = Loop->Receiver;
 		label_t *NewReceiver = new label_t;
@@ -1485,6 +1504,8 @@ operand_t *block_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t *
 			Label1->load(LineNo, Receiver.Body->compile(Compiler, Label0, Label1));
 			Label1->link(LineNo, Success);
 		Compiler->pop_scope();
+		//printf("After receiver, NoOfTemps = %d\n", Expr0->Temps->size());
+		Expr0->Temps = BodyTemps;
 		Loop->Receiver = NewReceiver;
 			Label0 = new label_t;
 			Start->recv(LineNo, NewReceiver);
@@ -1499,7 +1520,6 @@ operand_t *block_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t *
 					Compiler->pop_trap();
 				Compiler->pop_expression();
 			};
-			Expr0->Temps = FinalTemps;
 			if (Final) {
 				Label1 = new label_t;
 				label_t *Label2 = new label_t;
@@ -1509,8 +1529,9 @@ operand_t *block_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t *
 				Compiler->pop_trap();
 				Label2->recv(Final->LineNo, OldReceiver);
 				Compiler->back_trap(Label2);
-				Expr0->Temps = new bitset_t(RecvTemps, FinalTemps);
 			};
+			Expr0->Temps->reserve(RecvTemps);
+			//printf("After block, NoOfTemps = %d\n", Expr0->Temps->size());
 			Label0->recv(LineNo, OldReceiver);
 			Label0->link(LineNo, Success);
 		Loop->Receiver = OldReceiver;
@@ -1587,37 +1608,48 @@ operand_t *module_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t 
 		};
 	};
 	for (module_expr_t::globaldef_t *Def = Defs; Def; Def = Def->Next) {
-		operand_t *Operand = Def->Value->constant(Compiler);
+		operand_t *Operand = Def->Value->precompile(Compiler, Def->Type);
 		if (Operand) {
 			Compiler->declare(Def->Name, Operand);
 			if (Def->Exported) {
 				Sys$Module$export(Module, Def->Name, Operand->Type, Operand->Value);
-				Def->Exported = false;
 			};
 		};
 	};
 	for (module_expr_t::globaldef_t *Def = Defs; Def; Def = Def->Next) {
-		Compiler->push_function();
-		label_t *Start = new label_t;
-		label_t *Success = new label_t;
-		label_t *Failure = new label_t;
-			Compiler->push_expression();
-				Success->load(LineNo, Def->Value->compile(Compiler, Compiler->push_trap(LineNo, Start, Failure), Success));
-				Compiler->pop_trap();
-				Success->ret(LineNo);
-				Failure->fail(LineNo);
-			Compiler->pop_expression();
-		frame_t *Frame = Compiler->pop_function();
-		operand_t *Closure = Start->assemble(Frame);
-		Std$Function_result Result;
-		if (Std$Function$call(Closure->Value, 0, &Result) < FAILURE) {
-			operand_t *Operand = new operand_t;
-			Operand->Type = operand_t::CNST;
-			Operand->Value = Result.Val;
-			Compiler->declare(Def->Name, Operand);
-			Sys$Module$export(Module, Def->Name, 0, Result.Val);
-		} else {
-			Compiler->raise_error(LineNo, "Error: constant initialization failed");
+		switch (Def->Type) {
+		case PC_NONE: {
+			Compiler->push_function();
+			label_t *Start = new label_t;
+			label_t *Success = new label_t;
+			label_t *Failure = new label_t;
+				Compiler->push_expression();
+					Success->load(LineNo, Def->Value->compile(Compiler, Compiler->push_trap(LineNo, Start, Failure), Success));
+					Compiler->pop_trap();
+					Success->ret(LineNo);
+					Failure->fail(LineNo);
+				Compiler->pop_expression();
+			frame_t *Frame = Compiler->pop_function();
+			operand_t *Closure = Start->assemble(Frame);
+			Std$Function_result Result;
+			if (Std$Function$call(Closure->Value, 0, &Result) < FAILURE) {
+				operand_t *Operand = new operand_t;
+				Operand->Type = operand_t::CNST;
+				Operand->Value = Result.Val;
+				Compiler->declare(Def->Name, Operand);
+				Sys$Module$export(Module, Def->Name, 0, Result.Val);
+			} else {
+				Compiler->raise_error(LineNo, "Error: constant initialization failed");
+			};
+			break;
+		};
+		case PC_PARTIAL: {
+			Def->Value->compile(Compiler, new label_t, new label_t);
+			break;
+		};
+		case PC_FULL: {
+			break;
+		};
 		};
 	};
 	if (Body) {
@@ -1694,31 +1726,43 @@ int command_expr_t::compile(compiler_t *Compiler, Std$Function_result *Result) {
 		};
 	};
 	for (command_expr_t::globaldef_t *Def = Defs; Def; Def = Def->Next) {
-		operand_t *Operand = Def->Value->constant(Compiler);
+		operand_t *Operand = Def->Value->precompile(Compiler, Def->Type);
 		if (Operand) Compiler->declare(Def->Name, Operand);
 	};
 	int Status = SUCCESS;
 	for (command_expr_t::globaldef_t *Def = Defs; Def; Def = Def->Next) {
-		Compiler->push_function();
-		label_t *Start = new label_t;
-		label_t *Success = new label_t;
-		label_t *Failure = new label_t;
-			Compiler->push_expression();
-				Success->load(LineNo, Def->Value->compile(Compiler, Compiler->push_trap(LineNo, Start, Failure), Success));
-				Compiler->pop_trap();
-				Success->ret(LineNo);
-				Failure->fail(LineNo);
-			Compiler->pop_expression();
-		frame_t *Frame = Compiler->pop_function();
-		operand_t *Closure = Start->assemble(Frame);
-		Status = Std$Function$call(Closure->Value, 0, Result);
-		if (Status < FAILURE) {
-			operand_t *Operand = new operand_t;
-			Operand->Type = operand_t::CNST;
-			Operand->Value = Result->Val;
-			Compiler->declare(Def->Name, Operand);
-		} else {
-			Compiler->raise_error(LineNo, "Error: constant initialization failed");
+		switch (Def->Type) {
+		case PC_NONE: {
+			Compiler->push_function();
+			label_t *Start = new label_t;
+			label_t *Success = new label_t;
+			label_t *Failure = new label_t;
+				Compiler->push_expression();
+					Success->load(LineNo, Def->Value->compile(Compiler, Compiler->push_trap(LineNo, Start, Failure), Success));
+					Compiler->pop_trap();
+					Success->ret(LineNo);
+					Failure->fail(LineNo);
+				Compiler->pop_expression();
+			frame_t *Frame = Compiler->pop_function();
+			operand_t *Closure = Start->assemble(Frame);
+			Status = Std$Function$call(Closure->Value, 0, Result);
+			if (Status < FAILURE) {
+				operand_t *Operand = new operand_t;
+				Operand->Type = operand_t::CNST;
+				Operand->Value = Result->Val;
+				Compiler->declare(Def->Name, Operand);
+			} else {
+				Compiler->raise_error(LineNo, "Error: constant initialization failed");
+			};
+			break;
+		};
+		case PC_PARTIAL: {
+			Def->Value->compile(Compiler, new label_t, new label_t);
+			break;
+		};
+		case PC_FULL: {
+			break;
+		};
 		};
 	};
 	if (Body) {

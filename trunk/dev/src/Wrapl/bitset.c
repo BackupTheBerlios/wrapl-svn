@@ -54,7 +54,34 @@ bitset_t::bitset_t(bitset_t *A, bitset_t *B) {
 	};
 };
 
-void bitset_t::reserve(uint32_t N) {
+void bitset_t::reserve(const bitset_t *B) {
+	bitset_internal_t *A0 = Next;
+	bitset_internal_t *B0 = B->Next;
+	bitset_internal_t *Node = Next = new bitset_internal_t;
+	for (;;) {
+		if (A0->Lo > B0->Hi) {
+			B0 = B0->Next;
+		} else if (B0->Lo > A0->Hi) {
+			A0 = A0->Next;
+		} else {
+			Node->Lo = A0->Lo >? B0->Lo;
+			if (A0->Hi > B0->Hi) {
+				Node->Hi = B0->Hi;
+				B0 = B0->Next;
+			} else if (A0->Hi < B0->Hi) {
+				Node->Hi = A0->Hi;
+				A0 = A0->Next;
+			} else {
+				Node->Hi = A0->Hi;
+				if ((A0 = A0->Next) == 0) return;
+				if ((B0 = B0->Next) == 0) return;
+			};
+			Node = (Node->Next = new bitset_internal_t);
+		};
+	};
+};
+
+void bitset_t::reserve(int N) {
 	bitset_t *Prev = this;
 	for (;;) {
 		bitset_internal_t *Node = Prev->Next;
