@@ -1,0 +1,67 @@
+#!/usr/bin/riva
+MOD Rimplib;
+
+IMP Sys, IO;
+
+DEF ProcessSO(input, output, path, prefix) (
+    VAR dump <- IO.Process.Open("objdump", ["objdump", "-T", input]);
+    VAR outfile <- IO.File.Open(output, IO.File.WRITE + IO.File.TEXT);
+    outfile:write('module("{path}")\n');
+    outfile:write('prefix("{NIL ~== prefix}")\n');
+    VAR line, section, i;
+    VAR exports <- {};
+    REP (WHILE line <- dump:read;
+        line <- ALL line:split(" \t");
+        (line:length = 7) & (line[4] ~= "*UND*") => exports:insert(line[7]);
+    );
+    EVERY outfile:writes('export("{exports:keys}")\n');
+    outfile:close;
+    dump:close;
+    dump:wait;
+);
+
+DEF ProcessDLL(input, output, path, prefix) (
+);
+
+Sys.Program.Args:length = 0 => (
+    IO.Terminal.Out:write('\
+usage: rimplib [options] <input> <output>
+options:
+    -n <path>
+    -p <prefix>
+    -t <type>
+    -v
+');
+) // (
+    VAR i <- 1;
+    VAR path, prefix, type, verbose;
+    VAR input, output;
+    REP (WHILE i < Sys.Program.Args:length;
+        WHEN Sys.Program.Args[i]
+        IS "-n" DO
+            path <- Sys.Program.Args[i <- i + 1]
+        IS "-p" DO
+            prefix <- Sys.Program.Args[i <- i + 1]
+        IS "-t" DO
+            type <- Sys.Program.Args[i <- i + 1]
+        IS "-v" DO
+            verbose <- 1
+        DO
+            EXIT
+        ;
+        i <- i + 1;
+    );
+    input <- Sys.Program.Args[i];
+    output <- Sys.Program.Args[i + 1];
+    VAR i <- 0, j <- 0;
+    EVERY i <- input:any("/");
+    EVERY j <- input:any(".");
+    path == NIL => (path <- input[i + 1, j]);
+    type == NIL => (type <- input[j + 1, 0]);
+    WHEN type
+    IS "so" DO ProcessSO(input, output, path, prefix)
+    IS "dll" DO ProcessDLL(input, output, path, prefix)
+    ;
+);
+
+END Rimplib.

@@ -1,0 +1,29 @@
+#!/usr/bin/riva
+MOD Main;
+
+IMP Wrapl.Compiler, Sys.Program, IO.File, IO.Process, Sys.FileSys;
+IMP IO.Terminal USE Out;
+
+VAR source <- Program.Args[1];
+VAR temp <- FileSys.TempFile();
+VAR output <- (
+    VAR n <- 0;
+    EVERY n <- source:find(".");
+    source[1, n] + ".o";
+);
+VAR args <- Program.Args[2, 0] | [];
+
+(
+    VAR sourcefile <- File.Open(source, File.READ + File.TEXT);
+    VAR tempfile <- File.Open(temp, File.WRITE + File.TEXT);
+    Compiler.Compile(sourcefile, tempfile);
+    sourcefile:close;
+    tempfile:close;
+    VAR nasm <- Process.Open("nasm", ["nasm", "-felf"] + args + ["-o" + output, temp]);
+    REP WHILE Out:writes(nasm:read, "\n");
+    nasm:wait;
+    FileSys.Remove(temp);
+    RECV msg DO Out:write('Error: {msg}\n');
+);
+
+END Main.
