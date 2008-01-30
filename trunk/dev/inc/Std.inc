@@ -1,7 +1,7 @@
 %ifndef STD_INC
 %define STD_INC
 
-bits32
+bits 32
 section .symbols noexec
 section .methods noexec
 section .text

@@ -20,6 +20,7 @@ IO:\
     $(RivaModule IO/$(NATIVE), $(NATIVE))\
     $(RivaModule IO/Process, Process)\
     $(RivaModule IO/Buffer, Buffer)\
-	$(RivaModule IO/Threaded, Threaded)
+	$(RivaModule IO/Threaded, Threaded)\
+	$(RivaModule IO/Zlib, Zlib)
 
 .DEFAULT: IO

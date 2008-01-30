@@ -130,22 +130,33 @@ static char posix_readc(IO$Posix_t *Stream) {
 	return Char;
 };
 
+static Std$String_t *posix_next_rest(int Handle, int Index) {
+	char Char;
+	switch (read(Handle, &Char, 1)) {
+	case -1: return 0;
+	case 0: {
+		char *Chars = Riva$Memory$alloc_atomic(Index + 1);
+		Chars[Index] = 0;
+		return Std$String$new_length(Chars, Index);
+	};
+	case 1: {
+		Std$String_t *String = posix_next_rest(Handle, Index + 1);
+		if (String == 0) return 0;
+		((char *)String->Blocks->Chars.Value)[Index] = Char;
+		return String;
+	};
+	};
+};
+
 METHOD("rest", TYP, ReaderT) {
 	IO$Posix_t *Stream = Args[0].Val;
-	size_t Pos = lseek(Stream->Handle, 0, SEEK_CUR);
-	size_t Length = lseek(Stream->Handle, 0, SEEK_END) - Pos;
-	lseek(Stream->Handle, Pos, SEEK_SET);
-	char *Buffer = Riva$Memory$alloc_atomic(Length);
-	char *Ptr = Buffer;
-	size_t Rem = Length;
-	while (Rem) {
-		size_t BytesRead = read(Stream->Handle, Ptr, Rem);
-		Rem -= BytesRead;
-		Ptr += BytesRead;
+	Std$String_t *String = posix_next_rest(Stream->Handle, 0);
+	if (String) {
+		Result->Val = String;
+		return SUCCESS;
+	} else {
+		return FAILURE;
 	};
-	
-	Result->Val = Std$String$new_length(Buffer, Length);
-	return SUCCESS;
 };
 
 METHOD("read", TYP, ReaderT, TYP, Std$Integer$SmallT) {
@@ -353,6 +364,12 @@ METHOD("link", TYP, T, TYP, T) {
 	return SUCCESS;
 };
 */
+
+METHOD("fd", TYP, T) {
+	IO$Posix_t *Stream = Args[0].Val;
+	Result->Val = Std$Integer$new_small(Stream->Handle);
+	return SUCCESS;
+};
 
 void __init(void *Module) {
 	Util$TypedFunction$set(IO$Stream$flush, T, posix_flush);

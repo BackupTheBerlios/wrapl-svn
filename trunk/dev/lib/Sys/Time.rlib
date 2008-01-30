@@ -5,3 +5,5 @@ else
 	prefix("Sys$Time$")
 end
 export("T")
+export("Now")
+export("_new")

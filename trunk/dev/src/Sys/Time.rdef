@@ -4,4 +4,6 @@ if WINDOWS then
 		_export("_" .. Name, Name)
 	end
 end
-
+export("T")
+export("Now")
+export("_new")

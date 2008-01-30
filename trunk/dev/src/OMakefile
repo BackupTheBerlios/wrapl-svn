@@ -1,4 +1,4 @@
-.PHONY: Riva Rlink Std Util Sys IO Wrapl Math Xml Gtk NME clean
+.PHONY: Riva Rlink Std Util Sys IO Wrapl Math Xml Gtk NME clean WComp
 .DEFAULT: Riva Rlink Std Util Sys IO Wrapl Math Xml
 
 CFLAGS += -O3 -fexpensive-optimizations -fomit-frame-pointer -w -D_GNU_SOURCE -fdata-sections -ffunction-sections
@@ -67,9 +67,9 @@ section
 	vmount($(SRC_DIR)DB, $(OBJ_DIR)DB)
 	.SUBDIRS: $(OBJ_DIR)DB
 
-#section
-#	vmount($(SRC_DIR)Http, $(OBJ_DIR)Http)
-#	.SUBDIRS: $(OBJ_DIR)Http
+section
+	vmount($(SRC_DIR)Web, $(OBJ_DIR)Web)
+	.SUBDIRS: $(OBJ_DIR)Web
 
 if $(defined GTK)
 	section

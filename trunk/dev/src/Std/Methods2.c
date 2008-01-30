@@ -1205,6 +1205,127 @@ METHOD("skip", TYP, Std$String$T, TYP, Std$String$T, TYP, Std$Integer$SmallT) {
 	};
 };
 
+METHOD("before", TYP, Std$String$T, TYP, Std$String$T) {
+	Std$String_t *Arg0 = Args[1].Val;
+	Std$String_t *Arg1 = Args[0].Val;
+	if (Arg1->Length.Value == 0) return FAILURE;
+	if (Arg0->Length.Value == 0) {
+		if (Arg1->Length.Value == 0) return FAILURE;
+		Result->Val = Std$String$new_length(Arg1->Blocks->Chars.Value, 1);
+		return SUCCESS;
+	} else {
+	    uint8_t Mask[32];
+	    memset(Mask, 0, 32);
+	    for (Std$String_block *Block = Arg0->Blocks; Block->Length.Value; ++Block) {
+	        char *Chars = Block->Chars.Value;
+	        for (int I = 0; I < Block->Length.Value; ++I) {
+	            char Char = Chars[I];
+	            Mask[Char / 8] |= 1 << (Char % 8);
+	        };
+	    };
+		unsigned long SI = 1;
+		Std$String_block *SB = Arg1->Blocks;
+		const char *SC = SB->Chars.Value;
+		unsigned long SL = SB->Length.Value;
+		while (charcset(*SC, Mask) != 0) {
+			++SI;
+			if (--SL == 0) {
+				++SB;
+				SC = SB->Chars.Value;
+				SL = SB->Length.Value;
+				if (SC == 0) return FAILURE;
+			} else {
+				++SC;
+			};
+		};
+		unsigned long SI0 = SI;
+        Std$String_block *SB0 = SB;
+        const char *SC0 = SC;
+        unsigned long SL0 = SL;
+        while (charcset(*SC, Mask) == 0) {
+        	++SI;
+        	if (--SL == 0) {
+        		++SB;
+        		SC = SB->Chars.Value;
+        		SL = SB->Length.Value;
+        		if (SC == 0) {
+        			int NoOfBlocks = SB - SB0;
+        			Std$String_t *Slice = Riva$Memory$alloc(sizeof(Std$String_t) + (NoOfBlocks + 1) * sizeof(Std$String_block));
+        			Slice->Type = Std$String$T;
+        			Slice->Length.Type = Std$Integer$SmallT;
+        			Slice->Length.Value = SI - SI0;
+        			Slice->Count = NoOfBlocks;
+        			Slice->Blocks[0].Length.Type = Std$Integer$SmallT;
+        			Slice->Blocks[0].Length.Value = SL0;
+        			Slice->Blocks[0].Chars.Type = Std$Address$T;
+        			Slice->Blocks[0].Chars.Value = SC0;
+        			if (--NoOfBlocks) memcpy(Slice->Blocks + 1, SB0 + 1, NoOfBlocks * sizeof(Std$String_block));
+        			Result->Val = Slice;
+        			return SUCCESS;
+        		};
+        	} else {
+        		++SC;
+        	};
+        };
+        if (SL == SB->Length.Value) {
+			int NoOfBlocks = SB - SB0;
+			Std$String_t *Slice = Riva$Memory$alloc(sizeof(Std$String_t) + (NoOfBlocks + 1) * sizeof(Std$String_block));
+			Slice->Type = Std$String$T;
+			Slice->Length.Type = Std$Integer$SmallT;
+			Slice->Length.Value = SI - SI0;
+			Slice->Count = NoOfBlocks;
+			Slice->Blocks[0].Length.Type = Std$Integer$SmallT;
+			Slice->Blocks[0].Length.Value = SL0;
+			Slice->Blocks[0].Chars.Type = Std$Address$T;
+			Slice->Blocks[0].Chars.Value = SC0;
+			if (--NoOfBlocks) memcpy(Slice->Blocks + 1, SB0 + 1, NoOfBlocks * sizeof(Std$String_block));
+			Result->Val = Slice;
+        } else {
+			int NoOfBlocks = (SB - SB0) + 1;
+			Std$String_t *Slice = Riva$Memory$alloc(sizeof(Std$String_t) + (NoOfBlocks + 1) * sizeof(Std$String_block));
+			Slice->Type = Std$String$T;
+			Slice->Length.Type = Std$Integer$SmallT;
+			Slice->Length.Value = SI - SI0;
+			Slice->Count = NoOfBlocks;
+			if (--NoOfBlocks) {
+				Slice->Blocks[0].Length.Type = Std$Integer$SmallT;
+				Slice->Blocks[0].Length.Value = SL0;
+				Slice->Blocks[0].Chars.Type = Std$Address$T;
+				Slice->Blocks[0].Chars.Value = SC0;
+				Slice->Blocks[NoOfBlocks].Length.Type = Std$Integer$SmallT;
+				Slice->Blocks[NoOfBlocks].Length.Value = SB->Length.Value - SL;
+				Slice->Blocks[NoOfBlocks].Chars.Type = Std$Address$T;
+				Slice->Blocks[NoOfBlocks].Chars.Value = SB->Chars.Value;
+				if (--NoOfBlocks) memcpy(Slice->Blocks + 1, SB0 + 1, NoOfBlocks * sizeof(Std$String_block));
+			} else {
+				Slice->Blocks[0].Length.Type = Std$Integer$SmallT;
+				Slice->Blocks[0].Length.Value = SL0 - SL;
+				Slice->Blocks[0].Chars.Type = Std$Address$T;
+				Slice->Blocks[0].Chars.Value = SC0;
+			};
+			Result->Val = Slice;
+        };
+		return SUCCESS;
+	};
+};
+
+SYMBOL($any, "any");
+SYMBOL($skip, "skip");
+SYMBOL($INDEX, "[]");
+
+static Std$Integer_smallt Zero[] = {{Std$Integer$SmallT, 0}};
+
+METHOD("after", TYP, Std$String$T, TYP, Std$String$T) {
+	Std$Function_result Result0;
+	Std$Function_argument Args0[3] = {{Args[0].Val, 0}, {Args[1].Val, 0}, {0, 0}};
+	Std$Function$invoke($any, 2, &Result0, Args0);
+	Args0[2].Val = Result0.Val;
+	Std$Function$invoke($skip, 3, &Result0, Args0);
+	Args0[1].Val = Result0.Val;
+	Args0[2].Val = Zero;
+	return Std$Function$invoke($INDEX, 3, Result, Args0);
+};
+
 METHOD("/", TYP, Std$Integer$BigT, TYP, Std$Integer$BigT) {
 	Std$Integer_bigt *A = Args[0].Val;
 	Std$Integer_bigt *B = Args[1].Val;

@@ -19,6 +19,7 @@
 #define SECT_IMPORT		3
 #define SECT_BSS		4
 #define SECT_SYMBOL		5
+#define SECT_CONSTANT	6
 
 #define RELOC_ABS	0
 #define RELOC_REL	1
@@ -63,6 +64,10 @@ typedef struct section_t {
 				struct section_t *Library;
 				char *Path;
 			};
+		};
+		struct {
+			struct section_t *Init;
+			uint32_t Offset;
 		};
 	};
 } section_t;
@@ -149,6 +154,15 @@ static uint32_t fixup_symbol_section(section_t *Section, jmp_buf *OnError) {
 	if (Section->NoOfFixups) {
 		int IsRef;
 		module_import(Symbol, Section->Name, &IsRef, (void **)&Section->Data);
+		Section->NoOfFixups = 0;
+	};
+	return (uint32_t)Section->Data;
+};
+
+static uint32_t fixup_constant_section(section_t *Section, jmp_buf *OnError) {
+	if (Section->NoOfFixups) {
+		void *(*init)(void) = Section->Init->Fixup(Section->Init, OnError) + Section->Offset;
+		Section->Data = init();
 		Section->NoOfFixups = 0;
 	};
 	return (uint32_t)Section->Data;
@@ -284,6 +298,14 @@ static int riva_load(module_t *Module, const char *FileName) {
 			uint32_t Length; gzread(File, &Length, 4);
 			gzread(File, Section->Name = (char *)GC_malloc_atomic(Length + 1), Length);
 			Section->Name[Length] = 0;
+			Section->NoOfFixups = 1;
+		break;};
+		case SECT_CONSTANT: {
+			Section->Fixup = fixup_constant_section;
+			gzread(File, &Section->Flags, 1);
+			uint32_t Index; gzread(File, &Index, 4);
+			Section->Init = Sections[Index];
+			gzread(File, &Section->Offset, 4);
 			Section->NoOfFixups = 1;
 		break;};
 		};

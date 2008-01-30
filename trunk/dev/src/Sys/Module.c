@@ -62,6 +62,11 @@ const char *_get_path(Sys$Module_t *Module) {
 	return Riva$Module$get_path(Module->Handle);
 };
 
+GLOBAL_FUNCTION(AddDirectory, 1) {
+	Riva$Module$add_directory(Std$String$flatten(Args[0].Val));
+	return SUCCESS;
+};
+
 GLOBAL_FUNCTION(Load, 2) {
 	char *Path = (Args[0].Val == Std$Object$Nil) ? 0 :Std$String$flatten(Args[0].Val);
 	char *Name = Std$String$flatten(Args[1].Val);

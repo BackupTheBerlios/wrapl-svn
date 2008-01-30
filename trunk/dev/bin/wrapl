@@ -8,7 +8,7 @@ IMP Std.Integer;
 IMP IO.Terminal USE In, Out;
 IMP IO.Socket;
 IMP IO.Posix;
-IMP Wrapl;
+IMP Wrapl.Loader;
 IMP Sys.Module;
 IMP Sys.Program USE Args;
 IMP Sys.Config;
@@ -53,10 +53,10 @@ DEF Init() (
         );
         i <- i + 1;
     );
-    global <- Wrapl.SessionNew(In);
-    --Wrapl.SessionVar(global, "_", result);
-    Wrapl.SessionDef(global, "exit", _exit);
-    Wrapl.SessionDef(global, "help", _help);
+    global <- Loader.SessionNew(In);
+    --Loader.SessionVar(global, "_", result);
+    Loader.SessionDef(global, "exit", _exit);
+    Loader.SessionDef(global, "help", _help);
     ClientFunc(global, Out);
 );
 
@@ -64,11 +64,11 @@ DEF clients <- [];
 
 DEF ClientFunc(session, out) (
     clients:put(out);
-    out:writes("Interactive Wrapl [", Config.Get("version"), ":", Wrapl.Build, "]\n");
+    out:writes("Interactive Wrapl [", Config.Get("version"), ":", Loader.Build, "]\n");
     VAR result;
     REP (
         out:write("--> ");
-	(result <- Wrapl.SessionEval(session)) => (
+	(result <- Loader.SessionEval(session)) => (
             WHEN result IS _exit DO (
                 session == global => (
                     EVERY clients:values:write("Exiting.\n");
@@ -96,7 +96,7 @@ DEF ClientFunc(session, out) (
 	) // (
             out:write("failure");
 	);
-        RECV msg DO msg IN Wrapl.ErrorMessageT => (
+        RECV msg DO msg IN Loader.ErrorMessageT => (
             out:writes("console", msg);
             RECV msg DO (
                 clients:remove(out);
@@ -119,7 +119,7 @@ DEF CreateServerFile(filename) (
         VAR client, session;
         REP (
             client <- server:accept;
-            session <- Wrapl.SessionNew(client, global);
+            session <- Loader.SessionNew(client, global);
             Thread.New(ClientFunc, session, client);
             client <- NIL;
             session <- NIL;
@@ -136,7 +136,7 @@ DEF CreateServerOnPort(port) (
         VAR client, session;
         REP (
             client <- server:accept;
-            session <- Wrapl.SessionNew(client, global);
+            session <- Loader.SessionNew(client, global);
             Thread.New(ClientFunc, session, client);
         );
     ));

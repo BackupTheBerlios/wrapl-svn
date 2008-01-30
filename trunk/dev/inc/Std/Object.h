@@ -17,4 +17,9 @@ extern Std$Object_t Std$Object$Nil[];
 
 #undef RIVA_MODULE
 
+#define CONSTANT(NAME)\
+static Std$Object_t *init_ ## NAME(void);\
+Std$Object_t NAME[] __attribute__ ((section (".constants"))) = {{(Std$Object_t *)&init_ ## NAME}};\
+static Std$Object_t *init_ ## NAME(void)
+
 #endif

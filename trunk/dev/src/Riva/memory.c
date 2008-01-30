@@ -1,29 +1,9 @@
-#include "module.h"
-#include <stdint.h>
+#include "module.h"
 #ifdef LINUX
 #include <malloc.h>
 #include <gc/gc_local_alloc.h>
 #else
 #include <gc/gc.h>
-#endif
-
-#ifdef LINUX
-
-static memory_memalign(size_t Alignment, size_t Size, const void *Caller) {
-	uint8_t *Result = GC_malloc_uncollectable(Size + Alignment);
-	uint32_t Offset = (uint32_t)Result % Alignment;
-	if (Offset) Result += (Alignment - Offset);
-	return Result;
-};
-
-static void memory_init_hook (void) {
-	__malloc_hook = GC_malloc_uncollectable;
-	__realloc_hook = GC_realloc;
-	__free_hook = GC_free;
-	__memalign_hook = memory_memalign;
-}
-
-void (*__malloc_initialize_hook)(void) = memory_init_hook;
 #endif
 
 void memory_init(void) {

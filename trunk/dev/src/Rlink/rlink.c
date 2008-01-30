@@ -26,6 +26,7 @@
 #define SECT_IMPORT		3
 #define SECT_BSS		4
 #define SECT_SYMBOL		5
+#define SECT_CONSTANT	6
 
 #define EXP_CONSTANT 0
 #define EXP_VARIABLE 1
@@ -42,10 +43,12 @@
 
 typedef struct section_t section_t;
 typedef struct relocation_t relocation_t;
+typedef struct export_t export_t;
 
 typedef struct section_methods {
 	void (*setup)(section_t *Section);
 	void (*relocate)(section_t *Section, relocation_t *Relocation, uint32_t *Target);
+	void (*export)(section_t *Section, uint32_t Offset, export_t *Export);
 	void (*debug)(section_t *Section, FILE *File);
 	void (*write)(section_t *Section, gzFile File);
 } section_methods;
@@ -62,8 +65,6 @@ struct relocation_t {
 	uint32_t Size;
 	section_t *Section;
 };
-
-typedef struct export_t export_t;
 
 struct export_t {
 	export_t *Next;
@@ -153,6 +154,10 @@ static inline void section_relocate(section_t *Section, relocation_t *Relocation
 	Section->Methods->relocate(Section, Relocation, Target);
 };
 
+static inline void section_export(section_t *Section, uint32_t Offset, export_t *Export) {
+	Section->Methods->export(Section, Offset, Export);
+};
+
 static void default_section_setup(section_t *Section) {
 };
 
@@ -167,6 +172,16 @@ static void default_section_relocate(section_t *Section, relocation_t *Relocatio
 };
 
 static void invalid_section_relocate(section_t *Section, relocation_t *Relocation, uint32_t *Target) {
+	printf("%s: internal failure at line %d.\n", __FILE__, __LINE__);
+	exit(1);
+};
+
+static void default_section_export(section_t *Section, uint32_t Offset, export_t *Export) {
+	section_require(Export->Section = Section);
+	Export->Offset = Offset;
+};
+
+static void invalid_section_export(section_t *Section, uint32_t Offset, export_t *Export) {
 	printf("%s: internal failure at line %d.\n", __FILE__, __LINE__);
 	exit(1);
 };
@@ -227,6 +242,7 @@ static library_section_t *new_library_section(const char *Path) {
 	static section_methods Methods = {
 		default_section_setup,
 		default_section_relocate,
+		default_section_export,
 		(void (*)(section_t *, FILE *))library_section_debug,
 		(void (*)(section_t *, gzFile ))library_section_write
 	};
@@ -266,6 +282,7 @@ static import_section_t *new_import_section(library_section_t *Library, const ch
 	static section_methods Methods = {
 		(void (*)(section_t *))import_section_setup,
 		default_section_relocate,
+		default_section_export,
 		(void (*)(section_t *, FILE *))import_section_debug,
 		(void (*)(section_t *, gzFile ))import_section_write
 	};
@@ -298,6 +315,7 @@ static bss_section_t *new_bss_section(uint32_t Size) {
 	static section_methods Methods = {
 		default_section_setup,
 		default_section_relocate,
+		default_section_export,
 		(void (*)(section_t *, FILE *))bss_section_debug,
 		(void (*)(section_t *, gzFile ))bss_section_write
 	};
@@ -328,6 +346,7 @@ static symbol_section_t *new_symbol_section(const char *Name) {
 	static section_methods Methods = {
 		default_section_setup,
 		invalid_section_relocate,
+		default_section_export,
 		(void (*)(section_t *, FILE *))symbol_section_debug,
 		(void (*)(section_t *, gzFile ))symbol_section_write
 	};
@@ -360,6 +379,7 @@ static symbols_section_t *new_symbols_section(asection *Sect, bfd *Bfd) {
 	static section_methods Methods = {
 		invalid_section_setup,
 		(void (*)(section_t *, relocation_t *, uint32_t *))symbols_section_relocate,
+		0,
 		0,
 		0
 	};
@@ -487,6 +507,7 @@ static bfd_section_t *new_bfd_section(asection *Sect, bfd *Bfd, bfd_info_t *BfdI
 	static section_methods Methods = {
 		(void (*)(section_t *))bfd_section_setup,
 		default_section_relocate,
+		default_section_export,
 		(void (*)(section_t *, FILE *))bfd_section_debug,
 		(void (*)(section_t *, gzFile ))bfd_section_write
 	};
@@ -547,6 +568,7 @@ static method_section_t *new_method_section() {
 	static section_methods Methods = {
 		(void (*)(section_t *))method_section_setup,
 		invalid_section_relocate,
+		default_section_export,
 		(void (*)(section_t *, FILE *))method_section_debug,
 		(void (*)(section_t *, gzFile ))method_section_write
 	};
@@ -564,6 +586,125 @@ static method_section_t *new_method_section() {
 	return MethodSection;
 };
 
+typedef struct constant_section_t {
+	section_t Base;
+	uint32_t Flags;
+	section_t *Init;
+	uint32_t Offset;
+} constant_section_t;
+
+static void constant_section_debug(constant_section_t *Section, FILE *File) {
+	fprintf(File, "%d: constant section: %d[%d]\n", ((section_t *)Section)->Index, Section->Init->Index, Section->Offset);
+};
+
+static void constant_section_write(constant_section_t *Section, gzFile File) {
+	uint32_t Temp = SECT_CONSTANT; gzwrite(File, &Temp, 1);
+	Temp = 0; gzwrite(File, &Temp, 1);
+	Temp = ((section_t *)Section->Init)->Index; gzwrite(File, &Temp, 4);
+	Temp = Section->Offset; gzwrite(File, &Temp, 4);
+};
+
+static void constant_section_setup(constant_section_t *Section) {
+	section_require(Section->Init);
+};
+
+static constant_section_t *new_constant_section(void) {
+	static section_methods Methods = {
+		(void (*)(section_t *))constant_section_setup,
+		default_section_relocate,
+		default_section_export,
+		(void (*)(section_t *, FILE *))constant_section_debug,
+		(void (*)(section_t *, gzFile ))constant_section_write
+	};
+	constant_section_t *Section = new(constant_section_t);
+	((section_t *)Section)->Index = SEC_UNUSED;
+	((section_t *)Section)->Methods = &Methods;
+	Section->Flags = 0;
+	return Section;
+};
+
+typedef struct constants_section_t {
+	section_t Base;
+	asection *Sect;
+	bfd *Bfd;
+	bfd_info_t *BfdInfo;
+	uint32_t NoOfConstants;
+	constant_section_t **Constants;
+} constants_section_t;
+
+static void constants_section_relocate(constants_section_t *Section, relocation_t *Relocation, uint32_t *Target) {
+	if (Section->Sect) {
+		asection *Sect = Section->Sect;
+		bfd *Bfd = Section->Bfd;
+		bfd_info_t *BfdInfo = Section->BfdInfo;
+		int Count = bfd_get_section_size(Sect) / 4;
+		Section->Constants = malloc(sizeof(constant_section_t *) * Count);
+		for (int I = 0; I < Count; I++) Section->Constants[I] = new_constant_section();
+		uint8_t *Code;
+		bfd_malloc_and_get_section(Bfd, Sect, &Code);
+		arelent **Relocs = (arelent **)malloc(bfd_get_reloc_upper_bound(Bfd, Sect));
+		for (int I = bfd_canonicalize_reloc(Bfd, Sect, Relocs, BfdInfo->Symbols) - 1; I >= 0; --I) {
+			asymbol *Sym = *(Relocs[I]->sym_ptr_ptr);
+			reloc_howto_type *Type = Relocs[I]->howto;
+			constant_section_t *Constant = Section->Constants[Relocs[I]->address / 4];
+			uint32_t *Target = (uint32_t *)(Code + Relocs[I]->address);
+			if (Type->partial_inplace) *Target += (uint32_t)Sym->value;
+			Constant->Init = (section_t *)Sym->section->userdata;
+			Constant->Offset = *Target;
+		};
+		Section->Sect = 0;
+	};
+	constant_section_t *Constant = Section->Constants[*Target / 4];
+	*Target = 0;
+	section_require(Constant);
+	Relocation->Section = Constant;
+};
+
+static void constants_section_export(constants_section_t *Section, uint32_t Offset, export_t *Export) {
+	if (Section->Sect) {
+		asection *Sect = Section->Sect;
+		bfd *Bfd = Section->Bfd;
+		bfd_info_t *BfdInfo = Section->BfdInfo;
+		int Count = bfd_get_section_size(Sect) / 4;
+		Section->Constants = malloc(sizeof(constant_section_t *) * Count);
+		for (int I = 0; I < Count; I++) Section->Constants[I] = new_constant_section();
+		uint8_t *Code;
+		bfd_malloc_and_get_section(Bfd, Sect, &Code);
+		arelent **Relocs = (arelent **)malloc(bfd_get_reloc_upper_bound(Bfd, Sect));
+		for (int I = bfd_canonicalize_reloc(Bfd, Sect, Relocs, BfdInfo->Symbols) - 1; I >= 0; --I) {
+			asymbol *Sym = *(Relocs[I]->sym_ptr_ptr);
+			reloc_howto_type *Type = Relocs[I]->howto;
+			constant_section_t *Constant = Section->Constants[Relocs[I]->address / 4];
+			uint32_t *Target = (uint32_t *)(Code + Relocs[I]->address);
+			if (Type->partial_inplace) *Target += (uint32_t)Sym->value;
+			Constant->Init = (section_t *)Sym->section->userdata;
+			Constant->Offset = *Target;
+		};
+		Section->Sect = 0;
+	};
+	constant_section_t *Constant = Section->Constants[Offset / 4];
+	section_require(Constant);
+	Export->Section = Constant;
+	Export->Offset = 0;
+};
+
+static constants_section_t *new_constants_section(asection *Sect, bfd *Bfd, bfd_info_t *BfdInfo) {
+	static section_methods Methods = {
+		invalid_section_setup,
+		(void (*)(section_t *, relocation_t *, uint32_t *))constants_section_relocate,
+		(void (*)(section_t *, uint32_t, export_t *))constants_section_export,
+		0,
+		0
+	};
+	constants_section_t *Section = new(constants_section_t);
+	((section_t *)Section)->Index = SEC_UNUSED;
+	((section_t *)Section)->Methods = &Methods;
+	Section->Sect = Sect;
+	Section->Bfd = Bfd;
+	Section->BfdInfo = BfdInfo;
+	return Section;
+};
+
 static void add_bfd_section(bfd *Bfd, asection *Sect, bfd_info_t *BfdInfo) {
 	if (strcmp(Sect->name, ".symbols") == 0) {
 		if (Sect->size) Sect->userdata = new_symbols_section(Sect, Bfd);
@@ -575,6 +716,8 @@ static void add_bfd_section(bfd *Bfd, asection *Sect, bfd_info_t *BfdInfo) {
 			Section->Blocks = Block;
 			Sect->userdata = Block;
 		};
+	} else if (strcmp(Sect->name, ".constants") == 0) {
+		if (Sect->size) Sect->userdata = new_constants_section(Sect, Bfd, BfdInfo);
 	} else if (Sect->flags & SEC_THREAD_LOCAL) {
 		printf("Thread local storage not supported yet!\n");
 		exit(1);
@@ -973,8 +1116,7 @@ int main(int Argc, char **Argv) {
 				symbol_t *Symbol = (symbol_t *)stringtable_get(GlobalTable, Export->Internal);
 				if (Symbol == 0) Symbol = (symbol_t *)stringtable_get(WeakTable, Export->Internal);
 				if (Symbol) {
-					section_require(Export->Section = Symbol->Section);
-					Export->Offset = Symbol->Offset;
+					section_export(Symbol->Section, Symbol->Offset, Export);
 				} else {
 					printf("exported symbol not found: %s.\n", Export->Internal);
 					exit(1);

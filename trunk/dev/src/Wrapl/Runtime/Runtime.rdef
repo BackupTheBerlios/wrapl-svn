@@ -1,0 +1,14 @@
+if WINDOWS then
+	_export = export
+	export = function(Name)
+		_export("_" .. Name, Name)
+	end
+end
+
+export("WraplT")
+export("_run_state")
+export("_send_message")
+export("_resend_message")
+export("_invoke_function")
+export("_backtrack")
+export("CreateStringBlock")

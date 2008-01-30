@@ -651,6 +651,39 @@ method "@", STRING, VAL, Std$Integer$T
 	inc eax
 	ret
 
+method "@", STRING, VAL, Std$Integer$T, SMALLINT
+	sub esp, byte 12
+	mov ebx, esp
+	mov eax, [argument(edi).Val]
+	mov edx, [argument(edi + 16).Val]
+	push byte 0
+	mov edx, [small_int(edx).Value]
+	sub esp, [small_int(string(eax).Length).Value]
+	mov edi, esp
+	lea eax, [string(eax).Blocks]
+.copy:
+	mov ecx, [small_int(string_block(eax).Length).Value]
+	jecxz .done
+	mov esi, [address(string_block(eax).Chars).Value]
+	rep movsb
+	add eax, byte sizeof(string_block)
+	jmp .copy
+.done:
+	mov eax, esp
+	push edx
+	push eax
+	push ebx
+	call __gmpz_init_set_str
+	test eax, eax
+	js .failure
+	mov esp, ebx
+	jmp finish_integer
+.failure:
+	xor eax, eax
+	lea esp, [ebx + 12]
+	inc eax
+	ret
+
 extern atof
 method "@", STRING, VAL, Std$Real$T
 	mov ebx, esp

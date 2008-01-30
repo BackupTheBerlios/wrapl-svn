@@ -137,26 +137,6 @@ int module_lookup(void *Address, const char **ModuleName, const char **SymbolNam
 };
 
 static module_t *do_run(const char *Path, const char *Name) {
-	char FullPath[256];
-	sprintf(FullPath, "%s%s", Path, Name);
-	long Length = strlen(FullPath);
-	char *Ext = FullPath + Length;
-	struct stat Stat;
-
-	for (loader_node *Loader = Loaders; Loader; Loader = Loader->Next) {
-		strcpy(Ext, Loader->Extension);
-		if (stat(FullPath, &Stat) == 0) {
-			log_writef("Loading: %s\n", FullPath);
-			char *Key = GC_malloc_atomic(Length + 1);
-			memcpy(Key, FullPath, Length);
-			Key[Length] = 0;
-			module_t *Module = new(module_t);
-			Module->Name = Name;
-			Module->Import = default_import;
-			if (Loader->_load(Module, FullPath) == 0) log_errorf("Error: error loading %s\n", FullPath);
-			return Module;
-		};
-	};
     return 0;
 };
 
@@ -164,24 +144,7 @@ static int ModuleLevel = 0;
 #define MODULE_NOT_FOUND (module_t *)0xFFFFFFFF
 
 module_t *module_run(const char *Name, const char *Path) {
-    FIXUP_PATH(Name);
-    FIXUP_PATH(Path);
-    if (Path) {
-		module_t *Module = do_run(Path, Name);
-		if (Module == MODULE_NOT_FOUND) {
-			log_errorf("Error: module not found %s%s\n", Path, Name);
-		};
-		return Module;
-	} else {
-		module_t *Module = do_run("", Name);
-		if (Module != MODULE_NOT_FOUND) return Module;
-	    for (path_node *Node = Library; Node; Node = Node->Next) {
-	        module_t *Module = do_run(Node->Dir, Name);
-	        if (Module != MODULE_NOT_FOUND) return Module;
-	    };
-        log_errorf("Error: module not found %s\n", Name);
-        return 0;
-	};
+	return 0;
 };
 
 static module_t *module_try_load(const char *Key, loader_node *Loader) {

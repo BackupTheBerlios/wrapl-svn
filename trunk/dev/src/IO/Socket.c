@@ -72,6 +72,74 @@ GLOBAL_FUNCTION(New, 2) {
 };
 
 #ifdef LINUX
+METHOD("sendfd", TYP, LocalT, TYP, IO$Posix$T) {
+	int Socket = ((IO$Posix_t *)Args[0].Val)->Handle;
+	int Handle = ((IO$Posix_t *)Args[1].Val)->Handle;
+	char Payload[4];
+	union {
+		struct cmsghdr a;
+		char b[CMSG_SPACE(sizeof(int))];
+	} ControlX;
+	struct iovec IOVec[1] = {{
+		.iov_base = Payload, .iov_len = 4
+	}};
+	struct msghdr Message = {
+		.msg_name = 0, .msg_namelen = 0,
+		.msg_iov = IOVec, .msg_iovlen = 1,
+		.msg_control = &ControlX, .msg_controllen = sizeof(ControlX)
+	};
+	struct cmsghdr *CMPtr = CMSG_FIRSTHDR(&Message);
+	CMPtr->cmsg_len = CMSG_LEN(sizeof(int));
+	CMPtr->cmsg_level = SOL_SOCKET;
+	CMPtr->cmsg_type = SCM_RIGHTS;
+	*((int*)CMSG_DATA(CMPtr)) = Handle;
+	if (sendmsg(Socket, &Message, 0) < 0) {
+		Result->Val = Std$String$new("Error sending fd");
+		return MESSAGE;
+	} else {
+		return SUCCESS;
+	};
+};
+
+METHOD("recvfd", TYP, LocalT) {
+	int Socket = ((IO$Posix_t *)Args[0].Val)->Handle;
+	char Payload[4];
+	union {
+		struct cmsghdr a;
+		char b[CMSG_SPACE(sizeof(int))];
+	} ControlX;
+	struct iovec IOVec[1] = {{
+		.iov_base = Payload, .iov_len = 4
+	}};
+	struct msghdr Message = {
+		.msg_name = 0, .msg_namelen = 0,
+		.msg_iov = IOVec, .msg_iovlen = 1,
+		.msg_control = &ControlX, .msg_controllen = sizeof(ControlX)
+	};
+	struct cmsghdr *CMPtr = CMSG_FIRSTHDR(&Message);
+	CMPtr->cmsg_len = CMSG_LEN(sizeof(int));
+	CMPtr->cmsg_level = SOL_SOCKET;
+	CMPtr->cmsg_type = SCM_RIGHTS;
+	*((int*)CMSG_DATA(CMPtr)) = -1;
+	if (recvmsg(Socket, &Message, 0) < 0) {
+		Result->Val = Std$String$new("Error receiving fd");
+		return MESSAGE;
+	} else {
+		CMPtr = CMSG_FIRSTHDR(&Message);
+		if (CMPtr != 0 &&
+			CMPtr->cmsg_len == CMSG_LEN(sizeof(int)) &&
+			CMPtr->cmsg_level == SOL_SOCKET &&
+			CMPtr->cmsg_type == SCM_RIGHTS
+		) {
+			Result->Val = IO$Posix$new(T, *((int*)CMSG_DATA(CMPtr)));
+			return SUCCESS;
+		} else {
+			Result->Val = Std$String$new("Error receiving fd (2)");
+			return MESSAGE;
+		};
+	};
+};
+
 METHOD("bind", TYP, LocalT, TYP, Std$String$T) {
 	struct sockaddr_un Name;
 	Name.sun_family = AF_LOCAL;

@@ -1,0 +1,32 @@
+struct keyword_t {char *Name; int Token;};
+%%
+VAR, tkVAR
+DEF, tkDEF
+REP, tkREP
+EXIT, tkEXIT
+STEP, tkSTEP
+YIELD, tkYIELD
+WHILE, tkWHILE
+UNTIL, tkUNTIL
+ALL, tkALL
+EVERY, tkEVERY
+DO, tkDO
+IS, tkIS
+RET, tkRET
+SUSP, tkSUSP
+NIL, tkNIL
+BACK, tkBACK
+FAIL, tkFAIL
+IMP, tkIMP
+USE, tkUSE
+AS, tkAS
+IN, tkIN
+OF, tkOF
+MOD, tkMOD
+TO, tkTO
+RECV, tkRECV
+SEND, tkSEND
+NOT, tkNOT
+WHEN, tkWHEN
+END, tkEND
+SKIP, tkSKIP

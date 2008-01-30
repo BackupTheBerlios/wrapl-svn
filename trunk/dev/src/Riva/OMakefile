@@ -10,7 +10,6 @@ FILES[] =
 	fileset
 	log
 	log2
-	main
 	memory
 	module
 	native
@@ -24,8 +23,10 @@ if $(equal $(OSTYPE), Win32)
 	export
 
 LDFLAGS += -lz -lgc -lconfuse -s
-CProgram($(BASENAME), $(FILES))
+CProgram($(BASENAME), main $(FILES))
 
 Riva: $(PROGRAM)
 
-.DEFAULT: Riva
+StaticCLibrary(libriva, embedded $(FILES))
+
+.DEFAULT: Riva libriva.a

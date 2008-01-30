@@ -1,4 +1,5 @@
 #include <Std.h>
+#include <Sys/Time.h>
 #include <dirent.h>
 #include <sys/stat.h>
 #include <unistd.h>
@@ -315,6 +316,21 @@ GLOBAL_FUNCTION(FileType, 1) {
 	struct stat Stat;
 	if (stat(FileName, &Stat) == 0) {
 		Result->Val = Std$Integer$new_small(Stat.st_mode);
+		return SUCCESS;
+	} else {
+		return FAILURE;
+	};
+#endif
+};
+
+GLOBAL_FUNCTION(FileTime, 1) {
+	char FileName[((Std$String_t *)Args[0].Val)->Length.Value + 1];
+	Std$String$flatten_to(Args[0].Val, FileName);
+#ifdef WINDOWS
+#else
+	struct stat Stat;
+	if (stat(FileName, &Stat) == 0) {
+		Result->Val = Sys$Time$new(Stat.st_mtime);
 		return SUCCESS;
 	} else {
 		return FAILURE;

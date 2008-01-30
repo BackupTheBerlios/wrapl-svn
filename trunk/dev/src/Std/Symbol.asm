@@ -271,6 +271,7 @@ extern Std$String$T
 extern Std$Integer$SmallT
 extern Std$Address$T
 unchecked_func nomethod
+	;int3
 	push byte sizeof(nomethod_message)
 	call Riva$Memory$_alloc
 	add esp, byte 4
