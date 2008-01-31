@@ -1651,6 +1651,7 @@ operand_t *module_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t 
 		if (Var->External) {
 			cemit("extern $s", Var->Name);
 			Operand->Address = Var->Name;
+			Compiler->declare(Var->Name, Operand);
 		} else {
 			asprintf(&Operand->Address, "..@G%x", Operand);
 			cemit("%s: dd Std$Object$Nil", Operand->Address);
@@ -1693,6 +1694,7 @@ operand_t *module_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t 
 			Operand->Value = Def->Name;
 			cemit("extern %s", Def->Name);
 			Def->Type = expr_t::PC_FULL;
+			Compiler->declare(Def->Name, Operand);
 		} else {
 			operand_t *Operand = Def->Value->precompile(Compiler, Def->Type);
 			if (Operand) {

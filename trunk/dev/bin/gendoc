@@ -498,6 +498,7 @@ EVERY file <- Args[i:to(Args:length)] DO (
         );
         yasm:close;
         input:close;
+	) IS "wrapl" DO (
     ) DO (
         SEND "unknown filetype";
     );

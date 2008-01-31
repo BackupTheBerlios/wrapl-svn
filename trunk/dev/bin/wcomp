@@ -6,12 +6,8 @@ IMP IO.Terminal USE Out;
 
 VAR source <- Program.Args[1];
 VAR temp <- FileSys.TempFile();
-VAR output <- (
-    VAR n <- 0;
-    EVERY n <- source:find(".");
-    source[1, n] + ".o";
-);
-VAR args <- Program.Args[2, 0] | [];
+VAR output <- Program.Args[2];
+VAR args <- Program.Args[3, 0] | [];
 
 (
     VAR sourcefile <- File.Open(source, File.READ + File.TEXT);

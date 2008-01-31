@@ -121,6 +121,8 @@ public.AS = yasm
 public.ASOUT = $(array -o)
 public.ASFLAGS =
 
+public.WFLAGS =
+
 #
 # Add the -I option to the includes lazily.
 # Don't redefine this variable unless you know what you are doing.
@@ -150,6 +152,9 @@ foreach(CXX_EXT, $(CXX_EXTS))
 
 %$(EXT_OBJ): %.asm :scanner: scan-asm-%.asm
     $(AS) $(ASFLAGS) $(PREFIXED_INCLUDES) $(ASOUT)$@ $<
+
+%$(EXT_OBJ): %.wrapl
+	$(WCOMP) $< $@ $(WFLAGS)
 
 %.c: %.y
     $(YACC) $<
@@ -497,7 +502,12 @@ public.RivaModule(module, files) =
     private.SOURCEDIR = $(dirname $(RDEF))$(DIRSEP)
     private.SOURCES =
         foreach(name, $(files))
-            value $(SOURCEDIR)$(name)$(if $(file-exists $(SOURCEDIR)$(name).c), .c, .asm)
+			if $(file-exists $(SOURCEDIR)$(name).c)
+				value $(SOURCEDIR)$(name).c
+			elseif $(file-exists $(SOURCEDIR)$(name).asm)
+				value $(SOURCEDIR)$(name).asm
+			elseif $(file-exists $(SOURCEDIR)$(name).wrapl)
+				value $(SOURCEDIR)$(name).wrapl
     
     $(NAME): $(OFILES) $(RLINK) $(RDEF) $(DOC).txt
         $(RLINK) -o$@ $(OFILES) $(LDFLAGS) $(RDEF) -?$(LIST)

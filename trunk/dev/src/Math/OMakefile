@@ -5,9 +5,7 @@ LDFLAGS += Std.rlib Riva.rlib
 
 Math:\
     $(RivaModule Math/Matrix, Matrix)\
-    $(RivaModule Math/Methods, Methods)
-
-.SUBDIRS:\
-	Polynomial
+    $(RivaModule Math/Methods, Methods)\
+	$(RivaModule Math/Polynomial, Polynomial Polynomial2)
 
 .DEFAULT: Math

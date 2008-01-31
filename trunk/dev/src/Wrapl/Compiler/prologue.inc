@@ -219,4 +219,7 @@ extern Wrapl$Runtime$CreateStringBlock
 extern Std$List$T
 extern Wrapl$Runtime$_incorrect_type
 extern Wrapl$Runtime$_select_string
+extern Std$Symbol$Is
+extern Std$Symbol$In
+extern Std$Symbol$Set
 
