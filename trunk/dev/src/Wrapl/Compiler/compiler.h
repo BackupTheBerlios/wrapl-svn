@@ -534,12 +534,14 @@ struct module_expr_t : expr_t {
 		int LineNo;
 		const char *Name;
 		bool Exported;
+		bool External;
 	};
 	struct globaldef_t {
 		globaldef_t *Next;
 		int LineNo;
 		const char *Name;
 		bool Exported;
+		bool External;
 		expr_t *Value;
 		precomp_t Type;
 	};

@@ -1648,12 +1648,17 @@ operand_t *module_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t 
 	for (module_expr_t::globalvar_t *Var = Vars; Var; Var = Var->Next) {
 		operand_t *Operand = new operand_t;
 		Operand->Type = operand_t::GVAR;
-		asprintf(&Operand->Address, "..@G%x", Operand);
-		cemit("%s: dd Std$Object$Nil", Operand->Address);
-		Compiler->declare(Var->Name, Operand);
-		if (Var->Exported) {
-			cemit("global %s$%s", Name, Var->Name);
-			cemit("%s$%s: equ %s", Name, Var->Name, Operand->Address);
+		if (Var->External) {
+			cemit("extern $s", Var->Name);
+			Operand->Address = Var->Name;
+		} else {
+			asprintf(&Operand->Address, "..@G%x", Operand);
+			cemit("%s: dd Std$Object$Nil", Operand->Address);
+			Compiler->declare(Var->Name, Operand);
+			if (Var->Exported) {
+				cemit("global %s$%s", Name, Var->Name);
+				cemit("%s$%s: equ %s", Name, Var->Name, Operand->Address);
+			};
 		};
 	};
 	for (module_expr_t::globalimp_t *Imp = Imps; Imp; Imp = Imp->Next) {
@@ -1682,12 +1687,20 @@ operand_t *module_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t 
 		};
 	};
 	for (module_expr_t::globaldef_t *Def = Defs; Def; Def = Def->Next) {
-		operand_t *Operand = Def->Value->precompile(Compiler, Def->Type);
-		if (Operand) {
-			Compiler->declare(Def->Name, Operand);
-			if (Def->Exported) {
-				cemit("global %s$%s", Name, Def->Name);
-				cemit("%s$%s: equ %s", Name, Def->Name, Operand->Value);
+		if (Def->External) {
+			operand_t *Operand = new operand_t;
+			Operand->Type = operand_t::CNST;
+			Operand->Value = Def->Name;
+			cemit("extern %s", Def->Name);
+			Def->Type = expr_t::PC_FULL;
+		} else {
+			operand_t *Operand = Def->Value->precompile(Compiler, Def->Type);
+			if (Operand) {
+				Compiler->declare(Def->Name, Operand);
+				if (Def->Exported) {
+					cemit("global %s$%s", Name, Def->Name);
+					cemit("%s$%s: equ %s", Name, Def->Name, Operand->Value);
+				};
 			};
 		};
 	};

@@ -747,60 +747,62 @@ static module_expr_t *accept_globalvar(scanner_t *Scanner) {
 	Var->LineNo = Scanner->Token.LineNo;
 	Scanner->accept(tkIDENT);
 	Var->Name = Scanner->Token.Ident;
-	Var->Exported = Scanner->parse(tkEXCLAIM);
-	if (Scanner->parse(tkASSIGN)) {
-		ident_expr_t *Ident = new ident_expr_t(Scanner->Token.LineNo, Var->Name);
-		assign_expr_t *Assign = new assign_expr_t(Scanner->Token.LineNo, Ident, accept_expr(Scanner));
-		if (Scanner->parse(tkCOMMA)) {
-			module_expr_t *Module = accept_globalvar(Scanner);
-			Var->Next = Module->Vars;
-			Module->Vars = Var;
-			Assign->Next = Module->Body;
-			Module->Body = Assign;
-			return Module;
+	if (!(Var->External = Scanner->parse(tkQUERY))) {
+		Var->Exported = Scanner->parse(tkEXCLAIM);
+		if (Scanner->parse(tkASSIGN)) {
+			ident_expr_t *Ident = new ident_expr_t(Scanner->Token.LineNo, Var->Name);
+			assign_expr_t *Assign = new assign_expr_t(Scanner->Token.LineNo, Ident, accept_expr(Scanner));
+			if (Scanner->parse(tkCOMMA)) {
+				module_expr_t *Module = accept_globalvar(Scanner);
+				Var->Next = Module->Vars;
+				Module->Vars = Var;
+				Assign->Next = Module->Body;
+				Module->Body = Assign;
+				return Module;
+			} else {
+				Scanner->accept(tkSEMICOLON);
+				module_expr_t *Module = accept_globalstatement(Scanner);
+				Var->Next = Module->Vars;
+				Module->Vars = Var;
+				Assign->Next = Module->Body;
+				Module->Body = Assign;
+				return Module;
+			};
+		} else if (Scanner->parse(tkLPAREN)) {
+			func_expr_t::parameter_t *Parameters = accept_parameters(Scanner);
+			Scanner->accept(tkRPAREN);
+			func_expr_t *Func = new func_expr_t(Scanner->Token.LineNo, Parameters, accept_expr(Scanner));
+			ident_expr_t *Ident = new ident_expr_t(Scanner->Token.LineNo, Var->Name);
+			assign_expr_t *Assign = new assign_expr_t(Scanner->Token.LineNo, Ident, Func);
+			if (Scanner->parse(tkCOMMA)) {
+				module_expr_t *Module = accept_globalvar(Scanner);
+				Var->Next = Module->Vars;
+				Module->Vars = Var;
+				Assign->Next = Module->Body;
+				Module->Body = Assign;
+				return Module;
+			} else {
+				Scanner->accept(tkSEMICOLON);
+				module_expr_t *Module = accept_globalstatement(Scanner);
+				Var->Next = Module->Vars;
+				Module->Vars = Var;
+				Assign->Next = Module->Body;
+				Module->Body = Assign;
+				return Module;
+			};
 		} else {
-			Scanner->accept(tkSEMICOLON);
-			module_expr_t *Module = accept_globalstatement(Scanner);
-			Var->Next = Module->Vars;
-			Module->Vars = Var;
-			Assign->Next = Module->Body;
-			Module->Body = Assign;
-			return Module;
-		};
-	} else if (Scanner->parse(tkLPAREN)) {
-		func_expr_t::parameter_t *Parameters = accept_parameters(Scanner);
-		Scanner->accept(tkRPAREN);
-		func_expr_t *Func = new func_expr_t(Scanner->Token.LineNo, Parameters, accept_expr(Scanner));
-		ident_expr_t *Ident = new ident_expr_t(Scanner->Token.LineNo, Var->Name);
-		assign_expr_t *Assign = new assign_expr_t(Scanner->Token.LineNo, Ident, Func);
-		if (Scanner->parse(tkCOMMA)) {
-			module_expr_t *Module = accept_globalvar(Scanner);
-			Var->Next = Module->Vars;
-			Module->Vars = Var;
-			Assign->Next = Module->Body;
-			Module->Body = Assign;
-			return Module;
-		} else {
-			Scanner->accept(tkSEMICOLON);
-			module_expr_t *Module = accept_globalstatement(Scanner);
-			Var->Next = Module->Vars;
-			Module->Vars = Var;
-			Assign->Next = Module->Body;
-			Module->Body = Assign;
-			return Module;
-		};
-	} else {
-		if (Scanner->parse(tkCOMMA)) {
-			module_expr_t *Module = accept_globalvar(Scanner);
-			Var->Next = Module->Vars;
-			Module->Vars = Var;
-			return Module;
-		} else {
-			Scanner->accept(tkSEMICOLON);
-			module_expr_t *Module = accept_globalstatement(Scanner);
-			Var->Next = Module->Vars;
-			Module->Vars = Var;
-			return Module;
+			if (Scanner->parse(tkCOMMA)) {
+				module_expr_t *Module = accept_globalvar(Scanner);
+				Var->Next = Module->Vars;
+				Module->Vars = Var;
+				return Module;
+			} else {
+				Scanner->accept(tkSEMICOLON);
+				module_expr_t *Module = accept_globalstatement(Scanner);
+				Var->Next = Module->Vars;
+				Module->Vars = Var;
+				return Module;
+			};
 		};
 	};
 };
@@ -810,14 +812,16 @@ static module_expr_t *accept_globaldef(scanner_t *Scanner) {
 	Def->LineNo = Scanner->Token.LineNo;
 	Scanner->accept(tkIDENT);
 	Def->Name = Scanner->Token.Ident;
-	Def->Exported = Scanner->parse(tkEXCLAIM);
-	if (Scanner->parse(tkLPAREN)) {
-		func_expr_t::parameter_t *Parameters = accept_parameters(Scanner);
-		Scanner->accept(tkRPAREN);
-		Def->Value = new func_expr_t(Scanner->Token.LineNo, Parameters, accept_expr(Scanner));
-	} else {
-		Scanner->accept(tkASSIGN);
-		Def->Value = accept_expr(Scanner);
+	if (!(Def->External = Scanner->parse(tkQUERY))) {
+		Def->Exported = Scanner->parse(tkEXCLAIM);	
+		if (Scanner->parse(tkLPAREN)) {
+			func_expr_t::parameter_t *Parameters = accept_parameters(Scanner);
+			Scanner->accept(tkRPAREN);
+			Def->Value = new func_expr_t(Scanner->Token.LineNo, Parameters, accept_expr(Scanner));
+		} else {
+			Scanner->accept(tkASSIGN);
+			Def->Value = accept_expr(Scanner);
+		};
 	};
 	module_expr_t *Module;
 	if (Scanner->parse(tkCOMMA)) {
