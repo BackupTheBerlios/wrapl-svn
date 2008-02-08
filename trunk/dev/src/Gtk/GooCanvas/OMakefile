@@ -1,0 +1,14 @@
+BASENAME = $(GTK_LIB_DIR)GooCanvas$(DIRSEP)
+
+CFLAGS += $(shell pkg-config --cflags goocanvas) -include goocanvas.h
+LDFLAGS += Gtk/Gtk.rlib Gtk/GooCanvas.rlib
+
+if $(file-exists $(GTK_AUTOGEN))
+	foreach(FILE, $(rootname $(basename $(glob *.c))))
+		#println($(FILE))
+		clean:
+			$(rm $(FILE).c)
+			$(rm $(FILE).rdef)
+		GtkGooCanvas: $(RivaModule Gtk/GooCanvas/$(FILE), $(FILE))
+		export
+

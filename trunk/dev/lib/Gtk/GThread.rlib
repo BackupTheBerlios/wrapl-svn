@@ -1,0 +1,8 @@
+module("libgthread-2.0")
+export("_edata")
+export("__bss_start")
+export("g_thread_init")
+export("_init")
+export("g_thread_init_with_errorcheck_mutexes")
+export("_end")
+export("_fini")

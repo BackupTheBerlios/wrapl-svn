@@ -1,0 +1,14 @@
+BASENAME = $(GTK_LIB_DIR)SourceView$(DIRSEP)
+
+CFLAGS += $(shell pkg-config --cflags gtksourceview-2.0) -include gtksourceview/gtksourceview.h -include gtksourceview/gtksourcestyleschememanager.h -include gtksourceview/gtksourcelanguagemanager.h
+LDFLAGS += Gtk/SourceView.rlib
+
+if $(file-exists $(GTK_AUTOGEN))
+	foreach(FILE, $(rootname $(basename $(glob *.c))))
+		#println($(FILE))
+		clean:
+			$(rm $(FILE).c)
+			$(rm $(FILE).rdef)
+		GtkSourceView: $(RivaModule Gtk/SourceView/$(FILE), $(FILE))
+		export
+
