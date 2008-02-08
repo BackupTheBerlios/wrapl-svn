@@ -1,0 +1,19 @@
+LDFLAGS += Std.rlib Riva.rlib Util.rlib Sys$(DIRSEP)Module.rlib IO$(DIRSEP)Stream.rlib IO$(DIRSEP)File.rlib
+CFLAGS += -std=gnu99
+
+CFLAGS += $(shell pkg-config --cflags gtk+-2.0) -include gtk/gtk.h -include gtk/gtkimmodule.h
+LDFLAGS += Gtk/Gtk.rlib Gtk/Glib.rlib Gtk/GThread.rlib Gtk/GObject.rlib
+
+CFLAGS += $(shell pkg-config --cflags gtksourceview-2.0) -include gtksourceview/gtksourceview.h
+LDFLAGS += Gtk/SourceView.rlib
+
+CFLAGS += $(shell pkg-config --cflags libglade-2.0) -include glade/glade.h -include glade/glade-parser.h -include glade/glade-build.h
+LDFLAGS += Gtk/Glade.rlib
+
+Debugger2$(EXT_OBJ): Debugger.glade
+
+LocalCGeneratedFiles(Images.c)
+$(file Images.c): $(file Breakpoint.png) $(file NoBreakpoint.png)
+	gdk-pixbuf-csource --extern --raw --build-list BreakpointData $(file Breakpoint.png) NoBreakpointData $(file NoBreakpoint.png) > Images.c
+
+.DEFAULT: $(RivaModule Wrapl/Debugger, Debugger Debugger2 Images)

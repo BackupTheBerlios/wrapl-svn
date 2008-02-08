@@ -93,6 +93,8 @@ struct frame_t {
 	uint32_t NoOfParams;
 	bool Variadic;
 	upscope_t *UpScopes;
+	label_t *Resend;
+	void *Debug;
 };
 
 #include <stdio.h>
@@ -171,7 +173,7 @@ struct label_t : inst_t {
 	void append(inst_t *Inst);
 
 	void link(uint32_t LineNo, label_t *U) {Link = U;};
-	void scope(uint32_t LineNo, uint32_t Level, uint32_t Size);
+	void scope(uint32_t LineNo, uint32_t Level, uint32_t Size, void *Debug);
 	void init_trap(uint32_t LineNo, uint32_t Trap, label_t *Failure);
 	void push_trap(uint32_t LineNo, uint32_t Trap, label_t *Failure, uint32_t Temp);
 	void store_link(uint32_t LineNo, uint32_t Temp, label_t *Target);
@@ -192,6 +194,7 @@ struct label_t : inst_t {
 	void susp(uint32_t LineNo);
 	void recv(uint32_t LineNo, label_t *Handler);
 	void send(uint32_t LineNo);
+	void resend(uint32_t LineNo);
 	void comp(uint32_t LineNo, int Equal, operand_t *Operand, label_t *Failure);
 	void limit(uint32_t LineNo, uint32_t Trap, uint32_t Temp);
 	void test_limit(uint32_t LineNo, uint32_t Temp, label_t *Failure);

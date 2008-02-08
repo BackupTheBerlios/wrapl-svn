@@ -1,5 +1,6 @@
 #include "scanner.h"
 #include "missing.h"
+#include "debugger.h"
 #include <Riva.h>
 #include <Std.h>
 
@@ -95,6 +96,12 @@ scanner_t::scanner_t(IO$Stream_t *Source) {
 	NextToken.LineNo = 0;
 };
 
+const char *scanner_t::readl(void) {
+	const char *Line = IO$Stream$readl(Source);
+	if (Debugger) Debugger->add_line(Debug, Line);
+	return Line;
+};
+
 void scanner_t::flush() {
 	NextChar = "";
 	NextToken.Type = 0;
@@ -146,7 +153,7 @@ static Std$String_t *scan_string_block0_next(scanner_t *Scanner, int Index, bool
     Start: char Char = *(Scanner->NextChar++);
     switch (Char) {
     case 0: {
-        Scanner->NextChar = IO$Stream$readl(Scanner->Source);
+        Scanner->NextChar = Scanner->readl();
         if (Scanner->NextChar == 0) Scanner->raise_error(Scanner->NextToken.LineNo, "Error: end of input in block string");
         ++Scanner->NextToken.LineNo;
         Std$String_t *String = scan_string_block0_next(Scanner, Index + 1, ExprMode);
@@ -157,7 +164,7 @@ static Std$String_t *scan_string_block0_next(scanner_t *Scanner, int Index, bool
         Char = *(Scanner->NextChar++);
         switch (Char) {
         case 0: {
-            Scanner->NextChar = IO$Stream$readl(Scanner->Source);
+            Scanner->NextChar = Scanner->readl();
             if (Scanner->NextChar == 0) Scanner->raise_error(Scanner->NextToken.LineNo, "Error: end of input in block string");
             ++Scanner->NextToken.LineNo;
             goto Start;
@@ -240,7 +247,7 @@ static void scan_string_block0(scanner_t *Scanner) {
 };
 
 static Std$String_t *scan_string_block_next(scanner_t *Scanner, const char *End, int EndLength, const char **Current, int Index) {
-	char *Line = IO$Stream$readl(Scanner->Source);
+	char *Line = Scanner->readl();
 	if (Line) {
 		++Scanner->NextToken.LineNo;
 	} else {
@@ -278,7 +285,7 @@ bool scanner_t::parse(int Type) {
 		scan_loop: {
 			Start = Current;
 			switch (*Current) {
-			case 0: Current = IO$Stream$readl(Source);
+			case 0: Current = readl();
 				if (Current == 0) {
 					NextToken.Type = tkEOI; goto scan_done;
 				} else {
@@ -356,7 +363,7 @@ bool scanner_t::parse(int Type) {
 				case '0' ... '9': ++Current; goto scan_integer;
 				case '.': ++Current; goto scan_real_mantissa;
 				case '=': ++Current; goto scan_comment;
-				case '-': Current = IO$Stream$readl(Source);
+				case '-': Current = readl();
 					if (Current == 0) {
 						NextToken.Type = tkEOI; goto scan_done;
 					} else {
@@ -493,7 +500,7 @@ bool scanner_t::parse(int Type) {
 				int Level = 1;
 				comment_loop: {
 					switch (*Current++) {
-					case 0: Start = Current = IO$Stream$readl(Source);
+					case 0: Start = Current = readl();
 						if (Current == 0) {
 							raise_error(NextToken.LineNo, "Error: end of input in comment");
 						} else {
@@ -507,7 +514,7 @@ bool scanner_t::parse(int Type) {
 						};
 					case '-':
 						switch (*Current++) {
-						case '-': Start = Current = IO$Stream$readl(Source);
+						case '-': Start = Current = readl();
 							if (Current == 0) {
 								// RAISE ERROR HERE!!!
 							} else {

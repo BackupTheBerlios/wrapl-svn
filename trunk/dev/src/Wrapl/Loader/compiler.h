@@ -49,6 +49,7 @@ struct compiler_t {
 			expression_t *Expression;
 			operand_t *Self;
 			uint32_t LineNo;
+			void *Debug;
 		};
 
 		loop_t *Loop;
@@ -56,6 +57,7 @@ struct compiler_t {
 		frame_t Frame;
 		integertable_t LoopTable;
 		integertable_t VarTable;
+		void *Debug;
 
 		function_t();
 		uint32_t lookup(loop_t *Loop);
@@ -75,6 +77,7 @@ struct compiler_t {
 
 	function_t *Function;
 	scope_t *Scope, *Global;
+	void *Debug;
 
 	compiler_t() {
 		Scope = Global = new scope_t(scope_t::SC_GLOBAL);
@@ -104,7 +107,7 @@ struct compiler_t {
 
 	frame_t *frame() {return &Function->Frame;};
 
-	void push_function();
+	void push_function(int LineNo);
 	frame_t *pop_function();
 
 	void push_scope();

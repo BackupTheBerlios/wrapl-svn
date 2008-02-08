@@ -84,8 +84,6 @@ extern const char *Tokens[];
 
 struct scanner_t {
 	IO$Stream_t *Source;
-	//char *(*readl)(IO$Stream_t *);
-
 	const char *NextChar;
 
 	struct {
@@ -103,7 +101,10 @@ struct scanner_t {
 		int LineNo;
 	} Error;
 
+	void *Debug;
+
 	scanner_t(IO$Stream_t *Source);
+	const char *readl(void);
 	void flush();
 	bool parse(int Type);
 	void accept(int Type);

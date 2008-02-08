@@ -1,5 +1,6 @@
 #include "compiler.h"
 #include "missing.h"
+#include "debugger.h"
 
 #include <Std.h>
 #include <Riva/Config.h>
@@ -35,6 +36,8 @@ compiler_t::function_t::function_t() {DEBUG
 	Loop->Expression = new loop_t::expression_t;
 	Loop->Expression->Temps = new bitset_t();
 	Frame.NoOfScopes = 1;
+	Frame.Resend = new label_t;
+	Frame.Resend->resend(0);
 };
 
 operand_t *compiler_t::new_parameter(bool Indirect) {DEBUG
@@ -51,6 +54,7 @@ operand_t *compiler_t::new_local(bool Reference) {DEBUG
 	Operand->Type = Reference ? operand_t::LREF : operand_t::LVAR;
 	if (Function->Loop->Index == -1) {
 		uint32_t Index = Function->Loop->Free0->allocate(Function->Loop->Free1);
+		if (Debugger) Function->Loop->Debug = Debugger->add_scope(Function->Debug, Index);
 		for (function_t::loop_t *Prev = Function->Loop->Prev; Prev; Prev = Prev->Prev) Prev->Free1->reserve(Index);
 		Function->Loop->Index = Index;
 		if (Index >= Function->Frame.NoOfScopes) Function->Frame.NoOfScopes = Index + 1;
@@ -93,7 +97,7 @@ label_t *compiler_t::push_loop(uint32_t LineNo, label_t *Start, label_t *Step, l
 
 void compiler_t::pop_loop() {DEBUG
 	if (Function->Loop->NoOfLocals)
-		Function->Loop->Start0->scope(Function->Loop->LineNo, Function->Loop->Index, Function->Loop->NoOfLocals);
+		Function->Loop->Start0->scope(Function->Loop->LineNo, Function->Loop->Index, Function->Loop->NoOfLocals, Function->Loop->Debug);
 	Function->Loop = Function->Loop->Prev;
 };
 
@@ -164,14 +168,19 @@ uint32_t compiler_t::function_t::lookup(loop_t *Loop) {DEBUG
 	return Index;
 };
 
-void compiler_t::push_function() {DEBUG
+void compiler_t::push_function(int LineNo) {DEBUG
 	function_t *Function = new function_t();
 	Function->Up = this->Function;
 	this->Function = Function;
+	if (Debugger) {
+		Function->Debug = Debugger->add_function(Debug, LineNo);
+		Function->Loop->Debug = Debugger->add_scope(Function->Debug, 0);
+	};
 };
 
 frame_t *compiler_t::pop_function() {DEBUG
 	frame_t *Frame = &Function->Frame;
+	Frame->Debug = Function->Debug;
 	uint32_t NoOfTemps = Function->Loop->Expression->Temps->size();
 	if (NoOfTemps > Frame->NoOfTemps) Frame->NoOfTemps = NoOfTemps;
 	Function = Function->Up;
@@ -179,26 +188,22 @@ frame_t *compiler_t::pop_function() {DEBUG
 };
 
 void compiler_t::push_scope() {DEBUG
-	if (this->Scope->Type == scope_t::SC_LOCAL) {
-		scope_t *Scope = new scope_t(scope_t::SC_LOCAL, this->Scope);
+	if (Scope->Type == scope_t::SC_LOCAL) {
+		Scope = new scope_t(scope_t::SC_LOCAL, Scope);
 		Scope->Loop = Function->Loop;
 		Scope->Function = Function;
-		this->Scope = Scope;
 	} else {
-		scope_t *Scope = new scope_t(scope_t::SC_GLOBAL, this->Scope);
-		this->Scope = Scope;
+		Scope = new scope_t(scope_t::SC_GLOBAL, Scope);
 	};
 };
 
 void compiler_t::push_scope(scope_t::type_t Type) {DEBUG
 	if (Type == scope_t::SC_LOCAL) {
-		scope_t *Scope = new scope_t(scope_t::SC_LOCAL, this->Scope);
+		Scope = new scope_t(scope_t::SC_LOCAL, Scope);
 		Scope->Loop = Function->Loop;
 		Scope->Function = Function;
-		this->Scope = Scope;
 	} else {
-		scope_t *Scope = new scope_t(scope_t::SC_GLOBAL, this->Scope);
-		this->Scope = Scope;
+		Scope = new scope_t(scope_t::SC_GLOBAL, Scope);
 	};
 };
 
@@ -208,6 +213,13 @@ void compiler_t::pop_scope() {DEBUG
 
 void compiler_t::declare(const char *Name, operand_t *Operand) {DEBUG
 	stringtable_put(Scope->NameTable, Name, Operand);
+	if (Debugger) {
+		if (Operand->Type == operand_t::LVAR) {
+			Debugger->add_local(Scope->Loop->Debug, Name, Operand->Index);
+		} else if (Operand->Type == operand_t::GVAR) {
+			Debugger->add_global(Debug, Name, Operand->Address);
+		};
+	};
 };
 
 operand_t *compiler_t::lookup(int LineNo, const char *Name) {DEBUG
@@ -798,7 +810,7 @@ operand_t *parallel_invoke_expr_t::compile(compiler_t *Compiler, label_t *Start,
 };
 
 operand_t *func_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t *Success) {DEBUG
-	Compiler->push_function();
+	Compiler->push_function(LineNo);
 		Compiler->push_scope(compiler_t::scope_t::SC_LOCAL);
 			Compiler->push_expression();
 				for (func_expr_t::parameter_t *Parameter = Parameters; Parameter; Parameter = Parameter->Next) {
@@ -1449,7 +1461,7 @@ operand_t *block_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t *
 	for (block_expr_t::localdef_t *Def = Defs; Def; Def = Def->Next) {
 		switch (Def->Type) {
 		case PC_NONE: {
-			Compiler->push_function();
+			Compiler->push_function(LineNo);
 			label_t *Start = new label_t;
 			label_t *Success = new label_t;
 			label_t *Failure = new label_t;
@@ -1619,7 +1631,7 @@ operand_t *module_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t 
 	for (module_expr_t::globaldef_t *Def = Defs; Def; Def = Def->Next) {
 		switch (Def->Type) {
 		case PC_NONE: {
-			Compiler->push_function();
+			Compiler->push_function(LineNo);
 			label_t *Start = new label_t;
 			label_t *Success = new label_t;
 			label_t *Failure = new label_t;
@@ -1653,7 +1665,7 @@ operand_t *module_expr_t::compile(compiler_t *Compiler, label_t *Start, label_t 
 		};
 	};
 	if (Body) {
-		Compiler->push_function();
+		Compiler->push_function(LineNo);
 			label_t *Start = new label_t;
 			label_t *Label0 = Start;
 			for (expr_t *Expr = Body; Expr; Expr = Expr->Next) {
@@ -1733,7 +1745,7 @@ int command_expr_t::compile(compiler_t *Compiler, Std$Function_result *Result) {
 	for (command_expr_t::globaldef_t *Def = Defs; Def; Def = Def->Next) {
 		switch (Def->Type) {
 		case PC_NONE: {
-			Compiler->push_function();
+			Compiler->push_function(LineNo);
 			label_t *Start = new label_t;
 			label_t *Success = new label_t;
 			label_t *Failure = new label_t;
@@ -1766,7 +1778,7 @@ int command_expr_t::compile(compiler_t *Compiler, Std$Function_result *Result) {
 		};
 	};
 	if (Body) {
-		Compiler->push_function();
+		Compiler->push_function(LineNo);
 			label_t *Start = new label_t;
 			label_t *Success = new label_t;
 			label_t *Failure = new label_t;

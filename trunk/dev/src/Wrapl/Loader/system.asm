@@ -5,7 +5,7 @@ struct bstate, state
 	.Ref:		resd 1
 	.Code:		resd 1
 	.Handler:	resd 1
-	.Data:		resd 1
+	;.Data:		resd 1
 endstruct
 
 struct closure, value

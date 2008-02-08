@@ -9,6 +9,7 @@
 #include "missing.h"
 #include "system.h"
 #include "assembler.h"
+#include "debugger.h"
 
 static int wrapl_load(Riva$Module_t *Module, const char *Path) {
 	Sys$Module_t *Module0 = new Sys$Module_t;
@@ -22,6 +23,7 @@ static int wrapl_load(Riva$Module_t *Module, const char *Path) {
 		return 0;
 	};
 	module_expr_t *Expr;
+	if (Debugger) Scanner->Debug = Debugger->add_module(Path);
 	if (Scanner->parse(tkHASH) || Scanner->parse(tkAT)) {
 		Scanner->flush();
 		Expr = parse_module(Scanner, Module0);
@@ -35,6 +37,7 @@ static int wrapl_load(Riva$Module_t *Module, const char *Path) {
 	Expr->print(0);
 #endif
 	compiler_t *Compiler = new compiler_t();
+	if (Debugger) Compiler->Debug = Scanner->Debug;
 	if (setjmp(Compiler->Error.Handler)) {
 		printf("%s(%d): %s\n", Path, Compiler->Error.LineNo, Compiler->Error.Message);
 		return 0;
@@ -69,12 +72,14 @@ GLOBAL_FUNCTION(SessionNew, 1) {
 	session_t *Session = new session_t;
 	Session->Type = SessionT;
 	Session->Scanner = new scanner_t(Args[0].Val);
+	if (Debugger) Session->Scanner->Debug = Debugger->add_module("console");
 	if (Count > 1) {
 		session_t *Existing = (session_t *)Args[1].Val;
 		Session->Compiler = new compiler_t(Existing->Compiler->Global);
 	} else {
 		Session->Compiler = new compiler_t();
 	};
+	if (Debugger) Session->Compiler->Debug = Session->Scanner->Debug;
 	Result->Val = (Std$Object_t *)Session;
 	return SUCCESS;
 };
@@ -179,6 +184,18 @@ METHOD("var", TYP, SessionT, TYP, Std$String$T, ANY) {
 	Operand->Address = Args[2].Ref;
 	Session->Compiler->declare(Std$String$flatten((Std$String_t *)Args[1].Val), Operand);
 	return SUCCESS;
+};
+
+debugger_t *Debugger;
+
+extern "C" void _enable_debug(debugger_t *Debugger);
+void _enable_debug(debugger_t *_Debugger) {
+	Debugger = _Debugger;
+};
+
+extern "C" void _disable_debug(void);
+void _disable_debug(void) {
+	Debugger = 0;
 };
 
 extern "C" void __init(Riva$Module_t *Module);

@@ -1,0 +1,13 @@
+library("Wrapl/Loader.rlib")
+library("libpthread.rlib")
+
+if WINDOWS then
+	_export = export
+	export = function(Name)
+		_export("_" .. Name, Name)
+	end
+end
+
+export("__init")
+export("Enable")
+export("Disable")

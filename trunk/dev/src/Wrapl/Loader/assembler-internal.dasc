@@ -4,6 +4,7 @@
 |.section code, data
 |.type STATE, state_t
 |.type BSTATE, bstate_t
+|.type DSTATE, dstate_t
 |.type CLOSURE, closure_t
 |.type VALUE, Std$Object_t
 |.type TYPE, Std$Type_t
@@ -60,9 +61,17 @@ void encode_entry(assembler_t *Assembler) {
 	};
 	| pop eax
 	| mov STATE:eax->Run, dword &run_state
-	| mov BSTATE:eax->Handler, dword &resend_message
+	| mov BSTATE:eax->Handler, =>Assembler->Resend
 	| push ebp
 	| mov ebp, eax
+	if (Debugger) {
+		| push dword [ebp + Assembler->Scopes]
+		| push ebp
+		| push dword Assembler->Debug
+		| call &Debugger->enter_function
+		| mov DSTATE:ebp->Debug, eax
+		| add esp, 12
+	};
 	| xor edx, edx
 };
 
@@ -100,6 +109,13 @@ void scope_inst_t::encode(assembler_t *Assembler) {
 	| pop ecx
 	| mov [ebp + Assembler->Scopes + 4 * Index], eax
 	| mov edi, eax
+	if (Debugger) {
+		| push eax
+		| push dword Debug
+		| push dword DSTATE:ebp->Debug
+		| call &Debugger->enter_scope
+		| add esp, 12
+	};
 	| mov eax, Std$Object$Nil
 	| mov ecx, Size * 2
 	| rep; stosd
@@ -714,12 +730,30 @@ void back_inst_t::encode(assembler_t *Assembler) {
 };
 
 void ret_inst_t::encode(assembler_t *Assembler) {
+	if (Debugger) {
+		| push ecx
+		| push edx
+		| push dword DSTATE:ebp->Debug
+		| call &Debugger->exit_function
+		| add esp, 4
+		| pop edx
+		| pop ecx
+	};
 	| xor eax, eax
 	| pop ebp
 	| ret
 };
 
 void susp_inst_t::encode(assembler_t *Assembler) {
+	if (Debugger) {
+		| push ecx
+		| push edx
+		| push dword DSTATE:ebp->Debug
+		| call &Debugger->exit_function
+		| add esp, 4
+		| pop edx
+		| pop ecx
+	};
 	| mov BSTATE:ebx, ebp
 	| mov BSTATE:ebx->Val, ecx
 	| mov BSTATE:ebx->Ref, edx
@@ -731,6 +765,11 @@ void susp_inst_t::encode(assembler_t *Assembler) {
 };
 
 void fail_inst_t::encode(assembler_t *Assembler) {
+	if (Debugger) {
+		| push dword DSTATE:ebp->Debug
+		| call &Debugger->exit_function
+		| add esp, 4
+	};
 	| xor eax, eax
 	| pop ebp
 	| inc eax
@@ -741,13 +780,29 @@ void recv_inst_t::encode(assembler_t *Assembler) {
 	if (Handler) {
 		| mov BSTATE:ebp->Handler, =>Handler
 	} else {
-		| mov BSTATE:ebp->Handler, &resend_message
+		| mov BSTATE:ebp->Handler, =>Assembler->Resend
 	};
 };
 
 void send_inst_t::encode(assembler_t *Assembler) {
 	| mov eax, 2
 	| jmp dword BSTATE:ebp->Handler
+};
+
+void resend_inst_t::encode(assembler_t *Assembler) {
+	if (Debugger) {
+		| push ecx
+		| push edx
+		| push eax
+		| push dword DSTATE:ebp->Debug
+		| call &Debugger->exit_function
+		| add esp, 4
+		| pop eax
+		| pop edx
+		| pop ecx
+	};
+	| pop ebp
+	| ret
 };
 
 void comp_inst_t::encode(assembler_t *Assembler) {
@@ -1103,6 +1158,15 @@ void store_list_inst_t::encode(assembler_t *Assembler) {
 };
 
 void encode_potential_breakpoint(assembler_t *Assembler, uint32_t LineNo) {
-//	| mov eax, LineNo
-//	| call &potential_breakpoint
+	if (Debugger) {
+		| push ecx
+		| push edx
+		| push dword LineNo
+		| push dword DSTATE:ebp->Debug
+		| call &Debugger->break_line
+		| add esp, 8
+//		| int3
+		| pop edx
+		| pop ecx
+	};
 };

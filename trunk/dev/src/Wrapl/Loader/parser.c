@@ -250,9 +250,10 @@ static block_expr_t *accept_localvar(scanner_t *Scanner) {
 			return Block;
 		};
 	} else if (Scanner->parse(tkLPAREN)) {
+		int LineNo = Scanner->Token.LineNo;
 		func_expr_t::parameter_t *Parameters = accept_parameters(Scanner);
 		Scanner->accept(tkRPAREN);
-		func_expr_t *Func = new func_expr_t(Scanner->Token.LineNo, Parameters, accept_expr(Scanner));
+		func_expr_t *Func = new func_expr_t(LineNo, Parameters, accept_expr(Scanner));
 		ident_expr_t *Ident = new ident_expr_t(Scanner->Token.LineNo, Var->Name);
 		assign_expr_t *Assign = new assign_expr_t(Scanner->Token.LineNo, Ident, Func);
 		if (Scanner->parse(tkCOMMA)) {
@@ -301,9 +302,10 @@ static block_expr_t *accept_localdef(scanner_t *Scanner) {
 	Scanner->accept(tkIDENT);
 	Def->Name = Scanner->Token.Ident;
 	if (Scanner->parse(tkLPAREN)) {
+		int LineNo = Scanner->Token.LineNo;
 		func_expr_t::parameter_t *Parameters = accept_parameters(Scanner);
 		Scanner->accept(tkRPAREN);
-		Def->Value = new func_expr_t(Scanner->Token.LineNo, Parameters, accept_expr(Scanner));
+		Def->Value = new func_expr_t(LineNo, Parameters, accept_expr(Scanner));
 		block_expr_t *Block;
 		if (Scanner->parse(tkCOMMA)) {
 			Block = accept_localvar(Scanner);
@@ -806,9 +808,10 @@ static module_expr_t *accept_globalvar(scanner_t *Scanner) {
 			return Module;
 		};
 	} else if (Scanner->parse(tkLPAREN)) {
+		int LineNo = Scanner->Token.LineNo;
 		func_expr_t::parameter_t *Parameters = accept_parameters(Scanner);
 		Scanner->accept(tkRPAREN);
-		func_expr_t *Func = new func_expr_t(Scanner->Token.LineNo, Parameters, accept_expr(Scanner));
+		func_expr_t *Func = new func_expr_t(LineNo, Parameters, accept_expr(Scanner));
 		ident_expr_t *Ident = new ident_expr_t(Scanner->Token.LineNo, Var->Name);
 		assign_expr_t *Assign = new assign_expr_t(Scanner->Token.LineNo, Ident, Func);
 		if (Scanner->parse(tkCOMMA)) {
@@ -850,9 +853,10 @@ static module_expr_t *accept_globaldef(scanner_t *Scanner) {
 	Def->Name = Scanner->Token.Ident;
 	Def->Exported = Scanner->parse(tkEXCLAIM);
 	if (Scanner->parse(tkLPAREN)) {
+		int LineNo = Scanner->Token.LineNo;
 		func_expr_t::parameter_t *Parameters = accept_parameters(Scanner);
 		Scanner->accept(tkRPAREN);
-		Def->Value = new func_expr_t(Scanner->Token.LineNo, Parameters, accept_expr(Scanner));
+		Def->Value = new func_expr_t(LineNo, Parameters, accept_expr(Scanner));
 	} else {
 		Scanner->accept(tkASSIGN);
 		Def->Value = accept_expr(Scanner);
@@ -1003,9 +1007,10 @@ static command_expr_t *accept_commandvar(scanner_t *Scanner) {
 			return Module;
 		};
 	} else if (Scanner->parse(tkLPAREN)) {
+		int LineNo = Scanner->Token.LineNo;
 		func_expr_t::parameter_t *Parameters = accept_parameters(Scanner);
 		Scanner->accept(tkRPAREN);
-		func_expr_t *Func = new func_expr_t(Scanner->Token.LineNo, Parameters, accept_expr(Scanner));
+		func_expr_t *Func = new func_expr_t(LineNo, Parameters, accept_expr(Scanner));
 		ident_expr_t *Ident = new ident_expr_t(Scanner->Token.LineNo, Var->Name);
 		assign_expr_t *Assign = new assign_expr_t(Scanner->Token.LineNo, Ident, Func);
 		if (Scanner->parse(tkCOMMA)) {
@@ -1045,9 +1050,10 @@ static command_expr_t *accept_commanddef(scanner_t *Scanner) {
 	if (Scanner->parse(tkASSIGN)) {
 		Def->Value = accept_expr(Scanner);
 	} else if (Scanner->parse(tkLPAREN)) {
+		int LineNo = Scanner->Token.LineNo;
 		func_expr_t::parameter_t *Parameters = accept_parameters(Scanner);
 		Scanner->accept(tkRPAREN);
-		Def->Value = new func_expr_t(Scanner->Token.LineNo, Parameters, accept_expr(Scanner));
+		Def->Value = new func_expr_t(LineNo, Parameters, accept_expr(Scanner));
 	};
 	if (Scanner->parse(tkCOMMA)) {
 		command_expr_t *Module = accept_commanddef(Scanner);

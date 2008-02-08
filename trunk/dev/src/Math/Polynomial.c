@@ -250,5 +250,5 @@ void __init (void *Module) {
 	XStr = Std$String$new("x");
 	XPowStr = Std$String$new("x^");
 	Std$Function_result Result;
-	Std$Function$call(Polynomial2$INIT, 0, &Result);
+	//Std$Function$call(Polynomial2$INIT, 0, &Result);
 };

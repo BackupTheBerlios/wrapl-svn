@@ -1,5 +1,6 @@
 #include "assembler.h"
 #include "missing.h"
+#include "debugger.h"
 #include <Std.h>
 #include <string.h>
 
@@ -17,7 +18,18 @@ struct bstate_t {
 	Std$Object_t **Ref;
 	void *Code;
 	void *Handler;
-	void *Data;
+	//void *Data;
+};
+
+struct dstate_t {
+	void *Run;
+	state_t *Chain;
+	void *Resume;
+	Std$Object_t *Val;
+	Std$Object_t **Ref;
+	void *Code;
+	void *Handler;
+	void *Debug;
 };
 
 operand_t Register[] = {{
@@ -105,6 +117,7 @@ static void use_label(label_t *Start, label_t *Next, bool Follow) {
 
 struct scope_inst_t : inst_t {
 	uint32_t Index, Size;
+	void *Debug;
 #ifdef ASSEMBLER_LISTING
 	void list() {
 		if (IsPotentialBreakpoint) printf("*");
@@ -114,10 +127,11 @@ struct scope_inst_t : inst_t {
 	void encode(assembler_t *Assembler);
 };
 
-void label_t::scope(uint32_t LineNo, uint32_t Index, uint32_t Size) {
+void label_t::scope(uint32_t LineNo, uint32_t Index, uint32_t Size, void *Debug) {
 	scope_inst_t *Inst = new scope_inst_t;
 	Inst->Index = Index;
 	Inst->Size = Size;
+	Inst->Debug = Debug;
 	Inst->LineNo = LineNo;
 	Inst->IsPotentialBreakpoint = false;
 	append(Inst);
@@ -626,6 +640,23 @@ void label_t::send(uint32_t LineNo) {
 	append(Inst);
 };
 
+struct resend_inst_t : inst_t {
+#ifdef ASSEMBLER_LISTING
+	void list() {
+		if (IsPotentialBreakpoint) printf("*");
+		printf("%d:\tresend\n", LineNo);
+	};
+#endif
+	void encode(assembler_t *Assembler);
+};
+
+void label_t::resend(uint32_t LineNo) {
+	resend_inst_t *Inst = new resend_inst_t;
+	Inst->LineNo = LineNo;
+	Inst->IsPotentialBreakpoint = false;
+	append(Inst);
+};
+
 struct store_link_inst_t : inst_t {
 	uint32_t Temp;
 	label_t *Target;
@@ -1017,6 +1048,8 @@ struct assembler_t {
 	uint32_t NoOfUpScopes;
 	uint32_t NoOfParams;
 	uint32_t NoOfLocals;
+	label_t *Resend;
+	void *Debug;
 };
 
 #define Dst			Assembler
@@ -1051,6 +1084,7 @@ operand_t *label_t::assemble(const frame_t *Frame, operand_t *Operand) {
 	printf("Arranging labels...\n");
 #endif
 	use_label(&Assembly, this, true);
+	use_label(&Assembly, Frame->Resend, false);
 #ifdef ASSEMBLER_LISTING
 	printf("done.\n");
 #endif	
@@ -1059,13 +1093,17 @@ operand_t *label_t::assemble(const frame_t *Frame, operand_t *Operand) {
 	int NoOfConsts = 0;
 	for (inst_t *Inst = Assembly.Next; Inst; Inst = Inst->Next) NoOfConsts += Inst->noof_consts();
 
-	//if (DebuggerMode) {
-	//	Assembly.Next->IsPotentialBreakpoint = true;
-	//	for (inst_t *Inst = Assembly.Next; Inst; Inst = Inst->Next) Inst->find_breakpoints();
-	//};
+	if (Debugger) {
+		Assembly.Next->IsPotentialBreakpoint = true;
+		for (inst_t *Inst = Assembly.Next; Inst; Inst = Inst->Next) Inst->find_breakpoints();
+	};
 
 	assembler_t *Assembler = new assembler_t;
-	Assembler->UpScopes = sizeof(bstate_t);
+	if (Debugger) {
+		Assembler->UpScopes = sizeof(dstate_t);
+	} else {
+		Assembler->UpScopes = sizeof(bstate_t);
+	};
 	Assembler->Scopes = Assembler->UpScopes + 4 * Frame->NoOfUpScopes;
 	Assembler->Temps = Assembler->Scopes + 4 * Frame->NoOfScopes;
 	Assembler->Locals = Assembler->Temps + 8 * Frame->NoOfTemps;
@@ -1073,6 +1111,8 @@ operand_t *label_t::assemble(const frame_t *Frame, operand_t *Operand) {
 	Assembler->NoOfParams = Frame->NoOfParams;
 	Assembler->NoOfUpScopes = Frame->NoOfUpScopes;
 	Assembler->NoOfLocals = Frame->NoOfLocals;
+	Assembler->Resend = Frame->Resend;
+	Assembler->Debug = Frame->Debug;
 
 #ifdef ASSEMBLER_LISTING
 	printf("ASSEMBLY\n");
@@ -1095,11 +1135,11 @@ operand_t *label_t::assemble(const frame_t *Frame, operand_t *Operand) {
 	dasm_setup(Dst, ActionList);
 	encode_entry(Assembler);
 	for (inst_t *Inst = Assembly.Next; Inst; Inst = Inst->Next) {
-		//if (DebuggerMode) {
-		//	if (Inst->IsPotentialBreakpoint) {
-		//		encode_potential_breakpoint(Assembler, Inst->LineNo);
-		//	};
-		//};
+		if (Debugger) {
+			if (Inst->IsPotentialBreakpoint) {
+				encode_potential_breakpoint(Assembler, Inst->LineNo);
+			};
+		};
 		Inst->encode(Assembler);
 	};
 	uint32_t Size;
