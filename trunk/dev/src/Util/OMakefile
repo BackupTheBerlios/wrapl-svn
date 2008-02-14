@@ -1,10 +1,11 @@
 BASENAME = $(LIB_DIR)Util$(DIRSEP)
 
 CFLAGS += -std=gnu99
-LDFLAGS += Std.rlib Riva.rlib
+LDFLAGS += Std.rlib Riva.rlib $(file Tre.rlib)
 
 Util:\
 	$(RivaModule Util/TypedFunction, TypedFunction)\
 	$(RivaModule Util/StringTable, StringTable)\
 	$(RivaModule Util/TypeTable, TypeTable)\
-	$(RivaModule Util/ObjectTable, ObjectTable)
+	$(RivaModule Util/ObjectTable, ObjectTable)\
+	$(RivaModule Util/Regexp, Regexp Regexp2)

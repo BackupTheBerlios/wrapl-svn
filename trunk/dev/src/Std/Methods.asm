@@ -4309,3 +4309,40 @@ method "length", STRING
 	xor edx, edx
 	xor eax, eax
 	ret
+
+c_type ScannerT
+.invoke: ret
+
+struct scanner_position
+	.Block:		resd 1
+	.Offset:	resd 1
+	.Actual:	resd 1
+endstruct
+
+struct scanner, value
+	.String:	resd 1
+	.Old:		resb sizeof(scanner_position)
+	.Pos:		resb sizeof(scanner_position)
+endstruct
+
+method "scan", STRING
+	push byte sizeof(scanner)
+	call Riva$Memory$_alloc
+	pop ecx
+	mov ecx, eax
+	mov eax, [argument(edi).Val]
+	mov [value(ecx).Type], dword ScannerT
+	mov [scanner(ecx).String], eax
+	lea eax, [string(eax).Blocks]
+	mov [scanner_position(scanner(ecx).Old).Block], eax
+	mov [scanner_position(scanner(ecx).Pos).Block], eax
+	; setting Offset and Actual to 0 is unnecessary due to GC
+	xor edx, edx
+	xor eax, eax
+	ret
+
+method "skip", TYP, ScannerT
+	mov ecx, [argument(edi).Val]
+	xor edx, edx
+	xor eax, eax
+	ret
