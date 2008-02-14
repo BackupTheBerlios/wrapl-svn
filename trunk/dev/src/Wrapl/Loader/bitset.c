@@ -2,6 +2,7 @@
 #include "limits.h"
 
 #include <stdio.h>
+#include <algorithm>
 
 struct bitset_internal_t : bitset_t {
 	uint32_t Lo, Hi;
@@ -37,7 +38,7 @@ bitset_t::bitset_t(bitset_t *A, bitset_t *B) {
 		} else if (B0->Lo > A0->Hi) {
 			A0 = A0->Next;
 		} else {
-			Node->Lo = A0->Lo >? B0->Lo;
+			Node->Lo = std::max(A0->Lo, B0->Lo);
 			if (A0->Hi > B0->Hi) {
 				Node->Hi = B0->Hi;
 				B0 = B0->Next;
@@ -64,7 +65,7 @@ void bitset_t::reserve(const bitset_t *B) {
 		} else if (B0->Lo > A0->Hi) {
 			A0 = A0->Next;
 		} else {
-			Node->Lo = A0->Lo >? B0->Lo;
+			Node->Lo = std::max(A0->Lo, B0->Lo);
 			if (A0->Hi > B0->Hi) {
 				Node->Hi = B0->Hi;
 				B0 = B0->Next;
