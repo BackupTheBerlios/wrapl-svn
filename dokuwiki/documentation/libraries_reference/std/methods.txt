@@ -1,10 +1,9 @@
 ====== Methods ======
+==== ScannerT ====
+
+
 ==== :put ====
 '':put( @ [[..:Std:Address#T|Std.Address.T]], @ [[..:Std:Address#T|Std.Address.T]], @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])''
-
-
-==== :put ====
-'':put( @ [[..:Std:Address#T|Std.Address.T]], @ [[..:Std:Address#T|Std.Address.T]], @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]], @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])''
 
 
 ==== :put8 ====
@@ -153,6 +152,10 @@
 
 ==== :@ ====
 '':@( @ [[..:Std:String#T|Std.String.T]], = [[..:Std:Integer#T|Std.Integer.T]])''
+
+
+==== :@ ====
+'':@( @ [[..:Std:String#T|Std.String.T]], = [[..:Std:Integer#T|Std.Integer.T]], @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])''
 
 
 ==== :@ ====
@@ -868,6 +871,18 @@
 
 Returns the length of string
 
+==== :put ====
+'':put( @ [[..:Std:Address#T|Std.Address.T]], @ [[..:Std:Address#T|Std.Address.T]], @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]], @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :scan ====
+'':scan( @ [[..:Std:String#T|Std.String.T]])''
+
+
+==== :skip ====
+'':skip( @ [[#ScannerT|ScannerT]])''
+
+
 ==== :chars ====
 '':chars( @ [[..:Std:String#T|Std.String.T]])''
 
@@ -934,6 +949,14 @@ Returns the length of string
 
 ==== :skip ====
 '':skip( @ [[..:Std:String#T|Std.String.T]], @ [[..:Std:String#T|Std.String.T]], @ [[..:Std:Integer#SmallT|Std.Integer.SmallT]])''
+
+
+==== :before ====
+'':before( @ [[..:Std:String#T|Std.String.T]], @ [[..:Std:String#T|Std.String.T]])''
+
+
+==== :after ====
+'':after( @ [[..:Std:String#T|Std.String.T]], @ [[..:Std:String#T|Std.String.T]])''
 
 
 ==== :/ ====
