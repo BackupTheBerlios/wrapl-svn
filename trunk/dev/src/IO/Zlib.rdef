@@ -1,0 +1,13 @@
+library("libzlib.rlib")
+
+if WINDOWS then
+	_export = export
+	export = function(Name)
+		_export("_" .. Name, Name)
+	end
+end
+
+export("__init");
+export("T")
+export("InflateNew")
+export("DeflateNew")
