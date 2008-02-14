@@ -1,0 +1,14 @@
+BASENAME = $(GTK_LIB_DIR)Glib$(DIRSEP)
+
+CFLAGS += $(shell pkg-config --cflags glib-2.0) -include glib.h
+LDFLAGS += Gtk/Glib.rlib Gtk/GThread.rlib
+
+if $(file-exists $(GTK_AUTOGEN))
+	foreach(FILE, $(rootname $(basename $(glob *.c))))
+		#println($(FILE))
+		clean:
+			$(rm $(FILE).c)
+			$(rm $(FILE).rdef)
+		GtkGlib: $(RivaModule Gtk/Glib/$(FILE), $(FILE))
+		export
+
